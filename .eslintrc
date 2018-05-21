@@ -1,4 +1,13 @@
 {
   "parser": "babel-eslint",
+  "plugins": ["react", "jsx-a11y"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {}
 }

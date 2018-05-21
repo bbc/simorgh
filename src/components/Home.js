@@ -5,7 +5,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Hello, World!</h1>
+        <h1>Hello, World!</h1>        
         <nav>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
