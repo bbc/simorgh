@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Helmet from 'react-helmet';
+import Headline from './Headline';
 class Home extends React.Component {
   render() {
+    const headline = "Hello, World!";
+
     return (
-      <div className="home">
-        <h1>Hello, World!</h1>        
+      <Fragment>
+        <Helmet htmlAttributes={{ lang: "en-GB" }}>
+          <title>{headline}</title>
+        </Helmet>
+        <Headline text={headline} />
         <nav>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/article/c0123456789o">An Article</NavLink></li>
           </ul>
         </nav>
-      </div>
+      </Fragment>
     );
   }
 }
