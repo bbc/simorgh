@@ -5,6 +5,8 @@ const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 let currentApp = app;
 
+/* eslint-disable no-console */
+
 server.listen(port, error => {
   if (error) {
     console.log(error);
