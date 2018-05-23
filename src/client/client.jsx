@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ensureReady, After } from '@jaredpalmer/after';
 import routes from '../app/routes';
 
-const root = document.getElementById('root'); // eslint-disable-line no-undef
+const root = document.getElementById('root');
 
 ensureReady(routes).then(data =>
   hydrate(
@@ -15,7 +15,6 @@ ensureReady(routes).then(data =>
   ),
 );
 
-// eslint-disable-next-line no-undef
 if (module.hot) {
-  module.hot.accept(); // eslint-disable-line no-undef
+  module.hot.accept();
 }

@@ -41,9 +41,17 @@
     "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "razzle": "^2.0.0-alpha.12"
+    "razzle": "^2.0.0-alpha.12",
+    "supertest": "^3.1.0"
   },
   "jest": {
-    "setupFiles": ["./src/__test__/enzyme-setup.js"]
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!./build/**",
+      "!./node_modules/**"
+    ],
+    "setupFiles": [
+      "./src/__test__/enzyme-setup.js"
+    ]
   }
 }

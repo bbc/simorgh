@@ -7,7 +7,7 @@ let currentApp = app;
 
 /* eslint-disable no-console */
 
-server.listen(port, error => {
+server.listen(port, (error) => {
   if (error) {
     console.log(error);
   }
@@ -21,7 +21,7 @@ if (module.hot) {
   module.hot.accept('./server/server', () => {
     console.log('🔁  Hot Module Replacement reloading `./server/server`...');
     server.removeListener('request', currentApp);
-    const newApp = require('./server/server').default;
+    const newApp = require('./server/server').default; // eslint-disable-line global-require
     server.on('request', newApp);
     currentApp = newApp;
   });

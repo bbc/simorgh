@@ -2,12 +2,15 @@ import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST); /* eslint-disable-line import/no-dynamic-require */
+const assetPath = process.env.RAZZLE_ASSETS_MANIFEST || '../../build/assets.json';
+const staticPath = process.env.RAZZLE_PUBLIC_DIR || '../../build/public';
+
+const assets = require(assetPath); /* eslint-disable-line import/no-dynamic-require max-len */
 
 const server = express();
 server
   .disable('x-powered-by')
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .use(express.static(staticPath))
   .get('/*', async (req, res) => {
     try {
       const html = await render({
