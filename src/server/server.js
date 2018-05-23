@@ -1,6 +1,6 @@
 import express from 'express';
 import { render } from '@jaredpalmer/after';
-import routes from './routes';
+import routes from '../app/routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST); /* eslint-disable-line import/no-dynamic-require */
 
