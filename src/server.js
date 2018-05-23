@@ -2,7 +2,7 @@ import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from './routes';
 
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
+const assets = require(process.env.RAZZLE_ASSETS_MANIFEST); /* eslint-disable-line import/no-dynamic-require */
 
 const server = express();
 server
@@ -14,7 +14,7 @@ server
         req,
         res,
         routes,
-        assets
+        assets,
       });
       res.send(html);
     } catch (error) {

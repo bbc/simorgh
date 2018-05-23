@@ -1,5 +1,6 @@
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import PropTypes from 'prop-types';
 
 class Document extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
@@ -14,7 +15,7 @@ class Document extends React.Component {
     const bodyAttrs = helmet.bodyAttributes.toComponent();
 
     return (
-      <html {...htmlAttrs}>
+      <html lang={htmlAttrs.lang} {...htmlAttrs}>
         <head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="utf-8" />
@@ -40,5 +41,11 @@ class Document extends React.Component {
     );
   }
 }
+
+Document.propTypes = {
+  assets: PropTypes.func.isRequired,
+  data: PropTypes.func.isRequired,
+  helmet: PropTypes.func.isRequired,
+};
 
 export default Document;

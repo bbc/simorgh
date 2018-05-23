@@ -11,8 +11,8 @@ ensureReady(routes).then(data =>
     <BrowserRouter>
       <After data={data} routes={routes} />
     </BrowserRouter>,
-    root
-  )
+    root,
+  ),
 );
 
 // eslint-disable-next-line no-undef

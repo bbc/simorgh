@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const Headline = (props) => <h1>{props.text}</h1>;
+const Headline = props => <h1>{props.text}</h1>;
 
 Headline.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default Headline;

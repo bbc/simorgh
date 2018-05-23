@@ -1,5 +1,5 @@
 import Home from './components/Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import Article from './components/Article';
 
 const routes = [
   {
@@ -9,10 +9,8 @@ const routes = [
   },
   {
     path: '/article',
-    component: asyncComponent({
-      loader: () => import('./components/Article'), // required
-    })
-  }
+    component: Article,
+  },
 ];
 
 export default routes;

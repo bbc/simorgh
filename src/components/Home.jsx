@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
-import { NavLink } from "react-router-dom";
-import Helmet from "react-helmet";
-import Headline from "./Headline";
+import React, { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import Headline from './Headline';
 
 const Home = () => {
-  const headline = "Hello, World!";
+  const headline = 'Hello, World!';
 
   return (
     <Fragment>
-      <Helmet htmlAttributes={{ lang: "en-GB" }}>
+      <Helmet htmlAttributes={{ lang: 'en-GB' }}>
         <title>{headline}</title>
       </Helmet>
       <Headline text={headline} />
@@ -18,7 +18,7 @@ const Home = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/article/c0123456789o">An Article</NavLink>
+            <NavLink to="/article/1">An Article</NavLink>
           </li>
         </ul>
       </nav>

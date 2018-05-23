@@ -30,14 +30,16 @@
     "razzle": "^2.0.0-alpha.12",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3"
+    "eslint-plugin-jsx-a11y": "^5.1.1"
   }
 }
