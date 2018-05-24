@@ -7,4 +7,9 @@ describe('Article', () => {
     const component = shallow(<Article />);
     expect(component.find('h1').text()).toEqual('Article Headline');
   });
+
+  it('renders the title', () => {
+    const component = shallow(<Article />);
+    expect(component.find('title').text()).toEqual('Article Headline');
+  });
 });

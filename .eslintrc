@@ -4,7 +4,8 @@
     "es6": true,
     "browser": true,
     "jest": true,
-    "node": true
+    "node": true,
+  "extends": ["plugin:prettier/recommended"]
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -16,4 +17,3 @@
   },
   "plugins": ["react", "jsx-a11y"],
   "rules": {}
-}
