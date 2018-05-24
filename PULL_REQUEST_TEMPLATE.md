@@ -6,8 +6,7 @@ _PR changes summary to go here._
 - [ ] Pull request URL added to JIRA ticket
 - [ ] Up-to-date with latest (`git pull --rebase origin latest`)
 - [ ] Tested locally `npm run dev` runs, http://localhost:3000/ renders a page
-- [ ] Unit and snapshot tests added, if relevant
+- [ ] Tests added for new features
 - [ ] `npm test` has passing tests
 
-- [ ] Code reviewer approval
 - [ ] Test engineer approval
