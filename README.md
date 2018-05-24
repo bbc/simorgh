@@ -14,7 +14,7 @@ npm install
 
 To run this application locally, with hot-reloading, run: `npm run dev`.
 
-The application will start on [http://localhost:3000](http://localhost:3000/). These is a single root, `/`.
+The application will start on [http://localhost:3000/](http://localhost:3000/). These is a single route, `/`.
 
 ## Production build
 
