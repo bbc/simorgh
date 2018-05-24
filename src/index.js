@@ -1,5 +1,5 @@
 import http from 'http';
-import app from './server/server';
+import app from './server';
 
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
@@ -18,10 +18,10 @@ server.listen(port, (error) => {
 if (module.hot) {
   console.log('✅  Server-side Hot Module Replacement enabled');
 
-  module.hot.accept('./server/server', () => {
-    console.log('🔁  Hot Module Replacement reloading `./server/server`...');
+  module.hot.accept('./server', () => {
+    console.log('🔁  Hot Module Replacement reloading `./server`...');
     server.removeListener('request', currentApp);
-    const newApp = require('./server/server').default; // eslint-disable-line global-require
+    const newApp = require('./server').default; // eslint-disable-line global-require
     server.on('request', newApp);
     currentApp = newApp;
   });
