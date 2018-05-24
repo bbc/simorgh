@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true,
+  "extends": ["plugin:prettier/recommended"]
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "jsx-a11y"],
+  "rules": {}
