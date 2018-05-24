@@ -9,7 +9,9 @@ const Article = () => {
       <Helmet htmlAttributes={{ lang: 'en-GB' }}>
         <title>{headline}</title>
       </Helmet>
-      <h1 foo="bar" className="headline">{headline}</h1>
+      <h1 foo="bar" className="headline">
+        {headline}
+      </h1>
     </Fragment>
   );
 };

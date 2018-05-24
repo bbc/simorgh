@@ -1,10 +1,10 @@
 {
-  "extends": "airbnb", ["plugin:prettier/recommended"],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "env": {
     "es6": true,
     "browser": true,
     "jest": true,
-    "node": true,
+    "node": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -15,4 +15,7 @@
     }
   },
   "plugins": ["react", "jsx-a11y"],
-  "rules": {}
+  "rules": {
+    "prettier/prettier": ["error", {singleQuote: true, trailingComma: "all"}]
+    }
+}

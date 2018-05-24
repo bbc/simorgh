@@ -1,4 +1,4 @@
-import express from 'express';
+import express from "express";
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 
@@ -15,7 +15,7 @@ server
         req,
         res,
         routes,
-        assets,
+        assets
       });
       res.send(html);
     } catch (error) {
