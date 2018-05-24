@@ -4,7 +4,7 @@
   "description": "Article renderer",
   "main": "index.js",
   "scripts": {
-    "start:dev": "razzle start",
+    "dev": "razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
     "start": "NODE_ENV=production node build/server.js"

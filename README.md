@@ -12,7 +12,7 @@ npm install
 
 To run this application locally, run this
 ```
-npm start:dev
+npm run dev
 ```
 It will open the application on [http://localhost:3000](http://localhost:3000)
 
