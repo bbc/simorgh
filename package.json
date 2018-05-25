@@ -47,7 +47,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.4"
+    "babel-loader": "^7.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "razzle": "^2.0.0-alpha.12"
   },
   "jest": {
     "collectCoverageFrom": [
