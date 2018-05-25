@@ -12,7 +12,7 @@ pipeline {
       steps {
         build(
           job: 'articles-renderer-infrastructure/master',
-          parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME]]
+          parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME]],
           propagate: true,
           wait: true
         )
