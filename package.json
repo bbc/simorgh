@@ -40,7 +40,8 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.4",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "webpack-bundle-analyzer": "^2.13.1"
   },
   "jest": {
     "collectCoverageFrom": [
