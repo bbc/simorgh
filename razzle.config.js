@@ -7,7 +7,9 @@ module.exports = {
     if (target === 'node' && dev) {
       appConfig.plugins = [
         new BundleAnalyzerPlugin({
-          analyzerMode: 'server',
+          analyzerMode: 'static',
+          generateStatsFile: true,
+          openAnalyzer: false,
           reportFilename: 'webpackBundleReport.html',
           statsFilename: 'webpackBundleStats.json',
         }),
