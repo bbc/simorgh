@@ -9,6 +9,9 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .get('/status', (req, res) => {
+    res.sendStatus(200);
+  })
   .get('/*', async (req, res) => {
     try {
       const html = await render({
