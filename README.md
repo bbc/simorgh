@@ -16,12 +16,14 @@ To run this application locally, with hot-reloading, run: `npm run dev`.
 
 The application will start on [http://localhost:3000/](http://localhost:3000/). These is a single route, `/`.
 
+To view a breakdown of the bundle size, open the generated html report in a browser `./articles-renderer/build/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`.
+
 ## Production build
 
 To run this application locally with a production build, run:
 
-1. `npm run build`
-2. `npm run start`
+1.  `npm run build`
+2.  `npm run start`
 
 ## Tests
 
