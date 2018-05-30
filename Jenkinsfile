@@ -11,7 +11,7 @@ pipeline {
       agent any
       steps {
         build(
-          job: 'articles-renderer-infrastructure/latest',
+          job: 'simorgh-infrastructure/latest',
           parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME]],
           propagate: true,
           wait: true
