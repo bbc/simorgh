@@ -1,4 +1,4 @@
-# Articles Renderer
+# Simorgh
 
 ## Installation
 

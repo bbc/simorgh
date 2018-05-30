@@ -1,7 +1,7 @@
 {
   "name": "simorgh",
   "version": "0.0.1",
-  "description": "Article renderer",
+  "description": "Simorgh",
   "main": "index.js",
   "scripts": {
     "dev": "razzle start",
