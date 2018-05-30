@@ -1,7 +1,7 @@
 {
-  "name": "articles-renderer",
+  "name": "simorgh",
   "version": "0.0.1",
-  "description": "Article renderer",
+  "description": "Simorgh",
   "main": "index.js",
   "scripts": {
     "dev": "razzle start",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/articles-renderer.git"
+    "url": "git+https://github.com/bbc/simorgh.git"
   },
   "keywords": [
     "BBC",
@@ -21,9 +21,9 @@
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/bbc/articles-renderer/issues"
+    "url": "https://github.com/bbc/simorgh/issues"
   },
-  "homepage": "https://github.com/bbc/articles-renderer#readme",
+  "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@jaredpalmer/after": "^1.3.1",
     "eslint-config-airbnb": "15.1.0",

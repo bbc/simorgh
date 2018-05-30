@@ -1,4 +1,4 @@
-# Articles Renderer
+# Simorgh
 
 ## Installation
 
@@ -6,7 +6,7 @@ Install Node 8. [https://nodejs.org/en/](https://nodejs.org/en/)
 Update to use the latest npm `npm i -g npm`
 
 ```
-git clone git@github.com:bbc/articles-renderer.git
+git clone git@github.com:bbc/simorgh.git
 npm install
 ```
 
