@@ -7,7 +7,8 @@
     "dev": "razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
-    "start": "NODE_ENV=production node build/server.js"
+    "start": "NODE_ENV=production node build/server.js",
+    "speculate": "speculate"
   },
   "repository": {
     "type": "git",
@@ -25,16 +26,17 @@
   "homepage": "https://github.com/bbc/articles-renderer#readme",
   "dependencies": {
     "@jaredpalmer/after": "^1.3.1",
-    "express": "^4.16.3",
     "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
+    "express": "^4.16.3",
     "prop-types": "^15.6.1",
     "razzle": "^2.0.0-alpha.12",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "speculate": "^1.7.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
