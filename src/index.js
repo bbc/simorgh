@@ -2,7 +2,7 @@ import http from 'http';
 import app from './server';
 
 const server = http.createServer(app);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 7080;
 let currentApp = app;
 
 /* eslint-disable no-console */
