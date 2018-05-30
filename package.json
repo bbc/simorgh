@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "razzle start",
     "build": "razzle build",
+    "eslint": "eslint --ext .js,jsx ./src --fix",
     "test": "razzle test --env=jsdom",
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate"

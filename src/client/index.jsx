@@ -12,8 +12,7 @@ ensureReady(routes).then(data =>
       <After data={data} routes={routes} />
     </BrowserRouter>,
     root,
-  ),
-);
+  ));
 
 if (module.hot) {
   module.hot.accept();
