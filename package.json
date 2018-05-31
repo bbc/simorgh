@@ -11,7 +11,8 @@
     "test:unit": "razzle test --env=jsdom",
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
-    "cypress": "cypress open"
+    "test:e2e": "cypress run",
+    "test:debug": "cypress open"
   },
   "repository": {
     "type": "git",
