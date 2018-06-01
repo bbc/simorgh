@@ -3,10 +3,14 @@ import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 
 class Document extends React.Component {
+  static defaultProps = {
+    data: {},
+  }
+
   static propTypes = {
-    helmet: PropTypes.object,
-    assets: PropTypes.object,
-    data: PropTypes.object
+    helmet: PropTypes.objectOf(PropTypes.any).isRequired,
+    assets: PropTypes.objectOf(PropTypes.any).isRequired,
+    data: PropTypes.objectOf(PropTypes.any),
   }
 
   static async getInitialProps({ assets, data, renderPage }) {
@@ -17,17 +21,16 @@ class Document extends React.Component {
   render() {
     const { helmet, assets, data } = this.props;
     const htmlAttrs = helmet.htmlAttributes.toComponent();
-    const bodyAttrs = helmet.bodyAttributes.toComponent();
 
     return (
-      <html {...htmlAttrs}>
+      <html lang="en-GB" {...htmlAttrs}>
         <head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {helmet.title.toComponent()}
         </head>
-        <body {...bodyAttrs}>
+        <body>
           <AfterRoot />
           <AfterData data={data} />
           <script
@@ -42,5 +45,3 @@ class Document extends React.Component {
 }
 
 export default Document;
-
-
