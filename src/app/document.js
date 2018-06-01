@@ -1,7 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 
 class Document extends React.Component {
+  static propTypes = {
+    helmet: PropTypes.object,
+    assets: PropTypes.object,
+    data: PropTypes.object
+  }
+
   static async getInitialProps({ assets, data, renderPage }) {
     const page = await renderPage();
     return { assets, data, ...page };
@@ -19,11 +26,6 @@ class Document extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {helmet.title.toComponent()}
-          {helmet.meta.toComponent()}
-          {helmet.link.toComponent()}
-          {assets.client.css && (
-            <link rel="stylesheet" href={assets.client.css} />
-          )}
         </head>
         <body {...bodyAttrs}>
           <AfterRoot />
@@ -32,7 +34,6 @@ class Document extends React.Component {
             type="text/javascript"
             src={assets.client.js}
             defer
-            crossOrigin="anonymous"
           />
         </body>
       </html>
@@ -41,3 +42,5 @@ class Document extends React.Component {
 }
 
 export default Document;
+
+
