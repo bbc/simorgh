@@ -1,6 +1,7 @@
 import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
+import Document from '../app/components/Document';
 
 /* eslint-disable import/no-dynamic-require */
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
@@ -18,6 +19,7 @@ server
         req,
         res,
         routes,
+        document: Document,
         assets,
       });
       res.send(html);
