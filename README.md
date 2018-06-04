@@ -27,4 +27,10 @@ To run this application locally with a production build, run:
 
 ## Tests
 
-To run tests, run: `npm test`
+To run linting and unit tests, run: `npm test`
+
+### End to end tests
+
+We use [Cypress](https://www.cypress.io/) for our E2E tests. For running the tests locally we need multiple terminals running, one with the server running `npm run dev` and then another to run the test suite `npm test:e2e`.
+
+For a more detailed E2E testing experience Cypress can be run interactively using `npm test:e2e:interactive`. This loads a UI which easily allows for indivdual tests to be run and a visual stream of the browser while the tests run.
