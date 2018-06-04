@@ -7,7 +7,7 @@ let currentApp = app;
 
 /* eslint-disable no-console */
 
-server.listen(port, (error) => {
+server.listen(port, error => {
   if (error) {
     console.log(error);
   }

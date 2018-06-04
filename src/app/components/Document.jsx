@@ -5,13 +5,13 @@ import { AfterRoot, AfterData } from '@jaredpalmer/after';
 class Document extends React.Component {
   static defaultProps = {
     data: {},
-  }
+  };
 
   static propTypes = {
     helmet: PropTypes.objectOf(PropTypes.any).isRequired,
     assets: PropTypes.objectOf(PropTypes.any).isRequired,
     data: PropTypes.objectOf(PropTypes.any),
-  }
+  };
 
   static async getInitialProps({ assets, data, renderPage }) {
     const page = await renderPage();
@@ -33,11 +33,7 @@ class Document extends React.Component {
         <body>
           <AfterRoot />
           <AfterData data={data} />
-          <script
-            type="text/javascript"
-            src={assets.client.js}
-            defer
-          />
+          <script type="text/javascript" src={assets.client.js} defer />
         </body>
       </html>
     );
