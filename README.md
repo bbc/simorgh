@@ -1,5 +1,7 @@
 # Simorgh
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 Install Node 8. [https://nodejs.org/en/](https://nodejs.org/en/)
