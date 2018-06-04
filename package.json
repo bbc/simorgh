@@ -40,6 +40,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "express": "^4.16.3",
     "prop-types": "^15.6.1",
+    "prettier": "1.13.4",
     "razzle": "^2.0.0-alpha.12",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
