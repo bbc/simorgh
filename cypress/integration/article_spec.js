@@ -1,8 +1,7 @@
-const url = 'http://localhost:7080';
 describe('News Article', () => {
 
     beforeEach(() => {
-        cy.visit(url)
+        cy.visit('/')
     })
 
     it('should render a headline', () => {
@@ -17,7 +16,7 @@ describe('News Article', () => {
 
 describe('Renderer Status', () => {
     it('should display 200/OK', () => {
-        cy.request(url + '/status').then((response) => {
+        cy.request('/status').then((response) => {
             expect(response.status).to.eq(200)
         })
     })
