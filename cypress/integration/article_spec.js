@@ -1,4 +1,4 @@
-const url = 'http://localhost:7080/';
+const url = 'http://localhost:7080';
 describe('News Article', () => {
 
     beforeEach(() => {
