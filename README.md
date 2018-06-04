@@ -1,5 +1,7 @@
 # Simorgh
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+
 ## Installation
 
 Install Node 8. [https://nodejs.org/en/](https://nodejs.org/en/)
