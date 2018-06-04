@@ -17,7 +17,7 @@ describe('News Article', () => {
 
 describe('Renderer Status', () => {
     it('should display 200/OK', () => {
-        cy.request(url + 'status').then((response) => {
+        cy.request(url + '/status').then((response) => {
             expect(response.status).to.eq(200)
         })
     })
