@@ -16,12 +16,12 @@
   "metaDescription": null,
   "blocks": [
     {
-      "blockId": "0001",
+      "blockId": "feb207ee-d708-4bd9-9c77-616bdfb43bcf",
       "type": "headline",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
-      "blockId": "0002",
+      "blockId": "8fa4a490-e7f5-46bd-9d88-c100d9919211",
       "type": "paragraph",
       "content": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem."
     }
