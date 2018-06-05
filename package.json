@@ -30,6 +30,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@jaredpalmer/after": "^1.3.1",
+    "babel-eslint": "^8.2.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -49,7 +50,6 @@
     "speculate": "^1.7.4"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4"
   },
   "jest": {
