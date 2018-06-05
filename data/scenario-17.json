@@ -1,0 +1,169 @@
+{
+  "locatorId": "c000000000ho",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "analysis",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T12:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": "An SEO headline.",
+  "tags": {
+    "about": [
+      "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+      "http://www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id"
+    ],
+    "mentions": [
+      "http://www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
+      "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+      "http://www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id"
+    ]
+  },
+  "metaDescription":
+    "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
+  "blocks": [
+    {
+      "blockId": "3b195d2f-7d1b-4002-b362-4a20fe912aed",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
+        "copyrightHolder": "Getty Images",
+        "caption": null,
+        "altText": "Aliquam sodales lectus in augue posuere tempus."
+      },
+      "guidance": null,
+      "caption": null,
+      "altText": "Aliquam quis sodales nisl.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p060njgk",
+      "duration": "PT1M31S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "blockId": "0998da6b-51bb-4a0a-8430-324d07b5a325",
+      "type": "image",
+      "aspectRatio": "16:9",
+      "relPath":
+        "/cpsprodpb/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
+      "copyrightHolder": "BBC",
+      "caption": null,
+      "altText": "Aenean a elit sagittis, ullamcorper ipsum eget, commodo odio."
+    },
+    {
+      "blockId": "aec718bd-5b44-4abf-86fb-fb729fdcabc0",
+      "type": "headline",
+      "content":
+        "Maecenas varius diam in mi dignissim, eget maximus lacus commodo"
+    },
+    {
+      "blockId": "73f0665f-ce0e-481a-b28c-8bbeda3a3ba3",
+      "type": "paragraph",
+      "content":
+        "Mauris aliquam leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex./n/nDuis ornare odio in orci scelerisque, efficitur ornare nisl aliquet. Nunc a sapien sit amet massa pellentesque ultricies sed in lorem. Integer ultrices risus eget est bibendum ullamcorper./n/nSuspendisse rutrum, ante vel consequat gravida, diam nisi pretium turpis, eu aliquam orci diam nec felis. Sed tempus enim massa, at luctus dui efficitur aliquam./n/nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed malesuada tellus vel lectus aliquam blandit."
+    },
+    {
+      "blockId": "021c83f8-89a7-4634-82ab-3d6734e6ab91",
+      "type": "subheading",
+      "content": "Praesent eget tempus lacus"
+    },
+    {
+      "blockId": "fc48c266-9018-4b49-ae7a-02e26d1431eb",
+      "type": "paragraph",
+      "content":
+        "Donec enim justo, lobortis ut tellus ut, venenatis pulvinar sem./n/nIn hac habitasse platea dictumst. Fusce libero purus, condimentum sit amet elit eget, fringilla egestas enim. Sed at tempus erat. Morbi a odio et quam iaculis pulvinar sit amet et odio./n/nDuis erat mauris, placerat posuere diam nec, ultricies mollis mauris./n/nFusce gravida, dui eget sodales tristique, orci tellus rhoncus diam, efficitur elementum augue velit a diam."
+    },
+    {
+      "blockId": "7a8469dd-c12f-4762-a163-3b7f93995806",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
+        "copyrightHolder": "BBC",
+        "caption": null,
+        "altText": "Duis nec tempus erat, sit amet auctor lacus."
+      },
+      "guidance": null,
+      "caption": null,
+      "altText": "In aliquam libero at hendrerit auctor.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "b08qm073",
+      "duration": "PT3H13M00S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "blockId": "1452e357-c341-48bb-93e2-0fc30a272ff3",
+      "type": "paragraph",
+      "content":
+        "Fusce in odio nulla. Fusce ullamcorper ante vitae auctor tempor. Proin sit amet nibh at velit luctus vulputate vel eu sapien. Phasellus sollicitudin elit quis volutpat vulputate."
+    },
+    {
+      "blockId": "de02561d-b894-4089-8719-af38f7544825",
+      "type": "subheading",
+      "content": "Nam lorem felis, vulputate sed pretium nec"
+    },
+    {
+      "blockId": "3fe3ba4e-8505-4b57-9ee7-6fbfac72fe54",
+      "type": "paragraph",
+      "content":
+        "Etiam consectetur faucibus nisi, ut mollis elit rutrum at. Sed tincidunt justo sed arcu dictum, eu ultrices est euismod. Aliquam massa turpis, ornare nec interdum in, congue sit amet libero./n/nSed sit amet volutpat tellus, pellentesque placerat enim. Praesent et velit maximus, mollis tellus sit amet, consequat enim."
+    },
+    {
+      "blockId": "ddf04b27-fc5f-4b5f-b735-2ff7b86d7407",
+      "type": "image",
+      "aspectRatio": "16:9",
+      "relPath":
+        "/cpsprodpb/DCBD/production/_101790565_gettyimages-924021296.jpg",
+      "copyrightHolder": "AFP",
+      "caption":
+        "Phasellus arcu mi, fermentum vehicula iaculis sed, pellentesque quis ex.",
+      "altText": "Aenean a velit at velit dignissim dapibus at in magna."
+    },
+    {
+      "blockId": "fb1bc2e0-4675-4454-b219-198c0881f71b",
+      "type": "paragraph",
+      "content":
+        "Nullam sagittis magna sit amet dui iaculis, nec volutpat quam laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    {
+      "blockId": "670598de-d126-406a-9000-dd49395cb420",
+      "type": "subheading",
+      "content": "Suspendisse sed felis porta, malesuada nisl quis"
+    },
+    {
+      "blockId": "921ef586-a59b-444d-9b56-f78f48570aa5",
+      "type": "paragraph",
+      "content":
+        "Sed maximus non elit ut imperdiet. Proin in interdum diam, id egestas arcu. Nulla fermentum efficitur libero sed mattis./n/nSed finibus laoreet felis. Nulla consequat in ligula sit amet vestibulum. Mauris maximus non leo eu facilisis. Etiam porta, nisl sed sagittis dignissim, ipsum nulla tristique urna, nec faucibus ipsum enim at massa."
+    },
+    {
+      "blockId": "4c963c62-5868-4a88-b801-6618860574d3",
+      "type": "image",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
+        "copyrightHolder": "EBU",
+        "caption":
+          "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
+        "altText": "Ut et porttitor tellus. Integer vitae sollicitudin ligula."
+      },
+      "guidance": null,
+      "caption": null,
+      "altText": "Proin non nisl sem.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p06702pc",
+      "duration": "PT3M00S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "blockId": "fde4f23e-40b6-448b-a1de-79b348f9ec13",
+      "type": "subheading",
+      "content":
+        "Pellentesque urna nunc, tincidunt ac nisi ut, iaculis imperdiet dui."
+    }
+  ]
+}
