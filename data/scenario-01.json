@@ -1,0 +1,27 @@
+{
+  "locatorId":  "c0000000001o",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "seoHeadline": null,
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [
+    {
+      "blockId": "0001",
+      "type": "headline",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "blockId": "0002",
+      "type": "text",
+      "content": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem."
+    }
+  ]
+}
