@@ -11,13 +11,13 @@
   "seoHeadline": "An SEO headline.",
   "tags": {
     "about": [
-      "https: //www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
-      "https: //www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id"
+      "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+      "http://www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id"
     ],
     "mentions": [
-      "http: //www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
-      "http: //www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
-      "http: //www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id"
+      "http://www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
+      "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+      "http://www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id"
     ]
   },
   "metaDescription":
