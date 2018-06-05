@@ -12,9 +12,13 @@
       "https: //www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
       "https: //www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id"
     ],
-    "mentions": null
+    "mentions": [
+      "http: //www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
+      "http: //www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+      "http: //www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id"
+    ]
   },
-  "metaDescription": null,
+  "metaDescription": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
   "blocks": [
     {
       "blockId": "0001",
@@ -62,7 +66,8 @@
     {
       "blockId": "0006",
       "type": "text",
-      "content": "Donec enim justo, lobortis ut tellus ut, venenatis pulvinar sem./n/nIn hac habitasse platea dictumst. Fusce libero purus, condimentum sit amet elit eget, fringilla egestas enim. Sed at tempus erat. Morbi a odio et quam iaculis pulvinar sit amet et odio./n/nDuis erat mauris, placerat posuere diam nec, ultricies mollis mauris./n/nFusce gravida, dui eget sodales tristique, orci tellus rhoncus diam, efficitur elementum augue velit a diam. " },
+      "content": "Donec enim justo, lobortis ut tellus ut, venenatis pulvinar sem./n/nIn hac habitasse platea dictumst. Fusce libero purus, condimentum sit amet elit eget, fringilla egestas enim. Sed at tempus erat. Morbi a odio et quam iaculis pulvinar sit amet et odio./n/nDuis erat mauris, placerat posuere diam nec, ultricies mollis mauris./n/nFusce gravida, dui eget sodales tristique, orci tellus rhoncus diam, efficitur elementum augue velit a diam."
+    },
     {
       "blockId": "0007",
       "type": "video",
@@ -118,12 +123,12 @@
     },
     {
       "blockId": "00014",
-      "type": "subheading",
+      "type": "text",
       "content": "Sed maximus non elit ut imperdiet. Proin in interdum diam, id egestas arcu. Nulla fermentum efficitur libero sed mattis./n/nSed finibus laoreet felis. Nulla consequat in ligula sit amet vestibulum. Mauris maximus non leo eu facilisis. Etiam porta, nisl sed sagittis dignissim, ipsum nulla tristique urna, nec faucibus ipsum enim at massa."
     },
     {
       "blockId": "00015",
-      "type": "subheading",
+      "type": "image",
       "holdingImage": {
         "aspectRatio": "16:9",
         "relPath": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
