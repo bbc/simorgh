@@ -1,11 +1,13 @@
 {
-  "locatorId":  "c0000000001o",
+  "locatorId": "c0000000001o",
   "passport": {
     "language": "en-gb",
     "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
     "articleType": "news",
     "genre": null
   },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
   "seoHeadline": null,
   "tags": {
     "about": null,
