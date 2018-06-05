@@ -17,5 +17,5 @@ const testElementTextValue = (testTitle, element, value) => {
 
 describe('Article', () => {
   testElementTextValue('renders the headline in an h1', 'h1', HEADLINE);
-  testElementTextValue('renders the title', 'h1', HEADLINE);
+  testElementTextValue('renders the title', 'title', HEADLINE);
 });
