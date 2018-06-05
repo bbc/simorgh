@@ -9,12 +9,13 @@ const expectElementTextToEqual = (element, value) => {
   expect(component.find(element).text()).toEqual(value);
 };
 
-describe('Article', () => {
-  it('renders the headline in an h1', () => {
-    expectElementTextToEqual('h1', HEADLINE);
+const testElementTextValue = (testTitle, element, value) => {
+  it(testTitle, () => {
+    expectElementTextToEqual(element, value);
   });
+};
 
-  it('renders the title', () => {
-    expectElementTextToEqual('title', HEADLINE);
-  });
+describe('Article', () => {
+  testElementTextValue('renders the headline in an h1', 'h1', HEADLINE);
+  testElementTextValue('renders the title', 'h1', HEADLINE);
 });
