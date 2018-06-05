@@ -1,0 +1,44 @@
+{
+  "locatorId":  "c0000000003o",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "seoHeadline": null,
+  "tags": {
+    "about": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id,
+              http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [
+    {
+      "blockId": "88d9b609-485d-445a-978a-daac762c4eda",
+      "type": "headline",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ©"
+    },
+    {
+      "blockId": "b0e4dd4a-aaf4-4208-bf1b-d2a172bc10c6",
+      "type": "video",
+      "content":  {
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+          "copyrightHolder": "Getty Images",
+          "caption": null,
+          "altText": "Pellentesque pellentesque sem magna."
+        },
+        "guidance": null,
+        "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+        "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p067gq6h",
+        "duration": "PT1M34S",
+        "allowOffsiteEmbedding": false
+      }
+    }
+  ]
+}

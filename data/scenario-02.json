@@ -1,0 +1,22 @@
+{
+  "locatorId":  "c0000000002o",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "seoHeadline": null,
+  "tags": {
+    "about": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [
+    {
+      "blockId": "0002",
+      "type": "headline",
+      "content": "Lorem ipsum dolor sit amet, consectetur _adipiscing_ elit"
+    }
+  ]
+}
