@@ -3,14 +3,14 @@ import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 
 class Document extends React.Component {
-  static defaultProps = {
-    data: {},
-  };
-
   static propTypes = {
     helmet: PropTypes.objectOf(PropTypes.any).isRequired,
     assets: PropTypes.objectOf(PropTypes.any).isRequired,
     data: PropTypes.objectOf(PropTypes.any),
+  };
+
+  static defaultProps = {
+    data: {},
   };
 
   static async getInitialProps({ assets, data, renderPage }) {
