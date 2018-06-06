@@ -11,5 +11,11 @@ describe('Static Articles data', () => {
         expect(body).to.be.an('object');
       });
     });
+
+    it('should contain a blocks object', () => {
+      cy.request('/data/scenario-01.json').then(({ body }) => {
+        expect(body).to.have.property('blocks');
+      });
+    });
   });
 });
