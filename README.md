@@ -18,6 +18,10 @@ To run this application locally, with hot-reloading, run: `npm run dev`.
 
 The application will start on [http://localhost:7080/](http://localhost:7080/). These is a single route, `/`.
 
+### Storybook (UI Development Environment/Style Guide)
+
+To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
+
 ## Production build
 
 To run this application locally with a production build, run:
@@ -42,5 +46,7 @@ We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running 
 1. `npm run dev` with the application,
 2. `npm run test:e2e` with the Cypress integration tests.
 
+Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`. 
+Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
