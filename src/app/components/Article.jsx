@@ -7,11 +7,16 @@ class Article extends Component {
     headline: 'Article Headline',
   };
 
-  static async getInitialProps() {
+  static async getInitialProps({ req }) {
+    const path = '/data/scenario-01.json';
+    let url = path;
+
+    if (req !== null) {
+      url = `http://localhost:7080${path}`;
+    }
+
     try {
-      const response = await fetch(
-        'http://localhost:7080/data/scenario-01.json',
-      );
+      const response = await fetch(url);
       const data = await response.json();
       return { data };
     } catch (error) {
