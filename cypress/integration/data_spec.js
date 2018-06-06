@@ -1,5 +1,5 @@
 describe('Static Articles data', () => {
-  it('should display 200/OK', () => {
+  it('should return a status code of 200', () => {
     cy.request('/data/scenario-01.json').then(({ status }) => {
       expect(status).to.eq(200);
     });
