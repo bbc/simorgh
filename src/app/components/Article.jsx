@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
+import fetch from 'isomorphic-fetch';
 
 class Article extends Component {
   state = {
@@ -8,8 +9,11 @@ class Article extends Component {
 
   static async getInitialProps() {
     try {
-      const response = await fetch('/data/scenario-01.json');
-      return { response };
+      const response = await fetch(
+        'http://localhost:7080/data/scenario-01.json',
+      );
+      const data = await response.json();
+      return { data };
     } catch (error) {
       console.log(error);
       return {};
