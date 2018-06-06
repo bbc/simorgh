@@ -5,13 +5,9 @@ describe('Static Articles data', () => {
     });
   };
 
-  testScenarioRequest(
-    'should return a status code of 200',
-    '01',
-    ({ status }) => {
-      expect(status).to.eq(200);
-    },
-  );
+  testScenarioRequest('should return a 200 status code', '01', ({ status }) => {
+    expect(status).to.eq(200);
+  });
 
   describe('Response Body', () => {
     testScenarioRequest('should be an object', '01', ({ body }) => {
