@@ -56,22 +56,7 @@ If you have a breaking change in a commit, prefix the commit message with `BREAK
 
 ### Run tests
 
-All pull requests with new features should add appropriate unit and integration tests.
+All pull requests need to have linting, unit tests and integration tests passing.  For new features, you should add appropriate tests in your PR.
 
-You can run linting with ESLint and Prettier and also Jest unit tests with this:
-
-```
-npm test
-```
-
-To run Cypress integration tests, in one terminal window run:
-
-```
-npm run dev
-```
-and in another window run:
-
-```
-npm run test:e2e
-```
+[Instructions for how to run tests are here in the Readme](https://github.com/bbc/simorgh/blob/latest/README.md#tests).
 
