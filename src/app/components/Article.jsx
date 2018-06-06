@@ -6,6 +6,16 @@ class Article extends Component {
     headline: 'Article Headline',
   };
 
+  static async getInitialProps() {
+    try {
+      const response = await fetch('/data/scenario-01.json');
+      return { response };
+    } catch (error) {
+      console.log(error);
+      return {};
+    }
+  }
+
   render() {
     const { headline } = this.state;
     return (
