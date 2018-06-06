@@ -18,7 +18,7 @@ class Document extends React.Component {
     const sheet = new ServerStyleSheet()
     const page = await renderPage(App => props => sheet.collectStyles(<App {...props} />))
     const styleTags = sheet.getStyleElement()
-    return { assets, data, ...page };
+    return { assets, data, ...page, styleTags };
   }
 
   render() {
