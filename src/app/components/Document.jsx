@@ -14,12 +14,14 @@ class Document extends React.Component {
   };
 
   static async getInitialProps({ assets, data, renderPage }) {
-    const page = await renderPage();
+    const sheet = new ServerStyleSheet()
+    const page = await renderPage(App => props => sheet.collectStyles(<App {...props} />))
+    const styleTags = sheet.getStyleElement()
     return { assets, data, ...page };
   }
 
   render() {
-    const { helmet, assets, data } = this.props;
+    const { helmet, assets, data, styleTags } = this.props;
     const htmlAttrs = helmet.htmlAttributes.toComponent();
 
     return (
@@ -29,6 +31,7 @@ class Document extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {helmet.title.toComponent()}
+          {styleTags}
         </head>
         <body>
           <AfterRoot />
