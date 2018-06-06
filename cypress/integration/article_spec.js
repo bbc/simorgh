@@ -1,3 +1,5 @@
+import {testRequestResponse} from './test-helper';
+
 describe('News Article', () => {
 
     beforeEach(() => {
@@ -14,10 +16,8 @@ describe('News Article', () => {
     })
 })
 
-describe('Renderer Status', () => {
+describe('Page Status', () => {
     it('should display 200/OK', () => {
-        cy.request('/status').then((response) => {
-            expect(response.status).to.eq(200)
-        })
+      testRequestResponse('/', 200)  
     })
 })

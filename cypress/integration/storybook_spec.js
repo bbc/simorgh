@@ -1,3 +1,5 @@
+import {testRequestResponse} from './test-helper';
+
 describe('Storybook Article ', () => {
 
     beforeEach(() => {
@@ -10,10 +12,8 @@ describe('Storybook Article ', () => {
     })
 })
 
-describe('Renderer Status', () => {
+describe('Page Status', () => {
     it('should display 200/OK', () => {
-        cy.request('/').then((response) => {
-            expect(response.status).to.eq(200)
-        })
+      testRequestResponse('/', 200)  
     })
 })
