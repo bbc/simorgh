@@ -37,4 +37,6 @@ To run linting and unit tests, run: `npm test`
 
 We use [Cypress](https://www.cypress.io/) for our E2E tests. For running the tests locally we need multiple terminals running, one with the server running `npm run dev` and then another to run the test suite `npm run test:e2e`.
 
+Tests can also be run in isloation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`. Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
+
 For a more detailed E2E testing experience Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a UI which easily allows for indivdual tests to be run and a visual stream of the browser while the tests run.
