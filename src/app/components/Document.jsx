@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import { ServerStyleSheet } from 'styled-components';
 
 class Document extends React.Component {
   static propTypes = {
