@@ -31,12 +31,22 @@ To run this application locally with a production build, run:
 
 ## Tests
 
-To run linting and unit tests, run: `npm test`
+### Linting and unit tests
 
-### End to end tests
+We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `npm run test:lint`.
 
-We use [Cypress](https://www.cypress.io/) for our E2E tests. For running the tests locally we need multiple terminals running, one with the server running `npm run dev` and then another to run the test suite `npm run test:e2e`.
+We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `npm run test:unit`.
 
-Tests can also be run in isloation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`. Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
+`npm test` runs both sets of these.
 
-For a more detailed E2E testing experience Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a UI which easily allows for indivdual tests to be run and a visual stream of the browser while the tests run.
+### End-to-end tests
+
+We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally we need two terminals running:
+
+1. `npm run dev` with the application,
+2. `npm run test:e2e` with the Cypress integration tests.
+
+Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`. 
+Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
+Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
+
