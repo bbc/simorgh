@@ -13,7 +13,7 @@
     "speculate": "speculate",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test:e2e": "npm run dev & npx cypress run && pkill -f node",
-    "test:e2e:interactive": "npx cypress open"
+    "test:e2e:interactive": "npm run dev & npx cypress open && pkill -f node"
   },
   "repository": {
     "type": "git",
