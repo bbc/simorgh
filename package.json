@@ -54,7 +54,8 @@
   "devDependencies": {
     "@storybook/react": "^4.0.0-alpha.8",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4"
+    "babel-loader": "^7.1.4",
+    "jest-fetch-mock": "^1.6.2"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -63,7 +64,8 @@
       "!./node_modules/**"
     ],
     "setupFiles": [
-      "./src/__test__/enzyme-setup.js"
+      "./src/__test__/enzyme-setup.js",
+      "./src/__test__/jest-setup.js"
     ]
   }
 }
