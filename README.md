@@ -42,7 +42,7 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 ### End-to-end tests
 
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests.
-`npm run test:e2e` This will run the application and the Cypress tests. After tests are run, it will stop all Razzle processes (we use Razzle for our application).
+`npm run test:e2e` This will run the production build of the application and the Cypress tests.
 
 Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`.
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html

@@ -12,8 +12,8 @@
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test:e2e": "npm run dev & npx cypress run && pkill -f razzle",
-    "test:e2e:interactive": "npm run dev & npx cypress open && pkill -f razzle"
+    "test:e2e": "npm run build && npm run start & npx cypress run",
+    "test:e2e:interactive": "npm run build && npm run start & npx cypress open"
   },
   "repository": {
     "type": "git",
