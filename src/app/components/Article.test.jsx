@@ -27,10 +27,10 @@ describe('Article', () => {
   });
 
   describe('getInitialProps', () => {
-    const mockResponse = { data: '12345' };
+    const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () => {
-      return fetch.mockResponseOnce(JSON.stringify(mockResponse));
+      return fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
     };
 
     const mockFetchFailure = () => {
@@ -52,7 +52,7 @@ describe('Article', () => {
 
     testWrapper('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual({ data: mockResponse });
+      expect(response).toEqual({ data: mockSuccessfulResponse });
     });
 
     describe('On client', () => {
