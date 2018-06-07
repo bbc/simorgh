@@ -1,0 +1,42 @@
+{
+  "locatorId": "c0000000007o",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "opinion",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": ["http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+      "http://www.bbc.co.uk/things/b60cc878-3998-474a-9db8-939e097b1341#id",
+      "http://www.bbc.co.uk/things/5801200d-8765-4cc6-a002-6541b6921f04#id",
+      "http://www.bbc.co.uk/things/e80a8d15-0987-45a9-8152-097f23ce29e1#id"
+    ],
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "d5569d0a-0d46-41d9-ac4c-5b90dd1f4c60",
+    "type": "paragraph",
+    "content": "Nam accumsan nisl est, non vehicula nulla bibendum vitae. Aliquam erat volutpat. Cras volutpat egestas lacus, a gravida sem condimentum sit amet. Integer luctus ac lacus in hendrerit. Donec congue ornare sagittis."
+  }, {
+    "blockId": "60b08878-84ef-47ae-bca2-9a55d247d8dc",
+    "type": "headline",
+    "content": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc"
+  }, {
+    "blockId": "64c1383b-a0fb-4434-97ce-92b909182253",
+    "type": "paragraph",
+    "content": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis./n/nQuisque quis libero bibendum, feugiat felis ut, dignissim tortor. Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum."
+  }, {
+    "blockId": "22e5a292-3897-4859-a5ae-21ae0ad40606",
+    "type": "subheading",
+    "content": "Morbi malesuada lacus at nibh vestibulum"
+  }, {
+    "blockId": "3bf2ed43-0a72-4821-a118-f5f3a43ac855",
+    "type": "paragraph",
+    "content": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. *Cras porttitor dictum tellus*, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+  }]
+}

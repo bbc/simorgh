@@ -1,0 +1,104 @@
+{
+  "locatorId": "c000000000po",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": "Meghan's bouquet laid on tomb of unknown warrior",
+  "tags": {
+    "about": ["http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
+      "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+      "http://www.bbc.co.uk/things/e248c597-4f16-40f9-8313-678e7e911891#id"
+    ],
+    "mentions": ["http://www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
+      "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+      "http://www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id"
+    ]
+  },
+  "metaDescription": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
+  "blocks": [{
+    "blockId": "1fd4742e-fae9-4c7f-b1e7-c32cfc8b22a7",
+    "type": "headline",
+    "content": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior"
+  }, {
+    "blockId": "f8426cf2-e437-400c-b1e5-6d78a0bcc5c1",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg",
+    "copyrightHolder": "PA",
+    "caption": null,
+    "altText": "Duchess of Sussex's bouquet on the tomb of the unknown warrior"
+  }, {
+    "blockId": "f42687bc-7003-46f3-861f-3080ea2c5c45",
+    "type": "paragraph",
+    "content": "The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey./n/nThe royal tradition, started by the Queen Mother, usually takes place the day after the wedding./n/nMeghan paid tribute to Prince Harry's mother, Princess Diana, at their wedding by including forget-me-nots, her favourite flowers, in the bouquet./n/nIt also contained flowers handpicked by the prince at Kensington Palace./n/nIt was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [/news/articles/c000000000ro](which were later donated to local hospices)."
+  }, {
+    "blockId": "1bf2ebef-e3f1-4776-b360-7b5a1e96e9c9",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
+    "copyrightHolder": "PA",
+    "caption": null,
+    "altText": "Prince Harry and Meghan Markle leave St George's Chapel though a gateway of flowers."
+  }, {
+    "blockId": "b8fe8f38-6b3f-45ac-890b-759e0aecb893",
+    "type": "subheading",
+    "content": "Queen Victoria's myrtle"
+  }, {
+    "blockId": "b847a78d-0fbc-45d1-9fc8-60f59dd90e3a",
+    "type": "paragraph",
+    "content": "Myrtle sprigs from stems planted by Queen Victoria at Osborne House, on the Isle of Wight, in 1845 were included, as well as sprigs taken from a plant grown from the myrtle used in the Queen's wedding bouquet in 1947./n/nThe plant became a family favourite after Queen Victoria was given myrtle by Prince Albert's grandmother during a visit to Gotha in Germany./n/nLater that year, the couple bought Osborne House as a family retreat and they planted the sprig against the terrace walls, where it continues to bloom./n/nIt then became tradition for royal brides to carry the plant after Queen Victoria's eldest daughter, Princess Victoria, used it in her bouquet in 1858 - including the Duchess of Cambridge and Princess Diana."
+  }, {
+    "blockId": "a1e65126-7fe5-4282-9ab7-3dde92f21679",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
+    "copyrightHolder": "AFP/Getty Images",
+    "caption": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
+    "altText": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)"
+  }, {
+    "blockId": "d72895b6-b33a-4e1f-b1c6-8c1e37113cd2",
+    "type": "paragraph",
+    "content": "The petite bouquet carried by Meghan also contained scented sweet peas, lily of the valley, astilbe, jasmine and astrantia./n/nLily of the valley - the birth flower for May - is said to represent love and appreciation, the astilbe is said to symbolise patience and dedication, and astrantia means strength and courage./n/nThe flowers were then bound with a naturally dyed, raw silk ribbon."
+  }, {
+    "blockId": "098a7015-0197-4225-ad86-b1e7a26db43c",
+    "type": "subheading",
+    "content": "The origins of the tradition"
+  }, {
+    "blockId": "df5cb269-aa47-499a-9270-73e5525fdfd1",
+    "type": "paragraph",
+    "content": "The Queen Mother began the tradition of leaving the flowers on the grave in Westminster Abbey in 1923 after her wedding to the Duke of York - who later became King George VI."
+  }, {
+    "blockId": "00a4767c-efe0-45c4-9fc1-29eb8725f5e6",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
+    "copyrightHolder": "Getty Images",
+    "caption": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
+    "altText": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923"
+  }, {
+    "blockId": "5e38efd3-5c80-4451-8e72-22f34cad642e",
+    "type": "paragraph",
+    "content": "She is said to have left the flowers there in tribute to her brother Fergus, who was killed in 1915 during World War One./n/nThe Duchess of Cambridge also followed the tradition by having her bouquet left on the grave in 2011."
+  }, {
+    "blockId": "ca761723-8b9d-4a9b-9fae-4e00bdf1dae2",
+    "type": "subheading",
+    "content": "What is the tomb of the unknown warrior?"
+  }, {
+    "blockId": "4f0b0cbc-c903-4839-bea7-819d51d79495",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
+    "copyrightHolder": "BBC",
+    "caption": null,
+    "altText": "Tomb of the unknown warrior"
+  }, {
+    "blockId": "1086c51b-f2f1-47ec-bc22-e0457f3d4642",
+    "type": "paragraph",
+    "content": "The grave - which is at the west of the Nave of the Abbey - contains the body of a soldier brought back from France after World War One./n/nHe was buried on Remembrance Day, 11 November, in 1920, along with soil from the country./n/nThe idea is thought to have come from a chaplain, the Reverend David Railton, who served at the front during the war, after he saw a grave in a back garden in France with the words \"an unknown British soldier\" pencilled on./n/nA large public ceremony took place for the burial, which included King George V laying a wreath of red roses and bay leaves on the coffin./n/nThe grave is covered by a slab of black Belgian marble and contains a long inscription, including the words: \"They buried him among the kings because he had done good toward God and toward his house.\""
+  }]
+}

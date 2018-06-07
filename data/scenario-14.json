@@ -1,0 +1,62 @@
+{
+  "locatorId": "c000000000eo",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": "politics"
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": ["http://www.bbc.co.uk/things/7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376#id"],
+    "mentions": null
+  },
+  "metaDescription": "The UK steps up its war of words with the EU over being shut out of new satellite navigation system.",
+  "blocks": [{
+    "blockId": "8c2ba478-723a-420d-8680-036a9e353fac",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+    "copyrightHolder": "ESA",
+    "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+    "altText": "Galileo"
+  }, {
+    "blockId": "304bdd68-b564-441a-b127-dc30fea49781",
+    "type": "paragraph",
+    "content": "David Davis's Brexit department will also warn the scheme could cost the EU an extra €1bn (£876m) without the UK's continued involvement. /n/n /n/n The row could harm wider post-Brexit security co-operation, it will say in a paper to be published later."
+  }, {
+    "blockId": "97d3f8d8-be5c-4aed-a87c-5afa472a5e09",
+    "type": "headline",
+    "content": "Brexit: UK to demand EU pays back £1bn in Galileo costs"
+  }, {
+    "blockId": "9f4f70af-112f-4002-a880-d56a69427826",
+    "type": "subheading",
+    "content": "The UK wants the EU to repay £1bn if it is excluded from the Galileo satellite navigation system after Brexit."
+  }, {
+    "blockId": "0bfeebf6-6a93-470a-95e6-9f51b39208a1",
+    "type": "paragraph",
+    "content": "UK ministers are angry about the EU's decision to limit access to Galileo, an alternative to the US GPS system."
+  }, {
+    "blockId": "65372fd8-0261-4553-8ff2-35858a0370fe",
+    "type": "paragraph",
+    "content": "The UK played a major role in developing satellites for Galileo, which is expected to be fully operational in 2026."
+  }, {
+    "blockId": "ba6c6ecc-9c08-4db8-a4a1-838d61abcad3",
+    "type": "paragraph",
+    "content": "But Brussels has cited legal issues about sharing sensitive information with a non-member state for its decision to shut British firms out of the project. /n/n Brussels has also said it will restrict access to encrypted signals from Galileo, prompting the UK government to threaten to build its own satellite navigation system."
+  }, {
+    "blockId": "583f3e6e-2663-45c6-bb4a-eadb997e8e6d",
+    "type": "subheading",
+    "content": "It will not be straightforward to effectively fulfil all Galileo security work elsewhere"
+  }, {
+    "blockId": "2e51abfa-81b6-4de5-9b43-b73864323076",
+    "type": "subheading",
+    "content": "Brexit customs plan 'could cost £20bn"
+  }, {
+    "blockId": "1d449d81-030c-45f7-a008-cd19e9b1b777",
+    "type": "paragraph",
+    "content": "The UK government has also threatened to block Galileo satellites from using ground tracking stations in British overseas territories such as the Falklands.[UK ups the ante on _Galileo project_](http://www.bbc.co.uk/news/science-environment-44116085).The European Commission says the UK will have to apply to use the Public Regulated Service (PRS), a key element of the Galileo system, like any other non-EU country after its March 2019 departure."
+  }]
+}

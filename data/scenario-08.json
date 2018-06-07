@@ -1,0 +1,60 @@
+{
+  "locatorId": "c0000000008o",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "opinion",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": ["http://www.bbc.co.uk/things/fbb858f6-5eb5-4ffc-be8c-06ee49179aa9#id",
+      "http://www.bbc.co.uk/things/2aa1610b-9675-4a15-981b-e239e99ac223#id",
+      "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",  
+      "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
+      "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
+      "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
+      "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id"
+    ],
+    "mentions": ["http://www.bbc.co.uk/things/2daa28ee-c47e-4214-b97d-08ecc8881d98#id",
+      "http://www.bbc.co.uk/things/7a50cd42-14a5-4b12-8952-a72e867fb1cc#id",
+      "http://www.bbc.co.uk/things/f8cf6f0a-64b2-490f-a2ad-1f0f15df454d#id"
+    ]
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "263e730e-1d9d-48ee-aa56-505771c78450",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+    "copyrightHolder": "ESA",
+    "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+    "altText": "Galileo."
+  }, {
+    "blockId": "4243856b-a493-4b2e-960e-46777f0d46a0",
+    "type": "headline",
+    "content": "GDPR: 'Don't panic!' data watchdog tells firms"
+  }, {
+    "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
+    "type": "subheading",
+    "content": "What is GDPR?"
+  }, {
+    "blockId": "ab0a0ffb-8abe-4836-9a60-4cecc526f76d",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+    "copyrightHolder": "Getty Images",
+    "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis.",
+    "altText": "Fusce tincidunt lectus eget augue mollis."
+  }, {
+    "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
+    "type": "subheading",
+    "content": "What is GDPR?"
+  }, {
+    "blockId": "e1e101f1-3cca-4b32-b3ae-4ac2f323b940",
+    "type": "paragraph",
+    "content": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. **Cras porttitor dictum tellus**, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+  }]
+}

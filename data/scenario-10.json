@@ -1,0 +1,41 @@
+{
+  "locatorId": "c000000000ao",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": ["http://www.bbc.co.uk/things/05eb986d-6c0b-42c9-8b2b-5aedd2cbd739#id",
+      "http://www.bbc.co.uk/things/0ade3653-e18b-400b-a487-197af9588e1d#id",
+      "http://www.bbc.co.uk/things/16c0db56-63ce-4603-8d46-25a90c4162e4#id",
+      "http://www.bbc.co.uk/things/1bb8573b-fbf1-42c7-8c4a-95baed384de5#id",
+      "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+      "http://www.bbc.co.uk/things/2cadb94f-1d71-4d7f-be16-006677bcc467#id",
+      "http://www.bbc.co.uk/things/97b1cae0-16a8-49f8-bbe1-605669ea745e#id"
+    ],
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "d6d376fc-e9c9-4b6c-8dc4-17334ba54c54",
+    "type": "subheading",
+    "content": "What is GDPR?"
+  }, {
+    "blockId": "482429bb-88a7-4dc0-bbb9-506fa9b74056",
+    "type": "headline",
+    "content": "GDPR: 'Don't panic!' data watchdog tells firms"
+  }, {
+    "blockId": "a705bbde-5200-4569-acda-b39c01d7da80",
+    "type": "paragraph",
+    "content": "The penalties for wrongdoing could be quite hefty, especially for big companies. The new rules give the Information Commissioner's Office (ICO) powers to fine firms up to €20m (£17.5m) or 4% of global annual turnover for serious breaches./n/nMany smaller firms may not be prepared for the regulations coming into force, business body the Federation of Small Businesses (FSB) says. \"GDPR is here and the likelihood is that many of the UK's 5.7 million smaller businesses will not be compliant,\" chairman Mike Cherry said. \n\nHe says the \"burden and scale\" of the reforms have proven too much to handle for some."
+  }, {
+    "blockId": "a9d6e19b-e4a1-44d3-a25d-6470598fd5a6",
+    "type": "subheading",
+    "content": "What does the watchdog say?."
+  }]
+}
