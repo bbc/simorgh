@@ -27,14 +27,21 @@ describe('Article', () => {
   });
 
   describe('getInitialProps', () => {
+    const mockResponse = { data: '12345' };
+
     const callGetInitialProps = async context => {
-      fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
+      fetch.mockResponseOnce(JSON.stringify(mockResponse));
       const response = await Article.getInitialProps(context);
       return response;
     };
 
     beforeEach(() => {
       fetch.resetMocks();
+    });
+
+    testWrapper('should return the fetch response', async () => {
+      const response = await callGetInitialProps();
+      expect(response).toEqual({ data: mockResponse });
     });
 
     describe('On client', () => {
