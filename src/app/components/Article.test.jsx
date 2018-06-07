@@ -33,6 +33,10 @@ describe('Article', () => {
       return fetch.mockResponseOnce(JSON.stringify(mockResponse));
     };
 
+    const mockFetchFailure = () => {
+      return fetch.mockReject(JSON.stringify({ error: true }));
+    };
+
     const callGetInitialProps = async (
       context,
       mockFetch = mockFetchSuccess,
@@ -72,6 +76,13 @@ describe('Article', () => {
           );
         },
       );
+    });
+
+    describe('Rejected fetch', () => {
+      testWrapper('should return an empty object', async () => {
+        const response = await callGetInitialProps({}, mockFetchFailure);
+        expect(response).toEqual({});
+      });
     });
   });
 });
