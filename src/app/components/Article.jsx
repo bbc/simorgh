@@ -7,7 +7,7 @@ class Article extends Component {
     headline: 'Article Headline',
   };
 
-  static async getInitialProps({ req }) {
+  static async getInitialProps({ req } = {}) {
     let url = '/data/scenario-01.json';
 
     if (req) {
