@@ -3,12 +3,6 @@ import { shallow } from 'enzyme';
 import Article from './Article';
 
 describe('Article', () => {
-  const testWrapper = (testTitle, testAssertion) => {
-    it(testTitle, async () => {
-      testAssertion();
-    });
-  };
-
   describe('Component', () => {
     const HEADLINE = 'Article Headline';
 
@@ -17,11 +11,11 @@ describe('Article', () => {
       expect(component.find(element).text()).toEqual(value);
     };
 
-    testWrapper('renders the headline in an h1', () => {
+    it('renders the headline in an h1', () => {
       expectElementTextToEqual('h1', HEADLINE);
     });
 
-    testWrapper('renders the title', () => {
+    it('renders the title', () => {
       expectElementTextToEqual('title', HEADLINE);
     });
   });
@@ -48,13 +42,13 @@ describe('Article', () => {
       fetch.resetMocks();
     });
 
-    testWrapper('should return the fetch response', async () => {
+    it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
       expect(response).toEqual({ data: mockSuccessfulResponse });
     });
 
     describe('On client', () => {
-      testWrapper('should call fetch with a relative URL', () => {
+      it('should call fetch with a relative URL', () => {
         callGetInitialProps();
         expect(fetch.mock.calls[0][0]).toEqual('/data/scenario-01.json');
       });
@@ -65,19 +59,16 @@ describe('Article', () => {
       const context = { req: { exists: true } };
       process.env.BASE_PATH = BASE_PATH;
 
-      testWrapper(
-        'should call fetch with an absolute URL using BASE_PATH environment variable',
-        () => {
-          callGetInitialProps(context);
-          expect(fetch.mock.calls[0][0]).toEqual(
-            `${BASE_PATH}/data/scenario-01.json`,
-          );
-        },
-      );
+      it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
+        callGetInitialProps(context);
+        expect(fetch.mock.calls[0][0]).toEqual(
+          `${BASE_PATH}/data/scenario-01.json`,
+        );
+      });
     });
 
     describe('Rejected fetch', () => {
-      testWrapper('should return an empty object', async () => {
+      it('should return an empty object', async () => {
         const response = await callGetInitialProps({}, mockFetchFailure);
         expect(response).toEqual({});
       });
