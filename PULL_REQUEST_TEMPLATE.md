@@ -1,9 +1,6 @@
-JIRA: https://jira.dev.bbc.co.uk/browse/YOUR-TICKET
-
 _PR changes summary to go here._
 
-* [ ] JIRA ticket added
-* [ ] Pull request URL added to JIRA ticket
+* [ ] Issue linked https://github.com/bbc/simorgh/issues/NUMBER
 * [ ] Up-to-date with latest - `git pull --rebase origin latest`
 * [ ] Runs locally - `npm run dev` & [http://localhost:7080/](http://localhost:7080/)
 * [ ] Tests added for new features
