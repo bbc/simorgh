@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
-import fetch from 'isomorphic-fetch';
+import 'isomorphic-fetch';
 
 class Article extends Component {
   state = {
