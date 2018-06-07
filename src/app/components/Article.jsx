@@ -1,6 +1,14 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
+import styled from 'styled-components';
+
+const Headline = styled.h1`
+  color: #bb1919;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 4em;
+`;
 
 class Article extends Component {
   state = {
@@ -31,7 +39,7 @@ class Article extends Component {
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
-        <h1>{headline}</h1>
+        <Headline>{headline}</Headline>
       </Fragment>
     );
   }
