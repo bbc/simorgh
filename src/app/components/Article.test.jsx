@@ -45,13 +45,19 @@ describe('Article', () => {
     });
 
     describe('On Server', () => {
+      const BASE_PATH = 'https://test.com';
       const context = { req: { exists: true } };
-      testWrapper('should call fetch with an absolute URL', () => {
-        callGetInitialProps(context);
-        expect(fetch.mock.calls[0][0]).toEqual(
-          'http://localhost:7080/data/scenario-01.json',
-        );
-      });
+      process.env.BASE_PATH = BASE_PATH;
+
+      testWrapper(
+        'should call fetch with an absolute URL using BASE_PATH environment variable',
+        () => {
+          callGetInitialProps(context);
+          expect(fetch.mock.calls[0][0]).toEqual(
+            `${BASE_PATH}/data/scenario-01.json`,
+          );
+        },
+      );
     });
   });
 });
