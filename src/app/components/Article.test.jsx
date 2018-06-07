@@ -57,7 +57,7 @@ describe('Article', () => {
     describe('On Server', () => {
       const BASE_PATH = 'https://test.com';
       const context = { req: { exists: true } };
-      process.env.BASE_PATH = BASE_PATH;
+      process.env.RAZZLE_BASE_PATH = BASE_PATH;
 
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
         callGetInitialProps(context);
