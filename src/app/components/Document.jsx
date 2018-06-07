@@ -8,16 +8,20 @@ class Document extends React.Component {
     helmet: PropTypes.objectOf(PropTypes.any).isRequired,
     assets: PropTypes.objectOf(PropTypes.any).isRequired,
     data: PropTypes.objectOf(PropTypes.any),
+    styleTags: PropTypes.arrayOf(React.Component),
   };
 
   static defaultProps = {
     data: {},
+    styleTags: [],
   };
 
   static async getInitialProps({ assets, data, renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = await renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
+    const sheet = new ServerStyleSheet();
+    const page = await renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />),
+    );
+    const styleTags = sheet.getStyleElement();
     return { assets, data, ...page, styleTags };
   }
 
