@@ -12,7 +12,7 @@ class Article extends Component {
     let url = path;
 
     if (req !== null) {
-      url = `http://localhost:7080${path}`;
+      url = `${process.env.BASE_PATH}${path}`;
     }
 
     try {
