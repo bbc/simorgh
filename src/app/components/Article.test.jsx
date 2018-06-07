@@ -29,8 +29,15 @@ describe('Article', () => {
   describe('getInitialProps', () => {
     const mockResponse = { data: '12345' };
 
-    const callGetInitialProps = async context => {
-      fetch.mockResponseOnce(JSON.stringify(mockResponse));
+    const mockFetchSuccess = () => {
+      return fetch.mockResponseOnce(JSON.stringify(mockResponse));
+    };
+
+    const callGetInitialProps = async (
+      context,
+      mockFetch = mockFetchSuccess,
+    ) => {
+      mockFetch();
       const response = await Article.getInitialProps(context);
       return response;
     };
