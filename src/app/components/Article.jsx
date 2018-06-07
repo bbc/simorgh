@@ -8,14 +8,13 @@ class Article extends Component {
   };
 
   static async getInitialProps(context) {
-    const path = '/data/scenario-01.json';
-    let url = path;
+    let url = '/data/scenario-01.json';
 
     if (
       typeof context !== 'undefined' &&
       Object.prototype.hasOwnProperty.call(context, 'req')
     ) {
-      url = `${process.env.BASE_PATH}${path}`;
+      url = `${process.env.BASE_PATH}${url}`;
     }
 
     try {
