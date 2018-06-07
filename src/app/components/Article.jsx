@@ -23,7 +23,7 @@ class Article extends Component {
       const data = await response.json();
       return { data };
     } catch (error) {
-      console.log(error);
+      console.log(error); // eslint-disable-line no-console
       return {};
     }
   }

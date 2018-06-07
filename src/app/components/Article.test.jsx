@@ -29,13 +29,11 @@ describe('Article', () => {
   describe('getInitialProps', () => {
     const mockSuccessfulResponse = { data: '12345' };
 
-    const mockFetchSuccess = () => {
-      return fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
-    };
+    const mockFetchSuccess = () =>
+      fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
 
-    const mockFetchFailure = () => {
-      return fetch.mockReject(JSON.stringify({ error: true }));
-    };
+    const mockFetchFailure = () =>
+      fetch.mockReject(JSON.stringify({ error: true }));
 
     const callGetInitialProps = async (
       context,
