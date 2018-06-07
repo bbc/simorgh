@@ -7,11 +7,14 @@ class Article extends Component {
     headline: 'Article Headline',
   };
 
-  static async getInitialProps({ req }) {
+  static async getInitialProps(context) {
     const path = '/data/scenario-01.json';
     let url = path;
 
-    if (req !== null) {
+    if (
+      typeof context !== 'undefined' &&
+      Object.prototype.hasOwnProperty.call(context, 'req')
+    ) {
       url = `${process.env.BASE_PATH}${path}`;
     }
 
