@@ -11,7 +11,7 @@ class Article extends Component {
     let url = '/data/scenario-01.json';
 
     if (req) {
-      url = `${process.env.BASE_PATH}${url}`;
+      url = `${process.env.RAZZLE_BASE_PATH}${url}`;
     }
 
     try {
