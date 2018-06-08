@@ -41,7 +41,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
-    "prettier": "1.13.4",
+    "prettier": "1.13.5",
     "prop-types": "^15.6.1",
     "razzle": "^2.0.3",
     "react": "^16.3.2",
