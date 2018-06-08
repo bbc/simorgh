@@ -1,0 +1,90 @@
+{
+  "locatorId": "c000000000mo",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "334bcb1d-03ee-4bee-b838-b105c0189f9b",
+    "type": "paragraph",
+    "content": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+  }, {
+    "blockId": "7b3df064-7025-45aa-9e7f-593991bdfd79",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+    "copyrightHolder": "BBC",
+    "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+    "altText": "Integer varius eleifend ligula id semper."
+  }, {
+    "blockId": "1505dc33-4fc6-4b37-848f-af287e56fcae",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+    "copyrightHolder": "BBC",
+    "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+    "altText": "Integer varius eleifend ligula id semper."
+  }, {
+    "blockId": "f85205c8-1c69-45ed-9c25-0611c53fda16",
+    "type": "paragraph",
+    "content": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+  }, {
+    "blockId": "f3c43c8c-043f-42a3-97a1-77deaaf20789",
+    "type": "paragraph",
+    "content": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+  }, {
+    "blockId": "d7e4ef35-d9a8-45fd-a75c-a55d307e208c",
+    "type": "video",
+    "holdingImage": {
+      "aspectRatio": "16:9",
+      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+      "copyrightHolder": "NASA",
+      "caption": null,
+      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+    },
+    "guidance": null,
+    "caption": "Retail giant to close down 100 stores",
+    "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+    "mediaType": "video",
+    "isLive": false,
+    "externalId": "p064nsyw",
+    "duration": "PT2H34M25S",
+    "allowOffsiteEmbedding": false
+  }, {
+    "blockId": "9e6f0289-18fe-4b03-8c3e-263d834a148e",
+    "type": "video",
+    "holdingImage": {
+      "aspectRatio": "16:9",
+      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+      "copyrightHolder": "NASA",
+      "caption": null,
+      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+    },
+    "guidance": null,
+    "caption": "Retail giant to close down 100 stores",
+    "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+    "mediaType": "video",
+    "isLive": false,
+    "externalId": "p064nsyw",
+    "duration": "PT2H34M25S",
+    "allowOffsiteEmbedding": false
+  }, {
+    "blockId": "e93e39f9-d847-434b-ad85-7ef0b5987051",
+    "type": "headline",
+    "content": "Morbi malesuada lacus at nibh vestibulum"
+  }, {
+    "blockId": "3c8f44e8-2158-452c-b0f3-6edd0e9d2c8e",
+    "type": "paragraph",
+    "content": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+  }]
+}
