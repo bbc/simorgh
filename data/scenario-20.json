@@ -14,17 +14,20 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [{
-    "blockId": "714d27bb-49d8-4890-b101-f19e3b1df41a",
-    "type": "headline",
-    "content": "Duis ut tincidunt arcu"
-  }, {
-    "blockId": "4b191ed1-8f60-4a01-917a-b91d1bd4312f",
-    "type": "image",
-    "aspectRatio": "16:9",
-    "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-    "copyrightHolder": "Getty Images",
-    "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
-    "altText": "Fusce tincidunt lectus eget augue mollis."
-  }]
+  "blocks": [
+    {
+      "blockId": "714d27bb-49d8-4890-b101-f19e3b1df41a",
+      "type": "headline",
+      "content": "Duis ut tincidunt arcu"
+    },
+    {
+      "blockId": "4b191ed1-8f60-4a01-917a-b91d1bd4312f",
+      "type": "image",
+      "aspectRatio": "16:9",
+      "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+      "copyrightHolder": "Getty Images",
+      "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+      "altText": "Fusce tincidunt lectus eget augue mollis."
+    }
+  ]
 }

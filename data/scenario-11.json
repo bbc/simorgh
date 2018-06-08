@@ -10,7 +10,9 @@
   "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
   "seoHeadline": null,
   "tags": {
-    "about": ["http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id", "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
+    "about": [
+      "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
+      "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
       "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
       "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
       "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id",
@@ -23,11 +25,19 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [{
+  "blocks": [
+    {
+      "type": "text",
       "blockId": "86bb0b0f-f265-4bce-b89c-8c590a283a1a",
-      "type": "paragraph",
-      "content": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future."
-    }, {
+      "blocks": [
+        {
+          "blockId": "a39cecf2-153a-eaa1-2ff4-358d3ac35912",
+          "type": "paragraph",
+          "content": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future."
+        }
+      ]
+    },
+    {
       "blockId": "d8a16c7b-d162-4cc4-b885-12c5570c3e93",
       "type": "image",
       "aspectRatio": "16:9",
@@ -35,28 +45,55 @@
       "copyrightHolder": "ESA",
       "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
       "altText": "Galileo"
-    }, {
+    },
+    {
       "blockId": "70d7df75-ca90-40f7-addf-fe6e0646cf7b",
       "type": "headline",
       "content": "GDPR: 'Don't panic!' data watchdog tells firms"
-    }, {
-      "blockId": "32a2afb9-958d-4c16-9138-4947c2ca9476",
-      "type": "paragraph",
-      "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
-    }, {
-      "blockId": "a43fdfcf-5992-44cb-9b0f-e1d55a90a34f",
-      "type": "paragraph",
-      "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus.)"
-    }, {
-      "blockId": "6ec8b669-bb52-4b4e-9fb8-f94303d1d5ed",
-      "type": "paragraph",
-      "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur"
     },
     {
+      "type": "text",
+      "blockId": "32a2afb9-958d-4c16-9138-4947c2ca9476",
+      "blocks": [
+        {
+          "blockId": "737be311-8920-11e7-1ce5-b58c0ec55936",
+          "type": "paragraph",
+          "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "blockId": "a43fdfcf-5992-44cb-9b0f-e1d55a90a34f",
+      "blocks": [
+        {
+          "blockId": "04e41d54-35cb-32c1-03f6-91336faf64d4",
+          "type": "paragraph",
+          "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus.)"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "blockId": "6ec8b669-bb52-4b4e-9fb8-f94303d1d5ed",
+      "blocks": [
+        {
+          "blockId": "f5673fc7-fc6d-92d7-c2b6-7b8bb6c0d057",
+          "type": "paragraph",
+          "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur"
+        }
+      ]
+    },
+    {
+      "type": "text",
       "blockId": "8b69faf4-2a99-432a-b77f-fbb565ac5249",
-      "type": "paragraph",
-      "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
-
+      "blocks": [
+        {
+          "blockId": "f2b9d1d5-086b-c182-efa7-467d44c4e90e",
+          "type": "paragraph",
+          "content": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
+        }
+      ]
     }
   ]
 }

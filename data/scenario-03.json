@@ -10,37 +10,58 @@
   "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
   "seoHeadline": null,
   "tags": {
-    "about": ["http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
+    "about": [
+      "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
       "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id"
     ],
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [{
-    "blockId": "d043f630-4e0c-4dc2-96ab-f61191c63e23",
-    "type": "headline",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ©"
-  }, {
-    "blockId": "5d775199-505a-4438-ac30-4bb5adaabb05",
-    "type": "video",
-    "holdingImage": {
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
-      "copyrightHolder": "Getty Images",
-      "caption": null,
-      "altText": "Pellentesque pellentesque sem magna."
+  "blocks": [
+    {
+      "blockId": "d043f630-4e0c-4dc2-96ab-f61191c63e23",
+      "type": "headline",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ©"
     },
-    "guidance": null,
-    "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-    "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p067gq6h",
-    "duration": "PT1M34S",
-    "allowOffsiteEmbedding": false
-  }, {
-    "blockId": "ebf667b2-5835-441d-8cf2-fe6e56513f56",
-    "type": "paragraph",
-    "content": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.\n\nQuisque quis libero H<sub>2</sub>O bibendum, feugiat felis ut, dignissim tortor.\n\nMauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum."
-  }]
+    {
+      "blockId": "5d775199-505a-4438-ac30-4bb5adaabb05",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+        "copyrightHolder": "Getty Images",
+        "caption": null,
+        "altText": "Pellentesque pellentesque sem magna."
+      },
+      "guidance": null,
+      "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+      "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p067gq6h",
+      "duration": "PT1M34S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "type": "text",
+      "blockId": "ebf667b2-5835-441d-8cf2-fe6e56513f56",
+      "blocks": [
+        {
+          "blockId": "fdaf9a0e-64ee-09c0-df1a-2544c85dd4d1",
+          "type": "paragraph",
+          "content": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis."
+        },
+        {
+          "blockId": "c065122d-e01e-03b6-8bce-fd11ec4f75d7",
+          "type": "paragraph",
+          "content": "Quisque quis libero H<sub>2</sub>O bibendum, feugiat felis ut, dignissim tortor."
+        },
+        {
+          "blockId": "dbb3e07d-98c1-be5b-66b5-eeb07440a795",
+          "type": "paragraph",
+          "content": "Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum."
+        }
+      ]
+    }
+  ]
 }

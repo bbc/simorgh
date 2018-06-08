@@ -10,117 +10,133 @@
   "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
   "seoHeadline": null,
   "tags": {
-    "about": ["http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+    "about": [
+      "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
       "http://www.bbc.co.uk/things/f314d54b-01c4-496f-a137-972185085d88#id"
     ],
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [{
-    "blockId": "33f9d813-0714-4394-b882-8069f72a72a8",
-    "type": "paragraph",
-    "content": "Nulla ut eleifend massa. Vestibulum ac magna porttitor tortor viverra bibendum non ut lacus. Fusce convallis interdum congue. Fusce nec rutrum ipsum, vel rutrum diam."
-  }, {
-    "blockId": "0240a049-3e77-4d2b-983d-714daffbfa20",
-    "type": "image",
-    "aspectRatio": "16:9",
-    "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-    "copyrightHolder": "ESA",
-    "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-    "altText": "Galileo"
-  }, {
-    "blockId": "93df6d3d-946b-4295-86ab-8cc5330769b5",
-    "type": "video",
-    "holdingImage": {
+  "blocks": [
+    {
+      "type": "text",
+      "blockId": "33f9d813-0714-4394-b882-8069f72a72a8",
+      "blocks": [
+        {
+          "blockId": "728d6147-8a99-86a4-4aa2-1366b55a7d41",
+          "type": "paragraph",
+          "content": "Nulla ut eleifend massa. Vestibulum ac magna porttitor tortor viverra bibendum non ut lacus. Fusce convallis interdum congue. Fusce nec rutrum ipsum, vel rutrum diam."
+        }
+      ]
+    },
+    {
+      "blockId": "0240a049-3e77-4d2b-983d-714daffbfa20",
+      "type": "image",
       "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-      "copyrightHolder": "NASA",
-      "caption": null,
-      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+      "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+      "copyrightHolder": "ESA",
+      "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+      "altText": "Galileo"
     },
-    "guidance": null,
-    "caption": null,
-    "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p064nsyw",
-    "duration": "PT4M59S",
-    "allowOffsiteEmbedding": false
-  }, {
-    "blockId": "667de807-354c-4f89-ab0c-4b17bfaad7f9",
-    "type": "headline",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-  }, {
-    "blockId": "d06d953b-000c-4ed1-ae4d-c126326ad78f",
-    "type": "video",
-    "holdingImage": {
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-      "copyrightHolder": "BBC Sport",
+    {
+      "blockId": "93df6d3d-946b-4295-86ab-8cc5330769b5",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+        "copyrightHolder": "NASA",
+        "caption": null,
+        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+      },
+      "guidance": null,
       "caption": null,
-      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+      "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p064nsyw",
+      "duration": "PT4M59S",
+      "allowOffsiteEmbedding": false
     },
-    "guidance": null,
-    "caption": "Highlights: Peru 2-0 Scotland",
-    "altText": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p068lkw4",
-    "duration": "PT4M16S",
-    "allowOffsiteEmbedding": false
-  }, {
-    "blockId": "0edab00a-355a-48c1-98c6-31e61d682950",
-    "type": "video",
-    "holdingImage": {
-      "aspectRatio": "9:16",
-      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-      "copyrightHolder": "NASA",
+    {
+      "blockId": "667de807-354c-4f89-ab0c-4b17bfaad7f9",
+      "type": "headline",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "blockId": "d06d953b-000c-4ed1-ae4d-c126326ad78f",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+        "copyrightHolder": "BBC Sport",
+        "caption": null,
+        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+      },
+      "guidance": null,
+      "caption": "Highlights: Peru 2-0 Scotland",
+      "altText": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p068lkw4",
+      "duration": "PT4M16S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "blockId": "0edab00a-355a-48c1-98c6-31e61d682950",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "9:16",
+        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+        "copyrightHolder": "NASA",
+        "caption": null,
+        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape."
+      },
+      "guidance": null,
+      "caption": "How the Skripals were saved",
+      "altText": "This video contains a portrait vpid p068hxjd",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p068hxjb",
+      "duration": "PT2M18S",
+      "allowOffsiteEmbedding": false
+    },
+    {
+      "blockId": "32157e44-a97d-495b-a492-b2878186e623",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+        "copyrightHolder": "NASA",
+        "caption": null,
+        "altText": "Rio Olympics 2016"
+      },
+      "guidance": "Contains flashing images",
       "caption": null,
-      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape."
+      "altText": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p01hsgv6",
+      "duration": "PT4M59S",
+      "allowOffsiteEmbedding": false
     },
-    "guidance": null,
-    "caption": "How the Skripals were saved",
-    "altText": "This video contains a portrait vpid p068hxjd",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p068hxjb",
-    "duration": "PT2M18S",
-    "allowOffsiteEmbedding": false
-  }, {
-    "blockId": "32157e44-a97d-495b-a492-b2878186e623",
-    "type": "video",
-    "holdingImage": {
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-      "copyrightHolder": "NASA",
+    {
+      "blockId": "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
+      "type": "video",
+      "holdingImage": {
+        "aspectRatio": "16:9",
+        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+        "copyrightHolder": "NASA",
+        "caption": null,
+        "altText": "This video contains some guidance and no caption."
+      },
+      "guidance": null,
       "caption": null,
-      "altText": "Rio Olympics 2016"
-    },
-    "guidance": "Contains flashing images",
-    "caption": null,
-    "altText": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p01hsgv6",
-    "duration": "PT4M59S",
-    "allowOffsiteEmbedding": false
-  }, {
-    "blockId": "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
-    "type": "video",
-    "holdingImage": {
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-      "copyrightHolder": "NASA",
-      "caption": null,
-      "altText": "This video contains some guidance and no caption."
-    },
-    "guidance": null,
-    "caption": null,
-    "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-    "mediaType": "video",
-    "isLive": false,
-    "externalId": "p064gl4v",
-    "duration": "PT4M59S",
-    "allowOffsiteEmbedding": false
-  }]
+      "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+      "mediaType": "video",
+      "isLive": false,
+      "externalId": "p064gl4v",
+      "duration": "PT4M59S",
+      "allowOffsiteEmbedding": false
+    }
+  ]
 }
