@@ -4,10 +4,9 @@ import 'isomorphic-fetch';
 import styled from 'styled-components';
 
 const Headline = styled.h1`
-  color: #bb1919;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 4em;
+  color: #222;
+  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  font-size: 2em;
 `;
 
 class Article extends Component {
