@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article should render correctly 1`] = `
+exports[`Article Component should render correctly 1`] = `
 <h1
   className="sc-bdVaJa hULRsD"
 >
