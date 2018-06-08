@@ -4,18 +4,6 @@ import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import { ServerStyleSheet } from 'styled-components';
 
 class Document extends React.Component {
-  static propTypes = {
-    helmet: PropTypes.objectOf(PropTypes.any).isRequired,
-    assets: PropTypes.objectOf(PropTypes.any).isRequired,
-    data: PropTypes.objectOf(PropTypes.any),
-    styleTags: PropTypes.arrayOf(React.Component),
-  };
-
-  static defaultProps = {
-    data: {},
-    styleTags: [],
-  };
-
   static async getInitialProps({ assets, data, renderPage }) {
     const sheet = new ServerStyleSheet();
     const page = await renderPage(App => props =>
@@ -26,7 +14,7 @@ class Document extends React.Component {
   }
 
   render() {
-    const { helmet, assets, data, styleTags } = this.props;
+    const { helmet, assets, data, styleTags } = this.props; // eslint-disable-line react/prop-types
     const htmlAttrs = helmet.htmlAttributes.toComponent();
 
     return (
