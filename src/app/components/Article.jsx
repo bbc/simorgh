@@ -28,8 +28,7 @@ class Article extends Component {
       const response = await fetch(url);
       const data = await response.json();
 
-      const variant = Experiment.getRandomVariant();
-      return { data, variant };
+      return { data };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
       return {};
@@ -43,7 +42,7 @@ class Article extends Component {
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
-        <Experiment variant={this.props.variant}>
+        <Experiment>
           <Variant name="One">
             <Headline>One</Headline>
           </Variant>
