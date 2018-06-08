@@ -1,0 +1,108 @@
+{
+  "locatorId": "c000000000go",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "feature",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "ea910450-7467-4f83-bb8a-0727595531ff",
+    "type": "video",
+    "holdingImage": {
+      "aspectRatio": "16:9",
+      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+      "copyrightHolder": "NASA",
+      "caption": null,
+      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+    },
+    "guidance": null,
+    "caption": null,
+    "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+    "mediaType": "video",
+    "isLive": false,
+    "externalId": "p064nsyw",
+    "duration": "PT4M59S",
+    "allowOffsiteEmbedding": false
+  }, {
+    "blockId": "4908280a-4469-4a5e-97d3-8393055f45b8",
+    "type": "paragraph",
+    "content": "Nam luctus libero quis leo sodales, quis blandit eros commodo. Mauris quam tortor, \"porttitor vitae nunc sit amet\", tincidunt molestie metus.\n\nNam dapibus tellus vitae commodo eleifend. Duis ullamcorper orci sed nunc condimentum consequat. Donec feugiat aliquam nunc, vel elementum turpis vestibulum eget."
+  }, {
+    "blockId": "7cbd9acc-6f4c-4133-9dfd-28c991be16ea",
+    "type": "headline",
+    "content": "Nulla euismod semper turpis at vulputate"
+  }, {
+    "blockId": "5111278d-88d8-46fb-9f19-c0502a51b0d2",
+    "type": "subheading",
+    "content": "Fusce felis nunc"
+  }, {
+    "blockId": "cf4d8862-bd70-44ba-b147-844f306a1b8e",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/13376/production/_95301787_bbc_ouch_website_image_624x100_2.jpg",
+    "copyrightHolder": "BBC",
+    "caption": null,
+    "altText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }, {
+    "blockId": "8101be2f-5333-4654-8494-b0b82e78f646",
+    "type": "paragraph",
+    "content": "Nulla ut eleifend massa. Vestibulum ac magna porttitor tortor viverra bibendum non ut lacus. Fusce convallis interdum congue. Fusce nec rutrum ipsum, vel rutrum diam."
+  }, {
+    "blockId": "a90cee1c-5e88-466e-81fe-eb643b4db285",
+    "type": "subheading",
+    "content": "Donec tristique ante vel leo volutpat"
+  }, {
+    "blockId": "de28f8a1-411f-4e26-b9c6-547ffde98596",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/1736/production/_97424950_976mleedfinal.jpg",
+    "copyrightHolder": "BBC",
+    "caption": null,
+    "altText": "Sed tempus porttitor interdum."
+  }, {
+    "blockId": "036ed069-820d-490c-a9b4-20df735f7d50",
+    "type": "paragraph",
+    "content": "Nam eleifend imperdiet elit, ut vulputate tellus suscipit quis. Nam in diam vel nulla tincidunt lobortis. Mauris tempor enim mauris, ac fermentum orci sollicitudin at. Fusce quis efficitur dolor. Nam feugiat vestibulum feugiat. Integer non mollis orci.\n\nNunc sollicitudin sapien quis tellus ornare feugiat.\n\nPhasellus et libero risus. Maecenas risus sem, imperdiet semper purus sit amet, fermentum interdum urna. In convallis, neque ac scelerisque auctor, est dui bibendum mi, eget sodales nulla quam vel odio."
+  }, {
+    "blockId": "8af5f61a-5503-42b3-b421-2880909f047f",
+    "type": "subheading",
+    "content": "Donec tincidunt"
+  }, {
+    "blockId": "037fb79f-a439-4400-8da1-e2ca628d1f09",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/8A79/production/_101694453_capture.png",
+    "copyrightHolder": "Jen Adams Beason",
+    "caption": null,
+    "altText": "Duis posuere, nisl in faucibus placerat, nisl metus efficitur lorem"
+  }, {
+    "blockId": "02780a52-31d2-4889-b9a9-193667ccc1cd",
+    "type": "paragraph",
+    "content": "In id interdum dolor. Maecenas a sapien enim. Aliquam gravida id tortor nec consequat. Integer rutrum consectetur fermentum. Sed nec massa quis sem tempus ultricies. Nunc porta malesuada posuere."
+  }, {
+    "blockId": "f2cdfb7d-19e4-4cab-b4a9-6a0114a70668",
+    "type": "subheading",
+    "content": "Mauris tincidunt ipsum neque, in bibendum elit tincidunt nec"
+  }, {
+    "blockId": "74768a9e-d196-418f-bbf1-08d8dee4b568",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/15F44/production/_101742998_homebasepeople_newscast.jpg",
+    "copyrightHolder": "Newscast",
+    "caption": "Pellentesque sed odio urna. Donec diam sem, porta eget mi quis, elementum commodo sapien.",
+    "altText": "Praesent sollicitudin mauris in vehicula."
+  }, {
+    "blockId": "510d856f-df8f-45ec-a309-24b3247ce18f",
+    "type": "paragraph",
+    "content": "Suspendisse sem lorem, ultricies vestibulum lorem vel, tempor elementum ex.\n\nPellentesque nec eros felis. Pellentesque a quam diam. Curabitur posuere magna eros, et dignissim magna rutrum non."
+  }]
+}

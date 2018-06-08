@@ -1,0 +1,60 @@
+{
+  "locatorId": "c000000000fo",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "d892c48b-5d47-40f3-bcca-2fce9e964211",
+    "type": "image",
+    "aspectRatio": "16:9",
+    "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+    "copyrightHolder": "ESA",
+    "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+    "altText": "Galileo"
+  }, {
+    "blockId": "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
+    "type": "video",
+    "holdingImage": {
+      "aspectRatio": "16:9",
+      "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+      "copyrightHolder": "NASA",
+      "caption": null,
+      "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+    },
+    "guidance": null,
+    "caption": "Retail giant to close down 100 stores",
+    "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+    "mediaType": "video",
+    "isLive": false,
+    "externalId": "p064nsyw",
+    "duration": "PT2H34M25S",
+    "allowOffsiteEmbedding": false
+  }, {
+    "blockId": "7f801ede-99f5-4a04-bdc1-b670664c8ae1",
+    "type": "headline",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  }, {
+    "blockId": "80ed74d2-a178-41aa-839a-6195349f7e3e",
+    "type": "headline",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  }, {
+    "blockId": "43a53112-1eda-4b34-8129-143551431029",
+    "type": "headline",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  }, {
+    "blockId": "214ece59-d8fc-42d0-bd74-a3d29a8ad707",
+    "type": "headline",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  }]
+}

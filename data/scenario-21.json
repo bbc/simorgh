@@ -1,0 +1,26 @@
+{
+  "locatorId": "c000000000lo",
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": "business"
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": null,
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "blocks": [{
+    "blockId": "69c20cc7-c454-4251-b2ac-d29f0d8d4edf",
+    "type": "subheading",
+    "content": "Where are the richest households in the UK?"
+  }, {
+    "blockId": "157b703f-7a54-400b-97f2-604a3ab60e9b",
+    "type": "paragraph",
+    "content": "The sharp differences in household incomes across the UK have been set out in official government statistics.\n\nThe average household income, once taxes and benefits are accounted for, was £19,432 per person in 2016.\n\n But in Kensington & Chelsea and Hammersmith & Fulham in west London the average income was more than three times this at £58,816. \n\n In contrast, in Nottingham - which has the lowest household income - the average income was £12,232."
+  }]
+}
