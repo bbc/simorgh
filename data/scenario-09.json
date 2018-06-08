@@ -21,70 +21,106 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-        "copyrightHolder": "NASA",
+  "model": {
+    "blocks": [
+      {
+        "blockId": "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+          "copyrightHolder": "NASA",
+          "caption": null,
+          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+        },
+        "guidance": null,
         "caption": null,
-        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p064nsyw",
+        "duration": "PT2H34M25S",
+        "allowOffsiteEmbedding": false
       },
-      "guidance": null,
-      "caption": null,
-      "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p064nsyw",
-      "duration": "PT2H34M25S",
-      "allowOffsiteEmbedding": false
-    },
-    {
-      "blockId": "e8495951-d6cb-4f62-855c-cbc4a8d9c906",
-      "type": "headline",
-      "content": "Nulla euismod semper turpis at vulputate"
-    },
-    {
-      "blockId": "6a7ade5b-cac8-41dc-8e03-d6e6b7eaebc9",
-      "type": "subheading",
-      "content": "Donec ut fermentum risus, eu sodales mauris"
-    },
-    {
-      "blockId": "caa319be-e5a5-4d9b-b7f4-dc0c76d5bd95",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-        "copyrightHolder": "NASA",
-        "caption": null,
-        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-      },
-      "guidance": null,
-      "caption": null,
-      "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p064nsyw",
-      "duration": "PT2H34M25S",
-      "allowOffsiteEmbedding": false
-    },
-    {
-      "blockId": "68767319-7fdb-4189-8a29-95ce0d8a0923",
-      "type": "subheading",
-      "content": "Donec ut fermentum risus, eu _sodales mauris_ ."
-    },
-    {
-      "type": "text",
-      "blockId": "dac41846-7dab-4f75-a56a-d9f60a0d5f47",
-      "blocks": [
-        {
-          "blockId": "a6a22aca-0c61-0eb3-ab68-7a91abf1c529",
-          "type": "paragraph",
-          "content": "Integer convallis elit in mauris suscipit venenatis. **_Pellentesque et orci et arcu sollicitudin sagittis_** a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+      {
+        "blockId": "e8495951-d6cb-4f62-855c-cbc4a8d9c906",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "329367ec-c6b6-a437-edb7-427c284185b4",
+              "type": "text",
+              "model": {
+                "text": "Nulla euismod semper turpis at vulputate"
+              }
+            }
+          ]
         }
-      ]
-    }
-  ]
+      },
+      {
+        "blockId": "6a7ade5b-cac8-41dc-8e03-d6e6b7eaebc9",
+        "type": "subheading",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "7378eafa-b1b0-801d-c203-85d4b583cd40",
+              "type": "text",
+              "model": {
+                "text": "Donec ut fermentum risus, eu sodales mauris"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "caa319be-e5a5-4d9b-b7f4-dc0c76d5bd95",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+          "copyrightHolder": "NASA",
+          "caption": null,
+          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+        },
+        "guidance": null,
+        "caption": null,
+        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p064nsyw",
+        "duration": "PT2H34M25S",
+        "allowOffsiteEmbedding": false
+      },
+      {
+        "blockId": "68767319-7fdb-4189-8a29-95ce0d8a0923",
+        "type": "subheading",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "bcdd266f-edcb-863b-3e8e-419db8184105",
+              "type": "text",
+              "model": {
+                "text": "Donec ut fermentum risus, eu _sodales mauris_ ."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "text",
+        "blockId": "dac41846-7dab-4f75-a56a-d9f60a0d5f47",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "a6a22aca-0c61-0eb3-ab68-7a91abf1c529",
+              "type": "paragraph",
+              "model": {
+                "text": "Integer convallis elit in mauris suscipit venenatis. **_Pellentesque et orci et arcu sollicitudin sagittis_** a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

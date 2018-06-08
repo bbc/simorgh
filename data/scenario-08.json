@@ -26,50 +26,168 @@
     ]
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "263e730e-1d9d-48ee-aa56-505771c78450",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-      "copyrightHolder": "ESA",
-      "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-      "altText": "Galileo."
-    },
-    {
-      "blockId": "4243856b-a493-4b2e-960e-46777f0d46a0",
-      "type": "headline",
-      "content": "GDPR: 'Don't panic!' data watchdog tells firms"
-    },
-    {
-      "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
-      "type": "subheading",
-      "content": "What is GDPR?"
-    },
-    {
-      "blockId": "ab0a0ffb-8abe-4836-9a60-4cecc526f76d",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-      "copyrightHolder": "Getty Images",
-      "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis.",
-      "altText": "Fusce tincidunt lectus eget augue mollis."
-    },
-    {
-      "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
-      "type": "subheading",
-      "content": "What is GDPR?"
-    },
-    {
-      "type": "text",
-      "blockId": "e1e101f1-3cca-4b32-b3ae-4ac2f323b940",
-      "blocks": [
-        {
-          "blockId": "5f8f03c0-2e36-728f-bf2a-66bd98ef106f",
-          "type": "paragraph",
-          "content": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. **Cras porttitor dictum tellus**, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+  "model": {
+    "blocks": [
+      {
+        "blockId": "263e730e-1d9d-48ee-aa56-505771c78450",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "66f56750-539c-e357-00b9-ed94a1098aa5",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "ESA"
+            },
+            {
+              "blockId": "d69d8cfe-c05e-1462-f431-20ab81ae80ff",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "fc5945eb-6a70-a0f9-5300-864d261b968c",
+                    "type": "text",
+                    "model": {
+                      "text": "Galileo."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "8bc637d9-3463-77aa-a313-8c6ef6fd7792",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "e221e50c-4655-4eb5-4103-95008389b130",
+                    "type": "text",
+                    "model": {
+                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
-      ]
-    }
-  ]
+      },
+      {
+        "blockId": "4243856b-a493-4b2e-960e-46777f0d46a0",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "69ec8a6d-f0fd-8d03-95fe-8ee506fb591c",
+              "type": "text",
+              "model": {
+                "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
+        "type": "subheading",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "3b96c0a9-3ee6-0b8d-0291-82c833ce9aed",
+              "type": "text",
+              "model": {
+                "text": "What is GDPR?"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "ab0a0ffb-8abe-4836-9a60-4cecc526f76d",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "fc3d38c2-e96e-0cc9-70bf-641f4f7eaca8",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "Getty Images"
+            },
+            {
+              "blockId": "90108546-1594-71e0-4c80-b71092e5de2b",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "d3714c4d-0ee5-a8b9-379a-77a4bf45ab5d",
+                    "type": "text",
+                    "model": {
+                      "text": "Fusce tincidunt lectus eget augue mollis."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "1f73fad9-95e9-68b3-a795-4528c2db6359",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "75c8c23a-72f7-1411-92ad-a578f0bfcb0d",
+                    "type": "text",
+                    "model": {
+                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
+        "type": "subheading",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "8a60d4a6-1110-2cca-aa7c-7a2988b77c4a",
+              "type": "text",
+              "model": {
+                "text": "What is GDPR?"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "text",
+        "blockId": "e1e101f1-3cca-4b32-b3ae-4ac2f323b940",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "5f8f03c0-2e36-728f-bf2a-66bd98ef106f",
+              "type": "paragraph",
+              "model": {
+                "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. **Cras porttitor dictum tellus**, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

@@ -17,50 +17,107 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "426a17aa-c4a3-4c04-b6f6-850ffaa2d75b",
-      "type": "headline",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
-    },
-    {
-      "type": "text",
-      "blockId": "8b851516-b175-4092-a398-692f84cd7268",
-      "blocks": [
-        {
-          "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
-          "type": "paragraph",
-          "content": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™."
+  "model": {
+    "blocks": [
+      {
+        "blockId": "426a17aa-c4a3-4c04-b6f6-850ffaa2d75b",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "87bac169-b2c6-338d-4253-c294723e0c5f",
+              "type": "text",
+              "model": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+              }
+            }
+          ]
         }
-      ]
-    },
-    {
-      "blockId": "1475d1fb-5883-4c57-908a-2a89ba330ff6",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-      "copyrightHolder": "Getty Images",
-      "caption": "**Suspendisse blandit tincidunt ante**, non finibus nisl ornare non.",
-      "altText": "Fusce tincidunt lectus eget augue mollis."
-    },
-    {
-      "blockId": "da611d38-08ef-4105-a288-3385a343cb9b",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
-        "copyrightHolder": "Getty Images",
-        "caption": null,
-        "altText": "Pellentesque pellentesque sem magna."
       },
-      "guidance": null,
-      "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-      "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p067gq6h",
-      "duration": "PT1M34S",
-      "allowOffsiteEmbedding": false
-    }
-  ]
+      {
+        "type": "text",
+        "blockId": "8b851516-b175-4092-a398-692f84cd7268",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
+              "type": "paragraph",
+              "model": {
+                "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "1475d1fb-5883-4c57-908a-2a89ba330ff6",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "13097b46-67c7-cbe6-5777-63088d479fea",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "Getty Images"
+            },
+            {
+              "blockId": "4ed25e4b-c68c-71e6-901b-9534af64472c",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "3a0d2608-e2a4-a956-0d1a-4db91c1e6807",
+                    "type": "text",
+                    "model": {
+                      "text": "Fusce tincidunt lectus eget augue mollis."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "bab00a0a-5148-2acc-5805-618026484615",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "44f0e618-46a9-37a9-eda4-8cefbb83fa3a",
+                    "type": "text",
+                    "model": {
+                      "text": "**Suspendisse blandit tincidunt ante**, non finibus nisl ornare non."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "da611d38-08ef-4105-a288-3385a343cb9b",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+          "copyrightHolder": "Getty Images",
+          "caption": null,
+          "altText": "Pellentesque pellentesque sem magna."
+        },
+        "guidance": null,
+        "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+        "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p067gq6h",
+        "duration": "PT1M34S",
+        "allowOffsiteEmbedding": false
+      }
+    ]
+  }
 }

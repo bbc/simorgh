@@ -14,20 +14,73 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "714d27bb-49d8-4890-b101-f19e3b1df41a",
-      "type": "headline",
-      "content": "Duis ut tincidunt arcu"
-    },
-    {
-      "blockId": "4b191ed1-8f60-4a01-917a-b91d1bd4312f",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-      "copyrightHolder": "Getty Images",
-      "caption": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
-      "altText": "Fusce tincidunt lectus eget augue mollis."
-    }
-  ]
+  "model": {
+    "blocks": [
+      {
+        "blockId": "714d27bb-49d8-4890-b101-f19e3b1df41a",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "0c910453-c5ec-b1c6-e0ea-2435ee8eb806",
+              "type": "text",
+              "model": {
+                "text": "Duis ut tincidunt arcu"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "4b191ed1-8f60-4a01-917a-b91d1bd4312f",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "e12b16a4-1b71-b033-ee08-38e466fb41ea",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "Getty Images"
+            },
+            {
+              "blockId": "e3347773-a1b4-d7ec-18f6-7c4226f8c0e6",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "9765fddc-ce9d-246a-083d-372f20d224fd",
+                    "type": "text",
+                    "model": {
+                      "text": "Fusce tincidunt lectus eget augue mollis."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "44b825f9-0581-798d-2bbf-ee88c3f3512a",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "fad8a06a-bb37-b7e9-d118-648234be081d",
+                    "type": "text",
+                    "model": {
+                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

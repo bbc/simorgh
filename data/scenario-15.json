@@ -14,54 +14,137 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "d892c48b-5d47-40f3-bcca-2fce9e964211",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-      "copyrightHolder": "ESA",
-      "caption": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-      "altText": "Galileo"
-    },
-    {
-      "blockId": "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-        "copyrightHolder": "NASA",
-        "caption": null,
-        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+  "model": {
+    "blocks": [
+      {
+        "blockId": "d892c48b-5d47-40f3-bcca-2fce9e964211",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "61dfcd49-4798-802e-7d4b-daa32a0e863d",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "ESA"
+            },
+            {
+              "blockId": "ba3547f2-355e-62a7-5cbc-1a31f770b622",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "e1d4102d-55a2-40af-9416-eb1f6f2ad518",
+                    "type": "text",
+                    "model": {
+                      "text": "Galileo"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "663f388e-4d2a-b541-aa7d-50768aaa1719",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "38045c2b-1f64-5c3c-2d61-e4016dfc1efe",
+                    "type": "text",
+                    "model": {
+                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
-      "guidance": null,
-      "caption": "Retail giant to close down 100 stores",
-      "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p064nsyw",
-      "duration": "PT2H34M25S",
-      "allowOffsiteEmbedding": false
-    },
-    {
-      "blockId": "7f801ede-99f5-4a04-bdc1-b670664c8ae1",
-      "type": "headline",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    },
-    {
-      "blockId": "80ed74d2-a178-41aa-839a-6195349f7e3e",
-      "type": "headline",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    },
-    {
-      "blockId": "43a53112-1eda-4b34-8129-143551431029",
-      "type": "headline",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    },
-    {
-      "blockId": "214ece59-d8fc-42d0-bd74-a3d29a8ad707",
-      "type": "headline",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    }
-  ]
+      {
+        "blockId": "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+          "copyrightHolder": "NASA",
+          "caption": null,
+          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+        },
+        "guidance": null,
+        "caption": "Retail giant to close down 100 stores",
+        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p064nsyw",
+        "duration": "PT2H34M25S",
+        "allowOffsiteEmbedding": false
+      },
+      {
+        "blockId": "7f801ede-99f5-4a04-bdc1-b670664c8ae1",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f557fd6a-5a4c-bd03-8c90-2ad0d961abf8",
+              "type": "text",
+              "model": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "80ed74d2-a178-41aa-839a-6195349f7e3e",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "99766b7e-9299-c96c-3904-c86ccb19f08a",
+              "type": "text",
+              "model": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "43a53112-1eda-4b34-8129-143551431029",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "68ab81a9-b69d-8b35-1c3f-07f0aa3d63d9",
+              "type": "text",
+              "model": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "214ece59-d8fc-42d0-bd74-a3d29a8ad707",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "b4b15292-f020-20cc-332f-cc47a8ff8ea9",
+              "type": "text",
+              "model": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

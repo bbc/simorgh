@@ -33,77 +33,242 @@
     "mentions": null
   },
   "metaDescription": "The retail giant speeds up the pace of closures that it says are \"vital for the future of M&S\".",
-  "blocks": [
-    {
-      "type": "text",
-      "blockId": "47ca6b9e-eb93-4800-8678-47fbf443e17e",
-      "blocks": [
-        {
-          "blockId": "89cee09e-cb72-708a-074e-323d3469dab1",
-          "type": "paragraph",
-          "content": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future."
+  "model": {
+    "blocks": [
+      {
+        "type": "text",
+        "blockId": "47ca6b9e-eb93-4800-8678-47fbf443e17e",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "89cee09e-cb72-708a-074e-323d3469dab1",
+              "type": "paragraph",
+              "model": {
+                "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future."
+              }
+            }
+          ]
         }
-      ]
-    },
-    {
-      "blockId": "653786c0-d623-48a8-802c-4491b128aefe",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-        "copyrightHolder": "NASA",
-        "caption": null,
-        "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
       },
-      "guidance": null,
-      "caption": null,
-      "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p067gq6h",
-      "duration": "PT1M34S",
-      "allowOffsiteEmbedding": false
-    },
-    {
-      "blockId": "ee131b44-ca70-42d5-92a1-a92b41bbd638",
-      "type": "headline",
-      "content": "M&S to close 100 stores by 2022"
-    },
-    {
-      "blockId": "13140be5-c780-4766-abd9-667178fd211a",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/F86B/production/_101659536_m-s_getty.jpg",
-      "copyrightHolder": "Getty Images",
-      "caption": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. \n\nThis latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits.",
-      "altText": "M&S store closures."
-    },
-    {
-      "blockId": "14db1e9f-7744-4f63-bbea-c475c9ae4bd2",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
-      "copyrightHolder": "BBC",
-      "caption": "Map of Marks and Spencer store closure by 2020",
-      "altText": "Map of M&S store closures"
-    },
-    {
-      "blockId": "546ea2ab-412f-4fbe-a10f-cf11b7f843ac",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/16FBB/production/_97493149_1_protests_getty_624.jpg",
-      "copyrightHolder": "Getty images",
-      "caption": null,
-      "altText": "Syrian protesters"
-    },
-    {
-      "blockId": "7ff105f6-c58e-4aa5-8575-15f738b3f351",
-      "type": "image",
-      "aspectRatio": "16:9",
-      "relPath": "/cpsprodpb/1758D/production/_94792659_bbcbudget_new.gif",
-      "copyrightHolder": "BBC Scotland",
-      "caption": "BBC Scotland money",
-      "altText": "BBC Scotland money"
-    }
-  ]
+      {
+        "blockId": "653786c0-d623-48a8-802c-4491b128aefe",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+          "copyrightHolder": "NASA",
+          "caption": null,
+          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+        },
+        "guidance": null,
+        "caption": null,
+        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p067gq6h",
+        "duration": "PT1M34S",
+        "allowOffsiteEmbedding": false
+      },
+      {
+        "blockId": "ee131b44-ca70-42d5-92a1-a92b41bbd638",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f38581f9-a77a-27f1-f072-331f2e5af1de",
+              "type": "text",
+              "model": {
+                "text": "M&S to close 100 stores by 2022"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "13140be5-c780-4766-abd9-667178fd211a",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "28582749-98da-68dc-4f54-1d764454d9cc",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/F86B/production/_101659536_m-s_getty.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "Getty Images"
+            },
+            {
+              "blockId": "06f19fb0-cad2-a0b4-2850-96e189ab0e9a",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "18ac2173-2b90-c34b-3fa2-9b1ddece7c1c",
+                    "type": "text",
+                    "model": {
+                      "text": "M&S store closures."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "6d47d17a-814d-2fd4-7523-8d94d3b3b191",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "694c9524-25f3-41d5-c39e-07861a86fd0b",
+                    "type": "text",
+                    "model": {
+                      "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. \n\nThis latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "14db1e9f-7744-4f63-bbea-c475c9ae4bd2",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "eccf1274-a175-4ed0-3c3d-6f2ff5a1f6f7",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "BBC"
+            },
+            {
+              "blockId": "6b87ee99-36f0-11b2-3feb-127382e09091",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "44fa2745-67c3-d876-64d7-9ca8b179e2be",
+                    "type": "text",
+                    "model": {
+                      "text": "Map of M&S store closures"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "d0c8eb2a-b0c1-02d9-7bf1-18f30fbc9ec6",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "1fa8c9dc-06ae-85c5-e05e-4dbb88f1aaea",
+                    "type": "text",
+                    "model": {
+                      "text": "Map of Marks and Spencer store closure by 2020"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "546ea2ab-412f-4fbe-a10f-cf11b7f843ac",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "d10dc292-081a-00e3-c19b-e48165383f8a",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/16FBB/production/_97493149_1_protests_getty_624.jpg",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "Getty images"
+            },
+            {
+              "blockId": "89edc85b-1bd6-3e53-87c8-81c59a090c13",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "169f796e-dc64-6603-8144-8fff349a0079",
+                    "type": "text",
+                    "model": {
+                      "text": "Syrian protesters"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "7ff105f6-c58e-4aa5-8575-15f738b3f351",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "183d6585-c044-5b54-081e-1c5954a0aefc",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/1758D/production/_94792659_bbcbudget_new.gif",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "BBC Scotland"
+            },
+            {
+              "blockId": "58784874-d3a5-6bf7-aea3-094c5c110df1",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "bbc32078-d24e-4d8c-f69e-afced05c2f34",
+                    "type": "text",
+                    "model": {
+                      "text": "BBC Scotland money"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "b538b34e-29e1-fff0-5664-86252e275d68",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "7abd3d7e-6a4c-5447-f5b5-704510b364a4",
+                    "type": "text",
+                    "model": {
+                      "text": "BBC Scotland money"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

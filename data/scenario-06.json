@@ -20,50 +20,107 @@
     "mentions": null
   },
   "metaDescription": null,
-  "blocks": [
-    {
-      "blockId": "37282fc9-7663-45af-90da-6f109be6865e",
-      "type": "headline",
-      "content": "Phasellus at elit eget ante e=mc<sup>2</sup> malesuada tempus"
-    },
-    {
-      "type": "text",
-      "blockId": "6cba8e86-f184-462b-95cf-09c38571d600",
-      "blocks": [
-        {
-          "blockId": "8414c280-a6c3-e5f4-6485-8841489e02f8",
-          "type": "paragraph",
-          "content": "Fusce maximus ipsum nec orci semper dapibus. Donec pulvinar, nibh eu consectetur elementum, [dui neque consectetur magna](https://www.nature.com/articles/s41586-018-0095-1), vel suscipit metus metus sit amet lacus. Sed ornare, mi eget condimentum fringilla, nunc erat pretium metus, sit amet convallis orci diam vulputate leo."
+  "model": {
+    "blocks": [
+      {
+        "blockId": "37282fc9-7663-45af-90da-6f109be6865e",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f4fca1a3-5bc6-f9be-3f9e-727dea2ae126",
+              "type": "text",
+              "model": {
+                "text": "Phasellus at elit eget ante e=mc<sup>2</sup> malesuada tempus"
+              }
+            }
+          ]
         }
-      ]
-    },
-    {
-      "blockId": "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
-      "type": "video",
-      "holdingImage": {
-        "aspectRatio": "16:9",
-        "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
-        "copyrightHolder": "Getty Images",
-        "caption": null,
-        "altText": "Pellentesque pellentesque sem magna."
       },
-      "guidance": null,
-      "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-      "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-      "mediaType": "video",
-      "isLive": false,
-      "externalId": "p067gq6h",
-      "duration": "PT1M34S",
-      "allowOffsiteEmbedding": false
-    },
-    {
-      "blockId": "d061cfb9-6a79-4481-ab3a-28b25f9b94fe",
-      "type": "image",
-      "aspectRatio": "1181:1476",
-      "relPath": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
-      "copyrightHolder": "BBC",
-      "caption": "Praesent sagittis fringilla nibh ut vulputate. Ut _nec purus_ est. Vestibulum in eleifend nibh.",
-      "altText": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida."
-    }
-  ]
+      {
+        "type": "text",
+        "blockId": "6cba8e86-f184-462b-95cf-09c38571d600",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "8414c280-a6c3-e5f4-6485-8841489e02f8",
+              "type": "paragraph",
+              "model": {
+                "text": "Fusce maximus ipsum nec orci semper dapibus. Donec pulvinar, nibh eu consectetur elementum, [dui neque consectetur magna](https://www.nature.com/articles/s41586-018-0095-1), vel suscipit metus metus sit amet lacus. Sed ornare, mi eget condimentum fringilla, nunc erat pretium metus, sit amet convallis orci diam vulputate leo."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blockId": "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
+        "type": "video",
+        "holdingImage": {
+          "aspectRatio": "16:9",
+          "relPath": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+          "copyrightHolder": "Getty Images",
+          "caption": null,
+          "altText": "Pellentesque pellentesque sem magna."
+        },
+        "guidance": null,
+        "caption": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+        "altText": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+        "mediaType": "video",
+        "isLive": false,
+        "externalId": "p067gq6h",
+        "duration": "PT1M34S",
+        "allowOffsiteEmbedding": false
+      },
+      {
+        "blockId": "d061cfb9-6a79-4481-ab3a-28b25f9b94fe",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "c98f3b3e-c5c9-0309-cf00-445a8ed00d0f",
+              "type": "rawImage",
+              "model": {
+                "width": null,
+                "height": null,
+                "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                "originCode": null,
+                "copyrightHolder": "BBC"
+              },
+              "copyrightHolder": "BBC"
+            },
+            {
+              "blockId": "557eb893-3a55-e6e2-653e-b6da7ba333b4",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "4191e4cb-3449-a359-ea2e-75266bd8a3ea",
+                    "type": "text",
+                    "model": {
+                      "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "4f9b569f-a46a-0b7b-e882-01eacb0db307",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "91a90204-3eb0-60f6-732f-fca2fce2ea4a",
+                    "type": "text",
+                    "model": {
+                      "text": "Praesent sagittis fringilla nibh ut vulputate. Ut _nec purus_ est. Vestibulum in eleifend nibh."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
