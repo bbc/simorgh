@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article should render correctly 1`] = `
+<h1
+  className="sc-bdVaJa hULRsD"
+>
+  Article Headline
+</h1>
+`;

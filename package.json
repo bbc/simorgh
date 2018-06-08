@@ -32,8 +32,6 @@
   "dependencies": {
     "@jaredpalmer/after": "^1.3.1",
     "babel-eslint": "^8.2.3",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
     "es6-promise": "^4.2.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -50,6 +48,7 @@
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.4.0",
     "speculate": "^1.7.4",
     "styled-components": "^3.3.2"
   },
@@ -66,7 +65,6 @@
       "!./node_modules/**"
     ],
     "setupFiles": [
-      "./src/__test__/enzyme-setup.js",
       "./src/__test__/jest-setup.js"
     ]
   }
