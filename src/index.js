@@ -1,5 +1,6 @@
 import http from 'http';
 import app from './server';
+import registerServiceWorker from './registerServiceWorker';
 
 const server = http.createServer(app);
 const port = process.env.PORT || 7080;
@@ -25,4 +26,5 @@ if (module.hot) {
     server.on('request', newApp);
     currentApp = newApp;
   });
+  registerServiceWorker();
 }
