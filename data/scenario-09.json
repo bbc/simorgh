@@ -26,21 +26,72 @@
       {
         "blockId": "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-          "copyrightHolder": "NASA",
-          "caption": null,
-          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p064nsyw",
-        "duration": "PT2H34M25S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p064nsyw",
+          "blocks": [
+            {
+              "blockId": "1269ae82-776b-a9c8-affe-1033d2f4459f",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT2H34M25S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p064nsyw"
+              }
+            },
+            {
+              "blockId": "2e24f33d-77c2-c62e-0353-e14dc8276e3e",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "0cb5e07f-9881-d1d1-31a7-727e295eaa67",
+                    "type": "text",
+                    "model": {
+                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "34c923d7-b86e-6e63-bc3a-96d183ae55ed",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "b4d778d9-b1fc-11fc-cf65-1afe5ed93c22",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "NASA"
+                    }
+                  },
+                  {
+                    "blockId": "8a285581-eb53-0aea-b4ba-d575edbc7d71",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "ce40c253-3fff-a227-b27d-e2da5bc248e8",
+                          "type": "text",
+                          "model": {
+                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "e8495951-d6cb-4f62-855c-cbc4a8d9c906",
@@ -75,21 +126,72 @@
       {
         "blockId": "caa319be-e5a5-4d9b-b7f4-dc0c76d5bd95",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-          "copyrightHolder": "NASA",
-          "caption": null,
-          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p064nsyw",
-        "duration": "PT2H34M25S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p064nsyw",
+          "blocks": [
+            {
+              "blockId": "0fdaa22a-5fc9-06f7-3ded-f433d8ef6c8c",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT2H34M25S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p064nsyw"
+              }
+            },
+            {
+              "blockId": "b5e1fa91-29ac-a925-515b-89f31d9cf83a",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "85557d5e-98e0-bdc3-0a06-a518dccdfc21",
+                    "type": "text",
+                    "model": {
+                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "e8e2a26b-928a-b165-90e0-e21fd8d1c8b4",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "f2906a43-4dbd-6761-6f2f-e24c5d403952",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "NASA"
+                    }
+                  },
+                  {
+                    "blockId": "85853ee7-6b75-1f93-4a19-63aa36c66f54",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "cea9e575-0ec0-6723-3aa0-187a89590cc6",
+                          "type": "text",
+                          "model": {
+                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "68767319-7fdb-4189-8a29-95ce0d8a0923",

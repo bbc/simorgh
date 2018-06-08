@@ -19,21 +19,72 @@
       {
         "blockId": "42a49ee8-2edd-4c9e-97df-e9a2f4464146",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
-          "copyrightHolder": "Getty Images",
-          "caption": null,
-          "altText": "Aliquam sodales lectus in augue posuere tempus."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "Aliquam quis sodales nisl.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p060njgk",
-        "duration": "PT1M31S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p060njgk",
+          "blocks": [
+            {
+              "blockId": "7c71e71a-2232-17c0-c92d-c4bdf1fa0dd3",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT1M31S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p060njgk"
+              }
+            },
+            {
+              "blockId": "e362db26-ac15-15f2-d61b-28ad302128cd",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "80c58750-d790-4e0f-23a0-9f1492f35a4c",
+                    "type": "text",
+                    "model": {
+                      "text": "Aliquam quis sodales nisl."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "93fb855f-40e4-5f54-d535-1c2f387c58f5",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "d166dad0-7813-a5e1-00a1-6950b4e47cc5",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "Getty Images"
+                    }
+                  },
+                  {
+                    "blockId": "ee33885b-e88c-06f8-42a7-094905ae3492",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "d6b8cda1-797f-db29-e2a3-5d8c8d9b53f4",
+                          "type": "text",
+                          "model": {
+                            "text": "Aliquam sodales lectus in augue posuere tempus."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "9c142a95-cb1d-4a02-a603-e08d9af4da92",
@@ -175,21 +226,72 @@
       {
         "blockId": "08c845e5-2605-4f56-87aa-37cbe92bfa17",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
-          "copyrightHolder": "BBC",
-          "caption": null,
-          "altText": "Duis nec tempus erat, sit amet auctor lacus."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "In aliquam libero at hendrerit auctor.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "b08qm073",
-        "duration": "PT3H13M00S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:b08qm073",
+          "blocks": [
+            {
+              "blockId": "00de9269-267b-30e9-8940-9b9918d44a9b",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT3H13M00S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:b08qm073"
+              }
+            },
+            {
+              "blockId": "41398158-ee86-0505-ff9e-e2a890fae8d5",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "39bc3bce-0e18-b890-11b5-144d1665367f",
+                    "type": "text",
+                    "model": {
+                      "text": "In aliquam libero at hendrerit auctor."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "d8dfe1fc-f4e9-485c-0b48-a209110d6be4",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "8817c8b6-bb89-9911-4d0f-cf4c2d81c351",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "BBC"
+                    }
+                  },
+                  {
+                    "blockId": "27a0ead7-436e-faa4-7d46-ed4d0ece95f6",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "2c768839-1a39-e555-cc7b-1d0c7be86d2f",
+                          "type": "text",
+                          "model": {
+                            "text": "Duis nec tempus erat, sit amet auctor lacus."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "type": "text",
@@ -348,21 +450,87 @@
       {
         "blockId": "000112f0-05ad-4446-a626-f62557e052b3",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
-          "copyrightHolder": "EBU",
-          "caption": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
-          "altText": "Ut et porttitor tellus. Integer vitae sollicitudin ligula."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "Proin non nisl sem.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p06702pc",
-        "duration": "PT3M00S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p06702pc",
+          "blocks": [
+            {
+              "blockId": "714a0060-7953-5679-cf94-e9bfa2f0ccc5",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT3M00S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p06702pc"
+              }
+            },
+            {
+              "blockId": "bf5af338-b93a-2516-1aee-d0e30c48028a",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "56401adf-29d6-75a4-c3b6-3a0165222924",
+                    "type": "text",
+                    "model": {
+                      "text": "Proin non nisl sem."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "42c536c3-78e4-6af2-cb34-cec4d1e8469a",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "ec87c9e2-2afb-d531-27e9-5a6acfc07008",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "EBU"
+                    }
+                  },
+                  {
+                    "blockId": "36152a3c-b196-28e4-e269-4234e53820dc",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "70ec9674-88b4-9985-c59a-e0dad7466835",
+                          "type": "text",
+                          "model": {
+                            "text": "Ut et porttitor tellus. Integer vitae sollicitudin ligula."
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "blockId": "2859296f-4d18-61c1-6fad-7876cd466f13",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "a1d90aa9-e06c-3a6d-a428-f2b5bfccfc5b",
+                          "type": "text",
+                          "model": {
+                            "text": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "type": "text",

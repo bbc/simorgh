@@ -19,21 +19,72 @@
       {
         "blockId": "ea910450-7467-4f83-bb8a-0727595531ff",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-          "copyrightHolder": "NASA",
-          "caption": null,
-          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p064nsyw",
-        "duration": "PT4M59S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p064nsyw",
+          "blocks": [
+            {
+              "blockId": "646f7969-fd71-6e83-61ff-133572dadb27",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT4M59S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p064nsyw"
+              }
+            },
+            {
+              "blockId": "17ee0549-2b03-fc51-7e2b-272fa0d2ae54",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "cb0d1fb6-9561-5478-b684-9126447a8dd0",
+                    "type": "text",
+                    "model": {
+                      "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "e9a56f27-5225-ba07-2001-cd5352639590",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "c0a509e3-1a5b-4985-6ab3-1ebcf8863a51",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "NASA"
+                    }
+                  },
+                  {
+                    "blockId": "3f90438f-bb27-af00-4746-4979e3b51775",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "a11b6dee-b7f0-92e3-efc3-7b8613914bb1",
+                          "type": "text",
+                          "model": {
+                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "type": "text",

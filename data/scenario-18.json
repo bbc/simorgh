@@ -99,21 +99,72 @@
       {
         "blockId": "66988dfc-28d1-4dc2-9a8f-335852a02bb9",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
-          "copyrightHolder": "BBC",
-          "caption": null,
-          "altText": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "Fusce interdum semper lacus eget malesuada.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p054n8j9",
-        "duration": "PT15M23S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p054n8j9",
+          "blocks": [
+            {
+              "blockId": "14da2b7c-d234-e319-dc99-a4adfaa4a795",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT15M23S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p054n8j9"
+              }
+            },
+            {
+              "blockId": "1fd922cb-e7fa-8456-dfdf-cb1810700d8f",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "a16a034d-c4fe-1471-4fa7-8f6bbcc2f34f",
+                    "type": "text",
+                    "model": {
+                      "text": "Fusce interdum semper lacus eget malesuada."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "0ae75d14-94d4-1f7e-ba40-ffb30330e8cb",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "666409e6-5b20-758b-0a57-f2f11040329a",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "BBC"
+                    }
+                  },
+                  {
+                    "blockId": "c8773c35-5b35-3fce-ceed-50170fd86be3",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "9e250007-36ba-52ea-33f2-6f3c3e23f5ad",
+                          "type": "text",
+                          "model": {
+                            "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "4ac6e87f-0212-44ef-97ee-72b13a01a2a3",

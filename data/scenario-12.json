@@ -53,21 +53,72 @@
       {
         "blockId": "653786c0-d623-48a8-802c-4491b128aefe",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-          "copyrightHolder": "NASA",
-          "caption": null,
-          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-        },
-        "guidance": null,
         "caption": null,
-        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p067gq6h",
-        "duration": "PT1M34S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p067gq6h",
+          "blocks": [
+            {
+              "blockId": "b40a00b1-0b73-d8cd-d58f-08a2da35636f",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT1M34S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p067gq6h"
+              }
+            },
+            {
+              "blockId": "b39fdb15-705a-ae0e-b891-a73099e933be",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "120c3875-f813-dd43-5c7e-df5d3b92eeb8",
+                    "type": "text",
+                    "model": {
+                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "43e796a3-7646-9016-476c-95073803063c",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "5dd99fc2-6154-98e2-b032-4944a60ecf4a",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "NASA"
+                    }
+                  },
+                  {
+                    "blockId": "646166f2-8264-221e-3cf4-1e7bfd0360b2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "34761fa4-3336-ed5c-79da-ec2069dbdbcd",
+                          "type": "text",
+                          "model": {
+                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "ee131b44-ca70-42d5-92a1-a92b41bbd638",

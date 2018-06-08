@@ -69,21 +69,86 @@
       {
         "blockId": "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
         "type": "video",
-        "holdingImage": {
-          "aspectRatio": "16:9",
-          "relPath": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-          "copyrightHolder": "NASA",
-          "caption": null,
-          "altText": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
-        },
-        "guidance": null,
-        "caption": "Retail giant to close down 100 stores",
-        "altText": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-        "mediaType": "video",
-        "isLive": false,
-        "externalId": "p064nsyw",
-        "duration": "PT2H34M25S",
-        "allowOffsiteEmbedding": false
+        "model": {
+          "locator": "urn:bbc:pips:pid:p064nsyw",
+          "blocks": [
+            {
+              "blockId": "919f0940-e35e-b78f-9404-58153f3bf9a4",
+              "type": "rawVideo",
+              "model": {
+                "guidance": null,
+                "isLive": false,
+                "duration": "PT2H34M25S",
+                "allowOffsiteEmbedding": false,
+                "locator": "urn:bbc:pips:pid:p064nsyw"
+              }
+            },
+            {
+              "blockId": "baf8b746-7a72-387d-e955-d1393211a712",
+              "type": "altText",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "df676045-7ae4-47ce-16f8-17a5e2a1995c",
+                    "type": "text",
+                    "model": {
+                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "9944a462-ac23-de6f-ea5e-bd41e7e1bc5f",
+              "type": "caption",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "22bd2267-e9ff-821d-a648-bf7c133dd038",
+                    "type": "text",
+                    "model": {
+                      "text": "Retail giant to close down 100 stores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "blockId": "7ee5ddb4-41f8-f4fa-4a5e-39763f0ad451",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "930f6924-9693-7bf0-5a5a-98d98e07792c",
+                    "type": "rawImage",
+                    "model": {
+                      "width": null,
+                      "height": null,
+                      "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                      "originCode": null,
+                      "copyrightHolder": "NASA"
+                    }
+                  },
+                  {
+                    "blockId": "5ca9bf4c-efab-cbee-6454-6518ff7f25ee",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "b93e4e12-6009-b833-a2eb-8fd380ce456c",
+                          "type": "text",
+                          "model": {
+                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       {
         "blockId": "7f801ede-99f5-4a04-bdc1-b670664c8ae1",
