@@ -29,6 +29,8 @@ To run this application locally with a production build, run:
 1.  `npm run build`
 2.  `npm run start`
 
+To avoid indexing by search engines, there is a `nofollow` page level meta tag in `Document.jsx`.
+
 ## Tests
 
 ### Linting and unit tests
@@ -50,3 +52,5 @@ Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+### To-do
+* `nofollow` must be removed once this repo is ready for production use
