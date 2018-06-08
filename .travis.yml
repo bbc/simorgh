@@ -3,8 +3,8 @@ notifications:
   slack:
     rooms:
       - secure: "yUDO22xGc3ZV6yCGv9vIrdKCnERt7gz0y+ncAOIHBTI/WwJQ3HFKzZjkS0qNMESp3aTBh8gkikecn/AddpAMTgqpPEP4snYvy35UcZRFM6FdnjGWvsJHIhtgXuV5tH96IOFFmfDC+qEv2DILAl5rx+fGo03d3lXdc94pyiR5agAhmCXLlENTZWcrhJhrBSVldKVd5Ga3ltotGkkTpPla0B9lbpBBhrbYyeXF0uTpBhr64ut68GLHTfTS1D0c+7IoGLSbbVk5RnisEWztxHVIfhPfN/zereRv0z2GHo0tzsXDefzPY+7nzi0gudKDf4a1Dh//lvlLnoyzovnNPkSBnNjh62CehBiFuyWrNzhGhEhChsnZ384WtrTd6HigF1ikR48kp+2IKz7s8/Df2FWSTI4JNptl3ruMj5e5EQ3XxTeOl9y/wHQp8/Jc3cv1HFKJJHAaXWLUSNLBnS+g5mPKQN3VPskjalmT1gMQVwCUr5kJcGWno6wEUQh2ROcT2F68TVpJfhdRI6LDiteB/+UyXDQONc126yhoOoxmfMaM8AT29QdUExqlisVpORwjMzB7kBl3sZRmsDr+uJKeOt2GZkoJdaS5Df6pfY+1PQdACFd2R7uQE/KfFI1CyZSts6IxjDm+6edZ0P/K7hAXXLV00Yo0sK7aGb1VxaEUypzXM4w="
-    on_success: change # default: always
-    on_failure: always # default: always
-    on_start: change   # default: never
-    on_cancel: always # default: always
-    on_error: always # default: always
+    # on_success: change # default: always
+    # on_failure: always # default: always
+    # on_start: change   # default: never
+    # on_cancel: always # default: always
+    # on_error: always # default: always
