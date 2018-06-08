@@ -2,7 +2,7 @@
 
 exports[`Article Component should render correctly 1`] = `
 <h1
-  className="sc-bdVaJa hULRsD"
+  className="sc-bdVaJa fZQHHD"
 >
   Article Headline
 </h1>
