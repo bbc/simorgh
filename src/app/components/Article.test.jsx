@@ -1,22 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    const HEADLINE = 'Article Headline';
-
-    const expectElementTextToEqual = (element, value) => {
-      const component = shallow(<Article />);
-      expect(component.find(element).text()).toEqual(value);
-    };
-
-    it('renders the headline in an h1', () => {
-      expectElementTextToEqual('h1', HEADLINE);
-    });
-
-    it('renders the title', () => {
-      expectElementTextToEqual('title', HEADLINE);
+    it('should render correctly', () => {
+      const tree = renderer.create(<Article />).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 
