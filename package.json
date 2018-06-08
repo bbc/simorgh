@@ -34,6 +34,7 @@
     "babel-eslint": "^8.2.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "es6-promise": "^4.2.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -41,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "express": "^4.16.3",
+    "isomorphic-fetch": "^2.2.1",
     "prettier": "1.13.4",
     "prop-types": "^15.6.1",
     "razzle": "^2.0.3",
@@ -53,7 +55,8 @@
   "devDependencies": {
     "@storybook/react": "^4.0.0-alpha.8",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4"
+    "babel-loader": "^7.1.4",
+    "jest-fetch-mock": "^1.6.2"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -62,7 +65,8 @@
       "!./node_modules/**"
     ],
     "setupFiles": [
-      "./src/__test__/enzyme-setup.js"
+      "./src/__test__/enzyme-setup.js",
+      "./src/__test__/jest-setup.js"
     ]
   }
 }
