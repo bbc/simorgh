@@ -14,7 +14,7 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "jsx-a11y"],
+  "plugins": ["react", "json", "jsx-a11y"],
   "rules": {
     "prettier/prettier": ["error", {singleQuote: true, trailingComma: "all"}]
     }
