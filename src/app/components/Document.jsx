@@ -1,25 +1,19 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import { ServerStyleSheet } from 'styled-components';
 
 class Document extends React.Component {
-  static propTypes = {
-    helmet: PropTypes.objectOf(PropTypes.any).isRequired,
-    assets: PropTypes.objectOf(PropTypes.any).isRequired,
-    data: PropTypes.objectOf(PropTypes.any),
-  };
-
-  static defaultProps = {
-    data: {},
-  };
-
   static async getInitialProps({ assets, data, renderPage }) {
-    const page = await renderPage();
-    return { assets, data, ...page };
+    const sheet = new ServerStyleSheet();
+    const page = await renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />),
+    );
+    const styleTags = sheet.getStyleElement();
+    return { assets, data, ...page, styleTags };
   }
 
   render() {
-    const { helmet, assets, data } = this.props;
+    const { helmet, assets, data, styleTags } = this.props; // eslint-disable-line react/prop-types
     const htmlAttrs = helmet.htmlAttributes.toComponent();
 
     return (
@@ -29,6 +23,7 @@ class Document extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {helmet.title.toComponent()}
+          {styleTags}
         </head>
         <body>
           <AfterRoot />
