@@ -60,7 +60,8 @@
     "eslint-plugin-prettier": "^2.6.0",
     "jest-fetch-mock": "^1.6.2",
     "lighthouse": "^2.9.4",
-    "prettier": "1.13.5"
+    "prettier": "1.13.5",
+    "supertest": "^3.1.0"
   },
   "jest": {
     "collectCoverageFrom": [
