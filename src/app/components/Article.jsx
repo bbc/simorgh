@@ -2,14 +2,7 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
-
-import BBCNewsBanner from './header/BBCNewsBanner';
-
-const Body = styled.body`
-  margin: 0 auto;
-  padding: 0;
-  left: 0;
-`;
+import Header from './header/Header';
 
 const Headline = styled.h1`
   color: #222;
@@ -49,6 +42,7 @@ class Article extends Component {
         <Body />
         <BBCNewsBanner />
         <Headline>{headline}</Headline>
+        <Header />
       </Fragment>
     );
   }
