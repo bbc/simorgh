@@ -16,7 +16,7 @@ const BBCNewsNavigation = styled.div`
   width: 100%;
 `;
 
-const BBCNewsNavigationBrand = styled.a`
+const BBCNewsLink = styled.a`
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
   font-size: 2.4em;
   color: #fff;
@@ -36,11 +36,9 @@ class Header extends Component {
         <BBCNewsBranding>
           <BBCNewsBrandingLogo>
             <BBCNewsNavigation>
-              <a href="/news" id="brand">
-                <span>
-                  <BBCNewsNavigationBrand>{title}</BBCNewsNavigationBrand>
-                </span>
-              </a>
+                  <BBCNewsLink href="/news" id="brand">
+                    {title}
+                  </BBCNewsLink>
             </BBCNewsNavigation>
           </BBCNewsBrandingLogo>
         </BBCNewsBranding>
