@@ -3,23 +3,34 @@
 exports[`Article Component should render correctly 1`] = `
 Array [
   <body
-    className="sc-htpNat fctgVB"
+    className="sc-ifAKCX eUQdUx"
 />,
-  <header
-    aria-label="BBC News"
-    className="sc-bwzfXH fDxYsB"
-    role="banner"
+  <div
+    className="sc-bdVaJa fSMwDK"
 >
-    <a
-        className="sc-bdVaJa iguvfJ"
-        href="http://bbc.co.uk/news"
-        id="brand"
+    <div
+        className="sc-bwzfXH gRnqld"
     >
-        BBC News
-    </a>
-</header>,
+        <div
+            className="sc-htpNat daVAfG"
+        >
+            <a
+                href="/news"
+                id="brand"
+            >
+                <span>
+                    <a
+                        className="sc-bxivhb TWXJM"
+                    >
+                        BBC News
+                    </a>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>,
   <h1
-    className="sc-bxivhb cIvvaw"
+    className="sc-EHOje bjrdXX"
 >
     Article Headline
 </h1>,
