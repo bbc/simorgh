@@ -17,7 +17,13 @@ describe('News Article', () => {
 })
 
 describe('Page Status', () => {
-    it('should display 200/OK', () => {
+    it('should display 200', () => {
       testRequestResponse('/', 200)  
+    })
+})
+
+describe('Renderer Status', () => {
+    it('should display 200', () => {
+      testRequestResponse('/status', 200)  
     })
 })

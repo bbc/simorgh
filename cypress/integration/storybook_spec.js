@@ -13,7 +13,7 @@ describe('Storybook Article ', () => {
 })
 
 describe('Page Status', () => {
-    it('should display 200/OK', () => {
+    it('should display 200', () => {
       testRequestResponse('/', 200)  
     })
 })
