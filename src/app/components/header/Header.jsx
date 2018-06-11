@@ -11,11 +11,9 @@ const BBCNewsLink = styled.a`
 
 const BBCNewsHeader = styled.header`
   background-color: #bb1919;
-  height: 58px;
+  height: 45px;
   width: 100%;
-
-  margin: 0 62px;
-  padding: 10px 16px;
+  padding: 15px 16px;
 `;
 
 class Header extends Component {
