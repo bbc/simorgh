@@ -14,7 +14,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test:e2e": "npx cypress run",
     "test:e2e:interactive": "npx cypress open",
-    "lighthouse":"lighthouse --config-path=custom-config.js http://localhost:7080/"
+    "lighthouse": "lighthouse --config-path=custom-config.js http://localhost:7080/"
   },
   "repository": {
     "type": "git",
