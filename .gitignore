@@ -2,4 +2,4 @@
 npm-debug.log*
 build
 node_modules
-coverage
+*.report.html
