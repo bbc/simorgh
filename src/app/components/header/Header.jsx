@@ -27,11 +27,11 @@ class Header extends Component {
     const { title } = this.state;
 
     return (
-        <BBCNewsHeader role="banner" aria-label="BBC News">
-          <BBCNewsLink href="/news" id="brand">
-            {title}
-          </BBCNewsLink>
-        </BBCNewsHeader>
+      <BBCNewsHeader role="banner" aria-label="BBC News">
+        <BBCNewsLink href="/news" id="brand">
+          {title}
+        </BBCNewsLink>
+      </BBCNewsHeader>
     );
   }
 }
