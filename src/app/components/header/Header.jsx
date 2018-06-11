@@ -6,6 +6,7 @@ const BBCNewsLink = styled.a`
   font-size: 2.4em;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
 `;
 
 const BBCNewsNavigation = styled.div`
@@ -13,8 +14,8 @@ const BBCNewsNavigation = styled.div`
 `;
 
 const BBCNewsBrandingLogo = styled.div`
-  margin: 0 62px 0 62px;
-  padding: 10px 16px 10px 16px;
+  margin: 0 62px;
+  padding: 10px 16px;
 `;
 
 const BBCNewsBranding = styled.div`
@@ -22,7 +23,6 @@ const BBCNewsBranding = styled.div`
   height: 58px;
   width: 100%;
 `;
-
 
 class Header extends Component {
   state = {
@@ -37,9 +37,9 @@ class Header extends Component {
         <BBCNewsBranding>
           <BBCNewsBrandingLogo>
             <BBCNewsNavigation>
-                  <BBCNewsLink href="/news" id="brand">
-                    {title}
-                  </BBCNewsLink>
+              <BBCNewsLink href="/news" id="brand">
+                {title}
+              </BBCNewsLink>
             </BBCNewsNavigation>
           </BBCNewsBrandingLogo>
         </BBCNewsBranding>
