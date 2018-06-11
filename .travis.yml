@@ -6,9 +6,10 @@ cache:
 before_install: npm install -g npm@6.1.0
 install:
   - npm ci
-script:
+before_script:
   - npm run build
   - npm run start
+script:
   - $(npm bin)/cypress run
 notifications:
   email: false
