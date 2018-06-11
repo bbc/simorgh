@@ -57,7 +57,8 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "cypress": "^3.0.1",
-    "jest-fetch-mock": "^1.6.2"
+    "jest-fetch-mock": "^1.6.2",
+    "wait-on": "^2.1.0"
   },
   "jest": {
     "collectCoverageFrom": [
