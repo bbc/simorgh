@@ -63,6 +63,7 @@
       "**/*.{js,jsx}",
       "!**/*.stories.jsx",
       "!**/build/**",
+      "!**/coverage/**",
       "!**/cypress/support/**"
     ],
     "setupFiles": [
