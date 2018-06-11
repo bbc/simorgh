@@ -3,7 +3,7 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
-before_script: npm install -g npm@6.1.0
+before_install: npm install -g npm@6.1.0
 install:
   - npm ci
 script:
