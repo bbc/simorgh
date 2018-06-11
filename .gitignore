@@ -2,6 +2,7 @@
 npm-debug.log*
 build
 node_modules
+build
 coverage
 ./reports/*
 !./reports/*.keep
