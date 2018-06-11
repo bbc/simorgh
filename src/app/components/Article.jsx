@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 
+import Header from './header/Header';
+
 const Headline = styled.h1`
   color: #222;
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
@@ -39,6 +41,7 @@ class Article extends Component {
           <title>{headline}</title>
         </Helmet>
         <Headline>{headline}</Headline>
+        <Header />
       </Fragment>
     );
   }
