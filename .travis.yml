@@ -7,6 +7,8 @@ before_install: npm install -g npm@6.1.0
 install:
   - npm ci
 script:
+  - npm run build
+  - npm run start
   - $(npm bin)/cypress run
 notifications:
   email: false
