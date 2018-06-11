@@ -1,14 +1,13 @@
 language: node_js
-node_js:
-  - 10.4
 cache:
   directories:
     - ~/.npm
     - ~/.cache
+before_script: npm install -g npm@6.1.0
 install:
   - npm ci
 script:
-  - $(npm bin)/cypress run --record
+  - $(npm bin)/cypress run
 notifications:
   email: false
   slack:
