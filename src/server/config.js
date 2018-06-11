@@ -3,4 +3,4 @@ const publicDirectory =
     ? process.env.RAZZLE_PUBLIC_DIR
     : process.env.RAZZLE_PUBLIC_DIR_DEV;
 
-export default { publicDirectory };
+export default publicDirectory;
