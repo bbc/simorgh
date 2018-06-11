@@ -1,9 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Article Component should render correctly 1`] = `
-<h1
-  className="sc-bdVaJa fZQHHD"
+Array [
+  <body
+    className="sc-ifAKCX eUQdUx"
+/>,
+  <div
+    className="sc-bdVaJa fSMwDK"
 >
-  Article Headline
-</h1>
+    <div
+        className="sc-bwzfXH gRnqld"
+    >
+        <div
+            className="sc-htpNat daVAfG"
+        >
+            <a
+                href="/news"
+                id="brand"
+            >
+                <span>
+                    <a
+                        className="sc-bxivhb TWXJM"
+                    >
+                        BBC News
+                    </a>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>,
+  <h1
+    className="sc-EHOje bjrdXX"
+>
+    Article Headline
+</h1>,
+]
 `;

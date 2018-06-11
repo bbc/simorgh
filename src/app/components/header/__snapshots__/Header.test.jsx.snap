@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render correctly 1`] = `
+<div
+  className="sc-bdVaJa fSMwDK"
+>
+  <div
+    className="sc-bwzfXH gRnqld"
+  >
+    <div
+      className="sc-htpNat daVAfG"
+    >
+      <a
+        href="/news"
+        id="brand"
+      >
+        <span>
+          <a
+            className="sc-bxivhb TWXJM"
+          >
+            BBC News
+          </a>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
