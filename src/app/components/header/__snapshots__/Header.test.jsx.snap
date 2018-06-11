@@ -3,7 +3,7 @@
 exports[`Header Component should render correctly 1`] = `
 <header
   aria-label="BBC News"
-  className="sc-bwzfXH fEmsWu"
+  className="sc-bwzfXH jGhwts"
   role="banner"
 >
   <a
