@@ -1,5 +1,4 @@
 {
-  "locatorId": "c0000000006o",
   "passport": {
     "language": "en-gb",
     "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
@@ -186,5 +185,8 @@
         }
       }
     ]
-  }
+  },
+  "locator": "urn:bbc:optimo:asset:c0000000006o",
+  "blockId": "53294b49-4ab9-0d16-b99e-295646c74f4e",
+  "type": "article"
 }
