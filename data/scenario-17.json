@@ -65,8 +65,8 @@
                     "blockId": "d166dad0-7813-a5e1-00a1-6950b4e47cc5",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
                       "originCode": null,
                       "copyrightHolder": "Getty Images"
@@ -110,8 +110,8 @@
               "blockId": "44f60817-2313-6430-4e10-bb33ed61940d",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -311,8 +311,8 @@
                     "blockId": "8817c8b6-bb89-9911-4d0f-cf4c2d81c351",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
                       "originCode": null,
                       "copyrightHolder": "BBC"
@@ -416,8 +416,8 @@
               "blockId": "f13ca921-5c4a-9b7e-0391-1bacd0016ed0",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/DCBD/production/_101790565_gettyimages-924021296.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -582,8 +582,8 @@
                     "blockId": "ec87c9e2-2afb-d531-27e9-5a6acfc07008",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
                       "originCode": null,
                       "copyrightHolder": "EBU"

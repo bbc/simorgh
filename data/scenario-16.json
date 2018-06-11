@@ -65,8 +65,8 @@
                     "blockId": "c0a509e3-1a5b-4985-6ab3-1ebcf8863a51",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
@@ -178,8 +178,8 @@
               "blockId": "fc81637f-c2bc-f5f5-1247-1ca2598ba408",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/13376/production/_95301787_bbc_ouch_website_image_624x100_2.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -258,8 +258,8 @@
               "blockId": "c26123a7-3633-4b2f-dd30-b684f03ae00e",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/1736/production/_97424950_976mleedfinal.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -352,8 +352,8 @@
               "blockId": "3962112b-bd8e-1158-3504-ade2d82278e5",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/8A79/production/_101694453_capture.png",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -432,8 +432,8 @@
               "blockId": "dafc7c94-34e3-caeb-6d27-b0cb54f2ff43",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/15F44/production/_101742998_homebasepeople_newscast.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"

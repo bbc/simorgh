@@ -126,8 +126,8 @@
                     "blockId": "31fa2ffe-2a1a-8e08-6afb-aa882a3a5632",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
                       "originCode": null,
                       "copyrightHolder": "BBC"

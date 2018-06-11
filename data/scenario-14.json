@@ -26,8 +26,8 @@
               "blockId": "0510c01b-0451-315b-c668-d57b8c48caff",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"

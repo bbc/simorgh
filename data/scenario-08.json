@@ -36,8 +36,8 @@
               "blockId": "66f56750-539c-e357-00b9-ed94a1098aa5",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -147,8 +147,8 @@
               "blockId": "fc3d38c2-e96e-0cc9-70bf-641f4f7eaca8",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"

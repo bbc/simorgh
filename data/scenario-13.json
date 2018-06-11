@@ -42,8 +42,8 @@
               "blockId": "392b5d83-3b4c-c607-2944-55ddb4ef609b",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -148,8 +148,8 @@
                     "blockId": "7fe1b433-a14b-efa7-c612-77caef1634c8",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
@@ -279,8 +279,8 @@
                     "blockId": "9d05c1da-a702-6224-f927-6b425d7f0593",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "BBC Sport"
@@ -387,8 +387,8 @@
                     "blockId": "ff074be7-7319-7a77-0639-6b06e538476e",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
@@ -473,8 +473,8 @@
                     "blockId": "3bd820ea-0a71-4d4f-402c-13df24377f51",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
@@ -559,8 +559,8 @@
                     "blockId": "58ce7c35-5bf3-e0f3-70b0-7d419f952ca4",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"

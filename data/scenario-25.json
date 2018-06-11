@@ -55,8 +55,8 @@
               "blockId": "c92745d4-9b35-7e7d-206d-c0510905cb11",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -140,8 +140,8 @@
               "blockId": "ced62782-c893-30d2-ebca-8a2a117ff712",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -241,8 +241,8 @@
               "blockId": "d458fd39-d637-cd45-2fd5-c380e19243a7",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -373,8 +373,8 @@
               "blockId": "4f6c2265-aafb-0650-d87d-71a218446544",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"
@@ -483,8 +483,8 @@
               "blockId": "b5fb27fe-ecd8-bd6f-d3b5-88d92b2d6ad6",
               "type": "rawImage",
               "model": {
-                "width": null,
-                "height": null,
+                "width": 640,
+                "height": 420,
                 "locator": "/cpsprodpb/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
                 "originCode": null,
                 "copyrightHolder": "BBC"

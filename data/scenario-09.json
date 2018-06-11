@@ -72,8 +72,8 @@
                     "blockId": "b4d778d9-b1fc-11fc-cf65-1afe5ed93c22",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
@@ -204,8 +204,8 @@
                     "blockId": "f2906a43-4dbd-6761-6f2f-e24c5d403952",
                     "type": "rawImage",
                     "model": {
-                      "width": null,
-                      "height": null,
+                      "width": 640,
+                      "height": 420,
                       "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                       "originCode": null,
                       "copyrightHolder": "NASA"
