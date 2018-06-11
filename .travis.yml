@@ -6,7 +6,7 @@ cache:
 before_install: npm install -g npm@6.1.0
 install:
   - npm ci
-before_script: scripts/travis-before-install.sh
+before_script: ./scripts/travis-before-install.sh
 notifications:
   email: false
   slack:
