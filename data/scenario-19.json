@@ -24,7 +24,15 @@
               "blockId": "d8f1198b-c3c7-5fb4-f44d-73cd3d93f9f7",
               "type": "text",
               "model": {
-                "text": "Quisque feugiat quam ut lorem euismod"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "deefcfff-8184-3ca9-c8fe-67a4edb7c596",
+                    "model": {
+                      "text": "Quisque feugiat quam ut lorem euismod"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -54,7 +62,15 @@
               "blockId": "d6377b72-5fac-b584-06e4-8c0593a2f0f5",
               "type": "text",
               "model": {
-                "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "9715348d-f79a-133c-05c3-c4f276b64171",
+                    "model": {
+                      "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+                    }
+                  }
+                ]
               }
             }
           ]

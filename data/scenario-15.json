@@ -157,7 +157,15 @@
               "blockId": "f557fd6a-5a4c-bd03-8c90-2ad0d961abf8",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "0bc625b3-1f0a-a153-149c-21b5077ab976",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -172,7 +180,15 @@
               "blockId": "99766b7e-9299-c96c-3904-c86ccb19f08a",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "ac70bc4b-c73d-65d9-50b5-39f6cd81d1e2",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -187,7 +203,15 @@
               "blockId": "68ab81a9-b69d-8b35-1c3f-07f0aa3d63d9",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "157a8040-066b-5f0b-520d-148954bf73ab",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -202,7 +226,15 @@
               "blockId": "b4b15292-f020-20cc-332f-cc47a8ff8ea9",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "106013d6-d0c6-4205-0d44-0738720e6271",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    }
+                  }
+                ]
               }
             }
           ]

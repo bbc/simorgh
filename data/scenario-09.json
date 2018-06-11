@@ -101,7 +101,15 @@
               "blockId": "329367ec-c6b6-a437-edb7-427c284185b4",
               "type": "text",
               "model": {
-                "text": "Nulla euismod semper turpis at vulputate"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "730b6efd-1ed3-3dc6-e0a4-d09c3643cae9",
+                    "model": {
+                      "text": "Nulla euismod semper turpis at vulputate"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -116,7 +124,15 @@
               "blockId": "7378eafa-b1b0-801d-c203-85d4b583cd40",
               "type": "text",
               "model": {
-                "text": "Donec ut fermentum risus, eu sodales mauris"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "f134dcec-69e1-68c9-6878-aadd0bc64c36",
+                    "model": {
+                      "text": "Donec ut fermentum risus, eu sodales mauris"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -201,7 +217,15 @@
               "blockId": "bcdd266f-edcb-863b-3e8e-419db8184105",
               "type": "text",
               "model": {
-                "text": "Donec ut fermentum risus, eu _sodales mauris_ ."
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "038d3b51-fc3c-bfcc-bbc3-4493a4c7919b",
+                    "model": {
+                      "text": "Donec ut fermentum risus, eu _sodales mauris_ ."
+                    }
+                  }
+                ]
               }
             }
           ]

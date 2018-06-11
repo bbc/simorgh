@@ -29,7 +29,15 @@
               "blockId": "69f15bed-c00d-a6c8-f9f2-d33b65414273",
               "type": "text",
               "model": {
-                "text": "Royal wedding flowers given to Hackney hospice"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "e56832a8-8c37-9cf3-b86b-058d9b6a511c",
+                    "model": {
+                      "text": "Royal wedding flowers given to Hackney hospice"
+                    }
+                  }
+                ]
               }
             }
           ]

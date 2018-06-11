@@ -24,7 +24,15 @@
               "blockId": "035981fa-66d7-9ed3-e548-8e311b425fc3",
               "type": "text",
               "model": {
-                "text": "Where are the richest households in the UK?"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "587effc6-eabe-38ef-d632-c61b494aadab",
+                    "model": {
+                      "text": "Where are the richest households in the UK?"
+                    }
+                  }
+                ]
               }
             }
           ]

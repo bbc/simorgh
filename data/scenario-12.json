@@ -128,7 +128,15 @@
               "blockId": "f38581f9-a77a-27f1-f072-331f2e5af1de",
               "type": "text",
               "model": {
-                "text": "M&S to close 100 stores by 2022"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "9707b19f-9fce-0938-79e6-9c0d7fb72004",
+                    "model": {
+                      "text": "M&S to close 100 stores by 2022"
+                    }
+                  }
+                ]
               }
             }
           ]

@@ -39,7 +39,15 @@
               "blockId": "84bd25f2-0047-8a64-87f6-d7c2d03b790b",
               "type": "text",
               "model": {
-                "text": "Where are the richest households in the UK?"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "731578aa-cfda-e45e-8ebe-338ab1eee366",
+                    "model": {
+                      "text": "Where are the richest households in the UK?"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -54,7 +62,15 @@
               "blockId": "6211b326-e2c7-45b8-24f5-85b0531b7a8b",
               "type": "text",
               "model": {
-                "text": "Pellentesque pellentesque, massa a aliquam laoreet"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "a5433cb3-3b46-0421-9ce8-593c23df3058",
+                    "model": {
+                      "text": "Pellentesque pellentesque, massa a aliquam laoreet"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -207,7 +223,15 @@
               "blockId": "85fbf118-595c-c647-b747-ebeb7de76d27",
               "type": "text",
               "model": {
-                "text": "Quisque feugiat quam ut lorem euismod"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "36d6c54a-3916-7ab4-2566-ede09f99830e",
+                    "model": {
+                      "text": "Quisque feugiat quam ut lorem euismod"
+                    }
+                  }
+                ]
               }
             }
           ]

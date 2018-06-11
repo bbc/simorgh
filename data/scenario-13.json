@@ -161,7 +161,15 @@
               "blockId": "1eebc6d1-ee1f-c72a-bfd2-aa5eddbb14c7",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "840bb9b1-72ba-67f2-c010-fca58b7e8f45",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    }
+                  }
+                ]
               }
             }
           ]

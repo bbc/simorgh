@@ -24,7 +24,15 @@
               "blockId": "0c910453-c5ec-b1c6-e0ea-2435ee8eb806",
               "type": "text",
               "model": {
-                "text": "Duis ut tincidunt arcu"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "db7c844a-5630-7a8e-a2b6-e92e9210a036",
+                    "model": {
+                      "text": "Duis ut tincidunt arcu"
+                    }
+                  }
+                ]
               }
             }
           ]

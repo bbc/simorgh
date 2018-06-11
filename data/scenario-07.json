@@ -44,7 +44,15 @@
               "blockId": "f5c4b1c9-12d1-4069-61b8-ea5b978de46c",
               "type": "text",
               "model": {
-                "text": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "52b7fbf9-e40f-051f-3553-9cb9511b5c6a",
+                    "model": {
+                      "text": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -81,7 +89,15 @@
               "blockId": "0121be51-4598-aaff-7ba1-1eddbb7632ee",
               "type": "text",
               "model": {
-                "text": "Morbi malesuada lacus at nibh vestibulum"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "be9b1344-9905-c155-9cbd-fcb9097421ac",
+                    "model": {
+                      "text": "Morbi malesuada lacus at nibh vestibulum"
+                    }
+                  }
+                ]
               }
             }
           ]

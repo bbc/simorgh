@@ -104,7 +104,15 @@
               "blockId": "03576ee9-e45a-7df7-23ee-9bcb1470b92b",
               "type": "text",
               "model": {
-                "text": "Brexit: UK to demand EU pays back £1bn in Galileo costs"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "6c61d5ba-3ee1-e5f1-6fa1-1315f614ef75",
+                    "model": {
+                      "text": "Brexit: UK to demand EU pays back £1bn in Galileo costs"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -119,7 +127,15 @@
               "blockId": "263f94fb-a68d-0909-f780-f987c87e6dfd",
               "type": "text",
               "model": {
-                "text": "The UK wants the EU to repay £1bn if it is excluded from the Galileo satellite navigation system after Brexit."
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "bcdc7261-5cdc-ef70-e6cc-5b13f68d252d",
+                    "model": {
+                      "text": "The UK wants the EU to repay £1bn if it is excluded from the Galileo satellite navigation system after Brexit."
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -186,7 +202,15 @@
               "blockId": "cee81fa9-eaa3-ee29-3e25-a99c7c0fcefe",
               "type": "text",
               "model": {
-                "text": "It will not be straightforward to effectively fulfil all Galileo security work elsewhere"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "7260c2e9-92a3-92b1-ea03-10cd058de6cc",
+                    "model": {
+                      "text": "It will not be straightforward to effectively fulfil all Galileo security work elsewhere"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -201,7 +225,15 @@
               "blockId": "2062dd5d-dc0e-f8cb-3d86-1a7c7e84204f",
               "type": "text",
               "model": {
-                "text": "Brexit customs plan 'could cost £20bn"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "e994de0a-0ab6-0550-3696-17e1c69cea71",
+                    "model": {
+                      "text": "Brexit customs plan 'could cost £20bn"
+                    }
+                  }
+                ]
               }
             }
           ]

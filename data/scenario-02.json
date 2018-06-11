@@ -26,7 +26,15 @@
               "blockId": "94e712e8-99d1-0ef5-bb61-39f68de9f5ed",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur _adipiscing_ elit"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "635ebabb-1b25-b334-f8f7-a1811e2665c6",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur _adipiscing_ elit"
+                    }
+                  }
+                ]
               }
             }
           ]

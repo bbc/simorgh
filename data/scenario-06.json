@@ -30,7 +30,15 @@
               "blockId": "f4fca1a3-5bc6-f9be-3f9e-727dea2ae126",
               "type": "text",
               "model": {
-                "text": "Phasellus at elit eget ante e=mc<sup>2</sup> malesuada tempus"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "3e6859dd-e79f-fdf0-5daa-22e1fe546319",
+                    "model": {
+                      "text": "Phasellus at elit eget ante e=mc<sup>2</sup> malesuada tempus"
+                    }
+                  }
+                ]
               }
             }
           ]

@@ -128,7 +128,15 @@
               "blockId": "a05d5876-6e95-88e6-c530-1341649e208b",
               "type": "text",
               "model": {
-                "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "2c3fb0aa-9246-8f1a-a4ef-67f059d27c81",
+                    "model": {
+                      "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -179,7 +187,15 @@
               "blockId": "2151162d-0149-be06-9f0b-e939c8327205",
               "type": "text",
               "model": {
-                "text": "Praesent eget tempus lacus"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "6c078c10-5aae-f0ac-99e2-bb7f609aa49d",
+                    "model": {
+                      "text": "Praesent eget tempus lacus"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -315,7 +331,15 @@
               "blockId": "524a1cad-36db-2a04-d47d-04d66e94552d",
               "type": "text",
               "model": {
-                "text": "Nam lorem felis, vulputate sed pretium nec"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "fd839d52-21d7-b914-1cee-7ab337b1fb99",
+                    "model": {
+                      "text": "Nam lorem felis, vulputate sed pretium nec"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -416,7 +440,15 @@
               "blockId": "6c8af248-81e7-335d-7a34-efe6594b7346",
               "type": "text",
               "model": {
-                "text": "Suspendisse sed felis porta, malesuada nisl quis"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "a197f73f-7c00-9375-87ae-ce10e1c61bf4",
+                    "model": {
+                      "text": "Suspendisse sed felis porta, malesuada nisl quis"
+                    }
+                  }
+                ]
               }
             }
           ]

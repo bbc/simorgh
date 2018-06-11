@@ -24,7 +24,15 @@
               "blockId": "599ff36f-3af4-0fb7-1599-951294cd4dac",
               "type": "text",
               "model": {
-                "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "8d59db30-903f-19a7-c4c0-9b95f3c95c67",
+                    "model": {
+                      "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                    }
+                  }
+                ]
               }
             }
           ]

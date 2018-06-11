@@ -32,7 +32,15 @@
               "blockId": "d9927265-8ccd-a79d-d176-5fc5a6efdbbc",
               "type": "text",
               "model": {
-                "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "0aad25bb-9af3-978c-ab02-69feefb3c7a4",
+                    "model": {
+                      "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -158,7 +166,15 @@
               "blockId": "f873d696-dce0-e83c-32ef-c21801945eb8",
               "type": "text",
               "model": {
-                "text": "Queen Victoria's myrtle"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "91637987-343f-b4be-044a-2d067b9c35f6",
+                    "model": {
+                      "text": "Queen Victoria's myrtle"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -287,7 +303,15 @@
               "blockId": "54de23b1-f8a4-506a-b20f-e8ec08cd3c23",
               "type": "text",
               "model": {
-                "text": "The origins of the tradition"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "595d8bda-f499-d1c7-ea2f-c2a9e2e3760a",
+                    "model": {
+                      "text": "The origins of the tradition"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -388,7 +412,15 @@
               "blockId": "c295e84f-4bee-170d-cca1-cbb4a10f6402",
               "type": "text",
               "model": {
-                "text": "What is the tomb of the unknown warrior?"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "a993528e-6283-0cf6-287d-e20e5734124f",
+                    "model": {
+                      "text": "What is the tomb of the unknown warrior?"
+                    }
+                  }
+                ]
               }
             }
           ]

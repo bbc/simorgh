@@ -32,7 +32,15 @@
               "blockId": "c70237b8-3ca0-723f-e7c9-7cd80080d3c1",
               "type": "text",
               "model": {
-                "text": "What is GDPR?"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "94164f6d-84b6-e77f-ecc0-92a8143210ab",
+                    "model": {
+                      "text": "What is GDPR?"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -47,7 +55,15 @@
               "blockId": "cfe17c2c-e4f8-d0bd-681c-a27786536521",
               "type": "text",
               "model": {
-                "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "dd55668f-346f-10e1-6e51-87f432f7c8c3",
+                    "model": {
+                      "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -91,7 +107,15 @@
               "blockId": "1298ebe2-ce1e-5310-aebb-05d0fd5641f5",
               "type": "text",
               "model": {
-                "text": "What does the watchdog say?."
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "45248cea-0bd5-4e47-02f3-0b862ecbe73f",
+                    "model": {
+                      "text": "What does the watchdog say?."
+                    }
+                  }
+                ]
               }
             }
           ]

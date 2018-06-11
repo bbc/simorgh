@@ -116,7 +116,15 @@
               "blockId": "81c4d8b1-0fc0-4a67-a724-8fc1db9c97ee",
               "type": "text",
               "model": {
-                "text": "Nulla euismod semper turpis at vulputate"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "c610f7cb-473a-6ea8-74ce-435eca8d886d",
+                    "model": {
+                      "text": "Nulla euismod semper turpis at vulputate"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -131,7 +139,15 @@
               "blockId": "40f919b5-6a5e-b5dd-fef8-fb41515c29c0",
               "type": "text",
               "model": {
-                "text": "Fusce felis nunc"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "5084b00c-c669-18c6-6ce0-1deb7f1791b6",
+                    "model": {
+                      "text": "Fusce felis nunc"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -195,7 +211,15 @@
               "blockId": "4422a5d9-799b-9021-5c18-4acb700da481",
               "type": "text",
               "model": {
-                "text": "Donec tristique ante vel leo volutpat"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "b5abb1df-d6d3-8c20-b0ef-a9420cb4ba72",
+                    "model": {
+                      "text": "Donec tristique ante vel leo volutpat"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -273,7 +297,15 @@
               "blockId": "2a7c274a-0ac5-7e7f-48cd-74e8b516fe92",
               "type": "text",
               "model": {
-                "text": "Donec tincidunt"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "ab823ad9-2381-22a6-7574-51f3b04a611e",
+                    "model": {
+                      "text": "Donec tincidunt"
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -337,7 +369,15 @@
               "blockId": "18c6d7bc-8b1d-c2b0-60fc-7c93d11d3619",
               "type": "text",
               "model": {
-                "text": "Mauris tincidunt ipsum neque, in bibendum elit tincidunt nec"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "67d30ada-62d9-1b06-620c-50a2d7a2b325",
+                    "model": {
+                      "text": "Mauris tincidunt ipsum neque, in bibendum elit tincidunt nec"
+                    }
+                  }
+                ]
               }
             }
           ]

@@ -27,7 +27,15 @@
               "blockId": "87bac169-b2c6-338d-4253-c294723e0c5f",
               "type": "text",
               "model": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "6b3f82ec-ddc1-9ede-b1f1-02b03b1a48d2",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+                    }
+                  }
+                ]
               }
             }
           ]

@@ -335,7 +335,15 @@
               "blockId": "1806de44-104f-e539-2d0a-e87f7148e4e6",
               "type": "text",
               "model": {
-                "text": "Morbi malesuada lacus at nibh vestibulum"
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "879a24c5-3b3e-097f-9cb5-fc1da0149d4c",
+                    "model": {
+                      "text": "Morbi malesuada lacus at nibh vestibulum"
+                    }
+                  }
+                ]
               }
             }
           ]
