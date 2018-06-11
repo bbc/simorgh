@@ -60,11 +60,9 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/*.stories.jsx",
-      "!**/build/**",
-      "!**/coverage/**",
-      "!**/cypress/support/**"
+      "**/src/**/*.{js,jsx}",
+      "!**/src/__test__/**",
+      "!**/*.stories.jsx"
     ],
     "setupFiles": [
       "./src/__test__/jest-setup.js"
