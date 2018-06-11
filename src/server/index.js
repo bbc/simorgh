@@ -2,6 +2,7 @@ import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
+import { publicDirectory } from './config';
 
 /* eslint-disable import/no-dynamic-require */
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
@@ -10,7 +11,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static('data'))
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .use(express.static(publicDirectory))
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
