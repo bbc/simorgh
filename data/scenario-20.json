@@ -63,7 +63,15 @@
                     "blockId": "9765fddc-ce9d-246a-083d-372f20d224fd",
                     "type": "text",
                     "model": {
-                      "text": "Fusce tincidunt lectus eget augue mollis."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "e136d282-9bf2-40da-82c3-5e2779ff434e",
+                          "model": {
+                            "text": "Fusce tincidunt lectus eget augue mollis."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -78,7 +86,15 @@
                     "blockId": "fad8a06a-bb37-b7e9-d118-648234be081d",
                     "type": "text",
                     "model": {
-                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "b22df4c2-cafc-cc25-d77f-32627eff4671",
+                          "model": {
+                            "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

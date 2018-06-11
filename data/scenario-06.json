@@ -85,7 +85,15 @@
                     "blockId": "88b95218-c5f6-aa46-771f-e6d831fc5ef5",
                     "type": "text",
                     "model": {
-                      "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "d4d1159d-9c10-70de-d67d-1ff23dd98d05",
+                          "model": {
+                            "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -100,7 +108,15 @@
                     "blockId": "a9a78705-e1e8-03d2-b224-9e18249b8bd0",
                     "type": "text",
                     "model": {
-                      "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "9c499256-25d5-7926-a744-a2edb33ea3de",
+                          "model": {
+                            "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -131,7 +147,15 @@
                           "blockId": "3a26e7b3-7517-6f4a-4b9f-c169369db5bc",
                           "type": "text",
                           "model": {
-                            "text": "Pellentesque pellentesque sem magna."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "b5dfbf92-722d-9d6a-340d-1048b61f1246",
+                                "model": {
+                                  "text": "Pellentesque pellentesque sem magna."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -168,7 +192,15 @@
                     "blockId": "4191e4cb-3449-a359-ea2e-75266bd8a3ea",
                     "type": "text",
                     "model": {
-                      "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "b9067dd3-7cfe-b2a5-dd82-2f32e242f786",
+                          "model": {
+                            "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -183,7 +215,15 @@
                     "blockId": "91a90204-3eb0-60f6-732f-fca2fce2ea4a",
                     "type": "text",
                     "model": {
-                      "text": "Praesent sagittis fringilla nibh ut vulputate. Ut _nec purus_ est. Vestibulum in eleifend nibh."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "8fcb1c55-b920-4e84-72b4-683923c5c6b2",
+                          "model": {
+                            "text": "Praesent sagittis fringilla nibh ut vulputate. Ut _nec purus_ est. Vestibulum in eleifend nibh."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

@@ -42,7 +42,15 @@
                     "blockId": "3298d981-5b5a-1fcf-c615-7a14e799349a",
                     "type": "text",
                     "model": {
-                      "text": "Galileo"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "4db29665-f08d-5135-02d4-e0925e80f379",
+                          "model": {
+                            "text": "Galileo"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -57,7 +65,15 @@
                     "blockId": "e9c95639-8b60-0e2a-de2f-e41ad6eda538",
                     "type": "text",
                     "model": {
-                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "799e662a-8e85-a5f8-8cae-d92ad53bf8d0",
+                          "model": {
+                            "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

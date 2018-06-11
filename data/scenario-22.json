@@ -55,7 +55,15 @@
                     "blockId": "a264725f-7492-c716-115b-806d82a394fc",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "0fd08a51-605c-7225-edf4-ba00e7528be1",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -70,7 +78,15 @@
                     "blockId": "2e70c439-81ab-5084-aade-943a3fe6deff",
                     "type": "text",
                     "model": {
-                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "bc1bdafc-134d-2ab7-e727-2f4951d03cdd",
+                          "model": {
+                            "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -104,7 +120,15 @@
                     "blockId": "120d4af6-795d-122c-500c-ebd2192386cd",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "c2ccd85d-cd81-4308-8b95-cb06b5fd9191",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -119,7 +143,15 @@
                     "blockId": "7d2d80f0-9cbd-f8c5-b999-e3d09078736d",
                     "type": "text",
                     "model": {
-                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "55661000-92c7-89c9-2281-361c6a5e5a82",
+                          "model": {
+                            "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -184,7 +216,15 @@
                     "blockId": "cb977234-4fc2-f0fb-8704-48b20fddaeec",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "68362be7-459f-95bc-dcb2-f19d05bf1f28",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -199,7 +239,15 @@
                     "blockId": "3f059790-248f-bbbf-5955-b70c480309a5",
                     "type": "text",
                     "model": {
-                      "text": "Retail giant to close down 100 stores"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "c0c5ef91-bf60-de9f-20ac-243e456420e7",
+                          "model": {
+                            "text": "Retail giant to close down 100 stores"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -230,7 +278,15 @@
                           "blockId": "19b7e2d6-2237-2a6c-c530-9296bf87435f",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "8f2848fa-46a4-a8bf-cffd-c58f05494f13",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -268,7 +324,15 @@
                     "blockId": "cf135053-be5c-f65a-df66-7cb4d4eaf111",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "28155b86-a9c5-5b02-ae8f-eb912f0c1cc7",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -283,7 +347,15 @@
                     "blockId": "67c57a69-c9c4-ddf8-d4b1-57ce9ec112ab",
                     "type": "text",
                     "model": {
-                      "text": "Retail giant to close down 100 stores"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "1b25bb0c-8b98-3239-6f30-2d207a226dfa",
+                          "model": {
+                            "text": "Retail giant to close down 100 stores"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -314,7 +386,15 @@
                           "blockId": "be7188b1-2413-2f58-213d-ab424efb3a1b",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "569eabb2-0be1-656f-4263-6926d76cabd4",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

@@ -52,7 +52,15 @@
                     "blockId": "fc5945eb-6a70-a0f9-5300-864d261b968c",
                     "type": "text",
                     "model": {
-                      "text": "Galileo."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "8aa13ea3-e0c2-60b8-4384-efd306267302",
+                          "model": {
+                            "text": "Galileo."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -67,7 +75,15 @@
                     "blockId": "e221e50c-4655-4eb5-4103-95008389b130",
                     "type": "text",
                     "model": {
-                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "e35f4ea4-082f-c48f-3e10-90bf4ba00d21",
+                          "model": {
+                            "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -147,7 +163,15 @@
                     "blockId": "d3714c4d-0ee5-a8b9-379a-77a4bf45ab5d",
                     "type": "text",
                     "model": {
-                      "text": "Fusce tincidunt lectus eget augue mollis."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "146c5121-bf4a-3ead-3484-a22e72262832",
+                          "model": {
+                            "text": "Fusce tincidunt lectus eget augue mollis."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -162,7 +186,15 @@
                     "blockId": "75c8c23a-72f7-1411-92ad-a578f0bfcb0d",
                     "type": "text",
                     "model": {
-                      "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "bd7a48bc-7642-7e46-6dd9-5b3f97521b39",
+                          "model": {
+                            "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [/news/articles/c0000000004o](Morbi lacinia leo sed tellus faucibus), nec vulputate metus sagittis."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

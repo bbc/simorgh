@@ -81,7 +81,15 @@
                     "blockId": "8849c735-0beb-e966-085b-87dae1dc04d7",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "d75d9587-fab0-d4fd-4c5d-1876d676e619",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -131,7 +139,15 @@
                     "blockId": "c164fad6-2bb5-ef32-bf4e-408d0ccd187f",
                     "type": "text",
                     "model": {
-                      "text": "Sed et molestie justo."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "16e25944-7904-ae80-3f68-4282467b1638",
+                          "model": {
+                            "text": "Sed et molestie justo."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -146,7 +162,15 @@
                     "blockId": "e17e04db-91b7-4dce-7efa-842d4f89e886",
                     "type": "text",
                     "model": {
-                      "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "bc8e022a-9163-deda-01d1-a86daf41003e",
+                          "model": {
+                            "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -177,7 +201,15 @@
                           "blockId": "e3b14476-2708-b106-074c-dd35a93923ae",
                           "type": "text",
                           "model": {
-                            "text": "Nulla eget erat sed orci efficitur euismod eget eu nunc."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "57dfa055-58ee-4f2e-8d0d-6a5be2fb2659",
+                                "model": {
+                                  "text": "Nulla eget erat sed orci efficitur euismod eget eu nunc."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

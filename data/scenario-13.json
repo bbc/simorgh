@@ -58,7 +58,15 @@
                     "blockId": "7a9ad170-5f4f-cca6-eab0-505357664780",
                     "type": "text",
                     "model": {
-                      "text": "Galileo"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "d3f81655-b36e-f7db-5ae6-bfb2c36fd936",
+                          "model": {
+                            "text": "Galileo"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -73,7 +81,15 @@
                     "blockId": "41e69ca4-1cfc-f534-1495-c19346e964db",
                     "type": "text",
                     "model": {
-                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "aede9200-a0db-0dfa-9bd4-1b1813692443",
+                          "model": {
+                            "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -109,7 +125,15 @@
                     "blockId": "21eda773-0528-0d76-4184-fe7da309c845",
                     "type": "text",
                     "model": {
-                      "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "a0ec9585-f001-f1ee-e19f-32b65b815652",
+                          "model": {
+                            "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -140,7 +164,15 @@
                           "blockId": "d055bb39-e887-a215-387a-5574e2714781",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "5a73b29f-2f87-4a98-332f-794f59689b6a",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -201,7 +233,15 @@
                     "blockId": "a82ea891-15d9-cbaa-f553-22560115b546",
                     "type": "text",
                     "model": {
-                      "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "8fe0d69b-b3c5-b104-9301-876bda995278",
+                          "model": {
+                            "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -216,7 +256,15 @@
                     "blockId": "58fcb9f6-5819-5f31-d8da-7acddea84d1e",
                     "type": "text",
                     "model": {
-                      "text": "Highlights: Peru 2-0 Scotland"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "01153f9e-a9d9-d2f8-0e40-58be5d5ff0cc",
+                          "model": {
+                            "text": "Highlights: Peru 2-0 Scotland"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -247,7 +295,15 @@
                           "blockId": "960f40ab-fbdc-2b0c-774d-d5be6e8e6500",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "739811b0-3988-9bcc-059e-bb9308c686f9",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -285,7 +341,15 @@
                     "blockId": "9819964c-894d-55ba-6a12-6cc35d85c021",
                     "type": "text",
                     "model": {
-                      "text": "This video contains a portrait vpid p068hxjd"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "de55e89e-0d0c-6e12-f5a0-818f431450b2",
+                          "model": {
+                            "text": "This video contains a portrait vpid p068hxjd"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -300,7 +364,15 @@
                     "blockId": "a47dd29f-cba7-a6ce-81eb-18e396d41892",
                     "type": "text",
                     "model": {
-                      "text": "How the Skripals were saved"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "8db2a64b-aafa-fc68-6477-a98e3a2df2bc",
+                          "model": {
+                            "text": "How the Skripals were saved"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -331,7 +403,15 @@
                           "blockId": "fbd37b21-a993-5403-c90c-c696c65b4e40",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "36c4a52b-70d5-9433-a04b-c67f9831ed79",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -370,7 +450,15 @@
                     "blockId": "9d680abb-6948-6ddb-bb5f-efb6b85e42e9",
                     "type": "text",
                     "model": {
-                      "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "d5f33496-45aa-d210-0f31-9c3a3ecfda4e",
+                          "model": {
+                            "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -401,7 +489,15 @@
                           "blockId": "8599e70c-1754-3ff2-592c-89a4acc25397",
                           "type": "text",
                           "model": {
-                            "text": "Rio Olympics 2016"
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "b7038bbf-df9f-2a8d-7f45-65d9ccf85121",
+                                "model": {
+                                  "text": "Rio Olympics 2016"
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -440,7 +536,15 @@
                     "blockId": "da344b27-cf49-75a0-a416-d1ab5f68cf80",
                     "type": "text",
                     "model": {
-                      "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "09ccf5fa-b190-a102-65fb-0ebada55aeca",
+                          "model": {
+                            "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -471,7 +575,15 @@
                           "blockId": "d190c959-c142-e247-318c-bff0ff72fc4f",
                           "type": "text",
                           "model": {
-                            "text": "This video contains some guidance and no caption."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "714131d0-a478-0d47-9c16-0cb75360461c",
+                                "model": {
+                                  "text": "This video contains some guidance and no caption."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

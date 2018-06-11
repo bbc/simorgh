@@ -40,7 +40,15 @@
                     "blockId": "e1d4102d-55a2-40af-9416-eb1f6f2ad518",
                     "type": "text",
                     "model": {
-                      "text": "Galileo"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "2c9d8701-e3d9-b626-d4db-0e88534a6174",
+                          "model": {
+                            "text": "Galileo"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -55,7 +63,15 @@
                     "blockId": "38045c2b-1f64-5c3c-2d61-e4016dfc1efe",
                     "type": "text",
                     "model": {
-                      "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "9b6393a5-4d4a-7ac9-5853-4a9e1e6f89dd",
+                          "model": {
+                            "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -90,7 +106,15 @@
                     "blockId": "df676045-7ae4-47ce-16f8-17a5e2a1995c",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "ca62f8c7-4b74-e16c-bfa5-2118cc5bcf1b",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -105,7 +129,15 @@
                     "blockId": "22bd2267-e9ff-821d-a648-bf7c133dd038",
                     "type": "text",
                     "model": {
-                      "text": "Retail giant to close down 100 stores"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "cfc4d3f0-cec1-b6ad-c804-000518ddf00a",
+                          "model": {
+                            "text": "Retail giant to close down 100 stores"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -136,7 +168,15 @@
                           "blockId": "b93e4e12-6009-b833-a2eb-8fd380ce456c",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "b79349aa-54c7-2b9b-6841-e310898e6756",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

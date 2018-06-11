@@ -42,7 +42,15 @@
                     "blockId": "cb0d1fb6-9561-5478-b684-9126447a8dd0",
                     "type": "text",
                     "model": {
-                      "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "9b287b78-330d-4f96-f4e0-7d448cb6f166",
+                          "model": {
+                            "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -73,7 +81,15 @@
                           "blockId": "a11b6dee-b7f0-92e3-efc3-7b8613914bb1",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "3c491d94-5047-3422-f497-f37ed7406a38",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -178,7 +194,15 @@
                     "blockId": "687e2fde-ca9d-cc4a-073a-4c94ecf8da0b",
                     "type": "text",
                     "model": {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "7d584f6d-22ad-b7ab-3a6e-c063aa28e342",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -250,7 +274,15 @@
                     "blockId": "0bff5945-3dba-b811-bc37-3be8a117022d",
                     "type": "text",
                     "model": {
-                      "text": "Sed tempus porttitor interdum."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "9f8986b5-0f90-795a-20ed-5c0f49c3a37c",
+                          "model": {
+                            "text": "Sed tempus porttitor interdum."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -336,7 +368,15 @@
                     "blockId": "10d48f98-e69d-14b0-2f4f-5ff4913a0184",
                     "type": "text",
                     "model": {
-                      "text": "Duis posuere, nisl in faucibus placerat, nisl metus efficitur lorem"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "bf83497a-0c4f-15ff-66ff-7bf91a51c561",
+                          "model": {
+                            "text": "Duis posuere, nisl in faucibus placerat, nisl metus efficitur lorem"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -408,7 +448,15 @@
                     "blockId": "b9a0372c-d226-9e00-6551-5542cccb1506",
                     "type": "text",
                     "model": {
-                      "text": "Praesent sollicitudin mauris in vehicula."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "42266060-9b82-3fff-c47a-afadecad5981",
+                          "model": {
+                            "text": "Praesent sollicitudin mauris in vehicula."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -423,7 +471,15 @@
                     "blockId": "ca48a0d7-c4ad-6072-4a06-bfe05e6ee8f4",
                     "type": "text",
                     "model": {
-                      "text": "Pellentesque sed odio urna. Donec diam sem, porta eget mi quis, elementum commodo sapien."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "0e9e107a-e085-744c-d0ed-ebf00344ad19",
+                          "model": {
+                            "text": "Pellentesque sed odio urna. Donec diam sem, porta eget mi quis, elementum commodo sapien."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

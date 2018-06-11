@@ -103,7 +103,15 @@
                     "blockId": "408004f3-1830-7e51-c377-0b343642725a",
                     "type": "text",
                     "model": {
-                      "text": "Fusce interdum semper lacus eget malesuada."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "02058029-ecdf-90aa-4480-57607b44914d",
+                          "model": {
+                            "text": "Fusce interdum semper lacus eget malesuada."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -134,7 +142,15 @@
                           "blockId": "ad43f8e0-f584-2ff8-e94d-a1b4186e3560",
                           "type": "text",
                           "model": {
-                            "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "dfb27652-dcb6-8911-db7c-5d7f66d9e79a",
+                                "model": {
+                                  "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

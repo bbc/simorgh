@@ -76,7 +76,15 @@
                     "blockId": "120c3875-f813-dd43-5c7e-df5d3b92eeb8",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "58b9c718-cbd5-aaeb-71d9-66907a152319",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -107,7 +115,15 @@
                           "blockId": "34761fa4-3336-ed5c-79da-ec2069dbdbcd",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "618e7071-a7f1-6edc-d608-29558465f71c",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -167,7 +183,15 @@
                     "blockId": "18ac2173-2b90-c34b-3fa2-9b1ddece7c1c",
                     "type": "text",
                     "model": {
-                      "text": "M&S store closures."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "3c4192a7-ad39-d118-85f0-28a6fd4dad55",
+                          "model": {
+                            "text": "M&S store closures."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -182,7 +206,15 @@
                     "blockId": "694c9524-25f3-41d5-c39e-07861a86fd0b",
                     "type": "text",
                     "model": {
-                      "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. \n\nThis latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "61bb8d94-69d1-9eb6-5cf5-39a76c34d2ab",
+                          "model": {
+                            "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. \n\nThis latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -216,7 +248,15 @@
                     "blockId": "44fa2745-67c3-d876-64d7-9ca8b179e2be",
                     "type": "text",
                     "model": {
-                      "text": "Map of M&S store closures"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "cacdb3d5-1662-aa46-bdd8-82fb5f34cc0e",
+                          "model": {
+                            "text": "Map of M&S store closures"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -231,7 +271,15 @@
                     "blockId": "1fa8c9dc-06ae-85c5-e05e-4dbb88f1aaea",
                     "type": "text",
                     "model": {
-                      "text": "Map of Marks and Spencer store closure by 2020"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "c92ba8ae-0fbd-3821-a82f-9ec24f139f81",
+                          "model": {
+                            "text": "Map of Marks and Spencer store closure by 2020"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -265,7 +313,15 @@
                     "blockId": "169f796e-dc64-6603-8144-8fff349a0079",
                     "type": "text",
                     "model": {
-                      "text": "Syrian protesters"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "2eaaafb0-4ce8-3fd7-16f6-beb3f5a02206",
+                          "model": {
+                            "text": "Syrian protesters"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -299,7 +355,15 @@
                     "blockId": "bbc32078-d24e-4d8c-f69e-afced05c2f34",
                     "type": "text",
                     "model": {
-                      "text": "BBC Scotland money"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "fe1464a5-03fa-d29c-2256-65ddf692b349",
+                          "model": {
+                            "text": "BBC Scotland money"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -314,7 +378,15 @@
                     "blockId": "7abd3d7e-6a4c-5447-f5b5-704510b364a4",
                     "type": "text",
                     "model": {
-                      "text": "BBC Scotland money"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "824898d4-bb90-287f-70bc-67cb790672b6",
+                          "model": {
+                            "text": "BBC Scotland money"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

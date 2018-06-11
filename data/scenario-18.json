@@ -101,7 +101,15 @@
                     "blockId": "8b92f221-5bbd-25a0-b51c-530e46c42b0c",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "c1667b8c-2b85-ad9d-9f0f-72199c86ac32",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -137,7 +145,15 @@
                     "blockId": "a16a034d-c4fe-1471-4fa7-8f6bbcc2f34f",
                     "type": "text",
                     "model": {
-                      "text": "Fusce interdum semper lacus eget malesuada."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "69816a2d-acaf-5d72-d51a-46169ee70c38",
+                          "model": {
+                            "text": "Fusce interdum semper lacus eget malesuada."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -168,7 +184,15 @@
                           "blockId": "9e250007-36ba-52ea-33f2-6f3c3e23f5ad",
                           "type": "text",
                           "model": {
-                            "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "47beb0ae-7afa-e879-2f3f-677b8a42a07e",
+                                "model": {
+                                  "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -205,7 +229,15 @@
                     "blockId": "cd7e6c3c-f399-2d47-03f9-057f8cf8e7ae",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "567fe2b6-4601-1fb3-b01a-5e503fb22a98",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -262,7 +294,15 @@
                     "blockId": "246f778b-6655-5786-9b5c-db0c54245cd3",
                     "type": "text",
                     "model": {
-                      "text": "Integer varius eleifend ligula id semper."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "7a8cf3f6-1019-5a42-85be-748e30c7a939",
+                          "model": {
+                            "text": "Integer varius eleifend ligula id semper."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]

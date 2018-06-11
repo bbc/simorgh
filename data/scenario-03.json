@@ -67,7 +67,15 @@
                     "blockId": "4183af64-50f4-fd1d-eb3e-b68c4e1899e5",
                     "type": "text",
                     "model": {
-                      "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "f959a7b4-6057-58c4-fafa-7f52aa056dc2",
+                          "model": {
+                            "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -82,7 +90,15 @@
                     "blockId": "1a4a68e3-c8e5-4a67-0ca1-8eec810fd62c",
                     "type": "text",
                     "model": {
-                      "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "de2c531a-6b02-4db1-437b-09efa14cebd9",
+                          "model": {
+                            "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -113,7 +129,15 @@
                           "blockId": "d41fbdb5-8cb9-d2a0-968f-c3a40a18e5a7",
                           "type": "text",
                           "model": {
-                            "text": "Pellentesque pellentesque sem magna."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "c8326364-404a-e7da-aa5d-6eadf7d8815c",
+                                "model": {
+                                  "text": "Pellentesque pellentesque sem magna."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

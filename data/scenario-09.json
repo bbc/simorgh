@@ -49,7 +49,15 @@
                     "blockId": "0cb5e07f-9881-d1d1-31a7-727e295eaa67",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "dc943001-529b-5545-41c3-0456e6a7ae5d",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -80,7 +88,15 @@
                           "blockId": "ce40c253-3fff-a227-b27d-e2da5bc248e8",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "415a1cc9-1448-170e-f835-dabf9ed6171a",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -165,7 +181,15 @@
                     "blockId": "85557d5e-98e0-bdc3-0a06-a518dccdfc21",
                     "type": "text",
                     "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "blockId": "10c6221c-c3fb-e505-fd73-8443145177f2",
+                          "model": {
+                            "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -196,7 +220,15 @@
                           "blockId": "cea9e575-0ec0-6723-3aa0-187a89590cc6",
                           "type": "text",
                           "model": {
-                            "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "blockId": "ffb88992-8629-eadf-0553-d28641414335",
+                                "model": {
+                                  "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
