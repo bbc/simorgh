@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const BBCNewsLink = styled.a`
@@ -9,19 +9,13 @@ const BBCNewsLink = styled.a`
   text-decoration: none;
 `;
 
-const BBCNewsNavigation = styled.div`
-  width: 100%;
-`;
-
-const BBCNewsBrandingLogo = styled.div`
-  margin: 0 62px;
-  padding: 10px 16px;
-`;
-
-const BBCNewsBranding = styled.div`
+const BBCNewsNavigation = styled.header`
   background-color: #bb1919;
   height: 58px;
   width: 100%;
+
+  margin: 0 62px;
+  padding: 10px 16px;
 `;
 
 class Header extends Component {
@@ -33,17 +27,11 @@ class Header extends Component {
     const { title } = this.state;
 
     return (
-      <Fragment>
-        <BBCNewsBranding>
-          <BBCNewsBrandingLogo>
-            <BBCNewsNavigation>
-              <BBCNewsLink href="/news" id="brand">
-                {title}
-              </BBCNewsLink>
-            </BBCNewsNavigation>
-          </BBCNewsBrandingLogo>
-        </BBCNewsBranding>
-      </Fragment>
+        <BBCNewsNavigation role="banner" aria-label="BBC News">
+          <BBCNewsLink href="/news" id="brand">
+            {title}
+          </BBCNewsLink>
+        </BBCNewsNavigation>
     );
   }
 }
