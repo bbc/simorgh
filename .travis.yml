@@ -1,4 +1,12 @@
 language: node_js
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+script:
+  - $(npm bin)/cypress run --record
 notifications:
   email: false
   slack:
@@ -9,8 +17,3 @@ notifications:
     on_start: change   # default: never
     on_cancel: always # default: always
     on_error: always # default: always
-before_script:
-  - npm run build
-  - npm run start
-after_script:
-  - pkill -f razzle
