@@ -1,7 +1,7 @@
 import { getPublicDirectory } from './config';
 
 describe('Config', () => {
-  describe('publicDirectory', () => {
+  describe('getPublicDirectory', () => {
     process.env.RAZZLE_PUBLIC_DIR = 'test-public';
     process.env.RAZZLE_PUBLIC_DIR_DEV = `test-public-dev`;
 
