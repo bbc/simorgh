@@ -18,7 +18,7 @@ const BBCNewsNavigation = styled.div`
 
 const BBCNewsNavigationBrand = styled.a`
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-  font-size: 2em;
+  font-size: 2.4em;
   color: #fff;
   text-transform: uppercase;
 `;
