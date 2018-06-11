@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const BBCNewsLink = styled.a`
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-  font-size: 2.4em;
+  font-size: 2.2em;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
