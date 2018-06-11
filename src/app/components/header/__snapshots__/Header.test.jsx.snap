@@ -8,7 +8,7 @@ exports[`Header Component should render correctly 1`] = `
 >
   <a
     className="sc-bdVaJa iguvfJ"
-    href="/news"
+    href="http://bbc.co.uk/news"
     id="brand"
   >
     BBC News
