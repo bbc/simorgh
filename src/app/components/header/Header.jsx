@@ -9,7 +9,7 @@ const BBCNewsLink = styled.a`
   text-decoration: none;
 `;
 
-const BBCNewsNavigation = styled.header`
+const BBCNewsHeader = styled.header`
   background-color: #bb1919;
   height: 58px;
   width: 100%;
@@ -27,11 +27,11 @@ class Header extends Component {
     const { title } = this.state;
 
     return (
-        <BBCNewsNavigation role="banner" aria-label="BBC News">
+        <BBCNewsHeader role="banner" aria-label="BBC News">
           <BBCNewsLink href="/news" id="brand">
             {title}
           </BBCNewsLink>
-        </BBCNewsNavigation>
+        </BBCNewsHeader>
     );
   }
 }
