@@ -14,8 +14,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test:e2e": "npx cypress run",
     "test:e2e:interactive": "npx cypress open",
-    "test:storybook": "CYPRESS_baseUrl=http://localhost:9001 npm run test:e2e -- --spec cypress/integration/storybook_spec.js",
-    "test:storybook:interactive": "CYPRESS_baseUrl=http://localhost:9001 npm run test:e2e:interactive"
+    "test:storybook": "CYPRESS_baseUrl=http://localhost:9001 npm run test:e2e -- --spec cypress/integration/storybook_spec.js"
   },
   "repository": {
     "type": "git",
