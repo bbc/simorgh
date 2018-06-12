@@ -19,14 +19,36 @@ describe('Server', () => {
   });
 
   describe('/*', () => {
-    const testResponseData = 'data';
-    beforeEach(() => {
-      after.render = jest.fn().mockImplementationOnce(() => testResponseData);
+    const testResponseText = (testTitle, value, mockRender, testAssertion) => {
+      it(testTitle, async () => {
+        after.render = jest.fn().mockImplementationOnce(mockRender);
+        const { text } = await makeRequest('/');
+        testAssertion(text, value);
+      });
+    };
+
+    describe('Successful render', () => {
+      const testValue = 'data';
+      testResponseText(
+        'should respond with rendered data',
+        testValue,
+        () => testValue,
+        (text, value) => expect(text).toContain(value),
+      );
     });
 
-    it('should respond with rendered data', async () => {
-      const { text } = await makeRequest('/');
-      expect(text).toEqual(testResponseData);
+    describe('Error', () => {
+      const testValue = 'error';
+      const mockRender = () => {
+        throw testValue;
+      };
+      const testAssertion = (text, value) => expect(text).toContain(value);
+      testResponseText(
+        'should respond with the caught error',
+        testValue,
+        mockRender,
+        testAssertion,
+      );
     });
   });
 });
