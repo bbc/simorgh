@@ -56,3 +56,5 @@ We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the perf
 
 1. `npm run dev` starts the application,
 2. `npm run lighthouse` runs our Lighthouse Best Practice test.
+
+Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
