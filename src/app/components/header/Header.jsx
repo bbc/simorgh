@@ -11,7 +11,7 @@ const BBCNewsLink = styled.a`
 
 const BBCNewsHeader = styled.header`
   background-color: #bb1919;
-  height: 45px;
+  height: 40px;
   width: 100%;
   padding: 15px 16px;
 `;
