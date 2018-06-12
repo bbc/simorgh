@@ -25,9 +25,7 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 ## Production build
 
 To run this application locally with a production build, run:
-
-1.  `npm run build`
-2.  `npm run start`
+`npm run build && npm run start`
 
 ## Tests
 
@@ -54,7 +52,7 @@ Cypress can be run interactively using `npm run test:e2e:interactive`. This load
 
 We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. For running the tests locally we need two terminals running:
 
-1. `npm run start` starts the production server,
+1. [Start the production server](https://github.com/bbc/simorgh#production-build)
 2. `npm run lighthouse` runs our Lighthouse tests.
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
