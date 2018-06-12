@@ -7,6 +7,10 @@ import { getPublicDirectory } from './config';
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 
+/*
+  Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
+  Enables unit testing of this file.
+*/
 const getAssets = () => {
   if (!process.env.RAZZLE_ASSETS_MANIFEST) {
     return {};
