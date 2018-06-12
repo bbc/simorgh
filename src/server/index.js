@@ -5,8 +5,18 @@ import Document from '../app/components/Document';
 import { getPublicDirectory } from './config';
 
 /* eslint-disable import/no-dynamic-require */
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
+/* eslint-disable global-require */
+
+const getAssets = () => {
+  if (!process.env.RAZZLE_ASSETS_MANIFEST) {
+    return {};
+  }
+  return require(process.env.RAZZLE_ASSETS_MANIFEST);
+};
+
+const assets = getAssets();
 const publicDirectory = getPublicDirectory();
+
 const server = express();
 server
   .disable('x-powered-by')
