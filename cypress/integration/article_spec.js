@@ -1,4 +1,4 @@
-import {testRequestResponse} from './test-helper';
+import {testResponseCode} from './test-helper';
 
 describe('News Article', () => {
 
@@ -18,12 +18,12 @@ describe('News Article', () => {
 
 describe('Page Status', () => {
     it('should display 200', () => {
-      testRequestResponse('/', 200)  
+      testResponseCode('/', 200)  
     })
 })
 
 describe('Renderer Status', () => {
     it('should display 200', () => {
-      testRequestResponse('/status', 200)  
+      testResponseCode('/status', 200)  
     })
 })
