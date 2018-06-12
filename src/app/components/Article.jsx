@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 
-import Header from './header/Header';
+import BBCNewsBanner from './header/BBCNewsBanner';
 
 const Body = styled.body`
   margin: 0 auto;
@@ -47,7 +47,7 @@ class Article extends Component {
           <title>{headline}</title>
         </Helmet>
         <Body />
-        <Header />
+        <BBCNewsBanner />
         <Headline>{headline}</Headline>
       </Fragment>
     );

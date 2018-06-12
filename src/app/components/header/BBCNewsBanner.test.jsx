@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Header from './Header';
+import BBCNewsBanner from './BBCNewsBanner';
 
-describe('Header', () => {
+describe('BBCNewsBanner', () => {
   describe('Component', () => {
     it('should render correctly', () => {
-      const tree = renderer.create(<Header />);
+      const tree = renderer.create(<BBCNewsBanner />);
       expect(tree).toMatchSnapshot();
     });
   });
