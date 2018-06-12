@@ -2,7 +2,11 @@ import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
-import { getPublicDirectory } from './config';
+
+const getPublicDirectory = () =>
+  process.env.NODE_ENV === 'production'
+    ? process.env.RAZZLE_PUBLIC_DIR
+    : process.env.RAZZLE_PUBLIC_DIR_DEV;
 
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
