@@ -9,13 +9,5 @@ describe('Header', () => {
       const tree = renderer.create(<Header />);
       expect(tree).toMatchSnapshot();
     });
-
-    // it('should have a font-size of x', () => {
-
-    // });
-
-    // it('should have a background colour of x', () => {
-
-    // });
   });
 });
