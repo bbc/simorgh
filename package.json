@@ -7,7 +7,7 @@
     "dev": "razzle start",
     "build": "razzle build",
     "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint --ext .js,jsx ./src ./cypress ./.storybook ",
+    "test:lint": "eslint --ext .js,jsx ./src ./cypress",
     "test:unit": "razzle test --env=jsdom --coverage",
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
@@ -21,10 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/bbc/simorgh.git"
   },
-  "keywords": [
-    "BBC",
-    "Article"
-  ],
+  "keywords": ["BBC", "Article"],
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
@@ -69,8 +66,6 @@
       "!**/src/__test__/**",
       "!**/*.stories.jsx"
     ],
-    "setupFiles": [
-      "./src/__test__/jest-setup.js"
-    ]
+    "setupFiles": ["./src/__test__/jest-setup.js"]
   }
 }
