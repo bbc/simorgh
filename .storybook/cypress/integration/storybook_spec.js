@@ -1,6 +1,6 @@
 import { testResponseCode } from "../../../cypress/integration/test-helper";
 
-describe('Storybook Article', () => {
+describe("Storybook Article", () => {
   beforeEach(() => {
     cy.visit("/");
   });
