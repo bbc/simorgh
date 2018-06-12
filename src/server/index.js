@@ -11,14 +11,14 @@ import { getPublicDirectory } from './config';
   Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Enables unit testing of this file.
 */
-const getAssets = () => {
-  if (!process.env.RAZZLE_ASSETS_MANIFEST) {
-    return {};
-  }
-  return require(process.env.RAZZLE_ASSETS_MANIFEST);
-};
 
-const assets = getAssets();
+let assets;
+try {
+  assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
+} catch (error) {
+  assets = {};
+}
+
 const publicDirectory = getPublicDirectory();
 
 const server = express();
