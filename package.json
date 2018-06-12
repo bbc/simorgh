@@ -12,8 +12,8 @@
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test:e2e": "npx cypress run --project ./src/",
-    "test:e2e:interactive": "npx cypress open --project ./src/",
+    "test:e2e": "npx cypress run",
+    "test:e2e:interactive": "npx cypress open",
     "test:storybook": "npx cypress run --project ./.storybook/"
   },
   "repository": {
