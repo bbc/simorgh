@@ -1,4 +1,5 @@
 import request from 'supertest';
+import * as after from '@jaredpalmer/after';
 import server from './index';
 
 describe('Server', () => {
@@ -14,6 +15,18 @@ describe('Server', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
       expect(statusCode).toBe(200);
+    });
+  });
+
+  describe('/*', () => {
+    const testResponseData = 'data';
+    beforeEach(() => {
+      after.render = jest.fn().mockImplementationOnce(() => testResponseData);
+    });
+
+    it('should respond with rendered data', async () => {
+      const { text } = await makeRequest('/');
+      expect(text).toEqual(testResponseData);
     });
   });
 });
