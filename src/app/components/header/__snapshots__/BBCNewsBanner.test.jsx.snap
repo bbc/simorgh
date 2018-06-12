@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Component should render correctly 1`] = `
+exports[`BBCNewsBanner Component should render correctly 1`] = `
 <header
   aria-label="BBC News"
   className="sc-bwzfXH fDxYsB"

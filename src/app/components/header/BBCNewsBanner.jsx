@@ -16,7 +16,7 @@ const BBCNewsHeader = styled.header`
   padding: 15px 16px;
 `;
 
-class Header extends Component {
+class BBCNewsBanner extends Component {
   state = {
     title: 'BBC News',
   };
@@ -34,4 +34,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default BBCNewsBanner;
