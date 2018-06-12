@@ -46,7 +46,7 @@ class Article extends Component {
           <title>{headline}</title>
         </Helmet>
         <Body />
-        <Header />
+        <BBCNewsBanner />
         <Headline>{headline}</Headline>
       </Fragment>
     );
