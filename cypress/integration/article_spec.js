@@ -7,7 +7,7 @@ describe('News Article', () => {
     })
 
     it('should render the BBC News branding', () => {
-        cy.get('header a').should('contain', 'BBC News')
+        cy.get('header').should('contain', 'BBC News')
     })
 
     it('should render a headline', () => {
