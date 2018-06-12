@@ -1,3 +1,5 @@
+import {testResponseCode} from './test-helper';
+
 describe('News Article', () => {
 
     beforeEach(() => {
@@ -14,10 +16,14 @@ describe('News Article', () => {
     })
 })
 
+describe('Page Status', () => {
+    it('should display 200', () => {
+      testResponseCode('/', 200)  
+    })
+})
+
 describe('Renderer Status', () => {
-    it('should display 200/OK', () => {
-        cy.request('/status').then((response) => {
-            expect(response.status).to.eq(200)
-        })
+    it('should display 200', () => {
+      testResponseCode('/status', 200)  
     })
 })
