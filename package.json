@@ -21,7 +21,10 @@
     "type": "git",
     "url": "git+https://github.com/bbc/simorgh.git"
   },
-  "keywords": ["BBC", "Article"],
+  "keywords": [
+    "BBC",
+    "Article"
+  ],
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
@@ -66,6 +69,8 @@
       "!**/src/__test__/**",
       "!**/*.stories.jsx"
     ],
-    "setupFiles": ["./src/__test__/jest-setup.js"]
+    "setupFiles": [
+      "./src/__test__/jest-setup.js"
+    ]
   }
 }
