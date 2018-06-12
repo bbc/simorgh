@@ -54,7 +54,7 @@ Cypress can be run interactively using `npm run test:e2e:interactive`. This load
 
 We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. Our lighthouse tests audit for best practice. For running the tests locally we need two terminals running:
 
-1. `npm run dev` starts the application,
+1. `npm run build && npm run start` starts the production server,
 2. `npm run lighthouse` runs our Lighthouse Best Practice test.
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
