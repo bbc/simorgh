@@ -1,4 +1,4 @@
-import {testResponseCode} from './test-helper';
+import {testResponseCode} from '../../../cypress/integration/test-helper';
 
 describe('Storybook Article ', () => {
 
