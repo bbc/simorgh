@@ -8,17 +8,13 @@ const getPublicDirectory = () =>
     ? process.env.RAZZLE_PUBLIC_DIR
     : process.env.RAZZLE_PUBLIC_DIR_DEV;
 
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-
 /*
   Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Enables unit testing of this file.
 */
-
 let assets;
 try {
-  assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
+  assets = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
 } catch (error) {
   assets = {};
 }
