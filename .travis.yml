@@ -9,6 +9,13 @@ notifications:
     on_start: change   # default: never
     on_cancel: always # default: always
     on_error: always # default: always
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+before_install: npm install -g npm@latest
+install:
+  - npm ci
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
