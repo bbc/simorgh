@@ -26,7 +26,7 @@ class BBCNewsBanner extends Component {
 
     return (
       <BBCNewsHeader role="banner" aria-label="BBC News">
-        <BBCNewsLink href="http://bbc.co.uk/news" id="brand">
+        <BBCNewsLink href="http://bbc.co.uk/news">
           {title}
         </BBCNewsLink>
       </BBCNewsHeader>
