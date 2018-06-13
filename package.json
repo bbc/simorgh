@@ -59,8 +59,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "jest-fetch-mock": "^1.6.2",
-    "prettier": "1.13.5",
-    "wait-on": "^2.1.0"
+    "prettier": "1.13.5"
   },
   "jest": {
     "collectCoverageFrom": [

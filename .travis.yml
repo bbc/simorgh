@@ -1,12 +1,4 @@
 language: node_js
-cache:
-  directories:
-    - ~/.npm
-    - ~/.cache
-before_install: npm install -g npm@latest
-install:
-  - npm ci
-before_script: ./scripts/travis-before-install.sh
 notifications:
   email: false
   slack:
