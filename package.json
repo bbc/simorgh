@@ -44,10 +44,10 @@
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^16.4.0",
     "speculate": "^1.7.4",
-    "@storybook/react": "^4.0.0-alpha.8",
     "styled-components": "^3.3.2"
   },
   "devDependencies": {
+    "@storybook/react": "^4.0.0-alpha.8",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
