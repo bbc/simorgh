@@ -47,7 +47,7 @@ We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running 
 npm run test:e2e
 ```
 
-It will spin up a development server and run the Cypress tests against that.
+It will spin up a production server on port 7080 and run the Cypress tests against that.
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
