@@ -1,3 +1,3 @@
 Cypress.Screenshot.defaults({
-    screenshotOnRunFailure: false
-})
+  screenshotOnRunFailure: false,
+});

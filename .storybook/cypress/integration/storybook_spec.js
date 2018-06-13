@@ -1,17 +1,17 @@
-import { testResponseCode } from "../../../cypress/integration/test-helper";
+import { testResponseCode } from '../../../cypress/integration/test-helper';
 
-describe("Storybook Article", () => {
+describe('Storybook Article', () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit('/');
   });
 
-  it("should render a title", () => {
-    cy.title().should("eq", "Storybook");
+  it('should render a title', () => {
+    cy.title().should('eq', 'Storybook');
   });
 });
 
-describe("Page Status", () => {
-  it("should display 200", () => {
-    testResponseCode("/", 200);
+describe('Page Status', () => {
+  it('should display 200', () => {
+    testResponseCode('/', 200);
   });
 });

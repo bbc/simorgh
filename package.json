@@ -7,7 +7,7 @@
     "dev": "razzle start",
     "build": "razzle build",
     "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint --ext .js,jsx ./src ./cypress",
+    "test:lint": "eslint --ext .js,jsx ./storybook",
     "test:unit": "razzle test --env=jsdom --coverage",
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
@@ -44,10 +44,10 @@
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^16.4.0",
     "speculate": "^1.7.4",
+    "@storybook/react": "^4.0.0-alpha.8",
     "styled-components": "^3.3.2"
   },
   "devDependencies": {
-    "@storybook/react": "^4.0.0-alpha.8",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
