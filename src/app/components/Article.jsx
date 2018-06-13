@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 
-import BBCNewsBanner from './header/BBCNewsBanner';
+import BBCNewsBanner from './header/index';
 
 const Body = styled.body`
   margin: 0 auto;
