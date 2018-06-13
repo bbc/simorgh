@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
-import Header from './header/Header';
+import Header from './header';
 
 const Body = styled.body`
   margin: 0 auto;
