@@ -12,9 +12,9 @@
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "cypress": "npx cypress run",
+    "cypress:run": "npx cypress run",
     "cypress:interactive": "npx cypress open",
-    "test:e2e": "run-p --race dev cypress",
+    "test:e2e": "run-p --race dev cypress:run",
     "test:e2e:interactive": "run-p --race dev cypress:interactive",
     "test:storybook": "npx cypress run --project ./.storybook/",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view"
