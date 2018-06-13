@@ -40,7 +40,7 @@ describe('Article', () => {
     describe('On client', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual('/data/scenario-01.json');
+        expect(fetch.mock.calls[0][0]).toEqual('/data/test/scenario-01.json');
       });
     });
 
@@ -52,7 +52,7 @@ describe('Article', () => {
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
         callGetInitialProps(context);
         expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/scenario-01.json`,
+          `${BASE_PATH}/data/test/scenario-01.json`,
         );
       });
     });

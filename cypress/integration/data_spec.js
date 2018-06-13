@@ -9,7 +9,7 @@ describe('Static Articles data', () => {
   };
 
   beforeEach(() => {
-    cy.request(`/data/scenario-01.json`).then(({ status, body }) => {
+    cy.request(`/data/test/scenario-01.json`).then(({ status, body }) => {
       responseStatus = status;
       responseBody = body;
     });
