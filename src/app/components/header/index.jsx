@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Link = styled.a`
@@ -16,20 +16,10 @@ const StyledHeader = styled.header`
   padding: 15px 16px;
 `;
 
-class Header extends Component {
-  state = {
-    title: 'BBC News',
-  };
-
-  render() {
-    const { title } = this.state;
-
-    return (
-      <StyledHeader role="banner" aria-label="BBC News">
-        <Link href="http://bbc.co.uk/news">{title}</Link>
-      </StyledHeader>
-    );
-  }
-}
+const Header = () => (
+  <StyledHeader role="banner" aria-label="BBC News">
+    <Link href="http://bbc.co.uk/news">BBC News</Link>
+  </StyledHeader>
+);
 
 export default Header;
