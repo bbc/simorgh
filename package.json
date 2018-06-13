@@ -7,7 +7,7 @@
     "dev": "razzle start",
     "build": "razzle build",
     "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint --ext .js,jsx ./storybook",
+    "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook",
     "test:unit": "razzle test --env=jsdom --coverage",
     "start": "NODE_ENV=production node build/server.js",
     "speculate": "speculate",
