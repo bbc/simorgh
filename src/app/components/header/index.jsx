@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const BBCNewsLink = styled.a`
+const Link = styled.a`
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
   font-size: 2.2em;
   color: #fff;
@@ -26,9 +26,7 @@ class BBCNewsBanner extends Component {
 
     return (
       <BBCNewsHeader role="banner" aria-label="BBC News">
-        <BBCNewsLink href="http://bbc.co.uk/news">
-          {title}
-        </BBCNewsLink>
+        <Link href="http://bbc.co.uk/news">{title}</Link>
       </BBCNewsHeader>
     );
   }
