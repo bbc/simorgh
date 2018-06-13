@@ -1,4 +1,4 @@
-import {testResponseCode} from './test-helper';
+import { testResponseCode, getElement, shouldContainText, shouldContainStyles } from './test-helper';
 
 describe('News Article', () => {
 
@@ -6,27 +6,16 @@ describe('News Article', () => {
         cy.visit('/')
     })
 
-    it('Header should contain BBC News', () => {
-        const header = cy.get('header')
-        header.should('contain', 'BBC News')
-    });
-
-    it('Header should contain the following CSS property values', () => {
-        const header = cy.get('header')
-        header.should((el) => {
-            expect(el).to.have.css('background-color', 'rgb(187, 25, 25)')
-            expect(el).to.have.css('height', '40px')
-        });
-    });
-
-    it('Header should contain the following anchor CSS property values', () => {
-        const anchor = cy.get('header a')
-
-        anchor.should((el) => {
-            expect(el).to.have.css('font-family', 'ReithSans, Arial, Helvetica, freesans, sans-serif')
-            expect(el).to.have.css('color', 'rgb(255, 255, 255)')
-        })
-    });
+    it('should render the BBC News branding', () => {
+        const headerElement = getElement('header')
+        shouldContainStyles(headerElement, 'height', '40px')
+        shouldContainStyles(headerElement, 'background-color', 'rgb(187, 25, 25)')
+        
+        const anchorElement = getElement('header a')
+        shouldContainText(anchorElement, 'BBC News')
+        shouldContainStyles(anchorElement, 'color', 'rgb(255, 255, 255)')
+        shouldContainStyles(anchorElement, 'font-family', 'ReithSans, Arial, Helvetica, freesans, sans-serif')
+    })
 
     it('should render a headline', () => {
         cy.get('h1').should('contain','Article Headline')
