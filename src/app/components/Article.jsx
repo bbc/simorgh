@@ -2,8 +2,7 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
-
-import BBCNewsBanner from './header/BBCNewsBanner';
+import Header from './header/index';
 
 const Body = styled.body`
   margin: 0 auto;
@@ -47,7 +46,7 @@ class Article extends Component {
           <title>{headline}</title>
         </Helmet>
         <Body />
-        <BBCNewsBanner />
+        <Header title="BBC News" />
         <Headline>{headline}</Headline>
       </Fragment>
     );
