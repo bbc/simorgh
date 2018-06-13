@@ -14,7 +14,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "cypress": "npx cypress run",
     "cypress:interactive": "npx cypress open",
-    "test:e2e": "run-p --race dev cypress",
+    "test:e2e": "run-p --race start cypress",
+    "test:e2e:dev": "run-p --race dev cypress",
     "test:e2e:interactive": "run-p --race dev cypress:interactive",
     "test:storybook": "npx cypress run --project ./.storybook/",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view"
