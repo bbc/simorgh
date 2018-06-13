@@ -1,5 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import BBCNewsBanner from './index';
+import Header from './index';
 
-storiesOf('BBCNewsBanner', module).add('default', () => <BBCNewsBanner />);
+storiesOf('Header', module).add('default', () => <Header />);
