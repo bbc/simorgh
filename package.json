@@ -14,9 +14,9 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "cypress": "npx cypress run",
     "cypress:interactive": "npx cypress open",
-    "test:e2e": "kill $(lsof -t -i:7080) && npm run build && run-p --race start cypress",
+    "test:e2e": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress",
     "test:e2e:ci": "npm run build && run-p --race start cypress",
-    "test:e2e:interactive": "kill $(lsof -t -i:7080) && npm run build && run-p --race start cypress:interactive",
+    "test:e2e:interactive": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress:interactive",
     "test:storybook": "npx cypress run --project ./.storybook/",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view"
   },
