@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 
+import Experiment from './Experiment';
+import Variant from './Variant';
+
 const Headline = styled.h1`
   color: #222;
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
@@ -24,6 +27,7 @@ class Article extends Component {
     try {
       const response = await fetch(url);
       const data = await response.json();
+
       return { data };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
@@ -38,7 +42,23 @@ class Article extends Component {
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
-        <Headline>{headline}</Headline>
+        <Experiment>
+          <Variant name="One">
+            <Headline>One</Headline>
+          </Variant>
+          <Variant name="Three">
+            <Headline>Three</Headline>
+          </Variant>
+          <Variant name="Four">
+            <Headline>Four</Headline>
+          </Variant>
+          <Variant name="Five">
+            <Headline>Five</Headline>
+          </Variant>
+          <Variant name="Six">
+            <Headline>Six</Headline>
+          </Variant>
+        </Experiment>
       </Fragment>
     );
   }
