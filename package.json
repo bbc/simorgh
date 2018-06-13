@@ -15,6 +15,7 @@
     "cypress": "npx cypress run",
     "cypress:interactive": "npx cypress open",
     "test:e2e": "kill $(lsof -t -i:7080) && npm run build && run-p --race start cypress",
+    "test:e2e:ci": "npm run build && run-p --race start cypress",
     "test:e2e:dev": "kill $(lsof -t -i:7080) && run-p --race dev cypress",
     "test:e2e:dev:interactive": "kill $(lsof -t -i:7080) && run-p --race dev cypress:interactive",
     "test:storybook": "npx cypress run --project ./.storybook/",
