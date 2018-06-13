@@ -23,9 +23,5 @@ describe('Static Articles data', () => {
     testScenarioResponse('should be an object', () => {
       expect(responseBody).to.be.an('object');
     });
-
-    testScenarioResponse('should contain a blocks object', () => {
-      expect(responseBody).to.have.property('blocks');
-    });
   });
 });
