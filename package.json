@@ -14,10 +14,11 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "cypress": "npx cypress run",
     "cypress:interactive": "npx cypress open",
+    "cypress:storybook": "npx cypress run --project ./.storybook/.",
     "test:e2e": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress",
     "test:e2e:ci": "npm run build && run-p --race start cypress",
     "test:e2e:interactive": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress:interactive",
-    "test:storybook": "(lsof -t -i:9001 | xargs kill) && npx cypress run --project ./.storybook/",
+    "test:storybook": "(lsof -t -i:9001 | xargs kill) && run-p --race storybook cypress:storybook",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view"
   },
   "repository": {
