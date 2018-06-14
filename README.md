@@ -25,9 +25,7 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 ## Production build
 
 To run this application locally with a production build, run:
-
-1.  `npm run build`
-2.  `npm run start`
+`npm run build && npm run start`
 
 ## Tests
 
@@ -41,12 +39,28 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 ### End-to-end tests
 
+#### Main application
+
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally we need two terminals running:
 
 1. `npm run dev` with the application,
 2. `npm run test:e2e` with the Cypress integration tests.
 
-Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`. 
+Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`.
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+#### Storybook
+We also have a [Cypress](https://www.cypress.io/) project which runs a different set of end-to-end tests on [Storybook](https://github.com/bbc/simorgh#storybook-ui-development-environmentstyle-guide). For running the tests locally we need two terminals running:
+
+1. `npm run storybook` with the application,
+2. `npm run test:storybook` with the Cypress integration tests.
+
+### Lighthouse Best Practice tests
+
+We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. For running the tests locally we need two terminals running:
+
+1. [Start the production server](https://github.com/bbc/simorgh#production-build)
+2. `npm run lighthouse` runs our Lighthouse tests.
+
+Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
