@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component should render correctly 1`] = `
+exports[`Article Component with a passed model prop containing blocks should render correctly 1`] = `
 Array [
   <header
     className="sc-bwzfXH iaenUL"
@@ -16,7 +16,28 @@ Array [
   <h1
     className="sc-htpNat kEwiJ"
 >
-    Article Headline
+    headline
+    : 
+    {"type":"headline","blockId":"1"}
 </h1>,
+  <p>
+    test
+    : 
+    {"type":"test","blockId":"2"}
+</p>,
 ]
+`;
+
+exports[`Article Component with no props should render correctly 1`] = `
+<header
+  className="sc-bwzfXH iaenUL"
+  role="banner"
+>
+  <a
+    className="sc-bdVaJa iguvfJ"
+    href="http://bbc.co.uk/news"
+  >
+    BBC News
+  </a>
+</header>
 `;

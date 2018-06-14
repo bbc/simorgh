@@ -4,9 +4,30 @@ import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    it('should render correctly', () => {
-      const tree = renderer.create(<Article />).toJSON();
-      expect(tree).toMatchSnapshot();
+    describe('with no props', () => {
+      it('should render correctly', () => {
+        const tree = renderer.create(<Article />).toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+
+    describe('with a passed model prop containing blocks', () => {
+      const modelData = {
+        blocks: [
+          {
+            type: 'headline',
+            blockId: '1',
+          },
+          {
+            type: 'test',
+            blockId: '2',
+          },
+        ],
+      };
+      it('should render correctly', () => {
+        const tree = renderer.create(<Article model={modelData} />).toJSON();
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
