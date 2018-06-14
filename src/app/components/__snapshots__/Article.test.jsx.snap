@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Article Component should render correctly 1`] = `
-<h1
-  className="sc-bdVaJa fZQHHD"
+Array [
+  <header
+    className="sc-bwzfXH iaenUL"
+    role="banner"
 >
-  Article Headline
-</h1>
+    <a
+        className="sc-bdVaJa iguvfJ"
+        href="http://bbc.co.uk/news"
+    >
+        BBC News
+    </a>
+</header>,
+  <h1
+    className="sc-htpNat kEwiJ"
+>
+    Article Headline
+</h1>,
+]
 `;
