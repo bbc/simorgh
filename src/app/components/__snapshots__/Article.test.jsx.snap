@@ -2,9 +2,6 @@
 
 exports[`Article Component should render correctly 1`] = `
 Array [
-  <body
-    className="sc-htpNat fctgVB"
-/>,
   <header
     className="sc-bwzfXH iaenUL"
     role="banner"
@@ -17,7 +14,7 @@ Array [
     </a>
 </header>,
   <h1
-    className="sc-bxivhb cIvvaw"
+    className="sc-htpNat kEwiJ"
 >
     Article Headline
 </h1>,

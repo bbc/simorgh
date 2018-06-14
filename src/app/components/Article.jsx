@@ -4,12 +4,6 @@ import 'isomorphic-fetch';
 import styled from 'styled-components';
 import Header from './header/index';
 
-const Body = styled.body`
-  margin: 0 auto;
-  padding: 0;
-  left: 0;
-`;
-
 const Headline = styled.h1`
   color: #222;
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
@@ -45,7 +39,6 @@ class Article extends Component {
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
-        <Body />
         <Header />
         <Headline>{headline}</Headline>
       </Fragment>
