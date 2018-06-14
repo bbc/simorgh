@@ -7,7 +7,9 @@ exports[`Footer should render correctly 1`] = `
   <span
     className="sc-bwzfXH gdcgOT"
   >
-    Copyright © 2018 BBC. The BBC is not responsible for the content of external sites.
+    Copyright © 
+    2018
+     BBC. The BBC is not responsible for the content of external sites.
   </span>
 </div>
 `;

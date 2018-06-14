@@ -14,8 +14,8 @@ const StyledContent = styled.span`
 const Footer = () => (
   <StyledFooter>
     <StyledContent>
-      Copyright &copy; 2018 BBC. The BBC is not responsible for the content of
-      external sites.
+      Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
+      responsible for the content of external sites.
     </StyledContent>
   </StyledFooter>
 );
