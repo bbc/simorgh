@@ -41,13 +41,16 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 #### Main application
 
-We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally we need two terminals running:
+We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally, run this single command:
 
-1. `npm run dev` with the application,
-2. `npm run test:e2e` with the Cypress integration tests.
+```
+npm run test:e2e
+```
 
-Tests can also be run in isolation like this `npm run test:e2e -- --spec cypress/integration/article_spec.js`.
+It will spin up a production server on port 7080 and run the Cypress tests against that.
+
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
+
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
 #### Storybook
