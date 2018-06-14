@@ -24,6 +24,7 @@ describe('Article', () => {
           },
         ],
       };
+
       it('should render correctly', () => {
         const tree = renderer.create(<Article model={modelData} />).toJSON();
         expect(tree).toMatchSnapshot();
