@@ -11,7 +11,7 @@
     "dev": "razzle start",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view",
     "precommit": "npm run test:lint",
-    "prepush": "npm run test",
+    "prepush": "npm run test:unit",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
