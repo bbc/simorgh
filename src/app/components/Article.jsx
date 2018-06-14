@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
+import Header from './Header';
 
 const Headline = styled.h1`
   color: #222;
@@ -38,6 +39,7 @@ class Article extends Component {
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
+        <Header />
         <Headline>{headline}</Headline>
       </Fragment>
     );
