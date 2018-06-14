@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   background-color: #bb1919;
   height: 40px;
   width: 100%;
-  padding: 8px 8px;
+  padding: 16px;
 `;
 
 const Header = () => (

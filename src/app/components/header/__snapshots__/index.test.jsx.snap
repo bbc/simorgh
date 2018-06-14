@@ -2,7 +2,7 @@
 
 exports[`Header should render correctly 1`] = `
 <header
-  className="sc-bwzfXH iuWOWW"
+  className="sc-bwzfXH iaenUL"
   role="banner"
 >
   <a
