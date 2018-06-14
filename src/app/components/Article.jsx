@@ -24,8 +24,8 @@ class Article extends Component {
 
     try {
       const response = await fetch(url);
-      const data = await response.json();
-      return { data };
+      const { model } = await response.json();
+      return { model };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
       return {};
