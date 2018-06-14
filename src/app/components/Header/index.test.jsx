@@ -5,7 +5,7 @@ import Header from './index';
 
 describe('Header', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Header />);
-    expect(tree).toMatchSnapshot();
+    const header = renderer.create(<Header />);
+    expect(header).toMatchSnapshot();
   });
 });
