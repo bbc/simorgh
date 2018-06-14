@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => (
-  <StyledHeader role="banner" aria-label="BBC News">
+  <StyledHeader role="banner">
     <Link href="http://bbc.co.uk/news">BBC News</Link>
   </StyledHeader>
 );
