@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 import Header from './Header';
 
 const Headline = styled.h1`
@@ -10,12 +11,8 @@ const Headline = styled.h1`
   font-size: 2em;
 `;
 
-const renderModel = ({ blocks }) => {
-  if (!blocks) {
-    return [];
-  }
-
-  return blocks.map(block => {
+const renderModel = ({ blocks }) =>
+  blocks.map(block => {
     const { type, blockId } = block;
     const blockString = JSON.stringify(block);
 
@@ -30,9 +27,20 @@ const renderModel = ({ blocks }) => {
       </Element>
     );
   });
-};
 
 class Article extends Component {
+  static propTypes = {
+    model: propTypes.shape({
+      blocks: propTypes.arrayOf(propTypes.any),
+    }),
+  };
+
+  static defaultProps = {
+    model: {
+      blocks: [],
+    },
+  };
+
   state = {
     headline: 'Article Headline',
   };
