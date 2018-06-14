@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer renders the component 1`] = `
+exports[`Footer should render correctly 1`] = `
 <div
   className="sc-bdVaJa hCBkLw"
 >
