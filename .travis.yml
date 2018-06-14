@@ -19,5 +19,6 @@ before_script:
 script:
   - npm test
   - npm run test:e2e:ci
+  - npm run test:storybook:ci
 after_script:
   - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
