@@ -10,8 +10,12 @@ const Headline = styled.h1`
   font-size: 2em;
 `;
 
-const renderBlocks = blocks =>
-  blocks.map(block => {
+const renderModel = ({ blocks }) => {
+  if (!blocks) {
+    return [];
+  }
+
+  return blocks.map(block => {
     const { type, blockId } = block;
     const blockString = JSON.stringify(block);
 
@@ -26,6 +30,7 @@ const renderBlocks = blocks =>
       </Element>
     );
   });
+};
 
 class Article extends Component {
   state = {
@@ -51,16 +56,16 @@ class Article extends Component {
 
   render() {
     const { headline } = this.state;
-    const { blocks } = this.props.model;
+    const { model } = this.props;
 
-    const renderedBlocks = renderBlocks(blocks);
+    const renderedModel = renderModel(model);
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
         <Header />
-        {renderedBlocks}
+        {renderedModel}
       </Fragment>
     );
   }
