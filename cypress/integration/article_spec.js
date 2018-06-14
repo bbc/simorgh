@@ -29,6 +29,10 @@ describe('News Article', () => {
     getElement('h1').should('be.visible');
   });
 
+  it('should render a paragraph', () => {
+    getElement('p').should('have.length', 1);
+  });
+
   it('should render a title', () => {
     cy.title().should('eq', 'Article Headline');
   });
