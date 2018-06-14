@@ -1,6 +1,6 @@
 _PR changes summary to go here._
 
-* [ ] Issue linked https://github.com/bbc/simorgh/issues/NUMBER
+* [ ] Fixes https://github.com/bbc/simorgh/issues/NUMBER
 * [ ] Up-to-date with latest - `git pull --rebase origin latest`
 * [ ] Runs locally - `npm run dev` & [http://localhost:7080/](http://localhost:7080/)
 * [ ] Tests added for new features
