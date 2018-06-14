@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "razzle build",
-    "cypress": "npm cypress run",
-    "cypress:interactive": "npm cypress open",
-    "cypress:storybook": "npm cypress run --project ./.storybook/.",
+    "cypress": "cypress run",
+    "cypress:interactive": "cypress open",
+    "cypress:storybook": "cypress run --project ./.storybook/.",
     "dev": "razzle start",
     "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view",
     "speculate": "speculate",
