@@ -2,7 +2,11 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
+<<<<<<< HEAD
 import Header from './header/index';
+=======
+import Header from './header';
+>>>>>>> d4d25c179f8426f9a9e3427ff839e7d6d59fff3b
 
 const Body = styled.body`
   margin: 0 auto;
@@ -22,7 +26,7 @@ class Article extends Component {
   };
 
   static async getInitialProps({ req } = {}) {
-    let url = '/data/scenario-01.json';
+    let url = '/data/test/scenario-01.json';
 
     if (req) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;
@@ -46,7 +50,7 @@ class Article extends Component {
           <title>{headline}</title>
         </Helmet>
         <Body />
-        <Header title="BBC News" />
+        <Header />
         <Headline>{headline}</Headline>
       </Fragment>
     );
