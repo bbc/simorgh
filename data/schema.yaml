@@ -1,0 +1,338 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/no-name2/article/1.0.0
+info:
+  description: This is an early draft of an Article API definition for web and apps.
+  version: "1.1.1"
+  title: News web and apps article API
+  contact:
+    email: benjamin.hobbs@bbc.co.uk
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: news-developers
+    description: Operations available to and wanted by news developers
+paths:
+  /article:
+    get:
+      tags:
+      - news-developers
+      summary: returns article/s
+      operationId: getArticles
+      description: |
+        By passing in the appropriate parameters, you can return the appropriate article/s body from the system
+      parameters:
+        - in: query
+          name: searchString
+          description: pass the optional search string for looking up articles
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: skip
+          description: number of records to skip for pagination
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+        - in: query
+          name: limit
+          description: maximum number of records to return
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 50
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+        '400':
+          description: bad input parameter/s
+components:
+  schemas:
+    Article:
+      type: object
+      required:
+      - locator
+      - language
+      - publishedDateTime
+      - lastUpdatedDateTime
+      - passport
+      - seoHeadline
+      - socialHeadline
+      - metaDescription
+      - blocks
+      properties:
+        locator:
+          type: string
+          format: uuid
+          example: urn:bjk:hello:asset:c000zk2l88wo
+        passport:
+          type: object
+          required:
+          - home
+          - language
+          - articleType
+          properties:
+            language:
+              type: string
+              example: en-gb
+            home:
+              type: string
+              example: http://www.bbc.co.uk/ontologies/passport/home/News
+            articleType:
+              type: string
+              enum: [analysis, feature]
+              example: analysis
+        seoHeadline:
+          type: string
+          example: UK pledges extra £44m for Channel border security
+        socialHeadline:
+          type: string
+          example: You will never believe how much money UK pledges for Channel border security
+        publishedDateTime:
+          type: string
+          format: date-time
+          example: 2017-07-21T17:32:28Z
+        lastUpdatedDateTime:
+          type: string
+          format: date-time
+          example: 2017-12-21T17:32:28Z
+        MetaDescription:
+          type: boolean
+          example: null
+        model:
+          type: object
+          properties:
+            blocks:
+              properties:
+                blockId:
+                  type: string
+                  example: 0f29a57f-3492-3c0d-af51-837208b657fb
+                type:
+                  type: string
+                  enum: [Headline, Text,altText, paragraph, Image, caption, Video, rawImage, rawVideo]
+                model:
+                  oneOf:
+                  - $ref: '#/components/schemas/Article/properties/model/properties/blocks'
+                  - $ref: '#/components/schemas/Text'
+                  - $ref: '#/components/schemas/Image'
+                  - $ref: '#/components/schemas/Headline'
+                  - $ref: '#/components/schemas/altText'
+                  - $ref: '#/components/schemas/Paragraph'
+                  - $ref: '#/components/schemas/Caption'
+                  - $ref: '#/components/schemas/Video'
+                  - $ref: '#/components/schemas/rawVideo'
+                  - $ref: '#/components/schemas/rawImage'
+                  - $ref: '#/components/schemas/Model'
+                  - $ref: '#/components/schemas/rawImageBlock'
+                  - $ref: '#/components/schemas/rawVideoBlock'
+
+              example:
+                  blockid: 0f29a57f-3492-3c0d-af51-837208b657fb
+                  type: image
+                  model:
+                    # Properties of a referenced object
+    Image:
+      type: object
+      required:
+      - blockId
+      - type
+      - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [text]
+        model:
+          $ref: '#/components/schemas/rawImageBlock'
+    Text:
+      type: object
+      required:
+      - blockId
+      - type
+      - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [text]
+        model:
+          $ref: '#/components/schemas/Article/properties/model'
+    Headline:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [headline]
+        model:
+          $ref: '#/components/schemas/Article/properties/model'
+    altText:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [altText]
+        model:
+          $ref: '#/components/schemas/Article/properties/model'
+    Paragraph:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [paragraph]
+        model:
+          $ref: '#/components/schemas/Article/properties/model'
+    Caption:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [caption]
+        model:
+          $ref: '#/components/schemas/Article/properties/model'
+    Video:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [Video]
+        model:
+          $ref: '#/components/schemas/rawVideoBlock'
+    rawVideo:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [rawVideo]
+        model:
+          type: object
+          required:
+          - guidance
+          - isLive
+          - duration
+          - allowOffsiteEmbedding
+          - locator
+          properties:
+            guidance:
+              type: boolean
+              example: null
+            isLive:
+              type: string
+              example: false
+            duration:
+              type: string
+              example: PTSVHD02
+            allowffsiteEmbedding:
+              type: string
+              example: false
+            locator:
+              type: string
+              example:
+    rawImage:
+      type: object
+      required:
+        - blockId
+        - type
+        - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [rawImage]
+        model:
+          type: object
+          required:
+          - width
+          - height
+          - locator
+          - originCode
+          - copyrightHolder
+          properties:
+            width:
+              type: integer
+              example: 640
+            height:
+              type: integer
+              example: 420
+            locator:
+              type: string
+              example: https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg
+            originCode:
+              type: boolean
+              example: null
+            copyrightHolder:
+              type: string
+              example: BBC
+    Model:
+      type: object
+      required:
+        - text
+      properties:
+        text:
+          type: string
+          example: Aliquam quis sodales nisl.
+    rawImageBlock:
+      properties:
+        blocks:
+            $ref: '#/components/schemas/rawImage'
+    rawVideoBlock:
+      properties:
+        blocks:
+            $ref: '#/components/schemas/rawVideo'
