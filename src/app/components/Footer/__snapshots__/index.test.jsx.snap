@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`"Footer" should render correctly 1`] = `
-<div
+<footer
   className="sc-bdVaJa hCBkLw"
 >
   <span
@@ -11,5 +11,5 @@ exports[`"Footer" should render correctly 1`] = `
     2018
      BBC. The BBC is not responsible for the content of external sites.
   </span>
-</div>
+</footer>
 `;
