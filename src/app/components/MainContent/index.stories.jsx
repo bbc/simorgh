@@ -15,15 +15,13 @@ const data = {
   ],
 };
 
-storiesOf('MainContent', module).add('with just a headline', () => {
-  const blocksOnlyHeadline = data.blocks.filter(
-    ({ type }) => type === 'headline',
-  );
-  const dataOnlyHeadline = { blocks: blocksOnlyHeadline };
+storiesOf('MainContent', module)
+  .add('with just a headline', () => {
+    const blocksOnlyHeadline = data.blocks.filter(
+      ({ type }) => type === 'headline',
+    );
+    const dataOnlyHeadline = { blocks: blocksOnlyHeadline };
 
-  return <MainContent data={dataOnlyHeadline} />;
-});
-
-storiesOf('MainContent', module).add('with a headline and other blocks', () => (
-  <MainContent data={data} />
-));
+    return <MainContent data={dataOnlyHeadline} />;
+  })
+  .add('with a headline and other blocks', () => <MainContent data={data} />);
