@@ -1,5 +1,7 @@
 import Header from './index';
 
-import testHelper from '../../../../src/__test__/test-helper';
+import testHelper from '../../../../src/__test__/testHelper';
 
-testHelper.shouldMatchSnapshot('Header', Header);
+describe(`Header`, () => {
+  testHelper.shouldMatchSnapshot('Header', Header);
+});

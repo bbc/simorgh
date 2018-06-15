@@ -1,15 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`"Header" should render correctly 1`] = `
-<header
-  className="sc-bwzfXH iaenUL"
-  role="banner"
->
-  <a
-    className="sc-bdVaJa iguvfJ"
-    href="http://bbc.co.uk/news"
-  >
-    BBC News
-  </a>
-</header>
-`;
+exports[`Header should render correctly 1`] = `<Header />`;
