@@ -7,16 +7,16 @@ const StyledFooter = styled.footer`
   padding: 16px;
 `;
 
-const StyledSpan = styled.span`
+const StyledParagraph = styled.p`
   color: #fff;
 `;
 
 const Footer = () => (
   <StyledFooter>
-    <StyledSpan>
+    <StyledParagraph>
       Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
       responsible for the content of external sites.
-    </StyledSpan>
+    </StyledParagraph>
   </StyledFooter>
 );
 
