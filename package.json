@@ -4,6 +4,7 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
+    "blah": "blah",
     "build": "razzle build",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
