@@ -13,31 +13,36 @@ Array [
         BBC News
     </a>
 </header>,
-  <h1
-    className="sc-htpNat kEwiJ"
->
-    headline
-    : 
-    {"type":"headline","blockId":"1"}
-</h1>,
-  <p>
-    test
-    : 
-    {"type":"test","blockId":"2"}
-</p>,
+  <div>
+    <h1
+        className="sc-htpNat kEwiJ"
+    >
+        headline
+        : 
+        {"type":"headline","blockId":"1"}
+    </h1>
+    <p>
+        test
+        : 
+        {"type":"test","blockId":"2"}
+    </p>
+</div>,
 ]
 `;
 
 exports[`Article Component with no props should render correctly 1`] = `
-<header
-  className="sc-bwzfXH iaenUL"
-  role="banner"
+Array [
+  <header
+    className="sc-bwzfXH iaenUL"
+    role="banner"
 >
-  <a
-    className="sc-bdVaJa iguvfJ"
-    href="http://bbc.co.uk/news"
-  >
-    BBC News
-  </a>
-</header>
+    <a
+        className="sc-bdVaJa iguvfJ"
+        href="http://bbc.co.uk/news"
+    >
+        BBC News
+    </a>
+</header>,
+  <div />,
+]
 `;
