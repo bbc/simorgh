@@ -1,32 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
-import styled from 'styled-components';
 import propTypes from 'prop-types';
 import Header from './Header';
-
-const Headline = styled.h1`
-  color: #222;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-  font-size: 2em;
-`;
-
-const renderModel = ({ blocks }) =>
-  blocks.map(block => {
-    const { type, blockId } = block;
-    const blockString = JSON.stringify(block);
-
-    let Element = 'p';
-    if (type === 'headline') {
-      Element = Headline;
-    }
-
-    return (
-      <Element key={blockId}>
-        {type}: {blockString}
-      </Element>
-    );
-  });
+import MainContent from './MainContent';
 
 class Article extends Component {
   static propTypes = {
@@ -66,14 +43,13 @@ class Article extends Component {
     const { headline } = this.state;
     const { model } = this.props;
 
-    const renderedModel = renderModel(model);
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
         <Header />
-        {renderedModel}
+        <MainContent data={model} />
       </Fragment>
     );
   }
