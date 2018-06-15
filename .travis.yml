@@ -3,6 +3,10 @@ addons:
   apt:
     packages:
       - xvfb
+env:
+  - TEST_SUITE=
+  - TEST_SUITE=:e2e:ci
+  - TEST_SUITE=:storybook:ci
 notifications:
   email: false
   slack:
@@ -21,8 +25,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - npm test
-  - npm run test:e2e:ci
-  - npm run test:storybook:ci
+  - npm run test$TEST_SUITE
 after_script:
   - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
