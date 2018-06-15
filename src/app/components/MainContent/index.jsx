@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { shape } from 'prop-types';
-
-import articleDataType from '../../types/articleData';
+import propTypes from 'prop-types';
 
 const Headline = styled.h1`
   color: #222;
@@ -33,7 +31,11 @@ const MainContent = ({ data }) => {
 };
 
 MainContent.propTypes = {
-  data: shape(articleDataType).isRequired,
+  data: propTypes.shape({
+    model: propTypes.shape({
+      blocks: propTypes.arrayOf(propTypes.any),
+    }),
+  }).isRequired,
 };
 
 export default MainContent;

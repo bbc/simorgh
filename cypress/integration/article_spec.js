@@ -26,11 +26,7 @@ describe('News Article', () => {
   });
 
   it('should render a headline', () => {
-    getElement('h1').should('be.visible');
-  });
-
-  it('should render a paragraph', () => {
-    getElement('p').should('have.length', 1);
+    cy.get('h1').should('contain', 'Article Headline');
   });
 
   it('should render a title', () => {

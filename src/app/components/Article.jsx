@@ -1,20 +1,16 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
-
-import articleDataType from '../types/articleData';
+import styled from 'styled-components';
 import Header from './Header';
-import MainContent from './MainContent';
+
+const Headline = styled.h1`
+  color: #222;
+  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  font-size: 2em;
+`;
 
 class Article extends Component {
-  static propTypes = articleDataType;
-
-  static defaultProps = {
-    model: {
-      blocks: [],
-    },
-  };
-
   state = {
     headline: 'Article Headline',
   };
@@ -28,8 +24,8 @@ class Article extends Component {
 
     try {
       const response = await fetch(url);
-      const { model } = await response.json();
-      return { model };
+      const data = await response.json();
+      return { data };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
       return {};
@@ -38,15 +34,13 @@ class Article extends Component {
 
   render() {
     const { headline } = this.state;
-    const { model } = this.props;
-
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
         </Helmet>
         <Header />
-        <MainContent data={model} />
+        <Headline>{headline}</Headline>
       </Fragment>
     );
   }

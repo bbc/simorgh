@@ -4,36 +4,14 @@ import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    describe('with no props', () => {
-      it('should render correctly', () => {
-        const tree = renderer.create(<Article />).toJSON();
-        expect(tree).toMatchSnapshot();
-      });
-    });
-
-    describe('with a passed model prop containing blocks', () => {
-      const modelData = {
-        blocks: [
-          {
-            type: 'headline',
-            blockId: '1',
-          },
-          {
-            type: 'test',
-            blockId: '2',
-          },
-        ],
-      };
-
-      it('should render correctly', () => {
-        const tree = renderer.create(<Article model={modelData} />).toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('should render correctly', () => {
+      const tree = renderer.create(<Article />).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 
   describe('getInitialProps', () => {
-    const mockSuccessfulResponse = { model: [] };
+    const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () =>
       fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
@@ -56,7 +34,7 @@ describe('Article', () => {
 
     it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual(mockSuccessfulResponse);
+      expect(response).toEqual({ data: mockSuccessfulResponse });
     });
 
     describe('On client', () => {
