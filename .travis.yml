@@ -21,10 +21,12 @@ before_install: npm install -g npm@latest
 install:
   - npm ci
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - if [$TEST_SUITE == '']; then
+      curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
+      chmod +x ./cc-test-reporter;
+      ./cc-test-reporter before-build;
+    fi
 script:
   - npm run test$TEST_SUITE
 after_script:
-  - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+  - if [$TEST_SUITE == '']; then ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT; fi
