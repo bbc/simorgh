@@ -1,16 +1,13 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
-import propTypes from 'prop-types';
+
+import articleData from '../types/articleData';
 import Header from './Header';
 import MainContent from './MainContent';
 
 class Article extends Component {
-  static propTypes = {
-    model: propTypes.shape({
-      blocks: propTypes.arrayOf(propTypes.any),
-    }),
-  };
+  static propTypes = articleData;
 
   static defaultProps = {
     model: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import articleData from '../../types/articleData';
 
 const Headline = styled.h1`
   color: #222;
@@ -27,6 +28,10 @@ const render = ({ blocks }) =>
 const MainContent = ({ data }) => {
   const renderedContent = render(data);
   return <div>{renderedContent}</div>;
+};
+
+MainContent.propTypes = {
+  data: articleData.isRequired,
 };
 
 export default MainContent;
