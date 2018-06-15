@@ -1,9 +1,9 @@
 import propTypes from 'prop-types';
 
-const articleData = {
+const articleDataType = {
   model: propTypes.shape({
     blocks: propTypes.arrayOf(propTypes.any),
   }),
 };
 
-export default articleData;
+export default articleDataType;

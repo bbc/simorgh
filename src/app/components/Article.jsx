@@ -2,12 +2,12 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 
-import articleData from '../types/articleData';
+import articleDataType from '../types/articleData';
 import Header from './Header';
 import MainContent from './MainContent';
 
 class Article extends Component {
-  static propTypes = articleData;
+  static propTypes = articleDataType;
 
   static defaultProps = {
     model: {
