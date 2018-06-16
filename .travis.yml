@@ -3,15 +3,25 @@ addons:
   apt:
     packages:
       - xvfb
-env:
-  - TEST_SUITE=
-  - TEST_SUITE=:e2e:ci
+cache:
+  directories:
+    - ~/.cache
+    - ~/.npm
+before_install: npm install -g npm@latest
+install: npm ci
 jobs:
   include:
-    - stage: prepare cache
+    - stage: prep-cache
       script: true
     - stage: test
-      script: npm run test$TEST_SUITE
+      before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+      script: npm run test
+      after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+    - stage: test:e2e
+      script: npm run test:e2e:ci
 notifications:
   email: false
   slack:
@@ -22,20 +32,3 @@ notifications:
     on_start: change   # default: never
     on_cancel: always # default: always
     on_error: always # default: always
-cache:
-  directories:
-    - ~/.cache
-    - ~/.npm
-before_install: npm install -g npm@latest
-install:
-  - npm ci
-before_script:
-  - if [$TEST_SUITE == '']; then
-      curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
-      chmod +x ./cc-test-reporter;
-      ./cc-test-reporter before-build;
-    fi
-script:
-  - npm run test$TEST_SUITE
-after_script:
-  - if [$TEST_SUITE == '']; then ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT; fi
