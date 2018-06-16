@@ -5,7 +5,6 @@ cache:
     - ~/.npm
 before_install: npm install -g npm@latest
 install: 
-  - CYPRESS_CACHE_FOLDER="$TRAVIS_BUILD_DIR/cypress-cache"
   - npm ci
 jobs:
   include:
