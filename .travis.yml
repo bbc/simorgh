@@ -6,7 +6,6 @@ addons:
 env:
   - TEST_SUITE=
   - TEST_SUITE=:e2e:ci
-  - TEST_SUITE=:storybook:ci
 notifications:
   email: false
   slack:
