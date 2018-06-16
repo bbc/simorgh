@@ -4,11 +4,11 @@ cache:
     - ~/.cache
     - ~/.npm
 before_install: npm install -g npm@latest
-install: npm ci
+install: 
+  - CYPRESS_CACHE_FOLDER="$TRAVIS_BUILD_DIR/cypress-cache"
+  - npm ci
 jobs:
   include:
-    - stage: prep-cache
-      script: true
     - stage: test
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
