@@ -1,8 +1,4 @@
 language: node_js
-addons:
-  apt:
-    packages:
-      - xvfb
 cache:
   directories:
     - ~/.cache
@@ -21,7 +17,7 @@ jobs:
       script: npm run test
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
-      script: npm run test:e2e:ci
+      script: xvfb-run npm run test:e2e:ci
 notifications:
   email: false
   slack:
