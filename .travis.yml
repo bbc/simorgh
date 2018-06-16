@@ -17,6 +17,8 @@ jobs:
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
       script: xvfb-run npm run test:e2e:ci
+    - stage: test
+      script: xvfb-run npm run test:e2e:storybook:ci
 notifications:
   email: false
   slack:
