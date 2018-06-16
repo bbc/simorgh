@@ -6,6 +6,12 @@ addons:
 env:
   - TEST_SUITE=
   - TEST_SUITE=:e2e:ci
+jobs:
+  include:
+    - stage: prepare cache
+      script: true
+    - stage: test
+      script: npm run test$TEST_SUITE
 notifications:
   email: false
   slack:
