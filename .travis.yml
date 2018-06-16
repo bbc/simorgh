@@ -20,7 +20,7 @@ jobs:
         - ./cc-test-reporter before-build
       script: npm run test
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-    - stage: test:e2e
+    - stage: test
       script: npm run test:e2e:ci
 notifications:
   email: false
