@@ -10,13 +10,11 @@ const paragraphBlock = (blockId, text) => ({
 });
 
 const props = {
-  model: {
-    blocks: [
-      paragraphBlock('01', 'This is a text block.'),
-      paragraphBlock('02', 'This is another text block.'),
-      paragraphBlock('03', 'This is the final text block.'),
-    ],
-  },
+  blocks: [
+    paragraphBlock('01', 'This is a text block.'),
+    paragraphBlock('02', 'This is another text block.'),
+    paragraphBlock('03', 'This is the final text block.'),
+  ],
 };
 
 storiesOf('Text', module).add('default', () => <Text {...props} />);
