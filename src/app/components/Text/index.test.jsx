@@ -3,6 +3,13 @@ import renderer from 'react-test-renderer';
 import Text from './index';
 
 describe('Text', () => {
+  describe('with no data', () => {
+    it('should not render anything', () => {
+      const tree = renderer.create(<Text />).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
   describe('with data', () => {
     const paragraphBlock = (blockId, text) => ({
       blockId,
