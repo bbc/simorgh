@@ -1,13 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
 import Text from './index';
 
 describe('Text', () => {
   describe('with no data', () => {
-    it('should not render anything', () => {
-      const tree = renderer.create(<Text />).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should not render anything',
+      <Text />,
+    );
   });
 
   describe('with data', () => {
@@ -28,9 +28,9 @@ describe('Text', () => {
       },
     };
 
-    it('should render correctly', () => {
-      const tree = renderer.create(<Text {...data} />).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should render correctly',
+      <Text {...data} />,
+    );
   });
 });
