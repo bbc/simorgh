@@ -12,21 +12,19 @@ describe('Headline', () => {
 
   describe('with data', () => {
     const data = {
-      model: {
-        blocks: [
-          {
-            model: {
-              blocks: [
-                {
-                  model: {
-                    text: 'This is a headline!',
-                  },
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                model: {
+                  text: 'This is a headline!',
                 },
-              ],
-            },
+              },
+            ],
           },
-        ],
-      },
+        },
+      ],
     };
 
     it('should render correctly', () => {

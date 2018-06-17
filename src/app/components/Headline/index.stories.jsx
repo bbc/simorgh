@@ -3,21 +3,19 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Headline from './index';
 
 const props = {
-  model: {
-    blocks: [
-      {
-        model: {
-          blocks: [
-            {
-              model: {
-                text: 'This is a headline!',
-              },
+  blocks: [
+    {
+      model: {
+        blocks: [
+          {
+            model: {
+              text: 'This is a headline!',
             },
-          ],
-        },
+          },
+        ],
       },
-    ],
-  },
+    },
+  ],
 };
 
 storiesOf('Headline', module).add('default', () => <Headline {...props} />);
