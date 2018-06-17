@@ -4,7 +4,9 @@ import propTypes from 'prop-types';
 const Text = ({ model }) => {
   const { blocks } = model;
 
-  blocks.map(({ model: blockModel }) => <p>{blockModel.text}</p>);
+  blocks.map(({ blockId, model: blockModel }) => (
+    <p key={blockId}>{blockModel.text}</p>
+  ));
 };
 
 Text.propTypes = {
