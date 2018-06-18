@@ -1,13 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import snapshotTestHelper from '../../__test__/snapshotTestHelper';
 import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    it('should render correctly', () => {
-      const tree = renderer.create(<Article />).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should render correctly',
+      <Article />,
+    );
   });
 
   describe('getInitialProps', () => {
