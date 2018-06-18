@@ -60,3 +60,15 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 [Instructions for how to run tests are here in the Readme](https://github.com/bbc/simorgh/blob/latest/README.md#tests).
 
+### Run tests on your PR
+
+We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. To run these on your forked version, so you can see tests passing on your commits in your PR, follow these steps.
+
+- [Follow the steps in Project Setup](#project-setup)
+- Visit  [travis-ci.org](https://travis-ci.org)
+- Log in with your Github account where you've forked this repo to
+- Go to [https://travis-ci.org/YourGithubUsername/simorgh](https://travis-ci.org/YourGithubUsername/simorgh)
+- Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername).
+- Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis and CodeClimate will look at your fork of Simorgh and run the tests against that.
+- Now create a branch and start committing and pushing to it! 
+- You should see Travis CI now running against your branch. :white_check_mark:
