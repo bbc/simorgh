@@ -3,13 +3,13 @@
 exports[`Text with data should render correctly 1`] = `
 Array [
   <p>
-    This is a text block.
+    This is a paragraph.
 </p>,
   <p>
-    This is another text block.
+    This is another paragraph.
 </p>,
   <p>
-    This is the final text block.
+    This is a final paragraph.
 </p>,
 ]
 `;
