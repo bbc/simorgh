@@ -7,6 +7,7 @@ const Text = ({ blocks }) =>
 Text.propTypes = {
   blocks: propTypes.arrayOf(
     propTypes.shape({
+      blockId: proptypes.string,
       model: propTypes.shape({
         text: propTypes.string,
       }),
