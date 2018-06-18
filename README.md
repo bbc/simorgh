@@ -1,5 +1,9 @@
 # Simorgh
 
+Named simorgh after the Persian Mythological bird. The simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty. 
+
+![](https://lh6.googleusercontent.com/OsrCnGr2OiqJEbpN7hkutKGqaYpS5M55MKNShymVcCJIk93rlxZLH5rvL3rj8JXphsf86OWh17itiION6WVaO1vU2GWpAOEBnpMSVihwPgUBP7TUirpEJrhkuWZ1xC6j9RK-l2Hg)
+
 [![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 
 ## Installation
