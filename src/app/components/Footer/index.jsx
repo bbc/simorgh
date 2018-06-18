@@ -12,7 +12,7 @@ const StyledParagraph = styled.p`
 `;
 
 const Footer = () => (
-  <StyledFooter>
+  <StyledFooter role="contentinfo">
     <StyledParagraph>
       Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
       responsible for the content of external sites.
