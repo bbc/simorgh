@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer should render correctly 1`] = `<Footer />`;
+exports[`Footer Footer 1`] = `
+<footer
+  className="sc-bdVaJa hCBkLw"
+>
+  <p
+    className="sc-bwzfXH gdcgOT"
+  >
+    Copyright © 
+    2018
+     BBC. The BBC is not responsible for the content of external sites.
+  </p>
+</footer>
+`;

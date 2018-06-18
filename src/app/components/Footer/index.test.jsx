@@ -1,7 +1,8 @@
+import React from 'react';
 import Footer from './index';
 
-import testHelper from '../../../../src/__test__/testHelper';
+import snapshotTestHelper from '../../../../src/__test__/snapshotTestHelper';
 
 describe(`Footer`, () => {
-  testHelper.shouldMatchSnapshot('Footer', Footer);
+  snapshotTestHelper.shouldMatchSnapshot('Footer', <Footer />);
 });
