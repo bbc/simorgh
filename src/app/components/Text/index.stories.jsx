@@ -11,9 +11,9 @@ const paragraphBlock = (blockId, text) => ({
 
 const props = {
   blocks: [
-    paragraphBlock('01', 'This is a text block.'),
-    paragraphBlock('02', 'This is another text block.'),
-    paragraphBlock('03', 'This is the final text block.'),
+    paragraphBlock('01', 'This is a paragraph.'),
+    paragraphBlock('02', 'This is another paragraph.'),
+    paragraphBlock('03', 'This is a final paragraph.'),
   ],
 };
 
