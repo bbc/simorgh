@@ -1,6 +1,6 @@
 # Simorgh
 
-Named simorgh after the Persian Mythological bird. The simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty. 
+Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty. 
 
 ![](https://lh6.googleusercontent.com/OsrCnGr2OiqJEbpN7hkutKGqaYpS5M55MKNShymVcCJIk93rlxZLH5rvL3rj8JXphsf86OWh17itiION6WVaO1vU2GWpAOEBnpMSVihwPgUBP7TUirpEJrhkuWZ1xC6j9RK-l2Hg)
 
