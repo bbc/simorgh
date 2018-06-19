@@ -9,33 +9,83 @@ describe('Image', () => {
       <Image />,
     );
   });
-  describe('contains data', () => {
+  describe('with data', () => {
+    const rawImageBlock = {
+      blockId: '',
+      type: 'rawImage',
+      model: {
+        width: 640,
+        height: 420,
+        locator:
+          '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+        originCode: null,
+        copyrightHolder: 'BBC',
+      },
+    };
+
+    const altTextBlock = {
+      blockId: '',
+      type: 'altText',
+      model: {
+        blocks: [
+          {
+            blockId: '',
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  blockId: '',
+                  model: {
+                    text:
+                      'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+
+    const captionBlock = {
+      blockId: '',
+      type: 'caption',
+      model: {
+        blocks: [
+          {
+            blockId: '',
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  blockId: '',
+                  model: {
+                    text:
+                      'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+
     const data = {
       blocks: [
         {
           blockId: '',
           type: 'image',
           model: {
-            blocks: [
-              {
-                blockId: '',
-                type: 'rawImage',
-                model: {
-                  width: 640,
-                  height: 420,
-                  locator:
-                    '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-                  originCode: null,
-                  copyrightHolder: 'BBC',
-                },
-              },
-            ],
+            blocks: [rawImageBlock],
           },
         },
       ],
     };
     snapshotTestHelper.shouldMatchSnapshot(
-      'should render an image',
+      'should render an image with empty alt attribute',
       <Image {...data} />,
     );
     const dataWithAltText = {
@@ -44,44 +94,7 @@ describe('Image', () => {
           blockId: '',
           type: 'image',
           model: {
-            blocks: [
-              {
-                blockId: '',
-                type: 'rawImage',
-                model: {
-                  width: 640,
-                  height: 420,
-                  locator:
-                    '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-                  originCode: null,
-                  copyrightHolder: 'BBC',
-                },
-              },
-              {
-                blockId: '',
-                type: 'altText',
-                model: {
-                  blocks: [
-                    {
-                      blockId: '',
-                      type: 'text',
-                      model: {
-                        blocks: [
-                          {
-                            type: 'paragraph',
-                            blockId: '',
-                            model: {
-                              text:
-                                'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
+            blocks: [rawImageBlock, altTextBlock],
           },
         },
       ],
@@ -90,57 +103,20 @@ describe('Image', () => {
       'should render an image with alt attribute text',
       <Image {...dataWithAltText} />,
     );
-  });
-  const dataWithCaption = {
-    blocks: [
-      {
-        blockId: '',
-        type: 'image',
-        model: {
-          blocks: [
-            {
-              blockId: '',
-              type: 'rawImage',
-              model: {
-                width: 640,
-                height: 420,
-                locator:
-                  '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-                originCode: null,
-                copyrightHolder: 'BBC',
-              },
-            },
-            {
-              blockId: '',
-              type: 'caption',
-              model: {
-                blocks: [
-                  {
-                    blockId: '',
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          type: 'paragraph',
-                          blockId: '',
-                          model: {
-                            text:
-                              'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
-                          },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
+    const dataWithCaption = {
+      blocks: [
+        {
+          blockId: '',
+          type: 'image',
+          model: {
+            blocks: [rawImageBlock, captionBlock],
+          },
         },
-      },
-    ],
-  };
-  snapshotTestHelper.shouldMatchSnapshot(
-    'should render an image with a caption',
-    <Image {...dataWithCaption} />,
-  );
+      ],
+    };
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should render an image with a caption',
+      <Image {...dataWithCaption} />,
+    );
+  });
 });
