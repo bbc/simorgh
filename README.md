@@ -18,7 +18,7 @@ To run this application locally, with hot-reloading, run: `npm run dev`.
 
 The application will start on [http://localhost:7080/article/article-id](http://localhost:7080/article/article-id).
 
-These is a single route, `/article/[id]`, where `id` is the id of the static data, for example `scenario-01`.
+These is a single route, `/article/:id`, where `id` is the filename of the static Article data, for example `scenario-01`.
 
 **NOTE:** the `id` that is passed is redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/test/scenario-01.json). However, it also does not do anything with that data.
 
