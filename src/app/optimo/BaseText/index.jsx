@@ -1,10 +1,10 @@
 import React from 'react';
-import BlockContext from '../BlockContext';
+import Context from './Context';
 
 const BaseText = ({ text }) => (
-  <BlockContext.Consumer>
-    {({ BaseTextComponent }) => <BaseTextComponent>{text}</BaseTextComponent>}
-  </BlockContext.Consumer>
+  <Context.Consumer>
+    {Component => <Component>{text}</Component>}
+  </Context.Consumer>
 );
 
 export default BaseText;

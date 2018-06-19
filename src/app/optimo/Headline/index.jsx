@@ -1,12 +1,12 @@
 import React from 'react';
 import renderBlocks from '../renderBlocks';
-import BlockContext from '../BlockContext';
+import BaseTextContext from '../BaseText/Context';
 import StyledHeadline from '../../components/Headline';
 
 const Headline = ({ blocks }) => (
-  <BlockContext.Provider value={{ BaseTextComponent: StyledHeadline }}>
+  <BaseTextContext.Provider value={StyledHeadline}>
     {renderBlocks(blocks)}
-  </BlockContext.Provider>
+  </BaseTextContext.Provider>
 );
 
 export default Headline;
