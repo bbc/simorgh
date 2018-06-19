@@ -11,6 +11,18 @@ describe('Image', () => {
   });
 
   describe('with data', () => {
+    const imageData = arrayOfBlocks => ({
+      blocks: [
+        {
+          blockId: '',
+          type: 'image',
+          model: {
+            blocks: arrayOfBlocks,
+          },
+        },
+      ],
+    });
+
     const rawImageBlock = {
       blockId: '',
       type: 'rawImage',
@@ -48,59 +60,32 @@ describe('Image', () => {
       },
     });
 
-    const data = {
-      blocks: [
-        {
-          blockId: '',
-          type: 'image',
-          model: {
-            blocks: [rawImageBlock],
-          },
-        },
-      ],
-    };
+    const data = imageData([rawImageBlock]);
+
     snapshotTestHelper.shouldMatchSnapshot(
       'should render an image with empty alt attribute',
       <Image {...data} />,
     );
-    const dataWithAltText = {
-      blocks: [
-        {
-          blockId: '',
-          type: 'image',
-          model: {
-            blocks: [
-              rawImageBlock,
-              textBlock(
-                'altText',
-                'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-              ),
-            ],
-          },
-        },
-      ],
-    };
+    const dataWithAltText = imageData([
+      rawImageBlock,
+      textBlock(
+        'altText',
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      ),
+    ]);
+
     snapshotTestHelper.shouldMatchSnapshot(
       'should render an image with alt attribute text',
       <Image {...dataWithAltText} />,
     );
-    const dataWithCaption = {
-      blocks: [
-        {
-          blockId: '',
-          type: 'image',
-          model: {
-            blocks: [
-              rawImageBlock,
-              textBlock(
-                'caption',
-                'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
-              ),
-            ],
-          },
-        },
-      ],
-    };
+    const dataWithCaption = imageData([
+      rawImageBlock,
+      textBlock(
+        'caption',
+        'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
+      ),
+    ]);
+
     snapshotTestHelper.shouldMatchSnapshot(
       'should render an image with a caption',
       <Image {...dataWithCaption} />,
