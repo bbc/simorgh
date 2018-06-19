@@ -9,6 +9,7 @@ describe('Image', () => {
       <Image />,
     );
   });
+
   describe('with data', () => {
     const rawImageBlock = {
       blockId: '',
@@ -23,9 +24,9 @@ describe('Image', () => {
       },
     };
 
-    const altTextBlock = {
+    const textBlock = (type, text) => ({
       blockId: '',
-      type: 'altText',
+      type,
       model: {
         blocks: [
           {
@@ -37,8 +38,7 @@ describe('Image', () => {
                   type: 'paragraph',
                   blockId: '',
                   model: {
-                    text:
-                      'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+                    text,
                   },
                 },
               ],
@@ -46,32 +46,7 @@ describe('Image', () => {
           },
         ],
       },
-    };
-
-    const captionBlock = {
-      blockId: '',
-      type: 'caption',
-      model: {
-        blocks: [
-          {
-            blockId: '',
-            type: 'text',
-            model: {
-              blocks: [
-                {
-                  type: 'paragraph',
-                  blockId: '',
-                  model: {
-                    text:
-                      'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    };
+    });
 
     const data = {
       blocks: [
@@ -94,7 +69,13 @@ describe('Image', () => {
           blockId: '',
           type: 'image',
           model: {
-            blocks: [rawImageBlock, altTextBlock],
+            blocks: [
+              rawImageBlock,
+              textBlock(
+                'altText',
+                'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+              ),
+            ],
           },
         },
       ],
@@ -109,7 +90,13 @@ describe('Image', () => {
           blockId: '',
           type: 'image',
           model: {
-            blocks: [rawImageBlock, captionBlock],
+            blocks: [
+              rawImageBlock,
+              textBlock(
+                'caption',
+                'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
+              ),
+            ],
           },
         },
       ],
