@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<footer
+  className="sc-bdVaJa hCBkLw"
+  role="contentinfo"
+>
+  <p
+    className="sc-bwzfXH gdcgOT"
+  >
+    Copyright © 
+    2018
+     BBC. The BBC is not responsible for the content of external sites.
+  </p>
+</footer>
+`;
