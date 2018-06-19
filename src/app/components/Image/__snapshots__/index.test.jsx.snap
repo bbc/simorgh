@@ -7,4 +7,11 @@ exports[`Image contains data should render an image 1`] = `
 />
 `;
 
+exports[`Image contains data should render an image with alt attribute text 1`] = `
+<img
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
+`;
+
 exports[`Image with no data should not render anything 1`] = `null`;
