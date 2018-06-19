@@ -9,4 +9,34 @@ describe('Image', () => {
       <Image />,
     );
   });
+  describe('contains data', () => {
+    const data = {
+      blocks: [
+        {
+          blockId: '',
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                blockId: '',
+                type: 'rawImage',
+                model: {
+                  width: 640,
+                  height: 420,
+                  locator:
+                    '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+                  originCode: null,
+                  copyrightHolder: 'BBC',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should render an image',
+      <Image {...data} />,
+    );
+  });
 });

@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Image contains data should render an image 1`] = `
+<img
+  alt=""
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
+`;
+
 exports[`Image with no data should not render anything 1`] = `null`;
