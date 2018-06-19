@@ -1,7 +1,8 @@
 import { testResponseCode } from '../../../cypress/integration/test-helper';
 
 describe('Storybook Article', () => {
-  beforeEach(() => {
+  // eslint-disable-next-line no-undef
+  before(() => {
     cy.visit('/');
   });
 
