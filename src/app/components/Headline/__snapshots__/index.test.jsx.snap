@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Headline with data should render correctly 1`] = `
-<h1>
-  This is a headline!
-</h1>
-`;
-
-exports[`Headline with no data should not render anything 1`] = `<h1 />`;
