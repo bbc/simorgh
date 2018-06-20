@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { C_STORM, C_WHITE, FF_NEWS, SP_16 } from '../../constants';
 
 const StyledFooter = styled.footer`
-  background-color: #404040;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-  padding: 16px;
+  background-color: ${C_STORM};
+  font-family: ${FF_NEWS};
+  padding: ${SP_16};
 `;
 
 const StyledParagraph = styled.p`
-  color: #fff;
+  color: ${C_WHITE};
 `;
 
 const Footer = () => (
