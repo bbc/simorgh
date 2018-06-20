@@ -12,15 +12,11 @@ describe('Image', () => {
 
   describe('with data', () => {
     const imageData = arrayOfBlocks => ({
-      blocks: [
-        {
-          blockId: '',
-          type: 'image',
-          model: {
-            blocks: arrayOfBlocks,
-          },
-        },
-      ],
+      blockId: '',
+      type: 'image',
+      model: {
+        blocks: arrayOfBlocks,
+      },
     });
 
     const rawImageBlock = {

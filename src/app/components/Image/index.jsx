@@ -3,11 +3,15 @@ import propTypes from 'prop-types';
 
 const getText = block => block.model.blocks[0].model.blocks[0].model.text;
 
-const Image = ({ blocks }) => {
-  const subBlocks = blocks[0].model.blocks;
-  const rawImageBlock = subBlocks.filter(block => block.type === 'rawImage')[0];
-  const altTextBlock = subBlocks.filter(block => block.type === 'altText')[0];
-  const captionBlock = subBlocks.filter(block => block.type === 'caption')[0];
+const Image = props => {
+  const subBlocks = props.model.blocks;
+
+  const filterForBlock = (arrayOfBlocks, type) =>
+    arrayOfBlocks.filter(block => block.type === type)[0];
+
+  const rawImageBlock = filterForBlock(subBlocks, 'rawImage');
+  const altTextBlock = filterForBlock(subBlocks, 'altText');
+  const captionBlock = filterForBlock(subBlocks, 'caption');
 
   if (!rawImageBlock) {
     return null;
@@ -27,31 +31,23 @@ const Image = ({ blocks }) => {
 };
 
 Image.propTypes = {
-  blocks: propTypes.arrayOf(
-    propTypes.shape({
-      model: propTypes.shape({
-        blocks: propTypes.arrayOf(
-          propTypes.shape({
-            locator: propTypes.string,
-          }),
-        ),
+  model: propTypes.shape({
+    blocks: propTypes.arrayOf(
+      propTypes.shape({
+        locator: propTypes.string,
       }),
-    }),
-  ),
+    ),
+  }),
 };
 
 Image.defaultProps = {
-  blocks: [
-    {
-      model: {
-        blocks: [
-          {
-            model: {},
-          },
-        ],
+  model: {
+    blocks: [
+      {
+        model: {},
       },
-    },
-  ],
+    ],
+  },
 };
 
 export default Image;
