@@ -1,4 +1,4 @@
-const testResponseCode = (path, responseCode) => {
+const testNonHTMLResponseCode = (path, responseCode) => {
   cy.request(path).then(({ status }) => {
     expect(status).to.eq(responseCode);
   });
@@ -17,7 +17,7 @@ const shouldContainStyles = (element, css, styling) => {
 };
 
 export default {
-  testResponseCode,
+  testNonHTMLResponseCode,
   shouldContainText,
   shouldContainStyles,
   getElement,
