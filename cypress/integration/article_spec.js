@@ -28,7 +28,6 @@ describe('News Article', () => {
   it('should render a headline', () => {
     const h1 = getElement('h1');
     shouldContainText(h1, 'Article Headline');
-    // cy.get('h1').should('contain', 'Article Headline');
   });
 
   it('should render a title', () => {
