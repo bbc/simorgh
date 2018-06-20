@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image with data should render an image with a caption 1`] = `
+exports[`Image with data should render an image with alt attribute and caption 1`] = `
 <figure>
   <img
-    alt=""
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
   <figcaption
@@ -18,15 +18,6 @@ exports[`Image with data should render an image with alt attribute text 1`] = `
 <figure>
   <img
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-</figure>
-`;
-
-exports[`Image with data should render an image with empty alt attribute 1`] = `
-<figure>
-  <img
-    alt=""
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
 </figure>

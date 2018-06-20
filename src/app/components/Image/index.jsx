@@ -26,7 +26,7 @@ const Image = props => {
   }
 
   const rawImageLocator = rawImageBlock.model.locator;
-  const altText = altTextBlock ? getText(altTextBlock) : '';
+  const altText = getText(altTextBlock);
   const caption = captionBlock ? getText(captionBlock) : null;
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${rawImageLocator}`;
 

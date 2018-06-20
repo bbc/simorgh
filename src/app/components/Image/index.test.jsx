@@ -56,12 +56,6 @@ describe('Image', () => {
       },
     });
 
-    const data = imageData([rawImageBlock]);
-
-    snapshotTestHelper.shouldMatchSnapshot(
-      'should render an image with empty alt attribute',
-      <Image {...data} />,
-    );
     const dataWithAltText = imageData([
       rawImageBlock,
       textBlock(
@@ -77,13 +71,17 @@ describe('Image', () => {
     const dataWithCaption = imageData([
       rawImageBlock,
       textBlock(
+        'altText',
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      ),
+      textBlock(
         'caption',
         'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
       ),
     ]);
 
     snapshotTestHelper.shouldMatchSnapshot(
-      'should render an image with a caption',
+      'should render an image with alt attribute and caption',
       <Image {...dataWithCaption} />,
     );
   });
