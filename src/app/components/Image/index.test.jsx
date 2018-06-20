@@ -65,7 +65,7 @@ describe('Image', () => {
     ]);
 
     snapshotTestHelper.shouldMatchSnapshot(
-      'should render an image with alt attribute text',
+      'should render an image with alt text',
       <Image {...dataWithAltText} />,
     );
     const dataWithCaption = imageData([
@@ -81,7 +81,7 @@ describe('Image', () => {
     ]);
 
     snapshotTestHelper.shouldMatchSnapshot(
-      'should render an image with alt attribute and caption',
+      'should render an image with alt text and caption',
       <Image {...dataWithCaption} />,
     );
   });
