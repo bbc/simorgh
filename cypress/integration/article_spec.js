@@ -7,7 +7,7 @@ import {
 describe('News Article', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/');
+    cy.visit('/article/article-id');
   });
 
   it('should render the BBC News branding', () => {
