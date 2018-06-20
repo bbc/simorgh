@@ -121,7 +121,6 @@
       {
         "blockId": "66988dfc-28d1-4dc2-9a8f-335852a02bb9",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p054n8j9",
           "blocks": [

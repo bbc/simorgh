@@ -25,7 +25,6 @@
       {
         "blockId": "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p064nsyw",
           "blocks": [
@@ -157,7 +156,6 @@
       {
         "blockId": "caa319be-e5a5-4d9b-b7f4-dc0c76d5bd95",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p064nsyw",
           "blocks": [
