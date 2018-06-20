@@ -1,5 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledFigCaption = styled.figcaption`
+  background-color: #d5d0cd;
+  color: #404040;
+  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  padding: 8px;
+`;
 
 const getText = block => block.model.blocks[0].model.blocks[0].model.text;
 
@@ -25,7 +33,7 @@ const Image = props => {
   return (
     <figure>
       <img alt={altText} src={rawImageSrc} />
-      {caption ? <figcaption>{caption}</figcaption> : null}
+      {caption ? <StyledFigCaption>{caption}</StyledFigCaption> : null}
     </figure>
   );
 };

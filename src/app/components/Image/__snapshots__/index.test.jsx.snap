@@ -6,7 +6,9 @@ exports[`Image with data should render an image with a caption 1`] = `
     alt=""
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-  <figcaption>
+  <figcaption
+    className="sc-bdVaJa iqZbQd"
+  >
     Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
   </figcaption>
 </figure>
