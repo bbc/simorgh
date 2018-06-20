@@ -32,4 +32,27 @@ describe('SubHeading', () => {
       <SubHeading {...data} />,
     );
   });
+
+  describe('with subheading containing various symbols', () => {
+    const data = {
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                model: {
+                  text: '!@#$%^&*()\'"?/[]{}',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+
+    snapshotTestHelper.shouldMatchSnapshot(
+      'should still display the heading',
+      <SubHeading {...data} />,
+    );
+  });
 });
