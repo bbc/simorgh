@@ -2,33 +2,37 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Image from './index';
 
-const dataWithAltText = {
+const imageData = arrayOfBlocks => ({
+  blockId: '',
   type: 'image',
+  model: {
+    blocks: arrayOfBlocks,
+  },
+});
+
+const rawImageBlock = {
+  type: 'rawImage',
+  model: {
+    locator:
+      '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+  },
+};
+
+const textBlock = (type, text) => ({
+  blockId: '',
+  type,
   model: {
     blocks: [
       {
-        type: 'rawImage',
-        model: {
-          locator:
-            '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        },
-      },
-      {
-        type: 'altText',
+        blockId: '',
+        type: 'text',
         model: {
           blocks: [
             {
-              type: 'text',
+              type: 'paragraph',
+              blockId: '',
               model: {
-                blocks: [
-                  {
-                    type: 'paragraph',
-                    model: {
-                      text:
-                        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-                    },
-                  },
-                ],
+                text,
               },
             },
           ],
@@ -36,6 +40,31 @@ const dataWithAltText = {
       },
     ],
   },
-};
+});
 
-storiesOf('Image', module).add('default', () => <Image {...dataWithAltText} />);
+const dataWithAltText = imageData([
+  rawImageBlock,
+  textBlock(
+    'altText',
+    'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+  ),
+]);
+
+const dataWithCaption = imageData([
+  rawImageBlock,
+  textBlock(
+    'altText',
+    'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+  ),
+  textBlock(
+    'caption',
+    'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
+  ),
+]);
+
+storiesOf('Image', module).add('image with alt text', () => (
+  <Image {...dataWithAltText} />
+));
+storiesOf('Image', module).add('image with alt text and caption', () => (
+  <Image {...dataWithCaption} />
+));
