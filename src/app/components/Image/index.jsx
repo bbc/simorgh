@@ -21,7 +21,7 @@ const Image = props => {
   const altTextBlock = filterForBlock(subBlocks, 'altText');
   const captionBlock = filterForBlock(subBlocks, 'caption');
 
-  if (!rawImageBlock) {
+  if (!rawImageBlock || !altTextBlock) {
     return null;
   }
 
