@@ -7,3 +7,9 @@ exports[`SubHeading with data should display the provided sub-heading 1`] = `
 `;
 
 exports[`SubHeading with no data should not render anything 1`] = `<h2 />`;
+
+exports[`SubHeading with subheading containing various symbols should still display the heading 1`] = `
+<h2>
+  !@#$%^&*()'"?/[]{}
+</h2>
+`;
