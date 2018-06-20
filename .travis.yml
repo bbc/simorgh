@@ -20,7 +20,7 @@ jobs:
       #   - chmod +x ./cc-test-reporter
       #   - ./cc-test-reporter before-build
       script: npm run test
-      # after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+      #  after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
       script: xvfb-run npm run test:e2e:ci
     - stage: test
