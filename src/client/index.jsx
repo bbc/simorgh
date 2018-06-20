@@ -16,5 +16,15 @@ ensureReady(routes).then(data =>
 );
 
 if (module.hot) {
-  module.hot.accept();
+  module.hot.accept('../app/routes', () => {
+    const routes = require('../app/routes'.default);
+    ensureReady(routes).then(data =>
+      hydrate(
+        <BrowserRouter>
+          <After data={data} routes={routes} />
+        </BrowserRouter>,
+        root,
+      ),
+    );
+  }
 }
