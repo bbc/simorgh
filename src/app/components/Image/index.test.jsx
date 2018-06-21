@@ -12,7 +12,6 @@ describe('Image', () => {
 
   describe('with data', () => {
     const imageData = arrayOfBlocks => ({
-      blockId: '',
       type: 'image',
       model: {
         blocks: arrayOfBlocks,
@@ -20,7 +19,6 @@ describe('Image', () => {
     });
 
     const rawImageBlock = {
-      blockId: '',
       type: 'rawImage',
       model: {
         width: 640,
@@ -33,18 +31,15 @@ describe('Image', () => {
     };
 
     const textBlock = (type, text) => ({
-      blockId: '',
       type,
       model: {
         blocks: [
           {
-            blockId: '',
             type: 'text',
             model: {
               blocks: [
                 {
                   type: 'paragraph',
-                  blockId: '',
                   model: {
                     text,
                   },

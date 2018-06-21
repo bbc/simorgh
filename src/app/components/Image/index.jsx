@@ -2,38 +2,46 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledFigCaption = styled.figcaption`
-  background-color: #d5d0cd;
-  color: #404040;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-  padding: 8px;
-`;
+// Filters array of blocks for a single block of given type
+const filterForBlockType = (arrayOfBlocks, type) =>
+  arrayOfBlocks.filter(block => block.type === type)[0];
 
-const getText = block => block.model.blocks[0].model.blocks[0].model.text;
+const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
-const Image = props => {
-  const subBlocks = props.model.blocks;
+const renderCaption = block => {
+  if (!block) {
+    return null;
+  }
+  const StyledFigCaption = styled.figcaption`
+    background-color: #d5d0cd;
+    color: #404040;
+    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    padding: 8px;
+  `;
+  const caption = getText(block);
 
-  const filterForBlock = (arrayOfBlocks, type) =>
-    arrayOfBlocks.filter(block => block.type === type)[0];
+  return <StyledFigCaption>{caption}</StyledFigCaption>;
+};
 
-  const rawImageBlock = filterForBlock(subBlocks, 'rawImage');
-  const altTextBlock = filterForBlock(subBlocks, 'altText');
-  const captionBlock = filterForBlock(subBlocks, 'caption');
+const Image = ({ model }) => {
+  const subBlocks = model.blocks;
+
+  const rawImageBlock = filterForBlockType(subBlocks, 'rawImage');
+  const altTextBlock = filterForBlockType(subBlocks, 'altText');
+  const captionBlock = filterForBlockType(subBlocks, 'caption');
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
   }
 
-  const rawImageLocator = rawImageBlock.model.locator;
+  const { locator } = rawImageBlock.model;
   const altText = getText(altTextBlock);
-  const caption = captionBlock ? getText(captionBlock) : null;
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${rawImageLocator}`;
+  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
   return (
     <figure>
       <img alt={altText} src={rawImageSrc} />
-      {caption ? <StyledFigCaption>{caption}</StyledFigCaption> : null}
+      {renderCaption(captionBlock)}
     </figure>
   );
 };

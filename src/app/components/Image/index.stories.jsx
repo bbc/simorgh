@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Image from './index';
 
 const imageData = arrayOfBlocks => ({
-  blockId: '',
   type: 'image',
   model: {
     blocks: arrayOfBlocks,
@@ -19,18 +18,15 @@ const rawImageBlock = {
 };
 
 const textBlock = (type, text) => ({
-  blockId: '',
   type,
   model: {
     blocks: [
       {
-        blockId: '',
         type: 'text',
         model: {
           blocks: [
             {
               type: 'paragraph',
-              blockId: '',
               model: {
                 text,
               },
