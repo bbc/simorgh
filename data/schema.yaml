@@ -62,14 +62,12 @@ components:
       type: object
       required:
       - locator
-      - language
       - publishedDateTime
       - lastUpdatedDateTime
       - passport
       - seoHeadline
-      - socialHeadline
       - metaDescription
-      - blocks
+      - model
       properties:
         locator:
           type: string
@@ -95,9 +93,6 @@ components:
         seoHeadline:
           type: string
           example: UK pledges extra £44m for Channel border security
-        socialHeadline:
-          type: string
-          example: You will never believe how much money UK pledges for Channel border security
         publishedDateTime:
           type: string
           format: date-time
@@ -336,3 +331,4 @@ components:
       properties:
         blocks:
             $ref: '#/components/schemas/rawVideo'
+
