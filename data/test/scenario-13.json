@@ -101,7 +101,6 @@
       {
         "blockId": "93df6d3d-946b-4295-86ab-8cc5330769b5",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p064nsyw",
           "blocks": [
@@ -426,7 +425,6 @@
       {
         "blockId": "32157e44-a97d-495b-a492-b2878186e623",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p01hsgv6",
           "blocks": [
@@ -512,7 +510,6 @@
       {
         "blockId": "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p064gl4v",
           "blocks": [

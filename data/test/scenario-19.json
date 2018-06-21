@@ -79,7 +79,6 @@
       {
         "blockId": "9678d230-4e08-4ec8-8346-bf761874098c",
         "type": "video",
-        "caption": null,
         "model": {
           "locator": "urn:bbc:pips:pid:p054n8j9",
           "blocks": [
