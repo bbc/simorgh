@@ -4,16 +4,26 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
-    "dev": "razzle start",
     "build": "razzle build",
-    "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint --ext .js,jsx ./src",
-    "test:unit": "razzle test --env=jsdom",
-    "start": "NODE_ENV=production node build/server.js",
+    "cypress": "cypress run",
+    "cypress:interactive": "cypress open",
+    "cypress:storybook": "cypress run --project ./.storybook/.",
+    "dev": "razzle start",
+    "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view",
+    "precommit": "npm run test:lint",
+    "prepush": "npm run test:unit",
     "speculate": "speculate",
+    "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test:e2e": "npx cypress run",
-    "test:e2e:interactive": "npx cypress open"
+    "test": "npm run test:lint && npm run test:unit",
+    "test:e2e": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress",
+    "test:e2e:ci": "npm run build && run-p --race start cypress",
+    "test:e2e:interactive": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress:interactive",
+    "test:e2e:storybook": "(lsof -t -i:9001 | xargs kill) && run-p --race storybook cypress:storybook",
+    "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
+    "test:lighthouse": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start lighthouse",
+    "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
+    "test:unit": "razzle test --env=jsdom --coverage"
   },
   "repository": {
     "type": "git",
@@ -31,17 +41,9 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@jaredpalmer/after": "^1.3.1",
-    "babel-eslint": "^8.2.3",
     "es6-promise": "^4.2.4",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.6.0",
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
-    "prettier": "1.13.4",
     "prop-types": "^15.6.1",
     "razzle": "^2.0.3",
     "react": "^16.3.2",
@@ -55,14 +57,29 @@
   "devDependencies": {
     "@storybook/react": "^4.0.0-alpha.8",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
-    "jest-fetch-mock": "^1.6.2"
+    "cypress": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jest-fetch-mock": "^1.6.2",
+    "lighthouse": "^2.9.4",
+    "npm-run-all": "^4.1.3",
+    "prettier": "1.13.5",
+    "supertest": "^3.1.0",
+    "swagger-cli": "^2.1.0"
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!./build/**",
-      "!./node_modules/**"
+      "**/src/**/*.{js,jsx}",
+      "!**/src/__test__/**",
+      "!**/*.stories.jsx"
     ],
     "setupFiles": [
       "./src/__test__/jest-setup.js"
