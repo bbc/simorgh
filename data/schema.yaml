@@ -315,20 +315,21 @@ components:
             copyrightHolder:
               type: string
               example: BBC
-    Model:
-      type: object
-      required:
-        - text
-      properties:
-        text:
-          type: string
-          example: Aliquam quis sodales nisl.
-    rawImageBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawImage'
-    rawVideoBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawVideo'
-
+    # REQUEST THE BOTTOM LEVEL MODEL IS RENAMED
+    # Model:
+    #   type: object
+    #   required:
+    #     - text
+    #   properties:
+    #     text:
+    #       type: string
+    #       example: Aliquam quis sodales nisl.
+    # FIND OUT WHAT THESE ARE NEEDED FOR
+    # rawImageBlock:
+    #   properties:
+    #     blocks:
+    #         $ref: '#/components/schemas/rawImage'
+    # rawVideoBlock:
+    #   properties:
+    #     blocks:
+    #         $ref: '#/components/schemas/rawVideo'
