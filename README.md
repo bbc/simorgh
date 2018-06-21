@@ -31,6 +31,8 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 To run this application locally with a production build, run:
 `npm run build && npm run start`
 
+To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
+
 ## Tests
 
 ### Linting and unit tests
@@ -71,3 +73,6 @@ We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the perf
 2. `npm run lighthouse` runs our Lighthouse tests.
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
+
+### To-do
+* `nofollow` must be removed once this repo is ready for production use
