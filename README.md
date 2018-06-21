@@ -31,7 +31,7 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 To run this application locally with a production build, run:
 `npm run build && npm run start`
 
-To avoid indexing by search engines, there is a `nofollow` page level meta tag in `Document.jsx`.
+To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
 ## Tests
 
