@@ -9,7 +9,7 @@ const props = {
         blocks: [
           {
             model: {
-              text: 'Testing the SubHeading!',
+              text: 'This is a SubHeading!',
             },
           },
         ],
