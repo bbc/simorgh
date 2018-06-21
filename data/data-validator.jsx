@@ -1,3 +1,9 @@
+/*
+	To run cd into simorgh/data and run:
+	node /Users/phillee/Code/BBC/simorgh/data/data-validator.jsx
+ */
+
+
 const yaml = require('yaml-js');
 const fs = require('fs');
 const yamlSchema = fs.readFileSync('schema.yaml', 'utf8');
