@@ -2,6 +2,7 @@ import {
   getElement,
   shouldContainText,
   shouldContainStyles,
+  shouldHaveMetadata,
 } from './test-helper';
 
 describe('News Article', () => {
@@ -32,5 +33,9 @@ describe('News Article', () => {
 
   it('should render a title', () => {
     cy.title().should('eq', 'Article Headline');
+  });
+
+  it('should have a nofollow meta tag', () => {
+    shouldHaveMetadata('robots', 'nofollow');
   });
 });
