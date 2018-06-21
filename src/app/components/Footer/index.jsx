@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { C_STORM, C_WHITE, FF_NEWS, SP_16 } from '../../constants';
+import { C_STORM, C_WHITE, FF_NEWS, GEL_SPACING_DBL } from '../../constants';
 
 const StyledFooter = styled.footer`
   background-color: ${C_STORM};
   font-family: ${FF_NEWS};
-  padding: ${SP_16};
+  padding: ${GEL_SPACING_DBL};
 `;
 
 const StyledParagraph = styled.p`

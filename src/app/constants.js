@@ -10,6 +10,6 @@ export const C_WHITE = '#FFFFFF';
 // Font family
 export const FF_NEWS = 'ReithSans, Arial, Helvetica, freesans, sans-serif';
 
-// Spacing
-export const SP_8 = '8px';
-export const SP_16 = '16px';
+// GEL Spacing
+export const GEL_SPACING = '8px';
+export const GEL_SPACING_DBL = '16px';
