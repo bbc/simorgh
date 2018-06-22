@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
-import { C_EBON, FF_NEWS } from '../../constants';
+import { C_EBON, FF_NEWS } from '../../../lib/constants/styles';
 
 const Headline = styled.h1`
   color: ${C_EBON};

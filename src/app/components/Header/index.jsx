@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { C_POSTBOX, C_WHITE, FF_NEWS, GEL_SPACING_DBL } from '../../constants';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  FF_NEWS,
+  GEL_SPACING_DBL,
+} from '../../../lib/constants/styles';
 
 const Link = styled.a`
   font-family: ${FF_NEWS};
