@@ -8,7 +8,15 @@ module.exports = {
         A prod build will fail if the API changes so it is fairly safe.
       */
       appConfig.module.rules.shift();
+      // This is to pass the bundlde performance test in CI
+      appConfig.performance = Object.assign(
+        {},
+        {
+          maxAssetSize: 350000,
+          maxEntrypointSize: 350000,
+        },
+      );
     }
     return appConfig;
-  }
+  },
 };

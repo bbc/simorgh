@@ -2,12 +2,13 @@ import {
   getElement,
   shouldContainText,
   shouldContainStyles,
+  shouldHaveAttribute,
 } from './test-helper';
 
 describe('News Article', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/');
+    cy.visit('/article/article-id');
   });
 
   it('should render the BBC News branding', () => {
@@ -32,5 +33,10 @@ describe('News Article', () => {
 
   it('should render a title', () => {
     cy.title().should('eq', 'Article Headline');
+  });
+
+  it('should have a nofollow meta tag', () => {
+    const metaElement = getElement('head meta[name="robots"]');
+    shouldHaveAttribute(metaElement, 'content', 'nofollow');
   });
 });

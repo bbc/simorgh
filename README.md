@@ -1,5 +1,7 @@
 # Simorgh
 
+Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
+
 [![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 
 ## Installation
@@ -16,7 +18,11 @@ npm install
 
 To run this application locally, with hot-reloading, run: `npm run dev`.
 
-The application will start on [http://localhost:7080/](http://localhost:7080/). These is a single route, `/`.
+The application will start on [http://localhost:7080/article/scenario-id](http://localhost:7080/article/scenario-id).
+
+These is a single route, `/article/:id`, where `id` is the filename of the static Article data, for example `scenario-01`.
+
+**NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/test/scenario-01.json). Furthermore, the Article component does not do anything with that data.
 
 ### Storybook (UI Development Environment/Style Guide)
 
@@ -26,6 +32,8 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 
 To run this application locally with a production build, run:
 `npm run build && npm run start`
+
+To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
 ## Tests
 
@@ -67,3 +75,6 @@ We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the perf
 2. `npm run lighthouse` runs our Lighthouse tests.
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
+
+### To-do
+* `nofollow` must be removed once this repo is ready for production use

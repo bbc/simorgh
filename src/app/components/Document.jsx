@@ -22,6 +22,7 @@ class Document extends React.Component {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="nofollow" />
           <link rel="manifest" href="manifest.json" />
           {helmet.title.toComponent()}
           {styleTags}
