@@ -118,16 +118,16 @@ components:
                 model:
                   oneOf:
                   - $ref: '#/components/schemas/Article/properties/model/properties/blocks'
-                  - $ref: '#/components/schemas/Text'
-                  - $ref: '#/components/schemas/Image'
-                  - $ref: '#/components/schemas/Headline'
+                  - $ref: '#/components/schemas/text'
+                  - $ref: '#/components/schemas/image'
+                  - $ref: '#/components/schemas/headline'
                   - $ref: '#/components/schemas/altText'
-                  - $ref: '#/components/schemas/Paragraph'
-                  - $ref: '#/components/schemas/Caption'
-                  - $ref: '#/components/schemas/Video'
+                  - $ref: '#/components/schemas/paragraph'
+                  - $ref: '#/components/schemas/caption'
+                  - $ref: '#/components/schemas/video'
                   - $ref: '#/components/schemas/rawVideo'
                   - $ref: '#/components/schemas/rawImage'
-                  - $ref: '#/components/schemas/Model'
+                  - $ref: '#/components/schemas/model'
                   - $ref: '#/components/schemas/rawImageBlock'
                   - $ref: '#/components/schemas/rawVideoBlock'
 
@@ -136,7 +136,7 @@ components:
                   type: image
                   model:
                     # Properties of a referenced object
-    Image:
+    image:
       type: object
       required:
       - blockId
@@ -151,7 +151,7 @@ components:
           enum: [text]
         model:
           $ref: '#/components/schemas/rawImageBlock'
-    Text:
+    text:
       type: object
       required:
       - blockId
@@ -166,7 +166,7 @@ components:
           enum: [text]
         model:
           $ref: '#/components/schemas/Article/properties/model'
-    Headline:
+    headline:
       type: object
       required:
         - blockId
@@ -196,7 +196,7 @@ components:
           enum: [altText]
         model:
           $ref: '#/components/schemas/Article/properties/model'
-    Paragraph:
+    paragraph:
       type: object
       required:
         - blockId
@@ -211,7 +211,7 @@ components:
           enum: [paragraph]
         model:
           $ref: '#/components/schemas/Article/properties/model'
-    Caption:
+    caption:
       type: object
       required:
         - blockId
@@ -226,7 +226,7 @@ components:
           enum: [caption]
         model:
           $ref: '#/components/schemas/Article/properties/model'
-    Video:
+    video:
       type: object
       required:
         - blockId
@@ -315,21 +315,17 @@ components:
             copyrightHolder:
               type: string
               example: BBC
-    # REQUEST THE BOTTOM LEVEL MODEL IS RENAMED
-    # Model:
-    #   type: object
-    #   required:
-    #     - text
-    #   properties:
-    #     text:
-    #       type: string
-    #       example: Aliquam quis sodales nisl.
-    # FIND OUT WHAT THESE ARE NEEDED FOR
-    # rawImageBlock:
-    #   properties:
-    #     blocks:
-    #         $ref: '#/components/schemas/rawImage'
-    # rawVideoBlock:
-    #   properties:
-    #     blocks:
-    #         $ref: '#/components/schemas/rawVideo'
+    model:
+      type: object
+      properties:
+        text:
+          type: string
+          example: Aliquam quis sodales nisl.
+    rawImageBlock:
+      properties:
+        blocks:
+            $ref: '#/components/schemas/rawImage'
+    rawVideoBlock:
+      properties:
+        blocks:
+            $ref: '#/components/schemas/rawVideo'
