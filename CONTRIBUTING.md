@@ -60,15 +60,18 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 [Instructions for how to run tests are here in the Readme](https://github.com/bbc/simorgh/blob/latest/README.md#tests).
 
-### Run tests on your PR
+### Run tests on your fork
 
-We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. To run these on your forked version, so you can see tests passing on your commits in your PR, follow these steps.
+We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. PRs from you fork to the bbc/simorgh repo will be run by our TravisCI setup with no changes on your fork.
+
+To run these on your forked version follow these steps.
 
 - [Follow the steps in Project Setup](#project-setup)
 - Visit  [travis-ci.org](https://travis-ci.org)
 - Log in with your Github account where you've forked this repo to
 - Go to [https://travis-ci.org/YourGithubUsername/simorgh](https://travis-ci.org/YourGithubUsername/simorgh)
-- Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername).
-- Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis and CodeClimate will look at your fork of Simorgh and run the tests against that.
+- Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername). You can also change the settings on your repo at will.
+- Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis will look at your fork of Simorgh and run the tests against that.
+- To setup CodeClimate you need to login to the 'quality' option on [https://codeclimate.com/](https://codeclimate.com/) and obtain a code coverage [CC_TEST_REPORTER_ID](https://docs.codeclimate.com/docs/finding-your-test-coverage-token), this then needs to be added as an environment variable in TravisCI (see the TravisCI settings page).
 - Now create a branch and start committing and pushing to it! 
-- You should see Travis CI now running against your branch. :white_check_mark:
+- You should see Travis CI and codecoverage now running against your branch and PRs within your fork. :white_check_mark:
