@@ -58,7 +58,7 @@ paths:
           description: bad input parameter/s
 components:
   schemas:
-    Article:
+    article:
       type: object
       required:
       - locator
@@ -88,7 +88,7 @@ components:
               example: http://www.bbc.co.uk/ontologies/passport/home/News
             articleType:
               type: string
-              enum: [analysis, feature]
+              enum: [analysis, feature, news]
               example: analysis
         seoHeadline:
           type: string
@@ -101,7 +101,7 @@ components:
           type: string
           format: date-time
           example: 2017-12-21T17:32:28Z
-        MetaDescription:
+        metaDescription:
           type: boolean
           example: null
         model:
