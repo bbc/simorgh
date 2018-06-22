@@ -12,7 +12,7 @@ module.exports = {
       appConfig.performance = Object.assign(
         {},
         {
-          maxAssetSize: 300000,
+          maxAssetSize: 350000,
         },
       );
     }
