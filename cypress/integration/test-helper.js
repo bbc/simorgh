@@ -16,8 +16,8 @@ const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-const shouldHaveMetadata = (name, content) => {
-  cy.get(`head meta[name=${name}]`).should('have.attr', 'content', content);
+const shouldHaveMetadata = (element, content) => {
+  element.should('have.attr', 'content', content);
 };
 
 export default {

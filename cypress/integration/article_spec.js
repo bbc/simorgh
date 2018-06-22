@@ -36,6 +36,7 @@ describe('News Article', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    shouldHaveMetadata('robots', 'nofollow');
+    const metaElement = getElement('head meta[name="robots"]');
+    shouldHaveMetadata(metaElement, 'nofollow');
   });
 });
