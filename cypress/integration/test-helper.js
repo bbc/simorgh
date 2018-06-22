@@ -16,8 +16,8 @@ const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-const shouldHaveMetadata = (element, content) => {
-  element.should('have.attr', 'content', content);
+const shouldHaveAttribute = (element, attribute, value) => {
+  element.should('have.attr', attribute, value);
 };
 
 export default {
@@ -25,5 +25,5 @@ export default {
   shouldContainText,
   shouldContainStyles,
   getElement,
-  shouldHaveMetadata,
+  shouldHaveAttribute,
 };

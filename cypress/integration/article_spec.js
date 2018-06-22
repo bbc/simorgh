@@ -2,7 +2,7 @@ import {
   getElement,
   shouldContainText,
   shouldContainStyles,
-  shouldHaveMetadata,
+  shouldHaveAttribute,
 } from './test-helper';
 
 describe('News Article', () => {
@@ -37,6 +37,6 @@ describe('News Article', () => {
 
   it('should have a nofollow meta tag', () => {
     const metaElement = getElement('head meta[name="robots"]');
-    shouldHaveMetadata(metaElement, 'nofollow');
+    shouldHaveAttribute(metaElement, 'content', 'nofollow');
   });
 });
