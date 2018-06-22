@@ -16,9 +16,14 @@ const shouldContainStyles = (element, css, styling) => {
   });
 };
 
+const shouldHaveAttribute = (element, attribute, value) => {
+  element.should('have.attr', attribute, value);
+};
+
 export default {
   testNonHTMLResponseCode,
   shouldContainText,
   shouldContainStyles,
   getElement,
+  shouldHaveAttribute,
 };
