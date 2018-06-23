@@ -25,7 +25,7 @@ jobs:
         - npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now .out --token $now_token --public simorgh_storybook && now alias --token $now_token simorgh_storybook
+        - now .out --token $now_token --public && now alias --token $now_token simorgh_storybook
 notifications:
   email: false
   slack:
