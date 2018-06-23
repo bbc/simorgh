@@ -20,7 +20,7 @@ jobs:
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
     - stage: deploy
-      if: branch = latest
+      if: branch = latest && type = push
       script: npm run deploy-storybook -- --ci --source-branch=latest
 notifications:
   email: false
