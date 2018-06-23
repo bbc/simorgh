@@ -19,10 +19,14 @@ jobs:
       script: xvfb-run npm run test:e2e:ci
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
-    - stage: test
+    - stage: deploy
       if: type = push
-      before_script: build-storybook -c .storybook -o .out && cd .out && npm install now --no-save
-      script: now --token $now_token --static && now alias --token $now_token
+      before_script:
+        - npm install now --no-save
+      script:
+        - build-storybook -c .storybook -o .out
+        - cd .out
+        - now --token $now_token && now alias --token $now_token
 notifications:
   email: false
   slack:
