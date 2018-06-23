@@ -24,7 +24,7 @@ jobs:
       before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now --token $now_token ./.out && now alias --token $now_token -A simorghstorybook.now.sh
+        - now --token $now_token ./.out -A ../now.json && now alias --token $now_token -A simorghstorybook.now.sh
     - stage: test
       if: type = push
       before_script: npm install now --no-save
