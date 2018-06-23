@@ -19,6 +19,8 @@ jobs:
       script: xvfb-run npm run test:e2e:ci
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
+    - stage: deploy
+      script: npm run deploy-storybook -- --ci --source-branch=storybook-github
 notifications:
   email: false
   slack:
