@@ -21,11 +21,14 @@ jobs:
       script: xvfb-run npm run test:e2e:storybook:ci
     - stage: test
       if: type = push
-      before_script:
-        - npm install now --no-save
+      before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now ./.out -A ../now.storybook.json --token $now_token --public && now alias --token $now_token -A ../now.storybook.json
+        - now --token $now_token ./.out -A ../now.storybook.json && now alias --token $now_token -A ../now.storybook.json
+    - stage: test
+      if: type = push
+      before_script: npm install now --no-save
+      script: now --token $now_token && now alias --token $now_token
 notifications:
   email: false
   slack:
