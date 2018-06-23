@@ -60,7 +60,7 @@
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "cypress": "^3.0.1",
-    "eslint": "^4.19.1",
+    "eslint": "^5.0.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
