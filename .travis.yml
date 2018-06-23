@@ -22,7 +22,7 @@ jobs:
     - stage: deploy
       if: type = push
       before_script: build-storybook -c .storybook -o .out && cd .out
-      script: npm install now --no-save && now simorgh.storybook --token $now_token --static && now alias simorgh.storybook --token $now_token
+      script: npm install now --no-save && now simorgh_storybook --token $now_token --static && now alias simorgh_storybook --token $now_token
 notifications:
   email: false
   slack:
