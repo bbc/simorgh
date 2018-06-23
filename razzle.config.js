@@ -1,5 +1,8 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer') // eslint-disable-line import/no-extraneous-dependencies, prefer-destructuring
+  .BundleAnalyzerPlugin;
+
 module.exports = {
-  modify: (config, { dev }) => {
+  modify: (config, { target, dev }) => {
     const appConfig = config;
     if (!dev) {
       /*
@@ -16,6 +19,12 @@ module.exports = {
           maxEntrypointSize: 350000,
         },
       );
+    } else if (target === 'node' && dev) {
+      appConfig.plugins = [
+        new BundleAnalyzerPlugin({
+          openAnalyzer: false,
+        }),
+      ];
     }
     return appConfig;
   },
