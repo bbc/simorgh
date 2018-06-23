@@ -11,21 +11,21 @@ module.exports = {
         A prod build will fail if the API changes so it is fairly safe.
       */
       appConfig.module.rules.shift();
-      // This is to pass the bundlde performance test in CI
-      appConfig.performance = Object.assign(
-        {},
-        {
-          maxAssetSize: 350000,
-          maxEntrypointSize: 350000,
-        },
-      );
     } else if (target === 'node' && dev) {
-      appConfig.plugins = [
+      appConfig.plugins.push(
         new BundleAnalyzerPlugin({
           openAnalyzer: false,
         }),
-      ];
+      );
     }
+    // This is to override bundle performance test
+    appConfig.performance = Object.assign(
+      {},
+      {
+        maxAssetSize: 350000,
+        maxEntrypointSize: 350000,
+      },
+    );
     return appConfig;
   },
 };
