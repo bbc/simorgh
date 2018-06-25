@@ -37,10 +37,14 @@ class Article extends Component {
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
-          <title>{headline}</title>
+          <title>
+            {headline}
+          </title>
         </Helmet>
         <Header />
-        <Headline>{headline}</Headline>
+        <Headline>
+          {headline}
+        </Headline>
       </Fragment>
     );
   }

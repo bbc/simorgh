@@ -14,6 +14,7 @@ const StyledParagraph = styled.p`
 const Footer = () => (
   <StyledFooter role="contentinfo">
     <StyledParagraph>
+      {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
       Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
       responsible for the content of external sites.
     </StyledParagraph>
