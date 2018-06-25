@@ -3,7 +3,7 @@ import {
   shouldContainText,
   shouldContainStyles,
   shouldHaveAttribute,
-} from './test-helper';
+} from '../support/test-helper';
 
 describe('News Article', () => {
   // eslint-disable-next-line no-undef
