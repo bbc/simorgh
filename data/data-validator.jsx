@@ -33,6 +33,10 @@ const validateNode = (currentSchemaNode, dataNode, parentName) => {
 };
 
 const validateType = (currentSchemaNode, dataNode) => {
+	if (!dataNode.hasOwnProperty('type') && dataNode.includes('$ref'){
+
+	}
+
 	if (dataNode != null) {
 		if (currentSchemaNode.enum) {
 			if (!currentSchemaNode.enum.includes(dataNode)) {
@@ -75,10 +79,9 @@ const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 		for (let i = 0; i < properties.length; i++) {
 			let property = properties[i];
 			if (property == 'blocks') {
-				// console.log("We would now recurse over all the blocks!");
-				// for (let k = 0; k < dataNode[property].length; k++) {
-				// 	validateBlock(dataNode[property][k]);
-				// }
+				for (let k = 0; k < dataNode[property].length; k++) {
+					validateBlock(dataNode[property][k]);
+				}
 			} else {
 				if (dataNode.hasOwnProperty(property)) {
 					console.log("");
