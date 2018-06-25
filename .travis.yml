@@ -19,19 +19,28 @@ jobs:
       script: xvfb-run npm run test:e2e:ci
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
-    - stage: test
+    - stage: deploy
       if: type = push
       before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now rm -y --token $now_token --safe simorgh
+        - now rm -y --token $now_token --safe .out
         - now --token $now_token ./.out --public && now alias --token $now_token simorghstorybook.now.sh
-    - stage: test
+    - stage: deploy
       if: type = push
       before_script: npm install now --no-save
       script:
         - now rm -y --token $now_token --safe simorgh
         - now --token $now_token --public && now alias --token $now_token simorgh.now.sh
+    # - stage: deploy_cleanup
+    #   if: type = push
+    #   before_script: npm install now --no-save
+    #   script:
+    #     - now rm -y --token $now_token --safe .out
+    #     - now rm -y --token $now_token --safe simorgh
+  allow_failures:
+    - script: now rm -y --token $now_token --safe .out
+    - script: now rm -y --token $now_token --safe simorgh
 notifications:
   email: false
   slack:
