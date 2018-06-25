@@ -12,7 +12,7 @@ server.listen(port, error => {
     console.log(error);
   }
 
-  console.log(`Started and listening on http://localhost:${port}`);
+  console.log(`Started and listening on http://localhost:${port}/article/article-id`);
 });
 
 if (module.hot) {
