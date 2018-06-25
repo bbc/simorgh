@@ -21,6 +21,7 @@ const render = ({ blocks }) =>
 
     return (
       <Element key={blockId}>
+        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         {type}: {blockString}
       </Element>
     );
@@ -28,7 +29,11 @@ const render = ({ blocks }) =>
 
 const MainContent = ({ data }) => {
   const renderedContent = render(data);
-  return <div>{renderedContent}</div>;
+  return (
+    <div>
+      {renderedContent}
+    </div>
+);
 };
 
 MainContent.propTypes = {
