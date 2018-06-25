@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 
-const textPropTypes = {
+export const textPropTypes = {
   blocks: propTypes.arrayOf(
     propTypes.shape({
       model: propTypes.shape({
@@ -28,4 +28,22 @@ export const textDefaultPropTypes = {
   ],
 };
 
-export default textPropTypes;
+export const imagePropTypes = {
+  model: propTypes.shape({
+    blocks: propTypes.arrayOf(
+      propTypes.shape({
+        locator: propTypes.string,
+      }),
+    ),
+  }),
+};
+
+export const imageDefaultPropTypes = {
+  model: {
+    blocks: [
+      {
+        model: {},
+      },
+    ],
+  },
+};
