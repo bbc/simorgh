@@ -1,6 +1,7 @@
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import { ServerStyleSheet } from 'styled-components';
+// import requirejs from 'requirejs';
 
 class Document extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
@@ -15,6 +16,10 @@ class Document extends React.Component {
   render() {
     const { helmet, assets, data, styleTags } = this.props; // eslint-disable-line react/prop-types
     const htmlAttrs = helmet.htmlAttributes.toComponent();
+    // const requireMap = {
+    //   'jquery-1.9': '../vendor/jquery-1.9.1',
+    //   'bump-3': '../vendor/bump-3',
+    // };
 
     return (
       <html lang="en-GB" {...htmlAttrs}>
@@ -26,17 +31,9 @@ class Document extends React.Component {
           <link rel="manifest" href="manifest.json" />
           {helmet.title.toComponent()}
           {styleTags}
-          <script
-            type="text/javascript"
-            src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
-          />
-          <script type="text/javascript">{
-            var bbcRequireMap = {
-              "jquery-1.9":"https://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
-              "bump-3":"https://emp.bbci.co.uk/emp/bump-3/bump-3"
-            }
-            requirejs.config({ paths: bbcRequireMap, waitSeconds: 30 });
-          }</script>
+          {/* <script type="text/javascript">
+            {requirejs.config({ paths: requireMap, waitSeconds: 30 })}
+          </script> */}
         </head>
         <body>
           <AfterRoot />

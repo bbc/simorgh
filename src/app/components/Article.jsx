@@ -2,7 +2,9 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
+// import requirejs from 'requirejs';
 import Header from './Header';
+import mp from '../../../vendor/mediaplayer';
 
 const Headline = styled.h1`
   color: #222;
@@ -55,6 +57,9 @@ class Article extends Component {
         ],
       },
     };
+
+    console.log('imhere');
+
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
@@ -63,15 +68,7 @@ class Article extends Component {
         <Header />
         <Headline>{headline}</Headline>
         <div id="mediaPlayer12345678" style={mediaPlayerStyles} />
-        <script type="text/javascript">
-          {/* eslint-disable-next-line global-require import/no-dynamic-require */
-          require(['bump-3'], $ => {
-            const mediaPlayer = $('#mediaPlayer12345678').player(
-              playlistSettings,
-            );
-            mediaPlayer.load();
-          })}
-        </script>
+        <script type="text/javascript">{mp('mediaPlayer12345678')}</script>
       </Fragment>
     );
   }
