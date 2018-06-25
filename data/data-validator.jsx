@@ -11,20 +11,43 @@ const dataToValidate = require('./test/scenario-01.json');
 const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
 
-const validateBlock = (dataToValidate) => {
+const validateBlock = (dataToValidate, parentName = "") => {
 	let schemaName = dataToValidate.type;
 
 	if (!schemas.hasOwnProperty(schemaName)) {
 		throw "Error: No schema exists for the block " + dataToValidate.type;
 	}
-	console.log("----------------------------------------------------------------");
-	console.log("----------------------------------------------------------------");
+	console.log("");
+	console.log("");
 	console.log("Validating block: " + schemaName);
 	console.log("----------------------------------------------------------------");
-	console.log("----------------------------------------------------------------");
-	validateNode(schemas[schemaName], dataToValidate, dataToValidate.type);
+	let blockSchema = schemas[schemaName];
+	validateNode(blockSchema, dataToValidate, parentName + ":" + dataToValidate.type);
 }
 
+const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
+	if (dataNode) {
+
+		// we are in model with either no type and object keyed as '$ref' (headline:model in schema)
+		// OR
+		// we are in model with object keyed as 'blocks' (article:model in schema)
+		// and need to start validating the block again
+		if (currentSchemaNode.type === undefined && currentSchemaNode.hasOwnProperty('$ref') ||
+			dataNode.hasOwnProperty('blocks')) {
+
+			// if this is the final text attribute
+			if (dataNode.hasOwnProperty('text')) {
+				if (typeof(dataNode) === "string") {
+					console.log("Valid text string");
+				}
+			} else {
+				for (let j = 0; j < dataNode['blocks'].length; j++) {
+					validateBlock(dataNode['blocks'][j], parentHistory);
+				}
+			}
+		}
+	}
+}
 
 const validateNode = (currentSchemaNode, dataNode, parentName) => {
 	validateType(currentSchemaNode, dataNode);
@@ -33,32 +56,34 @@ const validateNode = (currentSchemaNode, dataNode, parentName) => {
 };
 
 const validateType = (currentSchemaNode, dataNode) => {
-	if (!dataNode.hasOwnProperty('type') && dataNode.includes('$ref'){
+	// needed for seoHeadline being null
+	if (dataNode == null) {
+		console.log("TYPE OF NULL");
+	} else if (currentSchemaNode.type) {
+		if (dataNode['text'] && !dataNode['blocks']) {
+		} else {
 
-	}
+			if (currentSchemaNode.enum) {
+				if (!currentSchemaNode.enum.includes(dataNode)) {
+					throw "Error: Type does not exist in enum array for " + dataNode + " node - expected values [" + currentSchemaNode.enum + "] got " + dataNode;
+				} else {
+					console.log('- Valid enum of ' + dataNode);
+				}
+			}
 
-	if (dataNode != null) {
-		if (currentSchemaNode.enum) {
-			if (!currentSchemaNode.enum.includes(dataNode)) {
-				throw "Error: Type does not exist in enum array for " + dataNode + " node - expected values [" + currentSchemaNode.enum + "] got " + dataNode;
+			if (currentSchemaNode.type != typeof(dataNode)) {
+				console.log('meh');
+				throw "Error: Type does not match for " + dataNode.type + " node - expected " + currentSchemaNode.type + " got " + typeof(dataNode);
 			} else {
-				console.log('- Valid enum of: ' + dataNode);
+				console.log("- Valid type of " + typeof(dataNode));
 			}
 		}
-
-		if (currentSchemaNode.type != typeof(dataNode)) {
-			throw "Error: Type does not match for " + dataNode.type + " node - expected " + currentSchemaNode.type + " got " + typeof(dataNode);
-		} else {
-			console.log("- Valid type of " + typeof(dataNode));
-		}
-	} else {
-		console.log("TYPE OF NULL");
 	}
 }
 
 const validateRequired = (currentSchemaNode, dataNode) => {
 	if (!currentSchemaNode.required) {
-		console.log("- No required values to check");
+	// 	console.log("- No required values to check");
 	} else {
 		console.log("- Required values successfully found:");
 		for (let i = 0; i < currentSchemaNode.required.length; i++) {
@@ -72,33 +97,24 @@ const validateRequired = (currentSchemaNode, dataNode) => {
 
 const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 	if (!currentSchemaNode.properties) {
-		console.log("- No properties to check");
+		// console.log("- No properties to check");
 	} else {
 		let properties = Object.keys(currentSchemaNode.properties);
 
 		for (let i = 0; i < properties.length; i++) {
 			let property = properties[i];
-			if (property == 'blocks') {
-				for (let k = 0; k < dataNode[property].length; k++) {
-					validateBlock(dataNode[property][k]);
-				}
-			} else {
-				if (dataNode.hasOwnProperty(property)) {
-					console.log("");
-					let parentHistory = parentName + ":" + property;
-					console.log("Validating property " + parentHistory);
-					validateProperty(currentSchemaNode.properties[property], dataNode[property], parentHistory);
-				}
-			}
+			console.log("");
+			let parentHistory = parentName + ":" + property;
+			let propertySchema = currentSchemaNode.properties[property];
+
+			console.log("Validating property " + parentHistory);
+			// console.log("----------------------------------------------------------------");
+			checkIfNodeIsABlock(propertySchema, dataNode[property], parentHistory);
+			validateNode(propertySchema, dataNode[property], parentHistory);
 		}
 	}
 };
 
-const validateProperty = (propertySchema, propertyDataNode, parentHistory) => {
-	console.log("----------------------------------------------------------------");
-	validateNode(propertySchema, propertyDataNode, parentHistory);
-	console.log("----------------------------------------------------------------");
-}
 
 validateBlock(dataToValidate);
 
