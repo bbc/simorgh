@@ -64,11 +64,37 @@ class Article extends Component {
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
           <title>{headline}</title>
+          <script
+            type="text/javascript"
+            src="http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+          />
+          <script type="text/javascript"
+            src="https://emp.bbci.co.uk/emp/bump-4/bump-4.js"
+          />
         </Helmet>
         <Header />
         <Headline>{headline}</Headline>
         <div id="mediaPlayer12345678" style={mediaPlayerStyles} />
-        <script type="text/javascript">{mp('mediaPlayer12345678')}</script>
+        <script type="text/javascript">{
+          var domNode = document.getElementById('mediaPlayer12345678');
+          var settings = {
+            product: 'iplayer',
+            responsive: true,
+            playlistObject: {
+              "title": "Butterfly photobombs koala film shoot at Australia zoo",
+              "holdingImageURL":"https://ichef.bbci.co.uk/images/ic/$recipe/p049srmr.jpg",
+              "items": [{
+                "versionID": "p049sq7k",
+                "kind": "programme",
+                "duration":37
+              }]
+            },
+            statsObject: { clipPID: "p049sq7f" }
+          };
+          var mediaPlayer = window.embeddedMedia.api.player(domNode, settings);
+          player.load();
+        }
+        </script>
       </Fragment>
     );
   }
