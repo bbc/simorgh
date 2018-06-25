@@ -62,7 +62,7 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 ### Run tests on your fork
 
-We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. PRs from you fork to the bbc/simorgh repo will be run by our TravisCI setup with no changes on your fork.
+We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. PRs from your fork to the bbc/simorgh repo will be run by our TravisCI setup with no changes needed on your fork.
 
 To run these on your forked version follow these steps.
 
