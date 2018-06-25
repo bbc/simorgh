@@ -3,7 +3,6 @@
 	node /Users/phillee/Code/BBC/simorgh/data/data-validator.jsx
  */
 
-
 const yaml = require('yaml-js');
 const fs = require('fs');
 const yamlSchema = fs.readFileSync('schema.yaml', 'utf8');
@@ -75,16 +74,22 @@ const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 
 		for (let i = 0; i < properties.length; i++) {
 			let property = properties[i];
-			if (dataNode.hasOwnProperty(property)) {
-				console.log("");
-				let parentHistory = parentName + ":" + property;
-				console.log("Validating property " + parentHistory);
-				validateProperty(currentSchemaNode.properties[property], dataNode[property], parentHistory);
+			if (property == 'blocks') {
+				// console.log("We would now recurse over all the blocks!");
+				// for (let k = 0; k < dataNode[property].length; k++) {
+				// 	validateBlock(dataNode[property][k]);
+				// }
+			} else {
+				if (dataNode.hasOwnProperty(property)) {
+					console.log("");
+					let parentHistory = parentName + ":" + property;
+					console.log("Validating property " + parentHistory);
+					validateProperty(currentSchemaNode.properties[property], dataNode[property], parentHistory);
+				}
 			}
 		}
 	}
 };
-
 
 const validateProperty = (propertySchema, propertyDataNode, parentHistory) => {
 	console.log("----------------------------------------------------------------");
@@ -92,21 +97,10 @@ const validateProperty = (propertySchema, propertyDataNode, parentHistory) => {
 	console.log("----------------------------------------------------------------");
 }
 
-
-
-// const schemaKeys = Object.keys(schemas);
-
-// for (let i = 0; i < schemaKeys.length; i++) {
-// 	let key = schemaKeys[i];
-// 	validateNode(schemas[key], dataToValidate);
-// 	console.log("Successfully validated: " + key);
-// }
-
 validateBlock(dataToValidate);
 
+console.log("");
 console.log("Validation complete!");
-
-
 
 
 

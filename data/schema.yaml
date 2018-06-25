@@ -117,7 +117,7 @@ components:
                   enum: [Headline, Text,altText, paragraph, Image, caption, Video, rawImage, rawVideo]
                 model:
                   oneOf:
-                  - $ref: '#/components/schemas/Article/properties/model/properties/blocks'
+                  - $ref: '#/components/schemas/article/properties/model/properties/blocks'
                   - $ref: '#/components/schemas/text'
                   - $ref: '#/components/schemas/image'
                   - $ref: '#/components/schemas/headline'
