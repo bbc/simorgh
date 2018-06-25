@@ -1,5 +1,15 @@
 import propTypes from 'prop-types';
 
+export const imagePropTypes = {
+  model: propTypes.shape({
+    blocks: propTypes.arrayOf(
+      propTypes.shape({
+        locator: propTypes.string,
+      }),
+    ),
+  }),
+};
+
 export const textPropTypes = {
   blocks: propTypes.arrayOf(
     propTypes.shape({
@@ -14,31 +24,7 @@ export const textPropTypes = {
   ),
 };
 
-export const textDefaultPropTypes = {
-  blocks: [
-    {
-      model: {
-        blocks: [
-          {
-            model: {},
-          },
-        ],
-      },
-    },
-  ],
-};
-
-export const imagePropTypes = {
-  model: propTypes.shape({
-    blocks: propTypes.arrayOf(
-      propTypes.shape({
-        locator: propTypes.string,
-      }),
-    ),
-  }),
-};
-
-export const imageDefaultPropTypes = {
+const baseDefaultPropTypes = {
   model: {
     blocks: [
       {
@@ -46,4 +32,10 @@ export const imageDefaultPropTypes = {
       },
     ],
   },
+};
+
+export const imageDefaultPropTypes = baseDefaultPropTypes;
+
+export const textDefaultPropTypes = {
+  blocks: [baseDefaultPropTypes],
 };
