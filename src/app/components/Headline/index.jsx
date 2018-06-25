@@ -4,7 +4,11 @@ import propTypes from 'prop-types';
 const Headline = ({ blocks }) => {
   const { text } = blocks[0].model.blocks[0].model;
 
-  return <h1>{text}</h1>;
+  return (
+    <h1>
+      {text}
+    </h1>
+  );
 };
 
 Headline.propTypes = {

@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "prettier"],
   "env": {
     "es6": true,
     "browser": true,
@@ -14,5 +14,5 @@
       "jsx": true
     }
   },
-  "plugins": ["prettier", "json"],
+  "plugins": ["prettier", "json"]
 }

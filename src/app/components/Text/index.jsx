@@ -2,7 +2,11 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Text = ({ blocks }) =>
-  blocks.map(({ blockId, model }) => <p key={blockId}>{model.text}</p>);
+  blocks.map(({ blockId, model }) => (
+    <p key={blockId}>
+      {model.text}
+    </p>
+  ));
 
 Text.propTypes = {
   blocks: propTypes.arrayOf(
