@@ -3,18 +3,18 @@
 exports[`Article Component should render correctly 1`] = `
 Array [
   <header
-    className="sc-bwzfXH iaenUL"
+    className="sc-bwzfXH jkZzbR"
     role="banner"
 >
     <a
-        className="sc-bdVaJa iguvfJ"
+        className="sc-bdVaJa gVvnJa"
         href="http://bbc.co.uk/news"
     >
         BBC News
     </a>
 </header>,
   <h1
-    className="sc-htpNat kEwiJ"
+    className="sc-htpNat NbMos"
 >
     Article Headline
 </h1>,
