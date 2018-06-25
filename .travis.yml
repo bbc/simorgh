@@ -24,14 +24,14 @@ jobs:
       before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now rm -y --token $now_token --safe simorghstorybook
-        - now --token $now_token ./.out simorghstorybook --public && now alias --token $now_token simorghstorybook simorghstorybook.now.sh
+        - now rm -y --token $now_token --safe simorgh
+        - now --token $now_token ./.out --public && now alias --token $now_token simorghstorybook.now.sh
     - stage: test
       if: type = push
       before_script: npm install now --no-save
       script:
         - now rm -y --token $now_token --safe simorgh
-        - now --token $now_token simorgh --public && now alias --token $now_token simorgh simorgh.now.sh
+        - now --token $now_token --public && now alias --token $now_token simorgh.now.sh
 notifications:
   email: false
   slack:
