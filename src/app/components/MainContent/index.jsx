@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
+import { C_EBON, FF_NEWS } from '../../../lib/constants/styles';
 
 const Headline = styled.h1`
-  color: #222;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  color: ${C_EBON};
+  font-family: ${FF_NEWS};
   font-size: 2em;
 `;
 
