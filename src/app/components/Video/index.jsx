@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import { videoPropTypes , videoDefaultPropTypes } from '../../proptypes';
 
 const Video = ({ model }) => {
     let subBlocks = model.blocks;
@@ -12,24 +12,8 @@ const Video = ({ model }) => {
     );
 };
 
-Video.propTypes = {
-    model: propTypes.shape({
-      blocks: propTypes.arrayOf(
-        propTypes.shape({
-          locator: propTypes.string,
-        }),
-      ),
-    }),
-  };
+Video.propTypes = videoPropTypes
   
-  Video.defaultProps = {
-    model: {
-      blocks: [
-        {
-          model: {},
-        },
-      ],
-    },
-  };
+Video.defaultProps = videoDefaultPropTypes
 
 export default Video;
