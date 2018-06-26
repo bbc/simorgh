@@ -1,6 +1,7 @@
 import React from 'react';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
 import Image from './index';
+import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
+import { blockContainingText } from '../../../__test__/blockHelpers';
 
 describe('Image', () => {
   describe('with no data', () => {
@@ -30,30 +31,9 @@ describe('Image', () => {
       },
     };
 
-    const textBlock = (type, text) => ({
-      type,
-      model: {
-        blocks: [
-          {
-            type: 'text',
-            model: {
-              blocks: [
-                {
-                  type: 'paragraph',
-                  model: {
-                    text,
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    });
-
     const dataWithAltText = imageData([
       rawImageBlock,
-      textBlock(
+      blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
       ),
@@ -65,11 +45,11 @@ describe('Image', () => {
     );
     const dataWithCaption = imageData([
       rawImageBlock,
-      textBlock(
+      blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
       ),
-      textBlock(
+      blockContainingText(
         'caption',
         'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
       ),
