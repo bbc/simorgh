@@ -2,7 +2,8 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Video = ({ model }) => {
-    const subBlocks = model.blocks;
+    let subBlocks = model.blocks;
+    subBlocks = "Test";
     return (
       <div> 
         {' '}

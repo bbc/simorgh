@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video with no data should not render anything 1`] = `
+<div>
+   
+  Test
+</div>
+`;
