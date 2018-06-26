@@ -1,6 +1,7 @@
 import React from 'react';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
 import Headline from './index';
+import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
+import { textBlock } from '../../../__test__/blockHelpers';
 
 describe('Headline', () => {
   describe('with no data', () => {
@@ -11,21 +12,7 @@ describe('Headline', () => {
   });
 
   describe('with data', () => {
-    const data = {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  text: 'This is a headline!',
-                },
-              },
-            ],
-          },
-        },
-      ],
-    };
+    const data = textBlock('This is a headline!');
 
     snapshotTestHelper.shouldMatchSnapshot(
       'should render correctly',
