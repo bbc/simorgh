@@ -23,11 +23,12 @@ jobs:
       if: type = push
       before_script: npm install now --no-save
       script:
-        - now --token $now_token --public && now alias --token $now_token simorgh.now.sh
-        - now rm -y --token $now_token --safe simorgh
         - build-storybook -c .storybook -o .out
         - now --token $now_token ./.out --public && now alias --token $now_token simorghstorybook.now.sh
         - now rm -y --token $now_token --safe .out
+      after_script: now rm -y --token $now_token --safe .out
+  allow_failures:
+    - after_script: now rm -y --token $now_token --safe .out
 notifications:
   email: false
   slack:
