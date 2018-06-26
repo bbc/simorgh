@@ -4,9 +4,11 @@ import 'isomorphic-fetch';
 import styled from 'styled-components';
 import Header from './Header';
 
+import {C_EBON, FF_NEWS} from '../../lib/constants/styles';
+
 const Headline = styled.h1`
-  color: #222;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  color: ${C_EBON};
+  font-family: ${FF_NEWS};
   font-size: 2em;
 `;
 
@@ -37,10 +39,14 @@ class Article extends Component {
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
-          <title>{headline}</title>
+          <title>
+            {headline}
+          </title>
         </Helmet>
         <Header />
-        <Headline>{headline}</Headline>
+        <Headline>
+          {headline}
+        </Headline>
       </Fragment>
     );
   }
