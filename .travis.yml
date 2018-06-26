@@ -20,7 +20,7 @@ jobs:
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
     - stage: deploy
-      if: type = push
+      if: type = push AND branch = latest
       before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o simorghstorybook
