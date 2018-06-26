@@ -1,6 +1,7 @@
 import React from 'react';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
 import SubHeading from './index';
+import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
+import { textBlock } from '../../../__test__/blockHelpers';
 
 describe('SubHeading', () => {
   describe('with no data', () => {
@@ -11,48 +12,14 @@ describe('SubHeading', () => {
   });
 
   describe('with data', () => {
-    const data = {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  text: 'The amazing sub-heading!?',
-                },
-              },
-            ],
-          },
-        },
-      ],
-    };
-
     snapshotTestHelper.shouldMatchSnapshot(
       'should display the provided sub-heading',
-      <SubHeading {...data} />,
+      <SubHeading {...textBlock('The amazing sub-heading!?')} />,
     );
-  });
-
-  describe('with subheading containing various symbols', () => {
-    const data = {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  text: '!@#$%^&*()\'"?/[]{}',
-                },
-              },
-            ],
-          },
-        },
-      ],
-    };
 
     snapshotTestHelper.shouldMatchSnapshot(
-      'should still display the heading',
-      <SubHeading {...data} />,
+      'should display the subheading containing various symbols',
+      <SubHeading {...textBlock('!@#$%^&*()\'"?/[]{}')} />,
     );
   });
 });

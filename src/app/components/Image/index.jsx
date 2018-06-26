@@ -1,6 +1,6 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import styled from 'styled-components';
+import { imagePropTypes, imageDefaultPropTypes } from '../../proptypes';
 
 // Filters array of blocks for a single block of given type
 const filterForBlockType = (arrayOfBlocks, type) =>
@@ -50,24 +50,8 @@ const Image = ({ model }) => {
   );
 };
 
-Image.propTypes = {
-  model: propTypes.shape({
-    blocks: propTypes.arrayOf(
-      propTypes.shape({
-        locator: propTypes.string,
-      }),
-    ),
-  }),
-};
+Image.propTypes = imagePropTypes;
 
-Image.defaultProps = {
-  model: {
-    blocks: [
-      {
-        model: {},
-      },
-    ],
-  },
-};
+Image.defaultProps = imageDefaultPropTypes;
 
 export default Image;

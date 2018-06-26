@@ -8,6 +8,9 @@ pipeline {
   }
   stages {
     stage ('Run Pipeline') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       agent any
       steps {
         build(
