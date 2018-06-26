@@ -6,8 +6,10 @@ const Video = ({ model }) => {
     const rawVideo  = model.blocks[0].model;
 
     const {locator, duration, isLive} = rawVideo;
-
-    const liveString = isLive.toString();
+    let liveString;
+    if(isLive !== undefined){
+      liveString = isLive.toString();
+    }
 
     return (
       <div> 
