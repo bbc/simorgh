@@ -2,12 +2,25 @@ import React from 'react';
 import { videoPropTypes , videoDefaultPropTypes } from '../../proptypes';
 
 const Video = ({ model }) => {
-    let subBlocks = model.blocks;
-    subBlocks = "Test";
+  // currenct placeholder proptypes
+    const rawVideo  = model.blocks[0].model;
+
+    const {locator, duration, isLive} = rawVideo;
+
+    const liveString = isLive.toString();
+
     return (
       <div> 
         {' '}
-        {subBlocks}
+        <div>
+          {locator}
+        </div>
+        <div>
+          {duration}
+        </div>
+        <div>
+          {liveString}
+        </div>
       </div>
     );
 };
