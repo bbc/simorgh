@@ -24,7 +24,7 @@ jobs:
       before_script: npm install now --no-save
       script:
         - build-storybook -c .storybook -o .out
-        - now --token $now_token ./.out --public && now alias --token $now_token simorghstorybook.now.sh
+        - now --token $now_token ./.out --public && now alias --token $now_token
         - now rm -y --token $now_token --safe .out
       after_script: now rm -y --token $now_token --safe .out
   allow_failures:
