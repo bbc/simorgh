@@ -4,25 +4,34 @@
  */
 
 const yaml = require('yaml-js');
-const fs = require('fs');
+const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
+const data = require('./test/scenario-01.json');
+
 const yamlSchema = fs.readFileSync('schema.yaml', 'utf8');
-const dataToValidate = require('./test/scenario-01.json');
 
 const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
 
-const validateBlock = (dataToValidate, parentName = "") => {
-	let schemaName = dataToValidate.type;
+const validateNode = (currentSchemaNode, dataNode, parentName) => {
+	validateType(currentSchemaNode, dataNode);
+	validateRequired(currentSchemaNode, dataNode);
+	validateProperties(currentSchemaNode, dataNode, parentName);
+};
 
-	if (!schemas.hasOwnProperty(schemaName)) {
-		throw "Error: No schema exists for the block " + dataToValidate.type;
+const validateBlock = (dataToValidate, parentName = '') => {
+	const schemaName = dataToValidate.type;
+
+	if (! (schemaName in schemas) ) {
+		const errorMsg = `Error: No schema exists for the block ${dataToValidate.type}`;
+		throw errorMsg;
 	}
-	console.log("");
-	console.log("");
-	console.log("Validating block: " + schemaName);
-	console.log("----------------------------------------------------------------");
-	let blockSchema = schemas[schemaName];
-	validateNode(blockSchema, dataToValidate, parentName + ":" + dataToValidate.type);
+	console.log(''); // eslint-disable-line no-console
+	console.log(''); // eslint-disable-line no-console
+	console.log(`Validating block: ${schemaName}`); // eslint-disable-line no-console
+	console.log('----------------------------------------------------------------'); // eslint-disable-line no-console
+
+	const blockSchema = schemas[schemaName];
+	validateNode(blockSchema, dataToValidate, `${parentName} : ${dataToValidate.type}`);
 }
 
 const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
@@ -32,50 +41,43 @@ const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 		// OR
 		// we are in model with object keyed as 'blocks' (article:model in schema)
 		// and need to start validating the block again
-		if (currentSchemaNode.type === undefined && currentSchemaNode.hasOwnProperty('$ref') ||
+		if (currentSchemaNode.type === undefined && '$ref' in currentSchemaNode ||
 			dataNode.hasOwnProperty('blocks')) {
 
 			// if this is the final text attribute
-			if (dataNode.hasOwnProperty('text')) {
-				if (typeof(dataNode) === "string") {
-					console.log("Valid text string");
+			if ('text' in dataNode) {
+				if (typeof(dataNode.text) === 'string') {
+					console.log('Valid text string'); // eslint-disable-line no-console
 				}
 			} else {
-				for (let j = 0; j < dataNode['blocks'].length; j++) {
-					validateBlock(dataNode['blocks'][j], parentHistory);
-				}
+				dataNode.blocks.map(
+					block => validateBlock(block, parentHistory)
+				);
 			}
 		}
 	}
 }
 
-const validateNode = (currentSchemaNode, dataNode, parentName) => {
-	validateType(currentSchemaNode, dataNode);
-	validateRequired(currentSchemaNode, dataNode);
-	validateProperties(currentSchemaNode, dataNode, parentName);
-};
-
 const validateType = (currentSchemaNode, dataNode) => {
 	// needed for seoHeadline being null
 	if (dataNode == null) {
-		console.log("TYPE OF NULL");
+		console.log('TYPE OF NULL'); // eslint-disable-line no-console
 	} else if (currentSchemaNode.type) {
-		if (dataNode['text'] && !dataNode['blocks']) {
-		} else {
-
+		if (! (dataNode.text && !dataNode.blocks) ) {
 			if (currentSchemaNode.enum) {
 				if (!currentSchemaNode.enum.includes(dataNode)) {
-					throw "Error: Type does not exist in enum array for " + dataNode + " node - expected values [" + currentSchemaNode.enum + "] got " + dataNode;
+					const errorMsg = `'Error: Type does not exist in enum array for ${dataNode} node - expected values [${currentSchemaNode.enum}] got ${dataNode}`;
+					throw errorMsg;
 				} else {
-					console.log('- Valid enum of ' + dataNode);
+					console.log(`- Valid enum of ${dataNode}`); // eslint-disable-line no-console
 				}
 			}
 
-			if (currentSchemaNode.type != typeof(dataNode)) {
-				console.log('meh');
-				throw "Error: Type does not match for " + dataNode.type + " node - expected " + currentSchemaNode.type + " got " + typeof(dataNode);
+			if (currentSchemaNode.type !== typeof(dataNode)) {
+				const errorMsg = `Error: Type does not match for ${dataNode.type} node - expected ${currentSchemaNode.type} got ${typeof(dataNode)}`;
+				throw errorMsg;
 			} else {
-				console.log("- Valid type of " + typeof(dataNode));
+				console.log(`- Valid type of ${typeof(dataNode)}`); // eslint-disable-line no-console
 			}
 		}
 	}
@@ -83,43 +85,47 @@ const validateType = (currentSchemaNode, dataNode) => {
 
 const validateRequired = (currentSchemaNode, dataNode) => {
 	if (!currentSchemaNode.required) {
-	// 	console.log("- No required values to check");
+	// 	console.log('- No required values to check'); // eslint-disable-line no-console
 	} else {
-		console.log("- Required values successfully found:");
-		for (let i = 0; i < currentSchemaNode.required.length; i++) {
-			if (!dataNode.hasOwnProperty(currentSchemaNode.required[i])) {
-				throw "Error: Missing required prop for " + currentSchemaNode.required[i];
+		console.log('- Required values successfully found:'); // eslint-disable-line no-console
+		currentSchemaNode.required.map(
+			requiredProp => {
+				if (! (requiredProp in dataNode) ) {
+					const errorMsg = `Error: Missing required prop for ${currentSchemaNode.required[i]}`;
+					throw errorMsg;
+				}
+				else {
+					console.log(`  - ${requiredProp}`); // eslint-disable-line no-console
+				}
 			}
-			else console.log("  - " + currentSchemaNode.required[i]);
-		}
+		);
 	}
 };
 
 const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 	if (!currentSchemaNode.properties) {
-		// console.log("- No properties to check");
+		// console.log('- No properties to check'); // eslint-disable-line no-console
 	} else {
-		let properties = Object.keys(currentSchemaNode.properties);
+		const properties = Object.keys(currentSchemaNode.properties);
 
 		for (let i = 0; i < properties.length; i++) {
-			let property = properties[i];
-			console.log("");
-			let parentHistory = parentName + ":" + property;
-			let propertySchema = currentSchemaNode.properties[property];
+			const property = properties[i];
+			const parentHistory = `${parentName}:${property}`;
+			const propertySchema = currentSchemaNode.properties[property];
 
-			console.log("Validating property " + parentHistory);
-			// console.log("----------------------------------------------------------------");
+			console.log(''); // eslint-disable-line no-console
+			console.log(`Validating property ${parentHistory}`); // eslint-disable-line no-console
+
 			checkIfNodeIsABlock(propertySchema, dataNode[property], parentHistory);
 			validateNode(propertySchema, dataNode[property], parentHistory);
 		}
 	}
 };
 
+validateBlock(data);
 
-validateBlock(dataToValidate);
-
-console.log("");
-console.log("Validation complete!");
+console.log(''); // eslint-disable-line no-console
+console.log('Validation complete!'); // eslint-disable-line no-console
 
 
 
