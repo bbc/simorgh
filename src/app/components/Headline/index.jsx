@@ -1,10 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import { textPropTypes, textDefaultPropTypes } from '../../proptypes';
+import { C_EBON, FF_NEWS } from '../../../lib/constants/styles';
+
+const StyledHeadline = styled.h1`
+  color: ${C_EBON};
+  font-family: ${FF_NEWS};
+  font-size: 2em;
+`;
 
 const Headline = ({ blocks }) => {
   const { text } = blocks[0].model.blocks[0].model;
 
-  return <h1>{text}</h1>;
+  return (
+    <StyledHeadline>
+      {text}
+    </StyledHeadline>
+  );
 };
 
 Headline.propTypes = textPropTypes;
