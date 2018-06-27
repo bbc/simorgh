@@ -42,7 +42,7 @@ const validateBlock = (dataToValidate, parentName = '') => {
 	console.log('----------------------------------------------------------------'); // eslint-disable-line no-console
 
 	const blockSchema = schemas[schemaName];
-	validateNode(blockSchema, dataToValidate, `${parentName} : ${dataToValidate.type}`);
+	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
 }
 
 const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
@@ -61,7 +61,7 @@ const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 					console.log('Valid text string'); // eslint-disable-line no-console
 				}
 			} else {
-				dataNode.blocks.map(
+				dataNode.blocks.forEach(
 					block => validateBlock(block, parentHistory)
 				);
 			}
@@ -117,24 +117,13 @@ const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 	if (!currentSchemaNode.properties) {
 		// console.log('- No properties to check'); // eslint-disable-line no-console
 	} else {
-		const properties = Object.keys(currentSchemaNode.properties);
-
-		properties.forEach(
-			(property, parentName, currentSchemaNode, dataNode) => {
-				console.log(currentSchemaNode);
+		Object.keys(currentSchemaNode.properties)
+			.forEach( property => {
 				const parentHistory = `${parentName}:${property}`;
 				const propertySchema = currentSchemaNode.properties[property];
 				validateProperty(propertySchema, dataNode[property], parentHistory);
 			}
-		)
-
-
-	// 	for (let i = 0; i < properties.length; i++) {
-	// 		const property = properties[i];
-	// 		const parentHistory = `${parentName}:${property}`;
-	// 		const propertySchema = currentSchemaNode.properties[property];
-	// 		validateProperty(propertySchema, dataNode[property], parentHistory);
-	// 	}
+		);
  	}
 };
 
