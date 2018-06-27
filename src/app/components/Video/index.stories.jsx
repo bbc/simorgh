@@ -2,22 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Video from './index';
 
-// const videoData = arrayOfBlocks => ({
-//   type: 'video',
-//   model: {
-//     blocks: arrayOfBlocks,
-//   },
-// });
-
-// const rawVideoBlock = {
-//     "type": "rawVideo",
-//     "model": {
-//       "guidance": null,
-//       "isLive": false,
-//       "duration": "PT2H34M25S",
-//       "locator": "urn:bbc:pips:pid:p064nsyw"
-// }
-// };
 
 
 const data = {
@@ -37,29 +21,6 @@ const data = {
           "versionID": "p064nsz3",
           "kind": "clip",
           "duration": 299
-        }
-      },
-      {
-        "blockId": "2e24f33d-77c2-c62e-0353-e14dc8276e3e",
-        "type": "altText",
-        "model": {
-          "blocks": [
-            {
-              "blockId": "0cb5e07f-9881-d1d1-31a7-727e295eaa67",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "blockId": "dc943001-529b-5545-41c3-0456e6a7ae5d",
-                    "model": {
-                      "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
         }
       },
       {
@@ -107,10 +68,6 @@ const data = {
     ]
   }
 };
-
-// const justVideoBlock = videoData([
-//     rawVideoBlock,
-//   ]);
 
 storiesOf('Video', module).add('just raw video', () => (
   <Video {...data} />

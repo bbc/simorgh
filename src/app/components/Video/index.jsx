@@ -1,31 +1,28 @@
 import React from 'react';
-import { videoPropTypes , videoDefaultPropTypes } from '../../proptypes';
+import { videoPropTypes, videoDefaultPropTypes } from '../../proptypes';
 import filterForBlockType from '../../BlockHelpers/blockHelpers';
 
 const Video = ({ model }) => {
-    const subBlocks = model.blocks;
+  const subBlocks = model.blocks;
 
-
-    // raw video block
-    const rawVideo  = filterForBlockType(subBlocks, 'rawVideo');
+  // raw video block
+  const rawVideo = filterForBlockType(subBlocks, 'rawVideo');
   if (!rawVideo) {
     return null;
   }
 
-    const {locator: videoLocator, duration, versionID, kind} = rawVideo.model;
+  const { locator: videoLocator, duration, versionID, kind } = rawVideo.model;
 
-    // image blocks
-    const imageBlock = filterForBlockType(subBlocks, 'image');
-    const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
+  // image blocks
+  const imageBlock = filterForBlockType(subBlocks, 'image');
+  const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
 
-    if (!rawVideo|| !rawImage) {
-      return null;
-    }
+  if (!rawVideo || !rawImage) {
+    return null;
+  }
 
-    const {locator : imageLocator } = rawImage.model;
-    const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
-
-    
+  const { locator: imageLocator } = rawImage.model;
+  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
 
   return (
     <div>
@@ -53,14 +50,12 @@ const Video = ({ model }) => {
         kind:
         {kind}
       </div>
-
-
     </div>
   );
 };
 
-Video.propTypes = videoPropTypes
-  
-Video.defaultProps = videoDefaultPropTypes
+Video.propTypes = videoPropTypes;
+
+Video.defaultProps = videoDefaultPropTypes;
 
 export default Video;
