@@ -5,7 +5,6 @@ import filterForBlockType from '../../BlockHelpers/blockHelpers';
 const Video = ({ model }) => {
   const subBlocks = model.blocks;
 
-  // raw video block
   const rawVideo = filterForBlockType(subBlocks, 'rawVideo');
   if (!rawVideo) {
     return null;
@@ -13,11 +12,10 @@ const Video = ({ model }) => {
 
   const { locator: videoLocator, duration, versionID, kind } = rawVideo.model;
 
-  // image blocks
   const imageBlock = filterForBlockType(subBlocks, 'image');
   const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
 
-  if (!rawVideo || !rawImage) {
+  if (!rawImage) {
     return null;
   }
 
