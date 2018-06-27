@@ -6,7 +6,7 @@ exports[`Header should render correctly 1`] = `
   role="banner"
 >
   <a
-    className="sc-bdVaJa gVvnJa"
+    className="sc-bdVaJa fkEqw"
     href="http://bbc.co.uk/news"
   >
     BBC News
