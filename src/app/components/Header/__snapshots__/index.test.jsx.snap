@@ -1,12 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
+.c1 {
+  color: #FFFFFF;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2.2em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c0 {
+  background-color: #BB1919;
+  height: 40px;
+  width: 100%;
+  padding: 16px;
+}
+
 <header
-  className="sc-bwzfXH jkZzbR"
+  className="c0"
   role="banner"
 >
   <a
-    className="sc-bdVaJa fkEqw"
+    className="c1"
     href="http://bbc.co.uk/news"
   >
     BBC News
