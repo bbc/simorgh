@@ -2,7 +2,7 @@
 
 exports[`Headline with data should render correctly 1`] = `
 <h1
-  className="sc-bdVaJa iyXvgZ"
+  className="sc-bdVaJa bjeWEM"
 >
   This is a headline!
 </h1>
@@ -10,6 +10,6 @@ exports[`Headline with data should render correctly 1`] = `
 
 exports[`Headline with no data should not render anything 1`] = `
 <h1
-  className="sc-bdVaJa iyXvgZ"
+  className="sc-bdVaJa bjeWEM"
 />
 `;

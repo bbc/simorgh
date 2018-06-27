@@ -21,7 +21,7 @@ describe('News Article', () => {
     shouldContainStyles(
       anchorElement,
       'font-family',
-      'ReithSans, Arial, Helvetica, freesans, sans-serif',
+      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
     );
   });
 

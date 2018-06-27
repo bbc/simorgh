@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { imagePropTypes, imageDefaultPropTypes } from '../../proptypes';
+import { FF_NEWS } from '../../../lib/constants/styles';
 
 // Filters array of blocks for a single block of given type
 const filterForBlockType = (arrayOfBlocks, type) =>
@@ -15,7 +16,7 @@ const renderCaption = block => {
   const StyledFigCaption = styled.figcaption`
     background-color: #d5d0cd;
     color: #404040;
-    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    font-family: ${FF_NEWS};
     padding: 8px;
   `;
   const caption = getText(block);
