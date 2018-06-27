@@ -15,6 +15,11 @@ const yamlSchema = fs.readFileSync('schema.yaml', 'utf8');
 const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
 
+const log = message => {
+	console.log(message); // eslint-disable-line no-console
+}
+
+
 const validateNode = (currentSchemaNode, dataNode, parentName) => {
 	validateType(currentSchemaNode, dataNode);
 	validateRequired(currentSchemaNode, dataNode);
@@ -22,8 +27,8 @@ const validateNode = (currentSchemaNode, dataNode, parentName) => {
 };
 
 const validateProperty = (propertySchema, dataProperty, parentName) => {
-	console.log(''); // eslint-disable-line no-console
-	console.log(`Validating property ${parentName}`); // eslint-disable-line no-console
+	log('');
+	log(`Validating property ${parentName}`);
 
 	checkIfNodeIsABlock(propertySchema, dataProperty, parentName);
 	validateNode(propertySchema, dataProperty, parentName);
@@ -36,10 +41,10 @@ const validateBlock = (dataToValidate, parentName = '') => {
 		const errorMsg = `Error: No schema exists for the block ${dataToValidate.type}`;
 		throw errorMsg;
 	}
-	console.log(''); // eslint-disable-line no-console
-	console.log(''); // eslint-disable-line no-console
-	console.log(`Validating block: ${schemaName}`); // eslint-disable-line no-console
-	console.log('----------------------------------------------------------------'); // eslint-disable-line no-console
+	log('');
+	log('');
+	log(`Validating block: ${schemaName}`);
+	log('----------------------------------------------------------------');
 
 	const blockSchema = schemas[schemaName];
 	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
@@ -58,7 +63,7 @@ const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 			// if this is the final text attribute
 			if ('text' in dataNode) {
 				if (typeof(dataNode.text) === 'string') {
-					console.log('Valid text string'); // eslint-disable-line no-console
+					log('Valid text string');
 				}
 			} else {
 				dataNode.blocks.forEach(
@@ -72,7 +77,7 @@ const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 const validateType = (currentSchemaNode, dataNode) => {
 	// needed for dataNode being null EG: seoHeadline
 	if (dataNode == null) {
-		console.log('TYPE OF NULL'); // eslint-disable-line no-console
+		log('TYPE OF NULL');
 	} else if (currentSchemaNode.type) {
 		if (! (dataNode.text && !dataNode.blocks) ) {
 			if (currentSchemaNode.enum) {
@@ -80,7 +85,7 @@ const validateType = (currentSchemaNode, dataNode) => {
 					const errorMsg = `'Error: Type does not exist in enum array for ${dataNode} node - expected values [${currentSchemaNode.enum}] got ${dataNode}`;
 					throw errorMsg;
 				} else {
-					console.log(`- Valid enum of ${dataNode}`); // eslint-disable-line no-console
+					log(`- Valid enum of ${dataNode}`);
 				}
 			}
 
@@ -88,7 +93,7 @@ const validateType = (currentSchemaNode, dataNode) => {
 				const errorMsg = `Error: Type does not match for ${dataNode.type} node - expected ${currentSchemaNode.type} got ${typeof(dataNode)}`;
 				throw errorMsg;
 			} else {
-				console.log(`- Valid type of ${typeof(dataNode)}`); // eslint-disable-line no-console
+				log(`- Valid type of ${typeof(dataNode)}`);
 			}
 		}
 	}
@@ -96,7 +101,7 @@ const validateType = (currentSchemaNode, dataNode) => {
 
 const validateRequired = (currentSchemaNode, dataNode) => {
 	if (currentSchemaNode.required) {
-		console.log('- Required values successfully found:'); // eslint-disable-line no-console
+		log('- Required values successfully found:');
 		currentSchemaNode.required.forEach(
 			requiredProp => {
 				if (! (requiredProp in dataNode) ) {
@@ -104,7 +109,7 @@ const validateRequired = (currentSchemaNode, dataNode) => {
 					throw errorMsg;
 				}
 				else {
-					console.log(`  - ${requiredProp}`); // eslint-disable-line no-console
+					log(`  - ${requiredProp}`);
 				}
 			}
 		);
@@ -125,5 +130,5 @@ const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 
 validateBlock(data);
 
-console.log(''); // eslint-disable-line no-console
-console.log('Validation complete!'); // eslint-disable-line no-console
+log('');
+log('Validation complete!');
