@@ -1,37 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Video from './index';
+import { videoBlock, rawImageModel, rawVideoModel, rawVideoBlock , rawImageBlock, imageBlock} from '../../../__test__/blockHelpers';
 
-const data = {
-  "type": "video",
-  "model": {
-    "locator": "urn:bbc:pips:pid:p064nsyw",
-    "blocks": [
-      {
-        "type": "rawVideo",
-        "model": {
-          "locator": "urn:bbc:pips:pid:p064nsyw",
-          "versionID": "p064nsz3",
-          "kind": "clip",
-          "duration": 299
-        }
-      },
-      {
-        "type": "image",
-        "model": {
-          "blocks": [
-            {
-              "type": "rawImage",
-              "model": {
-                "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-};
+
+const rVB = rawVideoBlock(rawVideoModel("urn:bbc:pips:pid:p064nsyw", "p064nsz3", "clip", 299 ));
+const rIB = rawImageBlock(rawImageModel("/cpsprodpb/5BD5/production/_101690532_2.jpg"));
+const img1 = imageBlock(rIB);
+
+const data = videoBlock(rVB, img1)
+
 
 storiesOf('Video', module).add('just raw video', () => (
   <Video {...data} />
