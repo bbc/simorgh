@@ -53,7 +53,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Article'
+                  $ref: '#/components/schemas/article'
         '400':
           description: bad input parameter/s
 components:
@@ -165,7 +165,7 @@ components:
           type: string
           enum: [text]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     headline:
       type: object
       required:
@@ -180,7 +180,7 @@ components:
           type: string
           enum: [headline]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     altText:
       type: object
       required:
@@ -195,7 +195,7 @@ components:
           type: string
           enum: [altText]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     paragraph:
       type: object
       required:
@@ -210,7 +210,7 @@ components:
           type: string
           enum: [paragraph]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     caption:
       type: object
       required:
@@ -225,7 +225,7 @@ components:
           type: string
           enum: [caption]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     video:
       type: object
       required:
