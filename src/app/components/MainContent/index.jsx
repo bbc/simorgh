@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import propTypes from 'prop-types';
+import { any, arrayOf, shape } from 'prop-types';
 import { C_EBON, FF_NEWS } from '../../../lib/constants/styles';
 
 const Headline = styled.h1`
@@ -37,9 +37,9 @@ const MainContent = ({ data }) => {
 };
 
 MainContent.propTypes = {
-  data: propTypes.shape({
-    model: propTypes.shape({
-      blocks: propTypes.arrayOf(propTypes.any),
+  data: shape({
+    model: shape({
+      blocks: arrayOf(any),
     }),
   }).isRequired,
 };
