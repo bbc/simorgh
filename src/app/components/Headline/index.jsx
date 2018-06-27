@@ -5,6 +5,7 @@ import { C_EBON, FF_NEWS } from '../../../lib/constants/styles';
 
 const StyledHeadline = styled.h1`
   color: ${C_EBON};
+  font-display: optional;
   font-family: ${FF_NEWS};
   font-size: 2em;
 `;

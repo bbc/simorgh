@@ -9,6 +9,7 @@ import {
 
 const StyledFooter = styled.footer`
   background-color: ${C_STORM};
+  font-display: optional;
   font-family: ${FF_NEWS};
   padding: ${GEL_SPACING_DBL};
 `;

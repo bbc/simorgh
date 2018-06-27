@@ -23,6 +23,7 @@ describe('News Article', () => {
       'font-family',
       'ReithSans, Arial, Helvetica, freesans, sans-serif',
     );
+    shouldContainStyles(anchorElement, 'font-display', 'optional');
   });
 
   it('should render a headline', () => {

@@ -15,6 +15,7 @@ const renderCaption = block => {
   const StyledFigCaption = styled.figcaption`
     background-color: #d5d0cd;
     color: #404040;
+    font-display: optional;
     font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
     padding: 8px;
   `;

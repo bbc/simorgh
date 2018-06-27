@@ -8,11 +8,12 @@ import {
 } from '../../../lib/constants/styles';
 
 const Link = styled.a`
+  color: ${C_WHITE};  
+  font-display: optional;
   font-family: ${FF_NEWS};
   font-size: 2.2em;
-  color: ${C_WHITE};
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const StyledHeader = styled.header`
