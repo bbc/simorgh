@@ -1,30 +1,62 @@
 import React from 'react';
 import { videoPropTypes , videoDefaultPropTypes } from '../../proptypes';
+import filterForBlockType from '../../BlockHelpers/blockHelpers';
 
 const Video = ({ model }) => {
-  // currenct placeholder proptypes
-    const rawVideo  = model.blocks[0].model;
+    const subBlocks = model.blocks;
 
-    const {locator, duration, isLive} = rawVideo;
-    let liveString;
-    if(isLive !== undefined){
-      liveString = isLive.toString();
+
+    // raw video block
+    const rawVideo  = filterForBlockType(subBlocks, 'rawVideo');
+  if (!rawVideo) {
+    return null;
+  }
+
+    const {locator: videoLocator, duration, versionID, kind} = rawVideo.model;
+
+    // image blocks
+    const imageBlock = filterForBlockType(subBlocks, 'image');
+    const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
+
+    if (!rawVideo|| !rawImage) {
+      return null;
     }
 
-    return (
-      <div> 
-        {' '}
-        <div>
-          {locator}
-        </div>
-        <div>
-          {duration}
-        </div>
-        <div>
-          {liveString}
-        </div>
+    const {locator : imageLocator } = rawImage.model;
+    const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
+
+    
+
+  return (
+    <div>
+      <div>
+        video locator:
+        {videoLocator}
       </div>
-    );
+      <div>
+        duration:
+        {duration}
+      </div>
+      <div>
+        raw Image Src:
+        {rawImageSrc}
+      </div>
+      <div>
+        versionID:
+        {versionID}
+      </div>
+      <div>
+        imageLocator:
+        {imageLocator}
+      </div>
+      <div>
+        kind:
+        {kind}
+      </div>
+
+
+    </div>
+  );
 };
 
 Video.propTypes = videoPropTypes
