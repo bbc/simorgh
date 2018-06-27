@@ -51,7 +51,6 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^16.4.0",
-    "requirejs": "^2.3.5",
     "speculate": "^1.7.4",
     "styled-components": "^3.3.2"
   },
@@ -68,7 +67,6 @@
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-requirejs": "^3.2.0",
     "husky": "^0.14.3",
     "jest-fetch-mock": "^1.6.2",
     "lighthouse": "^2.9.4",
