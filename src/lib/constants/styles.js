@@ -10,15 +10,15 @@ export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
 
 // Font family
-export const FF_NEWS_SANS_LIT = 'ReithSansNewsLight, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SANS_REG = 'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SANS_MDM = 'ReithSansNewsMedium, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SANS_BLD = 'ReithSansNewsBold, Arial, Helvetica, freesans, sans-serif';
-
-export const FF_NEWS_SERIF_LIT = 'ReithSerifNewsLight, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SERIF_REG = 'ReithSerifNewsRegular, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SERIF_MDM = 'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif';
-export const FF_NEWS_SERIF_BLD = 'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif';
+const fontFamilyBase = ', Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SANS_LIT = `ReithSansNewsLight${fontFamilyBase}`;
+export const FF_NEWS_SANS_REG = `ReithSansNewsRegular${fontFamilyBase}`;
+export const FF_NEWS_SANS_MDM = `ReithSansNewsMedium${fontFamilyBase}`;
+export const FF_NEWS_SANS_BLD = `ReithSansNewsBold${fontFamilyBase}`;
+export const FF_NEWS_SERIF_LIT = `ReithSerifNewsLight${fontFamilyBase}`;
+export const FF_NEWS_SERIF_REG = `ReithSerifNewsRegular${fontFamilyBase}`;
+export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
+export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
 // GEL Spacing
 export const GEL_SPACING = '8px';
