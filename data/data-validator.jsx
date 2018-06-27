@@ -70,7 +70,7 @@ const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 }
 
 const validateType = (currentSchemaNode, dataNode) => {
-	// needed for seoHeadline being null
+	// needed for dataNode being null EG: seoHeadline
 	if (dataNode == null) {
 		console.log('TYPE OF NULL'); // eslint-disable-line no-console
 	} else if (currentSchemaNode.type) {
@@ -95,9 +95,7 @@ const validateType = (currentSchemaNode, dataNode) => {
 }
 
 const validateRequired = (currentSchemaNode, dataNode) => {
-	if (!currentSchemaNode.required) {
-	// 	console.log('- No required values to check'); // eslint-disable-line no-console
-	} else {
+	if (currentSchemaNode.required) {
 		console.log('- Required values successfully found:'); // eslint-disable-line no-console
 		currentSchemaNode.required.forEach(
 			requiredProp => {
@@ -114,9 +112,7 @@ const validateRequired = (currentSchemaNode, dataNode) => {
 };
 
 const validateProperties = (currentSchemaNode, dataNode, parentName) => {
-	if (!currentSchemaNode.properties) {
-		// console.log('- No properties to check'); // eslint-disable-line no-console
-	} else {
+	if (currentSchemaNode.properties) {
 		Object.keys(currentSchemaNode.properties)
 			.forEach( property => {
 				const parentHistory = `${parentName}:${property}`;
