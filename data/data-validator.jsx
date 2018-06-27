@@ -19,6 +19,10 @@ const log = message => {
 	console.log(message); // eslint-disable-line no-console
 }
 
+const throwError = errorMsg => {
+	throw errorMsg;
+}
+
 const isNotFinalTextAttr = dataNode =>	{
 	if ('text' in dataNode && typeof(dataNode.text) === 'string') {
 		log('Valid text string');
@@ -72,8 +76,7 @@ const validateRequired = (currentSchemaNode, dataNode) => {
 		currentSchemaNode.required.forEach(
 			requiredProp => {
 				if (! (requiredProp in dataNode) ) {
-					const errorMsg = `Error: Missing required prop for ${requiredProp}`;
-					throw errorMsg;
+					throwError(`Error: Missing required prop for ${requiredProp}`);
 				}
 				else {
 					log(`  - ${requiredProp}`);
@@ -83,33 +86,34 @@ const validateRequired = (currentSchemaNode, dataNode) => {
 	}
 };
 
-const validateType = (currentSchemaNode, dataNode) => {
-	// needed for dataNode being null EG: seoHeadline
-	if (dataNode == null) {
-		log('TYPE OF NULL');
-	} else if (currentSchemaNode.type) {
-		if (! (dataNode.text && !dataNode.blocks) ) {
-			if (currentSchemaNode.enum) {
-				if (!currentSchemaNode.enum.includes(dataNode)) {
-					const errorMsg = `'Error: Type does not exist in enum array for ${dataNode} node - expected values [${currentSchemaNode.enum}] got ${dataNode}`;
-					throw errorMsg;
-				} else {
-					log(`- Valid enum of ${dataNode}`);
-				}
-			}
+const validateEnum = (schemaEnums, dataNode) => {
+	if (schemaEnums.includes(dataNode)) {
+		log(`- Valid enum of ${dataNode}`);
+	} else {
+		throwError(`'Error: Type does not exist in enum array for ${dataNode} node - expected values [${schemaEnums}] got ${dataNode}`);
+	}
+}
 
-			if (currentSchemaNode.type !== `${typeof(dataNode)}`) {
-				const errorMsg = `Error: Type does not match for ${dataNode.type} node - expected ${currentSchemaNode.type} got ${typeof(dataNode)}`;
-				throw errorMsg;
-			} else {
-				log(`- Valid type of ${typeof(dataNode)}`);
-			}
+const validateType = (schemaType, dataNode) => {
+	if (schemaType === `${typeof(dataNode)}`) {
+		log(`- Valid type of ${typeof(dataNode)}`);
+	} else {
+		throwError(`Error: Type does not match for ${dataNode.type} node - expected ${schemaType} got ${typeof(dataNode)}`);
+	}
+}
+
+const validateEnumAndType = (currentSchemaNode, dataNode) => {
+	if (dataNode !== null && currentSchemaNode.type) {
+		if (currentSchemaNode.enum) {
+			validateEnum(currentSchemaNode.enum, dataNode);
 		}
+
+		validateType(currentSchemaNode.type, dataNode);
 	}
 }
 
 const validateNode = (currentSchemaNode, dataNode, parentName) => {
-	validateType(currentSchemaNode, dataNode);
+	validateEnumAndType(currentSchemaNode, dataNode);
 	validateRequired(currentSchemaNode, dataNode);
 	validateProperties(currentSchemaNode, dataNode, parentName);
 };
@@ -118,8 +122,7 @@ const validateBlock = (dataToValidate, parentName = '') => {
 	const schemaName = dataToValidate.type;
 
 	if (! (schemaName in schemas) ) {
-		const errorMsg = `Error: No schema exists for the block ${dataToValidate.type}`;
-		throw errorMsg;
+		throwError(`Error: No schema exists for the block ${dataToValidate.type}`);
 	}
 
 	log('');
