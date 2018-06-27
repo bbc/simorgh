@@ -15,7 +15,3 @@ export const shouldContainStyles = (element, css, styling) => {
     expect(el).to.have.css(css, styling);
   });
 };
-
-export const shouldHaveAttribute = (element, attribute, value) => {
-  element.should('have.attr', attribute, value);
-};
