@@ -8,8 +8,7 @@ import {
 } from '../../../lib/constants/styles';
 
 const Link = styled.a`
-  color: ${C_WHITE};  
-  font-display: optional;
+  color: ${C_WHITE};
   font-family: ${FF_NEWS};
   font-size: 2.2em;
   text-decoration: none;
