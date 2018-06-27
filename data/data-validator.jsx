@@ -50,24 +50,31 @@ const validateBlock = (dataToValidate, parentName = '') => {
 	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
 }
 
+// no type and object has key '$ref' (headline:model in schema)
+const	checkIfSchemaRef = currentSchemaNode =>
+	currentSchemaNode.type === undefined &&
+	'$ref' in currentSchemaNode;
+
+// dataNode is an object and has key 'blocks' (article:model in schema)
+const dataContainsBlocks = dataNode =>
+	typeof(dataNode) === 'object' &&
+	'blocks' in dataNode;
+
+const isFinalTextAttr = dataNode =>	{
+	if ('text' in dataNode && typeof(dataNode.text) === 'string') {
+		log('Valid text string');
+		return true;
+	};
+	return false;
+};
+
 const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
 	if (dataNode) {
-
-		// no type and object has key '$ref' (headline:model in schema)
-		// OR
-		// dataNode is an object and has key 'blocks' (article:model in schema)
-		// and need to start validating the block again
-		if (currentSchemaNode.type === undefined && '$ref' in currentSchemaNode ||
-			typeof(dataNode) === 'object' && 'blocks' in dataNode) {
-
-			// if this is the final text attribute
-			if ('text' in dataNode) {
-				if (typeof(dataNode.text) === 'string') {
-					log('Valid text string');
-				}
-			} else {
-				dataNode.blocks.forEach(
-					block => validateBlock(block, parentHistory)
+		if (checkIfSchemaRef(currentSchemaNode) || dataContainsBlocks(dataNode)) {
+				if (!isFinalTextAttr(dataNode)) {
+					dataNode.blocks.forEach(
+						// start validating the next block
+						block => validateBlock(block, parentHistory)
 				);
 			}
 		}
