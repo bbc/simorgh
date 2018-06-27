@@ -10,7 +10,15 @@ export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
 
 // Font family
+export const FF_NEWS_SANS_LIT = 'ReithSansNewsLight, Arial, Helvetica, freesans, sans-serif';
 export const FF_NEWS_SANS_REG = 'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SANS_MDM = 'ReithSansNewsMedium, Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SANS_BLD = 'ReithSansNewsBold, Arial, Helvetica, freesans, sans-serif';
+
+export const FF_NEWS_SERIF_LIT = 'ReithSerifNewsLight, Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SERIF_REG = 'ReithSerifNewsRegular, Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SERIF_MDM = 'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif';
+export const FF_NEWS_SERIF_BLD = 'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif';
 
 // GEL Spacing
 export const GEL_SPACING = '8px';
