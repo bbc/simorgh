@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { imagePropTypes, imageDefaultPropTypes } from '../../proptypes';
 import filterForBlockType from '../../BlockHelpers/blockHelpers';
-
+import { FF_NEWS } from '../../../lib/constants/styles';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -13,7 +13,7 @@ const renderCaption = block => {
   const StyledFigCaption = styled.figcaption`
     background-color: #d5d0cd;
     color: #404040;
-    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    font-family: ${FF_NEWS};
     padding: 8px;
   `;
   const caption = getText(block);
