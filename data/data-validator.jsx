@@ -19,67 +19,69 @@ const log = message => {
 	console.log(message); // eslint-disable-line no-console
 }
 
-
-const validateNode = (currentSchemaNode, dataNode, parentName) => {
-	validateType(currentSchemaNode, dataNode);
-	validateRequired(currentSchemaNode, dataNode);
-	validateProperties(currentSchemaNode, dataNode, parentName);
+const isNotFinalTextAttr = dataNode =>	{
+	if ('text' in dataNode && typeof(dataNode.text) === 'string') {
+		log('Valid text string');
+		return false;
+	};
+	return true;
 };
+
+const validateBlocks = (blocks, parentName) => {
+	blocks.forEach(
+		block => validateBlock(block, parentName)
+	);
+};
+
+const doesPropertyContainBlocks = dataNode => {
+	// dataNode is an object and has key 'blocks'
+	if (typeof(dataNode) === 'object' && dataNode != null) {
+		return 'blocks' in dataNode;
+	}
+	return false;
+}
 
 const validateProperty = (propertySchema, dataProperty, parentName) => {
 	log('');
 	log(`Validating property ${parentName}`);
 
-	checkIfNodeIsABlock(propertySchema, dataProperty, parentName);
-	validateNode(propertySchema, dataProperty, parentName);
-}
-
-const validateBlock = (dataToValidate, parentName = '') => {
-	const schemaName = dataToValidate.type;
-
-	if (! (schemaName in schemas) ) {
-		const errorMsg = `Error: No schema exists for the block ${dataToValidate.type}`;
-		throw errorMsg;
+	if (doesPropertyContainBlocks(dataProperty)) {
+		if (isNotFinalTextAttr(dataProperty)) {
+			validateBlocks(dataProperty.blocks, parentName);
+		}
+	} else {
+		validateNode(propertySchema, dataProperty, parentName);
 	}
-	log('');
-	log('');
-	log(`Validating block: ${schemaName}`);
-	log('----------------------------------------------------------------');
-
-	const blockSchema = schemas[schemaName];
-	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
 }
 
-// no type and object has key '$ref' (headline:model in schema)
-const	checkIfSchemaRef = currentSchemaNode =>
-	currentSchemaNode.type === undefined &&
-	'$ref' in currentSchemaNode;
-
-// dataNode is an object and has key 'blocks' (article:model in schema)
-const dataContainsBlocks = dataNode =>
-	typeof(dataNode) === 'object' &&
-	'blocks' in dataNode;
-
-const isFinalTextAttr = dataNode =>	{
-	if ('text' in dataNode && typeof(dataNode.text) === 'string') {
-		log('Valid text string');
-		return true;
-	};
-	return false;
+const validateProperties = (currentSchemaNode, dataNode, parentName) => {
+	if (currentSchemaNode.properties) {
+		Object.keys(currentSchemaNode.properties)
+			.forEach( property => {
+				const parentHistory = `${parentName}:${property}`;
+				const propertySchema = currentSchemaNode.properties[property];
+				validateProperty(propertySchema, dataNode[property], parentHistory);
+			}
+		);
+ 	}
 };
 
-const checkIfNodeIsABlock = (currentSchemaNode, dataNode, parentHistory) => {
-	if (dataNode) {
-		if (checkIfSchemaRef(currentSchemaNode) || dataContainsBlocks(dataNode)) {
-				if (!isFinalTextAttr(dataNode)) {
-					dataNode.blocks.forEach(
-						// start validating the next block
-						block => validateBlock(block, parentHistory)
-				);
+const validateRequired = (currentSchemaNode, dataNode) => {
+	if (currentSchemaNode.required) {
+		log('- Required values successfully found:');
+		currentSchemaNode.required.forEach(
+			requiredProp => {
+				if (! (requiredProp in dataNode) ) {
+					const errorMsg = `Error: Missing required prop for ${requiredProp}`;
+					throw errorMsg;
+				}
+				else {
+					log(`  - ${requiredProp}`);
+				}
 			}
-		}
+		);
 	}
-}
+};
 
 const validateType = (currentSchemaNode, dataNode) => {
 	// needed for dataNode being null EG: seoHeadline
@@ -106,34 +108,28 @@ const validateType = (currentSchemaNode, dataNode) => {
 	}
 }
 
-const validateRequired = (currentSchemaNode, dataNode) => {
-	if (currentSchemaNode.required) {
-		log('- Required values successfully found:');
-		currentSchemaNode.required.forEach(
-			requiredProp => {
-				if (! (requiredProp in dataNode) ) {
-					const errorMsg = `Error: Missing required prop for ${requiredProp}`;
-					throw errorMsg;
-				}
-				else {
-					log(`  - ${requiredProp}`);
-				}
-			}
-		);
-	}
+const validateNode = (currentSchemaNode, dataNode, parentName) => {
+	validateType(currentSchemaNode, dataNode);
+	validateRequired(currentSchemaNode, dataNode);
+	validateProperties(currentSchemaNode, dataNode, parentName);
 };
 
-const validateProperties = (currentSchemaNode, dataNode, parentName) => {
-	if (currentSchemaNode.properties) {
-		Object.keys(currentSchemaNode.properties)
-			.forEach( property => {
-				const parentHistory = `${parentName}:${property}`;
-				const propertySchema = currentSchemaNode.properties[property];
-				validateProperty(propertySchema, dataNode[property], parentHistory);
-			}
-		);
- 	}
-};
+const validateBlock = (dataToValidate, parentName = '') => {
+	const schemaName = dataToValidate.type;
+
+	if (! (schemaName in schemas) ) {
+		const errorMsg = `Error: No schema exists for the block ${dataToValidate.type}`;
+		throw errorMsg;
+	}
+
+	log('');
+	log('');
+	log(`Validating block: ${schemaName}`);
+	log('----------------------------------------------------------------');
+
+	const blockSchema = schemas[schemaName];
+	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
+}
 
 validateBlock(data);
 
