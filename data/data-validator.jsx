@@ -131,7 +131,10 @@ const validateBlock = (dataToValidate, parentName = '') => {
 	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
 }
 
+console.time('validateBlock'); // eslint-disable-line no-console
 validateBlock(data);
 
 log('');
 log('Validation complete!');
+console.timeEnd('validateBlock'); // eslint-disable-line no-console
+
