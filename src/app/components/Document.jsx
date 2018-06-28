@@ -24,6 +24,12 @@ class Document extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="robots" content="nofollow" />
           <link rel="manifest" href="manifest.json" />
+          <link rel="preconnect" href="//ichef.bbci.co.uk" />
+          <link rel="preconnect" href="//static.bbci.co.uk" />
+          <link rel="preconnect" href="//gel.files.bbci.co.uk" />
+          <link rel="dns-prefetch" href="//ichef.bbci.co.uk" />
+          <link rel="dns-prefetch" href="//static.bbci.co.uk" />
+          <link rel="dns-prefetch" href="//gel.files.bbci.co.uk" />
           {helmet.title.toComponent()}
           {styleTags}
         </head>
