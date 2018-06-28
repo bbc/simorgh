@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 
 const Text = ({ blocks }) =>
   blocks.map(({ blockId, model }) => (
@@ -9,11 +9,11 @@ const Text = ({ blocks }) =>
   ));
 
 Text.propTypes = {
-  blocks: propTypes.arrayOf(
-    propTypes.shape({
-      blockId: propTypes.string,
-      model: propTypes.shape({
-        text: propTypes.string,
+  blocks: arrayOf(
+    shape({
+      blockId: string,
+      model: shape({
+        text: string,
       }),
     }),
   ),
