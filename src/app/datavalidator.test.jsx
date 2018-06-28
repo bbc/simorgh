@@ -5,13 +5,27 @@ const data = {
 };
 
 describe('Data Validator', () => {
-	it('should throws error when schema type and data type do not match', () => {
+	it('should throw an error when schema type and data type do not match', () => {
+	    const schemaType = 'string';
+
 	    expect(() => {
-				datavalidator.validateType('string', data);
+			datavalidator.validateType(schemaType, data);
 	    }).toThrowError(
-				'Error: Type does not match for article node - expected string got object'
-			);
+			'Error: Type does not match for article node - expected string got object'
+		);
 	});
+
+	it('should throw an error when data node is not in schema enum', () => {
+		const enumData = 'shorthand'
+		const schemaEnumArray = ['analysis', 'feature', 'news'];
+
+	    expect(() => {
+			datavalidator.validateEnum(schemaEnumArray, enumData);
+	    }).toThrowError(
+			'Error: Type does not exist in enum array for shorthand node - expected values [analysis,feature,news] got shorthand'
+		);
+	});
+
 	it('should throw error when data does not have a required property', () => {
 		const schema = {
 			required: ['locator', 'passport', 'model'],
