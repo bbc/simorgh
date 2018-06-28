@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import {
   C_STORM,
   C_WHITE,
-  FF_NEWS,
+  FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
 } from '../../../lib/constants/styles';
 
 const StyledFooter = styled.footer`
   background-color: ${C_STORM};
-  font-family: ${FF_NEWS};
+  font-family: ${FF_NEWS_SANS_REG};
   padding: ${GEL_SPACING_DBL};
 `;
 
