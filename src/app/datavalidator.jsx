@@ -1,16 +1,10 @@
-/*
-	To run cd into simorgh/data and run:
-	node /Users/phillee/Code/BBC/simorgh/data/data-validator.jsx
- */
-
- // disable function define before call due to recursive nature of schema
+ // disable "function-define-before-call" due to recursive nature of schema
  /* eslint no-use-before-define: 0 */
 
 const yaml = require('yaml-js');
 const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
-const data = require('./test/scenario-01.json');
 
-const yamlSchema = fs.readFileSync('schema.yaml', 'utf8');
+const yamlSchema = fs.readFileSync('././data/schema.yaml', 'utf8');
 
 const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
@@ -134,10 +128,24 @@ const validateBlock = (dataToValidate, parentName = '') => {
 	validateNode(blockSchema, dataToValidate, `${parentName}:${dataToValidate.type}`);
 }
 
-console.time('validateBlock'); // eslint-disable-line no-console
-validateBlock(data);
+const validateData = data => {
+	console.time('validateBlock'); // eslint-disable-line no-console
+	validateBlock(data);
 
-log('');
-log('Validation complete!');
-console.timeEnd('validateBlock'); // eslint-disable-line no-console
+	log('');
+	log('Validation complete!');
+	console.timeEnd('validateBlock'); // eslint-disable-line no-console
+}
 
+module.exports.isNotFinalTextAttr = isNotFinalTextAttr;
+module.exports.validateBlocks = validateBlocks;
+module.exports.doesPropertyContainBlocks = doesPropertyContainBlocks;
+module.exports.validateProperty = validateProperty;
+module.exports.validateProperties = validateProperties;
+module.exports.validateRequired = validateRequired;
+module.exports.validateEnum = validateEnum;
+module.exports.validateType = validateType;
+module.exports.validateEnumAndType = validateEnumAndType;
+module.exports.validateNode = validateNode;
+module.exports.validateBlock = validateBlock;
+module.exports.validateData = validateData;
