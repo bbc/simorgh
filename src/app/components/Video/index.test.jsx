@@ -1,6 +1,6 @@
 import React from 'react';
 import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
-import { videoBlock, rawVideoModel, rawVideoBlock, imageBlock } from '../../../__test__/blockHelpers';
+import { videoBlock, rawVideoModel, rawVideoBlock, imageBlock } from '../../models/blockHelpers';
 import Video from './index';
 
 describe('Video', () => {
