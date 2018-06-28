@@ -1,9 +1,7 @@
-// Type constatns
 export const rawVideoType = "rawVideo";
 export const imageType = "image";
 export const videoType = "video";
 export const rawImageType = "rawImage";
-
 
 export const textBlock = text => ({
   blocks: [
@@ -33,9 +31,6 @@ export const blockBase = (blockType, blockModel) => ({
   model: blockModel
 });
 
-// Models
-
-// a model which contains the block array
 export const blockArrayModel = (arrayOfBlocks) => (
   {
     blocks: arrayOfBlocks
@@ -53,8 +48,6 @@ export const rawImageModel = (imageLocator) => ({
   locator: imageLocator
 });
 
-// Blocks
-
 export const stdArrayModelBlock = (blockType, modelArray) => (
   blockBase(blockType, blockArrayModel(modelArray))
 )
@@ -65,12 +58,12 @@ export const rawVideoBlock = (model) => (
 
 export const rawImageBlock = (model) =>(
   blockBase(rawImageType, model)
-)
-// Takes in the raw image block and outputs the full image block
+);
+
 export const imageBlock = (rawBlock) => (
   stdArrayModelBlock(imageType, [rawBlock])
 );
-// Takes in a rawVideoBlock and an Image block and outputs the full video block
+
 export const videoBlock = (rawVBlock, imgBlock) => (
   stdArrayModelBlock(videoType, [rawVBlock, imgBlock])
 );
