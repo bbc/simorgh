@@ -1,7 +1,6 @@
 module.exports = {
   modify: (config, { dev }) => {
     const appConfig = config;
-
     if (!dev) {
       /*
         This is a hack to disable linting on the production build.
