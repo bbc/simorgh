@@ -13,7 +13,7 @@ class Document extends React.Component {
   }
 
   render() {
-    const { helmet, assets, data, styleTags } = this.props; // eslint-disable-line react/prop-types
+    const { helmet, assets, data, script, styleTags } = this.props; // eslint-disable-line react/prop-types
     const htmlAttrs = helmet.htmlAttributes.toComponent();
 
     return (
@@ -26,6 +26,7 @@ class Document extends React.Component {
           <link rel="manifest" href="manifest.json" />
           {helmet.title.toComponent()}
           {styleTags}
+          {helmet.script.toComponent()}
         </head>
         <body>
           <AfterRoot />
