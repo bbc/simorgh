@@ -1,4 +1,4 @@
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, bool } from 'prop-types';
 
 export const imagePropTypes = {
   model: shape({
@@ -25,23 +25,23 @@ export const textPropTypes = {
 };
 
 export const videoPropTypes = {
-  model: propTypes.shape({
-    blocks: propTypes.arrayOf(
-      propTypes.shape({
-        locator: propTypes.string,
-        blocks: propTypes.arrayOf(
+  model: shape({
+    blocks: arrayOf(
+      shape({
+        locator: string,
+        blocks: arrayOf(
           // raw video
-          propTypes.shape({
-            model: propTypes.shape({
-              isLive: propTypes.bool,
-              duration: propTypes.string,
-              locator: propTypes.string
+          shape({
+            model: shape({
+              isLive: bool,
+              duration: string,
+              locator: string
             }),
           }),
           // alt text
-          propTypes.shape(textPropTypes),
+          shape(textPropTypes),
           // image 
-          propTypes.shape(imagePropTypes)
+          shape(imagePropTypes)
         ),
       }),
     ),
