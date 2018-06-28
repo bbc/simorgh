@@ -22,33 +22,33 @@ const Video = () => {
           require({ paths: bbcRequireMap });
         `}
         </script>
+        <script type="text/javascript">
+          {`
+            const settings = {
+              product: 'news',
+              responsive: true,
+              playlistObject: {
+                title: 'Butterfly photobombs koala film shoot at Australia zoo',
+                holdingImageURL:
+                  'https://ichef.bbci.co.uk/images/ic/$recipe/p049srmr.jpg',
+                items: [
+                  {
+                    versionID: 'p049sq7k',
+                    kind: 'programme',
+                    duration: 37,
+                  },
+                ],
+              },
+            };
+
+            require(['bump-4'], function (bump) {
+              var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
+              mediaPlayer.load();
+            });
+          `}
+        </script>
       </Helmet>
       <div id="mediaPlayer12345678" style={mediaPlayerStyles} />
-      <script type="text/javascript">
-        {`
-          const settings = {
-            product: 'news',
-            responsive: true,
-            playlistObject: {
-              title: 'Butterfly photobombs koala film shoot at Australia zoo',
-              holdingImageURL:
-                'https://ichef.bbci.co.uk/images/ic/$recipe/p049srmr.jpg',
-              items: [
-                {
-                  versionID: 'p049sq7k',
-                  kind: 'programme',
-                  duration: 37,
-                },
-              ],
-            },
-          };
-
-          require(['bump-4'], function (bump) {
-            var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
-            mediaPlayer.load();
-          });
-        `}
-      </script>
     </Fragment>
   );
 };
