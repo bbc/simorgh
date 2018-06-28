@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imagePropTypes, imageDefaultPropTypes } from '../../proptypes';
-import { FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
+import { imagePropTypes, imageDefaultPropTypes } from '../../helpers/proptypes';
+import { FF_NEWS_SANS_REG } from '../../../lib/news/constants/styles';
 
 // Filters array of blocks for a single block of given type
 const filterForBlockType = (arrayOfBlocks, type) =>

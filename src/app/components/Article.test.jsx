@@ -1,5 +1,5 @@
 import React from 'react';
-import snapshotTestHelper from '../../__test__/snapshotTestHelper';
+import snapshotTestHelper from '../helpers/tests/snapshotTestHelper';
 import Article from './Article';
 
 describe('Article', () => {

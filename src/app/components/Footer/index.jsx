@@ -5,7 +5,7 @@ import {
   C_WHITE,
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
-} from '../../../lib/constants/styles';
+} from '../../../lib/news/constants/styles';
 
 const StyledFooter = styled.footer`
   background-color: ${C_STORM};
