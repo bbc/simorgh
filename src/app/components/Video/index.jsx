@@ -22,8 +22,12 @@ const Video = () => {
           require({ paths: bbcRequireMap });
         `}
         </script>
-        <script type="text/javascript">
-          {`
+      </Helmet>
+      <div id="mediaPlayer12345678" style={mediaPlayerStyles} />
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
             const settings = {
               product: 'news',
               responsive: true,
@@ -42,13 +46,12 @@ const Video = () => {
             };
 
             require(['bump-4'], function (bump) {
-              var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
+              var mediaPlayer = bump.player(document.getElementById('mediaPlayer12345678'),settings);
               mediaPlayer.load();
             });
-          `}
-        </script>
-      </Helmet>
-      <div id="mediaPlayer12345678" style={mediaPlayerStyles} />
+          `,
+        }}
+      />
     </Fragment>
   );
 };

@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 import Header from './Header';
+import Video from './Video';
 
 const Headline = styled.h1`
   color: #222;
@@ -42,6 +43,7 @@ class Article extends Component {
         </Helmet>
         <Header />
         <Headline>{headline}</Headline>
+        <Video />
       </Fragment>
     );
   }

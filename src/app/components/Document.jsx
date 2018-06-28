@@ -26,11 +26,11 @@ class Document extends React.Component {
           <link rel="manifest" href="manifest.json" />
           {helmet.title.toComponent()}
           {styleTags}
+          {helmet.script.toComponent()}
         </head>
         <body>
           <AfterRoot />
           <AfterData data={data} />
-          {helmet.script.toComponent()}
           <script type="text/javascript" src={assets.client.js} defer />
         </body>
       </html>
