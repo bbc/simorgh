@@ -26,6 +26,7 @@ class Document extends React.Component {
           <link rel="manifest" href="manifest.json" />
           {helmet.title.toComponent()}
           {styleTags}
+          {helmet.script.toComponent()}
         </head>
         <body>
           <AfterRoot />
