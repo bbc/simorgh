@@ -1,4 +1,5 @@
-import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer'; // eslint-disable-line import/no-extraneous-dependencies
+import 'jest-styled-components'; // eslint-disable-line import/no-extraneous-dependencies
 
 const shouldMatchSnapshot = (title, component) => {
   it(title, () => {
