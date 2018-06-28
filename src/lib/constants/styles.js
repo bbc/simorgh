@@ -45,7 +45,7 @@ injectGlobal`
     font-display: optional;
     font-family: ReithSansNewsMedium;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff') format('woff'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2') format('woff2');
   }
   @font-face {
@@ -73,7 +73,7 @@ injectGlobal`
     font-display: optional;
     font-family: ReithSerifNewsMedium;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2');
   }
   @font-face {
