@@ -1,22 +1,22 @@
-import propTypes from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 
 export const imagePropTypes = {
-  model: propTypes.shape({
-    blocks: propTypes.arrayOf(
-      propTypes.shape({
-        locator: propTypes.string,
+  model: shape({
+    blocks: arrayOf(
+      shape({
+        locator: string,
       }),
     ),
   }),
 };
 
 export const textPropTypes = {
-  blocks: propTypes.arrayOf(
-    propTypes.shape({
-      model: propTypes.shape({
-        blocks: propTypes.arrayOf(
-          propTypes.shape({
-            text: propTypes.string,
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            text: string,
           }),
         ),
       }),

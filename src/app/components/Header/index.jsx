@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import {
   C_POSTBOX,
   C_WHITE,
-  FF_NEWS,
+  FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
 } from '../../../lib/constants/styles';
 
 const Link = styled.a`
   color: ${C_WHITE};
-  font-family: ${FF_NEWS};
+  font-family: ${FF_NEWS_SANS_REG};
   font-size: 2.2em;
   text-decoration: none;
   text-transform: uppercase;
