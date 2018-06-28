@@ -13,6 +13,11 @@ const Video = ({ model }) => {
   const { locator: videoLocator, duration, versionID, kind } = rawVideo.model;
 
   const imageBlock = filterForBlockType(subBlocks, 'image');
+
+  if(!imageBlock){
+    return null;
+  }
+
   const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
 
   if (!rawImage) {
