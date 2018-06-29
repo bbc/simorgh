@@ -10,7 +10,8 @@ export const shouldMatchSnapshot = (title, component) => {
 
 export const isNullComponent = (title, component) => {
   it(title, () => {
-    expect(component).toBeNull();
+    const tree = renderer.create(component).toJSON();
+    expect(tree).toBeNull();
   });
 };
 

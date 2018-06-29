@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNullComponent } from '../../helpers/tests/testHelpers';
 import { videoBlock, rawVideoModel, rawVideoBlock, imageBlock } from '../../models/blocks';
 import Video from './index';
 
@@ -67,9 +67,11 @@ describe('Video', () => {
     const img = imageBlock(rIB);
     const data = videoBlock(rVB, img)
     
-    shouldMatchSnapshot(
-      'should not render anything',
+    isNullComponent(
+      'should be null',
       <Video {...data} />
     )
+
+    
   });
 });

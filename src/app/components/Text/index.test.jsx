@@ -1,10 +1,10 @@
 import React from 'react';
-import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
+import {shouldMatchSnapshot, isNullComponent} from '../../helpers/tests/testHelpers';
 import Text from './index';
 
 describe('Text', () => {
   describe('with no data', () => {
-    shouldMatchSnapshot(
+    isNullComponent(
       'should not render anything',
       <Text />,
     );
