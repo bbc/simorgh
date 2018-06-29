@@ -1,4 +1,4 @@
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, bool } from 'prop-types';
 
 export const imagePropTypes = {
   model: shape({
@@ -24,6 +24,30 @@ export const textPropTypes = {
   ),
 };
 
+export const videoPropTypes = {
+  model: shape({
+    blocks: arrayOf(
+      shape({
+        locator: string,
+        blocks: arrayOf(
+          // raw video
+          shape({
+            model: shape({
+              isLive: bool,
+              duration: string,
+              locator: string
+            }),
+          }),
+          // alt text
+          shape(textPropTypes),
+          // image 
+          shape(imagePropTypes)
+        ),
+      }),
+    ),
+  }),
+};
+
 const baseDefaultPropTypes = {
   model: {
     blocks: [
@@ -35,6 +59,8 @@ const baseDefaultPropTypes = {
 };
 
 export const imageDefaultPropTypes = baseDefaultPropTypes;
+
+export const videoDefaultPropTypes = baseDefaultPropTypes;
 
 export const textDefaultPropTypes = {
   blocks: [baseDefaultPropTypes],
