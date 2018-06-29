@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Video from './index';
-import { videoBlock, rawImageModel, rawVideoModel, rawVideoBlock , rawImageBlock, imageBlock} from '../../../__test__/blockHelpers';
+import { videoBlock, rawImageModel, rawVideoModel, rawVideoBlock , rawImageBlock, imageBlock} from '../../models/blockHelpers';
 
 
 const rVB = rawVideoBlock(rawVideoModel("urn:bbc:pips:pid:p064nsyw", "p064nsz3", "clip", 299 ));
