@@ -6,6 +6,8 @@ export const testNonHTMLResponseCode = (path, responseCode) => {
 
 export const getElement = element => cy.get(element);
 
+export const getSecondElement = element => cy.get(element).eq(1);
+
 export const shouldContainText = (element, text) => {
   element.should('contain', text);
 };

@@ -1,5 +1,6 @@
 import {
   getElement,
+  getSecondElement,
   shouldContainText,
   shouldContainStyles,
 } from '../support/test-helper';
@@ -37,5 +38,23 @@ describe('News Article', () => {
   it('should have a nofollow meta tag', () => {
     const metaElement = getElement('head meta[name="robots"]');
     metaElement.should('have.attr', 'content', 'nofollow');
+  });
+
+  it('should have resource links', () => {
+    const resources = [
+      "https://ichef.bbci.co.uk",
+      "https://static.bbci.co.uk",
+      "https://gel.files.bbci.co.uk"
+    ];
+
+    resources.forEach((resource) => {
+      const selector = `head link[href="${resource}"]`;
+
+      const firstMetaElement = getElement(selector);
+      firstMetaElement.should('have.attr', 'rel', 'preconnect');
+      const secondMetaElement = getSecondElement(selector);
+      secondMetaElement.should('have.attr', 'rel', 'dns-prefetch');
+    })
+
   });
 });

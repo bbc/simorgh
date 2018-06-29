@@ -4,12 +4,12 @@ import { ServerStyleSheet } from 'styled-components';
 
 const resourceHints = () => (
   <Fragment>
-    <link rel="preconnect" href="//ichef.bbci.co.uk" />
-    <link rel="preconnect" href="//static.bbci.co.uk" />
-    <link rel="preconnect" href="//gel.files.bbci.co.uk" />
-    <link rel="dns-prefetch" href="//ichef.bbci.co.uk" />
-    <link rel="dns-prefetch" href="//static.bbci.co.uk" />
-    <link rel="dns-prefetch" href="//gel.files.bbci.co.uk" />
+    <link rel="preconnect" href="https://ichef.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://static.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://gel.files.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="dns-prefetch" href="https://ichef.bbci.co.uk" />
+    <link rel="dns-prefetch" href="https://static.bbci.co.uk" />
+    <link rel="dns-prefetch" href="https://gel.files.bbci.co.uk" />
   </Fragment>
 );
 
