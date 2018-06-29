@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imagePropTypes, imageDefaultPropTypes } from '../../proptypes';
 import filterForBlockType from '../../helpers/blocks';
+import { imagePropTypes, imageDefaultPropTypes } from '../../helpers/proptypes';
 import { FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
