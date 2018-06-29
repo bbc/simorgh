@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './index';
 
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
 
 describe(`Header`, () => {
-  snapshotTestHelper.shouldMatchSnapshot('should render correctly', <Header />);
+  shouldMatchSnapshot('should render correctly', <Header />);
 });
