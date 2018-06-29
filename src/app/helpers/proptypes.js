@@ -5,9 +5,9 @@ export const imagePropTypes = {
     blocks: arrayOf(
       shape({
         locator: string,
-      }),
-    ),
-  }),
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
 };
 
 export const textPropTypes = {
@@ -17,13 +17,12 @@ export const textPropTypes = {
         blocks: arrayOf(
           shape({
             text: string,
-          }),
-        ),
-      }),
-    }),
-  ),
+          }).isRequired,
+        ).isRequired,
+      }).isRequired,
+    }).isRequired,
+  ).isRequired,
 };
-
 export const videoPropTypes = {
   model: shape({
     blocks: arrayOf(
