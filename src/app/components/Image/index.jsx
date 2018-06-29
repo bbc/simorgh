@@ -1,10 +1,8 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import styled from 'styled-components';
-
-// Filters array of blocks for a single block of given type
-const filterForBlockType = (arrayOfBlocks, type) =>
-  arrayOfBlocks.filter(block => block.type === type)[0];
+import filterForBlockType from '../../helpers/blocks';
+import { imagePropTypes, imageDefaultPropTypes } from '../../helpers/proptypes';
+import { FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -15,7 +13,7 @@ const renderCaption = block => {
   const StyledFigCaption = styled.figcaption`
     background-color: #d5d0cd;
     color: #404040;
-    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    font-family: ${FF_NEWS_SANS_REG};
     padding: 8px;
   `;
   const caption = getText(block);
@@ -50,24 +48,8 @@ const Image = ({ model }) => {
   );
 };
 
-Image.propTypes = {
-  model: propTypes.shape({
-    blocks: propTypes.arrayOf(
-      propTypes.shape({
-        locator: propTypes.string,
-      }),
-    ),
-  }),
-};
+Image.propTypes = imagePropTypes;
 
-Image.defaultProps = {
-  model: {
-    blocks: [
-      {
-        model: {},
-      },
-    ],
-  },
-};
+Image.defaultProps = imageDefaultPropTypes;
 
 export default Image;

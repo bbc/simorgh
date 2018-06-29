@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer should render correctly 1`] = `
+.c0 {
+  background-color: #404040;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  padding: 16px;
+}
+
+.c1 {
+  color: #FFFFFF;
+}
+
 <footer
-  className="sc-bdVaJa hCBkLw"
+  className="c0"
   role="contentinfo"
 >
   <p
-    className="sc-bwzfXH hGqmYS"
+    className="c1"
   >
     Copyright © 
     2018

@@ -3,7 +3,7 @@
 exports[`Article Component with passed data should render correctly 1`] = `
 <div>
   <h1
-    className="sc-bdVaJa iyXvgZ"
+    className="sc-bdVaJa bjeWEM"
   >
     headline
     : 

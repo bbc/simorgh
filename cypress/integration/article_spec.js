@@ -2,7 +2,6 @@ import {
   getElement,
   shouldContainText,
   shouldContainStyles,
-  shouldHaveAttribute,
 } from '../support/test-helper';
 
 describe('News Article', () => {
@@ -22,7 +21,7 @@ describe('News Article', () => {
     shouldContainStyles(
       anchorElement,
       'font-family',
-      'ReithSans, Arial, Helvetica, freesans, sans-serif',
+      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
     );
   });
 
@@ -37,6 +36,6 @@ describe('News Article', () => {
 
   it('should have a nofollow meta tag', () => {
     const metaElement = getElement('head meta[name="robots"]');
-    shouldHaveAttribute(metaElement, 'content', 'nofollow');
+    metaElement.should('have.attr', 'content', 'nofollow');
   });
 });
