@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader role="banner">
-    <Link href="http://bbc.co.uk/news">
+    <Link href="https://www.bbc.co.uk/news">
       BBC News
     </Link>
   </StyledHeader>
