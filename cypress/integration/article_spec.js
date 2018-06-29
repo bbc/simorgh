@@ -40,7 +40,7 @@ describe('News Article', () => {
     metaElement.should('have.attr', 'content', 'nofollow');
   });
 
-  it('should have resource links', () => {
+  it('should have resource hints', () => {
     const resources = [
       "https://ichef.bbci.co.uk",
       "https://static.bbci.co.uk",
@@ -49,12 +49,10 @@ describe('News Article', () => {
 
     resources.forEach((resource) => {
       const selector = `head link[href="${resource}"]`;
-
-      const firstMetaElement = getElement(selector);
-      firstMetaElement.should('have.attr', 'rel', 'preconnect');
-      const secondMetaElement = getSecondElement(selector);
-      secondMetaElement.should('have.attr', 'rel', 'dns-prefetch');
+      const firstElement = getElement(selector);
+      firstElement.should('have.attr', 'rel', 'preconnect');
+      const secondElement = getSecondElement(selector);
+      secondElement.should('have.attr', 'rel', 'dns-prefetch');
     })
-
   });
 });
