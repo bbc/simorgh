@@ -24,12 +24,11 @@ These is a single route, `/article/:id`, where `id` is the filename of the stati
 
 **NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/test/scenario-01.json). Furthermore, the Article component does not do anything with that data.
 
-### View a breakdown of the bundle size with webpack-bundle-analyzer
-With dev server running go to [http://127.0.0.1:8888/](http://127.0.0.1:8888/)
-
 ### Storybook (UI Development Environment/Style Guide)
 
 To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
+
+To view a breakdown of the bundle size, open the generated html report in a browser `./webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. We have have this data in json `./webpackBundleReport.json`.
 
 ## Production build
 
