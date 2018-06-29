@@ -1,5 +1,5 @@
 import React from 'react';
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import { videoBlock, rawVideoModel, rawVideoBlock, imageBlock } from '../../models/blocks';
 import Video from './index';
 
@@ -7,7 +7,7 @@ describe('Video', () => {
   const rVB = rawVideoBlock(rawVideoModel("urn:bbc:pips:pid:p064nsyw", "p064nsz3", "clip", 299 ));
   
   describe('with no data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should not render anything',
       <Video />,
     );
@@ -45,7 +45,7 @@ describe('Video', () => {
       },
     };
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render the important props in divs',
       <Video {...videoData} />,
     );
@@ -55,10 +55,10 @@ describe('Video', () => {
 
     const data = videoBlock(rVB, null);
 
-    snapshotTestHelper.shouldMatchSnapshot(
-      'should not render anything',
-      <Video {...data} />,
-    );
+    shouldMatchSnapshot(
+      'should only render the video',
+      <Video {...data} />
+    )
   });
 
   describe('with data but no raw image', () => {
@@ -67,9 +67,9 @@ describe('Video', () => {
     const img = imageBlock(rIB);
     const data = videoBlock(rVB, img)
     
-    snapshotTestHelper.shouldMatchSnapshot(
-      'should not render anything',
+    isNull(
+      'should be null',
       <Video {...data} />
-    )
+    )  
   });
 });
