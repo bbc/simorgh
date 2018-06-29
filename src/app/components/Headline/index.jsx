@@ -10,7 +10,10 @@ const StyledHeadline = styled.h1`
 `;
 
 const Headline = ({ blocks }) => {
+  console.log(blocks);
+  // console.log(blocks[0].model.blocks[0].model);
   const { text } = blocks[0].model.blocks[0].model;
+  // console.log(text);
 
   return (
     <StyledHeadline>
