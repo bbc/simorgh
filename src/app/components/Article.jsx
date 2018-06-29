@@ -13,7 +13,7 @@ class Article extends Component {
             blocks: [
               {
                 model: {
-                  text: 'This is a headline!',
+                  text: 'This is a test!',
                 },
               },
             ],
@@ -42,7 +42,6 @@ class Article extends Component {
 
   render() {
     const { headline } = this.state;
-    // console.log(headline);
     const { text } = headline.blocks[0].model.blocks[0].model;
     return (
       <Fragment>
@@ -52,9 +51,7 @@ class Article extends Component {
           </title>
         </Helmet>
         <Header />
-        <Headline>
-          {headline}
-        </Headline>
+        <Headline {...headline} />
       </Fragment>
     );
   }
