@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Image from './index';
-import { blockContainingText } from '../../models/blockHelpers';
+import { blockContainingText } from '../../models/blocks';
 
 const imageData = arrayOfBlocks => ({
   type: 'image',
