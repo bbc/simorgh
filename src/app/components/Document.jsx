@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import { ServerStyleSheet } from 'styled-components';
+
+const resourceHints = () => (
+  <Fragment>
+    <link rel="preconnect" href="https://ichef.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://static.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://gel.files.bbci.co.uk" crossOrigin="anonymous" />
+    <link rel="dns-prefetch" href="https://ichef.bbci.co.uk" />
+    <link rel="dns-prefetch" href="https://static.bbci.co.uk" />
+    <link rel="dns-prefetch" href="https://gel.files.bbci.co.uk" />
+  </Fragment>
+);
 
 class Document extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
@@ -24,6 +35,7 @@ class Document extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="robots" content="nofollow" />
           <link rel="manifest" href="manifest.json" />
+          {resourceHints()}
           {helmet.title.toComponent()}
           {styleTags}
         </head>
