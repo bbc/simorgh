@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video with data but no image should not render anything 1`] = `null`;
-
-exports[`Video with data but no raw image should not render anything 1`] = `null`;
+exports[`Video with data but no image should only render the video 1`] = `null`;
 
 exports[`Video with data should render the important props in divs 1`] = `
 <div>
