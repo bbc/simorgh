@@ -1,7 +1,7 @@
 import React from 'react';
 import SubHeading from './index';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
-import { textBlock } from '../../../__test__/blockHelpers';
+import { textBlock } from '../../models/blocks';
+import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
 
 describe('SubHeading', () => {
   describe('with no data', () => {

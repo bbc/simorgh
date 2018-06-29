@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from './index';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
-import { blockContainingText } from '../../../__test__/blockHelpers';
+import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
