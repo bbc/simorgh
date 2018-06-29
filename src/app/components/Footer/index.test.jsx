@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from './index';
 
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
 
 describe(`Footer`, () => {
-  snapshotTestHelper.shouldMatchSnapshot('should render correctly', <Footer />);
+  shouldMatchSnapshot('should render correctly', <Footer />);
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from './index';
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should not render anything',
       <Image />,
     );
@@ -39,7 +39,7 @@ describe('Image', () => {
       ),
     ]);
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text',
       <Image {...dataWithAltText} />,
     );
@@ -55,7 +55,7 @@ describe('Image', () => {
       ),
     ]);
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and caption',
       <Image {...dataWithCaption} />,
     );

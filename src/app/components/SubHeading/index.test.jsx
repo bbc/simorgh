@@ -1,23 +1,23 @@
 import React from 'react';
 import SubHeading from './index';
 import { textBlock } from '../../models/blocks';
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
 
 describe('SubHeading', () => {
   describe('with no data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should not render anything',
       <SubHeading />,
     );
   });
 
   describe('with data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should display the provided sub-heading',
       <SubHeading {...textBlock('The amazing sub-heading!?')} />,
     );
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should display the subheading containing various symbols',
       <SubHeading {...textBlock('!@#$%^&*()\'"?/[]{}')} />,
     );

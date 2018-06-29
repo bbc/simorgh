@@ -1,10 +1,10 @@
 import React from 'react';
-import snapshotTestHelper from '../../helpers/tests/snapshotTestHelper';
+import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
 import Text from './index';
 
 describe('Text', () => {
   describe('with no data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should not render anything',
       <Text />,
     );
@@ -26,7 +26,7 @@ describe('Text', () => {
       ],
     };
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <Text {...data} />,
     );
