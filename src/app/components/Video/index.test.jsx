@@ -70,8 +70,6 @@ describe('Video', () => {
     isNull(
       'should be null',
       <Video {...data} />
-    )
-
-    
+    )  
   });
 });
