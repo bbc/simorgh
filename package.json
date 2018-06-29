@@ -79,11 +79,11 @@
   "jest": {
     "collectCoverageFrom": [
       "**/src/**/*.{js,jsx}",
-      "!**/src/__test__/**",
+      "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx"
     ],
     "setupFiles": [
-      "./src/__test__/jest-setup.js"
+      "./src/app/helpers/tests/jest-setup.js"
     ]
   }
 }
