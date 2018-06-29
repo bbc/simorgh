@@ -30,7 +30,7 @@ const data = {
         blocks: [
           {
             model: {
-              text: 'This is a headline!',
+              text: 'This is some text content!',
             },
           },
         ],
