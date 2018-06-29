@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from './index';
-import { shouldMatchSnapshot, isNullComponent } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    isNullComponent(
+    isNull(
       'should return null',
       <Image />,
     );
