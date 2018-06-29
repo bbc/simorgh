@@ -5,7 +5,7 @@ import Text from './index';
 describe('Text', () => {
   describe('with no data', () => {
     isNullComponent(
-      'should not render anything',
+      'should return null',
       <Text />,
     );
   });

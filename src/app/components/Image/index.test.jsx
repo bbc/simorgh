@@ -6,7 +6,7 @@ import { blockContainingText } from '../../models/blocks';
 describe('Image', () => {
   describe('with no data', () => {
     isNullComponent(
-      'should not render anything',
+      'should return null',
       <Image />,
     );
   });
