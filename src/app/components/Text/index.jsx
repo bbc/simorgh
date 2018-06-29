@@ -15,8 +15,8 @@ Text.propTypes = {
       model: shape({
         text: string,
       }),
-    }),
-  ),
+    }).isRequired,
+  ).isRequired,
 };
 
 Text.defaultProps = {
