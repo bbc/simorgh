@@ -7,10 +7,34 @@ const data = {
     {
       type: 'headline',
       blockId: '1',
+      model: {
+        blocks: [
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    text: 'This is a headline!',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
     },
     {
-      type: 'test',
+      type: 'text',
       blockId: '2',
+      model: {
+        blocks: [
+          {
+            model: {
+              text: 'This is a headline!',
+            },
+          },
+        ],
+      },
     },
   ],
 };
@@ -25,3 +49,6 @@ storiesOf('MainContent', module)
     return <MainContent data={dataOnlyHeadline} />;
   })
   .add('with a headline and other blocks', () => <MainContent data={data} />);
+
+
+
