@@ -5,9 +5,9 @@ import { arrayOf, shape, string } from 'prop-types';
 
 const Text = ({ blocks }) =>
   blocks.map(({ blockId, model }) => (
-    <p key={blockId}>
+    <div key={blockId}>
       {remark().use(reactRenderer).processSync(model.text).contents}
-    </p>
+    </div>
   ));
 
 Text.propTypes = {
