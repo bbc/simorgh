@@ -1,4 +1,4 @@
-import routes from './routes';
+import routes from './index';
 
 describe('Routes', () => {
   test('It should be an array', () => {
