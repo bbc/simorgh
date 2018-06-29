@@ -11,13 +11,21 @@ module.exports = {
         A prod build will fail if the API changes so it is fairly safe.
       */
       appConfig.module.rules.shift();
-    } else if (target === 'node' && dev) {
-      appConfig.plugins.push(
-        new BundleAnalyzerPlugin({
-          openAnalyzer: false,
-        }),
-      );
+      // Setup bundle analyser
+      if (target === 'web') {
+        appConfig.plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            defaultSizes: 'gzip',
+            generateStatsFile: true,
+            openAnalyzer: false,
+            reportFilename: '../../webpackBundleReport.html',
+            statsFilename: '../../webpackBundleReport.json',
+          }),
+        );
+      }
     }
+
     // This is to override bundle performance test
     appConfig.performance = Object.assign(
       {},
