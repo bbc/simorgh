@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { textPropTypes, textDefaultPropTypes } from '../../proptypes';
+import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
 import { C_EBON, FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
 
 const StyledHeadline = styled.h1`
