@@ -2,7 +2,8 @@ describe('Storybook Article', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit('/');
-    cy.get('#storybook-preview-iframe').get('ul>li>div>ul>li:not(:first-child)').each(($story) => {
+    // uncollapse all stories (first is open by default)
+    cy.get('ul>li>div>ul>li:not(:first-child)').each(($story) => {
       cy.wrap($story).click()
     })
   });
@@ -12,7 +13,7 @@ describe('Storybook Article', () => {
   });
 
   it('each story render panel should not be blank', () => {
-    cy.get('#storybook-preview-iframe').get('ul>li>a').each(($a) => {
+    cy.get('ul>li>a').each(($a) => {
       cy.wrap($a).click()
       cy.get('#storybook-preview-iframe').then(($iframe) => {
         // .sb-show-main is the class of the storybook display panel
