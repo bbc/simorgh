@@ -1,11 +1,12 @@
 import React from 'react';
-import snapshotTestHelper from '../../../__test__/snapshotTestHelper';
 import Image from './index';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
-      'should not render anything',
+    isNull(
+      'should return null',
       <Image />,
     );
   });
@@ -30,52 +31,31 @@ describe('Image', () => {
       },
     };
 
-    const textBlock = (type, text) => ({
-      type,
-      model: {
-        blocks: [
-          {
-            type: 'text',
-            model: {
-              blocks: [
-                {
-                  type: 'paragraph',
-                  model: {
-                    text,
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    });
-
     const dataWithAltText = imageData([
       rawImageBlock,
-      textBlock(
+      blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
       ),
     ]);
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text',
       <Image {...dataWithAltText} />,
     );
     const dataWithCaption = imageData([
       rawImageBlock,
-      textBlock(
+      blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
       ),
-      textBlock(
+      blockContainingText(
         'caption',
         'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
       ),
     ]);
 
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and caption',
       <Image {...dataWithCaption} />,
     );

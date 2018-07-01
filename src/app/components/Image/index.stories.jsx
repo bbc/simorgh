@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Image from './index';
+import { blockContainingText } from '../../models/blocks';
 
 const imageData = arrayOfBlocks => ({
   type: 'image',
@@ -17,30 +18,9 @@ const rawImageBlock = {
   },
 };
 
-const textBlock = (type, text) => ({
-  type,
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text,
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-});
-
 const dataWithAltText = imageData([
   rawImageBlock,
-  textBlock(
+  blockContainingText(
     'altText',
     'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
   ),
@@ -48,11 +28,11 @@ const dataWithAltText = imageData([
 
 const dataWithCaption = imageData([
   rawImageBlock,
-  textBlock(
+  blockContainingText(
     'altText',
     'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
   ),
-  textBlock(
+  blockContainingText(
     'caption',
     'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
   ),

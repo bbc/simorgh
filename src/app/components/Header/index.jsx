@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import {
   C_POSTBOX,
   C_WHITE,
-  FF_NEWS,
+  FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
 } from '../../../lib/constants/styles';
 
 const Link = styled.a`
-  font-family: ${FF_NEWS};
-  font-size: 2.2em;
   color: ${C_WHITE};
-  text-transform: uppercase;
+  font-family: ${FF_NEWS_SANS_REG};
+  font-size: 2.2em;
   text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const StyledHeader = styled.header`
@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader role="banner">
-    <Link href="http://bbc.co.uk/news">
+    <Link href="https://www.bbc.co.uk/news">
       BBC News
     </Link>
   </StyledHeader>

@@ -1,42 +1,26 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import styled from 'styled-components';
+import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
+import { C_EBON, FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
+
+const StyledHeadline = styled.h1`
+  color: ${C_EBON};
+  font-family: ${FF_NEWS_SANS_REG};
+  font-size: 2em;
+`;
 
 const Headline = ({ blocks }) => {
   const { text } = blocks[0].model.blocks[0].model;
 
   return (
-    <h1>
+    <StyledHeadline>
       {text}
-    </h1>
+    </StyledHeadline>
   );
 };
 
-Headline.propTypes = {
-  blocks: propTypes.arrayOf(
-    propTypes.shape({
-      model: propTypes.shape({
-        blocks: propTypes.arrayOf(
-          propTypes.shape({
-            text: propTypes.string,
-          }),
-        ),
-      }),
-    }),
-  ),
-};
+Headline.propTypes = textPropTypes;
 
-Headline.defaultProps = {
-  blocks: [
-    {
-      model: {
-        blocks: [
-          {
-            model: {},
-          },
-        ],
-      },
-    },
-  ],
-};
+Headline.defaultProps = textDefaultPropTypes;
 
 export default Headline;

@@ -1,8 +1,8 @@
 import {
   getElement,
+  getSecondElement,
   shouldContainText,
   shouldContainStyles,
-  shouldHaveAttribute,
 } from '../support/test-helper';
 
 describe('News Article', () => {
@@ -22,7 +22,7 @@ describe('News Article', () => {
     shouldContainStyles(
       anchorElement,
       'font-family',
-      'ReithSans, Arial, Helvetica, freesans, sans-serif',
+      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
     );
   });
 
@@ -37,6 +37,22 @@ describe('News Article', () => {
 
   it('should have a nofollow meta tag', () => {
     const metaElement = getElement('head meta[name="robots"]');
-    shouldHaveAttribute(metaElement, 'content', 'nofollow');
+    metaElement.should('have.attr', 'content', 'nofollow');
+  });
+
+  it('should have resource hints', () => {
+    const resources = [
+      "https://ichef.bbci.co.uk",
+      "https://static.bbci.co.uk",
+      "https://gel.files.bbci.co.uk"
+    ];
+
+    resources.forEach((resource) => {
+      const selector = `head link[href="${resource}"]`;
+      const firstElement = getElement(selector);
+      firstElement.should('have.attr', 'rel', 'preconnect');
+      const secondElement = getSecondElement(selector);
+      secondElement.should('have.attr', 'rel', 'dns-prefetch');
+    })
   });
 });
