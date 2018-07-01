@@ -1,13 +1,9 @@
 describe('Storybook Article', () => {
-  const fullArray = ['Article', 'Footer', 'Header', 'Headline', 'Image', 'MainContent', 'SubHeading', 'Text', 'Video'];
-  fullArray.shift();
-  const storyArray = fullArray;
-  
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit('/');
-    cy.wrap(storyArray).each((story) => {
-      cy.contains(story).click()
+    cy.get('#storybook-preview-iframe').get('ul>li>div>ul>li:not(:first-child)').each(($story) => {
+      cy.wrap($story).click()
     })
   });
 
@@ -15,15 +11,14 @@ describe('Storybook Article', () => {
     cy.title().should('eq', 'Storybook');
   });
 
-  it('each story should have children', () => {
+  it('each story render panel should not be blank', () => {
     cy.get('#storybook-preview-iframe').get('ul>li>a').each(($a) => {
       cy.wrap($a).click()
       cy.get('#storybook-preview-iframe').then(($iframe) => {
-        const $jroot = $iframe.contents().find('#root')
-        const $root = $jroot[0]
-        cy.wrap($root).children().should('exist')
+        // .sb-show-main is the class of the storybook display panel
+        const $body = $iframe.contents().find('body.sb-show-main')
+        cy.wrap($body).children().should('exist')
       });
     })
   });
-  
 });
