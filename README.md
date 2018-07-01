@@ -28,14 +28,14 @@ These is a single route, `/article/:id`, where `id` is the filename of the stati
 
 To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
-To view a breakdown of the bundle size, open the generated html report in a browser `./webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. We have have this data in json `./webpackBundleReport.json`.
-
 ## Production build
 
 To run this application locally with a production build, run:
 `npm run build && npm run start`
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
+
+To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. We have have this data in json `./reports/webpackBundleReport.json`.
 
 ## Tests
 

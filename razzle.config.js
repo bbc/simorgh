@@ -19,8 +19,8 @@ module.exports = {
             defaultSizes: 'gzip',
             generateStatsFile: true,
             openAnalyzer: false,
-            reportFilename: '../../webpackBundleReport.html',
-            statsFilename: '../../webpackBundleReport.json',
+            reportFilename: '../../reports/webpackBundleReport.html',
+            statsFilename: '../../reports/webpackBundleReport.json',
           }),
         );
       }
