@@ -1,5 +1,4 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer') // eslint-disable-line import/no-extraneous-dependencies, prefer-destructuring
-  .BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies
 
 module.exports = {
   modify: (config, { target, dev }) => {
@@ -20,7 +19,7 @@ module.exports = {
               analyzerMode: 'static',
               defaultSizes: 'gzip',
               generateStatsFile: true,
-              // openAnalyzer: false,
+              openAnalyzer: false,
               reportFilename: '../../reports/webpackBundleReport.html',
               statsFilename: '../../reports/webpackBundleReport.json',
             }),
@@ -32,11 +31,10 @@ module.exports = {
     }
 
     // This is to override bundle performance test
-    appConfig.performance.assign({
+    appConfig.performance = {
         maxAssetSize: 350000,
         maxEntrypointSize: 350000,
-      },
-    );
+      };
     return appConfig;
   },
 };
