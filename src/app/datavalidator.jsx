@@ -52,21 +52,19 @@ const validateProperty = (propertySchema, dataProperty, parentName) => {
 	}
 }
 
-const validateProperties = (currentSchemaNode, dataNode, parentName) => {
-	if (currentSchemaNode.properties) {
-		Object.keys(currentSchemaNode.properties)
-			.forEach( property => {
-				const parentHistory = `${parentName}:${property}`;
-				const propertySchema = currentSchemaNode.properties[property];
-				validateProperty(propertySchema, dataNode[property], parentHistory);
-			}
-		);
- 	}
+const validateProperties = (propertiesSchema, dataNode, parentName) => {
+	Object.keys(propertiesSchema)
+		.forEach( property => {
+			const parentHistory = `${parentName}:${property}`;
+			const propertySchema = propertiesSchema[property];
+			validateProperty(propertySchema, dataNode[property], parentHistory);
+		}
+	);
 };
 
-const validateRequired = (currentSchemaNode, dataNode) => {
+const validateRequired = (requireSchema, dataNode) => {
 	log('- Required values successfully found:');
-	currentSchemaNode.required.forEach(
+	requireSchema.forEach(
 		requiredProp => {
 			if (! (requiredProp in dataNode) ) {
 				throwError(`Error: Missing required prop for ${requiredProp}`);
@@ -104,11 +102,11 @@ const validateNode = (currentSchemaNode, dataNode, parentName) => {
 	}
 
 	if (currentSchemaNode.required) {
-		validateRequired(currentSchemaNode, dataNode);
+		validateRequired(currentSchemaNode.required, dataNode);
 	}
 
 	if (currentSchemaNode.properties) {
-		validateProperties(currentSchemaNode, dataNode, parentName);
+		validateProperties(currentSchemaNode.properties, dataNode, parentName);
 	}
 };
 
