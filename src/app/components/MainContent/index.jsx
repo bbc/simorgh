@@ -3,11 +3,6 @@ import { any, arrayOf, shape } from 'prop-types';
 import headline from '../Headline';
 import text from '../Text';
 
-const Blocks = {
-  headline,
-  text,
-};
-
 // Inlined as this is a temporary component
 const BlockString = props => {
   const stringProps = JSON.stringify(props);
@@ -16,6 +11,11 @@ const BlockString = props => {
       {stringProps}
     </p>
   );
+};
+
+const Blocks = {
+  headline,
+  text,
 };
 
 const render = ({ blocks }) =>
