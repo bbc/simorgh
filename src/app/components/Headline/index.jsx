@@ -13,7 +13,7 @@ const StyledHeadline = styled.h1`
 const Headline = ({ blocks }) => {
   const { text } = extractText(blocks);
 
-  if(!text){
+  if (!text) {
     return null;
   }
 

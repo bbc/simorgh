@@ -5,7 +5,7 @@ import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
 const SubHeading = ({ blocks }) => {
   const { text } = extractText(blocks);
 
-  if(!text){
+  if (!text) {
     return null;
   }
 

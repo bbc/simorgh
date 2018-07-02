@@ -1,7 +1,7 @@
 import React from 'react';
 import Headline from './index';
 import { textBlock } from '../../models/blocks';
-import {shouldMatchSnapshot, isNull} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 
 describe('Headline', () => {
   describe('with no data', () => {
