@@ -1,10 +1,10 @@
 import React from 'react';
-import snapshotTestHelper from '../helpers/tests/snapshotTestHelper';
+import {shouldMatchSnapshot} from '../helpers/tests/testHelpers';
 import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    snapshotTestHelper.shouldMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <Article />,
     );

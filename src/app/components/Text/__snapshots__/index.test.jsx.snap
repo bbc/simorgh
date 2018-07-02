@@ -4,40 +4,38 @@ exports[`Text with data should render correctly 1`] = `
 Array [
   <div>
     <div>
-        <p>
-            It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
-            <a
-                href="/news/articles/c000000000ro"
-            >
-                which were later donated to local hospices
-            </a>
-            .
-        </p>
+      <p>
+        It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
+        <a
+          href="/news/articles/c000000000ro"
+        >
+          which were later donated to local hospices
+        </a>
+        .
+      </p>
     </div>
-</div>,
+  </div>,
   <div>
     <div>
-        <p>
-            This is another paragraph with some 
-            <strong>
-                bold
-            </strong>
-             text.
-        </p>
+      <p>
+        This is another paragraph with some 
+        <strong>
+          bold
+        </strong>
+         text.
+      </p>
     </div>
-</div>,
+  </div>,
   <div>
     <div>
-        <p>
-            This is a final paragraph with 
-            <em>
-                italic
-            </em>
-             text.
-        </p>
+      <p>
+        This is a final paragraph with 
+        <em>
+          italic
+        </em>
+         text.
+      </p>
     </div>
-</div>,
+  </div>,
 ]
 `;
-
-exports[`Text with no data should not render anything 1`] = `null`;
