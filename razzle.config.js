@@ -1,3 +1,5 @@
+import { log } from 'core-js/library/web/timers';
+
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer') // eslint-disable-line import/no-extraneous-dependencies, prefer-destructuring
   .BundleAnalyzerPlugin;
 
@@ -13,16 +15,21 @@ module.exports = {
       appConfig.module.rules.shift();
       // Setup bundle analyser
       if (target === 'web') {
-        appConfig.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            defaultSizes: 'gzip',
-            generateStatsFile: true,
-            // openAnalyzer: false,
-            reportFilename: '../../reports/webpackBundleReport.html',
-            statsFilename: '../../reports/webpackBundleReport.json',
-          }),
-        );
+        // `npm install --production' won't have this available
+        try {
+          appConfig.plugins.push(
+            new BundleAnalyzerPlugin({
+              analyzerMode: 'static',
+              defaultSizes: 'gzip',
+              generateStatsFile: true,
+              // openAnalyzer: false,
+              reportFilename: '../../reports/webpackBundleReport.html',
+              statsFilename: '../../reports/webpackBundleReport.json',
+            }),
+          );
+        } catch (e) {
+          console.log('Production install does not have bundle analysis') // eslint-disable-line no-console
+        }
       }
     }
 
