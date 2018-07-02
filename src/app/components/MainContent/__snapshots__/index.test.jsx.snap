@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component with passed data should render correctly 1`] = `
+exports[`MainContent should render correctly 1`] = `
 <div>
   <h1
     className="sc-bdVaJa bjeWEM"
   >
-    headline
-    : 
-    {"type":"headline","blockId":"1"}
+    This is a headline!
   </h1>
   <p>
-    test
-    : 
-    {"type":"test","blockId":"2"}
+    This is some text content!
+  </p>
+  <p>
+    {"blocks":[{"model":{"text":"This is some test content!"}}]}
   </p>
 </div>
 `;
