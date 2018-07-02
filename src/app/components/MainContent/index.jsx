@@ -17,7 +17,7 @@ const render = ({ blocks }) =>
       </p>
     );
 
-    const Block = Blocks[type];
+    const Block = Blocks[type] || BlockString;
 
     return (
       <Block {...block.model} key={blockId} />
