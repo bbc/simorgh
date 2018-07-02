@@ -1,13 +1,12 @@
 import React from 'react';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
 import { arrayOf, shape, string } from 'prop-types';
+import Markdown from 'markdown-to-jsx';
 
 const Text = ({ blocks }) =>
   blocks.map(({ blockId, model }) => (
-    <div key={blockId}>
-      {remark().use(reactRenderer).processSync(model.text).contents}
-    </div>
+    <Markdown key={blockId} options={{ forceBlock: true }}>
+      {model.text}
+    </Markdown>
   ));
 
 Text.propTypes = {
