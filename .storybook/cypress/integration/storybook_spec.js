@@ -17,8 +17,8 @@ describe('Storybook Article', () => {
       cy.wrap($a).click()
       cy.get('#storybook-preview-iframe').then(($iframe) => {
         // .sb-show-main is the class of the storybook display panel
-        const $body = $iframe.contents().find('body.sb-show-main')
-        cy.wrap($body).children().should('exist')
+        const $root = $iframe.contents().find('body.sb-show-main #root')
+        cy.wrap($root).children().should('exist')
       });
     })
   });
