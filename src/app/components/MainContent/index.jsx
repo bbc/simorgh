@@ -6,6 +6,7 @@ import Text from '../Text';
 const render = ({ blocks }) =>
   blocks.map(block => {
     const { type, blockId } = block;
+    const blockString = JSON.stringify(block);
 
     let Element = Text;
     if (type === 'headline') {
