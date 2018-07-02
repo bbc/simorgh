@@ -19,12 +19,12 @@ const BlockString = props => {
 
 const render = ({ blocks }) =>
   blocks.map(block => {
-    const { type, blockId } = block;
+    const { type, blockId, model } = block;
 
     const Block = Blocks[type] || BlockString;
 
     return (
-      <Block {...block.model} key={blockId} />
+      <Block key={blockId} {...model}  />
     );
   });
 
@@ -34,7 +34,7 @@ const MainContent = ({ data }) => {
     <div>
       {renderedContent}
     </div>
-);
+  );
 };
 
 MainContent.propTypes = {
