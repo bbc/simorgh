@@ -2,11 +2,11 @@
 
 We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/simorgh/blob/latest/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
-We are particularly looking for help with our [open issues](https://github.com/bbc/simorgh/issues). We appreciate all forms of contribution - not just code - that can include documentation, claric
+We are particularly looking for help with our [open issues](https://github.com/bbc/simorgh/issues). We appreciate all forms of contribution - not just code - that can include documentation, clarifications, typo corrections and much more.
 
 ## Getting started
 
-Before starting a pull request, firstly search through [existing issues]( https://github.com/bbc/simorgh/issues).
+Before starting a pull request, firstly search through [existing issues]( https://github.com/bbc/simorgh/issues). Please also ensure to branch from latest, we only review PRs that are as small as they can be; which we do to maximise productivity.
 
 If the work you want to carry out is not captured in an issue, please open one. Otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
