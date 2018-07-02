@@ -8,6 +8,7 @@ const Blocks = {
   text,
 };
 
+// Inlined as this is a temporary component
 const BlockString = props => {
   const stringProps = JSON.stringify(props);
   return (
