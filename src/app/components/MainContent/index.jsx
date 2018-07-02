@@ -11,7 +11,11 @@ const Blocks = {
 const render = ({ blocks }) =>
   blocks.map(block => {
     const { type, blockId } = block;
-    const blockString = JSON.stringify(block);
+    const BlockString = (
+      <p>
+        { JSON.stringify(block) }
+      </p>
+    );
 
     const Block = Blocks[type];
 
