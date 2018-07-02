@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline with data should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
+<h1
+  className="c0"
+>
+  This is a headline!
+</h1>
+`;
+
+exports[`Headline with no data should not render anything 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
+<h1
+  className="c0"
+/>
+`;

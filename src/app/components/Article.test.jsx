@@ -1,13 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {shouldMatchSnapshot} from '../helpers/tests/testHelpers';
 import Article from './Article';
 
 describe('Article', () => {
   describe('Component', () => {
-    it('should render correctly', () => {
-      const tree = renderer.create(<Article />).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'should render correctly',
+      <Article />,
+    );
   });
 
   describe('getInitialProps', () => {
@@ -40,7 +40,7 @@ describe('Article', () => {
     describe('On client', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual('/data/scenario-01.json');
+        expect(fetch.mock.calls[0][0]).toEqual('/data/test/scenario-01.json');
       });
     });
 
@@ -52,7 +52,7 @@ describe('Article', () => {
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
         callGetInitialProps(context);
         expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/scenario-01.json`,
+          `${BASE_PATH}/data/test/scenario-01.json`,
         );
       });
     });

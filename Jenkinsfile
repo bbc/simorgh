@@ -3,11 +3,14 @@
 pipeline {
   agent any
   options {
-    timeout(time: 30, unit: 'MINUTES')
+    timeout(time: 60, unit: 'MINUTES')
     timestamps ()
   }
   stages {
     stage ('Run Pipeline') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       agent any
       steps {
         build(

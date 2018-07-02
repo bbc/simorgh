@@ -1,11 +1,11 @@
 {
   "name": "Simorgh",
   "short_name": "Simorgh",
-  "theme_color": "#bb1919",
+  "Scope": "/",
   "background_color": "#bb1919",
   "display": "browser",
-  "Scope": "/",
   "start_url": "/",
+  "theme_color": "#bb1919",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

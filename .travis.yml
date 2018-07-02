@@ -1,1 +1,41 @@
 language: node_js
+cache:
+  directories:
+    - ~/.cache
+    - ~/.npm
+before_install: npm install -g npm@latest
+install: 
+  - npm ci
+jobs:
+  include:
+    - stage: test
+      before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+      script: npm run test
+      after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+    - stage: test
+      script: xvfb-run npm run test:e2e:ci
+    - stage: test
+      script: xvfb-run npm run test:e2e:storybook:ci
+    - stage: deploy
+      if: type = push AND branch = latest
+      before_script: npm install now --no-save
+      script:
+        - build-storybook -c .storybook -o simorghstorybook
+        - now --token $now_token ./simorghstorybook --public && now alias --token $now_token
+        - now rm -y --token $now_token --safe simorghstorybook
+      after_script: now rm -y --token $now_token --safe simorghstorybook
+  allow_failures:
+    - after_script: now rm -y --token $now_token --safe simorghstorybook
+notifications:
+  email: false
+  slack:
+    rooms:
+    - secure: "cIgDmp/ossApuLeVj1C3y058PKFJK8cdoGLdbHebdFvV+hY45m0QlEK8WpKpnEp7HZYTQMV5D64lybsffvmcpe3ZG17z/2Afoo6HLF0Eq42JcWl5eYkMw6S5S65i8YrPjctLdUeFNS8OhVPzcLe9XSbctrQzplRuYlskqAFiJ9jaPGLMQqUolR5VkxXQx2kbaFYWfSAPUSjW+IEaQoPVdIgbhns9cKETJ7G9ErkX1BN9ifEOrd7p+Bbb1MB+Gm2Dqyo4m1y41vHsXJ675gLsoKA/S6X1fdTbRFEr3D//vL/sP5aPgiu/SJuQG9q+r1yvMgdCnaTWZytLfSs3HQERzQiQFayuo5lDYGeiqz/vH4RrichuGWyVbOB481XV81Xi2nxKdaPRWLgMhgJB42be/u7i5R3Ol9PvI7iFQ2vB9oKKuiIlijzeqU6wQqtVKWjes8qmukt/XFHHDehtVRXHf9bYXLBvCxvwFMMcO2BOc9BNZov+Ogw4D12JTyPJCmYtJj3buPC+RpIl7NqVSWRnm+U5fEmADxQnmfN/Ii3Jn9aO2dNK21A3tLlnaMmCINVFGkt8Ub141EEvqyxktz5YlYjRR5yiMEKjFdhMjKLU61sbWakt++9Jzaj7mMe3EbRMPiMQpdwxURSE54PAAW46VdulxhH8fNNT8p2ZwuNuRFc="
+    on_success: change # default: always
+    on_failure: always # default: always
+    on_start: never   # default: never
+    on_cancel: always # default: always
+    on_error: always # default: always

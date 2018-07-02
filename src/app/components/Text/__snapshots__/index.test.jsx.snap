@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text with data should render correctly 1`] = `
+Array [
+  <p>
+    This is a paragraph.
+  </p>,
+  <p>
+    This is another paragraph.
+  </p>,
+  <p>
+    This is a final paragraph.
+  </p>,
+]
+`;

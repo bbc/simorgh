@@ -2,10 +2,13 @@ import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
+import Header from './Header';
+
+import {C_EBON, FF_NEWS_SANS_REG} from '../../lib/constants/styles';
 
 const Headline = styled.h1`
-  color: #222;
-  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  color: ${C_EBON};
+  font-family: ${FF_NEWS_SANS_REG};
   font-size: 2em;
 `;
 
@@ -15,7 +18,7 @@ class Article extends Component {
   };
 
   static async getInitialProps({ req } = {}) {
-    let url = '/data/scenario-01.json';
+    let url = '/data/test/scenario-01.json';
 
     if (req) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;
@@ -36,9 +39,14 @@ class Article extends Component {
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
-          <title>{headline}</title>
+          <title>
+            {headline}
+          </title>
         </Helmet>
-        <Headline>{headline}</Headline>
+        <Header />
+        <Headline>
+          {headline}
+        </Headline>
       </Fragment>
     );
   }
