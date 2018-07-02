@@ -27,7 +27,7 @@
     "test:lighthouse": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:unit": "razzle test --env=jsdom --coverage",
-    "test:unit:update-shapshots": "npm run test:unit -- -u",
+    "test:unit:update-shapshots": "npm run test:unit -- -u"
   },
   "repository": {
     "type": "git",
@@ -47,7 +47,6 @@
     "@jaredpalmer/after": "^1.3.1",
     "es6-promise": "^4.2.4",
     "express": "^4.16.3",
-    "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.2",
     "razzle": "^2.2.0",
