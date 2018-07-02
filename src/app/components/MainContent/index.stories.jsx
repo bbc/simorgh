@@ -36,6 +36,19 @@ const data = {
         ],
       },
     },
+    {
+      type: 'test',
+      blockId: '3',
+      model: {
+        blocks: [
+          {
+            model: {
+              text: 'This is some test content!',
+            },
+          },
+        ],
+      },
+    },
   ],
 };
 
