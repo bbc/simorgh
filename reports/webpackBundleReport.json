@@ -2,11 +2,14 @@
   "errors": [
   ],
   "warnings": [
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  static/js/bundle.4f446870.js (297 KiB)",
+    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  client (297 KiB)\n      static/js/bundle.4f446870.js\n",
+    "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
   "version": "4.10.2",
   "hash": "2144b10aa7e6a34ca392",
-  "time": 1874,
-  "builtAt": 1530549445719,
+  "time": 1869,
+  "builtAt": 1530551011888,
   "publicPath": "/",
   "outputPath": "/Users/hobbsb02/dev/simorgh/build/public",
   "assetsByChunkName": {
@@ -25,7 +28,8 @@
       "chunkNames": [
         "client"
       ],
-      "emitted": true
+      "emitted": true,
+      "isOverSizeLimit": true
     }
   ],
   "filteredAssets": 0,
@@ -41,7 +45,8 @@
       "children": {
       },
       "childAssets": {
-      }
+      },
+      "isOverSizeLimit": true
     }
   },
   "namedChunkGroups": {
@@ -56,7 +61,8 @@
       "children": {
       },
       "childAssets": {
-      }
+      },
+      "isOverSizeLimit": true
     }
   },
   "chunks": [
