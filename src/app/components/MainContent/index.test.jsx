@@ -30,6 +30,7 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              blockId: '2-1',
               model: {
                 text: 'This is some text content!',
               },
