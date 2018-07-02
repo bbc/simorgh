@@ -1,20 +1,22 @@
 import React from 'react';
 import { any, arrayOf, shape } from 'prop-types';
-import Headline from '../Headline';
-import Text from '../Text';
+import headline from '../Headline';
+import text from '../Text';
+
+const Blocks = {
+  headline,
+  text,
+};
 
 const render = ({ blocks }) =>
   blocks.map(block => {
     const { type, blockId } = block;
     const blockString = JSON.stringify(block);
 
-    let Element = Text;
-    if (type === 'headline') {
-      Element = Headline;
-    }
+    const Block = Blocks[type];
 
     return (
-      <Element {...block.model} key={blockId} />
+      <Block {...block.model} key={blockId} />
     );
   });
 
