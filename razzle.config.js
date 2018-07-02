@@ -3,6 +3,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-d
 module.exports = {
   modify: (config, { target, dev }) => {
     const appConfig = config;
+
     if (!dev) {
       /*
         This is a hack to disable linting on the production build.
@@ -10,6 +11,7 @@ module.exports = {
         A prod build will fail if the API changes so it is fairly safe.
       */
       appConfig.module.rules.shift();
+      
       // Setup bundle analyser
       if (target === 'web') {
         // `npm install --production' won't have this available
@@ -34,7 +36,8 @@ module.exports = {
     appConfig.performance = {
         maxAssetSize: 350000,
         maxEntrypointSize: 350000,
-      };
+    };
+
     return appConfig;
   },
 };
