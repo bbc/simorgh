@@ -4,9 +4,14 @@ exports[`MainContent should render correctly 1`] = `
 <div>
   <h1
     className="sc-bdVaJa bjeWEM"
-  />
+  >
+    This is a headline!
+  </h1>
   <p>
-    {}
+    This is some text content!
+  </p>
+  <p>
+    {"blocks":[{"model":{"text":"This is some test content!"}}]}
   </p>
 </div>
 `;
