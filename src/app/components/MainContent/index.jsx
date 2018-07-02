@@ -8,14 +8,18 @@ const Blocks = {
   text,
 };
 
+const BlockString = props => {
+  const stringProps = JSON.stringify(props);
+  return (
+    <p>
+      {stringProps}
+    </p>
+  );
+};
+
 const render = ({ blocks }) =>
   blocks.map(block => {
     const { type, blockId } = block;
-    const BlockString = (
-      <p>
-        { JSON.stringify(block) }
-      </p>
-    );
 
     const Block = Blocks[type] || BlockString;
 
