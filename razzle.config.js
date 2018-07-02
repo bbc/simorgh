@@ -1,5 +1,3 @@
-import { log } from 'core-js/library/web/timers';
-
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer') // eslint-disable-line import/no-extraneous-dependencies, prefer-destructuring
   .BundleAnalyzerPlugin;
 
