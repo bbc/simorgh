@@ -18,7 +18,7 @@ module.exports = {
             analyzerMode: 'static',
             defaultSizes: 'gzip',
             generateStatsFile: true,
-            openAnalyzer: false,
+            // openAnalyzer: false,
             reportFilename: '../../reports/webpackBundleReport.html',
             statsFilename: '../../reports/webpackBundleReport.json',
           }),
@@ -27,9 +27,7 @@ module.exports = {
     }
 
     // This is to override bundle performance test
-    appConfig.performance = Object.assign(
-      {},
-      {
+    appConfig.performance.assign({
         maxAssetSize: 350000,
         maxEntrypointSize: 350000,
       },
