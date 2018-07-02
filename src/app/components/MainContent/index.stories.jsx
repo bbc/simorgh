@@ -7,10 +7,47 @@ const data = {
     {
       type: 'headline',
       blockId: '1',
+      model: {
+        blocks: [
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    text: 'This is a headline!',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
+      type: 'text',
+      blockId: '2',
+      model: {
+        blocks: [
+          {
+            model: {
+              text: 'This is some text content!',
+            },
+          },
+        ],
+      },
     },
     {
       type: 'test',
-      blockId: '2',
+      blockId: '3',
+      model: {
+        blocks: [
+          {
+            model: {
+              text: 'This is some test content!',
+            },
+          },
+        ],
+      },
     },
   ],
 };

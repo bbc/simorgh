@@ -1,29 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
 import { any, arrayOf, shape } from 'prop-types';
-import { C_EBON, FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
+import headline from '../Headline';
+import text from '../Text';
 
-const Headline = styled.h1`
-  color: ${C_EBON};
-  font-family: ${FF_NEWS_SANS_REG};
-  font-size: 2em;
-`;
+// Inlined as this is a temporary component
+const BlockString = props => {
+  const stringProps = JSON.stringify(props);
+  return (
+    <p>
+      {stringProps}
+    </p>
+  );
+};
+
+const Blocks = {
+  headline,
+  text,
+};
 
 const render = ({ blocks }) =>
   blocks.map(block => {
-    const { type, blockId } = block;
-    const blockString = JSON.stringify(block);
+    const { type, blockId, model } = block;
 
-    let Element = 'p';
-    if (type === 'headline') {
-      Element = Headline;
-    }
+    const Block = Blocks[type] || BlockString;
 
     return (
-      <Element key={blockId}>
-        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-        {type}: {blockString}
-      </Element>
+      <Block key={blockId} {...model}  />
     );
   });
 
@@ -33,7 +35,7 @@ const MainContent = ({ data }) => {
     <div>
       {renderedContent}
     </div>
-);
+  );
 };
 
 MainContent.propTypes = {

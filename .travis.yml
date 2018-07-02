@@ -19,6 +19,9 @@ jobs:
       script: xvfb-run npm run test:e2e:ci
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
+    - stage: test
+      install: npm install --production
+      script: npm run build
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
