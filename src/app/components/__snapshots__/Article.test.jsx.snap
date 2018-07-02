@@ -21,14 +21,14 @@ Array [
 <header
     className="c0"
     role="banner"
->
+  >
     <a
-        className="c1"
-        href="https://www.bbc.co.uk/news"
+      className="c1"
+      href="https://www.bbc.co.uk/news"
     >
-        BBC News
+      BBC News
     </a>
-</header>,
+  </header>,
   .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
@@ -37,8 +37,8 @@ Array [
 
 <h1
     className="c0"
->
+  >
     Article Headline
-</h1>,
+  </h1>,
 ]
 `;
