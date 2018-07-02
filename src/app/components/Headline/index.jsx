@@ -12,6 +12,10 @@ const StyledHeadline = styled.h1`
 const Headline = ({ blocks }) => {
   const { text } = blocks[0].model.blocks[0].model;
 
+  if(!text){
+    return null;
+  }
+
   return (
     <StyledHeadline>
       {text}
