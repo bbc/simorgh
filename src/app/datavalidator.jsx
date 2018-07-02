@@ -65,19 +65,17 @@ const validateProperties = (currentSchemaNode, dataNode, parentName) => {
 };
 
 const validateRequired = (currentSchemaNode, dataNode) => {
-	if (currentSchemaNode.required) {
-		log('- Required values successfully found:');
-		currentSchemaNode.required.forEach(
-			requiredProp => {
-				if (! (requiredProp in dataNode) ) {
-					throwError(`Error: Missing required prop for ${requiredProp}`);
-				}
-				else {
-					log(`  - ${requiredProp}`);
-				}
+	log('- Required values successfully found:');
+	currentSchemaNode.required.forEach(
+		requiredProp => {
+			if (! (requiredProp in dataNode) ) {
+				throwError(`Error: Missing required prop for ${requiredProp}`);
 			}
-		);
-	}
+			else {
+				log(`  - ${requiredProp}`);
+			}
+		}
+	);
 };
 
 const validateEnum = (schemaEnums, dataNode) => {
@@ -89,27 +87,29 @@ const validateEnum = (schemaEnums, dataNode) => {
 }
 
 const validateType = (schemaType, dataNode) => {
-	if (schemaType === `${typeof(dataNode)}`) {
-		log(`- Valid type of ${typeof(dataNode)}`);
-	} else {
-		throwError(`Error: Type does not match for ${dataNode.type} node - expected ${schemaType} got ${typeof(dataNode)}`);
-	}
-}
-
-const validateEnumAndType = (currentSchemaNode, dataNode) => {
-	if (dataNode !== null && currentSchemaNode.type) {
-		if (currentSchemaNode.enum) {
-			validateEnum(currentSchemaNode.enum, dataNode);
+	if (dataNode !== null && schemaType) {
+		if (schemaType === `${typeof(dataNode)}`) {
+			log(`- Valid type of ${typeof(dataNode)}`);
+		} else {
+			throwError(`Error: Type does not match for ${dataNode.type} node - expected ${schemaType} got ${typeof(dataNode)}`);
 		}
-
-		validateType(currentSchemaNode.type, dataNode);
 	}
 }
 
 const validateNode = (currentSchemaNode, dataNode, parentName) => {
-	validateEnumAndType(currentSchemaNode, dataNode);
-	validateRequired(currentSchemaNode, dataNode);
-	validateProperties(currentSchemaNode, dataNode, parentName);
+	validateType(currentSchemaNode.type, dataNode);
+
+	if (currentSchemaNode.enum) {
+		validateEnum(currentSchemaNode.enum, dataNode);
+	}
+
+	if (currentSchemaNode.required) {
+		validateRequired(currentSchemaNode, dataNode);
+	}
+
+	if (currentSchemaNode.properties) {
+		validateProperties(currentSchemaNode, dataNode, parentName);
+	}
 };
 
 const validateBlock = (dataToValidate, parentName = '') => {
@@ -137,6 +137,9 @@ const validateData = data => {
 	console.timeEnd('validateBlock'); // eslint-disable-line no-console
 }
 
+// const data = require('../../data/test/scenario-01.json');
+// validateData(data);
+
 module.exports.isNotFinalTextAttr = isNotFinalTextAttr;
 module.exports.validateBlocks = validateBlocks;
 module.exports.doesPropertyContainBlocks = doesPropertyContainBlocks;
@@ -145,7 +148,6 @@ module.exports.validateProperties = validateProperties;
 module.exports.validateRequired = validateRequired;
 module.exports.validateEnum = validateEnum;
 module.exports.validateType = validateType;
-module.exports.validateEnumAndType = validateEnumAndType;
 module.exports.validateNode = validateNode;
 module.exports.validateBlock = validateBlock;
 module.exports.validateData = validateData;
