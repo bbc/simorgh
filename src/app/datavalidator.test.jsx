@@ -44,6 +44,8 @@ describe('Data Validator', () => {
         }).toThrowError('Error: Missing required prop for passport');
     });
 
+    /*
+
     it('should loop over all properties and validate them individually', () => {
         const schema = {
             type: 'object',
@@ -91,9 +93,56 @@ describe('Data Validator', () => {
         const validatePropMock = jest.spyOn(datavalidator, "validateProperty");
         const validatePropsMock = jest.spyOn(datavalidator, 'validateProperties');
 
-        datavalidator.validateNode(schema, dataWithRecursiveProps)
+        expect(() => {
+            datavalidator.validateProperties(schema.properties, dataWithRecursiveProps, ':article');
+        }).not.toThrowError();
 
         expect(validatePropsMock).toHaveBeenCalledTimes(2);
         expect(validatePropMock).toHaveBeenCalledTimes(4);
     });
+
+    */
+
+    it('isNotFinalTextAttr() should return true if not the final text attribute', () => {
+        const data = {
+            notText: "Not the final text attribute",
+        };
+
+        expect(datavalidator.isNotFinalTextAttr(data)).toEqual(true);
+    });
+
+    it('isNotFinalTextAttr() should return false if it is the final text attribute', () => {
+        const data = {
+            text: "Some article content",
+        };
+
+        expect(datavalidator.isNotFinalTextAttr(data)).toEqual(false);
+    });
+
+    it('doesPropertyContainBlocks() should return true if dataNode contains blocks', () => {
+        const data = {
+            blocks: {},
+        };
+
+        expect(datavalidator.doesPropertyContainBlocks(data)).toEqual(true);
+    });
+
+    it('doesPropertyContainBlocks() should return false if dataNode does not contain blocks', () => {
+        const data = {
+            text: "Some article content",
+        };
+
+        expect(datavalidator.doesPropertyContainBlocks(data)).toEqual(false);
+    });
+
+    it('doesPropertyContainBlocks() should return false on non objects', () => {
+        const data = "not an object";
+
+        expect(datavalidator.doesPropertyContainBlocks(data)).toEqual(false);
+    });
+
+    it('doesPropertyContainBlocks() should return false if dataNode is null', () => {
+        expect(datavalidator.doesPropertyContainBlocks(null)).toEqual(false);
+    });
 });
+

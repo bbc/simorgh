@@ -18,7 +18,7 @@ const throwError = errorMsg => {
 }
 
 const isNotFinalTextAttr = dataNode =>	{
-	if ('text' in dataNode && typeof(dataNode.text) === 'string') {
+	if ('text' in dataNode) {
 		log('Valid text string');
 		return false;
 	};
@@ -134,9 +134,6 @@ const validateData = data => {
 	log('Validation complete!');
 	console.timeEnd('validateBlock'); // eslint-disable-line no-console
 }
-
-// const data = require('../../data/test/scenario-01.json');
-// validateData(data);
 
 module.exports.isNotFinalTextAttr = isNotFinalTextAttr;
 module.exports.validateBlocks = validateBlocks;
