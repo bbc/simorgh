@@ -9,11 +9,7 @@ const SubHeading = ({ blocks }) => {
     return null;
   }
 
-  return (
-    <h2>
-      {text}
-    </h2>
-  );
+  return <h2>{text}</h2>;
 };
 
 SubHeading.propTypes = textPropTypes;

@@ -14,7 +14,7 @@ const Video = ({ model }) => {
 
   const imageBlock = filterForBlockType(subBlocks, 'image');
 
-  if(!imageBlock){
+  if (!imageBlock) {
     return null;
   }
 
