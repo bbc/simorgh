@@ -10,13 +10,6 @@ const rawBlock = t => ({
   model: testModel,
 });
 
-const rawBlockTest = (testDescription, type, blockFunction) =>
-  test(testDescription, () => {
-    const raw = blockFunction(testModel);
-    const block = rawBlock(type);
-    expect(raw).toEqual(block);
-  });
-
 describe('Block Containing Text', () => {
   test('generates the appropriate block json', () => {
     const testJson = {
@@ -71,6 +64,13 @@ describe('Standard block abstractions', () => {
 });
 
 describe('Raw Block Tests', () => {
+  const rawBlockTest = (testDescription, type, blockFunction) =>
+    test(testDescription, () => {
+      const raw = blockFunction(testModel);
+      const block = rawBlock(type);
+      expect(raw).toEqual(block);
+    });
+
   rawBlockTest(
     'rawVideoBlock generates the correct json',
     'rawVideo',
