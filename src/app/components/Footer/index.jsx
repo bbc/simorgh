@@ -10,7 +10,7 @@ import {
 const StyledFooter = styled.footer`
   background-color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
-  padding: ${GEL_SPACING_DBL};
+  padding: ${GEL_SPACING_DBL}px;
 `;
 
 const StyledParagraph = styled.p`

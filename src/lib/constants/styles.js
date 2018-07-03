@@ -21,8 +21,8 @@ export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
 export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
 // GEL Spacing
-export const GEL_SPACING = '8px';
-export const GEL_SPACING_DBL = '16px';
+export const GEL_SPACING = 8;
+export const GEL_SPACING_DBL = GEL_SPACING * 2;
 
 // Start defining Reith fonts.
 /* eslint-disable no-unused-expressions */
