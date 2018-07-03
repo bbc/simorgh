@@ -1,13 +1,10 @@
 import React from 'react';
-import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import Article from './index';
 
 describe('Article', () => {
   describe('Component', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      <Article />,
-    );
+    shouldMatchSnapshot('should render correctly', <Article />);
   });
 
   describe('getInitialProps', () => {

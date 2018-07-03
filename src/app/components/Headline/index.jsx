@@ -17,11 +17,7 @@ const Headline = ({ blocks }) => {
     return null;
   }
 
-  return (
-    <StyledHeadline>
-      {text}
-    </StyledHeadline>
-  );
+  return <StyledHeadline>{text}</StyledHeadline>;
 };
 
 Headline.propTypes = textPropTypes;
