@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 40px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL};
+  padding: ${GEL_SPACING_DBL}px;
 `;
 
 const Header = () => (
