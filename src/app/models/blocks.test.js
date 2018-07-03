@@ -1,4 +1,14 @@
-import { videoBlock, rawVideoBlock, blockContainingText, blockBase, rawImageBlock, stdArrayModelBlock, blockArrayModel, imageBlock, rawImageModel } from './blocks';
+import {
+  videoBlock,
+  rawVideoBlock,
+  blockContainingText,
+  blockBase,
+  rawImageBlock,
+  stdArrayModelBlock,
+  blockArrayModel,
+  imageBlock,
+  rawImageModel,
+} from './blocks';
 
 const testModel = {
   type: 'testingType',

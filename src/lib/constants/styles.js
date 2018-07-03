@@ -83,4 +83,4 @@ injectGlobal`
     font-weight: 700;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff') format('woff'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2') format('woff2');
   }
-`
+`;

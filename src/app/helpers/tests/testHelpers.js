@@ -14,4 +14,3 @@ export const isNull = (title, component) => {
     expect(tree).toBeNull();
   });
 };
-

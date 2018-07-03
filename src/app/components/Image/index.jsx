@@ -18,11 +18,7 @@ const renderCaption = block => {
   `;
   const caption = getText(block);
 
-  return (
-    <StyledFigCaption>
-      {caption}
-    </StyledFigCaption>
-  );
+  return <StyledFigCaption>{caption}</StyledFigCaption>;
 };
 
 const Image = ({ model }) => {
