@@ -5,8 +5,8 @@ const testModel = {
   model: 'TheModel',
 };
 
-const rawBlock = t => ({
-  type: t,
+const rawBlock = type => ({
+  type,
   model: testModel,
 });
 
