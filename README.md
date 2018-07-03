@@ -43,6 +43,10 @@ To run this application locally with a production build, run:
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
+### Bundle analysis reports
+
+Every run of `npm run build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
+
 ## Tests
 
 ### Linting and unit tests
