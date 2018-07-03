@@ -8,7 +8,17 @@ const testModel = {
 const rawBlock = (t) => ({
     type: t,
     model: testModel
-})
+});
+
+const rawBlockTest = (type, blockFunction) =>(
+    describe('Raw Video Block', () => {
+        const raw = blockFunction(testModel);
+        const block = rawBlock(type);
+        test('takes a Raw Image Model and outputs the correct json', () => {
+            expect(raw).toEqual(block);
+        });
+    })
+);
 
 describe('Block Containing Text', () => {
     test('yes', () => {
@@ -87,21 +97,10 @@ describe('Std Array Model Block', () => {
     });
 });
 
-describe('Raw Video Block', () => {
-    const raw = rawVideoBlock(testModel);
-    const block = rawBlock("rawVideo");
-    test('takes a Raw Image Model and outputs the correct json', () => {
-        expect(raw).toEqual(block);
-    });
-});
+rawBlockTest("rawVideo" , rawVideoBlock);
 
-describe('Raw Image Block', () => {
-    const raw = rawImageBlock(testModel);
-    const block = rawBlock("rawImage");
-    test('takes a Raw Image Model and outputs the correct json', () => {
-        expect(raw).toEqual(block);
-    });
-});
+rawBlockTest("rawImage", rawImageBlock);
+
 
 describe('Image Block', () => {
     test('yes', () => {
