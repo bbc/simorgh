@@ -19,11 +19,23 @@ Array [
      text.
   </p>,
   <p>
-    This is a final paragraph with 
+    This is a paragraph with 
     <em>
       italic
     </em>
      text.
+  </p>,
+  <p>
+    <del>
+      This is a paragraph with some strike-through text
+    </del>
+    .
+  </p>,
+  <p>
+    This is a paragraph with some 
+    <code>
+      inline code.
+    </code>
   </p>,
 ]
 `;
