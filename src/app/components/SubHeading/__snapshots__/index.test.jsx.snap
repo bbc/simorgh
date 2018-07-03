@@ -11,5 +11,3 @@ exports[`SubHeading with data should display the subheading containing various s
   !@#$%^&*()'"?/[]{}
 </h2>
 `;
-
-exports[`SubHeading with no data should not render anything 1`] = `<h2 />`;

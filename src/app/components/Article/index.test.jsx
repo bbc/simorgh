@@ -1,6 +1,6 @@
 import React from 'react';
-import {shouldMatchSnapshot} from '../helpers/tests/testHelpers';
-import Article from './Article';
+import {shouldMatchSnapshot} from '../../helpers/tests/testHelpers';
+import Article from './index';
 
 describe('Article', () => {
   describe('Component', () => {
