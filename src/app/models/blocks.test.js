@@ -1,137 +1,117 @@
 import { videoBlock, rawVideoBlock, blockContainingText, blockBase, rawImageBlock, stdArrayModelBlock, blockArrayModel, imageBlock, rawImageModel } from './blocks';
 
 const testModel = {
-    type: "testingType",
-    model: "TheModel"
-}
+  type: 'testingType',
+  model: 'TheModel',
+};
 
-const rawBlock = (t) => ({
-    type: t,
-    model: testModel
+const rawBlock = t => ({
+  type: t,
+  model: testModel,
 });
 
-const rawBlockTest = (type, blockFunction) =>(
-    describe('Raw Video Block', () => {
-        const raw = blockFunction(testModel);
-        const block = rawBlock(type);
-        test('takes a Raw Image Model and outputs the correct json', () => {
-            expect(raw).toEqual(block);
-        });
-    })
-);
+const rawBlockTest = (testDescription, type, blockFunction) =>
+  test(testDescription, () => {
+    const raw = blockFunction(testModel);
+    const block = rawBlock(type);
+    expect(raw).toEqual(block);
+  });
 
 describe('Block Containing Text', () => {
-    test('yes', () => {
-        const testJson = {
-            type: "TheType",
+  test('generates the appropriate block json', () => {
+    const testJson = {
+      type: 'TheType',
+      model: {
+        blocks: [
+          {
+            type: 'text',
             model: {
-                    blocks: [
-                      {
-                        type: 'text',
-                        model: {
-                          blocks: [
-                            {
-                              type: 'paragraph',
-                              model: {
-                                text: "hello"
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  }
-        };
-        
-        const block = blockContainingText("TheType", "hello");
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'hello',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
 
-        expect(block).toEqual(testJson);
-        
-    });
+    const block = blockContainingText('TheType', 'hello');
+
+    expect(block).toEqual(testJson);
+  });
 });
 
-describe('BlockBase', () => {
-    test('outputs the proper json', () => {
-        const block = blockBase("testingType", "TheModel");
-        expect(block).toEqual(testModel);
-    });
-});
-  
-describe('Block Array Model', () => {
-    test('yes', () => {
-        const testJson = {
-            blocks: [
-                testModel
-            ]
-        }
-        const block = blockArrayModel([testModel]);
-        expect(block).toEqual(testJson);
-        
-    });
-});
-
-describe('Raw Image Model', () => {
-    test('yes', () => {
-        const testJson = {
-            locator: "here"
-        }
-        const block = rawImageModel("here");
-        expect(block).toEqual(testJson);
-        
-    });
+describe('Standard block abstractions', () => {
+  test('blockBase outputs the standard model object containing the type and the model', () => {
+    const block = blockBase('testingType', 'TheModel');
+    expect(block).toEqual(testModel);
+  });
+  test('blockArrayModel generates the array of models in json', () => {
+    const testJson = {
+      blocks: [testModel],
+    };
+    const block = blockArrayModel([testModel]);
+    expect(block).toEqual(testJson);
+  });
+  test('stdArrayModelBlock generates the model in blocks in a model json structure', () => {
+    const composite = {
+      type: 'test',
+      model: {
+        blocks: [testModel],
+      },
+    };
+    const stdArrayModel = stdArrayModelBlock('test', [testModel]);
+    expect(stdArrayModel).toEqual(composite);
+  });
 });
 
-describe('Std Array Model Block', () => {
-    test('yes', () => {
-        const composite = {
-            type: "test",
-            model: {
-                blocks: [
-                    testModel
-                ]
-            }
-        };
-        const stdArrayModel = stdArrayModelBlock("test", [testModel]);
-        expect(stdArrayModel).toEqual(composite);
-        
-    });
+describe('Raw Block Tests', () => {
+  rawBlockTest(
+    'rawVideoBlock generates the correct json',
+    'rawVideo',
+    rawVideoBlock,
+  );
+  rawBlockTest(
+    'rawImageBlock generates the correct json',
+    'rawImage',
+    rawImageBlock,
+  );
+
+  test('rawImageModel', () => {
+    const testJson = {
+      locator: 'here',
+    };
+    const block = rawImageModel('here');
+    expect(block).toEqual(testJson);
+  });
 });
 
-rawBlockTest("rawVideo" , rawVideoBlock);
+describe('High order blocks', () => {
+  test('Image block builder generates the image block containing the standard array block', () => {
+    const composite = {
+      type: 'image',
+      model: {
+        blocks: [testModel],
+      },
+    };
+    const generatedBlock = imageBlock(testModel);
 
-rawBlockTest("rawImage", rawImageBlock);
+    expect(generatedBlock).toEqual(composite);
+  });
 
-
-describe('Image Block', () => {
-    test('yes', () => {
-        const composite = {
-            type: "image",
-            model: {
-                blocks: [
-                    testModel
-                ]
-            }
-        };
-        const generatedBlock = imageBlock(testModel);
-        
-        expect(generatedBlock).toEqual(composite);
-        
-    });
-});
-
-describe('Video Block', () => {
-    test('yes', () => {
-        const testJson = {
-            type: "video",
-            model: {
-                blocks: [
-                    testModel,
-                    testModel
-                ]
-            }
-        };
-        const generatedBlock = videoBlock(testModel, testModel);
-        expect(generatedBlock).toEqual(testJson);
-        
-    });
+  test('Video block builder generates the video block containging a model of a block array with at least two models', () => {
+    const testJson = {
+      type: 'video',
+      model: {
+        blocks: [testModel, testModel],
+      },
+    };
+    const generatedBlock = videoBlock(testModel, testModel);
+    expect(generatedBlock).toEqual(testJson);
+  });
 });
