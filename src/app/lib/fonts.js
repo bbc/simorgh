@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components';
 
-
 injectGlobal`
   @font-face {
     font-display: optional;
