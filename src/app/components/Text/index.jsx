@@ -1,11 +1,12 @@
 import React from 'react';
 import { arrayOf, shape, string } from 'prop-types';
+import Markdown from 'markdown-to-jsx';
 
 const Text = ({ blocks }) =>
   blocks.map(({ blockId, model }) => (
-    <p key={blockId}>
+    <Markdown key={blockId} options={{ forceBlock: true }}>
       {model.text}
-    </p>
+    </Markdown>
   ));
 
 Text.propTypes = {
