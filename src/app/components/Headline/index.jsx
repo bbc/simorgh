@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { extractText } from '../../helpers/blocks';
+import { extractText } from '../../helpers/blockHandlers';
 import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
 import { C_EBON, FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
 

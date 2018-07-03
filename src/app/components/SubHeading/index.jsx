@@ -1,5 +1,5 @@
 import React from 'react';
-import { extractText } from '../../helpers/blocks';
+import { extractText } from '../../helpers/blockHandlers';
 import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
 
 const SubHeading = ({ blocks }) => {
