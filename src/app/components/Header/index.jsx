@@ -5,7 +5,7 @@ import {
   C_WHITE,
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
-} from '../../../lib/constants/styles';
+} from '../../lib/constants/styles';
 
 const Link = styled.a`
   color: ${C_WHITE};
