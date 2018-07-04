@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import MainContent from './index';
 
 describe('MainContent', () => {
@@ -39,7 +40,7 @@ describe('MainContent', () => {
         },
       },
       {
-        type: 'test',
+        type: 'text',
         blockId: '3',
         model: {
           blocks: [
@@ -54,17 +55,12 @@ describe('MainContent', () => {
     ],
   };
 
-  console.log(JSON.stringify(validData));
-
-  it('should render correctly', () => {
-    const tree = renderer.create(<MainContent data={validData} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  shouldMatchSnapshot('should render correctly', <MainContent blocks={validData} />);
 
   const invalidData = {
     blocks: [
       {
-        type: 'test',
+        type: 'text',
         blockId: '1',
         model: {
           blocks: [
@@ -78,7 +74,7 @@ describe('MainContent', () => {
         },
       },
       {
-        type: 'test',
+        type: 'text',
         blockId: '2',
         model: {
           blocks: [
@@ -94,7 +90,7 @@ describe('MainContent', () => {
   };
 
   it('should render incorrectly', () => {
-    const tree = renderer.create(<MainContent data={invalidData} />).toJSON();
+    const tree = renderer.create(<MainContent blocks={invalidData} />).toJSON();
     expect(tree).toThrowErrorMatchingSnapshot();
   });
 
