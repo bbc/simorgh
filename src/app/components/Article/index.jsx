@@ -17,8 +17,9 @@ class Article extends Component {
     headline: 'Article Headline',
   };
 
-  static async getInitialProps({ req } = {}) {
-    let url = '/data/test/scenario-01.json';
+  static async getInitialProps({ req, match } = {}) {
+    const { id } = match.params;
+    let url = `/data/test/${id}.json`;
 
     if (req) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;
