@@ -18,14 +18,14 @@ class Article extends Component {
   };
 
   static async getInitialProps({ req, match } = {}) {
-    const { id } = match.params;
-    let url = `/data/test/${id}.json`;
-
-    if (req) {
-      url = `${process.env.RAZZLE_BASE_PATH}${url}`;
-    }
-
     try {
+      const { id } = match.params;
+      let url = `/data/test/${id}.json`;
+
+      if (req) {
+        url = `${process.env.RAZZLE_BASE_PATH}${url}`;
+      }
+
       const response = await fetch(url);
       const data = await response.json();
       return { data };
