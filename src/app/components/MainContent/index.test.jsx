@@ -62,7 +62,10 @@ describe('MainContent', () => {
     ],
   };
 
-  shouldMatchSnapshot('should render correctly', <MainContent {...validData} />);
+  shouldMatchSnapshot(
+    'should render correctly',
+    <MainContent {...validData} />,
+  );
 
   const invalidData = {
     blocks: [
@@ -103,5 +106,4 @@ describe('MainContent', () => {
     const tree = renderer.create(<MainContent {...invalidData} />).toJSON();
     expect(tree).toThrowErrorMatchingSnapshot();
   });
-
 });

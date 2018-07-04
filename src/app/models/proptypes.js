@@ -55,9 +55,7 @@ const blockPropTypes = model => ({
 });
 
 const headlinePropTypes = {
-  blocks: arrayOf(
-    shape(textPropTypes),
-  ),
+  blocks: arrayOf(shape(textPropTypes)),
 };
 
 export const mainContentPropTypes = {
