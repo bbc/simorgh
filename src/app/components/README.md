@@ -1,6 +1,6 @@
 This repo follows the container component pattern. See ../containers/README.md for an explanation of this.
 
-All components in this repo need to have at least one story and one set of unit tests including the snapshot tests. We expect 90% or greater code coverage of each component.
+All components in this repo need to have at least one story and one set of unit tests usually including the snapshot tests. We expect 90% or greater code coverage of each component.
 
 Any of the components in this directory are a good example of how we wish components to be written and should be studied as templates for contribution, that is unless there are inline comments saying otherwise.
 
