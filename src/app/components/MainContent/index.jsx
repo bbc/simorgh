@@ -1,6 +1,5 @@
 import React from 'react';
-import { arrayOf } from 'prop-types';
-import { textPropTypes } from '../../helpers/proptypes';
+import { mainContentPropTypes } from '../../helpers/proptypes';
 import headline from '../Headline';
 import text from '../Text';
 
@@ -39,11 +38,6 @@ const MainContent = ({ blocks }) => {
   );
 };
 
-MainContent.propTypes = {
-  blocks: arrayOf({
-    headline: textPropTypes,
-    text: textPropTypes,
-  }).isRequired,
-};
+MainContent.propTypes = mainContentPropTypes;
 
 export default MainContent;
