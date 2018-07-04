@@ -48,6 +48,25 @@ export const videoPropTypes = {
   }),
 };
 
+const blockPropTypes = model => ({
+  blockId: string,
+  type: string,
+  model: shape(model),
+});
+
+const headlinePropTypes = {
+  blocks: arrayOf(
+    shape(textPropTypes),
+  ),
+};
+
+export const mainContentPropTypes = {
+  blocks: arrayOf(
+    shape(blockPropTypes(headlinePropTypes)),
+    shape(blockPropTypes(textPropTypes)),
+  ).isRequired,
+};
+
 const baseDefaultPropTypes = {
   model: {
     blocks: [
