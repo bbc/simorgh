@@ -1,9 +1,11 @@
 const path = require('path');
 
 module.exports = (baseConfig, env, defaultConfig) => {
-  defaultConfig.resolve.extensions.push('.jsx');
+  const customConfig = defaultConfig;
 
-  defaultConfig.module.rules.push({
+  customConfig.resolve.extensions.push('.jsx');
+
+  customConfig.module.rules.push({
     test: /\.jsx?$/,
     include: path.resolve(__dirname, '../src'),
     use: [
@@ -18,5 +20,5 @@ module.exports = (baseConfig, env, defaultConfig) => {
     ],
   });
 
-  return defaultConfig;
+  return customConfig;
 };
