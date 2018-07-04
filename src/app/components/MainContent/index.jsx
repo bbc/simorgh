@@ -1,5 +1,5 @@
 import React from 'react';
-import { any, arrayOf, shape } from 'prop-types';
+import { shape, PropTypes } from 'prop-types';
 import headline from '../Headline';
 import text from '../Text';
 
@@ -25,7 +25,7 @@ const render = ({ blocks }) =>
     const Block = Blocks[type] || BlockString;
 
     return (
-      <Block key={blockId} {...model}  />
+      <Block key={blockId} {...model} />
     );
   });
 
@@ -41,7 +41,13 @@ const MainContent = ({ data }) => {
 MainContent.propTypes = {
   data: shape({
     model: shape({
-      blocks: arrayOf(any),
+      blocks: shape({
+        headline: PropTypes.object.isRequired,
+        subheading: PropTypes.object.isRequired,
+        text: PropTypes.object.isRequired,
+        image: PropTypes.object.isRequired,
+        video: PropTypes.object.isRequired,
+      }),
     }),
   }).isRequired,
 };
