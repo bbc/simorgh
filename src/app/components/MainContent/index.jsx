@@ -1,5 +1,6 @@
 import React from 'react';
-import { shape, PropTypes } from 'prop-types';
+import { arrayOf } from 'prop-types';
+import { textPropTypes } from '../../helpers/proptypes';
 import headline from '../Headline';
 import text from '../Text';
 
@@ -18,7 +19,7 @@ const Blocks = {
   text,
 };
 
-const render = ({ blocks }) =>
+const render = (blocks) =>
   blocks.map(block => {
     const { type, blockId, model } = block;
 
@@ -29,8 +30,8 @@ const render = ({ blocks }) =>
     );
   });
 
-const MainContent = ({ data }) => {
-  const renderedContent = render(data);
+const MainContent = ({ blocks }) => {
+  const renderedContent = render(blocks);
   return (
     <div>
       {renderedContent}
@@ -39,16 +40,9 @@ const MainContent = ({ data }) => {
 };
 
 MainContent.propTypes = {
-  data: shape({
-    model: shape({
-      blocks: shape({
-        headline: PropTypes.object.isRequired,
-        subheading: PropTypes.object.isRequired,
-        text: PropTypes.object.isRequired,
-        image: PropTypes.object.isRequired,
-        video: PropTypes.object.isRequired,
-      }),
-    }),
+  blocks: arrayOf({
+    headline: textPropTypes,
+    text: textPropTypes,
   }).isRequired,
 };
 
