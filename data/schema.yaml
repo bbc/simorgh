@@ -53,23 +53,21 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Article'
+                  $ref: '#/components/schemas/article'
         '400':
           description: bad input parameter/s
 components:
   schemas:
-    Article:
+    article:
       type: object
       required:
       - locator
-      - language
       - publishedDateTime
       - lastUpdatedDateTime
       - passport
       - seoHeadline
-      - socialHeadline
       - metaDescription
-      - blocks
+      - model
       properties:
         locator:
           type: string
@@ -90,14 +88,11 @@ components:
               example: http://www.bbc.co.uk/ontologies/passport/home/News
             articleType:
               type: string
-              enum: [analysis, feature]
+              enum: [analysis, feature, news]
               example: analysis
         seoHeadline:
           type: string
           example: UK pledges extra £44m for Channel border security
-        socialHeadline:
-          type: string
-          example: You will never believe how much money UK pledges for Channel border security
         publishedDateTime:
           type: string
           format: date-time
@@ -106,7 +101,7 @@ components:
           type: string
           format: date-time
           example: 2017-12-21T17:32:28Z
-        MetaDescription:
+        metaDescription:
           type: boolean
           example: null
         model:
@@ -122,17 +117,17 @@ components:
                   enum: [Headline, Text,altText, paragraph, Image, caption, Video, rawImage, rawVideo]
                 model:
                   oneOf:
-                  - $ref: '#/components/schemas/Article/properties/model/properties/blocks'
-                  - $ref: '#/components/schemas/Text'
-                  - $ref: '#/components/schemas/Image'
-                  - $ref: '#/components/schemas/Headline'
+                  - $ref: '#/components/schemas/article/properties/model/properties/blocks'
+                  - $ref: '#/components/schemas/text'
+                  - $ref: '#/components/schemas/image'
+                  - $ref: '#/components/schemas/headline'
                   - $ref: '#/components/schemas/altText'
-                  - $ref: '#/components/schemas/Paragraph'
-                  - $ref: '#/components/schemas/Caption'
-                  - $ref: '#/components/schemas/Video'
+                  - $ref: '#/components/schemas/paragraph'
+                  - $ref: '#/components/schemas/caption'
+                  - $ref: '#/components/schemas/video'
                   - $ref: '#/components/schemas/rawVideo'
                   - $ref: '#/components/schemas/rawImage'
-                  - $ref: '#/components/schemas/Model'
+                  - $ref: '#/components/schemas/model'
                   - $ref: '#/components/schemas/rawImageBlock'
                   - $ref: '#/components/schemas/rawVideoBlock'
 
@@ -141,7 +136,7 @@ components:
                   type: image
                   model:
                     # Properties of a referenced object
-    Image:
+    image:
       type: object
       required:
       - blockId
@@ -156,7 +151,7 @@ components:
           enum: [text]
         model:
           $ref: '#/components/schemas/rawImageBlock'
-    Text:
+    text:
       type: object
       required:
       - blockId
@@ -170,8 +165,8 @@ components:
           type: string
           enum: [text]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Headline:
+          $ref: '#/components/schemas/article/properties/model'
+    headline:
       type: object
       required:
         - blockId
@@ -185,7 +180,7 @@ components:
           type: string
           enum: [headline]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          $ref: '#/components/schemas/article/properties/model'
     altText:
       type: object
       required:
@@ -200,8 +195,8 @@ components:
           type: string
           enum: [altText]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Paragraph:
+          $ref: '#/components/schemas/article/properties/model'
+    paragraph:
       type: object
       required:
         - blockId
@@ -215,8 +210,8 @@ components:
           type: string
           enum: [paragraph]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Caption:
+          $ref: '#/components/schemas/article/properties/model'
+    caption:
       type: object
       required:
         - blockId
@@ -230,8 +225,8 @@ components:
           type: string
           enum: [caption]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Video:
+          $ref: '#/components/schemas/article/properties/model'
+    video:
       type: object
       required:
         - blockId
@@ -320,10 +315,8 @@ components:
             copyrightHolder:
               type: string
               example: BBC
-    Model:
+    model:
       type: object
-      required:
-        - text
       properties:
         text:
           type: string
