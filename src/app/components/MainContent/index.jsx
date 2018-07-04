@@ -18,7 +18,7 @@ const Blocks = {
   text,
 };
 
-const render = (blocks) =>
+const render = (blocks) => {
   blocks.map(block => {
     const { type, blockId, model } = block;
 
@@ -28,8 +28,11 @@ const render = (blocks) =>
       <Block key={blockId} {...model} />
     );
   });
+};
 
 const MainContent = ({ blocks }) => {
+  if (!blocks || blocks.length === 0) return null;
+
   const renderedContent = render(blocks);
   return (
     <div>

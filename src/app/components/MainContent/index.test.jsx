@@ -1,6 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import MainContent from './index';
 
 describe('MainContent', () => {
@@ -64,44 +63,12 @@ describe('MainContent', () => {
 
   shouldMatchSnapshot('should render correctly', <MainContent {...validData} />);
 
-  const invalidData = {
-    blocks: [
-      {
-        type: 'text',
-        blockId: '1',
-        model: {
-          blocks: [
-            {
-              blockId: '1',
-              type: 'paragraph',
-              model: {
-                text: 'This is some text content!',
-              },
-            },
-          ],
-        },
-      },
-      {
-        type: 'text',
-        blockId: '2',
-        model: {
-          blocks: [
-            {
-              blockId: '2-1',
-              type: 'paragraph',
-              model: {
-                text: 'This is some test content!',
-              },
-            },
-          ],
-        },
-      },
-    ],
-  };
+  describe('with no data', () => {
+    isNull('should return null', <MainContent />);
+  });
 
-  it('should render incorrectly', () => {
-    const tree = renderer.create(<MainContent {...invalidData} />).toJSON();
-    expect(tree).toThrowErrorMatchingSnapshot();
+  describe('with data', () => {
+    isNull('should return null', <MainContent blocks={[]} />)
   });
 
 });
