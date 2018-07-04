@@ -1,6 +1,6 @@
 import React from 'react';
-import { videoPropTypes, videoDefaultPropTypes } from '../../helpers/proptypes';
-import { filterForBlockType } from '../../helpers/blocks';
+import { videoPropTypes, videoDefaultPropTypes } from '../../models/proptypes';
+import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const Video = ({ model }) => {
   const subBlocks = model.blocks;

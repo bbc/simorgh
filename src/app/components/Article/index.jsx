@@ -3,8 +3,7 @@ import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
 import styled from 'styled-components';
 import Header from '../Header';
-
-import { C_EBON, FF_NEWS_SANS_REG } from '../../../lib/constants/styles';
+import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
 
 const Headline = styled.h1`
   color: ${C_EBON};
