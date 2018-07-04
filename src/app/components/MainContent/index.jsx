@@ -1,5 +1,5 @@
 import React from 'react';
-import { mainContentPropTypes } from '../../helpers/proptypes';
+import { mainContentPropTypes } from '../../models/proptypes';
 import headline from '../Headline';
 import text from '../Text';
 
