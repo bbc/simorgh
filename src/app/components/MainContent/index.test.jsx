@@ -12,9 +12,13 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              type: 'text',
+              blockId: '1-1',
               model: {
                 blocks: [
                   {
+                    type: 'paragraph',
+                    blockId: '1-1-1',
                     model: {
                       text: 'This is a headline!',
                     },
@@ -31,6 +35,7 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              type: 'paragraph',
               blockId: '2-1',
               model: {
                 text: 'This is some text content!',
@@ -45,6 +50,8 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              type: 'paragraph',
+              blockId: '2-1',
               model: {
                 text: 'This is some test content!',
               },
@@ -55,7 +62,7 @@ describe('MainContent', () => {
     ],
   };
 
-  shouldMatchSnapshot('should render correctly', <MainContent blocks={validData} />);
+  shouldMatchSnapshot('should render correctly', <MainContent {...validData} />);
 
   const invalidData = {
     blocks: [
@@ -66,6 +73,7 @@ describe('MainContent', () => {
           blocks: [
             {
               blockId: '1',
+              type: 'paragraph',
               model: {
                 text: 'This is some text content!',
               },
@@ -79,6 +87,8 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              blockId: '2-1',
+              type: 'paragraph',
               model: {
                 text: 'This is some test content!',
               },
@@ -90,7 +100,7 @@ describe('MainContent', () => {
   };
 
   it('should render incorrectly', () => {
-    const tree = renderer.create(<MainContent blocks={invalidData} />).toJSON();
+    const tree = renderer.create(<MainContent {...invalidData} />).toJSON();
     expect(tree).toThrowErrorMatchingSnapshot();
   });
 

@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainContent should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
 <div>
   <h1
-    className="sc-bdVaJa bjeWEM"
+    className="c0"
   >
     This is a headline!
   </h1>
@@ -11,7 +17,7 @@ exports[`MainContent should render correctly 1`] = `
     This is some text content!
   </p>
   <p>
-    {"blocks":[{"model":{"text":"This is some test content!"}}]}
+    This is some test content!
   </p>
 </div>
 `;
