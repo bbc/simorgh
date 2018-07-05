@@ -108,34 +108,42 @@ components:
           type: object
           properties:
             blocks:
-              properties:
-                blockId:
-                  type: string
-                  example: 0f29a57f-3492-3c0d-af51-837208b657fb
-                type:
-                  type: string
-                  enum: [Headline, Text,altText, paragraph, Image, caption, Video, rawImage, rawVideo]
-                model:
-                  oneOf:
-                  - $ref: '#/components/schemas/article/properties/model/properties/blocks'
-                  - $ref: '#/components/schemas/text'
-                  - $ref: '#/components/schemas/image'
-                  - $ref: '#/components/schemas/headline'
-                  - $ref: '#/components/schemas/altText'
-                  - $ref: '#/components/schemas/paragraph'
-                  - $ref: '#/components/schemas/caption'
-                  - $ref: '#/components/schemas/video'
-                  - $ref: '#/components/schemas/rawVideo'
-                  - $ref: '#/components/schemas/rawImage'
-                  - $ref: '#/components/schemas/model'
-                  - $ref: '#/components/schemas/rawImageBlock'
-                  - $ref: '#/components/schemas/rawVideoBlock'
-
+              type: array
+              items:
+                type: object
+                properties:
+                  blockId:
+                    type: string
+                    example: 0f29a57f-3492-3c0d-af51-837208b657fb
+                  type:
+                    type: string
+                    enum: [headline, text,altText, paragraph, image, caption, video, rawImage, rawVideo]
+                  model:
+                    $ref: '#/components/schemas/blocks'
               example:
                   blockid: 0f29a57f-3492-3c0d-af51-837208b657fb
                   type: image
                   model:
+
                     # Properties of a referenced object
+    blocks:
+      type: array
+      items:
+        type: object
+        oneOf:
+        - $ref: '#/components/schemas/article/properties/model/properties/blocks'
+        - $ref: '#/components/schemas/text'
+        - $ref: '#/components/schemas/image'
+        - $ref: '#/components/schemas/headline'
+        - $ref: '#/components/schemas/altText'
+        - $ref: '#/components/schemas/paragraph'
+        - $ref: '#/components/schemas/caption'
+        - $ref: '#/components/schemas/video'
+        - $ref: '#/components/schemas/rawVideo'
+        - $ref: '#/components/schemas/rawImage'
+        - $ref: '#/components/schemas/modelWithText'
+        - $ref: '#/components/schemas/rawImageBlock'
+        - $ref: '#/components/schemas/rawVideoBlock'
     image:
       type: object
       required:
@@ -150,7 +158,15 @@ components:
           type: string
           enum: [text]
         model:
-          $ref: '#/components/schemas/rawImageBlock'
+          type: object
+          properties:
+            blocks:
+              type: array
+              items:
+                type: object
+                oneOf:
+                - $ref: '#/components/schemas/rawVideoBlock'
+
     text:
       type: object
       required:
@@ -315,7 +331,7 @@ components:
             copyrightHolder:
               type: string
               example: BBC
-    model:
+    modelWithText:
       type: object
       properties:
         text:
