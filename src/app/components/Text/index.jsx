@@ -14,7 +14,7 @@ Text.propTypes = {
     shape({
       blockId: string,
       model: shape({
-        text: string,
+        text: string.isRequired,
       }).isRequired,
     }).isRequired,
   ).isRequired,
