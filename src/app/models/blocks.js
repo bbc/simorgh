@@ -21,6 +21,18 @@ export const textBlock = text => ({
   ],
 });
 
+export const headingBlock = text => ({
+  blocks: [
+    {
+      type: 'headline',
+      blockId: '1',
+      model: textBlock(text),
+    },
+  ],
+});
+
+export const blockContainingHeading = text => headingBlock(text);
+
 export const blockContainingText = (type, text) => ({
   type,
   model: textBlock(text),

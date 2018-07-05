@@ -8,6 +8,7 @@ import {
   blockArrayModel,
   imageBlock,
   rawImageModel,
+  blockContainingHeading,
 } from './blocks';
 
 const testModel = {
@@ -44,6 +45,40 @@ describe('Block Containing Text', () => {
     };
 
     const block = blockContainingText('TheType', 'hello');
+
+    expect(block).toEqual(testJson);
+  });
+});
+
+describe('Block Containing Heading', () => {
+  test('generates the appropriate block json', () => {
+    const testJson = {
+      blocks: [
+        {
+          type: 'headline',
+          blockId: '1',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is a headline',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+
+    const block = blockContainingHeading('This is a headline');
 
     expect(block).toEqual(testJson);
   });

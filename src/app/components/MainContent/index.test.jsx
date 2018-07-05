@@ -1,65 +1,13 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import { headingBlock, textBlock } from '../../models/blocks';
 import MainContent from './index';
 
+const heading = 'This is a headline';
+const text = 'This is some text content!';
+
 describe('MainContent', () => {
-  const validData = {
-    blocks: [
-      {
-        type: 'headline',
-        blockId: '1',
-        model: {
-          blocks: [
-            {
-              type: 'text',
-              blockId: '1-1',
-              model: {
-                blocks: [
-                  {
-                    type: 'paragraph',
-                    blockId: '1-1-1',
-                    model: {
-                      text: 'This is a headline!',
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
-      {
-        type: 'text',
-        blockId: '2',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              blockId: '2-1',
-              model: {
-                text: 'This is some text content!',
-              },
-            },
-          ],
-        },
-      },
-      {
-        type: 'text',
-        blockId: '3',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              blockId: '2-1',
-              model: {
-                text: 'This is some test content!',
-              },
-            },
-          ],
-        },
-      },
-    ],
-  };
+  const validData = [headingBlock(heading), textBlock(text), textBlock(text)];
 
   shouldMatchSnapshot(
     'should render correctly',
