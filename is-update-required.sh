@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ $(pwd) =~ .+simorgh ]]; then
-	# cd to application route directory
+	# cd to application route directory this allows the commiting/pushing from any part of the application
 	cd ${BASH_REMATCH}
 
 	# if the wordcount of the package-lock file diff is not zero
@@ -13,6 +13,8 @@ if [[ $(pwd) =~ .+simorgh ]]; then
 			"additions"
 		echo "Unless you have made dependency changes on your feature branch it is likely your branch is out of date with origin/latest"
 		echo "We suggest you 'git pull origin latest' and run 'npm install' to update your package-lock.json"
-		echo "This ensures you are running the most recent version and also that the precommit and prepush hooks are valid on you local setup"
+		echo "This ensures you are running the most recent version of the application and it's dependecies"
+		echo "This also that the husky precommit and prepush hooks are valid on you local setup"
+		echo ""
 	fi
 fi
