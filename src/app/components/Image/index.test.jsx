@@ -5,10 +5,7 @@ import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    isNull(
-      'should return null',
-      <Image />,
-    );
+    isNull('should return null', <Image />);
   });
 
   describe('with data', () => {

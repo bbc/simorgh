@@ -6,11 +6,7 @@ import text from '../Text';
 // Inlined as this is a temporary component
 const BlockString = props => {
   const stringProps = JSON.stringify(props);
-  return (
-    <p>
-      {stringProps}
-    </p>
-  );
+  return <p>{stringProps}</p>;
 };
 
 const Blocks = {
@@ -24,18 +20,12 @@ const render = ({ blocks }) =>
 
     const Block = Blocks[type] || BlockString;
 
-    return (
-      <Block key={blockId} {...model}  />
-    );
+    return <Block key={blockId} {...model} />;
   });
 
 const MainContent = ({ data }) => {
   const renderedContent = render(data);
-  return (
-    <div>
-      {renderedContent}
-    </div>
-  );
+  return <div>{renderedContent}</div>;
 };
 
 MainContent.propTypes = {

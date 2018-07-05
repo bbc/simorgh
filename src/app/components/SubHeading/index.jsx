@@ -1,6 +1,6 @@
 import React from 'react';
-import { extractText } from '../../helpers/blocks';
-import { textPropTypes, textDefaultPropTypes } from '../../helpers/proptypes';
+import { extractText } from '../../helpers/blockHandlers';
+import { textPropTypes, textDefaultPropTypes } from '../../models/proptypes';
 
 const SubHeading = ({ blocks }) => {
   const { text } = extractText(blocks);
@@ -9,11 +9,7 @@ const SubHeading = ({ blocks }) => {
     return null;
   }
 
-  return (
-    <h2>
-      {text}
-    </h2>
-  );
+  return <h2>{text}</h2>;
 };
 
 SubHeading.propTypes = textPropTypes;

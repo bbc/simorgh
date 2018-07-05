@@ -34,13 +34,13 @@ export const videoPropTypes = {
             model: shape({
               isLive: bool,
               duration: string,
-              locator: string.isRequired
+              locator: string.isRequired,
             }),
           }),
           // alt text
           shape(textPropTypes),
           // image
-          shape(imagePropTypes)
+          shape(imagePropTypes),
         ),
       }),
     ),

@@ -5,7 +5,7 @@ import {
   C_WHITE,
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
-} from '../../../lib/constants/styles';
+} from '../../lib/constants/styles';
 
 const Link = styled.a`
   color: ${C_WHITE};
@@ -19,14 +19,12 @@ const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 40px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL};
+  padding: ${GEL_SPACING_DBL}px;
 `;
 
 const Header = () => (
   <StyledHeader role="banner">
-    <Link href="https://www.bbc.co.uk/news">
-      BBC News
-    </Link>
+    <Link href="https://www.bbc.co.uk/news">BBC News</Link>
   </StyledHeader>
 );
 
