@@ -1,21 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Headline from './index';
+import { containerText } from '../../models/blocks';
 
-const props = {
-  blocks: [
-    {
-      model: {
-        blocks: [
-          {
-            model: {
-              text: 'This is a headline!',
-            },
-          },
-        ],
-      },
-    },
-  ],
-};
-
-storiesOf('Headline', module).add('default', () => <Headline {...props} />);
+storiesOf('Headline', module).add('default', () => (
+  <Headline {...containerText('This is a headline!')} />
+));

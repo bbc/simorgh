@@ -1,6 +1,6 @@
 import React from 'react';
 import { any, arrayOf, shape } from 'prop-types';
-import headline from '../Headline';
+import TextContainer from '../Containers/TextContainer';
 import text from '../Text';
 
 // Inlined as this is a temporary component
@@ -10,7 +10,7 @@ const BlockString = props => {
 };
 
 const Blocks = {
-  headline,
+  headline: TextContainer,
   text,
 };
 
@@ -19,6 +19,11 @@ const render = ({ blocks }) =>
     const { type, blockId, model } = block;
 
     const Block = Blocks[type] || BlockString;
+    // An if function for now until I apply the container to the text
+    // component
+    if (type === 'headline') {
+      return <Block key={blockId} {...block} />;
+    }
 
     return <Block key={blockId} {...model} />;
   });

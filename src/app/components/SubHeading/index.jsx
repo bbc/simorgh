@@ -1,19 +1,12 @@
 import React from 'react';
-import { extractText } from '../../helpers/blockHandlers';
-import { textPropTypes, textDefaultPropTypes } from '../../models/proptypes';
+import { containerProp } from '../../models/proptypes';
 
-const SubHeading = ({ blocks }) => {
-  const { text } = extractText(blocks);
+const SubHeading = ({ text }) => <h2>{text}</h2>;
 
-  if (!text) {
-    return null;
-  }
+SubHeading.propTypes = containerProp;
 
-  return <h2>{text}</h2>;
+SubHeading.defaultProps = {
+  text: 'Subheading',
 };
-
-SubHeading.propTypes = textPropTypes;
-
-SubHeading.defaultProps = textDefaultPropTypes;
 
 export default SubHeading;

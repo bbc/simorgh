@@ -10,6 +10,10 @@ export const imagePropTypes = {
   }),
 };
 
+export const containerProp = {
+  text: string,
+};
+
 export const textPropTypes = {
   blocks: arrayOf(
     shape({
@@ -22,6 +26,25 @@ export const textPropTypes = {
       }),
     }),
   ),
+};
+
+export const commonTextPropTypes = {
+  type: string,
+  model: shape({
+    blocks: arrayOf(
+      shape({
+        model: shape({
+          blocks: arrayOf(
+            shape({
+              model: shape({
+                text: string,
+              }),
+            }),
+          ),
+        }),
+      }),
+    ),
+  }),
 };
 
 export const videoPropTypes = {
@@ -57,6 +80,25 @@ const baseDefaultPropTypes = {
     ],
   },
 };
+
+export const baseTextDefaultPropTypes = (type, text) => ({
+  type,
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            {
+              model: {
+                text,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+});
 
 export const imageDefaultPropTypes = baseDefaultPropTypes;
 

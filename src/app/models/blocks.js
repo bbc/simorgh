@@ -21,6 +21,10 @@ export const textBlock = text => ({
   ],
 });
 
+export const containerText = text => ({
+  text,
+});
+
 export const blockContainingText = (type, text) => ({
   type,
   model: textBlock(text),
