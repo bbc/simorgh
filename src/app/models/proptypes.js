@@ -45,11 +45,11 @@ export const imagePropTypes = {
         // altText block
         shape({
           model: shape(textPropTypes),
-        }),
+        }).isRequired,
         // caption block
         shape({
           model: shape(optionalTextPropTypes),
-        }).isRequired,
+        }),
       ]).isRequired,
     ).isRequired,
   }).isRequired,
