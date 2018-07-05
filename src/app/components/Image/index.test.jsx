@@ -40,6 +40,7 @@ describe('Image', () => {
       'should render an image with alt text',
       <Image {...dataWithAltText} />,
     );
+
     const dataWithCaption = imageData([
       rawImageBlock,
       blockContainingText(
