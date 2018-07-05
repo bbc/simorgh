@@ -1,16 +1,12 @@
 import React from 'react';
-import { mainContentPropTypes } from '../../helpers/proptypes';
+import { mainContentPropTypes } from '../../models/proptypes';
 import headline from '../Headline';
 import text from '../Text';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
   const stringProps = JSON.stringify(props);
-  return (
-    <p>
-      {stringProps}
-    </p>
-  );
+  return <p>{stringProps}</p>;
 };
 
 const Blocks = {
@@ -18,27 +14,20 @@ const Blocks = {
   text,
 };
 
-const render = (blocks) => {
+const render = blocks =>
   blocks.map(block => {
     const { type, blockId, model } = block;
 
     const Block = Blocks[type] || BlockString;
 
-    return (
-      <Block key={blockId} {...model} />
-    );
+    return <Block key={blockId} {...model} />;
   });
-};
 
 const MainContent = ({ blocks }) => {
   if (!blocks || blocks.length === 0) return null;
 
   const renderedContent = render(blocks);
-  return (
-    <div>
-      {renderedContent}
-    </div>
-  );
+  return <div>{renderedContent}</div>;
 };
 
 MainContent.propTypes = mainContentPropTypes;

@@ -61,14 +61,21 @@ describe('MainContent', () => {
     ],
   };
 
-  shouldMatchSnapshot('should render correctly', <MainContent {...validData} />);
+  shouldMatchSnapshot(
+    'should render correctly',
+    <MainContent {...validData} />,
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly',
+    <MainContent {...validData} />,
+  );
 
   describe('with no data', () => {
     isNull('should return null', <MainContent />);
   });
 
   describe('with data', () => {
-    isNull('should return null', <MainContent blocks={[]} />)
+    isNull('should return null', <MainContent blocks={[]} />);
   });
-
 });

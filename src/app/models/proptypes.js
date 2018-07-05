@@ -35,13 +35,13 @@ export const videoPropTypes = {
             model: shape({
               isLive: bool,
               duration: string,
-              locator: string
+              locator: string,
             }),
           }),
           // alt text
           shape(textPropTypes),
-          // image 
-          shape(imagePropTypes)
+          // image
+          shape(imagePropTypes),
         ),
       }),
     ),
@@ -55,9 +55,7 @@ const blockPropTypes = model => ({
 });
 
 const headlinePropTypes = {
-  blocks: arrayOf(
-    shape(textPropTypes),
-  ),
+  blocks: arrayOf(shape(textPropTypes)),
 };
 
 export const mainContentPropTypes = {

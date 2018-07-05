@@ -1,16 +1,20 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
-import { videoBlock, rawVideoModel, rawVideoBlock, imageBlock } from '../../models/blocks';
+import {
+  videoBlock,
+  rawVideoModel,
+  rawVideoBlock,
+  imageBlock,
+} from '../../models/blocks';
 import Video from './index';
 
 describe('Video', () => {
-  const rVB = rawVideoBlock(rawVideoModel("urn:bbc:pips:pid:p064nsyw", "p064nsz3", "clip", 299 ));
-  
+  const rVB = rawVideoBlock(
+    rawVideoModel('urn:bbc:pips:pid:p064nsyw', 'p064nsz3', 'clip', 299),
+  );
+
   describe('with no data', () => {
-    shouldMatchSnapshot(
-      'should not render anything',
-      <Video />,
-    );
+    shouldMatchSnapshot('should not render anything', <Video />);
   });
 
   describe('with data', () => {
@@ -52,24 +56,16 @@ describe('Video', () => {
   });
 
   describe('with data but no image', () => {
-
     const data = videoBlock(rVB, null);
 
-    shouldMatchSnapshot(
-      'should only render the video',
-      <Video {...data} />
-    )
+    shouldMatchSnapshot('should only render the video', <Video {...data} />);
   });
 
   describe('with data but no raw image', () => {
-
     const rIB = null;
     const img = imageBlock(rIB);
-    const data = videoBlock(rVB, img)
-    
-    isNull(
-      'should be null',
-      <Video {...data} />
-    )  
+    const data = videoBlock(rVB, img);
+
+    isNull('should be null', <Video {...data} />);
   });
 });

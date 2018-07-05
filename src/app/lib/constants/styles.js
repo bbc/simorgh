@@ -21,8 +21,8 @@ export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
 export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
 // GEL Spacing
-export const GEL_SPACING = '8px';
-export const GEL_SPACING_DBL = '16px';
+export const GEL_SPACING = 8;
+export const GEL_SPACING_DBL = GEL_SPACING * 2;
 
 // Start defining Reith fonts.
 /* eslint-disable no-unused-expressions */
@@ -83,4 +83,4 @@ injectGlobal`
     font-weight: 700;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff') format('woff'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2') format('woff2');
   }
-`
+`;
