@@ -1,4 +1,4 @@
-// blockHelpers.js
+// blockHandlers.js
 // Contains various helper functions for managing props as well as finding specific
 // elements and blocks within them
 

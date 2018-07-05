@@ -8,6 +8,8 @@ describe('Article', () => {
   });
 
   describe('getInitialProps', () => {
+    const defaultIdParam = 'scenario-01';
+    const defaultContext = { match: { params: { id: defaultIdParam } } };
     const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () =>
@@ -17,7 +19,7 @@ describe('Article', () => {
       fetch.mockReject(JSON.stringify({ error: true }));
 
     const callGetInitialProps = async (
-      context,
+      context = defaultContext,
       mockFetch = mockFetchSuccess,
     ) => {
       mockFetch();
@@ -37,19 +39,21 @@ describe('Article', () => {
     describe('On client', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual('/data/test/scenario-01.json');
+        expect(fetch.mock.calls[0][0]).toEqual(
+          `/data/test/${defaultIdParam}.json`,
+        );
       });
     });
 
     describe('On Server', () => {
       const BASE_PATH = 'https://test.com';
-      const context = { req: { exists: true } };
+      const serverContext = { req: { exists: true }, ...defaultContext };
       process.env.RAZZLE_BASE_PATH = BASE_PATH;
 
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
-        callGetInitialProps(context);
+        callGetInitialProps(serverContext);
         expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/test/scenario-01.json`,
+          `${BASE_PATH}/data/test/${defaultIdParam}.json`,
         );
       });
     });
