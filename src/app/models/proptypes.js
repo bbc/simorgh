@@ -40,11 +40,11 @@ export const imagePropTypes = {
         shape({
           model: shape({
             locator: string.isRequired,
-          }),
+          }).isRequired,
         }).isRequired,
         // altText block
         shape({
-          model: shape(textPropTypes),
+          model: shape(textPropTypes).isRequired,
         }).isRequired,
         // caption block
         shape({
