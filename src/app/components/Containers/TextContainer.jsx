@@ -15,7 +15,7 @@ const TextContainer = blocks => {
   const extractType = blocks.type;
   const passingText = blocks.model.blocks[0].model.blocks[0].model;
 
-  if (!passingText) {
+  if (!extractType || !passingText) {
     return null;
   }
 
@@ -25,9 +25,6 @@ const TextContainer = blocks => {
 
 TextContainer.propTypes = commonTextPropTypes;
 
-TextContainer.defaultProps = baseTextDefaultPropTypes(
-  'headline',
-  'A Glorious test',
-);
+TextContainer.defaultProps = baseTextDefaultPropTypes('', '');
 
 export default TextContainer;
