@@ -56,18 +56,6 @@ describe('News Article', () => {
     });
   });
 
-  it('should load the Reith font', () => {
-    cy.server();
-    cy.visit('/article/article-id');
-    cy.request(
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
-    ).then(response => {
-      expect(response.status).to.eq(200);
-      expect(response).to.have.property('headers');
-      expect(response).to.have.property('duration');
-    });
-  });
-
   it('should load the font', () => {
     cy.request('/article/article-id')
       .its('body')
