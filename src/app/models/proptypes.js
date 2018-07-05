@@ -1,14 +1,4 @@
-import { arrayOf, shape, string, bool } from 'prop-types';
-
-export const imagePropTypes = {
-  model: shape({
-    blocks: arrayOf(
-      shape({
-        locator: string.isRequired,
-      }).isRequired,
-    ).isRequired,
-  }).isRequired,
-};
+import { arrayOf, bool, oneOfType, shape, string } from 'prop-types';
 
 export const textPropTypes = {
   blocks: arrayOf(
@@ -16,13 +6,55 @@ export const textPropTypes = {
       model: shape({
         blocks: arrayOf(
           shape({
-            text: string.isRequired,
+            model: shape({
+              text: string.isRequired,
+            }).isRequired,
           }).isRequired,
         ).isRequired,
       }).isRequired,
     }).isRequired,
   ).isRequired,
 };
+
+export const optionalTextPropTypes = {
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              text: string,
+            }),
+          }),
+        ),
+      }),
+    }),
+  ),
+};
+
+export const imagePropTypes = {
+  model: shape({
+    blocks: arrayOf(
+      oneOfType([
+        // rawImage block
+        shape({
+          model: shape({
+            locator: string.isRequired,
+          }),
+        }).isRequired,
+        // altText block
+        shape({
+          model: shape(textPropTypes),
+        }),
+        // caption block
+        shape({
+          model: shape(optionalTextPropTypes),
+        }).isRequired,
+      ]).isRequired,
+    ).isRequired,
+  }).isRequired,
+};
+
 export const videoPropTypes = {
   model: shape({
     blocks: arrayOf(
@@ -43,8 +75,8 @@ export const videoPropTypes = {
           shape(imagePropTypes),
         ),
       }),
-    ),
-  }),
+    ).isRequired,
+  }).isRequired,
 };
 
 const baseDefaultPropTypes = {
