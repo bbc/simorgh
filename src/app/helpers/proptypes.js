@@ -4,7 +4,7 @@ export const imagePropTypes = {
   model: shape({
     blocks: arrayOf(
       shape({
-        locator: string,
+        locator: string.isRequired,
       }).isRequired,
     ).isRequired,
   }).isRequired,
@@ -16,7 +16,7 @@ export const textPropTypes = {
       model: shape({
         blocks: arrayOf(
           shape({
-            text: string,
+            text: string.isRequired,
           }).isRequired,
         ).isRequired,
       }).isRequired,
@@ -34,12 +34,12 @@ export const videoPropTypes = {
             model: shape({
               isLive: bool,
               duration: string,
-              locator: string
+              locator: string.isRequired
             }),
           }),
           // alt text
           shape(textPropTypes),
-          // image 
+          // image
           shape(imagePropTypes)
         ),
       }),
