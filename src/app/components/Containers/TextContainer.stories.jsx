@@ -1,48 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import TextContainer from './TextContainer';
+import { blockContainingText } from '../../models/blocks';
 
-const p = {
-  type: 'headline',
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
-
-const pl = {
-  type: 'subheading',
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
+const p = blockContainingText('headline', 'The Headline');
+const pl = blockContainingText('subheading', 'The SubHeading');
 
 storiesOf('Text Container', module).add('passing in a headline', () => (
   <TextContainer {...p} />
@@ -50,5 +12,3 @@ storiesOf('Text Container', module).add('passing in a headline', () => (
 storiesOf('Text Container', module).add('passing in a subheading', () => (
   <TextContainer {...pl} />
 ));
-
-// /////////////
