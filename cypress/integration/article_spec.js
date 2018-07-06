@@ -57,71 +57,28 @@ describe('News Article', () => {
   });
 
   it('should load the font', () => {
-    cy.request('/article/article-id')
-      .its('body')
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff',
-      )
-      .should(
-        'contains',
-        'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2',
-      );
+    const expectedFonts = [
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff',
+      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2',
+    ];
+    const styleTag = getElement('head style');
+
+    expectedFonts.forEach(font => {
+      styleTag.should('contain', font);
+    });
   });
 });
