@@ -1,4 +1,21 @@
 module.exports = {
+  entry: ['babel-polyfill', './src/client.js'],
+  presets: [
+    'env',
+    {
+      useBuiltIns: true,
+      targets: {
+        browsers: [
+          'chrome >= 51',
+          'firefox >= 45',
+          'ie >= 10',
+          'edge >= 13',
+          'safari >= 9',
+          'opera >= 40',
+        ],
+      },
+    },
+  ],
   modify: (config, { target, dev }) => {
     const appConfig = config;
 
@@ -29,8 +46,8 @@ module.exports = {
     // This is to override bundle performance test
     if (process.env.CI) {
       appConfig.performance = {
-          maxAssetSize: 350000,
-          maxEntrypointSize: 350000,
+        maxAssetSize: 350000,
+        maxEntrypointSize: 350000,
       };
     }
 
