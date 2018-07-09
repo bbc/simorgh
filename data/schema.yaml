@@ -132,6 +132,7 @@ components:
         - $ref: '#/components/schemas/rawVideo'
         - $ref: '#/components/schemas/rawImage'
         - $ref: '#/components/schemas/modelWithText'
+      minItems: 1
 
     image:
       type: object
