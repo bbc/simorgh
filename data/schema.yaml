@@ -181,7 +181,14 @@ components:
           type: string
           enum: [text]
         model:
-          $ref: '#/components/schemas/article/properties/model'
+          type: object
+          properties:
+            blocks:
+              type: array
+              items:
+                type: object
+                oneOf:
+                - $ref: '#/components/schemas/blocks'
     headline:
       type: object
       required:
@@ -196,7 +203,7 @@ components:
           type: string
           enum: [headline]
         model:
-          $ref: '#/components/schemas/article/properties/model'
+          $ref: '#/components/schemas/blocks'
     altText:
       type: object
       required:
@@ -256,7 +263,14 @@ components:
           type: string
           enum: [Video]
         model:
-          $ref: '#/components/schemas/rawVideoBlock'
+          type: object
+          properties:
+            blocks:
+              type: array
+              items:
+                type: object
+                oneOf:
+                - $ref: '#/components/schemas/rawVideoBlock'
     rawVideo:
       type: object
       required:
