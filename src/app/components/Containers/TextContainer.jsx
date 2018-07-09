@@ -12,15 +12,15 @@ const Blocks = {
 };
 
 const TextContainer = blocks => {
-  const extractType = blocks.type;
-  const passingText = blocks.model.blocks[0].model.blocks[0].model;
+  const { type } = blocks;
+  const extractedTest = blocks.model.blocks[0].model.blocks[0].model;
 
-  if (!extractType || !passingText) {
+  if (!type || !extractedTest) {
     return null;
   }
 
-  const BlockType = Blocks[extractType];
-  return <BlockType {...passingText} />;
+  const BlockType = Blocks[type];
+  return <BlockType {...extractedTest} />;
 };
 
 TextContainer.propTypes = commonTextPropTypes;

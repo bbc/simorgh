@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { containerProp } from '../../models/proptypes';
+import { requiredTextProp } from '../../models/proptypes';
 import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
 
 const StyledHeadline = styled.h1`
@@ -11,10 +11,10 @@ const StyledHeadline = styled.h1`
 
 const Headline = ({ text }) => <StyledHeadline>{text}</StyledHeadline>;
 
-Headline.propTypes = containerProp;
+Headline.propTypes = requiredTextProp;
 
 Headline.defaultProps = {
-  text: 'Hello',
+  text: 'Headline',
 };
 
 export default Headline;

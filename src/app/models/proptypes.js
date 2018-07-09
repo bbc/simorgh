@@ -16,9 +16,8 @@ export const textPropTypes = {
   ).isRequired,
 };
 
-
-export const containerProp = {
-  text: string,
+export const requiredTextProp = {
+  text: string.isRequired,
 };
 
 export const optionalTextPropTypes = {
@@ -46,7 +45,7 @@ export const commonTextPropTypes = {
           blocks: arrayOf(
             shape({
               model: shape({
-                text: string,
+                text: string.isRequired,
               }),
             }),
           ),
@@ -54,6 +53,8 @@ export const commonTextPropTypes = {
       }),
     ),
   }),
+};
+
 export const imagePropTypes = {
   model: shape({
     blocks: arrayOf(

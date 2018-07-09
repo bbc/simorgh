@@ -1,9 +1,9 @@
 import React from 'react';
-import { containerProp } from '../../models/proptypes';
+import { requiredTextProp } from '../../models/proptypes';
 
 const SubHeading = ({ text }) => <h2>{text}</h2>;
 
-SubHeading.propTypes = containerProp;
+SubHeading.propTypes = requiredTextProp;
 
 SubHeading.defaultProps = {
   text: 'Subheading',
