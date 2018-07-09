@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextContainer with headline props should render a headline component 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
+<h1
+  className="c0"
+>
+  This is a headline!
+</h1>
+`;
+
+exports[`TextContainer with subheading props should render a headline component 1`] = `
+<h2>
+  The amazing subheading!
+</h2>
+`;

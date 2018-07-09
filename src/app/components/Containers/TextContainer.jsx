@@ -13,14 +13,14 @@ const Blocks = {
 
 const TextContainer = blocks => {
   const { type } = blocks;
-  const extractedTest = blocks.model.blocks[0].model.blocks[0].model;
+  const text = blocks.model.blocks[0].model.blocks[0].model;
 
-  if (!type || !extractedTest) {
+  if (!type || !text) {
     return null;
   }
 
   const BlockType = Blocks[type];
-  return <BlockType {...extractedTest} />;
+  return <BlockType {...text} />;
 };
 
 TextContainer.propTypes = commonTextPropTypes;
