@@ -1,7 +1,7 @@
 import React from 'react';
-import { any, arrayOf, shape } from 'prop-types';
 import headline from '../Headline';
 import text from '../Text';
+import propTypes from '../../models/propTypes/mainContent';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -14,7 +14,7 @@ const Blocks = {
   text,
 };
 
-const render = ({ blocks }) =>
+const render = blocks =>
   blocks.map(block => {
     const { type, blockId, model } = block;
 
@@ -23,17 +23,11 @@ const render = ({ blocks }) =>
     return <Block key={blockId} {...model} />;
   });
 
-const MainContent = ({ data }) => {
-  const renderedContent = render(data);
+const MainContent = ({ blocks }) => {
+  const renderedContent = render(blocks);
   return <div>{renderedContent}</div>;
 };
 
-MainContent.propTypes = {
-  data: shape({
-    model: shape({
-      blocks: arrayOf(any),
-    }),
-  }).isRequired,
-};
+MainContent.propTypes = propTypes;
 
 export default MainContent;

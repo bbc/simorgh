@@ -60,7 +60,7 @@ describe('MainContent', () => {
   };
 
   it('should render correctly', () => {
-    const tree = renderer.create(<MainContent data={data} />).toJSON();
+    const tree = renderer.create(<MainContent {...data} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

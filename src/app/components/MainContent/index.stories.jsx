@@ -65,6 +65,6 @@ storiesOf('MainContent', module)
     );
     const dataOnlyHeadline = { blocks: blocksOnlyHeadline };
 
-    return <MainContent data={dataOnlyHeadline} />;
+    return <MainContent {...dataOnlyHeadline} />;
   })
-  .add('with a headline and other blocks', () => <MainContent data={data} />);
+  .add('with a headline and other blocks', () => <MainContent {...data} />);
