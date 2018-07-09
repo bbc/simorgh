@@ -25,6 +25,6 @@ const TextContainer = blocks => {
 
 TextContainer.propTypes = commonTextPropTypes;
 
-TextContainer.defaultProps = baseTextDefaultPropTypes('', '');
+TextContainer.defaultProps = baseTextDefaultPropTypes;
 
 export default TextContainer;

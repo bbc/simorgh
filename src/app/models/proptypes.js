@@ -112,8 +112,8 @@ const baseDefaultPropTypes = {
   },
 };
 
-export const baseTextDefaultPropTypes = (type, text) => ({
-  type,
+export const baseTextDefaultPropTypes = {
+  type: '',
   model: {
     blocks: [
       {
@@ -121,7 +121,7 @@ export const baseTextDefaultPropTypes = (type, text) => ({
           blocks: [
             {
               model: {
-                text,
+                text: '',
               },
             },
           ],
@@ -129,7 +129,7 @@ export const baseTextDefaultPropTypes = (type, text) => ({
       },
     ],
   },
-});
+};
 
 export const imageDefaultPropTypes = baseDefaultPropTypes;
 
