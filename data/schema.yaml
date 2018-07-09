@@ -112,22 +112,7 @@ components:
           type: object
           properties:
             blocks:
-              type: array
-              items:
-                type: object
-                properties:
-                  blockId:
-                    type: string
-                    example: 0f29a57f-3492-3c0d-af51-837208b657fb
-                  type:
-                    type: string
-                    enum: [headline, text,altText, paragraph, image, caption, video, rawImage, rawVideo]
-                  model:
-                    $ref: '#/components/schemas/blocks'
-              example:
-                  blockid: 0f29a57f-3492-3c0d-af51-837208b657fb
-                  type: image
-                  model:
+              $ref: '#/components/schemas/blocks'
 
                     # Properties of a referenced object
     blocks:
@@ -145,8 +130,7 @@ components:
         - $ref: '#/components/schemas/rawVideo'
         - $ref: '#/components/schemas/rawImage'
         - $ref: '#/components/schemas/modelWithText'
-        - $ref: '#/components/schemas/rawImageBlock'
-        - $ref: '#/components/schemas/rawVideoBlock'
+
     image:
       type: object
       required:
@@ -164,11 +148,7 @@ components:
           type: object
           properties:
             blocks:
-              type: array
-              items:
-                type: object
-                oneOf:
-                - $ref: '#/components/schemas/rawVideoBlock'
+              $ref: '#/components/schemas/blocks'
 
     text:
       type: object
@@ -187,11 +167,8 @@ components:
           type: object
           properties:
             blocks:
-              type: array
-              items:
-                type: object
-                oneOf:
-                - $ref: '#/components/schemas/blocks'
+              $ref: '#/components/schemas/blocks'
+
     headline:
       type: object
       required:
@@ -206,7 +183,11 @@ components:
           type: string
           enum: [headline]
         model:
-          $ref: '#/components/schemas/blocks'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     altText:
       type: object
       required:
@@ -221,7 +202,11 @@ components:
           type: string
           enum: [altText]
         model:
-          $ref: '#/components/schemas/article/properties/model'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     paragraph:
       type: object
       required:
@@ -236,7 +221,11 @@ components:
           type: string
           enum: [paragraph]
         model:
-          $ref: '#/components/schemas/article/properties/model'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     caption:
       type: object
       required:
@@ -251,7 +240,11 @@ components:
           type: string
           enum: [caption]
         model:
-          $ref: '#/components/schemas/article/properties/model'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     video:
       type: object
       required:
@@ -269,11 +262,8 @@ components:
           type: object
           properties:
             blocks:
-              type: array
-              items:
-                type: object
-                oneOf:
-                - $ref: '#/components/schemas/rawVideoBlock'
+              $ref: '#/components/schemas/blocks'
+
     rawVideo:
       type: object
       required:
@@ -311,6 +301,7 @@ components:
             locator:
               type: string
               example:
+
     rawImage:
       type: object
       required:
@@ -348,17 +339,11 @@ components:
             copyrightHolder:
               type: string
               example: BBC
+
     modelWithText:
       type: object
       properties:
         text:
           type: string
           example: Aliquam quis sodales nisl.
-    rawImageBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawImage'
-    rawVideoBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawVideo'
+          
