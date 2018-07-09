@@ -1,18 +1,4 @@
-import { arrayOf, shape, string, bool } from 'prop-types';
-
-export const imagePropTypes = {
-  model: shape({
-    blocks: arrayOf(
-      shape({
-        locator: string,
-      }),
-    ),
-  }),
-};
-
-export const containerProp = {
-  text: string,
-};
+import { arrayOf, bool, oneOfType, shape, string } from 'prop-types';
 
 export const textPropTypes = {
   blocks: arrayOf(
@@ -20,7 +6,30 @@ export const textPropTypes = {
       model: shape({
         blocks: arrayOf(
           shape({
-            text: string,
+            model: shape({
+              text: string.isRequired,
+            }).isRequired,
+          }).isRequired,
+        ).isRequired,
+      }).isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
+
+export const containerProp = {
+  text: string,
+};
+
+export const optionalTextPropTypes = {
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              text: string,
+            }),
           }),
         ),
       }),
@@ -45,6 +54,27 @@ export const commonTextPropTypes = {
       }),
     ),
   }),
+export const imagePropTypes = {
+  model: shape({
+    blocks: arrayOf(
+      oneOfType([
+        // rawImage block
+        shape({
+          model: shape({
+            locator: string.isRequired,
+          }).isRequired,
+        }).isRequired,
+        // altText block
+        shape({
+          model: shape(textPropTypes).isRequired,
+        }).isRequired,
+        // caption block
+        shape({
+          model: shape(optionalTextPropTypes),
+        }),
+      ]).isRequired,
+    ).isRequired,
+  }).isRequired,
 };
 
 export const videoPropTypes = {
@@ -58,7 +88,7 @@ export const videoPropTypes = {
             model: shape({
               isLive: bool,
               duration: string,
-              locator: string,
+              locator: string.isRequired,
             }),
           }),
           // alt text
@@ -67,8 +97,8 @@ export const videoPropTypes = {
           shape(imagePropTypes),
         ),
       }),
-    ),
-  }),
+    ).isRequired,
+  }).isRequired,
 };
 
 const baseDefaultPropTypes = {
