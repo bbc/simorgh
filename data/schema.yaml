@@ -106,10 +106,12 @@ components:
           format: date-time
           example: 2017-12-21T17:32:28Z
         metaDescription:
-          type: boolean
-          example: null
+          type: string
+          example: story about a young brave hero
         model:
           type: object
+          required:
+          - blocks
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
@@ -288,7 +290,7 @@ components:
           properties:
             guidance:
               type: boolean
-              example: null
+              example: true
             isLive:
               type: string
               example: false
@@ -300,7 +302,7 @@ components:
               example: false
             locator:
               type: string
-              example:
+              example: xyz:abc:pips:pid:p019fch9
 
     rawImage:
       type: object
@@ -335,7 +337,7 @@ components:
               example: https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg
             originCode:
               type: boolean
-              example: null
+              example: true
             copyrightHolder:
               type: string
               example: BBC
@@ -346,4 +348,3 @@ components:
         text:
           type: string
           example: Aliquam quis sodales nisl.
-          
