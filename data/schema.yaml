@@ -66,6 +66,7 @@ components:
       - lastUpdatedDateTime
       - passport
       - seoHeadline
+      - socialHeadline
       - metaDescription
       - model
       properties:
@@ -93,6 +94,9 @@ components:
         seoHeadline:
           type: string
           example: UK pledges extra £44m for Channel border security
+        socialHeadline:
+          type: string
+          example: Royals gather for Prince Louis Christening
         publishedDateTime:
           type: string
           format: date-time
@@ -131,7 +135,6 @@ components:
       items:
         type: object
         oneOf:
-        - $ref: '#/components/schemas/article/properties/model/properties/blocks'
         - $ref: '#/components/schemas/text'
         - $ref: '#/components/schemas/image'
         - $ref: '#/components/schemas/headline'
