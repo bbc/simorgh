@@ -74,7 +74,7 @@ const validateBlock = dataToValidate => {
   log('----------------------------------------------------------------');
 
   const blockSchema = schemas[schemaName];
-  validateNode(blockSchema, dataToValidate, `${dataToValidate.type}`);
+  validateNode(blockSchema, dataToValidate);
 };
 
 const validateData = data => {
