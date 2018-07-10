@@ -7,7 +7,9 @@ const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
 
 const log = message => {
-  console.log(message); // eslint-disable-line no-console
+  if (process.env.NODE_ENV !== 'test' && typeof jest === 'undefined') {
+    console.log(message); // eslint-disable-line no-console
+  }
 };
 
 const throwError = errorMsg => {
