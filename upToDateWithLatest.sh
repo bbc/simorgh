@@ -8,9 +8,13 @@ if [[ $(pwd) =~ .+simorgh ]]; then
 
 	# if the banch git log contains the most recent commit on origin/latest
 	if [[ $FEATURE_BRANCH_COMMIT_LIST != *$LATEST_COMMIT* ]]; then
-		echo "Your branch is not up-to-date with latest. Push to origin denied."
-		echo "Please pull in the most recent version of origin/latest. EG: git pull origin latest"
-		exit
+		# set the console output to red
+		tput setaf 1
+		echo "Your branch is not up-to-date with latest - push to origin denied."
+		echo "Please pull in the most recent version of origin/latest. EG: 'git pull origin latest'"
+		# reset the console output colour
+		tput sgr0
+		exit 1
 	fi
 
 	echo "Up-to-date with latest"
