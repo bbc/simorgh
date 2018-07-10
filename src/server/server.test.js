@@ -5,12 +5,15 @@ import server, { getPublicDirectory } from './index';
 describe('Server', () => {
   describe('getPublicDirectory', () => {
     it(`should set the directory path based on env`, () => {
-      const envs = [{ production: 'build/public' }, { notProd: 'public' }];
+      const envs = [
+        { production: 'build/public' },
+        { notProduction: 'public' },
+      ];
 
-      envs.forEach(el => {
-        const key = Object.keys(el).shift();
+      envs.forEach(env => {
+        const key = Object.keys(env).shift();
         process.env.NODE_ENV = key;
-        expect(getPublicDirectory()).toBe(el[key]);
+        expect(getPublicDirectory()).toBe(env[key]);
       });
     });
   });
