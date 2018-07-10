@@ -12,9 +12,14 @@ describe('Server', () => {
 
       envs.forEach(env => {
         const key = Object.keys(env).shift();
+        // sets the env globally
         process.env.NODE_ENV = key;
         expect(getPublicDirectory()).toBe(env[key]);
       });
+    });
+
+    afterEach(() => {
+      delete process.env.NODE_ENV;
     });
   });
 
