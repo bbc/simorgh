@@ -3,11 +3,11 @@ import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
 
-const getPublicDirectory = () =>
-  process.env.NODE_ENV === 'production'
+export function getPublicDirectory() {
+  return process.env.NODE_ENV === 'production'
     ? process.env.RAZZLE_PUBLIC_DIR
     : process.env.RAZZLE_PUBLIC_DIR_DEV;
-
+}
 /*
   Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Enables unit testing of this file.
