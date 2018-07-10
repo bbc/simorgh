@@ -6,10 +6,10 @@ module.exports = {
       useBuiltIns: true,
       targets: {
         browsers: [
-          'chrome >= 51',
-          'firefox >= 45',
-          'ie >= 10',
-          'edge >= 13',
+          'chrome >= 53',
+          'firefox >= 45.0',
+          'ie == 11',
+          'edge >= 37',
           'safari >= 9',
           'opera >= 40',
         ],
