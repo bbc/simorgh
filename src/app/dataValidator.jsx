@@ -80,8 +80,10 @@ const validateBlock = dataToValidate => {
 };
 
 const validateData = data => {
+  console.time('validateBlock'); // eslint-disable-line no-console
   validateBlock(data);
-
+  log('');
+  console.timeEnd('validateBlock'); // eslint-disable-line no-console
   log('');
   log('Validation complete!');
 };
