@@ -12,7 +12,7 @@ describe('Server', () => {
 
       envs.forEach(env => {
         const key = Object.keys(env).shift();
-        // sets the env globally
+        // sets an env variable globally for the running test process
         process.env.NODE_ENV = key;
         expect(getPublicDirectory()).toBe(env[key]);
       });
