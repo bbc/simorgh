@@ -3,8 +3,6 @@ import * as after from '@jaredpalmer/after';
 import server, { getPublicDirectory } from './index';
 
 describe('Server', () => {
-  const makeRequest = async path => request(server).get(path);
-
   describe('getPublicDirectory', () => {
     it(`should set the directory path based on env`, () => {
       const envs = [{ production: 'build/public' }, { notProd: 'public' }];
@@ -16,6 +14,8 @@ describe('Server', () => {
       });
     });
   });
+
+  const makeRequest = async path => request(server).get(path);
 
   it(`should not pass an 'x-powered-by' response header`, async () => {
     const { headers } = await makeRequest('/status');
