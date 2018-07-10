@@ -115,3 +115,4 @@ module.exports.validateType = validateType;
 module.exports.validateNode = validateNode;
 module.exports.validateBlock = validateBlock;
 module.exports.validateData = validateData;
+module.exports.validateProperties = validateProperties;
