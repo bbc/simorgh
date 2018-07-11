@@ -11,6 +11,7 @@ if [[ $(pwd) =~ .+simorgh ]]; then
     echo "Your package-lock.json differs to origin/latest with" \
       $amount_of_additions \
       "additions"
+    echo "Now running an 'npm install'"
     npm install
   fi
 fi
