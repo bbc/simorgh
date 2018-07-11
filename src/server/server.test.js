@@ -12,14 +12,14 @@ describe('Server', () => {
   });
 
   describe('Routing for requests that are not articles', () => {
-    const data = [
-      { route: '/status', responseCode: 200 },
-      { route: '/*', responseCode: 404 },
+    const routes = [
+      { path: '/status', responseCode: 200 },
+      { path: '/*', responseCode: 404 },
     ];
 
-    data.forEach(el => {
+    routes.forEach(el => {
       it(`should respond with a ${el.responseCode}`, async () => {
-        const { statusCode } = await makeRequest(el.route);
+        const { statusCode } = await makeRequest(el.path);
         expect(statusCode).toBe(el.responseCode);
       });
     });
