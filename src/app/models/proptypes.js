@@ -16,6 +16,10 @@ export const textPropTypes = {
   ).isRequired,
 };
 
+export const requiredTextProp = {
+  text: string.isRequired,
+};
+
 export const optionalTextPropTypes = {
   blocks: arrayOf(
     shape({
@@ -30,6 +34,25 @@ export const optionalTextPropTypes = {
       }),
     }),
   ),
+};
+
+export const commonTextPropTypes = {
+  type: string,
+  model: shape({
+    blocks: arrayOf(
+      shape({
+        model: shape({
+          blocks: arrayOf(
+            shape({
+              model: shape({
+                text: string.isRequired,
+              }),
+            }),
+          ),
+        }),
+      }),
+    ),
+  }),
 };
 
 export const imagePropTypes = {
@@ -84,6 +107,25 @@ const baseDefaultPropTypes = {
     blocks: [
       {
         model: {},
+      },
+    ],
+  },
+};
+
+export const baseTextDefaultPropTypes = {
+  type: '',
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            {
+              model: {
+                text: '',
+              },
+            },
+          ],
+        },
       },
     ],
   },
