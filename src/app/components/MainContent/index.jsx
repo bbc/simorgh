@@ -25,6 +25,16 @@ const render = ({ blocks }) =>
 
 const MainContent = ({ data }) => {
   const renderedContent = render(data);
+
+  const obj1 = {
+    a: 1,
+    b: 2,
+    c: 3,
+  };
+
+  const obj2 = Object.assign({ c: 4, d: 5 }, obj1);
+  console.log(obj2.c);
+
   return <div>{renderedContent}</div>;
 };
 
