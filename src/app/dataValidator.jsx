@@ -24,7 +24,7 @@ const validateRequired = (requireSchema, dataNode) => {
 
   requireSchema.forEach(requiredProp => {
     if (!(requiredProp in dataNode)) {
-      throwError(`Error: Missing required prop for ${requiredProp}`);
+      throwError(`Error: Missing required property '${requiredProp}'`);
     } else {
       log(`  - ${requiredProp}`);
     }
@@ -36,7 +36,7 @@ const validateEnum = (schemaEnums, dataNode) => {
     log(`- Valid enum of ${dataNode}`);
   } else {
     throwError(
-      `Error: Type does not exist in enum array for ${dataNode} node - expected values [${schemaEnums}] got ${dataNode}`,
+      `Error: Type does not exist in enum array - expected values [${schemaEnums}] got '${dataNode}'`,
     );
   }
 };
@@ -46,9 +46,8 @@ const validateType = (schemaType, dataNode) => {
     if (schemaType === `${typeof dataNode}`) {
       log(`- Valid type of ${typeof dataNode}`);
     } else {
-      const nodeName = dataNode.type;
       throwError(
-        `Error: Type does not match for ${nodeName} node - expected ${schemaType} got ${typeof dataNode}`,
+        `Error: Type does not match - expected '${schemaType}' got '${typeof dataNode}'`,
       );
     }
   }
@@ -83,7 +82,7 @@ const validateBlock = dataToValidate => {
   const schemaName = dataToValidate.type;
 
   if (!(schemaName in schemas)) {
-    throwError(`Error: No schema exists for the block ${dataToValidate.type}`);
+    throwError(`Error: No schema exists for the block '${dataToValidate.type}'`);
   }
 
   log('');

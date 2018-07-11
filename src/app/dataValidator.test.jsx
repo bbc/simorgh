@@ -12,7 +12,7 @@ describe('Data Validator', () => {
       expect(() => {
         dataValidator.validateType(schemaType, dataArticleWrapper);
       }).toThrowError(
-        'Error: Type does not match for article node - expected string got object',
+        `Error: Type does not match - expected 'string' got 'object'`,
       );
     });
 
@@ -23,7 +23,7 @@ describe('Data Validator', () => {
       expect(() => {
         dataValidator.validateEnum(schemaEnumArray, enumData);
       }).toThrowError(
-        'Error: Type does not exist in enum array for shorthand node - expected values [analysis,feature,news] got shorthand',
+        `Error: Type does not exist in enum array - expected values [analysis,feature,news] got 'shorthand'`,
       );
     });
 
@@ -36,7 +36,7 @@ describe('Data Validator', () => {
 
       expect(() => {
         dataValidator.validateRequired(schema.required, dataArticleWrapper);
-      }).toThrowError('Error: Missing required prop for locator');
+      }).toThrowError(`Error: Missing required property 'locator'`);
     });
 
     it('should loop through all items of the required array and throw error when a required property is missing', () => {
@@ -53,7 +53,7 @@ describe('Data Validator', () => {
 
       expect(() => {
         dataValidator.validateRequired(schema.required, dataWithLocator);
-      }).toThrowError('Error: Missing required prop for passport');
+      }).toThrowError(`Error: Missing required property 'passport'`);
     });
 
     it('should loop properties and error if type does not match', () => {
@@ -69,7 +69,7 @@ describe('Data Validator', () => {
       expect(() => {
         dataValidator.validateProperties(schema, data);
       }).toThrowError(
-        `Error: Type does not match for undefined node - expected string got object`,
+        `Error: Type does not match - expected 'string' got 'object'`,
       );
     });
   });
