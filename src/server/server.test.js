@@ -11,10 +11,17 @@ describe('Server', () => {
     expect(headerKeys).not.toContain('x-powered-by');
   });
 
-  describe('/status', () => {
-    it('should respond with a 200', async () => {
-      const { statusCode } = await makeRequest('/status');
-      expect(statusCode).toBe(200);
+  describe('Routing for requests that are not articles', () => {
+    const data = [
+      { route: '/status', responseCode: 200 },
+      { route: '/*', responseCode: 404 },
+    ];
+
+    data.forEach(el => {
+      it(`should respond with a ${el.responseCode}`, async () => {
+        const { statusCode } = await makeRequest(el.route);
+        expect(statusCode).toBe(el.responseCode);
+      });
     });
   });
 
@@ -44,13 +51,6 @@ describe('Server', () => {
 
         const { text } = await makeRequest('/article/id/');
         expect(text).toContain(testData);
-      });
-    });
-
-    describe('/*', () => {
-      it('should respond with a 404', async () => {
-        const { statusCode } = await makeRequest('/icecream');
-        expect(statusCode).toBe(404);
       });
     });
   });
