@@ -21,7 +21,7 @@ describe('TextContainer', () => {
     const data = blockContainingText('subheading', 'The amazing subheading!');
 
     shouldMatchSnapshot(
-      'should render a headline component',
+      'should render a subheading component',
       <TextContainer {...data} />,
     );
   });
