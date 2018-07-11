@@ -9,7 +9,7 @@ if [[ $(pwd) =~ .+simorgh ]]; then
   # assume a single addition is a version bump
   if [ $amount_of_additions \> 1 ]; then
     echo "Your package-lock.json differs to origin/latest with" \
-      $(git diff origin/latest -- package-lock.json | grep "+  " | wc -l) \
+      $amount_of_additions \
       "additions"
     npm install
   fi
