@@ -14,7 +14,7 @@ exports[`TextContainer with headline props should render a headline component 1`
 </h1>
 `;
 
-exports[`TextContainer with subheading props should render a headline component 1`] = `
+exports[`TextContainer with subheading props should render a subheading component 1`] = `
 <h2>
   The amazing subheading!
 </h2>

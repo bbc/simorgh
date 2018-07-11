@@ -10,6 +10,6 @@ exports[`Headline with data should render correctly 1`] = `
 <h1
   className="c0"
 >
-  This is a headline!
+  This is a headline
 </h1>
 `;
