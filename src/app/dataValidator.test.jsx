@@ -108,5 +108,38 @@ describe('Data Validator', () => {
         dataValidator.validateRequired(schema.required, requiredData);
       }).not.toThrowError();
     });
+
+    it('should validate nested properties correctly', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          passport: {
+            type: 'object',
+            properties: {
+              language: {
+                type: 'string',
+              },
+              home: {
+                type: 'string',
+              },
+              articleType: {
+                type: 'string',
+              },
+            },
+          },
+        },
+      };
+      const data = {
+        passport: {
+          language: 'en-gb',
+          home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
+          articleType: 'news',
+        },
+      };
+
+      expect(() => {
+        dataValidator.validateProperties(schema, data);
+      }).not.toThrowError();
+    });
   });
 });
