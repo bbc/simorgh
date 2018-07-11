@@ -19,62 +19,68 @@ const throwError = errorMsg => {
   throw errorMsg;
 };
 
-const validateRequired = (requireSchema, dataNode) => {
+const validateRequired = (requireSchema, dataNode, schemaName) => {
   log('- Required values successfully found:');
 
   requireSchema.forEach(requiredProp => {
     if (!(requiredProp in dataNode)) {
-      throwError(`Error: Missing required property '${requiredProp}'`);
+      throwError(
+        `Error: Missing required property '${requiredProp}' for '${schemaName}'`,
+      );
     } else {
       log(`  - ${requiredProp}`);
     }
   });
 };
 
-const validateEnum = (schemaEnums, dataNode) => {
+const validateEnum = (schemaEnums, dataNode, schemaName) => {
   if (schemaEnums.includes(dataNode)) {
     log(`- Valid enum of ${dataNode}`);
   } else {
     throwError(
-      `Error: Type does not exist in enum array - expected values [${schemaEnums}] got '${dataNode}'`,
+      `Error: Value does not exist in enum array for '${schemaName}' - expected values [${schemaEnums}] got '${dataNode}'`,
     );
   }
 };
 
-const validateType = (schemaType, dataNode) => {
+const validateType = (schemaType, dataNode, schemaName) => {
   if (dataNode !== null && schemaType) {
     if (schemaType === `${typeof dataNode}`) {
       log(`- Valid type of ${typeof dataNode}`);
     } else {
       throwError(
-        `Error: Type does not match - expected '${schemaType}' got '${typeof dataNode}'`,
+        `Error: Type does not match for '${schemaName}' - expected '${schemaType}' got '${typeof dataNode}'`,
       );
     }
   }
 };
 
-const validateProperties = (propertiesSchema, dataNode) => {
+const validateProperties = (propertiesSchema, dataNode, schemaName) => {
   Object.keys(propertiesSchema).forEach(property => {
     const propertySchema = propertiesSchema[property];
     log('');
     log(`Validating Property ${property}`);
-    validateNode(propertySchema, dataNode[property]);
+    validateNode(
+      propertySchema,
+      dataNode[property],
+      `${schemaName}:${property}`,
+    );
   });
 };
 
-const validateNode = (currentSchemaNode, dataNode) => {
-  validateType(currentSchemaNode.type, dataNode);
+const validateNode = (currentSchemaNode, dataNode, schemaName) => {
+  validateType(currentSchemaNode.type, dataNode, schemaName);
 
   if (currentSchemaNode.enum) {
-    validateEnum(currentSchemaNode.enum, dataNode);
+    validateEnum(currentSchemaNode.enum, dataNode, schemaName);
   }
 
   if (currentSchemaNode.required) {
-    validateRequired(currentSchemaNode.required, dataNode);
+    validateRequired(currentSchemaNode.required, dataNode, schemaName);
   }
 
   if (currentSchemaNode.properties) {
-    validateProperties(currentSchemaNode.properties, dataNode);
+    validateProperties(currentSchemaNode.properties, dataNode, schemaName);
   }
 };
 
@@ -82,7 +88,9 @@ const validateBlock = dataToValidate => {
   const schemaName = dataToValidate.type;
 
   if (!(schemaName in schemas)) {
-    throwError(`Error: No schema exists for the block '${dataToValidate.type}'`);
+    throwError(
+      `Error: No schema exists for the block '${dataToValidate.type}'`,
+    );
   }
 
   log('');
@@ -91,7 +99,7 @@ const validateBlock = dataToValidate => {
   log('----------------------------------------------------------------');
 
   const blockSchema = schemas[schemaName];
-  validateNode(blockSchema, dataToValidate);
+  validateNode(blockSchema, dataToValidate, schemaName);
 };
 
 const validateData = data => {

@@ -8,22 +8,24 @@ describe('Data Validator', () => {
   describe('error checking', () => {
     it('should throw an error when schema type and data type do not match', () => {
       const schemaType = 'string';
+      const schemaName = 'article';
 
       expect(() => {
-        dataValidator.validateType(schemaType, dataArticleWrapper);
+        dataValidator.validateType(schemaType, dataArticleWrapper, schemaName);
       }).toThrowError(
-        `Error: Type does not match - expected 'string' got 'object'`,
+        `Error: Type does not match for 'article' - expected 'string' got 'object'`,
       );
     });
 
     it('should throw an error when data node is not in schema enum definition', () => {
       const enumData = 'shorthand';
       const schemaEnumArray = ['analysis', 'feature', 'news'];
+      const schemaName = 'articleType';
 
       expect(() => {
-        dataValidator.validateEnum(schemaEnumArray, enumData);
+        dataValidator.validateEnum(schemaEnumArray, enumData, schemaName);
       }).toThrowError(
-        `Error: Type does not exist in enum array - expected values [analysis,feature,news] got 'shorthand'`,
+        `Error: Value does not exist in enum array for 'articleType' - expected values [analysis,feature,news] got 'shorthand'`,
       );
     });
 
@@ -65,11 +67,12 @@ describe('Data Validator', () => {
       const data = {
         locator: {},
       };
+      const schemaName = 'article';
 
       expect(() => {
-        dataValidator.validateProperties(schema, data);
+        dataValidator.validateProperties(schema, data, schemaName);
       }).toThrowError(
-        `Error: Type does not match - expected 'string' got 'object'`,
+        `Error: Type does not match for 'article:locator' - expected 'string' got 'object'`,
       );
     });
   });
