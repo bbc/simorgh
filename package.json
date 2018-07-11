@@ -11,7 +11,7 @@
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dev": "razzle start",
     "lighthouse": "lighthouse http://localhost:7080/article/id --output-path=./reports/report.html --view",
-    "postmerge": "npm install",
+    "postmerge": "./scripts/dependencyUpdateCheck.sh",
     "precommit": "npm run test:lint",
     "prepush": "./scripts/upToDateWithLatest.sh && npm run test:unit",
     "speculate": "speculate",
