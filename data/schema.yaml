@@ -53,23 +53,22 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Article'
+                  $ref: '#/components/schemas/article'
         '400':
           description: bad input parameter/s
 components:
   schemas:
-    Article:
+    article:
       type: object
       required:
       - locator
-      - language
       - publishedDateTime
       - lastUpdatedDateTime
       - passport
       - seoHeadline
       - socialHeadline
       - metaDescription
-      - blocks
+      - model
       properties:
         locator:
           type: string
@@ -90,14 +89,14 @@ components:
               example: http://www.bbc.co.uk/ontologies/passport/home/News
             articleType:
               type: string
-              enum: [analysis, feature]
+              enum: [analysis, feature, news]
               example: analysis
         seoHeadline:
           type: string
           example: UK pledges extra £44m for Channel border security
         socialHeadline:
           type: string
-          example: You will never believe how much money UK pledges for Channel border security
+          example: Royals gather for Prince Louis Christening
         publishedDateTime:
           type: string
           format: date-time
@@ -106,42 +105,55 @@ components:
           type: string
           format: date-time
           example: 2017-12-21T17:32:28Z
-        MetaDescription:
-          type: boolean
-          example: null
+        metaDescription:
+          type: string
+          example: story about a young brave hero
+        model:
+          type: object
+          required:
+          - blocks
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
+                    # Properties of a referenced object
+    blocks:
+      type: array
+      items:
+        type: object
+        oneOf:
+        - $ref: '#/components/schemas/text'
+        - $ref: '#/components/schemas/image'
+        - $ref: '#/components/schemas/headline'
+        - $ref: '#/components/schemas/altText'
+        - $ref: '#/components/schemas/paragraph'
+        - $ref: '#/components/schemas/caption'
+        - $ref: '#/components/schemas/video'
+        - $ref: '#/components/schemas/rawVideo'
+        - $ref: '#/components/schemas/rawImage'
+        - $ref: '#/components/schemas/modelWithText'
+      minItems: 1
+
+    image:
+      type: object
+      required:
+      - blockId
+      - type
+      - model
+      properties:
+        blockId:
+          type: string
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+        type:
+          type: string
+          enum: [text]
         model:
           type: object
           properties:
             blocks:
-              properties:
-                blockId:
-                  type: string
-                  example: 0f29a57f-3492-3c0d-af51-837208b657fb
-                type:
-                  type: string
-                  enum: [Headline, Text,altText, paragraph, Image, caption, Video, rawImage, rawVideo]
-                model:
-                  oneOf:
-                  - $ref: '#/components/schemas/Article/properties/model/properties/blocks'
-                  - $ref: '#/components/schemas/Text'
-                  - $ref: '#/components/schemas/Image'
-                  - $ref: '#/components/schemas/Headline'
-                  - $ref: '#/components/schemas/altText'
-                  - $ref: '#/components/schemas/Paragraph'
-                  - $ref: '#/components/schemas/Caption'
-                  - $ref: '#/components/schemas/Video'
-                  - $ref: '#/components/schemas/rawVideo'
-                  - $ref: '#/components/schemas/rawImage'
-                  - $ref: '#/components/schemas/Model'
-                  - $ref: '#/components/schemas/rawImageBlock'
-                  - $ref: '#/components/schemas/rawVideoBlock'
+              $ref: '#/components/schemas/blocks'
 
-              example:
-                  blockid: 0f29a57f-3492-3c0d-af51-837208b657fb
-                  type: image
-                  model:
-                    # Properties of a referenced object
-    Image:
+    text:
       type: object
       required:
       - blockId
@@ -155,23 +167,12 @@ components:
           type: string
           enum: [text]
         model:
-          $ref: '#/components/schemas/rawImageBlock'
-    Text:
-      type: object
-      required:
-      - blockId
-      - type
-      - model
-      properties:
-        blockId:
-          type: string
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [text]
-        model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Headline:
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
+    headline:
       type: object
       required:
         - blockId
@@ -185,7 +186,11 @@ components:
           type: string
           enum: [headline]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     altText:
       type: object
       required:
@@ -200,8 +205,12 @@ components:
           type: string
           enum: [altText]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Paragraph:
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
+    paragraph:
       type: object
       required:
         - blockId
@@ -215,8 +224,12 @@ components:
           type: string
           enum: [paragraph]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Caption:
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
+    caption:
       type: object
       required:
         - blockId
@@ -230,8 +243,12 @@ components:
           type: string
           enum: [caption]
         model:
-          $ref: '#/components/schemas/Article/properties/model'
-    Video:
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
+    video:
       type: object
       required:
         - blockId
@@ -245,7 +262,11 @@ components:
           type: string
           enum: [Video]
         model:
-          $ref: '#/components/schemas/rawVideoBlock'
+          type: object
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+
     rawVideo:
       type: object
       required:
@@ -270,7 +291,7 @@ components:
           properties:
             guidance:
               type: boolean
-              example: null
+              example: true
             isLive:
               type: string
               example: false
@@ -282,7 +303,8 @@ components:
               example: false
             locator:
               type: string
-              example:
+              example: xyz:abc:pips:pid:p019fch9
+
     rawImage:
       type: object
       required:
@@ -316,23 +338,14 @@ components:
               example: https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg
             originCode:
               type: boolean
-              example: null
+              example: true
             copyrightHolder:
               type: string
               example: BBC
-    Model:
+
+    modelWithText:
       type: object
-      required:
-        - text
       properties:
         text:
           type: string
           example: Aliquam quis sodales nisl.
-    rawImageBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawImage'
-    rawVideoBlock:
-      properties:
-        blocks:
-            $ref: '#/components/schemas/rawVideo'
