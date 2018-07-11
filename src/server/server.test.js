@@ -17,10 +17,10 @@ describe('Server', () => {
       { path: '/*', responseCode: 404 },
     ];
 
-    routes.forEach(el => {
-      it(`should respond with a ${el.responseCode}`, async () => {
-        const { statusCode } = await makeRequest(el.path);
-        expect(statusCode).toBe(el.responseCode);
+    routes.forEach(route => {
+      it(`should respond with a ${route.responseCode}`, async () => {
+        const { statusCode } = await makeRequest(route.path);
+        expect(statusCode).toBe(route.responseCode);
       });
     });
   });
