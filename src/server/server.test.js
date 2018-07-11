@@ -18,7 +18,7 @@ describe('Server', () => {
     });
   });
 
-  describe('/*', () => {
+  describe('/article/*', () => {
     const renderWithTestData = mockRender => {
       after.render = jest.fn().mockImplementationOnce(mockRender);
     };
@@ -29,7 +29,7 @@ describe('Server', () => {
 
         renderWithTestData(() => testData);
 
-        const { text } = await makeRequest('/');
+        const { text } = await makeRequest('/article/id');
         expect(text).toContain(testData);
       });
     });
@@ -42,8 +42,15 @@ describe('Server', () => {
           throw testData;
         });
 
-        const { text } = await makeRequest('/');
+        const { text } = await makeRequest('/article/id/');
         expect(text).toContain(testData);
+      });
+    });
+
+    describe('/*', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest('/icecream');
+        expect(statusCode).toBe(404);
       });
     });
   });
