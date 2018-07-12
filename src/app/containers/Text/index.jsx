@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { textModelPropTypes } from '../../models/propTypes/text';
 import Markdown from '../../components/Markdown';
 
 const TextContainer = ({ blocks }) => {
@@ -10,15 +10,6 @@ const TextContainer = ({ blocks }) => {
   ));
 };
 
-TextContainer.propTypes = {
-  blocks: arrayOf(
-    shape({
-      blockId: string,
-      model: shape({
-        text: string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+TextContainer.propTypes = textModelPropTypes;
 
 export default TextContainer;
