@@ -7,10 +7,12 @@ export const textBlock = text => ({
   blocks: [
     {
       type: 'text',
+      blockId: 't-1',
       model: {
         blocks: [
           {
             type: 'paragraph',
+            blockId: 'p-1',
             model: {
               text,
             },
