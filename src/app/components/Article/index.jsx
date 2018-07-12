@@ -1,19 +1,24 @@
 import React, { Fragment, Component } from 'react';
 import Helmet from 'react-helmet';
 import 'isomorphic-fetch';
-import styled from 'styled-components';
 import Header from '../Header';
-import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
-
-const Headline = styled.h1`
-  color: ${C_EBON};
-  font-family: ${FF_NEWS_SANS_REG};
-  font-size: 2em;
-`;
+import MainContent from '../MainContent';
+import { textBlock } from '../../models/blocks';
 
 class Article extends Component {
   state = {
-    headline: 'Article Headline',
+    data: {
+      title: 'Article Headline',
+      model: {
+        blocks: [
+          {
+            type: 'headline',
+            blockId: '1',
+            model: textBlock('Article Headline'),
+          },
+        ],
+      },
+    },
   };
 
   static async getInitialProps({ req } = {}) {
@@ -34,14 +39,16 @@ class Article extends Component {
   }
 
   render() {
-    const { headline } = this.state;
+    const { data } = this.state;
+    const { title, model } = data;
+
     return (
       <Fragment>
         <Helmet htmlAttributes={{ lang: 'en-GB' }}>
-          <title>{headline}</title>
+          <title>{title}</title>
         </Helmet>
         <Header />
-        <Headline>{headline}</Headline>
+        <MainContent data={model} />
       </Fragment>
     );
   }
