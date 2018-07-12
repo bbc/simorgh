@@ -1,6 +1,9 @@
 import React from 'react';
-import { arrayOf, shape, string } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
+import {
+  textModelPropTypes,
+  textModelDefaultProps,
+} from '../../models/propTypes/text';
 
 const Text = ({ blocks }) =>
   blocks.map(({ blockId, model }) => (
@@ -9,19 +12,8 @@ const Text = ({ blocks }) =>
     </Markdown>
   ));
 
-Text.propTypes = {
-  blocks: arrayOf(
-    shape({
-      blockId: string,
-      model: shape({
-        text: string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+Text.propTypes = textModelPropTypes;
 
-Text.defaultProps = {
-  blocks: [],
-};
+Text.defaultProps = textModelDefaultProps;
 
 export default Text;

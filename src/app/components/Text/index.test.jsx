@@ -10,6 +10,7 @@ describe('Text', () => {
   describe('with data', () => {
     const paragraphBlock = (blockId, text) => ({
       blockId,
+      type: 'paragraph',
       model: {
         text,
       },
