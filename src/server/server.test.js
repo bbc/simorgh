@@ -14,7 +14,7 @@ describe('Server', () => {
   describe('Routing for requests that are not articles', () => {
     const routes = [
       { path: '/status', responseCode: 200 },
-      { path: '/*', responseCode: 404 },
+      { path: '/*', responseCode: 200 },
     ];
 
     routes.forEach(route => {

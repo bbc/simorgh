@@ -29,7 +29,7 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
-  .get('/article/*', async (req, res) => {
+  .get('/*', async (req, res) => {
     try {
       const html = await render({
         req,
@@ -42,9 +42,6 @@ server
     } catch (error) {
       res.json(error);
     }
-  })
-  .get('/*', async (req, res) => {
-    res.sendStatus(404);
   });
 
 export default server;
