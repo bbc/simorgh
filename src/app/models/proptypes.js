@@ -1,20 +1,5 @@
 import { arrayOf, bool, oneOfType, shape, string } from 'prop-types';
-
-export const textPropTypes = {
-  blocks: arrayOf(
-    shape({
-      model: shape({
-        blocks: arrayOf(
-          shape({
-            model: shape({
-              text: string.isRequired,
-            }).isRequired,
-          }).isRequired,
-        ).isRequired,
-      }).isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+import { textBlockPropTypes } from './propTypes/text';
 
 export const optionalTextPropTypes = {
   blocks: arrayOf(
@@ -44,7 +29,7 @@ export const imagePropTypes = {
         }).isRequired,
         // altText block
         shape({
-          model: shape(textPropTypes).isRequired,
+          model: shape(textBlockPropTypes).isRequired,
         }).isRequired,
         // caption block
         shape({
@@ -70,7 +55,7 @@ export const videoPropTypes = {
             }),
           }),
           // alt text
-          shape(textPropTypes),
+          shape(textBlockPropTypes),
           // image
           shape(imagePropTypes),
         ),
