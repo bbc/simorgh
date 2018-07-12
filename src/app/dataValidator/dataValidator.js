@@ -29,9 +29,7 @@ const validateBlock = dataToValidate => {
     throwError(`Error: No schema exists for the block ${dataToValidate.type}`);
   }
 
-  log('');
-  log('');
-  log(`Validating block: ${schemaName}`);
+  log(`\nValidating block: ${schemaName}`);
   log('----------------------------------------------------------------');
 
   const blockSchema = schemas[schemaName];
@@ -41,10 +39,9 @@ const validateBlock = dataToValidate => {
 const validateData = data => {
   console.time('validateBlock'); // eslint-disable-line no-console
   validateBlock(data);
-  log('');
+  log('\n');
   console.timeEnd('validateBlock'); // eslint-disable-line no-console
-  log('');
-  log('Validation complete!');
+  log('\nValidation complete!');
 };
 
 // invoke the validator for WIP purposes
