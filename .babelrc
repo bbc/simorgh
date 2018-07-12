@@ -1,5 +1,9 @@
 {
     "presets": [
-        "razzle"
+        ["env", {
+            "targets": {
+                "browsers": ["last 2 versions", "ie 8"]
+            }
+        }], ["razzle"]
     ]
 }
