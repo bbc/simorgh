@@ -11,21 +11,14 @@ describe('Server', () => {
     expect(headerKeys).not.toContain('x-powered-by');
   });
 
-  describe('Routing for requests that are not articles', () => {
-    const routes = [
-      { path: '/status', responseCode: 200 },
-      { path: '/*', responseCode: 200 },
-    ];
-
-    routes.forEach(route => {
-      it(`should respond with a ${route.responseCode}`, async () => {
-        const { statusCode } = await makeRequest(route.path);
-        expect(statusCode).toBe(route.responseCode);
-      });
+  describe('/status', () => {
+    it('should respond with a 200', async () => {
+      const { statusCode } = await makeRequest('/status');
+      expect(statusCode).toBe(200);
     });
   });
 
-  describe('/article/*', () => {
+  describe('/*', () => {
     const renderWithTestData = mockRender => {
       after.render = jest.fn().mockImplementationOnce(mockRender);
     };
@@ -36,7 +29,7 @@ describe('Server', () => {
 
         renderWithTestData(() => testData);
 
-        const { text } = await makeRequest('/article/id');
+        const { text } = await makeRequest('/');
         expect(text).toContain(testData);
       });
     });
@@ -49,7 +42,7 @@ describe('Server', () => {
           throw testData;
         });
 
-        const { text } = await makeRequest('/article/id/');
+        const { text } = await makeRequest('/');
         expect(text).toContain(testData);
       });
     });
