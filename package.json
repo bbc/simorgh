@@ -82,6 +82,9 @@
     "swagger-cli": "^2.1.0",
     "webpack-bundle-analyzer": "^2.13.1"
   },
+  "resolutions": {
+    "eslint-scope": "3.7.1"
+  },
   "jest": {
     "collectCoverageFrom": [
       "**/src/**/*.{js,jsx}",
