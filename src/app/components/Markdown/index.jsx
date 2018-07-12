@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, bool } from 'prop-types';
+import { string, bool, shape } from 'prop-types';
 import MD from 'markdown-to-jsx';
 
 const Markdown = ({ text, options }) => {
@@ -10,9 +10,9 @@ const Markdown = ({ text, options }) => {
 
 Markdown.propTypes = {
   text: string.isRequired,
-  options: {
+  options: shape({
     forceBlock: bool,
-  },
+  }),
 };
 
 Markdown.defaultProps = {
