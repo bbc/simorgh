@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown should render bold 1`] = `
+<p>
+  This is text with 
+  <strong>
+    some bold formatting
+  </strong>
+  .
+</p>
+`;
+
+exports[`Markdown should render inline-code 1`] = `
+<p>
+  This is text with 
+  <code>
+    some inline code
+  </code>
+  .
+</p>
+`;
+
+exports[`Markdown should render italics 1`] = `
+<p>
+  This is text with 
+  <strong>
+    some italic formatting
+  </strong>
+  .
+</p>
+`;
+
+exports[`Markdown should render strike-through 1`] = `
+<p>
+  This is text with 
+  <del>
+    some strike-through formatting
+  </del>
+  .
+</p>
+`;
