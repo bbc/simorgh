@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { extractText } from '../../helpers/blockHandlers';
-import { textPropTypes, textDefaultPropTypes } from '../../models/proptypes';
+import { textDefaultPropTypes } from '../../models/proptypes';
+import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
 
 const StyledHeadline = styled.h1`
@@ -20,7 +21,7 @@ const Headline = ({ blocks }) => {
   return <StyledHeadline>{text}</StyledHeadline>;
 };
 
-Headline.propTypes = textPropTypes;
+Headline.propTypes = headlineModelPropTypes;
 
 Headline.defaultProps = textDefaultPropTypes;
 
