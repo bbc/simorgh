@@ -1,7 +1,7 @@
 import React from 'react';
 import { any, arrayOf, shape } from 'prop-types';
 import headline from '../Headline';
-import text from '../Text';
+import text from '../../containers/Text';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
