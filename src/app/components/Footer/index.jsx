@@ -16,7 +16,9 @@ const StyledFooter = styled.footer`
 const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(4, 50%);
   list-style-type: none;
   margin: 0 0 ${GEL_SPACING}px 0;
   padding: 0 0 ${GEL_SPACING}px 0;
