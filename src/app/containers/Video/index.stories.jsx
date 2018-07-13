@@ -20,6 +20,6 @@ const img1 = imageBlock(rIB);
 
 const data = videoBlock(rVB, img1);
 
-storiesOf('Video', module).add('just raw video', () => (
+storiesOf('Video Container', module).add('default', () => (
   <VideoContainer {...data} />
 ));

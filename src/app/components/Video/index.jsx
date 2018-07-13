@@ -1,5 +1,5 @@
 import React from 'react';
-import { videoPropTypes, videoDefaultPropTypes } from '../../models/proptypes';
+import { videoComponentPropTypes } from '../../models/proptypes';
 
 const Video = ({
   videoLocator,
@@ -37,8 +37,15 @@ const Video = ({
   </div>
 );
 
-Video.propTypes = videoPropTypes;
+Video.propTypes = videoComponentPropTypes;
 
-Video.defaultProps = videoDefaultPropTypes;
+Video.defaultProps = {
+  videoLocator: 'video locator',
+  duration: 'duration',
+  rawImageSrc: 'raw image source',
+  versionID: 'version id',
+  imageLocator: 'image locator',
+  kind: 'kind',
+};
 
 export default Video;

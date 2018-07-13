@@ -64,6 +64,14 @@ export const videoPropTypes = {
   }).isRequired,
 };
 
+export const videoComponentPropTypes = {
+  videoLocator: string,
+  duration: string,
+  rawImageSrc: string,
+  versionID: string,
+  imageLocator: string,
+};
+
 const baseDefaultPropTypes = {
   model: {
     blocks: [
