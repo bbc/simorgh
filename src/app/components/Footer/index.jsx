@@ -13,6 +13,7 @@ const StyledFooter = styled.footer`
   font-family: ${FF_NEWS_SANS_REG};
   padding: ${GEL_SPACING_DBL}px ${GEL_SPACING}px;
 `;
+
 const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;

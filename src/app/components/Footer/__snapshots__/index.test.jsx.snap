@@ -10,7 +10,9 @@ exports[`Footer should render correctly 1`] = `
 .c1 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: repeat(4,50%);
   list-style-type: none;
   margin: 0 0 8px 0;
   padding: 0 0 8px 0;
