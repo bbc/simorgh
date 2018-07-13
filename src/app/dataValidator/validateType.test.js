@@ -1,3 +1,5 @@
+global.console.log = jest.fn(); // silence console.log during jest tests
+
 const { validateType } = require('./validateType');
 
 const data = {

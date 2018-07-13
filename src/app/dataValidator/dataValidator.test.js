@@ -1,3 +1,6 @@
+global.console.log = jest.fn(); // silence console.log during jest tests
+global.console.time = jest.fn(); // silence console.time during jest tests
+
 const yaml = require('yaml-js'); // eslint-disable-line import/no-extraneous-dependencies
 const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
 const { validateNode, validateBlock } = require('./dataValidator');

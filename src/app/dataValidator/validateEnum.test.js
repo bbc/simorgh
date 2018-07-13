@@ -1,3 +1,5 @@
+global.console.log = jest.fn(); // silence console.log during jest tests
+
 const { validateEnum } = require('./validateEnum');
 
 describe('validate Enum', () => {
