@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Markdown should render bold 1`] = `
+exports[`Text should render bold 1`] = `
 <p>
   This is text with 
   <strong>
@@ -10,7 +10,7 @@ exports[`Markdown should render bold 1`] = `
 </p>
 `;
 
-exports[`Markdown should render inline-code 1`] = `
+exports[`Text should render inline-code 1`] = `
 <p>
   This is text with 
   <code>
@@ -20,7 +20,7 @@ exports[`Markdown should render inline-code 1`] = `
 </p>
 `;
 
-exports[`Markdown should render italics 1`] = `
+exports[`Text should render italics 1`] = `
 <p>
   This is text with 
   <strong>
@@ -30,7 +30,7 @@ exports[`Markdown should render italics 1`] = `
 </p>
 `;
 
-exports[`Markdown should render strike-through 1`] = `
+exports[`Text should render strike-through 1`] = `
 <p>
   This is text with 
   <del>

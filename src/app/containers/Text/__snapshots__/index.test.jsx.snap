@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text with data should render correctly 1`] = `
+exports[`TextContainer with data should render correctly 1`] = `
 Array [
   <p>
     It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
