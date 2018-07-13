@@ -3,7 +3,7 @@ import { extractText } from '../../helpers/blockHandlers';
 import { textBlockPropTypes } from '../../models/propTypes/text/index';
 import { textDefaultPropTypes } from '../../models/proptypes';
 
-const SubHeading = ({ blocks }) => {
+const SubHeadingContainer = ({ blocks }) => {
   const { text } = extractText(blocks);
 
   if (!text) {
@@ -13,8 +13,8 @@ const SubHeading = ({ blocks }) => {
   return <h2>{text}</h2>;
 };
 
-SubHeading.propTypes = textBlockPropTypes;
+SubHeadingContainer.propTypes = textBlockPropTypes;
 
-SubHeading.defaultProps = textDefaultPropTypes;
+SubHeadingContainer.defaultProps = textDefaultPropTypes;
 
-export default SubHeading;
+export default SubHeadingContainer;
