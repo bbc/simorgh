@@ -18,6 +18,18 @@ describe('Data Validator', () => {
     }).not.toThrowError();
   });
 
+  it('should not error when enum is set', () => {
+    const enumSchema = {
+      type: 'string',
+      enum: ['analysis', 'feature', 'news'],
+    };
+    const enumData = 'analysis';
+
+    expect(() => {
+      validateNode(enumSchema, enumData);
+    }).not.toThrowError();
+  });
+
   it('should not error on validateBlock(article)', () => {
     expect(() => {
       validateBlock(data);
