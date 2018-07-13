@@ -35,10 +35,12 @@ Array [
   font-size: 2em;
 }
 
-<h1
-    className="c0"
-  >
-    Article Headline
-  </h1>,
+<div>
+    <h1
+      className="c0"
+    >
+      Article Headline
+    </h1>
+  </div>,
 ]
 `;
