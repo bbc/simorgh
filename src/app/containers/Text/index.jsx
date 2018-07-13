@@ -1,13 +1,11 @@
 import React from 'react';
 import { textModelPropTypes } from '../../models/propTypes/text';
-import Markdown from '../../components/Markdown';
+import Text from '../../components/Text';
 
 const TextContainer = ({ blocks }) => {
   if (!blocks) return null;
 
-  return blocks.map(({ blockId, model }) => (
-    <Markdown key={blockId} {...model} />
-  ));
+  return blocks.map(({ blockId, model }) => <Text key={blockId} {...model} />);
 };
 
 TextContainer.propTypes = textModelPropTypes;
