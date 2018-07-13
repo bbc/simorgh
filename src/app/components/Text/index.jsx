@@ -1,19 +1,24 @@
 import React from 'react';
+import { string, bool, shape } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
-import {
-  textModelPropTypes,
-  textModelDefaultProps,
-} from '../../models/propTypes/text';
 
-const Text = ({ blocks }) =>
-  blocks.map(({ blockId, model }) => (
-    <Markdown key={blockId} options={{ forceBlock: true }}>
-      {model.text}
-    </Markdown>
-  ));
+const Text = ({ text, options }) => {
+  if (!text) return null;
 
-Text.propTypes = textModelPropTypes;
+  return <Markdown options={options}>{text}</Markdown>;
+};
 
-Text.defaultProps = textModelDefaultProps;
+Text.propTypes = {
+  text: string.isRequired,
+  options: shape({
+    forceBlock: bool,
+  }),
+};
+
+Text.defaultProps = {
+  options: {
+    forceBlock: true,
+  },
+};
 
 export default Text;
