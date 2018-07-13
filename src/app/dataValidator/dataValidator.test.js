@@ -1,9 +1,10 @@
 const yaml = require('yaml-js'); // eslint-disable-line import/no-extraneous-dependencies
 const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
-const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');
+const { validateNode, validateBlock } = require('./dataValidator');
 const data = require('../../../data/test/scenario-01.json');
 
-const { validateNode, validateBlock } = require('./dataValidator');
+const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');
+
 const { components } = yaml.load(yamlSchema);
 const { article } = components.schemas;
 
