@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubHeading with data should display the provided sub-heading 1`] = `
-<h2>
+exports[`SubHeadingContainer with data should display the provided sub-heading 1`] = `
+<h2
+  className=""
+>
   The amazing sub-heading!?
 </h2>
 `;
 
-exports[`SubHeading with data should display the subheading containing various symbols 1`] = `
-<h2>
+exports[`SubHeadingContainer with data should display the subheading containing various symbols 1`] = `
+<h2
+  className=""
+>
   !@#$%^&*()'"?/[]{}
 </h2>
 `;
