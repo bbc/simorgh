@@ -26,7 +26,7 @@ describe('TextContainer', () => {
           '02',
           'This is another paragraph with some **bold** text.',
         ),
-        paragraphBlock('03', 'This is a paragraph with *italic* text.'),
+        paragraphBlock('03', 'This is a paragraph with __italic__ text.'),
         paragraphBlock(
           '04',
           '~~This is a paragraph with some strike-through text~~.',
