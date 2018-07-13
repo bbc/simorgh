@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import Video from './index';
+import VideoContainer from './index';
 import {
   videoBlock,
   rawImageModel,
@@ -20,4 +20,6 @@ const img1 = imageBlock(rIB);
 
 const data = videoBlock(rVB, img1);
 
-storiesOf('Video', module).add('just raw video', () => <Video {...data} />);
+storiesOf('Video', module).add('just raw video', () => (
+  <VideoContainer {...data} />
+));
