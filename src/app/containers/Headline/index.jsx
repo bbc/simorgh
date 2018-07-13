@@ -11,7 +11,7 @@ const StyledHeadline = styled.h1`
   font-size: 2em;
 `;
 
-const Headline = ({ blocks }) => {
+const HeadlineContainer = ({ blocks }) => {
   const { text } = extractText(blocks);
 
   if (!text) {
@@ -21,8 +21,8 @@ const Headline = ({ blocks }) => {
   return <StyledHeadline>{text}</StyledHeadline>;
 };
 
-Headline.propTypes = headlineModelPropTypes;
+HeadlineContainer.propTypes = headlineModelPropTypes;
 
-Headline.defaultProps = textDefaultPropTypes;
+HeadlineContainer.defaultProps = textDefaultPropTypes;
 
-export default Headline;
+export default HeadlineContainer;

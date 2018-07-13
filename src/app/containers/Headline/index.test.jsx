@@ -1,16 +1,19 @@
 import React from 'react';
-import Headline from './index';
+import HeadlineContainer from './index';
 import { textBlock } from '../../models/blocks';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 
-describe('Headline', () => {
+describe('HeadlineContainer', () => {
   describe('with no data', () => {
-    isNull('should not render anything', <Headline />);
+    isNull('should not render anything', <HeadlineContainer />);
   });
 
   describe('with data', () => {
     const data = textBlock('This is a headline!');
 
-    shouldMatchSnapshot('should render correctly', <Headline {...data} />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <HeadlineContainer {...data} />,
+    );
   });
 });
