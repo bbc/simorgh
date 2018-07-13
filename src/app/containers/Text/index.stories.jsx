@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import Text from './index';
+import TextContainer from './index';
 
 const paragraphBlock = (blockId, text) => ({
   blockId,
@@ -25,4 +25,6 @@ const props = {
   ],
 };
 
-storiesOf('Text', module).add('default', () => <Text {...props} />);
+storiesOf('TextContainer', module).add('default', () => (
+  <TextContainer {...props} />
+));

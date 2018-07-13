@@ -1,10 +1,10 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
-import Text from './index';
+import TextContainer from './index';
 
-describe('Text', () => {
+describe('TextContainer', () => {
   describe('with no data', () => {
-    isNull('should return null', <Text />);
+    isNull('should return null', <TextContainer />);
   });
 
   describe('with data', () => {
@@ -35,6 +35,6 @@ describe('Text', () => {
       ],
     };
 
-    shouldMatchSnapshot('should render correctly', <Text {...data} />);
+    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
   });
 });
