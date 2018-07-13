@@ -21,7 +21,7 @@ const renderCaption = block => {
   return <StyledFigCaption>{caption}</StyledFigCaption>;
 };
 
-const Image = ({ model }) => {
+const ImageContainer = ({ model }) => {
   const subBlocks = model.blocks;
 
   const rawImageBlock = filterForBlockType(subBlocks, 'rawImage');
@@ -44,8 +44,8 @@ const Image = ({ model }) => {
   );
 };
 
-Image.propTypes = imagePropTypes;
+ImageContainer.propTypes = imagePropTypes;
 
-Image.defaultProps = imageDefaultPropTypes;
+ImageContainer.defaultProps = imageDefaultPropTypes;
 
-export default Image;
+export default ImageContainer;

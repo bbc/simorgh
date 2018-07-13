@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from './index';
+import ImageContainer from './index';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import { blockContainingText } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    isNull('should return null', <Image />);
+    isNull('should return null', <ImageContainer />);
   });
 
   describe('with data', () => {
@@ -38,7 +38,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text',
-      <Image {...dataWithAltText} />,
+      <ImageContainer {...dataWithAltText} />,
     );
 
     const dataWithCaption = imageData([
@@ -55,7 +55,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text and caption',
-      <Image {...dataWithCaption} />,
+      <ImageContainer {...dataWithCaption} />,
     );
   });
 });
