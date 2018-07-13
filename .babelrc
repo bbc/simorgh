@@ -1,6 +1,7 @@
 {
     "presets": [
         ["env", {
+            "entry": ["babel-polyfill", "./src/client.js"],
             "useBuiltIns": true,
             "targets": {
                 "browsers": [
