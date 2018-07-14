@@ -27,12 +27,19 @@ const StyledList = styled.ul`
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
     margin-bottom: ${GEL_SPACING}px;
+    @supports not (display: grid) {
+      width: 100%;
+    }
   }
 `;
 
 const StyledListItem = styled.li`
   min-width: 50%;
   padding: ${GEL_SPACING}px;
+  @supports not (display: grid) {
+    padding: ${GEL_SPACING}px 0;
+    display: inline-block;
+  }
 `;
 
 const StyledLink = styled.a`
@@ -47,7 +54,7 @@ const StyledLink = styled.a`
 
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding-top: ${GEL_SPACING}px;
+  padding: ${GEL_SPACING}px 0 0 0;
   margin: 0;
 `;
 

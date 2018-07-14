@@ -43,8 +43,21 @@ exports[`Footer should render correctly 1`] = `
 
 .c4 {
   color: #FFFFFF;
-  padding-top: 8px;
+  padding: 8px 0 0 0;
   margin: 0;
+}
+
+@supports not (display:grid) {
+  .c1 > li:first-child {
+    width: 100%;
+  }
+}
+
+@supports not (display:grid) {
+  .c2 {
+    padding: 8px 0;
+    display: inline-block;
+  }
 }
 
 <footer
