@@ -61,30 +61,37 @@ const StyledParagraph = styled.p`
 const listItems = [
   {
     href: 'https://www.bbc.com/news/help-41670342',
+    id: '1',
     text: 'Why you can trust the BBC',
   },
   {
     href: 'http://www.bbc.com/terms',
+    id: '2',
     text: 'Terms of Use',
   },
   {
     href: 'https://www.bbc.com/news/help-41670342',
+    id: '3',
     text: 'About the BBC',
   },
   {
     href: 'https://www.bbc.com/news/help-41670342',
+    id: '4',
     text: 'Privacy Policy',
   },
   {
     href: 'http://www.bbc.com/terms',
+    id: '5',
     text: 'Cookies',
   },
   {
     href: 'https://www.bbc.com/news/help-41670342',
+    id: '6',
     text: 'Accessibility Help',
   },
   {
     href: 'https://www.bbc.com/news/help-41670342',
+    id: '7',
     text: 'Contact the BBC',
   },
 ];
@@ -98,7 +105,7 @@ const Footer = () => (
   <StyledFooter role="contentinfo">
     <StyledList>
       {listItems.map(listItem => (
-        <StyledListItem>
+        <StyledListItem key={listItem.id}>
           <StyledLink href={listItem.href}>{listItem.text}</StyledLink>
         </StyledListItem>
       ))}
