@@ -31,6 +31,7 @@ exports[`Footer should render correctly 1`] = `
 
 .c3 {
   color: #FFFFFF;
+  font-family: ReithSansNewsBold,Arial,Helvetica,freesans,sans-serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

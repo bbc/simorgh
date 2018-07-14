@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {
   C_GREY,
   C_WHITE,
+  FF_NEWS_SANS_BLD,
   FF_NEWS_SANS_REG,
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -44,6 +45,7 @@ const StyledListItem = styled.li`
 
 const StyledLink = styled.a`
   color: ${C_WHITE};
+  font-family: ${FF_NEWS_SANS_BLD};
   text-decoration: none;
 
   &:hover,
