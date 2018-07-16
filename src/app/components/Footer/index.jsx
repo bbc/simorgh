@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { arrayOf, string } from 'prop-types';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -7,6 +8,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
+import { linkPropTypes } from '../../models/proptypes';
 
 const StyledFooter = styled.footer`
   background-color: ${C_ORBIT_GREY};
@@ -59,46 +61,10 @@ const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-const externalLink = {
-  href: 'https://www.bbc.co.uk/help/web/links/',
-  text: 'Read about our approach to external linking.',
-};
-
-const listItems = [
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    text: 'Why you can trust the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    text: 'Terms of Use',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    text: 'About the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    text: 'Privacy Policy',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    text: 'Cookies',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    text: 'Accessibility Help',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    text: 'Contact the BBC',
-  },
-];
-
-const Footer = () => (
+const Footer = ({ list, text, link }) => (
   <StyledFooter role="contentinfo">
     <StyledList>
-      {listItems.map((listItem, index) => (
+      {list.map((listItem, index) => (
         // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
         // eslint-disable-next-line react/no-array-index-key
         <StyledListItem key={index}>
@@ -107,11 +73,16 @@ const Footer = () => (
       ))}
     </StyledList>
     <StyledParagraph>
-      Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
-      responsible for the content of external sites.
-      <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
+      {text}
+      <StyledLink href={link.href}>{link.text}</StyledLink>
     </StyledParagraph>
   </StyledFooter>
 );
+
+Footer.propTypes = {
+  list: arrayOf(linkPropTypes).isRequired,
+  text: string.isRequired,
+  link: linkPropTypes.isRequired,
+};
 
 export default Footer;
