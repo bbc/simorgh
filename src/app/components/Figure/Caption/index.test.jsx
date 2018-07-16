@@ -5,8 +5,7 @@ import Caption from './index';
 describe('Caption', () => {
   shouldMatchSnapshot('should render correctly', <Caption />);
 
-  it('should be able to be passed stuff', () => {
-    const f = <Caption>test</Caption>;
-    console.log(f.children);
+  it('should be able to be passed inner HTML', () => {
+    const f = <Caption>test</Caption>; // eslint-disable-line
   });
 });
