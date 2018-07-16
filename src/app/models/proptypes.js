@@ -65,11 +65,12 @@ export const videoPropTypes = {
 };
 
 export const videoComponentPropTypes = {
-  videoLocator: string,
   duration: string,
+  imageLocator: string,
+  kind: string,
   rawImageSrc: string,
   versionID: string,
-  imageLocator: string,
+  videoLocator: string,
 };
 
 const baseDefaultPropTypes = {

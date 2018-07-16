@@ -40,12 +40,12 @@ const Video = ({
 Video.propTypes = videoComponentPropTypes;
 
 Video.defaultProps = {
-  videoLocator: 'video locator',
-  duration: 'duration',
+  duration: 299,
+  imageLocator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
+  kind: 'clip',
   rawImageSrc: 'raw image source',
-  versionID: 'version id',
-  imageLocator: 'image locator',
-  kind: 'kind',
+  versionID: 'p064nsz3',
+  videoLocator: 'urn:bbc:pips:pid:p064nsyw',
 };
 
 export default Video;
