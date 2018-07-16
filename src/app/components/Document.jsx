@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import { ServerStyleSheet } from 'styled-components';
-import globalStyles from '../lib/globalStyles'; // eslint-disable-line no-unused-vars
+import '../lib/globalStyles';
 
 const resourceHints = () => (
   <Fragment>
