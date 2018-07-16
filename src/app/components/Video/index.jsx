@@ -1,64 +1,51 @@
 import React from 'react';
-import { videoPropTypes, videoDefaultPropTypes } from '../../models/proptypes';
-import { filterForBlockType } from '../../helpers/blockHandlers';
+import { videoComponentPropTypes } from '../../models/proptypes';
 
-const Video = ({ model }) => {
-  const subBlocks = model.blocks;
-
-  const rawVideo = filterForBlockType(subBlocks, 'rawVideo');
-  if (!rawVideo) {
-    return null;
-  }
-
-  const { locator: videoLocator, duration, versionID, kind } = rawVideo.model;
-
-  const imageBlock = filterForBlockType(subBlocks, 'image');
-
-  if (!imageBlock) {
-    return null;
-  }
-
-  const rawImage = filterForBlockType(imageBlock.model.blocks, 'rawImage');
-
-  if (!rawImage) {
-    return null;
-  }
-
-  const { locator: imageLocator } = rawImage.model;
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
-
-  return (
+const Video = ({
+  videoLocator,
+  duration,
+  rawImageSrc,
+  versionID,
+  imageLocator,
+  kind,
+}) => (
+  <div>
     <div>
-      <div>
-        video locator:
-        {videoLocator}
-      </div>
-      <div>
-        duration:
-        {duration}
-      </div>
-      <div>
-        raw Image Src:
-        {rawImageSrc}
-      </div>
-      <div>
-        versionID:
-        {versionID}
-      </div>
-      <div>
-        imageLocator:
-        {imageLocator}
-      </div>
-      <div>
-        kind:
-        {kind}
-      </div>
+      video locator:
+      {videoLocator}
     </div>
-  );
+    <div>
+      duration:
+      {duration}
+    </div>
+    <div>
+      raw Image Src:
+      {rawImageSrc}
+    </div>
+    <div>
+      versionID:
+      {versionID}
+    </div>
+    <div>
+      imageLocator:
+      {imageLocator}
+    </div>
+    <div>
+      kind:
+      {kind}
+    </div>
+  </div>
+);
+
+Video.propTypes = videoComponentPropTypes;
+
+Video.defaultProps = {
+  duration: 299,
+  imageLocator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
+  kind: 'clip',
+  rawImageSrc: 'raw image source',
+  versionID: 'p064nsz3',
+  videoLocator: 'urn:bbc:pips:pid:p064nsyw',
 };
-
-Video.propTypes = videoPropTypes;
-
-Video.defaultProps = videoDefaultPropTypes;
 
 export default Video;
