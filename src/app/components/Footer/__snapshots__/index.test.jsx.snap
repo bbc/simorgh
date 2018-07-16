@@ -37,7 +37,7 @@ exports[`Footer should render correctly 1`] = `
 }
 
 .c3:hover,
-.c3focus {
+.c3:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -150,7 +150,7 @@ exports[`Footer should render correctly 1`] = `
       href="http://www.bbc.co.uk/help/web/links/"
     >
        
-      Read about our approach to external linking
+      Read about our approach to external linking.
     </a>
   </p>
 </footer>

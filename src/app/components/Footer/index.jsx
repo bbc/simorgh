@@ -49,7 +49,7 @@ const StyledLink = styled.a`
   text-decoration: none;
 
   &:hover,
-  &focus {
+  &:focus {
     text-decoration: underline;
   }
 `;
@@ -100,7 +100,7 @@ const listItems = [
 
 const externalLink = {
   href: 'http://www.bbc.co.uk/help/web/links/',
-  text: 'Read about our approach to external linking',
+  text: 'Read about our approach to external linking.',
 };
 
 const Footer = () => (
