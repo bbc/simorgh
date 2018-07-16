@@ -1,19 +1,15 @@
 import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imagePropTypes, imageDefaultPropTypes } from '../../models/proptypes';
-import Caption from '../../components/Figure/Caption';
 import Figure from '../../components/Figure';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
-const renderCaption = block => {
+const getCaption = block => {
   if (!block) {
     return null;
   }
-
-  const caption = getText(block);
-
-  return <Caption>{caption}</Caption>;
+  return getText(block);
 };
 
 const ImageContainer = ({ model }) => {
@@ -35,7 +31,7 @@ const ImageContainer = ({ model }) => {
     <Figure
       src={rawImageSrc}
       alt={altText}
-      caption={renderCaption(captionBlock)}
+      caption={getCaption(captionBlock)}
     />
   );
 };

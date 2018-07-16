@@ -25,11 +25,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   <figcaption
     className="c0"
   >
-    <figcaption
-      className="c0"
-    >
-      Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-    </figcaption>
+    Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
   </figcaption>
 </figure>
 `;
