@@ -5,10 +5,12 @@ import { injectGlobal } from 'styled-components';
 
 // Colours
 export const C_EBON = '#222222';
-export const C_GREY = '#4C4C4C';
 export const C_POSTBOX = '#BB1919';
 export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
+
+// Colours from other services
+export const C_ORBIT_GREY = '#4C4C4C';
 
 // Font family
 const fontFamilyBase = ', Arial, Helvetica, freesans, sans-serif';

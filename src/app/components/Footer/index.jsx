@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  C_GREY,
+  C_ORBIT_GREY,
   C_WHITE,
   FF_NEWS_SANS_BLD,
   FF_NEWS_SANS_REG,
@@ -10,7 +10,7 @@ import {
 } from '../../lib/constants/styles';
 
 const StyledFooter = styled.footer`
-  background-color: ${C_GREY};
+  background-color: ${C_ORBIT_GREY};
   font-family: ${FF_NEWS_SANS_REG};
   padding: ${GEL_SPACING_DBL}px ${GEL_SPACING}px;
 `;
