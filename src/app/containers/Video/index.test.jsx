@@ -6,7 +6,7 @@ import {
   rawVideoBlock,
   imageBlock,
 } from '../../models/blocks';
-import Video from './index';
+import VideoContainer from './index';
 
 describe('Video', () => {
   const rVB = rawVideoBlock(
@@ -14,7 +14,7 @@ describe('Video', () => {
   );
 
   describe('with no data', () => {
-    shouldMatchSnapshot('should not render anything', <Video />);
+    shouldMatchSnapshot('should not render anything', <VideoContainer />);
   });
 
   describe('with data', () => {
@@ -51,14 +51,17 @@ describe('Video', () => {
 
     shouldMatchSnapshot(
       'should render the important props in divs',
-      <Video {...videoData} />,
+      <VideoContainer {...videoData} />,
     );
   });
 
   describe('with data but no image', () => {
     const data = videoBlock(rVB, null);
 
-    shouldMatchSnapshot('should only render the video', <Video {...data} />);
+    shouldMatchSnapshot(
+      'should only render the video',
+      <VideoContainer {...data} />,
+    );
   });
 
   describe('with data but no raw image', () => {
@@ -66,6 +69,6 @@ describe('Video', () => {
     const img = imageBlock(rIB);
     const data = videoBlock(rVB, img);
 
-    isNull('should be null', <Video {...data} />);
+    isNull('should be null', <VideoContainer {...data} />);
   });
 });
