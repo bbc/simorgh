@@ -59,54 +59,49 @@ const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-const listItems = [
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '1',
-    text: 'Why you can trust the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    id: '2',
-    text: 'Terms of Use',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '3',
-    text: 'About the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '4',
-    text: 'Privacy Policy',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    id: '5',
-    text: 'Cookies',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '6',
-    text: 'Accessibility Help',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '7',
-    text: 'Contact the BBC',
-  },
-];
-
 const externalLink = {
   href: 'https://www.bbc.co.uk/help/web/links/',
   text: 'Read about our approach to external linking.',
 };
 
+const listItems = [
+  {
+    href: 'https://www.bbc.com/news/help-41670342',
+    text: 'Why you can trust the BBC',
+  },
+  {
+    href: 'https://www.bbc.com/terms',
+    text: 'Terms of Use',
+  },
+  {
+    href: 'https://www.bbc.com/news/help-41670342',
+    text: 'About the BBC',
+  },
+  {
+    href: 'https://www.bbc.com/news/help-41670342',
+    text: 'Privacy Policy',
+  },
+  {
+    href: 'https://www.bbc.com/terms',
+    text: 'Cookies',
+  },
+  {
+    href: 'https://www.bbc.com/news/help-41670342',
+    text: 'Accessibility Help',
+  },
+  {
+    href: 'https://www.bbc.com/news/help-41670342',
+    text: 'Contact the BBC',
+  },
+];
+
 const Footer = () => (
   <StyledFooter role="contentinfo">
     <StyledList>
-      {listItems.map(listItem => (
-        <StyledListItem key={listItem.id}>
+      {listItems.map((listItem, index) => (
+        // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
+        // eslint-disable-next-line react/no-array-index-key
+        <StyledListItem key={index}>
           <StyledLink href={listItem.href}>{listItem.text}</StyledLink>
         </StyledListItem>
       ))}
