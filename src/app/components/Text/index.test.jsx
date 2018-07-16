@@ -14,7 +14,7 @@ describe('Text', () => {
 
   shouldMatchSnapshot(
     'should render italics',
-    <Text text="This is text with __some italic formatting__." />,
+    <Text text="This is text with _some italic formatting_." />,
   );
 
   shouldMatchSnapshot(
