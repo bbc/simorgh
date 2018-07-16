@@ -83,7 +83,7 @@ exports[`Footer should render correctly 1`] = `
     >
       <a
         className="c3"
-        href="http://www.bbc.com/terms"
+        href="https://www.bbc.com/terms"
       >
         Terms of Use
       </a>
@@ -113,7 +113,7 @@ exports[`Footer should render correctly 1`] = `
     >
       <a
         className="c3"
-        href="http://www.bbc.com/terms"
+        href="https://www.bbc.com/terms"
       >
         Cookies
       </a>
@@ -147,7 +147,7 @@ exports[`Footer should render correctly 1`] = `
      BBC. The BBC is not responsible for the content of external sites.
     <a
       className="c3"
-      href="http://www.bbc.co.uk/help/web/links/"
+      href="https://www.bbc.co.uk/help/web/links/"
     >
        
       Read about our approach to external linking.

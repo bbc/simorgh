@@ -67,7 +67,7 @@ const listItems = [
     text: 'Why you can trust the BBC',
   },
   {
-    href: 'http://www.bbc.com/terms',
+    href: 'https://www.bbc.com/terms',
     id: '2',
     text: 'Terms of Use',
   },
@@ -82,7 +82,7 @@ const listItems = [
     text: 'Privacy Policy',
   },
   {
-    href: 'http://www.bbc.com/terms',
+    href: 'https://www.bbc.com/terms',
     id: '5',
     text: 'Cookies',
   },
@@ -99,7 +99,7 @@ const listItems = [
 ];
 
 const externalLink = {
-  href: 'http://www.bbc.co.uk/help/web/links/',
+  href: 'https://www.bbc.co.uk/help/web/links/',
   text: 'Read about our approach to external linking.',
 };
 
