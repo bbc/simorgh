@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {
   C_ORBIT_GREY,
   C_WHITE,
-  FF_NEWS_SANS_BLD,
   FF_NEWS_SANS_REG,
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -45,7 +44,7 @@ const StyledListItem = styled.li`
 
 const StyledLink = styled.a`
   color: ${C_WHITE};
-  font-family: ${FF_NEWS_SANS_BLD};
+  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
 
   &:hover,
@@ -115,7 +114,7 @@ const Footer = () => (
     <StyledParagraph>
       Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
       responsible for the content of external sites.
-      <StyledLink href={externalLink.href}> {externalLink.text}</StyledLink>
+      <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
     </StyledParagraph>
   </StyledFooter>
 );
