@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubHeading should render correctly 1`] = `
+<h2
+  className=""
+>
+  should display the provided sub-heading
+</h2>
+`;
