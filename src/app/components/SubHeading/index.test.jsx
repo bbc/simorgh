@@ -1,6 +1,6 @@
 import React from 'react';
 import SubHeading from './index';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 describe('SubHeading', () => {
   shouldMatchSnapshot(
