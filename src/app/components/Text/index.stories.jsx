@@ -8,7 +8,7 @@ storiesOf('Text', module)
     <Text text="This is text with **some bold formatting**." />
   ))
   .add('italic', () => (
-    <Text text="This is text with __some italic formatting__." />
+    <Text text="This is text with _some italic formatting_." />
   ))
   .add('strike-through', () => (
     <Text text="This is text with ~~some strike-through formatting~~." />
