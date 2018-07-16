@@ -11,5 +11,8 @@ describe('Image', () => {
     expect(image.type).toBe('img');
   });
 
-  it('should have tested proptypes...', () => {});
+  it('should have alt text and src', () => {
+    expect(image.props.alt).toBe('kittens');
+    expect(image.props.src).toBe('path/kittens.jpg');
+  });
 });
