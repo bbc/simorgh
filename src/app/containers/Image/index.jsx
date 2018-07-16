@@ -2,6 +2,7 @@ import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imagePropTypes, imageDefaultPropTypes } from '../../models/proptypes';
 import Caption from '../../components/Figure/Caption';
+import Figure from '../../components/Figure';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -31,10 +32,11 @@ const ImageContainer = ({ model }) => {
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
   return (
-    <figure>
-      <img alt={altText} src={rawImageSrc} />
-      {renderCaption(captionBlock)}
-    </figure>
+    <Figure
+      src={rawImageSrc}
+      alt={altText}
+      caption={renderCaption(captionBlock)}
+    />
   );
 };
 
