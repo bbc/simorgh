@@ -2,6 +2,9 @@ const { log } = require('../../utilities/messaging');
 const { validateRequired } = require('./validateRequired');
 const { validateType } = require('./validateType');
 const { validateEnum } = require('./validateEnum');
+const {
+  propertyNeedsValidating,
+} = require('../interpretSchema/propertyNeedsValidating');
 
 const validateNode = (currentSchemaNode, dataNode, schemaName) => {
   validateType(currentSchemaNode.type, dataNode, schemaName);
@@ -19,15 +22,6 @@ const validateNode = (currentSchemaNode, dataNode, schemaName) => {
   }
 };
 
-const isRequiredProperty = (property, schema) => {
-  if (schema.required) {
-    if (schema.required.includes(property)) {
-      return true;
-    }
-  }
-  return false;
-};
-
 /*
   Due to the recursive nature of properties being able to be nested inside of properties
   both validateProperties() and validateNode() need to be contained within a single file
@@ -35,13 +29,13 @@ const isRequiredProperty = (property, schema) => {
 */
 const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
   const propertiesSchema = currentSchemaNode.properties;
+
   Object.keys(propertiesSchema).forEach(property => {
-    if (
-      isRequiredProperty(property, currentSchemaNode) ||
-      Object.prototype.hasOwnProperty.call(dataNode, property)
-    ) {
+    if (propertyNeedsValidating(currentSchemaNode, dataNode, property)) {
       const propertySchema = propertiesSchema[property];
+
       log(`\nValidating Property '${property}' in '${schemaName}'`);
+
       validateNode(
         propertySchema,
         dataNode[property],
