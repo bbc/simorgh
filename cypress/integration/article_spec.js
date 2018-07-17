@@ -56,7 +56,7 @@ describe('News Article', () => {
     });
   });
 
-  it('should load the font', () => {
+  it('should include the font faces', () => {
     const expectedFonts = [
       'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
       'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
