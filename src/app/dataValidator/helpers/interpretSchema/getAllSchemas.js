@@ -5,4 +5,4 @@ const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');
 const { components } = yaml.load(yamlSchema);
 const { schemas } = components;
 
-module.exports.loadSchema = () => schemas;
+module.exports.getAllSchemas = () => schemas;

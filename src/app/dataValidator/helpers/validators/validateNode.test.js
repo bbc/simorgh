@@ -2,10 +2,10 @@ global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { validateNode, validateProperties } = require('./validateNode');
-const { loadSchema } = require('../../utilities/loadSchema');
+const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
 const data = require('../../../../../data/test/scenario-01.json');
 
-const schemas = loadSchema();
+const schemas = getAllSchemas();
 const { article } = schemas;
 
 describe('Validate node & properties helper', () => {

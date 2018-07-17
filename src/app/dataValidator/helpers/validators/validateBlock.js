@@ -1,8 +1,8 @@
 const { log, throwError } = require('../../utilities/messaging');
-const { loadSchema } = require('../../utilities/loadSchema');
+const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
 const { validateNode } = require('./validateNode');
 
-const schemas = loadSchema();
+const schemas = getAllSchemas();
 
 module.exports.validateBlock = dataToValidate => {
   const schemaName = dataToValidate.type;
