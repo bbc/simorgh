@@ -7,6 +7,9 @@ export const C_POSTBOX = '#BB1919';
 export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
 
+// Colours from other services
+export const C_ORBIT_GREY = '#4C4C4C';
+
 // Font family
 const fontFamilyBase = ', Arial, Helvetica, freesans, sans-serif';
 export const FF_NEWS_SANS_LIT = `ReithSansNewsLight${fontFamilyBase}`;
