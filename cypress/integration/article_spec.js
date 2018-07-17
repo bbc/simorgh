@@ -81,4 +81,12 @@ describe('News Article', () => {
       styleTag.should('contain', font);
     });
   });
+
+  // Testing the actual fetch is not currently possible
+  it('should have script to fetch bundle', () => {
+    cy.get('script')
+      .last()
+      .should('have.attr', 'src')
+      .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
+  });
 });

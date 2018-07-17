@@ -8,8 +8,8 @@
   ],
   "version": "4.16.0",
   "hash": "dfe21ac0410cc17ae16e",
-  "time": 6146,
-  "builtAt": 1531757376591,
+  "time": 1440,
+  "builtAt": 1531865986332,
   "publicPath": "/",
   "outputPath": "/Users/hobbsb02/dev/simorgh/build/public",
   "assetsByChunkName": {
@@ -817,6 +817,51 @@
               "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "prop-types",
+              "loc": "9:0-35"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "44:12-21"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "45:23-32"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "46:12-21"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "47:12-21"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "prop-types",
               "loc": "12:0-35"
             },
             {
@@ -944,51 +989,6 @@
               "type": "harmony import specifier",
               "userRequest": "prop-types",
               "loc": "98:18-27"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "prop-types",
-              "loc": "9:0-35"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "44:12-21"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "45:23-32"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "46:12-21"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "47:12-21"
             },
             {
               "moduleId": "eO8H",
@@ -3720,9 +3720,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-          "issuerId": "oioR",
-          "issuerName": "./node_modules/core-js/library/modules/_for-of.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
+          "issuerId": "8gHz",
+          "issuerName": "./node_modules/core-js/library/modules/_species-constructor.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3760,14 +3760,14 @@
               "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "JMW+",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "name": "./node_modules/core-js/library/modules/es6.promise.js"
+              "id": "PBE1",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
             },
             {
-              "id": "oioR",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-              "name": "./node_modules/core-js/library/modules/_for-of.js"
+              "id": "8gHz",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
+              "name": "./node_modules/core-js/library/modules/_species-constructor.js"
             }
           ],
           "failed": false,
@@ -3776,15 +3776,6 @@
           "assets": [
           ],
           "reasons": [
-            {
-              "moduleId": "oioR",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-              "module": "./node_modules/core-js/library/modules/_for-of.js",
-              "moduleName": "./node_modules/core-js/library/modules/_for-of.js",
-              "type": "cjs require",
-              "userRequest": "./_an-object",
-              "loc": "4:15-38"
-            },
             {
               "moduleId": "8gHz",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
@@ -3802,6 +3793,15 @@
               "type": "cjs require",
               "userRequest": "./_an-object",
               "loc": "1:15-38"
+            },
+            {
+              "moduleId": "oioR",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+              "module": "./node_modules/core-js/library/modules/_for-of.js",
+              "moduleName": "./node_modules/core-js/library/modules/_for-of.js",
+              "type": "cjs require",
+              "userRequest": "./_an-object",
+              "loc": "4:15-38"
             },
             {
               "moduleId": "2faE",
@@ -3951,13 +3951,13 @@
               "loc": "2:13-33"
             },
             {
-              "moduleId": "PBE1",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
-              "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-              "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+              "moduleId": "JMW+",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "module": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
               "type": "cjs require",
               "userRequest": "./_global",
-              "loc": "5:13-33"
+              "loc": "3:13-33"
             },
             {
               "moduleId": "UWiX",
@@ -4050,13 +4050,13 @@
               "loc": "3:13-33"
             },
             {
-              "moduleId": "JMW+",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "module": "./node_modules/core-js/library/modules/es6.promise.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleId": "PBE1",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+              "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
               "type": "cjs require",
               "userRequest": "./_global",
-              "loc": "3:13-33"
+              "loc": "5:13-33"
             }
           ],
           "usedExports": true,
@@ -4568,9 +4568,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "issuerId": "JMW+",
-          "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "issuerId": "PBE1",
+          "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "issuerPath": [
             {
               "id": 0,
@@ -4608,9 +4608,9 @@
               "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "JMW+",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "name": "./node_modules/core-js/library/modules/es6.promise.js"
+              "id": "PBE1",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
             }
           ],
           "failed": false,
@@ -4620,15 +4620,6 @@
           ],
           "reasons": [
             {
-              "moduleId": "JMW+",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "module": "./node_modules/core-js/library/modules/es6.promise.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-              "type": "cjs require",
-              "userRequest": "./_species-constructor",
-              "loc": "11:25-58"
-            },
-            {
               "moduleId": "PBE1",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
               "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -4636,6 +4627,15 @@
               "type": "cjs require",
               "userRequest": "./_species-constructor",
               "loc": "6:25-58"
+            },
+            {
+              "moduleId": "JMW+",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "module": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+              "type": "cjs require",
+              "userRequest": "./_species-constructor",
+              "loc": "11:25-58"
             }
           ],
           "usedExports": true,
@@ -6036,15 +6036,6 @@
               "loc": "10:15-32"
             },
             {
-              "moduleId": "QMMT",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_classof.js",
-              "module": "./node_modules/core-js/library/modules/_classof.js",
-              "moduleName": "./node_modules/core-js/library/modules/_classof.js",
-              "type": "cjs require",
-              "userRequest": "./_wks",
-              "loc": "3:10-27"
-            },
-            {
               "moduleId": "8gHz",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
               "module": "./node_modules/core-js/library/modules/_species-constructor.js",
@@ -6052,6 +6043,15 @@
               "type": "cjs require",
               "userRequest": "./_wks",
               "loc": "4:14-31"
+            },
+            {
+              "moduleId": "QMMT",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_classof.js",
+              "module": "./node_modules/core-js/library/modules/_classof.js",
+              "moduleName": "./node_modules/core-js/library/modules/_classof.js",
+              "type": "cjs require",
+              "userRequest": "./_wks",
+              "loc": "3:10-27"
             },
             {
               "moduleId": "RfKB",
@@ -6063,15 +6063,6 @@
               "loc": "3:10-27"
             },
             {
-              "moduleId": "TuGD",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-detect.js",
-              "module": "./node_modules/core-js/library/modules/_iter-detect.js",
-              "moduleName": "./node_modules/core-js/library/modules/_iter-detect.js",
-              "type": "cjs require",
-              "userRequest": "./_wks",
-              "loc": "1:15-32"
-            },
-            {
               "moduleId": "TJWN",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-species.js",
               "module": "./node_modules/core-js/library/modules/_set-species.js",
@@ -6079,6 +6070,15 @@
               "type": "cjs require",
               "userRequest": "./_wks",
               "loc": "6:14-31"
+            },
+            {
+              "moduleId": "TuGD",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-detect.js",
+              "module": "./node_modules/core-js/library/modules/_iter-detect.js",
+              "moduleName": "./node_modules/core-js/library/modules/_iter-detect.js",
+              "type": "cjs require",
+              "userRequest": "./_wks",
+              "loc": "1:15-32"
             },
             {
               "moduleId": "zLkG",
@@ -12227,15 +12227,6 @@
               "loc": "2:14-44"
             },
             {
-              "moduleId": "JMW+",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "module": "./node_modules/core-js/library/modules/es6.promise.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-              "type": "cjs require",
-              "userRequest": "./_core",
-              "loc": "225:10-28"
-            },
-            {
               "moduleId": "PBE1",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
               "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -12243,6 +12234,15 @@
               "type": "cjs require",
               "userRequest": "./_core",
               "loc": "4:11-29"
+            },
+            {
+              "moduleId": "JMW+",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "module": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+              "type": "cjs require",
+              "userRequest": "./_core",
+              "loc": "225:10-28"
             },
             {
               "moduleId": "zn7N",
@@ -12584,9 +12584,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "issuerId": "JMW+",
-          "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "issuerId": "PBE1",
+          "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "issuerPath": [
             {
               "id": 0,
@@ -12624,9 +12624,9 @@
               "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "JMW+",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "name": "./node_modules/core-js/library/modules/es6.promise.js"
+              "id": "PBE1",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
             }
           ],
           "failed": false,
@@ -12645,19 +12645,19 @@
               "loc": "2:14-34"
             },
             {
-              "moduleId": "JMW+",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "module": "./node_modules/core-js/library/modules/es6.promise.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-              "type": "cjs require",
-              "userRequest": "./_export",
-              "loc": "6:14-34"
-            },
-            {
               "moduleId": "PBE1",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
               "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
               "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+              "type": "cjs require",
+              "userRequest": "./_export",
+              "loc": "3:14-34"
+            },
+            {
+              "moduleId": "Q/yX",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.try.js",
+              "module": "./node_modules/core-js/library/modules/es7.promise.try.js",
+              "moduleName": "./node_modules/core-js/library/modules/es7.promise.try.js",
               "type": "cjs require",
               "userRequest": "./_export",
               "loc": "3:14-34"
@@ -12726,13 +12726,13 @@
               "loc": "1:14-34"
             },
             {
-              "moduleId": "Q/yX",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.try.js",
-              "module": "./node_modules/core-js/library/modules/es7.promise.try.js",
-              "moduleName": "./node_modules/core-js/library/modules/es7.promise.try.js",
+              "moduleId": "JMW+",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "module": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
               "type": "cjs require",
               "userRequest": "./_export",
-              "loc": "3:14-34"
+              "loc": "6:14-34"
             }
           ],
           "usedExports": true,
@@ -12793,24 +12793,6 @@
               "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "history",
-              "loc": "14:0-41"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "history",
-              "loc": "74:44-58"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "history",
               "loc": "10:0-61"
             },
             {
@@ -12821,6 +12803,24 @@
               "type": "harmony import specifier",
               "userRequest": "history",
               "loc": "29:162-175"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "history",
+              "loc": "14:0-41"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "history",
+              "loc": "74:44-58"
             },
             {
               "moduleId": "eO8H",
@@ -13014,24 +13014,6 @@
                   "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
                   "type": "harmony side effect evaluation",
                   "userRequest": "history",
-                  "loc": "14:0-41"
-                },
-                {
-                  "moduleId": "eO8H",
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-                  "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-                  "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-                  "type": "harmony import specifier",
-                  "userRequest": "history",
-                  "loc": "74:44-58"
-                },
-                {
-                  "moduleId": "eO8H",
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-                  "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-                  "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "history",
                   "loc": "10:0-61"
                 },
                 {
@@ -13042,6 +13024,24 @@
                   "type": "harmony import specifier",
                   "userRequest": "history",
                   "loc": "29:162-175"
+                },
+                {
+                  "moduleId": "eO8H",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+                  "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+                  "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "history",
+                  "loc": "14:0-41"
+                },
+                {
+                  "moduleId": "eO8H",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+                  "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+                  "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "history",
+                  "loc": "74:44-58"
                 },
                 {
                   "moduleId": "eO8H",
@@ -17906,15 +17906,6 @@
               "loc": "8:16-40"
             },
             {
-              "moduleId": "2GTP",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ctx.js",
-              "module": "./node_modules/core-js/library/modules/_ctx.js",
-              "moduleName": "./node_modules/core-js/library/modules/_ctx.js",
-              "type": "cjs require",
-              "userRequest": "./_a-function",
-              "loc": "2:16-40"
-            },
-            {
               "moduleId": "8gHz",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
               "module": "./node_modules/core-js/library/modules/_species-constructor.js",
@@ -17922,6 +17913,15 @@
               "type": "cjs require",
               "userRequest": "./_a-function",
               "loc": "3:16-40"
+            },
+            {
+              "moduleId": "2GTP",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ctx.js",
+              "module": "./node_modules/core-js/library/modules/_ctx.js",
+              "moduleName": "./node_modules/core-js/library/modules/_ctx.js",
+              "type": "cjs require",
+              "userRequest": "./_a-function",
+              "loc": "2:16-40"
             },
             {
               "moduleId": "ZW5q",
@@ -22294,6 +22294,42 @@
               "loc": "13:53-69"
             },
             {
+              "moduleId": "HgBz",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
+              "module": "./node_modules/@jaredpalmer/after/build/After.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "37:25-41"
+            },
+            {
+              "moduleId": "ET5a",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "28:25-41"
+            },
+            {
+              "moduleId": "6Q7O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
+              "module": "./node_modules/@jaredpalmer/after/build/Document.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "66:25-41"
+            },
+            {
+              "moduleId": "6ihe",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
+              "module": "./node_modules/@jaredpalmer/after/build/render.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "65:25-41"
+            },
+            {
               "moduleId": "oFFJ",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
               "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
@@ -22316,6 +22352,33 @@
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
               "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
               "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "41:2-7"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "react",
+              "loc": "8:0-26"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "37:11-16"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "41:2-7"
@@ -22354,33 +22417,6 @@
               "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "8:0-26"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "37:11-16"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "41:2-7"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "react",
               "loc": "7:0-26"
             },
             {
@@ -22400,42 +22436,6 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "44:13-18"
-            },
-            {
-              "moduleId": "HgBz",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
-              "module": "./node_modules/@jaredpalmer/after/build/After.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "37:25-41"
-            },
-            {
-              "moduleId": "ET5a",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "28:25-41"
-            },
-            {
-              "moduleId": "6Q7O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
-              "module": "./node_modules/@jaredpalmer/after/build/Document.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "66:25-41"
-            },
-            {
-              "moduleId": "6ihe",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
-              "module": "./node_modules/@jaredpalmer/after/build/render.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "65:25-41"
             },
             {
               "moduleId": "eO8H",
@@ -22858,24 +22858,6 @@
               "moduleName": "./src/client.js + 16 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "2:0-26"
-            },
-            {
-              "moduleId": "ftlp",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
-              "module": "./src/client.js + 16 modules",
-              "moduleName": "./src/client.js + 16 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "14:11-16"
-            },
-            {
-              "moduleId": "ftlp",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
-              "module": "./src/client.js + 16 modules",
-              "moduleName": "./src/client.js + 16 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "react",
               "loc": "1:0-26"
             },
             {
@@ -22886,6 +22868,24 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "17:9-14"
+            },
+            {
+              "moduleId": "ftlp",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
+              "module": "./src/client.js + 16 modules",
+              "moduleName": "./src/client.js + 16 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "react",
+              "loc": "2:0-26"
+            },
+            {
+              "moduleId": "ftlp",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
+              "module": "./src/client.js + 16 modules",
+              "moduleName": "./src/client.js + 16 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "14:11-16"
             },
             {
               "moduleId": "9ObM",
@@ -25373,9 +25373,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "issuerId": "JMW+",
-          "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "issuerId": "PBE1",
+          "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "issuerPath": [
             {
               "id": 0,
@@ -25413,9 +25413,9 @@
               "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "JMW+",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "name": "./node_modules/core-js/library/modules/es6.promise.js"
+              "id": "PBE1",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
             }
           ],
           "failed": false,
@@ -25425,15 +25425,6 @@
           ],
           "reasons": [
             {
-              "moduleId": "JMW+",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-              "module": "./node_modules/core-js/library/modules/es6.promise.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-              "type": "cjs require",
-              "userRequest": "./_promise-resolve",
-              "loc": "17:21-50"
-            },
-            {
               "moduleId": "PBE1",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
               "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -25441,6 +25432,15 @@
               "type": "cjs require",
               "userRequest": "./_promise-resolve",
               "loc": "7:21-50"
+            },
+            {
+              "moduleId": "JMW+",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "module": "./node_modules/core-js/library/modules/es6.promise.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+              "type": "cjs require",
+              "userRequest": "./_promise-resolve",
+              "loc": "17:21-50"
             }
           ],
           "usedExports": true,
@@ -26276,6 +26276,51 @@
           "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "prop-types",
+          "loc": "9:0-35"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "44:12-21"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "45:23-32"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "46:12-21"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "47:12-21"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "prop-types",
           "loc": "12:0-35"
         },
         {
@@ -26403,51 +26448,6 @@
           "type": "harmony import specifier",
           "userRequest": "prop-types",
           "loc": "98:18-27"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony side effect evaluation",
-          "userRequest": "prop-types",
-          "loc": "9:0-35"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "44:12-21"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "45:23-32"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "46:12-21"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "47:12-21"
         },
         {
           "moduleId": "eO8H",
@@ -29163,9 +29163,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-      "issuerId": "oioR",
-      "issuerName": "./node_modules/core-js/library/modules/_for-of.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
+      "issuerId": "8gHz",
+      "issuerName": "./node_modules/core-js/library/modules/_species-constructor.js",
       "issuerPath": [
         {
           "id": 0,
@@ -29203,14 +29203,14 @@
           "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "JMW+",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "name": "./node_modules/core-js/library/modules/es6.promise.js"
+          "id": "PBE1",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
         },
         {
-          "id": "oioR",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-          "name": "./node_modules/core-js/library/modules/_for-of.js"
+          "id": "8gHz",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
+          "name": "./node_modules/core-js/library/modules/_species-constructor.js"
         }
       ],
       "failed": false,
@@ -29219,15 +29219,6 @@
       "assets": [
       ],
       "reasons": [
-        {
-          "moduleId": "oioR",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
-          "module": "./node_modules/core-js/library/modules/_for-of.js",
-          "moduleName": "./node_modules/core-js/library/modules/_for-of.js",
-          "type": "cjs require",
-          "userRequest": "./_an-object",
-          "loc": "4:15-38"
-        },
         {
           "moduleId": "8gHz",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
@@ -29245,6 +29236,15 @@
           "type": "cjs require",
           "userRequest": "./_an-object",
           "loc": "1:15-38"
+        },
+        {
+          "moduleId": "oioR",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+          "module": "./node_modules/core-js/library/modules/_for-of.js",
+          "moduleName": "./node_modules/core-js/library/modules/_for-of.js",
+          "type": "cjs require",
+          "userRequest": "./_an-object",
+          "loc": "4:15-38"
         },
         {
           "moduleId": "2faE",
@@ -29393,13 +29393,13 @@
           "loc": "2:13-33"
         },
         {
-          "moduleId": "PBE1",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
-          "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-          "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+          "moduleId": "JMW+",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "module": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
           "type": "cjs require",
           "userRequest": "./_global",
-          "loc": "5:13-33"
+          "loc": "3:13-33"
         },
         {
           "moduleId": "UWiX",
@@ -29492,13 +29492,13 @@
           "loc": "3:13-33"
         },
         {
-          "moduleId": "JMW+",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "module": "./node_modules/core-js/library/modules/es6.promise.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleId": "PBE1",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+          "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "type": "cjs require",
           "userRequest": "./_global",
-          "loc": "3:13-33"
+          "loc": "5:13-33"
         }
       ],
       "usedExports": true,
@@ -30003,9 +30003,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-      "issuerId": "JMW+",
-      "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+      "issuerId": "PBE1",
+      "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
       "issuerPath": [
         {
           "id": 0,
@@ -30043,9 +30043,9 @@
           "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "JMW+",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "name": "./node_modules/core-js/library/modules/es6.promise.js"
+          "id": "PBE1",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
         }
       ],
       "failed": false,
@@ -30055,15 +30055,6 @@
       ],
       "reasons": [
         {
-          "moduleId": "JMW+",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "module": "./node_modules/core-js/library/modules/es6.promise.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-          "type": "cjs require",
-          "userRequest": "./_species-constructor",
-          "loc": "11:25-58"
-        },
-        {
           "moduleId": "PBE1",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
           "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -30071,6 +30062,15 @@
           "type": "cjs require",
           "userRequest": "./_species-constructor",
           "loc": "6:25-58"
+        },
+        {
+          "moduleId": "JMW+",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "module": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "type": "cjs require",
+          "userRequest": "./_species-constructor",
+          "loc": "11:25-58"
         }
       ],
       "usedExports": true,
@@ -36786,15 +36786,6 @@
           "loc": "10:15-32"
         },
         {
-          "moduleId": "QMMT",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_classof.js",
-          "module": "./node_modules/core-js/library/modules/_classof.js",
-          "moduleName": "./node_modules/core-js/library/modules/_classof.js",
-          "type": "cjs require",
-          "userRequest": "./_wks",
-          "loc": "3:10-27"
-        },
-        {
           "moduleId": "8gHz",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
           "module": "./node_modules/core-js/library/modules/_species-constructor.js",
@@ -36802,6 +36793,15 @@
           "type": "cjs require",
           "userRequest": "./_wks",
           "loc": "4:14-31"
+        },
+        {
+          "moduleId": "QMMT",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_classof.js",
+          "module": "./node_modules/core-js/library/modules/_classof.js",
+          "moduleName": "./node_modules/core-js/library/modules/_classof.js",
+          "type": "cjs require",
+          "userRequest": "./_wks",
+          "loc": "3:10-27"
         },
         {
           "moduleId": "RfKB",
@@ -36813,15 +36813,6 @@
           "loc": "3:10-27"
         },
         {
-          "moduleId": "TuGD",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-detect.js",
-          "module": "./node_modules/core-js/library/modules/_iter-detect.js",
-          "moduleName": "./node_modules/core-js/library/modules/_iter-detect.js",
-          "type": "cjs require",
-          "userRequest": "./_wks",
-          "loc": "1:15-32"
-        },
-        {
           "moduleId": "TJWN",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-species.js",
           "module": "./node_modules/core-js/library/modules/_set-species.js",
@@ -36829,6 +36820,15 @@
           "type": "cjs require",
           "userRequest": "./_wks",
           "loc": "6:14-31"
+        },
+        {
+          "moduleId": "TuGD",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-detect.js",
+          "module": "./node_modules/core-js/library/modules/_iter-detect.js",
+          "moduleName": "./node_modules/core-js/library/modules/_iter-detect.js",
+          "type": "cjs require",
+          "userRequest": "./_wks",
+          "loc": "1:15-32"
         },
         {
           "moduleId": "zLkG",
@@ -37578,15 +37578,6 @@
           "loc": "2:14-44"
         },
         {
-          "moduleId": "JMW+",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "module": "./node_modules/core-js/library/modules/es6.promise.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-          "type": "cjs require",
-          "userRequest": "./_core",
-          "loc": "225:10-28"
-        },
-        {
           "moduleId": "PBE1",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
           "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -37594,6 +37585,15 @@
           "type": "cjs require",
           "userRequest": "./_core",
           "loc": "4:11-29"
+        },
+        {
+          "moduleId": "JMW+",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "module": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "type": "cjs require",
+          "userRequest": "./_core",
+          "loc": "225:10-28"
         },
         {
           "moduleId": "zn7N",
@@ -37931,9 +37931,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-      "issuerId": "JMW+",
-      "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+      "issuerId": "PBE1",
+      "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
       "issuerPath": [
         {
           "id": 0,
@@ -37971,9 +37971,9 @@
           "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "JMW+",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "name": "./node_modules/core-js/library/modules/es6.promise.js"
+          "id": "PBE1",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
         }
       ],
       "failed": false,
@@ -37992,19 +37992,19 @@
           "loc": "2:14-34"
         },
         {
-          "moduleId": "JMW+",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "module": "./node_modules/core-js/library/modules/es6.promise.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-          "type": "cjs require",
-          "userRequest": "./_export",
-          "loc": "6:14-34"
-        },
-        {
           "moduleId": "PBE1",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
           "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+          "type": "cjs require",
+          "userRequest": "./_export",
+          "loc": "3:14-34"
+        },
+        {
+          "moduleId": "Q/yX",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.try.js",
+          "module": "./node_modules/core-js/library/modules/es7.promise.try.js",
+          "moduleName": "./node_modules/core-js/library/modules/es7.promise.try.js",
           "type": "cjs require",
           "userRequest": "./_export",
           "loc": "3:14-34"
@@ -38073,13 +38073,13 @@
           "loc": "1:14-34"
         },
         {
-          "moduleId": "Q/yX",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.try.js",
-          "module": "./node_modules/core-js/library/modules/es7.promise.try.js",
-          "moduleName": "./node_modules/core-js/library/modules/es7.promise.try.js",
+          "moduleId": "JMW+",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "module": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
           "type": "cjs require",
           "userRequest": "./_export",
-          "loc": "3:14-34"
+          "loc": "6:14-34"
         }
       ],
       "usedExports": true,
@@ -38139,24 +38139,6 @@
           "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "history",
-          "loc": "14:0-41"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "history",
-          "loc": "74:44-58"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony side effect evaluation",
-          "userRequest": "history",
           "loc": "10:0-61"
         },
         {
@@ -38167,6 +38149,24 @@
           "type": "harmony import specifier",
           "userRequest": "history",
           "loc": "29:162-175"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "history",
+          "loc": "14:0-41"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "history",
+          "loc": "74:44-58"
         },
         {
           "moduleId": "eO8H",
@@ -38360,24 +38360,6 @@
               "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "history",
-              "loc": "14:0-41"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
-              "userRequest": "history",
-              "loc": "74:44-58"
-            },
-            {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "history",
               "loc": "10:0-61"
             },
             {
@@ -38388,6 +38370,24 @@
               "type": "harmony import specifier",
               "userRequest": "history",
               "loc": "29:162-175"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "history",
+              "loc": "14:0-41"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
+              "userRequest": "history",
+              "loc": "74:44-58"
             },
             {
               "moduleId": "eO8H",
@@ -43233,15 +43233,6 @@
           "loc": "8:16-40"
         },
         {
-          "moduleId": "2GTP",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ctx.js",
-          "module": "./node_modules/core-js/library/modules/_ctx.js",
-          "moduleName": "./node_modules/core-js/library/modules/_ctx.js",
-          "type": "cjs require",
-          "userRequest": "./_a-function",
-          "loc": "2:16-40"
-        },
-        {
           "moduleId": "8gHz",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_species-constructor.js",
           "module": "./node_modules/core-js/library/modules/_species-constructor.js",
@@ -43249,6 +43240,15 @@
           "type": "cjs require",
           "userRequest": "./_a-function",
           "loc": "3:16-40"
+        },
+        {
+          "moduleId": "2GTP",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ctx.js",
+          "module": "./node_modules/core-js/library/modules/_ctx.js",
+          "moduleName": "./node_modules/core-js/library/modules/_ctx.js",
+          "type": "cjs require",
+          "userRequest": "./_a-function",
+          "loc": "2:16-40"
         },
         {
           "moduleId": "ZW5q",
@@ -47589,6 +47589,42 @@
           "loc": "13:53-69"
         },
         {
+          "moduleId": "HgBz",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
+          "module": "./node_modules/@jaredpalmer/after/build/After.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "37:25-41"
+        },
+        {
+          "moduleId": "ET5a",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "28:25-41"
+        },
+        {
+          "moduleId": "6Q7O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
+          "module": "./node_modules/@jaredpalmer/after/build/Document.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "66:25-41"
+        },
+        {
+          "moduleId": "6ihe",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
+          "module": "./node_modules/@jaredpalmer/after/build/render.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "65:25-41"
+        },
+        {
           "moduleId": "oFFJ",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
           "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
@@ -47611,6 +47647,33 @@
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
           "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
           "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "41:2-7"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "react",
+          "loc": "8:0-26"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "37:11-16"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "41:2-7"
@@ -47649,33 +47712,6 @@
           "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "8:0-26"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "37:11-16"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "41:2-7"
-        },
-        {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony side effect evaluation",
-          "userRequest": "react",
           "loc": "7:0-26"
         },
         {
@@ -47695,42 +47731,6 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "44:13-18"
-        },
-        {
-          "moduleId": "HgBz",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
-          "module": "./node_modules/@jaredpalmer/after/build/After.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "37:25-41"
-        },
-        {
-          "moduleId": "ET5a",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "28:25-41"
-        },
-        {
-          "moduleId": "6Q7O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
-          "module": "./node_modules/@jaredpalmer/after/build/Document.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "66:25-41"
-        },
-        {
-          "moduleId": "6ihe",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
-          "module": "./node_modules/@jaredpalmer/after/build/render.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "65:25-41"
         },
         {
           "moduleId": "eO8H",
@@ -48153,24 +48153,6 @@
           "moduleName": "./src/client.js + 16 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "2:0-26"
-        },
-        {
-          "moduleId": "ftlp",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
-          "module": "./src/client.js + 16 modules",
-          "moduleName": "./src/client.js + 16 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "14:11-16"
-        },
-        {
-          "moduleId": "ftlp",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
-          "module": "./src/client.js + 16 modules",
-          "moduleName": "./src/client.js + 16 modules",
-          "type": "harmony side effect evaluation",
-          "userRequest": "react",
           "loc": "1:0-26"
         },
         {
@@ -48181,6 +48163,24 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "17:9-14"
+        },
+        {
+          "moduleId": "ftlp",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
+          "module": "./src/client.js + 16 modules",
+          "moduleName": "./src/client.js + 16 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "react",
+          "loc": "2:0-26"
+        },
+        {
+          "moduleId": "ftlp",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/client.js 4b639bab7c2ec44f24835d09cf99ccee",
+          "module": "./src/client.js + 16 modules",
+          "moduleName": "./src/client.js + 16 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "14:11-16"
         },
         {
           "moduleId": "9ObM",
@@ -50639,9 +50639,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-      "issuerId": "JMW+",
-      "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+      "issuerId": "PBE1",
+      "issuerName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
       "issuerPath": [
         {
           "id": 0,
@@ -50679,9 +50679,9 @@
           "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "JMW+",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "name": "./node_modules/core-js/library/modules/es6.promise.js"
+          "id": "PBE1",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "name": "./node_modules/core-js/library/modules/es7.promise.finally.js"
         }
       ],
       "failed": false,
@@ -50691,15 +50691,6 @@
       ],
       "reasons": [
         {
-          "moduleId": "JMW+",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
-          "module": "./node_modules/core-js/library/modules/es6.promise.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
-          "type": "cjs require",
-          "userRequest": "./_promise-resolve",
-          "loc": "17:21-50"
-        },
-        {
           "moduleId": "PBE1",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
           "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
@@ -50707,6 +50698,15 @@
           "type": "cjs require",
           "userRequest": "./_promise-resolve",
           "loc": "7:21-50"
+        },
+        {
+          "moduleId": "JMW+",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "module": "./node_modules/core-js/library/modules/es6.promise.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.promise.js",
+          "type": "cjs require",
+          "userRequest": "./_promise-resolve",
+          "loc": "17:21-50"
         }
       ],
       "usedExports": true,
