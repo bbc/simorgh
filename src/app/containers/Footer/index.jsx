@@ -6,7 +6,7 @@ const externalLink = {
   text: 'Read about our approach to external linking.',
 };
 
-const listItems = [
+const links = [
   {
     href: 'https://www.bbc.com/news/help-41670342',
     text: 'Why you can trust the BBC',
@@ -41,7 +41,11 @@ const currentYear = new Date().getFullYear();
 const copyrightText = `Copyright \u00A9 ${currentYear} BBC. The BBC is not responsible for the content of external sites. `;
 
 const FooterContainer = () => (
-  <Footer list={listItems} text={copyrightText} link={externalLink} />
+  <Footer
+    links={links}
+    copyrightText={copyrightText}
+    externalLink={externalLink}
+  />
 );
 
 export default FooterContainer;

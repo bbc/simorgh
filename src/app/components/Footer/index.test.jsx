@@ -9,10 +9,10 @@ describe(`Footer`, () => {
     text: 'Link',
   };
 
-  const list = [link];
+  const links = [link];
 
   shouldMatchSnapshot(
     'should render correctly',
-    <Footer list={list} text="Text here. " link={link} />,
+    <Footer links={links} copyrightText="Text here. " externalLink={link} />,
   );
 });

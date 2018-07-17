@@ -40,11 +40,6 @@ export const imagePropTypes = {
   }).isRequired,
 };
 
-export const linkPropTypes = shape({
-  href: string.isRequired,
-  text: string.isRequired,
-});
-
 export const videoPropTypes = {
   model: shape({
     blocks: arrayOf(

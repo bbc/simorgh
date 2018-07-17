@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { arrayOf, string } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -8,7 +8,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
-import { linkPropTypes } from '../../models/proptypes';
 
 const StyledFooter = styled.footer`
   background-color: ${C_ORBIT_GREY};
@@ -61,28 +60,33 @@ const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-const Footer = ({ list, text, link }) => (
+const Footer = ({ links, copyrightText, externalLink }) => (
   <StyledFooter role="contentinfo">
     <StyledList>
-      {list.map((listItem, index) => (
+      {links.map((link, index) => (
         // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
         // eslint-disable-next-line react/no-array-index-key
         <StyledListItem key={index}>
-          <StyledLink href={listItem.href}>{listItem.text}</StyledLink>
+          <StyledLink href={link.href}>{link.text}</StyledLink>
         </StyledListItem>
       ))}
     </StyledList>
     <StyledParagraph>
-      {text}
-      <StyledLink href={link.href}>{link.text}</StyledLink>
+      {copyrightText}
+      <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
     </StyledParagraph>
   </StyledFooter>
 );
 
-Footer.propTypes = {
-  list: arrayOf(linkPropTypes.isRequired).isRequired,
+const linkPropTypes = shape({
+  href: string.isRequired,
   text: string.isRequired,
-  link: linkPropTypes.isRequired,
+});
+
+Footer.propTypes = {
+  links: arrayOf(linkPropTypes.isRequired).isRequired,
+  copyrightText: string.isRequired,
+  externalLink: linkPropTypes.isRequired,
 };
 
 export default Footer;
