@@ -80,7 +80,7 @@ const Footer = ({ list, text, link }) => (
 );
 
 Footer.propTypes = {
-  list: arrayOf(linkPropTypes).isRequired,
+  list: arrayOf(linkPropTypes.isRequired).isRequired,
   text: string.isRequired,
   link: linkPropTypes.isRequired,
 };
