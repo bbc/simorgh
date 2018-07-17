@@ -13,7 +13,9 @@ jobs:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
         - ./cc-test-reporter before-build
-      script: npm run test
+      script:
+       - npm run test
+       - npm run test:accessibility:ci
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
       script: xvfb-run npm run test:e2e:ci
