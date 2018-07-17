@@ -1,8 +1,11 @@
 import React from 'react';
-import { imagePropTypes } from '../../models/proptypes';
+import { string } from 'prop-types';
 
 const Image = ({ alt, src }) => <img alt={alt} src={src} />;
 
-Image.propTypes = imagePropTypes;
+Image.propTypes = {
+  alt: string.isRequired,
+  src: string.isRequired,
+};
 
 export default Image;
