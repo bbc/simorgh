@@ -1,6 +1,6 @@
 import React from 'react';
 import Video from '../../components/Video';
-import { videoPropTypes, videoDefaultPropTypes } from '../../models/proptypes';
+import { videoPropTypes, videoDefaultPropTypes } from '../../models/propTypes';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const VideoContainer = ({ model }) => {
