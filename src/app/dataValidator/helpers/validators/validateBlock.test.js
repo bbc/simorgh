@@ -4,7 +4,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 const data = require('../../../../../data/test/scenario-01.json');
 const { validateBlock } = require('./validateBlock');
 
-describe('Data Validator', () => {
+describe('Validate block', () => {
   it('should not error on validateBlock(article)', () => {
     expect(() => {
       validateBlock(data);
@@ -16,14 +16,5 @@ describe('Data Validator', () => {
     expect(() => {
       validateBlock(headlineBlock);
     }).not.toThrowError();
-  });
-
-  it('should error when schema does not exist', () => {
-    const dataWithBadType = {
-      type: 'ich',
-    };
-    expect(() => {
-      validateBlock(dataWithBadType);
-    }).toThrowError('Error: No schema exists for the block ich');
   });
 });
