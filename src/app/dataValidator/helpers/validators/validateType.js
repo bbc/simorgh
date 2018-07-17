@@ -1,4 +1,4 @@
-const { log, throwError } = require('../../utilities/index');
+const { log, throwError } = require('../../utilities/messaging');
 
 module.exports.validateType = (schemaType, dataNode, schemaName) => {
   if (dataNode !== null && schemaType) {

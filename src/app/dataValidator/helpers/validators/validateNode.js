@@ -1,4 +1,4 @@
-const { log } = require('../../utilities/index');
+const { log } = require('../../utilities/messaging');
 const { validateRequired } = require('./validateRequired');
 const { validateType } = require('./validateType');
 const { validateEnum } = require('./validateEnum');

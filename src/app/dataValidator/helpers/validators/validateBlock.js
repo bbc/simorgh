@@ -1,6 +1,6 @@
 const yaml = require('yaml-js'); // eslint-disable-line import/no-extraneous-dependencies
 const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
-const { log, throwError } = require('../../utilities/index');
+const { log, throwError } = require('../../utilities/messaging');
 const { validateNode } = require('./validateNode');
 
 const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');

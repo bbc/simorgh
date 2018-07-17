@@ -1,4 +1,4 @@
-const { log } = require('./utilities/index');
+const { log } = require('./utilities/messaging');
 const { validateBlock } = require('./helpers/validators/validateBlock');
 
 const validateData = data => {

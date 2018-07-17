@@ -1,4 +1,4 @@
-const { log, throwError } = require('../../utilities/index');
+const { log, throwError } = require('../../utilities/messaging');
 
 module.exports.validateEnum = (schemaEnums, dataNode, schemaName) => {
   if (schemaEnums.includes(dataNode)) {
