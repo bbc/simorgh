@@ -1,7 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Figure should render correctly 1`] = `
+exports[`Figure with a caption should render correctly 1`] = `
+.c0 {
+  background-color: #d5d0cd;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  padding: 8px;
+}
+
 <figure>
-  <img />
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
+  <figcaption
+    className="c0"
+  >
+    This is a caption!
+  </figcaption>
+</figure>
+`;
+
+exports[`Figure without a caption should render correctly 1`] = `
+<figure>
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
 </figure>
 `;
