@@ -10,5 +10,7 @@ exports[`Caption should render correctly 1`] = `
 
 <figcaption
   className="c0"
-/>
+>
+  This is some Caption text
+</figcaption>
 `;
