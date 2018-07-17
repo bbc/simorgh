@@ -27,13 +27,12 @@ const ImageContainer = ({ model }) => {
   const altText = getText(altTextBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
-  return (
-    <Figure
-      src={rawImageSrc}
-      alt={altText}
-      caption={getCaption(captionBlock)}
-    />
-  );
+  const image = {
+    src: rawImageSrc,
+    alt: altText,
+  };
+
+  return <Figure image={image} caption={getCaption(captionBlock)} />;
 };
 
 ImageContainer.propTypes = imagePropTypes;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
 import Caption from './Caption';
 import Image from '../Image';
 
@@ -7,16 +7,18 @@ function renderCaption(caption) {
   return caption ? <Caption>{caption}</Caption> : null;
 }
 
-const Figure = ({ alt, src, caption }) => (
+const Figure = ({ image, caption }) => (
   <figure>
-    <Image alt={alt} src={src} />
+    <Image {...image} />
     {renderCaption(caption)}
   </figure>
 );
 
 Figure.propTypes = {
-  alt: string.isRequired,
-  src: string.isRequired,
+  image: shape({
+    alt: string.isRequired,
+    src: string.isRequired,
+  }).isRequired,
   caption: string,
 };
 
