@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 import Caption from './Caption';
 import Image from '../Image';
 
@@ -12,5 +13,15 @@ const Figure = ({ alt, src, caption }) => (
     {renderCaption(caption)}
   </figure>
 );
+
+Figure.propTypes = {
+  alt: string.isRequired,
+  src: string.isRequired,
+  caption: string,
+};
+
+Figure.defaultProps = {
+  caption: null,
+};
 
 export default Figure;
