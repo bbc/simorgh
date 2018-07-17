@@ -1,16 +1,10 @@
 import React from 'react';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import Headline from './index';
-import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 
 describe('Headline', () => {
-  describe('with no data', () => {
-    isNull('should not render anything', <Headline />);
-  });
-
-  describe('with data', () => {
-    const data = textBlock('This is a headline!');
-
-    shouldMatchSnapshot('should render correctly', <Headline {...data} />);
-  });
+  shouldMatchSnapshot(
+    'should render correctly',
+    <Headline>This is text with no formatting.</Headline>,
+  );
 });

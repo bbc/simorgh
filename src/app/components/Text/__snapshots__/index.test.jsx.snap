@@ -23,9 +23,9 @@ exports[`Text should render inline-code 1`] = `
 exports[`Text should render italics 1`] = `
 <p>
   This is text with 
-  <strong>
+  <em>
     some italic formatting
-  </strong>
+  </em>
   .
 </p>
 `;
