@@ -2,8 +2,9 @@ const { log, throwError } = require('../../utilities/messaging');
 const { loadSchema } = require('../../utilities/loadSchema');
 const { validateNode } = require('./validateNode');
 
+const schemas = loadSchema();
+
 module.exports.validateBlock = dataToValidate => {
-  const schemas = loadSchema();
   const schemaName = dataToValidate.type;
 
   if (!(schemaName in schemas)) {
