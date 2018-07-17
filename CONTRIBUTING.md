@@ -60,6 +60,7 @@ If you have a breaking change in a commit, prefix the commit message with `BREAK
 - Test files should follow the dot notation as per the Jest convention, e.g. `index.test.jsx`
 - Stories should follow the dot notation as per the Storybook convention, e.g. `index.stories.jsx`
 - Files and directories should be camelCase, e.g. `storyBody.jsx`
+- The main entry file in a directory should be named `index.[extension]` e.g. `Headline/index.jsx` and `server/index.js`
 - Static assets e.g. `icon-128x128.png` do not need to be camelCased.
 
 ### Run tests
