@@ -1,4 +1,4 @@
-const { log, throwError } = require('./validatorHelper');
+const { log, throwError } = require('../../utilities/index');
 
 module.exports.validateType = (schemaType, dataNode, schemaName) => {
   if (dataNode !== null && schemaType) {

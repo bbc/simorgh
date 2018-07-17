@@ -1,4 +1,4 @@
-const { log, throwError } = require('./validatorHelper');
+const { log, throwError } = require('../../utilities/index');
 
 module.exports.validateRequired = (requireSchema, dataNode, schemaName) => {
   log('- Required values successfully found:');

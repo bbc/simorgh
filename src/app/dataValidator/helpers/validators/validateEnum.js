@@ -1,4 +1,4 @@
-const { log, throwError } = require('./validatorHelper');
+const { log, throwError } = require('../../utilities/index');
 
 module.exports.validateEnum = (schemaEnums, dataNode, schemaName) => {
   if (schemaEnums.includes(dataNode)) {
