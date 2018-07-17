@@ -95,8 +95,8 @@ components:
           type: string
           example: UK pledges extra £44m for Channel border security
         socialHeadline:
-         type: string
-         example: Royals gather for Prince Louis Christening
+          type: string
+          example: Royals gather for Prince Louis Christening
         publishedDateTime:
           type: string
           format: date-time
