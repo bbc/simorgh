@@ -1,15 +1,12 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const yaml = require('yaml-js'); // eslint-disable-line import/no-extraneous-dependencies
-const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
 const { validateNode, validateProperties } = require('./validateNode');
+const { loadSchema } = require('../../utilities/loadSchema');
 const data = require('../../../../../data/test/scenario-01.json');
 
-const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');
-
-const { components } = yaml.load(yamlSchema);
-const { article } = components.schemas;
+const schemas = loadSchema();
+const { article } = schemas;
 
 describe('Validate node & properties helper', () => {
   it('should not error on validateNode', () => {
