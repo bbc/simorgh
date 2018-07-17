@@ -1,6 +1,6 @@
 import React from 'react';
 import { any, arrayOf, shape } from 'prop-types';
-import headline from '../Headline';
+import headline from '../../containers/Headline';
 import text from '../../containers/Text';
 
 // Inlined as this is a temporary component
