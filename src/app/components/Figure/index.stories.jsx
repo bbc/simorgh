@@ -12,5 +12,5 @@ const image = {
 const caption = 'This is a caption!';
 
 storiesOf('Figure', module)
-  .add('with a caption', () => <Figure image={image} caption={caption} />)
-  .add('without a caption', () => <Figure image={image} />);
+  .add('with a caption', () => <Figure {...image} caption={caption} />)
+  .add('without a caption', () => <Figure {...image} />);

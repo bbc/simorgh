@@ -1,24 +1,21 @@
 import React from 'react';
-import { string, shape } from 'prop-types';
+import { string } from 'prop-types';
 import Caption from './Caption';
-import Image from '../Image';
 
 function renderCaption(caption) {
   return caption ? <Caption>{caption}</Caption> : null;
 }
 
-const Figure = ({ image, caption }) => (
+const Figure = ({ src, alt, caption }) => (
   <figure>
-    <Image {...image} />
+    <img src={src} alt={alt} />
     {renderCaption(caption)}
   </figure>
 );
 
 Figure.propTypes = {
-  image: shape({
-    alt: string.isRequired,
-    src: string.isRequired,
-  }).isRequired,
+  alt: string.isRequired,
+  src: string.isRequired,
   caption: string,
 };
 

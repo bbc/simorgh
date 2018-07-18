@@ -15,11 +15,11 @@ describe('Figure', () => {
   describe('with a caption', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure image={image} caption={caption} />,
+      <Figure {...image} caption={caption} />,
     );
   });
 
   describe('without a caption', () => {
-    shouldMatchSnapshot('should render correctly', <Figure image={image} />);
+    shouldMatchSnapshot('should render correctly', <Figure {...image} />);
   });
 });
