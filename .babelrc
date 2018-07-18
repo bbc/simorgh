@@ -1,7 +1,6 @@
 {
     "presets": [
-        "razzle/babel",
-        "stage-0", ["env", {
+        "razzle/babel", ["env", {
             "useBuiltIns": true,
             "targets": {
                 "browsers": [
