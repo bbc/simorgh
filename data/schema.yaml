@@ -71,10 +71,24 @@ components:
         # - socialHeadline # currently not in any scenario data, see issues
         - type
       properties:
+        lastUpdatedDateTime:
+          type: string
+          format: date-time
+          example: 2017-12-21T17:32:28Z
         locator:
           type: string
           format: uuid
           example: urn:bjk:hello:asset:c000zk2l88wo
+        metaDescription:
+          type: string
+          example: story about a young brave hero
+        model:
+          type: object
+          required:
+          - blocks
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
         passport:
           type: object
           required:
@@ -92,30 +106,19 @@ components:
               type: string
               enum: [analysis, feature, news]
               example: analysis
+        publishedDateTime:
+          type: string
+          format: date-time
+          example: 2017-07-21T17:32:28Z
         seoHeadline:
           type: string
           example: UK pledges extra £44m for Channel border security
         socialHeadline:
           type: string
           example: Royals gather for Prince Louis Christening
-        publishedDateTime:
+        type:
           type: string
-          format: date-time
-          example: 2017-07-21T17:32:28Z
-        lastUpdatedDateTime:
-          type: string
-          format: date-time
-          example: 2017-12-21T17:32:28Z
-        metaDescription:
-          type: string
-          example: story about a young brave hero
-        model:
-          type: object
-          required:
-          - blocks
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
+          enum: ['article']
 
                     # Properties of a referenced object
     blocks:
@@ -145,14 +148,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [text]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['image']
 
     text:
       type: object
@@ -164,14 +167,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [text]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['text']
 
     headline:
       type: object
@@ -183,14 +186,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [headline]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['headline']
 
     altText:
       type: object
@@ -202,14 +205,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [altText]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['altText']
 
     paragraph:
       type: object
@@ -221,14 +224,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [paragraph]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['paragraph']
 
     caption:
       type: object
@@ -240,14 +243,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [caption]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['caption']
 
     video:
       type: object
@@ -259,14 +262,14 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [Video]
         model:
           type: object
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
+        type:
+          type: string
+          enum: ['video']
 
     rawVideo:
       type: object
@@ -278,9 +281,6 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [rawVideo]
         model:
           type: object
           required:
@@ -290,21 +290,24 @@ components:
             - isLive
             - locator
           properties:
+            allowffsiteEmbedding:
+              type: string
+              example: false
+            duration:
+              type: string
+              example: PTSVHD02
             guidance:
               type: boolean
               example: true
             isLive:
               type: string
               example: false
-            duration:
-              type: string
-              example: PTSVHD02
-            allowffsiteEmbedding:
-              type: string
-              example: false
             locator:
               type: string
               example: xyz:abc:pips:pid:p019fch9
+        type:
+          type: string
+          enum: ['rawVideo']
 
     rawImage:
       type: object
@@ -316,9 +319,6 @@ components:
         blockId:
           type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        type:
-          type: string
-          enum: [rawImage]
         model:
           type: object
           required:
@@ -328,9 +328,9 @@ components:
             - originCode
             - width
           properties:
-            width:
-              type: integer
-              example: 640
+            copyrightHolder:
+              type: string
+              example: BBC
             height:
               type: integer
               example: 420
@@ -340,9 +340,12 @@ components:
             originCode:
               type: boolean
               example: true
-            copyrightHolder:
-              type: string
-              example: BBC
+            width:
+              type: integer
+              example: 640
+        type:
+          type: string
+          enum: ['rawImage']
 
     modelWithText:
       type: object
