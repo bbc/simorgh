@@ -3,7 +3,7 @@ import 'isomorphic-fetch';
 import Article from '../../components/Article';
 import { textBlock } from '../../models/blocks';
 
-class ArticleContaine extends Component {
+class ArticleContainer extends Component {
   state = {
     data: {
       title: 'Article Headline',
@@ -45,4 +45,4 @@ class ArticleContaine extends Component {
   }
 }
 
-export default Article;
+export default ArticleContainer;
