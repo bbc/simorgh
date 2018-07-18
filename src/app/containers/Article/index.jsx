@@ -1,11 +1,9 @@
-import React, { Fragment, Component } from 'react';
-import Helmet from 'react-helmet';
+import React, { Component } from 'react';
 import 'isomorphic-fetch';
-import Header from '../../components/Header';
-import MainContent from '../../components/MainContent';
+import Article from '../../components/Article';
 import { textBlock } from '../../models/blocks';
 
-class Article extends Component {
+class ArticleContaine extends Component {
   state = {
     data: {
       title: 'Article Headline',
@@ -43,15 +41,7 @@ class Article extends Component {
     const { data } = this.state;
     const { title, model } = data;
 
-    return (
-      <Fragment>
-        <Helmet htmlAttributes={{ lang: 'en-GB' }}>
-          <title>{title}</title>
-        </Helmet>
-        <Header />
-        <MainContent data={model} />
-      </Fragment>
-    );
+    return <Article lang="en-GB" title={title} data={model} />;
   }
 }
 
