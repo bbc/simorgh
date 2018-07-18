@@ -56,7 +56,7 @@ describe('News Article', () => {
     });
   });
 
-  it('should load the font', () => {
+  it('should include the font faces', () => {
     const expectedFonts = [
       'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
       'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
@@ -80,5 +80,13 @@ describe('News Article', () => {
     expectedFonts.forEach(font => {
       styleTag.should('contain', font);
     });
+  });
+
+  // Testing the actual fetch is not currently possible
+  it('should have script to fetch bundle', () => {
+    cy.get('script')
+      .last()
+      .should('have.attr', 'src')
+      .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
 });
