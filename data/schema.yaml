@@ -68,132 +68,78 @@ components:
         - passport
         - publishedDateTime
         - seoHeadline
-        # - socialHeadline # currently not in any scenario data, see issues
         - type
       properties:
         lastUpdatedDateTime:
-          type: string
+          example: 2017-12-21 17:32:28 +00:00
           format: date-time
-          example: 2017-12-21T17:32:28Z
+          type: string
         locator:
-          type: string
+          example: "urn:bjk:hello:asset:c000zk2l88wo"
           format: uuid
-          example: urn:bjk:hello:asset:c000zk2l88wo
-        metaDescription:
           type: string
-          example: story about a young brave hero
+        metaDescription:
+          example: "story about a young brave hero"
+          type: string
         model:
-          type: object
-          required:
-          - blocks
           properties:
             blocks:
-              $ref: '#/components/schemas/blocks'
-        passport:
+              $ref: "#/components/schemas/blocks"
+          required:
+            - blocks
           type: object
+        passport:
+          properties:
+            articleType:
+              enum:
+                - analysis
+                - feature
+                - news
+              example: analysis
+              type: string
+            home:
+              example: "http://www.bbc.co.uk/ontologies/passport/home/News"
+              type: string
+            language:
+              example: en-gb
+              type: string
           required:
             - articleType
             - home
             - language
-          properties:
-            language:
-              type: string
-              example: en-gb
-            home:
-              type: string
-              example: http://www.bbc.co.uk/ontologies/passport/home/News
-            articleType:
-              type: string
-              enum: [analysis, feature, news]
-              example: analysis
+          type: object
         publishedDateTime:
-          type: string
+          example: 2017-07-21 17:32:28 +00:00
           format: date-time
-          example: 2017-07-21T17:32:28Z
+          type: string
         seoHeadline:
+          example: "UK pledges extra £44m for Channel border security"
           type: string
-          example: UK pledges extra £44m for Channel border security
         socialHeadline:
+          example: "Royals gather for Prince Louis Christening"
           type: string
-          example: Royals gather for Prince Louis Christening
         type:
+          enum:
+            - article
           type: string
-          enum: ['article']
 
-                    # Properties of a referenced object
+    # schema definitions for referred blocks below
+
     blocks:
-      type: array
+      type: object
       items:
-        type: object
         oneOf:
-          - $ref: '#/components/schemas/altText'
-          - $ref: '#/components/schemas/caption'
-          - $ref: '#/components/schemas/headline'
-          - $ref: '#/components/schemas/image'
-          - $ref: '#/components/schemas/modelWithText'
-          - $ref: '#/components/schemas/paragraph'
-          - $ref: '#/components/schemas/rawImage'
-          - $ref: '#/components/schemas/rawVideo'
-          - $ref: '#/components/schemas/text'
-          - $ref: '#/components/schemas/video'
+          - $ref: "#/components/schemas/altText"
+          - $ref: "#/components/schemas/caption"
+          - $ref: "#/components/schemas/headline"
+          - $ref: "#/components/schemas/image"
+          - $ref: "#/components/schemas/modelWithText"
+          - $ref: "#/components/schemas/paragraph"
+          - $ref: "#/components/schemas/rawImage"
+          - $ref: "#/components/schemas/rawVideo"
+          - $ref: "#/components/schemas/text"
+          - $ref: "#/components/schemas/video"
       minItems: 1
-
-    image:
-      type: object
-      required:
-        - blockId
-        - model
-        - type
-      properties:
-        blockId:
-          type: string
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        model:
-          type: object
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
-        type:
-          type: string
-          enum: ['image']
-
-    text:
-      type: object
-      required:
-        - blockId
-        - model
-        - type
-      properties:
-        blockId:
-          type: string
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        model:
-          type: object
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
-        type:
-          type: string
-          enum: ['text']
-
-    headline:
-      type: object
-      required:
-        - blockId
-        - model
-        - type
-      properties:
-        blockId:
-          type: string
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        model:
-          type: object
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
-        type:
-          type: string
-          enum: ['headline']
 
     altText:
       type: object
@@ -203,35 +149,17 @@ components:
         - type
       properties:
         blockId:
-          type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
         model:
-          type: object
           properties:
             blocks:
-              $ref: '#/components/schemas/blocks'
-        type:
-          type: string
-          enum: ['altText']
-
-    paragraph:
-      type: object
-      required:
-        - blockId
-        - model
-        - type
-      properties:
-        blockId:
-          type: string
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        model:
+              $ref: "#/components/schemas/blocks"
           type: object
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
         type:
+          enum:
+            - altText
           type: string
-          enum: ['paragraph']
 
     caption:
       type: object
@@ -241,18 +169,19 @@ components:
         - type
       properties:
         blockId:
-          type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
         model:
-          type: object
           properties:
             blocks:
-              $ref: '#/components/schemas/blocks'
+              $ref: "#/components/schemas/blocks"
+          type: object
         type:
+          enum:
+            - caption
           type: string
-          enum: ['caption']
 
-    video:
+    headline:
       type: object
       required:
         - blockId
@@ -260,18 +189,19 @@ components:
         - type
       properties:
         blockId:
-          type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
         model:
-          type: object
           properties:
             blocks:
-              $ref: '#/components/schemas/blocks'
+              $ref: "#/components/schemas/blocks"
+          type: object
         type:
+          enum:
+            - headline
           type: string
-          enum: ['video']
 
-    rawVideo:
+    image:
       type: object
       required:
         - blockId
@@ -279,35 +209,44 @@ components:
         - type
       properties:
         blockId:
-          type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
-        model:
-          type: object
-          required:
-            - allowOffsiteEmbedding
-            - duration
-            - guidance
-            - isLive
-            - locator
-          properties:
-            allowffsiteEmbedding:
-              type: string
-              example: false
-            duration:
-              type: string
-              example: PTSVHD02
-            guidance:
-              type: boolean
-              example: true
-            isLive:
-              type: string
-              example: false
-            locator:
-              type: string
-              example: xyz:abc:pips:pid:p019fch9
-        type:
           type: string
-          enum: ['rawVideo']
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - image
+          type: string
+
+    modelWithText:
+      type: object
+      properties:
+        text:
+          example: "Aliquam quis sodales nisl."
+          type: string
+
+    paragraph:
+      type: object
+      required:
+        - blockId
+        - model
+        - type
+      properties:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - paragraph
+          type: string
 
     rawImage:
       type: object
@@ -317,39 +256,112 @@ components:
         - type
       properties:
         blockId:
-          type: string
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
         model:
-          type: object
+          properties:
+            copyrightHolder:
+              example: BBC
+              type: string
+            height:
+              example: 420
+              type: integer
+            locator:
+              example: "https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg"
+              type: string
+            originCode:
+              example: true
+              type: boolean
+            width:
+              example: 640
+              type: integer
           required:
             - copyrightHolder
             - height
             - locator
             - originCode
             - width
-          properties:
-            copyrightHolder:
-              type: string
-              example: BBC
-            height:
-              type: integer
-              example: 420
-            locator:
-              type: string
-              example: https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg
-            originCode:
-              type: boolean
-              example: true
-            width:
-              type: integer
-              example: 640
+          type: object
         type:
+          enum:
+            - rawImage
           type: string
-          enum: ['rawImage']
 
-    modelWithText:
+    rawVideo:
       type: object
+      required:
+        - blockId
+        - model
+        - type
       properties:
-        text:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
           type: string
-          example: Aliquam quis sodales nisl.
+        model:
+          properties:
+            allowffsiteEmbedding:
+              example: false
+              type: string
+            duration:
+              example: PTSVHD02
+              type: string
+            guidance:
+              example: true
+              type: boolean
+            isLive:
+              example: false
+              type: string
+            locator:
+              example: "xyz:abc:pips:pid:p019fch9"
+              type: string
+          required:
+            - allowOffsiteEmbedding
+            - duration
+            - guidance
+            - isLive
+            - locator
+          type: object
+        type:
+          enum:
+            - rawVideo
+          type: string
+
+    text:
+      type: object
+      required:
+        - blockId
+        - model
+        - type
+      properties:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - text
+          type: string
+
+    video:
+      type: object
+      required:
+        - blockId
+        - model
+        - type
+      properties:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - video
+          type: string
