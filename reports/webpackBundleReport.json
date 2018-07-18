@@ -8,8 +8,8 @@
   ],
   "version": "4.16.0",
   "hash": "dfe21ac0410cc17ae16e",
-  "time": 1490,
-  "builtAt": 1531869873472,
+  "time": 1590,
+  "builtAt": 1531912658203,
   "publicPath": "/",
   "outputPath": "/Users/hobbsb02/dev/simorgh/build/public",
   "assetsByChunkName": {
@@ -1315,51 +1315,6 @@
               "loc": "108:19-28"
             },
             {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "prop-types",
-              "loc": "12:0-35"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "94:11-20"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "95:12-21"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "98:10-19"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "101:10-19"
-            },
-            {
               "moduleId": "eO8H",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
               "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -1477,13 +1432,13 @@
               "loc": "128:10-19"
             },
             {
-              "moduleId": "oFFJ",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
-              "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "type": "harmony side effect evaluation",
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "9:0-35"
+              "loc": "129:13-22"
             },
             {
               "moduleId": "eO8H",
@@ -1511,6 +1466,51 @@
               "type": "harmony import specifier",
               "userRequest": "prop-types",
               "loc": "135:10-19"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "prop-types",
+              "loc": "12:0-35"
+            },
+            {
+              "moduleId": "oFFJ",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
+              "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "prop-types",
+              "loc": "9:0-35"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "95:12-21"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "98:10-19"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "101:10-19"
             },
             {
               "moduleId": "eO8H",
@@ -2188,13 +2188,13 @@
               "loc": "13:12-19"
             },
             {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "129:13-22"
+              "loc": "94:11-20"
             }
           ],
           "usedExports": true,
@@ -2712,31 +2712,13 @@
               "loc": "49:6-13"
             },
             {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "warning",
               "loc": "9:0-30"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "warning",
-              "loc": "77:4-11"
-            },
-            {
-              "moduleId": "oFFJ",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
-              "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "warning",
-              "loc": "7:0-30"
             },
             {
               "moduleId": "eO8H",
@@ -2748,13 +2730,13 @@
               "loc": "71:4-11"
             },
             {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony import specifier",
+              "moduleId": "oFFJ",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
+              "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "type": "harmony side effect evaluation",
               "userRequest": "warning",
-              "loc": "73:4-11"
+              "loc": "7:0-30"
             },
             {
               "moduleId": "eO8H",
@@ -2782,6 +2764,24 @@
               "type": "harmony import specifier",
               "userRequest": "warning",
               "loc": "81:4-11"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "warning",
+              "loc": "9:0-30"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "warning",
+              "loc": "77:4-11"
             },
             {
               "moduleId": "eO8H",
@@ -2824,9 +2824,9 @@
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
               "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
               "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
+              "type": "harmony import specifier",
               "userRequest": "warning",
-              "loc": "9:0-30"
+              "loc": "73:4-11"
             }
           ],
           "usedExports": [
@@ -9695,13 +9695,13 @@
           ],
           "reasons": [
             {
-              "moduleId": "eO8H",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-              "type": "harmony side effect evaluation",
+              "moduleId": "YHGo",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+              "module": "./node_modules/history/es/index.js + 9 modules",
+              "moduleName": "./node_modules/history/es/index.js + 9 modules",
+              "type": "harmony import specifier",
               "userRequest": "invariant",
-              "loc": "13:0-34"
+              "loc": "52:2-11"
             },
             {
               "moduleId": "eO8H",
@@ -9758,24 +9758,6 @@
               "loc": "35:4-13"
             },
             {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "invariant",
-              "loc": "10:0-34"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "invariant",
-              "loc": "64:4-13"
-            },
-            {
               "moduleId": "eO8H",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
               "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -9792,6 +9774,24 @@
               "type": "harmony import specifier",
               "userRequest": "invariant",
               "loc": "61:4-13"
+            },
+            {
+              "moduleId": "eO8H",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+              "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "invariant",
+              "loc": "13:0-34"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "invariant",
+              "loc": "64:4-13"
             },
             {
               "moduleId": "eO8H",
@@ -9857,13 +9857,13 @@
               "loc": "4:0-34"
             },
             {
-              "moduleId": "YHGo",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-              "module": "./node_modules/history/es/index.js + 9 modules",
-              "moduleName": "./node_modules/history/es/index.js + 9 modules",
-              "type": "harmony import specifier",
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony side effect evaluation",
               "userRequest": "invariant",
-              "loc": "52:2-11"
+              "loc": "10:0-34"
             }
           ],
           "usedExports": [
@@ -20715,15 +20715,6 @@
               "loc": "1:18-43"
             },
             {
-              "moduleId": "fpC5",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
-              "module": "./node_modules/core-js/library/modules/_object-dps.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
-              "type": "cjs require",
-              "userRequest": "./_descriptors",
-              "loc": "5:17-42"
-            },
-            {
               "moduleId": "vwuL",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
               "module": "./node_modules/core-js/library/modules/_object-gopd.js",
@@ -20731,6 +20722,15 @@
               "type": "cjs require",
               "userRequest": "./_descriptors",
               "loc": "9:12-37"
+            },
+            {
+              "moduleId": "fpC5",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
+              "module": "./node_modules/core-js/library/modules/_object-dps.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
+              "type": "cjs require",
+              "userRequest": "./_descriptors",
+              "loc": "5:17-42"
             },
             {
               "moduleId": "AUvm",
@@ -22501,42 +22501,6 @@
               "loc": "91:2-7"
             },
             {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "react",
-              "loc": "11:0-26"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "64:34-39"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "87:22-27"
-            },
-            {
-              "moduleId": "nr6O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-              "module": "./node_modules/react-router/es/Router.js",
-              "moduleName": "./node_modules/react-router/es/Router.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "91:2-7"
-            },
-            {
               "moduleId": "eO8H",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
               "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -22580,6 +22544,42 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "114:2-7"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "react",
+              "loc": "11:0-26"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "64:34-39"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "87:22-27"
+            },
+            {
+              "moduleId": "nr6O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+              "module": "./node_modules/react-router/es/Router.js",
+              "moduleName": "./node_modules/react-router/es/Router.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "91:2-7"
             },
             {
               "moduleId": "eO8H",
@@ -26774,51 +26774,6 @@
           "loc": "108:19-28"
         },
         {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "prop-types",
-          "loc": "12:0-35"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "94:11-20"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "95:12-21"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "98:10-19"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "101:10-19"
-        },
-        {
           "moduleId": "eO8H",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
           "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -26936,13 +26891,13 @@
           "loc": "128:10-19"
         },
         {
-          "moduleId": "oFFJ",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
-          "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "type": "harmony side effect evaluation",
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "9:0-35"
+          "loc": "129:13-22"
         },
         {
           "moduleId": "eO8H",
@@ -26970,6 +26925,51 @@
           "type": "harmony import specifier",
           "userRequest": "prop-types",
           "loc": "135:10-19"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "prop-types",
+          "loc": "12:0-35"
+        },
+        {
+          "moduleId": "oFFJ",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
+          "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "prop-types",
+          "loc": "9:0-35"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "95:12-21"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "98:10-19"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "101:10-19"
         },
         {
           "moduleId": "eO8H",
@@ -27647,13 +27647,13 @@
           "loc": "13:12-19"
         },
         {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "129:13-22"
+          "loc": "94:11-20"
         }
       ],
       "usedExports": true,
@@ -28166,31 +28166,13 @@
           "loc": "49:6-13"
         },
         {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "warning",
           "loc": "9:0-30"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "warning",
-          "loc": "77:4-11"
-        },
-        {
-          "moduleId": "oFFJ",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
-          "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "warning",
-          "loc": "7:0-30"
         },
         {
           "moduleId": "eO8H",
@@ -28202,13 +28184,13 @@
           "loc": "71:4-11"
         },
         {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony import specifier",
+          "moduleId": "oFFJ",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
+          "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "moduleName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "type": "harmony side effect evaluation",
           "userRequest": "warning",
-          "loc": "73:4-11"
+          "loc": "7:0-30"
         },
         {
           "moduleId": "eO8H",
@@ -28236,6 +28218,24 @@
           "type": "harmony import specifier",
           "userRequest": "warning",
           "loc": "81:4-11"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "warning",
+          "loc": "9:0-30"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "warning",
+          "loc": "77:4-11"
         },
         {
           "moduleId": "eO8H",
@@ -28278,9 +28278,9 @@
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
           "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
           "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony side effect evaluation",
+          "type": "harmony import specifier",
           "userRequest": "warning",
-          "loc": "9:0-30"
+          "loc": "73:4-11"
         }
       ],
       "usedExports": [
@@ -34882,13 +34882,13 @@
       ],
       "reasons": [
         {
-          "moduleId": "eO8H",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
-          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
-          "type": "harmony side effect evaluation",
+          "moduleId": "YHGo",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+          "module": "./node_modules/history/es/index.js + 9 modules",
+          "moduleName": "./node_modules/history/es/index.js + 9 modules",
+          "type": "harmony import specifier",
           "userRequest": "invariant",
-          "loc": "13:0-34"
+          "loc": "52:2-11"
         },
         {
           "moduleId": "eO8H",
@@ -34945,24 +34945,6 @@
           "loc": "35:4-13"
         },
         {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "invariant",
-          "loc": "10:0-34"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "invariant",
-          "loc": "64:4-13"
-        },
-        {
           "moduleId": "eO8H",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
           "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -34979,6 +34961,24 @@
           "type": "harmony import specifier",
           "userRequest": "invariant",
           "loc": "61:4-13"
+        },
+        {
+          "moduleId": "eO8H",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
+          "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "moduleName": "./node_modules/react-router-dom/es/index.js + 21 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "invariant",
+          "loc": "13:0-34"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "invariant",
+          "loc": "64:4-13"
         },
         {
           "moduleId": "eO8H",
@@ -35044,13 +35044,13 @@
           "loc": "4:0-34"
         },
         {
-          "moduleId": "YHGo",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-          "module": "./node_modules/history/es/index.js + 9 modules",
-          "moduleName": "./node_modules/history/es/index.js + 9 modules",
-          "type": "harmony import specifier",
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony side effect evaluation",
           "userRequest": "invariant",
-          "loc": "52:2-11"
+          "loc": "10:0-34"
         }
       ],
       "usedExports": [
@@ -46028,15 +46028,6 @@
           "loc": "1:18-43"
         },
         {
-          "moduleId": "fpC5",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
-          "module": "./node_modules/core-js/library/modules/_object-dps.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
-          "type": "cjs require",
-          "userRequest": "./_descriptors",
-          "loc": "5:17-42"
-        },
-        {
           "moduleId": "vwuL",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
           "module": "./node_modules/core-js/library/modules/_object-gopd.js",
@@ -46044,6 +46035,15 @@
           "type": "cjs require",
           "userRequest": "./_descriptors",
           "loc": "9:12-37"
+        },
+        {
+          "moduleId": "fpC5",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
+          "module": "./node_modules/core-js/library/modules/_object-dps.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
+          "type": "cjs require",
+          "userRequest": "./_descriptors",
+          "loc": "5:17-42"
         },
         {
           "moduleId": "AUvm",
@@ -47796,42 +47796,6 @@
           "loc": "91:2-7"
         },
         {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "react",
-          "loc": "11:0-26"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "64:34-39"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "87:22-27"
-        },
-        {
-          "moduleId": "nr6O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
-          "module": "./node_modules/react-router/es/Router.js",
-          "moduleName": "./node_modules/react-router/es/Router.js",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "91:2-7"
-        },
-        {
           "moduleId": "eO8H",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/index.js 1718fe1a40448c8116e29406fe15662f",
           "module": "./node_modules/react-router-dom/es/index.js + 21 modules",
@@ -47875,6 +47839,42 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "114:2-7"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "react",
+          "loc": "11:0-26"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "64:34-39"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "87:22-27"
+        },
+        {
+          "moduleId": "nr6O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router/es/Router.js",
+          "module": "./node_modules/react-router/es/Router.js",
+          "moduleName": "./node_modules/react-router/es/Router.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "91:2-7"
         },
         {
           "moduleId": "eO8H",
