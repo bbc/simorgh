@@ -1,5 +1,5 @@
 import React from 'react';
-import { videoComponentPropTypes } from '../../models/proptypes';
+import { videoComponentPropTypes } from '../../models/propTypes';
 
 const Video = ({
   videoLocator,
