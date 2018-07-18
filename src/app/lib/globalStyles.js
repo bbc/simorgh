@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-expressions */
+import styledNormalize from 'styled-normalize';
 import { injectGlobal } from 'styled-components';
 
 injectGlobal`
+  ${styledNormalize}
+
   @font-face {
     font-display: optional;
     font-family: ReithSansNewsLight;

@@ -5,15 +5,16 @@ const { validateType } = require('./validateType');
 const data = {
   type: 'article',
 };
+const schemaName = 'article';
 
 describe('Validate type', () => {
   it('should throw an error when schema type and data type do not match', () => {
     const schemaType = 'string';
 
     expect(() => {
-      validateType(schemaType, data);
+      validateType(schemaType, data, schemaName);
     }).toThrowError(
-      'Error: Type does not match for article node - expected string got object',
+      `Error: Type does not match for 'article' - expected 'string' got 'object'`,
     );
   });
 
@@ -21,7 +22,7 @@ describe('Validate type', () => {
     const schemaType = 'object';
 
     expect(() => {
-      validateType(schemaType, data);
+      validateType(schemaType, data, schemaName);
     }).not.toThrowError();
   });
 });

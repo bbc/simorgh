@@ -10,7 +10,7 @@
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
-    "data-validate": "node src/app/datavalidator/datavalidator.js",
+    "data-validate": "node src/app/dataValidator/index.js",
     "dev": "razzle start",
     "lighthouse": "lighthouse http://localhost:7080/article/scenario-01 --output-path=./reports/report.html --view",
     "postmerge": "./scripts/dependencyUpdateCheck.sh",
@@ -19,7 +19,7 @@
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "npm run test:lint && npm run test:unit",
+    "test": "npm run test:lint && npm run test:unit && npm run data-validate",
     "test:accessibility": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start bbc-a11y",
     "test:accessibility:ci": "npm run build && run-p --race start bbc-a11y",
     "test:e2e": "(lsof -t -i:7080 | xargs kill) && npm run build && run-p --race start cypress",
@@ -60,7 +60,8 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
     "speculate": "^1.7.4",
-    "styled-components": "^3.3.3"
+    "styled-components": "^3.3.3",
+    "styled-normalize": "^8.0.0"
   },
   "devDependencies": {
     "@storybook/react": "4.0.0-alpha.8",
