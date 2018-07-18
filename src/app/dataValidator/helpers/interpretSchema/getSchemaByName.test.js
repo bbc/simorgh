@@ -9,7 +9,7 @@ describe('Get schema by name helper', () => {
 
     expect(() => {
       getSchemaByName(invalidSchemaName);
-    }).toThrowError('Error: No schema exists for the block ich');
+    }).toThrowError(`Error: No schema exists for the block 'ich'`);
   });
 
   it('should error when schema does not exist', () => {
