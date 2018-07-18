@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
-    "bbc-a11y": "sleep 5 && bbc-a11y",
+    "bbc-a11y": "bbc-a11y",
     "build": "razzle build",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
