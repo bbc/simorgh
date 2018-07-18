@@ -1,6 +1,6 @@
 {
     "presets": [
-        "razzle/babel", ["env", {
+        ["env", {
             "useBuiltIns": true,
             "targets": {
                 "browsers": [
@@ -17,6 +17,7 @@
                     "ios_saf >= 10"
                 ]
             }
-        }]
+        }],
+        "razzle/babel"
     ]
 }
