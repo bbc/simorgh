@@ -73,83 +73,21 @@ exports[`Footer should render correctly 1`] = `
     >
       <a
         className="c3"
-        href="https://www.bbc.com/news/help-41670342"
+        href="https://www.bbc.co.uk/news"
       >
-        Why you can trust the BBC
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/terms"
-      >
-        Terms of Use
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/news/help-41670342"
-      >
-        About the BBC
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/news/help-41670342"
-      >
-        Privacy Policy
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/terms"
-      >
-        Cookies
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/news/help-41670342"
-      >
-        Accessibility Help
-      </a>
-    </li>
-    <li
-      className="c2"
-    >
-      <a
-        className="c3"
-        href="https://www.bbc.com/news/help-41670342"
-      >
-        Contact the BBC
+        Link
       </a>
     </li>
   </ul>
   <p
     className="c4"
   >
-    Copyright © 
-    2018
-     BBC. The BBC is not responsible for the content of external sites.
+    Text here. 
     <a
       className="c3"
-      href="https://www.bbc.co.uk/help/web/links/"
+      href="https://www.bbc.co.uk/news"
     >
-      Read about our approach to external linking.
+      Link
     </a>
   </p>
 </footer>
