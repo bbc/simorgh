@@ -9,7 +9,7 @@ const validateData = data => {
   log('\nValidation complete!');
 };
 
-const data = require('../../../data/test/scenario-01.json');
+const data = require('../../../data/scenario-01.json');
 
 validateData(data);
 
