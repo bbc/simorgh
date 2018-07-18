@@ -1,5 +1,5 @@
 import { arrayOf, bool, oneOfType, shape, string } from 'prop-types';
-import { textBlockPropTypes } from './propTypes/text';
+import { textBlockPropTypes } from './text';
 
 export const optionalTextPropTypes = {
   blocks: arrayOf(
