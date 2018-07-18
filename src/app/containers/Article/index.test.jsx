@@ -1,13 +1,13 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import Article from './index';
+import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
-describe('Article', () => {
+describe('ArticleContainer', () => {
   describe('Component', () => {
-    shouldMatchSnapshot('should render correctly', <Article />);
+    shouldMatchSnapshot('should render correctly', <ArticleContainer />);
   });
 
   describe('getInitialProps', () => {
@@ -26,7 +26,7 @@ describe('Article', () => {
       mockFetch = mockFetchSuccess,
     ) => {
       mockFetch();
-      const response = await Article.getInitialProps(context);
+      const response = await ArticleContainer.getInitialProps(context);
       return response;
     };
 

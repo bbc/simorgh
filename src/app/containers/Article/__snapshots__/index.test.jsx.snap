@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component should render correctly 1`] = `
+exports[`ArticleContainer Component should render correctly 1`] = `
 Array [
   .c1 {
   color: #FFFFFF;
