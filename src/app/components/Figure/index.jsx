@@ -2,9 +2,8 @@ import React from 'react';
 import { string } from 'prop-types';
 import Caption from './Caption';
 
-function renderCaption(caption) {
-  return caption ? <Caption>{caption}</Caption> : null;
-}
+const renderCaption = caption =>
+  caption ? <Caption>{caption}</Caption> : null;
 
 const Figure = ({ src, alt, caption }) => (
   <figure>
