@@ -2,25 +2,155 @@
 
 exports[`Footer should render correctly 1`] = `
 .c0 {
-  background-color: #404040;
+  background-color: #4C4C4C;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  padding: 16px;
+  padding: 16px 8px;
 }
 
 .c1 {
+  border-bottom: 1px solid #FFFFFF;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: repeat(4,50%);
+  list-style-type: none;
+  margin: 0 0 8px 0;
+  padding: 0 0 8px 0;
+}
+
+.c1 > li:first-child {
+  border-bottom: 1px solid #FFFFFF;
+  grid-column: 1/3;
+  margin-bottom: 8px;
+}
+
+.c2 {
+  min-width: 50%;
+  padding: 8px;
+}
+
+.c3 {
   color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  color: #FFFFFF;
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+
+@supports not (display:grid) {
+  .c1 > li:first-child {
+    width: 100%;
+  }
+}
+
+@supports not (display:grid) {
+  .c2 {
+    padding: 8px 0;
+    display: inline-block;
+  }
 }
 
 <footer
   className="c0"
   role="contentinfo"
 >
-  <p
+  <ul
     className="c1"
+  >
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/news/help-41670342"
+      >
+        Why you can trust the BBC
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/terms"
+      >
+        Terms of Use
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/news/help-41670342"
+      >
+        About the BBC
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/news/help-41670342"
+      >
+        Privacy Policy
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/terms"
+      >
+        Cookies
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/news/help-41670342"
+      >
+        Accessibility Help
+      </a>
+    </li>
+    <li
+      className="c2"
+    >
+      <a
+        className="c3"
+        href="https://www.bbc.com/news/help-41670342"
+      >
+        Contact the BBC
+      </a>
+    </li>
+  </ul>
+  <p
+    className="c4"
   >
     Copyright © 
     2018
      BBC. The BBC is not responsible for the content of external sites.
+    <a
+      className="c3"
+      href="https://www.bbc.co.uk/help/web/links/"
+    >
+      Read about our approach to external linking.
+    </a>
   </p>
 </footer>
 `;
