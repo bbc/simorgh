@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import Image from './index';
+import ImageContainer from './index';
 import { blockContainingText } from '../../models/blocks';
 
 const imageData = arrayOfBlocks => ({
@@ -38,9 +38,10 @@ const dataWithCaption = imageData([
   ),
 ]);
 
-storiesOf('Image', module).add('image with alt text', () => (
-  <Image {...dataWithAltText} />
+storiesOf('ImageContainer', module).add('image with alt text', () => (
+  <ImageContainer {...dataWithAltText} />
 ));
-storiesOf('Image', module).add('image with alt text and caption', () => (
-  <Image {...dataWithCaption} />
-));
+storiesOf('ImageContainer', module).add(
+  'image with alt text and caption',
+  () => <ImageContainer {...dataWithCaption} />,
+);
