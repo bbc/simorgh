@@ -1,0 +1,46 @@
+{
+  "passport": {
+    "language": "en-gb",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+    "articleType": "news",
+    "genre": null
+  },
+  "publishedDateTime": "2018-06-04T00:00:00.000Z",
+  "lastUpdatedDateTime": "2018-06-05T12:00:00.000Z",
+  "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio",
+  "tags": {
+    "about": null,
+    "mentions": null
+  },
+  "metaDescription": null,
+  "model": {
+    "blocks": [
+      {
+        "blockId": "4793311b-f874-4e87-87f8-286cbd3df775",
+        "type": "headline",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "599ff36f-3af4-0fb7-1599-951294cd4dac",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "blockId": "8d59db30-903f-19a7-c4c0-9b95f3c95c67",
+                    "model": {
+                      "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "locator": "urn:bbc:optimo:asset:c000000000oo",
+  "blockId": "6f06a1b6-db72-97cd-1ff2-3c85a674b8f8",
+  "type": "article"
+}

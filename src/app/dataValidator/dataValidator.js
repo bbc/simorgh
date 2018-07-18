@@ -45,7 +45,7 @@ const validateData = data => {
 };
 
 // invoke the validator for WIP purposes
-const data = require('../../../data/test/scenario-01.json');
+const data = require('../../../data/scenario-01.json');
 
 validateData(data);
 

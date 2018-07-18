@@ -30,7 +30,7 @@ The application will start on [http://localhost:7080/article/scenario-id](http:/
 
 These is a single route, `/article/:id`, where `id` is the filename of the static Article data, for example `scenario-01`.
 
-**NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/test/scenario-01.json). Furthermore, the Article component does not do anything with that data.
+**NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/scenario-01.json). Furthermore, the Article component does not do anything with that data.
 
 ### Storybook (UI Development Environment/Style Guide)
 
