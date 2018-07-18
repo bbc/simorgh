@@ -26,7 +26,7 @@ const dataFolderToRender =
 const server = express();
 server
   .disable('x-powered-by')
-  .use('data', express.static(dataFolderToRender))
+  .use('/data', express.static(dataFolderToRender))
   .use(express.static(publicDirectory))
   .get('/status', (req, res) => {
     res.sendStatus(200);
