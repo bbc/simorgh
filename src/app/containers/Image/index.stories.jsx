@@ -18,7 +18,7 @@ const rawImageBlock = {
   },
 };
 
-const dataWithAltText = imageData([
+const data = imageData([
   rawImageBlock,
   blockContainingText(
     'altText',
@@ -39,7 +39,7 @@ const dataWithCaption = imageData([
 ]);
 
 storiesOf('ImageContainer', module).add('image with alt text', () => (
-  <ImageContainer {...dataWithAltText} />
+  <ImageContainer {...data} />
 ));
 storiesOf('ImageContainer', module).add(
   'image with alt text and caption',

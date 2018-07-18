@@ -28,7 +28,7 @@ describe('Image', () => {
       },
     };
 
-    const dataWithAltText = imageData([
+    const data = imageData([
       rawImageBlock,
       blockContainingText(
         'altText',
@@ -38,7 +38,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text',
-      <ImageContainer {...dataWithAltText} />,
+      <ImageContainer {...data} />,
     );
 
     const dataWithCaption = imageData([
