@@ -8,8 +8,8 @@
   ],
   "version": "4.16.0",
   "hash": "dedb32d3ff97b3494a1a",
-  "time": 1636,
-  "builtAt": 1531928323824,
+  "time": 1354,
+  "builtAt": 1531950615791,
   "publicPath": "/",
   "outputPath": "/Users/hobbsb02/dev/simorgh/build/public",
   "assetsByChunkName": {
@@ -2397,15 +2397,6 @@
               "loc": "3:10-27"
             },
             {
-              "moduleId": "6tYh",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-              "module": "./node_modules/core-js/library/modules/_set-proto.js",
-              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-              "type": "cjs require",
-              "userRequest": "./_ctx",
-              "loc": "13:14-31"
-            },
-            {
               "moduleId": "oioR",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
               "module": "./node_modules/core-js/library/modules/_for-of.js",
@@ -2422,6 +2413,15 @@
               "type": "cjs require",
               "userRequest": "./_ctx",
               "loc": "1:10-27"
+            },
+            {
+              "moduleId": "6tYh",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+              "module": "./node_modules/core-js/library/modules/_set-proto.js",
+              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+              "type": "cjs require",
+              "userRequest": "./_ctx",
+              "loc": "13:14-31"
             }
           ],
           "usedExports": true,
@@ -3720,9 +3720,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-          "issuerId": "6tYh",
-          "issuerName": "./node_modules/core-js/library/modules/_set-proto.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+          "issuerId": "oioR",
+          "issuerName": "./node_modules/core-js/library/modules/_for-of.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3745,29 +3745,29 @@
               "name": "./src/app/components/Article/index.jsx"
             },
             {
-              "id": "mRg0",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-              "name": "./node_modules/babel-runtime/helpers/inherits.js"
+              "id": "D3Ub",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+              "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
             },
             {
-              "id": "s3Ml",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/set-prototype-of.js",
-              "name": "./node_modules/babel-runtime/core-js/object/set-prototype-of.js"
+              "id": "4d7F",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+              "name": "./node_modules/babel-runtime/core-js/promise.js"
             },
             {
-              "id": "JbBM",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-              "name": "./node_modules/core-js/library/fn/object/set-prototype-of.js"
+              "id": "aW7e",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+              "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "Hfiw",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-              "name": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js"
+              "id": "JMW+",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "name": "./node_modules/core-js/library/modules/es6.promise.js"
             },
             {
-              "id": "6tYh",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-              "name": "./node_modules/core-js/library/modules/_set-proto.js"
+              "id": "oioR",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+              "name": "./node_modules/core-js/library/modules/_for-of.js"
             }
           ],
           "failed": false,
@@ -3776,24 +3776,6 @@
           "assets": [
           ],
           "reasons": [
-            {
-              "moduleId": "6tYh",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-              "module": "./node_modules/core-js/library/modules/_set-proto.js",
-              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-              "type": "cjs require",
-              "userRequest": "./_an-object",
-              "loc": "4:15-38"
-            },
-            {
-              "moduleId": "oVml",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-              "module": "./node_modules/core-js/library/modules/_object-create.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-              "type": "cjs require",
-              "userRequest": "./_an-object",
-              "loc": "2:15-38"
-            },
             {
               "moduleId": "oioR",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
@@ -3831,10 +3813,19 @@
               "loc": "1:15-38"
             },
             {
-              "moduleId": "fpC5",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
-              "module": "./node_modules/core-js/library/modules/_object-dps.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
+              "moduleId": "6tYh",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+              "module": "./node_modules/core-js/library/modules/_set-proto.js",
+              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+              "type": "cjs require",
+              "userRequest": "./_an-object",
+              "loc": "4:15-38"
+            },
+            {
+              "moduleId": "oVml",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+              "module": "./node_modules/core-js/library/modules/_object-create.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
               "type": "cjs require",
               "userRequest": "./_an-object",
               "loc": "2:15-38"
@@ -3844,6 +3835,15 @@
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-call.js",
               "module": "./node_modules/core-js/library/modules/_iter-call.js",
               "moduleName": "./node_modules/core-js/library/modules/_iter-call.js",
+              "type": "cjs require",
+              "userRequest": "./_an-object",
+              "loc": "2:15-38"
+            },
+            {
+              "moduleId": "fpC5",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
+              "module": "./node_modules/core-js/library/modules/_object-dps.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
               "type": "cjs require",
               "userRequest": "./_an-object",
               "loc": "2:15-38"
@@ -3960,15 +3960,6 @@
               "loc": "5:13-33"
             },
             {
-              "moduleId": "Y7ZC",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
-              "module": "./node_modules/core-js/library/modules/_export.js",
-              "moduleName": "./node_modules/core-js/library/modules/_export.js",
-              "type": "cjs require",
-              "userRequest": "./_global",
-              "loc": "1:13-33"
-            },
-            {
               "moduleId": "UWiX",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks.js",
               "module": "./node_modules/core-js/library/modules/_wks.js",
@@ -3976,6 +3967,15 @@
               "type": "cjs require",
               "userRequest": "./_global",
               "loc": "3:13-33"
+            },
+            {
+              "moduleId": "Y7ZC",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
+              "module": "./node_modules/core-js/library/modules/_export.js",
+              "moduleName": "./node_modules/core-js/library/modules/_export.js",
+              "type": "cjs require",
+              "userRequest": "./_global",
+              "loc": "1:13-33"
             },
             {
               "moduleId": "QXhf",
@@ -4014,13 +4014,13 @@
               "loc": "2:13-33"
             },
             {
-              "moduleId": "Hsns",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_dom-create.js",
-              "module": "./node_modules/core-js/library/modules/_dom-create.js",
-              "moduleName": "./node_modules/core-js/library/modules/_dom-create.js",
+              "moduleId": "29s/",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_shared.js",
+              "module": "./node_modules/core-js/library/modules/_shared.js",
+              "moduleName": "./node_modules/core-js/library/modules/_shared.js",
               "type": "cjs require",
               "userRequest": "./_global",
-              "loc": "2:15-35"
+              "loc": "2:13-33"
             },
             {
               "moduleId": "MvwC",
@@ -4032,13 +4032,13 @@
               "loc": "1:15-35"
             },
             {
-              "moduleId": "29s/",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_shared.js",
-              "module": "./node_modules/core-js/library/modules/_shared.js",
-              "moduleName": "./node_modules/core-js/library/modules/_shared.js",
+              "moduleId": "Hsns",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_dom-create.js",
+              "module": "./node_modules/core-js/library/modules/_dom-create.js",
+              "moduleName": "./node_modules/core-js/library/modules/_dom-create.js",
               "type": "cjs require",
               "userRequest": "./_global",
-              "loc": "2:13-33"
+              "loc": "2:15-35"
             },
             {
               "moduleId": "AUvm",
@@ -4796,15 +4796,6 @@
               "loc": "7:15-38"
             },
             {
-              "moduleId": "6tYh",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-              "module": "./node_modules/core-js/library/modules/_set-proto.js",
-              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-              "type": "cjs require",
-              "userRequest": "./_is-object",
-              "loc": "3:15-38"
-            },
-            {
               "moduleId": "zXhZ",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_promise-resolve.js",
               "module": "./node_modules/core-js/library/modules/_promise-resolve.js",
@@ -4812,6 +4803,15 @@
               "type": "cjs require",
               "userRequest": "./_is-object",
               "loc": "2:15-38"
+            },
+            {
+              "moduleId": "6tYh",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+              "module": "./node_modules/core-js/library/modules/_set-proto.js",
+              "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+              "type": "cjs require",
+              "userRequest": "./_is-object",
+              "loc": "3:15-38"
             },
             {
               "moduleId": "5K7Z",
@@ -6027,15 +6027,6 @@
               "loc": "5:20-37"
             },
             {
-              "moduleId": "zLkG",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks-ext.js",
-              "module": "./node_modules/core-js/library/modules/_wks-ext.js",
-              "moduleName": "./node_modules/core-js/library/modules/_wks-ext.js",
-              "type": "cjs require",
-              "userRequest": "./_wks",
-              "loc": "1:12-29"
-            },
-            {
               "moduleId": "MPFp",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-define.js",
               "module": "./node_modules/core-js/library/modules/_iter-define.js",
@@ -6088,6 +6079,15 @@
               "type": "cjs require",
               "userRequest": "./_wks",
               "loc": "1:15-32"
+            },
+            {
+              "moduleId": "zLkG",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks-ext.js",
+              "module": "./node_modules/core-js/library/modules/_wks-ext.js",
+              "moduleName": "./node_modules/core-js/library/modules/_wks-ext.js",
+              "type": "cjs require",
+              "userRequest": "./_wks",
+              "loc": "1:12-29"
             },
             {
               "moduleId": "j2DC",
@@ -7297,9 +7297,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "issuerId": "oVml",
-          "issuerName": "./node_modules/core-js/library/modules/_object-create.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+          "issuerId": "QXhf",
+          "issuerName": "./node_modules/core-js/library/modules/_task.js",
           "issuerPath": [
             {
               "id": 0,
@@ -7322,29 +7322,29 @@
               "name": "./src/app/components/Article/index.jsx"
             },
             {
-              "id": "mRg0",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-              "name": "./node_modules/babel-runtime/helpers/inherits.js"
+              "id": "D3Ub",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+              "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
             },
             {
-              "id": "AyUB",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/create.js",
-              "name": "./node_modules/babel-runtime/core-js/object/create.js"
+              "id": "4d7F",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+              "name": "./node_modules/babel-runtime/core-js/promise.js"
             },
             {
-              "id": "3GJH",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-              "name": "./node_modules/core-js/library/fn/object/create.js"
+              "id": "aW7e",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+              "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "lCc8",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-              "name": "./node_modules/core-js/library/modules/es6.object.create.js"
+              "id": "JMW+",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "name": "./node_modules/core-js/library/modules/es6.promise.js"
             },
             {
-              "id": "oVml",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-              "name": "./node_modules/core-js/library/modules/_object-create.js"
+              "id": "QXhf",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+              "name": "./node_modules/core-js/library/modules/_task.js"
             }
           ],
           "failed": false,
@@ -7354,15 +7354,6 @@
           ],
           "reasons": [
             {
-              "moduleId": "oVml",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-              "module": "./node_modules/core-js/library/modules/_object-create.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-              "type": "cjs require",
-              "userRequest": "./_dom-create",
-              "loc": "12:15-39"
-            },
-            {
               "moduleId": "QXhf",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
               "module": "./node_modules/core-js/library/modules/_task.js",
@@ -7370,6 +7361,15 @@
               "type": "cjs require",
               "userRequest": "./_dom-create",
               "loc": "4:10-34"
+            },
+            {
+              "moduleId": "oVml",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+              "module": "./node_modules/core-js/library/modules/_object-create.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
+              "type": "cjs require",
+              "userRequest": "./_dom-create",
+              "loc": "12:15-39"
             },
             {
               "moduleId": "eUtF",
@@ -8626,9 +8626,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "issuerId": "oVml",
-          "issuerName": "./node_modules/core-js/library/modules/_object-create.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+          "issuerId": "QXhf",
+          "issuerName": "./node_modules/core-js/library/modules/_task.js",
           "issuerPath": [
             {
               "id": 0,
@@ -8651,29 +8651,29 @@
               "name": "./src/app/components/Article/index.jsx"
             },
             {
-              "id": "mRg0",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-              "name": "./node_modules/babel-runtime/helpers/inherits.js"
+              "id": "D3Ub",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+              "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
             },
             {
-              "id": "AyUB",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/create.js",
-              "name": "./node_modules/babel-runtime/core-js/object/create.js"
+              "id": "4d7F",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+              "name": "./node_modules/babel-runtime/core-js/promise.js"
             },
             {
-              "id": "3GJH",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-              "name": "./node_modules/core-js/library/fn/object/create.js"
+              "id": "aW7e",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+              "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "lCc8",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-              "name": "./node_modules/core-js/library/modules/es6.object.create.js"
+              "id": "JMW+",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "name": "./node_modules/core-js/library/modules/es6.promise.js"
             },
             {
-              "id": "oVml",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-              "name": "./node_modules/core-js/library/modules/_object-create.js"
+              "id": "QXhf",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+              "name": "./node_modules/core-js/library/modules/_task.js"
             }
           ],
           "failed": false,
@@ -8683,15 +8683,6 @@
           ],
           "reasons": [
             {
-              "moduleId": "oVml",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-              "module": "./node_modules/core-js/library/modules/_object-create.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-              "type": "cjs require",
-              "userRequest": "./_html",
-              "loc": "18:2-20"
-            },
-            {
               "moduleId": "QXhf",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
               "module": "./node_modules/core-js/library/modules/_task.js",
@@ -8699,6 +8690,15 @@
               "type": "cjs require",
               "userRequest": "./_html",
               "loc": "3:11-29"
+            },
+            {
+              "moduleId": "oVml",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+              "module": "./node_modules/core-js/library/modules/_object-create.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
+              "type": "cjs require",
+              "userRequest": "./_html",
+              "loc": "18:2-20"
             }
           ],
           "usedExports": true,
@@ -8906,15 +8906,6 @@
               "loc": "3:11-29"
             },
             {
-              "moduleId": "Y7ZC",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
-              "module": "./node_modules/core-js/library/modules/_export.js",
-              "moduleName": "./node_modules/core-js/library/modules/_export.js",
-              "type": "cjs require",
-              "userRequest": "./_hide",
-              "loc": "4:11-29"
-            },
-            {
               "moduleId": "MPFp",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-define.js",
               "module": "./node_modules/core-js/library/modules/_iter-define.js",
@@ -8922,6 +8913,15 @@
               "type": "cjs require",
               "userRequest": "./_hide",
               "loc": "5:11-29"
+            },
+            {
+              "moduleId": "Y7ZC",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
+              "module": "./node_modules/core-js/library/modules/_export.js",
+              "moduleName": "./node_modules/core-js/library/modules/_export.js",
+              "type": "cjs require",
+              "userRequest": "./_hide",
+              "loc": "4:11-29"
             },
             {
               "moduleId": "XJU/",
@@ -12200,28 +12200,28 @@
               "loc": "2:17-47"
             },
             {
-              "moduleId": "3GJH",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-              "module": "./node_modules/core-js/library/fn/object/create.js",
-              "moduleName": "./node_modules/core-js/library/fn/object/create.js",
+              "moduleId": "RU/L",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/define-property.js",
+              "module": "./node_modules/core-js/library/fn/object/define-property.js",
+              "moduleName": "./node_modules/core-js/library/fn/object/define-property.js",
               "type": "cjs require",
               "userRequest": "../../modules/_core",
               "loc": "2:14-44"
             },
             {
-              "moduleId": "aW7e",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
-              "module": "./node_modules/core-js/library/fn/promise.js",
-              "moduleName": "./node_modules/core-js/library/fn/promise.js",
+              "moduleId": "JbBM",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
+              "module": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
+              "moduleName": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
               "type": "cjs require",
-              "userRequest": "../modules/_core",
-              "loc": "7:17-44"
+              "userRequest": "../../modules/_core",
+              "loc": "2:17-47"
             },
             {
-              "moduleId": "RU/L",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/define-property.js",
-              "module": "./node_modules/core-js/library/fn/object/define-property.js",
-              "moduleName": "./node_modules/core-js/library/fn/object/define-property.js",
+              "moduleId": "3GJH",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
+              "module": "./node_modules/core-js/library/fn/object/create.js",
+              "moduleName": "./node_modules/core-js/library/fn/object/create.js",
               "type": "cjs require",
               "userRequest": "../../modules/_core",
               "loc": "2:14-44"
@@ -12317,15 +12317,6 @@
               "loc": "2:14-44"
             },
             {
-              "moduleId": "UbbE",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/assign.js",
-              "module": "./node_modules/core-js/library/fn/object/assign.js",
-              "moduleName": "./node_modules/core-js/library/fn/object/assign.js",
-              "type": "cjs require",
-              "userRequest": "../../modules/_core",
-              "loc": "2:17-47"
-            },
-            {
               "moduleId": "4bdI",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/freeze.js",
               "module": "./node_modules/core-js/library/fn/object/freeze.js",
@@ -12335,13 +12326,22 @@
               "loc": "2:17-47"
             },
             {
-              "moduleId": "JbBM",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-              "module": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
-              "moduleName": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
+              "moduleId": "UbbE",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/assign.js",
+              "module": "./node_modules/core-js/library/fn/object/assign.js",
+              "moduleName": "./node_modules/core-js/library/fn/object/assign.js",
               "type": "cjs require",
               "userRequest": "../../modules/_core",
               "loc": "2:17-47"
+            },
+            {
+              "moduleId": "aW7e",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+              "module": "./node_modules/core-js/library/fn/promise.js",
+              "moduleName": "./node_modules/core-js/library/fn/promise.js",
+              "type": "cjs require",
+              "userRequest": "../modules/_core",
+              "loc": "7:17-44"
             }
           ],
           "usedExports": true,
@@ -12584,9 +12584,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "issuerId": "Hfiw",
-          "issuerName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+          "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "issuerId": "JMW+",
+          "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
           "issuerPath": [
             {
               "id": 0,
@@ -12609,24 +12609,24 @@
               "name": "./src/app/components/Article/index.jsx"
             },
             {
-              "id": "mRg0",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-              "name": "./node_modules/babel-runtime/helpers/inherits.js"
+              "id": "D3Ub",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+              "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
             },
             {
-              "id": "s3Ml",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/set-prototype-of.js",
-              "name": "./node_modules/babel-runtime/core-js/object/set-prototype-of.js"
+              "id": "4d7F",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+              "name": "./node_modules/babel-runtime/core-js/promise.js"
             },
             {
-              "id": "JbBM",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-              "name": "./node_modules/core-js/library/fn/object/set-prototype-of.js"
+              "id": "aW7e",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+              "name": "./node_modules/core-js/library/fn/promise.js"
             },
             {
-              "id": "Hfiw",
-              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-              "name": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js"
+              "id": "JMW+",
+              "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+              "name": "./node_modules/core-js/library/modules/es6.promise.js"
             }
           ],
           "failed": false,
@@ -12645,15 +12645,6 @@
               "loc": "2:14-34"
             },
             {
-              "moduleId": "Hfiw",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-              "module": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-              "type": "cjs require",
-              "userRequest": "./_export",
-              "loc": "2:14-34"
-            },
-            {
               "moduleId": "JMW+",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
               "module": "./node_modules/core-js/library/modules/es6.promise.js",
@@ -12661,15 +12652,6 @@
               "type": "cjs require",
               "userRequest": "./_export",
               "loc": "6:14-34"
-            },
-            {
-              "moduleId": "PBE1",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
-              "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-              "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-              "type": "cjs require",
-              "userRequest": "./_export",
-              "loc": "3:14-34"
             },
             {
               "moduleId": "Q/yX",
@@ -12685,6 +12667,24 @@
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.define-property.js",
               "module": "./node_modules/core-js/library/modules/es6.object.define-property.js",
               "moduleName": "./node_modules/core-js/library/modules/es6.object.define-property.js",
+              "type": "cjs require",
+              "userRequest": "./_export",
+              "loc": "1:14-34"
+            },
+            {
+              "moduleId": "Hfiw",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+              "module": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+              "type": "cjs require",
+              "userRequest": "./_export",
+              "loc": "2:14-34"
+            },
+            {
+              "moduleId": "lCc8",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
+              "module": "./node_modules/core-js/library/modules/es6.object.create.js",
+              "moduleName": "./node_modules/core-js/library/modules/es6.object.create.js",
               "type": "cjs require",
               "userRequest": "./_export",
               "loc": "1:14-34"
@@ -12726,13 +12726,13 @@
               "loc": "1:14-34"
             },
             {
-              "moduleId": "lCc8",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-              "module": "./node_modules/core-js/library/modules/es6.object.create.js",
-              "moduleName": "./node_modules/core-js/library/modules/es6.object.create.js",
+              "moduleId": "PBE1",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+              "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+              "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
               "type": "cjs require",
               "userRequest": "./_export",
-              "loc": "1:14-34"
+              "loc": "3:14-34"
             }
           ],
           "usedExports": true,
@@ -13221,7 +13221,7 @@
                   "moduleName": "./node_modules/history/es/createHashHistory.js",
                   "type": "harmony import specifier",
                   "userRequest": "./PathUtils",
-                  "loc": "62:53-68"
+                  "loc": "27:16-31"
                 },
                 {
                   "moduleId": null,
@@ -13297,6 +13297,24 @@
                 },
                 {
                   "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+                  "module": "./node_modules/history/es/createMemoryHistory.js",
+                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./PathUtils",
+                  "loc": "6:0-41"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+                  "module": "./node_modules/history/es/createMemoryHistory.js",
+                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./PathUtils",
+                  "loc": "49:19-29"
+                },
+                {
+                  "moduleId": null,
                   "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
                   "module": "./node_modules/history/es/createHashHistory.js",
                   "moduleName": "./node_modules/history/es/createHashHistory.js",
@@ -13342,12 +13360,12 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony import specifier",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
+                  "module": "./node_modules/history/es/index.js",
+                  "moduleName": "./node_modules/history/es/index.js",
+                  "type": "harmony export imported specifier",
                   "userRequest": "./PathUtils",
-                  "loc": "27:16-31"
+                  "loc": "9:0-52"
                 },
                 {
                   "moduleId": null,
@@ -13360,12 +13378,12 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
-                  "module": "./node_modules/history/es/index.js",
-                  "moduleName": "./node_modules/history/es/index.js",
-                  "type": "harmony export imported specifier",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
                   "userRequest": "./PathUtils",
-                  "loc": "9:0-52"
+                  "loc": "62:53-68"
                 },
                 {
                   "moduleId": null,
@@ -13468,24 +13486,6 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-                  "module": "./node_modules/history/es/createMemoryHistory.js",
-                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "./PathUtils",
-                  "loc": "6:0-41"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-                  "module": "./node_modules/history/es/createMemoryHistory.js",
-                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./PathUtils",
-                  "loc": "49:19-29"
-                },
-                {
-                  "moduleId": null,
                   "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/LocationUtils.js",
                   "module": "./node_modules/history/es/LocationUtils.js",
                   "moduleName": "./node_modules/history/es/LocationUtils.js",
@@ -13577,12 +13577,12 @@
               "reasons": [
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+                  "module": "./node_modules/history/es/createMemoryHistory.js",
+                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
                   "type": "harmony import specifier",
                   "userRequest": "./LocationUtils",
-                  "loc": "76:11-25"
+                  "loc": "44:39-53"
                 },
                 {
                   "moduleId": null,
@@ -13640,51 +13640,6 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "./LocationUtils",
-                  "loc": "5:0-68"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
-                  "module": "./node_modules/history/es/index.js",
-                  "moduleName": "./node_modules/history/es/index.js",
-                  "type": "harmony export imported specifier",
-                  "userRequest": "./LocationUtils",
-                  "loc": "8:0-68"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./LocationUtils",
-                  "loc": "103:27-44"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./LocationUtils",
-                  "loc": "172:19-33"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./LocationUtils",
-                  "loc": "207:19-33"
-                },
-                {
-                  "moduleId": null,
                   "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
                   "module": "./node_modules/history/es/createMemoryHistory.js",
                   "moduleName": "./node_modules/history/es/createMemoryHistory.js",
@@ -13694,12 +13649,12 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-                  "module": "./node_modules/history/es/createMemoryHistory.js",
-                  "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-                  "type": "harmony import specifier",
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
+                  "module": "./node_modules/history/es/index.js",
+                  "moduleName": "./node_modules/history/es/index.js",
+                  "type": "harmony export imported specifier",
                   "userRequest": "./LocationUtils",
-                  "loc": "44:39-53"
+                  "loc": "8:0-68"
                 },
                 {
                   "moduleId": null,
@@ -13727,6 +13682,51 @@
                   "type": "harmony import specifier",
                   "userRequest": "./LocationUtils",
                   "loc": "83:19-33"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./LocationUtils",
+                  "loc": "5:0-68"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./LocationUtils",
+                  "loc": "76:11-25"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./LocationUtils",
+                  "loc": "103:27-44"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./LocationUtils",
+                  "loc": "172:19-33"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./LocationUtils",
+                  "loc": "207:19-33"
                 }
               ],
               "usedExports": [
@@ -14221,24 +14221,6 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "./createTransitionManager",
-                  "loc": "7:0-64"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-                  "module": "./node_modules/history/es/createHashHistory.js",
-                  "moduleName": "./node_modules/history/es/createHashHistory.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./createTransitionManager",
-                  "loc": "79:26-49"
-                },
-                {
-                  "moduleId": null,
                   "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
                   "module": "./node_modules/history/es/createMemoryHistory.js",
                   "moduleName": "./node_modules/history/es/createMemoryHistory.js",
@@ -14254,6 +14236,24 @@
                   "type": "harmony import specifier",
                   "userRequest": "./createTransitionManager",
                   "loc": "28:26-49"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./createTransitionManager",
+                  "loc": "7:0-64"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+                  "module": "./node_modules/history/es/createHashHistory.js",
+                  "moduleName": "./node_modules/history/es/createHashHistory.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "./createTransitionManager",
+                  "loc": "79:26-49"
                 }
               ],
               "usedExports": [
@@ -19389,6 +19389,24 @@
                 },
                 {
                   "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
+                  "module": "./src/app/models/propTypes/headline/index.js",
+                  "moduleName": "./src/app/models/propTypes/headline/index.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../text",
+                  "loc": "2:0-45"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
+                  "module": "./src/app/models/propTypes/headline/index.js",
+                  "moduleName": "./src/app/models/propTypes/headline/index.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "../text",
+                  "loc": "4:53-71"
+                },
+                {
+                  "moduleId": null,
                   "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/index.js",
                   "module": "./src/app/models/propTypes/index.js",
                   "moduleName": "./src/app/models/propTypes/index.js",
@@ -19413,24 +19431,6 @@
                   "type": "harmony import specifier",
                   "userRequest": "./text",
                   "loc": "50:12-30"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
-                  "module": "./src/app/models/propTypes/headline/index.js",
-                  "moduleName": "./src/app/models/propTypes/headline/index.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "../text",
-                  "loc": "2:0-45"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
-                  "module": "./src/app/models/propTypes/headline/index.js",
-                  "moduleName": "./src/app/models/propTypes/headline/index.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "../text",
-                  "loc": "4:53-71"
                 }
               ],
               "usedExports": [
@@ -19877,6 +19877,33 @@
               "moduleName": "./node_modules/history/es/index.js + 9 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "warning",
+              "loc": "5:0-30"
+            },
+            {
+              "moduleId": "YHGo",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+              "module": "./node_modules/history/es/index.js + 9 modules",
+              "moduleName": "./node_modules/history/es/index.js + 9 modules",
+              "type": "harmony import specifier",
+              "userRequest": "warning",
+              "loc": "52:4-11"
+            },
+            {
+              "moduleId": "YHGo",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+              "module": "./node_modules/history/es/index.js + 9 modules",
+              "moduleName": "./node_modules/history/es/index.js + 9 modules",
+              "type": "harmony import specifier",
+              "userRequest": "warning",
+              "loc": "80:4-11"
+            },
+            {
+              "moduleId": "YHGo",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+              "module": "./node_modules/history/es/index.js + 9 modules",
+              "moduleName": "./node_modules/history/es/index.js + 9 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "warning",
               "loc": "3:0-30"
             },
             {
@@ -19923,33 +19950,6 @@
               "type": "harmony import specifier",
               "userRequest": "warning",
               "loc": "233:4-11"
-            },
-            {
-              "moduleId": "YHGo",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-              "module": "./node_modules/history/es/index.js + 9 modules",
-              "moduleName": "./node_modules/history/es/index.js + 9 modules",
-              "type": "harmony side effect evaluation",
-              "userRequest": "warning",
-              "loc": "5:0-30"
-            },
-            {
-              "moduleId": "YHGo",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-              "module": "./node_modules/history/es/index.js + 9 modules",
-              "moduleName": "./node_modules/history/es/index.js + 9 modules",
-              "type": "harmony import specifier",
-              "userRequest": "warning",
-              "loc": "52:4-11"
-            },
-            {
-              "moduleId": "YHGo",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-              "module": "./node_modules/history/es/index.js + 9 modules",
-              "moduleName": "./node_modules/history/es/index.js + 9 modules",
-              "type": "harmony import specifier",
-              "userRequest": "warning",
-              "loc": "80:4-11"
             },
             {
               "moduleId": "YHGo",
@@ -20706,6 +20706,15 @@
               "loc": "6:12-37"
             },
             {
+              "moduleId": "eUtF",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ie8-dom-define.js",
+              "module": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
+              "moduleName": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
+              "type": "cjs require",
+              "userRequest": "./_descriptors",
+              "loc": "1:18-43"
+            },
+            {
               "moduleId": "vwuL",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
               "module": "./node_modules/core-js/library/modules/_object-gopd.js",
@@ -20722,15 +20731,6 @@
               "type": "cjs require",
               "userRequest": "./_descriptors",
               "loc": "5:17-42"
-            },
-            {
-              "moduleId": "eUtF",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ie8-dom-define.js",
-              "module": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
-              "moduleName": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
-              "type": "cjs require",
-              "userRequest": "./_descriptors",
-              "loc": "1:18-43"
             },
             {
               "moduleId": "AUvm",
@@ -22294,42 +22294,6 @@
               "loc": "13:53-69"
             },
             {
-              "moduleId": "HgBz",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
-              "module": "./node_modules/@jaredpalmer/after/build/After.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "37:25-41"
-            },
-            {
-              "moduleId": "ET5a",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "28:25-41"
-            },
-            {
-              "moduleId": "6Q7O",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
-              "module": "./node_modules/@jaredpalmer/after/build/Document.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "66:25-41"
-            },
-            {
-              "moduleId": "6ihe",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
-              "module": "./node_modules/@jaredpalmer/after/build/render.js",
-              "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "65:25-41"
-            },
-            {
               "moduleId": "oFFJ",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
               "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
@@ -22436,6 +22400,42 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "44:13-18"
+            },
+            {
+              "moduleId": "HgBz",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
+              "module": "./node_modules/@jaredpalmer/after/build/After.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "37:25-41"
+            },
+            {
+              "moduleId": "ET5a",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "28:25-41"
+            },
+            {
+              "moduleId": "6Q7O",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
+              "module": "./node_modules/@jaredpalmer/after/build/Document.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "66:25-41"
+            },
+            {
+              "moduleId": "6ihe",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
+              "module": "./node_modules/@jaredpalmer/after/build/render.js",
+              "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "65:25-41"
             },
             {
               "moduleId": "eO8H",
@@ -23464,15 +23464,6 @@
               "loc": "2:17-44"
             },
             {
-              "moduleId": "vwuL",
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
-              "module": "./node_modules/core-js/library/modules/_object-gopd.js",
-              "moduleName": "./node_modules/core-js/library/modules/_object-gopd.js",
-              "type": "cjs require",
-              "userRequest": "./_property-desc",
-              "loc": "2:17-44"
-            },
-            {
               "moduleId": "j2DC",
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-create.js",
               "module": "./node_modules/core-js/library/modules/_iter-create.js",
@@ -23480,6 +23471,15 @@
               "type": "cjs require",
               "userRequest": "./_property-desc",
               "loc": "3:17-44"
+            },
+            {
+              "moduleId": "vwuL",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
+              "module": "./node_modules/core-js/library/modules/_object-gopd.js",
+              "moduleName": "./node_modules/core-js/library/modules/_object-gopd.js",
+              "type": "cjs require",
+              "userRequest": "./_property-desc",
+              "loc": "2:17-44"
             },
             {
               "moduleId": "AUvm",
@@ -27854,15 +27854,6 @@
           "loc": "3:10-27"
         },
         {
-          "moduleId": "6tYh",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-          "module": "./node_modules/core-js/library/modules/_set-proto.js",
-          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-          "type": "cjs require",
-          "userRequest": "./_ctx",
-          "loc": "13:14-31"
-        },
-        {
           "moduleId": "oioR",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
           "module": "./node_modules/core-js/library/modules/_for-of.js",
@@ -27879,6 +27870,15 @@
           "type": "cjs require",
           "userRequest": "./_ctx",
           "loc": "1:10-27"
+        },
+        {
+          "moduleId": "6tYh",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+          "module": "./node_modules/core-js/library/modules/_set-proto.js",
+          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+          "type": "cjs require",
+          "userRequest": "./_ctx",
+          "loc": "13:14-31"
         }
       ],
       "usedExports": true,
@@ -29163,9 +29163,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-      "issuerId": "6tYh",
-      "issuerName": "./node_modules/core-js/library/modules/_set-proto.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+      "issuerId": "oioR",
+      "issuerName": "./node_modules/core-js/library/modules/_for-of.js",
       "issuerPath": [
         {
           "id": 0,
@@ -29188,29 +29188,29 @@
           "name": "./src/app/components/Article/index.jsx"
         },
         {
-          "id": "mRg0",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-          "name": "./node_modules/babel-runtime/helpers/inherits.js"
+          "id": "D3Ub",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+          "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
         },
         {
-          "id": "s3Ml",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/set-prototype-of.js",
-          "name": "./node_modules/babel-runtime/core-js/object/set-prototype-of.js"
+          "id": "4d7F",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+          "name": "./node_modules/babel-runtime/core-js/promise.js"
         },
         {
-          "id": "JbBM",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-          "name": "./node_modules/core-js/library/fn/object/set-prototype-of.js"
+          "id": "aW7e",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+          "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "Hfiw",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "name": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js"
+          "id": "JMW+",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "name": "./node_modules/core-js/library/modules/es6.promise.js"
         },
         {
-          "id": "6tYh",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-          "name": "./node_modules/core-js/library/modules/_set-proto.js"
+          "id": "oioR",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
+          "name": "./node_modules/core-js/library/modules/_for-of.js"
         }
       ],
       "failed": false,
@@ -29219,24 +29219,6 @@
       "assets": [
       ],
       "reasons": [
-        {
-          "moduleId": "6tYh",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-          "module": "./node_modules/core-js/library/modules/_set-proto.js",
-          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-          "type": "cjs require",
-          "userRequest": "./_an-object",
-          "loc": "4:15-38"
-        },
-        {
-          "moduleId": "oVml",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "module": "./node_modules/core-js/library/modules/_object-create.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-          "type": "cjs require",
-          "userRequest": "./_an-object",
-          "loc": "2:15-38"
-        },
         {
           "moduleId": "oioR",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_for-of.js",
@@ -29274,10 +29256,19 @@
           "loc": "1:15-38"
         },
         {
-          "moduleId": "fpC5",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
-          "module": "./node_modules/core-js/library/modules/_object-dps.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
+          "moduleId": "6tYh",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+          "module": "./node_modules/core-js/library/modules/_set-proto.js",
+          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+          "type": "cjs require",
+          "userRequest": "./_an-object",
+          "loc": "4:15-38"
+        },
+        {
+          "moduleId": "oVml",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+          "module": "./node_modules/core-js/library/modules/_object-create.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
           "type": "cjs require",
           "userRequest": "./_an-object",
           "loc": "2:15-38"
@@ -29287,6 +29278,15 @@
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-call.js",
           "module": "./node_modules/core-js/library/modules/_iter-call.js",
           "moduleName": "./node_modules/core-js/library/modules/_iter-call.js",
+          "type": "cjs require",
+          "userRequest": "./_an-object",
+          "loc": "2:15-38"
+        },
+        {
+          "moduleId": "fpC5",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-dps.js",
+          "module": "./node_modules/core-js/library/modules/_object-dps.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-dps.js",
           "type": "cjs require",
           "userRequest": "./_an-object",
           "loc": "2:15-38"
@@ -29402,15 +29402,6 @@
           "loc": "5:13-33"
         },
         {
-          "moduleId": "Y7ZC",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
-          "module": "./node_modules/core-js/library/modules/_export.js",
-          "moduleName": "./node_modules/core-js/library/modules/_export.js",
-          "type": "cjs require",
-          "userRequest": "./_global",
-          "loc": "1:13-33"
-        },
-        {
           "moduleId": "UWiX",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks.js",
           "module": "./node_modules/core-js/library/modules/_wks.js",
@@ -29418,6 +29409,15 @@
           "type": "cjs require",
           "userRequest": "./_global",
           "loc": "3:13-33"
+        },
+        {
+          "moduleId": "Y7ZC",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
+          "module": "./node_modules/core-js/library/modules/_export.js",
+          "moduleName": "./node_modules/core-js/library/modules/_export.js",
+          "type": "cjs require",
+          "userRequest": "./_global",
+          "loc": "1:13-33"
         },
         {
           "moduleId": "QXhf",
@@ -29456,13 +29456,13 @@
           "loc": "2:13-33"
         },
         {
-          "moduleId": "Hsns",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_dom-create.js",
-          "module": "./node_modules/core-js/library/modules/_dom-create.js",
-          "moduleName": "./node_modules/core-js/library/modules/_dom-create.js",
+          "moduleId": "29s/",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_shared.js",
+          "module": "./node_modules/core-js/library/modules/_shared.js",
+          "moduleName": "./node_modules/core-js/library/modules/_shared.js",
           "type": "cjs require",
           "userRequest": "./_global",
-          "loc": "2:15-35"
+          "loc": "2:13-33"
         },
         {
           "moduleId": "MvwC",
@@ -29474,13 +29474,13 @@
           "loc": "1:15-35"
         },
         {
-          "moduleId": "29s/",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_shared.js",
-          "module": "./node_modules/core-js/library/modules/_shared.js",
-          "moduleName": "./node_modules/core-js/library/modules/_shared.js",
+          "moduleId": "Hsns",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_dom-create.js",
+          "module": "./node_modules/core-js/library/modules/_dom-create.js",
+          "moduleName": "./node_modules/core-js/library/modules/_dom-create.js",
           "type": "cjs require",
           "userRequest": "./_global",
-          "loc": "2:13-33"
+          "loc": "2:15-35"
         },
         {
           "moduleId": "AUvm",
@@ -30229,15 +30229,6 @@
           "loc": "7:15-38"
         },
         {
-          "moduleId": "6tYh",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
-          "module": "./node_modules/core-js/library/modules/_set-proto.js",
-          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
-          "type": "cjs require",
-          "userRequest": "./_is-object",
-          "loc": "3:15-38"
-        },
-        {
           "moduleId": "zXhZ",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_promise-resolve.js",
           "module": "./node_modules/core-js/library/modules/_promise-resolve.js",
@@ -30245,6 +30236,15 @@
           "type": "cjs require",
           "userRequest": "./_is-object",
           "loc": "2:15-38"
+        },
+        {
+          "moduleId": "6tYh",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_set-proto.js",
+          "module": "./node_modules/core-js/library/modules/_set-proto.js",
+          "moduleName": "./node_modules/core-js/library/modules/_set-proto.js",
+          "type": "cjs require",
+          "userRequest": "./_is-object",
+          "loc": "3:15-38"
         },
         {
           "moduleId": "5K7Z",
@@ -32510,9 +32510,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-      "issuerId": "oVml",
-      "issuerName": "./node_modules/core-js/library/modules/_object-create.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+      "issuerId": "QXhf",
+      "issuerName": "./node_modules/core-js/library/modules/_task.js",
       "issuerPath": [
         {
           "id": 0,
@@ -32535,29 +32535,29 @@
           "name": "./src/app/components/Article/index.jsx"
         },
         {
-          "id": "mRg0",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-          "name": "./node_modules/babel-runtime/helpers/inherits.js"
+          "id": "D3Ub",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+          "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
         },
         {
-          "id": "AyUB",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/create.js",
-          "name": "./node_modules/babel-runtime/core-js/object/create.js"
+          "id": "4d7F",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+          "name": "./node_modules/babel-runtime/core-js/promise.js"
         },
         {
-          "id": "3GJH",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-          "name": "./node_modules/core-js/library/fn/object/create.js"
+          "id": "aW7e",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+          "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "lCc8",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-          "name": "./node_modules/core-js/library/modules/es6.object.create.js"
+          "id": "JMW+",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "name": "./node_modules/core-js/library/modules/es6.promise.js"
         },
         {
-          "id": "oVml",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "name": "./node_modules/core-js/library/modules/_object-create.js"
+          "id": "QXhf",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+          "name": "./node_modules/core-js/library/modules/_task.js"
         }
       ],
       "failed": false,
@@ -32567,15 +32567,6 @@
       ],
       "reasons": [
         {
-          "moduleId": "oVml",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "module": "./node_modules/core-js/library/modules/_object-create.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-          "type": "cjs require",
-          "userRequest": "./_dom-create",
-          "loc": "12:15-39"
-        },
-        {
           "moduleId": "QXhf",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
           "module": "./node_modules/core-js/library/modules/_task.js",
@@ -32583,6 +32574,15 @@
           "type": "cjs require",
           "userRequest": "./_dom-create",
           "loc": "4:10-34"
+        },
+        {
+          "moduleId": "oVml",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+          "module": "./node_modules/core-js/library/modules/_object-create.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
+          "type": "cjs require",
+          "userRequest": "./_dom-create",
+          "loc": "12:15-39"
         },
         {
           "moduleId": "eUtF",
@@ -33824,9 +33824,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-      "issuerId": "oVml",
-      "issuerName": "./node_modules/core-js/library/modules/_object-create.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+      "issuerId": "QXhf",
+      "issuerName": "./node_modules/core-js/library/modules/_task.js",
       "issuerPath": [
         {
           "id": 0,
@@ -33849,29 +33849,29 @@
           "name": "./src/app/components/Article/index.jsx"
         },
         {
-          "id": "mRg0",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-          "name": "./node_modules/babel-runtime/helpers/inherits.js"
+          "id": "D3Ub",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+          "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
         },
         {
-          "id": "AyUB",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/create.js",
-          "name": "./node_modules/babel-runtime/core-js/object/create.js"
+          "id": "4d7F",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+          "name": "./node_modules/babel-runtime/core-js/promise.js"
         },
         {
-          "id": "3GJH",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-          "name": "./node_modules/core-js/library/fn/object/create.js"
+          "id": "aW7e",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+          "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "lCc8",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-          "name": "./node_modules/core-js/library/modules/es6.object.create.js"
+          "id": "JMW+",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "name": "./node_modules/core-js/library/modules/es6.promise.js"
         },
         {
-          "id": "oVml",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "name": "./node_modules/core-js/library/modules/_object-create.js"
+          "id": "QXhf",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
+          "name": "./node_modules/core-js/library/modules/_task.js"
         }
       ],
       "failed": false,
@@ -33881,15 +33881,6 @@
       ],
       "reasons": [
         {
-          "moduleId": "oVml",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
-          "module": "./node_modules/core-js/library/modules/_object-create.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
-          "type": "cjs require",
-          "userRequest": "./_html",
-          "loc": "18:2-20"
-        },
-        {
           "moduleId": "QXhf",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_task.js",
           "module": "./node_modules/core-js/library/modules/_task.js",
@@ -33897,6 +33888,15 @@
           "type": "cjs require",
           "userRequest": "./_html",
           "loc": "3:11-29"
+        },
+        {
+          "moduleId": "oVml",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-create.js",
+          "module": "./node_modules/core-js/library/modules/_object-create.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-create.js",
+          "type": "cjs require",
+          "userRequest": "./_html",
+          "loc": "18:2-20"
         }
       ],
       "usedExports": true,
@@ -34102,15 +34102,6 @@
           "loc": "3:11-29"
         },
         {
-          "moduleId": "Y7ZC",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
-          "module": "./node_modules/core-js/library/modules/_export.js",
-          "moduleName": "./node_modules/core-js/library/modules/_export.js",
-          "type": "cjs require",
-          "userRequest": "./_hide",
-          "loc": "4:11-29"
-        },
-        {
           "moduleId": "MPFp",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-define.js",
           "module": "./node_modules/core-js/library/modules/_iter-define.js",
@@ -34118,6 +34109,15 @@
           "type": "cjs require",
           "userRequest": "./_hide",
           "loc": "5:11-29"
+        },
+        {
+          "moduleId": "Y7ZC",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_export.js",
+          "module": "./node_modules/core-js/library/modules/_export.js",
+          "moduleName": "./node_modules/core-js/library/modules/_export.js",
+          "type": "cjs require",
+          "userRequest": "./_hide",
+          "loc": "4:11-29"
         },
         {
           "moduleId": "XJU/",
@@ -36777,15 +36777,6 @@
           "loc": "5:20-37"
         },
         {
-          "moduleId": "zLkG",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks-ext.js",
-          "module": "./node_modules/core-js/library/modules/_wks-ext.js",
-          "moduleName": "./node_modules/core-js/library/modules/_wks-ext.js",
-          "type": "cjs require",
-          "userRequest": "./_wks",
-          "loc": "1:12-29"
-        },
-        {
           "moduleId": "MPFp",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-define.js",
           "module": "./node_modules/core-js/library/modules/_iter-define.js",
@@ -36838,6 +36829,15 @@
           "type": "cjs require",
           "userRequest": "./_wks",
           "loc": "1:15-32"
+        },
+        {
+          "moduleId": "zLkG",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_wks-ext.js",
+          "module": "./node_modules/core-js/library/modules/_wks-ext.js",
+          "moduleName": "./node_modules/core-js/library/modules/_wks-ext.js",
+          "type": "cjs require",
+          "userRequest": "./_wks",
+          "loc": "1:12-29"
         },
         {
           "moduleId": "j2DC",
@@ -37551,28 +37551,28 @@
           "loc": "2:17-47"
         },
         {
-          "moduleId": "3GJH",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
-          "module": "./node_modules/core-js/library/fn/object/create.js",
-          "moduleName": "./node_modules/core-js/library/fn/object/create.js",
+          "moduleId": "RU/L",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/define-property.js",
+          "module": "./node_modules/core-js/library/fn/object/define-property.js",
+          "moduleName": "./node_modules/core-js/library/fn/object/define-property.js",
           "type": "cjs require",
           "userRequest": "../../modules/_core",
           "loc": "2:14-44"
         },
         {
-          "moduleId": "aW7e",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
-          "module": "./node_modules/core-js/library/fn/promise.js",
-          "moduleName": "./node_modules/core-js/library/fn/promise.js",
+          "moduleId": "JbBM",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
+          "module": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
+          "moduleName": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
           "type": "cjs require",
-          "userRequest": "../modules/_core",
-          "loc": "7:17-44"
+          "userRequest": "../../modules/_core",
+          "loc": "2:17-47"
         },
         {
-          "moduleId": "RU/L",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/define-property.js",
-          "module": "./node_modules/core-js/library/fn/object/define-property.js",
-          "moduleName": "./node_modules/core-js/library/fn/object/define-property.js",
+          "moduleId": "3GJH",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/create.js",
+          "module": "./node_modules/core-js/library/fn/object/create.js",
+          "moduleName": "./node_modules/core-js/library/fn/object/create.js",
           "type": "cjs require",
           "userRequest": "../../modules/_core",
           "loc": "2:14-44"
@@ -37668,15 +37668,6 @@
           "loc": "2:14-44"
         },
         {
-          "moduleId": "UbbE",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/assign.js",
-          "module": "./node_modules/core-js/library/fn/object/assign.js",
-          "moduleName": "./node_modules/core-js/library/fn/object/assign.js",
-          "type": "cjs require",
-          "userRequest": "../../modules/_core",
-          "loc": "2:17-47"
-        },
-        {
           "moduleId": "4bdI",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/freeze.js",
           "module": "./node_modules/core-js/library/fn/object/freeze.js",
@@ -37686,13 +37677,22 @@
           "loc": "2:17-47"
         },
         {
-          "moduleId": "JbBM",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-          "module": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
-          "moduleName": "./node_modules/core-js/library/fn/object/set-prototype-of.js",
+          "moduleId": "UbbE",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/assign.js",
+          "module": "./node_modules/core-js/library/fn/object/assign.js",
+          "moduleName": "./node_modules/core-js/library/fn/object/assign.js",
           "type": "cjs require",
           "userRequest": "../../modules/_core",
           "loc": "2:17-47"
+        },
+        {
+          "moduleId": "aW7e",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+          "module": "./node_modules/core-js/library/fn/promise.js",
+          "moduleName": "./node_modules/core-js/library/fn/promise.js",
+          "type": "cjs require",
+          "userRequest": "../modules/_core",
+          "loc": "7:17-44"
         }
       ],
       "usedExports": true,
@@ -37931,9 +37931,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-      "issuerId": "Hfiw",
-      "issuerName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+      "issuer": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+      "issuerId": "JMW+",
+      "issuerName": "./node_modules/core-js/library/modules/es6.promise.js",
       "issuerPath": [
         {
           "id": 0,
@@ -37956,24 +37956,24 @@
           "name": "./src/app/components/Article/index.jsx"
         },
         {
-          "id": "mRg0",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/inherits.js",
-          "name": "./node_modules/babel-runtime/helpers/inherits.js"
+          "id": "D3Ub",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/helpers/asyncToGenerator.js",
+          "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js"
         },
         {
-          "id": "s3Ml",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/object/set-prototype-of.js",
-          "name": "./node_modules/babel-runtime/core-js/object/set-prototype-of.js"
+          "id": "4d7F",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/babel-runtime/core-js/promise.js",
+          "name": "./node_modules/babel-runtime/core-js/promise.js"
         },
         {
-          "id": "JbBM",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/object/set-prototype-of.js",
-          "name": "./node_modules/core-js/library/fn/object/set-prototype-of.js"
+          "id": "aW7e",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/fn/promise.js",
+          "name": "./node_modules/core-js/library/fn/promise.js"
         },
         {
-          "id": "Hfiw",
-          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "name": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js"
+          "id": "JMW+",
+          "identifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
+          "name": "./node_modules/core-js/library/modules/es6.promise.js"
         }
       ],
       "failed": false,
@@ -37992,15 +37992,6 @@
           "loc": "2:14-34"
         },
         {
-          "moduleId": "Hfiw",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "module": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
-          "type": "cjs require",
-          "userRequest": "./_export",
-          "loc": "2:14-34"
-        },
-        {
           "moduleId": "JMW+",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.promise.js",
           "module": "./node_modules/core-js/library/modules/es6.promise.js",
@@ -38008,15 +37999,6 @@
           "type": "cjs require",
           "userRequest": "./_export",
           "loc": "6:14-34"
-        },
-        {
-          "moduleId": "PBE1",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
-          "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-          "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
-          "type": "cjs require",
-          "userRequest": "./_export",
-          "loc": "3:14-34"
         },
         {
           "moduleId": "Q/yX",
@@ -38032,6 +38014,24 @@
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.define-property.js",
           "module": "./node_modules/core-js/library/modules/es6.object.define-property.js",
           "moduleName": "./node_modules/core-js/library/modules/es6.object.define-property.js",
+          "type": "cjs require",
+          "userRequest": "./_export",
+          "loc": "1:14-34"
+        },
+        {
+          "moduleId": "Hfiw",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+          "module": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js",
+          "type": "cjs require",
+          "userRequest": "./_export",
+          "loc": "2:14-34"
+        },
+        {
+          "moduleId": "lCc8",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
+          "module": "./node_modules/core-js/library/modules/es6.object.create.js",
+          "moduleName": "./node_modules/core-js/library/modules/es6.object.create.js",
           "type": "cjs require",
           "userRequest": "./_export",
           "loc": "1:14-34"
@@ -38073,13 +38073,13 @@
           "loc": "1:14-34"
         },
         {
-          "moduleId": "lCc8",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es6.object.create.js",
-          "module": "./node_modules/core-js/library/modules/es6.object.create.js",
-          "moduleName": "./node_modules/core-js/library/modules/es6.object.create.js",
+          "moduleId": "PBE1",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/es7.promise.finally.js",
+          "module": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+          "moduleName": "./node_modules/core-js/library/modules/es7.promise.finally.js",
           "type": "cjs require",
           "userRequest": "./_export",
-          "loc": "1:14-34"
+          "loc": "3:14-34"
         }
       ],
       "usedExports": true,
@@ -38567,7 +38567,7 @@
               "moduleName": "./node_modules/history/es/createHashHistory.js",
               "type": "harmony import specifier",
               "userRequest": "./PathUtils",
-              "loc": "62:53-68"
+              "loc": "27:16-31"
             },
             {
               "moduleId": null,
@@ -38643,6 +38643,24 @@
             },
             {
               "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+              "module": "./node_modules/history/es/createMemoryHistory.js",
+              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./PathUtils",
+              "loc": "6:0-41"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+              "module": "./node_modules/history/es/createMemoryHistory.js",
+              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./PathUtils",
+              "loc": "49:19-29"
+            },
+            {
+              "moduleId": null,
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
               "module": "./node_modules/history/es/createHashHistory.js",
               "moduleName": "./node_modules/history/es/createHashHistory.js",
@@ -38688,12 +38706,12 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony import specifier",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
+              "module": "./node_modules/history/es/index.js",
+              "moduleName": "./node_modules/history/es/index.js",
+              "type": "harmony export imported specifier",
               "userRequest": "./PathUtils",
-              "loc": "27:16-31"
+              "loc": "9:0-52"
             },
             {
               "moduleId": null,
@@ -38706,12 +38724,12 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
-              "module": "./node_modules/history/es/index.js",
-              "moduleName": "./node_modules/history/es/index.js",
-              "type": "harmony export imported specifier",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
               "userRequest": "./PathUtils",
-              "loc": "9:0-52"
+              "loc": "62:53-68"
             },
             {
               "moduleId": null,
@@ -38814,24 +38832,6 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-              "module": "./node_modules/history/es/createMemoryHistory.js",
-              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "./PathUtils",
-              "loc": "6:0-41"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-              "module": "./node_modules/history/es/createMemoryHistory.js",
-              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-              "type": "harmony import specifier",
-              "userRequest": "./PathUtils",
-              "loc": "49:19-29"
-            },
-            {
-              "moduleId": null,
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/LocationUtils.js",
               "module": "./node_modules/history/es/LocationUtils.js",
               "moduleName": "./node_modules/history/es/LocationUtils.js",
@@ -38923,12 +38923,12 @@
           "reasons": [
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
+              "module": "./node_modules/history/es/createMemoryHistory.js",
+              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
               "type": "harmony import specifier",
               "userRequest": "./LocationUtils",
-              "loc": "76:11-25"
+              "loc": "44:39-53"
             },
             {
               "moduleId": null,
@@ -38986,51 +38986,6 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "./LocationUtils",
-              "loc": "5:0-68"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
-              "module": "./node_modules/history/es/index.js",
-              "moduleName": "./node_modules/history/es/index.js",
-              "type": "harmony export imported specifier",
-              "userRequest": "./LocationUtils",
-              "loc": "8:0-68"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony import specifier",
-              "userRequest": "./LocationUtils",
-              "loc": "103:27-44"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony import specifier",
-              "userRequest": "./LocationUtils",
-              "loc": "172:19-33"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony import specifier",
-              "userRequest": "./LocationUtils",
-              "loc": "207:19-33"
-            },
-            {
-              "moduleId": null,
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
               "module": "./node_modules/history/es/createMemoryHistory.js",
               "moduleName": "./node_modules/history/es/createMemoryHistory.js",
@@ -39040,12 +38995,12 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
-              "module": "./node_modules/history/es/createMemoryHistory.js",
-              "moduleName": "./node_modules/history/es/createMemoryHistory.js",
-              "type": "harmony import specifier",
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js",
+              "module": "./node_modules/history/es/index.js",
+              "moduleName": "./node_modules/history/es/index.js",
+              "type": "harmony export imported specifier",
               "userRequest": "./LocationUtils",
-              "loc": "44:39-53"
+              "loc": "8:0-68"
             },
             {
               "moduleId": null,
@@ -39073,6 +39028,51 @@
               "type": "harmony import specifier",
               "userRequest": "./LocationUtils",
               "loc": "83:19-33"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./LocationUtils",
+              "loc": "5:0-68"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./LocationUtils",
+              "loc": "76:11-25"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./LocationUtils",
+              "loc": "103:27-44"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./LocationUtils",
+              "loc": "172:19-33"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./LocationUtils",
+              "loc": "207:19-33"
             }
           ],
           "usedExports": [
@@ -39567,24 +39567,6 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "./createTransitionManager",
-              "loc": "7:0-64"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
-              "module": "./node_modules/history/es/createHashHistory.js",
-              "moduleName": "./node_modules/history/es/createHashHistory.js",
-              "type": "harmony import specifier",
-              "userRequest": "./createTransitionManager",
-              "loc": "79:26-49"
-            },
-            {
-              "moduleId": null,
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createMemoryHistory.js",
               "module": "./node_modules/history/es/createMemoryHistory.js",
               "moduleName": "./node_modules/history/es/createMemoryHistory.js",
@@ -39600,6 +39582,24 @@
               "type": "harmony import specifier",
               "userRequest": "./createTransitionManager",
               "loc": "28:26-49"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./createTransitionManager",
+              "loc": "7:0-64"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/createHashHistory.js",
+              "module": "./node_modules/history/es/createHashHistory.js",
+              "moduleName": "./node_modules/history/es/createHashHistory.js",
+              "type": "harmony import specifier",
+              "userRequest": "./createTransitionManager",
+              "loc": "79:26-49"
             }
           ],
           "usedExports": [
@@ -44712,6 +44712,24 @@
             },
             {
               "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
+              "module": "./src/app/models/propTypes/headline/index.js",
+              "moduleName": "./src/app/models/propTypes/headline/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../text",
+              "loc": "2:0-45"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
+              "module": "./src/app/models/propTypes/headline/index.js",
+              "moduleName": "./src/app/models/propTypes/headline/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "../text",
+              "loc": "4:53-71"
+            },
+            {
+              "moduleId": null,
               "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/index.js",
               "module": "./src/app/models/propTypes/index.js",
               "moduleName": "./src/app/models/propTypes/index.js",
@@ -44736,24 +44754,6 @@
               "type": "harmony import specifier",
               "userRequest": "./text",
               "loc": "50:12-30"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
-              "module": "./src/app/models/propTypes/headline/index.js",
-              "moduleName": "./src/app/models/propTypes/headline/index.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "../text",
-              "loc": "2:0-45"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/razzle/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hobbsb02/dev/simorgh/src/app/models/propTypes/headline/index.js",
-              "module": "./src/app/models/propTypes/headline/index.js",
-              "moduleName": "./src/app/models/propTypes/headline/index.js",
-              "type": "harmony import specifier",
-              "userRequest": "../text",
-              "loc": "4:53-71"
             }
           ],
           "usedExports": [
@@ -45199,6 +45199,33 @@
           "moduleName": "./node_modules/history/es/index.js + 9 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "warning",
+          "loc": "5:0-30"
+        },
+        {
+          "moduleId": "YHGo",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+          "module": "./node_modules/history/es/index.js + 9 modules",
+          "moduleName": "./node_modules/history/es/index.js + 9 modules",
+          "type": "harmony import specifier",
+          "userRequest": "warning",
+          "loc": "52:4-11"
+        },
+        {
+          "moduleId": "YHGo",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+          "module": "./node_modules/history/es/index.js + 9 modules",
+          "moduleName": "./node_modules/history/es/index.js + 9 modules",
+          "type": "harmony import specifier",
+          "userRequest": "warning",
+          "loc": "80:4-11"
+        },
+        {
+          "moduleId": "YHGo",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
+          "module": "./node_modules/history/es/index.js + 9 modules",
+          "moduleName": "./node_modules/history/es/index.js + 9 modules",
+          "type": "harmony side effect evaluation",
+          "userRequest": "warning",
           "loc": "3:0-30"
         },
         {
@@ -45245,33 +45272,6 @@
           "type": "harmony import specifier",
           "userRequest": "warning",
           "loc": "233:4-11"
-        },
-        {
-          "moduleId": "YHGo",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-          "module": "./node_modules/history/es/index.js + 9 modules",
-          "moduleName": "./node_modules/history/es/index.js + 9 modules",
-          "type": "harmony side effect evaluation",
-          "userRequest": "warning",
-          "loc": "5:0-30"
-        },
-        {
-          "moduleId": "YHGo",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-          "module": "./node_modules/history/es/index.js + 9 modules",
-          "moduleName": "./node_modules/history/es/index.js + 9 modules",
-          "type": "harmony import specifier",
-          "userRequest": "warning",
-          "loc": "52:4-11"
-        },
-        {
-          "moduleId": "YHGo",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/history/es/index.js de1e578bde2329ec374ee3cebcd317b8",
-          "module": "./node_modules/history/es/index.js + 9 modules",
-          "moduleName": "./node_modules/history/es/index.js + 9 modules",
-          "type": "harmony import specifier",
-          "userRequest": "warning",
-          "loc": "80:4-11"
         },
         {
           "moduleId": "YHGo",
@@ -46019,6 +46019,15 @@
           "loc": "6:12-37"
         },
         {
+          "moduleId": "eUtF",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ie8-dom-define.js",
+          "module": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
+          "moduleName": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
+          "type": "cjs require",
+          "userRequest": "./_descriptors",
+          "loc": "1:18-43"
+        },
+        {
           "moduleId": "vwuL",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
           "module": "./node_modules/core-js/library/modules/_object-gopd.js",
@@ -46035,15 +46044,6 @@
           "type": "cjs require",
           "userRequest": "./_descriptors",
           "loc": "5:17-42"
-        },
-        {
-          "moduleId": "eUtF",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_ie8-dom-define.js",
-          "module": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
-          "moduleName": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
-          "type": "cjs require",
-          "userRequest": "./_descriptors",
-          "loc": "1:18-43"
         },
         {
           "moduleId": "AUvm",
@@ -47589,42 +47589,6 @@
           "loc": "13:53-69"
         },
         {
-          "moduleId": "HgBz",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
-          "module": "./node_modules/@jaredpalmer/after/build/After.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "37:25-41"
-        },
-        {
-          "moduleId": "ET5a",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "28:25-41"
-        },
-        {
-          "moduleId": "6Q7O",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
-          "module": "./node_modules/@jaredpalmer/after/build/Document.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "66:25-41"
-        },
-        {
-          "moduleId": "6ihe",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
-          "module": "./node_modules/@jaredpalmer/after/build/render.js",
-          "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "65:25-41"
-        },
-        {
           "moduleId": "oFFJ",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/react-router-dom/es/BrowserRouter.js",
           "module": "./node_modules/react-router-dom/es/BrowserRouter.js",
@@ -47731,6 +47695,42 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "44:13-18"
+        },
+        {
+          "moduleId": "HgBz",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/After.js",
+          "module": "./node_modules/@jaredpalmer/after/build/After.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/After.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "37:25-41"
+        },
+        {
+          "moduleId": "ET5a",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "module": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/asyncComponent.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "28:25-41"
+        },
+        {
+          "moduleId": "6Q7O",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/Document.js",
+          "module": "./node_modules/@jaredpalmer/after/build/Document.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/Document.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "66:25-41"
+        },
+        {
+          "moduleId": "6ihe",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/@jaredpalmer/after/build/render.js",
+          "module": "./node_modules/@jaredpalmer/after/build/render.js",
+          "moduleName": "./node_modules/@jaredpalmer/after/build/render.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "65:25-41"
         },
         {
           "moduleId": "eO8H",
@@ -48754,15 +48754,6 @@
           "loc": "2:17-44"
         },
         {
-          "moduleId": "vwuL",
-          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
-          "module": "./node_modules/core-js/library/modules/_object-gopd.js",
-          "moduleName": "./node_modules/core-js/library/modules/_object-gopd.js",
-          "type": "cjs require",
-          "userRequest": "./_property-desc",
-          "loc": "2:17-44"
-        },
-        {
           "moduleId": "j2DC",
           "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_iter-create.js",
           "module": "./node_modules/core-js/library/modules/_iter-create.js",
@@ -48770,6 +48761,15 @@
           "type": "cjs require",
           "userRequest": "./_property-desc",
           "loc": "3:17-44"
+        },
+        {
+          "moduleId": "vwuL",
+          "moduleIdentifier": "/Users/hobbsb02/dev/simorgh/node_modules/core-js/library/modules/_object-gopd.js",
+          "module": "./node_modules/core-js/library/modules/_object-gopd.js",
+          "moduleName": "./node_modules/core-js/library/modules/_object-gopd.js",
+          "type": "cjs require",
+          "userRequest": "./_property-desc",
+          "loc": "2:17-44"
         },
         {
           "moduleId": "AUvm",
