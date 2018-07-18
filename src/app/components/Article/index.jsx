@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import { string, shape, any } from 'prop-types';
+import { string, any } from 'prop-types';
 import Header from '../Header';
 import MainContent from '../MainContent';
 
@@ -17,7 +17,7 @@ const Article = ({ lang, title, data }) => (
 Article.propTypes = {
   lang: string.isRequired,
   title: string.isRequired,
-  data: shape(any).isRequired,
+  data: any.isRequired, // eslint-disable-line
 };
 
 export default Article;
