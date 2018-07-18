@@ -20,15 +20,13 @@ try {
 }
 
 const publicDirectory = getPublicDirectory();
-const dataRoute =
-  process.env.NODE_ENV === 'production' ? '/data/prod' : '/data';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data';
 
 const server = express();
 server
   .disable('x-powered-by')
-  .use(dataRoute, express.static(dataFolderToRender))
+  .use('data', express.static(dataFolderToRender))
   .use(express.static(publicDirectory))
   .get('/status', (req, res) => {
     res.sendStatus(200);
