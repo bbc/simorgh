@@ -4,7 +4,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 const yaml = require('yaml-js'); // eslint-disable-line import/no-extraneous-dependencies
 const fs = require('fs'); // eslint-disable-line import/no-extraneous-dependencies
 const { validateNode, validateBlock } = require('./dataValidator');
-const data = require('../../../data/test/scenario-01.json');
+const data = require('../../../data/scenario-01.json');
 
 const yamlSchema = fs.readFileSync('./././data/schema.yaml', 'utf8');
 
