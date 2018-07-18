@@ -1,14 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Article from './index';
-import { blockContainingText } from '../../models/blocks';
+import { textBlock } from '../../models/blocks';
 
 const title = 'This is a title!';
 const lang = 'en-GB';
 
 const data = {
   blocks: [
-    blockContainingText('headline', 'This is a headline!'),
+    {
+      type: 'headline',
+      blockId: '1',
+      model: textBlock('This is a headline!'),
+    },
     {
       type: 'text',
       blockId: '2',
@@ -22,7 +26,7 @@ const data = {
             },
           },
           {
-            blockId: '2-1',
+            blockId: '2-2',
             type: 'paragraph',
             model: {
               text: 'More text content!',
