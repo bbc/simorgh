@@ -1,8 +1,28 @@
 import request from 'supertest';
 import * as after from '@jaredpalmer/after';
-import server from './index';
+import server, { getPublicDirectory } from './index';
 
 describe('Server', () => {
+  describe('getPublicDirectory', () => {
+    it(`should set the directory path based on env`, () => {
+      const envs = [
+        { production: 'build/public' },
+        { notProduction: 'public' },
+      ];
+
+      envs.forEach(env => {
+        const key = Object.keys(env).shift();
+        // sets an env variable globally for the running test process
+        process.env.NODE_ENV = key;
+        expect(getPublicDirectory()).toBe(env[key]);
+      });
+    });
+
+    afterEach(() => {
+      delete process.env.NODE_ENV;
+    });
+  });
+
   const makeRequest = async path => request(server).get(path);
 
   it(`should not pass an 'x-powered-by' response header`, async () => {
