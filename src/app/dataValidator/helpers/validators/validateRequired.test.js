@@ -12,10 +12,11 @@ describe('Data Validator', () => {
     const data = {
       type: 'article',
     };
+    const schemaName = 'article';
 
     expect(() => {
-      validateRequired(schema.required, data);
-    }).toThrowError('Error: Missing required prop for locator');
+      validateRequired(schema.required, data, schemaName);
+    }).toThrowError(`Error: Missing required property 'locator' for 'article'`);
   });
 
   it('should loop through all items of the required array and throw error when a required property is missing', () => {
@@ -24,15 +25,17 @@ describe('Data Validator', () => {
       type: 'article',
       properties: {},
     };
-
     const dataWithLocator = {
       type: 'article',
       locator: 'urn:bbc:optimo:asset:c0000000001o',
     };
+    const schemaName = 'article';
 
     expect(() => {
-      validateRequired(schema.required, dataWithLocator);
-    }).toThrowError('Error: Missing required prop for passport');
+      validateRequired(schema.required, dataWithLocator, schemaName);
+    }).toThrowError(
+      `Error: Missing required property 'passport' for 'article'`,
+    );
   });
 
   it('should not error when data does have all required properties', () => {
@@ -46,9 +49,10 @@ describe('Data Validator', () => {
       required: ['locator', 'passport', 'model'],
       type: 'article',
     };
+    const schemaName = 'article';
 
     expect(() => {
-      validateRequired(schema.required, requiredData);
+      validateRequired(schema.required, requiredData, schemaName);
     }).not.toThrowError();
   });
 });

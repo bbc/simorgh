@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { arrayOf, shape, string } from 'prop-types';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -59,64 +60,33 @@ const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-const listItems = [
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '1',
-    text: 'Why you can trust the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    id: '2',
-    text: 'Terms of Use',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '3',
-    text: 'About the BBC',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '4',
-    text: 'Privacy Policy',
-  },
-  {
-    href: 'https://www.bbc.com/terms',
-    id: '5',
-    text: 'Cookies',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '6',
-    text: 'Accessibility Help',
-  },
-  {
-    href: 'https://www.bbc.com/news/help-41670342',
-    id: '7',
-    text: 'Contact the BBC',
-  },
-];
-
-const externalLink = {
-  href: 'https://www.bbc.co.uk/help/web/links/',
-  text: 'Read about our approach to external linking.',
-};
-
-const Footer = () => (
+const Footer = ({ links, copyrightText, externalLink }) => (
   <StyledFooter role="contentinfo">
     <StyledList>
-      {listItems.map(listItem => (
-        <StyledListItem key={listItem.id}>
-          <StyledLink href={listItem.href}>{listItem.text}</StyledLink>
+      {links.map((link, index) => (
+        // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
+        // eslint-disable-next-line react/no-array-index-key
+        <StyledListItem key={index}>
+          <StyledLink href={link.href}>{link.text}</StyledLink>
         </StyledListItem>
       ))}
     </StyledList>
     <StyledParagraph>
-      Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
-      responsible for the content of external sites.
+      {copyrightText}
       <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
     </StyledParagraph>
   </StyledFooter>
 );
+
+const linkPropTypes = shape({
+  href: string.isRequired,
+  text: string.isRequired,
+});
+
+Footer.propTypes = {
+  links: arrayOf(linkPropTypes.isRequired).isRequired,
+  copyrightText: string.isRequired,
+  externalLink: linkPropTypes.isRequired,
+};
 
 export default Footer;
