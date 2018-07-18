@@ -61,14 +61,14 @@ components:
     article:
       type: object
       required:
-      - locator
-      - publishedDateTime
-      - lastUpdatedDateTime
-      - passport
-      - seoHeadline
-      # - socialHeadline # currently not in any scenario data, see issues
-      - metaDescription
-      - model
+        - lastUpdatedDateTime
+        - locator
+        - metaDescription
+        - model
+        - passport
+        - publishedDateTime
+        - seoHeadline
+        # - socialHeadline # currently not in any scenario data, see issues
       properties:
         locator:
           type: string
@@ -77,9 +77,9 @@ components:
         passport:
           type: object
           required:
-          - home
-          - language
-          - articleType
+            - articleType
+            - home
+            - language
           properties:
             language:
               type: string
@@ -122,24 +122,24 @@ components:
       items:
         type: object
         oneOf:
-        - $ref: '#/components/schemas/text'
-        - $ref: '#/components/schemas/image'
-        - $ref: '#/components/schemas/headline'
-        - $ref: '#/components/schemas/altText'
-        - $ref: '#/components/schemas/paragraph'
-        - $ref: '#/components/schemas/caption'
-        - $ref: '#/components/schemas/video'
-        - $ref: '#/components/schemas/rawVideo'
-        - $ref: '#/components/schemas/rawImage'
-        - $ref: '#/components/schemas/modelWithText'
+          - $ref: '#/components/schemas/altText'
+          - $ref: '#/components/schemas/caption'
+          - $ref: '#/components/schemas/headline'
+          - $ref: '#/components/schemas/image'
+          - $ref: '#/components/schemas/modelWithText'
+          - $ref: '#/components/schemas/paragraph'
+          - $ref: '#/components/schemas/rawImage'
+          - $ref: '#/components/schemas/rawVideo'
+          - $ref: '#/components/schemas/text'
+          - $ref: '#/components/schemas/video'
       minItems: 1
 
     image:
       type: object
       required:
-      - blockId
-      - type
-      - model
+        - blockId
+        - model
+        - type
       properties:
         blockId:
           type: string
@@ -156,9 +156,9 @@ components:
     text:
       type: object
       required:
-      - blockId
-      - type
-      - model
+        - blockId
+        - model
+        - type
       properties:
         blockId:
           type: string
@@ -176,8 +176,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -195,8 +195,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -214,8 +214,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -233,8 +233,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -252,8 +252,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -271,8 +271,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -283,11 +283,11 @@ components:
         model:
           type: object
           required:
-          - guidance
-          - isLive
-          - duration
-          - allowOffsiteEmbedding
-          - locator
+            - allowOffsiteEmbedding
+            - duration
+            - guidance
+            - isLive
+            - locator
           properties:
             guidance:
               type: boolean
@@ -309,8 +309,8 @@ components:
       type: object
       required:
         - blockId
-        - type
         - model
+        - type
       properties:
         blockId:
           type: string
@@ -321,11 +321,11 @@ components:
         model:
           type: object
           required:
-          - width
-          - height
-          - locator
-          - originCode
-          - copyrightHolder
+            - copyrightHolder
+            - height
+            - locator
+            - originCode
+            - width
           properties:
             width:
               type: integer
