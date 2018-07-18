@@ -1,7 +1,7 @@
 {
     "presets": [
-        ["env", {
-            "entry": ["babel-polyfill", "./src/client.js"],
+        "razzle/babel",
+        "stage-0", ["env", {
             "useBuiltIns": true,
             "targets": {
                 "browsers": [
@@ -15,8 +15,9 @@
                     "Android >= 7",
                     "and_chr >= 53",
                     "and_ff >= 49",
-                    "ios_saf >= 10"]
+                    "ios_saf >= 10"
+                ]
             }
-        }], ["razzle"]
+        }]
     ]
 }
