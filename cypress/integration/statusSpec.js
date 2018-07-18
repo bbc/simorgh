@@ -1,4 +1,4 @@
-import { testNonHTMLResponseCode } from '../support/test-helper';
+import { testNonHTMLResponseCode } from '../support/testHelper';
 
 describe('Simorgh Status', () => {
   it('should return 200', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { extractText } from '../../helpers/blockHandlers';
-import { textDefaultPropTypes } from '../../models/proptypes';
+import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Headline from '../../components/Headline';
 
