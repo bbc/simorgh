@@ -1,27 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imagePropTypes, imageDefaultPropTypes } from '../../models/propTypes';
-import { FF_NEWS_SANS_REG } from '../../lib/constants/styles';
+import Figure from '../../components/Figure';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
-const renderCaption = block => {
+const getCaption = block => {
   if (!block) {
     return null;
   }
-  const StyledFigCaption = styled.figcaption`
-    background-color: #d5d0cd;
-    color: #404040;
-    font-family: ${FF_NEWS_SANS_REG};
-    padding: 8px;
-  `;
-  const caption = getText(block);
-
-  return <StyledFigCaption>{caption}</StyledFigCaption>;
+  return getText(block);
 };
 
-const Image = ({ model }) => {
+const ImageContainer = ({ model }) => {
   const subBlocks = model.blocks;
 
   const rawImageBlock = filterForBlockType(subBlocks, 'rawImage');
@@ -37,15 +28,16 @@ const Image = ({ model }) => {
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
   return (
-    <figure>
-      <img alt={altText} src={rawImageSrc} />
-      {renderCaption(captionBlock)}
-    </figure>
+    <Figure
+      src={rawImageSrc}
+      alt={altText}
+      caption={getCaption(captionBlock)}
+    />
   );
 };
 
-Image.propTypes = imagePropTypes;
+ImageContainer.propTypes = imagePropTypes;
 
-Image.defaultProps = imageDefaultPropTypes;
+ImageContainer.defaultProps = imageDefaultPropTypes;
 
-export default Image;
+export default ImageContainer;
