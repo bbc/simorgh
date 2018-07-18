@@ -69,6 +69,7 @@ components:
         - publishedDateTime
         - seoHeadline
         # - socialHeadline # currently not in any scenario data, see issues
+        - type
       properties:
         locator:
           type: string
