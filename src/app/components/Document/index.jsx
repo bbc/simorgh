@@ -25,6 +25,7 @@ const resourceHints = () => (
   </Fragment>
 );
 
+/* eslint-disable react/prop-types */
 const Document = ({ assets, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const title = helmet.title.toComponent();
