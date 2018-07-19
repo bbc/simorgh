@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import MainContent from './index';
 
 describe('MainContent', () => {
@@ -57,8 +57,8 @@ describe('MainContent', () => {
     },
   ];
 
-  it('should render correctly', () => {
-    const tree = renderer.create(<MainContent blocks={blocks} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'should render inline-code',
+    <MainContent blocks={blocks} />,
+  );
 });
