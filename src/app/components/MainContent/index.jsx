@@ -14,7 +14,7 @@ const Blocks = {
   text,
 };
 
-const render = ({ blocks }) =>
+const render = blocks =>
   blocks.map(block => {
     const { type, blockId, model } = block;
 
@@ -23,8 +23,8 @@ const render = ({ blocks }) =>
     return <Block key={blockId} {...model} />;
   });
 
-const MainContent = ({ data }) => {
-  const renderedContent = render(data);
+const MainContent = ({ blocks }) => {
+  const renderedContent = render(blocks);
   return <div>{renderedContent}</div>;
 };
 
