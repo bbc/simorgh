@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
+import 'babel-polyfill';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { ensureReady, After } from '@jaredpalmer/after';
