@@ -1,7 +1,7 @@
 import express from 'express';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
-import Document from '../app/components/Document';
+import Document from '../app/containers/Document';
 
 const getPublicDirectory = () =>
   process.env.NODE_ENV === 'production'
