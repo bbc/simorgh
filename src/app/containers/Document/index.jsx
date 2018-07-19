@@ -13,16 +13,7 @@ class DocumentContainer extends React.Component {
   }
 
   render() {
-    const { helmet, assets, data, styleTags } = this.props; // eslint-disable-line react/prop-types
-
-    return (
-      <Document
-        assets={assets}
-        data={data}
-        styleTags={styleTags}
-        helmet={helmet}
-      />
-    );
+    return <Document {...this.props} />;
   }
 }
 
