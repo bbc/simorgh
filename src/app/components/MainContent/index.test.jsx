@@ -58,7 +58,7 @@ describe('MainContent', () => {
   ];
 
   shouldMatchSnapshot(
-    'should render inline-code',
+    'should render correctly',
     <MainContent blocks={blocks} />,
   );
 });
