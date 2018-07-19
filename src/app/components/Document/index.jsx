@@ -25,24 +25,29 @@ const resourceHints = () => (
   </Fragment>
 );
 
-const Document = ({ assets, data, styleTags, htmlAttrs, helmet }) => (
-  <html lang="en-GB" {...htmlAttrs}>
-    <head>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="nofollow" />
-      <link rel="manifest" href="manifest.json" />
-      {resourceHints()}
-      {helmet.title.toComponent()}
-      {styleTags}
-    </head>
-    <body>
-      <AfterRoot />
-      <AfterData data={data} />
-      <script type="text/javascript" src={assets.client.js} defer />
-    </body>
-  </html>
-);
+const Document = ({ assets, data, styleTags, helmet }) => {
+  const htmlAttrs = helmet.htmlAttributes.toComponent();
+  const title = helmet.title.toComponent();
+
+  return (
+    <html lang="en-GB" {...htmlAttrs}>
+      <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="nofollow" />
+        <link rel="manifest" href="manifest.json" />
+        {resourceHints()}
+        {title}
+        {styleTags}
+      </head>
+      <body>
+        <AfterRoot />
+        <AfterData data={data} />
+        <script type="text/javascript" src={assets.client.js} defer />
+      </body>
+    </html>
+  );
+};
 
 export default Document;
