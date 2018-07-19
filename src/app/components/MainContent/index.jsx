@@ -1,7 +1,8 @@
 import React from 'react';
-import { any, arrayOf, shape } from 'prop-types';
+import { shape } from 'prop-types';
 import headline from '../../containers/Headline';
 import text from '../../containers/Text';
+import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -30,9 +31,7 @@ const MainContent = ({ data }) => {
 
 MainContent.propTypes = {
   data: shape({
-    model: shape({
-      blocks: arrayOf(any),
-    }),
+    model: shape(mainContentModelPropTypes),
   }).isRequired,
 };
 

@@ -11,9 +11,13 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              type: 'text',
+              blockId: '1-1',
               model: {
                 blocks: [
                   {
+                    type: 'paragraph',
+                    blockId: '1-1-1',
                     model: {
                       text: 'This is a headline!',
                     },
@@ -30,6 +34,7 @@ describe('MainContent', () => {
         model: {
           blocks: [
             {
+              type: 'paragraph',
               blockId: '2-1',
               model: {
                 text: 'This is some text content!',
