@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import MainContent from './index';
-// import { isNull } from '../../helpers/tests/testHelpers';
 
 describe('MainContent', () => {
   const data = {
@@ -63,12 +62,4 @@ describe('MainContent', () => {
     const tree = renderer.create(<MainContent data={data} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  // describe('with no data', () => {
-  //   isNull('should return null', <MainContent />);
-  // });
-
-  // describe('with data', () => {
-  //   isNull('should return null', <MainContent data={[]} />);
-  // });
 });
