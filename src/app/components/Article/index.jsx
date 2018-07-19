@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import { string, any } from 'prop-types';
+import { string } from 'prop-types';
 import Header from '../Header';
 import MainContent from '../MainContent';
+import mainContentPropTypes from '../../models/propTypes/mainContent';
 
 const Article = ({ lang, title, blocks }) => (
   <Fragment>
@@ -17,7 +18,7 @@ const Article = ({ lang, title, blocks }) => (
 Article.propTypes = {
   lang: string.isRequired,
   title: string.isRequired,
-  blocks: any.isRequired, // eslint-disable-line
+  ...mainContentPropTypes.isRequired,
 };
 
 export default Article;
