@@ -7,6 +7,9 @@ class ArticleContainer extends Component {
   state = {
     data: {
       title: 'Article Headline',
+      passport: {
+        language: 'en-GB',
+      },
       model: {
         blocks: [
           {
@@ -39,9 +42,9 @@ class ArticleContainer extends Component {
 
   render() {
     const { data } = this.state;
-    const { title, model } = data;
+    const { title, model, passport } = data;
 
-    return <Article lang="en-GB" title={title} data={model} />;
+    return <Article {...passport} title={title} data={model} />;
   }
 }
 
