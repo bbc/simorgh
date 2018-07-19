@@ -22,7 +22,7 @@ class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { id } = match.params;
-      let url = `/data/test/${id}.json`;
+      let url = `/data/${id}.json`;
 
       if (req) {
         url = `${process.env.RAZZLE_BASE_PATH}${url}`;

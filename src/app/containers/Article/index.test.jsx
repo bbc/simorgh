@@ -42,9 +42,7 @@ describe('ArticleContainer', () => {
     describe('On client', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual(
-          `/data/test/${defaultIdParam}.json`,
-        );
+        expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
       });
     });
 
@@ -56,7 +54,7 @@ describe('ArticleContainer', () => {
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
         callGetInitialProps(serverContext);
         expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/test/${defaultIdParam}.json`,
+          `${BASE_PATH}/data/${defaultIdParam}.json`,
         );
       });
     });
