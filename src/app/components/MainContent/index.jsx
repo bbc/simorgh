@@ -1,5 +1,4 @@
 import React from 'react';
-import { shape } from 'prop-types';
 import headline from '../../containers/Headline';
 import text from '../../containers/Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
@@ -15,7 +14,7 @@ const Blocks = {
   text,
 };
 
-const render = ({ blocks }) =>
+const render = blocks =>
   blocks.map(block => {
     const { type, blockId, model } = block;
 
@@ -24,15 +23,11 @@ const render = ({ blocks }) =>
     return <Block key={blockId} {...model} />;
   });
 
-const MainContent = ({ data }) => {
-  const renderedContent = render(data);
+const MainContent = ({ blocks }) => {
+  const renderedContent = render(blocks);
   return <div>{renderedContent}</div>;
 };
 
-MainContent.propTypes = {
-  data: shape({
-    model: shape(mainContentModelPropTypes),
-  }).isRequired,
-};
+MainContent.propTypes = mainContentModelPropTypes;
 
 export default MainContent;

@@ -10,7 +10,7 @@ const Article = ({ lang, title, data }) => (
       <title>{title}</title>
     </Helmet>
     <Header />
-    <MainContent data={data} />
+    <MainContent {...data} />
   </Fragment>
 );
 
