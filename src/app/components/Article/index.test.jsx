@@ -35,7 +35,7 @@ const blocks = [
     },
   },
   {
-    type: 'test',
+    type: 'test', // causes prop validation errors
     blockId: '3',
     model: {
       blocks: [
