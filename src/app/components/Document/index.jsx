@@ -1,29 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import ResourceHints from './ResourceHints';
 import '../../lib/globalStyles';
-
-const resourceHints = () => (
-  <Fragment>
-    <link
-      rel="preconnect"
-      href="https://ichef.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://static.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://gel.files.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link rel="dns-prefetch" href="https://ichef.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://static.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://gel.files.bbci.co.uk" />
-  </Fragment>
-);
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, data, styleTags, helmet }) => {
@@ -38,7 +16,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="nofollow" />
         <link rel="manifest" href="manifest.json" />
-        {resourceHints()}
+        <ResourceHints />
         {title}
         {styleTags}
       </head>
