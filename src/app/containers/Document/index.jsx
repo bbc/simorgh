@@ -1,32 +1,8 @@
-import React, { Fragment } from 'react';
-import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
-import '../../lib/globalStyles';
+import Document from '../../components/Document';
 
-const resourceHints = () => (
-  <Fragment>
-    <link
-      rel="preconnect"
-      href="https://ichef.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://static.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://gel.files.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link rel="dns-prefetch" href="https://ichef.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://static.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://gel.files.bbci.co.uk" />
-  </Fragment>
-);
-
-class Document extends React.Component {
+class DocumentContainer extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
     const sheet = new ServerStyleSheet();
     const page = await renderPage(App => props =>
@@ -41,25 +17,15 @@ class Document extends React.Component {
     const htmlAttrs = helmet.htmlAttributes.toComponent();
 
     return (
-      <html lang="en-GB" {...htmlAttrs}>
-        <head>
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="robots" content="nofollow" />
-          <link rel="manifest" href="manifest.json" />
-          {resourceHints()}
-          {helmet.title.toComponent()}
-          {styleTags}
-        </head>
-        <body>
-          <AfterRoot />
-          <AfterData data={data} />
-          <script type="text/javascript" src={assets.client.js} defer />
-        </body>
-      </html>
+      <Document
+        assets={assets}
+        data={data}
+        styleTags={styleTags}
+        htmlAttrs={htmlAttrs}
+        helmet={helmet}
+      />
     );
   }
 }
 
-export default Document;
+export default DocumentContainer;
