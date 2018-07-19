@@ -17,9 +17,15 @@ describe('Document', () => {
         .mockImplementation(() => <title>Test title</title>),
     },
   };
+  const styleTags = <style>{'html { color: red; }'}</style>;
 
   const shallowDocument = shallowRender(
-    <Document assets={assets} data={data} helmet={helmet} />,
+    <Document
+      assets={assets}
+      data={data}
+      helmet={helmet}
+      styleTags={styleTags}
+    />,
   );
 
   it('should render correctly', () => {

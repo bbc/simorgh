@@ -28,6 +28,9 @@ exports[`Document should render correctly 1`] = `
     <title>
       Test title
     </title>
+    <style>
+      html { color: red; }
+    </style>
   </head>
   <body>
     <AfterRoot />
