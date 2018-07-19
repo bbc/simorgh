@@ -49,7 +49,7 @@ class Article extends Component {
           <title>{title}</title>
         </Helmet>
         <Header />
-        <MainContent data={model} />
+        <MainContent {...model} />
       </Fragment>
     );
   }
