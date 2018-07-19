@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import { ServerStyleSheet } from 'styled-components';
-import '../lib/globalStyles';
+import '../../lib/globalStyles';
 
 const resourceHints = () => (
   <Fragment>
