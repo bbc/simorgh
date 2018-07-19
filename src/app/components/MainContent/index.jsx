@@ -1,5 +1,4 @@
 import React from 'react';
-import { shape } from 'prop-types';
 import headline from '../../containers/Headline';
 import text from '../../containers/Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
@@ -29,10 +28,6 @@ const MainContent = ({ data }) => {
   return <div>{renderedContent}</div>;
 };
 
-MainContent.propTypes = {
-  data: shape({
-    model: shape(mainContentModelPropTypes),
-  }).isRequired,
-};
+MainContent.propTypes = mainContentModelPropTypes;
 
 export default MainContent;
