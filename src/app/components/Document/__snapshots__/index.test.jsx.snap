@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document should be 1`] = `
+<html
+  lang="en-GB"
+>
+  <head>
+    <meta
+      content="IE=edge"
+      httpEquiv="X-UA-Compatible"
+    />
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="width=device-width, initial-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="nofollow"
+      name="robots"
+    />
+    <link
+      href="manifest.json"
+      rel="manifest"
+    />
+    <ResourceHints />
+  </head>
+  <body>
+    <AfterRoot />
+    <AfterData />
+    <script
+      defer={true}
+      src="http://example.com/file.js"
+      type="text/javascript"
+    />
+  </body>
+</html>
+`;
+
+exports[`Document should render correctly 1`] = `
+<html
+  lang="test"
+>
+  <head>
+    <meta
+      content="IE=edge"
+      httpEquiv="X-UA-Compatible"
+    />
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="width=device-width, initial-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="nofollow"
+      name="robots"
+    />
+    <link
+      href="manifest.json"
+      rel="manifest"
+    />
+    <ResourceHints />
+    Object {
+      "title": "Test title",
+    }
+  </head>
+  <body>
+    <AfterRoot />
+    <AfterData
+      data={Object {}}
+    />
+    <script
+      defer={true}
+      src="http://example.com/file.js"
+      type="text/javascript"
+    />
+  </body>
+</html>
+`;
