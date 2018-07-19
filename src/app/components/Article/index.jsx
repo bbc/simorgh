@@ -4,9 +4,9 @@ import { string, any } from 'prop-types';
 import Header from '../Header';
 import MainContent from '../MainContent';
 
-const Article = ({ language, title, data }) => (
+const Article = ({ lang, title, data }) => (
   <Fragment>
-    <Helmet htmlAttributes={{ lang: language }}>
+    <Helmet htmlAttributes={{ lang }}>
       <title>{title}</title>
     </Helmet>
     <Header />
@@ -15,7 +15,7 @@ const Article = ({ language, title, data }) => (
 );
 
 Article.propTypes = {
-  language: string.isRequired,
+  lang: string.isRequired,
   title: string.isRequired,
   data: any.isRequired, // eslint-disable-line
 };

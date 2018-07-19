@@ -44,7 +44,7 @@ class ArticleContainer extends Component {
     const { data } = this.state;
     const { title, model, passport } = data;
 
-    return <Article {...passport} title={title} data={model} />;
+    return <Article lang={passport.language} title={title} data={model} />;
   }
 }
 
