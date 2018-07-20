@@ -2,18 +2,35 @@ const fs = require('fs');
 const { log } = require('./utilities/messaging');
 const { validateBlock } = require('./helpers/validators/validateNode');
 
-const data = JSON.parse(
-  fs.readFileSync('./././data/scenario-01.json', 'utf-8'),
-);
-
-const validateData = dataToValidate => {
-  console.time('validateBlock'); // eslint-disable-line no-console
-  validateBlock(dataToValidate, 'article');
-  log('\n');
-  console.timeEnd('validateBlock'); // eslint-disable-line no-console
-  log('\nValidation complete!');
+const readFileSync = filename => {
+  const data = fs.readFileSync(filename);
+  validateData(JSON.parse(data));
 };
 
-validateData(data);
+const readdirAsync = dirname =>
+  new Promise((resolve, reject) => {
+    fs.readdir(dirname, (err, filenames) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(
+          filenames.forEach(filename => {
+            // only validate json files
+            if (filename.includes('.json')) {
+              readFileSync(`${dirname}/${filename}`);
+            }
+          }),
+        );
+      }
+    });
+  });
 
-module.exports = { validateData };
+const validateAllDataFiles = dirPath => readdirAsync(dirPath);
+
+console.time('validateAllDataFiles'); // eslint-disable-line no-console
+validateAllDataFiles('./././data').then(() => {
+  console.timeEnd('validateAllDataFiles'); // eslint-disable-line no-console
+  log('\nAll files validated!');
+});
+
+module.exports.validateAllDataFiles = validateAllDataFiles;
