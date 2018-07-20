@@ -2,25 +2,26 @@ const fs = require('fs');
 const { log } = require('./utilities/messaging');
 const { validateBlock } = require('./helpers/validators/validateNode');
 
-const readFileSync = filename => {
+const validateFile = filename => {
   const data = fs.readFileSync(filename);
   validateData(JSON.parse(data));
 };
 
+const readAllFiles = (filenames, dirname) =>
+  filenames.forEach(filename => {
+    // only validate json files
+    if (filename.includes('.json')) {
+      validateFile(`${dirname}/${filename}`);
+    }
+  });
+
 const readdirAsync = dirname =>
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
     fs.readdir(dirname, (err, filenames) => {
       if (err) {
-        reject(err);
+        throwError(err);
       } else {
-        resolve(
-          filenames.forEach(filename => {
-            // only validate json files
-            if (filename.includes('.json')) {
-              readFileSync(`${dirname}/${filename}`);
-            }
-          }),
-        );
+        resolve(readAllFiles(filenames, dirname));
       }
     });
   });
