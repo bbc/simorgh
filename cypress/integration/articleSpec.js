@@ -89,4 +89,15 @@ describe('News Article', () => {
       .should('have.attr', 'src')
       .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
+
+  it('should check the font file loads', () => {
+    cy.get('h1').should(h1 => {
+      const fontFamilyElements = h1.map((i, el) =>
+        Cypress.$(el).css('font-family'),
+      );
+      const fontFamilyArray = fontFamilyElements.get();
+      const fontFamilyUnique = new Set(fontFamilyArray);
+      expect(fontFamilyUnique.size).to.be.lessThan(3);
+    });
+  });
 });
