@@ -9,7 +9,6 @@ const validateFile = filename => {
 
 const readAllFiles = (filenames, dirname) =>
   filenames.forEach(filename => {
-
     // explicitly ignore scenario-23
     if (filename.includes('scenario-23.json')) {
       return;
@@ -38,4 +37,6 @@ readdirAsync('./././data').then(() => {
   log('\nAll files validated!');
 });
 
-module.exports.validateAllDataFiles = validateAllDataFiles;
+module.exports.readdirAsync = readdirAsync;
+module.exports.validateFile = validateFile;
+module.exports.readAllFiles = readAllFiles;
