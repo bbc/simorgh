@@ -23,11 +23,11 @@ const render = blocks =>
     return <Block key={blockId} {...model} />;
   });
 
-const MainContent = ({ blocks }) => {
+const MainContentContainer = ({ blocks }) => {
   const renderedContent = render(blocks);
   return <div>{renderedContent}</div>;
 };
 
-MainContent.propTypes = mainContentModelPropTypes;
+MainContentContainer.propTypes = mainContentModelPropTypes;
 
-export default MainContent;
+export default MainContentContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import MainContent from './index';
+import MainContentContainer from './index';
 
 describe('MainContent', () => {
   const blocks = [
@@ -59,6 +59,6 @@ describe('MainContent', () => {
 
   shouldMatchSnapshot(
     'should render correctly',
-    <MainContent blocks={blocks} />,
+    <MainContentContainer blocks={blocks} />,
   );
 });
