@@ -2,6 +2,7 @@ import React from 'react';
 import headline from '../Headline';
 import text from '../Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
+import MainContent from '../../components/MainContent';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -25,7 +26,7 @@ const render = blocks =>
 
 const MainContentContainer = ({ blocks }) => {
   const renderedContent = render(blocks);
-  return <div>{renderedContent}</div>;
+  return <MainContent>{renderedContent}</MainContent>;
 };
 
 MainContentContainer.propTypes = mainContentModelPropTypes;
