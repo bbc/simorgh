@@ -20,7 +20,7 @@ const render = blocks =>
 
     const Block = Blocks[type] || BlockString;
 
-    return <Block key={blockId} {...model} />;
+    return <Block key={blockId} type={type} {...model} />;
   });
 
 const MainContent = ({ blocks }) => {
