@@ -91,6 +91,18 @@ components:
             - tags
             - type
           properties:
+            articleType:
+              enum:
+                - analysis
+                - askTheAudience
+                - explainer
+                - factCheck
+                - feature
+                - news
+                - opinion
+                - review
+                - summary
+              example: analysis
             blockId:
               type: string
             blockTypes:
