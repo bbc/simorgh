@@ -91,13 +91,20 @@ describe('News Article', () => {
   });
 
   it('should check the font file loads', () => {
-    cy.get('h1').should(h1 => {
-      const fontFamilyElements = h1.map((i, el) =>
-        Cypress.$(el).css('font-family'),
-      );
-      const fontFamilyArray = fontFamilyElements.get();
-      const fontFamilyUnique = new Set(fontFamilyArray);
-      expect(fontFamilyUnique.size).to.be.lessThan(3);
-    });
+    const fontFamiliesArray = [];
+    cy.get('*')
+      .each(element => {
+        const fontFamily = Cypress.$(element).css('font-family');
+        if (
+          fontFamily &&
+          !fontFamiliesArray.includes(fontFamily) &&
+          fontFamily !== 'Times'
+        ) {
+          fontFamiliesArray.push(fontFamily);
+        }
+      })
+      .then(() => {
+        expect(fontFamiliesArray.length).to.be.lessThan(3);
+      });
   });
 });
