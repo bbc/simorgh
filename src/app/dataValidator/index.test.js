@@ -6,7 +6,7 @@ const {
   validateData,
   validateFile,
   readAllFiles,
-  readdirAsync,
+  // readdirAsync,
 } = require('./index');
 const data = require('../../../data/scenario-01.json');
 
@@ -26,13 +26,13 @@ describe('Data Validator', () => {
     }).not.toThrowError();
   });
 
-  it('should throw error on invalid dirname', () => {
-    const invalidDirectoryName = 'foobar';
+  // it('should throw error on invalid dirname', () => {
+  //   const invalidDirectoryName = 'foobar';
 
-    expect(() => {
-      readdirAsync(invalidDirectoryName);
-    }).toThrowError();
-  });
+  //   expect(() => {
+  //     readdirAsync(invalidDirectoryName);
+  //   }).toThrowError();
+  // });
 });
 
 describe('Data Validator requires mocking', () => {
