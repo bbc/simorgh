@@ -9,6 +9,12 @@ const validateFile = filename => {
 
 const readAllFiles = (filenames, dirname) =>
   filenames.forEach(filename => {
+
+    // explicitly ignore scenario-23
+    if (filename.includes('scenario-23.json')) {
+      return;
+    }
+
     // only validate json files
     if (filename.includes('.json')) {
       validateFile(`${dirname}/${filename}`);
