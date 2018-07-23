@@ -17,7 +17,7 @@ exports[`MainContent should render correctly 1`] = `
     This is some text content!
   </p>
   <p>
-    {"blocks":[{"model":{"text":"This is some test content!"}}]}
+    {"type":"test","blocks":[{"model":{"text":"This is some test content!"}}]}
   </p>
 </div>
 `;
