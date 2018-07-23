@@ -2,7 +2,12 @@ global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const fs = require('fs');
-const { validateData, validateFile, readAllFiles } = require('./index');
+const {
+  validateData,
+  validateFile,
+  readAllFiles,
+  readdirAsync,
+} = require('./index');
 const data = require('../../../data/scenario-01.json');
 
 const dirname = './././data';
@@ -15,18 +20,28 @@ const readFiles = filenames => {
 };
 
 describe('Data Validator', () => {
+  it('should not error on validateData', () => {
+    expect(() => {
+      validateData(data);
+    }).not.toThrowError();
+  });
+
+  it('should throw error on invalid dirname', () => {
+    const invalidDirectoryName = 'foobar';
+
+    expect(() => {
+      readdirAsync(invalidDirectoryName);
+    }).toThrowError();
+  });
+});
+
+describe('Data Validator requires mocking', () => {
   beforeEach(() => {
     readFileSyncMock = jest.spyOn(fs, 'readFileSync');
   });
 
   afterEach(() => {
     readFileSyncMock.mockRestore();
-  });
-
-  it('should not error on validateData', () => {
-    expect(() => {
-      validateData(data);
-    }).not.toThrowError();
   });
 
   it('should read valid files', () => {
