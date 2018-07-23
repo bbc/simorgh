@@ -1,5 +1,6 @@
 import React from 'react';
 import headline from '../../containers/Headline';
+import image from '../../containers/Image';
 import text from '../../containers/Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 
@@ -11,6 +12,7 @@ const BlockString = props => {
 
 const Blocks = {
   headline,
+  image,
   text,
 };
 
