@@ -26,11 +26,9 @@ const readdirAsync = dirname =>
     });
   });
 
-const validateAllDataFiles = dirPath => readdirAsync(dirPath);
-
-console.time('validateAllDataFiles'); // eslint-disable-line no-console
-validateAllDataFiles('./././data').then(() => {
-  console.timeEnd('validateAllDataFiles'); // eslint-disable-line no-console
+console.time('readdirAsync'); // eslint-disable-line no-console
+readdirAsync('./././data').then(() => {
+  console.timeEnd('readdirAsync'); // eslint-disable-line no-console
   log('\nAll files validated!');
 });
 
