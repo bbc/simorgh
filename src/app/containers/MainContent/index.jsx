@@ -1,6 +1,6 @@
 import React from 'react';
-import headline from '../../containers/Headline';
-import text from '../../containers/Text';
+import headline from '../Headline';
+import text from '../Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 
 // Inlined as this is a temporary component
