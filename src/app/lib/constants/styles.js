@@ -24,3 +24,9 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
+
+// Screen sizes for GEL Typography
+export const smartPhoneScreenWidthMin = 20;
+export const tabletScreenWidthMin = 37.5;
+export const desktopScreenWidthMin = 37.5;
+export const smartPhoneScreenWidthMax = tabletScreenWidthMin - 0.063;
