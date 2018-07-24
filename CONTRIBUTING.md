@@ -6,7 +6,7 @@ We are particularly looking for help with our [open issues](https://github.com/b
 
 ## Getting started
 
-Before starting a pull request, firstly search through [existing issues]( https://github.com/bbc/simorgh/issues). Please also ensure to branch from latest, we only review PRs that are as small as they can be; which we do to maximise productivity.
+Before starting a pull request, firstly search through [existing issues](https://github.com/bbc/simorgh/issues). Please also ensure to branch from latest, we only review PRs that are as small as they can be; which we do to maximise productivity.
 
 If the work you want to carry out is not captured in an issue, please open one. Otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
@@ -54,9 +54,18 @@ When committing, please use these commit guidelines:
 
 If you have a breaking change in a commit, prefix the commit message with `BREAKING CHANGE:`
 
+### Naming conventions
+
+- Component and Container directories should be capitalised as per the React convention, e.g. `/Headline/`
+- Test files should follow the dot notation as per the Jest convention, e.g. `index.test.jsx`
+- Stories should follow the dot notation as per the Storybook convention, e.g. `index.stories.jsx`
+- Files and directories should be camelCase, e.g. `storyBody.jsx`
+- The main entry file in a directory should be named `index.[extension]` e.g. `Headline/index.jsx` and `server/index.js`
+- Static assets e.g. `icon-128x128.png` do not need to be camelCased.
+
 ### Run tests
 
-All pull requests need to have linting, unit tests and integration tests passing.  For new features, you should add appropriate tests in your PR.
+All pull requests need to have linting, unit tests and integration tests passing. For new features, you should add appropriate tests in your PR.
 
 [Instructions for how to run tests are here in the Readme](https://github.com/bbc/simorgh/blob/latest/README.md#tests).
 
@@ -67,11 +76,11 @@ We use Travis CI as our continuous integration tool. It runs our linting, unit t
 To run these on your forked version follow these steps.
 
 - [Follow the steps in Project Setup](#project-setup)
-- Visit  [travis-ci.org](https://travis-ci.org)
+- Visit [travis-ci.org](https://travis-ci.org)
 - Log in with your Github account where you've forked this repo to
 - Go to [https://travis-ci.org/YourGithubUsername/simorgh](https://travis-ci.org/YourGithubUsername/simorgh)
 - Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername). You can also change the settings on your repo at will.
 - Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis will look at your fork of Simorgh and run the tests against that.
 - To setup CodeClimate you need to login to the 'quality' option on [https://codeclimate.com/](https://codeclimate.com/) and obtain a code coverage [CC_TEST_REPORTER_ID](https://docs.codeclimate.com/docs/finding-your-test-coverage-token), this then needs to be added as an environment variable in TravisCI (see the TravisCI settings page).
-- Now create a branch and start committing and pushing to it! 
+- Now create a branch and start committing and pushing to it!
 - You should see Travis CI and codecoverage now running against your branch and PRs within your fork. :white_check_mark:

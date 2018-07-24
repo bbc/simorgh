@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component should render correctly 1`] = `
+exports[`Article should render correctly 1`] = `
 Array [
   .c1 {
   color: #FFFFFF;
@@ -39,8 +39,17 @@ Array [
     <h1
       className="c0"
     >
-      Article Headline
+      This is a headline!
     </h1>
+    <p>
+      This is some text content!
+    </p>
+    <p>
+      More text content!
+    </p>
+    <p>
+      {"type":"test","blocks":[{"blockId":"3-1","type":"test-something","model":{"text":"This is some test content!"}}]}
+    </p>
   </div>,
 ]
 `;

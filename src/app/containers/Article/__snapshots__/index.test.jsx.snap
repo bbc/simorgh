@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleContainer Component should render correctly 1`] = `
+Array [
+  .c1 {
+  color: #FFFFFF;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2.2em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c0 {
+  background-color: #BB1919;
+  height: 40px;
+  width: 100%;
+  padding: 16px;
+}
+
+<header
+    className="c0"
+    role="banner"
+  >
+    <a
+      className="c1"
+      href="https://www.bbc.co.uk/news"
+    >
+      BBC News
+    </a>
+  </header>,
+  .c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
+<div>
+    <h1
+      className="c0"
+    >
+      Article Headline
+    </h1>
+  </div>,
+]
+`;
