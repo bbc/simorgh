@@ -4,7 +4,51 @@ exports[`MainContent should render correctly 1`] = `
 .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  line-height: 2em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 3.25em;
+  line-height: 3.5em;
+}
+
+.c1 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c1 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c1 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c1 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
 }
 
 <div>
@@ -13,7 +57,9 @@ exports[`MainContent should render correctly 1`] = `
   >
     This is a headline!
   </h1>
-  <p>
+  <p
+    className="c1"
+  >
     This is some text content!
   </p>
   <p>

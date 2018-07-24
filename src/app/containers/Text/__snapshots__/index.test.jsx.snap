@@ -2,7 +2,33 @@
 
 exports[`TextContainer with data should render correctly 1`] = `
 Array [
-  <p>
+  .c0 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+<p
+    className="c0"
+  >
     It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
     <a
       href="/news/articles/c000000000ro"
@@ -11,27 +37,131 @@ Array [
     </a>
     .
   </p>,
-  <p>
+  .c0 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+<p
+    className="c0"
+  >
     This is another paragraph with some 
     <strong>
       bold
     </strong>
      text.
   </p>,
-  <p>
+  .c0 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+<p
+    className="c0"
+  >
     This is a paragraph with 
     <em>
       italic
     </em>
      text.
   </p>,
-  <p>
+  .c0 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+<p
+    className="c0"
+  >
     <del>
       This is a paragraph with some strike-through text
     </del>
     .
   </p>,
-  <p>
+  .c0 {
+  font-size: 0.938em;
+  line-height: 1.25em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.25em;
+  }
+}
+
+<p
+    className="c0"
+  >
     This is a paragraph with some 
     <code>
       inline code.

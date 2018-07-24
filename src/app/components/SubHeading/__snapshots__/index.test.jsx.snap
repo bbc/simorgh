@@ -1,13 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SubHeading with data should display the provided sub-heading 1`] = `
-<h2>
+.c0 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.625em;
+  line-height: 1.875em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+<h2
+  className="c0"
+>
   The amazing sub-heading!?
 </h2>
 `;
 
 exports[`SubHeading with data should display the subheading containing various symbols 1`] = `
-<h2>
+.c0 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.c0 TODO:above 37.5em and with touch {
+  font-size: 1.625em;
+  line-height: 1.875em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+<h2
+  className="c0"
+>
   !@#$%^&*()'"?/[]{}
 </h2>
 `;
