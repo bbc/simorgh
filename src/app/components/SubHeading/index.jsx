@@ -8,15 +8,11 @@ import mediaQuery from '../../helpers/mediaQueries';
 const StyledSubHeading = styled.h2`
   font-size: 1.25em;
   line-height: 1.5em;
-  ${mediaQuery.smartPhone} {
-    font-size: 1.25em;
-    line-height: 1.5em;
-  }
-  ${mediaQuery.tablet} {
+  ${mediaQuery.tabletOnly} {
     font-size: 1.625em;
     line-height: 1.875em;
   }
-  ${mediaQuery.desktop} {
+  ${mediaQuery.desktopOnly} {
     font-size: 1.5em;
     line-height: 1.75em;
   }

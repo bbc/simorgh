@@ -9,15 +9,13 @@ const Caption = styled.figcaption`
   font-size: 0.875em;
   line-height: 1em;
   padding: 8px;
-  ${mediaQuery.smartPhone} {
-    font-size: 0.875em;
+  ${mediaQuery.smartPhoneOnly} {
     line-height: 1.125em;
   }
-  ${mediaQuery.tablet} {
-    font-size: 0.875em;
+  ${mediaQuery.tabletOnly} {
     line-height: 1.125em;
   }
-  ${mediaQuery.desktop} {
+  ${mediaQuery.desktopOnly} {
     font-size: 0.813em;
     line-height: 1em;
   }

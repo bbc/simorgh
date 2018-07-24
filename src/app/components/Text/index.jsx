@@ -7,17 +7,12 @@ import mediaQuery from '../../helpers/mediaQueries';
 const StyledParagraph = styled.p`
   font-size: 0.938em;
   line-height: 1.25em;
-  ${mediaQuery.smartPhone} {
+  ${mediaQuery.smartPhoneAndLarger} {
     font-size: 1em;
-    line-height: 1.25em;
   }
-  ${mediaQuery.tablet} {
+  ${mediaQuery.tabletOnly} {
     font-size: 1.125em;
     line-height: 1.375em;
-  }
-  ${mediaQuery.desktop} {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 `;
 

@@ -7,15 +7,15 @@ const Headline = styled.h1`
   font-family: ${FF_NEWS_SANS_REG};
   font-size: 1.75em;
   line-height: 2em;
-  ${mediaQuery.smartPhone} {
+  ${mediaQuery.smartPhoneOnly} {
     font-size: 2em;
     line-height: 2.25em;
   }
-  ${mediaQuery.tablet} {
+  ${mediaQuery.tabletOnly} {
     font-size: 3.25em;
     line-height: 3.5em;
   }
-  ${mediaQuery.desktop} {
+  ${mediaQuery.desktopOnly} {
     font-size: 2.75em;
     line-height: 3em;
   }
