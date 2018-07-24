@@ -90,7 +90,7 @@ describe('News Article', () => {
       .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
 
-  it('should check the font file loads', () => {
+  it('should load less than three font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -98,6 +98,7 @@ describe('News Article', () => {
         if (
           fontFamily &&
           !fontFamiliesArray.includes(fontFamily) &&
+          // !== 'Times' has been added as there elements not visible, which Cypress is assigning a font of 'Times'
           fontFamily !== 'Times'
         ) {
           fontFamiliesArray.push(fontFamily);
