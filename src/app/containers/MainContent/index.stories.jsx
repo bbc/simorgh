@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import MainContent from './index';
+import MainContentContainer from './index';
 
 const blocks = [
   {
@@ -54,8 +54,8 @@ storiesOf('MainContent', module)
   .add('with just a headline', () => {
     const blocksOnlyHeadline = blocks.filter(({ type }) => type === 'headline');
 
-    return <MainContent blocks={blocksOnlyHeadline} />;
+    return <MainContentContainer blocks={blocksOnlyHeadline} />;
   })
   .add('with a headline and other blocks', () => (
-    <MainContent blocks={blocks} />
+    <MainContentContainer blocks={blocks} />
   ));
