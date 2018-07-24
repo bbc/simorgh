@@ -1,6 +1,9 @@
 import React from 'react';
 import Video from '../../components/Video';
-import { videoPropTypes, videoDefaultPropTypes } from '../../models/propTypes';
+import {
+  videoPropTypes,
+  emptyBlockArrayDefaultProps,
+} from '../../models/propTypes';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const VideoContainer = ({ blocks }) => {
@@ -41,6 +44,6 @@ const VideoContainer = ({ blocks }) => {
 
 VideoContainer.propTypes = videoPropTypes;
 
-VideoContainer.defaultProps = videoDefaultPropTypes;
+VideoContainer.defaultProps = emptyBlockArrayDefaultProps;
 
 export default VideoContainer;

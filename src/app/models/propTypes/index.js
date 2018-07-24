@@ -81,9 +81,16 @@ const baseDefaultPropTypes = {
   },
 };
 
-export const imageDefaultPropTypes = baseDefaultPropTypes;
+// this is a temp default prop until Image and Video can be moved to using the new approach to prop type definition
+export const emptyBlockArrayDefaultProps = {
+  blocks: [
+    {
+      model: {},
+    },
+  ],
+};
 
-export const videoDefaultPropTypes = baseDefaultPropTypes;
+export const imageDefaultPropTypes = baseDefaultPropTypes;
 
 export const textDefaultPropTypes = {
   blocks: [baseDefaultPropTypes],
