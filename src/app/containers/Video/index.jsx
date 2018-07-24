@@ -3,17 +3,16 @@ import Video from '../../components/Video';
 import { videoPropTypes, videoDefaultPropTypes } from '../../models/propTypes';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 
-const VideoContainer = ({ model }) => {
-  const subBlocks = model.blocks;
+const VideoContainer = ({ blocks }) => {
+  const rawVideo = filterForBlockType(blocks, 'rawVideo');
 
-  const rawVideo = filterForBlockType(subBlocks, 'rawVideo');
   if (!rawVideo) {
     return null;
   }
 
   const { locator: videoLocator, duration, versionID, kind } = rawVideo.model;
 
-  const imageBlock = filterForBlockType(subBlocks, 'image');
+  const imageBlock = filterForBlockType(blocks, 'image');
 
   if (!imageBlock) {
     return null;
