@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { string } from 'prop-types';
 import Header from '../Header';
-import MainContent from '../MainContent';
+import MainContent from '../../containers/MainContent';
 import mainContentPropTypes from '../../models/propTypes/mainContent';
 
 const Article = ({ lang, title, blocks }) => (
