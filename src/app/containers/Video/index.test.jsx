@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import {
-  videoBlock,
+  blockArrayModel,
   rawVideoModel,
   rawVideoBlock,
   imageBlock,
@@ -10,7 +10,7 @@ import VideoContainer from './index';
 
 describe('Video', () => {
   const rVB = rawVideoBlock(
-    rawVideoModel('urn:bbc:pips:pid:p064nsyw', 'p064nsz3', 'clip', 299),
+    rawVideoModel('urn:bbc:pips:pid:p064nsyw', 'p064nsz3', 'clip', '299'),
   );
 
   describe('with no data', () => {
@@ -19,34 +19,30 @@ describe('Video', () => {
 
   describe('with data', () => {
     const videoData = {
-      type: 'video',
-      model: {
-        locator: 'urn:bbc:pips:pid:p064nsyw',
-        blocks: [
-          {
-            type: 'rawVideo',
-            model: {
-              locator: 'urn:bbc:pips:pid:p064nsyw',
-              versionID: 'p064nsz3',
-              kind: 'clip',
-              duration: 299,
-            },
+      blocks: [
+        {
+          type: 'rawVideo',
+          model: {
+            locator: 'urn:bbc:pips:pid:p064nsyw',
+            versionID: 'p064nsz3',
+            kind: 'clip',
+            duration: '299',
           },
-          {
-            type: 'image',
-            model: {
-              blocks: [
-                {
-                  type: 'rawImage',
-                  model: {
-                    locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
-                  },
+        },
+        {
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                type: 'rawImage',
+                model: {
+                  locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
                 },
-              ],
-            },
+              },
+            ],
           },
-        ],
-      },
+        },
+      ],
     };
 
     shouldMatchSnapshot(
@@ -56,7 +52,7 @@ describe('Video', () => {
   });
 
   describe('with data but no image', () => {
-    const data = videoBlock(rVB, null);
+    const data = blockArrayModel([rVB, null]);
 
     shouldMatchSnapshot(
       'should only render the video',
@@ -67,7 +63,7 @@ describe('Video', () => {
   describe('with data but no raw image', () => {
     const rIB = null;
     const img = imageBlock(rIB);
-    const data = videoBlock(rVB, img);
+    const data = blockArrayModel([rVB, img]);
 
     isNull('should be null', <VideoContainer {...data} />);
   });

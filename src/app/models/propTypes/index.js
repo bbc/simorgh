@@ -39,27 +39,25 @@ export const imagePropTypes = {
 };
 
 export const videoPropTypes = {
-  model: shape({
-    blocks: arrayOf(
-      shape({
-        locator: string,
-        blocks: arrayOf(
-          // raw video
-          shape({
-            model: shape({
-              isLive: bool,
-              duration: string,
-              locator: string.isRequired,
-            }),
+  blocks: arrayOf(
+    shape({
+      locator: string,
+      blocks: arrayOf(
+        // raw video
+        shape({
+          model: shape({
+            isLive: bool,
+            duration: string,
+            locator: string.isRequired,
           }),
-          // alt text
-          shape(textBlockPropTypes),
-          // image
-          shape(imagePropTypes),
-        ),
-      }),
-    ).isRequired,
-  }).isRequired,
+        }),
+        // alt text
+        shape(textBlockPropTypes),
+        // image
+        shape(imagePropTypes),
+      ),
+    }),
+  ).isRequired,
 };
 
 export const videoComponentPropTypes = {
@@ -91,8 +89,6 @@ export const emptyBlockArrayDefaultProps = {
 };
 
 export const imageDefaultPropTypes = baseDefaultPropTypes;
-
-export const videoDefaultPropTypes = baseDefaultPropTypes;
 
 export const textDefaultPropTypes = {
   blocks: [baseDefaultPropTypes],
