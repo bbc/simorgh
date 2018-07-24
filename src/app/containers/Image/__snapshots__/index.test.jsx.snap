@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image should render an image with alt text 1`] = `
+exports[`Image with data should render an image with alt text 1`] = `
 <figure>
   <img
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
@@ -9,7 +9,7 @@ exports[`Image should render an image with alt text 1`] = `
 </figure>
 `;
 
-exports[`Image should render an image with alt text and caption 1`] = `
+exports[`Image with data should render an image with alt text and caption 1`] = `
 .c0 {
   background-color: #d5d0cd;
   color: #404040;
