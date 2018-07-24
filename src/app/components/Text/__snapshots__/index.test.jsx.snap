@@ -11,17 +11,9 @@ exports[`Text should render bold 1`] = `
   line-height: 1.375em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 }
 
@@ -47,17 +39,9 @@ exports[`Text should render inline-code 1`] = `
   line-height: 1.375em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 }
 
@@ -83,17 +67,9 @@ exports[`Text should render italics 1`] = `
   line-height: 1.375em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 }
 
@@ -119,17 +95,9 @@ exports[`Text should render strike-through 1`] = `
   line-height: 1.375em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 }
 

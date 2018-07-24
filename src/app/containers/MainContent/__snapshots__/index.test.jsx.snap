@@ -37,17 +37,9 @@ exports[`MainContent should render correctly 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) {
   .c1 {
     font-size: 1em;
-    line-height: 1.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c1 {
-    font-size: 1em;
-    line-height: 1.25em;
   }
 }
 

@@ -11,13 +11,11 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 .c0 TODO:above 37.5em and with touch {
-  font-size: 0.875em;
   line-height: 1.125em;
 }
 
 @media (min-width:20em) and (max-width:37.437em) {
   .c0 {
-    font-size: 0.875em;
     line-height: 1.125em;
   }
 }
