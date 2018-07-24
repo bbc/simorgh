@@ -2,12 +2,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import VideoContainer from './index';
 import {
-  videoBlock,
   rawImageModel,
   rawVideoModel,
   rawVideoBlock,
   rawImageBlock,
   imageBlock,
+  blockArrayModel,
 } from '../../models/blocks';
 
 const rVB = rawVideoBlock(
@@ -18,7 +18,7 @@ const rIB = rawImageBlock(
 );
 const img1 = imageBlock(rIB);
 
-const data = videoBlock(rVB, img1);
+const data = blockArrayModel([rVB, img1]);
 
 storiesOf('Video Container', module).add('default', () => (
   <VideoContainer {...data} />
