@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageContainer from './index';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
-import { blockContainingText } from '../../models/blocks';
+import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
@@ -9,13 +9,6 @@ describe('Image', () => {
   });
 
   describe('with data', () => {
-    const imageData = arrayOfBlocks => ({
-      type: 'image',
-      model: {
-        blocks: arrayOfBlocks,
-      },
-    });
-
     const rawImageBlock = {
       type: 'rawImage',
       model: {
@@ -28,7 +21,7 @@ describe('Image', () => {
       },
     };
 
-    const data = imageData([
+    const data = blockArrayModel([
       rawImageBlock,
       blockContainingText(
         'altText',
@@ -41,7 +34,7 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
-    const dataWithCaption = imageData([
+    const dataWithCaption = blockArrayModel([
       rawImageBlock,
       blockContainingText(
         'altText',

@@ -18,26 +18,24 @@ export const optionalTextPropTypes = {
 };
 
 export const imagePropTypes = {
-  model: shape({
-    blocks: arrayOf(
-      oneOfType([
-        // rawImage block
-        shape({
-          model: shape({
-            locator: string.isRequired,
-          }).isRequired,
+  blocks: arrayOf(
+    oneOfType([
+      // rawImage block
+      shape({
+        model: shape({
+          locator: string.isRequired,
         }).isRequired,
-        // altText block
-        shape({
-          model: shape(textBlockPropTypes).isRequired,
-        }).isRequired,
-        // caption block
-        shape({
-          model: shape(optionalTextPropTypes),
-        }),
-      ]).isRequired,
-    ).isRequired,
-  }).isRequired,
+      }).isRequired,
+      // altText block
+      shape({
+        model: shape(textBlockPropTypes).isRequired,
+      }).isRequired,
+      // caption block
+      shape({
+        model: shape(optionalTextPropTypes),
+      }),
+    ]).isRequired,
+  ).isRequired,
 };
 
 export const videoPropTypes = {
