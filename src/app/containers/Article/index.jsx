@@ -1,27 +1,8 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
-import { textBlock } from '../../models/blocks';
 
 class ArticleContainer extends Component {
-  state = {
-    data: {
-      seoHeadline: 'Article Headline',
-      passport: {
-        language: 'en-GB',
-      },
-      model: {
-        blocks: [
-          {
-            type: 'headline',
-            blockId: '1',
-            model: textBlock('Article Headline'),
-          },
-        ],
-      },
-    },
-  };
-
   static async getInitialProps({ req, match } = {}) {
     try {
       const { id } = match.params;
@@ -41,7 +22,7 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data } = this.props; // eslint-disable-line
     const { seoHeadline, model, passport } = data;
 
     return <Article lang={passport.language} title={seoHeadline} {...model} />;
