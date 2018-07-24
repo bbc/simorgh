@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 import { extractText } from '../../helpers/blockHandlers';
 import { textDefaultPropTypes } from '../../models/proptypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
@@ -15,7 +16,10 @@ const HeadingsContainer = ({ blocks, type }) => {
   return <Heading>{text}</Heading>;
 };
 
-HeadingsContainer.propTypes = headlineModelPropTypes;
+HeadingsContainer.propTypes = {
+  ...headlineModelPropTypes,
+  type: string.isRequired,
+};
 
 HeadingsContainer.defaultProps = textDefaultPropTypes;
 
