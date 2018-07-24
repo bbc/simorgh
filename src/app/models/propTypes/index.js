@@ -41,27 +41,25 @@ export const imagePropTypes = {
 };
 
 export const videoPropTypes = {
-  model: shape({
-    blocks: arrayOf(
-      shape({
-        locator: string,
-        blocks: arrayOf(
-          // raw video
-          shape({
-            model: shape({
-              isLive: bool,
-              duration: string,
-              locator: string.isRequired,
-            }),
+  blocks: arrayOf(
+    shape({
+      locator: string,
+      blocks: arrayOf(
+        // raw video
+        shape({
+          model: shape({
+            isLive: bool,
+            duration: string,
+            locator: string.isRequired,
           }),
-          // alt text
-          shape(textBlockPropTypes),
-          // image
-          shape(imagePropTypes),
-        ),
-      }),
-    ).isRequired,
-  }).isRequired,
+        }),
+        // alt text
+        shape(textBlockPropTypes),
+        // image
+        shape(imagePropTypes),
+      ),
+    }),
+  ).isRequired,
 };
 
 export const videoComponentPropTypes = {
@@ -83,9 +81,16 @@ const baseDefaultPropTypes = {
   },
 };
 
-export const imageDefaultPropTypes = baseDefaultPropTypes;
+// this is a temp default prop until Image and Video can be moved to using the new approach to prop type definition
+export const emptyBlockArrayDefaultProps = {
+  blocks: [
+    {
+      model: {},
+    },
+  ],
+};
 
-export const videoDefaultPropTypes = baseDefaultPropTypes;
+export const imageDefaultPropTypes = baseDefaultPropTypes;
 
 export const textDefaultPropTypes = {
   blocks: [baseDefaultPropTypes],
