@@ -3,6 +3,7 @@ const { validateRequired } = require('./validateRequired');
 const { validateType } = require('./validateType');
 const { validateEnum } = require('./validateEnum');
 const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
+const { getRefNameList } = require('../interpretSchema/getRefNameList');
 const {
   referencesSchemaDefinition,
   getSchemaRefName,
@@ -44,11 +45,30 @@ const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
   }
 
   if (schemaNode.items) {
-    loadSchemaReference(
+    handleSchemaItems(
       schemaNode.items.oneOf,
       dataNode,
       schemaName,
       parentSchemaName,
+    );
+  }
+};
+
+const validateProperty = (
+  propertySchema,
+  dataNode,
+  property,
+  schemaName,
+  parentSchemaName,
+) => {
+  if (referencesSchemaDefinition(propertySchema)) {
+    validateBlock(dataNode, getSchemaRefName(propertySchema), parentSchemaName);
+  } else {
+    validateNode(
+      propertySchema,
+      dataNode[property],
+      schemaName,
+      `${parentSchemaName}:${property}`,
     );
   }
 };
@@ -67,17 +87,7 @@ const validateProperties = (
 
       log(`\nValidating Property '${property}' in '${parentSchemaName}'`);
 
-      if (referencesSchemaDefinition(propertySchema)) {
-        const referenceSchemaName = getSchemaRefName(propertySchema);
-        validateBlock(dataNode, referenceSchemaName, parentSchemaName);
-      } else {
-        validateNode(
-          propertySchema,
-          dataNode[property],
-          schemaName,
-          `${parentSchemaName}:${property}`,
-        );
-      }
+      validateProperty(propertySchema, dataNode, property, parentSchemaName);
     } else {
       log(`\nOptional Property '${property}' not in '${schemaName}'`);
     }
@@ -103,16 +113,14 @@ const validateBlock = (
   );
 };
 
-const loadSchemaReference = (
+const handleSchemaItems = (
   referencedItems,
   dataNode,
   schemaName,
   parentSchemaName,
 ) => {
   const dataNodeArray = dataNode[schemaName];
-  const referencedSchemaNames = referencedItems.map(referencedItem =>
-    getSchemaRefName(referencedItem),
-  );
+  const referencedSchemaNames = getRefNameList(referencedItems);
 
   dataNodeArray.forEach(dataItem => {
     if (referencedSchemaNames.includes(dataItem.type)) {
