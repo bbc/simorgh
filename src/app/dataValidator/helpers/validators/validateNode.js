@@ -5,6 +5,7 @@ const { validateEnum } = require('./validateEnum');
 const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
 const {
   referencesSchemaDefinition,
+  getSchemaRef,
 } = require('../interpretSchema/referencesSchemaDefinition');
 const {
   propertyNeedsValidating,
@@ -51,7 +52,8 @@ const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
       log(`\nValidating Property '${property}' in '${schemaName}'`);
 
       if (referencesSchemaDefinition(propertySchema)) {
-        handleSchemaReference(dataNode); // eslint-disable-line no-use-before-define
+        const referenceSchemaName = getSchemaRef(propertySchema);
+        handleSchemaReference(dataNode, referenceSchemaName); // eslint-disable-line no-use-before-define
       } else {
         validateNode(
           propertySchema,
@@ -65,22 +67,23 @@ const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
   });
 };
 
-const validateBlock = (dataToValidate, dataType = null) => {
-  const schemaName = dataType || dataToValidate.type;
+const validateBlock = (dataToValidate, referenceSchemaName = null) => {
+  const schemaName = referenceSchemaName || dataToValidate.type;
 
   log(`\nValidating block: ${schemaName}`);
   log('----------------------------------------------------------------');
 
   const blockSchema = getSchemaByName(schemaName);
+
   validateNode(blockSchema, dataToValidate, schemaName);
 };
 
-const handleSchemaReference = dataNode => {
-  if ('blocks' in dataNode) {
-    validateBlock(dataNode, 'blocks');
+const handleSchemaReference = (dataNode, referenceSchemaName) => {
+  if (referenceSchemaName) {
+    validateBlock(dataNode, referenceSchemaName);
+  } else {
+    validateBlock(dataNode);
   }
-
-  validateBlock(dataNode);
 };
 
 module.exports = { validateNode, validateProperties, validateBlock };
