@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Headings Headline component should render correctly 1`] = `
+exports[`Headline component should render correctly 1`] = `
 .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
@@ -14,7 +14,7 @@ exports[`Headings Headline component should render correctly 1`] = `
 </h1>
 `;
 
-exports[`Headings SubHeading component should render correctly 1`] = `
+exports[`SubHeading component should render correctly 1`] = `
 <h2
   className=""
 >
