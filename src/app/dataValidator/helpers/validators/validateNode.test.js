@@ -1,7 +1,11 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const { validateNode, validateProperties } = require('./validateNode');
+const {
+  validateNode,
+  validateProperties,
+  validateBlock,
+} = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
 const data = require('../../../../../data/scenario-01.json');
 
@@ -101,6 +105,21 @@ describe('Validate node & properties helper', () => {
 
     expect(() => {
       validateProperties(schema, propertyData, schemaName);
+    }).not.toThrowError();
+  });
+});
+
+describe('Validate block', () => {
+  it('should not error on validateBlock(article)', () => {
+    expect(() => {
+      validateBlock(data);
+    }).not.toThrowError();
+  });
+
+  it('should not error on validateBlock(headline)', () => {
+    const headlineBlock = data.model.blocks[0];
+    expect(() => {
+      validateBlock(headlineBlock);
     }).not.toThrowError();
   });
 });

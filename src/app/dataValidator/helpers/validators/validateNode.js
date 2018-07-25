@@ -2,9 +2,28 @@ const { log } = require('../../utilities/messaging');
 const { validateRequired } = require('./validateRequired');
 const { validateType } = require('./validateType');
 const { validateEnum } = require('./validateEnum');
+const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
+const {
+  referencesSchemaDefinition,
+} = require('../interpretSchema/referencesSchemaDefinition');
 const {
   propertyNeedsValidating,
 } = require('../interpretSchema/propertyNeedsValidating');
+
+/*
+  Due to the recursive nature of our data payload this file must contain all the methods that
+  are possible of recursively calling each other through the data tree.
+
+  The order of execution/recursion is as follows:
+    For recursive validation of the properties field
+    - validateBlock -> validateNode -> validateProperties -> validateNode -> validateProperties
+
+    For recursive validation of blocks
+    - validateBlock -> validateNode -> validateProperties -> validateBlock -> validateNode ...
+
+  If these methods are not contained within a single file a ReferenceError is throw due to the
+  method being required/imported is not yet defined.
+*/
 
 const validateNode = (currentSchemaNode, dataNode, schemaName) => {
   validateType(currentSchemaNode.type, dataNode, schemaName);
@@ -22,11 +41,6 @@ const validateNode = (currentSchemaNode, dataNode, schemaName) => {
   }
 };
 
-/*
-  Due to the recursive nature of properties being able to be nested inside of properties
-  both validateProperties() and validateNode() need to be contained within a single file
-  otherwise a ReferenceError is throw due to the other method not yet being defined
-*/
 const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
   const propertiesSchema = currentSchemaNode.properties;
 
@@ -36,16 +50,37 @@ const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
 
       log(`\nValidating Property '${property}' in '${schemaName}'`);
 
-      validateNode(
-        propertySchema,
-        dataNode[property],
-        `${schemaName}:${property}`,
-      );
+      if (referencesSchemaDefinition(propertySchema)) {
+        handleSchemaReference(dataNode); // eslint-disable-line no-use-before-define
+      } else {
+        validateNode(
+          propertySchema,
+          dataNode[property],
+          `${schemaName}:${property}`,
+        );
+      }
     } else {
       log(`\nOptional Property '${property}' not in '${schemaName}'`);
     }
   });
 };
 
-module.exports.validateNode = validateNode;
-module.exports.validateProperties = validateProperties;
+const validateBlock = (dataToValidate, dataType = null) => {
+  const schemaName = dataType || dataToValidate.type;
+
+  log(`\nValidating block: ${schemaName}`);
+  log('----------------------------------------------------------------');
+
+  const blockSchema = getSchemaByName(schemaName);
+  validateNode(blockSchema, dataToValidate, schemaName);
+};
+
+const handleSchemaReference = dataNode => {
+  if ('blocks' in dataNode) {
+    validateBlock(dataNode, 'blocks');
+  }
+
+  validateBlock(dataNode);
+};
+
+module.exports = { validateNode, validateProperties, validateBlock };

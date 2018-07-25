@@ -1,5 +1,5 @@
 const { log } = require('./utilities/messaging');
-const { validateBlock } = require('./helpers/validators/validateBlock');
+const { validateBlock } = require('./helpers/validators/validateNode');
 
 const validateData = data => {
   console.time('validateBlock'); // eslint-disable-line no-console
@@ -13,4 +13,4 @@ const data = require('../../../data/scenario-01.json');
 
 validateData(data);
 
-module.exports.validateData = validateData;
+module.exports = { validateData };
