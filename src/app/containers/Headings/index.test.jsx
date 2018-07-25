@@ -3,29 +3,24 @@ import HeadingsContainer from './index';
 import { textBlock } from '../../models/blocks';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 
+const template = (title, text, type) => {
+  describe(title, () => {
+    const data = {
+      ...textBlock(text),
+      type,
+    };
+    shouldMatchSnapshot(
+      'should render correctly',
+      <HeadingsContainer {...data} />,
+    );
+  });
+};
+
 describe('Headings', () => {
   describe('with no data', () => {
     isNull('should not render anything', <HeadingsContainer />);
   });
 
-  describe('with headline data', () => {
-    const headlineData = {
-      ...textBlock('This is a headline!'),
-      type: 'headline',
-    };
-    shouldMatchSnapshot(
-      'should render correctly',
-      <HeadingsContainer {...headlineData} />,
-    );
-  });
-  describe('with subheading data', () => {
-    const subheadingData = {
-      ...textBlock('This is a subheading'),
-      type: 'subheading',
-    };
-    shouldMatchSnapshot(
-      'should render correctly',
-      <HeadingsContainer {...subheadingData} />,
-    );
-  });
+  template('with headline data', 'This is a headline!', 'headline');
+  template('with subheading data', 'This is a subheading', 'subheading');
 });
