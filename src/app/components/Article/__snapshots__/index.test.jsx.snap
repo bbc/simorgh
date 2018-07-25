@@ -9,21 +9,11 @@ Array [
   padding: 16px;
 }
 
-.c1 {
-  color: #FFFFFF;
-  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  font-size: 2.2em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 <header
     className="c0"
     role="banner"
   >
     <a
-      className="c1"
       href="https://www.bbc.co.uk/news"
     >
       BBC News

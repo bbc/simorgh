@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline component should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 2em;
+}
+
+<h1
+  className="c0"
+>
+  This is my headline.
+</h1>
+`;
+
+exports[`SubHeading component should render correctly 1`] = `
+<h2
+  className=""
+>
+  This is a SubHeading
+</h2>
+`;

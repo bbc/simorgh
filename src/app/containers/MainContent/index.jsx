@@ -1,5 +1,5 @@
 import React from 'react';
-import headline from '../Headline';
+import headline from '../Headings';
 import text from '../Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 import MainContent from '../../components/MainContent';
