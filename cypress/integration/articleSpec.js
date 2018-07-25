@@ -15,6 +15,9 @@ describe('News Article', () => {
     const headerElement = getElement('header');
     shouldContainStyles(headerElement, 'height', '40px');
     shouldContainStyles(headerElement, 'background-color', 'rgb(187, 25, 25)');
+
+    const anchorElement = getElement('header a');
+    shouldContainText(anchorElement, 'BBC News');
   });
 
   it('should render a headline', () => {
