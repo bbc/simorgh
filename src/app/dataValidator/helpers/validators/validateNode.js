@@ -87,7 +87,13 @@ const validateProperties = (
 
       log(`\nValidating Property '${property}' in '${parentSchemaName}'`);
 
-      validateProperty(propertySchema, dataNode, property, parentSchemaName);
+      validateProperty(
+        propertySchema,
+        dataNode,
+        property,
+        schemaName,
+        parentSchemaName,
+      );
     } else {
       log(`\nOptional Property '${property}' not in '${schemaName}'`);
     }
