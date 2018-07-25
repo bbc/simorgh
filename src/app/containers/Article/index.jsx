@@ -6,7 +6,7 @@ import { textBlock } from '../../models/blocks';
 class ArticleContainer extends Component {
   state = {
     data: {
-      title: 'Article Headline',
+      seoHeadline: 'Article Headline',
       passport: {
         language: 'en-GB',
       },
@@ -42,9 +42,9 @@ class ArticleContainer extends Component {
 
   render() {
     const { data } = this.state;
-    const { title, model, passport } = data;
+    const { seoHeadline, model, passport } = data;
 
-    return <Article lang={passport.language} title={title} {...model} />;
+    return <Article lang={passport.language} title={seoHeadline} {...model} />;
   }
 }
 
