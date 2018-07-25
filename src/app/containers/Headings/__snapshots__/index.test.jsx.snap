@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headings with headline data should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-size: 1.75em;
+  line-height: 2em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
+}
+
+<h1
+  className="c0"
+>
+  This is a headline!
+</h1>
+`;
+
+exports[`Headings with subheading data should render correctly 1`] = `
+<h2
+  className=""
+>
+  This is a subheading
+</h2>
+`;
