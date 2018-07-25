@@ -1,6 +1,7 @@
 import React from 'react';
 import headline from '../Headings';
 import text from '../Text';
+import video from '../Video';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 import MainContent from '../../components/MainContent';
 
@@ -13,6 +14,7 @@ const BlockString = props => {
 const Blocks = {
   headline,
   text,
+  video,
 };
 
 const render = blocks =>
