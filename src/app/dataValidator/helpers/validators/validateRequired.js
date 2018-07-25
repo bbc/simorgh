@@ -1,6 +1,10 @@
 const { log, throwError } = require('../../utilities/messaging');
 
-module.exports.validateRequired = (requireSchema, dataNode, parentSchemaName) => {
+module.exports.validateRequired = (
+  requireSchema,
+  dataNode,
+  parentSchemaName,
+) => {
   log('- Required values successfully found:');
 
   requireSchema.forEach(requiredProp => {

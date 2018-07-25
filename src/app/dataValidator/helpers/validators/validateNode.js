@@ -26,38 +26,50 @@ const {
   method being required/imported is not yet defined.
 */
 
-const validateNode = (currentSchemaNode, dataNode, schemaName, parentSchemaName) => {
-  validateType(currentSchemaNode.type, dataNode, parentSchemaName);
+/* eslint-disable no-use-before-define */
 
-  if (currentSchemaNode.enum) {
-    validateEnum(currentSchemaNode.enum, dataNode, parentSchemaName);
+const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
+  validateType(schemaNode.type, dataNode, parentSchemaName);
+
+  if (schemaNode.enum) {
+    validateEnum(schemaNode.enum, dataNode, parentSchemaName);
   }
 
-  if (currentSchemaNode.required) {
-    validateRequired(currentSchemaNode.required, dataNode, parentSchemaName);
+  if (schemaNode.required) {
+    validateRequired(schemaNode.required, dataNode, parentSchemaName);
   }
 
-  if (currentSchemaNode.properties) {
-    validateProperties(currentSchemaNode, dataNode, schemaName, parentSchemaName); // eslint-disable-line no-use-before-define
+  if (schemaNode.properties) {
+    validateProperties(schemaNode, dataNode, schemaName, parentSchemaName);
   }
 
-  if (currentSchemaNode.items) {
-    loadSchemaReference(currentSchemaNode.items.oneOf, dataNode, schemaName, parentSchemaName); // eslint-disable-line no-use-before-define
+  if (schemaNode.items) {
+    loadSchemaReference(
+      schemaNode.items.oneOf,
+      dataNode,
+      schemaName,
+      parentSchemaName,
+    );
   }
 };
 
-const validateProperties = (currentSchemaNode, dataNode, schemaName, parentSchemaName) => {
-  const propertiesSchema = currentSchemaNode.properties;
+const validateProperties = (
+  schemaNode,
+  dataNode,
+  schemaName,
+  parentSchemaName,
+) => {
+  const propertiesSchema = schemaNode.properties;
 
   Object.keys(propertiesSchema).forEach(property => {
-    if (propertyNeedsValidating(currentSchemaNode, dataNode, property)) {
+    if (propertyNeedsValidating(schemaNode, dataNode, property)) {
       const propertySchema = propertiesSchema[property];
 
       log(`\nValidating Property '${property}' in '${parentSchemaName}'`);
 
       if (referencesSchemaDefinition(propertySchema)) {
         const referenceSchemaName = getSchemaRefName(propertySchema);
-        validateBlock(dataNode, referenceSchemaName, parentSchemaName); // eslint-disable-line no-use-before-define
+        validateBlock(dataNode, referenceSchemaName, parentSchemaName);
       } else {
         validateNode(
           propertySchema,
@@ -72,17 +84,31 @@ const validateProperties = (currentSchemaNode, dataNode, schemaName, parentSchem
   });
 };
 
-const validateBlock = (dataToValidate, referenceSchemaName = null, parentSchemaName = '') => {
+const validateBlock = (
+  dataToValidate,
+  referenceSchemaName = null,
+  parentSchemaName = '',
+) => {
   const schemaName = referenceSchemaName || dataToValidate.type;
   const blockSchema = getSchemaByName(schemaName);
 
   log(`\nValidating block: ${parentSchemaName}`);
   log('----------------------------------------------------------------');
 
-  validateNode(blockSchema, dataToValidate, schemaName, `${parentSchemaName}:${schemaName}`);
+  validateNode(
+    blockSchema,
+    dataToValidate,
+    schemaName,
+    `${parentSchemaName}:${schemaName}`,
+  );
 };
 
-const loadSchemaReference = (referencedItems, dataNode, schemaName, parentSchemaName) => {
+const loadSchemaReference = (
+  referencedItems,
+  dataNode,
+  schemaName,
+  parentSchemaName,
+) => {
   const dataNodeArray = dataNode[schemaName];
   const referencedSchemaNames = referencedItems.map(referencedItem =>
     getSchemaRefName(referencedItem),
