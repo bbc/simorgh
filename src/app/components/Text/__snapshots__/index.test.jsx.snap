@@ -9,6 +9,7 @@ exports[`Text should render bold 1`] = `
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -32,6 +33,7 @@ exports[`Text should render inline-code 1`] = `
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -55,6 +57,7 @@ exports[`Text should render italics 1`] = `
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -78,6 +81,7 @@ exports[`Text should render strike-through 1`] = `
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 

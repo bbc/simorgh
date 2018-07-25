@@ -30,8 +30,27 @@ exports[`Headings with headline data should render correctly 1`] = `
 `;
 
 exports[`Headings with subheading data should render correctly 1`] = `
+.c0 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+@media (min-width:20em) and (max-width:37.437em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
 <h2
-  className=""
+  className="c0"
 >
   This is a subheading
 </h2>

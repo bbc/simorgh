@@ -10,6 +10,7 @@ Array [
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -32,6 +33,7 @@ Array [
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -52,6 +54,7 @@ Array [
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -72,6 +75,7 @@ Array [
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
@@ -91,6 +95,7 @@ Array [
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 

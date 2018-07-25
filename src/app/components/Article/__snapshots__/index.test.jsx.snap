@@ -48,6 +48,7 @@ Array [
 @media (min-width:20em) {
   .c1 {
     font-size: 1em;
+    line-height: 1.375em;
   }
 }
 
