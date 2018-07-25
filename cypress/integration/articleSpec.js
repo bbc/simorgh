@@ -89,4 +89,23 @@ describe('News Article', () => {
       .should('have.attr', 'src')
       .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
+
+  it('should load less than three font files', () => {
+    const fontFamiliesArray = [];
+    cy.get('*')
+      .each(element => {
+        const fontFamily = Cypress.$(element).css('font-family');
+        if (
+          fontFamily &&
+          !fontFamiliesArray.includes(fontFamily) &&
+          // !== 'Times' has been added as there elements not visible, which Cypress is assigning a font of 'Times'
+          fontFamily !== 'Times'
+        ) {
+          fontFamiliesArray.push(fontFamily);
+        }
+      })
+      .then(() => {
+        expect(fontFamiliesArray.length).to.be.lessThan(3);
+      });
+  });
 });
