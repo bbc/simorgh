@@ -43,11 +43,12 @@ describe('Validate node & properties helper', () => {
       locator: {},
     };
     const schemaName = 'article';
+    const parentSchemaName = ':article';
 
     expect(() => {
-      validateProperties(schema, propertyErrorData, schemaName);
+      validateProperties(schema, propertyErrorData, schemaName, parentSchemaName);
     }).toThrowError(
-      `Error: Type does not match for 'article:locator' - expected 'string' got 'object'`,
+      `Error: Type does not match for ':article:locator' - expected 'string' got 'object'`,
     );
   });
 
