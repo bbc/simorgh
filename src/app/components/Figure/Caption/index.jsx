@@ -9,12 +9,10 @@ const Caption = styled.figcaption`
   font-size: 0.875em;
   line-height: 1em;
   padding: 8px;
-  ${mediaQuery.smartPhoneOnly} {
-    line-height: 1.125em;
-  }
+  font-size: 0.9375em;
+  line-height: 1.125em;
   ${mediaQuery.desktopOnly} {
-    font-size: 0.813em;
-    line-height: 1em;
+    font-size: 0.875em;
   }
 `;
 
