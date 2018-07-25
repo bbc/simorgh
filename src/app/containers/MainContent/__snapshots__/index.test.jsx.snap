@@ -7,7 +7,9 @@ exports[`MainContent should render correctly 1`] = `
   font-size: 2em;
 }
 
-<div>
+<main
+  role="main"
+>
   <h1
     className="c0"
   >
@@ -19,5 +21,5 @@ exports[`MainContent should render correctly 1`] = `
   <p>
     {"type":"test","blocks":[{"model":{"text":"This is some test content!"}}]}
   </p>
-</div>
+</main>
 `;
