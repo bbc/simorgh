@@ -40,4 +40,3 @@ readdirAsync('./././data').then(() => {
 module.exports.readdirAsync = readdirAsync;
 module.exports.validateFile = validateFile;
 module.exports.readAllFiles = readAllFiles;
-// module.exports.readdirAsync = readdirAsync;
