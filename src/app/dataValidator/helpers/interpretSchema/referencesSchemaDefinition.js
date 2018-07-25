@@ -1,5 +1,5 @@
 module.exports.referencesSchemaDefinition = currentSchemaNode =>
   '$ref' in currentSchemaNode;
 
-module.exports.getSchemaRef = currentSchemaNode =>
+module.exports.getSchemaRefName = currentSchemaNode =>
   currentSchemaNode.$ref.replace('#/components/schemas/', '');

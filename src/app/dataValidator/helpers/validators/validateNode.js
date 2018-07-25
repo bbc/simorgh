@@ -5,7 +5,7 @@ const { validateEnum } = require('./validateEnum');
 const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
 const {
   referencesSchemaDefinition,
-  getSchemaRef,
+  getSchemaRefName,
 } = require('../interpretSchema/referencesSchemaDefinition');
 const {
   propertyNeedsValidating,
@@ -40,6 +40,10 @@ const validateNode = (currentSchemaNode, dataNode, schemaName) => {
   if (currentSchemaNode.properties) {
     validateProperties(currentSchemaNode, dataNode, schemaName); // eslint-disable-line no-use-before-define
   }
+
+  if (currentSchemaNode.items) {
+    loadSchemaReference(currentSchemaNode.items.oneOf, dataNode, schemaName); // eslint-disable-line no-use-before-define
+  }
 };
 
 const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
@@ -52,7 +56,7 @@ const validateProperties = (currentSchemaNode, dataNode, schemaName) => {
       log(`\nValidating Property '${property}' in '${schemaName}'`);
 
       if (referencesSchemaDefinition(propertySchema)) {
-        const referenceSchemaName = getSchemaRef(propertySchema);
+        const referenceSchemaName = getSchemaRefName(propertySchema);
         handleSchemaReference(dataNode, referenceSchemaName); // eslint-disable-line no-use-before-define
       } else {
         validateNode(
@@ -76,6 +80,19 @@ const validateBlock = (dataToValidate, referenceSchemaName = null) => {
   const blockSchema = getSchemaByName(schemaName);
 
   validateNode(blockSchema, dataToValidate, schemaName);
+};
+
+const loadSchemaReference = (referencedItems, dataNode, schemaName) => {
+  const dataNodeArray = dataNode[schemaName];
+  const referencedSchemaNames = referencedItems.map(referencedItem =>
+    getSchemaRefName(referencedItem),
+  );
+
+  dataNodeArray.forEach(dataItem => {
+    if (referencedSchemaNames.includes(dataItem.type)) {
+      validateBlock(dataItem);
+    }
+  });
 };
 
 const handleSchemaReference = (dataNode, referenceSchemaName) => {
