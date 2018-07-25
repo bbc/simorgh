@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
+.c0 {
+  background-color: #BB1919;
+  height: 40px;
+  width: 100%;
+  padding: 16px;
+}
+
 .c1 {
   color: #FFFFFF;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
@@ -8,13 +15,6 @@ exports[`Header should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.c0 {
-  background-color: #BB1919;
-  height: 40px;
-  width: 100%;
-  padding: 16px;
 }
 
 <header
