@@ -56,7 +56,7 @@ describe('MainContent', () => {
       },
     },
     {
-      blockId: '4',
+      blockId: '4*72h36',
       type: 'image',
       model: {
         blocks: [
