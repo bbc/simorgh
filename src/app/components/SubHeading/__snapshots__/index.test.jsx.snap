@@ -6,11 +6,6 @@ exports[`SubHeading with data should display the provided sub-heading 1`] = `
   line-height: 1.5em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.625em;
-  line-height: 1.875em;
-}
-
 @media (min-width:37.5em) {
   .c0 {
     font-size: 1.5em;
@@ -29,11 +24,6 @@ exports[`SubHeading with data should display the subheading containing various s
 .c0 {
   font-size: 1.25em;
   line-height: 1.5em;
-}
-
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.625em;
-  line-height: 1.875em;
 }
 
 @media (min-width:37.5em) {

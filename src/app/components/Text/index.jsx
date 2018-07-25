@@ -10,10 +10,6 @@ const StyledParagraph = styled.p`
   ${mediaQuery.smartPhoneAndLarger} {
     font-size: 1em;
   }
-  ${mediaQuery.tabletOnly} {
-    font-size: 1.125em;
-    line-height: 1.375em;
-  }
 `;
 
 const Text = ({ text, options }) => {

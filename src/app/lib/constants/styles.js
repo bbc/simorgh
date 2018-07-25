@@ -27,6 +27,5 @@ export const GEL_SPACING_DBL = GEL_SPACING * 2;
 
 // Screen sizes for GEL Typography
 export const smartPhoneScreenWidthMin = 20;
-export const tabletScreenWidthMin = 37.5;
 export const desktopScreenWidthMin = 37.5;
-export const smartPhoneScreenWidthMax = tabletScreenWidthMin - 0.063;
+export const smartPhoneScreenWidthMax = desktopScreenWidthMin - 0.063;

@@ -26,11 +26,6 @@ Array [
   line-height: 2em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 3.25em;
-  line-height: 3.5em;
-}
-
 @media (min-width:20em) and (max-width:37.437em) {
   .c0 {
     font-size: 2em;

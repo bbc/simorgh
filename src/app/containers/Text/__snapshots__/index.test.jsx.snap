@@ -7,11 +7,6 @@ Array [
   line-height: 1.25em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
-}
-
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -34,11 +29,6 @@ Array [
   line-height: 1.25em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
-}
-
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -57,11 +47,6 @@ Array [
   .c0 {
   font-size: 0.938em;
   line-height: 1.25em;
-}
-
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
 }
 
 @media (min-width:20em) {
@@ -84,11 +69,6 @@ Array [
   line-height: 1.25em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
-}
-
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -106,11 +86,6 @@ Array [
   .c0 {
   font-size: 0.938em;
   line-height: 1.25em;
-}
-
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
 }
 
 @media (min-width:20em) {

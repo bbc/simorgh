@@ -6,11 +6,6 @@ exports[`Text should render bold 1`] = `
   line-height: 1.25em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
-}
-
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -32,11 +27,6 @@ exports[`Text should render inline-code 1`] = `
 .c0 {
   font-size: 0.938em;
   line-height: 1.25em;
-}
-
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
 }
 
 @media (min-width:20em) {
@@ -62,11 +52,6 @@ exports[`Text should render italics 1`] = `
   line-height: 1.25em;
 }
 
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
-}
-
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -88,11 +73,6 @@ exports[`Text should render strike-through 1`] = `
 .c0 {
   font-size: 0.938em;
   line-height: 1.25em;
-}
-
-.c0 TODO:above 37.5em and with touch {
-  font-size: 1.125em;
-  line-height: 1.375em;
 }
 
 @media (min-width:20em) {

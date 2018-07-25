@@ -12,9 +12,6 @@ const Caption = styled.figcaption`
   ${mediaQuery.smartPhoneOnly} {
     line-height: 1.125em;
   }
-  ${mediaQuery.tabletOnly} {
-    line-height: 1.125em;
-  }
   ${mediaQuery.desktopOnly} {
     font-size: 0.813em;
     line-height: 1em;
