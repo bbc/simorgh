@@ -9,9 +9,13 @@ const blocks = [
     model: {
       blocks: [
         {
+          type: 'text',
+          blockId: 't-1',
           model: {
             blocks: [
               {
+                type: 'paragraph',
+                blockId: 'p-1',
                 model: {
                   text: 'This is a headline!',
                 },
@@ -28,6 +32,8 @@ const blocks = [
     model: {
       blocks: [
         {
+          type: 'paragraph',
+          blockId: 'p-2',
           model: {
             text: 'This is some text content!',
           },

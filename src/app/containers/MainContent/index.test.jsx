@@ -6,7 +6,7 @@ describe('MainContent', () => {
   const blocks = [
     {
       type: 'headline',
-      blockId: '1',
+      blockId: 'b-1',
       model: {
         blocks: [
           {

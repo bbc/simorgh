@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeadlineContainer with data should render correctly 1`] = `
+exports[`Headings with headline data should render correctly 1`] = `
 .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
@@ -12,4 +12,12 @@ exports[`HeadlineContainer with data should render correctly 1`] = `
 >
   This is a headline!
 </h1>
+`;
+
+exports[`Headings with subheading data should render correctly 1`] = `
+<h2
+  className=""
+>
+  This is a subheading
+</h2>
 `;
