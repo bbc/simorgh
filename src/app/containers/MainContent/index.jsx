@@ -1,5 +1,5 @@
 import React from 'react';
-import headline from '../Headings';
+import headings from '../Headings';
 import text from '../Text';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 import MainContent from '../../components/MainContent';
@@ -11,7 +11,8 @@ const BlockString = props => {
 };
 
 const Blocks = {
-  headline,
+  headline: headings,
+  subheading: headings,
   text,
 };
 
