@@ -20,6 +20,11 @@ exports[`MainContent should render correctly 1`] = `
   >
     This is a headline!
   </h1>
+  <h2
+    className=""
+  >
+    This is a subheading!
+  </h2>
   <p>
     This is some text content!
   </p>
