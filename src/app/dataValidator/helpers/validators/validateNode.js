@@ -41,7 +41,12 @@ const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
   }
 
   if (schemaNode.properties) {
-    validateProperties(schemaNode, dataNode, schemaName, parentSchemaName);
+    module.exports.validateProperties(
+      schemaNode,
+      dataNode,
+      schemaName,
+      parentSchemaName,
+    );
   }
 
   if (schemaNode.items) {
@@ -62,9 +67,13 @@ const validateProperty = (
   parentSchemaName,
 ) => {
   if (referencesSchemaDefinition(propertySchema)) {
-    validateBlock(dataNode, getSchemaRefName(propertySchema), parentSchemaName);
+    module.exports.validateBlock(
+      dataNode,
+      getSchemaRefName(propertySchema),
+      parentSchemaName,
+    );
   } else {
-    validateNode(
+    module.exports.validateNode(
       propertySchema,
       dataNode[property],
       schemaName,
@@ -111,7 +120,7 @@ const validateBlock = (
   log(`\nValidating block: ${parentSchemaName}`);
   log('----------------------------------------------------------------');
 
-  validateNode(
+  module.exports.validateNode(
     blockSchema,
     dataToValidate,
     schemaName,
@@ -130,7 +139,11 @@ const handleSchemaItems = (
 
   dataNodeArray.forEach(dataItem => {
     if (referencedSchemaNames.includes(dataItem.type)) {
-      validateBlock(dataItem, dataItem.type, `${parentSchemaName}`);
+      module.exports.validateBlock(
+        dataItem,
+        dataItem.type,
+        `${parentSchemaName}`,
+      );
     }
   });
 };
