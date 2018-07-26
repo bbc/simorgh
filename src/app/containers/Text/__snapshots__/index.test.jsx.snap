@@ -3,7 +3,7 @@
 exports[`TextContainer with data should render correctly 1`] = `
 Array [
   .c0 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 
@@ -26,7 +26,7 @@ Array [
     .
   </p>,
   .c0 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 
@@ -47,7 +47,7 @@ Array [
      text.
   </p>,
   .c0 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 
@@ -68,7 +68,7 @@ Array [
      text.
   </p>,
   .c0 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 
@@ -88,7 +88,7 @@ Array [
     .
   </p>,
   .c0 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 

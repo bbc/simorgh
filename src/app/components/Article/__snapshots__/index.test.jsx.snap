@@ -27,11 +27,11 @@ Array [
 }
 
 .c1 {
-  font-size: 0.938em;
+  font-size: 0.9375em;
   line-height: 1.25em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
     line-height: 2.25em;

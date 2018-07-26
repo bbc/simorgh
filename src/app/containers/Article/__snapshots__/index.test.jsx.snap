@@ -26,7 +26,7 @@ Array [
   line-height: 2em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
     line-height: 2.25em;

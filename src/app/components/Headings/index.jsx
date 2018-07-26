@@ -20,8 +20,7 @@ export const Headline = styled.h1`
 `;
 
 export const SubHeading = styled.h2`
-  // Font styling below is a subset of BBC GEL Typography "Double Pica"
-  // The styling provided by Sareh and the GEL typography Double pica don't match :(
+  // Font styling below is a subset of BBC GEL Typography "Trafalgar"
   font-size: 1.25em;
   line-height: 1.5em;
   ${mediaQuery.smartPhoneOnly} {

@@ -8,7 +8,7 @@ exports[`Headline component should render correctly 1`] = `
   line-height: 2em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
     line-height: 2.25em;
@@ -35,7 +35,7 @@ exports[`SubHeading component should render correctly 1`] = `
   line-height: 1.5em;
 }
 
-@media (min-width:20em) and (max-width:37.437em) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 1.5em;
     line-height: 1.75em;
