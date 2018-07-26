@@ -20,11 +20,14 @@ const readAllFiles = (filenames, dirname) =>
     }
   });
 
+const rejects = error =>
+  throwError(error);
+
 const readdirAsync = dirname =>
-  new Promise(resolve => {
+  new Promise((resolve, rejects) => {
     fs.readdir(dirname, (err, filenames) => {
       if (err) {
-        throwError(err);
+        rejects(err);
       } else {
         resolve(readAllFiles(filenames, dirname));
       }
@@ -37,6 +40,8 @@ readdirAsync('./././data').then(() => {
   log('\nAll files validated!');
 });
 
-module.exports.readdirAsync = readdirAsync;
-module.exports.validateFile = validateFile;
-module.exports.readAllFiles = readAllFiles;
+module.exports = {
+  validateFile,
+  readAllFiles,
+  readdirAsync,
+};

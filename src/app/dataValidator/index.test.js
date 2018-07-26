@@ -2,7 +2,12 @@ global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const fs = require('fs');
-const { validateData, validateFile, readAllFiles } = require('./index');
+const {
+  validateData,
+  validateFile,
+  readAllFiles,
+  readdirAsync,
+} = require('./index');
 const data = require('../../../data/scenario-01.json');
 
 const dirname = './././data';
@@ -75,5 +80,11 @@ describe('Data Validator requires mocking', () => {
     expect(readFileSyncMock.mock.calls).toEqual([
       ['./././data/scenario-01.json'],
     ]);
+  });
+
+  it('should error if readdirAsync Promise rejects', async () => {
+    await expect(readdirAsync('./././notData')).rejects.toThrowError(
+      `no such file or directory, scandir './././notData'`,
+    );
   });
 });
