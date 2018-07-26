@@ -37,5 +37,31 @@ exports[`MainContent should render correctly 1`] = `
       Former embroider Pauline Clayton described the gift as "lovely"
     </figcaption>
   </figure>
+  <div>
+    <div>
+      video locator:
+      urn:bbc:pips:pid:p067gq6h
+    </div>
+    <div>
+      duration:
+      PT1M34S
+    </div>
+    <div>
+      raw Image Src:
+      https://ichef.bbci.co.uk/news/640/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg
+    </div>
+    <div>
+      versionID:
+      p064nsz3
+    </div>
+    <div>
+      imageLocator:
+      /cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg
+    </div>
+    <div>
+      kind:
+      clip
+    </div>
+  </div>
 </div>
 `;

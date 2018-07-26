@@ -2,6 +2,7 @@ import React from 'react';
 import headline from '../Headings';
 import text from '../Text';
 import image from '../Image';
+import video from '../Video';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 import MainContent from '../../components/MainContent';
 
@@ -15,6 +16,7 @@ const Blocks = {
   headline,
   text,
   image,
+  video,
 };
 
 const render = blocks =>
