@@ -1,6 +1,7 @@
 import React from 'react';
 import headings from '../Headings';
 import text from '../Text';
+import image from '../Image';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 import MainContent from '../../components/MainContent';
 
@@ -14,6 +15,7 @@ const Blocks = {
   headline: headings,
   subheading: headings,
   text,
+  image,
 };
 
 const render = blocks =>
