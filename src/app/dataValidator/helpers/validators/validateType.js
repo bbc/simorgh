@@ -1,7 +1,7 @@
 const { log, throwError } = require('../../utilities/messaging');
 
 module.exports.validateType = (schemaType, dataNode, parentSchemaName) => {
-  if (dataNode !== null && schemaType) {
+  if (dataNode !== null) {
     if (schemaType === `${typeof dataNode}`) {
       log(`- Valid type of ${typeof dataNode}`);
     } else {
