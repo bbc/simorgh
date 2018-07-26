@@ -2,8 +2,8 @@ const { log } = require('../../utilities/messaging');
 const { validateRequired } = require('./validateRequired');
 const { validateType } = require('./validateType');
 const { validateEnum } = require('./validateEnum');
+const { validateOneOf } = require('./validateOneOf');
 const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
-const { getRefNameList } = require('../interpretSchema/getRefNameList');
 const {
   referencesSchemaDefinition,
   getSchemaRefName,
@@ -135,16 +135,15 @@ const handleSchemaItems = (
   parentSchemaName,
 ) => {
   const dataNodeArray = dataNode[schemaName];
-  const referencedSchemaNames = getRefNameList(referencedItems);
 
   dataNodeArray.forEach(dataItem => {
-    if (referencedSchemaNames.includes(dataItem.type)) {
-      module.exports.validateBlock(
-        dataItem,
-        dataItem.type,
-        `${parentSchemaName}`,
-      );
-    }
+    validateOneOf(referencedItems, dataItem, parentSchemaName);
+
+    module.exports.validateBlock(
+      dataItem,
+      dataItem.type,
+      `${parentSchemaName}`,
+    );
   });
 };
 
