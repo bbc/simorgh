@@ -13,7 +13,7 @@ export const Headline = styled.h1`
     font-size: 2em;
     line-height: 2.25em;
   }
-  ${mediaQuery.desktopOnly} {
+  ${mediaQuery.laptopAndLarger} {
     font-size: 2.75em;
     line-height: 3em;
   }
@@ -27,7 +27,7 @@ export const SubHeading = styled.h2`
     font-size: 1.5em;
     line-height: 1.75em;
   }
-  ${mediaQuery.desktopOnly} {
+  ${mediaQuery.laptopAndLarger} {
     font-size: 2em;
     line-height: 2.25em;
   }

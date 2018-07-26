@@ -32,4 +32,4 @@ export const GEL_SPACING_DBL = GEL_SPACING * 2;
 */
 export const smartPhoneScreenWidthMin = 20; // 320px
 export const smartPhoneScreenWidthMax = 37.4375; // 599px
-export const desktopScreenWidthMin = 37.5; // 600px
+export const laptopScreenWidthMin = 37.5; // 600px
