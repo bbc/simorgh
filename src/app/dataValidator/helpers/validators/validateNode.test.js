@@ -1,11 +1,7 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const {
-  validateNode,
-  validateProperties,
-  validateBlock,
-} = require('./validateNode');
+const validateNode = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
 const data = require('../../../../../data/scenario-01.json');
 
@@ -15,7 +11,7 @@ const { article } = schemas;
 describe('Validate node & properties helper', () => {
   it('should not error on validateNode', () => {
     expect(() => {
-      validateNode(article, data);
+      validateNode.validateNode(article, data);
     }).not.toThrowError();
   });
 
@@ -27,7 +23,7 @@ describe('Validate node & properties helper', () => {
     const enumData = 'analysis';
 
     expect(() => {
-      validateNode(enumSchema, enumData);
+      validateNode.validateNode(enumSchema, enumData);
     }).not.toThrowError();
   });
 
@@ -46,7 +42,7 @@ describe('Validate node & properties helper', () => {
     const parentSchemaName = ':article';
 
     expect(() => {
-      validateProperties(
+      validateNode.validateProperties(
         schema,
         propertyErrorData,
         schemaName,
@@ -89,7 +85,7 @@ describe('Validate node & properties helper', () => {
     const schemaName = 'article';
 
     expect(() => {
-      validateProperties(schema, propertyData, schemaName);
+      validateNode.validateProperties(schema, propertyData, schemaName);
     }).not.toThrowError();
   });
 
@@ -110,7 +106,7 @@ describe('Validate node & properties helper', () => {
     const schemaName = 'article';
 
     expect(() => {
-      validateProperties(schema, propertyData, schemaName);
+      validateNode.validateProperties(schema, propertyData, schemaName);
     }).not.toThrowError();
   });
 });
@@ -118,14 +114,45 @@ describe('Validate node & properties helper', () => {
 describe('Validate block', () => {
   it('should not error on validateBlock(article)', () => {
     expect(() => {
-      validateBlock(data);
+      validateNode.validateBlock(data);
     }).not.toThrowError();
   });
 
   it('should not error on validateBlock(headline)', () => {
     const headlineBlock = data.model.blocks[0];
     expect(() => {
-      validateBlock(headlineBlock);
+      validateNode.validateBlock(headlineBlock);
     }).not.toThrowError();
+  });
+
+  it('should recursively validate all blocks', () => {
+    const validateBlockSpy = jest.spyOn(validateNode, 'validateBlock');
+
+    const articleModel = data.model;
+    const articleBlocks = articleModel.blocks;
+    const headlineBlock = articleBlocks[0];
+    const headlineModel = headlineBlock.model;
+    const textBlock = headlineModel.blocks[0];
+    const textModel = textBlock.model;
+    const paragraphBlock = textModel.blocks[0];
+    const textBlock2 = articleBlocks[1];
+    const textModel2 = textBlock2.model;
+    const paragraphBlock2 = textModel2.blocks[0];
+
+    validateNode.validateBlock(data);
+
+    // prettier-ignore
+    expect(validateBlockSpy.mock.calls).toEqual([
+      [data],
+      [articleModel,    'blocks',     ':article:model'],
+      [headlineBlock,   'headline',   ':article:model:blocks'],
+      [headlineModel,   'blocks',     ':article:model:blocks:headline:model'],
+      [textBlock,       'text',       ':article:model:blocks:headline:model:blocks'],
+      [textModel,       'blocks',     ':article:model:blocks:headline:model:blocks:text:model'],
+      [paragraphBlock,  'paragraph',  ':article:model:blocks:headline:model:blocks:text:model:blocks'],
+      [textBlock2,      'text',       ':article:model:blocks'],
+      [textModel2,      'blocks',     ':article:model:blocks:text:model'],
+      [paragraphBlock2, 'paragraph',  ':article:model:blocks:text:model:blocks'],
+    ]);
   });
 });
