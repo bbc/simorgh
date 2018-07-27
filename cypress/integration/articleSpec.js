@@ -18,6 +18,13 @@ describe('News Article', () => {
 
     const anchorElement = getElement('header a');
     shouldContainText(anchorElement, 'BBC News');
+
+    anchorElement.focus();
+    shouldContainStyles(
+      anchorElement.focused(),
+      'border-bottom',
+      '4px solid rgb(255, 255, 255)',
+    );
   });
 
   it('should render a headline', () => {

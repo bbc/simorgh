@@ -9,6 +9,12 @@ Array [
   padding: 16px;
 }
 
+.c0 a:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 4px solid #FFFFFF;
+}
+
 <header
     aria-label="BBC News"
     className="c0"
