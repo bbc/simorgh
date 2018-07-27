@@ -28,6 +28,29 @@ describe('MainContent', () => {
       },
     },
     {
+      type: 'subheading',
+      blockId: '1',
+      model: {
+        blocks: [
+          {
+            type: 'text',
+            blockId: 't-1',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  blockId: 'p-1',
+                  model: {
+                    text: 'This is a subheading!',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
       type: 'text',
       blockId: '2',
       model: {
