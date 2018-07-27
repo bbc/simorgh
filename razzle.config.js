@@ -16,25 +16,25 @@ module.exports = {
         A prod build will fail if the API changes so it is fairly safe.
       */
       appConfig.module.rules.shift();
+    }
 
-      // Setup bundle analyser
-      if (target === 'web' && !process.env.CI) {
-        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
-        appConfig.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            defaultSizes: 'gzip',
-            generateStatsFile: true,
-            openAnalyzer: false,
-            reportFilename: '../../reports/webpackBundleReport.html',
-            statsFilename: '../../reports/webpackBundleReport.json',
-          }),
-        );
-      }
+    // Setup bundle analyser
+    if (!dev && target === 'web' && !process.env.CI) {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
+      appConfig.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          defaultSizes: 'gzip',
+          generateStatsFile: true,
+          openAnalyzer: false,
+          reportFilename: '../../reports/webpackBundleReport.html',
+          statsFilename: '../../reports/webpackBundleReport.json',
+        }),
+      );
     }
 
     // This is to override bundle performance test
-    if (process.env.CI) {
+    if (!dev && process.env.CI) {
       appConfig.performance = {
         maxAssetSize: 400000,
         maxEntrypointSize: 400000,
