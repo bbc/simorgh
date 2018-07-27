@@ -75,7 +75,7 @@
       "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     "locators" : {
-      "optimoUrn" : "urn:bbc:optimo:asset:c0000000003o"
+      "optimoUrn" : "urn:bbc:optimo:asset:c0000000001o"
     },
     "summary" : "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
     "timestamp" : 1514811600000
