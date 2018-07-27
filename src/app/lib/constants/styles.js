@@ -3,7 +3,7 @@
 
 // Colours
 export const C_EBON = '#222222';
-export const C_POSTBOX = '#BB1919';
+export const C_POSTBOX = '#B80000';
 export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
 

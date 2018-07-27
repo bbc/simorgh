@@ -2,8 +2,8 @@
 
 exports[`Header should render correctly 1`] = `
 .c0 {
-  background-color: #BB1919;
-  height: 40px;
+  background-color: #B80000;
+  height: 80px;
   width: 100%;
   padding: 16px;
 }
