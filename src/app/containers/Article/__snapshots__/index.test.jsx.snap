@@ -55,9 +55,8 @@ Array [
       <span
         className="c1"
       >
-        BBC News (this is hidden text)
+        BBC News
       </span>
-       
     </a>
   </header>,
   .c0 {
