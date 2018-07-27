@@ -6,6 +6,14 @@ exports[`Figure with a caption should render correctly 1`] = `
   color: #404040;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   padding: 8px;
+  font-size: 0.9375em;
+  line-height: 1.125em;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.875em;
+  }
 }
 
 <figure>

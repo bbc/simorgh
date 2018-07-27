@@ -24,3 +24,12 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
+
+/*
+   Screen sizes for GEL Typography
+   These namings are based on the GEL description. They are also known as group B and group D
+   Link to relevant GEL docs: http://www.bbc.co.uk/gel/guidelines/typography#type-sizes
+*/
+export const smartPhoneScreenWidthMin = 20; // 320px
+export const smartPhoneScreenWidthMax = 37.4375; // 599px
+export const laptopScreenWidthMin = 37.5; // 600px
