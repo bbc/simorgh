@@ -1,6 +1,13 @@
+const { GenerateSW } = require('workbox-webpack-plugin');
+
 module.exports = {
   modify: (config, { target, dev }) => {
     const appConfig = config;
+
+    if (target === 'web') {
+      const sw = new GenerateSW({ swDest: 'service-worker.js' });
+      appConfig.plugins.push(sw);
+    }
 
     if (!dev) {
       /*
