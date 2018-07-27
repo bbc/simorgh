@@ -10,7 +10,7 @@ Array [
 }
 
 <header
-    aria-label="BBC"
+    aria-label="BBC News"
     className="c0"
     role="banner"
   >
