@@ -29,6 +29,8 @@ exports[`Header should render correctly 1`] = `
     href="https://www.bbc.co.uk/news"
   >
     <svg
+      aria-hidden="true"
+      focusable="false"
       height="40"
       viewBox="0 0 154 22"
       width="280"
