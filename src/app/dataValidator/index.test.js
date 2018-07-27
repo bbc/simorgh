@@ -82,9 +82,13 @@ describe('Data Validator requires mocking', () => {
     ]);
   });
 
-  it('should error if readdirAsync Promise rejects', async () => {
+  it('should error if readdirAsync Promise rejects as directory does not exist', async () => {
     await expect(readdirAsync('./././notData')).rejects.toThrowError(
       `no such file or directory, scandir './././notData'`,
     );
+  });
+
+  it('should not error if readdirAsync gets a valid directory', async () => {
+    await expect(readdirAsync('./././data')).resolves.not.toThrowError();
   });
 });
