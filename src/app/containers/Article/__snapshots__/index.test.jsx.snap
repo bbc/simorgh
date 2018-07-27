@@ -3,8 +3,8 @@
 exports[`ArticleContainer Component should render correctly 1`] = `
 Array [
   .c0 {
-  background-color: #BB1919;
-  height: 40px;
+  background-color: #B80000;
+  height: 80px;
   width: 100%;
   padding: 16px;
 }
