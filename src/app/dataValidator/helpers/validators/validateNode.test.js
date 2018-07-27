@@ -154,5 +154,6 @@ describe('Validate block', () => {
       [textModel2,      'blocks',     ':article:model:blocks:text:model'],
       [paragraphBlock2, 'paragraph',  ':article:model:blocks:text:model:blocks'],
     ]);
+    // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
   });
 });
