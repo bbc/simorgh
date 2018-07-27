@@ -10,4 +10,4 @@ const mediaQuery = {
   laptopAndLarger: `@media (min-width: ${laptopScreenWidthMin}em)`,
 };
 
-export { mediaQuery as default };
+export default mediaQuery;
