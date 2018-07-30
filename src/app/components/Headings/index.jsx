@@ -1,10 +1,34 @@
 import styled from 'styled-components';
 import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
+import mediaQuery from '../../helpers/mediaQueries';
 
 export const Headline = styled.h1`
   color: ${C_EBON};
   font-family: ${FF_NEWS_SANS_REG};
-  font-size: 2em;
+
+  // Font styling below is a subset of BBC GEL Typography "Canon"
+  font-size: 1.75em;
+  line-height: 2em;
+  ${mediaQuery.smartPhoneOnly} {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+  ${mediaQuery.laptopAndLarger} {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
 `;
 
-export const SubHeading = styled.h2``;
+export const SubHeading = styled.h2`
+  // Font styling below is a subset of BBC GEL Typography "Trafalgar"
+  font-size: 1.25em;
+  line-height: 1.5em;
+  ${mediaQuery.smartPhoneOnly} {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+  ${mediaQuery.laptopAndLarger} {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+`;

@@ -4,7 +4,22 @@ exports[`Headline component should render correctly 1`] = `
 .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  line-height: 2em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
 }
 
 <h1
@@ -15,8 +30,27 @@ exports[`Headline component should render correctly 1`] = `
 `;
 
 exports[`SubHeading component should render correctly 1`] = `
+.c0 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
 <h2
-  className=""
+  className="c0"
 >
   This is a SubHeading
 </h2>
