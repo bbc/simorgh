@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render bold 1`] = `
-<p>
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+<p
+  className="c0"
+>
   This is text with 
   <strong>
     some bold formatting
@@ -11,7 +25,21 @@ exports[`Text should render bold 1`] = `
 `;
 
 exports[`Text should render inline-code 1`] = `
-<p>
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+<p
+  className="c0"
+>
   This is text with 
   <code>
     some inline code
@@ -21,7 +49,21 @@ exports[`Text should render inline-code 1`] = `
 `;
 
 exports[`Text should render italics 1`] = `
-<p>
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+<p
+  className="c0"
+>
   This is text with 
   <em>
     some italic formatting
@@ -31,7 +73,21 @@ exports[`Text should render italics 1`] = `
 `;
 
 exports[`Text should render strike-through 1`] = `
-<p>
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+<p
+  className="c0"
+>
   This is text with 
   <del>
     some strike-through formatting
