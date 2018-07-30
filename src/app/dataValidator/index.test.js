@@ -66,7 +66,7 @@ describe('Data Validator requires mocking', () => {
     expect(readFileSyncMock).not.toBeCalled();
   });
 
-  it('should ignore scenario-23.json', () => {
+  it('should ignore files that are no json format', () => {
     const filenames = [
       'scenario-01.json',
       'schema.yaml',
