@@ -87,7 +87,6 @@ components:
             - lastPublished
             - lastUpdated
             - locators
-            # - metaDescription
             - passport
             - tags
             - type
@@ -129,9 +128,6 @@ components:
               properties:
                 optimoUrn:
                   type: string
-            metaDescription:
-              example: "story about a young brave hero"
-              type: string
             passport:
               type: object
               required:
