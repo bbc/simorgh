@@ -6,8 +6,7 @@ Array [
   background-color: #B80000;
   height: 80px;
   width: 100%;
-  padding-left: 16px;
-  position: relative;
+  padding: 16px;
 }
 
 .c1 {
