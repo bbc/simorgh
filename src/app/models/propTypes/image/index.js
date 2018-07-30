@@ -49,3 +49,8 @@ const requiredPropCheck = ({ find }) => {
 export const imageModelPropTypes = {
   blocks: arrayOfSpecificObjects(requiredPropCheck, blockProps),
 };
+
+export const imageBlockPropTypes = blockOfSpecificTypeAndModel(
+  'image',
+  imageModelPropTypes,
+);
