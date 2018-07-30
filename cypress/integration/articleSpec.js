@@ -19,9 +19,11 @@ describe('News Article', () => {
     const anchorElement = getElement('header a');
     shouldContainText(anchorElement, 'BBC News');
 
-    const svgElement = getElement('header a svg');
-    svgElement.should('have.attr', 'focusable', 'false');
-    svgElement.should('have.attr', 'aria-hidden', 'true');
+    it('should have accessibility attributes', () => {
+      const svgElement = getElement('header a svg');
+      svgElement.should('have.attr', 'focusable', 'false');
+      svgElement.should('have.attr', 'aria-hidden', 'true');
+    });
   });
 
   it('should render a headline', () => {
