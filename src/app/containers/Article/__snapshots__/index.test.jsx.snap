@@ -32,9 +32,14 @@ Array [
       <svg
         aria-hidden="true"
         focusable="false"
-        height="40"
+        style={
+          Object {
+            "height": "40px",
+            "marginTop": "20px",
+            "width": "280px",
+          }
+        }
         viewBox="0 0 154 22"
-        width="280"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
