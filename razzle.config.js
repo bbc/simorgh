@@ -1,6 +1,17 @@
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
+const OfflinePlugin = require('offline-plugin'); // eslint-disable-line
+
 module.exports = {
   modify: (config, { target, dev }) => {
     const appConfig = config;
+
+    if (target === 'web') {
+      appConfig.plugins.push(
+        new OfflinePlugin({
+          externals: ['/'],
+        }),
+      );
+    }
 
     if (!dev) {
       /*
@@ -12,7 +23,6 @@ module.exports = {
 
       // Setup bundle analyser
       if (target === 'web' && !process.env.CI) {
-        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
         appConfig.plugins.push(
           new BundleAnalyzerPlugin({
             analyzerMode: 'static',
