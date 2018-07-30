@@ -4,6 +4,7 @@ import {
   C_POSTBOX,
   GEL_SPACING_DBL,
   C_WHITE,
+  GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 
 const StyledHeader = styled.header`
@@ -14,7 +15,7 @@ const StyledHeader = styled.header`
 
   a:focus {
     text-decoration: none;
-    border-bottom: 4px solid ${C_WHITE};
+    border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
   }
 `;
 
