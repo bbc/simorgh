@@ -1,5 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import validateRouteParameter from '../../routeValidator/helpers/validateRouteParameter';
 import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
@@ -43,6 +44,13 @@ describe('ArticleContainer', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
         expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
+      });
+
+      it('should validate the id parameter before fetching article data', () => {
+        const idParam = `scenario-01`;
+        expect(() => {
+          validateRouteParameter(idParam);
+        }).not.toThrowError();
       });
     });
 
