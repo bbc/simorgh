@@ -80,7 +80,6 @@ components:
         metadata:
           required:
             - blockId
-            # - blockTypes
             - created
             - firstPublished
             - id
