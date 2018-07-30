@@ -12,7 +12,7 @@
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "data-validate": "node src/app/dataValidator/index.js",
     "dev": "razzle start",
-    "lighthouse": "lighthouse http://localhost:7080/article/scenario-01 --output-path=./reports/report.html --view",
+    "lighthouse": "lighthouse http://localhost:7080/ --output-path=./reports/report.html --view",
     "postmerge": "./scripts/dependencyUpdateCheck.sh",
     "precommit": "npm run test:lint",
     "prepush": "./scripts/upToDateWithLatest.sh && npm run test:unit",
