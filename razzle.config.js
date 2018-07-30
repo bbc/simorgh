@@ -18,6 +18,7 @@ module.exports = {
             // obviously we need a file to match this path
             navigateFallbackURL: './article/offline.html',
           },
+          // start_url: '/',
           updateStrategy: 'changed',
         }),
       );

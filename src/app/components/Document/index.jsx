@@ -16,7 +16,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="nofollow" />
         <meta name="theme-color" content="#b80000" />
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}
         {styleTags}
