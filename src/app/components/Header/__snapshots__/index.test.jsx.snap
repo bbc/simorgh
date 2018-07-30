@@ -5,7 +5,8 @@ exports[`Header should render correctly 1`] = `
   background-color: #B80000;
   height: 80px;
   width: 100%;
-  padding: 16px;
+  padding-left: 16px;
+  position: relative;
 }
 
 .c1 {
@@ -31,14 +32,9 @@ exports[`Header should render correctly 1`] = `
     <svg
       aria-hidden="true"
       focusable="false"
-      style={
-        Object {
-          "height": "40px",
-          "marginTop": "20px",
-          "width": "280px",
-        }
-      }
+      height="40"
       viewBox="0 0 154 22"
+      width="280"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
