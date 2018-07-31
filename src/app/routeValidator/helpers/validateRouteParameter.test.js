@@ -1,7 +1,5 @@
 import validateRouteParameter from './validateRouteParameter';
 
-// global.console.log = jest.fn(); // silence console.log during jest testss
-
 describe('Validate Route Parameter', () => {
   it('should throw an error with an invalid route paremeter', () => {
     const routeParameter = `route-01`;
