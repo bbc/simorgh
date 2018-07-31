@@ -1,6 +1,8 @@
 const { log } = require('./utilities/messaging');
 const { validateBlock } = require('./helpers/validators/validateBlock');
 
+// var debugMode = process.env.npm_config_debugMode || false;
+
 const validateData = data => {
   console.time('validateBlock'); // eslint-disable-line no-console
   validateBlock(data);
