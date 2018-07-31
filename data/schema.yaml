@@ -93,7 +93,7 @@ components:
             blockId:
               type: string
             blockTypes:
-              type: object # why isn't this an array when the json is loaded? Does the json need to be parsed?
+              type: object
               items:
                 type: string
                 # oneOf:  # one of has have a $ref value
@@ -208,7 +208,7 @@ components:
     # schema definitions for referred blocks below
 
     blocks:
-      type: object # why isn't this an array when the json is loaded? Does the json need to be parsed?
+      type: object
       items:
         oneOf:
           - $ref: "#/components/schemas/altText"
