@@ -1,34 +1,36 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const readScenarios = require('./readScenarios');
+const readScenario = require('./readScenario');
 
 let fileToValidateMock;
 const dirname = './././data';
 
 const readFiles = filenames => {
   expect(() => {
-    readScenarios.readScenarios(filenames, dirname);
+    readScenario.readScenario(filenames, dirname);
   }).not.toThrowError();
 };
 
-describe('readScenarios helper', () => {
+describe('readScenario helper', () => {
   beforeEach(() => {
-    fileToValidateMock = jest.spyOn(readScenarios, 'fileToValidate');
+    fileToValidateMock = jest.spyOn(readScenario, 'fileToValidate');
   });
 
   afterEach(() => {
     fileToValidateMock.mockRestore();
   });
 
-  it('should readScenarios given a valid array and directory name', () => {
+  it('should readScenario given a valid array and directory name', () => {
     const filenames = [
       'scenario-01.json',
       'scenario-02.json',
       'scenario-03.json',
     ];
 
-    readFiles(filenames);
+    filenames.forEach(filename => {
+      readFiles(filename);
+    });
 
     expect(fileToValidateMock.mock.calls).toEqual([
       ['./././data/scenario-01.json'],
@@ -46,18 +48,12 @@ describe('readScenarios helper', () => {
   });
 
   it('should ignore files that are no json format', () => {
-    const filenames = [
-      'scenario-01.json',
-      'schema.yaml',
-      'scenario-01.yaml',
-      'README.md',
-      'prod',
-    ];
+    const filenames = ['schema.yaml', 'scenario-01.yaml', 'README.md', 'prod'];
 
-    readFiles(filenames);
+    filenames.forEach(filename => {
+      readFiles(filename);
+    });
 
-    expect(fileToValidateMock.mock.calls).toEqual([
-      ['./././data/scenario-01.json'],
-    ]);
+    expect(fileToValidateMock).not.toHaveBeenCalled();
   });
 });
