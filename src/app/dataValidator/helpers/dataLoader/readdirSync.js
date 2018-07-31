@@ -1,10 +1,10 @@
 const fs = require('fs');
 const { readScenario } = require('./readScenario');
 
-module.exports.readdirSync = dirname => {
-  const filenames = fs.readdirSync(dirname);
+module.exports.readdirSync = dirName => {
+  const fileNames = fs.readdirSync(dirName);
 
   return Promise.all(
-    filenames.map(filename => readScenario(filename, dirname)),
+    fileNames.map(fileName => readScenario(fileName, dirName)),
   );
 };
