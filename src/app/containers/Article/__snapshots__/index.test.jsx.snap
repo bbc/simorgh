@@ -22,7 +22,8 @@ Array [
   .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  padding-top: 32px;
+  margin: 0;
+  padding: 32px 0 16px 0;
   font-size: 1.75em;
   line-height: 2em;
 }
