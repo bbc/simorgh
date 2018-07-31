@@ -6,13 +6,7 @@ const { readdirAsync } = require('./readdirAsync');
 describe('readdirAsync helper', () => {
   it('should error if directory passed to readdirAsync does not exist', () => {
     expect(() => {
-      readdirAsync('./././notData');
-    }).toThrowError();
+      readdirAsync('./././data');
+    }).not.toThrowError();
   });
-  //
-  // it('should not error if directory passed to readdirAsync is valid', async () => {
-  //   expect(() => {
-  //       readdirAsync('./././data');
-  //   }).not.toThrowError();
-  // });
 });
