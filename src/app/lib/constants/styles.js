@@ -24,6 +24,7 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
+export const GEL_SPACING_HLF = 4;
 
 /*
    Screen sizes for GEL Typography
