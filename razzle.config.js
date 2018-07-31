@@ -1,4 +1,3 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
 const OfflinePlugin = require('offline-plugin'); // eslint-disable-line
 
 module.exports = {
@@ -15,6 +14,8 @@ module.exports = {
 
       // Setup bundle analyser
       if (target === 'web' && !process.env.CI) {
+        // const defined here because it's a dev dep (breaks production build if at top of file)
+        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
         appConfig.plugins.push(
           new BundleAnalyzerPlugin({
             analyzerMode: 'static',
@@ -49,7 +50,6 @@ module.exports = {
             // obviously we need a file to match this path
             navigateFallbackURL: './article/offline.html',
           },
-          // start_url: '/',
           updateStrategy: 'changed',
         }),
       );
