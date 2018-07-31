@@ -13,8 +13,8 @@ describe('News Article', () => {
 
   it('should render the BBC News branding', () => {
     const headerElement = getElement('header');
-    shouldContainStyles(headerElement, 'height', '40px');
-    shouldContainStyles(headerElement, 'background-color', 'rgb(187, 25, 25)');
+    shouldContainStyles(headerElement, 'height', '80px');
+    shouldContainStyles(headerElement, 'background-color', 'rgb(184, 0, 0)');
 
     const anchorElement = getElement('header a');
     shouldContainText(anchorElement, 'BBC News');
