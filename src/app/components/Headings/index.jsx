@@ -1,18 +1,10 @@
 import styled from 'styled-components';
-import {
-  C_EBON,
-  C_STORM,
-  FF_NEWS_SANS_REG,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '../../lib/constants/styles';
+import { C_EBON, FF_NEWS_SANS_REG } from '../../lib/constants/styles';
 import mediaQuery from '../../helpers/mediaQueries';
 
 export const Headline = styled.h1`
   color: ${C_EBON};
   font-family: ${FF_NEWS_SANS_REG};
-  margin: 0; // Reset
-  padding: ${GEL_SPACING_QUAD}px 0 ${GEL_SPACING_DBL}px 0;
 
   // Font styling below is a subset of BBC GEL Typography "Canon"
   font-size: 1.75em;
@@ -28,11 +20,6 @@ export const Headline = styled.h1`
 `;
 
 export const SubHeading = styled.h2`
-  color: ${C_STORM};
-  font-family: ${FF_NEWS_SANS_REG};
-  margin: 0; // Reset
-  padding: ${GEL_SPACING_DBL}px 0;
-
   // Font styling below is a subset of BBC GEL Typography "Trafalgar"
   font-size: 1.25em;
   line-height: 1.5em;
