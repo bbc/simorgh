@@ -4,6 +4,7 @@ exports[`Headings with headline data should render correctly 1`] = `
 .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  padding-top: 32px;
   font-size: 1.75em;
   line-height: 2em;
 }
@@ -31,6 +32,9 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 exports[`Headings with subheading data should render correctly 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  padding-top: 16px;
   font-size: 1.25em;
   line-height: 1.5em;
 }
