@@ -3,8 +3,8 @@
 exports[`Article should render correctly 1`] = `
 Array [
   .c0 {
-  background-color: #BB1919;
-  height: 40px;
+  background-color: #B80000;
+  height: 80px;
   width: 100%;
   padding: 16px;
 }
@@ -22,7 +22,34 @@ Array [
   .c0 {
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  line-height: 2em;
+}
+
+.c1 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
+}
+
+@media (min-width:20em) {
+  .c1 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
 }
 
 <div>
@@ -31,10 +58,14 @@ Array [
     >
       This is a headline!
     </h1>
-    <p>
+    <p
+      className="c1"
+    >
       This is some text content!
     </p>
-    <p>
+    <p
+      className="c1"
+    >
       More text content!
     </p>
     <p>

@@ -4,7 +4,7 @@ import { C_POSTBOX, GEL_SPACING_DBL } from '../../lib/constants/styles';
 
 const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
-  height: 40px;
+  height: 80px;
   width: 100%;
   padding: ${GEL_SPACING_DBL}px;
 `;
