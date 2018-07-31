@@ -18,7 +18,9 @@ describe('News Article', () => {
 
     const anchorElement = getElement('header a');
     shouldContainText(anchorElement, 'BBC News');
+  });
 
+  describe('the logo', () => {
     it('should have accessibility attributes', () => {
       const svgElement = getElement('header a svg');
       svgElement.should('have.attr', 'focusable', 'false');
