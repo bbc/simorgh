@@ -34,6 +34,7 @@ exports[`FooterContainer should render correctly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: block;
 }
 
 .c3:hover,
@@ -46,6 +47,21 @@ exports[`FooterContainer should render correctly 1`] = `
   color: #FFFFFF;
   padding: 8px 0 0 0;
   margin: 0;
+}
+
+.c5 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  display: inline-block;
+}
+
+.c5:hover,
+.c5:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @supports not (display:grid) {
@@ -144,7 +160,7 @@ exports[`FooterContainer should render correctly 1`] = `
   >
     Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
     <a
-      className="c3"
+      className="c5"
       href="https://www.bbc.co.uk/help/web/links/"
     >
       Read about our approach to external linking.

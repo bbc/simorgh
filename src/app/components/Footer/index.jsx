@@ -47,11 +47,16 @@ const StyledLink = styled.a`
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
+  display: block;
 
   &:hover,
   &:focus {
     text-decoration: underline;
   }
+`;
+
+const CopyrightLink = StyledLink.extend`
+  display: inline-block;
 `;
 
 const StyledParagraph = styled.p`
@@ -73,7 +78,9 @@ const Footer = ({ links, copyrightText, externalLink }) => (
     </StyledList>
     <StyledParagraph>
       {copyrightText}
-      <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
+      <CopyrightLink href={externalLink.href}>
+        {externalLink.text}
+      </CopyrightLink>
     </StyledParagraph>
   </StyledFooter>
 );
