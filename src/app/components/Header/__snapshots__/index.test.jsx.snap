@@ -3,7 +3,6 @@
 exports[`Header should render correctly 1`] = `
 .c0 {
   background-color: #B80000;
-  box-sizing: border-box;
   height: 80px;
   width: 100%;
   padding: 16px;
