@@ -11,6 +11,7 @@ import {
 
 const StyledFooter = styled.footer`
   background-color: ${C_ORBIT_GREY};
+  box-sizing: border-box;
   font-family: ${FF_NEWS_SANS_REG};
   padding: ${GEL_SPACING_DBL}px ${GEL_SPACING}px;
 `;

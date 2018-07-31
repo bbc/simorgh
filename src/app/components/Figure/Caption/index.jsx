@@ -4,6 +4,7 @@ import mediaQuery from '../../../helpers/mediaQueries';
 
 const Caption = styled.figcaption`
   background-color: #d5d0cd;
+  box-sizing: border-box;
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   padding: 8px;

@@ -4,6 +4,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
 Array [
   .c0 {
   background-color: #B80000;
+  box-sizing: border-box;
   height: 80px;
   width: 100%;
   padding: 16px;
@@ -20,6 +21,7 @@ Array [
     </a>
   </header>,
   .c0 {
+  box-sizing: border-box;
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   margin: 0;

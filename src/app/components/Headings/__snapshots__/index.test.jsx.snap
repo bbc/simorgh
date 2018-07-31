@@ -2,6 +2,7 @@
 
 exports[`Headline component should render correctly 1`] = `
 .c0 {
+  box-sizing: border-box;
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   margin: 0;
@@ -33,6 +34,7 @@ exports[`Headline component should render correctly 1`] = `
 
 exports[`SubHeading component should render correctly 1`] = `
 .c0 {
+  box-sizing: border-box;
   color: #404040;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   margin: 0;
