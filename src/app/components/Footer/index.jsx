@@ -36,9 +36,7 @@ const StyledList = styled.ul`
 
 const StyledListItem = styled.li`
   min-width: 50%;
-  padding: ${GEL_SPACING}px;
   @supports not (display: grid) {
-    padding: ${GEL_SPACING}px 0;
     display: inline-block;
   }
 `;
@@ -47,6 +45,7 @@ const StyledLink = styled.a`
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
+  padding: ${GEL_SPACING}px;
   display: block;
 
   &:hover,

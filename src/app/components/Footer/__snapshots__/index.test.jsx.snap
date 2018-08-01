@@ -26,7 +26,6 @@ exports[`Footer should render correctly 1`] = `
 
 .c2 {
   min-width: 50%;
-  padding: 8px;
 }
 
 .c3 {
@@ -34,6 +33,7 @@ exports[`Footer should render correctly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 8px;
   display: block;
 }
 
@@ -61,7 +61,6 @@ exports[`Footer should render correctly 1`] = `
 
 @supports not (display:grid) {
   .c2 {
-    padding: 8px 0;
     display: inline-block;
   }
 }
