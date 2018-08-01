@@ -3,6 +3,7 @@
 exports[`Footer should render correctly 1`] = `
 .c0 {
   background-color: #4C4C4C;
+  box-sizing: border-box;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   padding: 16px 8px;
 }

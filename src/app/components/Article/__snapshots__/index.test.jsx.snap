@@ -4,6 +4,7 @@ exports[`Article should render correctly 1`] = `
 Array [
   .c0 {
   background-color: #B80000;
+  box-sizing: border-box;
   height: 80px;
   width: 100%;
   padding: 16px;
@@ -20,6 +21,7 @@ Array [
     </a>
   </header>,
   .c0 {
+  box-sizing: border-box;
   color: #222222;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   margin: 0;
@@ -29,6 +31,7 @@ Array [
 }
 
 .c1 {
+  box-sizing: border-box;
   font-size: 0.9375em;
   line-height: 1.25em;
 }

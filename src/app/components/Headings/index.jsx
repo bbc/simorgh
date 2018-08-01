@@ -9,6 +9,7 @@ import {
 import mediaQuery from '../../helpers/mediaQueries';
 
 export const Headline = styled.h1`
+  box-sizing: border-box;
   color: ${C_EBON};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
@@ -28,6 +29,7 @@ export const Headline = styled.h1`
 `;
 
 export const SubHeading = styled.h2`
+  box-sizing: border-box;
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset

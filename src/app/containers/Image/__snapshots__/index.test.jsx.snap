@@ -12,6 +12,7 @@ exports[`Image with data should render an image with alt text 1`] = `
 exports[`Image with data should render an image with alt text and caption 1`] = `
 .c0 {
   background-color: #d5d0cd;
+  box-sizing: border-box;
   color: #404040;
   font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
   padding: 8px;
