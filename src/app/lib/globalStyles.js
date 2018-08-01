@@ -5,6 +5,10 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   ${styledNormalize}
 
+  * {
+    box-sizing: border-box;
+  }
+
   @font-face {
     font-display: optional;
     font-family: ReithSansNewsLight;
