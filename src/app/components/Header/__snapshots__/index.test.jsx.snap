@@ -15,7 +15,6 @@ exports[`Header should render correctly 1`] = `
 }
 
 <header
-  aria-label="BBC News"
   className="c0"
   role="banner"
 >
