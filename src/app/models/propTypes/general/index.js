@@ -42,6 +42,10 @@ const requiredPropCheck = (propData, propTypes) => {
 export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
   const { [key]: propData } = props;
 
+  if (!Array.isArray(propData)) {
+    return new Error(`Invalid props: ${key} is not an array.`);
+  }
+
   // checks required props
   const missingRequiredProps = requiredPropCheck(propData, propTypeData);
 
