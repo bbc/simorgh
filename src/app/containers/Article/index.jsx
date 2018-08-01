@@ -25,6 +25,14 @@ class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { id } = match.params;
+
+      const regex = '^(scenario-[0-9]{2})$';
+      const routeMatches = id.match(regex);
+
+      if (!routeMatches) {
+        throw new Error('invalid route parameter');
+      }
+
       let url = `/data/${id}.json`;
 
       if (req) {
