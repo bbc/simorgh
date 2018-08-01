@@ -8,13 +8,13 @@ const readScenario = (fileName, dirName) => {
     return false;
   }
 
-  if (path.extname(fileName) === '.json') {
-    return new Promise(resolve => {
-      resolve(module.exports.fileToValidate(`${dirName}/${fileName}`));
-    });
+  if (path.extname(fileName) !== '.json') {
+    return false;
   }
 
-  return false;
+  return new Promise(resolve => {
+    resolve(module.exports.fileToValidate(`${dirName}/${fileName}`));
+  });
 };
 
 const fileToValidate = fileName => {
