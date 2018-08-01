@@ -12,8 +12,9 @@ const StyledHeader = styled.header`
   height: 80px;
   width: 100%;
   padding: ${GEL_SPACING_DBL}px;
-
-  a:focus {
+`;
+const StyledLink = styled.a`
+  :focus {
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
   }
@@ -21,7 +22,7 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader role="banner">
-    <a href="https://www.bbc.co.uk/news">BBC News</a>
+    <StyledLink href="https://www.bbc.co.uk/news">BBC News</StyledLink>
   </StyledHeader>
 );
 
