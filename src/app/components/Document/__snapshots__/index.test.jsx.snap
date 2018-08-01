@@ -20,8 +20,12 @@ exports[`Document should render correctly 1`] = `
       content="nofollow"
       name="robots"
     />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
     <link
-      href="manifest.json"
+      href="/manifest.json"
       rel="manifest"
     />
     <ResourceHints />
