@@ -3,7 +3,7 @@
 
 // Colours
 export const C_EBON = '#222222';
-export const C_POSTBOX = '#BB1919';
+export const C_POSTBOX = '#B80000';
 export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
 
@@ -24,3 +24,13 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
+export const GEL_SPACING_QUAD = GEL_SPACING * 4;
+
+/*
+   Screen sizes for GEL Typography
+   These namings are based on the GEL description. They are also known as group B and group D
+   Link to relevant GEL docs: http://www.bbc.co.uk/gel/guidelines/typography#type-sizes
+*/
+export const smartPhoneScreenWidthMin = 20; // 320px
+export const smartPhoneScreenWidthMax = 37.4375; // 599px
+export const laptopScreenWidthMin = 37.5; // 600px

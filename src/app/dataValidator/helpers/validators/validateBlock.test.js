@@ -12,7 +12,7 @@ describe('Validate block', () => {
   });
 
   it('should not error on validateBlock(headline)', () => {
-    const headlineBlock = data.model.blocks[0];
+    const headlineBlock = data.content.model.blocks[0];
     expect(() => {
       validateBlock(headlineBlock);
     }).not.toThrowError();
