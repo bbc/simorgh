@@ -3,7 +3,7 @@ const { validateNode } = require('./validateNode');
 const { getSchemaByName } = require('../interpretSchema/getSchemaByName');
 
 module.exports.validateBlock = dataToValidate => {
-  const schemaName = dataToValidate.type;
+  const schemaName = dataToValidate.type || dataToValidate.metadata.type;
 
   log(`\nValidating block: ${schemaName}`);
   log('----------------------------------------------------------------');
