@@ -1,6 +1,5 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import validateRouteParameter from '../../routeValidator/helpers/validateRouteParameter';
 import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
@@ -46,11 +45,11 @@ describe('ArticleContainer', () => {
         expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
       });
 
-      it('should validate the id parameter before fetching article data', () => {
-        const idParam = `scenario-01`;
-        expect(() => {
-          validateRouteParameter(idParam);
-        }).not.toThrowError();
+      it('should check the route parameter is invalid before returning an empty object', async () => {
+        const invalidIdParam = 'route-21';
+        const invalidContext = { match: { params: { id: invalidIdParam } } };
+        const response = await callGetInitialProps(invalidContext);
+        expect(response).toEqual({});
       });
     });
 
