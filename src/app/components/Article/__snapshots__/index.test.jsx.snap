@@ -4,7 +4,6 @@ exports[`Article should render correctly 1`] = `
 Array [
   .c0 {
   background-color: #B80000;
-  box-sizing: border-box;
   height: 80px;
   width: 100%;
   padding: 16px;
