@@ -24,30 +24,26 @@ const captionBlockPropTypes = blockObjectOfSpecificTypeAndModel(
   blocksWithTypes([textBlockPropTypes]),
 );
 
-const blockProps = {
-  rawImage: rawImageBlockPropTypes,
-  altText: altTextBlockPropTypes,
-  caption: captionBlockPropTypes,
-};
-
-const requiredPropCheck = ({ find }) => {
-  const rawImage = find(({ type }) => type === 'rawImage');
-
-  if (!rawImage) {
-    return new Error(`Missing required prop: rawImage`);
-  }
-
-  const altText = find(({ type }) => type === 'altText');
-
-  if (!altText) {
-    return new Error(`Missing required prop: altText`);
-  }
-
-  return null;
-};
+const blockProps = [
+  {
+    type: 'rawImage',
+    props: rawImageBlockPropTypes,
+    isRequired: true,
+  },
+  {
+    type: 'altText',
+    props: altTextBlockPropTypes,
+    isRequired: true,
+  },
+  {
+    type: 'caption',
+    props: captionBlockPropTypes,
+    isRequired: false,
+  },
+];
 
 export const imageModelPropTypes = {
-  blocks: arrayOfSpecificObjects(requiredPropCheck, blockProps),
+  blocks: arrayOfSpecificObjects(blockProps),
 };
 
 export const imageBlockPropTypes = blockOfSpecificTypeAndModel(
