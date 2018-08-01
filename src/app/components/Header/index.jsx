@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   C_POSTBOX,
-  GEL_SPACING_DBL,
   C_WHITE,
+  GEL_SPACING_DBL,
   GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 
