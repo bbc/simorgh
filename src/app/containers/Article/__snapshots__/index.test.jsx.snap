@@ -19,6 +19,8 @@ Array [
   overflow: hidden;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
+  left: -100000;
+  top: 0;
 }
 
 <header

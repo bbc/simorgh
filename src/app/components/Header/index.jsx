@@ -18,6 +18,8 @@ const VisuallyHiddenText = styled.span`
   border: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  left: -100000;
+  top: 0;
 `;
 
 const Header = () => (
