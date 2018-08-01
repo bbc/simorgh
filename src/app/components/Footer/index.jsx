@@ -55,7 +55,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const CopyrightLink = StyledLink.extend`
+const CopyrightLink = styled(StyledLink)`
   display: inline-block;
 `;
 
