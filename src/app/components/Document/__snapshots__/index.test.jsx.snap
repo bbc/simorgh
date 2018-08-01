@@ -21,7 +21,7 @@ exports[`Document should render correctly 1`] = `
       name="robots"
     />
     <meta
-      content="#b80000"
+      content="#B80000"
       name="theme-color"
     />
     <link

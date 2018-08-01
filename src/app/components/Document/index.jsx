@@ -2,6 +2,7 @@ import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import ResourceHints from './ResourceHints';
 import '../../lib/globalStyles';
+import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, data, styleTags, helmet }) => {
@@ -15,7 +16,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="nofollow" />
-        <meta name="theme-color" content="#b80000" />
+        <meta name="theme-color" content={C_POSTBOX} />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}
