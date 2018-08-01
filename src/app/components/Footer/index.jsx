@@ -54,7 +54,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const CopyrightLink = styled(StyledLink)`
+const InlineBlockLink = styled(StyledLink)`
   display: inline-block;
 `;
 
@@ -77,9 +77,9 @@ const Footer = ({ links, copyrightText, externalLink }) => (
     </StyledList>
     <StyledParagraph>
       {copyrightText}
-      <CopyrightLink href={externalLink.href}>
+      <InlineBlockLink href={externalLink.href}>
         {externalLink.text}
-      </CopyrightLink>
+      </InlineBlockLink>
     </StyledParagraph>
   </StyledFooter>
 );
