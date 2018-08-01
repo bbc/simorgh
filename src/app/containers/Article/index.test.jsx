@@ -44,8 +44,10 @@ describe('ArticleContainer', () => {
         callGetInitialProps();
         expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
       });
+    });
 
-      it('should check the route parameter is invalid before returning an empty object', async () => {
+    describe('Route parameter', () => {
+      it('should check the id is invalid before returning an empty object', async () => {
         const invalidIdParam = 'route-21';
         const invalidContext = { match: { params: { id: invalidIdParam } } };
         const response = await callGetInitialProps(invalidContext);
