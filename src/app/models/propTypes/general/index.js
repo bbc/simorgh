@@ -39,7 +39,7 @@ const requiredPropCheck = (propData, propTypes) => {
   }, []);
 };
 
-export const arrayOfSpecificObjects = propTypeData => (props, key) => {
+export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
   const { [key]: propData } = props;
 
   // checks required props

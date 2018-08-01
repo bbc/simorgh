@@ -3,7 +3,7 @@ import {
   blockOfSpecificTypeAndModel,
   blockObjectOfSpecificTypeAndModel,
   blocksWithTypes,
-  arrayOfSpecificObjects,
+  arrayOfSpecificBlocks,
 } from '../general';
 import { textBlockPropTypes } from '../text';
 
@@ -43,7 +43,7 @@ const blockProps = [
 ];
 
 export const imageModelPropTypes = {
-  blocks: arrayOfSpecificObjects(blockProps),
+  blocks: arrayOfSpecificBlocks(blockProps),
 };
 
 export const imageBlockPropTypes = blockOfSpecificTypeAndModel(
