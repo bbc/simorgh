@@ -4,7 +4,7 @@ import {
   shouldContainStyles,
 } from '../support/testHelper';
 
-describe('News Article', () => {
+describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit('/article/article-id');
