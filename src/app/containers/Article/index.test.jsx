@@ -53,6 +53,8 @@ describe('ArticleContainer', () => {
         jest.spyOn(global.console, 'log');
         const response = await callGetInitialProps(invalidContext);
 
+        expect(fetch).not.toHaveBeenCalled();
+
         expect(console.log).toBeCalled();
         expect(console.log).toBeCalledWith(
           new Error('invalid route parameter'),
