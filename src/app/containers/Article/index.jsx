@@ -1,27 +1,9 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
-import { textBlock } from '../../models/blocks';
+import articlePropTypes from '../../models/propTypes/article';
 
 class ArticleContainer extends Component {
-  state = {
-    data: {
-      seoHeadline: 'Article Headline',
-      passport: {
-        language: 'en-GB',
-      },
-      model: {
-        blocks: [
-          {
-            type: 'headline',
-            blockId: '1',
-            model: textBlock('Article Headline'),
-          },
-        ],
-      },
-    },
-  };
-
   static async getInitialProps({ req, match } = {}) {
     try {
       const { id } = match.params;
@@ -33,6 +15,7 @@ class ArticleContainer extends Component {
 
       const response = await fetch(url);
       const data = await response.json();
+
       return { data };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
@@ -41,11 +24,19 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const { data } = this.state;
-    const { seoHeadline, model, passport } = data;
+    const { data } = this.props;
+    const { content, metadata, promo } = data;
 
-    return <Article lang={passport.language} title={seoHeadline} {...model} />;
+    return (
+      <Article
+        lang={metadata.passport.language}
+        title={promo.headlines.seoHeadline}
+        {...content.model}
+      />
+    );
   }
 }
+
+ArticleContainer.propTypes = articlePropTypes;
 
 export default ArticleContainer;
