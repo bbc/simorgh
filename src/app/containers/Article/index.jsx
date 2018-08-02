@@ -30,7 +30,9 @@ class ArticleContainer extends Component {
       const routeMatches = id.match(regex);
 
       if (!routeMatches) {
-        throw new Error('invalid route parameter');
+        throw new Error(
+          `Invalid route parameter: ${id}. Parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+        );
       }
 
       let url = `/data/${id}.json`;
