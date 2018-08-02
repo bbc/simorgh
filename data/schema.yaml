@@ -78,6 +78,7 @@ components:
                 blocks:
                   $ref: "#/components/schemas/blocks"
         metadata:
+          type: object
           required:
             - blockId
             - created
@@ -96,18 +97,7 @@ components:
               type: object
               items:
                 type: string
-                # oneOf:  # one of has have a $ref value
-                #   - "altText"
-                #   - "caption"
-                #   - "headline"
-                #   - "image"
-                #   - "paragraph"
-                #   - "rawImage"
-                #   - "rawVideo"
-                #   - "subheading"
-                #   - "text"
-                #   - "video"
-              minItems: 1
+              minItems: 2
             created:
               type: number
             createdBy:
@@ -158,11 +148,11 @@ components:
               type: object
               properties:
                 about:
-                  type: array
+                  type: object
                   items:
                     type: string
                 mentions:
-                  type: array
+                  type: object
                   items:
                     type: string
             type:
@@ -221,7 +211,7 @@ components:
           - $ref: "#/components/schemas/rawVideo"
           - $ref: "#/components/schemas/text"
           - $ref: "#/components/schemas/video"
-      minItems: 1
+      minItems: 2
 
     altText:
       type: object
