@@ -50,7 +50,18 @@ describe('ArticleContainer', () => {
       it('should check the id is invalid before returning an empty object', async () => {
         const invalidIdParam = 'route-21';
         const invalidContext = { match: { params: { id: invalidIdParam } } };
+        jest.spyOn(global.console, 'log');
         const response = await callGetInitialProps(invalidContext);
+
+        expect(console.log).toBeCalled();
+        expect(console.log).toBeCalledWith(
+          new Error('invalid route parameter'),
+        );
+
+        // expect(() => {
+        //   callGetInitialProps(invalidContext);
+        // }).toThrow('invalid route parameter');
+
         expect(response).toEqual({});
       });
     });
