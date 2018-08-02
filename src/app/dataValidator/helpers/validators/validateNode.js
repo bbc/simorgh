@@ -62,13 +62,13 @@ const validateProperty = (
   parentSchemaName,
 ) => {
   if (referencesSchemaDefinition(propertySchema)) {
-    validateReference(
+    recursivelyCallValidateBlock(
       dataNode,
       getSchemaRefName(propertySchema),
       parentSchemaName,
     );
   } else {
-    module.exports.validateNode(
+    recursivelyCallValidateNode(
       propertySchema,
       dataNode[property],
       schemaName,
@@ -122,15 +122,17 @@ const validateBlock = (
   );
 };
 
-const validateReference = (dataNode, referenceSchemaName, parentSchemaName) =>
-  module.exports.validateBlock(dataNode, referenceSchemaName, parentSchemaName);
-
 const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
   log(
     `\nValidating Item at index '${index}' in the array '${parentSchemaName}'`,
   );
 
-  validateNode(itemSchema, dataItem, 'item', `${parentSchemaName}:item`);
+  recursivelyCallValidateNode(
+    itemSchema,
+    dataItem,
+    'item',
+    `${parentSchemaName}:item`,
+  );
 };
 
 const handleSchemaItems = (
@@ -148,7 +150,11 @@ const handleSchemaItems = (
       dataNodeArray.forEach(dataItem => {
         validateOneOf(referencedItems.oneOf, dataItem, parentSchemaName);
 
-        validateReference(dataItem, dataItem.type, `${parentSchemaName}`);
+        recursivelyCallValidateBlock(
+          dataItem,
+          dataItem.type,
+          `${parentSchemaName}`,
+        );
       });
     } else {
       dataNode.forEach((item, index) => {
@@ -159,5 +165,26 @@ const handleSchemaItems = (
     log(`The data node ${parentSchemaName} is null`);
   }
 };
+
+// proxy methods to be overly explicit of which methods recursively call a running method
+const recursivelyCallValidateBlock = (
+  dataNode,
+  referenceSchemaName,
+  parentSchemaName,
+) =>
+  module.exports.validateBlock(dataNode, referenceSchemaName, parentSchemaName);
+
+const recursivelyCallValidateNode = (
+  schemaNode,
+  dataNode,
+  schemaName,
+  parentSchemaName,
+) =>
+  module.exports.validateNode(
+    schemaNode,
+    dataNode,
+    schemaName,
+    parentSchemaName,
+  );
 
 module.exports = { validateNode, validateProperties, validateBlock };
