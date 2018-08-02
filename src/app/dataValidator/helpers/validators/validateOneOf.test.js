@@ -10,7 +10,7 @@ const parentSchemaName = ':article:model:blocks';
 
 describe('validate oneOf', () => {
   it('should not error on valid oneOf block', () => {
-    const headlineBlock = data.model.blocks[0];
+    const headlineBlock = data.content.model.blocks[0];
 
     expect(() => {
       validateOneOf(referencedItems, headlineBlock, parentSchemaName);
@@ -18,8 +18,8 @@ describe('validate oneOf', () => {
   });
 
   it('should error on invalid oneOf block', () => {
-    data.model.blocks[0].type = 'randomBlock';
-    const randomBlock = data.model.blocks[0];
+    data.content.model.blocks[0].type = 'randomBlock';
+    const randomBlock = data.content.model.blocks[0];
 
     expect(() => {
       validateOneOf(referencedItems, randomBlock, parentSchemaName);

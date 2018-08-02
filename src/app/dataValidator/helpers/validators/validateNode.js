@@ -50,12 +50,7 @@ const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
   }
 
   if (schemaNode.items) {
-    handleSchemaItems(
-      schemaNode.items.oneOf,
-      dataNode,
-      schemaName,
-      parentSchemaName,
-    );
+    handleSchemaItems(schemaNode.items, dataNode, schemaName, parentSchemaName);
   }
 };
 
@@ -111,11 +106,10 @@ const validateProperties = (
 
 const validateBlock = (
   dataToValidate,
-  referenceSchemaName = null,
+  referenceSchemaName,
   parentSchemaName = '',
 ) => {
-  const schemaName = referenceSchemaName || dataToValidate.type;
-  const blockSchema = getSchemaByName(schemaName);
+  const blockSchema = getSchemaByName(referenceSchemaName);
 
   log(`\nValidating block: ${parentSchemaName}`);
   log('----------------------------------------------------------------');
@@ -123,8 +117,8 @@ const validateBlock = (
   module.exports.validateNode(
     blockSchema,
     dataToValidate,
-    schemaName,
-    `${parentSchemaName}:${schemaName}`,
+    referenceSchemaName,
+    `${parentSchemaName}:${referenceSchemaName}`,
   );
 };
 
@@ -134,17 +128,29 @@ const handleSchemaItems = (
   schemaName,
   parentSchemaName,
 ) => {
-  const dataNodeArray = dataNode[schemaName];
+  // if the value is null and not an array EG: article:promo:tags:about
+  if (dataNode) {
+    // oneOf declaration require $ref inside
+    if (referencedItems.oneOf) {
+      const dataNodeArray = dataNode[schemaName];
 
-  dataNodeArray.forEach(dataItem => {
-    validateOneOf(referencedItems, dataItem, parentSchemaName);
+      dataNodeArray.forEach(dataItem => {
+        validateOneOf(referencedItems.oneOf, dataItem, parentSchemaName);
 
-    module.exports.validateBlock(
-      dataItem,
-      dataItem.type,
-      `${parentSchemaName}`,
-    );
-  });
+        module.exports.validateBlock(
+          dataItem,
+          dataItem.type,
+          `${parentSchemaName}`,
+        );
+      });
+    } else {
+      dataNode.forEach(item => {
+        validateNode(referencedItems, item, 'item', `${parentSchemaName}:item`);
+      });
+    }
+  } else {
+    log(`The data node ${parentSchemaName} is null`);
+  }
 };
 
 module.exports = { validateNode, validateProperties, validateBlock };

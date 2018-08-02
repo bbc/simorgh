@@ -8,7 +8,7 @@ const data = JSON.parse(
 
 const validateData = dataToValidate => {
   console.time('validateBlock'); // eslint-disable-line no-console
-  validateBlock(dataToValidate);
+  validateBlock(dataToValidate, 'article');
   log('\n');
   console.timeEnd('validateBlock'); // eslint-disable-line no-console
   log('\nValidation complete!');
