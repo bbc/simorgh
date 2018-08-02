@@ -157,4 +157,12 @@ describe('Validate block', () => {
     ]);
     // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
   });
+
+  it('should recursively validate all levels of the tree', () => {
+    const validateNodeSpy = jest.spyOn(validateNode, 'validateNode');
+
+    validateNode.validateBlock(data, 'article');
+
+    expect(validateNodeSpy).toHaveBeenCalledTimes(57);
+  });
 });
