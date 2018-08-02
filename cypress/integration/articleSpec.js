@@ -8,7 +8,7 @@ import {
 describe('News Article', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/article/scenario-01');
+    cy.visit('/article/scenario-25');
   });
 
   it('should render the BBC News branding', () => {
@@ -24,15 +24,12 @@ describe('News Article', () => {
     const h1 = getElement('h1');
     shouldContainText(
       h1,
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
     );
   });
 
   it('should render a title', () => {
-    cy.title().should(
-      'eq',
-      'Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh',
-    );
+    cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
   });
 
   it('should have a nofollow meta tag', () => {
