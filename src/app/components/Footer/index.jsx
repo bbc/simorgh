@@ -12,7 +12,7 @@ import {
 const StyledFooter = styled.footer`
   background-color: ${C_ORBIT_GREY};
   font-family: ${FF_NEWS_SANS_REG};
-  padding: ${GEL_SPACING_DBL}px ${GEL_SPACING}px;
+  padding: ${GEL_SPACING_DBL}em ${GEL_SPACING}em;
 `;
 
 const StyledList = styled.ul`
@@ -22,12 +22,12 @@ const StyledList = styled.ul`
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
-  margin: 0 0 ${GEL_SPACING}px 0;
-  padding: 0 0 ${GEL_SPACING}px 0;
+  margin: 0 0 ${GEL_SPACING}em 0;
+  padding: 0 0 ${GEL_SPACING}em 0;
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
-    margin-bottom: ${GEL_SPACING}px;
+    margin-bottom: ${GEL_SPACING}em;
     @supports not (display: grid) {
       width: 100%;
     }
@@ -36,9 +36,9 @@ const StyledList = styled.ul`
 
 const StyledListItem = styled.li`
   min-width: 50%;
-  padding: ${GEL_SPACING}px;
+  padding: ${GEL_SPACING}em;
   @supports not (display: grid) {
-    padding: ${GEL_SPACING}px 0;
+    padding: ${GEL_SPACING}em 0;
     display: inline-block;
   }
 `;
@@ -56,7 +56,7 @@ const StyledLink = styled.a`
 
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding: ${GEL_SPACING}px 0 0 0;
+  padding: ${GEL_SPACING}em 0 0 0;
   margin: 0;
 `;
 
