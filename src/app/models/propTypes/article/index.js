@@ -1,4 +1,5 @@
-import { array, arrayOf, number, shape, string } from 'prop-types';
+import { arrayOf, number, shape, string } from 'prop-types';
+import mainContentPropTypes from '../mainContent';
 
 const articlePropTypes = {
   data: shape({
@@ -29,7 +30,7 @@ const articlePropTypes = {
     }).isRequired,
     content: shape({
       model: shape({
-        blocks: array,
+        blocks: mainContentPropTypes,
       }),
     }).isRequired,
     promo: shape({
