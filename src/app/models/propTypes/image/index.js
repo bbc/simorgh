@@ -11,7 +11,7 @@ const rawImageBlockPropTypes = blockObjectOfSpecificTypeAndModel('rawImage', {
   width: number.isRequired,
   height: number.isRequired,
   locator: string.isRequired,
-  copyrightHolder: string.isRequired,
+  copyrightHolder: string,
 });
 
 const altTextBlockPropTypes = blockObjectOfSpecificTypeAndModel(
