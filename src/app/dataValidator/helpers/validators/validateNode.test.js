@@ -165,4 +165,45 @@ describe('Validate block', () => {
 
     expect(validateNodeSpy).toHaveBeenCalledTimes(60);
   });
+
+  it('handleSchemaItems: should handle null value when array expected', () => {
+    const dataWithNullArray = {
+      metadata: {
+        tags: {
+          about: null,
+        },
+        type: 'article',
+      },
+    };
+    const simpleSchema = {
+      type: 'object',
+      properties: {
+        metadata: {
+          type: 'object',
+          properties: {
+            tags: {
+              type: 'object',
+              properties: {
+                about: {
+                  type: 'object',
+                  items: {
+                    type: 'string',
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+
+    expect(() =>
+      validateNode.validateNode(
+        simpleSchema,
+        dataWithNullArray,
+        'article',
+        ':article',
+      ),
+    ).not.toThrowError();
+  });
 });
