@@ -5,7 +5,7 @@ exports[`Header should render correctly 1`] = `
   background-color: #B80000;
   height: 80px;
   width: 100%;
-  padding: 1em;
+  padding: 1rem;
 }
 
 <header
