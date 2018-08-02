@@ -58,10 +58,6 @@ describe('ArticleContainer', () => {
           new Error('invalid route parameter'),
         );
 
-        // expect(() => {
-        //   callGetInitialProps(invalidContext);
-        // }).toThrow('invalid route parameter');
-
         expect(response).toEqual({});
       });
     });
