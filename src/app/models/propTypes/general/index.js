@@ -6,6 +6,7 @@ import {
   oneOfType,
   checkPropTypes,
 } from 'prop-types';
+import requiredPropCheck from './requiredPropCheck';
 
 export const blockObjectOfSpecificTypeAndModel = (type, model) => ({
   blockId: string.isRequired,
@@ -19,25 +20,6 @@ export const blockOfSpecificTypeAndModel = (type, model) =>
 export const blocksWithTypes = blockTypes => ({
   blocks: arrayOf(oneOfType(blockTypes).isRequired).isRequired,
 });
-
-const requiredPropCheck = (propData, propTypes) => {
-  // get types of required props
-  const requiredProps = propTypes
-    .filter(({ isRequired }) => isRequired)
-    .map(({ type }) => type);
-
-  // get types of passed props
-  const propDataTypes = propData.map(({ type }) => type);
-
-  // get types of required props that are not passed
-  return requiredProps.reduce((missingProps, requiredProp) => {
-    if (!propDataTypes.includes(requiredProp)) {
-      missingProps.push(requiredProp);
-    }
-
-    return missingProps;
-  }, []);
-};
 
 export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
   const { [key]: propData } = props;
