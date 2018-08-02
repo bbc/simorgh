@@ -87,7 +87,7 @@ describe('News Article', () => {
       .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
 
-  it('should load less than three font files', () => {
+  it('should load a maximum of three font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -102,7 +102,7 @@ describe('News Article', () => {
         }
       })
       .then(() => {
-        expect(fontFamiliesArray.length).to.be.lessThan(3);
+        expect(fontFamiliesArray.length).to.be.lessThan(4);
       });
   });
 });
