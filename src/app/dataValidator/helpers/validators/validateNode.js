@@ -62,7 +62,7 @@ const validateProperty = (
   parentSchemaName,
 ) => {
   if (referencesSchemaDefinition(propertySchema)) {
-    module.exports.validateBlock(
+    validateReference(
       dataNode,
       getSchemaRefName(propertySchema),
       parentSchemaName,
@@ -122,6 +122,17 @@ const validateBlock = (
   );
 };
 
+const validateReference = (dataNode, referenceSchemaName, parentSchemaName) =>
+  module.exports.validateBlock(dataNode, referenceSchemaName, parentSchemaName);
+
+const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
+  log(
+    `\nValidating Item at index '${index}' in the array '${parentSchemaName}'`,
+  );
+
+  validateNode(itemSchema, dataItem, 'item', `${parentSchemaName}:item`);
+};
+
 const handleSchemaItems = (
   referencedItems,
   dataNode,
@@ -137,15 +148,11 @@ const handleSchemaItems = (
       dataNodeArray.forEach(dataItem => {
         validateOneOf(referencedItems.oneOf, dataItem, parentSchemaName);
 
-        module.exports.validateBlock(
-          dataItem,
-          dataItem.type,
-          `${parentSchemaName}`,
-        );
+        validateReference(dataItem, dataItem.type, `${parentSchemaName}`);
       });
     } else {
-      dataNode.forEach(item => {
-        validateNode(referencedItems, item, 'item', `${parentSchemaName}:item`);
+      dataNode.forEach((item, index) => {
+        validateItem(referencedItems, item, index, parentSchemaName);
       });
     }
   } else {
