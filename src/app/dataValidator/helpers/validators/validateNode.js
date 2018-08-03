@@ -29,12 +29,8 @@ const {
 
 /* eslint-disable no-use-before-define */
 
-const validateBlock = (
-  dataToValidate,
-  referenceSchemaName,
-  parentSchemaName = '',
-) => {
-  const blockSchema = getSchemaByName(referenceSchemaName);
+const validateBlock = (dataToValidate, schemaName, parentSchemaName = '') => {
+  const blockSchema = getSchemaByName(schemaName);
 
   log(`\nValidating block: ${parentSchemaName}`);
   log('----------------------------------------------------------------');
@@ -42,8 +38,8 @@ const validateBlock = (
   module.exports.validateNode(
     blockSchema,
     dataToValidate,
-    referenceSchemaName,
-    `${parentSchemaName}:${referenceSchemaName}`,
+    schemaName,
+    `${parentSchemaName}:${schemaName}`,
   );
 };
 
@@ -167,12 +163,8 @@ const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
 };
 
 // proxy methods to be overly explicit of which methods recursively call a running method
-const recursivelyCallValidateBlock = (
-  dataNode,
-  referenceSchemaName,
-  parentSchemaName,
-) =>
-  module.exports.validateBlock(dataNode, referenceSchemaName, parentSchemaName);
+const recursivelyCallValidateBlock = (dataNode, schemaName, parentSchemaName) =>
+  module.exports.validateBlock(dataNode, schemaName, parentSchemaName);
 
 const recursivelyCallValidateNode = (
   schemaNode,
