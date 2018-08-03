@@ -1,8 +1,11 @@
 import {
+  checkElementStyles,
   getElement,
   getSecondElement,
   shouldContainText,
   shouldContainStyles,
+  shouldHaveDescendants,
+  shouldNotHaveDescendants,
 } from '../support/testHelper';
 
 describe('News Article', () => {
@@ -22,26 +25,19 @@ describe('News Article', () => {
   });
 
   it('should render a headline', () => {
-    const h1 = getElement('h1');
-    shouldContainText(
-      h1,
+    checkElementStyles(
+      'h1',
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
-    );
-    shouldContainStyles(h1, 'color', 'rgb(34, 34, 34)');
-    shouldContainStyles(
-      h1,
-      'font-family',
+      'rgb(34, 34, 34)',
       'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif',
     );
   });
 
   it('should render a subheading', () => {
-    const h2 = getElement('h2');
-    shouldContainText(h2, "Queen Victoria's myrtle");
-    shouldContainStyles(h2, 'color', 'rgb(64, 64, 64)');
-    shouldContainStyles(
-      h2,
-      'font-family',
+    checkElementStyles(
+      'h2',
+      "Queen Victoria's myrtle",
+      'rgb(64, 64, 64)',
       'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
     );
   });
@@ -58,16 +54,16 @@ describe('News Article', () => {
     const firstFigure = getElement('figure').eq(0);
 
     firstFigure.should('be.visible');
-    firstFigure.should('to.have.descendants', 'img');
-    firstFigure.should('not.to.have.descendants', 'figcaption');
+    shouldHaveDescendants(firstFigure, 'img');
+    shouldNotHaveDescendants(firstFigure, 'figcaption');
   });
 
   it('should have a visible image with a caption', () => {
     const thirdFigure = getElement('figure').eq(2);
 
     thirdFigure.should('be.visible');
-    thirdFigure.should('to.have.descendants', 'img');
-    thirdFigure.should('to.have.descendants', 'figcaption');
+    shouldHaveDescendants(thirdFigure, 'img');
+    shouldHaveDescendants(thirdFigure, 'figcaption');
   });
 
   it('should render a title', () => {

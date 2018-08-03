@@ -17,3 +17,18 @@ export const shouldContainStyles = (element, css, styling) => {
     expect(el).to.have.css(css, styling);
   });
 };
+
+export const shouldHaveDescendants = (element, descendantElement) => {
+  element.should('to.have.descendants', descendantElement);
+};
+
+export const shouldNotHaveDescendants = (element, descendantElement) => {
+  element.should('not.to.have.descendants', descendantElement);
+};
+
+export const checkElementStyles = (elementString, text, color, fontFamily) => {
+  const el = getElement(elementString);
+  shouldContainText(el, text);
+  shouldContainStyles(el, 'color', color);
+  shouldContainStyles(el, 'font-family', fontFamily);
+};
