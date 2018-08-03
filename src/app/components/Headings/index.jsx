@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   C_EBON,
   C_STORM,
+  FF_NEWS_SERIF_MDM,
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
@@ -10,7 +11,7 @@ import mediaQuery from '../../helpers/mediaQueries';
 
 export const Headline = styled.h1`
   color: ${C_EBON};
-  font-family: ${FF_NEWS_SANS_REG};
+  font-family: ${FF_NEWS_SERIF_MDM};
   margin: 0; // Reset
   padding: ${GEL_SPACING_QUAD}px 0 ${GEL_SPACING_DBL}px 0;
 

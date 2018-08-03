@@ -1,16 +1,19 @@
+const fs = require('fs');
 const { log } = require('./utilities/messaging');
-const { validateBlock } = require('./helpers/validators/validateBlock');
+const { validateBlock } = require('./helpers/validators/validateNode');
 
-const validateData = data => {
+const data = JSON.parse(
+  fs.readFileSync('./././data/scenario-01.json', 'utf-8'),
+);
+
+const validateData = dataToValidate => {
   console.time('validateBlock'); // eslint-disable-line no-console
-  validateBlock(data);
+  validateBlock(dataToValidate, 'article');
   log('\n');
   console.timeEnd('validateBlock'); // eslint-disable-line no-console
   log('\nValidation complete!');
 };
 
-const data = require('../../../data/scenario-01.json');
-
 validateData(data);
 
-module.exports.validateData = validateData;
+module.exports = { validateData };
