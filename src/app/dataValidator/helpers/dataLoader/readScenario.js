@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validateData } = require('../validators/validateData');
+const { countScenarios } = require('../../utilities/countScenarios');
 
 const readScenario = (fileName, dirName) => {
   // explicitly ignore scenario-23 as it's a example of invalid data
@@ -11,6 +12,8 @@ const readScenario = (fileName, dirName) => {
   if (path.extname(fileName) !== '.json') {
     return false;
   }
+
+  countScenarios();
 
   return new Promise(resolve => {
     resolve(module.exports.fileToValidate(`${dirName}/${fileName}`));
