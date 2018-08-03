@@ -8,6 +8,7 @@ import {
 describe('News Article', () => {
   // eslint-disable-next-line no-undef
   before(() => {
+    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
     cy.visit('/article/scenario-25');
   });
 
@@ -26,6 +27,47 @@ describe('News Article', () => {
       h1,
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
     );
+    shouldContainStyles(h1, 'color', 'rgb(34, 34, 34)');
+    shouldContainStyles(
+      h1,
+      'font-family',
+      'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif',
+    );
+  });
+
+  it('should render a subheading', () => {
+    const h2 = getElement('h2');
+    shouldContainText(h2, "Queen Victoria's myrtle");
+    shouldContainStyles(h2, 'color', 'rgb(64, 64, 64)');
+    shouldContainStyles(
+      h2,
+      'font-family',
+      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
+    );
+  });
+
+  it('should render a paragraph', () => {
+    const p = getElement('p');
+    shouldContainText(
+      p,
+      'The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.',
+    );
+  });
+
+  it('should have a visible image without a caption', () => {
+    const firstFigure = getElement('figure').eq(0);
+
+    firstFigure.should('be.visible');
+    firstFigure.should('to.have.descendants', 'img');
+    firstFigure.should('not.to.have.descendants', 'figcaption');
+  });
+
+  it('should have a visible image with a caption', () => {
+    const thirdFigure = getElement('figure').eq(2);
+
+    thirdFigure.should('be.visible');
+    thirdFigure.should('to.have.descendants', 'img');
+    thirdFigure.should('to.have.descendants', 'figcaption');
   });
 
   it('should render a title', () => {
