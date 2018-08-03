@@ -3,15 +3,19 @@ const path = require('path');
 const { validateData } = require('../validators/validateData');
 
 const readScenarios = (filenames, dirname) =>
-  filenames.forEach(filename => {
+  filenames.map(filename => {
     // explicitly ignore scenario-23 as it's a example of invalid data
     if (filename.includes('scenario-23.json')) {
-      return;
+      return false;
     }
 
     if (path.extname(filename) === '.json') {
-      module.exports.fileToValidate(`${dirname}/${filename}`);
+      return new Promise(resolve => {
+        resolve(module.exports.fileToValidate(`${dirname}/${filename}`));
+      });
     }
+
+    return false;
   });
 
 const fileToValidate = filename => {
