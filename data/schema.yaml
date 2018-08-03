@@ -205,7 +205,6 @@ components:
           - $ref: "#/components/schemas/caption"
           - $ref: "#/components/schemas/headline"
           - $ref: "#/components/schemas/image"
-          - $ref: "#/components/schemas/modelWithText"
           - $ref: "#/components/schemas/paragraph"
           - $ref: "#/components/schemas/rawImage"
           - $ref: "#/components/schemas/rawVideo"
@@ -293,13 +292,6 @@ components:
             - image
           type: string
 
-    modelWithText:
-      type: object
-      properties:
-        text:
-          example: "Aliquam quis sodales nisl."
-          type: string
-
     paragraph:
       type: object
       required:
@@ -311,10 +303,12 @@ components:
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
           type: string
         model:
-          properties:
-            blocks:
-              $ref: "#/components/schemas/blocks"
           type: object
+          required:
+            - text
+          properties:
+            text:
+              type: string
         type:
           enum:
             - paragraph
