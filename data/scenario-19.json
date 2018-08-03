@@ -185,6 +185,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000019o"
     },
-    "summary": "Nulla lectus justo, congue in feugiat quis, pharetra at leo."
+    "summary": "Nulla lectus justo, congue in feugiat quis, pharetra at leo.",
+    "timestamp" : 1514811600000
   }
 }

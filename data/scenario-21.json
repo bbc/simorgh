@@ -92,11 +92,13 @@
   "promo": {
     "id": "urn:bbc:ares::article:c0000000021o",
     "headlines": {
-      "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio"
+      "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio",
+      "promoHeadline": "Duis ut tincidunt arcu"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000021o"
     },
-    "summary": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    "summary": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "timestamp" : 1514811600000
   }
 }
