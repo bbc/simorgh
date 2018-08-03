@@ -32,3 +32,15 @@ export const checkElementStyles = (elementString, text, color, fontFamily) => {
   shouldContainStyles(el, 'color', color);
   shouldContainStyles(el, 'font-family', fontFamily);
 };
+
+export const noImageCaption = (figure, img, caption) => {
+  figure.should('be.visible');
+  shouldHaveDescendants(figure, img);
+  shouldNotHaveDescendants(figure, caption);
+};
+
+export const imageCaption = (figure, img, caption) => {
+  figure.should('be.visible');
+  shouldHaveDescendants(figure, img);
+  shouldHaveDescendants(figure, caption);
+};

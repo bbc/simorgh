@@ -2,10 +2,10 @@ import {
   checkElementStyles,
   getElement,
   getSecondElement,
+  imageCaption,
+  noImageCaption,
   shouldContainText,
   shouldContainStyles,
-  shouldHaveDescendants,
-  shouldNotHaveDescendants,
 } from '../support/testHelper';
 
 describe('News Article', () => {
@@ -51,19 +51,11 @@ describe('News Article', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    const firstFigure = getElement('figure').eq(0);
-
-    firstFigure.should('be.visible');
-    shouldHaveDescendants(firstFigure, 'img');
-    shouldNotHaveDescendants(firstFigure, 'figcaption');
+    noImageCaption(getElement('figure').eq(0), 'img', 'figcaption');
   });
 
   it('should have a visible image with a caption', () => {
-    const thirdFigure = getElement('figure').eq(2);
-
-    thirdFigure.should('be.visible');
-    shouldHaveDescendants(thirdFigure, 'img');
-    shouldHaveDescendants(thirdFigure, 'figcaption');
+    imageCaption(getElement('figure').eq(2), 'img', 'figcaption');
   });
 
   it('should render a title', () => {
