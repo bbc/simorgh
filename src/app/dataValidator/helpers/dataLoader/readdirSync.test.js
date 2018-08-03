@@ -4,19 +4,23 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 const { readdirSync } = require('./readdirSync');
 const readScenario = require('./readScenario');
 
+const expectMethodToBeCalledTimes = (number, spyMethod) => {
+  readdirSync('./././data').then(() => {
+    expect(spyMethod).toHaveBeenCalledTimes(number);
+  });
+};
+
 describe('readdirSync helper', () => {
   it('should call readScenario for every file in the /data directory', () => {
     const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
-    return readdirSync('./././data').then(() => {
-      expect(readScenarioSpy).toHaveBeenCalledTimes(29);
-    });
+
+    expectMethodToBeCalledTimes(29, readScenarioSpy);
   });
 
   it('should call fileToValidate for only the valid json file in the /data directory', () => {
     const fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
-    return readdirSync('./././data').then(() => {
-      expect(fileToValidateSpy).toHaveBeenCalledTimes(25);
-    });
+
+    expectMethodToBeCalledTimes(25, fileToValidateSpy);
   });
 
   it('should return a promise', () => {
