@@ -29,6 +29,24 @@ const {
 
 /* eslint-disable no-use-before-define */
 
+const validateBlock = (
+  dataToValidate,
+  referenceSchemaName,
+  parentSchemaName = '',
+) => {
+  const blockSchema = getSchemaByName(referenceSchemaName);
+
+  log(`\nValidating block: ${parentSchemaName}`);
+  log('----------------------------------------------------------------');
+
+  module.exports.validateNode(
+    blockSchema,
+    dataToValidate,
+    referenceSchemaName,
+    `${parentSchemaName}:${referenceSchemaName}`,
+  );
+};
+
 const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
   validateType(schemaNode.type, dataNode, parentSchemaName);
 
@@ -51,29 +69,6 @@ const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
 
   if (schemaNode.items) {
     handleSchemaItems(schemaNode.items, dataNode, schemaName, parentSchemaName);
-  }
-};
-
-const validateProperty = (
-  propertySchema,
-  dataNode,
-  property,
-  schemaName,
-  parentSchemaName,
-) => {
-  if (referencesSchemaDefinition(propertySchema)) {
-    recursivelyCallValidateBlock(
-      dataNode,
-      getSchemaRefName(propertySchema),
-      parentSchemaName,
-    );
-  } else {
-    recursivelyCallValidateNode(
-      propertySchema,
-      dataNode[property],
-      schemaName,
-      `${parentSchemaName}:${property}`,
-    );
   }
 };
 
@@ -104,35 +99,27 @@ const validateProperties = (
   });
 };
 
-const validateBlock = (
-  dataToValidate,
-  referenceSchemaName,
-  parentSchemaName = '',
+const validateProperty = (
+  propertySchema,
+  dataNode,
+  property,
+  schemaName,
+  parentSchemaName,
 ) => {
-  const blockSchema = getSchemaByName(referenceSchemaName);
-
-  log(`\nValidating block: ${parentSchemaName}`);
-  log('----------------------------------------------------------------');
-
-  module.exports.validateNode(
-    blockSchema,
-    dataToValidate,
-    referenceSchemaName,
-    `${parentSchemaName}:${referenceSchemaName}`,
-  );
-};
-
-const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
-  log(
-    `\nValidating Item at index '${index}' in the array '${parentSchemaName}'`,
-  );
-
-  recursivelyCallValidateNode(
-    itemSchema,
-    dataItem,
-    'item',
-    `${parentSchemaName}:item`,
-  );
+  if (referencesSchemaDefinition(propertySchema)) {
+    recursivelyCallValidateBlock(
+      dataNode,
+      getSchemaRefName(propertySchema),
+      parentSchemaName,
+    );
+  } else {
+    recursivelyCallValidateNode(
+      propertySchema,
+      dataNode[property],
+      schemaName,
+      `${parentSchemaName}:${property}`,
+    );
+  }
 };
 
 const handleSchemaItems = (
@@ -164,6 +151,19 @@ const handleSchemaItems = (
   } else {
     log(`The data node ${parentSchemaName} is null`);
   }
+};
+
+const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
+  log(
+    `\nValidating Item at index '${index}' in the array '${parentSchemaName}'`,
+  );
+
+  recursivelyCallValidateNode(
+    itemSchema,
+    dataItem,
+    'item',
+    `${parentSchemaName}:item`,
+  );
 };
 
 // proxy methods to be overly explicit of which methods recursively call a running method
