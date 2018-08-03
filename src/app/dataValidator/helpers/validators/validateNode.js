@@ -16,15 +16,7 @@ const {
   Due to the recursive nature of our data payload this file must contain all the methods that
   are possible of recursively calling each other through the data tree.
 
-  The order of execution/recursion is as follows:
-    For recursive validation of the properties field
-    - validateBlock -> validateNode -> validateProperties -> validateNode -> validateProperties
-
-    For recursive validation of blocks
-    - validateBlock -> validateNode -> validateProperties -> validateBlock -> validateNode ...
-
-  If these methods are not contained within a single file a ReferenceError is throw due to the
-  method being required/imported is not yet defined.
+  See the dataValidator/README.md for more detail
 */
 
 /* eslint-disable no-use-before-define */
