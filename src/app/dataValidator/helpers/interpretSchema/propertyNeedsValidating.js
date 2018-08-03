@@ -11,4 +11,4 @@ const propertyNeedsValidating = (schema, data, property) =>
   isRequiredProperty(schema, property) ||
   Object.prototype.hasOwnProperty.call(data, property);
 
-module.exports.propertyNeedsValidating = propertyNeedsValidating;
+module.exports = { propertyNeedsValidating };
