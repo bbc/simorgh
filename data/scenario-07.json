@@ -194,6 +194,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000007o"
     },
-    "summary": "Nunc ut ligula in metus scelerisque tincidunt vitae vel odio."
+    "summary": "Nunc ut ligula in metus scelerisque tincidunt vitae vel odio.",
+    "timestamp" : 1514811600000
   }
 }
