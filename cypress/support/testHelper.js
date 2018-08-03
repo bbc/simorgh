@@ -18,14 +18,6 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-export const shouldHaveDescendants = (element, descendantElement) => {
-  element.should('to.have.descendants', descendantElement);
-};
-
-export const shouldNotHaveDescendants = (element, descendantElement) => {
-  element.should('not.to.have.descendants', descendantElement);
-};
-
 export const checkElementStyles = (elementString, text, color, fontFamily) => {
   const el = getElement(elementString);
   shouldContainText(el, text);
@@ -33,14 +25,17 @@ export const checkElementStyles = (elementString, text, color, fontFamily) => {
   shouldContainStyles(el, 'font-family', fontFamily);
 };
 
-export const noImageCaption = (figure, img, caption) => {
+export const figureVisibility = (figure, img) => {
   figure.should('be.visible');
-  shouldHaveDescendants(figure, img);
-  shouldNotHaveDescendants(figure, caption);
+  figure.should('to.have.descendants', img);
+};
+
+export const noImageCaption = (figure, img, caption) => {
+  figureVisibility(figure, img);
+  figure.should('not.to.have.descendants', caption);
 };
 
 export const imageCaption = (figure, img, caption) => {
-  figure.should('be.visible');
-  shouldHaveDescendants(figure, img);
-  shouldHaveDescendants(figure, caption);
+  figureVisibility(figure, img);
+  figure.should('to.have.descendants', caption);
 };
