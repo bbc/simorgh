@@ -206,4 +206,49 @@ describe('Validate block', () => {
       ),
     ).not.toThrowError();
   });
+
+  it('handleSchemaItems: should handle an array of blocks', () => {
+    const dataWithBlocksArray = {
+      model: {
+        blocks: [
+          {
+            blockId: 'cafd1bff-a31b-03a8-a029-171eaad3e41a',
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  blockId: 'ce0e3616-fe03-e3be-9da8-45461a0f726c',
+                  model: {
+                    text:
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+    const simpleSchema = {
+      type: 'object',
+      properties: {
+        blocks: {
+          type: 'object',
+          items: {
+            oneOf: [{ $ref: '#/components/schemas/paragraph' }],
+          },
+        },
+      },
+    };
+
+    expect(() =>
+      validateNode.validateNode(
+        simpleSchema,
+        dataWithBlocksArray,
+        'blocks',
+        ':article:content:model',
+      ),
+    ).not.toThrowError();
+  });
 });
