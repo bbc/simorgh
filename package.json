@@ -11,7 +11,7 @@
     "cypress:storybook": "cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "data-validate": "node src/app/dataValidator/index.js",
-    "data-validate:debug": "npm run data-validate --debugMode=true",
+    "data-validate:debug": "npm run data-validate --DEBUG_MODE=true",
     "dev": "razzle start",
     "lighthouse": "lighthouse http://localhost:7080/article/scenario-01 --output-path=./reports/report.html --view",
     "postmerge": "./scripts/dependencyUpdateCheck.sh",

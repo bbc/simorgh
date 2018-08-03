@@ -1,12 +1,13 @@
-const debugMode = process.env.npm_config_debugMode || false;
+const log = message => {
+  const debugMode = process.env.npm_config_DEBUG_MODE || false;
 
-module.exports = {
-  log: message => {
-    if (debugMode) {
-      console.log(message); // eslint-disable-line no-console
-    }
-  },
-  throwError: errorMsg => {
-    throw errorMsg;
-  },
+  if (debugMode) {
+    console.log(message); // eslint-disable-line no-console
+  }
 };
+
+const throwError = errorMsg => {
+  throw errorMsg;
+};
+
+module.exports = { log, throwError };
