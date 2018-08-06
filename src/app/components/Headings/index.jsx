@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styled from 'styled-components';
 import {
   C_EBON,
@@ -28,7 +30,8 @@ export const Headline = styled.h1`
   }
 `;
 
-export const SubHeading = styled.h2`
+// export const SubHeading = styled.h2`
+const StyledSubHeading = styled.h2`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
@@ -46,3 +49,11 @@ export const SubHeading = styled.h2`
     line-height: 2.25em;
   }
 `;
+
+const SubHeadingLink = (articleId, text) => <h2 id={`${articleId}`}>{text}</h2>;
+
+export const SubHeading = (articleId, text) => (
+  <StyledSubHeading>
+    <SubHeadingLink articleId={articleId} text={text} />
+  </StyledSubHeading>
+);
