@@ -677,6 +677,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000017o"
     },
-    "summary": null
+    "summary": null,
+    "timestamp" : 1514811600000
   }
 }
