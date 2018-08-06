@@ -46,6 +46,25 @@ describe('ArticleContainer', () => {
       });
     });
 
+    describe('Validate route parameter ', () => {
+      it('to check the id is invalid before returning an empty object', async () => {
+        jest.spyOn(global.console, 'log');
+        const invalidIdParam = 'route-21';
+        const invalidContext = { match: { params: { id: invalidIdParam } } };
+        const response = await callGetInitialProps(invalidContext);
+
+        expect(fetch).not.toHaveBeenCalled();
+
+        expect(console.log).toBeCalledWith(
+          new Error(
+            `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+          ),
+        );
+
+        expect(response).toEqual({});
+      });
+    });
+
     describe('On Server', () => {
       const BASE_PATH = 'https://test.com';
       const serverContext = { req: { exists: true }, ...defaultContext };
