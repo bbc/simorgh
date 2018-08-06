@@ -58,7 +58,7 @@ describe('ArticleContainer', () => {
         expect(console.log).toBeCalled();
         expect(console.log).toBeCalledWith(
           new Error(
-            `Invalid route parameter: ${invalidIdParam}. Parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+            `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
           ),
         );
 
