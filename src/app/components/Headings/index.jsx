@@ -50,7 +50,7 @@ const StyledSubHeading = styled.h2`
   }
 `;
 
-const SubHeadingLink = (articleId, text) => <h2 id={`${articleId}`}>{text}</h2>;
+const SubHeadingLink = (articleId, text) => <h2 id={articleId}>{text}</h2>;
 
 export const SubHeading = (articleId, text) => (
   <StyledSubHeading>
