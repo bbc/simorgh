@@ -369,6 +369,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000008o"
     },
-    "summary": "Sed sit amet suscipit eros. Praesent posuere dapibus lacus in rhoncus."
+    "summary": "Sed sit amet suscipit eros. Praesent posuere dapibus lacus in rhoncus.",
+    "timestamp" : 1514811600000
   }
 }
