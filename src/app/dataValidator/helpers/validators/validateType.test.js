@@ -25,4 +25,12 @@ describe('Validate type', () => {
       validateType(schemaType, data, schemaName);
     }).not.toThrowError();
   });
+
+  it('should ignore the type check of properties that have a value of null', () => {
+    const schemaType = 'object';
+
+    expect(() => {
+      validateType(schemaType, null, schemaName);
+    }).not.toThrowError();
+  });
 });
