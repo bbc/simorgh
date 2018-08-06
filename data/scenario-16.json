@@ -533,6 +533,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000016o"
     },
-    "summary": "Pellentesque vel libero in ligula convallis venenatis nec eget urna."
+    "summary": "Pellentesque vel libero in ligula convallis venenatis nec eget urna.",
+    "timestamp" : 1514811600000
   }
 }

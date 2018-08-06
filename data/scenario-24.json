@@ -62,6 +62,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000024o"
     },
-    "summary": "Fusce in mi augue. Quisque fringilla posuere finibus. Nulla ac pulvinar magna, venenatis pharetra libero."
+    "summary": "Fusce in mi augue. Quisque fringilla posuere finibus. Nulla ac pulvinar magna, venenatis pharetra libero.",
+    "timestamp" : 1514811600000
   }
 }

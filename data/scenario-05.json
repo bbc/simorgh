@@ -279,6 +279,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
     },
-    "summary": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    "summary": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "timestamp" : 1514811600000
   }
 }
