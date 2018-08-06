@@ -311,6 +311,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000006o"
     },
-    "summary": "Donec a urna odio. Donec vestibulum ut enim a sollicitudin. Curabitur sit amet interdum odio."
+    "summary": "Donec a urna odio. Donec vestibulum ut enim a sollicitudin. Curabitur sit amet interdum odio.",
+    "timestamp" : 1514811600000
   }
 }
