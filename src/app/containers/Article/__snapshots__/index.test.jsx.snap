@@ -77,6 +77,11 @@ Array [
   line-height: 2em;
 }
 
+.c1 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
 @media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
@@ -91,12 +96,24 @@ Array [
   }
 }
 
+@media (min-width:20em) {
+  .c1 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
 <div>
     <h1
       className="c0"
     >
       Article Headline
     </h1>
+    <p
+      className="c1"
+    >
+      A paragraph.
+    </p>
   </div>,
 ]
 `;

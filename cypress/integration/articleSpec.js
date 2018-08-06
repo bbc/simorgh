@@ -1,6 +1,9 @@
 import {
+  checkElementStyles,
   getElement,
   getSecondElement,
+  visibleImageNoCaption,
+  visibleImageWithCaption,
   shouldContainText,
   shouldContainStyles,
 } from '../support/testHelper';
@@ -8,7 +11,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/article/article-id');
+    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
+    cy.visit('/article/scenario-25');
   });
 
   it('should render the BBC News branding', () => {
@@ -29,12 +33,41 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a headline', () => {
-    const h1 = getElement('h1');
-    shouldContainText(h1, 'Article Headline');
+    checkElementStyles(
+      'h1',
+      'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
+      'rgb(34, 34, 34)',
+      'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif',
+    );
+  });
+
+  it('should render a subheading', () => {
+    checkElementStyles(
+      'h2',
+      "Queen Victoria's myrtle",
+      'rgb(64, 64, 64)',
+      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
+    );
+  });
+
+  it('should render a paragraph', () => {
+    const p = getElement('p');
+    shouldContainText(
+      p,
+      'The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.',
+    );
+  });
+
+  it('should have a visible image without a caption', () => {
+    visibleImageNoCaption(getElement('figure').eq(0));
+  });
+
+  it('should have a visible image with a caption', () => {
+    visibleImageWithCaption(getElement('figure').eq(2));
   });
 
   it('should render a title', () => {
-    cy.title().should('eq', 'Article Headline');
+    cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
   });
 
   it('should have a nofollow meta tag', () => {
@@ -92,7 +125,7 @@ describe('Article Body Tests', () => {
       .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
   });
 
-  it('should load less than three font files', () => {
+  it('should load a maximum of three font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -107,7 +140,7 @@ describe('Article Body Tests', () => {
         }
       })
       .then(() => {
-        expect(fontFamiliesArray.length).to.be.lessThan(3);
+        expect(fontFamiliesArray.length).to.be.lessThan(4);
       });
   });
 });
