@@ -307,6 +307,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000004o"
     },
-    "summary": "Donec in ante id justo interdum pellentesque non vitae tortor."
+    "summary": "Donec in ante id justo interdum pellentesque non vitae tortor.",
+    "timestamp" : 1514811600000
   }
 }
