@@ -67,9 +67,11 @@ exports[`Footer should render correctly 1`] = `
 >
   <ul
     className="c1"
+    role="list"
   >
     <li
       className="c2"
+      role="listitem"
     >
       <a
         className="c3"
