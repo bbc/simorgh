@@ -1,3 +1,4 @@
+import propTypesLib from 'prop-types';
 import { arrayOfSpecificBlocks } from './index';
 
 import * as requiredPropCheck from './requiredPropCheck';
@@ -38,5 +39,14 @@ describe('arrayOfSpecificBlocks', () => {
     );
   });
 
-  it('should check the type of each item in prop array', () => {});
+  it('should check the type of each item in prop array', () => {
+    jest.spyOn(propTypesLib, 'checkPropTypes');
+
+    const call = prop => [{ propWouldBe: 'here' }, prop, 'prop', prop.type];
+    const calls = propData.testProp.map(call);
+
+    checkProps(propData);
+
+    expect(propTypesLib.checkPropTypes.mock.calls).toEqual(calls);
+  });
 });
