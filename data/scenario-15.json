@@ -304,6 +304,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000015o"
     },
-    "summary": "Morbi tempus eros id nulla aliquet, ut fermentum nulla aliquet."
+    "summary": "Morbi tempus eros id nulla aliquet, ut fermentum nulla aliquet.",
+    "timestamp" : 1514811600000
   }
 }

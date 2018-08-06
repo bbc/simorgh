@@ -642,6 +642,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000013o"
     },
-    "summary": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor felis eu convallis."
+    "summary": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor felis eu convallis.",
+    "timestamp" : 1514811600000
   }
 }
