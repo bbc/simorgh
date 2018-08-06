@@ -1,6 +1,5 @@
 import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
-import { emptyBlockArrayDefaultProps } from '../../models/propTypes';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../../components/Figure';
 
@@ -14,6 +13,10 @@ const getCaption = block => {
 };
 
 const ImageContainer = ({ blocks }) => {
+  if (!blocks) {
+    return null;
+  }
+
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
@@ -36,7 +39,5 @@ const ImageContainer = ({ blocks }) => {
 };
 
 ImageContainer.propTypes = imageModelPropTypes;
-
-ImageContainer.defaultProps = emptyBlockArrayDefaultProps;
 
 export default ImageContainer;
