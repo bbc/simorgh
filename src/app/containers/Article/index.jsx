@@ -31,7 +31,7 @@ class ArticleContainer extends Component {
 
       if (!routeMatches) {
         throw new Error(
-          `Invalid route parameter: ${id}. Parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+          `Invalid route parameter: ${id}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
         );
       }
 
