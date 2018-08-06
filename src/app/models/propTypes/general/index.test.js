@@ -1,16 +1,15 @@
 import { arrayOfSpecificBlocks } from './index';
 
-describe('arrayOfSpecificBlocks', () => {
-  const propTypes = [
-    { type: 'propOne', props: { propWouldBe: 'here' }, isRequired: false },
-    { type: 'propTwo', props: { propWouldBe: 'here' }, isRequired: true },
-  ];
+const propTypes = [
+  { type: 'propOne', props: { propWouldBe: 'here' }, isRequired: false },
+  { type: 'propTwo', props: { propWouldBe: 'here' }, isRequired: true },
+];
 
+const checkProps = props => arrayOfSpecificBlocks(propTypes)(props, 0);
+
+describe('arrayOfSpecificBlocks', () => {
   it('should return an error if prop is not an array', () => {
-    const propCheck = arrayOfSpecificBlocks(propTypes)(
-      { propThatIsntAnArray: {} },
-      0,
-    );
+    const propCheck = checkProps({ propThatIsntAnArray: {} });
 
     expect(propCheck).toEqual(Error('Invalid props: 0 is not an array.'));
   });
