@@ -1,4 +1,5 @@
 import { arrayOfSpecificBlocks } from './index';
+
 import * as requiredPropCheck from './requiredPropCheck';
 
 const propData = {
@@ -24,20 +25,17 @@ describe('arrayOfSpecificBlocks', () => {
     );
   });
 
-  describe('missing required props', () => {
-    beforeEach(() => {
-      requiredPropCheck.default = jest
-        .fn()
-        .mockReturnValueOnce(['missingProp', 'missingPropTwo']);
-    });
+  it('should return an error if missing required props', () => {
+    requiredPropCheck.default = jest
+      .fn()
+      .mockReturnValue([])
+      .mockReturnValueOnce(['missingProp', 'missingPropTwo']);
 
-    it('should return an error', () => {
-      const propCheck = checkProps(propData);
+    const propCheck = checkProps(propData);
 
-      expect(propCheck).toEqual(
-        Error('Missing required props: missingProp,missingPropTwo'),
-      );
-    });
+    expect(propCheck).toEqual(
+      Error('Missing required props: missingProp,missingPropTwo'),
+    );
   });
 
   it('should check the type of each item in prop array', () => {});
