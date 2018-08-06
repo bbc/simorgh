@@ -334,6 +334,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000018o"
     },
-    "summary": "Nulla quis mi ut ex tempus rutrum. Aenean faucibus libero turpis, vel facilisis ex imperdiet at."
+    "summary": "Nulla quis mi ut ex tempus rutrum. Aenean faucibus libero turpis, vel facilisis ex imperdiet at.",
+    "timestamp" : 1514811600000
   }
 }
