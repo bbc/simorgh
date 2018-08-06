@@ -5,6 +5,14 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   ${styledNormalize}
 
+  // Box Sizing https://bit.ly/1A91I0J
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
   @font-face {
     font-display: optional;
     font-family: ReithSansNewsLight;

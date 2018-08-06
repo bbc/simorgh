@@ -78,6 +78,7 @@ components:
                 blocks:
                   $ref: "#/components/schemas/blocks"
         metadata:
+          type: object
           required:
             - blockId
             - created
@@ -96,18 +97,7 @@ components:
               type: object
               items:
                 type: string
-                # oneOf:  # one of has have a $ref value
-                #   - "altText"
-                #   - "caption"
-                #   - "headline"
-                #   - "image"
-                #   - "paragraph"
-                #   - "rawImage"
-                #   - "rawVideo"
-                #   - "subheading"
-                #   - "text"
-                #   - "video"
-              minItems: 1
+              minItems: 2
             created:
               type: number
             createdBy:
@@ -158,11 +148,11 @@ components:
               type: object
               properties:
                 about:
-                  type: array
+                  type: object
                   items:
                     type: string
                 mentions:
-                  type: array
+                  type: object
                   items:
                     type: string
             type:
@@ -215,13 +205,12 @@ components:
           - $ref: "#/components/schemas/caption"
           - $ref: "#/components/schemas/headline"
           - $ref: "#/components/schemas/image"
-          - $ref: "#/components/schemas/modelWithText"
           - $ref: "#/components/schemas/paragraph"
           - $ref: "#/components/schemas/rawImage"
           - $ref: "#/components/schemas/rawVideo"
           - $ref: "#/components/schemas/text"
           - $ref: "#/components/schemas/video"
-      minItems: 1
+      minItems: 2
 
     altText:
       type: object
@@ -303,13 +292,6 @@ components:
             - image
           type: string
 
-    modelWithText:
-      type: object
-      properties:
-        text:
-          example: "Aliquam quis sodales nisl."
-          type: string
-
     paragraph:
       type: object
       required:
@@ -321,10 +303,12 @@ components:
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
           type: string
         model:
-          properties:
-            blocks:
-              $ref: "#/components/schemas/blocks"
           type: object
+          required:
+            - text
+          properties:
+            text:
+              type: string
         type:
           enum:
             - paragraph
