@@ -236,6 +236,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000010o"
     },
-    "summary": "Maecenas pretium libero ut augue bibendum tristique eget at enim."
+    "summary": "Maecenas pretium libero ut augue bibendum tristique eget at enim.",
+    "timestamp" : 1514811600000
   }
 }

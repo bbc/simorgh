@@ -468,6 +468,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000022o"
     },
-    "summary": "Proin sollicitudin elit neque, in mollis turpis pharetra non. Ut quis neque faucibus, ultrices ante sit amet, fringilla est."
+    "summary": "Proin sollicitudin elit neque, in mollis turpis pharetra non. Ut quis neque faucibus, ultrices ante sit amet, fringilla est.",
+    "timestamp" : 1514811600000
   }
 }
