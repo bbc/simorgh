@@ -17,25 +17,3 @@ export const shouldContainStyles = (element, css, styling) => {
     expect(el).to.have.css(css, styling);
   });
 };
-
-export const checkElementStyles = (elementString, text, color, fontFamily) => {
-  const el = getElement(elementString);
-  shouldContainText(el, text);
-  shouldContainStyles(el, 'color', color);
-  shouldContainStyles(el, 'font-family', fontFamily);
-};
-
-export const figureVisibility = figure => {
-  figure.should('be.visible');
-  figure.should('to.have.descendants', 'img');
-};
-
-export const visibleImageNoCaption = figure => {
-  figureVisibility(figure);
-  figure.should('not.to.have.descendants', 'figcaption');
-};
-
-export const visibleImageWithCaption = figure => {
-  figureVisibility(figure);
-  figure.should('to.have.descendants', 'figcaption');
-};
