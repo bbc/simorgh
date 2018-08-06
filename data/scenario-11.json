@@ -343,6 +343,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000011o"
     },
-    "summary": "Pellentesque fringilla, dui facilisis suscipit auctor, ligula ex consequat ex, ut sodales velit sem id nibh."
+    "summary": "Pellentesque fringilla, dui facilisis suscipit auctor, ligula ex consequat ex, ut sodales velit sem id nibh.",
+    "timestamp" : 1514811600000
   }
 }

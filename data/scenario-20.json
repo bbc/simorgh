@@ -127,6 +127,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000020o"
     },
-    "summary": "Cras eleifend eleifend rhoncus. Curabitur tincidunt egestas lorem et cursus. Nunc sed magna in orci porttitor faucibus."
+    "summary": "Cras eleifend eleifend rhoncus. Curabitur tincidunt egestas lorem et cursus. Nunc sed magna in orci porttitor faucibus.",
+    "timestamp" : 1514811600000
   }
 }
