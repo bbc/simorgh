@@ -24,6 +24,14 @@ describe('News Article', () => {
     shouldContainText(anchorElement, 'BBC News');
   });
 
+  describe('the logo', () => {
+    it('should have accessibility attributes', () => {
+      const svgElement = getElement('header a svg');
+      svgElement.should('have.attr', 'focusable', 'false');
+      svgElement.should('have.attr', 'aria-hidden', 'true');
+    });
+  });
+
   it('should render a headline', () => {
     checkElementStyles(
       'h1',
