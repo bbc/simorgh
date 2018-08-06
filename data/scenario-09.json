@@ -373,6 +373,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000009o"
     },
-    "summary": "Pellentesque non eros vitae nunc auctor aliquam. Mauris ac metus dui."
+    "summary": "Pellentesque non eros vitae nunc auctor aliquam. Mauris ac metus dui.",
+    "timestamp" : 1514811600000
   }
 }
