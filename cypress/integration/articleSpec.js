@@ -2,8 +2,8 @@ import {
   checkElementStyles,
   getElement,
   getSecondElement,
-  visibleFigureNoCaption,
-  visibleFigureWithCaption,
+  visibleImageNoCaption,
+  visibleImageWithCaption,
   shouldContainText,
   shouldContainStyles,
 } from '../support/testHelper';
@@ -51,11 +51,11 @@ describe('News Article', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    visibleFigureNoCaption(getElement('figure').eq(0));
+    visibleImageNoCaption(getElement('figure').eq(0));
   });
 
   it('should have a visible image with a caption', () => {
-    visibleFigureWithCaption(getElement('figure').eq(2));
+    visibleImageWithCaption(getElement('figure').eq(2));
   });
 
   it('should render a title', () => {

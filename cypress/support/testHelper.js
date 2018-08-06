@@ -30,12 +30,12 @@ export const figureVisibility = figure => {
   figure.should('to.have.descendants', 'img');
 };
 
-export const visibleFigureNoCaption = figure => {
+export const visibleImageNoCaption = figure => {
   figureVisibility(figure);
   figure.should('not.to.have.descendants', 'figcaption');
 };
 
-export const visibleFigureWithCaption = figure => {
+export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
 };
