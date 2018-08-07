@@ -15,7 +15,7 @@ exports[`Footer should render correctly 1`] = `
   grid-template-rows: repeat(4,50%);
   list-style-type: none;
   margin: 0;
-  padding: 8px 0 8px;
+  padding: 8px 0;
 }
 
 .c1 > li:first-child {

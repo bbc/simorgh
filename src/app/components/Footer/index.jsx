@@ -23,7 +23,7 @@ const StyledList = styled.ul`
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
   margin: 0;
-  padding: ${GEL_SPACING}px 0 ${GEL_SPACING}px;
+  padding: ${GEL_SPACING}px 0;
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
