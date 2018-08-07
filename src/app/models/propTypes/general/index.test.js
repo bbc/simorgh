@@ -43,7 +43,12 @@ describe('arrayOfSpecificBlocks', () => {
   it('should check the type of each item in prop array', () => {
     jest.spyOn(propTypesLib, 'checkPropTypes');
 
-    const call = prop => [{ propWouldBe: 'here' }, prop, 'prop', prop.type];
+    const call = prop => [
+      { propWouldBe: 'here' },
+      prop,
+      'prop',
+      `${prop.type} - TestComponent`,
+    ];
     const calls = propData.testProp.map(call);
 
     checkProps(propData);
