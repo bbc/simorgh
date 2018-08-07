@@ -11,6 +11,6 @@ describe('Headline component', () => {
 describe('SubHeading component', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <SubHeading>This is a SubHeading</SubHeading>,
+    <SubHeading text="This is a SubHeading" />,
   );
 });
