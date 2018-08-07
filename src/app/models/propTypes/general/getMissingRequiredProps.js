@@ -1,4 +1,4 @@
-const requiredPropCheck = (propData, propTypes) => {
+const getMissingRequiredProps = (propData, propTypes) => {
   // get types of required props
   const requiredProps = propTypes
     .filter(({ isRequired }) => isRequired)
@@ -17,4 +17,4 @@ const requiredPropCheck = (propData, propTypes) => {
   }, []);
 };
 
-export default requiredPropCheck;
+export default getMissingRequiredProps;

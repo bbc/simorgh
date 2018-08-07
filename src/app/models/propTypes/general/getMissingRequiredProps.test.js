@@ -1,6 +1,6 @@
-import requiredPropCheck from './requiredPropCheck';
+import getMissingRequiredProps from './getMissingRequiredProps';
 
-describe('requiredPropCheck', () => {
+describe('getMissingRequiredProps', () => {
   const props = [
     { type: 'propOne' },
     { type: 'propTwo' },
@@ -13,8 +13,8 @@ describe('requiredPropCheck', () => {
     { type: 'propThree', isRequired: false },
   ];
 
-  const testRequiredPropCheck = (propTypes, expectedObject) => {
-    const result = requiredPropCheck(propTypes, types);
+  const testGetMissingRequiredProps = (propTypes, expectedObject) => {
+    const result = getMissingRequiredProps(propTypes, types);
 
     expect(result).toEqual(expectedObject);
   };
@@ -24,7 +24,7 @@ describe('requiredPropCheck', () => {
       /* eslint-disable react/destructuring-assignment */
       const propsWithMissingRequiredProps = props.slice(2);
 
-      testRequiredPropCheck(propsWithMissingRequiredProps, [
+      testGetMissingRequiredProps(propsWithMissingRequiredProps, [
         'propOne',
         'propTwo',
       ]);
@@ -35,14 +35,14 @@ describe('requiredPropCheck', () => {
         /* eslint-disable react/destructuring-assignment */
         const propsWithNonRequiredProps = props.slice(0, 1);
 
-        testRequiredPropCheck(propsWithNonRequiredProps, ['propTwo']);
+        testGetMissingRequiredProps(propsWithNonRequiredProps, ['propTwo']);
       });
     });
   });
 
   describe('if no required props are missing', () => {
     it('should return an empty arrays', () => {
-      testRequiredPropCheck(props, []);
+      testGetMissingRequiredProps(props, []);
     });
   });
 });

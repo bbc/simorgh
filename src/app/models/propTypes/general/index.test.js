@@ -1,7 +1,7 @@
 import propTypesLib from 'prop-types';
 import { arrayOfSpecificBlocks } from './index';
 
-import * as requiredPropCheck from './requiredPropCheck';
+import * as getMissingRequiredProps from './getMissingRequiredProps';
 
 const propData = {
   testProp: [
@@ -27,7 +27,7 @@ describe('arrayOfSpecificBlocks', () => {
   });
 
   it('should return an error if missing required props', () => {
-    requiredPropCheck.default = jest
+    getMissingRequiredProps.default = jest
       .fn()
       .mockReturnValue([])
       .mockReturnValueOnce(['missingProp', 'missingPropTwo']);

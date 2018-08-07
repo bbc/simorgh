@@ -6,7 +6,7 @@ import {
   oneOfType,
   checkPropTypes,
 } from 'prop-types';
-import requiredPropCheck from './requiredPropCheck';
+import getMissingRequiredProps from './getMissingRequiredProps';
 
 export const blockObjectOfSpecificTypeAndModel = (type, model) => ({
   blockId: string.isRequired,
@@ -29,7 +29,7 @@ export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
   }
 
   // checks required props
-  const missingRequiredProps = requiredPropCheck(propData, propTypeData);
+  const missingRequiredProps = getMissingRequiredProps(propData, propTypeData);
 
   // throw error if missing required props
   if (missingRequiredProps.length > 0) {
