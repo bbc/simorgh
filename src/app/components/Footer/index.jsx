@@ -23,11 +23,12 @@ const StyledList = styled.ul`
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
   margin: 0;
-  padding: 0 0 ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING}px 0 ${GEL_SPACING}px;
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
-    padding-bottom: ${GEL_SPACING_DBL}px;
+    padding-bottom: ${GEL_SPACING}px;
+    margin-bottom: ${GEL_SPACING}px;
     @supports not (display: grid) {
       width: 100%;
     }
@@ -45,7 +46,7 @@ const StyledLink = styled.a`
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
-  padding-top: ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING}px 0;
   display: block;
 
   &:hover,
