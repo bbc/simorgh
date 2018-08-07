@@ -94,7 +94,9 @@ Array [
   }
 }
 
-<div>
+<main
+    role="main"
+  >
     <h1
       className="c0"
     >
@@ -105,6 +107,6 @@ Array [
     >
       A paragraph.
     </p>
-  </div>,
+  </main>,
 ]
 `;
