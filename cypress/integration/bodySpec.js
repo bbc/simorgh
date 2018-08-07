@@ -5,31 +5,13 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
-  shouldContainStyles,
 } from '../support/testHelper';
 
-describe('News Article', () => {
+describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
     cy.visit('/article/scenario-25');
-  });
-
-  it('should render the BBC News branding', () => {
-    const headerElement = getElement('header');
-    shouldContainStyles(headerElement, 'height', '80px');
-    shouldContainStyles(headerElement, 'background-color', 'rgb(184, 0, 0)');
-
-    const anchorElement = getElement('header a');
-    shouldContainText(anchorElement, 'BBC News');
-  });
-
-  describe('the logo', () => {
-    it('should have accessibility attributes', () => {
-      const svgElement = getElement('header a svg');
-      svgElement.should('have.attr', 'focusable', 'false');
-      svgElement.should('have.attr', 'aria-hidden', 'true');
-    });
   });
 
   it('should render a headline', () => {
