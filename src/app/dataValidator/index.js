@@ -1,19 +1,15 @@
-const fs = require('fs');
-const { log } = require('./utilities/messaging');
-const { validateBlock } = require('./helpers/validators/validateNode');
+const { readdirSync } = require('./helpers/dataLoader/readdirSync');
+const { getScenariosCount } = require('./utilities/countScenarios');
 
-const data = JSON.parse(
-  fs.readFileSync('./././data/scenario-01.json', 'utf-8'),
-);
-
-const validateData = dataToValidate => {
-  console.time('validateBlock'); // eslint-disable-line no-console
-  validateBlock(dataToValidate, 'article');
-  log('\n');
-  console.timeEnd('validateBlock'); // eslint-disable-line no-console
-  log('\nValidation complete!');
+const validateAllScenarios = () => {
+  console.time('validateAllScenarios'); // eslint-disable-line no-console
+  return readdirSync('./././data').then(() => {
+    const scenariosCount = getScenariosCount();
+    console.log(`\nAll ${scenariosCount} scenarios validated!`); // eslint-disable-line no-console
+    console.timeEnd('validateAllScenarios'); // eslint-disable-line no-console
+  });
 };
 
-validateData(data);
+validateAllScenarios();
 
-module.exports = { validateData };
+module.exports = { validateAllScenarios };

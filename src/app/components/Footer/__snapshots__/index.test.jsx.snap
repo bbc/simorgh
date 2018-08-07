@@ -3,7 +3,7 @@
 exports[`Footer should render correctly 1`] = `
 .c0 {
   background-color: #4C4C4C;
-  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0 8px;
 }
 
@@ -73,9 +73,11 @@ exports[`Footer should render correctly 1`] = `
 >
   <ul
     className="c1"
+    role="list"
   >
     <li
       className="c2"
+      role="listitem"
     >
       <a
         className="c3"

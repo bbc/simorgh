@@ -68,11 +68,11 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <StyledFooter role="contentinfo">
-    <StyledList>
+    <StyledList role="list">
       {links.map((link, index) => (
         // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
         // eslint-disable-next-line react/no-array-index-key
-        <StyledListItem key={index}>
+        <StyledListItem key={index} role="listitem">
           <StyledLink href={link.href}>{link.text}</StyledLink>
         </StyledListItem>
       ))}

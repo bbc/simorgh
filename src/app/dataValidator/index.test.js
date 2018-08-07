@@ -1,13 +1,12 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const { validateData } = require('./index');
-const data = require('../../../data/scenario-01.json');
+const { validateAllScenarios } = require('./index');
 
 describe('Data Validator', () => {
-  it('should not error on validateData', () => {
+  it('should not error', () => {
     expect(() => {
-      validateData(data);
+      validateAllScenarios();
     }).not.toThrowError();
   });
 });
