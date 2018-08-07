@@ -1,6 +1,3 @@
-import React from 'react';
-import string from 'prop-types';
-
 import styled from 'styled-components';
 import {
   C_EBON,
@@ -31,7 +28,10 @@ export const Headline = styled.h1`
   }
 `;
 
-const StyledSubHeading = styled.div`
+export const SubHeading = styled.h2.attrs({
+  id: ({ text }) => text,
+  tabIndex: '-1',
+})`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
@@ -49,15 +49,3 @@ const StyledSubHeading = styled.div`
     line-height: 2.25em;
   }
 `;
-
-export const SubHeading = ({ text }) => (
-  <StyledSubHeading>
-    <h2 id={text} tabIndex="-1">
-      {text}
-    </h2>
-  </StyledSubHeading>
-);
-
-SubHeading.propTypes = {
-  text: string.isRequired,
-};
