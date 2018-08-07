@@ -21,7 +21,11 @@ export const blocksWithTypes = blockTypes => ({
   blocks: arrayOf(oneOfType(blockTypes).isRequired).isRequired,
 });
 
-export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
+export const arrayOfSpecificBlocks = propTypeData => (
+  props,
+  key,
+  componentName,
+) => {
   const { [key]: propData } = props;
 
   if (!Array.isArray(propData)) {
@@ -45,12 +49,17 @@ export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
 
     /**
      * Checks the passed prop against the passed propType. Passed params:
-     * @param {Object} propType - The prop types to check the prop against
+     * @param {Object} propTypes - The prop types to check the prop against
      * @param {string} propValue - the prop to check
-     * @param {string} location - 'prop' - the location of the prop check. Can be 'prop', 'context', or 'child context'
-     * @param {string} propValue.type - the name being checked, usually the component
+     * @param {string} location - 'prop' - the location of the prop check
+     * @param {string} name - the name of the item being checked. Passing type value of the prop and component for specificity
      */
-    checkPropTypes(propTypes, propValue, 'prop', propValue.type);
+    checkPropTypes(
+      propTypes,
+      propValue,
+      'prop',
+      `${propValue.type} - ${componentName}`,
+    );
   });
 
   return null;
