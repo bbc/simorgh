@@ -36,13 +36,21 @@ export const arrayOfSpecificBlocks = propTypeData => (props, key) => {
     return new Error(`Missing required props: ${missingRequiredProps}`);
   }
 
-  // loop through props and compare against defined types for that block type
-  propData.forEach(prop => {
+  // loop through each passed prop in the array and compares them against defined types for that block type
+  propData.forEach(propValue => {
+    // finds the first propType that has a type that matches the type of the passed prop
     const { props: propTypes } = propTypeData.find(
-      ({ type }) => type === prop.type,
+      ({ type }) => type === propValue.type,
     );
 
-    checkPropTypes(propTypes, prop, 'prop', prop.type);
+    /**
+     * Checks the passed prop against the passed propType. Passed params:
+     * @param {Object} propType - The prop types to check the prop against
+     * @param {string} propValue - the prop to check
+     * @param {string} location - 'prop' - the location of the prop check. Can be 'prop', 'context', or 'child context'
+     * @param {string} propValue.type - the name being checked, usually the component
+     */
+    checkPropTypes(propTypes, propValue, 'prop', propValue.type);
   });
 
   return null;
