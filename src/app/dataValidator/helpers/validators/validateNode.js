@@ -142,9 +142,7 @@ const handleSchemaItems = (
 };
 
 const validateItem = (itemSchema, dataItem, index, parentSchemaName) => {
-  log(
-    `\nValidating Item at index '${index}' in the array '${parentSchemaName}'`,
-  );
+  log(`\nValidating Item at index ${index} in the array ${parentSchemaName}`);
 
   recursivelyCallValidateNode(
     itemSchema,
