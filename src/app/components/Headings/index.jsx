@@ -31,8 +31,7 @@ export const Headline = styled.h1`
   }
 `;
 
-// export const SubHeading = styled.h2`
-const StyledSubHeading = styled.h2`
+const StyledSubHeading = styled.div`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
