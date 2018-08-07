@@ -14,7 +14,9 @@ describe('Header Tests', () => {
     const headerElement = getElement('header');
     shouldContainStyles(headerElement, 'height', '80px');
     shouldContainStyles(headerElement, 'background-color', 'rgb(184, 0, 0)');
+  });
 
+  it('should have a focused state', () => {
     const anchorElement = getElement('header a');
     shouldContainText(anchorElement, 'BBC News');
 
