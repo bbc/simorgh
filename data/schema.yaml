@@ -91,6 +91,18 @@ components:
             - tags
             - type
           properties:
+            articleType:
+              enum:
+                - analysis
+                - askTheAudience
+                - explainer
+                - factCheck
+                - feature
+                - news
+                - opinion
+                - review
+                - summary
+              example: analysis
             blockId:
               type: string
             blockTypes:
@@ -126,6 +138,7 @@ components:
               properties:
                 articleType:
                   enum:
+                    - analysis
                     - askTheAudience
                     - explainer
                     - factCheck
@@ -150,11 +163,11 @@ components:
                 about:
                   type: object
                   items:
-                    type: string
+                    type: object
                 mentions:
                   type: object
                   items:
-                    type: string
+                    type: object
             type:
               enum:
                 - article
@@ -208,6 +221,7 @@ components:
           - $ref: "#/components/schemas/paragraph"
           - $ref: "#/components/schemas/rawImage"
           - $ref: "#/components/schemas/rawVideo"
+          - $ref: "#/components/schemas/subheading"
           - $ref: "#/components/schemas/text"
           - $ref: "#/components/schemas/video"
       minItems: 2
@@ -331,7 +345,7 @@ components:
               type: string
             height:
               example: 420
-              type: integer
+              type: number
             locator:
               example: "https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg"
               type: string
@@ -340,7 +354,7 @@ components:
               type: boolean
             width:
               example: 640
-              type: integer
+              type: number
           required:
             - copyrightHolder
             - height
@@ -373,10 +387,10 @@ components:
               type: string
             guidance:
               example: true
-              type: boolean
+              type: string
             isLive:
               example: false
-              type: string
+              type: boolean
             locator:
               example: "xyz:abc:pips:pid:p019fch9"
               type: string
@@ -390,6 +404,26 @@ components:
         type:
           enum:
             - rawVideo
+          type: string
+
+    subheading:
+      type: object
+      required:
+        - blockId
+        - model
+        - type
+      properties:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - subheading
           type: string
 
     text:

@@ -1,12 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { C_POSTBOX, GEL_SPACING_DBL } from '../../lib/constants/styles';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
+} from '../../lib/constants/styles';
 
 const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 80px;
   width: 100%;
   padding: ${GEL_SPACING_DBL}px;
+`;
+const StyledLink = styled.a`
+  :hover,
+  :focus {
+    text-decoration: none;
+    border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
+    padding: ${GEL_SPACING_DBL}px 0;
+  }
 `;
 
 const VisuallyHiddenText = styled.span`
@@ -23,7 +36,7 @@ const VisuallyHiddenText = styled.span`
 
 const Header = () => (
   <StyledHeader role="banner">
-    <a href="https://www.bbc.co.uk/news">
+    <StyledLink href="https://www.bbc.co.uk/news">
       <svg
         width="280"
         height="40"
@@ -39,7 +52,7 @@ const Header = () => (
         </g>
       </svg>
       <VisuallyHiddenText>BBC News</VisuallyHiddenText>
-    </a>
+    </StyledLink>
   </StyledHeader>
 );
 

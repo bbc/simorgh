@@ -11,7 +11,7 @@ export const C_WHITE = '#FFFFFF';
 export const C_ORBIT_GREY = '#4C4C4C';
 
 // Font family
-const fontFamilyBase = ', Arial, Helvetica, freesans, sans-serif';
+const fontFamilyBase = ', Helvetica, Arial, sans-serif';
 export const FF_NEWS_SANS_LIT = `ReithSansNewsLight${fontFamilyBase}`;
 export const FF_NEWS_SANS_REG = `ReithSansNewsRegular${fontFamilyBase}`;
 export const FF_NEWS_SANS_MDM = `ReithSansNewsMedium${fontFamilyBase}`;
@@ -24,6 +24,7 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
+export const GEL_SPACING_HLF = GEL_SPACING / 2;
 export const GEL_SPACING_QUAD = GEL_SPACING * 4;
 
 /*
