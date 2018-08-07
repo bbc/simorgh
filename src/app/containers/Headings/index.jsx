@@ -19,9 +19,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     return null;
   }
 
-  if (Headings[type] === SubHeading) return <Heading text={text} />;
-
-  return <Heading>{text}</Heading>;
+  return <Heading text={text}>{text}</Heading>;
 };
 
 HeadingsContainer.propTypes = {
