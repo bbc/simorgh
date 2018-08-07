@@ -136,11 +136,13 @@ describe('ArticleContainer', () => {
 
         expect(fetch).not.toHaveBeenCalled();
 
+        /* eslint-disable no-console */
         expect(console.log).toBeCalledWith(
           new Error(
             `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
           ),
         );
+        /* eslint-enable no-console */
 
         expect(response).toEqual({});
       });
