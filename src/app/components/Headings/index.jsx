@@ -1,4 +1,5 @@
 import React from 'react';
+import string from 'prop-types';
 
 import styled from 'styled-components';
 import {
@@ -50,10 +51,22 @@ const StyledSubHeading = styled.h2`
   }
 `;
 
-const SubHeadingLink = (articleId, text) => <h2 id={articleId}>{text}</h2>;
+const SubHeadingLink = ({ text }) => (
+  <h2 id={text} tabIndex="-1">
+    {text}
+  </h2>
+);
 
-export const SubHeading = (articleId, text) => (
+SubHeadingLink.propTypes = {
+  text: string.isRequired,
+};
+
+export const SubHeading = ({ text }) => (
   <StyledSubHeading>
-    <SubHeadingLink articleId={articleId} text={text} />
+    <SubHeadingLink text={text} />
   </StyledSubHeading>
 );
+
+SubHeading.propTypes = {
+  text: string.isRequired,
+};
