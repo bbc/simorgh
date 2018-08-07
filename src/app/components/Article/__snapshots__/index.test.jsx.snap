@@ -94,7 +94,9 @@ Array [
   }
 }
 
-<div>
+<main
+    role="main"
+  >
     <h1
       className="c0"
     >
@@ -113,6 +115,6 @@ Array [
     <p>
       {"type":"test","blocks":[{"blockId":"3-1","type":"test-something","model":{"text":"This is some test content!"}}]}
     </p>
-  </div>,
+  </main>,
 ]
 `;
