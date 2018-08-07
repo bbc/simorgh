@@ -51,19 +51,11 @@ const StyledSubHeading = styled.h2`
   }
 `;
 
-const SubHeadingLink = ({ text }) => (
-  <h2 id={text} tabIndex="-1">
-    {text}
-  </h2>
-);
-
-SubHeadingLink.propTypes = {
-  text: string.isRequired,
-};
-
 export const SubHeading = ({ text }) => (
   <StyledSubHeading>
-    <SubHeadingLink text={text} />
+    <h2 id={text} tabIndex="-1">
+      {text}
+    </h2>
   </StyledSubHeading>
 );
 
