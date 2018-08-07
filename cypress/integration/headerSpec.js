@@ -8,6 +8,7 @@ describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit('/article/scenario-25');
+    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
   });
 
   it('should render the BBC News branding', () => {
