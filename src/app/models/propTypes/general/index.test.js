@@ -15,7 +15,8 @@ const propTypes = [
   { type: 'propTwo', props: { propWouldBe: 'here' }, isRequired: true },
 ];
 
-const checkProps = props => arrayOfSpecificBlocks(propTypes)(props, 'testProp');
+const checkProps = props =>
+  arrayOfSpecificBlocks(propTypes)(props, 'testProp', 'TestComponent');
 
 describe('arrayOfSpecificBlocks', () => {
   it('should return an error if prop is not an array', () => {
