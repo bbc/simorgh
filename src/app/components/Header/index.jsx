@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 80px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING_DBL};
 `;
 
 const VisuallyHiddenText = styled.span`

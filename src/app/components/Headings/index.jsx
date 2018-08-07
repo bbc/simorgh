@@ -13,7 +13,7 @@ export const Headline = styled.h1`
   color: ${C_EBON};
   font-family: ${FF_NEWS_SERIF_MDM};
   margin: 0; // Reset
-  padding: ${GEL_SPACING_QUAD}px 0 ${GEL_SPACING_DBL}px 0;
+  padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL} 0;
 
   // Font styling below is a subset of BBC GEL Typography "Canon"
   font-size: 1.75em;
@@ -32,7 +32,7 @@ export const SubHeading = styled.h2`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
-  padding: ${GEL_SPACING_DBL}px 0;
+  padding: ${GEL_SPACING_DBL} 0;
 
   // Font styling below is a subset of BBC GEL Typography "Trafalgar"
   font-size: 1.25em;
