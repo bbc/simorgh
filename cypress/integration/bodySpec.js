@@ -19,7 +19,7 @@ describe('Article Body Tests', () => {
       'h1',
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
       'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Arial, Helvetica, freesans, sans-serif',
+      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
     );
   });
 
@@ -28,7 +28,7 @@ describe('Article Body Tests', () => {
       'h2',
       "Queen Victoria's myrtle",
       'rgb(64, 64, 64)',
-      'ReithSansNewsRegular, Arial, Helvetica, freesans, sans-serif',
+      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
     );
   });
 
