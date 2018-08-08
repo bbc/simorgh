@@ -9,9 +9,9 @@ const Document = ({ assets, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const title = helmet.title.toComponent();
 
-  const scripts = assets.map(
-    <script type="text/javascript" src={assets} defer />,
-  );
+  const scripts = assets.map(asset => (
+    <script key={asset} type="text/javascript" src={asset} defer />
+  ));
 
   return (
     <html lang="en-GB" {...htmlAttrs}>
