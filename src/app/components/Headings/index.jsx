@@ -28,14 +28,12 @@ export const Headline = styled.h1`
   }
 `;
 
-const regexRemoveUnnecessarySymbols = /[.,/#!$%^&*;:{}=\-_~()'"]/g;
-const regexRemoveSpacingReplaceWithDash = /\s+/g;
+const regexPunctuationSymbols = /[.,/#!$%^&*;:{}=\-_~()'"]/g;
+const regexSpaces = /\s+/g;
 
 export const SubHeading = styled.h2.attrs({
   id: ({ text }) =>
-    text
-      .replace(regexRemoveUnnecessarySymbols, '')
-      .replace(regexRemoveSpacingReplaceWithDash, '-'),
+    text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-'),
   tabIndex: '-1',
 })`
   color: ${C_STORM};
