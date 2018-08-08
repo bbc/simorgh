@@ -57,7 +57,7 @@ exports[`SubHeading component should render correctly 1`] = `
 
 <h2
   className="c0"
-  id="This is a SubHeading"
+  id="This-is-a-SubHeading"
   tabIndex="-1"
 >
   This is a SubHeading

@@ -29,7 +29,7 @@ export const Headline = styled.h1`
 `;
 
 export const SubHeading = styled.h2.attrs({
-  id: ({ text }) => text,
+  id: ({ text }) => text.replace(/\s+/g, '-'),
   tabIndex: '-1',
 })`
   color: ${C_STORM};
