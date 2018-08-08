@@ -18,7 +18,11 @@ try {
 
   assets = Object.keys(assetManifest).map(key => assetManifest[key].js);
 } catch (error) {
-  console.log(error); // eslint-disable-line no-console
+  console.log(
+    `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
+      process.env.RAZZLE_ASSETS_MANIFEST
+    }`,
+  );
 }
 
 const publicDirectory = getPublicDirectory();
