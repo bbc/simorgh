@@ -1,6 +1,6 @@
 module.exports = {
   modify: (config, { target, dev }) => {
-    const appConfig = config;
+    const appConfig = { ...config };
 
     if (!dev) {
       /*
