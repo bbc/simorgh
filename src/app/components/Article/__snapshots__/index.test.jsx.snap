@@ -115,11 +115,7 @@ Array [
       </a>
     </div>
   </header>,
-  .c0 {
-  display: grid;
-}
-
-.c2 {
+  .c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -131,6 +127,31 @@ Array [
 .c3 {
   font-size: 0.9375em;
   line-height: 1.25em;
+}
+
+.c0 {
+  display: grid;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 2.75em;
+    line-height: 3em;
+  }
+}
+
+@media (min-width:20em) {
+  .c3 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
 }
 
 @media (max-width:1007px) {
@@ -172,27 +193,6 @@ Array [
 @media (min-width:1280px) {
   .c1 {
     grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
-    font-size: 2em;
-    line-height: 2.25em;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 2.75em;
-    line-height: 3em;
-  }
-}
-
-@media (min-width:20em) {
-  .c3 {
-    font-size: 1em;
-    line-height: 1.375em;
   }
 }
 
