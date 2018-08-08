@@ -21,8 +21,8 @@ module.exports = {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
                 name: 'vendor',
-                minSize: 184320,
-                maxSize: 245760,
+                minSize: 184320, // 180kb
+                maxSize: 245760, // 240kb
               },
             },
           },
