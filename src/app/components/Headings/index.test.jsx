@@ -15,19 +15,19 @@ describe('SubHeading component', () => {
   );
 
   shouldMatchSnapshot(
-    'should render without quotes',
+    'attribute id should render without quotes',
     <SubHeading text="This 'is' a SubHeading">This is a SubHeading</SubHeading>,
   );
 
   shouldMatchSnapshot(
-    'should render without double quotes',
+    'attribute id should render without double quotes',
     <SubHeading text="This &quot;is&quot; a SubHeading">
       This is a SubHeading
     </SubHeading>,
   );
 
   shouldMatchSnapshot(
-    'should render without exclamation marks',
+    'attribute id should render without exclamation marks',
     <SubHeading text="This is! a SubHeading!">This is a SubHeading</SubHeading>,
   );
 });
