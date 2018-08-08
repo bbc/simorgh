@@ -26,6 +26,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         <AfterRoot />
         <AfterData data={data} />
         <script type="text/javascript" src={assets.client.js} defer />
+        <script type="text/javascript" src={assets.vendor.js} defer />
       </body>
     </html>
   );
