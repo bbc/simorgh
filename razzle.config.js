@@ -30,7 +30,7 @@ module.exports = {
     if (process.env.CI) {
       appConfig.performance = {
         maxAssetSize: 400000,
-        maxEntrypointSize: 400000,
+        maxEntrypointSize: 500000,
       };
     }
 
