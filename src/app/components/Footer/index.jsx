@@ -4,19 +4,11 @@ import { arrayOf, shape, string } from 'prop-types';
 import Brand from '../Brand';
 import {
   C_ORBIT_GREY,
-  C_POSTBOX,
   C_WHITE,
   FF_NEWS_SANS_REG,
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
-
-const StyledBrandWrapper = styled.div`
-  background-color: ${C_POSTBOX};
-  height: 80px;
-  width: 100%;
-  padding: ${GEL_SPACING_DBL}px;
-`;
 
 const StyledFooterLinks = styled.div`
   background-color: ${C_ORBIT_GREY};
@@ -71,9 +63,7 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <StyledBrandWrapper>
-      <Brand />
-    </StyledBrandWrapper>
+    <Brand />
     <StyledFooterLinks>
       <StyledList role="list">
         {links.map((link, index) => (
