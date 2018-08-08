@@ -38,8 +38,8 @@ const Header = () => (
   <StyledHeader role="banner">
     <StyledLink href="https://www.bbc.co.uk/news">
       <svg
-        width="280"
-        height="40"
+        width="154"
+        height="22"
         viewBox="0 0 154 22"
         xmlns="http://www.w3.org/2000/svg"
         focusable="false"
