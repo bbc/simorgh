@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
-import Header from '../Header';
+import Brand from '../Brand';
 import {
   C_ORBIT_GREY,
+  C_POSTBOX,
   C_WHITE,
   FF_NEWS_SANS_REG,
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
-// import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 
-const StyledFooter = styled.footer`
-  color: red;
+const StyledBrandWrapper = styled.div`
+  background-color: ${C_POSTBOX};
+  height: 80px;
+  width: 100%;
+  padding: ${GEL_SPACING_DBL}px;
 `;
 
 const StyledFooterLinks = styled.div`
@@ -67,8 +70,10 @@ const StyledParagraph = styled.p`
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
-  <StyledFooter role="contentinfo">
-    <Header />
+  <footer role="contentinfo">
+    <StyledBrandWrapper>
+      <Brand />
+    </StyledBrandWrapper>
     <StyledFooterLinks>
       <StyledList role="list">
         {links.map((link, index) => (
@@ -84,7 +89,7 @@ const Footer = ({ links, copyrightText, externalLink }) => (
         <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
       </StyledParagraph>
     </StyledFooterLinks>
-  </StyledFooter>
+  </footer>
 );
 
 const linkPropTypes = shape({

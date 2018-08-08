@@ -2,25 +2,21 @@
 
 exports[`FooterContainer should render correctly 1`] = `
 .c0 {
-  color: red;
-}
-
-.c1 {
   background-color: #B80000;
   height: 80px;
   width: 100%;
   padding: 16px;
 }
 
-.c2:hover,
-.c2:focus {
+.c1:hover,
+.c1:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 4px solid #FFFFFF;
   padding: 16px 0;
 }
 
-.c3 {
+.c2 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,13 +29,13 @@ exports[`FooterContainer should render correctly 1`] = `
   top: 0;
 }
 
-.c4 {
+.c3 {
   background-color: #4C4C4C;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 16px 8px;
 }
 
-.c5 {
+.c4 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
@@ -50,59 +46,57 @@ exports[`FooterContainer should render correctly 1`] = `
   padding: 0 0 8px 0;
 }
 
-.c5 > li:first-child {
+.c4 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
   grid-column: 1/3;
   margin-bottom: 8px;
 }
 
-.c6 {
+.c5 {
   min-width: 50%;
   padding: 8px;
 }
 
-.c7 {
+.c6 {
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c7:hover,
-.c7:focus {
+.c6:hover,
+.c6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c8 {
+.c7 {
   color: #FFFFFF;
   padding: 8px 0 0 0;
   margin: 0;
 }
 
 @supports not (display:grid) {
-  .c5 > li:first-child {
+  .c4 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c6 {
+  .c5 {
     padding: 8px 0;
     display: inline-block;
   }
 }
 
 <footer
-  className="c0"
   role="contentinfo"
 >
-  <header
-    className="c1"
-    role="banner"
+  <div
+    className="c0"
   >
     <a
-      className="c2"
+      className="c1"
       href="https://www.bbc.co.uk/news"
     >
       <svg
@@ -129,91 +123,91 @@ exports[`FooterContainer should render correctly 1`] = `
         </g>
       </svg>
       <span
-        className="c3"
+        className="c2"
       >
         BBC News
       </span>
     </a>
-  </header>
+  </div>
   <div
-    className="c4"
+    className="c3"
   >
     <ul
-      className="c5"
+      className="c4"
       role="list"
     >
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/news/help-41670342"
         >
           Why you can trust the BBC
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/terms"
         >
           Terms of Use
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/news/help-41670342"
         >
           About the BBC
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/news/help-41670342"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/terms"
         >
           Cookies
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/news/help-41670342"
         >
           Accessibility Help
         </a>
       </li>
       <li
-        className="c6"
+        className="c5"
         role="listitem"
       >
         <a
-          className="c7"
+          className="c6"
           href="https://www.bbc.com/news/help-41670342"
         >
           Contact the BBC
@@ -221,11 +215,11 @@ exports[`FooterContainer should render correctly 1`] = `
       </li>
     </ul>
     <p
-      className="c8"
+      className="c7"
     >
       Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
       <a
-        className="c7"
+        className="c6"
         href="https://www.bbc.co.uk/help/web/links/"
       >
         Read about our approach to external linking.
