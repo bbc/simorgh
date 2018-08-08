@@ -6,6 +6,11 @@ const routes = [
     exact: true,
     component: Article,
   },
+  {
+    path: '/article/amp',
+    exact: true,
+    component: Article,
+  },
 ];
 
 export default routes;
