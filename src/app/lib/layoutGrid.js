@@ -13,7 +13,7 @@ export const layoutGridWrapper = css`
   }
 `;
 
-export const layoutGridMain = css`
+export const layoutGridItem = css`
   @media (min-width: 600px) and (max-width: 1007px) {
     grid-column: 2 / span 4;
   }
@@ -28,6 +28,6 @@ export const layoutGridMain = css`
   }
 `;
 
-export const layoutGridFull = css`
+export const layoutGridItemFullWidth = css`
   grid-column: 1 / span 10;
 `;

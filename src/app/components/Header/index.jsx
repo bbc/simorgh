@@ -6,7 +6,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
-import { layoutGridWrapper, layoutGridMain } from '../../lib/layoutGrid';
+import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 
 const StyledHeader = styled.header`
   ${layoutGridWrapper}
@@ -16,8 +16,8 @@ const StyledHeader = styled.header`
   padding: ${GEL_SPACING_DBL}px;
 `;
 
-const GridDiv = styled.div`
-  ${layoutGridMain};
+const GridItem = styled.div`
+  ${layoutGridItem};
 `;
 
 const StyledLink = styled.a`
@@ -43,7 +43,7 @@ const VisuallyHiddenText = styled.span`
 
 const Header = () => (
   <StyledHeader role="banner">
-    <GridDiv>
+    <GridItem>
       <StyledLink href="https://www.bbc.co.uk/news">
         <svg
           width="280"
@@ -61,7 +61,7 @@ const Header = () => (
         </svg>
         <VisuallyHiddenText>BBC News</VisuallyHiddenText>
       </StyledLink>
-    </GridDiv>
+    </GridItem>
   </StyledHeader>
 );
 

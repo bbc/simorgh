@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, element } from 'prop-types';
-import { layoutGridWrapper, layoutGridMain } from '../../lib/layoutGrid';
+import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 
 const StyledMainContent = styled.main`
   ${layoutGridWrapper};
 `;
 
-const StyledDiv = styled.div`
-  ${layoutGridMain};
+const GridItem = styled.div`
+  ${layoutGridItem};
 `;
 
 const MainContent = ({ children }) => (
   <StyledMainContent role="main">
-    <StyledDiv>{children}</StyledDiv>
+    <GridItem>{children}</GridItem>
   </StyledMainContent>
 );
 
