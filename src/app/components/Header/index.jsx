@@ -5,13 +5,14 @@ import {
   C_WHITE,
   GEL_SPACING_DBL,
   GEL_SPACING_HLF,
+  GEL_SPACING,
 } from '../../lib/constants/styles';
 
 const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 80px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING}px;
 `;
 const StyledLink = styled.a`
   :hover,
@@ -39,7 +40,7 @@ const Header = () => (
     <StyledLink href="https://www.bbc.co.uk/news">
       <svg
         width="154"
-        height="22"
+        height="66"
         viewBox="0 0 154 22"
         xmlns="http://www.w3.org/2000/svg"
         focusable="false"

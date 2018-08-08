@@ -5,7 +5,7 @@ exports[`Header should render correctly 1`] = `
   background-color: #B80000;
   height: 80px;
   width: 100%;
-  padding: 16px;
+  padding: 8px;
 }
 
 .c1:hover,
@@ -40,9 +40,9 @@ exports[`Header should render correctly 1`] = `
     <svg
       aria-hidden="true"
       focusable="false"
-      height="40"
+      height="66"
       viewBox="0 0 154 22"
-      width="280"
+      width="154"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
