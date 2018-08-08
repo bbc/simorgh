@@ -7,7 +7,7 @@ const routes = [
     component: Article,
   },
   {
-    path: '/article/amp',
+    path: '/article/amp/:id',
     exact: true,
     component: Article,
   },
