@@ -34,6 +34,30 @@ module.exports = {
       };
     }
 
+    if (target === 'web') {
+      appConfig.output.filename = dev
+        ? 'static/js/[name].js'
+        : 'static/js/[name].[hash:8].js';
+
+      appConfig.entry.vendor = [
+        'razzle/polyfills',
+        'react',
+        'react-dom',
+        'markdown-to-jsx',
+        'react-helmet',
+        'react-router-dom',
+        'styled-components',
+        'styled-normalize',
+      ];
+
+      appConfig.optimization = {
+        splitChunks: {
+          chunks: 'initial',
+          name: false,
+        },
+      };
+    }
+
     return appConfig;
   },
 };
