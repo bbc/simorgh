@@ -13,4 +13,21 @@ describe('SubHeading component', () => {
     'should render correctly',
     <SubHeading text="This is a SubHeading">This is a SubHeading</SubHeading>,
   );
+
+  shouldMatchSnapshot(
+    'should render without quotes',
+    <SubHeading text="This 'is' a SubHeading">This is a SubHeading</SubHeading>,
+  );
+
+  shouldMatchSnapshot(
+    'should render without double quotes',
+    <SubHeading text="This &quot;is&quot; a SubHeading">
+      This is a SubHeading
+    </SubHeading>,
+  );
+
+  shouldMatchSnapshot(
+    'should render without exclamation marks',
+    <SubHeading text="This is! a SubHeading!">This is a SubHeading</SubHeading>,
+  );
 });
