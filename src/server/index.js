@@ -12,12 +12,12 @@ const getPublicDirectory = () =>
   Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Enables unit testing of this file.
 */
-let assets = [];
+const assets = [];
 try {
   const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
-  assets = Object.keys(assetManifest).map(key => {
-    const { js } = assetManifest[key];
-    return js;
+
+  Object.keys(assetManifest).forEach(key => {
+    assets.push(assetManifest[key].js);
   });
 } catch (error) {
   console.log(error); // eslint-disable-line no-console
