@@ -9,14 +9,17 @@ const getPublicDirectory = () =>
     : process.env.RAZZLE_PUBLIC_DIR_DEV;
 
 /*
-  Safely imports the assets manifest file in any edge-case that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
-  Enables unit testing of this file.
+  Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
+  Maps through the manifest file and extracts the JavaScript URLs.
 */
-let assets = [];
+const assets = [];
 try {
   const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
-
-  assets = Object.keys(assetManifest).map(key => assetManifest[key].js);
+  const assetsManifestKeys = Object.keys(assetManifest);
+  for (let i = assetsManifestKeys.length - 1; i >= 0; i -= 1) {
+    const key = assetsManifestKeys[i];
+    assets.push(assetManifest[key].js);
+  }
 } catch (error) {
   /* eslint-disable no-console */
   console.log(
