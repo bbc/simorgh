@@ -62,7 +62,7 @@ describe('Article Meta Tests', () => {
     cy.get('script')
       .last()
       .should('have.attr', 'src')
-      .and('match', /(\/static\/js\/client\.\w+\.js)/g);
+      .and('match', /(\/static\/js\/client-\w+\.\w+\.js)/g);
   });
 
   it('should have resource hints', () => {
