@@ -2,6 +2,19 @@
 
 exports[`Figure with a caption should render correctly 1`] = `
 .c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c3 {
   background-color: #d5d0cd;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -22,7 +35,7 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 0.875em;
   }
 }
@@ -35,8 +48,13 @@ exports[`Figure with a caption should render correctly 1`] = `
     className="c1"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-  <figcaption
+  <span
     className="c2"
+  >
+    Image caption, 
+  </span>
+  <figcaption
+    className="c3"
   >
     This is a caption!
   </figcaption>

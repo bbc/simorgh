@@ -29,6 +29,19 @@ exports[`MainContent should render correctly 1`] = `
 }
 
 .c7 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c8 {
   background-color: #d5d0cd;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -88,7 +101,7 @@ exports[`MainContent should render correctly 1`] = `
 }
 
 @media (min-width:37.5em) {
-  .c7 {
+  .c8 {
     font-size: 0.875em;
   }
 }
@@ -184,8 +197,13 @@ exports[`MainContent should render correctly 1`] = `
         className="c6"
         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       />
-      <figcaption
+      <span
         className="c7"
+      >
+        Image caption, 
+      </span>
+      <figcaption
+        className="c8"
       >
         Former embroider Pauline Clayton described the gift as "lovely"
       </figcaption>
