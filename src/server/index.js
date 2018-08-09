@@ -3,11 +3,6 @@ import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/containers/Document';
 
-const getPublicDirectory = () =>
-  process.env.NODE_ENV === 'production'
-    ? process.env.RAZZLE_PUBLIC_DIR
-    : process.env.RAZZLE_PUBLIC_DIR_DEV;
-
 /*
   Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Maps through the manifest file and extracts the JavaScript URLs.
@@ -34,6 +29,11 @@ try {
   );
   /* eslint-enable no-console */
 }
+
+const getPublicDirectory = () =>
+  process.env.NODE_ENV === 'production'
+    ? process.env.RAZZLE_PUBLIC_DIR
+    : process.env.RAZZLE_PUBLIC_DIR_DEV;
 
 const publicDirectory = getPublicDirectory();
 const dataFolderToRender =
