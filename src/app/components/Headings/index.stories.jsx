@@ -7,5 +7,5 @@ storiesOf('Headline', module).add('default', () => (
 ));
 
 storiesOf('SubHeading', module).add('default', () => (
-  <SubHeading>This is a SubHeading</SubHeading>
+  <SubHeading text="This is a SubHeading">This is a SubHeading</SubHeading>
 ));

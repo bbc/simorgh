@@ -5,8 +5,6 @@ import Header from '../Header';
 import MainContent from '../../containers/MainContent';
 import mainContentPropTypes from '../../models/propTypes/mainContent';
 
-// const Header = Brand.withComponent('header');
-
 const Article = ({ lang, title, blocks }) => (
   <Fragment>
     <Helmet htmlAttributes={{ lang }}>
