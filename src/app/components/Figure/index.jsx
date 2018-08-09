@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
-const renderCaption = caption =>
-  caption ? <Caption>{caption}</Caption> : null;
+const renderCaption = caption => (caption ? <Caption text={caption} /> : null);
 
 const StyledFigure = styled.figure`
   margin: 0;
