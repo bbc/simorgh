@@ -12,3 +12,4 @@ describe('Caption', () => {
     </Caption>,
   );
 });
+
