@@ -57,6 +57,8 @@ exports[`Headings with subheading data should render correctly 1`] = `
 
 <h2
   className="c0"
+  id="This-is-a-subheading"
+  tabIndex="-1"
 >
   This is a subheading
 </h2>
