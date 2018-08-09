@@ -17,12 +17,12 @@ module.exports = {
           splitChunks: {
             chunks: 'initial',
             automaticNameDelimiter: '-',
+            minSize: 184320, // 180kb
+            maxSize: 245760, // 240kb
             cacheGroups: {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
                 name: 'vendor',
-                minSize: 184320, // 180kb
-                maxSize: 245760, // 240kb
               },
             },
           },
