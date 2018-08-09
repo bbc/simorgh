@@ -4,7 +4,7 @@ exports[`Footer should render correctly 1`] = `
 .c0 {
   background-color: #4C4C4C;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 16px 8px;
+  padding: 0 8px;
 }
 
 .c1 {
@@ -14,19 +14,19 @@ exports[`Footer should render correctly 1`] = `
   grid-template-columns: repeat(2,50%);
   grid-template-rows: repeat(4,50%);
   list-style-type: none;
-  margin: 0 0 8px 0;
-  padding: 0 0 8px 0;
+  margin: 0;
+  padding: 8px 0;
 }
 
 .c1 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
   grid-column: 1/3;
+  padding-bottom: 8px;
   margin-bottom: 8px;
 }
 
 .c2 {
   min-width: 50%;
-  padding: 8px;
 }
 
 .c3 {
@@ -34,6 +34,8 @@ exports[`Footer should render correctly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 8px 0;
+  display: block;
 }
 
 .c3:hover,
@@ -42,9 +44,14 @@ exports[`Footer should render correctly 1`] = `
   text-decoration: underline;
 }
 
+.c5 {
+  display: inline;
+  padding: 8px 0;
+}
+
 .c4 {
   color: #FFFFFF;
-  padding: 8px 0 0 0;
+  padding: 16px 0;
   margin: 0;
 }
 
@@ -56,7 +63,6 @@ exports[`Footer should render correctly 1`] = `
 
 @supports not (display:grid) {
   .c2 {
-    padding: 8px 0;
     display: inline-block;
   }
 }
@@ -86,7 +92,7 @@ exports[`Footer should render correctly 1`] = `
   >
     Text here. 
     <a
-      className="c3"
+      className="c5 c3"
       href="https://www.bbc.co.uk/news"
     >
       Link
