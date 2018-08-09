@@ -28,7 +28,7 @@ export const Headline = styled.h1`
   }
 `;
 
-const regexPunctuationSymbols = /[.,/#!$%^&*;:{}=\-_~()'"]/g;
+const regexPunctuationSymbols = /[^a-z0-9\s-]/gi;
 const regexSpaces = /\s+/g;
 
 export const SubHeading = styled.h2.attrs({
