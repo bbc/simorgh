@@ -10,7 +10,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
   const title = helmet.title.toComponent();
 
   return (
-    <html lang="en-GB" {...htmlAttrs} style={{ fontSize: '100%' }}>
+    <html lang="en-GB" {...htmlAttrs}>
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet="utf-8" />
