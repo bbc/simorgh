@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {
   C_POSTBOX,
   C_WHITE,
-  GEL_SPACING_DBL,
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '../../lib/constants/styles';
@@ -15,11 +14,13 @@ const StyledHeader = styled.header`
   padding: ${GEL_SPACING}px;
 `;
 const StyledLink = styled.a`
+  display: inline-block;
+  margin-top: 21px;
   :hover,
   :focus {
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
-    padding: ${GEL_SPACING_DBL}px 0;
+    padding-bottom: 21px;
   }
 `;
 
@@ -40,7 +41,7 @@ const Header = () => (
     <StyledLink href="https://www.bbc.co.uk/news">
       <svg
         width="154"
-        height="66"
+        height="22"
         viewBox="0 0 154 22"
         xmlns="http://www.w3.org/2000/svg"
         focusable="false"
