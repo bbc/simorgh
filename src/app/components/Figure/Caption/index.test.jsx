@@ -5,6 +5,6 @@ import Caption from './index';
 describe('Caption', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <Caption caption="This is some Caption text" />,
+    <Caption text="This is some Caption text" />,
   );
 });

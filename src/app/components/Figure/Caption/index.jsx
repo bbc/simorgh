@@ -23,15 +23,15 @@ const StyledCaption = styled.figcaption`
   }
 `;
 
-const Caption = ({ caption }) => (
+const Caption = ({ text }) => (
   <StyledCaption>
     <VisuallyHiddenText>Image caption, </VisuallyHiddenText>
-    {caption}
+    {text}
   </StyledCaption>
 );
 
 Caption.propTypes = {
-  caption: string.isRequired,
+  text: string.isRequired,
 };
 
 export default Caption;
