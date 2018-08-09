@@ -27,9 +27,10 @@ export const GEL_SPACING_DBL = GEL_SPACING * 2;
 export const GEL_SPACING_HLF = GEL_SPACING / 2;
 export const GEL_SPACING_QUAD = GEL_SPACING * 4;
 
-// REMs
-export const REM = 1;
-export const REM_DBL = 2;
+// REM units for spacing
+export const REM = '1rem';
+export const REM_DBL = '2rem';
+export const REM_HLF = '0.5rem';
 
 /*
    Screen sizes for GEL Typography
