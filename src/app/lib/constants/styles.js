@@ -27,8 +27,8 @@ export const GEL_SPACING_DBL = GEL_SPACING * 2;
 export const GEL_SPACING_HLF = GEL_SPACING / 2;
 export const GEL_SPACING_QUAD = GEL_SPACING * 4;
 
-// REM units for spacing
-export const REM = '1rem';
+// REM units
+export const REM = '1rem'; // 16px (resisable by the user in their browser settings)
 export const REM_DBL = '2rem';
 export const REM_HLF = '0.5rem';
 
