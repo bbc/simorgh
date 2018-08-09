@@ -16,6 +16,11 @@ const assets = [];
 try {
   const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
   const assetsManifestKeys = Object.keys(assetManifest);
+
+  /*
+    Loops through the asset manifest, extracts the JS URL out of each entry and injects them into the assets array, which is passed to render.
+    Loops backwards as the client bundle is output first, but needs to be last
+  */
   for (let i = assetsManifestKeys.length - 1; i >= 0; i -= 1) {
     const key = assetsManifestKeys[i];
     assets.push(assetManifest[key].js);
