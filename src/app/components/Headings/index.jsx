@@ -4,8 +4,8 @@ import {
   C_STORM,
   FF_NEWS_SERIF_MDM,
   FF_NEWS_SANS_REG,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
+  GEL_SPACING_EIGTH,
+  GEL_SPACING_FOURTH,
 } from '../../lib/constants/styles';
 import mediaQuery from '../../helpers/mediaQueries';
 
@@ -13,7 +13,7 @@ export const Headline = styled.h1`
   color: ${C_EBON};
   font-family: ${FF_NEWS_SERIF_MDM};
   margin: 0; // Reset
-  padding: ${GEL_SPACING_QUAD}px 0 ${GEL_SPACING_DBL}px 0;
+  padding: ${GEL_SPACING_FOURTH}rem 0 ${GEL_SPACING_EIGTH}rem 0;
 
   // Font styling below is a subset of BBC GEL Typography "Canon"
   font-size: 1.75em;
@@ -32,7 +32,7 @@ export const SubHeading = styled.h2`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset
-  padding: ${GEL_SPACING_DBL}px 0;
+  padding: ${GEL_SPACING_EIGTH}rem 0;
 
   // Font styling below is a subset of BBC GEL Typography "Trafalgar"
   font-size: 1.25em;
