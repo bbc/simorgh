@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Caption should render correctly 1`] = `
-Array [
-  .c0 {
+.c1 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -15,12 +14,7 @@ Array [
   top: 0;
 }
 
-<span
-    className="c0"
-  >
-    Image caption, 
-  </span>,
-  .c0 {
+.c0 {
   background-color: #d5d0cd;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -36,9 +30,13 @@ Array [
 }
 
 <figcaption
-    className="c0"
+  className="c0"
+>
+  <span
+    className="c1"
   >
-    This is some Caption text
-  </figcaption>,
-]
+    Image caption, 
+  </span>
+  This is some Caption text
+</figcaption>
 `;

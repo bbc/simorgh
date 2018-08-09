@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -23,15 +23,15 @@ const StyledCaption = styled.figcaption`
   }
 `;
 
-const Caption = ({ text }) => (
-  <Fragment>
+const Caption = ({ caption }) => (
+  <StyledCaption>
     <VisuallyHiddenText>Image caption, </VisuallyHiddenText>
-    <StyledCaption>{text}</StyledCaption>
-  </Fragment>
+    {caption}
+  </StyledCaption>
 );
 
 Caption.propTypes = {
-  text: string.isRequired,
+  caption: string.isRequired,
 };
 
 export default Caption;

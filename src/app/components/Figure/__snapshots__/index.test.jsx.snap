@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure with a caption should render correctly 1`] = `
-.c2 {
+.c3 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -14,7 +14,7 @@ exports[`Figure with a caption should render correctly 1`] = `
   top: 0;
 }
 
-.c3 {
+.c2 {
   background-color: #d5d0cd;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -35,7 +35,7 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 0.875em;
   }
 }
@@ -48,14 +48,14 @@ exports[`Figure with a caption should render correctly 1`] = `
     className="c1"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-  <span
+  <figcaption
     className="c2"
   >
-    Image caption, 
-  </span>
-  <figcaption
-    className="c3"
-  >
+    <span
+      className="c3"
+    >
+      Image caption, 
+    </span>
     This is a caption!
   </figcaption>
 </figure>
