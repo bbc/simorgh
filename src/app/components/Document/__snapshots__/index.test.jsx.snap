@@ -3,6 +3,11 @@
 exports[`Document should render correctly 1`] = `
 <html
   lang="test"
+  style={
+    Object {
+      "fontSize": "100%",
+    }
+  }
 >
   <head>
     <meta
