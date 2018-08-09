@@ -3,5 +3,5 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Caption from './index';
 
 storiesOf('Caption', module).add('default', () => (
-  <Caption>This is some Caption text</Caption>
+  <Caption text="This is some Caption text" />
 ));
