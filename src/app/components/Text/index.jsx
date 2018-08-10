@@ -22,6 +22,15 @@ const StyledItalic = styled.i`
     line-height: 1.375em;
   }
 `;
+const StyledBold = styled.b`
+  // Font styling below is a subset of BBC GEL Typography "Body Copy"
+  font-size: 0.9375em;
+  line-height: 1.25em;
+  ${mediaQuery.smartPhoneAndLarger} {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+`;
 
 const Text = ({ text, options }) => {
   if (!text) return null;
@@ -45,6 +54,9 @@ Text.defaultProps = {
       },
       em: {
         component: StyledItalic,
+      },
+      strong: {
+        component: StyledBold,
       },
     },
   },
