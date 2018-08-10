@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import Link from '../Link';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -42,20 +43,30 @@ const StyledListItem = styled.li`
   }
 `;
 
-const StyledLink = styled.a`
-  color: ${C_WHITE};
-  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
-  text-decoration: none;
-  padding: ${GEL_SPACING}px 0;
-  display: block;
+// const StyledLink = styled.a`
+//   color: ${C_WHITE};
+//   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
+//   text-decoration: none;
+//   padding: ${GEL_SPACING}px 0;
+//   display: block;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+//   &:hover,
+//   &:focus {
+//     text-decoration: underline;
+//   }
+// `;
+
+// const InlineBlockLink = styled(Link)`
+//   display: inline;
+//   padding: ${GEL_SPACING}px 0;
+// `;
+
+const BlockLink = styled(Link)`
+  display: block;
+  padding: ${GEL_SPACING}px 0;
 `;
 
-const InlineBlockLink = styled(StyledLink)`
+const InlineBlockLink = styled(Link)`
   display: inline;
   padding: ${GEL_SPACING}px 0;
 `;
@@ -73,15 +84,13 @@ const Footer = ({ links, copyrightText, externalLink }) => (
         // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
         // eslint-disable-next-line react/no-array-index-key
         <StyledListItem key={index} role="listitem">
-          <StyledLink href={link.href}>{link.text}</StyledLink>
+          <BlockLink text={link.text} href={link.href} />
         </StyledListItem>
       ))}
     </StyledList>
     <StyledParagraph>
       {copyrightText}
-      <InlineBlockLink href={externalLink.href}>
-        {externalLink.text}
-      </InlineBlockLink>
+      <InlineBlockLink text={externalLink.text} href={externalLink.href} />
     </StyledParagraph>
   </StyledFooter>
 );

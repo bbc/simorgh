@@ -9,21 +9,13 @@ const StyledLink = styled.a`
   text-decoration: none;
   padding: ${GEL_SPACING}px 0;
   display: block;
-
   &:hover,
   &:focus {
     text-decoration: underline;
   }
 `;
 
-const InlineBlockLink = styled(StyledLink)`
-  display: inline;
-  padding: ${GEL_SPACING}px 0;
-`;
-
-const Link = ({ text, href }) => (
-  <InlineBlockLink href={href}>{text}</InlineBlockLink>
-);
+const Link = ({ text, href }) => <StyledLink href={href}>{text}</StyledLink>;
 
 Link.propTypes = {
   href: string.isRequired,
