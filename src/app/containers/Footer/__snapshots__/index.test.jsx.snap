@@ -45,8 +45,18 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 .c5 {
-  display: inline;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   padding: 8px 0;
+  display: inline;
+}
+
+.c5:hover,
+.c5:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c4 {
@@ -158,7 +168,7 @@ exports[`FooterContainer should render correctly 1`] = `
   >
     Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
     <a
-      className="c5 c3"
+      className="c5"
       href="https://www.bbc.co.uk/help/web/links/"
     >
       Read about our approach to external linking.

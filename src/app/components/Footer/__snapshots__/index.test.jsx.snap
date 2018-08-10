@@ -45,8 +45,18 @@ exports[`Footer should render correctly 1`] = `
 }
 
 .c5 {
-  display: inline;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   padding: 8px 0;
+  display: inline;
+}
+
+.c5:hover,
+.c5:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c4 {
@@ -92,7 +102,7 @@ exports[`Footer should render correctly 1`] = `
   >
     Text here. 
     <a
-      className="c5 c3"
+      className="c5"
       href="https://www.bbc.co.uk/news"
     >
       Link
