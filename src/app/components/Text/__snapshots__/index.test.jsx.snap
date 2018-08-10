@@ -6,8 +6,20 @@ exports[`Text should render bold 1`] = `
   line-height: 1.25em;
 }
 
+.c1 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
 @media (min-width:20em) {
   .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+@media (min-width:20em) {
+  .c1 {
     font-size: 1em;
     line-height: 1.375em;
   }
@@ -17,9 +29,11 @@ exports[`Text should render bold 1`] = `
   className="c0"
 >
   This is text with 
-  <strong>
+  <b
+    className="c1"
+  >
     some bold formatting
-  </strong>
+  </b>
   .
 </p>
 `;
@@ -54,8 +68,20 @@ exports[`Text should render italics 1`] = `
   line-height: 1.25em;
 }
 
+.c1 {
+  font-size: 0.9375em;
+  line-height: 1.25em;
+}
+
 @media (min-width:20em) {
   .c0 {
+    font-size: 1em;
+    line-height: 1.375em;
+  }
+}
+
+@media (min-width:20em) {
+  .c1 {
     font-size: 1em;
     line-height: 1.375em;
   }
@@ -65,9 +91,11 @@ exports[`Text should render italics 1`] = `
   className="c0"
 >
   This is text with 
-  <em>
+  <i
+    className="c1"
+  >
     some italic formatting
-  </em>
+  </i>
   .
 </p>
 `;
