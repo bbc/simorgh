@@ -19,7 +19,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     return null;
   }
 
-  return <Heading>{text}</Heading>;
+  return <Heading text={text}>{text}</Heading>;
 };
 
 HeadingsContainer.propTypes = {
