@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterList should render correctly 1`] = `
+.c2 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 8px 0;
+  display: block;
+}
+
+.c2:hover,
+.c2:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c0 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
@@ -21,21 +36,6 @@ exports[`FooterList should render correctly 1`] = `
 
 .c1 {
   min-width: 50%;
-}
-
-.c2 {
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 8px 0;
-  display: block;
-}
-
-.c2:hover,
-.c2:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 @supports not (display:grid) {
