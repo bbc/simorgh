@@ -28,7 +28,14 @@ export const Headline = styled.h1`
   }
 `;
 
-export const SubHeading = styled.h2`
+const regexPunctuationSymbols = /[^a-z0-9\s-]/gi;
+const regexSpaces = /\s+/g;
+
+export const SubHeading = styled.h2.attrs({
+  id: ({ text }) =>
+    text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-'),
+  tabIndex: '-1',
+})`
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; // Reset

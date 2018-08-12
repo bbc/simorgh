@@ -1,12 +1,12 @@
 import { blocksWithTypes } from '../general';
 import { headlineBlockPropTypes } from '../headline';
 import { textBlockPropTypes } from '../text';
-import { imagePropTypes } from '../index';
+import { imageBlockPropTypes } from '../image';
 
 const mainContentPropTypes = blocksWithTypes([
   headlineBlockPropTypes,
   textBlockPropTypes,
-  imagePropTypes,
+  imageBlockPropTypes,
 ]);
 
 export default mainContentPropTypes;
