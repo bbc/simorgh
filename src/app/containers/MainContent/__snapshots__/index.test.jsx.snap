@@ -126,8 +126,6 @@ exports[`MainContent should render correctly 1`] = `
 >
   <div
     className="c1"
-    id="This-is-a-subheading"
-    tabIndex="-1"
   >
     <h1
       className="c2"
@@ -136,6 +134,8 @@ exports[`MainContent should render correctly 1`] = `
     </h1>
     <h2
       className="c3"
+      id="This-is-a-subheading"
+      tabIndex="-1"
     >
       This is a subheading!
     </h2>
