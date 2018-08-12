@@ -14,20 +14,16 @@ export const layoutGridWrapper = css`
 `;
 
 export const layoutGridItem = css`
+  @media (max-width: 599px) {
+    grid-column: 1 / -1;
+  }
   @media (min-width: 600px) and (max-width: 1007px) {
-    grid-column: 2 / span 4;
+    grid-column: 2 / -2;
   }
   @media (min-width: 1008px) and (max-width: 1279px) {
-    grid-column: 2 / span 6;
-  }
-  @media (max-width: 599px) {
-    grid-column: 1 / span 6;
+    grid-column: 2 / -2;
   }
   @media (min-width: 1280px) {
-    grid-column: 3 / span 6;
+    grid-column: 3 / -3;
   }
-`;
-
-export const layoutGridItemFullWidth = css`
-  grid-column: 1 / span 10;
 `;
