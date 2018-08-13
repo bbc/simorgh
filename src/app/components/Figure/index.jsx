@@ -1,15 +1,21 @@
 import React from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 import Caption from './Caption';
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
 
+const StyledFigure = styled.figure`
+  padding-bottom: 16px;
+  width: 100%;
+`;
+
 const Figure = ({ src, alt, caption }) => (
-  <figure>
+  <StyledFigure>
     <img src={src} alt={alt} />
     {renderCaption(caption)}
-  </figure>
+  </StyledFigure>
 );
 
 Figure.propTypes = {
