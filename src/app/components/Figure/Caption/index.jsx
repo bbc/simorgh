@@ -14,7 +14,7 @@ const Caption = styled.figcaption`
 
   // Font styling below is a subset of BBC GEL Typography "Long Primer"
   font-size: 0.9375em;
-  line-height: 1.125em;
+  line-height: 1.125rem;
   ${mediaQuery.laptopAndLarger} {
     font-size: 0.875em;
   }

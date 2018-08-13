@@ -77,32 +77,32 @@ Array [
   margin: 0;
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 .c1 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     font-size: 2.75em;
-    line-height: 3em;
+    line-height: 3rem;
   }
 }
 
 @media (min-width:20em) {
   .c1 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 

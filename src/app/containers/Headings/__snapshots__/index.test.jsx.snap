@@ -7,20 +7,20 @@ exports[`Headings with headline data should render correctly 1`] = `
   margin: 0;
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     font-size: 2.75em;
-    line-height: 3em;
+    line-height: 3rem;
   }
 }
 
@@ -38,20 +38,20 @@ exports[`Headings with subheading data should render correctly 1`] = `
   margin: 0;
   padding: 1rem 0;
   font-size: 1.25em;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 1.5em;
-    line-height: 1.75em;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
 }
 

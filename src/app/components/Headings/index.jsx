@@ -17,14 +17,14 @@ export const Headline = styled.h1`
 
   // Font styling below is a subset of BBC GEL Typography "Canon"
   font-size: 1.75em;
-  line-height: 2em;
+  line-height: 2rem;
   ${mediaQuery.smartPhoneOnly} {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
   ${mediaQuery.laptopAndLarger} {
     font-size: 2.75em;
-    line-height: 3em;
+    line-height: 3rem;
   }
 `;
 
@@ -43,13 +43,13 @@ export const SubHeading = styled.h2.attrs({
 
   // Font styling below is a subset of BBC GEL Typography "Trafalgar"
   font-size: 1.25em;
-  line-height: 1.5em;
+  line-height: 1.5rem;
   ${mediaQuery.smartPhoneOnly} {
     font-size: 1.5em;
-    line-height: 1.75em;
+    line-height: 1.75rem;
   }
   ${mediaQuery.laptopAndLarger} {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
 `;
