@@ -1,6 +1,6 @@
 module.exports = {
   modify: (config, { target, dev }) => {
-    const appConfig = { ...config };
+    const appConfig = config;
 
     if (!dev) {
       /*
@@ -10,6 +10,7 @@ module.exports = {
       */
       appConfig.module.rules.shift();
 
+      // Setup bundle analyser
       if (target === 'web') {
         // setup bundle splitting
         appConfig.output.filename = 'static/js/[name].[hash:8].js';
@@ -17,39 +18,39 @@ module.exports = {
           splitChunks: {
             chunks: 'initial',
             automaticNameDelimiter: '-',
-            minSize: 184320, // 180kb
-            maxSize: 245760, // 240kb
             cacheGroups: {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
                 name: 'vendor',
+                minSize: 184320, // 180kb
+                maxSize: 245760, // 240kb
               },
             },
           },
         };
+      }
 
-        // Setup bundle analyser
-        if (!process.env.CI) {
-          const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
-          appConfig.plugins.push(
-            new BundleAnalyzerPlugin({
-              analyzerMode: 'static',
-              defaultSizes: 'gzip',
-              generateStatsFile: true,
-              openAnalyzer: false,
-              reportFilename: '../../reports/webpackBundleReport.html',
-              statsFilename: '../../reports/webpackBundleReport.json',
-            }),
-          );
-        }
+      // Setup bundle analyser
+      if (target === 'web' && !process.env.CI) {
+        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
+        appConfig.plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            defaultSizes: 'gzip',
+            generateStatsFile: true,
+            openAnalyzer: false,
+            reportFilename: '../../reports/webpackBundleReport.html',
+            statsFilename: '../../reports/webpackBundleReport.json',
+          }),
+        );
       }
     }
 
     // This is to override bundle performance test
     if (process.env.CI) {
       appConfig.performance = {
-        maxAssetSize: 245760, // 240kb - individual bundles
-        maxEntrypointSize: 491520, // 480kb - total bundles
+        maxAssetSize: 500000,
+        maxEntrypointSize: 500000,
       };
     }
 
