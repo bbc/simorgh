@@ -139,7 +139,7 @@
                       "type": "rawImage",
                       "model": {
                         "width": 640,
-                        "height": 420,
+                        "height": 360,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"
