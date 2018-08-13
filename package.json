@@ -76,7 +76,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.4",
-    "bbc-a11y": "^2.1.0",
+    "bbc-a11y": "^2.2.0",
     "cypress": "^3.0.3",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
