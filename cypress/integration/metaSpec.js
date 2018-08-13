@@ -12,7 +12,7 @@ describe('Article Meta Tests', () => {
     metaElement.should('have.attr', 'content', 'nofollow');
   });
 
-  it('should load a maximum of two BBCReith font files', () => {
+  it('should load a maximum of two Reith font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -20,13 +20,14 @@ describe('Article Meta Tests', () => {
         if (
           fontFamily &&
           !fontFamiliesArray.includes(fontFamily) &&
-          fontFamily.startsWith('BBCReith')
+          fontFamily.startsWith('Reith')
         ) {
           fontFamiliesArray.push(fontFamily);
         }
       })
       .then(() => {
         expect(fontFamiliesArray.length).to.be.lessThan(3);
+        expect(fontFamiliesArray.length).to.be.greaterThan(0);
       });
   });
 
