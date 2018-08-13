@@ -9,7 +9,7 @@ Array [
 }
 
 .c1 {
-  padding: 8px 8px 25px;
+  padding: 8px 8px 24px;
   display: inline-block;
 }
 
@@ -58,9 +58,9 @@ Array [
           aria-hidden="true"
           className="c3"
           focusable="false"
-          height="22"
-          viewBox="0 0 154 22"
-          width="154"
+          height="24"
+          viewBox="0 0 168 24"
+          width="168"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
