@@ -36,3 +36,7 @@ export const layoutGridItem = css`
     grid-column: 3 / -3;
   }
 `;
+
+export const layoutGridItemFullWidth = css`
+  grid-column: 1 / -1;
+`;
