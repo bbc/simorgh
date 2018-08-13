@@ -8,6 +8,13 @@ import {
   GEL_SPACING_TRPL,
 } from '../../lib/constants/styles';
 
+/*
+   the middle of the banner 40px
+  ( banner height - margin top - svg height - hover border width ) / 2
+  (80 - 8 - 24 - 4) / 2 === 20
+*/
+const centerSvg = '20px';
+
 const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 80px;
@@ -37,12 +44,12 @@ const VisuallyHiddenText = styled.span`
 `;
 
 const StyledSpan = styled.span`
-  padding-bottom: 21px;
+  padding-bottom: ${centerSvg};
 `;
 
 const BrandImage = styled.svg`
   display: inline;
-  margin-top: 21px;
+  margin-top: ${centerSvg};
 `;
 
 const Header = () => (
