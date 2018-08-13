@@ -12,7 +12,7 @@ describe('Article Meta Tests', () => {
     metaElement.should('have.attr', 'content', 'nofollow');
   });
 
-  it('should load a maximum of three font files', () => {
+  it('should load a maximum of two BBCReith font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -21,7 +21,7 @@ describe('Article Meta Tests', () => {
           fontFamily &&
           !fontFamiliesArray.includes(fontFamily) &&
           // !== 'Times' has been added as there elements not visible, which Cypress is assigning a font of 'Times'
-          fontFamily !== 'Times'
+          fontFamily.startsWith('BBCReith')
         ) {
           fontFamiliesArray.push(fontFamily);
         }
