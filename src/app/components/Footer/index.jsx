@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import Brand from '../Brand';
 import Link from '../Link';
 import FooterList from '../FooterList';
 import {
@@ -11,7 +12,7 @@ import {
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
 
-const StyledFooter = styled.footer`
+const StyledFooterLinks = styled.div`
   background-color: ${C_ORBIT_GREY};
   font-family: ${FF_NEWS_SANS_REG};
   padding: 0 ${GEL_SPACING}px;
@@ -24,13 +25,16 @@ const StyledParagraph = styled.p`
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
-  <StyledFooter role="contentinfo">
-    <FooterList links={links} />
-    <StyledParagraph>
-      {copyrightText}
-      <Link text={externalLink.text} href={externalLink.href} inline />
-    </StyledParagraph>
-  </StyledFooter>
+  <footer role="contentinfo">
+    <Brand />
+    <StyledFooterLinks>
+      <FooterList links={links} />
+      <StyledParagraph>
+        {copyrightText}
+        <Link text={externalLink.text} href={externalLink.href} inline />
+      </StyledParagraph>
+    </StyledFooterLinks>
+  </footer>
 );
 
 const linkPropTypes = shape({
