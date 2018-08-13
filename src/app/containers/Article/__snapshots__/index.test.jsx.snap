@@ -13,7 +13,7 @@ Array [
 .c1:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 0.25rempx solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
   padding: 1rem 0;
 }
 

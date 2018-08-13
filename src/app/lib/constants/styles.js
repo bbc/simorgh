@@ -24,7 +24,7 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 // GEL Spacing
 // Assumes 16px is set as the default font-size, although resisable by the user
 export const GEL_SPACING = `0.5rem`; // 8px
-export const GEL_SPACING_DBL = `1rem`;
+export const GEL_SPACING_DBL = `1rem`; // 16px
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING_QUAD = `2rem`;
 
