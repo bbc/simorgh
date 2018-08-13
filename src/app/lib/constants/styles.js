@@ -25,6 +25,7 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 export const GEL_SPACING = 8;
 export const GEL_SPACING_DBL = GEL_SPACING * 2;
 export const GEL_SPACING_HLF = GEL_SPACING / 2;
+export const GEL_SPACING_TRPL = GEL_SPACING * 3;
 export const GEL_SPACING_QUAD = GEL_SPACING * 4;
 
 /*

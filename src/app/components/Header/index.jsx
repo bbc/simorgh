@@ -5,6 +5,7 @@ import {
   C_WHITE,
   GEL_SPACING_HLF,
   GEL_SPACING,
+  GEL_SPACING_TRPL,
 } from '../../lib/constants/styles';
 
 const StyledHeader = styled.header`
@@ -13,7 +14,7 @@ const StyledHeader = styled.header`
   width: 100%;
 `;
 const StyledLink = styled.a`
-  padding: ${GEL_SPACING}px ${GEL_SPACING}px 25px;
+  padding: ${GEL_SPACING}px ${GEL_SPACING}px ${GEL_SPACING_TRPL}px;
   display: inline-block;
   :active span,
   :focus span,
@@ -49,9 +50,9 @@ const Header = () => (
     <StyledLink href="https://www.bbc.co.uk/news">
       <StyledSpan>
         <BrandImage
-          width="154"
-          height="22"
-          viewBox="0 0 154 22"
+          width="168"
+          height="24"
+          viewBox="0 0 168 24"
           xmlns="http://www.w3.org/2000/svg"
           focusable="false"
           aria-hidden="true"
