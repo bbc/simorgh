@@ -12,9 +12,9 @@ describe('Header Tests', () => {
   });
 
   it('should render the BBC News branding', () => {
-    const headerElement = getElement('header');
-    shouldContainStyles(headerElement, 'height', '80px');
-    shouldContainStyles(headerElement, 'background-color', 'rgb(184, 0, 0)');
+    const headerBranding = getElement('header div');
+    shouldContainStyles(headerBranding, 'height', '80px');
+    shouldContainStyles(headerBranding, 'background-color', 'rgb(184, 0, 0)');
   });
 
   it('should have a focused state', () => {
