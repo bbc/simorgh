@@ -30,6 +30,20 @@ exports[`Header should render correctly 1`] = `
   top: 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    grid-gap: 8px;
+    padding: 8px;
+  }
+}
+
+@media (min-width:600px) {
+  .c0 {
+    grid-gap: 16px;
+    padding: 16px;
+  }
+}
+
 @media (max-width:1007px) {
   .c0 {
     grid-template-columns: repeat(6,1fr);
@@ -48,27 +62,27 @@ exports[`Header should render correctly 1`] = `
   }
 }
 
+@media (max-width:599px) {
+  .c1 {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (min-width:600px) and (max-width:1007px) {
   .c1 {
-    grid-column: 2 / span 4;
+    grid-column: 2 / -2;
   }
 }
 
 @media (min-width:1008px) and (max-width:1279px) {
   .c1 {
-    grid-column: 2 / span 6;
-  }
-}
-
-@media (max-width:599px) {
-  .c1 {
-    grid-column: 1 / span 6;
+    grid-column: 2 / -2;
   }
 }
 
 @media (min-width:1280px) {
   .c1 {
-    grid-column: 3 / span 6;
+    grid-column: 3 / -3;
   }
 }
 
