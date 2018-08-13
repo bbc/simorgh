@@ -27,7 +27,7 @@ describe('Article Meta Tests', () => {
         }
       })
       .then(() => {
-        expect(fontFamiliesArray.length).to.be.lessThan(4);
+        expect(fontFamiliesArray.length).to.be.lessThan(3);
       });
   });
 
