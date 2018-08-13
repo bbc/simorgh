@@ -31,6 +31,105 @@ exports[`Headline component should render correctly 1`] = `
 </h1>
 `;
 
+exports[`SubHeading component attribute id should render without double quotes 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 16px 0;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+<h2
+  className="c0"
+  id="This-is-a-SubHeading"
+  tabIndex="-1"
+>
+  This is a SubHeading
+</h2>
+`;
+
+exports[`SubHeading component attribute id should render without exclamation marks 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 16px 0;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+<h2
+  className="c0"
+  id="This-is-a-SubHeading"
+  tabIndex="-1"
+>
+  This is a SubHeading
+</h2>
+`;
+
+exports[`SubHeading component attribute id should render without quotes 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 16px 0;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 2em;
+    line-height: 2.25em;
+  }
+}
+
+<h2
+  className="c0"
+  id="This-is-a-SubHeading"
+  tabIndex="-1"
+>
+  This is a SubHeading
+</h2>
+`;
+
 exports[`SubHeading component should render correctly 1`] = `
 .c0 {
   color: #404040;
@@ -57,6 +156,8 @@ exports[`SubHeading component should render correctly 1`] = `
 
 <h2
   className="c0"
+  id="This-is-a-SubHeading"
+  tabIndex="-1"
 >
   This is a SubHeading
 </h2>
