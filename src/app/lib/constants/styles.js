@@ -22,15 +22,11 @@ export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
 export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
 // GEL Spacing
-export const GEL_SPACING = 8;
-export const GEL_SPACING_DBL = GEL_SPACING * 2;
-export const GEL_SPACING_HLF = GEL_SPACING / 2;
-export const GEL_SPACING_QUAD = GEL_SPACING * 4;
-
-// REM units
-export const REM = '1rem'; // 16px (resisable by the user in their browser settings)
-export const REM_DBL = '2rem';
-export const REM_HLF = '0.5rem';
+// Assumes 16px is set as the default font-size, although resisable by the user
+export const GEL_SPACING = `0.5rem`; // 8px
+export const GEL_SPACING_DBL = `1rem`;
+export const GEL_SPACING_HLF = `0.25rem`;
+export const GEL_SPACING_QUAD = `2rem`;
 
 /*
    Screen sizes for GEL Typography

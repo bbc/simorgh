@@ -11,14 +11,15 @@ const StyledHeader = styled.header`
   background-color: ${C_POSTBOX};
   height: 80px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING_DBL};
 `;
+// fix me
 const StyledLink = styled.a`
   :hover,
   :focus {
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
-    padding: ${GEL_SPACING_DBL}px 0;
+    padding: ${GEL_SPACING_DBL} 0;
   }
 `;
 

@@ -4,7 +4,7 @@ exports[`Footer should render correctly 1`] = `
 .c0 {
   background-color: #4C4C4C;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0 8px;
+  padding: 0 0.5rem;
 }
 
 .c1 {
