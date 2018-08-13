@@ -11,9 +11,16 @@ const StyledFigure = styled.figure`
   width: 100%;
 `;
 
+const Image = styled.img.attrs({
+  src: ({ src }) => src,
+  alt: ({ alt }) => alt,
+})`
+  width: 100%;
+`;
+
 const Figure = ({ src, alt, caption }) => (
   <StyledFigure>
-    <img src={src} alt={alt} />
+    <Image src={src} alt={alt} />
     {renderCaption(caption)}
   </StyledFigure>
 );
