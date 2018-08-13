@@ -2,22 +2,21 @@
 
 exports[`Header should render correctly 1`] = `
 .c0 {
-  display: grid;
   background-color: #B80000;
   height: 80px;
   width: 100%;
   padding: 16px;
 }
 
-.c2:hover,
-.c2:focus {
+.c1:hover,
+.c1:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 4px solid #FFFFFF;
   padding: 16px 0;
 }
 
-.c3 {
+.c2 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -30,71 +29,14 @@ exports[`Header should render correctly 1`] = `
   top: 0;
 }
 
-@media (max-width:600px) {
-  .c0 {
-    grid-gap: 8px;
-    padding: 8px;
-  }
-}
-
-@media (min-width:600px) {
-  .c0 {
-    grid-gap: 16px;
-    padding: 16px;
-  }
-}
-
-@media (max-width:1007px) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:1008px) and (max-width:1279px) {
-  .c0 {
-    grid-template-columns: repeat(8,1fr);
-  }
-}
-
-@media (min-width:1280px) {
-  .c0 {
-    grid-template-columns: repeat(10,1fr);
-  }
-}
-
-@media (max-width:599px) {
-  .c1 {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width:600px) and (max-width:1007px) {
-  .c1 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:1008px) and (max-width:1279px) {
-  .c1 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:1280px) {
-  .c1 {
-    grid-column: 3 / -3;
-  }
-}
-
 <header
-  className="c0"
   role="banner"
 >
   <div
-    className="c1"
+    className="c0"
   >
     <a
-      className="c2"
+      className="c1"
       href="https://www.bbc.co.uk/news"
     >
       <svg
@@ -121,7 +63,7 @@ exports[`Header should render correctly 1`] = `
         </g>
       </svg>
       <span
-        className="c3"
+        className="c2"
       >
         BBC News
       </span>
