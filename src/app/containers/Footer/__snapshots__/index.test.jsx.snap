@@ -72,15 +72,15 @@ exports[`FooterContainer should render correctly 1`] = `
   text-decoration: underline;
 }
 
+.c8 {
+  display: inline;
+  padding: 0.5rem 0;
+}
+
 .c7 {
   color: #FFFFFF;
   padding: 1rem 0;
   margin: 0;
-}
-
-.c8 {
-  display: inline;
-  padding: 0.5rem 0;
 }
 
 @supports not (display:grid) {
