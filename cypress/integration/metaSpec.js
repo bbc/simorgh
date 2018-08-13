@@ -20,7 +20,6 @@ describe('Article Meta Tests', () => {
         if (
           fontFamily &&
           !fontFamiliesArray.includes(fontFamily) &&
-          // !== 'Times' has been added as there elements not visible, which Cypress is assigning a font of 'Times'
           fontFamily.startsWith('BBCReith')
         ) {
           fontFamiliesArray.push(fontFamily);
