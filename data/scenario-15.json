@@ -36,8 +36,8 @@
                 "blockId": "61dfcd49-4798-802e-7d4b-daa32a0e863d",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 320,
+                  "height": 180,
                   "locator": "/13225/production/_101237387_mediaitem101237386.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
@@ -164,8 +164,8 @@
                       "blockId": "930f6924-9693-7bf0-5a5a-98d98e07792c",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
+                        "width": 320,
+                        "height": 180,
                         "locator": "/5BD5/production/_101690532_2.jpg",
                         "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
