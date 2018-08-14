@@ -1,4 +1,4 @@
-# Spike: REMs vs EMs for spacing
+# REMs vs EMs for spacing
 REMs and EMs can be used for spacing (padding/margins/line height). We chose REMs on the basis of clarity and no perceptible difference in rendering.
 
 ## REMs
