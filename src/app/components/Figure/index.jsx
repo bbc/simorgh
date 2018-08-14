@@ -11,10 +11,7 @@ const StyledFigure = styled.figure`
   width: 100%;
 `;
 
-const Image = styled.img.attrs({
-  src: ({ src }) => src,
-  alt: ({ alt }) => alt,
-})`
+const Image = styled.img`
   width: 100%;
 `;
 
