@@ -1,7 +1,7 @@
 import * as styledComponents from 'styled-components';
 
-describe('injectGlobal', () => {
-  it('should be called with args matching snapshot', async () => {
+describe('globalStyles', () => {
+  it('should call injectGlobal with args matching snapshot', async () => {
     jest.spyOn(styledComponents, 'injectGlobal');
 
     await import('./globalStyles');

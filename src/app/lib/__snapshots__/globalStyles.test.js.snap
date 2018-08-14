@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`injectGlobal should be called with args matching snapshot 1`] = `
+exports[`globalStyles should call injectGlobal with args matching snapshot 1`] = `
 Array [
   Array [
     "
