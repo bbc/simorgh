@@ -13,7 +13,7 @@ import {
 const StyledFooterLinks = styled.div`
   background-color: ${C_ORBIT_GREY};
   font-family: ${FF_NEWS_SANS_REG};
-  padding: 0 ${GEL_SPACING}px;
+  padding: 0 ${GEL_SPACING};
 `;
 
 const StyledList = styled.ul`
@@ -24,12 +24,12 @@ const StyledList = styled.ul`
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
   margin: 0;
-  padding: ${GEL_SPACING}px 0;
+  padding: ${GEL_SPACING} 0;
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
-    padding-bottom: ${GEL_SPACING}px;
-    margin-bottom: ${GEL_SPACING}px;
+    padding-bottom: ${GEL_SPACING};
+    margin-bottom: ${GEL_SPACING};
     @supports not (display: grid) {
       width: 100%;
     }
@@ -47,7 +47,7 @@ const StyledLink = styled.a`
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
-  padding: ${GEL_SPACING}px 0;
+  padding: ${GEL_SPACING} 0;
   display: block;
 
   &:hover,
@@ -58,12 +58,12 @@ const StyledLink = styled.a`
 
 const InlineBlockLink = styled(StyledLink)`
   display: inline;
-  padding: ${GEL_SPACING}px 0;
+  padding: ${GEL_SPACING} 0;
 `;
 
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding: ${GEL_SPACING_DBL}px 0;
+  padding: ${GEL_SPACING_DBL} 0;
   margin: 0;
 `;
 
