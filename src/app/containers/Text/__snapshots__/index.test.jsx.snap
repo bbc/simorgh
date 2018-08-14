@@ -4,13 +4,13 @@ exports[`TextContainer with data should render correctly 1`] = `
 Array [
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -27,13 +27,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -48,13 +48,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -69,13 +69,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -89,13 +89,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
