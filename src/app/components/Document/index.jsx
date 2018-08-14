@@ -9,6 +9,10 @@ const Document = ({ assets, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const title = helmet.title.toComponent();
 
+  const scripts = assets.map(asset => (
+    <script key={asset} type="text/javascript" src={asset} defer />
+  ));
+
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -25,7 +29,7 @@ const Document = ({ assets, data, styleTags, helmet }) => {
       <body>
         <AfterRoot />
         <AfterData data={data} />
-        <script type="text/javascript" src={assets.client.js} defer />
+        {scripts}
       </body>
     </html>
   );
