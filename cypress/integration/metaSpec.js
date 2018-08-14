@@ -31,32 +31,6 @@ describe('Article Meta Tests', () => {
       });
   });
 
-  it('should include the font faces', () => {
-    const expectedFonts = [
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2',
-    ];
-    const styleTag = getElement('head style');
-
-    expectedFonts.forEach(font => {
-      styleTag.should('contain', font);
-    });
-  });
-
   // Testing the actual fetch is not currently possible
   it('should have script to fetch bundle', () => {
     cy.get('script')
