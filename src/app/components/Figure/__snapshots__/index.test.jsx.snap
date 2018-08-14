@@ -11,7 +11,8 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 .c0 {
-  padding-bottom: 16px;
+  margin: 0;
+  padding: 0 0 1rem 0;
   width: 100%;
 }
 
@@ -43,7 +44,8 @@ exports[`Figure with a caption should render correctly 1`] = `
 
 exports[`Figure without a caption should render correctly 1`] = `
 .c0 {
-  padding-bottom: 16px;
+  margin: 0;
+  padding: 0 0 1rem 0;
   width: 100%;
 }
 
