@@ -1,5 +1,5 @@
 # Spike: REMs vs EMs for spacing
-This spike arises from https://github.com/bbc/simorgh/issues/407 and compares REMs/EMs as units for spacing (margin, padding, line height).  We chose REMs on the basis of clarity and no perceptible difference in rendering.
+REMs and EMs can be used for spacing (padding/margins/line height). We chose REMs on the basis of clarity and no perceptible difference in rendering.
 
 ## REMs
 The REM unit represents a size relative to the root element (e.g., the `font-size` of `<html>`). Combined with the root element's font-size, a REM represents the root element's initial value. 
@@ -77,3 +77,5 @@ Potential complexity of understanding due to nesting components, depending on ho
     <li>https://engageinteractive.co.uk/blog/em-vs-rem-vs-px</li>
     <li>https://zellwk.com/blog/rem-vs-em/</li>
 </ul>
+
+This spike arises from https://github.com/bbc/simorgh/issues/407.
