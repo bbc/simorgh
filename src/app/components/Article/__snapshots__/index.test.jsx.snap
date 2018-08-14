@@ -35,12 +35,12 @@ Array [
 }
 
 .c2 {
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .c3 {
   display: inline;
-  margin-top: 21px;
+  margin-top: 20px;
 }
 
 <header
