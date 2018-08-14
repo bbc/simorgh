@@ -49,8 +49,8 @@ module.exports = {
     // This is to override bundle performance test
     if (process.env.CI) {
       appConfig.performance = {
-        maxAssetSize: 500000,
-        maxEntrypointSize: 500000,
+        maxAssetSize: 245760, // 240kb - individual bundles
+        maxEntrypointSize: 491520, // 480kb - total bundles
       };
     }
 
