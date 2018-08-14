@@ -70,12 +70,8 @@ const Brand = ({ fullWidth }) => (
   </StyledGridWrapper>
 );
 
-Brand.defaultProps = {
-  fullWidth: false,
-};
-
 Brand.propTypes = {
-  fullWidth: boolean,
+  fullWidth: boolean.isRequired,
 };
 
 export default Brand;
