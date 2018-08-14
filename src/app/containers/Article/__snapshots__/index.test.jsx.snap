@@ -9,7 +9,7 @@ Array [
 }
 
 .c1 {
-  padding: 8px 8px 0;
+  padding: 0.5rem 0.5rem 0;
   display: inline-block;
 }
 
@@ -18,7 +18,7 @@ Array [
 .c1:focus span {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c4 {
@@ -36,7 +36,7 @@ Array [
 
 .c2 {
   display: inline-block;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .c3 {
@@ -94,34 +94,34 @@ Array [
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 32px 0 16px 0;
+  padding: 2rem 0 1rem 0;
   font-size: 1.75em;
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 .c1 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     font-size: 2em;
-    line-height: 2.25em;
+    line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     font-size: 2.75em;
-    line-height: 3em;
+    line-height: 3rem;
   }
 }
 
 @media (min-width:20em) {
   .c1 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 

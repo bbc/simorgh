@@ -8,7 +8,7 @@ exports[`Header should render correctly 1`] = `
 }
 
 .c1 {
-  padding: 8px 8px 0;
+  padding: 0.5rem 0.5rem 0;
   display: inline-block;
 }
 
@@ -17,7 +17,7 @@ exports[`Header should render correctly 1`] = `
 .c1:focus span {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c4 {
@@ -35,7 +35,7 @@ exports[`Header should render correctly 1`] = `
 
 .c2 {
   display: inline-block;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .c3 {
