@@ -3,7 +3,7 @@ import { shallowRender } from '../../helpers/tests/testHelpers';
 import Document from './index';
 
 describe('Document', () => {
-  const assets = { client: { js: 'http://example.com/file.js' } };
+  const assets = ['http://example.com/file.js'];
   const data = {};
   const helmet = {
     htmlAttributes: {
