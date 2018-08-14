@@ -7,7 +7,7 @@ The REM unit represents a size relative to the root element (e.g., the `font-siz
 ### Advantages
 Spacing will be global across Simorgh
 
-Ease of understanding: When we create a constant expressed in REMs (e.g. `export const GEL_SPACING = '0.5rem'`) that value, or values based of of that value, stay constant, which adds simplicity from a developer perspective.
+Ease of understanding: When we create a constant expressed in REMs (e.g. `export const GEL_SPACING = '0.5rem'`) that value, or values based of that value, stay constant, which adds simplicity from a developer perspective.
 
 ```
 // assumes the root font size is 16px, which is a common browser default
