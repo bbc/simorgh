@@ -1,4 +1,4 @@
-{ 
+{
   "metadata": {
     "id" : "urn:bbc:ares::article:c0000000002o",
     "locators" : {
@@ -68,8 +68,8 @@
                 "model": {
                   "width": 572,
                   "height": 716,
-                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
-                  "originCode": null,
+                  "locator": "/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

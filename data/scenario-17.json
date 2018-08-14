@@ -78,8 +78,8 @@
                       "model": {
                         "width": 640,
                         "height": 420,
-                        "locator": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
-                        "originCode": null,
+                        "locator": "/E92C/production/_101729695_briefcasedollars.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
                     },
@@ -123,8 +123,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
-                  "originCode": null,
+                  "locator": "/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -324,7 +324,7 @@
                         "width": 640,
                         "height": 420,
                         "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "BBC"
                       }
                     },
@@ -428,8 +428,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/DCBD/production/_101790565_gettyimages-924021296.jpg",
-                  "originCode": null,
+                  "locator": "/DCBD/production/_101790565_gettyimages-924021296.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -594,7 +594,7 @@
                         "width": 640,
                         "height": 420,
                         "locator": "//ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "EBU"
                       }
                     },

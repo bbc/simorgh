@@ -61,8 +61,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-                  "originCode": null,
+                  "locator": "/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

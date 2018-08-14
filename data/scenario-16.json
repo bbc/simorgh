@@ -78,8 +78,8 @@
                       "model": {
                         "width": 640,
                         "height": 420,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "locator": "/5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -191,8 +191,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/13376/production/_95301787_bbc_ouch_website_image_624x100_2.jpg",
-                  "originCode": null,
+                  "locator": "/13376/production/_95301787_bbc_ouch_website_image_624x100_2.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -271,8 +271,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/1736/production/_97424950_976mleedfinal.jpg",
-                  "originCode": null,
+                  "locator": "/1736/production/_97424950_976mleedfinal.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -365,8 +365,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/8A79/production/_101694453_capture.png",
-                  "originCode": null,
+                  "locator": "/8A79/production/_101694453_capture.png",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -445,8 +445,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/cpsprodpb/15F44/production/_101742998_homebasepeople_newscast.jpg",
-                  "originCode": null,
+                  "locator": "/15F44/production/_101742998_homebasepeople_newscast.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

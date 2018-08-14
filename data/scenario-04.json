@@ -105,8 +105,8 @@
                 "model": {
                   "width": 1024,
                   "height": 761,
-                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "locator": "/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -225,8 +225,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/14D21/production/_101718258_bluegirlsgetty.jpg",
-                        "originCode": null,
+                        "locator": "/14D21/production/_101718258_bluegirlsgetty.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
                     },
