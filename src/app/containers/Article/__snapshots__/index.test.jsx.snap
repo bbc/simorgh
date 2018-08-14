@@ -9,7 +9,7 @@ Array [
 }
 
 .c1 {
-  padding: 8px 8px 24px;
+  padding: 8px 8px 0;
   display: inline-block;
 }
 
@@ -35,11 +35,12 @@ Array [
 }
 
 .c2 {
-  padding-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 24px;
 }
 
 .c3 {
-  display: inline;
+  display: block;
   margin-top: 20px;
 }
 
@@ -61,8 +62,8 @@ Array [
             className="c3"
             focusable="false"
             height="24"
-            viewBox="0 0 154 24"
-            width="154"
+            viewBox="0 0 154 22"
+            width="168"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g

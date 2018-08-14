@@ -8,21 +8,18 @@ import {
   GEL_SPACING_TRPL,
 } from '../../lib/constants/styles';
 
-/*
-   the middle of the banner 40px
-  ( banner height - margin top - svg height - hover border width ) / 2
-  (80 - 8 - 24 - 4) / 2 === 20
-*/
+// (( BANNER_HEIGHT - SVG_HEIGHT ) / 2 ) - A_PADDING_TOP
 const centerSvg = '20px';
+const bannerHeight = '80px';
 
 const StyledWrapper = styled.div`
   background-color: ${C_POSTBOX};
-  height: 80px;
+  height: ${bannerHeight};
   width: 100%;
 `;
 
 const StyledLink = styled.a`
-  padding: ${GEL_SPACING}px ${GEL_SPACING}px ${GEL_SPACING_TRPL}px;
+  padding: ${GEL_SPACING}px ${GEL_SPACING}px 0;
   display: inline-block;
   :active span,
   :hover span,
@@ -45,11 +42,12 @@ const VisuallyHiddenText = styled.span`
 `;
 
 const StyledSpan = styled.span`
-  padding-bottom: ${centerSvg};
+  display: inline-block;
+  padding-bottom: ${GEL_SPACING_TRPL}px;
 `;
 
 const BrandSvg = styled.svg`
-  display: inline;
+  display: block;
   margin-top: ${centerSvg};
 `;
 
@@ -58,9 +56,9 @@ const Brand = () => (
     <StyledLink href="https://www.bbc.co.uk/news">
       <StyledSpan>
         <BrandSvg
-          width="154"
+          width="168"
           height="24"
-          viewBox="0 0 154 24"
+          viewBox="0 0 154 22"
           xmlns="http://www.w3.org/2000/svg"
           focusable="false"
           aria-hidden="true"
