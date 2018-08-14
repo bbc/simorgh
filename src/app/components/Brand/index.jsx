@@ -21,11 +21,9 @@ const StyledGridWrapper = styled.div`
   padding: ${GEL_SPACING_DBL}px;
 `;
 
-/*  eslint-disable react/destructuring-assignment */
 const StyledGridItem = styled.div`
-  ${props => (props.fullWidth ? layoutGridItem : layoutGridItemFullWidth)};
+  ${fullWidth => (fullWidth ? layoutGridItemFullWidth : layoutGridItem)};
 `;
-/*  eslint-enable react/destructuring-assignment */
 
 const StyledLink = styled.a`
   :hover,

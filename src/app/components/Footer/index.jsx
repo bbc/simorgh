@@ -69,7 +69,7 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <Brand />
+    <Brand fullWidth />
     <StyledFooterLinks>
       <StyledList role="list">
         {links.map((link, index) => (
