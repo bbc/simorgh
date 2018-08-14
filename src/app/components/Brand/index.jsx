@@ -5,7 +5,6 @@ import {
   C_POSTBOX,
   C_WHITE,
   GEL_SPACING_DBL,
-  GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 import {
   layoutGridWrapper,
@@ -18,15 +17,15 @@ const StyledGridWrapper = styled.div`
   background-color: ${C_POSTBOX};
   height: 80px;
   width: 100%;
-  padding: ${GEL_SPACING_DBL}px;
+  padding: ${GEL_SPACING_DBL};
 `;
 
 const StyledLink = styled.a`
   :hover,
   :focus {
     text-decoration: none;
-    border-bottom: ${GEL_SPACING_HLF}px solid ${C_WHITE};
-    padding: ${GEL_SPACING_DBL}px 0;
+    border-bottom: 4px solid ${C_WHITE};
+    padding: ${GEL_SPACING_DBL} 0;
   }
 `;
 
