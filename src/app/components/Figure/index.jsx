@@ -2,12 +2,14 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import Caption from './Caption';
+import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
 
 const StyledFigure = styled.figure`
-  padding-bottom: 16px;
+  margin: 0;
+  padding: 0 0 ${GEL_SPACING_DBL} 0;
   width: 100%;
 `;
 
