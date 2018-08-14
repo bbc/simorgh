@@ -9,10 +9,6 @@ exports[`FooterContainer should render correctly 1`] = `
   padding: 16px;
 }
 
-.c1 {
-  grid-column: 1 / -1;
-}
-
 .c2:hover,
 .c2:focus {
   -webkit-text-decoration: none;
@@ -86,6 +82,10 @@ exports[`FooterContainer should render correctly 1`] = `
   color: #FFFFFF;
   padding: 16px 0;
   margin: 0;
+}
+
+.c1 {
+  grid-column: 1 / -1;
 }
 
 @media (max-width:600px) {

@@ -10,10 +10,6 @@ Array [
   padding: 16px;
 }
 
-.c1 {
-  grid-column: 1 / -1;
-}
-
 .c2:hover,
 .c2:focus {
   -webkit-text-decoration: none;
@@ -64,6 +60,30 @@ Array [
 @media (min-width:1280px) {
   .c0 {
     grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@media (max-width:599px) {
+  .c1 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:600px) and (max-width:1007px) {
+  .c1 {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:1008px) and (max-width:1279px) {
+  .c1 {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:1280px) {
+  .c1 {
+    grid-column: 3 / -3;
   }
 }
 
