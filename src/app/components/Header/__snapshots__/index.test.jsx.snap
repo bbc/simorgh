@@ -4,23 +4,23 @@ exports[`Header should render correctly 1`] = `
 .c0 {
   background-color: #B80000;
   height: 80px;
+  padding: 16px;
   width: 100%;
 }
 
 .c1 {
   padding: 8px 8px 24px;
-  display: inline-block;
 }
 
-.c1:active span,
-.c1:focus span,
-.c1:hover span {
+.c1:hover,
+.c1:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 4px solid #FFFFFF;
+  padding: 16px 0;
 }
 
-.c4 {
+.c2 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,33 +33,22 @@ exports[`Header should render correctly 1`] = `
   top: 0;
 }
 
-.c2 {
-  padding-bottom: 20px;
-}
-
-.c3 {
-  display: inline;
-  margin-top: 20px;
-}
-
 <header
-  className="c0"
   role="banner"
 >
-  <a
-    className="c1"
-    href="https://www.bbc.co.uk/news"
+  <div
+    className="c0"
   >
-    <span
-      className="c2"
+    <a
+      className="c1"
+      href="https://www.bbc.co.uk/news"
     >
       <svg
         aria-hidden="true"
-        className="c3"
         focusable="false"
-        height="24"
-        viewBox="0 0 168 24"
-        width="168"
+        height="40"
+        viewBox="0 0 154 22"
+        width="280"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -77,12 +66,12 @@ exports[`Header should render correctly 1`] = `
           />
         </g>
       </svg>
-    </span>
-    <span
-      className="c4"
-    >
-      BBC News
-    </span>
-  </a>
+      <span
+        className="c2"
+      >
+        BBC News
+      </span>
+    </a>
+  </div>
 </header>
 `;

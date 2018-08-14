@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import Brand from '../Brand';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -9,7 +10,7 @@ import {
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
 
-const StyledFooter = styled.footer`
+const StyledFooterLinks = styled.div`
   background-color: ${C_ORBIT_GREY};
   font-family: ${FF_NEWS_SANS_REG};
   padding: 0 ${GEL_SPACING}px;
@@ -67,23 +68,26 @@ const StyledParagraph = styled.p`
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
-  <StyledFooter role="contentinfo">
-    <StyledList role="list">
-      {links.map((link, index) => (
-        // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
-        // eslint-disable-next-line react/no-array-index-key
-        <StyledListItem key={index} role="listitem">
-          <StyledLink href={link.href}>{link.text}</StyledLink>
-        </StyledListItem>
-      ))}
-    </StyledList>
-    <StyledParagraph>
-      {copyrightText}
-      <InlineBlockLink href={externalLink.href}>
-        {externalLink.text}
-      </InlineBlockLink>
-    </StyledParagraph>
-  </StyledFooter>
+  <footer role="contentinfo">
+    <Brand />
+    <StyledFooterLinks>
+      <StyledList role="list">
+        {links.map((link, index) => (
+          // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
+          // eslint-disable-next-line react/no-array-index-key
+          <StyledListItem key={index} role="listitem">
+            <StyledLink href={link.href}>{link.text}</StyledLink>
+          </StyledListItem>
+        ))}
+      </StyledList>
+      <StyledParagraph>
+        {copyrightText}
+        <InlineBlockLink href={externalLink.href}>
+          {externalLink.text}
+        </InlineBlockLink>
+      </StyledParagraph>
+    </StyledFooterLinks>
+  </footer>
 );
 
 const linkPropTypes = shape({
