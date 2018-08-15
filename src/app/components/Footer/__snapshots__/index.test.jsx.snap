@@ -29,10 +29,34 @@ exports[`Footer should render correctly 1`] = `
   top: 0;
 }
 
-.c3 {
-  background-color: #4C4C4C;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0 0.5rem;
+.c6 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+.c6:hover,
+.c6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: inline;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c4 {
@@ -43,7 +67,7 @@ exports[`Footer should render correctly 1`] = `
   grid-template-rows: repeat(4,50%);
   list-style-type: none;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .c4 > li:first-child {
@@ -57,29 +81,15 @@ exports[`Footer should render correctly 1`] = `
   min-width: 50%;
 }
 
-.c6 {
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  display: block;
-}
-
-.c6:hover,
-.c6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c8 {
-  display: inline;
-  padding: 0.5rem 0;
+.c3 {
+  background-color: #4C4C4C;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0 0.5rem;
 }
 
 .c7 {
   color: #FFFFFF;
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -159,7 +169,7 @@ exports[`Footer should render correctly 1`] = `
     >
       Text here. 
       <a
-        className="c8 c6"
+        className="c8"
         href="https://www.bbc.co.uk/news"
       >
         Link
