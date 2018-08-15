@@ -5,37 +5,30 @@ import Document from './index';
 describe('Document', () => {
   const assets = ['http://example.com/file.js'];
   const data = {};
+
+  const mockHelmetToComponent = element => ({
+    toComponent: jest.fn().mockImplementation(() => element),
+  });
+
   const helmet = {
     htmlAttributes: {
       toComponent: jest.fn().mockImplementation(() => ({
         lang: 'test',
       })),
     },
-    link: {
-      toComponent: jest
-        .fn()
-        .mockImplementation(() => (
-          <link
-            rel="canonical"
-            href="https://www.bbc.com/news/article/scenario-25"
-          />
-        )),
-    },
-    meta: {
-      toComponent: jest
-        .fn()
-        .mockImplementation(() => (
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, minimum-scale=1"
-          />
-        )),
-    },
-    title: {
-      toComponent: jest
-        .fn()
-        .mockImplementation(() => <title>Test title</title>),
-    },
+    link: mockHelmetToComponent(
+      <link
+        rel="canonical"
+        href="https://www.bbc.com/news/article/scenario-25"
+      />,
+    ),
+    meta: mockHelmetToComponent(
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1"
+      />,
+    ),
+    title: mockHelmetToComponent(<title>Test title</title>),
   };
   const styleTags = <style>{'html { color: red; }'}</style>;
 

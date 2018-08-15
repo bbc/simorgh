@@ -34,7 +34,7 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const ID_REGEX = '(c[0-9]{8,15}o)$';
+    const ID_REGEX = '(c[a-zA-Z0-9]{8,15}o)$';
 
     const { data } = this.props;
     const { content, metadata, promo } = data;
