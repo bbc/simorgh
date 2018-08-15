@@ -8,7 +8,7 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 const renderCaption = caption =>
   caption ? (
     <Caption>
-      <VisuallyHiddenText>Image caption</VisuallyHiddenText>
+      <VisuallyHiddenText>Image caption,</VisuallyHiddenText>
       {caption}
     </Caption>
   ) : null;

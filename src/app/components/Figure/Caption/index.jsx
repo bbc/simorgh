@@ -1,4 +1,3 @@
-import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -20,9 +19,5 @@ const Caption = styled.figcaption`
     font-size: 0.875em;
   }
 `;
-
-Caption.propTypes = {
-  text: string.isRequired,
-};
 
 export default Caption;
