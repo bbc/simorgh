@@ -4,12 +4,12 @@ import { GEL_SPACING, GEL_SPACING_DBL } from './constants/styles';
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: 600px) {
-    grid-gap: ${GEL_SPACING}px; // Between grid items
-    padding: ${GEL_SPACING}px; // On grid wrapper
+    grid-gap: ${GEL_SPACING}; // Between grid items
+    padding: ${GEL_SPACING}; // On grid wrapper
   }
   @media (min-width: 600px) {
-    grid-gap: ${GEL_SPACING_DBL}px; // Between grid items
-    padding: ${GEL_SPACING_DBL}px; // On grid wrapper
+    grid-gap: ${GEL_SPACING_DBL}; // Between grid items
+    padding: ${GEL_SPACING_DBL}; // On grid wrapper
   }
   @media (max-width: 1007px) {
     grid-template-columns: repeat(6, 1fr);

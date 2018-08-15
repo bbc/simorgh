@@ -80,15 +80,15 @@ exports[`MainContent should render correctly 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    grid-gap: 0.5rempx;
-    padding: 0.5rempx;
+    grid-gap: 0.5rem;
+    padding: 0.5rem;
   }
 }
 
 @media (min-width:600px) {
   .c0 {
-    grid-gap: 1rempx;
-    padding: 1rempx;
+    grid-gap: 1rem;
+    padding: 1rem;
   }
 }
 
