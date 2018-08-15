@@ -35,11 +35,12 @@ exports[`MainContent should render correctly 1`] = `
 
 .c3 {
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding-bottom: 1rem;
   width: 100%;
 }
 
 .c4 {
+  display: block;
   width: 100%;
 }
 
