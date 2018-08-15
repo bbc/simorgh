@@ -3,17 +3,12 @@ import styled from 'styled-components';
 import { string, boolean } from 'prop-types';
 import { C_WHITE, GEL_SPACING } from '../../lib/constants/styles';
 
-const getInline = props => {
-  const { inline } = props;
-  return inline;
-};
-
 const StyledLink = styled.a`
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
-  padding: ${GEL_SPACING}px 0;
-  display: ${props => (getInline(props) === true ? 'inline' : 'block')};
+  padding: ${GEL_SPACING};
+  display: ${({ inline }) => (inline ? 'inline' : 'block')};
   &:hover,
   &:focus {
     text-decoration: underline;

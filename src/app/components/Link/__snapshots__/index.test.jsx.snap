@@ -6,7 +6,7 @@ exports[`Link should render a standard block link 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 0.5rem;
   display: block;
 }
 
@@ -30,7 +30,7 @@ exports[`Link should render an inline link after passing an inline prop 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 0.5rem;
   display: inline;
 }
 
