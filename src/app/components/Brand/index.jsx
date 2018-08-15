@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { boolean } from 'prop-types';
+import { bool } from 'prop-types';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -76,7 +76,7 @@ Brand.defaultProps = {
 };
 
 Brand.propTypes = {
-  indentedLogo: boolean,
+  indentedLogo: bool,
 };
 
 export default Brand;
