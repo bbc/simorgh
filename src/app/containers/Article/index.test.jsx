@@ -84,10 +84,17 @@ describe('ArticleContainer', () => {
     },
   };
 
+  const articleMatch = {
+    path: '/article/:id',
+    url: '/article/scenario-27',
+    isExact: true,
+    params: { id: 'scenario-27' },
+  };
+
   describe('Component', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <ArticleContainer data={articleData} />,
+      <ArticleContainer data={articleData} match={articleMatch} />,
     );
   });
 

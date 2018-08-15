@@ -39,8 +39,6 @@ class ArticleContainer extends Component {
     const { params } = match;
     const { id } = params;
 
-    console.log(match);
-
     return (
       <Article
         id={id}
