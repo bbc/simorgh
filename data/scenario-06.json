@@ -200,8 +200,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
                         "copyrightHolder": "Getty Images"
                       }
                     },
@@ -245,8 +245,8 @@
                 "model": {
                   "width": 2362,
                   "height": 2952,
-                  "locator": "/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },

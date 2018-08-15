@@ -1,4 +1,4 @@
-{
+{ 
   "metadata": {
     "id" : "urn:bbc:ares::article:c0000000003o",
     "locators" : {
@@ -140,8 +140,8 @@
                       "model": {
                         "width": 640,
                         "height": 360,
-                        "locator": "/6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
                         "copyrightHolder": "Getty Images"
                       }
                     },

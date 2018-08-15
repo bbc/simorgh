@@ -118,8 +118,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/E7DB/production/_101655395_paulineclayton.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -233,8 +233,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/DE8F/production/_101657965_hi046913336.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/DE8F/production/_101657965_hi046913336.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -298,8 +298,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/6CE3/production/_101657872_hi046905593.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/6CE3/production/_101657872_hi046905593.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -385,8 +385,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/3256/production/_98968821_hi032280080.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/3256/production/_98968821_hi032280080.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -479,8 +479,8 @@
                 "model": {
                   "width": 640,
                   "height": 420,
-                  "locator": "/22AB/production/_101657880_hi046918757.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/22AB/production/_101657880_hi046918757.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },

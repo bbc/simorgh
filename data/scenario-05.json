@@ -105,8 +105,8 @@
                 "model": {
                   "width": 640,
                   "height": 360,
-                  "locator": "/D6C0/production/_101767945_gettyimages-519045912.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -233,8 +233,8 @@
                       "model": {
                         "width": 640,
                         "height": 360,
-                        "locator": "/6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
                         "copyrightHolder": "Getty Images"
                       }
                     },

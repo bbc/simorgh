@@ -341,8 +341,8 @@
                       "model": {
                         "width": 640,
                         "height": 360,
-                        "locator": "/5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -409,8 +409,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/F86B/production/_101659536_m-s_getty.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/F86B/production/_101659536_m-s_getty.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -474,8 +474,8 @@
                 "model": {
                   "width": 640,
                   "height": 520,
-                  "locator": "/A237/production/_101672514_ms-mapclosures-nc.png",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -539,8 +539,8 @@
                 "model": {
                   "width": 1024,
                   "height": 419,
-                  "locator": "/16FBB/production/_97493149_1_protests_getty_624.jpg",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/16FBB/production/_97493149_1_protests_getty_624.jpg",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
@@ -581,8 +581,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/1758D/production/_94792659_bbcbudget_new.gif",
-                  "originCode": "cpsprodpb",
+                  "locator": "/cpsprodpb/1758D/production/_94792659_bbcbudget_new.gif",
+                  "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },

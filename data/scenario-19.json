@@ -140,7 +140,7 @@
                         "width": 640,
                         "height": 420,
                         "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
-                        "originCode": "cpsprodpb",
+                        "originCode": null,
                         "copyrightHolder": "BBC"
                       }
                     },
