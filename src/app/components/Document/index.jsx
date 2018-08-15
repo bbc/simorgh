@@ -18,7 +18,10 @@ const Document = ({ assets, data, styleTags, helmet }) => {
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
         <meta name="robots" content="nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
         <link rel="manifest" href="/manifest.json" />
