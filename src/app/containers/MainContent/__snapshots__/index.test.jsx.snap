@@ -20,6 +20,9 @@ exports[`MainContent should render correctly 1`] = `
 }
 
 .c2 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
