@@ -30,10 +30,34 @@ exports[`FooterContainer should render correctly 1`] = `
   top: 0;
 }
 
-.c4 {
-  background-color: #4C4C4C;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0 0.5rem;
+.c7 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9 {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: inline;
+}
+
+.c9:hover,
+.c9:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c5 {
@@ -44,7 +68,7 @@ exports[`FooterContainer should render correctly 1`] = `
   grid-template-rows: repeat(4,50%);
   list-style-type: none;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .c5 > li:first-child {
@@ -58,29 +82,15 @@ exports[`FooterContainer should render correctly 1`] = `
   min-width: 50%;
 }
 
-.c7 {
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  display: block;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c9 {
-  display: inline;
-  padding: 0.5rem 0;
+.c4 {
+  background-color: #4C4C4C;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0 0.5rem;
 }
 
 .c8 {
   color: #FFFFFF;
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -266,7 +276,7 @@ exports[`FooterContainer should render correctly 1`] = `
     >
       Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
       <a
-        className="c9 c7"
+        className="c9"
         href="https://www.bbc.co.uk/help/web/links/"
       >
         Read about our approach to external linking.

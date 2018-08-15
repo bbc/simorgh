@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
 import Brand from '../Brand';
+import Link from '../Link';
+import FooterList from '../FooterList';
 import {
   C_ORBIT_GREY,
   C_WHITE,
@@ -16,54 +18,9 @@ const StyledFooterLinks = styled.div`
   padding: 0 ${GEL_SPACING};
 `;
 
-const StyledList = styled.ul`
-  border-bottom: 1px solid ${C_WHITE};
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(4, 50%);
-  list-style-type: none;
-  margin: 0;
-  padding: ${GEL_SPACING} 0;
-  > li:first-child {
-    border-bottom: 1px solid ${C_WHITE};
-    grid-column: 1/3;
-    padding-bottom: ${GEL_SPACING};
-    margin-bottom: ${GEL_SPACING};
-    @supports not (display: grid) {
-      width: 100%;
-    }
-  }
-`;
-
-const StyledListItem = styled.li`
-  min-width: 50%;
-  @supports not (display: grid) {
-    display: inline-block;
-  }
-`;
-
-const StyledLink = styled.a`
-  color: ${C_WHITE};
-  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
-  text-decoration: none;
-  padding: ${GEL_SPACING} 0;
-  display: block;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-`;
-
-const InlineBlockLink = styled(StyledLink)`
-  display: inline;
-  padding: ${GEL_SPACING} 0;
-`;
-
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding: ${GEL_SPACING_DBL} 0;
+  padding: ${GEL_SPACING_DBL};
   margin: 0;
 `;
 
@@ -71,20 +28,10 @@ const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
     <Brand indentedLogo={false} />
     <StyledFooterLinks>
-      <StyledList role="list">
-        {links.map((link, index) => (
-          // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
-          // eslint-disable-next-line react/no-array-index-key
-          <StyledListItem key={index} role="listitem">
-            <StyledLink href={link.href}>{link.text}</StyledLink>
-          </StyledListItem>
-        ))}
-      </StyledList>
+      <FooterList links={links} />
       <StyledParagraph>
         {copyrightText}
-        <InlineBlockLink href={externalLink.href}>
-          {externalLink.text}
-        </InlineBlockLink>
+        <Link text={externalLink.text} href={externalLink.href} inline />
       </StyledParagraph>
     </StyledFooterLinks>
   </footer>
