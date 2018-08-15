@@ -3,25 +3,13 @@
 exports[`Text should render bold 1`] = `
 .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
-}
-
-.c1 {
-  font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
-  }
-}
-
-@media (min-width:20em) {
-  .c1 {
-    font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -29,9 +17,7 @@ exports[`Text should render bold 1`] = `
   className="c0"
 >
   This is text with 
-  <b
-    className="c1"
-  >
+  <b>
     some bold formatting
   </b>
   .
@@ -41,13 +27,13 @@ exports[`Text should render bold 1`] = `
 exports[`Text should render inline-code 1`] = `
 .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -65,25 +51,13 @@ exports[`Text should render inline-code 1`] = `
 exports[`Text should render italics 1`] = `
 .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
-}
-
-.c1 {
-  font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
-  }
-}
-
-@media (min-width:20em) {
-  .c1 {
-    font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -91,9 +65,7 @@ exports[`Text should render italics 1`] = `
   className="c0"
 >
   This is text with 
-  <i
-    className="c1"
-  >
+  <i>
     some italic formatting
   </i>
   .
@@ -103,13 +75,13 @@ exports[`Text should render italics 1`] = `
 exports[`Text should render strike-through 1`] = `
 .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
