@@ -30,57 +30,57 @@ exports[`Header should render correctly 1`] = `
   top: 0;
 }
 
-@media (max-width:600px) {
+@media (max-width:37.5em) {
   .c0 {
     grid-gap: 0.5rem;
     padding: 0.5rem;
   }
 }
 
-@media (min-width:600px) {
+@media (min-width:37.5em) {
   .c0 {
     grid-gap: 1rem;
     padding: 1rem;
   }
 }
 
-@media (max-width:1007px) {
+@media (max-width:62.9375em) {
   .c0 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
-@media (min-width:1008px) and (max-width:1279px) {
+@media (min-width:63em) and (max-width:80em) {
   .c0 {
     grid-template-columns: repeat(8,1fr);
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width:80em) {
   .c0 {
     grid-template-columns: repeat(10,1fr);
   }
 }
 
-@media (max-width:599px) {
+@media (max-width:56.1875em) {
   .c1 {
     grid-column: 1 / -1;
   }
 }
 
-@media (min-width:600px) and (max-width:1007px) {
+@media (min-width:37.5em) and (max-width:62.9375em) {
   .c1 {
     grid-column: 2 / -2;
   }
 }
 
-@media (min-width:1008px) and (max-width:1279px) {
+@media (min-width:63em) and (max-width:80em) {
   .c1 {
     grid-column: 2 / -2;
   }
 }
 
-@media (min-width:1280px) {
+@media (min-width:80em) {
   .c1 {
     grid-column: 3 / -3;
   }
