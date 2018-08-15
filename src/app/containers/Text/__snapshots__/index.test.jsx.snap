@@ -4,13 +4,13 @@ exports[`TextContainer with data should render correctly 1`] = `
 Array [
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -27,25 +27,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
-}
-
-.c1 {
-  font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
-  }
-}
-
-@media (min-width:20em) {
-  .c1 {
-    font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -53,34 +41,20 @@ Array [
     className="c0"
   >
     This is another paragraph with some 
-    <b
-      className="c1"
-    >
+    <b>
       bold
     </b>
      text.
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
-}
-
-.c1 {
-  font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
-  }
-}
-
-@media (min-width:20em) {
-  .c1 {
-    font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -88,22 +62,20 @@ Array [
     className="c0"
   >
     This is a paragraph with 
-    <i
-      className="c1"
-    >
+    <i>
       italic
     </i>
      text.
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -117,13 +89,13 @@ Array [
   </p>,
   .c0 {
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
