@@ -9,11 +9,12 @@ const renderCaption = caption =>
 
 const StyledFigure = styled.figure`
   margin: 0;
-  padding: 0 0 ${GEL_SPACING_DBL} 0;
+  padding-bottom: ${GEL_SPACING_DBL};
   width: 100%;
 `;
 
 const Image = styled.img`
+  display: block;
   width: 100%;
 `;
 
