@@ -36,15 +36,15 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    grid-gap: 8px;
-    padding: 8px;
+    grid-gap: 0.5rempx;
+    padding: 0.5rempx;
   }
 }
 
 @media (min-width:600px) {
   .c0 {
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 1rempx;
+    padding: 1rempx;
   }
 }
 
@@ -115,7 +115,7 @@ exports[`Brand should render correctly with indentedLogo true 1`] = `
   background-color: #B80000;
   height: 80px;
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .c2:hover,
@@ -123,7 +123,7 @@ exports[`Brand should render correctly with indentedLogo true 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 4px solid #FFFFFF;
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 .c3 {
@@ -141,15 +141,15 @@ exports[`Brand should render correctly with indentedLogo true 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    grid-gap: 8px;
-    padding: 8px;
+    grid-gap: 0.5rempx;
+    padding: 0.5rempx;
   }
 }
 
 @media (min-width:600px) {
   .c0 {
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 1rempx;
+    padding: 1rempx;
   }
 }
 

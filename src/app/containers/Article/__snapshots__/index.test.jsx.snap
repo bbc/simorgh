@@ -33,15 +33,15 @@ Array [
 
 @media (max-width:600px) {
   .c0 {
-    grid-gap: 8px;
-    padding: 8px;
+    grid-gap: 0.5rempx;
+    padding: 0.5rempx;
   }
 }
 
 @media (min-width:600px) {
   .c0 {
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 1rempx;
+    padding: 1rempx;
   }
 }
 
@@ -173,15 +173,15 @@ Array [
 
 @media (max-width:600px) {
   .c0 {
-    grid-gap: 8px;
-    padding: 8px;
+    grid-gap: 0.5rempx;
+    padding: 0.5rempx;
   }
 }
 
 @media (min-width:600px) {
   .c0 {
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 1rempx;
+    padding: 1rempx;
   }
 }
 
