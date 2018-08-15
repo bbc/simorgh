@@ -11,6 +11,16 @@ describe('Document', () => {
         lang: 'test',
       })),
     },
+    link: {
+      toComponent: jest
+        .fn()
+        .mockImplementation(() => (
+          <link
+            rel="canonical"
+            href="https://www.bbc.com/news/article/scenario-25"
+          />
+        )),
+    },
     title: {
       toComponent: jest
         .fn()
