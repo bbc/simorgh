@@ -34,14 +34,12 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const ID_REGEX = '(c[a-zA-Z0-9]{8,15}o)$';
-
     const { data } = this.props;
     const { content, metadata, promo } = data;
     const { id: aresArticleId } = metadata;
 
-    const idMatches = aresArticleId.match(ID_REGEX);
-    const id = idMatches ? idMatches[0] : '';
+    const idParts = aresArticleId.split(':');
+    const id = idParts[idParts.length - 1];
 
     return (
       <Article
