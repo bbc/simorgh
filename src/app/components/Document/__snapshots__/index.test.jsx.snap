@@ -13,7 +13,7 @@ exports[`Document should render correctly 1`] = `
       charSet="utf-8"
     />
     <meta
-      content="width=device-width, initial-scale=1"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
     />
     <meta
@@ -23,6 +23,10 @@ exports[`Document should render correctly 1`] = `
     <meta
       content="#B80000"
       name="theme-color"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/scenario-25"
+      rel="canonical"
     />
     <link
       href="/manifest.json"

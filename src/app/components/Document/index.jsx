@@ -24,6 +24,10 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         />
         <meta name="robots" content="nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
+        <link
+          rel="canonical"
+          href="https://www.bbc.com/news/articles/scenario-25"
+        />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}
