@@ -350,8 +350,8 @@ components:
               example: "https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg"
               type: string
             originCode:
-              example: true
-              type: boolean
+              example: "cpsprodpb"
+              type: string
             width:
               example: 640
               type: number
