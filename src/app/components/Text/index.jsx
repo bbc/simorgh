@@ -3,8 +3,16 @@ import styled from 'styled-components';
 import { string, bool, shape } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import mediaQuery from '../../helpers/mediaQueries';
+import {
+  C_STORM,
+  FF_NEWS_SANS_REG,
+  GEL_SPACING_DBL,
+} from '../../lib/constants/styles';
 
 const StyledParagraph = styled.p`
+  color: ${C_STORM};
+  font-family: ${FF_NEWS_SANS_REG};
+  padding-bottom: ${GEL_SPACING_DBL}
   // Font styling below is a subset of BBC GEL Typography "Body Copy"
   font-size: 0.9375em;
   line-height: 1.25rem;
