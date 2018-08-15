@@ -8,6 +8,15 @@ exports[`Footer should render correctly 1`] = `
   padding: 1rem;
 }
 
+.c1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1:hover,
 .c1:focus {
   -webkit-text-decoration: none;
