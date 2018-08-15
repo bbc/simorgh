@@ -3,8 +3,15 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
-const renderCaption = caption => (caption ? <Caption text={caption} /> : null);
+const renderCaption = caption =>
+  caption ? (
+    <Caption>
+      <VisuallyHiddenText>Image caption</VisuallyHiddenText>
+      {caption}
+    </Caption>
+  ) : null;
 
 const StyledFigure = styled.figure`
   margin: 0;

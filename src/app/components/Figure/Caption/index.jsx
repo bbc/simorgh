@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -6,10 +5,9 @@ import {
   C_STORM,
   GEL_SPACING,
 } from '../../../lib/constants/styles';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
 
-const StyledCaption = styled.figcaption`
+const Caption = styled.figcaption`
   background-color: #d5d0cd;
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
@@ -22,13 +20,6 @@ const StyledCaption = styled.figcaption`
     font-size: 0.875em;
   }
 `;
-
-const Caption = ({ text }) => (
-  <StyledCaption>
-    <VisuallyHiddenText>Image caption, </VisuallyHiddenText>
-    {text}
-  </StyledCaption>
-);
 
 Caption.propTypes = {
   text: string.isRequired,
