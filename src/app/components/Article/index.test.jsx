@@ -3,6 +3,7 @@ import Article from './index';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { textBlock } from '../../models/blocks';
 
+const id = 'scenario-25';
 const title = 'This is a title!';
 const lang = 'en-GB';
 
@@ -54,6 +55,6 @@ const blocks = [
 describe('Article', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <Article title={title} lang={lang} blocks={blocks} />,
+    <Article id={id} title={title} lang={lang} blocks={blocks} />,
   );
 });

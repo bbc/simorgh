@@ -8,7 +8,7 @@ import { C_POSTBOX } from '../../lib/constants/styles';
 const Document = ({ assets, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const title = helmet.title.toComponent();
-
+  const links = helmet.link.toComponent();
   const scripts = assets.map(asset => (
     <script key={asset} type="text/javascript" src={asset} defer />
   ));
@@ -24,13 +24,10 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         />
         <meta name="robots" content="nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
-        <link
-          rel="canonical"
-          href="https://www.bbc.com/news/articles/scenario-25"
-        />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}
+        {links}
         {styleTags}
       </head>
       <body>

@@ -34,11 +34,16 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, match } = this.props;
     const { content, metadata, promo } = data;
+    const { params } = match;
+    const { id } = params;
+
+    console.log(match);
 
     return (
       <Article
+        id={id}
         lang={metadata.passport.language}
         title={promo.headlines.seoHeadline}
         {...content.model}
