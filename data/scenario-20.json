@@ -59,8 +59,8 @@
                 "blockId": "e12b16a4-1b71-b033-ee08-38e466fb41ea",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
