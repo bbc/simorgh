@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/ && amphtml-validator http://localhost:7080/article/amp/scenario-25 || true",
+    "amp:validate": "wait-on http://localhost:7080/ && (amphtml-validator http://localhost:7080/article/amp/scenario-25 || true)",
     "bbcA11y": "bbc-a11y",
     "build": "razzle build",
     "cypress": "cypress run",
@@ -26,7 +26,7 @@
     "test": "npm run test:lint && npm run test:unit && npm run dataValidate",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:accessibility:ci": "npm run build && run-p --race start bbcA11y",
-    "test:ampvalidator": "npm run killApp && npm run build && run-p --race start amp:validate",
+    "test:ampValidate": "npm run killApp && npm run build && run-p --race start amp:validate",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:ci": "npm run build && run-p --race start cypress",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
