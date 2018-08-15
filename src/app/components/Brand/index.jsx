@@ -21,7 +21,6 @@ const StyledWrapper = styled.div`
 const StyledLink = styled.a`
   padding: ${GEL_SPACING} ${GEL_SPACING} 0;
   display: inline-block;
-  :active span,
   :hover span,
   :focus span {
     text-decoration: none;
