@@ -12,7 +12,6 @@ exports[`Header should render correctly 1`] = `
   display: inline-block;
 }
 
-.c1:active span,
 .c1:hover span,
 .c1:focus span {
   -webkit-text-decoration: none;
