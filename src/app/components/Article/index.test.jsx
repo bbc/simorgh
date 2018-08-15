@@ -3,7 +3,7 @@ import Article from './index';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { textBlock } from '../../models/blocks';
 
-const id = 'scenario-25';
+const id = 'c0000000001o';
 const title = 'This is a title!';
 const lang = 'en-GB';
 
