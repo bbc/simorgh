@@ -14,6 +14,12 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledLink = styled.a`
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-decoration: none;
+
   :hover,
   :focus {
     text-decoration: none;
