@@ -11,11 +11,9 @@ describe('Document', () => {
   });
 
   const helmet = {
-    htmlAttributes: {
-      toComponent: jest.fn().mockImplementation(() => ({
-        lang: 'test',
-      })),
-    },
+    htmlAttributes: mockHelmetToComponent({
+      lang: 'test',
+    }),
     link: mockHelmetToComponent(
       <link
         rel="canonical"
