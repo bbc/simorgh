@@ -11,6 +11,10 @@ const Article = ({ lang, title, blocks, id }) => {
   return (
     <Fragment>
       <Helmet htmlAttributes={{ lang }}>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
         <title>{title}</title>
         <link rel="canonical" href={canonicalLink} />
       </Helmet>
