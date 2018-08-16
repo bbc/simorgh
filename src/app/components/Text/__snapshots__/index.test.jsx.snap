@@ -14,10 +14,9 @@ exports[`Text should render an inline link 1`] = `
   text-decoration: none;
 }
 
-.c1:hover {
-  background-color: #C3DEE7;
-  border: 2px solid #C3DEE7;
-  border-bottom: 1px solid #0f556c;
+.c1:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
 }
 
 .c1:focus {
@@ -27,9 +26,11 @@ exports[`Text should render an inline link 1`] = `
   color: #F5F3F1;
 }
 
-.c1:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+.c1:hover {
+  color: #0f556c;
+  background-color: #C3DEE7;
+  border: 2px solid #C3DEE7;
+  border-bottom: 1px solid #0f556c;
 }
 
 @media (min-width:20em) {
