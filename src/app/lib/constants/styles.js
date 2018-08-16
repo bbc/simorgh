@@ -6,6 +6,7 @@ export const C_EBON = '#222222';
 export const C_POSTBOX = '#B80000';
 export const C_STORM = '#404040';
 export const C_WHITE = '#FFFFFF';
+export const C_BLUEJAY = '#0f556c';
 
 // Colours from other services
 export const C_ORBIT_GREY = '#4C4C4C';
