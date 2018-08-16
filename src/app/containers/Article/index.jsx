@@ -38,8 +38,7 @@ class ArticleContainer extends Component {
     const { content, metadata, promo } = data;
     const { id: aresArticleId } = metadata;
 
-    const idParts = aresArticleId.split(':');
-    const id = idParts[idParts.length - 1];
+    const id = aresArticleId.split(':').pop();
 
     return (
       <Article
