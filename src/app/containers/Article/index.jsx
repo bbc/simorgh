@@ -36,9 +36,13 @@ class ArticleContainer extends Component {
   render() {
     const { data } = this.props;
     const { content, metadata, promo } = data;
+    const { id: aresArticleId } = metadata;
+
+    const id = aresArticleId.split(':').pop();
 
     return (
       <Article
+        id={id}
         lang={metadata.passport.language}
         title={promo.headlines.seoHeadline}
         {...content.model}
