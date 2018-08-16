@@ -35,6 +35,11 @@ exports[`Caption should render correctly 1`] = `
   <span
     className="c1"
   >
+    Image caption, 
+  </span>
+  <span
+    className="c1"
+  >
     Image caption,
   </span>
   This is some Caption text

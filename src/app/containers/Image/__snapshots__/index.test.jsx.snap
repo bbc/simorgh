@@ -24,15 +24,6 @@ exports[`Image with data should render an image with alt text 1`] = `
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-.c2 {
-  background-color: #d5d0cd;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
-  font-size: 0.9375em;
-  line-height: 1.125rem;
-}
-
 .c3 {
   position: absolute;
   width: 1px;
@@ -44,6 +35,15 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   top: 0;
+}
+
+.c2 {
+  background-color: #d5d0cd;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  font-size: 0.9375em;
+  line-height: 1.125rem;
 }
 
 .c0 {
