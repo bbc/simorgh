@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
+const captionOffscreenText = 'Image caption, ';
+
 const renderCaption = caption =>
   caption ? (
     <Caption>
