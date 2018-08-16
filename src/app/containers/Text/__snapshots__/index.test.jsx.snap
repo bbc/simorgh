@@ -7,6 +7,13 @@ Array [
   line-height: 1.25rem;
 }
 
+.c1 {
+  color: #0f556c;
+  border-bottom: 1px solid #0f556c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
@@ -19,6 +26,7 @@ Array [
   >
     It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
     <a
+      className="c1"
       href="/news/articles/c000000000ro"
     >
       which were later donated to local hospices

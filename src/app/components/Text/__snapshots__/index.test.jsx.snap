@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Text should render an inline link 1`] = `
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c1 {
+  color: #0f556c;
+  border-bottom: 1px solid #0f556c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+  className="c0"
+>
+  This is text that contains an 
+  <a
+    className="c1"
+    href="https://www.bbc.com/news"
+  >
+    inline link
+  </a>
+   inside it..
+</p>
+`;
+
 exports[`Text should render bold 1`] = `
 .c0 {
   font-size: 0.9375em;
