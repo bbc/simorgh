@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { string, bool, shape } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import mediaQuery from '../../helpers/mediaQueries';
-import { C_BLUEJAY } from '../../lib/constants/styles';
+import { C_BLUEJAY, C_BLUEJAY_LHT } from '../../lib/constants/styles';
 
 const StyledParagraph = styled.p`
   // Font styling below is a subset of BBC GEL Typography "Body Copy"
@@ -19,6 +19,11 @@ const InlineLink = styled.a`
   color: ${C_BLUEJAY};
   border-bottom: 1px solid ${C_BLUEJAY};
   text-decoration: none;
+  &:hover {
+    background-color: ${C_BLUEJAY_LHT};
+    border: 2px solid ${C_BLUEJAY_LHT};
+    border-bottom: 1px solid ${C_BLUEJAY};
+  }
 `;
 
 const Text = ({ text, options }) => {
