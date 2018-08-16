@@ -1,4 +1,4 @@
-const OfflinePlugin = require('offline-plugin'); // eslint-disable-line
+const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
   modify: (config, { target, dev }) => {
@@ -68,7 +68,7 @@ module.exports = {
           ServiceWorker: {
             events: true,
             // obviously we need a file to match this path
-            navigateFallbackURL: './article/offline.html',
+            navigateFallbackURL: './offline.html',
           },
           updateStrategy: 'changed',
         }),
