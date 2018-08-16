@@ -7,6 +7,7 @@ import {
   C_BLUEJAY,
   C_BLUEJAY_LHT,
   C_OAT_LHT,
+  C_PEBBLE,
 } from '../../lib/constants/styles';
 
 const StyledParagraph = styled.p`
@@ -34,6 +35,10 @@ const InlineLink = styled.a`
     border: 2px solid ${C_BLUEJAY};
     border-bottom: 1px solid ${C_OAT_LHT};
     color: ${C_OAT_LHT};
+  }
+  &:visited {
+    color: ${C_PEBBLE};
+    border-bottom: 1px solid ${C_PEBBLE};
   }
 `;
 
