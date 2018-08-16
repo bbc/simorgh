@@ -25,10 +25,9 @@ const InlineLink = styled.a`
   border: 2px solid transparent;
   border-bottom: 1px solid ${C_BLUEJAY};
   text-decoration: none;
-  &:hover {
-    background-color: ${C_BLUEJAY_LHT};
-    border: 2px solid ${C_BLUEJAY_LHT};
-    border-bottom: 1px solid ${C_BLUEJAY};
+  &:visited {
+    color: ${C_PEBBLE};
+    border-bottom: 1px solid ${C_PEBBLE};
   }
   &:focus {
     background-color: ${C_BLUEJAY};
@@ -36,9 +35,11 @@ const InlineLink = styled.a`
     border-bottom: 1px solid ${C_OAT_LHT};
     color: ${C_OAT_LHT};
   }
-  &:visited {
-    color: ${C_PEBBLE};
-    border-bottom: 1px solid ${C_PEBBLE};
+  &:hover {
+    color: ${C_BLUEJAY};
+    background-color: ${C_BLUEJAY_LHT};
+    border: 2px solid ${C_BLUEJAY_LHT};
+    border-bottom: 1px solid ${C_BLUEJAY};
   }
 `;
 
