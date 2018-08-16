@@ -17,6 +17,7 @@ const StyledParagraph = styled.p`
 
 const InlineLink = styled.a`
   color: ${C_BLUEJAY};
+  border: 2px solid transparent;
   border-bottom: 1px solid ${C_BLUEJAY};
   text-decoration: none;
   &:hover {
