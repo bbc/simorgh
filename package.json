@@ -16,7 +16,7 @@
     "dev": "razzle start",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
-    "lighthouse": "lighthouse http://localhost:7080/article/scenario-01 --output-path=./reports/report.html --view",
+    "lighthouse": "lighthouse http://localhost:7080/article/scenario-27 --output-path=./reports/report.html --view",
     "postmerge": "./scripts/dependencyUpdateCheck.sh",
     "precommit": "npm run test:lint",
     "prepush": "./scripts/upToDateWithLatest.sh && npm run test:unit",
