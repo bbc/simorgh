@@ -54,7 +54,7 @@ exports[`Figure with a caption should render correctly 1`] = `
     <span
       className="c3"
     >
-      Image caption,
+      Image caption, 
     </span>
     This is a caption!
   </figcaption>

@@ -5,10 +5,12 @@ import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
+const captionOffscreenText = 'Image caption, ';
+
 const renderCaption = caption =>
   caption ? (
     <Caption>
-      <VisuallyHiddenText>Image caption,</VisuallyHiddenText>
+      <VisuallyHiddenText>{captionOffscreenText}</VisuallyHiddenText>
       {caption}
     </Caption>
   ) : null;

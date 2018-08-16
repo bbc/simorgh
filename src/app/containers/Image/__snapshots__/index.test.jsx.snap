@@ -77,7 +77,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     <span
       className="c3"
     >
-      Image caption,
+      Image caption, 
     </span>
     Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
   </figcaption>
