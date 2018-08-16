@@ -72,7 +72,7 @@ const Brand = ({ indentedLogo }) => {
 };
 
 Brand.defaultProps = {
-  indentedLogo: false,
+  indentedLogo: true,
 };
 
 Brand.propTypes = {
