@@ -10,7 +10,8 @@ const Caption = styled.figcaption`
   background-color: #d5d0cd;
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
-  padding: ${GEL_SPACING};
+  padding: ${GEL_SPACING} 0;
+  width: 100%;
 
   // Font styling below is a subset of BBC GEL Typography "Long Primer"
   font-size: 0.9375em;
