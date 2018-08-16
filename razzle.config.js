@@ -67,7 +67,6 @@ module.exports = {
           externals: ['/'],
           ServiceWorker: {
             events: true,
-            // obviously we need a file to match this path
             navigateFallbackURL: './offline.html',
           },
           updateStrategy: 'changed',
