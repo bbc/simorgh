@@ -7,9 +7,9 @@ exports[`Text should render an inline link 1`] = `
 }
 
 .c1 {
-  color: #0f556c;
+  color: #0F556C;
   border: 2px solid transparent;
-  border-bottom: 1px solid #0f556c;
+  border-bottom: 1px solid #0F556C;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -20,17 +20,17 @@ exports[`Text should render an inline link 1`] = `
 }
 
 .c1:focus {
-  background-color: #0f556c;
-  border: 2px solid #0f556c;
+  background-color: #0F556C;
+  border: 2px solid #0F556C;
   border-bottom: 1px solid #F5F3F1;
   color: #F5F3F1;
 }
 
 .c1:hover {
-  color: #0f556c;
+  color: #0F556C;
   background-color: #C3DEE7;
   border: 2px solid #C3DEE7;
-  border-bottom: 1px solid #0f556c;
+  border-bottom: 1px solid #0F556C;
 }
 
 @media (min-width:20em) {
@@ -50,7 +50,7 @@ exports[`Text should render an inline link 1`] = `
   >
     inline link
   </a>
-   inside it..
+   inside it.
 </p>
 `;
 
