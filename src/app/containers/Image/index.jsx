@@ -2,15 +2,10 @@ import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../../components/Figure';
+import { Img } from '../../components/Figure/Img';
+import Caption from '../../components/Figure/Caption';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
-
-const getCaption = block => {
-  if (!block) {
-    return null;
-  }
-  return getText(block);
-};
 
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
@@ -28,13 +23,15 @@ const ImageContainer = ({ blocks }) => {
   const { locator } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
+  const caption = captionBlock ? (
+    <Caption>{getText(captionBlock)}</Caption>
+  ) : null;
 
   return (
-    <Figure
-      src={rawImageSrc}
-      alt={altText}
-      caption={getCaption(captionBlock)}
-    />
+    <Figure>
+      <Img src={rawImageSrc} alt={altText} />
+      {caption}
+    </Figure>
   );
 };
 
