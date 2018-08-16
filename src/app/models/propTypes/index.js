@@ -1,5 +1,6 @@
-import { arrayOf, bool, oneOfType, shape, string } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import { textBlockPropTypes } from './text';
+import { imageBlockPropTypes } from './image';
 
 export const optionalTextPropTypes = {
   blocks: arrayOf(
@@ -15,27 +16,6 @@ export const optionalTextPropTypes = {
       }),
     }),
   ),
-};
-
-export const imagePropTypes = {
-  blocks: arrayOf(
-    oneOfType([
-      // rawImage block
-      shape({
-        model: shape({
-          locator: string.isRequired,
-        }).isRequired,
-      }).isRequired,
-      // altText block
-      shape({
-        model: shape(textBlockPropTypes).isRequired,
-      }).isRequired,
-      // caption block
-      shape({
-        model: shape(optionalTextPropTypes),
-      }),
-    ]).isRequired,
-  ).isRequired,
 };
 
 export const videoPropTypes = {
@@ -54,7 +34,7 @@ export const videoPropTypes = {
         // alt text
         shape(textBlockPropTypes),
         // image
-        shape(imagePropTypes),
+        shape(imageBlockPropTypes),
       ),
     }),
   ).isRequired,

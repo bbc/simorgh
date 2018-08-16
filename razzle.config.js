@@ -13,6 +13,26 @@ module.exports = {
       appConfig.module.rules.shift();
 
       // Setup bundle analyser
+      if (target === 'web') {
+        // setup bundle splitting
+        appConfig.output.filename = 'static/js/[name].[hash:8].js';
+        appConfig.optimization = {
+          splitChunks: {
+            chunks: 'initial',
+            automaticNameDelimiter: '-',
+            minSize: 184320, // 180kb
+            maxSize: 245760, // 240kb
+            cacheGroups: {
+              vendor: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendor',
+              },
+            },
+          },
+        };
+      }
+
+      // Setup bundle analyser
       if (target === 'web' && !process.env.CI) {
         // const defined here because it's a dev dep (breaks production build if at top of file)
         const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
@@ -32,8 +52,8 @@ module.exports = {
     // This is to override bundle performance test
     if (process.env.CI) {
       appConfig.performance = {
-        maxAssetSize: 400000,
-        maxEntrypointSize: 400000,
+        maxAssetSize: 245760, // 240kb - individual bundles
+        maxEntrypointSize: 491520, // 480kb - total bundles
       };
     }
 

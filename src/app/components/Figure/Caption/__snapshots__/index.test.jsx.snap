@@ -4,10 +4,10 @@ exports[`Caption should render correctly 1`] = `
 .c0 {
   background-color: #d5d0cd;
   color: #404040;
-  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  padding: 8px;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
   font-size: 0.9375em;
-  line-height: 1.125em;
+  line-height: 1.125rem;
 }
 
 @media (min-width:37.5em) {

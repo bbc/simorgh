@@ -6,8 +6,89 @@ import ArticleContainer from './index';
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
+  const articleData = {
+    metadata: {
+      id: 'urn:bbc:ares::article:c0000000001o',
+      locators: {
+        optimoUrn: 'urn:bbc:optimo:asset:c0000000001o',
+      },
+      type: 'article',
+      createdBy: '',
+      blockId: 'a-1',
+      created: 1514808060000,
+      firstPublished: 1514808060000,
+      lastPublished: 1514811600000,
+      lastUpdated: 1514811600000,
+      passport: {
+        language: 'en-gb',
+        home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
+        articleType: 'news',
+        genre: null,
+      },
+    },
+    content: {
+      model: {
+        blocks: [
+          {
+            blockId: 'h-1',
+            type: 'headline',
+            model: {
+              blocks: [
+                {
+                  blockId: 't-1',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        blockId: 'p-1',
+                        model: {
+                          text: 'Article Headline',
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'text',
+            blockId: 't-2',
+            model: {
+              blocks: [
+                {
+                  blockId: 'p-2',
+                  type: 'paragraph',
+                  model: {
+                    text: 'A paragraph.',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    promo: {
+      id: 'urn:bbc:ares::article:c0000000001o',
+      headlines: {
+        seoHeadline: 'Article Headline for SEO',
+        promoHeadline: 'Article Headline for Promo',
+      },
+      locators: {
+        optimoUrn: 'urn:bbc:optimo:asset:c0000000001o',
+      },
+      summary: 'Article summary.',
+      timestamp: 1514811600000,
+    },
+  };
+
   describe('Component', () => {
-    shouldMatchSnapshot('should render correctly', <ArticleContainer />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <ArticleContainer data={articleData} />,
+    );
   });
 
   describe('getInitialProps', () => {
@@ -43,6 +124,27 @@ describe('ArticleContainer', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
         expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
+      });
+    });
+
+    describe('Validate route parameter ', () => {
+      it('to check the id is invalid before returning an empty object', async () => {
+        jest.spyOn(global.console, 'log');
+        const invalidIdParam = 'route-21';
+        const invalidContext = { match: { params: { id: invalidIdParam } } };
+        const response = await callGetInitialProps(invalidContext);
+
+        expect(fetch).not.toHaveBeenCalled();
+
+        /* eslint-disable no-console */
+        expect(console.log).toBeCalledWith(
+          new Error(
+            `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+          ),
+        );
+        /* eslint-enable no-console */
+
+        expect(response).toEqual({});
       });
     });
 
