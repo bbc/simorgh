@@ -15,11 +15,21 @@ describe('Figure', () => {
   describe('with a caption', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure {...image} caption={caption} />,
+      <Figure {...image} copyrightHolder="BBC" caption={caption} />,
     );
   });
 
   describe('without a caption', () => {
-    shouldMatchSnapshot('should render correctly', <Figure {...image} />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <Figure {...image} copyrightHolder="BBC" />,
+    );
+  });
+
+  describe('with non BBC copyright', () => {
+    shouldMatchSnapshot(
+      'should render correctly',
+      <Figure {...image} copyrightHolder="Getty images" />,
+    );
   });
 });
