@@ -7,7 +7,7 @@ import {
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/articles/c0000000025o');
+    cy.visit('/news/articles/c0000000025o');
     // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
   });
 
