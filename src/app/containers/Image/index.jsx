@@ -20,6 +20,7 @@ const ImageContainer = ({ blocks }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
+  const { copyrightHolder } = rawImageBlock.model;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -33,6 +34,7 @@ const ImageContainer = ({ blocks }) => {
     <Figure
       src={rawImageSrc}
       alt={altText}
+      copyrightHolder={copyrightHolder}
       caption={getCaption(captionBlock)}
     />
   );
