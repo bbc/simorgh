@@ -26,11 +26,11 @@ npm install
 
 To run this application locally, with hot-reloading, run: `npm run dev`.
 
-The application will start on [http://localhost:7080/article/scenario-id](http://localhost:7080/article/scenario-id).
+The application will start on [http://localhost:7080/articles/c0000000001o](http://localhost:7080/articles/c0000000001o).
 
-These is a single route, `/article/:id`, where `id` is the filename of the static Article data, for example `scenario-01`.
+These is a single route, `/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
-**NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario-01](https://github.com/bbc/simorgh/blob/latest/data/scenario-01.json). Furthermore, the Article component does not do anything with that data.
+**NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario 1: c0000000001o](https://github.com/bbc/simorgh/blob/latest/data/c0000000001o.json). Furthermore, the Article component does not do anything with that data.
 
 ### Storybook (UI Development Environment/Style Guide)
 
@@ -74,6 +74,7 @@ Further details on using the Cypress CLI can be found at https://docs.cypress.io
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
 #### Storybook
+
 We also have a [Cypress](https://www.cypress.io/) project which runs a different set of end-to-end tests on [Storybook](https://github.com/bbc/simorgh#storybook-ui-development-environmentstyle-guide). For running the tests locally we need two terminals running:
 
 1. `npm run storybook` with the application,
@@ -89,4 +90,5 @@ We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the perf
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
 
 ### To-do
-* `nofollow` must be removed once this repo is ready for production use
+
+- `nofollow` must be removed once this repo is ready for production use
