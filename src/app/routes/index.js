@@ -2,12 +2,12 @@ import Article from '../containers/Article';
 
 const routes = [
   {
-    path: '/articles/:id',
+    path: '/news/articles/:id',
     exact: true,
     component: Article,
   },
   {
-    path: '/articles/amp/:id',
+    path: '/news/articles/amp/:id',
     exact: true,
     component: Article,
   },

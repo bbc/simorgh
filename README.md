@@ -26,9 +26,9 @@ npm install
 
 To run this application locally, with hot-reloading, run: `npm run dev`.
 
-The application will start on [http://localhost:7080/articles/c0000000001o](http://localhost:7080/articles/c0000000001o).
+The application will start on [http://localhost:7080/news/articles/c0000000001o](http://localhost:7080/news/articles/c0000000001o).
 
-These is a single route, `/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
+These is a single route, `/news/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
 **NOTE:** the `id` parameter is currently redundant as the Article component is hard-coded to fetch data from [scenario 1: c0000000001o](https://github.com/bbc/simorgh/blob/latest/data/c0000000001o.json). Furthermore, the Article component does not do anything with that data.
 
