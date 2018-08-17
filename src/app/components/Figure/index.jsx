@@ -1,21 +1,7 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, element, shape } from 'prop-types';
 import styled from 'styled-components';
-import Caption from './Caption';
-import VisuallyHiddenText from '../VisuallyHiddenText';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
-
-const copyrightOffscreenText = 'Copyright';
-
-const renderCopyright = copyright => {
-  const copyrightText = `${copyrightOffscreenText} ${copyright}`;
-  return copyright !== 'BBC' ? (
-    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
-  ) : null;
-};
-
-const renderCaption = caption =>
-  caption ? <Caption>{caption}</Caption> : null;
 
 const StyledFigure = styled.figure`
   margin: 0;
@@ -28,23 +14,21 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Figure = ({ src, alt, copyrightHolder, caption }) => (
+const Figure = ({ src, alt, children }) => (
   <StyledFigure>
     <Image src={src} alt={alt} />
-    {renderCopyright(copyrightHolder)}
-    {renderCaption(caption)}
+    {children}
   </StyledFigure>
 );
 
 Figure.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
-  copyrightHolder: string.isRequired,
-  caption: string,
+  children: shape({ element }),
 };
 
 Figure.defaultProps = {
-  caption: null,
+  children: null,
 };
 
 export default Figure;

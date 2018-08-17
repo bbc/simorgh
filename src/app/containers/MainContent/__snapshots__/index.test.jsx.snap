@@ -28,6 +28,17 @@ exports[`MainContent should render correctly 1`] = `
   line-height: 1.25rem;
 }
 
+.c5 {
+  margin: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c6 {
+  display: block;
+  width: 100%;
+}
+
 .c8 {
   position: absolute;
   width: 1px;
@@ -46,17 +57,6 @@ exports[`MainContent should render correctly 1`] = `
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
-  width: 100%;
-}
-
-.c5 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c6 {
-  display: block;
   width: 100%;
 }
 

@@ -24,6 +24,17 @@ exports[`Image with data should render an image with alt text 1`] = `
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
+.c0 {
+  margin: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
 .c3 {
   position: absolute;
   width: 1px;
@@ -42,17 +53,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
-  width: 100%;
-}
-
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
   width: 100%;
 }
 
@@ -84,6 +84,17 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
+.c0 {
+  margin: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
 .c2 {
   position: absolute;
   width: 1px;
@@ -95,17 +106,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   top: 0;
-}
-
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
 }
 
 <figure

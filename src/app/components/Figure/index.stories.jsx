@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Figure from './index';
+import Caption from './Caption';
+import Copyright from './Copyright';
 
 const image = {
   alt:
@@ -10,12 +12,17 @@ const image = {
 };
 
 const caption = 'This is a caption!';
+const copyright = 'Getty images';
 
 storiesOf('Figure', module)
   .add('with a caption', () => (
-    <Figure {...image} copyrightHolder="BBC" caption={caption} />
+    <Figure {...image}>
+      <Caption>{caption}</Caption>
+    </Figure>
   ))
-  .add('without a caption', () => <Figure {...image} copyrightHolder="BBC" />)
+  .add('without a caption', () => <Figure {...image} />)
   .add('with non BBC copyright', () => (
-    <Figure {...image} copyrightHolder="Getty images" />
+    <Figure {...image}>
+      <Copyright>{copyright}</Copyright>
+    </Figure>
   ));

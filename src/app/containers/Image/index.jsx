@@ -1,7 +1,7 @@
 import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
-import Figure from '../../components/Figure';
+import Figure from '../Figure';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
