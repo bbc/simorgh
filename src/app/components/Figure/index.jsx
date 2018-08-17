@@ -1,8 +1,12 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import Copyright from './Copyright';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
+
+const renderCopyright = copyright =>
+  copyright !== 'BBC' ? <Copyright>{copyright}</Copyright> : null;
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
@@ -18,9 +22,10 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Figure = ({ src, alt, caption }) => (
+const Figure = ({ src, alt, copyrightHolder, caption }) => (
   <StyledFigure>
     <Image src={src} alt={alt} />
+    {renderCopyright(copyrightHolder)}
     {renderCaption(caption)}
   </StyledFigure>
 );
@@ -28,6 +33,7 @@ const Figure = ({ src, alt, caption }) => (
 Figure.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  copyrightHolder: string.isRequired,
   caption: string,
 };
 
