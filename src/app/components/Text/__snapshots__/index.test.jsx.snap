@@ -27,6 +27,10 @@ exports[`Text should render an inline link 1`] = `
 }
 
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -54,6 +58,10 @@ exports[`Text should render an inline link 1`] = `
 
 exports[`Text should render bold 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -78,6 +86,10 @@ exports[`Text should render bold 1`] = `
 
 exports[`Text should render inline-code 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -102,6 +114,10 @@ exports[`Text should render inline-code 1`] = `
 
 exports[`Text should render italics 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -126,6 +142,10 @@ exports[`Text should render italics 1`] = `
 
 exports[`Text should render strike-through 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
