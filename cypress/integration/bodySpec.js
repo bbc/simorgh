@@ -9,8 +9,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
-    cy.visit('/article/scenario-25');
+    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
+    cy.visit('/news/articles/c0000000025o');
   });
 
   it('should render a headline', () => {
