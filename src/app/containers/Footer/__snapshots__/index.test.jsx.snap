@@ -114,14 +114,14 @@ exports[`FooterContainer should render correctly 1`] = `
 @media (max-width:37.5em) {
   .c0 {
     grid-gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     grid-gap: 1rem;
-    padding: 1rem;
+    padding: 0 1rem;
   }
 }
 
