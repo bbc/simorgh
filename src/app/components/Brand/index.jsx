@@ -14,7 +14,7 @@ import {
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
-const SVG_BOTTOM_OFFSET = '4.25rem'; // 68px = BANNER_HEIGHT - GEL_SPACING - GEL_SPACING_HLF
+const SVG_BOTTOM_OFFSET = '4.25rem'; // 68px
 const BANNER_HEIGHT = '5rem'; // 80px
 
 const SVG_HEIGHT_PX = 24;
