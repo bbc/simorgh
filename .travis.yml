@@ -3,6 +3,7 @@ before_install: npm install -g npm@latest
 jobs:
   include:
     - stage: test
+      install: npm ci
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
@@ -10,7 +11,6 @@ jobs:
       script:
        - npm run test
        - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-       - npm run build
        - xvfb-run npm run test:e2e:storybook:ci
     - stage: test
       install: npm install --production
