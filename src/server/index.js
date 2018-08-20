@@ -1,7 +1,7 @@
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@jtart/uni';
 import routes from '../app/routes';
-import Document from '../app/containers/Document';
+import wrapper from './wrapper';
 
 /*
   Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
@@ -49,14 +49,14 @@ server
   })
   .get('/*', async (req, res) => {
     try {
-      const html = await render({
-        req,
-        res,
+      const { statusCode, html } = await render(
+        req.url,
         routes,
-        document: Document,
         assets,
-      });
-      res.send(html);
+        wrapper,
+      );
+
+      res.status(statusCode).send(html);
     } catch (error) {
       res.json(error);
     }
