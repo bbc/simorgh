@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import VisuallyHiddenText from '../VisuallyHiddenText';
 import { bool } from 'prop-types';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import {
   C_POSTBOX,
   C_WHITE,
