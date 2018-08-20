@@ -191,7 +191,7 @@
                 "blockId": "8eb06d3b-4c93-9685-f2d1-cba0a9c49966",
                 "type": "paragraph",
                 "model": {
-                  "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c000000000ro)."
+                  "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c0000000027o)."
                 }
               }
             ]
@@ -637,7 +637,6 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
     },
-    "summary": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
-    "timestamp": 1514811600000
+    "summary": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923."
   }
 }
