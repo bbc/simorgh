@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, bool, shape } from 'prop-types';
+import { string, bool, shape, node } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import mediaQuery from '../../helpers/mediaQueries';
 import {
@@ -22,8 +22,8 @@ const StyledParagraph = styled.p`
     line-height: 1.375rem;
   }
 `;
-const StyledItalic = ({ children }) => <i>{children}</i>;
-const StyledBold = ({ children }) => <b>{children}</b>;
+const Italic = ({ children }) => <i>{children}</i>;
+const Bold = ({ children }) => <b>{children}</b>;
 
 const Text = ({ text, options }) => {
   if (!text) return null;
@@ -31,12 +31,12 @@ const Text = ({ text, options }) => {
   return <Markdown options={options}>{text}</Markdown>;
 };
 
-StyledItalic.propTypes = {
-  children: string.isRequired,
+Italic.propTypes = {
+  children: node.isRequired,
 };
 
-StyledBold.propTypes = {
-  children: string.isRequired,
+Bold.propTypes = {
+  children: node.isRequired,
 };
 
 Text.propTypes = {
@@ -54,10 +54,10 @@ Text.defaultProps = {
         component: StyledParagraph,
       },
       em: {
-        component: StyledItalic,
+        component: Italic,
       },
       strong: {
-        component: StyledBold,
+        component: Bold,
       },
     },
   },
