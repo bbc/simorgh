@@ -15,15 +15,15 @@ jobs:
         - ./cc-test-reporter before-build
       script:
        - npm run test
-       - xvfb-run npm run test:accessibility:ci
-      after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-    - stage: test
-      script: xvfb-run npm run test:e2e:ci
-    - stage: test
-      script: xvfb-run npm run test:e2e:storybook:ci
-    - stage: test
-      install: npm install --production
-      script: npm run build
+       - xvfb-run npm run a11y-tests-web
+      # after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+    # - stage: test
+    #   script: xvfb-run npm run test:e2e:ci
+    # - stage: test
+    #   script: xvfb-run npm run test:e2e:storybook:ci
+    # - stage: test
+    #   install: npm install --production
+    #   script: npm run build
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
