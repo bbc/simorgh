@@ -22,7 +22,7 @@ const StyledParagraph = styled.p`
 
 const InlineLink = styled.a`
   color: ${C_BLUEJAY};
-  border: 2px solid transparent;
+  padding: 2px;
   border-bottom: 1px solid ${C_BLUEJAY};
   text-decoration: none;
   &:visited {
@@ -31,14 +31,12 @@ const InlineLink = styled.a`
   }
   &:focus {
     background-color: ${C_BLUEJAY};
-    border: 2px solid ${C_BLUEJAY};
     border-bottom: 1px solid ${C_OAT_LHT};
     color: ${C_OAT_LHT};
   }
   &:hover {
     color: ${C_BLUEJAY};
     background-color: ${C_BLUEJAY_LHT};
-    border: 2px solid ${C_BLUEJAY_LHT};
     border-bottom: 1px solid ${C_BLUEJAY};
   }
 `;
