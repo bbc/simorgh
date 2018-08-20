@@ -104,7 +104,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -232,7 +232,7 @@
                       "type": "rawImage",
                       "model": {
                         "width": 640,
-                        "height": 420,
+                        "height": 360,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"

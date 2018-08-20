@@ -105,7 +105,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -220,7 +220,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/DE8F/production/_101657965_hi046913336.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -285,7 +285,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/6CE3/production/_101657872_hi046905593.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -372,7 +372,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/3256/production/_98968821_hi032280080.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -466,7 +466,7 @@
                 "type": "rawImage",
                 "model": {
                   "width": 640,
-                  "height": 420,
+                  "height": 360,
                   "locator": "/cpsprodpb/22AB/production/_101657880_hi046918757.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
