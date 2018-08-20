@@ -138,8 +138,8 @@
                       "blockId": "6be99f49-084a-072b-16a4-a60c22ee0ec2",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
+                        "width": 1024,
+                        "height": 576,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"
