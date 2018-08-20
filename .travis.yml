@@ -1,14 +1,15 @@
 language: node_js
 cache:
   directories:
-    - node_modules
-    # - ~/.cache
+    - ~/.cache
     - ~/.npm
 before_install: npm install -g npm@latest
 install: 
   - npm ci
 jobs:
   include:
+    - stage: prepare cache
+      script: true
     - stage: test
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -17,9 +18,11 @@ jobs:
       script:
        - npm run test
        - xvfb-run npm run test:accessibility:ci
-       - xvfb-run npm run test:e2e:ci
-       - xvfb-run npm run test:e2e:storybook:ci
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+    - stage: test
+      script: xvfb-run npm run test:e2e:ci
+    - stage: test
+      script: xvfb-run npm run test:e2e:storybook:ci
     - stage: test
       install: npm install --production
       script: npm run build
