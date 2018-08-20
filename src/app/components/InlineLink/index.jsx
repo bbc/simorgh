@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from '@jtart/uni';
 import {
   C_BLUEJAY,
   C_BLUEJAY_LHT,
@@ -6,7 +7,7 @@ import {
   C_PEBBLE,
 } from '../../lib/constants/styles';
 
-const InlineLink = styled.a`
+const InlineLink = styled(Link)`
   color: ${C_BLUEJAY};
   padding: 2px;
   border-bottom: 1px solid ${C_BLUEJAY};
