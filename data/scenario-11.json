@@ -150,8 +150,8 @@
                 "blockId": "1a43632e-4171-8103-157d-64fed7162cbd",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 360,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"

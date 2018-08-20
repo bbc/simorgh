@@ -339,8 +339,8 @@
                       "blockId": "5dd99fc2-6154-98e2-b032-4944a60ecf4a",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 360,
+                        "width": 1024,
+                        "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
                         "originCode": null,
                         "copyrightHolder": "NASA"
@@ -472,8 +472,8 @@
                 "blockId": "eccf1274-a175-4ed0-3c3d-6f2ff5a1f6f7",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 520,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
                   "originCode": null,
                   "copyrightHolder": "BBC"
