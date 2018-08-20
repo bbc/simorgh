@@ -8,12 +8,12 @@ class ArticleContainer extends Component {
     try {
       const { id } = match.params;
 
-      const regex = '^(scenario-[0-9]{2})$';
+      const regex = '^(c[a-zA-Z0-9]{10}o)$';
       const routeMatches = id.match(regex);
 
       if (!routeMatches) {
         throw new Error(
-          `Invalid route parameter: ${id}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+          `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
         );
       }
 

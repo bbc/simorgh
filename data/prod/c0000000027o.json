@@ -104,8 +104,8 @@
                 "blockId": "d876cbe3-70fd-9884-c559-294eaa07ed24",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -190,7 +190,7 @@
                 "blockId": "8fe17c4d-7138-eb79-90e6-135476782d87",
                 "type": "paragraph",
                 "model": {
-                  "text": "/Meghan's own bouquet was [placed on the tomb of the unknown warrior](/news/articles/c000000000po) at Westminster Abbey, following royal tradition."
+                  "text": "/Meghan's own bouquet was [placed on the tomb of the unknown warrior](/news/articles/c0000000025o) at Westminster Abbey, following royal tradition."
                 }
               },
               {
@@ -219,8 +219,8 @@
                 "blockId": "6ff44f4b-b275-a289-fc03-8ecd286c610c",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/DE8F/production/_101657965_hi046913336.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -284,8 +284,8 @@
                 "blockId": "35370620-c9be-fa41-28f4-86959b3d45e6",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/6CE3/production/_101657872_hi046905593.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -371,8 +371,8 @@
                 "blockId": "be06f276-62d1-0e65-5b98-153034f10992",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/3256/production/_98968821_hi032280080.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -465,8 +465,8 @@
                 "blockId": "c44ed910-8f07-13a9-6757-5b34bd008dff",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/22AB/production/_101657880_hi046918757.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"

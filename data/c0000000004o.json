@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::article:c0000000005o",
+    "id": "urn:bbc:ares::article:c0000000004o",
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000004o"
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "e14dfcec-7035-0de9-4d31-b74fe25b97aa",
+    "blockId": "cd3dd7a0-d589-48da-e0c7-0c8b64f4a8f6",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -22,31 +22,31 @@
     "tags": {
       "about": [
         {
-          "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
-          "topicId": "cwlw3xz0lvvt",
-          "topicName": "Brexit",
-          "curationType": [
-            "vivo-stream"
-          ],
-          "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
-          "thingLabel": "Brexit",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
-        },
-        {
-          "thingUri": "http://www.bbc.co.uk/things/b7498154-88a4-43ac-8790-c3bb93d5e18f#id",
-          "topicId": "cjkm56d0p7et",
-          "topicName": "Manchester",
+          "thingUri": "http://www.bbc.co.uk/things/27094cb6-a61c-4236-ba93-f8ca99921444#id",
+          "topicId": "c8zwnrr1ezmt",
+          "topicName": "Llandaff",
           "curationType": [
             "location-stream"
           ],
-          "thingId": "b7498154-88a4-43ac-8790-c3bb93d5e18f",
-          "thingLabel": "Manchester",
+          "thingId": "27094cb6-a61c-4236-ba93-f8ca99921444",
+          "thingLabel": "Llandaff",
           "thingType": [
             "Thing",
             "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/d3200c79-82f2-4f4d-a03f-fe1b8df9c3c4#id",
+          "topicId": "c7047e7xdvmt",
+          "topicName": "Elton John",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "d3200c79-82f2-4f4d-a03f-fe1b8df9c3c4",
+          "thingLabel": "Elton John",
+          "thingType": [
+            "Thing",
+            "Person"
           ]
         }
       ],
@@ -57,20 +57,20 @@
     "model": {
       "blocks": [
         {
-          "blockId": "426a17aa-c4a3-4c04-b6f6-850ffaa2d75b",
+          "blockId": "39c766f2-8397-4ec3-a5e2-811d0bc91844",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "87bac169-b2c6-338d-4253-c294723e0c5f",
+                "blockId": "36cfc706-ca05-4bec-88bc-6c5b56be6d6e",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "6b3f82ec-ddc1-9ede-b1f1-02b03b1a48d2",
+                      "blockId": "dc4a00fd-9f32-1f47-e490-d9a0a58b0321",
                       "model": {
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+                        "text": "Lorem ipsum dolor sit amet, _547‰ complete_"
                       }
                     }
                   ]
@@ -81,73 +81,50 @@
         },
         {
           "type": "text",
-          "blockId": "8b851516-b175-4092-a398-692f84cd7268",
+          "blockId": "672d20a7-b7a5-4aa9-9599-d4074e8c7537",
           "model": {
             "blocks": [
               {
-                "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
+                "blockId": "3f8f18a1-aac3-bb8f-534a-bf99c423b4a8",
                 "type": "paragraph",
                 "model": {
-                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™."
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem."
                 }
               }
             ]
           }
         },
         {
-          "blockId": "1475d1fb-5883-4c57-908a-2a89ba330ff6",
+          "blockId": "a1cfc5ed-ccd6-40d4-a66f-b17a4ff05c61",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "13097b46-67c7-cbe6-5777-63088d479fea",
+                "blockId": "9367efc1-4f12-eb02-35ce-4a2b1b0bb4f4",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
-                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "width": 1024,
+                  "height": 761,
+                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
                 }
               },
               {
-                "blockId": "4ed25e4b-c68c-71e6-901b-9534af64472c",
+                "blockId": "73fc0298-d089-31fe-755a-6e6971891941",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "3a0d2608-e2a4-a956-0d1a-4db91c1e6807",
+                      "blockId": "8849c735-0beb-e966-085b-87dae1dc04d7",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "a7ea79c6-6824-45fb-7d71-5ebd8a3268c3",
+                            "blockId": "d75d9587-fab0-d4fd-4c5d-1876d676e619",
                             "model": {
-                              "text": "Fusce tincidunt lectus eget augue mollis."
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "blockId": "bab00a0a-5148-2acc-5805-618026484615",
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "44f0e618-46a9-37a9-eda4-8cefbb83fa3a",
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "blockId": "6e8ba222-9bf7-114f-44d0-71ef73a04bc4",
-                            "model": {
-                              "text": "**Suspendisse blandit tincidunt ante**, non finibus nisl ornare non."
+                              "text": "Integer varius eleifend ligula id semper."
                             }
                           }
                         ]
@@ -160,13 +137,28 @@
           }
         },
         {
-          "blockId": "da611d38-08ef-4105-a288-3385a343cb9b",
+          "type": "text",
+          "blockId": "5e2855f1-f8c5-49a4-92bb-a925261215c7",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "61904dcb-7334-4141-6436-12cf0e703737",
+                "type": "paragraph",
+                "model": {
+                  "text": "Praesent luctus dignissim justo ac mattis. Ut a risus ipsum. In ut elit finibus, pretium enim quis, finibus eros."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "667ede0f-cdbb-4ed5-b3f0-aa14c786efa4",
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "blockId": "db0f400f-ec66-19d3-ff93-493ab2808366",
+                "blockId": "fdb38e3a-2f2e-4a1e-6358-9e8b633abb87",
                 "type": "rawVideo",
                 "model": {
                   "guidance": null,
@@ -177,20 +169,20 @@
                 }
               },
               {
-                "blockId": "7f9b3c1a-210f-3280-e870-6bd9718be661",
+                "blockId": "c7b09f2c-1426-aa71-346d-24f566eefcea",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "b390efc1-8323-058a-3b7f-d458c0dc47dc",
+                      "blockId": "c164fad6-2bb5-ef32-bf4e-408d0ccd187f",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "21ac41e5-3fab-7479-bca8-aa7798c53280",
+                            "blockId": "16e25944-7904-ae80-3f68-4282467b1638",
                             "model": {
-                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat."
+                              "text": "Sed et molestie justo."
                             }
                           }
                         ]
@@ -200,18 +192,18 @@
                 }
               },
               {
-                "blockId": "78a69a88-3c8c-330f-113e-0f8e110e179c",
+                "blockId": "a2ae93c3-af63-820e-7aa6-0144ee34f393",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "e6973f43-2e14-ed75-0220-899169f7a559",
+                      "blockId": "e17e04db-91b7-4dce-7efa-842d4f89e886",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "8bc5417e-daa9-d215-c380-3a1520c16bef",
+                            "blockId": "bc8e022a-9163-deda-01d1-a86daf41003e",
                             "model": {
                               "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
                             }
@@ -223,36 +215,36 @@
                 }
               },
               {
-                "blockId": "436b013e-9df5-b9f7-63e9-cd8bf43eadd3",
+                "blockId": "56036d02-20ae-9957-ef03-5cba959b92d1",
                 "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "e317dc0b-2b12-b029-5454-0eac6c5eed3e",
+                      "blockId": "09a08d4c-36b6-1604-9c86-5cd2ae2e9c9d",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
-                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/14D21/production/_101718258_bluegirlsgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"
                       }
                     },
                     {
-                      "blockId": "b88f0acf-1bd1-f8d4-3dde-3ab0d68aa435",
+                      "blockId": "868462c2-dff1-2b56-b586-cacbc98abadb",
                       "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "blockId": "e6c7c4f2-ee0e-2b44-27de-3bb3aaad5788",
+                            "blockId": "e3b14476-2708-b106-074c-dd35a93923ae",
                             "type": "text",
                             "model": {
                               "blocks": [
                                 {
                                   "type": "paragraph",
-                                  "blockId": "32b8211d-35c1-6bc8-8760-48935e54caaa",
+                                  "blockId": "57dfa055-58ee-4f2e-8d0d-6a5be2fb2659",
                                   "model": {
-                                    "text": "Pellentesque pellentesque sem magna."
+                                    "text": "Nulla eget erat sed orci efficitur euismod eget eu nunc."
                                   }
                                 }
                               ]
@@ -266,20 +258,56 @@
               }
             ]
           }
+        },
+        {
+          "type": "text",
+          "blockId": "e7ab265d-b23c-42bf-b9ea-2add899c6f81",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1c808342-6246-2b21-517f-a73457a8a057",
+                "type": "paragraph",
+                "model": {
+                  "text": "Quisque ipsum orci, dignissim quis consequat vitae, imperdiet nec diam. Fusce at euismod ex."
+                }
+              },
+              {
+                "blockId": "bca9dc2e-04d3-727c-fa0b-cef930e1db04",
+                "type": "paragraph",
+                "model": {
+                  "text": "Quisque ornare odio vel porttitor scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                }
+              },
+              {
+                "blockId": "c13f6bc6-a2a7-b391-ca0c-ac341d4a3906",
+                "type": "paragraph",
+                "model": {
+                  "text": "Vestibulum maximus iaculis malesuada. Pellentesque laoreet placerat erat, nec iaculis odio aliquam vitae. Donec in facilisis turpis."
+                }
+              },
+              {
+                "blockId": "27974e04-8c0a-b0cf-d902-d658d86eb305",
+                "type": "paragraph",
+                "model": {
+                  "text": "Duis commodo, augue in hendrerit blandit, justo magna fringilla enim, eget luctus neque felis eget libero. Morbi nibh est, feugiat quis vestibulum eu, facilisis in ex."
+                }
+              }
+            ]
+          }
         }
       ]
     }
   },
   "promo": {
-    "id": "urn:bbc:ares::article:c0000000005o",
+    "id": "urn:bbc:ares::article:c0000000004o",
     "headlines": {
       "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
-      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+      "promoHeadline": "Lorem ipsum dolor sit amet, _547‰_ complete"
     },
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000004o"
     },
-    "summary": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "summary": "Donec in ante id justo interdum pellentesque non vitae tortor.",
     "timestamp" : 1514811600000
   }
 }
