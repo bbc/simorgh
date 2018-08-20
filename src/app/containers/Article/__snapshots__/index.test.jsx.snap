@@ -29,7 +29,9 @@ Array [
 
 .c4 {
   display: inline-block;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4.25rem;
+  width: 10.496875rem;
+  height: 1.5rem;
 }
 
 .c2:hover .c4,
@@ -120,9 +122,7 @@ Array [
               aria-hidden="true"
               className="c5"
               focusable="false"
-              height="1.5rem"
               viewBox="0 0 167.95 24"
-              width="10.496875rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
