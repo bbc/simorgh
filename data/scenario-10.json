@@ -22,34 +22,6 @@
     "tags": {
       "about": [
         {
-          "thingUri": "http://www.bbc.co.uk/things/05eb986d-6c0b-42c9-8b2b-5aedd2cbd739#id",
-          "topicId": "cn1r2exwmw3t",
-          "topicName": "Harvey Weinstein",
-          "curationType": [
-            "vivo-stream"
-          ],
-          "thingId": "05eb986d-6c0b-42c9-8b2b-5aedd2cbd739",
-          "thingLabel": "Harvey Weinstein",
-          "thingType": [
-            "Person",
-            "Thing"
-          ]
-        },
-        {
-          "thingUri": "http://www.bbc.co.uk/things/0ade3653-e18b-400b-a487-197af9588e1d#id",
-          "topicId": "cmnz4k61vmmt",
-          "topicName": "Harvey Weinstein charges",
-          "curationType": [
-            "vivo-stream"
-          ],
-          "thingId": "0ade3653-e18b-400b-a487-197af9588e1d",
-          "thingLabel": "Harvey Weinstein charges",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
-        },
-        {
           "thingUri": "http://www.bbc.co.uk/things/16c0db56-63ce-4603-8d46-25a90c4162e4#id",
           "topicId": "cpme0nn8kzzt",
           "topicName": "#TimesUp campaign",
