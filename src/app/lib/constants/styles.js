@@ -40,3 +40,26 @@ export const GEL_SPACING_QUAD = `2rem`;
 export const smartPhoneScreenWidthMin = 20; // 320px
 export const smartPhoneScreenWidthMax = 37.4375; // 599px
 export const laptopScreenWidthMin = 37.5; // 600px
+
+/* 
+    The following are breakpoints from GEL Grid
+    Link to relevant GEL docs: https://www.bbc.co.uk/gel/guidelines/grid#grid-sizes
+    The only exception is that we have split out group 1 into 0 and 1 
+*/
+
+export const group0ScreenWidthMin = `0em`; // 0px
+export const group0ScreenWidthMax = `14.9375em`; // 239px
+
+export const group1ScreenWidthMin = `15em`; // 240px
+export const group1ScreenWidthMax = `24.9375em`; // 399px
+
+export const group2ScreenWidthMin = `37.5em`; // 400px
+export const group2ScreenWidthMax = `56.1875em`; // 599px
+
+export const group3ScreenWidthMin = `37.5em`; // 600px
+export const group3ScreenWidthMax = `62.9375em`; // 1007px
+
+export const group4ScreenWidthMin = `63em`; // 1008px
+export const group4ScreenWidthMax = `80em`; // 1279px
+
+export const group5ScreenWidthMin = `80em`; // 1280px

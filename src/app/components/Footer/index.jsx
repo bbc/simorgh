@@ -26,7 +26,7 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <Brand />
+    <Brand indentedLogo={false} />
     <StyledFooterLinks>
       <FooterList links={links} />
       <StyledParagraph>
