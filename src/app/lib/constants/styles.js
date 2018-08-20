@@ -28,8 +28,8 @@ export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 */
 export const GEL_SPACING = `0.5rem`;
 export const GEL_SPACING_DBL = `1rem`; // 16px
+export const GEL_SPACING_TRPL = `1.5rem`; // 16px
 export const GEL_SPACING_HLF = `0.25rem`;
-export const GEL_SPACING_TRPL = '1.5rem';
 export const GEL_SPACING_QUAD = `2rem`;
 
 /*

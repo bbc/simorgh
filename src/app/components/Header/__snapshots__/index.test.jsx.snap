@@ -3,7 +3,7 @@
 exports[`Header should render correctly 1`] = `
 .c0 {
   background-color: #B80000;
-  height: 80px;
+  height: 5rem;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@ exports[`Header should render correctly 1`] = `
 
 .c3 {
   display: block;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 <header
@@ -59,9 +59,9 @@ exports[`Header should render correctly 1`] = `
           aria-hidden="true"
           className="c3"
           focusable="false"
-          height="24"
+          height="1.5rem"
           viewBox="0 0 167.95 24"
-          width="167.95"
+          width="10.496875rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g

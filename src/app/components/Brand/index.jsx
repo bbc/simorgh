@@ -3,18 +3,25 @@ import styled from 'styled-components';
 import {
   C_POSTBOX,
   C_WHITE,
-  GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_TRPL,
+  GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 
-// (( BANNER_HEIGHT - SVG_HEIGHT ) / 2 ) - A_PADDING_TOP
-const centerSvg = '20px';
-const bannerHeight = '80px';
+const SVG_TOP_OFFSET = '1.25rem'; // 20px
+const SVG_BOTTOM_OFFSET = GEL_SPACING_TRPL;
+const BANNER_HEIGHT = '5rem'; // 80px
+
+const SVG_HEIGHT_PX = 24;
+const SVG_HEIGHT = GEL_SPACING_TRPL;
+const SVG_WIDTH_PX = 167.95;
+const SVG_WIDTH = `${SVG_WIDTH_PX / 16}rem`;
+
+const VIEWBOX_VALUES = `0 0 ${SVG_WIDTH_PX} ${SVG_HEIGHT_PX}`;
 
 const StyledWrapper = styled.div`
   background-color: ${C_POSTBOX};
-  height: ${bannerHeight};
+  height: ${BANNER_HEIGHT};
   width: 100%;
 `;
 
@@ -42,12 +49,12 @@ const VisuallyHiddenText = styled.span`
 
 const StyledSpan = styled.span`
   display: inline-block;
-  padding-bottom: ${GEL_SPACING_TRPL};
+  padding-bottom: ${SVG_BOTTOM_OFFSET};
 `;
 
 const BrandSvg = styled.svg`
   display: block;
-  margin-top: ${centerSvg};
+  margin-top: ${SVG_TOP_OFFSET};
 `;
 
 const Brand = () => (
@@ -55,9 +62,9 @@ const Brand = () => (
     <StyledLink href="https://www.bbc.co.uk/news">
       <StyledSpan>
         <BrandSvg
-          width="167.95"
-          height="24"
-          viewBox="0 0 167.95 24"
+          width={SVG_WIDTH}
+          height={SVG_HEIGHT}
+          viewBox={VIEWBOX_VALUES}
           xmlns="http://www.w3.org/2000/svg"
           focusable="false"
           aria-hidden="true"
