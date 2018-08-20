@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLink should render correctly 1`] = `
+.c0 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c0:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c0:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+<a
+  className="c0"
+  href="https://www.bbc.com/news"
+>
+  BBC News
+</a>
+`;
