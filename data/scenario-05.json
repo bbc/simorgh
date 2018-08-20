@@ -103,8 +103,8 @@
                 "blockId": "13097b46-67c7-cbe6-5777-63088d479fea",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 576,
                   "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -231,8 +231,8 @@
                       "blockId": "e317dc0b-2b12-b029-5454-0eac6c5eed3e",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
+                        "width": 1024,
+                        "height": 576,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"

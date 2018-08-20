@@ -198,8 +198,8 @@
                       "blockId": "41a5621e-afab-dbc6-8af7-ece441388a7c",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
+                        "width": 1024,
+                        "height": 576,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"
@@ -243,8 +243,8 @@
                 "blockId": "c98f3b3e-c5c9-0309-cf00-445a8ed00d0f",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 2362,
+                  "height": 2952,
                   "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
                   "originCode": null,
                   "copyrightHolder": "BBC"
