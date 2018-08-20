@@ -5,7 +5,6 @@ import {
   C_POSTBOX,
   C_WHITE,
   GEL_SPACING,
-  GEL_SPACING_TRPL,
   GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 import {
@@ -15,7 +14,7 @@ import {
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
-const SVG_BOTTOM_OFFSET = GEL_SPACING_TRPL;
+const SVG_BOTTOM_OFFSET = '4.25rem'; // 68px = BANNER_HEIGHT - GEL_SPACING - GEL_SPACING_HLF
 const BANNER_HEIGHT = '5rem'; // 80px
 
 const SVG_HEIGHT_PX = 24;
@@ -52,6 +51,8 @@ const VisuallyHiddenText = styled.span`
 const StyledSpan = styled.span`
   display: inline-block;
   padding-bottom: ${SVG_BOTTOM_OFFSET};
+  width: ${SVG_WIDTH};
+  height: ${SVG_HEIGHT};
   ${StyledLink}:hover &,
   ${StyledLink}:focus & {
     text-decoration: none;
@@ -75,8 +76,6 @@ const Brand = ({ indentedLogo }) => {
         <StyledLink href="https://www.bbc.co.uk/news">
           <StyledSpan>
             <BrandSvg
-              width={SVG_WIDTH}
-              height={SVG_HEIGHT}
               viewBox={VIEWBOX_VALUES}
               xmlns="http://www.w3.org/2000/svg"
               focusable="false"
