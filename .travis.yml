@@ -10,8 +10,8 @@ jobs:
       script:
        - npm run test
        - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-       - xvfb-run npm run test:accessibility:ci
-       - xvfb-run npm run test:e2e:ci
+       - npm run build
+       - xvfb-run npm run test:bbcA11y&cypress:ci
        - xvfb-run npm run test:e2e:storybook:ci
     - stage: test
       install: npm install --production
