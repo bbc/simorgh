@@ -28,7 +28,7 @@
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:accessibility:ci": "npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build && run-p --race start amp:validate",
-    "test:bbcA11yAndCypress:ci": "run-p --race start bbcA11y&cypress",
+    "test:bbcA11yAndCypress:ci": "run-p --race start bbcA11yAndcypress",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:ci": "npm run build && run-p --race start cypress",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
