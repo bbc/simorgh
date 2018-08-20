@@ -103,8 +103,8 @@
                 "blockId": "9367efc1-4f12-eb02-35ce-4a2b1b0bb4f4",
                 "type": "rawImage",
                 "model": {
-                  "width": 640,
-                  "height": 420,
+                  "width": 1024,
+                  "height": 761,
                   "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
                   "originCode": null,
                   "copyrightHolder": "BBC"
@@ -223,8 +223,8 @@
                       "blockId": "09a08d4c-36b6-1604-9c86-5cd2ae2e9c9d",
                       "type": "rawImage",
                       "model": {
-                        "width": 640,
-                        "height": 420,
+                        "width": 1024,
+                        "height": 576,
                         "locator": "/cpsprodpb/14D21/production/_101718258_bluegirlsgetty.jpg",
                         "originCode": null,
                         "copyrightHolder": "Getty Images"
