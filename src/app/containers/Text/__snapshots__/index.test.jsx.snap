@@ -3,6 +3,10 @@
 exports[`TextContainer with data should render correctly 1`] = `
 Array [
   .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -26,6 +30,10 @@ Array [
     .
   </p>,
   .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -47,6 +55,10 @@ Array [
      text.
   </p>,
   .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -68,6 +80,10 @@ Array [
      text.
   </p>,
   .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
@@ -88,6 +104,10 @@ Array [
     .
   </p>,
   .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
   line-height: 1.25rem;
 }
