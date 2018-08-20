@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { node } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -34,7 +34,7 @@ const Caption = ({ children }) => (
 
 Caption.propTypes = {
   // children will be "element.isRequired" in the future to support embedded <lang> and markdown
-  children: string.isRequired,
+  children: node.isRequired,
 };
 
 export default Caption;
