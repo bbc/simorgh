@@ -1,14 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render an inline link 1`] = `
-.c0 {
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
 .c1 {
   color: #0F556C;
-  border: 2px solid transparent;
+  padding: 2px;
   border-bottom: 1px solid #0F556C;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -21,7 +16,6 @@ exports[`Text should render an inline link 1`] = `
 
 .c1:focus {
   background-color: #0F556C;
-  border: 2px solid #0F556C;
   border-bottom: 1px solid #F5F3F1;
   color: #F5F3F1;
 }
@@ -29,8 +23,12 @@ exports[`Text should render an inline link 1`] = `
 .c1:hover {
   color: #0F556C;
   background-color: #C3DEE7;
-  border: 2px solid #C3DEE7;
   border-bottom: 1px solid #0F556C;
+}
+
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
