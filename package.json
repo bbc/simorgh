@@ -30,7 +30,7 @@
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:ci": "npm run build && run-p --race start cypress",
     "test:a11y+lighthouse": "wait-on http://localhost:7080/ &&  A11Y_CONFIG=simorgh/simorgh npm --prefix ./node_modules/@bbc/a11y-tests-web run start:bbc-a11y:headless",
-    "test:a11y+lighthouse:ci": "npm run killApp && npm run build && run-p --race start test:a11y+lighthouse",
+    "test:a11y+lighthouse:ci": "npm run build && run-p --race start test:a11y+lighthouse",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
     "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
