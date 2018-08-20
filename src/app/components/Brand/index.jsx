@@ -19,7 +19,7 @@ const SVG_BOTTOM_OFFSET = GEL_SPACING_TRPL;
 const BANNER_HEIGHT = '5rem'; // 80px
 
 const SVG_HEIGHT_PX = 24;
-const SVG_HEIGHT = GEL_SPACING_TRPL;
+const SVG_HEIGHT = `${SVG_HEIGHT_PX / 16}rem`;
 const SVG_WIDTH_PX = 167.95;
 const SVG_WIDTH = `${SVG_WIDTH_PX / 16}rem`;
 
