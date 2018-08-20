@@ -30,6 +30,13 @@ const Text = ({ text, options }) => {
   return <Markdown options={options}>{text}</Markdown>;
 };
 
+/* eslint-disable */
+const Link = ({ children, href, ...rest }) => (
+  <InlineLink to={href} {...rest}>
+    {children}
+  </InlineLink>
+);
+
 Text.propTypes = {
   text: string.isRequired,
   options: shape({
@@ -45,7 +52,7 @@ Text.defaultProps = {
         component: StyledParagraph,
       },
       a: {
-        component: InlineLink,
+        component: Link,
       },
     },
   },
