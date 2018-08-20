@@ -2,7 +2,20 @@
 
 exports[`Article should render correctly 1`] = `
 Array [
-  .c0 {
+  .c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c0 {
   display: grid;
   background-color: #B80000;
   height: 80px;
@@ -16,19 +29,6 @@ Array [
   text-decoration: none;
   border-bottom: 4px solid #FFFFFF;
   padding: 1rem 0;
-}
-
-.c3 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 @media (max-width:37.5em) {
