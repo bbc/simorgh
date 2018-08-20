@@ -28,11 +28,6 @@ const StyledWrapper = styled.div`
 const StyledLink = styled.a`
   padding: ${GEL_SPACING} ${GEL_SPACING} 0;
   display: inline-block;
-  :hover span,
-  :focus span {
-    text-decoration: none;
-    border-bottom: ${GEL_SPACING_HLF} solid ${C_WHITE};
-  }
 `;
 
 const VisuallyHiddenText = styled.span`
@@ -50,6 +45,11 @@ const VisuallyHiddenText = styled.span`
 const StyledSpan = styled.span`
   display: inline-block;
   padding-bottom: ${SVG_BOTTOM_OFFSET};
+  ${StyledLink}:hover &,
+  ${StyledLink}:focus & {
+    text-decoration: none;
+    border-bottom: ${GEL_SPACING_HLF} solid ${C_WHITE};
+  }
 `;
 
 const BrandSvg = styled.svg`

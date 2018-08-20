@@ -8,19 +8,12 @@ Array [
   width: 100%;
 }
 
-.c1 {
+.c2 {
   padding: 0.5rem 0.5rem 0;
   display: inline-block;
 }
 
-.c1:hover span,
-.c1:focus span {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c4 {
+.c5 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,12 +26,19 @@ Array [
   top: 0;
 }
 
-.c2 {
+.c3 {
   display: inline-block;
   padding-bottom: 1.5rem;
 }
 
-.c3 {
+.c1:hover .c3,
+.c1:focus .c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c4 {
   display: block;
   margin-top: 1.25rem;
 }
@@ -50,15 +50,15 @@ Array [
       className="c0"
     >
       <a
-        className="c1"
+        className="c1 c2"
         href="https://www.bbc.co.uk/news"
       >
         <span
-          className="c2"
+          className="c3"
         >
           <svg
             aria-hidden="true"
-            className="c3"
+            className="c4"
             focusable="false"
             height="1.5rem"
             viewBox="0 0 167.95 24"
@@ -81,7 +81,7 @@ Array [
             </g>
           </svg>
           <span
-            className="c4"
+            className="c5"
           >
             BBC News
           </span>

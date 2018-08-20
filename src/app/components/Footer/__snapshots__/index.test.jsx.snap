@@ -7,19 +7,12 @@ exports[`Footer should render correctly 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c2 {
   padding: 0.5rem 0.5rem 0;
   display: inline-block;
 }
 
-.c1:hover span,
-.c1:focus span {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c4 {
+.c5 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -32,17 +25,24 @@ exports[`Footer should render correctly 1`] = `
   top: 0;
 }
 
-.c2 {
+.c3 {
   display: inline-block;
   padding-bottom: 1.5rem;
 }
 
-.c3 {
+.c1:hover .c3,
+.c1:focus .c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c4 {
   display: block;
   margin-top: 1.25rem;
 }
 
-.c8 {
+.c9 {
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
@@ -51,13 +51,13 @@ exports[`Footer should render correctly 1`] = `
   display: block;
 }
 
-.c8:hover,
-.c8:focus {
+.c9:hover,
+.c9:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c11 {
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
@@ -66,13 +66,13 @@ exports[`Footer should render correctly 1`] = `
   display: inline;
 }
 
-.c10:hover,
-.c10:focus {
+.c11:hover,
+.c11:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6 {
+.c7 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
@@ -83,37 +83,37 @@ exports[`Footer should render correctly 1`] = `
   padding: 0.5rem;
 }
 
-.c6 > li:first-child {
+.c7 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
   grid-column: 1/3;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.c7 {
+.c8 {
   min-width: 50%;
 }
 
-.c5 {
+.c6 {
   background-color: #4C4C4C;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0 0.5rem;
 }
 
-.c9 {
+.c10 {
   color: #FFFFFF;
   padding: 1rem;
   margin: 0;
 }
 
 @supports not (display:grid) {
-  .c6 > li:first-child {
+  .c7 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c7 {
+  .c8 {
     display: inline-block;
   }
 }
@@ -125,15 +125,15 @@ exports[`Footer should render correctly 1`] = `
     className="c0"
   >
     <a
-      className="c1"
+      className="c1 c2"
       href="https://www.bbc.co.uk/news"
     >
       <span
-        className="c2"
+        className="c3"
       >
         <svg
           aria-hidden="true"
-          className="c3"
+          className="c4"
           focusable="false"
           height="1.5rem"
           viewBox="0 0 167.95 24"
@@ -156,7 +156,7 @@ exports[`Footer should render correctly 1`] = `
           </g>
         </svg>
         <span
-          className="c4"
+          className="c5"
         >
           BBC News
         </span>
@@ -164,18 +164,18 @@ exports[`Footer should render correctly 1`] = `
     </a>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <ul
-      className="c6"
+      className="c7"
       role="list"
     >
       <li
-        className="c7"
+        className="c8"
         role="listitem"
       >
         <a
-          className="c8"
+          className="c9"
           href="https://www.bbc.co.uk/news"
         >
           Link
@@ -183,11 +183,11 @@ exports[`Footer should render correctly 1`] = `
       </li>
     </ul>
     <p
-      className="c9"
+      className="c10"
     >
       Text here. 
       <a
-        className="c10"
+        className="c11"
         href="https://www.bbc.co.uk/news"
       >
         Link
