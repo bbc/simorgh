@@ -39,6 +39,8 @@ pipeline {
           ]], 
           submoduleCfg: [], 
           userRemoteConfigs: [[
+            credentialsId: 'github',
+            name: 'githubBBCSimorgh',
             url: 'git@github.com:bbc/simorgh.git'
           ]]
         ])
