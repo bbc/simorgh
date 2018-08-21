@@ -1,6 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
@@ -20,8 +21,10 @@ const Image = styled.img`
 
 const Figure = ({ src, alt, caption }) => (
   <StyledFigure>
-    <Image src={src} alt={alt} />
-    {renderCaption(caption)}
+    <LazyLoad height={200}>
+      <Image src={src} alt={alt} />
+      {renderCaption(caption)}
+    </LazyLoad>
   </StyledFigure>
 );
 
