@@ -1,7 +1,10 @@
 #!/usr/bin/env groovy
 
-def dockerregistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def dockernodeimage = "${dockerregistry}/bbc-news/node-8-lts:0.0.5"
+def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
+def nodeImageVersion = "0.0.5"
+def nodeImage = "${dockerRegistry}/bbc-news/node-8-lts:${nodeImageVersion}"
+def nodeName
+def stageName = ""
 
 pipeline {
   agent any
@@ -20,7 +23,7 @@ pipeline {
       }
       agent {
         docker {
-          image "${dockernodeimage}"
+          image "${nodeImage}"
           args '-u root -v /etc/pki:/certs'
         }
       }
@@ -29,7 +32,7 @@ pipeline {
         checkout([$class: 'GitSCM', branches: [[name: "*/${params.BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "${env.APP_DIRECTORY}"]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/bbc/simorgh.git']]])
         script {
           getCommitInfo()
-          nodename = "${env.node_name}".toString()
+          nodeName = "${env.node_name}".toString()
         }
       }
       post {
@@ -46,8 +49,8 @@ pipeline {
       }
       agent {
         docker {
-          image "${dockernodeimage}"
-          label nodename
+          image "${nodeImage}"
+          label nodeName
           args '-u root -v /etc/pki:/certs'
         }
       }
