@@ -28,6 +28,9 @@ pipeline {
         }
       }
       steps {
+        sh "echo ${params}"
+      }
+      steps {
         sh "rm -rf ${env.APP_DIRECTORY}"
         checkout([
           $class: 'GitSCM', 
@@ -40,7 +43,7 @@ pipeline {
           submoduleCfg: [], 
           userRemoteConfigs: [[
             credentialsId: 'github',
-            name: "${params.BRANCH}",
+            name: "origin/${params.BRANCH}",
             url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
