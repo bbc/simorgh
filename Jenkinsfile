@@ -40,7 +40,7 @@ pipeline {
           submoduleCfg: [], 
           userRemoteConfigs: [[
             credentialsId: 'github',
-            name: "refs/heads/${params.BRANCH_NAME}",
+            name: "${params.BRANCH}",
             url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
