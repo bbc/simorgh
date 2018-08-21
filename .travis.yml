@@ -16,8 +16,7 @@ jobs:
       install: npm install --production
       script:
        - npm run build
-       - xvfb-run npm run test:e2e:ci
-       - xvfb-run npm run test:accessibility:ci
+       - xvfb-run npm run test:ci
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
