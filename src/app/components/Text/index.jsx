@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, bool, shape } from 'prop-types';
+import { string, bool, shape, node } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import mediaQuery from '../../helpers/mediaQueries';
 import InlineLink from '../InlineLink';
@@ -23,11 +23,21 @@ const StyledParagraph = styled.p`
     line-height: 1.375rem;
   }
 `;
+const Italic = ({ children }) => <i>{children}</i>;
+const Bold = ({ children }) => <b>{children}</b>;
 
 const Text = ({ text, options }) => {
   if (!text) return null;
 
   return <Markdown options={options}>{text}</Markdown>;
+};
+
+Italic.propTypes = {
+  children: node.isRequired,
+};
+
+Bold.propTypes = {
+  children: node.isRequired,
 };
 
 Text.propTypes = {
@@ -43,6 +53,12 @@ Text.defaultProps = {
     overrides: {
       p: {
         component: StyledParagraph,
+      },
+      em: {
+        component: Italic,
+      },
+      strong: {
+        component: Bold,
       },
       a: {
         component: InlineLink,
