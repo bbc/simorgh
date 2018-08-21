@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -35,18 +36,6 @@ const StyledLink = styled.a`
   padding: ${GEL_SPACING} ${GEL_SPACING} 0;
   display: inline-block;
   margin-left: -${GEL_SPACING};
-`;
-
-const VisuallyHiddenText = styled.span`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  top: 0;
 `;
 
 const StyledSpan = styled.span`

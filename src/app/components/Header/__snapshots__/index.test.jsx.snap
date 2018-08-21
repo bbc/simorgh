@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
-.c0 {
-  display: grid;
-  background-color: #B80000;
-  height: 5rem;
-  width: 100%;
-}
-
-.c3 {
-  padding: 0.5rem 0.5rem 0;
-  display: inline-block;
-}
-
 .c6 {
   position: absolute;
   width: 1px;
@@ -26,9 +14,22 @@ exports[`Header should render correctly 1`] = `
   top: 0;
 }
 
-.c4 {
+.c0 {
+  display: grid;
+  background-color: #B80000;
+  height: 5rem;
+  width: 100%;
+}
+
+.c3 {
+  padding: 0.5rem 0.5rem 0;
   display: inline-block;
-  padding-bottom: 4.25rem;
+  margin-left: -0.5rem;
+}
+
+.c4 {
+  display: block;
+  padding-bottom: 3rem;
   width: 10.496875rem;
   height: 1.5rem;
 }
