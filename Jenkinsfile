@@ -41,7 +41,7 @@ pipeline {
           userRemoteConfigs: [[
             credentialsId: 'github',
             name: 'githubBBCSimorgh',
-            url: 'git@github.com:bbc/simorgh.git'
+            url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
         script {
