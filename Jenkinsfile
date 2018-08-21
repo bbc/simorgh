@@ -75,6 +75,7 @@ pipeline {
         }
       }
       steps {
+        sh 'make install'
         sh 'make developmentTests'
         sh 'make productionTests'
       }
