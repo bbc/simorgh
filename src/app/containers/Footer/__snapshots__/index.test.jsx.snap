@@ -28,9 +28,7 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c4 {
   display: block;
-  padding-bottom: 3rem;
-  width: 10.496875rem;
-  height: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .c2:hover .c4,
@@ -42,6 +40,8 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c5 {
   display: block;
+  height: 1.5rem;
+  width: 10.496875rem;
   margin-top: 1.25rem;
 }
 

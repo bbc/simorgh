@@ -15,7 +15,7 @@ import {
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
-const SVG_BOTTOM_OFFSET = '3rem'; // 48px
+const SVG_BOTTOM_OFFSET = '1.5rem'; // 48px
 const BANNER_HEIGHT = '5rem'; // 80px
 
 const SVG_HEIGHT_PX = 24;
@@ -40,8 +40,6 @@ const StyledLink = styled.a`
 const StyledSpan = styled.span`
   display: block;
   padding-bottom: ${SVG_BOTTOM_OFFSET};
-  width: ${SVG_WIDTH};
-  height: ${SVG_HEIGHT};
   ${StyledLink}:hover &,
   ${StyledLink}:focus & {
     text-decoration: none;
@@ -51,6 +49,8 @@ const StyledSpan = styled.span`
 
 const BrandSvg = styled.svg`
   display: block;
+  height: ${SVG_HEIGHT};
+  width: ${SVG_WIDTH};
   margin-top: ${SVG_TOP_OFFSET};
 `;
 
