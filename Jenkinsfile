@@ -29,7 +29,19 @@ pipeline {
       }
       steps {
         sh "rm -rf ${env.APP_DIRECTORY}"
-        checkout([$class: 'GitSCM', branches: [[name: "*/${params.BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "${env.APP_DIRECTORY}"]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/bbc/simorgh.git']]])
+        checkout([
+          $class: 'GitSCM', 
+          branches: [[name: "*/${params.BRANCH}"]], 
+          doGenerateSubmoduleConfigurations: false, 
+          extensions: [[
+            $class: 'RelativeTargetDirectory', 
+            relativeTargetDir: "${env.APP_DIRECTORY}"
+          ]], 
+          submoduleCfg: [], 
+          userRemoteConfigs: [[
+            credentialsId: 'github', url: 'https://github.com/bbc/simorgh.git'
+          ]]
+        ])
         script {
           getCommitInfo()
           nodeName = "${env.node_name}".toString()
