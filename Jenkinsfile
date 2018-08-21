@@ -5,6 +5,12 @@ def nodeImageVersion = "0.0.5"
 def nodeImage = "${dockerRegistry}/bbc-news/node-8-lts:${nodeImageVersion}"
 def nodeName
 def stageName = ""
+def getCommitInfo = {
+  infraGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${GIT_COMMIT}").trim()
+  appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
+  appGitCommitAuthor = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git --no-pager show -s --format='%an' ${appGitCommit}").trim()
+  appGitCommitMessage = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git log -1 --pretty=%B").trim()
+}
 
 pipeline {
   agent any
@@ -28,7 +34,6 @@ pipeline {
         }
       }
       steps {
-        sh "echo ${params}"
         sh "rm -rf ${env.APP_DIRECTORY}"
         checkout([
           $class: 'GitSCM', 
