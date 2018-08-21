@@ -29,8 +29,6 @@ pipeline {
       }
       steps {
         sh "echo ${params}"
-      }
-      steps {
         sh "rm -rf ${env.APP_DIRECTORY}"
         checkout([
           $class: 'GitSCM', 
