@@ -75,9 +75,9 @@ Array [
     className="c0"
   >
     This is another paragraph with some 
-    <strong>
+    <b>
       bold
-    </strong>
+    </b>
      text.
   </p>,
   .c0 {
@@ -100,9 +100,9 @@ Array [
     className="c0"
   >
     This is a paragraph with 
-    <em>
+    <i>
       italic
-    </em>
+    </i>
      text.
   </p>,
   .c0 {
