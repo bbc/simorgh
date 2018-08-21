@@ -19,7 +19,7 @@ pipeline {
   stages {
     stage('Checkout application repo') {
       when {
-        expression { params.BRANCH != 'latest' }
+        expression { env.BRANCH_NAME != 'latest' }
       }
       agent {
         docker {
@@ -32,7 +32,7 @@ pipeline {
         sh "rm -rf ${env.APP_DIRECTORY}"
         checkout([
           $class: 'GitSCM', 
-          branches: [[name: "*/${params.BRANCH}"]], 
+          branches: [[name: "*/${env.BRANCH_NAME}"]],
           doGenerateSubmoduleConfigurations: false, 
           extensions: [[
             $class: 'RelativeTargetDirectory', 
@@ -41,7 +41,7 @@ pipeline {
           submoduleCfg: [], 
           userRemoteConfigs: [[
             credentialsId: 'github',
-            name: "origin/${params.BRANCH}",
+            name: "origin/${env.BRANCH_NAME}",
             url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
@@ -60,7 +60,7 @@ pipeline {
     }
     stage ('Run application tests') {
       when {
-        expression { params.BRANCH != 'latest' }
+        expression { env.BRANCH_NAME != 'latest' }
       }
       agent {
         docker {
