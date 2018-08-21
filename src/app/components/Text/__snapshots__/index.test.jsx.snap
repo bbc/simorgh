@@ -77,9 +77,9 @@ exports[`Text should render bold 1`] = `
   className="c0"
 >
   This is text with 
-  <strong>
+  <b>
     some bold formatting
-  </strong>
+  </b>
   .
 </p>
 `;
@@ -133,9 +133,9 @@ exports[`Text should render italics 1`] = `
   className="c0"
 >
   This is text with 
-  <em>
+  <i>
     some italic formatting
-  </em>
+  </i>
   .
 </p>
 `;
