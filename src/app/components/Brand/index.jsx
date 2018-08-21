@@ -14,7 +14,7 @@ import {
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
-const SVG_BOTTOM_OFFSET = '4.25rem'; // 68px
+const SVG_BOTTOM_OFFSET = '3rem'; // 48px
 const BANNER_HEIGHT = '5rem'; // 80px
 
 const SVG_HEIGHT_PX = 24;
@@ -34,6 +34,7 @@ const StyledGridWrapper = styled.div`
 const StyledLink = styled.a`
   padding: ${GEL_SPACING} ${GEL_SPACING} 0;
   display: inline-block;
+  margin-left: -${GEL_SPACING};
 `;
 
 const VisuallyHiddenText = styled.span`
@@ -49,7 +50,7 @@ const VisuallyHiddenText = styled.span`
 `;
 
 const StyledSpan = styled.span`
-  display: inline-block;
+  display: block;
   padding-bottom: ${SVG_BOTTOM_OFFSET};
   width: ${SVG_WIDTH};
   height: ${SVG_HEIGHT};
