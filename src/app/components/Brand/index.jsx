@@ -33,9 +33,8 @@ const StyledGridWrapper = styled.div`
 `;
 
 const StyledLink = styled.a`
-  padding: ${GEL_SPACING} ${GEL_SPACING} 0;
+  padding-top: ${GEL_SPACING};
   display: inline-block;
-  margin-left: -${GEL_SPACING};
 `;
 
 const StyledSpan = styled.span`

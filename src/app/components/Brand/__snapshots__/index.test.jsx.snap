@@ -22,9 +22,8 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
 }
 
 .c3 {
-  padding: 0.5rem 0.5rem 0;
+  padding-top: 0.5rem;
   display: inline-block;
-  margin-left: -0.5rem;
 }
 
 .c4 {
@@ -170,9 +169,8 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
 }
 
 .c3 {
-  padding: 0.5rem 0.5rem 0;
+  padding-top: 0.5rem;
   display: inline-block;
-  margin-left: -0.5rem;
 }
 
 .c4 {
