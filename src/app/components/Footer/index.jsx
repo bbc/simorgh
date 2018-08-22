@@ -14,6 +14,7 @@ import {
   layoutGridWrapper,
   layoutGridItemFullWidth,
 } from '../../lib/layoutGrid';
+import { T_BREVIER } from '../../lib/constants/typography';
 
 const StyledFooterLinksWrapper = styled.div`
   ${layoutGridWrapper};
@@ -21,7 +22,8 @@ const StyledFooterLinksWrapper = styled.div`
 `;
 
 const StyledFooterLinks = styled.div`
-  ${layoutGridItemFullWidth};
+  ${layoutGridItemFullWidth}
+  ${T_BREVIER}
   font-family: ${FF_NEWS_SANS_REG};
 `;
 

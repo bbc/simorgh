@@ -33,8 +33,6 @@ export const GEL_SPACING = `0.5rem`;
 export const GEL_SPACING_DBL = `1rem`; // 16px
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING_QUAD = `2rem`;
-export const GEL_SPACING_ALT_HLF = `0.375rem`;
-export const GEL_SPACING_ALT = `0.75rem`;
 
 /*
    Screen sizes for GEL Typography

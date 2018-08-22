@@ -1,18 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string, boolean } from 'prop-types';
-import {
-  C_WHITE,
-  GEL_SPACING_ALT,
-  GEL_SPACING_HLF,
-} from '../../lib/constants/styles';
+import { C_WHITE, GEL_SPACING } from '../../lib/constants/styles';
 
 const StyledLink = styled.a`
-  padding: ${GEL_SPACING_ALT} 0;
+  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
   color: ${C_WHITE};
   font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   text-decoration: none;
-  padding-bottom: ${GEL_SPACING_HLF};
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
 `;
 

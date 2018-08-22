@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { string, arrayOf, shape } from 'prop-types';
 import {
   C_WHITE,
+  GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_ALT,
-  GEL_SPACING_HLF,
 } from '../../lib/constants/styles';
 import Link from '../Link';
 
@@ -17,13 +16,13 @@ const StyledList = styled.ul`
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
-  padding: 0 0 ${GEL_SPACING_ALT};
+  padding: 0 0 ${GEL_SPACING};
   margin: 0;
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
-    padding-bottom: ${GEL_SPACING_ALT};
-    margin-bottom: ${GEL_SPACING_HLF};
+    padding: ${GEL_SPACING} 0;
+    margin-bottom: ${GEL_SPACING};
     @supports not (display: grid) {
       width: 100%;
     }
