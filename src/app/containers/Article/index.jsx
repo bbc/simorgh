@@ -63,4 +63,8 @@ class ArticleContainer extends Component {
 
 ArticleContainer.propTypes = articlePropTypes;
 
+ArticleContainer.defaultProps = {
+  data: null,
+};
+
 export default ArticleContainer;
