@@ -19,7 +19,7 @@
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c0000000001o --output-path=./reports/report.html --view",
     "postmerge": "./scripts/dependencyUpdateCheck.sh",
     "precommit": "npm run test:lint",
-    "prepush": "./scripts/upToDateWithLatest.sh && npm run test:unit",
+    "prepush": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
