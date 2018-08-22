@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure with a caption should render correctly 1`] = `
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c2 {
   background-color: #d5d0cd;
   color: #404040;
@@ -39,6 +52,11 @@ exports[`Figure with a caption should render correctly 1`] = `
   <figcaption
     className="c2"
   >
+    <span
+      className="c3"
+    >
+      Image caption, 
+    </span>
     This is a caption!
   </figcaption>
 </figure>
