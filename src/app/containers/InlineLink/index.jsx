@@ -7,7 +7,7 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 
 const InlineLinkContainer = ({ href, children, ...rest }) => {
   // if URL matches a valid route, use a react-router link
-  if (href.match('^/news/articles/c0{8}[0-9]{2}o$')) {
+  if (href.match('^/news/articles/c[a-zA-Z0-9]{10}o$')) {
     return (
       <InternalInlineLink to={href} {...rest}>
         {children}
