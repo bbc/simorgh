@@ -10,4 +10,3 @@ developmentTests:
 
 productionTests:
 	cd ${APP_DIRECTORY}; npm run build; xvfb-run npm run test:e2e:ci
-	cd ${APP_DIRECTORY}; npm run test:accessibility:ci
