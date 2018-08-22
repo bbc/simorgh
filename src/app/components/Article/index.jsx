@@ -6,7 +6,7 @@ import MainContent from '../../containers/MainContent';
 import mainContentPropTypes from '../../models/propTypes/mainContent';
 
 const Article = ({ lang, title, blocks, id }) => {
-  const canonicalLink = `https://www.bbc.com/news/article/${id}`;
+  const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
 
   return (
     <Fragment>
