@@ -38,13 +38,13 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 .c2 {
-  background-color: #d5d0cd;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0.5rem 0;
-  width: 100%;
   font-size: 0.9375em;
   line-height: 1.125rem;
+  background-color: #D5D0CD;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .c0 {
@@ -61,6 +61,12 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 @media (min-width:37.5em) {
   .c2 {
     font-size: 0.875em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    padding: 0.5rem 1rem;
   }
 }
 
