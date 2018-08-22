@@ -16,7 +16,7 @@ jobs:
       install: npm ci --only=production
       script:
         - npm run build
-        - xvfb-run npm run test:ci
+        - xvfb-run npm run test:prod:ci
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
