@@ -4,22 +4,24 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import InlineLink from './index';
 
 describe('InlineLink', () => {
-  describe('internal link', () => {
+  describe('with link matching routes for SPA', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      /* wrapping internal link to satisfy react-router, the process of mocking would be more work than value */
+      /*
+        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
+      */
       <StaticRouter>
         <InlineLink href="/news/articles/c0000000027o">
-          Internal Link
+          Internal SPA article
         </InlineLink>
       </StaticRouter>,
     );
   });
 
-  describe('external link', () => {
+  describe('with link not matching SPA route', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <InlineLink href="https://www.bbc.com/news">External Link</InlineLink>,
+      <InlineLink href="https://www.bbc.com/news">BBC News</InlineLink>,
     );
   });
 });
