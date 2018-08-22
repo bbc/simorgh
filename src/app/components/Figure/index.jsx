@@ -1,6 +1,6 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import styled from 'styled-components';
 import Caption from './Caption';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
@@ -14,21 +14,20 @@ const StyledFigure = styled.figure`
   width: 100%;
 `;
 
-const Figure = ({ src, alt, caption }) => (
+const Figure = ({ image, caption }) => (
   <StyledFigure>
-    <LazyLoadImage src={src} alt={alt}>
-      {renderCaption(caption)}
-    </LazyLoadImage>
+    <LazyLoadImage src={image.src} alt={image.alt} />
+    {renderCaption(caption)}
   </StyledFigure>
 );
 
 Figure.propTypes = {
-  alt: string.isRequired,
-  src: string.isRequired,
+  image: node,
   caption: string,
 };
 
 Figure.defaultProps = {
+  image: null,
   caption: null,
 };
 
