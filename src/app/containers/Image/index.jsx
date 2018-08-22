@@ -20,13 +20,12 @@ const ImageContainer = ({ blocks }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
-  const { copyrightHolder } = rawImageBlock.model;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
   }
 
-  const { locator } = rawImageBlock.model;
+  const { locator, copyrightHolder } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
