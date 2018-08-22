@@ -1,23 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string, arrayOf, shape } from 'prop-types';
-import { C_WHITE, GEL_SPACING } from '../../lib/constants/styles';
+import {
+  C_WHITE,
+  GEL_SPACING_DBL,
+  GEL_SPACING_ALT,
+  GEL_SPACING_HLF,
+} from '../../lib/constants/styles';
 import Link from '../Link';
 
 const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;
   grid-auto-flow: column;
+  grid-column-gap: ${GEL_SPACING_DBL};
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
+  padding: 0 0 ${GEL_SPACING_ALT};
   margin: 0;
-  padding: ${GEL_SPACING};
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
     grid-column: 1/3;
-    padding-bottom: ${GEL_SPACING};
-    margin-bottom: ${GEL_SPACING};
+    padding-bottom: ${GEL_SPACING_ALT};
+    margin-bottom: ${GEL_SPACING_HLF};
     @supports not (display: grid) {
       width: 100%;
     }

@@ -24,15 +24,17 @@ export const FF_NEWS_SERIF_REG = `ReithSerifNewsRegular${fontFamilyBase}`;
 export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
 export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
-/* 
+/*
     GEL Spacing
-    Assumes 16px is set as the default font-size. 
+    Assumes 16px is set as the default font-size.
     This is changeable in the user's browser settings, as the html font-size is 100%
 */
 export const GEL_SPACING = `0.5rem`;
 export const GEL_SPACING_DBL = `1rem`; // 16px
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING_QUAD = `2rem`;
+export const GEL_SPACING_ALT_HLF = `0.375rem`;
+export const GEL_SPACING_ALT = `0.75rem`;
 
 /*
    Screen sizes for GEL Typography
@@ -43,10 +45,10 @@ export const smartPhoneScreenWidthMin = 20; // 320px
 export const smartPhoneScreenWidthMax = 37.4375; // 599px
 export const laptopScreenWidthMin = 37.5; // 600px
 
-/* 
+/*
     The following are breakpoints from GEL Grid
     Link to relevant GEL docs: https://www.bbc.co.uk/gel/guidelines/grid#grid-sizes
-    The only exception is that we have split out group 1 into 0 and 1 
+    The only exception is that we have split out group 1 into 0 and 1
 */
 
 export const group0ScreenWidthMin = `0em`; // 0px
