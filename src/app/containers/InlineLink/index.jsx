@@ -6,6 +6,7 @@ import InlineLink from '../../components/InlineLink';
 const InternalInlineLink = InlineLink.withComponent(Link);
 
 const InlineLinkContainer = ({ href, children, ...rest }) => {
+  // if URL matches a valid route, use a react-router link
   if (href.match('^/news/articles/c0{8}[0-9]{2}o$')) {
     return (
       <InternalInlineLink to={href} {...rest}>
@@ -14,6 +15,7 @@ const InlineLinkContainer = ({ href, children, ...rest }) => {
     );
   }
 
+  // else return a normal hyperlink
   return (
     <InlineLink href={href} {...rest}>
       {children}
