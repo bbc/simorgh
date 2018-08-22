@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { string, bool, shape, node } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import mediaQuery from '../../helpers/mediaQueries';
-import InlineLink from '../InlineLink';
+import InlineLink from '../../containers/InlineLink';
 import {
   C_STORM,
   FF_NEWS_SANS_REG,
