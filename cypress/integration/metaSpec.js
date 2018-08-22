@@ -3,8 +3,8 @@ import { getElement, getSecondElement } from '../support/testHelper';
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
-    cy.visit('/article/scenario-25');
+    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
+    cy.visit('/news/articles/c0000000025o');
   });
 
   it('should have a nofollow meta tag', () => {
@@ -12,7 +12,7 @@ describe('Article Meta Tests', () => {
     metaElement.should('have.attr', 'content', 'nofollow');
   });
 
-  it('should load a maximum of three font files', () => {
+  it('should load a maximum of two Reith font files', () => {
     const fontFamiliesArray = [];
     cy.get('*')
       .each(element => {
@@ -20,41 +20,15 @@ describe('Article Meta Tests', () => {
         if (
           fontFamily &&
           !fontFamiliesArray.includes(fontFamily) &&
-          // !== 'Times' has been added as there elements not visible, which Cypress is assigning a font of 'Times'
-          fontFamily !== 'Times'
+          fontFamily.startsWith('Reith')
         ) {
           fontFamiliesArray.push(fontFamily);
         }
       })
       .then(() => {
-        expect(fontFamiliesArray.length).to.be.lessThan(4);
+        expect(fontFamiliesArray.length).to.be.lessThan(3);
+        expect(fontFamiliesArray.length).to.be.greaterThan(0);
       });
-  });
-
-  it('should include the font faces', () => {
-    const expectedFonts = [
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff',
-      'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2',
-    ];
-    const styleTag = getElement('head style');
-
-    expectedFonts.forEach(font => {
-      styleTag.should('contain', font);
-    });
   });
 
   // Testing the actual fetch is not currently possible
@@ -62,7 +36,7 @@ describe('Article Meta Tests', () => {
     cy.get('script')
       .last()
       .should('have.attr', 'src')
-      .and('match', /(\/static\/js\/bundle\.\w+\.js)/g);
+      .and('match', /(\/static\/js\/client-\w+\.\w+\.js)/g);
   });
 
   it('should have resource hints', () => {

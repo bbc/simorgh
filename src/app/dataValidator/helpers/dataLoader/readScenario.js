@@ -4,8 +4,8 @@ const { validateData } = require('../validators/validateData');
 const { countScenarios } = require('../../utilities/countScenarios');
 
 const readScenario = (fileName, dirName) => {
-  // explicitly ignore scenario-23 as it's a example of invalid data
-  if (fileName.includes('scenario-23.json')) {
+  // explicitly ignore c0000000023o as it's a example of invalid data
+  if (fileName.includes('c0000000023o.json')) {
     return false;
   }
 

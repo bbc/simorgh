@@ -11,6 +11,26 @@ module.exports = {
       appConfig.module.rules.shift();
 
       // Setup bundle analyser
+      if (target === 'web') {
+        // setup bundle splitting
+        appConfig.output.filename = 'static/js/[name].[hash:8].js';
+        appConfig.optimization = {
+          splitChunks: {
+            chunks: 'initial',
+            automaticNameDelimiter: '-',
+            minSize: 184320, // 180kb
+            maxSize: 245760, // 240kb
+            cacheGroups: {
+              vendor: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendor',
+              },
+            },
+          },
+        };
+      }
+
+      // Setup bundle analyser
       if (target === 'web' && !process.env.CI) {
         const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line import/no-extraneous-dependencies, global-require
         appConfig.plugins.push(
@@ -29,8 +49,8 @@ module.exports = {
     // This is to override bundle performance test
     if (process.env.CI) {
       appConfig.performance = {
-        maxAssetSize: 500000,
-        maxEntrypointSize: 500000,
+        maxAssetSize: 245760, // 240kb - individual bundles
+        maxEntrypointSize: 491520, // 480kb - total bundles
       };
     }
 

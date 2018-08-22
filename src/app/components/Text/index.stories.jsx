@@ -15,4 +15,7 @@ storiesOf('Text', module)
   ))
   .add('inline code', () => (
     <Text text="This is text with `some inline code`." />
+  ))
+  .add('inline link', () => (
+    <Text text="This is text that contains an [inline link](https://www.bbc.com/news) inside it." />
   ));

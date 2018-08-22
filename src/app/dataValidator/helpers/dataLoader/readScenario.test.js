@@ -23,9 +23,9 @@ describe('readScenario helper', () => {
 
   it('should readScenario given a valid array and directory name', () => {
     const filenames = [
-      'scenario-01.json',
-      'scenario-02.json',
-      'scenario-03.json',
+      'c0000000001o.json',
+      'c0000000002o.json',
+      'c0000000003o.json',
     ];
 
     filenames.forEach(filename => {
@@ -33,14 +33,14 @@ describe('readScenario helper', () => {
     });
 
     expect(fileToValidateMock.mock.calls).toEqual([
-      ['./././data/scenario-01.json'],
-      ['./././data/scenario-02.json'],
-      ['./././data/scenario-03.json'],
+      ['./././data/c0000000001o.json'],
+      ['./././data/c0000000002o.json'],
+      ['./././data/c0000000003o.json'],
     ]);
   });
 
-  it('should ignore scenario-23.json', () => {
-    const filenames = ['scenario-23.json'];
+  it('should ignore c0000000023o.json', () => {
+    const filenames = ['c0000000023o.json'];
 
     readFiles(filenames);
 
@@ -48,7 +48,7 @@ describe('readScenario helper', () => {
   });
 
   it('should ignore files that are no json format', () => {
-    const filenames = ['schema.yaml', 'scenario-01.yaml', 'README.md', 'prod'];
+    const filenames = ['schema.yaml', 'c0000000023o.yaml', 'README.md', 'prod'];
 
     filenames.forEach(filename => {
       readFiles(filename);

@@ -21,10 +21,10 @@ const articlePropTypes = {
         articleType: string.isRequired,
         genre: string,
       }),
-      tags: {
+      tags: shape({
         about: string,
         mentions: string,
-      },
+      }),
       version: string,
       blockTypes: arrayOf(string),
     }).isRequired,
