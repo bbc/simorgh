@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Caption should render correctly 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c0 {
   background-color: #d5d0cd;
   color: #404040;
@@ -19,6 +32,16 @@ exports[`Caption should render correctly 1`] = `
 <figcaption
   className="c0"
 >
+  <span
+    className="c1"
+  >
+    Image caption, 
+  </span>
+  <span
+    className="c1"
+  >
+    Image caption,
+  </span>
   This is some Caption text
 </figcaption>
 `;

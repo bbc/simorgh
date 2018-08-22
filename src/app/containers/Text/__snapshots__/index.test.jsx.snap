@@ -2,7 +2,32 @@
 
 exports[`TextContainer with data should render correctly 1`] = `
 Array [
-  .c0 {
+  .c1 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c1:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c1:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -23,6 +48,7 @@ Array [
   >
     It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
     <a
+      className="c1"
       href="/news/articles/c000000000ro"
     >
       which were later donated to local hospices
@@ -49,9 +75,9 @@ Array [
     className="c0"
   >
     This is another paragraph with some 
-    <strong>
+    <b>
       bold
-    </strong>
+    </b>
      text.
   </p>,
   .c0 {
@@ -74,9 +100,9 @@ Array [
     className="c0"
   >
     This is a paragraph with 
-    <em>
+    <i>
       italic
-    </em>
+    </i>
      text.
   </p>,
   .c0 {
