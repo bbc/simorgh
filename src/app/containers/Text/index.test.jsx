@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticRouter } from 'react-router-dom';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import TextContainer from './index';
 
@@ -35,6 +36,11 @@ describe('TextContainer', () => {
       ],
     };
 
-    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <StaticRouter>
+        <TextContainer {...data} />
+      </StaticRouter>,
+    );
   });
 });
