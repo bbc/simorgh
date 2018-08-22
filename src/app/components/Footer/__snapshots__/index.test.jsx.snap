@@ -64,8 +64,6 @@ exports[`Footer should render correctly 1`] = `
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(2,50%);
-  grid-template-rows: repeat(4,50%);
   list-style-type: none;
   margin: 0;
   padding: 0.5rem;
@@ -73,7 +71,7 @@ exports[`Footer should render correctly 1`] = `
 
 .c5 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
-  grid-column: 1/3;
+  grid-column: 1/-1;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -127,6 +125,34 @@ exports[`Footer should render correctly 1`] = `
 @media (min-width:80em) {
   .c0 {
     grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@media (max-width:56.1875em) {
+  .c5 {
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(4,50%);
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c5 {
+    grid-template-columns: repeat(3,33.333%);
+    grid-template-rows: repeat(3,33.333%);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c5 {
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(3,33.333%);
+  }
+}
+
+@media (min-width:80em) {
+  .c5 {
+    grid-template-columns: repeat(5,20%);
+    grid-template-rows: repeat(3,33.333%);
   }
 }
 
