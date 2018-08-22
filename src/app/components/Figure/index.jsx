@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import Caption from './Caption';
@@ -13,15 +14,11 @@ const StyledFigure = styled.figure`
   width: 100%;
 `;
 
-const Image = styled.img`
-  display: block;
-  width: 100%;
-`;
-
 const Figure = ({ src, alt, caption }) => (
   <StyledFigure>
-    <Image src={src} alt={alt} />
-    {renderCaption(caption)}
+    <LazyLoadImage src={src} alt={alt}>
+      {renderCaption(caption)}
+    </LazyLoadImage>
   </StyledFigure>
 );
 
