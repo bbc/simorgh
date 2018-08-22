@@ -18,7 +18,9 @@ jobs:
        - xvfb-run npm run test:accessibility:ci
       after_script: ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
-      script: xvfb-run npm run test:e2e:ci
+      script:
+        - npm run build
+        - xvfb-run npm run test:e2e:ci
     - stage: test
       script: xvfb-run npm run test:e2e:storybook:ci
     - stage: test
