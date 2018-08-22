@@ -2,12 +2,11 @@
 
 exports[`Link should render a standard block link 1`] = `
 .c1 {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding-bottom: 0.25rem;
   display: block;
 }
 
@@ -31,12 +30,11 @@ exports[`Link should render a standard block link 1`] = `
 
 exports[`Link should render an inline link after passing an inline prop 1`] = `
 .c1 {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding-bottom: 0.25rem;
   display: inline;
 }
 
