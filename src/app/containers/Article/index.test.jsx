@@ -92,7 +92,7 @@ describe('ArticleContainer', () => {
   });
 
   describe('getInitialProps', () => {
-    const defaultIdParam = 'scenario-01';
+    const defaultIdParam = 'c0000000001o';
     const defaultContext = { match: { params: { id: defaultIdParam } } };
     const mockSuccessfulResponse = { data: '12345' };
 
@@ -139,7 +139,7 @@ describe('ArticleContainer', () => {
         /* eslint-disable no-console */
         expect(console.log).toBeCalledWith(
           new Error(
-            `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+            `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
           ),
         );
         /* eslint-enable no-console */

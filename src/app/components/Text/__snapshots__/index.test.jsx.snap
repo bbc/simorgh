@@ -1,15 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text should render bold 1`] = `
+exports[`Text should render an inline link 1`] = `
+.c1 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c1:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c1:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+  className="c0"
+>
+  This is text that contains an 
+  <a
+    className="c1"
+    href="https://www.bbc.com/news"
+  >
+    inline link
+  </a>
+   inside it.
+</p>
+`;
+
+exports[`Text should render bold 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
   }
 }
 
@@ -17,23 +77,27 @@ exports[`Text should render bold 1`] = `
   className="c0"
 >
   This is text with 
-  <strong>
+  <b>
     some bold formatting
-  </strong>
+  </b>
   .
 </p>
 `;
 
 exports[`Text should render inline-code 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -50,14 +114,18 @@ exports[`Text should render inline-code 1`] = `
 
 exports[`Text should render italics 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
@@ -65,23 +133,27 @@ exports[`Text should render italics 1`] = `
   className="c0"
 >
   This is text with 
-  <em>
+  <i>
     some italic formatting
-  </em>
+  </i>
   .
 </p>
 `;
 
 exports[`Text should render strike-through 1`] = `
 .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
   font-size: 0.9375em;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
   .c0 {
     font-size: 1em;
-    line-height: 1.375em;
+    line-height: 1.375rem;
   }
 }
 
