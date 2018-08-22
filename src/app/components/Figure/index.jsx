@@ -1,12 +1,18 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import Copyright from './Copyright';
 import Caption from './Caption';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
+const copyrightOffscreenText = 'Copyright ';
+
 const renderCopyright = copyright =>
-  copyright !== 'BBC' ? <Copyright>{copyright}</Copyright> : null;
+  copyright !== 'BBC' ? (
+    <VisuallyHiddenText>
+      {copyrightOffscreenText + copyright}
+    </VisuallyHiddenText>
+  ) : null;
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
