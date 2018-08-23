@@ -45,7 +45,7 @@ const articlePropTypes = {
       summary: string,
       timestamp: number,
     }).isRequired,
-  }).isRequired,
+  }),
 };
 
 export default articlePropTypes;
