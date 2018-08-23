@@ -73,7 +73,6 @@ exports[`FooterContainer should render correctly 1`] = `
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 1rem;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -146,6 +145,7 @@ exports[`FooterContainer should render correctly 1`] = `
 
 @media (max-width:56.1875em) {
   .c9 {
+    grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,50%);
   }
@@ -153,21 +153,24 @@ exports[`FooterContainer should render correctly 1`] = `
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
   .c9 {
-    grid-template-columns: repeat(3,33.333%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c9 {
-    grid-template-columns: repeat(4,25%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:80em) {
   .c9 {
-    grid-template-columns: repeat(5,20%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
