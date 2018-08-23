@@ -4,6 +4,7 @@ import { string, arrayOf, shape } from 'prop-types';
 import {
   C_WHITE,
   GEL_SPACING,
+  GEL_SPACING_DBL,
   group2ScreenWidthMax,
   group3ScreenWidthMin,
   group3ScreenWidthMax,
@@ -17,31 +18,34 @@ const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;
   grid-auto-flow: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 ${GEL_SPACING};
   @media (max-width: ${group2ScreenWidthMax}) {
-    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: ${GEL_SPACING};
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 50%);
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
-    grid-template-columns: repeat(3, 33.333%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-template-columns: repeat(4, 25%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-template-columns: repeat(5, 20%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
-
-  list-style-type: none;
-  margin: 0;
-  padding: ${GEL_SPACING};
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
-    grid-column: 1/-1;
-    padding-bottom: ${GEL_SPACING};
+    padding: ${GEL_SPACING} 0;
     margin-bottom: ${GEL_SPACING};
+    grid-column: 1/-1;
     @supports not (display: grid) {
       width: 100%;
     }
