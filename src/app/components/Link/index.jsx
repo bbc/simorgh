@@ -13,7 +13,7 @@ const StyledLink = styled.a`
 
 const StyleLinkText = styled.span`
   ${StyledLink}:hover &,
-  ${StyledLink}:focus {
+  ${StyledLink}:focus & {
     padding-bottom: 2px;
     border-bottom: 2px solid ${C_WHITE};
   }
