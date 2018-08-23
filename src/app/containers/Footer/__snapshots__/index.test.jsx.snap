@@ -144,28 +144,28 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width:56.1875em) {
-  .c5 {
+  .c8 {
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(4,50%);
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
-  .c5 {
+  .c8 {
     grid-template-columns: repeat(3,33.333%);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
-  .c5 {
+  .c8 {
     grid-template-columns: repeat(4,25%);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:80em) {
-  .c5 {
+  .c8 {
     grid-template-columns: repeat(5,20%);
     grid-template-rows: repeat(3,33.333%);
   }
