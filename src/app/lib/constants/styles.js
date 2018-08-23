@@ -10,6 +10,7 @@ export const C_BLUEJAY = '#0F556C';
 export const C_BLUEJAY_LHT = '#C3DEE7';
 export const C_OAT_LHT = '#F5F3F1';
 export const C_PEBBLE = '#5C5752';
+export const C_STONE = '#D5D0CD';
 // Colours from other services
 export const C_ORBIT_GREY = '#4C4C4C';
 
