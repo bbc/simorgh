@@ -27,6 +27,6 @@ export const T_BREVIER = css`
   }
 
   ${mediaQuery.laptopAndLarger} {
-    font-size: 0.8125;
+    font-size: 0.8125em;
   }
 `;
