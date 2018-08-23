@@ -1,4 +1,5 @@
 import {
+  checkFooterLinks,
   getElement,
   shouldContainText,
   shouldContainStyles,
@@ -21,66 +22,43 @@ describe('Footer Tests', () => {
 
     anchorElement.focus();
     shouldContainStyles(
-      cy.focused(),
+      getElement('footer a span'),
       'border-bottom',
       '4px solid rgb(255, 255, 255)',
     );
   });
 
   it('should have a hover state', () => {
-    const anchorElement = getElement('footer a').eq(0);
+    const anchorElement = getElement('footer a');
     anchorElement.invoke('mouseover');
 
     shouldContainStyles(
-      anchorElement,
+      getElement('footer a span'),
       'border-bottom',
       '4px solid rgb(255, 255, 255)',
     );
   });
   it('should have working links', () => {
     getElement('footer ul').within(() => {
-      cy.get('a')
-        .eq(0)
-        .should('have.attr', 'href')
-        .and('contain', '/news/help-41670342');
-      cy.get('a')
-        .eq(1)
-        .should('have.attr', 'href')
-        .and('contain', '/terms');
-      cy.get('a')
-        .eq(2)
-        .should('have.attr', 'href')
-        .and('contain', '/aboutthebbc/');
-      cy.get('a')
-        .eq(3)
-        .should('have.attr', 'href')
-        .and('contain', '/privacy/');
-      cy.get('a')
-        .eq(4)
-        .should('have.attr', 'href')
-        .and('contain', '/usingthebbc/cookies/');
-      cy.get('a')
-        .eq(5)
-        .should('have.attr', 'href')
-        .and('contain', '/accessibility/');
-      cy.get('a')
-        .eq(6)
-        .should('have.attr', 'href')
-        .and('contain', '/contact/');
+      checkFooterLinks('0', '/news/help-41670342');
+      checkFooterLinks('1', '/terms');
+      checkFooterLinks('2', '/aboutthebbc/');
+      checkFooterLinks('3', '/privacy/');
+      checkFooterLinks('4', '/usingthebbc/cookies/');
+      checkFooterLinks('5', '/accessibility/');
+      checkFooterLinks('6', '/contact/');
     });
   });
   it('should contain copyright text', () => {
-    const footerGreyArea = getElement('footer div').eq(2);
-    footerGreyArea
-      .children('p')
-      .should(
-        'contain',
-        'Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. ',
-      );
+    const footerCopyrightArea = getElement('footer p');
+    footerCopyrightArea.should(
+      'contain',
+      'Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. ',
+    );
   });
   it('should contain a link in the copyright text', () => {
-    const footerGreyArea = getElement('footer p');
-    footerGreyArea
+    const footerCopyrightArea = getElement('footer p');
+    footerCopyrightArea
       .children('a')
       .should('have.attr', 'href')
       .and('contain', '/help/web/links');

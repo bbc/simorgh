@@ -25,6 +25,13 @@ export const checkElementStyles = (elementString, text, color, fontFamily) => {
   shouldContainStyles(el, 'font-family', fontFamily);
 };
 
+export const checkFooterLinks = (position, url) => {
+  cy.get('a')
+    .eq(position)
+    .should('have.attr', 'href')
+    .and('contain', url);
+};
+
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   getElement(link).click();
   cy.url().should('contain', url);
