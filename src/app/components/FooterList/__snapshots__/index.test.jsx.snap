@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterList should render correctly 1`] = `
-.c2 {
+.c3 {
+  padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.5rem;
   display: block;
 }
 
-.c2:hover,
-.c2:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c2:hover .c4,
+.c2:focus .c4 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
 }
 
 .c0 {
@@ -22,14 +22,14 @@ exports[`FooterList should render correctly 1`] = `
   grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0 0 0.5rem;
 }
 
 .c0 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
-  grid-column: 1/-1;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   margin-bottom: 0.5rem;
+  grid-column: 1/-1;
 }
 
 .c1 {
@@ -38,28 +38,32 @@ exports[`FooterList should render correctly 1`] = `
 
 @media (max-width:56.1875em) {
   .c0 {
-    grid-template-columns: repeat(2,50%);
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,50%);
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
   .c0 {
-    grid-template-columns: repeat(3,33.333%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: repeat(4,25%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: repeat(5,20%);
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
@@ -85,10 +89,14 @@ exports[`FooterList should render correctly 1`] = `
     role="listitem"
   >
     <a
-      className="c2"
+      className="c2 c3"
       href="https://www.bbc.co.uk/news"
     >
-      Link
+      <span
+        className="c4"
+      >
+        Link
+      </span>
     </a>
   </li>
 </ul>

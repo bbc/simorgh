@@ -25,7 +25,7 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator } = rawImageBlock.model;
+  const { locator, copyrightHolder } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
@@ -33,6 +33,7 @@ const ImageContainer = ({ blocks }) => {
     <Figure
       src={rawImageSrc}
       alt={altText}
+      copyrightHolder={copyrightHolder}
       caption={getCaption(captionBlock)}
     />
   );
