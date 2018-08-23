@@ -5,14 +5,14 @@ import Caption from './Caption';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
-const copyrightOffscreenText = 'Copyright ';
+const copyrightOffscreenText = 'Copyright';
 
-const renderCopyright = copyright =>
-  copyright !== 'BBC' ? (
-    <VisuallyHiddenText>
-      {copyrightOffscreenText + copyright}
-    </VisuallyHiddenText>
+const renderCopyright = copyright => {
+  const copyrightText = `${copyrightOffscreenText} ${copyright}`;
+  return copyright !== 'BBC' ? (
+    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
   ) : null;
+};
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
