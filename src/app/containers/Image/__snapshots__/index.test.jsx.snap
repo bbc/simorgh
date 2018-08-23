@@ -38,8 +38,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 .c2 {
-  font-size: 0.9375em;
-  line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -56,12 +54,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 .c1 {
   display: block;
   width: 100%;
-}
-
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 0.875em;
-  }
 }
 
 @media (min-width:37.5em) {

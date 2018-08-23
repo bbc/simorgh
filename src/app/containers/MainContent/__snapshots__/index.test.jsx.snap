@@ -42,8 +42,6 @@ exports[`MainContent should render correctly 1`] = `
 }
 
 .c7 {
-  font-size: 0.9375em;
-  line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -98,12 +96,6 @@ exports[`MainContent should render correctly 1`] = `
   .c4 {
     font-size: 1em;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c7 {
-    font-size: 0.875em;
   }
 }
 
