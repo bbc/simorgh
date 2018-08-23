@@ -32,6 +32,23 @@ export const checkFooterLinks = (position, url) => {
     .and('contain', url);
 };
 
+export const checkLinkStyling = position => {
+  const link = cy.get('a').eq(position);
+  shouldContainStyles(link, 'color', 'rgb(255, 255, 255)');
+  link.focus();
+  shouldContainStyles(
+    link,
+    'text-decoration',
+    'underline solid rgb(255, 255, 255)',
+  );
+  link.invoke('mouseover');
+  shouldContainStyles(
+    link,
+    'text-decoration',
+    'underline solid rgb(255, 255, 255)',
+  );
+};
+
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   getElement(link).click();
   cy.url().should('contain', url);

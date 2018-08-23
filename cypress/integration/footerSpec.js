@@ -1,4 +1,5 @@
 import {
+  checkLinkStyling,
   checkFooterLinks,
   getElement,
   shouldContainText,
@@ -47,6 +48,17 @@ describe('Footer Tests', () => {
       checkFooterLinks('4', '/usingthebbc/cookies/');
       checkFooterLinks('5', '/accessibility/');
       checkFooterLinks('6', '/contact/');
+    });
+  });
+  it('should have styling', () => {
+    getElement('footer ul').within(() => {
+      checkLinkStyling(0);
+      checkLinkStyling(1);
+      checkLinkStyling(2);
+      checkLinkStyling(3);
+      checkLinkStyling(4);
+      checkLinkStyling(5);
+      checkLinkStyling(6);
     });
   });
   it('should contain copyright text', () => {
