@@ -45,66 +45,66 @@ exports[`FooterContainer should render correctly 1`] = `
   margin-top: 1.25rem;
 }
 
-.c10 {
+.c12 {
+  padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.5rem;
   display: block;
 }
 
-.c10:hover,
-.c10:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c12 {
+.c15 {
+  padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.5rem;
   display: inline;
 }
 
-.c12:hover,
-.c12:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c11:hover .c13,
+.c11:focus .c13 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
 }
 
-.c8 {
+.c9 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0 0 0.5rem;
 }
 
-.c8 > li:first-child {
+.c9 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
-  grid-column: 1/-1;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   margin-bottom: 0.5rem;
+  grid-column: 1/-1;
 }
 
-.c9 {
+.c10 {
   min-width: 50%;
 }
 
 .c7 {
+  display: grid;
   background-color: #4C4C4C;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0 0.5rem;
 }
 
-.c11 {
+.c8 {
+  grid-column: 1 / -1;
+  font-size: 0.875em;
+  line-height: 1rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+}
+
+.c14 {
   color: #FFFFFF;
-  padding: 1rem;
   margin: 0;
+  padding: 1rem 0;
 }
 
 .c1 {
@@ -144,42 +144,90 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width:56.1875em) {
-  .c8 {
-    grid-template-columns: repeat(2,50%);
+  .c9 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,50%);
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
-  .c8 {
-    grid-template-columns: repeat(3,33.333%);
+  .c9 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
-  .c8 {
-    grid-template-columns: repeat(4,25%);
+  .c9 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @media (min-width:80em) {
-  .c8 {
-    grid-template-columns: repeat(5,20%);
+  .c9 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,33.333%);
   }
 }
 
 @supports not (display:grid) {
-  .c8 > li:first-child {
+  .c9 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c9 {
+  .c10 {
     display: inline-block;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c7 {
+    grid-gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c7 {
+    grid-gap: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c7 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c7 {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+@media (min-width:80em) {
+  .c7 {
+    grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c8 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c8 {
+    font-size: 0.8125em;
   }
 }
 
@@ -233,99 +281,134 @@ exports[`FooterContainer should render correctly 1`] = `
   <div
     className="c7"
   >
-    <ul
+    <div
       className="c8"
-      role="list"
     >
-      <li
+      <ul
         className="c9"
-        role="listitem"
+        role="list"
       >
-        <a
+        <li
           className="c10"
-          href="https://www.bbc.com/news/help-41670342"
+          role="listitem"
         >
-          Why you can trust the BBC
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/news/help-41670342"
+          >
+            <span
+              className="c13"
+            >
+              Why you can trust the BBC
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.com/terms"
+          role="listitem"
         >
-          Terms of Use
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/terms"
+          >
+            <span
+              className="c13"
+            >
+              Terms of Use
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.co.uk/aboutthebbc/"
         >
-          About the BBC
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.co.uk/aboutthebbc/"
+          >
+            <span
+              className="c13"
+            >
+              About the BBC
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.com/privacy/"
+          role="listitem"
         >
-          Privacy Policy
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/privacy/"
+          >
+            <span
+              className="c13"
+            >
+              Privacy Policy
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.com/usingthebbc/cookies/"
+          role="listitem"
         >
-          Cookies
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/usingthebbc/cookies/"
+          >
+            <span
+              className="c13"
+            >
+              Cookies
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.com/accessibility/"
+          role="listitem"
         >
-          Accessibility Help
-        </a>
-      </li>
-      <li
-        className="c9"
-        role="listitem"
-      >
-        <a
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/accessibility/"
+          >
+            <span
+              className="c13"
+            >
+              Accessibility Help
+            </span>
+          </a>
+        </li>
+        <li
           className="c10"
-          href="https://www.bbc.com/contact/"
+          role="listitem"
         >
-          Contact the BBC
-        </a>
-      </li>
-    </ul>
-    <p
-      className="c11"
-    >
-      Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
-      <a
-        className="c12"
-        href="https://www.bbc.co.uk/help/web/links/"
+          <a
+            className="c11 c12"
+            href="https://www.bbc.com/contact/"
+          >
+            <span
+              className="c13"
+            >
+              Contact the BBC
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p
+        className="c14"
       >
-        Read about our approach to external linking.
-      </a>
-    </p>
+        Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. 
+        <a
+          className="c11 c15"
+          href="https://www.bbc.co.uk/help/web/links/"
+        >
+          <span
+            className="c13"
+          >
+            Read about our approach to external linking.
+          </span>
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 `;
