@@ -50,6 +50,7 @@ Array [
     <a
       className="c1"
       href="/news/articles/c000000000ro"
+      onClick={[Function]}
     >
       which were later donated to local hospices
     </a>

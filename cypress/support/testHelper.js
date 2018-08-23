@@ -25,6 +25,13 @@ export const checkElementStyles = (elementString, text, color, fontFamily) => {
   shouldContainStyles(el, 'font-family', fontFamily);
 };
 
+export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
+  getElement(link).click();
+  cy.url().should('contain', url);
+  const anchorElement = getElement('header a');
+  shouldContainText(anchorElement, 'BBC News');
+};
+
 export const figureVisibility = figure => {
   figure.should('be.visible');
   figure.should('to.have.descendants', 'img');
