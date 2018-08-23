@@ -320,6 +320,7 @@ exports[`FooterContainer should render correctly 1`] = `
         </li>
         <li
           className="c10"
+          role="listitem"
         >
           <a
             className="c11 c12"
