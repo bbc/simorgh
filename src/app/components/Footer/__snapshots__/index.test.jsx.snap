@@ -183,7 +183,7 @@ exports[`Footer should render correctly 1`] = `
 
 @media (min-width:37.5em) {
   .c5 {
-    font-size: 0.8125;
+    font-size: 0.8125em;
   }
 }
 
