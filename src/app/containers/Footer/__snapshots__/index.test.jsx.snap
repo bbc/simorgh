@@ -221,7 +221,7 @@ exports[`FooterContainer should render correctly 1`] = `
       >
         <a
           className="c7"
-          href="https://www.bbc.com/news/help-41670342"
+          href="https://www.bbc.co.uk/aboutthebbc/"
         >
           About the BBC
         </a>
@@ -232,7 +232,7 @@ exports[`FooterContainer should render correctly 1`] = `
       >
         <a
           className="c7"
-          href="https://www.bbc.com/news/help-41670342"
+          href="https://www.bbc.com/privacy/"
         >
           Privacy Policy
         </a>
@@ -243,7 +243,7 @@ exports[`FooterContainer should render correctly 1`] = `
       >
         <a
           className="c7"
-          href="https://www.bbc.com/terms"
+          href="https://www.bbc.com/usingthebbc/cookies/"
         >
           Cookies
         </a>
@@ -254,7 +254,7 @@ exports[`FooterContainer should render correctly 1`] = `
       >
         <a
           className="c7"
-          href="https://www.bbc.com/news/help-41670342"
+          href="https://www.bbc.com/accessibility/"
         >
           Accessibility Help
         </a>
@@ -265,7 +265,7 @@ exports[`FooterContainer should render correctly 1`] = `
       >
         <a
           className="c7"
-          href="https://www.bbc.com/news/help-41670342"
+          href="https://www.bbc.com/contact/"
         >
           Contact the BBC
         </a>

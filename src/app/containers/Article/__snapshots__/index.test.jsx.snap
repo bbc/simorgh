@@ -470,7 +470,7 @@ Array [
         >
           <a
             className="c7"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.co.uk/aboutthebbc/"
           >
             About the BBC
           </a>
@@ -481,7 +481,7 @@ Array [
         >
           <a
             className="c7"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/privacy/"
           >
             Privacy Policy
           </a>
@@ -492,7 +492,7 @@ Array [
         >
           <a
             className="c7"
-            href="https://www.bbc.com/terms"
+            href="https://www.bbc.com/usingthebbc/cookies/"
           >
             Cookies
           </a>
@@ -503,7 +503,7 @@ Array [
         >
           <a
             className="c7"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/accessibility/"
           >
             Accessibility Help
           </a>
@@ -514,7 +514,7 @@ Array [
         >
           <a
             className="c7"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/contact/"
           >
             Contact the BBC
           </a>
