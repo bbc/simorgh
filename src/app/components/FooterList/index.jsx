@@ -18,24 +18,27 @@ const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: ${GEL_SPACING_DBL};
   list-style-type: none;
   margin: 0;
   padding: 0 0 ${GEL_SPACING};
   @media (max-width: ${group2ScreenWidthMax}) {
+    grid-column-gap: ${GEL_SPACING};
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 50%);
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
-    grid-template-columns: repeat(3, 33.333%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-template-columns: repeat(4, 25%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-template-columns: repeat(5, 20%);
+    grid-column-gap: ${GEL_SPACING_DBL};
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 33.333%);
   }
   > li:first-child {
