@@ -3,7 +3,7 @@ import Brand from '../Brand';
 
 const Header = () => (
   <header role="banner">
-    <Brand />
+    <Brand indentedLogo={false} />
   </header>
 );
 

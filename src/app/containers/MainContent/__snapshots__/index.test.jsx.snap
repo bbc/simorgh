@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainContent should render correctly 1`] = `
-.c2 {
+.c3 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -10,7 +10,7 @@ exports[`MainContent should render correctly 1`] = `
   line-height: 2rem;
 }
 
-.c3 {
+.c4 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -19,7 +19,7 @@ exports[`MainContent should render correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.c4 {
+.c5 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -28,7 +28,7 @@ exports[`MainContent should render correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -41,7 +41,7 @@ exports[`MainContent should render correctly 1`] = `
   top: 0;
 }
 
-.c7 {
+.c8 {
   background-color: #d5d0cd;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -50,164 +50,176 @@ exports[`MainContent should render correctly 1`] = `
   line-height: 1.125rem;
 }
 
-.c5 {
+.c6 {
   margin: 0;
   padding-bottom: 1rem;
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: block;
   width: 100%;
 }
 
-.c0 {
+.c1 {
   display: grid;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 2.75em;
     line-height: 3rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c4 {
     font-size: 1.5em;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c4 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:20em) {
-  .c4 {
+  .c5 {
     font-size: 1em;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c7 {
+  .c8 {
     font-size: 0.875em;
   }
 }
 
 @media (max-width:37.5em) {
-  .c0 {
+  .c1 {
     grid-gap: 0.5rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c0 {
+  .c1 {
     grid-gap: 1rem;
     padding: 0 1rem;
   }
 }
 
 @media (max-width:62.9375em) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(8,1fr);
   }
 }
 
 @media (min-width:80em) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(10,1fr);
   }
 }
 
+@media (min-width:80em) {
+  .c0 {
+    display: grid;
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
 @media (max-width:56.1875em) {
-  .c1 {
+  .c2 {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
-  .c1 {
+  .c2 {
     grid-column: 2 / -2;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
-  .c1 {
+  .c2 {
     grid-column: 2 / -2;
   }
 }
 
 @media (min-width:80em) {
-  .c1 {
+  .c2 {
     grid-column: 3 / -3;
   }
 }
 
-<main
+<div
   className="c0"
-  role="main"
 >
-  <div
+  <main
     className="c1"
+    role="main"
   >
-    <h1
+    <div
       className="c2"
     >
-      This is a headline!
-    </h1>
-    <h2
-      className="c3"
-      id="This-is-a-subheading"
-      tabIndex="-1"
-    >
-      This is a subheading!
-    </h2>
-    <p
-      className="c4"
-    >
-      This is some text content!
-    </p>
-    <p>
-      {"type":"test","blocks":[{"model":{"text":"This is some test content!"}}]}
-    </p>
-    <figure
-      className="c5"
-    >
-      <img
-        alt="Pauline Clayton"
-        className="c6"
-        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      />
-      <figcaption
-        className="c7"
+      <h1
+        className="c3"
       >
-        <span
+        This is a headline!
+      </h1>
+      <h2
+        className="c4"
+        id="This-is-a-subheading"
+        tabIndex="-1"
+      >
+        This is a subheading!
+      </h2>
+      <p
+        className="c5"
+      >
+        This is some text content!
+      </p>
+      <p>
+        {"type":"test","blocks":[{"model":{"text":"This is some test content!"}}]}
+      </p>
+      <figure
+        className="c6"
+      >
+        <img
+          alt="Pauline Clayton"
+          className="c7"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
+        <figcaption
           className="c8"
         >
-          Image caption, 
-        </span>
-        Former embroider Pauline Clayton described the gift as "lovely"
-      </figcaption>
-    </figure>
-  </div>
-</main>
+          <span
+            className="c9"
+          >
+            Image caption, 
+          </span>
+          Former embroider Pauline Clayton described the gift as "lovely"
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+</div>
 `;

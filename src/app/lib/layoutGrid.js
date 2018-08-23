@@ -10,6 +10,14 @@ import {
   group5ScreenWidthMin,
 } from './constants/styles';
 
+export const twelveEightyGridWrapper = css`
+  @media (min-width: ${group5ScreenWidthMin}) {
+    display: grid;
+    max-width: 1280px;
+    margin: auto;
+  }
+`;
+
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: ${group3ScreenWidthMin}) {
