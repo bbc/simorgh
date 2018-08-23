@@ -1,21 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string, arrayOf, shape } from 'prop-types';
-import { C_WHITE, GEL_SPACING } from '../../lib/constants/styles';
+import {
+  C_WHITE,
+  GEL_SPACING,
+  group2ScreenWidthMax,
+  group3ScreenWidthMin,
+  group3ScreenWidthMax,
+  group4ScreenWidthMin,
+  group4ScreenWidthMax,
+  group5ScreenWidthMin,
+} from '../../lib/constants/styles';
 import Link from '../Link';
 
 const StyledList = styled.ul`
   border-bottom: 1px solid ${C_WHITE};
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(4, 50%);
+  @media (max-width: ${group2ScreenWidthMax}) {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 50%);
+  }
+  @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
+    grid-template-columns: repeat(3, 33.333%);
+    grid-template-rows: repeat(3, 33.333%);
+  }
+  @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33.333%);
+  }
+  @media (min-width: ${group5ScreenWidthMin}) {
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, 33.333%);
+  }
+
   list-style-type: none;
   margin: 0;
   padding: ${GEL_SPACING};
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
-    grid-column: 1/3;
+    grid-column: 1/-1;
     padding-bottom: ${GEL_SPACING};
     margin-bottom: ${GEL_SPACING};
     @supports not (display: grid) {
