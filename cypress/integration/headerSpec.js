@@ -23,7 +23,7 @@ describe('Header Tests', () => {
 
     anchorElement.focus();
     shouldContainStyles(
-      cy.focused(),
+      getElement('header a span'),
       'border-bottom',
       '4px solid rgb(255, 255, 255)',
     );
@@ -34,7 +34,7 @@ describe('Header Tests', () => {
     anchorElement.invoke('mouseover');
 
     shouldContainStyles(
-      anchorElement,
+      getElement('header a span'),
       'border-bottom',
       '4px solid rgb(255, 255, 255)',
     );
