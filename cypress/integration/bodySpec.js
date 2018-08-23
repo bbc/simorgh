@@ -52,7 +52,7 @@ describe('Article Body Tests', () => {
     cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
   });
 
-  it('should have working inline links', () => {
+  it('should have a working first inline link', () => {
     clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c0000000027o');
   });
 });
