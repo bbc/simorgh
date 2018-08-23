@@ -9,7 +9,7 @@
 import { css } from 'styled-components';
 import mediaQuery from '../../helpers/mediaQueries';
 
-const T_LONG_PRIMER = css`
+export const T_LONG_PRIMER = css`
   font-size: 0.9375em;
   line-height: 1.125rem;
 
@@ -18,4 +18,15 @@ const T_LONG_PRIMER = css`
   }
 `;
 
-export default T_LONG_PRIMER;
+export const T_BREVIER = css`
+  font-size: 0.875em;
+  line-height: 1rem;
+
+  ${mediaQuery.smartPhoneOnly} {
+    line-height: 1.125rem;
+  }
+
+  ${mediaQuery.laptopAndLarger} {
+    font-size: 0.8125em;
+  }
+`;
