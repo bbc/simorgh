@@ -68,6 +68,47 @@ exports[`Figure with a caption should render correctly 1`] = `
 </figure>
 `;
 
+exports[`Figure with non BBC copyright should render correctly 1`] = `
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c0 {
+  margin: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
+<figure
+  className="c0"
+>
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    className="c1"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
+  <span
+    className="c2"
+  >
+    Copyright Getty images
+  </span>
+</figure>
+`;
+
 exports[`Figure without a caption should render correctly 1`] = `
 .c0 {
   margin: 0;
