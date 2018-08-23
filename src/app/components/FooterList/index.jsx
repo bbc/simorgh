@@ -13,7 +13,7 @@ const StyledList = styled.ul`
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: ${GEL_SPACING_DBL};
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 50%);
   list-style-type: none;
   padding: 0 0 ${GEL_SPACING};
