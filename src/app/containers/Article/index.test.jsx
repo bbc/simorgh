@@ -89,6 +89,10 @@ describe('ArticleContainer', () => {
       'should render correctly',
       <ArticleContainer data={articleData} />,
     );
+
+    describe('no data', () => {
+      shouldMatchSnapshot('should render correctly', <ArticleContainer />);
+    });
   });
 
   describe('getInitialProps', () => {
