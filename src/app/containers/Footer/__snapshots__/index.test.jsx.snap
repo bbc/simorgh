@@ -324,7 +324,7 @@ exports[`FooterContainer should render correctly 1`] = `
         >
           <a
             className="c11 c12"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.co.uk/aboutthebbc/"
           >
             <span
               className="c13"
@@ -339,7 +339,7 @@ exports[`FooterContainer should render correctly 1`] = `
         >
           <a
             className="c11 c12"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/privacy/"
           >
             <span
               className="c13"
@@ -354,7 +354,7 @@ exports[`FooterContainer should render correctly 1`] = `
         >
           <a
             className="c11 c12"
-            href="https://www.bbc.com/terms"
+            href="https://www.bbc.com/usingthebbc/cookies/"
           >
             <span
               className="c13"
@@ -369,7 +369,7 @@ exports[`FooterContainer should render correctly 1`] = `
         >
           <a
             className="c11 c12"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/accessibility/"
           >
             <span
               className="c13"
@@ -384,7 +384,7 @@ exports[`FooterContainer should render correctly 1`] = `
         >
           <a
             className="c11 c12"
-            href="https://www.bbc.com/news/help-41670342"
+            href="https://www.bbc.com/contact/"
           >
             <span
               className="c13"

@@ -4,6 +4,7 @@ import { string } from 'prop-types';
 import Header from '../Header';
 import MainContent from '../../containers/MainContent';
 import mainContentPropTypes from '../../models/propTypes/mainContent';
+import Footer from '../../containers/Footer';
 
 const Article = ({ lang, title, blocks, id }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
@@ -20,6 +21,7 @@ const Article = ({ lang, title, blocks, id }) => {
       </Helmet>
       <Header />
       <MainContent blocks={blocks} />
+      <Footer />
     </Fragment>
   );
 };

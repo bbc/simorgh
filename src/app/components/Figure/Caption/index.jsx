@@ -5,23 +5,24 @@ import {
   FF_NEWS_SANS_REG,
   C_STORM,
   GEL_SPACING,
+  GEL_SPACING_DBL,
+  C_STONE,
 } from '../../../lib/constants/styles';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
+import T_LONG_PRIMER from '../../../lib/constants/typography';
 
 const captionOffscreenText = 'Image caption, ';
 
 const StyledCaption = styled.figcaption`
-  background-color: #d5d0cd;
+  ${T_LONG_PRIMER}
+  background-color: ${C_STONE};
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
   padding: ${GEL_SPACING};
-
-  // Font styling below is a subset of BBC GEL Typography "Long Primer"
-  font-size: 0.9375em;
-  line-height: 1.125rem;
+  width: 100%;
   ${mediaQuery.laptopAndLarger} {
-    font-size: 0.875em;
+    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
 `;
 

@@ -42,12 +42,11 @@ exports[`MainContent should render correctly 1`] = `
 }
 
 .c8 {
-  background-color: #d5d0cd;
+  background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
-  font-size: 0.9375em;
-  line-height: 1.125rem;
+  width: 100%;
 }
 
 .c6 {
@@ -59,6 +58,11 @@ exports[`MainContent should render correctly 1`] = `
 .c7 {
   display: block;
   width: 100%;
+}
+
+.c0 {
+  max-width: 1280px;
+  margin: auto;
 }
 
 .c1 {
@@ -102,7 +106,7 @@ exports[`MainContent should render correctly 1`] = `
 
 @media (min-width:37.5em) {
   .c8 {
-    font-size: 0.875em;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -138,14 +142,6 @@ exports[`MainContent should render correctly 1`] = `
   }
 }
 
-@media (min-width:80em) {
-  .c0 {
-    display: grid;
-    max-width: 1280px;
-    margin: auto;
-  }
-}
-
 @media (max-width:56.1875em) {
   .c2 {
     grid-column: 1 / -1;
@@ -170,12 +166,12 @@ exports[`MainContent should render correctly 1`] = `
   }
 }
 
-<div
+<main
   className="c0"
+  role="main"
 >
-  <main
+  <div
     className="c1"
-    role="main"
   >
     <div
       className="c2"
@@ -220,6 +216,6 @@ exports[`MainContent should render correctly 1`] = `
         </figcaption>
       </figure>
     </div>
-  </main>
-</div>
+  </div>
+</main>
 `;
