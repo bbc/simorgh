@@ -12,5 +12,10 @@ const image = {
 const caption = 'This is a caption!';
 
 storiesOf('Figure', module)
-  .add('with a caption', () => <Figure {...image} caption={caption} />)
-  .add('without a caption', () => <Figure {...image} />);
+  .add('with a caption', () => (
+    <Figure {...image} copyrightHolder="BBC" caption={caption} />
+  ))
+  .add('without a caption', () => <Figure {...image} copyrightHolder="BBC" />)
+  .add('with non BBC copyright', () => (
+    <Figure {...image} copyrightHolder="Getty images" />
+  ));
