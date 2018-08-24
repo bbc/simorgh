@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ArticleContainer Component no data should render correctly 1`] = `"Loading..."`;
+
 exports[`ArticleContainer Component should render correctly 1`] = `
 Array [
   .c6 {

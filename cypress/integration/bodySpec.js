@@ -1,4 +1,5 @@
 import {
+  clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   getElement,
   visibleImageNoCaption,
@@ -49,5 +50,9 @@ describe('Article Body Tests', () => {
 
   it('should render a title', () => {
     cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
+  });
+
+  it('should have a working first inline link', () => {
+    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c0000000027o');
   });
 });
