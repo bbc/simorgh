@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { string, node } from 'prop-types';
 import Header from '../Header';
-import mainContentPropTypes from '../../models/propTypes/mainContent';
 import Footer from '../../containers/Footer';
 
 const Article = ({ lang, title, id, children }) => {
@@ -30,7 +29,6 @@ Article.propTypes = {
   id: string.isRequired,
   lang: string.isRequired,
   title: string.isRequired,
-  ...mainContentPropTypes.isRequired,
 };
 
 export default Article;
