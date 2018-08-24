@@ -8,32 +8,43 @@ import {
   C_ORBIT_GREY,
   C_WHITE,
   FF_NEWS_SANS_REG,
-  GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
+import {
+  layoutGridWrapper,
+  layoutGridItemFullWidth,
+} from '../../lib/layoutGrid';
+import { T_BREVIER } from '../../lib/constants/typography';
+
+const StyledFooterLinksWrapper = styled.div`
+  ${layoutGridWrapper};
+  background-color: ${C_ORBIT_GREY};
+`;
 
 const StyledFooterLinks = styled.div`
-  background-color: ${C_ORBIT_GREY};
+  ${layoutGridItemFullWidth}
+  ${T_BREVIER}
   font-family: ${FF_NEWS_SANS_REG};
-  padding: 0 ${GEL_SPACING};
 `;
 
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding: ${GEL_SPACING_DBL};
   margin: 0;
+  padding: ${GEL_SPACING_DBL} 0;
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
     <Brand indentedLogo={false} />
-    <StyledFooterLinks>
-      <FooterList links={links} />
-      <StyledParagraph>
-        {copyrightText}
-        <Link text={externalLink.text} href={externalLink.href} inline />
-      </StyledParagraph>
-    </StyledFooterLinks>
+    <StyledFooterLinksWrapper>
+      <StyledFooterLinks>
+        <FooterList links={links} />
+        <StyledParagraph>
+          {copyrightText}
+          <Link text={externalLink.text} href={externalLink.href} inline />
+        </StyledParagraph>
+      </StyledFooterLinks>
+    </StyledFooterLinksWrapper>
   </footer>
 );
 

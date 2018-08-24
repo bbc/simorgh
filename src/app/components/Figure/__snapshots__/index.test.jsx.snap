@@ -15,12 +15,11 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 .c2 {
-  background-color: #d5d0cd;
+  background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
-  font-size: 0.9375em;
-  line-height: 1.125rem;
+  width: 100%;
 }
 
 .c0 {
@@ -36,7 +35,7 @@ exports[`Figure with a caption should render correctly 1`] = `
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 0.875em;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -58,6 +57,47 @@ exports[`Figure with a caption should render correctly 1`] = `
     </span>
     This is a caption!
   </figcaption>
+</figure>
+`;
+
+exports[`Figure with non BBC copyright should render correctly 1`] = `
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c0 {
+  margin: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
+<figure
+  className="c0"
+>
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    className="c1"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
+  <span
+    className="c2"
+  >
+    Copyright Getty images
+  </span>
 </figure>
 `;
 
