@@ -1,7 +1,11 @@
 import React from 'react';
 import HeadingsContainer from './index';
 import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 
 const template = (title, text, type) => {
   describe(title, () => {
@@ -11,14 +15,14 @@ const template = (title, text, type) => {
     };
     shouldMatchSnapshot(
       'should render correctly',
-      <HeadingsContainer {...data} />,
+      shallowRender(<HeadingsContainer {...data} />),
     );
   });
 };
 
 describe('Headings', () => {
   describe('with no data', () => {
-    isNull('should not render anything', <HeadingsContainer />);
+    isNull('should not render anything', shallowRender(<HeadingsContainer />));
   });
 
   template('with headline data', 'This is a headline!', 'headline');

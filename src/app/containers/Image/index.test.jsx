@@ -1,11 +1,15 @@
 import React from 'react';
 import ImageContainer from './index';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    isNull('should return null', <ImageContainer />);
+    isNull('should return null', shallowRender(<ImageContainer />));
   });
 
   describe('with data', () => {
@@ -43,7 +47,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text',
-      <ImageContainer {...data} />,
+      shallowRender(<ImageContainer {...data} />),
     );
 
     const dataWithNonBbcCopyright = blockArrayModel([
@@ -56,7 +60,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
-      <ImageContainer {...dataWithNonBbcCopyright} />,
+      shallowRender(<ImageContainer {...dataWithNonBbcCopyright} />),
     );
 
     const dataWithCaption = blockArrayModel([
@@ -73,7 +77,7 @@ describe('Image', () => {
 
     shouldMatchSnapshot(
       'should render an image with alt text and caption',
-      <ImageContainer {...dataWithCaption} />,
+      shallowRender(<ImageContainer {...dataWithCaption} />),
     );
   });
 });

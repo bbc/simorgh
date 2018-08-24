@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 import MainContentContainer from './index';
 
 describe('MainContent', () => {
@@ -149,6 +152,6 @@ describe('MainContent', () => {
 
   shouldMatchSnapshot(
     'should render correctly',
-    <MainContentContainer blocks={blocks} />,
+    shallowRender(<MainContentContainer blocks={blocks} />),
   );
 });
