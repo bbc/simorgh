@@ -1,6 +1,6 @@
 import {
   checkLinkStyling,
-  // checkFooterLinks,
+  checkFooterLinks,
   getElement,
   shouldContainText,
   shouldContainStyles,
@@ -39,18 +39,18 @@ describe('Footer Tests', () => {
       '4px solid rgb(255, 255, 255)',
     );
   });
-  // it('should have working links', () => {
-  //   getElement('footer ul').within(() => {
-  //     checkFooterLinks('0', '/news/help-41670342');
-  //     checkFooterLinks('1', '/terms');
-  //     checkFooterLinks('2', '/aboutthebbc/');
-  //     checkFooterLinks('3', '/privacy/');
-  //     checkFooterLinks('4', '/usingthebbc/cookies/');
-  //     checkFooterLinks('5', '/accessibility/');
-  //     checkFooterLinks('6', '/contact/');
-  //   });
-  // });
-  it('should have styling', () => {
+  it('should have working links', () => {
+    getElement('footer ul').within(() => {
+      checkFooterLinks('0', '/news/help-41670342');
+      checkFooterLinks('1', '/terms');
+      checkFooterLinks('2', '/aboutthebbc/');
+      checkFooterLinks('3', '/privacy/');
+      checkFooterLinks('4', '/usingthebbc/cookies/');
+      checkFooterLinks('5', '/accessibility/');
+      checkFooterLinks('6', '/contact/');
+    });
+  });
+  xit('should have styling', () => {
     getElement('footer ul').within(() => {
       checkLinkStyling(0);
       checkLinkStyling(1);
