@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, element } from 'prop-types';
-import {
-  layoutGridWrapper,
-  layoutGridItem,
-  twelveEightyGridWrapper,
-} from '../../lib/layoutGrid';
+import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 
-const StyledMainContent = styled.main`
-  ${layoutGridWrapper};
+export const StyledMainContent = styled.main`
+  max-width: 1280px;
+  margin: auto;
 `;
 
-const TwelveEightyGridWrapper = styled.div`
-  ${twelveEightyGridWrapper};
+const StyleGridWrapper = styled.div`
+  ${layoutGridWrapper};
 `;
 
 const GridItem = styled.div`
@@ -20,11 +17,11 @@ const GridItem = styled.div`
 `;
 
 const MainContent = ({ children }) => (
-  <TwelveEightyGridWrapper>
-    <StyledMainContent role="main">
+  <StyledMainContent role="main">
+    <StyleGridWrapper>
       <GridItem>{children}</GridItem>
-    </StyledMainContent>
-  </TwelveEightyGridWrapper>
+    </StyleGridWrapper>
+  </StyledMainContent>
 );
 
 MainContent.propTypes = {
