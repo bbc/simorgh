@@ -1,10 +1,14 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import VisuallyHiddenText from './index';
+
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 describe('VisuallyHiddenText', () => {
   shouldMatchSnapshot(
     'should render off screen text for screen readers',
-    <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>,
+    shallowRender(<VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>),
   );
 });

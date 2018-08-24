@@ -1,7 +1,11 @@
 import React from 'react';
 import Article from './index';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { textBlock } from '../../models/blocks';
+
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 const id = 'c0000000001o';
 const title = 'This is a title!';
@@ -55,6 +59,8 @@ const blocks = [
 describe('Article', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <Article id={id} title={title} lang={lang} blocks={blocks} />,
+    shallowRender(
+      <Article id={id} title={title} lang={lang} blocks={blocks} />,
+    ),
   );
 });

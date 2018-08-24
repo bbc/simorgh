@@ -1,8 +1,11 @@
 import React from 'react';
 import Header from './index';
 
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 describe(`Header`, () => {
-  shouldMatchSnapshot('should render correctly', <Header />);
+  shouldMatchSnapshot('should render correctly', shallowRender(<Header />));
 });
