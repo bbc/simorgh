@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { string, node } from 'prop-types';
 import Header from '../Header';
 import mainContentPropTypes from '../../models/propTypes/mainContent';
+import Footer from '../../containers/Footer';
 
 const Article = ({ lang, title, id, children }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
@@ -19,6 +20,7 @@ const Article = ({ lang, title, id, children }) => {
       </Helmet>
       <Header />
       {children}
+      <Footer />
     </Fragment>
   );
 };
