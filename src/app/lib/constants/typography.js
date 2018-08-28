@@ -18,6 +18,16 @@ export const T_LONG_PRIMER = css`
   }
 `;
 
+/* Font styling below is a subset of BBC GEL Typography "Body Copy" */
+export const T_BODY_COPY = css`
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+  ${mediaQuery.smartPhoneAndLarger} {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+`;
+
 export const T_BREVIER = css`
   font-size: 0.875em;
   line-height: 1rem;
@@ -26,5 +36,33 @@ export const T_BREVIER = css`
   }
   ${mediaQuery.laptopAndLarger} {
     font-size: 0.8125em;
+  }
+`;
+
+/* Font styling below is a subset of BBC GEL Typography "Canon" */
+export const T_CANON = css`
+  font-size: 1.75em;
+  line-height: 2rem;
+  ${mediaQuery.smartPhoneOnly} {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+  ${mediaQuery.laptopAndLarger} {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+`;
+
+/* Font styling below is a subset of BBC GEL Typography "Trafalgar" */
+export const T_TRAFALGAR = css`
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  ${mediaQuery.smartPhoneOnly} {
+    font-size: 1.5em;
+    line-height: 1.75rem;
+  }
+  ${mediaQuery.laptopAndLarger} {
+    font-size: 2em;
+    line-height: 2.25rem;
   }
 `;
