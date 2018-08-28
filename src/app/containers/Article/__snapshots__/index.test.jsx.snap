@@ -151,7 +151,6 @@ Array [
 }
 
 .c0 {
-  max-width: 1280px;
   margin: auto;
 }
 
@@ -177,6 +176,18 @@ Array [
   .c4 {
     font-size: 1em;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    max-width: 1008px;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    max-width: 1280px;
   }
 }
 
