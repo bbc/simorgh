@@ -21,11 +21,9 @@ export const T_LONG_PRIMER = css`
 export const T_BREVIER = css`
   font-size: 0.875em;
   line-height: 1rem;
-
   ${mediaQuery.smartPhoneOnly} {
     line-height: 1.125rem;
   }
-
   ${mediaQuery.laptopAndLarger} {
     font-size: 0.8125em;
   }

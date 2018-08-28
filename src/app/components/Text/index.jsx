@@ -15,7 +15,7 @@ const StyledParagraph = styled.p`
   font-family: ${FF_NEWS_SANS_REG};
   padding-bottom: ${GEL_SPACING_DBL};
   margin: 0;
-  // Font styling below is a subset of BBC GEL Typography "Body Copy"
+  /* Font styling below is a subset of BBC GEL Typography "Body Copy" */
   font-size: 0.9375em;
   line-height: 1.25rem;
   ${mediaQuery.smartPhoneAndLarger} {
