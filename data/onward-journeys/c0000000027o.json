@@ -32,75 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "cy4ng11dgygt",
-      "topicName": "Hackney",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Wait until I'm sacked or leave - Pochettino"
-          },
-          "locators": {
-            "uri": "/sport/football/45236561"
-          },
-          "timestamp": 1534622581,
-          "image": {
-            "blockId": "3551800c-34c0-4c2a-a055-dca1f6f6a26c",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "f40bcd90-d684-4787-9c8b-881a4c01b448",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 692,
-                    "height": 389,
-                    "locator": "http://c.files.bbci.co.uk/14EE9/production/_103073758_gettyimages-1018784962.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cy4ng11dgygt",
-      "topicName": "Hackney",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Wait until I'm sacked or leave - Pochettino"
-          },
-          "locators": {
-            "uri": "/sport/football/45236561"
-          },
-          "timestamp": 1534622581,
-          "image": {
-            "blockId": "3551800c-34c0-4c2a-a055-dca1f6f6a26c",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "f40bcd90-d684-4787-9c8b-881a4c01b448",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 692,
-                    "height": 389,
-                    "locator": "http://c.files.bbci.co.uk/14EE9/production/_103073758_gettyimages-1018784962.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2647694-hackney/0"
     }
   ],
   "moreFromTheBBC": [
@@ -276,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cg3mq45zq4xt/duchess-of-sussex"
     },
     {
       "topicId": "cy4ng11dgygt",
@@ -450,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2647694-hackney/0"
     },
     {
       "topicId": "cpwpy79d6dxt",
@@ -624,7 +559,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cpwpy79d6dxt/royal-wedding-2018"
     },
     {
       "topicId": "c8zwn8k9nlet",
@@ -798,7 +734,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2633842-windsor/0"
     }
   ],
   "mostRead": [
