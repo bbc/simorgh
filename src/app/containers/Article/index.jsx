@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
+import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 
 class ArticleContainer extends Component {
@@ -49,6 +50,7 @@ class ArticleContainer extends Component {
     const { id: aresArticleId } = metadata;
 
     const id = aresArticleId.split(':').pop();
+    const { blocks } = content.model;
 
     return (
       <Article
@@ -56,7 +58,9 @@ class ArticleContainer extends Component {
         lang={metadata.passport.language}
         title={promo.headlines.seoHeadline}
         {...content.model}
-      />
+      >
+        <MainContent blocks={blocks} />
+      </Article>
     );
   }
 }
