@@ -32,41 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "cpwpy79d6dxt",
-      "topicName": "Royal Wedding 2018",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Meghan Markle coat of arms revealed"
-          },
-          "locators": {
-            "uri": "/news/uk-44258461"
-          },
-          "timestamp": 1527602563,
-          "image": {
-            "blockId": "397c876f-7eda-4333-a60b-9556c1b841d3",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "6ce60420-fcd9-4fbf-b86a-65c04fa1179c",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/E623/production/_101751985_96d3a8e6-f35c-4dea-8e0d-f5a97d6ee4f3.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cpwpy79d6dxt/royal-wedding-2018"
     }
   ],
   "moreFromTheBBC": [
@@ -242,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/c2gze9gn5lkt/diana-princess-of-wales"
     },
     {
       "topicId": "cz4pr2gd414t",
@@ -416,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cz4pr2gd414t/duchess-of-cambridge"
     },
     {
       "topicId": "cg3mq45zq4xt",
@@ -590,7 +559,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cg3mq45zq4xt/duchess-of-sussex"
     },
     {
       "topicId": "cpwpy79d6dxt",
@@ -764,7 +734,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cpwpy79d6dxt/royal-wedding-2018"
     },
     {
       "topicId": "ck6z09186yet",
@@ -938,7 +909,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/ck6z09186yet/westminster-abbey"
     }
   ],
   "mostRead": [
