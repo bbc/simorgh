@@ -20,14 +20,14 @@ const StyledParagraph = styled.p`
 const Italic = ({ children }) => <i>{children}</i>;
 const Bold = ({ children }) => <b>{children}</b>;
 
-const Text = ({ text, paragraph }) => {
+const Text = ({ text, paragraphOverride }) => {
   if (!text) return null;
 
   const options = {
     forceBlock: true,
     overrides: {
       p: {
-        component: paragraph,
+        component: paragraphOverride,
       },
       em: {
         component: Italic,
@@ -54,11 +54,11 @@ Bold.propTypes = {
 
 Text.propTypes = {
   text: string.isRequired,
-  paragraph: node,
+  paragraphOverride: node,
 };
 
 Text.defaultProps = {
-  paragraph: StyledParagraph,
+  paragraphOverride: StyledParagraph,
 };
 
 export default Text;
