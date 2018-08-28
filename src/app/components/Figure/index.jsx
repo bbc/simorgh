@@ -31,7 +31,7 @@ const Image = styled.img`
 
 const Figure = ({ src, alt, copyrightHolder, caption }) => (
   <StyledFigure>
-    <LazyLoad height={200}>
+    <LazyLoad height={500} offset={500}>
       <Image src={src} alt={alt} />
       {renderCopyright(copyrightHolder)}
       {renderCaption(caption)}
