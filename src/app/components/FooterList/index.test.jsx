@@ -1,7 +1,10 @@
 import React from 'react';
 import FooterList from './index';
 
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 describe(`FooterList`, () => {
   const link = {
@@ -11,5 +14,8 @@ describe(`FooterList`, () => {
 
   const links = [link];
 
-  shouldMatchSnapshot('should render correctly', <FooterList links={links} />);
+  shouldMatchSnapshot(
+    'should render correctly',
+    shallowRender(<FooterList links={links} />),
+  );
 });

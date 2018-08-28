@@ -1,11 +1,15 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
-    isNull('should return null', <TextContainer />);
+    isNull('should return null', shallowRender(<TextContainer />));
   });
 
   describe('with data', () => {
@@ -41,9 +45,11 @@ describe('TextContainer', () => {
       /*
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
       */
-      <StaticRouter>
-        <TextContainer {...data} />
-      </StaticRouter>,
+      shallowRender(
+        <StaticRouter>
+          <TextContainer {...data} />
+        </StaticRouter>,
+      ),
     );
   });
 });

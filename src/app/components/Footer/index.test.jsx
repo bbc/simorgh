@@ -1,7 +1,10 @@
 import React from 'react';
 import Footer from './index';
 
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 describe(`Footer`, () => {
   const link = {
@@ -13,6 +16,8 @@ describe(`Footer`, () => {
 
   shouldMatchSnapshot(
     'should render correctly',
-    <Footer links={links} copyrightText="Text here. " externalLink={link} />,
+    shallowRender(
+      <Footer links={links} copyrightText="Text here. " externalLink={link} />,
+    ),
   );
 });

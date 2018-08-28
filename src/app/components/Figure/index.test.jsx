@@ -1,6 +1,10 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import Figure from './index';
+
+import {
+  shallowRender,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 
 const image = {
   alt:
@@ -15,21 +19,23 @@ describe('Figure', () => {
   describe('with a caption', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure {...image} copyrightHolder="BBC" caption={caption} />,
+      shallowRender(
+        <Figure {...image} copyrightHolder="BBC" caption={caption} />,
+      ),
     );
   });
 
   describe('without a caption', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure {...image} copyrightHolder="BBC" />,
+      shallowRender(<Figure {...image} copyrightHolder="BBC" />),
     );
   });
 
   describe('with non BBC copyright', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure {...image} copyrightHolder="Getty images" />,
+      shallowRender(<Figure {...image} copyrightHolder="Getty images" />),
     );
   });
 });
