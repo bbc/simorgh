@@ -35,7 +35,6 @@ export const checkFooterLinks = (position, url) => {
 export const checkLinkStyling = position => {
   const link = cy.get('a').eq(position);
   shouldContainStyles(link, 'color', 'rgb(255, 255, 255)');
-  
   link.focus();
   shouldContainStyles(
     link.get('span').eq(position),
