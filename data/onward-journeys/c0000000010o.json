@@ -32,143 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "cql0269k80xt",
-      "topicName": "#MeToo campaign",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Glover and Jones create Time's Up video"
-          },
-          "locators": {
-            "uri": "/news/entertainment-arts-44630735"
-          },
-          "timestamp": 1530116595,
-          "image": {
-            "blockId": "90dffb40-b70b-4d1d-9c38-034d8a1ec356",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "9fe9dcda-3c6a-4f48-b1dc-d0fe4a7bff5c",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/2727/production/_102232001_befunky-collage.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cql0269k80xt",
-      "topicName": "#MeToo campaign",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Glover and Jones create Time's Up video"
-          },
-          "locators": {
-            "uri": "/news/entertainment-arts-44630735"
-          },
-          "timestamp": 1530116595,
-          "image": {
-            "blockId": "90dffb40-b70b-4d1d-9c38-034d8a1ec356",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "9fe9dcda-3c6a-4f48-b1dc-d0fe4a7bff5c",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/2727/production/_102232001_befunky-collage.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cql0269k80xt",
-      "topicName": "#MeToo campaign",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Glover and Jones create Time's Up video"
-          },
-          "locators": {
-            "uri": "/news/entertainment-arts-44630735"
-          },
-          "timestamp": 1530116595,
-          "image": {
-            "blockId": "90dffb40-b70b-4d1d-9c38-034d8a1ec356",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "9fe9dcda-3c6a-4f48-b1dc-d0fe4a7bff5c",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/2727/production/_102232001_befunky-collage.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cql0269k80xt",
-      "topicName": "#MeToo campaign",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Glover and Jones create Time's Up video"
-          },
-          "locators": {
-            "uri": "/news/entertainment-arts-44630735"
-          },
-          "timestamp": 1530116595,
-          "image": {
-            "blockId": "90dffb40-b70b-4d1d-9c38-034d8a1ec356",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "9fe9dcda-3c6a-4f48-b1dc-d0fe4a7bff5c",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/2727/production/_102232001_befunky-collage.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cql0269k80xt/metoo-campaign"
     }
   ],
   "moreFromTheBBC": [
@@ -344,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cql0269k80xt/metoo-campaign"
     },
     {
       "topicId": "cpme0nn8kzzt",
@@ -518,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cpme0nn8kzzt/timesup-campaign"
     },
     {
       "topicId": "cg41ylwvgjyt",
@@ -692,7 +559,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cg41ylwvgjyt/film"
     },
     {
       "topicId": "c9eddyqn66yt",
@@ -866,7 +734,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/c9eddyqn66yt/new-york-city"
     },
     {
       "topicId": "cn89pdz0pd4t",
@@ -1040,7 +909,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cn89pdz0pd4t/sexual-harassment"
     }
   ],
   "mostRead": [
