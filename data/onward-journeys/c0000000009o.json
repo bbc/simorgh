@@ -32,109 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "ck7rdppjl6rt",
-      "topicName": "Liff",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Over here. Over crowded. Over the top?"
-          },
-          "locators": {
-            "uri": "/news/uk-scotland-scotland-business-45238735"
-          },
-          "timestamp": 1534679634,
-          "image": {
-            "blockId": "2c7c219c-6449-4e7c-91f6-7287fb4a95e7",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "b99ee28a-5174-4f99-a049-e98055dfc3c0",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/3A77/production/_103076941_mediaitem103076940.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "ck7rdppjl6rt",
-      "topicName": "Liff",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Over here. Over crowded. Over the top?"
-          },
-          "locators": {
-            "uri": "/news/uk-scotland-scotland-business-45238735"
-          },
-          "timestamp": 1534679634,
-          "image": {
-            "blockId": "2c7c219c-6449-4e7c-91f6-7287fb4a95e7",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "b99ee28a-5174-4f99-a049-e98055dfc3c0",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/3A77/production/_103076941_mediaitem103076940.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "ck7rdppjl6rt",
-      "topicName": "Liff",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Over here. Over crowded. Over the top?"
-          },
-          "locators": {
-            "uri": "/news/uk-scotland-scotland-business-45238735"
-          },
-          "timestamp": 1534679634,
-          "image": {
-            "blockId": "2c7c219c-6449-4e7c-91f6-7287fb4a95e7",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "b99ee28a-5174-4f99-a049-e98055dfc3c0",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/3A77/production/_103076941_mediaitem103076940.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2644518-liff/0"
     }
   ],
   "moreFromTheBBC": [
@@ -310,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cp7r8vgl2lgt/donald-trump"
     },
     {
       "topicId": "ck7rdppjl6rt",
@@ -484,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2644518-liff/0"
     },
     {
       "topicId": "cwlw3xz04egt",
@@ -658,7 +559,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz04egt/mental-health"
     },
     {
       "topicId": "cwlw3xz01m7t",
@@ -832,7 +734,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz01m7t/ruth-davidson"
     },
     {
       "topicId": "c302m85qe1vt",
@@ -1006,7 +909,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/c302m85qe1vt/uk-immigration"
     }
   ],
   "mostRead": [

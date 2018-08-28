@@ -32,143 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "cwlw3xz0lvvt",
-      "topicName": "Brexit",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Firms 'hit by EU labour shortages'"
-          },
-          "locators": {
-            "uri": "/news/business-45162132"
-          },
-          "timestamp": 1534115732,
-          "image": {
-            "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "52442115-805a-40d0-9110-3a7a867d2881",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/65FA/production/_99760162_gettyimages-862588248.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cwlw3xz0lvvt",
-      "topicName": "Brexit",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Firms 'hit by EU labour shortages'"
-          },
-          "locators": {
-            "uri": "/news/business-45162132"
-          },
-          "timestamp": 1534115732,
-          "image": {
-            "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "52442115-805a-40d0-9110-3a7a867d2881",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/65FA/production/_99760162_gettyimages-862588248.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cwlw3xz0lvvt",
-      "topicName": "Brexit",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Firms 'hit by EU labour shortages'"
-          },
-          "locators": {
-            "uri": "/news/business-45162132"
-          },
-          "timestamp": 1534115732,
-          "image": {
-            "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "52442115-805a-40d0-9110-3a7a867d2881",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/65FA/production/_99760162_gettyimages-862588248.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "topicId": "cwlw3xz0lvvt",
-      "topicName": "Brexit",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Firms 'hit by EU labour shortages'"
-          },
-          "locators": {
-            "uri": "/news/business-45162132"
-          },
-          "timestamp": 1534115732,
-          "image": {
-            "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "52442115-805a-40d0-9110-3a7a867d2881",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/65FA/production/_99760162_gettyimages-862588248.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Getty Images"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz0lvvt/brexit"
     }
   ],
   "moreFromTheBBC": [
@@ -344,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz0lvvt/brexit"
     },
     {
       "topicId": "c1038wnxn57t",
@@ -518,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/c1038wnxn57t/german-federal-elections-2017"
     },
     {
       "topicId": "cvenzmgyev0t",
@@ -692,7 +559,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cvenzmgyev0t/us-election-2016"
     },
     {
       "topicId": "cky4yx910j3t",
@@ -866,7 +734,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cky4yx910j3t/russian-presidential-election-2018"
     },
     {
       "topicId": "cwm11216mzyt",
@@ -1040,7 +909,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwm11216mzyt/us-mid-term-elections-2018"
     }
   ],
   "mostRead": [
