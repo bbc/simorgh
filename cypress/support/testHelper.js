@@ -36,14 +36,15 @@ export const checkLinkStyling = position => {
   const link = cy.get('a').eq(position);
   shouldContainStyles(link, 'color', 'rgb(255, 255, 255)');
   link.focus();
+  const linkSpan = link.get('span').eq(position);
   shouldContainStyles(
-    link.get('span').eq(position),
+    linkSpan,
     'border-bottom',
     '2px solid rgb(255, 255, 255)',
   );
   link.invoke('mouseover');
   shouldContainStyles(
-    link.get('span').eq(position),
+    linkSpan,
     'border-bottom',
     '2px solid rgb(255, 255, 255)',
   );
