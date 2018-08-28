@@ -50,7 +50,7 @@ describe('Footer Tests', () => {
       checkFooterLinks('6', '/contact/');
     });
   });
-  xit('should have styling', () => {
+  it('should have styling', () => {
     getElement('footer ul').within(() => {
       checkLinkStyling(0);
       checkLinkStyling(1);
