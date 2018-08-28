@@ -26,10 +26,17 @@ describe('Figure', () => {
     );
   });
 
-  describe('with non BBC copyright', () => {
+  describe('with non-BBC copyright', () => {
     shouldMatchSnapshot(
       'should render correctly',
       <Figure {...image} copyrightHolder="Getty images" />,
+    );
+  });
+
+  describe('with caption and non-BBC copyright', () => {
+    shouldMatchSnapshot(
+      'should render correctly',
+      <Figure {...image} copyrightHolder="Getty images" caption={caption} />,
     );
   });
 });

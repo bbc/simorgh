@@ -21,8 +21,14 @@ storiesOf('Figure', module)
     </Figure>
   ))
   .add('without a caption', () => <Figure {...image} />)
-  .add('with non BBC copyright', () => (
+  .add('with non-BBC copyright', () => (
     <Figure {...image}>
       <VisuallyHiddenText>{copyright}</VisuallyHiddenText>
+    </Figure>
+  ))
+  .add('with a caption and non-BBC copyright', () => (
+    <Figure {...image}>
+      <VisuallyHiddenText>{copyright}</VisuallyHiddenText>
+      <Caption>{caption}</Caption>
     </Figure>
   ));

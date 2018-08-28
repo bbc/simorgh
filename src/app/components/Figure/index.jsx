@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, element, shape } from 'prop-types';
+import { string, node } from 'prop-types';
 import styled from 'styled-components';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
@@ -24,7 +24,7 @@ const Figure = ({ src, alt, children }) => (
 Figure.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
-  children: shape({ element }),
+  children: node,
 };
 
 Figure.defaultProps = {
