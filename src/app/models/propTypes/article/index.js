@@ -22,8 +22,18 @@ const articlePropTypes = {
         genre: string,
       }),
       tags: shape({
-        about: string,
-        mentions: string,
+        about: arrayOf(
+          shape({
+            thingUri: string,
+            topicId: string,
+            topicName: string,
+            curationType: arrayOf(string),
+            thingId: string,
+            thingLabel: string,
+            thingType: arrayOf(string),
+          }),
+        ),
+        mentions: arrayOf(shape({})),
       }),
       version: string,
       blockTypes: arrayOf(string),
@@ -45,7 +55,7 @@ const articlePropTypes = {
       summary: string,
       timestamp: number,
     }).isRequired,
-  }).isRequired,
+  }),
 };
 
 export default articlePropTypes;

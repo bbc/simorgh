@@ -3,7 +3,17 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import Caption from './Caption';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import { GEL_SPACING_DBL } from '../../lib/constants/styles';
+
+const copyrightOffscreenText = 'Copyright';
+
+const renderCopyright = copyright => {
+  const copyrightText = `${copyrightOffscreenText} ${copyright}`;
+  return copyright !== 'BBC' ? (
+    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
+  ) : null;
+};
 
 const renderCaption = caption =>
   caption ? <Caption>{caption}</Caption> : null;
@@ -19,10 +29,11 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Figure = ({ src, alt, caption }) => (
+const Figure = ({ src, alt, copyrightHolder, caption }) => (
   <StyledFigure>
     <LazyLoad height={200}>
       <Image src={src} alt={alt} />
+      {renderCopyright(copyrightHolder)}
       {renderCaption(caption)}
     </LazyLoad>
   </StyledFigure>
@@ -31,6 +42,7 @@ const Figure = ({ src, alt, caption }) => (
 Figure.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  copyrightHolder: string.isRequired,
   caption: string,
 };
 

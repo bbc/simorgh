@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import Header from '../Header';
-import MainContent from '../../containers/MainContent';
-import mainContentPropTypes from '../../models/propTypes/mainContent';
+import Footer from '../../containers/Footer';
 
-const Article = ({ lang, title, blocks, id }) => {
+const Article = ({ lang, title, id, children }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
 
   return (
@@ -19,16 +18,17 @@ const Article = ({ lang, title, blocks, id }) => {
         <link rel="canonical" href={canonicalLink} />
       </Helmet>
       <Header />
-      <MainContent blocks={blocks} />
+      {children}
+      <Footer />
     </Fragment>
   );
 };
 
 Article.propTypes = {
+  children: node.isRequired,
   id: string.isRequired,
   lang: string.isRequired,
   title: string.isRequired,
-  ...mainContentPropTypes.isRequired,
 };
 
 export default Article;

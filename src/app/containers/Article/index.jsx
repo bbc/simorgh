@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
+import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 
 class ArticleContainer extends Component {
@@ -35,10 +36,21 @@ class ArticleContainer extends Component {
 
   render() {
     const { data } = this.props;
+
+    /*
+      This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
+      After.JS gives no explicit loading state, so we just have to check for a lack of data.
+      After.JS should handle async data fetching in a more informative way, which will be become an issue for error handling.
+    */
+    if (!data) {
+      return 'Loading...';
+    }
+
     const { content, metadata, promo } = data;
     const { id: aresArticleId } = metadata;
 
     const id = aresArticleId.split(':').pop();
+    const { blocks } = content.model;
 
     return (
       <Article
@@ -46,11 +58,17 @@ class ArticleContainer extends Component {
         lang={metadata.passport.language}
         title={promo.headlines.seoHeadline}
         {...content.model}
-      />
+      >
+        <MainContent blocks={blocks} />
+      </Article>
     );
   }
 }
 
 ArticleContainer.propTypes = articlePropTypes;
+
+ArticleContainer.defaultProps = {
+  data: null,
+};
 
 export default ArticleContainer;
