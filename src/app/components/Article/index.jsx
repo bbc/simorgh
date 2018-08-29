@@ -6,10 +6,15 @@ import Footer from '../../containers/Footer';
 
 const Article = ({ amp, lang, title, id, children }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
+  const htmlAttributes = { lang };
+
+  if (amp) {
+    htmlAttributes.amp = amp;
+  }
 
   return (
     <Fragment>
-      <Helmet htmlAttributes={{ amp, lang }}>
+      <Helmet htmlAttributes={htmlAttributes}>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
