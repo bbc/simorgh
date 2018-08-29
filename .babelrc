@@ -27,7 +27,8 @@
     [
       "babel-plugin-styled-components",
       {
-        "ssr": true
+        "ssr": true,
+        "fileName": false
       }
     ]
   ]
