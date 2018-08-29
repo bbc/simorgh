@@ -34,6 +34,7 @@
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
     "test:lighthouse": "npm run killApp && npm run build && run-p --race start lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
+    "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "razzle test --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
   },
@@ -93,6 +94,10 @@
     "npm-run-all": "^4.1.3",
     "prettier": "^1.14.0",
     "react-test-renderer": "^16.4.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.2",
     "supertest": "^3.1.0",
     "swagger-cli": "^2.1.1",
     "webpack-bundle-analyzer": "^2.13.1",
