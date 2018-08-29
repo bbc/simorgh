@@ -5,9 +5,9 @@ describe('isAmpPath', () => {
     expect(isAmpPath('/random')).toEqual(false);
   });
   it('should return false when passed a non-AMP article path', () => {
-    expect(isAmpPath('/news/articles/c0000000001o')).toEqual(false);
+    expect(isAmpPath('/news/articles/:id')).toEqual(false);
   });
   it('should return true when passed an AMP article path', () => {
-    expect(isAmpPath('/news/articles/amp/c0000000001o')).toEqual(false);
+    expect(isAmpPath('/news/articles/amp/:id')).toEqual(true);
   });
 });
