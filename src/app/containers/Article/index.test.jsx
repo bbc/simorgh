@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
@@ -85,13 +85,16 @@ describe('ArticleContainer', () => {
   };
 
   describe('Component', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render correctly',
       <ArticleContainer data={articleData} />,
     );
 
     describe('no data', () => {
-      shouldMatchSnapshot('should render correctly', <ArticleContainer />);
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer />,
+      );
     });
   });
 
