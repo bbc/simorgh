@@ -1,0 +1,669 @@
+{
+  "object": "document",
+  "data": {},
+  "nodes": [
+    {
+      "object": "block",
+      "type": "text",
+      "data": {},
+      "nodes": [
+        {
+          "object": "block",
+          "type": "unordered-list",
+          "data": {},
+          "nodes": [
+            {
+              "object": "block",
+              "type": "list-item",
+              "data": {},
+              "nodes": [
+                {
+                  "object": "block",
+                  "type": "paragraph",
+                  "data": {},
+                  "nodes": [
+                    {
+                      "object": "text",
+                      "leaves": [
+                        {
+                          "object": "leaf",
+                          "text": "Text 1",
+                          "marks": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "object": "block",
+                  "type": "ordered-list",
+                  "data": {},
+                  "nodes": [
+                    {
+                      "object": "block",
+                      "type": "list-item",
+                      "data": {},
+                      "nodes": [
+                        {
+                          "object": "block",
+                          "type": "paragraph",
+                          "data": {},
+                          "nodes": [
+                            {
+                              "object": "text",
+                              "leaves": [
+                                {
+                                  "object": "leaf",
+                                  "text": "This is editable ",
+                                  "marks": []
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": "rich",
+                                  "marks": [
+                                    {
+                                      "object": "mark",
+                                      "type": "bold",
+                                      "data": {}
+                                    }
+                                  ]
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": " text, and ",
+                                  "marks": []
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": "italic",
+                                  "marks": [
+                                    {
+                                      "object": "mark",
+                                      "type": "italic",
+                                      "data": {}
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "object": "block",
+                          "type": "unordered-list",
+                          "data": {},
+                          "nodes": [
+                            {
+                              "object": "block",
+                              "type": "list-item",
+                              "data": {},
+                              "nodes": [
+                                {
+                                  "object": "block",
+                                  "type": "paragraph",
+                                  "data": {},
+                                  "nodes": [
+                                    {
+                                      "object": "text",
+                                      "leaves": [
+                                        {
+                                          "object": "leaf",
+                                          "text": "Text 1",
+                                          "marks": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "object": "block",
+                                  "type": "ordered-list",
+                                  "data": {},
+                                  "nodes": [
+                                    {
+                                      "object": "block",
+                                      "type": "list-item",
+                                      "data": {},
+                                      "nodes": [
+                                        {
+                                          "object": "block",
+                                          "type": "paragraph",
+                                          "data": {},
+                                          "nodes": [
+                                            {
+                                              "object": "text",
+                                              "leaves": [
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "This is editable ",
+                                                  "marks": []
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "rich",
+                                                  "marks": [
+                                                    {
+                                                      "object": "mark",
+                                                      "type": "bold",
+                                                      "data": {}
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": " text, and ",
+                                                  "marks": []
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "italic",
+                                                  "marks": [
+                                                    {
+                                                      "object": "mark",
+                                                      "type": "italic",
+                                                      "data": {}
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "object": "block",
+                                      "type": "list-item",
+                                      "data": {},
+                                      "nodes": [
+                                        {
+                                          "object": "block",
+                                          "type": "paragraph",
+                                          "data": {},
+                                          "nodes": [
+                                            {
+                                              "object": "text",
+                                              "leaves": [
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "This is editable ",
+                                                  "marks": []
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "rich",
+                                                  "marks": [
+                                                    {
+                                                      "object": "mark",
+                                                      "type": "bold",
+                                                      "data": {}
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": " text, and ",
+                                                  "marks": []
+                                                },
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "italic",
+                                                  "marks": [
+                                                    {
+                                                      "object": "mark",
+                                                      "type": "italic",
+                                                      "data": {}
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "object": "block",
+                              "type": "list-item",
+                              "data": {},
+                              "nodes": [
+                                {
+                                  "object": "block",
+                                  "type": "paragraph",
+                                  "data": {},
+                                  "nodes": [
+                                    {
+                                      "object": "text",
+                                      "leaves": [
+                                        {
+                                          "object": "leaf",
+                                          "text": "Text 2",
+                                          "marks": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "object": "block",
+                                  "type": "unordered-list",
+                                  "data": {},
+                                  "nodes": [
+                                    {
+                                      "object": "block",
+                                      "type": "list-item",
+                                      "data": {},
+                                      "nodes": [
+                                        {
+                                          "object": "block",
+                                          "type": "paragraph",
+                                          "data": {},
+                                          "nodes": [
+                                            {
+                                              "object": "text",
+                                              "leaves": [
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "Text 1",
+                                                  "marks": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "object": "block",
+                                          "type": "ordered-list",
+                                          "data": {},
+                                          "nodes": [
+                                            {
+                                              "object": "block",
+                                              "type": "list-item",
+                                              "data": {},
+                                              "nodes": [
+                                                {
+                                                  "object": "block",
+                                                  "type": "paragraph",
+                                                  "data": {},
+                                                  "nodes": [
+                                                    {
+                                                      "object": "text",
+                                                      "leaves": [
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "This is editable ",
+                                                          "marks": []
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "rich",
+                                                          "marks": [
+                                                            {
+                                                              "object": "mark",
+                                                              "type": "bold",
+                                                              "data": {}
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": " text, and ",
+                                                          "marks": []
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "italic",
+                                                          "marks": [
+                                                            {
+                                                              "object": "mark",
+                                                              "type": "italic",
+                                                              "data": {}
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "object": "block",
+                                              "type": "list-item",
+                                              "data": {},
+                                              "nodes": [
+                                                {
+                                                  "object": "block",
+                                                  "type": "paragraph",
+                                                  "data": {},
+                                                  "nodes": [
+                                                    {
+                                                      "object": "text",
+                                                      "leaves": [
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "This is editable ",
+                                                          "marks": []
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "rich",
+                                                          "marks": [
+                                                            {
+                                                              "object": "mark",
+                                                              "type": "bold",
+                                                              "data": {}
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": " text, and ",
+                                                          "marks": []
+                                                        },
+                                                        {
+                                                          "object": "leaf",
+                                                          "text": "italic",
+                                                          "marks": [
+                                                            {
+                                                              "object": "mark",
+                                                              "type": "italic",
+                                                              "data": {}
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "object": "block",
+                                                  "type": "unordered-list",
+                                                  "data": {},
+                                                  "nodes": [
+                                                    {
+                                                      "object": "block",
+                                                      "type": "list-item",
+                                                      "data": {},
+                                                      "nodes": [
+                                                        {
+                                                          "object": "block",
+                                                          "type": "paragraph",
+                                                          "data": {},
+                                                          "nodes": [
+                                                            {
+                                                              "object": "text",
+                                                              "leaves": [
+                                                                {
+                                                                  "object": "leaf",
+                                                                  "text": "Text 1",
+                                                                  "marks": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "object": "block",
+                                                          "type": "ordered-list",
+                                                          "data": {},
+                                                          "nodes": [
+                                                            {
+                                                              "object": "block",
+                                                              "type": "list-item",
+                                                              "data": {},
+                                                              "nodes": [
+                                                                {
+                                                                  "object": "block",
+                                                                  "type": "paragraph",
+                                                                  "data": {},
+                                                                  "nodes": [
+                                                                    {
+                                                                      "object": "text",
+                                                                      "leaves": [
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "This is editable ",
+                                                                          "marks": []
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "rich",
+                                                                          "marks": [
+                                                                            {
+                                                                              "object": "mark",
+                                                                              "type": "bold",
+                                                                              "data": {}
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": " text, and ",
+                                                                          "marks": []
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "italic",
+                                                                          "marks": [
+                                                                            {
+                                                                              "object": "mark",
+                                                                              "type": "italic",
+                                                                              "data": {}
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "object": "block",
+                                                              "type": "list-item",
+                                                              "data": {},
+                                                              "nodes": [
+                                                                {
+                                                                  "object": "block",
+                                                                  "type": "paragraph",
+                                                                  "data": {},
+                                                                  "nodes": [
+                                                                    {
+                                                                      "object": "text",
+                                                                      "leaves": [
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "This is editable ",
+                                                                          "marks": []
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "rich",
+                                                                          "marks": [
+                                                                            {
+                                                                              "object": "mark",
+                                                                              "type": "bold",
+                                                                              "data": {}
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": " text, and ",
+                                                                          "marks": []
+                                                                        },
+                                                                        {
+                                                                          "object": "leaf",
+                                                                          "text": "italic",
+                                                                          "marks": [
+                                                                            {
+                                                                              "object": "mark",
+                                                                              "type": "italic",
+                                                                              "data": {}
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "object": "block",
+                                                      "type": "list-item",
+                                                      "data": {},
+                                                      "nodes": [
+                                                        {
+                                                          "object": "block",
+                                                          "type": "paragraph",
+                                                          "data": {},
+                                                          "nodes": [
+                                                            {
+                                                              "object": "text",
+                                                              "leaves": [
+                                                                {
+                                                                  "object": "leaf",
+                                                                  "text": "Text 2",
+                                                                  "marks": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "object": "block",
+                                      "type": "list-item",
+                                      "data": {},
+                                      "nodes": [
+                                        {
+                                          "object": "block",
+                                          "type": "paragraph",
+                                          "data": {},
+                                          "nodes": [
+                                            {
+                                              "object": "text",
+                                              "leaves": [
+                                                {
+                                                  "object": "leaf",
+                                                  "text": "Text 2",
+                                                  "marks": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "object": "block",
+                      "type": "list-item",
+                      "data": {},
+                      "nodes": [
+                        {
+                          "object": "block",
+                          "type": "paragraph",
+                          "data": {},
+                          "nodes": [
+                            {
+                              "object": "text",
+                              "leaves": [
+                                {
+                                  "object": "leaf",
+                                  "text": "This is editable ",
+                                  "marks": []
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": "rich",
+                                  "marks": [
+                                    {
+                                      "object": "mark",
+                                      "type": "bold",
+                                      "data": {}
+                                    }
+                                  ]
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": " text, and ",
+                                  "marks": []
+                                },
+                                {
+                                  "object": "leaf",
+                                  "text": "italic",
+                                  "marks": [
+                                    {
+                                      "object": "mark",
+                                      "type": "italic",
+                                      "data": {}
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "object": "block",
+              "type": "list-item",
+              "data": {},
+              "nodes": [
+                {
+                  "object": "block",
+                  "type": "paragraph",
+                  "data": {},
+                  "nodes": [
+                    {
+                      "object": "text",
+                      "leaves": [
+                        {
+                          "object": "leaf",
+                          "text": "Text 2",
+                          "marks": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
