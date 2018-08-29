@@ -75,4 +75,20 @@ describe('Footer Tests', () => {
       .should('have.attr', 'href')
       .and('contain', '/help/web/links');
   });
+  it('should contain a link in the copyright text, which have hover and focus states', () => {
+    const link = getElement('footer p a');
+    link.focus();
+    const linkSpan = link.get('footer p a span');
+    shouldContainStyles(
+      linkSpan,
+      'border-bottom',
+      '2px solid rgb(255, 255, 255)',
+    );
+    link.invoke('mouseover');
+    shouldContainStyles(
+      linkSpan,
+      'border-bottom',
+      '2px solid rgb(255, 255, 255)',
+    );
+  });
 });
