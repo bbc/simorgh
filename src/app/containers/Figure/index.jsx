@@ -5,36 +5,29 @@ import Image from '../../components/Figure/Image';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import Caption from '../../components/Figure/Caption';
 
-const FigureContainer = ({ src, alt, copyrightHolder, caption }) => {
-  const copyrightOffscreenText = 'Copyright';
+const renderCopyright = copyright =>
+  copyright ? <VisuallyHiddenText>{copyright}</VisuallyHiddenText> : null;
 
-  const renderCopyright = copyright => {
-    const copyrightText = `${copyrightOffscreenText} ${copyright}`;
-    return copyright !== 'BBC' ? (
-      <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
-    ) : null;
-  };
+const renderCaption = captionValue =>
+  captionValue ? <Caption>{captionValue}</Caption> : null;
 
-  const renderCaption = captionValue =>
-    captionValue ? <Caption>{captionValue}</Caption> : null;
-
-  return (
-    <Figure>
-      <Image alt={alt} src={src} />
-      {renderCopyright(copyrightHolder)}
-      {renderCaption(caption)}
-    </Figure>
-  );
-};
+const FigureContainer = ({ src, alt, copyright, caption }) => (
+  <Figure>
+    <Image alt={alt} src={src} />
+    {renderCopyright(copyright)}
+    {renderCaption(caption)}
+  </Figure>
+);
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
-  copyrightHolder: string.isRequired,
+  copyright: string,
   caption: string,
 };
 
 FigureContainer.defaultProps = {
+  copyright: null,
   caption: null,
 };
 

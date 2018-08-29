@@ -12,6 +12,17 @@ const getCaption = block => {
   return getText(block);
 };
 
+const getCopyright = copyrightHolder => {
+  if (copyrightHolder === 'BBC') {
+    return null;
+  }
+
+  const copyrightOffscreenText = 'Copyright';
+  const copyrightText = `${copyrightOffscreenText} ${copyrightHolder}`;
+
+  return copyrightText;
+};
+
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
     return null;
@@ -33,7 +44,7 @@ const ImageContainer = ({ blocks }) => {
     <Figure
       src={rawImageSrc}
       alt={altText}
-      copyrightHolder={copyrightHolder}
+      copyright={getCopyright(copyrightHolder)}
       caption={getCaption(captionBlock)}
     />
   );
