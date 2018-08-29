@@ -5,7 +5,7 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   ${styledNormalize}
 
-  // Box Sizing https://bit.ly/1A91I0J
+  /* Box Sizing https://bit.ly/1A91I0J */
   html {
     box-sizing: border-box;
     font-size: 100%;

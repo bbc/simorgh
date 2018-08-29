@@ -1,6 +1,9 @@
 import React from 'react';
 import ImageContainer from './index';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
@@ -41,7 +44,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render an image with alt text',
       <ImageContainer {...data} />,
     );
@@ -54,7 +57,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
       <ImageContainer {...dataWithNonBbcCopyright} />,
     );
@@ -71,7 +74,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
     );

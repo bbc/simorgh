@@ -32,41 +32,8 @@
             }
           }
         }
-      ]
-    },
-    {
-      "topicId": "cn54x92e7y8t",
-      "topicName": "Irish abortion referendum",
-      "content": [
-        {
-          "headlines": {
-            "promoHeadline": "Hundreds rally for NI abortion rights"
-          },
-          "locators": {
-            "uri": "/news/uk-northern-ireland-44281878"
-          },
-          "timestamp": 1527530761,
-          "image": {
-            "blockId": "9fd80166-7482-45b2-b84a-64ea02f7c8a9",
-            "type": "image",
-            "model": {
-              "blocks": [
-                {
-                  "blockId": "0d1ba835-2536-4b05-b1ef-c9ed18b611c8",
-                  "type": "rawImage",
-                  "model": {
-                    "width": 976,
-                    "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/13FCC/production/_101786818_capture.jpg",
-                    "originCode": "cpsprodpb",
-                    "copyrightHolder": "Pacemaker"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cn54x92e7y8t/irish-abortion-referendum"
     }
   ],
   "moreFromTheBBC": [
@@ -242,7 +209,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cn54x92e7y8t/irish-abortion-referendum"
     },
     {
       "topicId": "c207p54m45dt",
@@ -416,7 +384,8 @@
             }
           }
         }
-      ]
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/c207p54m45dt/abortion"
     }
   ],
   "mostRead": [
