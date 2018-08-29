@@ -12,6 +12,33 @@ exports[`Figure with a caption should render correctly 1`] = `
   width: 100%;
 }
 
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c2 {
+  background-color: #D5D0CD;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    padding: 0.5rem 1rem;
+  }
+}
+
 <figure
   className="c0"
 >
@@ -20,6 +47,16 @@ exports[`Figure with a caption should render correctly 1`] = `
     className="c1"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
+  <figcaption
+    className="c2"
+  >
+    <span
+      className="c3"
+    >
+      Image caption, 
+    </span>
+    This is a caption
+  </figcaption>
 </figure>
 `;
 
@@ -35,6 +72,33 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   width: 100%;
 }
 
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
+.c3 {
+  background-color: #D5D0CD;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    padding: 0.5rem 1rem;
+  }
+}
+
 <figure
   className="c0"
 >
@@ -43,6 +107,21 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
     className="c1"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
+  <span
+    className="c2"
+  >
+    Copyright Getty images
+  </span>
+  <figcaption
+    className="c3"
+  >
+    <span
+      className="c2"
+    >
+      Image caption, 
+    </span>
+    This is a caption
+  </figcaption>
 </figure>
 `;
 
@@ -58,6 +137,19 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   width: 100%;
 }
 
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 <figure
   className="c0"
 >
@@ -66,6 +158,11 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
     className="c1"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
+  <span
+    className="c2"
+  >
+    Copyright Getty images
+  </span>
 </figure>
 `;
 

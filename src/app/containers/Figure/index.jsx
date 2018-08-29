@@ -1,8 +1,9 @@
 import React from 'react';
 import { string } from 'prop-types';
 import Figure from '../../components/Figure';
-import Caption from '../../components/Figure/Caption';
+import Image from '../../components/Figure/Image';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import Caption from '../../components/Figure/Caption';
 
 const FigureContainer = ({ src, alt, copyrightHolder, caption }) => {
   const copyrightOffscreenText = 'Copyright';
@@ -18,7 +19,8 @@ const FigureContainer = ({ src, alt, copyrightHolder, caption }) => {
     captionValue ? <Caption>{captionValue}</Caption> : null;
 
   return (
-    <Figure src={src} alt={alt}>
+    <Figure>
+      <Image alt={alt} src={src} />
       {renderCopyright(copyrightHolder)}
       {renderCaption(caption)}
     </Figure>
