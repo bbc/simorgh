@@ -1,158 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-Array [
-  .c1 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c1:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
-}
-
-.c1:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
-}
-
-.c1:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
-}
-
-.c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
   }
-}
-
-<p
-    className="c0"
-  >
-    It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
-    <a
-      className="-Link c1"
-      href="/news/articles/c000000000ro"
-      onClick={[Function]}
-    >
-      which were later donated to local hospices
-    </a>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is another paragraph with some 
-    <b>
-      bold
-    </b>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with 
-    <i>
-      italic
-    </i>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    <del>
-      This is a paragraph with some strike-through text
-    </del>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with some 
-    <code>
-      inline code.
-    </code>
-  </p>,
-]
+>
+  <TextContainer
+    blocks={
+      Array [
+        Object {
+          "blockId": "01",
+          "model": Object {
+            "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c000000000ro).",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "02",
+          "model": Object {
+            "text": "This is another paragraph with some **bold** text.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "03",
+          "model": Object {
+            "text": "This is a paragraph with _italic_ text.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "04",
+          "model": Object {
+            "text": "~~This is a paragraph with some strike-through text~~.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "05",
+          "model": Object {
+            "text": "This is a paragraph with some \`inline code.\`",
+          },
+          "type": "paragraph",
+        },
+      ]
+    }
+  />
+</Router>
 `;
