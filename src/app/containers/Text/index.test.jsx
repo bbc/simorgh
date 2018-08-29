@@ -1,6 +1,9 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
@@ -36,7 +39,7 @@ describe('TextContainer', () => {
       ],
     };
 
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render correctly',
       /*
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.

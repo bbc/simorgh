@@ -69,6 +69,12 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 [Instructions for how to run tests are here in the Readme](https://github.com/bbc/simorgh/blob/latest/README.md#tests).
 
+### Writing tests
+
+For new components, we write Jest Snapshot tests, with a deep render, using the `shouldMatchSnapshot` test utility function.
+
+For new containers, we write Jest Snapshot tests with a shallow render, using the `shouldShallowMatchSnapshot` test utility function. We also write assertion-based enzyme tests to capture variations in prop values. [See the Article `getInitialProps` tests here as an example.](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Article/index.test.jsx)
+
 ### Run tests on your fork
 
 We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. PRs from your fork to the bbc/simorgh repo will be run by our TravisCI setup with no changes needed on your fork.

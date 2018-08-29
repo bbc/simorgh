@@ -1,7 +1,10 @@
 import React from 'react';
 import HeadingsContainer from './index';
 import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 
 const template = (title, text, type) => {
   describe(title, () => {
@@ -9,7 +12,7 @@ const template = (title, text, type) => {
       ...textBlock(text),
       type,
     };
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render correctly',
       <HeadingsContainer {...data} />,
     );
