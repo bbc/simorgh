@@ -4,6 +4,7 @@ import {
   getElement,
   visibleImageNoCaption,
   visibleImageWithCaption,
+  shouldContainStyles,
   shouldContainText,
 } from '../support/testHelper';
 
@@ -50,6 +51,16 @@ describe('Article Body Tests', () => {
 
   it('should render a title', () => {
     cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
+  });
+
+  it('should have an inline link with unvisited styles', () => {
+    const firstInlineLink = getElement('main a');
+    shouldContainStyles(firstInlineLink, 'color', 'rgb(15, 85, 108)');
+    shouldContainStyles(
+      firstInlineLink,
+      'border-bottom',
+      '1px solid rgb(15, 85, 108)',
+    );
   });
 
   it('should have a working first inline link', () => {
