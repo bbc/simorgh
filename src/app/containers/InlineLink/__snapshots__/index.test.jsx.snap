@@ -31,9 +31,9 @@ exports[`InlineLink with link matching routes for SPA should render correctly 1`
 `;
 
 exports[`InlineLink with link not matching SPA route should render correctly 1`] = `
-<styled.a
+<InlineLink
   href="https://www.bbc.com/news"
 >
   BBC News
-</styled.a>
+</InlineLink>
 `;
