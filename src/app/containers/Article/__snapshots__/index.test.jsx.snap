@@ -4,6 +4,7 @@ exports[`ArticleContainer Component no data should render correctly 1`] = `"Load
 
 exports[`ArticleContainer Component should render correctly 1`] = `
 <Article
+  amp={false}
   blocks={
     Array [
       Object {
