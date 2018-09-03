@@ -124,7 +124,7 @@ describe('ArticleContainer', () => {
 
     it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual({ data: mockSuccessfulResponse });
+      expect(response).toEqual({ amp: false, data: mockSuccessfulResponse });
     });
 
     describe('On client', () => {
