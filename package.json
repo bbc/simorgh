@@ -33,7 +33,7 @@
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
     "test:lighthouse": "npm run killApp && npm run build && run-p --race start lighthouse",
-    "test:a11y+lighthouse": "wait-on http://localhost:7080/ &&  A11Y_CONFIG=simorgh/simorgh OUTPUT_JSON='/lighthouse-report.json' npm --prefix ./node_modules/@bbc/a11y-tests-web run start:lighthouse:junit",
+    "test:a11y+lighthouse": "wait-on http://localhost:7080/ &&  A11Y_CONFIG=simorgh/simorgh OUTPUT_JSON='/../../../../lighthouse-report.json' npm --prefix ./node_modules/@bbc/a11y-tests-web run start:lighthouse:junit",
     "test:a11y+lighthouse:ci": "npm run build && run-p --race start test:a11y+lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
