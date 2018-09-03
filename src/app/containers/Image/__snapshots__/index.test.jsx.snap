@@ -1,67 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render an image with alt text 1`] = `
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
-}
-
-<figure
-  className="c0"
->
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    className="c1"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-</figure>
+<Figure
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyrightHolder="BBC"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-.c2 {
-  background-color: #d5d0cd;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
-  font-size: 0.9375em;
-  line-height: 1.125rem;
-}
+<Figure
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
+  copyrightHolder="BBC"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
+`;
 
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
-}
-
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 0.875em;
-  }
-}
-
-<figure
-  className="c0"
->
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    className="c1"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-  <figcaption
-    className="c2"
-  >
-    Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-  </figcaption>
-</figure>
+exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
+<Figure
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyrightHolder="Getty images"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;

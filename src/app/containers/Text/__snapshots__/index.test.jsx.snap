@@ -1,131 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-Array [
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
   }
-}
-
-<p
-    className="c0"
-  >
-    It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
-    <a
-      href="/news/articles/c000000000ro"
-    >
-      which were later donated to local hospices
-    </a>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is another paragraph with some 
-    <strong>
-      bold
-    </strong>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with 
-    <em>
-      italic
-    </em>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    <del>
-      This is a paragraph with some strike-through text
-    </del>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with some 
-    <code>
-      inline code.
-    </code>
-  </p>,
-]
+>
+  <TextContainer
+    blocks={
+      Array [
+        Object {
+          "blockId": "01",
+          "model": Object {
+            "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c000000000ro).",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "02",
+          "model": Object {
+            "text": "This is another paragraph with some **bold** text.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "03",
+          "model": Object {
+            "text": "This is a paragraph with _italic_ text.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "04",
+          "model": Object {
+            "text": "~~This is a paragraph with some strike-through text~~.",
+          },
+          "type": "paragraph",
+        },
+        Object {
+          "blockId": "05",
+          "model": Object {
+            "text": "This is a paragraph with some \`inline code.\`",
+          },
+          "type": "paragraph",
+        },
+      ]
+    }
+  />
+</Router>
 `;

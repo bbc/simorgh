@@ -22,7 +22,7 @@ Here are the font sizes and line heights in `em`s, assuming a base font size of 
 | Great Primer | 1.125         | 1.375           | 1.125         | 1.5             | 1.25          | 1.5             | Heading for single onward journey box (e.g. More on Archaeology) |
 | Body Copy    | 0.9375        | 1.25            | 1             | 1.5             | 1             | 1.375           | Body copy (p)                                                    |
 | Pica         | 0.9375        | 1.25            | 1             | 1.375           | 1             | 1.25            | Headline for single onward journey                               |
-| Long Primer  | 0.9375        | 1.125           | 0.9375        | 1.25            | 0.875         | 1.125           | Image caption & Video caption & Onward journey timestamps        |
+| Long Primer  | 0.9375        | 1.125           | 0.9375        | 1.125            | 0.875         | 1.125           | Image caption & Video caption & Onward journey timestamps        |
 | Brevier      | 0.875         | 1               | 0.875         | 1.125           | 0.8125        | 1               | Article timestamps                                               |
 | Minion       | 0.75          | 1               | 0.75          | 1               | 0.75          | 1               | Article category                                                 |
 

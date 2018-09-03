@@ -7,8 +7,8 @@ import {
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/article/scenario-25');
-    // Only 'scenario-25' & 'scenario-27' are available within the PROD enviroment
+    cy.visit('/news/articles/c0000000025o');
+    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
   });
 
   it('should render the BBC News branding', () => {
@@ -23,18 +23,7 @@ describe('Header Tests', () => {
 
     anchorElement.focus();
     shouldContainStyles(
-      cy.focused(),
-      'border-bottom',
-      '4px solid rgb(255, 255, 255)',
-    );
-  });
-
-  it('should have a hover state', () => {
-    const anchorElement = getElement('header a');
-    anchorElement.invoke('mouseover');
-
-    shouldContainStyles(
-      anchorElement,
+      getElement('header a span'),
       'border-bottom',
       '4px solid rgb(255, 255, 255)',
     );

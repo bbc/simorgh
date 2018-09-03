@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
@@ -85,14 +85,21 @@ describe('ArticleContainer', () => {
   };
 
   describe('Component', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should render correctly',
       <ArticleContainer data={articleData} />,
     );
+
+    describe('no data', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer />,
+      );
+    });
   });
 
   describe('getInitialProps', () => {
-    const defaultIdParam = 'scenario-01';
+    const defaultIdParam = 'c0000000001o';
     const defaultContext = { match: { params: { id: defaultIdParam } } };
     const mockSuccessfulResponse = { data: '12345' };
 
@@ -117,7 +124,7 @@ describe('ArticleContainer', () => {
 
     it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual({ data: mockSuccessfulResponse });
+      expect(response).toEqual({ amp: false, data: mockSuccessfulResponse });
     });
 
     describe('On client', () => {
@@ -139,7 +146,7 @@ describe('ArticleContainer', () => {
         /* eslint-disable no-console */
         expect(console.log).toBeCalledWith(
           new Error(
-            `Invalid route parameter: ${invalidIdParam}. Id parameter must be in format 'scenario-[xx]', where [xx] could be 01 to 99.`,
+            `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
           ),
         );
         /* eslint-enable no-console */

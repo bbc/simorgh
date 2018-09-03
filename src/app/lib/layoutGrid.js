@@ -13,12 +13,12 @@ import {
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: ${group3ScreenWidthMin}) {
-    grid-gap: ${GEL_SPACING}; // Between grid items
-    padding: ${GEL_SPACING}; // On grid wrapper
+    grid-gap: ${GEL_SPACING}; /* Between grid items */
+    padding: 0 ${GEL_SPACING}; /* On grid wrapper */
   }
   @media (min-width: ${group3ScreenWidthMin}) {
-    grid-gap: ${GEL_SPACING_DBL}; // Between grid items
-    padding: ${GEL_SPACING_DBL}; // On grid wrapper
+    grid-gap: ${GEL_SPACING_DBL}; /* Between grid items */
+    padding: 0 ${GEL_SPACING_DBL}; /* On grid wrapper */
   }
   @media (max-width: ${group3ScreenWidthMax}) {
     grid-template-columns: repeat(6, 1fr);
