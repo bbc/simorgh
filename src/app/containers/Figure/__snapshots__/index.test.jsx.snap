@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure should render an image with alt text 1`] = `
-<styled.figure>
+<Figure>
   <Image
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-</styled.figure>
+</Figure>
 `;
 
 exports[`Figure should render caption text 1`] = `
-<styled.figure>
+<Figure>
   <Image
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -18,11 +18,11 @@ exports[`Figure should render caption text 1`] = `
   <Caption>
     This is a caption
   </Caption>
-</styled.figure>
+</Figure>
 `;
 
 exports[`Figure should render copyright text 1`] = `
-<styled.figure>
+<Figure>
   <Image
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -30,5 +30,5 @@ exports[`Figure should render copyright text 1`] = `
   <VisuallyHiddenText>
     Copyright Getty images
   </VisuallyHiddenText>
-</styled.figure>
+</Figure>
 `;
