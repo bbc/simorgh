@@ -1,15 +1,20 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import { string, node } from 'prop-types';
+import { bool, string, node } from 'prop-types';
 import Header from '../Header';
 import Footer from '../../containers/Footer';
 
-const Article = ({ lang, title, id, children }) => {
+const Article = ({ amp, lang, title, id, children }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
+  const htmlAttributes = { lang };
+
+  if (amp) {
+    htmlAttributes.amp = amp;
+  }
 
   return (
     <Fragment>
-      <Helmet htmlAttributes={{ lang }}>
+      <Helmet htmlAttributes={htmlAttributes}>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -25,6 +30,7 @@ const Article = ({ lang, title, id, children }) => {
 };
 
 Article.propTypes = {
+  amp: bool.isRequired,
   children: node.isRequired,
   id: string.isRequired,
   lang: string.isRequired,
