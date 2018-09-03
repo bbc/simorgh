@@ -28,17 +28,6 @@ describe('Footer Tests', () => {
       '4px solid rgb(255, 255, 255)',
     );
   });
-
-  it('should have a hover state', () => {
-    const anchorElement = getElement('footer a');
-    anchorElement.invoke('mouseover');
-
-    shouldContainStyles(
-      getElement('footer a span'),
-      'border-bottom',
-      '4px solid rgb(255, 255, 255)',
-    );
-  });
   it('should have working links', () => {
     getElement('footer ul').within(() => {
       checkFooterLinks('0', '/news/help-41670342');
