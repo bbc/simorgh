@@ -28,15 +28,4 @@ describe('Header Tests', () => {
       '4px solid rgb(255, 255, 255)',
     );
   });
-
-  it('should have a hover state', () => {
-    const anchorElement = getElement('header a');
-    anchorElement.invoke('mouseover');
-
-    shouldContainStyles(
-      getElement('header a span'),
-      'border-bottom',
-      '4px solid rgb(255, 255, 255)',
-    );
-  });
 });
