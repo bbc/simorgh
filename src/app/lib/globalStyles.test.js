@@ -6,7 +6,7 @@ describe('globalStyles', () => {
 
     await import('./globalStyles');
 
-    const injectGlobalArgs = styledComponents['injectGlobal'].mock.calls[0]; // eslint-disable-line dot-notation
+    const injectGlobalArgs = styledComponents.injectGlobal.mock.calls[0]; // eslint-disable-line dot-notation
 
     expect(injectGlobalArgs).toMatchSnapshot();
   });
