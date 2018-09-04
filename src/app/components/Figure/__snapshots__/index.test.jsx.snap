@@ -26,6 +26,8 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
 }
 
 .c2 {
+  font-size: 0.9375em;
+  line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -56,6 +58,12 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
   color: #0F556C;
   background-color: #C3DEE7;
   border-bottom: 1px solid #0F556C;
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 0.875em;
+  }
 }
 
 @media (min-width:37.5em) {
@@ -117,11 +125,19 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 .c2 {
+  font-size: 0.9375em;
+  line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 0.875em;
+  }
 }
 
 @media (min-width:37.5em) {
@@ -177,11 +193,19 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 }
 
 .c3 {
+  font-size: 0.9375em;
+  line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 0.875em;
+  }
 }
 
 @media (min-width:37.5em) {
