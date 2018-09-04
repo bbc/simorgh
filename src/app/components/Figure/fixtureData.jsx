@@ -2,6 +2,7 @@ import React from 'react';
 import Figure from './index';
 import Image from './Image';
 import Caption from './Caption';
+import Text from '../Text';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
 const imageAlt =
@@ -9,6 +10,8 @@ const imageAlt =
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
 const captionValue = 'This is a caption';
+const captionValueContainingLink =
+  'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Copyright Getty images';
 
 export const FigureImage = (
@@ -20,7 +23,14 @@ export const FigureImage = (
 export const FigureImageWithCaption = (
   <Figure>
     <Image alt={imageAlt} src={imageSrc} />
-    <Caption>{captionValue}</Caption>
+    <Text text={captionValue} paragraphOverride={Caption} />
+  </Figure>
+);
+
+export const FigureImageWithCaptionContainingLink = (
+  <Figure>
+    <Image alt={imageAlt} src={imageSrc} />
+    <Text text={captionValueContainingLink} paragraphOverride={Caption} />
   </Figure>
 );
 
@@ -35,6 +45,6 @@ export const FigureImageWithCopyrightAndCaption = (
   <Figure>
     <Image alt={imageAlt} src={imageSrc} />
     <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
-    <Caption>{captionValue}</Caption>
+    <Text text={captionValue} paragraphOverride={Caption} />
   </Figure>
 );
