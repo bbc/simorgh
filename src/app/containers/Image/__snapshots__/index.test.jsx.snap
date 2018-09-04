@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render an image with alt text 1`] = `
-<Figure
+<FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
-  copyrightHolder="BBC"
+  copyright={null}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-<Figure
+<FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
-  copyrightHolder="BBC"
+  copyright={null}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-<Figure
+<FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
-  copyrightHolder="Getty images"
+  copyright="Copyright Getty images"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
