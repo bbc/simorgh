@@ -1,7 +1,8 @@
-import { arrayOf, number, shape, string } from 'prop-types';
+import { arrayOf, bool, number, shape, string } from 'prop-types';
 import mainContentPropTypes from '../mainContent';
 
 const articlePropTypes = {
+  amp: bool,
   data: shape({
     metadata: shape({
       id: string.isRequired,
