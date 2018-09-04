@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, node } from 'prop-types';
+import { string, node, func } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import InlineLink from '../../containers/InlineLink';
 import {
@@ -54,7 +54,7 @@ Bold.propTypes = {
 
 Text.propTypes = {
   text: string.isRequired,
-  paragraphOverride: node,
+  paragraphOverride: func,
 };
 
 Text.defaultProps = {
