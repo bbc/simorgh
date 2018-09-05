@@ -14,3 +14,10 @@ The following scenarios are intended to represent failures - where we would pote
 * 24 - headline only
 
 Scenario 23 represents an article which has been withdrawn.
+
+| Scenario | Metadata | Content | Tagging | Notes |
+|---------:|----------|---------|---------|-------|
+| 1        | Ordinary | Headline, Text (1 par) | None | None |
+| 2        | Ordinary | Headline, Image (portrait, caption), Text (2 pars, superscript) | One tag, no topics |
+| 3        | Ordinary | Headline, Video (caption), Text (3 pars, subscript) | Two tags, one topic (person) |
+| 4        | Ordinary | Headline, Text (1 par), Image, Text (1 par), Video (caption), Text (4 pars) | Two tags, two topics (place & person) |
