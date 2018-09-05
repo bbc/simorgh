@@ -99,4 +99,40 @@ describe('Image', () => {
       <ImageContainer {...dataWithCaption} />,
     );
   });
+
+  describe('with incomplete data', () => {
+    describe('no rawImage block', () => {
+      const dataWithoutRawImage = blockArrayModel([
+        blockContainingText(
+          'altText',
+          'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        ),
+      ]);
+      isNull(
+        'should return null if there is no image block',
+        <ImageContainer data={dataWithoutRawImage} />,
+      );
+    });
+
+    describe('no altText block', () => {
+      const rawImageBlock = {
+        type: 'rawImage',
+        model: {
+          width: 640,
+          height: 420,
+          locator:
+            '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+          originCode: null,
+          copyrightHolder: 'BBC',
+        },
+      };
+
+      const dataWithoutAltText = blockArrayModel([rawImageBlock]);
+
+      isNull(
+        'should return null',
+        <ImageContainer data={dataWithoutAltText} />,
+      );
+    });
+  });
 });
