@@ -1,9 +1,5 @@
 import React from 'react';
-import Figure from './index';
-import Image from './Image';
-import Caption from './Caption';
-import Text from '../Text';
-import VisuallyHiddenText from '../VisuallyHiddenText';
+import FigureContainer from '../../containers/Figure';
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
@@ -14,37 +10,60 @@ const captionValueContainingLink =
   'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Copyright Getty images';
 
-export const FigureImage = (
-  <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-  </Figure>
+const generateFixtureData = (hasCaption, hasCopyright, hasInlineLink) => {
+  if (hasCaption && hasInlineLink) {
+    return (
+      <FigureContainer
+        src={imageSrc}
+        alt={imageAlt}
+        caption={captionValueContainingLink}
+      />
+    );
+  }
+
+  if (hasCaption && hasCopyright) {
+    return (
+      <FigureContainer
+        src={imageSrc}
+        alt={imageAlt}
+        copyright={copyrightText}
+        caption={captionValue}
+      />
+    );
+  }
+
+  if (hasCaption) {
+    return (
+      <FigureContainer src={imageSrc} alt={imageAlt} caption={captionValue} />
+    );
+  }
+
+  if (hasCopyright) {
+    return (
+      <FigureContainer
+        src={imageSrc}
+        alt={imageAlt}
+        copyright={copyrightText}
+      />
+    );
+  }
+
+  return <FigureContainer src={imageSrc} alt={imageAlt} />;
+};
+
+export const FigureImage = generateFixtureData();
+
+export const FigureImageWithCaption = generateFixtureData(true);
+
+export const FigureImageWithCaptionContainingLink = generateFixtureData(
+  true,
+  false,
+  true,
 );
 
-export const FigureImageWithCaption = (
-  <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <Text text={captionValue} paragraphOverride={Caption} />
-  </Figure>
-);
+export const FigureImageWithCopyright = generateFixtureData(false, true);
 
-export const FigureImageWithCaptionContainingLink = (
-  <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <Text text={captionValueContainingLink} paragraphOverride={Caption} />
-  </Figure>
-);
-
-export const FigureImageWithCopyright = (
-  <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
-  </Figure>
-);
-
-export const FigureImageWithCopyrightAndCaption = (
-  <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
-    <Text text={captionValue} paragraphOverride={Caption} />
-  </Figure>
+export const FigureImageWithCopyrightAndCaption = generateFixtureData(
+  true,
+  true,
 );
