@@ -2,10 +2,21 @@ import React from 'react';
 import { textModelPropTypes } from '../../models/propTypes/text';
 import Text from '../../components/Text';
 
-const TextContainer = ({ blocks }) => {
+const TextContainer = ({ type, blocks, typeOfPreviousBlock }) => {
   if (!blocks) return null;
 
-  return blocks.map(({ blockId, model }) => <Text key={blockId} {...model} />);
+  const HorizontalRule = typeOfPreviousBlock === type ? <hr /> : null;
+
+  const textBlocks = blocks.map(({ blockId, model }) => (
+    <Text key={blockId} {...model} />
+  ));
+
+  return (
+    <React.Fragment>
+      {HorizontalRule}
+      {textBlocks}
+    </React.Fragment>
+  );
 };
 
 TextContainer.propTypes = textModelPropTypes;
