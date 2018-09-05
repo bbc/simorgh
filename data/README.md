@@ -17,7 +17,10 @@ Scenario 23 represents an article which has been withdrawn.
 
 | Scenario | Metadata | Content | Tagging | Notes |
 |---------:|----------|---------|---------|-------|
-| 1        | Ordinary | Headline, Text (1 par) | None | None |
-| 2        | Ordinary | Headline, Image (portrait, caption), Text (2 pars, superscript) | One tag, no topics |
-| 3        | Ordinary | Headline, Video (caption), Text (3 pars, subscript) | Two tags, one topic (person) |
-| 4        | Ordinary | Headline, Text (1 par), Image, Text (1 par), Video (caption), Text (4 pars) | Two tags, two topics (place & person) |
+| 1        | Ordinary | Headline, Text (1 par) | None | |
+| 2        | Ordinary | Headline, Image (portrait, caption), Text (2 pars, superscript) | One tag, no topics | |
+| 3        | Ordinary | Headline, Video (caption), Text (3 pars, subscript) | Two tags, one topic (person) | |
+| 4        | Ordinary | Headline, Text (1 par), Image, Text (1 par), Video (caption), Text (4 pars) | Two tags, two topics (place & person) | |
+| 5        | Ordinary | Headline, Text (1 par), Image (caption), Video (caption), Image | Two tags, two topics (event & place) | |
+| 6        | Ordinary | Headline, Text (1 par, external link), Video (caption), Image (caption) | 5 tags, 3 topics (person & 2 events) | |
+| 7        | Category: Opinion | Text (1 par), Headline, Text (2 pars, internal link), Subheading, Text (1 long par) | Four tags, four topics (2 people, 2 places) | Will fail in v1.0 |
