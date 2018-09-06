@@ -3,113 +3,23 @@
 exports[`TextContainer with data should render correctly 1`] = `
 <React.Fragment>
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 1st paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 2nd paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 3rd paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 4th paragraph block.."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 5th paragraph block."
   />
 </React.Fragment>
@@ -119,113 +29,23 @@ exports[`TextContainer with data with a passed previous block type should render
 <React.Fragment>
   <hr />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 1st paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 2nd paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 3rd paragraph block."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 4th paragraph block.."
   />
   <Text
-    options={
-      Object {
-        "forceBlock": true,
-        "overrides": Object {
-          "a": Object {
-            "component": [Function],
-          },
-          "em": Object {
-            "component": [Function],
-          },
-          "p": Object {
-            "component": [Function],
-          },
-          "strong": Object {
-            "component": [Function],
-          },
-        },
-      }
-    }
+    paragraphOverride={[Function]}
     text="This is a 5th paragraph block."
   />
 </React.Fragment>
