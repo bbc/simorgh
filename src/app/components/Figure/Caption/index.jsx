@@ -10,12 +10,12 @@ import {
 } from '../../../lib/constants/styles';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
-import T_LONG_PRIMER from '../../../lib/constants/typography';
+import { T_LONG_PRIMER } from '../../../lib/constants/typography';
 
 const captionOffscreenText = 'Image caption, ';
 
 const StyledCaption = styled.figcaption`
-  ${T_LONG_PRIMER}
+  ${T_LONG_PRIMER};
   background-color: ${C_STONE};
   color: ${C_STORM};
   font-family: ${FF_NEWS_SANS_REG};
