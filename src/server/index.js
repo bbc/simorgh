@@ -1,7 +1,11 @@
+import React from 'react';
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { ServerUni, loadInitialData } from '@jtart/uni';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { ServerStyleSheet } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import routes from '../app/routes';
-import Document from '../app/containers/Document';
+import Document from '../app/components/Document';
 
 /*
   Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
@@ -47,18 +51,34 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
-  .get('/*', async (req, res) => {
+  .get('/*', async ({ url }, res) => {
     try {
-      const html = await render({
-        req,
-        res,
-        routes,
-        document: Document,
-        assets,
-      });
-      res.send(html);
+      const sheet = new ServerStyleSheet();
+      const data = await loadInitialData(url, routes);
+
+      const app = renderToString(
+        sheet.collectStyles(
+          <ServerUni url={url} routes={routes} data={data} />,
+        ),
+      );
+
+      const helmet = Helmet.renderStatic();
+
+      const styleTags = sheet.getStyleElement();
+
+      const doc = renderToStaticMarkup(
+        <Document
+          assets={assets}
+          app={app}
+          data={data}
+          styleTags={styleTags}
+          helmet={helmet}
+        />,
+      );
+
+      res.send(doc);
     } catch (error) {
-      res.json(error);
+      res.status(404).send(error);
     }
   });
 
