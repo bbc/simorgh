@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline should render correctly 1`] = `
+.c0 {
+  background-color: #B80000;
+  height: 0.25rem;
+  width: 3rem;
+  margin: 1rem 0;
+  border: 0;
+}
+
+<hr
+  className="c0"
+/>
+`;
