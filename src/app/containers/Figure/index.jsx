@@ -2,19 +2,22 @@ import React from 'react';
 import { string } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import Caption from '../../components/Figure/Caption';
+import ImageWrapper from '../../components/Figure/ImageWrapper';
+import Copyright from '../../components/Figure/Copyright';
 
 const renderCopyright = copyright =>
-  copyright ? <VisuallyHiddenText>{copyright}</VisuallyHiddenText> : null;
+  copyright ? <Copyright>{copyright}</Copyright> : null;
 
 const renderCaption = captionValue =>
   captionValue ? <Caption>{captionValue}</Caption> : null;
 
 const FigureContainer = ({ src, alt, copyright, caption }) => (
   <Figure>
-    <Image alt={alt} src={src} />
-    {renderCopyright(copyright)}
+    <ImageWrapper>
+      <Image alt={alt} src={src} />
+      {renderCopyright(copyright)}
+    </ImageWrapper>
     {renderCaption(caption)}
   </Figure>
 );

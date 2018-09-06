@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageWrapper with Copright should render correctly 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
+.c2 {
+  font-size: 0.75em;
+  line-height: 1em;
+  background-color: #222222;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    className="c1"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
+  <span
+    className="c2"
+  >
+    © 
+    Getty Images
+  </span>
+</div>
+`;
+
+exports[`ImageWrapper without Copyright should render correctly 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+    className="c1"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  />
+</div>
+`;

@@ -2,39 +2,48 @@ import React from 'react';
 import Figure from './index';
 import Image from './Image';
 import Caption from './Caption';
-import VisuallyHiddenText from '../VisuallyHiddenText';
+import Copyright from './Copyright';
+import ImageWrapper from './ImageWrapper';
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
 const imageSrc =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const captionValue = 'This is a caption';
-const copyrightText = 'Copyright Getty images';
+const copyrightText = 'Getty Images';
 
 export const FigureImage = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+    </ImageWrapper>
   </Figure>
 );
 
 export const FigureImageWithCaption = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+    </ImageWrapper>
     <Caption>{captionValue}</Caption>
   </Figure>
 );
 
 export const FigureImageWithCopyright = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+      <Copyright>{copyrightText}</Copyright>
+    </ImageWrapper>
   </Figure>
 );
 
 export const FigureImageWithCopyrightAndCaption = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <VisuallyHiddenText>{copyrightText}</VisuallyHiddenText>
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+      <Copyright>{copyrightText}</Copyright>
+    </ImageWrapper>
     <Caption>{captionValue}</Caption>
   </Figure>
 );
