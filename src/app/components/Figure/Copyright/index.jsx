@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -9,7 +9,6 @@ import {
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 
-// const copyrightSymbolPrefix = '&#169; ';
 const copyrightSymbolPrefix = '© ';
 
 const StyledCopyright = styled.span`
@@ -23,15 +22,12 @@ const StyledCopyright = styled.span`
   right: 0;
 `;
 
-const Copyright = ({ children }) => (
-  <StyledCopyright>
-    {copyrightSymbolPrefix}
-    {children}
-  </StyledCopyright>
+const Copyright = ({ text }) => (
+  <StyledCopyright>{`${copyrightSymbolPrefix} ${text}`}</StyledCopyright>
 );
 
 Copyright.propTypes = {
-  children: node.isRequired,
+  text: string.isRequired,
 };
 
 export default Copyright;
