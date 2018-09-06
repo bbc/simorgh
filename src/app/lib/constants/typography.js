@@ -66,3 +66,8 @@ export const T_TRAFALGAR = css`
     line-height: 2.25rem;
   }
 `;
+
+export const T_MINION = css`
+  font-size: 0.75em;
+  line-height: 1em;
+`;
