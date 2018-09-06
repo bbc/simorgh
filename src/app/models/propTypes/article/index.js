@@ -19,7 +19,7 @@ const articlePropTypes = {
       passport: shape({
         language: string.isRequired,
         home: string.isRequired,
-        articleType: string.isRequired,
+        category: string.isRequired,
         genre: string,
       }),
       tags: shape({
