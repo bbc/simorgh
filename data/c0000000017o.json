@@ -14,7 +14,7 @@
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-      "articleType": "analysis",
+      "category": "analysis",
       "genre": null
     },
     "version": "v0.3.2",
