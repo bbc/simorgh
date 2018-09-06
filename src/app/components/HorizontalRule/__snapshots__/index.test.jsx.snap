@@ -5,7 +5,7 @@ exports[`Headline should render correctly 1`] = `
   background-color: #B80000;
   height: 4px;
   width: 48px;
-  margin: 16px 0;
+  margin: 1rem 0;
   border: 0;
 }
 
