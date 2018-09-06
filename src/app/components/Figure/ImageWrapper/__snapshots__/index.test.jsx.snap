@@ -33,8 +33,7 @@ exports[`ImageWrapper with Copright should render correctly 1`] = `
   <span
     className="c2"
   >
-    © 
-    Getty Images
+    ©  Getty Images
   </span>
 </div>
 `;

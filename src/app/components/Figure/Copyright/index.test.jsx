@@ -5,6 +5,6 @@ import Copyright from './index';
 describe('Copyright', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <Copyright>Getty Images</Copyright>,
+    <Copyright text="Getty Images" />,
   );
 });

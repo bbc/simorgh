@@ -14,7 +14,7 @@ describe('ImageWrapper with Copright', () => {
     'should render correctly',
     <ImageWrapper>
       <Image alt={imageAlt} src={imageSrc} />
-      <Copyright>Getty Images</Copyright>
+      <Copyright text="Getty Images" />
     </ImageWrapper>,
   );
 });
