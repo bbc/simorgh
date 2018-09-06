@@ -1,15 +1,15 @@
 import React from 'react';
-import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import ResourceHints from './ResourceHints';
 import '../../lib/globalStyles';
 import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, data, styleTags, helmet }) => {
+const Document = ({ assets, app, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
+  const serialisedData = JSON.stringify(data).replace(/</g, '\\u003c');
   const scripts = assets.map(asset => (
     <script key={asset} type="text/javascript" src={asset} defer />
   ));
@@ -29,8 +29,12 @@ const Document = ({ assets, data, styleTags, helmet }) => {
         {styleTags}
       </head>
       <body>
-        <AfterRoot />
-        <AfterData data={data} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.SIMORGH_DATA=${serialisedData}`,
+          }}
+        />
         {scripts}
       </body>
     </html>
