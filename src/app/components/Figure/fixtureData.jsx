@@ -10,60 +10,29 @@ const captionValueContainingLink =
   'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Copyright Getty images';
 
-const generateFixtureData = (hasCaption, hasCopyright, hasInlineLink) => {
-  if (hasCaption && hasInlineLink) {
-    return (
-      <FigureContainer
-        src={imageSrc}
-        alt={imageAlt}
-        caption={captionValueContainingLink}
-      />
-    );
-  }
-
-  if (hasCaption && hasCopyright) {
-    return (
-      <FigureContainer
-        src={imageSrc}
-        alt={imageAlt}
-        copyright={copyrightText}
-        caption={captionValue}
-      />
-    );
-  }
-
-  if (hasCaption) {
-    return (
-      <FigureContainer src={imageSrc} alt={imageAlt} caption={captionValue} />
-    );
-  }
-
-  if (hasCopyright) {
-    return (
-      <FigureContainer
-        src={imageSrc}
-        alt={imageAlt}
-        copyright={copyrightText}
-      />
-    );
-  }
-
-  return <FigureContainer src={imageSrc} alt={imageAlt} />;
-};
+const generateFixtureData = (caption, copyright) => (
+  <FigureContainer
+    src={imageSrc}
+    alt={imageAlt}
+    caption={caption}
+    copyright={copyright}
+  />
+);
 
 export const FigureImage = generateFixtureData();
 
-export const FigureImageWithCaption = generateFixtureData(true);
+export const FigureImageWithCaption = generateFixtureData(captionValue);
 
 export const FigureImageWithCaptionContainingLink = generateFixtureData(
-  true,
-  false,
-  true,
+  captionValueContainingLink,
 );
 
-export const FigureImageWithCopyright = generateFixtureData(false, true);
+export const FigureImageWithCopyright = generateFixtureData(
+  null,
+  copyrightText,
+);
 
 export const FigureImageWithCopyrightAndCaption = generateFixtureData(
-  true,
-  true,
+  captionValue,
+  copyrightText,
 );
