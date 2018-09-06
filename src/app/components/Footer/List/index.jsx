@@ -11,7 +11,7 @@ import {
   group4ScreenWidthMin,
   group4ScreenWidthMax,
   group5ScreenWidthMin,
-} from '../../lib/constants/styles';
+} from '../../../lib/constants/styles';
 import Link from '../Link';
 
 const StyledList = styled.ul`
