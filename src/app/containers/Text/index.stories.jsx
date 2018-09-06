@@ -25,6 +25,11 @@ const props = {
   ],
 };
 
-storiesOf('TextContainer', module).add('default', () => (
-  <TextContainer {...props} />
-));
+storiesOf('TextContainer', module)
+  .add('default', () => <TextContainer {...props} />)
+  .add('adjacent text blocks', () => (
+    <React.Fragment>
+      <TextContainer {...props} type="text" />
+      <TextContainer {...props} type="text" typeOfPreviousBlock="text" />
+    </React.Fragment>
+  ));
