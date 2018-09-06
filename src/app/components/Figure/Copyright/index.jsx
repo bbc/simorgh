@@ -9,7 +9,7 @@ import {
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 
-const copyrightSymbolPrefix = '©';
+const copyrightSymbolPrefix = '\u00A9';
 
 const StyledCopyright = styled.span`
   ${T_MINION};
