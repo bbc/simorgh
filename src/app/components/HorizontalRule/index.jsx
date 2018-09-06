@@ -3,8 +3,8 @@ import { C_POSTBOX, GEL_SPACING_DBL } from '../../lib/constants/styles';
 
 const HorizontalRule = styled.hr`
   background-color: ${C_POSTBOX};
-  height: 4px;
-  width: 48px;
+  height: 0.25rem;
+  width: 3rem;
   margin: ${GEL_SPACING_DBL} 0;
   border: 0;
 `;
