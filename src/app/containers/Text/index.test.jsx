@@ -28,6 +28,13 @@ describe('TextContainer', () => {
     isNull('should return null', <TextContainer />);
   });
 
+  describe('with a passed previous block type', () => {
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <TextContainer {...data} type="text" typeOfPreviousBlock="text" />,
+    );
+  });
+
   shouldShallowMatchSnapshot(
     'should render correctly',
     <TextContainer {...data} />,
