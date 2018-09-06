@@ -3,6 +3,7 @@ import Figure from './index';
 import Image from './Image';
 import Caption from './Caption';
 import Copyright from './Copyright';
+import ImageWrapper from './ImageWrapper';
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
@@ -13,28 +14,36 @@ const copyrightText = 'Getty Images';
 
 export const FigureImage = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+    </ImageWrapper>
   </Figure>
 );
 
 export const FigureImageWithCaption = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+    </ImageWrapper>
     <Caption>{captionValue}</Caption>
   </Figure>
 );
 
 export const FigureImageWithCopyright = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <Copyright>{copyrightText}</Copyright>
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+      <Copyright>{copyrightText}</Copyright>
+    </ImageWrapper>
   </Figure>
 );
 
 export const FigureImageWithCopyrightAndCaption = (
   <Figure>
-    <Image alt={imageAlt} src={imageSrc} />
-    <Copyright>{copyrightText}</Copyright>
+    <ImageWrapper>
+      <Image alt={imageAlt} src={imageSrc} />
+      <Copyright>{copyrightText}</Copyright>
+    </ImageWrapper>
     <Caption>{captionValue}</Caption>
   </Figure>
 );

@@ -5,7 +5,6 @@ const Figure = styled.figure`
   margin: 0;
   padding-bottom: ${GEL_SPACING_DBL};
   width: 100%;
-  position: relative;
 `;
 
 export default Figure;
