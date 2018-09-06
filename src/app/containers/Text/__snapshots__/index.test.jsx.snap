@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextContainer should render correctly 1`] = `
+exports[`TextContainer with data should render correctly 1`] = `
 <React.Fragment>
   <Text
     options={
@@ -115,7 +115,7 @@ exports[`TextContainer should render correctly 1`] = `
 </React.Fragment>
 `;
 
-exports[`TextContainer with a passed previous block type should render correctly 1`] = `
+exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
 <React.Fragment>
   <hr />
   <Text
