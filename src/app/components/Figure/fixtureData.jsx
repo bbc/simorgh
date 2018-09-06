@@ -7,7 +7,7 @@ import Copyright from './Copyright';
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
 const imageSrc =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const captionValue = 'This is a caption';
 const copyrightText = 'Getty Images';
 
