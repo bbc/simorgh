@@ -14,7 +14,7 @@
     "passport": {
       "language": "fa",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-      "articleType": "news",
+      "category": "news",
       "genre": null
     },
     "version": "v0.3.2",
