@@ -1,67 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextContainer with data should render correctly 1`] = `
-<Router
-  history={
-    Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+exports[`TextContainer should render correctly 1`] = `
+<React.Fragment>
+  <Text
+    options={
+      Object {
+        "forceBlock": true,
+        "overrides": Object {
+          "a": Object {
+            "component": [Function],
+          },
+          "em": Object {
+            "component": [Function],
+          },
+          "p": Object {
+            "component": [Function],
+          },
+          "strong": Object {
+            "component": [Function],
+          },
+        },
+      }
     }
-  }
->
-  <TextContainer
-    blocks={
-      Array [
-        Object {
-          "blockId": "01",
-          "model": Object {
-            "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c000000000ro).",
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "blockId": "02",
-          "model": Object {
-            "text": "This is another paragraph with some **bold** text.",
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "blockId": "03",
-          "model": Object {
-            "text": "This is a paragraph with _italic_ text.",
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "blockId": "04",
-          "model": Object {
-            "text": "~~This is a paragraph with some strike-through text~~.",
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "blockId": "05",
-          "model": Object {
-            "text": "This is a paragraph with some \`inline code.\`",
-          },
-          "type": "paragraph",
-        },
-      ]
-    }
+    text="This is a 1st paragraph block."
   />
-</Router>
+  <Text
+    options={
+      Object {
+        "forceBlock": true,
+        "overrides": Object {
+          "a": Object {
+            "component": [Function],
+          },
+          "em": Object {
+            "component": [Function],
+          },
+          "p": Object {
+            "component": [Function],
+          },
+          "strong": Object {
+            "component": [Function],
+          },
+        },
+      }
+    }
+    text="This is a 2nd paragraph block."
+  />
+  <Text
+    options={
+      Object {
+        "forceBlock": true,
+        "overrides": Object {
+          "a": Object {
+            "component": [Function],
+          },
+          "em": Object {
+            "component": [Function],
+          },
+          "p": Object {
+            "component": [Function],
+          },
+          "strong": Object {
+            "component": [Function],
+          },
+        },
+      }
+    }
+    text="This is a 3rd paragraph block."
+  />
+  <Text
+    options={
+      Object {
+        "forceBlock": true,
+        "overrides": Object {
+          "a": Object {
+            "component": [Function],
+          },
+          "em": Object {
+            "component": [Function],
+          },
+          "p": Object {
+            "component": [Function],
+          },
+          "strong": Object {
+            "component": [Function],
+          },
+        },
+      }
+    }
+    text="This is a 4th paragraph block.."
+  />
+  <Text
+    options={
+      Object {
+        "forceBlock": true,
+        "overrides": Object {
+          "a": Object {
+            "component": [Function],
+          },
+          "em": Object {
+            "component": [Function],
+          },
+          "p": Object {
+            "component": [Function],
+          },
+          "strong": Object {
+            "component": [Function],
+          },
+        },
+      }
+    }
+    text="This is a 5th paragraph block."
+  />
+</React.Fragment>
 `;
