@@ -2,10 +2,11 @@
 
 exports[`Headline should render correctly 1`] = `
 .c0 {
-  color: #B80000;
+  background-color: #B80000;
   height: 4px;
   width: 48px;
-  padding: 16px 0;
+  margin: 16px 0;
+  border: 0;
 }
 
 <hr
