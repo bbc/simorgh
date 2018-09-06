@@ -2,19 +2,23 @@
 
 exports[`Figure should render an image with alt text 1`] = `
 <Figure>
-  <Image
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
+  <ImageWrapper>
+    <Image
+      alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+    />
+  </ImageWrapper>
 </Figure>
 `;
 
 exports[`Figure should render caption text 1`] = `
 <Figure>
-  <Image
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
+  <ImageWrapper>
+    <Image
+      alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+    />
+  </ImageWrapper>
   <Caption>
     This is a caption
   </Caption>
@@ -23,12 +27,14 @@ exports[`Figure should render caption text 1`] = `
 
 exports[`Figure should render copyright text 1`] = `
 <Figure>
-  <Image
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-  <VisuallyHiddenText>
-    Copyright Getty images
-  </VisuallyHiddenText>
+  <ImageWrapper>
+    <Image
+      alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+    />
+    <Copyright>
+      Copyright Getty images
+    </Copyright>
+  </ImageWrapper>
 </Figure>
 `;
