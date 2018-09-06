@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 import { textModelPropTypes } from '../../models/propTypes/text';
 import Text from '../../components/Text';
 
@@ -19,6 +20,13 @@ const TextContainer = ({ type, blocks, typeOfPreviousBlock }) => {
   );
 };
 
-TextContainer.propTypes = textModelPropTypes;
+TextContainer.propTypes = {
+  ...textModelPropTypes,
+  typeOfPreviousBlock: string,
+};
+
+TextContainer.defaultProps = {
+  typeOfPreviousBlock: null,
+};
 
 export default TextContainer;
