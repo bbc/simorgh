@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
 import Brand from '../Brand';
-import Link from '../Link';
-import FooterList from '../FooterList';
+import Link from './Link';
+import FooterList from './List';
 import {
   C_ORBIT_GREY,
   C_WHITE,
