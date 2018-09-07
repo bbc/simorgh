@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Metadata News article should render correctly 1`] = `null`;
+
+exports[`Metadata Persian article should render correctly 1`] = `null`;

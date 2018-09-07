@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Helmet from 'react-helmet';
 import { bool, string, node } from 'prop-types';
+import Metadata from './Metadata';
 import Header from '../Header';
 import Footer from '../../containers/Footer';
 
@@ -12,16 +12,15 @@ const Article = ({ amp, lang, title, id, children }) => {
     htmlAttributes.amp = amp;
   }
 
+  const metadataProps = {
+    canonicalLink,
+    htmlAttributes,
+    title,
+  };
+
   return (
     <Fragment>
-      <Helmet htmlAttributes={htmlAttributes}>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1"
-        />
-        <title>{title}</title>
-        <link rel="canonical" href={canonicalLink} />
-      </Helmet>
+      <Metadata {...metadataProps} />
       <Header />
       {children}
       <Footer />
