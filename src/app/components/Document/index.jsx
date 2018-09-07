@@ -1,7 +1,6 @@
 import React from 'react';
 import { AfterRoot, AfterData } from '@jaredpalmer/after';
 import ResourceHints from './ResourceHints';
-import '../../lib/globalStyles';
 import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */

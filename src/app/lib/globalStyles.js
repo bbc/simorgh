@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import styledNormalize from 'styled-normalize';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
 
   /* Box Sizing https://bit.ly/1A91I0J */
@@ -71,3 +71,5 @@ injectGlobal`
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff') format('woff');
   }
 `;
+
+export default GlobalStyle;
