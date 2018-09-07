@@ -45,6 +45,7 @@ exports[`MainContent should render correctly 1`] = `
       ]
     }
     type="subheading"
+    typeOfPreviousBlock="headline"
   />
   <TextContainer
     blocks={
@@ -59,6 +60,7 @@ exports[`MainContent should render correctly 1`] = `
       ]
     }
     type="text"
+    typeOfPreviousBlock="subheading"
   />
   <BlockString
     blocks={
@@ -71,6 +73,7 @@ exports[`MainContent should render correctly 1`] = `
       ]
     }
     type="test"
+    typeOfPreviousBlock="text"
   />
   <ImageContainer
     blocks={
@@ -135,6 +138,7 @@ exports[`MainContent should render correctly 1`] = `
       ]
     }
     type="image"
+    typeOfPreviousBlock="test"
   />
 </MainContent>
 `;
