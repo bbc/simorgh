@@ -1,30 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
 
-class ArticleContainer extends Component {
+const serviceValidator = service => {
+  const services = ['news', 'persian'];
+
+  const serviceMatch = services.includes(service);
+
+  if (!serviceMatch) {
+    throw new Error(
+      `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
+    );
+  }
+};
+
+class ArticleContainer extends React.Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { path } = match;
       const { id, service } = match.params;
 
-      const services = ['news', 'persian'];
       const regex = '^(c[a-zA-Z0-9]{10}o)$';
       const routeMatches = id.match(regex);
-      const serviceMatch = services.includes(service);
+
+      serviceValidator(service);
 
       if (!routeMatches) {
         throw new Error(
           `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
-        );
-      }
-
-      if (!serviceMatch) {
-        throw new Error(
-          `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
         );
       }
 
