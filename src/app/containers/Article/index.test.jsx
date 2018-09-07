@@ -147,7 +147,12 @@ describe('ArticleContainer', () => {
         jest.spyOn(global.console, 'log');
         const invalidIdParam = 'route-21';
         const invalidContext = {
-          match: { params: { id: invalidIdParam, service: 'news' } },
+          match: {
+            params: {
+              id: invalidIdParam,
+              service: defaultServiceParam,
+            },
+          },
         };
         const response = await callGetInitialProps(invalidContext);
 
