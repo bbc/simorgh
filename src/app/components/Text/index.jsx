@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, bool, shape, node } from 'prop-types';
+import { string, node, func } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import InlineLink from '../../containers/InlineLink';
 import {
@@ -20,8 +20,26 @@ const StyledParagraph = styled.p`
 const Italic = ({ children }) => <i>{children}</i>;
 const Bold = ({ children }) => <b>{children}</b>;
 
-const Text = ({ text, options }) => {
+const Text = ({ text, paragraphOverride }) => {
   if (!text) return null;
+
+  const options = {
+    forceBlock: true,
+    overrides: {
+      p: {
+        component: paragraphOverride,
+      },
+      em: {
+        component: Italic,
+      },
+      strong: {
+        component: Bold,
+      },
+      a: {
+        component: InlineLink,
+      },
+    },
+  };
 
   return <Markdown options={options}>{text}</Markdown>;
 };
@@ -36,29 +54,11 @@ Bold.propTypes = {
 
 Text.propTypes = {
   text: string.isRequired,
-  options: shape({
-    forceBlock: bool,
-  }),
+  paragraphOverride: func,
 };
 
 Text.defaultProps = {
-  options: {
-    forceBlock: true,
-    overrides: {
-      p: {
-        component: StyledParagraph,
-      },
-      em: {
-        component: Italic,
-      },
-      strong: {
-        component: Bold,
-      },
-      a: {
-        component: InlineLink,
-      },
-    },
-  },
+  paragraphOverride: StyledParagraph,
 };
 
 export default Text;
