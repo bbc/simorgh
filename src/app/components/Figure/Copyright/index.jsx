@@ -21,9 +21,13 @@ const StyledCopyright = styled.span`
   bottom: 0;
   right: 0;
 
+  /*
+    The hidden '.' is required for accessibility reasons
+    https://github.com/bbc/simorgh/issues/456#issuecomment-419405600
+  */
   &::after {
     content: '.';
-    color: ${C_EBON};
+    color: ${C_EBON}; /* This needs to match the background-color */
   }
 `;
 
