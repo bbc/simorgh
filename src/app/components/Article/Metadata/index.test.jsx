@@ -1,6 +1,6 @@
 import React from 'react';
 import Metadata from './index';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../helpers/tests/testHelpers';
 
 describe('Metadata', () => {
   describe('News article', () => {
@@ -9,7 +9,24 @@ describe('Metadata', () => {
       lang: 'en-GB',
     };
     const title = 'An article title';
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <Metadata
+        canonicalLink={canonicalLink}
+        htmlAttributes={htmlAttributes}
+        title={title}
+      />,
+    );
+  });
+
+  describe('News AMP article', () => {
+    const canonicalLink = 'https://www.bbc.com/news/articles/amp/c0000000001o';
+    const htmlAttributes = {
+      amp: true,
+      lang: 'en-GB',
+    };
+    const title = 'An article title';
+    shouldShallowMatchSnapshot(
       'should render correctly',
       <Metadata
         canonicalLink={canonicalLink}
@@ -25,7 +42,25 @@ describe('Metadata', () => {
       lang: 'fa',
     };
     const title = 'پهپادی که برایتان قهوه می‌آورد';
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <Metadata
+        canonicalLink={canonicalLink}
+        htmlAttributes={htmlAttributes}
+        title={title}
+      />,
+    );
+  });
+
+  describe('Persian AMP article', () => {
+    const canonicalLink =
+      'https://www.bbc.com/persian/articles/amp/c0000000001o';
+    const htmlAttributes = {
+      amp: true,
+      lang: 'fa',
+    };
+    const title = 'پهپادی که برایتان قهوه می‌آورد';
+    shouldShallowMatchSnapshot(
       'should render correctly',
       <Metadata
         canonicalLink={canonicalLink}
