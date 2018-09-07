@@ -40,9 +40,7 @@ const articlePropTypes = {
       blockTypes: arrayOf(string),
     }).isRequired,
     content: shape({
-      model: shape({
-        blocks: mainContentPropTypes,
-      }),
+      model: shape(mainContentPropTypes),
     }).isRequired,
     promo: shape({
       id: string.isRequired,
