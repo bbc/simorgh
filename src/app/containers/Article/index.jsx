@@ -9,10 +9,18 @@ class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { path } = match;
-      const { id } = match.params;
+      const { id, service } = match.params;
 
+      const services = ['news', 'persian'];
       const regex = '^(c[a-zA-Z0-9]{10}o)$';
       const routeMatches = id.match(regex);
+      const serviceMatch = services.includes(service);
+
+      if (!serviceMatch) {
+        throw new Error(
+          `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
+        );
+      }
 
       if (!routeMatches) {
         throw new Error(

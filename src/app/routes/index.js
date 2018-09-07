@@ -2,7 +2,7 @@ import Article from '../containers/Article';
 
 const routes = [
   {
-    path: '/news/articles/:id',
+    path: '/:service/articles/:id',
     exact: true,
     component: Article,
   },
