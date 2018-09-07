@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string, bool } from 'prop-types';
-import { C_WHITE, GEL_SPACING } from '../../lib/constants/styles';
+import { C_WHITE, GEL_SPACING } from '../../../lib/constants/styles';
 
 const StyledLink = styled.a`
   padding: ${GEL_SPACING} 0 ${GEL_SPACING};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import Link from './index';
 
 const text = 'Some link text';

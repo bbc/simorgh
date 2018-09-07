@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterList from './index';
 
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 
 describe(`FooterList`, () => {
   const link = {
