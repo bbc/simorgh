@@ -16,15 +16,15 @@ class ArticleContainer extends Component {
       const routeMatches = id.match(regex);
       const serviceMatch = services.includes(service);
 
-      if (!serviceMatch) {
-        throw new Error(
-          `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
-        );
-      }
-
       if (!routeMatches) {
         throw new Error(
           `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
+        );
+      }
+
+      if (!serviceMatch) {
+        throw new Error(
+          `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
         );
       }
 

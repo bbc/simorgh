@@ -100,7 +100,15 @@ describe('ArticleContainer', () => {
 
   describe('getInitialProps', () => {
     const defaultIdParam = 'c0000000001o';
-    const defaultContext = { match: { params: { id: defaultIdParam } } };
+    const defaultServiceParam = 'news';
+    const defaultContext = {
+      match: {
+        params: {
+          id: defaultIdParam,
+          service: defaultServiceParam,
+        },
+      },
+    };
     const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () =>
