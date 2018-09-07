@@ -68,7 +68,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     پهپادی که برایتان قهوه می‌آورد
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/amp/c0000000001o"
+    href="https://www.bbc.com/persian/articles/amp/c0000000028o"
     rel="canonical"
   />
 </HelmetWrapper>

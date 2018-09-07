@@ -2,71 +2,59 @@ import React from 'react';
 import Metadata from './index';
 import { shouldShallowMatchSnapshot } from '../../../helpers/tests/testHelpers';
 
+const metadataSnapshotTest = (
+  testDescription,
+  canonicalLink,
+  title,
+  htmlAttributes,
+) =>
+  describe(testDescription, () => {
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <Metadata
+        canonicalLink={canonicalLink}
+        htmlAttributes={htmlAttributes}
+        title={title}
+      />,
+    );
+  });
+
 describe('Metadata', () => {
-  describe('News article', () => {
-    const canonicalLink = 'https://www.bbc.com/news/articles/c0000000001o';
-    const htmlAttributes = {
+  metadataSnapshotTest(
+    'News article',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'An article title',
+    {
       lang: 'en-GB',
-    };
-    const title = 'An article title';
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <Metadata
-        canonicalLink={canonicalLink}
-        htmlAttributes={htmlAttributes}
-        title={title}
-      />,
-    );
-  });
+    },
+  );
 
-  describe('News AMP article', () => {
-    const canonicalLink = 'https://www.bbc.com/news/articles/amp/c0000000001o';
-    const htmlAttributes = {
+  metadataSnapshotTest(
+    'News AMP article',
+    'https://www.bbc.com/news/articles/amp/c0000000001o',
+    'An article title',
+    {
       amp: true,
       lang: 'en-GB',
-    };
-    const title = 'An article title';
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <Metadata
-        canonicalLink={canonicalLink}
-        htmlAttributes={htmlAttributes}
-        title={title}
-      />,
-    );
-  });
+    },
+  );
 
-  describe('Persian article', () => {
-    const canonicalLink = 'https://www.bbc.com/persian/articles/c0000000028o';
-    const htmlAttributes = {
+  metadataSnapshotTest(
+    'Persian article',
+    'https://www.bbc.com/persian/articles/c0000000028o',
+    'پهپادی که برایتان قهوه می‌آورد',
+    {
       lang: 'fa',
-    };
-    const title = 'پهپادی که برایتان قهوه می‌آورد';
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <Metadata
-        canonicalLink={canonicalLink}
-        htmlAttributes={htmlAttributes}
-        title={title}
-      />,
-    );
-  });
+    },
+  );
 
-  describe('Persian AMP article', () => {
-    const canonicalLink =
-      'https://www.bbc.com/persian/articles/amp/c0000000001o';
-    const htmlAttributes = {
+  metadataSnapshotTest(
+    'Persian AMP article',
+    'https://www.bbc.com/persian/articles/amp/c0000000028o',
+    'پهپادی که برایتان قهوه می‌آورد',
+    {
       amp: true,
       lang: 'fa',
-    };
-    const title = 'پهپادی که برایتان قهوه می‌آورد';
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <Metadata
-        canonicalLink={canonicalLink}
-        htmlAttributes={htmlAttributes}
-        title={title}
-      />,
-    );
-  });
+    },
+  );
 });
