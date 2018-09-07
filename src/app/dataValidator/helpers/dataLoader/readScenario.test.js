@@ -33,9 +33,9 @@ describe('readScenario helper', () => {
     });
 
     expect(fileToValidateMock.mock.calls).toEqual([
-      ['./././data/c0000000001o.json'],
-      ['./././data/c0000000002o.json'],
-      ['./././data/c0000000003o.json'],
+      ['./././data/news/test/c0000000001o.json'],
+      ['./././data/news/test/c0000000002o.json'],
+      ['./././data/news/test/c0000000003o.json'],
     ]);
   });
 
