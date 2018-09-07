@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
 
-const serviceValidator = service => {
+const validateService = service => {
   const services = ['news', 'persian'];
-
   const serviceMatch = services.includes(service);
 
   if (!serviceMatch) {
@@ -17,22 +16,25 @@ const serviceValidator = service => {
   }
 };
 
-class ArticleContainer extends React.Component {
+const validateId = id => {
+  const regex = '^(c[a-zA-Z0-9]{10}o)$';
+  const routeMatches = id.match(regex);
+
+  if (!routeMatches) {
+    throw new Error(
+      `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
+    );
+  }
+};
+
+class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { path } = match;
       const { id, service } = match.params;
 
-      const regex = '^(c[a-zA-Z0-9]{10}o)$';
-      const routeMatches = id.match(regex);
-
-      serviceValidator(service);
-
-      if (!routeMatches) {
-        throw new Error(
-          `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
-        );
-      }
+      validateService(service);
+      validateId(id);
 
       let url = `/data/${id}.json`;
 
