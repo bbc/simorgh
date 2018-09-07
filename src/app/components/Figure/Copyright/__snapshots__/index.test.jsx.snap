@@ -13,8 +13,14 @@ exports[`Copyright should render correctly 1`] = `
   right: 0;
 }
 
+.c0::after {
+  content: '.';
+  color: #222222;
+}
+
 <span
   className="c0"
+  role="text"
 >
   © Getty Images
 </span>

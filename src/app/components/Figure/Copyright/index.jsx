@@ -20,10 +20,19 @@ const StyledCopyright = styled.span`
   position: absolute;
   bottom: 0;
   right: 0;
+
+  &::after {
+    content: '.';
+    color: ${C_EBON};
+  }
 `;
 
+const copyrightRole = 'text';
+
 const Copyright = ({ text }) => (
-  <StyledCopyright>{`${copyrightSymbolPrefix} ${text}`}</StyledCopyright>
+  <StyledCopyright role={copyrightRole}>
+    {`${copyrightSymbolPrefix} ${text}`}
+  </StyledCopyright>
 );
 
 Copyright.propTypes = {
