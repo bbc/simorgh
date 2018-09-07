@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, boolean } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { C_WHITE, GEL_SPACING } from '../../../lib/constants/styles';
 
 const StyledLink = styled.a`
@@ -32,7 +32,7 @@ Link.defaultProps = {
 Link.propTypes = {
   href: string.isRequired,
   text: string.isRequired,
-  inline: boolean,
+  inline: bool,
 };
 
 export default Link;
