@@ -69,7 +69,7 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
     "speculate": "^1.7.4",
-    "styled-components": "^3.4.2",
+    "styled-components": "^4.0.0-beta.1",
     "styled-normalize": "^8.0.0",
     "wait-on": "^2.1.0"
   },
