@@ -4,7 +4,7 @@ const { validateData } = require('../validators/validateData');
 const { countScenarios } = require('../../utilities/countScenarios');
 const readdirSync = require('./readdirSync');
 
-const ifDirectoryValidateNestedFiles = fullFileName => {
+const ifDirectoryThenValidateNestedFiles = fullFileName => {
   const fileStats = fs.statSync(fullFileName);
 
   if (fileStats.isDirectory()) {
@@ -21,7 +21,7 @@ const readScenario = (fileName, dirName) => {
   }
 
   if (fileName !== 'onward-journeys') {
-    module.exports.ifDirectoryValidateNestedFiles(fullFileName);
+    ifDirectoryThenValidateNestedFiles(fullFileName);
   }
 
   if (path.extname(fileName) !== '.json') {
@@ -43,5 +43,4 @@ const fileToValidate = fileName => {
 module.exports = {
   readScenario,
   fileToValidate,
-  ifDirectoryValidateNestedFiles,
 };
