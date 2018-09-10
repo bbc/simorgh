@@ -6,14 +6,16 @@ const metadataSnapshotTest = (
   testDescription,
   canonicalLink,
   title,
-  htmlAttributes,
+  lang,
+  amp,
 ) =>
   describe(testDescription, () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
       <Metadata
+        amp={amp}
         canonicalLink={canonicalLink}
-        htmlAttributes={htmlAttributes}
+        lang={lang}
         title={title}
       />,
     );
@@ -24,37 +26,31 @@ describe('Metadata', () => {
     'News article',
     'https://www.bbc.com/news/articles/c0000000001o',
     'An article title',
-    {
-      lang: 'en-GB',
-    },
+    'en-GB',
+    false,
   );
 
   metadataSnapshotTest(
     'News AMP article',
     'https://www.bbc.com/news/articles/amp/c0000000001o',
     'An article title',
-    {
-      amp: true,
-      lang: 'en-GB',
-    },
+    'en-GB',
+    true,
   );
 
   metadataSnapshotTest(
     'Persian article',
     'https://www.bbc.com/persian/articles/c0000000028o',
     'پهپادی که برایتان قهوه می‌آورد',
-    {
-      lang: 'fa',
-    },
+    'fa',
+    false,
   );
 
   metadataSnapshotTest(
     'Persian AMP article',
     'https://www.bbc.com/persian/articles/amp/c0000000028o',
     'پهپادی که برایتان قهوه می‌آورد',
-    {
-      amp: true,
-      lang: 'fa',
-    },
+    'fa',
+    true,
   );
 });

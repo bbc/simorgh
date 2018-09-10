@@ -6,15 +6,11 @@ import Footer from '../../containers/Footer';
 
 const Article = ({ amp, lang, title, id, children }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
-  const htmlAttributes = { lang };
-
-  if (amp) {
-    htmlAttributes.amp = amp;
-  }
 
   const metadataProps = {
+    amp,
     canonicalLink,
-    htmlAttributes,
+    lang,
     title,
   };
 
