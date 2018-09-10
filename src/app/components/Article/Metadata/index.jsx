@@ -15,7 +15,10 @@ const Metadata = ({ canonicalLink, htmlAttributes, title }) => (
 
 Metadata.propTypes = {
   canonicalLink: string.isRequired,
-  htmlAttributes: shape({}).isRequired,
+  htmlAttributes: shape({
+    amp: string,
+    lang: string.isRequired,
+  }).isRequired,
   title: string.isRequired,
 };
 export default Metadata;
