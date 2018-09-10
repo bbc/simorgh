@@ -4,7 +4,7 @@ import { bool, string, node } from 'prop-types';
 import Header from '../Header';
 import Footer from '../../containers/Footer';
 
-const Article = ({ amp, lang, title, id, children }) => {
+const Article = ({ amp, children, description, id, lang, title }) => {
   const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
   const htmlAttributes = { lang };
 
@@ -21,6 +21,16 @@ const Article = ({ amp, lang, title, id, children }) => {
         />
         <title>{title}</title>
         <link rel="canonical" href={canonicalLink} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@BBCNews" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content="@BBCNews" />
+        <meta
+          name="twitter:image:src"
+          content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1"
+        />
+        <meta name="twitter:image:alt" content="BBC News" />
       </Helmet>
       <Header />
       {children}
@@ -32,6 +42,7 @@ const Article = ({ amp, lang, title, id, children }) => {
 Article.propTypes = {
   amp: bool.isRequired,
   children: node.isRequired,
+  description: string.isRequired,
   id: string.isRequired,
   lang: string.isRequired,
   title: string.isRequired,

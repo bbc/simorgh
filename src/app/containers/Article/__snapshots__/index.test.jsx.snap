@@ -47,6 +47,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       },
     ]
   }
+  description="Article Headline for SEO"
   id="c0000000001o"
   lang="en-gb"
   title="Article Headline for SEO"

@@ -58,6 +58,7 @@ class ArticleContainer extends Component {
       <Article
         amp={amp}
         id={id}
+        description={promo.summary}
         lang={metadata.passport.language}
         title={promo.headlines.seoHeadline}
         {...content.model}

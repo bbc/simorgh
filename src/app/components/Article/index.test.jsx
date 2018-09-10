@@ -4,6 +4,7 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { textBlock } from '../../models/blocks';
 
 const id = 'c0000000001o';
+const description = 'Here is the article description.';
 const title = 'This is a title!';
 const lang = 'en-GB';
 
@@ -55,6 +56,12 @@ const blocks = [
 describe('Article', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <Article id={id} title={title} lang={lang} blocks={blocks} />,
+    <Article
+      blocks={blocks}
+      description={description}
+      id={id}
+      lang={lang}
+      title={title}
+    />,
   );
 });
