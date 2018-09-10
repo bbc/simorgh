@@ -21,7 +21,7 @@ const readScenario = (fileName, dirName) => {
   }
 
   if (fileName !== 'onward-journeys') {
-    ifDirectoryValidateNestedFiles(fullFileName);
+    module.exports.ifDirectoryValidateNestedFiles(fullFileName);
   }
 
   if (path.extname(fileName) !== '.json') {
@@ -40,4 +40,8 @@ const fileToValidate = fileName => {
   validateData(JSON.parse(data));
 };
 
-module.exports = { readScenario, fileToValidate };
+module.exports = {
+  readScenario,
+  fileToValidate,
+  ifDirectoryValidateNestedFiles,
+};
