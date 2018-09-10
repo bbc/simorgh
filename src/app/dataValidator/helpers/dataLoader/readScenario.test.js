@@ -4,7 +4,6 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 const readScenario = require('./readScenario');
 
 let fileToValidateMock;
-let ifDirectoryValidateNestedFilesMock;
 const defaultDirname = './././data';
 
 const readFiles = (filenames, dirname = defaultDirname) => {
@@ -16,15 +15,10 @@ const readFiles = (filenames, dirname = defaultDirname) => {
 describe('readScenario helper', () => {
   beforeEach(() => {
     fileToValidateMock = jest.spyOn(readScenario, 'fileToValidate');
-    ifDirectoryValidateNestedFilesMock = jest.spyOn(
-      readScenario,
-      'ifDirectoryValidateNestedFiles',
-    );
   });
 
   afterEach(() => {
     fileToValidateMock.mockRestore();
-    ifDirectoryValidateNestedFilesMock.mockRestore();
   });
 
   it('should readScenario given a valid array and directory name', () => {
