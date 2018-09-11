@@ -1,25 +1,42 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
 import Article from '../../components/Article';
+import Metadata from '../../components/Metadata';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
 import serviceConfig from '../../lib/serviceConfig';
 
+const validateService = service => {
+  const services = ['news', 'persian'];
+  const serviceMatch = services.includes(service);
+
+  if (!serviceMatch) {
+    throw new Error(
+      `Invalid route parameter: ${service}. Service parameter must be news or persian.`,
+    );
+  }
+};
+
+const validateId = id => {
+  const regex = '^(c[a-zA-Z0-9]{10}o)$';
+  const routeMatches = id.match(regex);
+
+  if (!routeMatches) {
+    throw new Error(
+      `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
+    );
+  }
+};
+
 class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
       const { path } = match;
-      const { id } = match.params;
+      const { id, service } = match.params;
 
-      const regex = '^(c[a-zA-Z0-9]{10}o)$';
-      const routeMatches = id.match(regex);
-
-      if (!routeMatches) {
-        throw new Error(
-          `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
-        );
-      }
+      validateService(service);
+      validateId(id);
 
       let url = `/data/${id}.json`;
 
@@ -72,25 +89,28 @@ class ArticleContainer extends Component {
     /* Service-specific config imported from file */
     const config = serviceConfig[service];
 
+    const metadataProps = {
+      amp,
+      articleAuthor: config.articleAuthor,
+      articleSection: metadata.passport.genre,
+      canonicalLink,
+      defaultImage: config.defaultImage,
+      defaultImageAltText: config.defaultImageAltText,
+      description: promo.summary,
+      lang: metadata.passport.language,
+      locale: config.locale,
+      metaTags,
+      opengraphSiteName: config.opengraphSiteName,
+      timeLastUpdated,
+      timeFirstPublished,
+      title: promo.headlines.seoHeadline,
+      twitterCreator: config.twitterCreator,
+      twitterSite: config.twitterSite,
+    };
+
     return (
-      <Article
-        amp={amp}
-        articleAuthor={config.articleAuthor}
-        articleSection={metadata.passport.genre}
-        canonicalLink={canonicalLink}
-        defaultImage={config.defaultImage}
-        defaultImageAltText={config.defaultImageAltText}
-        description={promo.summary}
-        lang={metadata.passport.language}
-        locale={config.locale}
-        metaTags={metaTags}
-        opengraphSiteName={config.opengraphSiteName}
-        timeLastUpdated={timeLastUpdated}
-        timeFirstPublished={timeFirstPublished}
-        title={promo.headlines.seoHeadline}
-        twitterCreator={config.twitterCreator}
-        twitterSite={config.twitterSite}
-      >
+      <Article>
+        <Metadata {...metadataProps} />
         <MainContent blocks={blocks} />
       </Article>
     );
