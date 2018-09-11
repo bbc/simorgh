@@ -44,7 +44,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static(dataFolderToRender))
-  .use('/', expressStaticGzip(publicDirectory))
+  .use(expressStaticGzip(publicDirectory))
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
