@@ -37,7 +37,7 @@ const getPublicDirectory = () =>
 
 const publicDirectory = getPublicDirectory();
 const dataFolderToRender =
-  process.env.NODE_ENV === 'production' ? 'data/prod/news' : 'data/test/news';
+  process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
 const server = express();
 server

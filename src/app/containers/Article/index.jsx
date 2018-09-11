@@ -36,7 +36,7 @@ class ArticleContainer extends Component {
       validateService(service);
       validateId(id);
 
-      let url = `/data/${id}.json`;
+      let url = `/data/${service}/${id}.json`;
 
       if (req) {
         url = `${process.env.RAZZLE_BASE_PATH}${url}`;
