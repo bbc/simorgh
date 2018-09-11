@@ -29,10 +29,10 @@ describe('readdirSync helper', () => {
     expectMethodToBeCalledTimes(25, fileToValidateSpy);
   });
 
-  it('should call fileToValidate for only the files in /data/news/prod', () => {
+  it('should call fileToValidate for only the files in /data/prod/news', () => {
     const fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    expectMethodToBeCalledTimes(2, fileToValidateSpy, './././data/news/prod');
+    expectMethodToBeCalledTimes(2, fileToValidateSpy, './././data/prod/news');
   });
 
   it('should return a promise', () => {

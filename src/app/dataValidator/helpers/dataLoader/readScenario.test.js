@@ -12,7 +12,7 @@ const readFiles = (fileNames, dirPath = dataDirPath) =>
   });
 
 const testReadScenario = (fileNames, expectedCalls) => {
-  const newsDirPath = './././data/news/test';
+  const newsDirPath = './././data/test/news';
   readFiles(fileNames, newsDirPath);
 
   expect(fileToValidateMock.mock.calls).toEqual(expectedCalls);
@@ -34,9 +34,9 @@ describe('readScenario helper', () => {
       'c0000000003o.json',
     ];
     const expectedCalls = [
-      ['./././data/news/test/c0000000001o.json'],
-      ['./././data/news/test/c0000000002o.json'],
-      ['./././data/news/test/c0000000003o.json'],
+      ['./././data/test/news/c0000000001o.json'],
+      ['./././data/test/news/c0000000002o.json'],
+      ['./././data/test/news/c0000000003o.json'],
     ];
 
     testReadScenario(fileNames, expectedCalls);
@@ -44,14 +44,14 @@ describe('readScenario helper', () => {
 
   it('should ignore c0000000023o.json', () => {
     const fileNames = ['c0000000023o.json', 'c0000000003o.json'];
-    const expectedCalls = [['./././data/news/test/c0000000003o.json']];
+    const expectedCalls = [['./././data/test/news/c0000000003o.json']];
 
     testReadScenario(fileNames, expectedCalls);
   });
 
   it('should ignore onward-journeys', () => {
     const fileNames = ['c0000000001o.json', 'onward-journeys'];
-    const expectedCalls = [['./././data/news/test/c0000000001o.json']];
+    const expectedCalls = [['./././data/test/news/c0000000001o.json']];
 
     testReadScenario(fileNames, expectedCalls);
   });

@@ -3,7 +3,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 
 const validateNode = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
-const data = require('../../../../../data/news/test/c0000000001o.json');
+const data = require('../../../../../data/test/news/c0000000001o.json');
 
 const schemas = getAllSchemas();
 const { article } = schemas;
