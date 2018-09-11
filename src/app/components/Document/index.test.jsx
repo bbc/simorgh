@@ -4,7 +4,7 @@ import Document from './index';
 
 describe('Document', () => {
   const assets = ['http://example.com/file.js'];
-  const data = {};
+  const data = { test: 'data' };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
@@ -33,6 +33,7 @@ describe('Document', () => {
   const shallowDocument = shallowRender(
     <Document
       assets={assets}
+      app={'<h1>App!</h1>'}
       data={data}
       helmet={helmet}
       styleTags={styleTags}
