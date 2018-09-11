@@ -2,6 +2,7 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
+import { loadInitialData } from '@jtart/uni';
 import Document from '../app/components/Document';
 
 import server from './index';
@@ -32,9 +33,7 @@ jest.mock('react-helmet', () => ({
 }));
 
 jest.mock('@jtart/uni', () => ({
-  loadInitialData: jest
-    .fn()
-    .mockImplementation(() => Promise.resolve({ some: 'data' })),
+  loadInitialData: jest.fn(),
   ServerUni: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
 }));
 
@@ -61,6 +60,12 @@ describe('Server', () => {
 
   describe('/*', () => {
     describe('Successful render', () => {
+      beforeEach(() => {
+        loadInitialData.mockImplementationOnce(() =>
+          Promise.resolve({ some: 'data' }),
+        );
+      });
+
       it('should respond with rendered data', async () => {
         const { text } = await makeRequest('/some/route');
 
@@ -83,15 +88,16 @@ describe('Server', () => {
     });
 
     describe('Error', () => {
-      it('should respond with the caught error', async () => {
-        const testData = 'data';
+      beforeEach(() => {
+        loadInitialData.mockImplementationOnce(() =>
+          Promise.reject(Error('Error!')),
+        );
+      });
 
-        renderWithTestData(() => {
-          throw testData;
-        });
-
-        const { text } = await makeRequest('/');
-        expect(text).toContain(testData);
+      it('should respond with a 404', async () => {
+        const { status, text } = await makeRequest('/');
+        expect(status).toEqual(404);
+        expect(text).toEqual('Error!');
       });
     });
   });

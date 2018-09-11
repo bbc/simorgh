@@ -77,8 +77,8 @@ server
       );
 
       res.send(doc);
-    } catch (error) {
-      res.status(404).send(error);
+    } catch ({ message }) {
+      res.status(404).send(message);
     }
   });
 
