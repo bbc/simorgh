@@ -1,5 +1,9 @@
+import React from 'react';
 import request from 'supertest';
-import * as after from '@jaredpalmer/after';
+import * as reactDomServer from 'react-dom/server';
+import * as styledComponents from 'styled-components';
+import Document from '../app/components/Document';
+
 import server from './index';
 
 jest.mock(
@@ -13,6 +17,31 @@ jest.mock(
     virtual: true,
   },
 );
+
+jest.mock('react-dom/server', () => ({
+  renderToString: jest.fn().mockImplementation(() => '<h1>Mock app</h1>'),
+  renderToStaticMarkup: jest
+    .fn()
+    .mockImplementation(() => '<html><body><h1>Mock app</h1></body></html>'),
+}));
+
+jest.mock('react-helmet', () => ({
+  Helmet: {
+    renderStatic: jest.fn().mockReturnValue({ head: 'tags' }),
+  },
+}));
+
+jest.mock('@jtart/uni', () => ({
+  loadInitialData: jest
+    .fn()
+    .mockImplementation(() => Promise.resolve({ some: 'data' })),
+  ServerUni: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
+}));
+
+styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
+  collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
+  getStyleElement: jest.fn().mockReturnValue(<styles />),
+}));
 
 describe('Server', () => {
   const makeRequest = async path => request(server).get(path);
@@ -31,33 +60,25 @@ describe('Server', () => {
   });
 
   describe('/*', () => {
-    const renderWithTestData = mockRender => {
-      after.render = jest.fn().mockImplementationOnce(mockRender);
-    };
-
-    it('should call render', async () => {
-      after.render = jest.fn();
-      await makeRequest('/');
-
-      expect(after.render).toHaveBeenCalledTimes(1);
-      expect(after.render).toHaveBeenCalledWith({
-        req: expect.any(Object),
-        res: expect.any(Object),
-        routes: expect.any(Array),
-        document: expect.any(Function),
-        assets: ['one.js'],
-      });
-    });
-
     describe('Successful render', () => {
       it('should respond with rendered data', async () => {
-        const testData = 'data';
+        const { text } = await makeRequest('/some/route');
 
-        renderWithTestData(() => testData);
+        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+          <h1>Mock app</h1>,
+        );
 
-        const { text } = await makeRequest('/');
+        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+          <Document
+            app="<h1>Mock app</h1>"
+            assets={['one.js']}
+            data={{ some: 'data' }}
+            helmet={{ head: 'tags' }}
+            styleTags={<styles />}
+          />,
+        );
 
-        expect(text).toContain(testData);
+        expect(text).toEqual('<html><body><h1>Mock app</h1></body></html>');
       });
     });
 
