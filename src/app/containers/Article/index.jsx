@@ -50,15 +50,15 @@ class ArticleContainer extends Component {
     }
 
     const { content, metadata, promo } = data;
-    const { id: aresArticleId } = metadata;
+    const { id: aresArticleId, tags } = metadata;
 
     const id = aresArticleId.split(':').pop();
     const { blocks } = content.model;
 
     /* metaTags: An array of each thingLabel from tags.about & tags.mention */
-    const { about, mentions } = metadata.tags;
-    const aboutTags = about.map(thing => thing.thingLabel);
-    const mentionTags = mentions.map(thing => thing.thingLabel);
+    const { about, mentions } = tags;
+    const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
+    const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
     const metaTags = aboutTags.concat(mentionTags);
 
     /* Timestamps converted to ISO 8601 format */

@@ -25,6 +25,7 @@ describe('ArticleContainer', () => {
         category: 'news',
         genre: null,
       },
+      tags: {},
     },
     content: {
       model: {

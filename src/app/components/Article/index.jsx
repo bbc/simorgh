@@ -42,7 +42,12 @@ const Article = ({
         <meta name="article:author" content={articleAuthor} />
         <meta name="article:modified_time" content={timeLastUpdated} />
         <meta name="article:published_time" content={timeFirstPublished} />
-        <meta name="article:section" content={articleSection} />
+        {() => {
+          if (!articleSection) {
+            return null;
+          }
+          return <meta name="article:section" content={articleSection} />;
+        }}
         {metaTags.map(tag => (
           <meta name="article:tag" content={tag} />
         ))}
