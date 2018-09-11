@@ -1,4 +1,5 @@
 import express from 'express';
+import expressStaticGzip from 'express-static-gzip';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/containers/Document';
@@ -43,7 +44,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static(dataFolderToRender))
-  .use(express.static(publicDirectory))
+  .use('/', expressStaticGzip(publicDirectory))
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })

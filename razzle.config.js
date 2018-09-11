@@ -1,3 +1,4 @@
+const CompressionPlugin = require('compression-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
@@ -46,6 +47,13 @@ module.exports = {
               minify: true,
             },
             updateStrategy: 'changed',
+          }),
+          new CompressionPlugin({
+            algorithm: 'gzip',
+            filename: '[path].gz[query]',
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8,
           }),
         );
       }
