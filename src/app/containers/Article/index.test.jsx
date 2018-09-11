@@ -84,10 +84,15 @@ describe('ArticleContainer', () => {
     },
   };
 
+  const data = {
+    data: articleData,
+    amp: false,
+  };
+
   describe('Component', () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
-      <ArticleContainer data={articleData} />,
+      <ArticleContainer data={data} />,
     );
 
     describe('no data', () => {
@@ -95,84 +100,6 @@ describe('ArticleContainer', () => {
         'should render correctly',
         <ArticleContainer />,
       );
-    });
-  });
-
-  describe('getInitialProps', () => {
-    const defaultIdParam = 'c0000000001o';
-    const defaultContext = { match: { params: { id: defaultIdParam } } };
-    const mockSuccessfulResponse = { data: '12345' };
-
-    const mockFetchSuccess = () =>
-      fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
-
-    const mockFetchFailure = () =>
-      fetch.mockReject(JSON.stringify({ error: true }));
-
-    const callGetInitialProps = async (
-      context = defaultContext,
-      mockFetch = mockFetchSuccess,
-    ) => {
-      mockFetch();
-      const response = await ArticleContainer.getInitialProps(context);
-      return response;
-    };
-
-    beforeEach(() => {
-      fetch.resetMocks();
-    });
-
-    it('should return the fetch response', async () => {
-      const response = await callGetInitialProps();
-      expect(response).toEqual({ amp: false, data: mockSuccessfulResponse });
-    });
-
-    describe('On client', () => {
-      it('should call fetch with a relative URL', () => {
-        callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
-      });
-    });
-
-    describe('Validate route parameter ', () => {
-      it('to check the id is invalid before returning an empty object', async () => {
-        jest.spyOn(global.console, 'log');
-        const invalidIdParam = 'route-21';
-        const invalidContext = { match: { params: { id: invalidIdParam } } };
-        const response = await callGetInitialProps(invalidContext);
-
-        expect(fetch).not.toHaveBeenCalled();
-
-        /* eslint-disable no-console */
-        expect(console.log).toBeCalledWith(
-          new Error(
-            `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
-          ),
-        );
-        /* eslint-enable no-console */
-
-        expect(response).toEqual({});
-      });
-    });
-
-    describe('On Server', () => {
-      const BASE_PATH = 'https://test.com';
-      const serverContext = { req: { exists: true }, ...defaultContext };
-      process.env.RAZZLE_BASE_PATH = BASE_PATH;
-
-      it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
-        callGetInitialProps(serverContext);
-        expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/${defaultIdParam}.json`,
-        );
-      });
-    });
-
-    describe('Rejected fetch', () => {
-      it('should return an empty object', async () => {
-        const response = await callGetInitialProps({}, mockFetchFailure);
-        expect(response).toEqual({});
-      });
     });
   });
 });
