@@ -1,6 +1,6 @@
 import React from 'react';
 import Metadata from './index';
-import { shouldShallowMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 const metadataSnapshotTest = (
   testDescription,

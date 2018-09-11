@@ -3,10 +3,6 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Article from './index';
 import { textBlock } from '../../models/blocks';
 
-const id = 'c0000000001o';
-const title = 'This is a title!';
-const lang = 'en-GB';
-
 const blocks = [
   {
     type: 'headline',
@@ -56,24 +52,15 @@ storiesOf('Article', module)
   .add('with just a headline', () => {
     const blocksOnlyHeadline = blocks.filter(({ type }) => type === 'headline');
 
-    return (
-      <Article id={id} title={title} lang={lang} blocks={blocksOnlyHeadline} />
-    );
+    return <Article blocks={blocksOnlyHeadline} />;
   })
   .add('with a headline and text', () => {
     const blocksOnlyHeadlineText = blocks.filter(
       ({ type }) => type === 'headline' || type === 'text',
     );
 
-    return (
-      <Article
-        id={id}
-        title={title}
-        lang={lang}
-        blocks={blocksOnlyHeadlineText}
-      />
-    );
+    return <Article blocks={blocksOnlyHeadlineText} />;
   })
   .add('with a headline, text, and other blocks', () => (
-    <Article id={id} title={title} lang={lang} blocks={blocks} />
+    <Article blocks={blocks} />
   ));
