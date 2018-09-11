@@ -7,26 +7,29 @@ import articlePropTypes from '../../models/propTypes/article';
 const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...';
   if (error) return 'Something went wrong :(';
+  if (data) {
+    const { amp, data: articleData } = data;
 
-  const { amp, data: articleData } = data;
+    const { content, metadata, promo } = articleData;
+    const { id: aresArticleId } = metadata;
 
-  const { content, metadata, promo } = articleData;
-  const { id: aresArticleId } = metadata;
+    const id = aresArticleId.split(':').pop();
+    const { blocks } = content.model;
 
-  const id = aresArticleId.split(':').pop();
-  const { blocks } = content.model;
+    return (
+      <Article
+        amp={amp}
+        id={id}
+        lang={metadata.passport.language}
+        title={promo.headlines.seoHeadline}
+        {...content.model}
+      >
+        <MainContent blocks={blocks} />
+      </Article>
+    );
+  }
 
-  return (
-    <Article
-      amp={amp}
-      id={id}
-      lang={metadata.passport.language}
-      title={promo.headlines.seoHeadline}
-      {...content.model}
-    >
-      <MainContent blocks={blocks} />
-    </Article>
-  );
+  return null;
 };
 
 ArticleContainer.propTypes = {
