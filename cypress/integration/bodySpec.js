@@ -5,6 +5,7 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
+  shouldContainStyles,
 } from '../support/testHelper';
 
 describe('Article Body Tests', () => {
@@ -50,6 +51,23 @@ describe('Article Body Tests', () => {
 
   it('should render a title', () => {
     cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
+  });
+
+  it('should have an inline link with focus styling', () => {
+    const firstInlineLink = getElement('main a');
+
+    firstInlineLink.focus();
+    shouldContainStyles(
+      firstInlineLink,
+      'background-color',
+      'rgb(15, 85, 108)',
+    );
+    shouldContainStyles(firstInlineLink, 'color', 'rgb(245, 243, 241)');
+    shouldContainStyles(
+      firstInlineLink,
+      'border-bottom',
+      '1px solid rgb(245, 243, 241)',
+    );
   });
 
   it('should have a working first inline link', () => {

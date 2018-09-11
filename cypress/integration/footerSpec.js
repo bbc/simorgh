@@ -28,17 +28,6 @@ describe('Footer Tests', () => {
       '4px solid rgb(255, 255, 255)',
     );
   });
-
-  it('should have a hover state', () => {
-    const anchorElement = getElement('footer a');
-    anchorElement.invoke('mouseover');
-
-    shouldContainStyles(
-      getElement('footer a span'),
-      'border-bottom',
-      '4px solid rgb(255, 255, 255)',
-    );
-  });
   it('should have working links', () => {
     getElement('footer ul').within(() => {
       checkFooterLinks('0', '/news/help-41670342');
@@ -74,5 +63,21 @@ describe('Footer Tests', () => {
       .children('a')
       .should('have.attr', 'href')
       .and('contain', '/help/web/links');
+  });
+  it('should contain a link in the copyright text, which have hover and focus states', () => {
+    const link = getElement('footer p a');
+    link.focus();
+    const linkSpan = link.get('footer p a span');
+    shouldContainStyles(
+      linkSpan,
+      'border-bottom',
+      '2px solid rgb(255, 255, 255)',
+    );
+    link.invoke('mouseover');
+    shouldContainStyles(
+      linkSpan,
+      'border-bottom',
+      '2px solid rgb(255, 255, 255)',
+    );
   });
 });

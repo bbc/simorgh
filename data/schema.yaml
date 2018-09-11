@@ -91,7 +91,7 @@ components:
             - tags
             - type
           properties:
-            articleType:
+            category:
               enum:
                 - analysis
                 - askTheAudience
@@ -132,11 +132,11 @@ components:
             passport:
               type: object
               required:
-                - articleType
+                - category
                 - home
                 - language
               properties:
-                articleType:
+                category:
                   enum:
                     - analysis
                     - askTheAudience

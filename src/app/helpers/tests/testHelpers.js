@@ -9,17 +9,24 @@ export const shouldMatchSnapshot = (title, component) => {
   });
 };
 
-export const isNull = (title, component) => {
-  it(title, () => {
-    const tree = renderer.create(component).toJSON();
-    expect(tree).toBeNull();
-  });
-};
-
 export const shallowRender = component => {
   const shallowRenderer = new ShallowRenderer();
   shallowRenderer.render(component);
   const result = shallowRenderer.getRenderOutput();
 
   return result;
+};
+
+export const shouldShallowMatchSnapshot = (title, component) => {
+  it(title, () => {
+    const tree = shallowRender(component);
+    expect(tree).toMatchSnapshot();
+  });
+};
+
+export const isNull = (title, component) => {
+  it(title, () => {
+    const tree = renderer.create(component).toJSON();
+    expect(tree).toBeNull();
+  });
 };

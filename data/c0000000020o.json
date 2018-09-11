@@ -14,11 +14,19 @@
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-      "articleType": "news",
+      "category": "news",
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption"
+    ],
     "tags": {
       "about": [],
       "mentions": []
@@ -103,7 +111,7 @@
                             "type": "paragraph",
                             "blockId": "b22df4c2-cafc-cc25-d77f-32627eff4671",
                             "model": {
-                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non."
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.[placed on the tomb of the unknown warrior](/news/articles/c0000000025o)"
                             }
                           }
                         ]
@@ -128,6 +136,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000020o"
     },
     "summary": "Cras eleifend eleifend rhoncus. Curabitur tincidunt egestas lorem et cursus. Nunc sed magna in orci porttitor faucibus.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

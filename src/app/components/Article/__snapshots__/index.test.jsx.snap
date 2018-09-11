@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article should render correctly 1`] = `
+exports[`Article should render correctly with a child 1`] = `
 Array [
   .c6 {
   position: absolute;
@@ -46,6 +46,10 @@ Array [
   margin-top: 1.25rem;
 }
 
+.c1 {
+  grid-column: 1 / -1;
+}
+
 @media (max-width:37.5em) {
   .c0 {
     grid-gap: 0.5rem;
@@ -75,30 +79,6 @@ Array [
 @media (min-width:80em) {
   .c0 {
     grid-template-columns: repeat(10,1fr);
-  }
-}
-
-@media (max-width:56.1875em) {
-  .c1 {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width:37.5em) and (max-width:62.9375em) {
-  .c1 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:63em) and (max-width:80em) {
-  .c1 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:80em) {
-  .c1 {
-    grid-column: 3 / -3;
   }
 }
 
@@ -150,6 +130,9 @@ Array [
       </div>
     </div>
   </header>,
+  <span>
+    Child element
+  </span>,
   .c6 {
   position: absolute;
   width: 1px;
