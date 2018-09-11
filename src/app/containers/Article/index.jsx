@@ -4,6 +4,7 @@ import Article from '../../components/Article';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import serviceConfig from '../../lib/serviceConfig';
 
 class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
@@ -54,14 +55,41 @@ class ArticleContainer extends Component {
     const id = aresArticleId.split(':').pop();
     const { blocks } = content.model;
 
+    /* metaTags: An array of each thingLabel from tags.about & tags.mention */
+    const { about, mentions } = metadata.tags;
+    const aboutTags = about.map(thing => thing.thingLabel);
+    const mentionTags = mentions.map(thing => thing.thingLabel);
+    const metaTags = aboutTags.concat(mentionTags);
+
+    /* Timestamps converted to ISO 8601 format */
+    const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
+    const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
+
+    const service = 'news'; /* Temporarily hard-coded to news */
+    /* Canonical link generated from servicename and id */
+    const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+
+    /* Service-specific config imported from file */
+    const config = serviceConfig[service];
+
     return (
       <Article
         amp={amp}
-        id={id}
+        articleAuthor={config.articleAuthor}
+        articleSection={metadata.passport.genre}
+        canonicalLink={canonicalLink}
+        defaultImage={config.defaultImage}
+        defaultImageAltText={config.defaultImageAltText}
         description={promo.summary}
         lang={metadata.passport.language}
+        locale={config.locale}
+        metaTags={metaTags}
+        opengraphSiteName={config.opengraphSiteName}
+        timeLastUpdated={timeLastUpdated}
+        timeFirstPublished={timeFirstPublished}
         title={promo.headlines.seoHeadline}
-        {...content.model}
+        twitterCreator={config.twitterCreator}
+        twitterSite={config.twitterSite}
       >
         <MainContent blocks={blocks} />
       </Article>

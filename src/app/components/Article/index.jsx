@@ -1,11 +1,29 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
-import { bool, string, node } from 'prop-types';
+import { arrayOf, bool, string, node } from 'prop-types';
 import Header from '../Header';
 import Footer from '../../containers/Footer';
 
-const Article = ({ amp, children, description, id, lang, title }) => {
-  const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
+const Article = ({
+  amp,
+  articleAuthor,
+  articleSection,
+  canonicalLink,
+  children,
+  defaultImage,
+  defaultImageAltText,
+  description,
+  lang,
+  locale,
+  metaTags,
+  opengraphSiteName,
+  timeFirstPublished,
+  timeLastUpdated,
+  title,
+  twitterCreator,
+  twitterSite,
+  type,
+}) => {
   const htmlAttributes = { lang };
 
   if (amp) {
@@ -21,16 +39,28 @@ const Article = ({ amp, children, description, id, lang, title }) => {
         />
         <title>{title}</title>
         <link rel="canonical" href={canonicalLink} />
+        <meta name="article:author" content={articleAuthor} />
+        <meta name="article:modified_time" content={timeLastUpdated} />
+        <meta name="article:published_time" content={timeFirstPublished} />
+        <meta name="article:section" content={articleSection} />
+        {metaTags.map(tag => (
+          <meta name="article:tag" content={tag} />
+        ))}
+        <meta name="og:description" content={description} />
+        <meta name="og:image" content={defaultImage} />
+        <meta name="og:image:alt" content={defaultImageAltText} />
+        <meta name="og:locale" content={locale} />
+        <meta name="og:site_name" content={opengraphSiteName} />
+        <meta name="og:title" content={title} />
+        <meta name="og:type" content={type} />
+        <meta name="og:url" content={canonicalLink} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@BBCNews" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:creator" content={twitterCreator} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:creator" content="@BBCNews" />
-        <meta
-          name="twitter:image:src"
-          content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1"
-        />
-        <meta name="twitter:image:alt" content="BBC News" />
+        <meta name="twitter:image:alt" content={defaultImageAltText} />
+        <meta name="twitter:image:src" content={defaultImage} />
+        <meta name="twitter:site" content={twitterSite} />
+        <meta name="twitter:title" content={title} />
       </Helmet>
       <Header />
       {children}
@@ -41,11 +71,23 @@ const Article = ({ amp, children, description, id, lang, title }) => {
 
 Article.propTypes = {
   amp: bool.isRequired,
+  articleAuthor: string.isRequired,
+  articleSection: string.isRequired,
+  canonicalLink: string.isRequired,
   children: node.isRequired,
+  defaultImage: string.isRequired,
+  defaultImageAltText: string.isRequired,
   description: string.isRequired,
-  id: string.isRequired,
   lang: string.isRequired,
+  locale: string.isRequired,
+  metaTags: arrayOf(string).isRequired,
+  opengraphSiteName: string.isRequired,
+  timeFirstPublished: string.isRequired,
+  timeLastUpdated: string.isRequired,
   title: string.isRequired,
+  twitterCreator: string.isRequired,
+  twitterSite: string.isRequired,
+  type: string.isRequired,
 };
 
 export default Article;
