@@ -14,7 +14,7 @@
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-      "articleType": "news",
+      "category": "news",
       "genre": null
     },
     "version": "v0.3.2",
@@ -562,6 +562,7 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0000000027o"
     },
-    "summary": "St Joseph's Hospice's residents were \"thrilled\" to receive the flowers from the Windsor chapel."
+    "summary": "St Joseph's Hospice's residents were \"thrilled\" to receive the flowers from the Windsor chapel.",
+    "timestamp" : 1514811600000
   }
 }

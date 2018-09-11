@@ -1,21 +1,21 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import Figure from './index';
-
-const image = {
-  alt:
-    'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-  src:
-    'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-};
-
-const caption = 'This is a caption!';
+import {
+  FigureImage,
+  FigureImageWithCaption,
+  FigureImageWithCaptionContainingLink,
+  FigureImageWithCopyright,
+  FigureImageWithCopyrightAndCaption,
+} from './fixtureData';
 
 storiesOf('Figure', module)
-  .add('with a caption', () => (
-    <Figure {...image} copyrightHolder="BBC" caption={caption} />
-  ))
-  .add('without a caption', () => <Figure {...image} copyrightHolder="BBC" />)
-  .add('with non BBC copyright', () => (
-    <Figure {...image} copyrightHolder="Getty images" />
-  ));
+  .add('with a caption', () => FigureImageWithCaption)
+  .add('without a caption', () => FigureImage)
+  .add(
+    'with a caption containing a link',
+    () => FigureImageWithCaptionContainingLink,
+  )
+  .add('with non-BBC copyright', () => FigureImageWithCopyright)
+  .add(
+    'with a caption and non-BBC copyright',
+    () => FigureImageWithCopyrightAndCaption,
+  );

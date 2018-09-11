@@ -3,53 +3,13 @@
 exports[`ArticleContainer Component no data should render correctly 1`] = `"Loading..."`;
 
 exports[`ArticleContainer Component should render correctly 1`] = `
-<Article
-  blocks={
-    Array [
-      Object {
-        "blockId": "h-1",
-        "model": Object {
-          "blocks": Array [
-            Object {
-              "blockId": "t-1",
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "blockId": "p-1",
-                    "model": Object {
-                      "text": "Article Headline",
-                    },
-                    "type": "paragraph",
-                  },
-                ],
-              },
-              "type": "text",
-            },
-          ],
-        },
-        "type": "headline",
-      },
-      Object {
-        "blockId": "t-2",
-        "model": Object {
-          "blocks": Array [
-            Object {
-              "blockId": "p-2",
-              "model": Object {
-                "text": "A paragraph.",
-              },
-              "type": "paragraph",
-            },
-          ],
-        },
-        "type": "text",
-      },
-    ]
-  }
-  id="c0000000001o"
-  lang="en-gb"
-  title="Article Headline for SEO"
->
+<Article>
+  <Metadata
+    amp={false}
+    canonicalLink="https://www.bbc.com/news/articles/c0000000001o"
+    lang="en-gb"
+    title="Article Headline for SEO"
+  />
   <MainContentContainer
     blocks={
       Array [
