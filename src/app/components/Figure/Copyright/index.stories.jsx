@@ -3,5 +3,5 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Copyright from './index';
 
 storiesOf('Copyright', module).add('default', () => (
-  <Copyright text="Getty Images" />
+  <Copyright>Getty Images</Copyright>
 ));
