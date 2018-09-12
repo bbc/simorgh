@@ -266,7 +266,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
       className="c3"
       role="text"
     >
-      © Getty Images
+      Getty Images
     </span>
   </div>
   <figcaption
@@ -330,7 +330,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
       className="c3"
       role="text"
     >
-      © Getty Images
+      Getty Images
     </span>
   </div>
 </figure>

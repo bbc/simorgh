@@ -8,7 +8,7 @@ import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
 
 const renderCopyright = copyright =>
-  copyright ? <Copyright text={copyright} /> : null;
+  copyright ? <Copyright>{copyright}</Copyright> : null;
 
 const renderCaption = captionValue =>
   captionValue ? (
