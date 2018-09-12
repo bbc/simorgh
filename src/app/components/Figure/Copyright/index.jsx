@@ -1,5 +1,3 @@
-import React from 'react';
-import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -9,9 +7,9 @@ import {
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 
-const copyrightSymbolPrefix = '\u00A9';
-
-const StyledCopyright = styled.span`
+const Copyright = styled.span.attrs({
+  role: 'text',
+})`
   ${T_MINION};
   background-color: ${C_EBON};
   color: ${C_WHITE};
@@ -30,17 +28,5 @@ const StyledCopyright = styled.span`
     color: ${C_EBON}; /* This needs to match the background-color */
   }
 `;
-
-const copyrightRole = 'text';
-
-const Copyright = ({ text }) => (
-  <StyledCopyright role={copyrightRole}>
-    {`${copyrightSymbolPrefix} ${text}`}
-  </StyledCopyright>
-);
-
-Copyright.propTypes = {
-  text: string.isRequired,
-};
 
 export default Copyright;
