@@ -83,7 +83,9 @@ describe('Server', () => {
           />,
         );
 
-        expect(text).toEqual('<html><body><h1>Mock app</h1></body></html>');
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
     });
 
