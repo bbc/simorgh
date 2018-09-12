@@ -32,7 +32,7 @@ const getInitialData = async ({ match }) => {
     validateService(service);
     validateId(id);
 
-    let url = `/data/${id}.json`;
+    let url = `/data/${service}/${id}.json`;
 
     if (isServer()) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;

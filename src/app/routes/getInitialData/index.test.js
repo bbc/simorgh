@@ -43,7 +43,9 @@ describe('getInitialData', () => {
       isServer.default = jest.fn().mockReturnValueOnce(false);
 
       callGetInitialData();
-      expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
+      expect(fetch.mock.calls[0][0]).toEqual(
+        `/data/${defaultServiceParam}/${defaultIdParam}.json`,
+      );
     });
   });
 
@@ -107,7 +109,7 @@ describe('getInitialData', () => {
 
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
-        `${BASE_PATH}/data/${defaultIdParam}.json`,
+        `${BASE_PATH}/data/${defaultServiceParam}/${defaultIdParam}.json`,
       );
     });
   });
