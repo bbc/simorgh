@@ -100,7 +100,15 @@ describe('ArticleContainer', () => {
 
   describe('getInitialProps', () => {
     const defaultIdParam = 'c0000000001o';
-    const defaultContext = { match: { params: { id: defaultIdParam } } };
+    const defaultServiceParam = 'news';
+    const defaultContext = {
+      match: {
+        params: {
+          id: defaultIdParam,
+          service: defaultServiceParam,
+        },
+      },
+    };
     const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () =>
@@ -135,10 +143,17 @@ describe('ArticleContainer', () => {
     });
 
     describe('Validate route parameter ', () => {
-      it('to check the id is invalid before returning an empty object', async () => {
+      it('checks the id is invalid before returning an empty object', async () => {
         jest.spyOn(global.console, 'log');
         const invalidIdParam = 'route-21';
-        const invalidContext = { match: { params: { id: invalidIdParam } } };
+        const invalidContext = {
+          match: {
+            params: {
+              id: invalidIdParam,
+              service: defaultServiceParam,
+            },
+          },
+        };
         const response = await callGetInitialProps(invalidContext);
 
         expect(fetch).not.toHaveBeenCalled();
@@ -147,6 +162,29 @@ describe('ArticleContainer', () => {
         expect(console.log).toBeCalledWith(
           new Error(
             `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
+          ),
+        );
+        /* eslint-enable no-console */
+
+        expect(response).toEqual({});
+      });
+
+      it('checks the service is invalid before returning an empty object', async () => {
+        jest.spyOn(global.console, 'log');
+        const invalidServiceParam = 'route-21';
+        const invalidContext = {
+          match: {
+            params: { id: 'c0000000027o', service: invalidServiceParam },
+          },
+        };
+        const response = await callGetInitialProps(invalidContext);
+
+        expect(fetch).not.toHaveBeenCalled();
+
+        /* eslint-disable no-console */
+        expect(console.log).toBeCalledWith(
+          new Error(
+            `Invalid route parameter: ${invalidServiceParam}. Service parameter must be news or persian.`,
           ),
         );
         /* eslint-enable no-console */
