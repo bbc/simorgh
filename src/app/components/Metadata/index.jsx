@@ -38,12 +38,9 @@ const Metadata = ({
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastUpdated} />
       <meta name="article:published_time" content={timeFirstPublished} />
-      {() => {
-        if (!articleSection) {
-          return null;
-        }
-        return <meta name="article:section" content={articleSection} />;
-      }}
+      {articleSection ? (
+        <meta name="article:section" content={articleSection} />
+      ) : null}
       {metaTags.map(tag => (
         <meta name="article:tag" content={tag} />
       ))}

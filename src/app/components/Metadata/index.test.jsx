@@ -127,4 +127,24 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
   );
+
+  metadataSnapshotTest(
+    'articleSection is not null',
+    false,
+    'BBC News',
+    'Politics',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    'en-GB',
+    'en_GB',
+    ['tagA', 'tagB'],
+    'BBC News',
+    1514811600000,
+    1514811600000,
+    'An article title',
+    '@BBCNews',
+    '@BBCNews',
+  );
 });
