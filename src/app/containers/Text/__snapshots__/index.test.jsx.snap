@@ -1,158 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-Array [
-  .c1 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
+<React.Fragment>
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 1st paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 2nd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 3rd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 4th paragraph block.."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 5th paragraph block."
+  />
+</React.Fragment>
+`;
 
-.c1:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
-}
-
-.c1:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
-}
-
-.c1:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
-}
-
-.c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
-    <a
-      className="c1"
-      href="/news/articles/c000000000ro"
-      onClick={[Function]}
-    >
-      which were later donated to local hospices
-    </a>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is another paragraph with some 
-    <b>
-      bold
-    </b>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with 
-    <i>
-      italic
-    </i>
-     text.
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    <del>
-      This is a paragraph with some strike-through text
-    </del>
-    .
-  </p>,
-  .c0 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
-  margin: 0;
-  font-size: 0.9375em;
-  line-height: 1.25rem;
-}
-
-@media (min-width:20em) {
-  .c0 {
-    font-size: 1em;
-    line-height: 1.375rem;
-  }
-}
-
-<p
-    className="c0"
-  >
-    This is a paragraph with some 
-    <code>
-      inline code.
-    </code>
-  </p>,
-]
+exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
+<React.Fragment>
+  <hr />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 1st paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 2nd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 3rd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 4th paragraph block.."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 5th paragraph block."
+  />
+</React.Fragment>
 `;

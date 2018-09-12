@@ -1,7 +1,8 @@
-import { arrayOf, number, shape, string } from 'prop-types';
+import { arrayOf, bool, number, shape, string } from 'prop-types';
 import mainContentPropTypes from '../mainContent';
 
 const articlePropTypes = {
+  amp: bool,
   data: shape({
     metadata: shape({
       id: string.isRequired,
@@ -18,7 +19,7 @@ const articlePropTypes = {
       passport: shape({
         language: string.isRequired,
         home: string.isRequired,
-        articleType: string.isRequired,
+        category: string.isRequired,
         genre: string,
       }),
       tags: shape({
@@ -39,9 +40,7 @@ const articlePropTypes = {
       blockTypes: arrayOf(string),
     }).isRequired,
     content: shape({
-      model: shape({
-        blocks: mainContentPropTypes,
-      }),
+      model: shape(mainContentPropTypes),
     }).isRequired,
     promo: shape({
       id: string.isRequired,

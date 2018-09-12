@@ -1,125 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render an image with alt text 1`] = `
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
-}
-
-<figure
-  className="c0"
->
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    className="c1"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-</figure>
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyright={null}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-.c3 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
-}
-
-.c2 {
-  background-color: #D5D0CD;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
-}
-
-@media (min-width:37.5em) {
-  .c2 {
-    padding: 0.5rem 1rem;
-  }
-}
-
-<figure
-  className="c0"
->
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    className="c1"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-  <figcaption
-    className="c2"
-  >
-    <span
-      className="c3"
-    >
-      Image caption, 
-    </span>
-    Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-  </figcaption>
-</figure>
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
+  copyright={null}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-.c2 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
-}
-
-.c0 {
-  margin: 0;
-  padding-bottom: 1rem;
-  width: 100%;
-}
-
-.c1 {
-  display: block;
-  width: 100%;
-}
-
-<figure
-  className="c0"
->
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    className="c1"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-  <span
-    className="c2"
-  >
-    Copyright Getty images
-  </span>
-</figure>
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyright="Copyright Getty images"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;

@@ -3,7 +3,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 
 const validateNode = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
-const data = require('../../../../../data/c0000000001o.json');
+const data = require('../../../../../data/test/news/c0000000001o.json');
 
 const schemas = getAllSchemas();
 const { article } = schemas;
@@ -67,7 +67,7 @@ describe('Validate node & properties helper', () => {
               home: {
                 type: 'string',
               },
-              articleType: {
+              category: {
                 type: 'string',
               },
             },
@@ -79,7 +79,7 @@ describe('Validate node & properties helper', () => {
       passport: {
         language: 'en-gb',
         home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
-        articleType: 'news',
+        category: 'news',
       },
     };
     const schemaName = 'article';
