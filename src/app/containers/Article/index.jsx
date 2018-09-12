@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import 'isomorphic-fetch';
-import Article from '../../components/Article';
 import Metadata from '../../components/Metadata';
+import Header from '../../components/Header';
+import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
@@ -104,7 +105,8 @@ class ArticleContainer extends Component {
     const id = aresArticleId.split(':').pop();
     const config = serviceConfig[service];
     return (
-      <Article>
+      <Fragment>
+        <Header />
         <Metadata
           {...metadataProps(
             amp,
@@ -117,7 +119,8 @@ class ArticleContainer extends Component {
           )}
         />
         <MainContent blocks={content.model} />
-      </Article>
+        <Footer />
+      </Fragment>
     );
   }
 }

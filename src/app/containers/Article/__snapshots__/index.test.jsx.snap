@@ -3,7 +3,8 @@
 exports[`ArticleContainer Component no data should render correctly 1`] = `"Loading..."`;
 
 exports[`ArticleContainer Component should render correctly 1`] = `
-<Article>
+<React.Fragment>
+  <Header />
   <Metadata
     amp={false}
     articleAuthor="https://www.facebook.com/bbcnews"
@@ -68,5 +69,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       }
     }
   />
-</Article>
+  <FooterContainer />
+</React.Fragment>
 `;
