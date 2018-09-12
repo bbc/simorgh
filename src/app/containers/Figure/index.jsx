@@ -1,23 +1,30 @@
 import React from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import Copyright from '../../components/Figure/Copyright';
 import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
 
 const renderCopyright = copyright =>
-  copyright ? <VisuallyHiddenText>{copyright}</VisuallyHiddenText> : null;
+  copyright ? <Copyright text={copyright} /> : null;
 
 const renderCaption = captionValue =>
   captionValue ? (
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
+const RelativeDiv = styled.div`
+  position: relative;
+`;
+
 const FigureContainer = ({ src, alt, copyright, caption }) => (
   <Figure>
-    <Image alt={alt} src={src} />
-    {renderCopyright(copyright)}
+    <RelativeDiv>
+      <Image alt={alt} src={src} />
+      {renderCopyright(copyright)}
+    </RelativeDiv>
     {renderCaption(caption)}
   </Figure>
 );
