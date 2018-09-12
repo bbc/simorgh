@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article should render correctly 1`] = `
+exports[`Article should render correctly with a child 1`] = `
 Array [
   .c6 {
   position: absolute;
@@ -130,6 +130,9 @@ Array [
       </div>
     </div>
   </header>,
+  <span>
+    Child element
+  </span>,
   .c6 {
   position: absolute;
   width: 1px;

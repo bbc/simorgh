@@ -1,6 +1,7 @@
 import React from 'react';
 import { bool, string, shape } from 'prop-types';
 import Article from '../../components/Article';
+import Metadata from '../../components/Metadata';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 
@@ -15,15 +16,18 @@ const ArticleContainer = ({ loading, error, data }) => {
 
     const id = aresArticleId.split(':').pop();
     const { blocks } = content.model;
+    const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
+
+    const metadataProps = {
+      amp,
+      canonicalLink,
+      lang: metadata.passport.language,
+      title: promo.headlines.seoHeadline,
+    };
 
     return (
-      <Article
-        amp={amp}
-        id={id}
-        lang={metadata.passport.language}
-        title={promo.headlines.seoHeadline}
-        {...content.model}
-      >
+      <Article>
+        <Metadata {...metadataProps} />
         <MainContent blocks={blocks} />
       </Article>
     );
