@@ -4,12 +4,18 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 const readScenario = require('./readScenario');
 
 let fileToValidateMock;
-const dirname = './././data';
+const dataDirPath = './././data';
 
-const readFiles = filenames => {
-  expect(() => {
-    readScenario.readScenario(filenames, dirname);
-  }).not.toThrowError();
+const readFiles = (fileNames, dirPath = dataDirPath) =>
+  fileNames.forEach(fileName => {
+    readScenario.readScenario(fileName, dirPath);
+  });
+
+const testReadScenario = (fileNames, expectedCalls) => {
+  const newsDirPath = './././data/test/news';
+  readFiles(fileNames, newsDirPath);
+
+  expect(fileToValidateMock.mock.calls).toEqual(expectedCalls);
 };
 
 describe('readScenario helper', () => {
@@ -22,37 +28,38 @@ describe('readScenario helper', () => {
   });
 
   it('should readScenario given a valid array and directory name', () => {
-    const filenames = [
+    const fileNames = [
       'c0000000001o.json',
       'c0000000002o.json',
       'c0000000003o.json',
     ];
+    const expectedCalls = [
+      ['./././data/test/news/c0000000001o.json'],
+      ['./././data/test/news/c0000000002o.json'],
+      ['./././data/test/news/c0000000003o.json'],
+    ];
 
-    filenames.forEach(filename => {
-      readFiles(filename);
-    });
-
-    expect(fileToValidateMock.mock.calls).toEqual([
-      ['./././data/c0000000001o.json'],
-      ['./././data/c0000000002o.json'],
-      ['./././data/c0000000003o.json'],
-    ]);
+    testReadScenario(fileNames, expectedCalls);
   });
 
   it('should ignore c0000000023o.json', () => {
-    const filenames = ['c0000000023o.json'];
+    const fileNames = ['c0000000023o.json', 'c0000000003o.json'];
+    const expectedCalls = [['./././data/test/news/c0000000003o.json']];
 
-    readFiles(filenames);
+    testReadScenario(fileNames, expectedCalls);
+  });
 
-    expect(fileToValidateMock).not.toBeCalled();
+  it('should ignore onward-journeys', () => {
+    const fileNames = ['c0000000001o.json', 'onward-journeys'];
+    const expectedCalls = [['./././data/test/news/c0000000001o.json']];
+
+    testReadScenario(fileNames, expectedCalls);
   });
 
   it('should ignore files that are no json format', () => {
-    const filenames = ['schema.yaml', 'c0000000023o.yaml', 'README.md', 'prod'];
+    const fileNames = ['schema.yaml', 'README.md'];
 
-    filenames.forEach(filename => {
-      readFiles(filename);
-    });
+    readFiles(fileNames);
 
     expect(fileToValidateMock).not.toHaveBeenCalled();
   });
