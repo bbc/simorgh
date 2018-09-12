@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom';
 import { string, node } from 'prop-types';
 import InlineLink from '../../components/InlineLink';
 
-const InternalInlineLink = InlineLink.withComponent(Link);
-
 const InlineLinkContainer = ({ href, children, ...rest }) => {
   const regex = '^/news/articles/c[a-zA-Z0-9]{10}o$';
 
   // if URL matches a valid route, use a react-router link
   if (href.match(regex)) {
     return (
-      <InternalInlineLink to={href} {...rest}>
+      <InlineLink as={Link} to={href} {...rest}>
         {children}
-      </InternalInlineLink>
+      </InlineLink>
     );
   }
 
