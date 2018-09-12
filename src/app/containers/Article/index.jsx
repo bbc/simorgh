@@ -29,6 +29,39 @@ const validateId = id => {
   }
 };
 
+const metadataProps = (
+  amp,
+  config,
+  id,
+  metadata,
+  metaTags,
+  promo,
+  service,
+  timeFirstPublished,
+  timeLastUpdated,
+) => {
+  /* Canonical link generated from servicename and id */
+  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+
+  return {
+    amp,
+    articleAuthor: config.articleAuthor,
+    articleSection: metadata.passport.genre,
+    canonicalLink,
+    defaultImage: config.defaultImage,
+    defaultImageAltText: config.defaultImageAltText,
+    description: promo.summary,
+    lang: metadata.passport.language,
+    locale: config.locale,
+    metaTags,
+    opengraphSiteName: config.opengraphSiteName,
+    timeFirstPublished,
+    timeLastUpdated,
+    title: promo.headlines.seoHeadline,
+    twitterCreator: config.twitterCreator,
+    twitterSite: config.twitterSite,
+  };
+};
 class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
@@ -55,6 +88,8 @@ class ArticleContainer extends Component {
     }
   }
 
+  static renderMetadata() {}
+
   render() {
     const { amp, data } = this.props;
     /*
@@ -72,45 +107,35 @@ class ArticleContainer extends Component {
     const id = aresArticleId.split(':').pop();
     const { blocks } = content.model;
 
+    /* Timestamps converted to ISO 8601 format */
+    const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
+    const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
+
     /* metaTags: An array of each thingLabel from tags.about & tags.mention */
     const { about, mentions } = tags;
     const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
     const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
     const metaTags = aboutTags.concat(mentionTags);
 
-    /* Timestamps converted to ISO 8601 format */
-    const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
-    const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
-
     const service = 'news'; /* Temporarily hard-coded to news */
-    /* Canonical link generated from servicename and id */
-    const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
-
     /* Service-specific config imported from file */
     const config = serviceConfig[service];
 
-    const metadataProps = {
-      amp,
-      articleAuthor: config.articleAuthor,
-      articleSection: metadata.passport.genre,
-      canonicalLink,
-      defaultImage: config.defaultImage,
-      defaultImageAltText: config.defaultImageAltText,
-      description: promo.summary,
-      lang: metadata.passport.language,
-      locale: config.locale,
-      metaTags,
-      opengraphSiteName: config.opengraphSiteName,
-      timeLastUpdated,
-      timeFirstPublished,
-      title: promo.headlines.seoHeadline,
-      twitterCreator: config.twitterCreator,
-      twitterSite: config.twitterSite,
-    };
-
     return (
       <Article>
-        <Metadata {...metadataProps} />
+        <Metadata
+          {...metadataProps(
+            amp,
+            config,
+            id,
+            metadata,
+            metaTags,
+            promo,
+            service,
+            timeFirstPublished,
+            timeLastUpdated,
+          )}
+        />
         <MainContent blocks={blocks} />
       </Article>
     );
