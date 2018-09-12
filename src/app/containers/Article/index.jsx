@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
-import Article from '../../components/Article';
 import Metadata from '../../components/Metadata';
+import Header from '../../components/Header';
+import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 
@@ -26,10 +27,12 @@ const ArticleContainer = ({ loading, error, data }) => {
     };
 
     return (
-      <Article>
+      <Fragment>
+        <Header />
         <Metadata {...metadataProps} />
         <MainContent blocks={blocks} />
-      </Article>
+        <Footer />
+      </Fragment>
     );
   }
 

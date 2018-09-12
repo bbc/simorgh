@@ -1,5 +1,5 @@
 language: node_js
-before_install: npm install -g npm@latest
+before_install: npm install -g npm@6.4.1
 jobs:
   include:
     - stage: test
