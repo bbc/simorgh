@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Metadata News AMP article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "amp": true,
+      "lang": "en-GB",
+    }
+  }
+>
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    An article title
+  </title>
+  <link
+    href="https://www.bbc.com/news/articles/amp/c0000000001o"
+    rel="canonical"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Metadata News article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en-GB",
+    }
+  }
+>
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    An article title
+  </title>
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    rel="canonical"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Metadata Persian AMP article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "amp": true,
+      "lang": "fa",
+    }
+  }
+>
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    پهپادی که برایتان قهوه می‌آورد
+  </title>
+  <link
+    href="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    rel="canonical"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Metadata Persian article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "fa",
+    }
+  }
+>
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    پهپادی که برایتان قهوه می‌آورد
+  </title>
+  <link
+    href="https://www.bbc.com/persian/articles/c0000000028o"
+    rel="canonical"
+  />
+</HelmetWrapper>
+`;
