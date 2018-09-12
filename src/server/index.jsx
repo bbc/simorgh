@@ -76,7 +76,7 @@ server
         />,
       );
 
-      res.send(doc);
+      res.send(`<!doctype html>${doc}`);
     } catch ({ message }) {
       res.status(404).send(message);
     }
