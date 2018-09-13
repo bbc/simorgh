@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import createDataModel from '../../lib/model';
 
 const validateService = service => {
   const services = ['news', 'persian'];
@@ -45,8 +46,10 @@ class ArticleContainer extends Component {
       }
 
       const response = await fetch(url);
-      const data = await response.json();
+      const responseData = await response.json();
       const amp = isAmpPath(path);
+
+      const data = createDataModel(responseData);
 
       return { amp, data };
     } catch (error) {
@@ -66,24 +69,12 @@ class ArticleContainer extends Component {
       return 'Loading...';
     }
 
-    const { content, metadata, promo } = data;
-    const { id: aresArticleId } = metadata;
-
-    const id = aresArticleId.split(':').pop();
-    const { blocks } = content.model;
-    const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
-
-    const metadataProps = {
-      amp,
-      canonicalLink,
-      lang: metadata.passport.language,
-      title: promo.headlines.seoHeadline,
-    };
+    const { blocks, metadata } = data;
 
     return (
       <Fragment>
         <Header />
-        <Metadata {...metadataProps} />
+        <Metadata amp={amp} {...metadata} />
         <MainContent blocks={blocks} />
         <Footer />
       </Fragment>
