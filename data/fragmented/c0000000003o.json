@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000003o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000003o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "c1953941-e851-9cee-bab4-8e38f327986b",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Bill",
+          "thingUri": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
+          "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
+          "thingType": [
+            "Film",
+            "Thing"
+          ]
+        },
+        {
+          "thingLabel": "Theresa May",
+          "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
+          "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
+          "thingType": [
+            "Person",
+            "Thing"
+          ],
+          "topidName": "Theresa May",
+          "topicId": "c50znx8v4z7t",
+          "curationType": [
+            "vivo-stream"
+          ]
+        }
+      ],
+      "mentions": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "video",
+      "rawVideo",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "d043f630-4e0c-4dc2-96ab-f61191c63e23",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2696dcac-2036-72cb-67c7-3f18bea268ef",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "1bf4d5c7-a386-32c5-4ad5-a037ead08760",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ©",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ©",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "5d775199-505a-4438-ac30-4bb5adaabb05",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
+              {
+                "blockId": "03875412-259d-0a55-e930-7eddecaa5b74",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT1M34S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p067gq6h"
+                }
+              },
+              {
+                "blockId": "fa950ec7-133a-f960-a017-525fee45087f",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "4183af64-50f4-fd1d-eb3e-b68c4e1899e5",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "f959a7b4-6057-58c4-fafa-7f52aa056dc2",
+                            "model": {
+                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "e9d11a05-1591-8b87-bba6-7676f7943032",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "1a4a68e3-c8e5-4a67-0ca1-8eec810fd62c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "de2c531a-6b02-4db1-437b-09efa14cebd9",
+                            "model": {
+                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "65724cfc-795e-419e-a590-463328195615",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "6be99f49-084a-072b-16a4-a60c22ee0ec2",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "Getty Images"
+                      }
+                    },
+                    {
+                      "blockId": "80a2b11a-84ca-c254-22b9-04b20b6715a9",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "d41fbdb5-8cb9-d2a0-968f-c3a40a18e5a7",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "c8326364-404a-e7da-aa5d-6eadf7d8815c",
+                                  "model": {
+                                    "text": "Pellentesque pellentesque sem magna.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Pellentesque pellentesque sem magna.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "ebf667b2-5835-441d-8cf2-fe6e56513f56",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "fdaf9a0e-64ee-09c0-df1a-2544c85dd4d1",
+                "type": "paragraph",
+                "model": {
+                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "c065122d-e01e-03b6-8bce-fd11ec4f75d7",
+                "type": "paragraph",
+                "model": {
+                  "text": "Quisque quis libero H2O bibendum, feugiat felis ut, dignissim tortor.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Quisque quis libero H",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "2",
+                        "attributes": [
+                          "subscript"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "O bibendum, feugiat felis ut, dignissim tortor.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "dbb3e07d-98c1-be5b-66b5-eeb07440a795",
+                "type": "paragraph",
+                "model": {
+                  "text": "Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000003o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000003o"
+    },
+    "summary": "Suspendisse lectus dui, mollis vitae fermentum non, feugiat sed nibh.",
+    "timestamp": 1514811600000
+  }
+}

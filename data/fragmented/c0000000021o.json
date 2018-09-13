@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000021o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000021o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "3e0f7d40-840a-acfb-f24a-d55f49233f04",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": "business"
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "text",
+      "paragraph",
+      "subheading",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "69c20cc7-c454-4251-b2ac-d29f0d8d4edf",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "035981fa-66d7-9ed3-e548-8e311b425fc3",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "587effc6-eabe-38ef-d632-c61b494aadab",
+                      "model": {
+                        "text": "Where are the richest households in the UK?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Where are the richest households in the UK?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "157b703f-7a54-400b-97f2-604a3ab60e9b",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "30c8b233-b3c5-6a7a-b1ef-55fe87145b79",
+                "type": "paragraph",
+                "model": {
+                  "text": "The sharp differences in household incomes across the UK have been set out in official government statistics.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The sharp differences in household incomes across the UK have been set out in official government statistics.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "65f2f7c1-3d46-3b75-6554-0d40e09f67db",
+                "type": "paragraph",
+                "model": {
+                  "text": "The average household income, once taxes and benefits are accounted for, was £19,432 per person in 2016.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The average household income, once taxes and benefits are accounted for, was £19,432 per person in 2016.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "03f9e2e8-8469-2abb-691d-15d3a3c62c70",
+                "type": "paragraph",
+                "model": {
+                  "text": " But in Kensington & Chelsea and Hammersmith & Fulham in west London the average income was more than three times this at £58,816. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " But in Kensington & Chelsea and Hammersmith & Fulham in west London the average income was more than three times this at £58,816. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "1718cc52-a658-18b5-89ab-fa0198c110f4",
+                "type": "paragraph",
+                "model": {
+                  "text": " In contrast, in Nottingham - which has the lowest household income - the average income was £12,232.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " In contrast, in Nottingham - which has the lowest household income - the average income was £12,232.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000021o",
+    "headlines": {
+      "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio",
+      "promoHeadline": "Duis ut tincidunt arcu"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000021o"
+    },
+    "summary": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "timestamp": 1514811600000
+  }
+}

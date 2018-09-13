@@ -1,0 +1,497 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000008o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000008o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "8e66e76f-aaec-0e9d-98b3-4511e77e4c28",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "opinion",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "subheading",
+      "fragment",
+      "urlLink"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/fbb858f6-5eb5-4ffc-be8c-06ee49179aa9#id",
+          "thingId": "fbb858f6-5eb5-4ffc-be8c-06ee49179aa9",
+          "thingLabel": "Election 2015 - EU",
+          "thingType": [
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2aa1610b-9675-4a15-981b-e239e99ac223#id",
+          "thingId": "2aa1610b-9675-4a15-981b-e239e99ac223",
+          "thingLabel": "Election 2015 Northern Ireland",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
+          "topicId": "cwlw3xz0lvvt",
+          "topicName": "Brexit",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
+          "thingLabel": "Brexit",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
+          "topicId": "cwm11216mzyt",
+          "topicName": "US mid-term elections 2018",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "01fc38c4-244c-4641-8549-0243c92e4c24",
+          "thingLabel": "US mid-term elections 2018",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
+          "topicId": "cvenzmgyev0t",
+          "topicName": "US Election 2016",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "530d1350-d83c-405b-b6c3-809473e23c58",
+          "thingLabel": "US Election 2016",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
+          "topicId": "cky4yx910j3t",
+          "topicName": "Russian presidential election 2018",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "8ece91c9-56df-4c55-a6d2-f00e98f28335",
+          "thingLabel": "Russian presidential election 2018",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id",
+          "topicId": "c1038wnxn57t",
+          "topicName": "German federal elections 2017",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "bf922d40-1842-479d-a4bf-2ce36bdf1f94",
+          "thingLabel": "German federal elections 2017",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2daa28ee-c47e-4214-b97d-08ecc8881d98#id",
+          "thingId": "2daa28ee-c47e-4214-b97d-08ecc8881d98",
+          "thingLabel": "2015 UK election",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/7a50cd42-14a5-4b12-8952-a72e867fb1cc#id",
+          "thingId": "7a50cd42-14a5-4b12-8952-a72e867fb1cc",
+          "thingLabel": "Ireland election 2016",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f8cf6f0a-64b2-490f-a2ad-1f0f15df454d#id",
+          "thingId": "f8cf6f0a-64b2-490f-a2ad-1f0f15df454d",
+          "thingLabel": "Australia election 2016",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        }
+      ]
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "263e730e-1d9d-48ee-aa56-505771c78450",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "66f56750-539c-e357-00b9-ed94a1098aa5",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "d69d8cfe-c05e-1462-f431-20ab81ae80ff",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "fc5945eb-6a70-a0f9-5300-864d261b968c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "8aa13ea3-e0c2-60b8-4384-efd306267302",
+                            "model": {
+                              "text": "Galileo.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "8bc637d9-3463-77aa-a313-8c6ef6fd7792",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "e221e50c-4655-4eb5-4103-95008389b130",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "e35f4ea4-082f-c48f-3e10-90bf4ba00d21",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "4243856b-a493-4b2e-960e-46777f0d46a0",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "69ec8a6d-f0fd-8d03-95fe-8ee506fb591c",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "99082a72-c42f-cea2-1a9d-026733bb696f",
+                      "model": {
+                        "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "3b96c0a9-3ee6-0b8d-0291-82c833ce9aed",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "a72f8adb-3fd2-b03d-d447-4957fa5dbdce",
+                      "model": {
+                        "text": "What is GDPR?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is GDPR?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "ab0a0ffb-8abe-4836-9a60-4cecc526f76d",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "fc3d38c2-e96e-0cc9-70bf-641f4f7eaca8",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "90108546-1594-71e0-4c80-b71092e5de2b",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "d3714c4d-0ee5-a8b9-379a-77a4bf45ab5d",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "146c5121-bf4a-3ead-3484-a22e72262832",
+                            "model": {
+                              "text": "Fusce tincidunt lectus eget augue mollis.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fusce tincidunt lectus eget augue mollis.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "1f73fad9-95e9-68b3-a795-4528c2db6359",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "75c8c23a-72f7-1411-92ad-a578f0bfcb0d",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "bd7a48bc-7642-7e46-6dd9-5b3f97521b39",
+                            "model": {
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Morbi lacinia leo sed tellus faucibus",
+                                    "locator": "/news/articles/c0000000004o",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Morbi lacinia leo sed tellus faucibus",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ", nec vulputate metus sagittis.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "8a60d4a6-1110-2cca-aa7c-7a2988b77c4a",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "c8cb0c7e-c3a1-42d7-ca10-72c8e4e2c526",
+                      "model": {
+                        "text": "What is GDPR?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is GDPR?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "e1e101f1-3cca-4b32-b3ae-4ac2f323b940",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "5f8f03c0-2e36-728f-bf2a-66bd98ef106f",
+                "type": "paragraph",
+                "model": {
+                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cras porttitor dictum tellus",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000008o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "GDPR: 'Don't panic!' data watchdog tells firms"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000008o"
+    },
+    "summary": "Sed sit amet suscipit eros. Praesent posuere dapibus lacus in rhoncus.",
+    "timestamp": 1514811600000
+  }
+}
