@@ -49,6 +49,17 @@ describe('Article Body Tests', () => {
     visibleImageWithCaption(getElement('figure').eq(2));
   });
 
+  it('should have an image copyright label with styling', () => {
+    const copyrightLabel = getElement('figure')
+      .eq(0)
+      .within(() => {
+        getElement('span').eq(0);
+      });
+    copyrightLabel.should('contain', 'Getty Images');
+    shouldContainStyles(copyrightLabel, 'background-color', 'rgb(34, 34, 34)');
+    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+  });
+
   it('should render a title', () => {
     cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
   });
