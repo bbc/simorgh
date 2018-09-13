@@ -60,7 +60,6 @@ class ArticleContainer extends Component {
 
   render() {
     const { amp, data } = this.props;
-
     /*
       This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
       After.JS gives no explicit loading state, so we just have to check for a lack of data.
