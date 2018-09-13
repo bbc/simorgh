@@ -125,7 +125,7 @@
                   "height": 576,
                   "locator": "/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg",
                   "originCode": null,
-                  "copyrightHolder": "BBC"
+                  "copyrightHolder": "Getty Images"
                 }
               },
               {
@@ -311,7 +311,7 @@
                   "height": 576,
                   "locator": "/cpsprodpb/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
                   "originCode": null,
-                  "copyrightHolder": "BBC"
+                  "copyrightHolder": "Getty Images"
                 }
               },
               {
@@ -638,6 +638,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
     },
     "summary": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }
