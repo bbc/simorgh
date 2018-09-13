@@ -10,7 +10,7 @@ import {
 import { T_MINION } from '../../../lib/constants/typography';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 
-const WrapperSpan = styled.span.attrs({
+const StyledCopyright = styled.span.attrs({
   role: 'text',
 })`
   ${T_MINION};
@@ -33,10 +33,10 @@ https://github.com/bbc/simorgh/issues/456#issuecomment-419405600
 `;
 
 const Copyright = ({ children }) => (
-  <WrapperSpan>
+  <StyledCopyright>
     <VisuallyHiddenText>Image source,</VisuallyHiddenText>
     {children}
-  </WrapperSpan>
+  </StyledCopyright>
 );
 
 Copyright.propTypes = {

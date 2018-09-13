@@ -195,6 +195,19 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   width: 100%;
 }
 
+.c4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c3 {
   font-size: 0.75em;
   line-height: 1em;
@@ -213,19 +226,6 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 }
 
 .c5 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
-}
-
-.c4 {
   font-size: 0.9375em;
   line-height: 1.125rem;
   background-color: #D5D0CD;
@@ -240,13 +240,13 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 }
 
 @media (min-width:37.5em) {
-  .c4 {
+  .c5 {
     font-size: 0.875em;
   }
 }
 
 @media (min-width:37.5em) {
-  .c4 {
+  .c5 {
     padding: 0.5rem 1rem;
   }
 }
@@ -266,14 +266,19 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
       className="c3"
       role="text"
     >
+      <span
+        className="c4"
+      >
+        Image source,
+      </span>
       Getty Images
     </span>
   </div>
   <figcaption
-    className="c4"
+    className="c5"
   >
     <span
-      className="c5"
+      className="c4"
     >
       Image caption, 
     </span>
@@ -294,6 +299,19 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   width: 100%;
 }
 
+.c4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c3 {
   font-size: 0.75em;
   line-height: 1em;
@@ -330,6 +348,11 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
       className="c3"
       role="text"
     >
+      <span
+        className="c4"
+      >
+        Image source,
+      </span>
       Getty Images
     </span>
   </div>
