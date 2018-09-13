@@ -53,6 +53,7 @@ const metadataProps = (amp, config, id, metadata, metaTags, promo, service) => {
     title: promo.headlines.seoHeadline,
     twitterCreator: config.twitterCreator,
     twitterSite: config.twitterSite,
+    type: metadata.type,
   };
 };
 

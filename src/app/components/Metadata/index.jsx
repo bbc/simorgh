@@ -42,7 +42,7 @@ const Metadata = ({
         <meta name="article:section" content={articleSection} />
       ) : null}
       {metaTags.map(tag => (
-        <meta name="article:tag" content={tag} />
+        <meta name="article:tag" content={tag} key={tag} />
       ))}
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
@@ -66,7 +66,7 @@ const Metadata = ({
 Metadata.propTypes = {
   amp: bool.isRequired,
   articleAuthor: string.isRequired,
-  articleSection: string.isRequired,
+  articleSection: string,
   canonicalLink: string.isRequired,
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
@@ -81,6 +81,10 @@ Metadata.propTypes = {
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
+};
+
+Metadata.defaultProps = {
+  articleSection: null,
 };
 
 export default Metadata;
