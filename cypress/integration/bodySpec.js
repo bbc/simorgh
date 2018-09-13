@@ -55,7 +55,7 @@ describe('Article Body Tests', () => {
       .within(() => {
         getElement('span').eq(0);
       });
-    copyrightLabel.should('contain', 'Getty Images');
+    copyrightLabel.should('contain', 'PA');
     shouldContainStyles(copyrightLabel, 'background-color', 'rgb(34, 34, 34)');
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
