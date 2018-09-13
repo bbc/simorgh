@@ -119,7 +119,7 @@ class ArticleContainer extends Component {
             service,
           )}
         />
-        <MainContent blocks={content.model} />
+        <MainContent blocks={content.model.blocks} />
         <Footer />
       </Fragment>
     );
