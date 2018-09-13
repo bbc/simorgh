@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 import { string, number } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
@@ -32,9 +33,11 @@ const renderCaption = captionValue =>
 const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
   <Figure>
     <ImageWrapper ratio={ratio}>
-      <Image alt={alt} src={src} />
-      {renderCopyright(copyright)}
-      {renderCaption(caption)}
+      <LazyLoad offset={100} once>
+        <Image alt={alt} src={src} />
+        {renderCopyright(copyright)}
+        {renderCaption(caption)}
+      </LazyLoad>
     </ImageWrapper>
   </Figure>
 );
