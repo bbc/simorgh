@@ -33,12 +33,15 @@ const renderCaption = captionValue =>
 const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
   <Figure>
     <ImageWrapper ratio={ratio}>
-      <LazyLoad offset={100} once>
+      <LazyLoad offset={250} once>
         <Image alt={alt} src={src} />
-        {renderCopyright(copyright)}
-        {renderCaption(caption)}
       </LazyLoad>
+      <noscript>
+        <Image alt={alt} src={src} />
+      </noscript>
+      {renderCopyright(copyright)}
     </ImageWrapper>
+    {renderCaption(caption)}
   </Figure>
 );
 
