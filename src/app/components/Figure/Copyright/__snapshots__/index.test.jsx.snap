@@ -22,6 +22,6 @@ exports[`Copyright should render correctly 1`] = `
   className="c0"
   role="text"
 >
-  © Getty Images
+  Getty Images
 </span>
 `;
