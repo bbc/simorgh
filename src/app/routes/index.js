@@ -6,11 +6,6 @@ const routes = [
     exact: true,
     component: Article,
   },
-  {
-    path: '/:service/articles/:id.amp',
-    exact: true,
-    component: Article,
-  },
 ];
 
 export default routes;
