@@ -8,6 +8,6 @@ describe('isAmpPath', () => {
     expect(isAmpPath('/articles/:id')).toEqual(false);
   });
   it('should return true when passed an AMP article path', () => {
-    expect(isAmpPath('/articles/amp/:id')).toEqual(true);
+    expect(isAmpPath('/articles/:id.amp')).toEqual(true);
   });
 });
