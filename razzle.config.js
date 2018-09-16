@@ -1,3 +1,4 @@
+const BrotliPlugin = require('brotli-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
@@ -47,6 +48,12 @@ module.exports = {
               minify: true,
             },
             updateStrategy: 'changed',
+          }),
+          new BrotliPlugin({
+            asset: '[path].br[query]',
+            test: /\.js$/,
+            threshold: 10240,
+            minRatio: 0.8,
           }),
           new CompressionPlugin({
             algorithm: 'gzip',

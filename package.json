@@ -57,6 +57,7 @@
     "babel-plugin-styled-components": "^1.6.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "brotli-webpack-plugin": "^1.0.0",
     "compression-webpack-plugin": "^2.0.0",
     "es6-promise": "^4.2.5",
     "express": "^4.16.3",
