@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import 'isomorphic-fetch';
-import Article from '../../components/Article';
 import Metadata from '../../components/Metadata';
+import Header from '../../components/Header';
+import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import GlobalStyle from '../../lib/globalStyles';
 
 const validateService = service => {
   const services = ['news', 'persian'];
@@ -37,7 +39,7 @@ class ArticleContainer extends Component {
       validateService(service);
       validateId(id);
 
-      let url = `/data/${id}.json`;
+      let url = `/data/${service}/${id}.json`;
 
       if (req) {
         url = `${process.env.RAZZLE_BASE_PATH}${url}`;
@@ -80,10 +82,13 @@ class ArticleContainer extends Component {
     };
 
     return (
-      <Article>
+      <Fragment>
+        <Header />
+        <GlobalStyle />
         <Metadata {...metadataProps} />
         <MainContent blocks={blocks} />
-      </Article>
+        <Footer />
+      </Fragment>
     );
   }
 }
