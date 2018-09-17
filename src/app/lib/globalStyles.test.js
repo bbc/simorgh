@@ -1,13 +1,13 @@
 import * as styledComponents from 'styled-components';
 
 describe('globalStyles', () => {
-  it('should call injectGlobal with args matching snapshot', async () => {
-    jest.spyOn(styledComponents, 'injectGlobal');
+  it('should call createGlobalStyle with args matching snapshot', async () => {
+    jest.spyOn(styledComponents, 'createGlobalStyle');
 
     await import('./globalStyles');
 
-    const injectGlobalArgs = styledComponents.injectGlobal.mock.calls[0];
+    const createGlobalStyle = styledComponents.createGlobalStyle.mock.calls[0];
 
-    expect(injectGlobalArgs).toMatchSnapshot();
+    expect(createGlobalStyle).toMatchSnapshot();
   });
 });
