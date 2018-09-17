@@ -34,7 +34,7 @@ exports[`Figure should render copyright text 1`] = `
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     />
     <Copyright>
-      Copyright Getty images
+      GETTY IMAGES
     </Copyright>
   </RelativeDiv>
 </Figure>

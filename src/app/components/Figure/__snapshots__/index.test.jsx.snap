@@ -271,7 +271,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
       >
         Image source,
       </span>
-      Getty Images
+      GETTY IMAGES
     </span>
   </div>
   <figcaption
@@ -353,7 +353,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
       >
         Image source,
       </span>
-      Getty Images
+      GETTY IMAGES
     </span>
   </div>
 </figure>
