@@ -5,6 +5,7 @@ exports[`ArticleContainer Component no data should render correctly 1`] = `"Load
 exports[`ArticleContainer Component should render correctly 1`] = `
 <React.Fragment>
   <Header />
+  <GlobalStyleComponent />
   <Metadata
     amp={false}
     canonicalLink="https://www.bbc.com/news/articles/c0000000001o"

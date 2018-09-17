@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure should render an image with alt text 1`] = `
-<Figure>
-  <Image
+<ForwardRef>
+  <ForwardRef
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-</Figure>
+</ForwardRef>
 `;
 
 exports[`Figure should render caption text 1`] = `
-<Figure>
-  <Image
+<ForwardRef>
+  <ForwardRef
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
@@ -19,17 +19,17 @@ exports[`Figure should render caption text 1`] = `
     paragraphOverride={[Function]}
     text="This is a caption"
   />
-</Figure>
+</ForwardRef>
 `;
 
 exports[`Figure should render copyright text 1`] = `
-<Figure>
-  <Image
+<ForwardRef>
+  <ForwardRef
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   />
-  <VisuallyHiddenText>
+  <ForwardRef>
     Copyright Getty images
-  </VisuallyHiddenText>
-</Figure>
+  </ForwardRef>
+</ForwardRef>
 `;
