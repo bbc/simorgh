@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000028o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000028o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "4ee6e9e6-8e20-45ee-a2a8-a74254261f25",
+    "created": 1535122662000,
+    "firstPublished": 1535122662000,
+    "lastPublished": 1535122662000,
+    "lastUpdated": 1535122662000,
+    "passport": {
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1#id",
+          "thingId": "c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1",
+          "thingLabel": " پهپاد",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "1c68a22e-1593-4a0b-946c-842fea0dbe79",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "4769e065-ad32-4569-b5de-46c80d2e8ab9",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "39cedae0-7fb2-4210-805c-c488c025e91c",
+                      "model": {
+                        "text": "پهپادی که برایتان قهوه می‌آورد",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "پهپادی که برایتان قهوه می‌آورد",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "c4b0943e-9f87-4e63-a695-ed64ef8b88b2",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "13e42b80-c1e7-423b-83a3-7677263ea95d",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "Getty Images"
+                }
+              },
+              {
+                "blockId": "e33cc834-6475-4380-83cd-f25654d7d8eb",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a7ed5717-666e-4827-8eac-b6ba25645659",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "4f717027-6e2a-4542-91fa-a03cbaf28d22",
+                            "model": {
+                              "text": "قهوه",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "قهوه",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "352e8801-d5c0-4e00-9c29-607dcce8df40",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "38340ca2-a569-4c13-92a6-dbe8c671be8d",
+                "type": "paragraph",
+                "model": {
+                  "text": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "5dc876ec-a5da-4928-a0b3-659c8e886332",
+                "type": "paragraph",
+                "model": {
+                  "text": "شرکت آی‌بی‌ام چنین طرحی را ثبت اختراع (پتنت) کرده است.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "شرکت آی‌بی‌ام چنین طرحی را ثبت اختراع (پتنت) کرده است.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "3c65eca6-23a6-49a5-b129-a1a3935d1a56",
+                "type": "paragraph",
+                "model": {
+                  "text": "طبق طرحی که آی‌بی‌ام ثبت کرده، این پهپاد می‌تواند \"احساس نیاز\" کارمندان ادارات را درک کرده و برایشان قهوه ببرد.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "طبق طرحی که آی‌بی‌ام ثبت کرده، این پهپاد می‌تواند \"احساس نیاز\" کارمندان ادارات را درک کرده و برایشان قهوه ببرد.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "97c5d1c3-f5b9-4dba-8d12-5c70514fa967",
+                "type": "paragraph",
+                "model": {
+                  "text": "شرکت‌های بزرگی مانند آی‌بی‌ام به طور مرتب طرح‌هایی از این دست را ثبت می‌کنند حتی اگر قصد و نیتی برای ساخت و عرضه آن در آینده نزدیک نداشته باشند.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "شرکت‌های بزرگی مانند آی‌بی‌ام به طور مرتب طرح‌هایی از این دست را ثبت می‌کنند حتی اگر قصد و نیتی برای ساخت و عرضه آن در آینده نزدیک نداشته باشند.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "07c70923-91d4-4fa7-992d-27c3b999a405",
+                "type": "paragraph",
+                "model": {
+                  "text": "آی‌بی‌ام نگفته است که آیا قصد ساخت و عرضه پهپاد قهوه‌ پخش‌کن را دارد یا نه.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "آی‌بی‌ام نگفته است که آیا قصد ساخت و عرضه پهپاد قهوه‌ پخش‌کن را دارد یا نه.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9fc17ebe-8257-478d-8167-1d4c0f4629bc",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "6be185ce-0082-4a6d-9ede-8cd88e4534f5",
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "/cpsprodpb/16868/production/_103146229_03146228.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "IBM"
+                }
+              },
+              {
+                "blockId": "56b57891-55ce-47e1-a899-a661c7db7d47",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "f208f29a-4b8d-4ef0-b976-48576dc45de3",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "edaf2232-84c2-4459-af8a-3030a49362e9",
+                            "model": {
+                              "text": "پهپاد قهوه‌ پخش‌کن",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "پهپاد قهوه‌ پخش‌کن",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "f4bd5271-15b3-4167-932a-af80fa9b9eb2",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "e3a12f92-20e9-4412-a0ca-1ef6b7f4c089",
+                "type": "paragraph",
+                "model": {
+                  "text": "این طرح توسط آی‌بی‌ام در آمریکا پتنت شده و شامل چندین نوع پهپاد برای توزیع قهوه است. در یک طرح، پهپاد، قهوه را مستقیما به فنجان فرد می‌ریزد.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "این طرح توسط آی‌بی‌ام در آمریکا پتنت شده و شامل چندین نوع پهپاد برای توزیع قهوه است. در یک طرح، پهپاد، قهوه را مستقیما به فنجان فرد می‌ریزد.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "93456e54-629a-4c93-be2c-78d7b55c90bd",
+                "type": "paragraph",
+                "model": {
+                  "text": "در یک گزینه دیگر، نوشیدنی‌های داغ در بسته‌های در بسته فرستاده می‌شوند تا از ریختن آنها جلوگیری شود.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "در یک گزینه دیگر، نوشیدنی‌های داغ در بسته‌های در بسته فرستاده می‌شوند تا از ریختن آنها جلوگیری شود.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "10858aa8-ec71-4ec5-b8b0-9cc4d8414903",
+                "type": "paragraph",
+                "model": {
+                  "text": "آی‌بی‌ام خاطرنشان کرده که این پهپادها مجهز به فناوری خواهند بود که فشار خون آدم‌ها، حالت چهره و اتساع مردمک را تشخیص می‌دهند و می‌توانند تشخیص بدهند آدم‌ها خواب‌آلود هستند یا نه.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "آی‌بی‌ام خاطرنشان کرده که این پهپادها مجهز به فناوری خواهند بود که فشار خون آدم‌ها، حالت چهره و اتساع مردمک را تشخیص می‌دهند و می‌توانند تشخیص بدهند آدم‌ها خواب‌آلود هستند یا نه.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "bb580c35-a491-485c-8c92-dc3ed8c7ac3b",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f9150413-6c01-497a-9c8f-d6ab81d9b741",
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 223,
+                  "locator": "/cpsprodpb/33D0/production/_103146231_mediaitem103146230.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "IBM"
+                }
+              },
+              {
+                "blockId": "bc53ed22-9566-49a5-b5dd-95f90f80f840",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "aabec2b7-afd2-4ccb-8574-906eb39b1b54",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "ac8ee5ec-1396-44ce-b8cb-60951132edbf",
+                            "model": {
+                              "text": "پهپاد قهوه‌ پخش‌کن",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "پهپاد قهوه‌ پخش‌کن",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "96246749-9893-42b3-9c1b-5d2fa2cf5e69",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "362ba512-4bd8-4e03-9d65-dd7adbe71ccf",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "e1ee2372-a77f-4a0d-824d-0a593009c02d",
+                            "model": {
+                              "text": "نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "bf97cf48-6244-4202-8675-41efa8764ec2",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "5137f9a8-2d33-4949-9aab-8c4aca043e4d",
+                "type": "paragraph",
+                "model": {
+                  "text": "البته، کارمندان اداره می‌توانند با حرکت دست هم از پهپادها یک فنجان قهوه بخواهند.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "البته، کارمندان اداره می‌توانند با حرکت دست هم از پهپادها یک فنجان قهوه بخواهند.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "4d5b8705-19a2-42e2-b821-73cc720bbd6a",
+                "type": "paragraph",
+                "model": {
+                  "text": "شرکت آی‌بی‌ام زمانی سردمدار تولید کامپیوتر در جهان بود.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "شرکت آی‌بی‌ام زمانی سردمدار تولید کامپیوتر در جهان بود.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d3231cd8-ba05-4cca-a57a-e322c93a2576",
+                "type": "paragraph",
+                "model": {
+                  "text": "اما در سال‌های اخیر این شرکت در زمینه تولید نرم‌افزار و هوش مصنوعی فعال شده است.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "اما در سال‌های اخیر این شرکت در زمینه تولید نرم‌افزار و هوش مصنوعی فعال شده است.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000028o",
+    "headlines": {
+      "seoHeadline": "پهپادی که برایتان قهوه می‌آورد",
+      "promoHeadline": "پهپادی که برایتان قهوه می‌آورد"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000028o"
+    },
+    "summary": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
+    "timestamp": 1535122662000
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000014o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000014o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "67a406a3-44f9-7de3-4200-22aefcc49520",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": "politics"
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "fragment",
+      "urlLink"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376#id",
+          "topicId": "cly498dwj1lt",
+          "topicName": "Cardiff Airport link road",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376",
+          "thingLabel": "Cardiff Airport link road",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "8c2ba478-723a-420d-8680-036a9e353fac",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "0510c01b-0451-315b-c668-d57b8c48caff",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "840aad43-1d2b-a6a0-92ef-97e3026c9e0d",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3298d981-5b5a-1fcf-c615-7a14e799349a",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "4db29665-f08d-5135-02d4-e0925e80f379",
+                            "model": {
+                              "text": "Galileo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d6a2db75-b1f7-5c52-8080-5dbeefd1e7a8",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "e9c95639-8b60-0e2a-de2f-e41ad6eda538",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "799e662a-8e85-a5f8-8cae-d92ad53bf8d0",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "304bdd68-b564-441a-b127-dc30fea49781",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "fd41138e-02a1-503c-c486-9c0e3af6de2b",
+                "type": "paragraph",
+                "model": {
+                  "text": "David Davis's Brexit department will also warn the scheme could cost the EU an extra €1bn (£876m) without the UK's continued involvement. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "David Davis's Brexit department will also warn the scheme could cost the EU an extra €1bn (£876m) without the UK's continued involvement. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "ed255587-67fd-9167-6400-53d88a97ab94",
+                "type": "paragraph",
+                "model": {
+                  "text": " ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "8b4bc2bf-7a40-1014-8b81-607e3ea08147",
+                "type": "paragraph",
+                "model": {
+                  "text": " The row could harm wider post-Brexit security co-operation, it will say in a paper to be published later.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " The row could harm wider post-Brexit security co-operation, it will say in a paper to be published later.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "97d3f8d8-be5c-4aed-a87c-5afa472a5e09",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "03576ee9-e45a-7df7-23ee-9bcb1470b92b",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "6c61d5ba-3ee1-e5f1-6fa1-1315f614ef75",
+                      "model": {
+                        "text": "Brexit: UK to demand EU pays back £1bn in Galileo costs",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Brexit: UK to demand EU pays back £1bn in Galileo costs",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9f4f70af-112f-4002-a880-d56a69427826",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "263f94fb-a68d-0909-f780-f987c87e6dfd",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "bcdc7261-5cdc-ef70-e6cc-5b13f68d252d",
+                      "model": {
+                        "text": "The UK wants the EU to repay £1bn if it is excluded from the Galileo satellite navigation system after Brexit.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The UK wants the EU to repay £1bn if it is excluded from the Galileo satellite navigation system after Brexit.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "0bfeebf6-6a93-470a-95e6-9f51b39208a1",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f517acb4-5ae1-885c-aced-16bd0beea07e",
+                "type": "paragraph",
+                "model": {
+                  "text": "UK ministers are angry about the EU's decision to limit access to Galileo, an alternative to the US GPS system.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "UK ministers are angry about the EU's decision to limit access to Galileo, an alternative to the US GPS system.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "65372fd8-0261-4553-8ff2-35858a0370fe",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "5c368460-2878-8022-9025-87d0c29835c7",
+                "type": "paragraph",
+                "model": {
+                  "text": "The UK played a major role in developing satellites for Galileo, which is expected to be fully operational in 2026.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The UK played a major role in developing satellites for Galileo, which is expected to be fully operational in 2026.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "ba6c6ecc-9c08-4db8-a4a1-838d61abcad3",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "6793b736-190a-8cd5-59fb-017056765e78",
+                "type": "paragraph",
+                "model": {
+                  "text": "But Brussels has cited legal issues about sharing sensitive information with a non-member state for its decision to shut British firms out of the project. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "But Brussels has cited legal issues about sharing sensitive information with a non-member state for its decision to shut British firms out of the project. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "881a059b-d56f-e4c2-f15b-1209de291f6e",
+                "type": "paragraph",
+                "model": {
+                  "text": " Brussels has also said it will restrict access to encrypted signals from Galileo, prompting the UK government to threaten to build its own satellite navigation system.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Brussels has also said it will restrict access to encrypted signals from Galileo, prompting the UK government to threaten to build its own satellite navigation system.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "583f3e6e-2663-45c6-bb4a-eadb997e8e6d",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "cee81fa9-eaa3-ee29-3e25-a99c7c0fcefe",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "7260c2e9-92a3-92b1-ea03-10cd058de6cc",
+                      "model": {
+                        "text": "It will not be straightforward to effectively fulfil all Galileo security work elsewhere",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "It will not be straightforward to effectively fulfil all Galileo security work elsewhere",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "2e51abfa-81b6-4de5-9b43-b73864323076",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2062dd5d-dc0e-f8cb-3d86-1a7c7e84204f",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "e994de0a-0ab6-0550-3696-17e1c69cea71",
+                      "model": {
+                        "text": "Brexit customs plan 'could cost £20bn",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Brexit customs plan 'could cost £20bn",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "1d449d81-030c-45f7-a008-cd19e9b1b777",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "df25ce53-fd62-f698-62fc-a3d78619f5cd",
+                "type": "paragraph",
+                "model": {
+                  "text": "The UK government has also threatened to block Galileo satellites from using ground tracking stations in British overseas territories such as the Falklands.UK ups the ante on Galileo project.The European Commission says the UK will have to apply to use the Public Regulated Service (PRS), a key element of the Galileo system, like any other non-EU country after its March 2019 departure.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The UK government has also threatened to block Galileo satellites from using ground tracking stations in British overseas territories such as the Falklands.",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "UK ups the ante on Galileo project",
+                        "locator": "http://www.bbc.co.uk/news/science-environment-44116085",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "UK ups the ante on ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Galileo project",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".The European Commission says the UK will have to apply to use the Public Regulated Service (PRS), a key element of the Galileo system, like any other non-EU country after its March 2019 departure.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000014o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Brexit: UK to demand EU pays back £1bn in Galileo costs"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000014o"
+    },
+    "summary": "The UK steps up its war of words with the EU over being shut out of new satellite navigation system.",
+    "timestamp": 1514811600000
+  }
+}

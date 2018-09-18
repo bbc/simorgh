@@ -1,0 +1,803 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000013o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000013o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "cee1ab7e-181a-e568-7555-1d1e01df2d8e",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "feature",
+      "genre": "business"
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+          "topicId": "c207p54m45dt",
+          "topicName": "Abortion",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
+          "thingLabel": "Abortion",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f314d54b-01c4-496f-a137-972185085d88#id",
+          "topicId": "cn54x92e7y8t",
+          "topicName": "Irish abortion referendum",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "f314d54b-01c4-496f-a137-972185085d88",
+          "thingLabel": "Irish abortion referendum",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "33f9d813-0714-4394-b882-8069f72a72a8",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "728d6147-8a99-86a4-4aa2-1366b55a7d41",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nulla ut eleifend massa. Vestibulum ac magna porttitor tortor viverra bibendum non ut lacus. Fusce convallis interdum congue. Fusce nec rutrum ipsum, vel rutrum diam.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nulla ut eleifend massa. Vestibulum ac magna porttitor tortor viverra bibendum non ut lacus. Fusce convallis interdum congue. Fusce nec rutrum ipsum, vel rutrum diam.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "0240a049-3e77-4d2b-983d-714daffbfa20",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "392b5d83-3b4c-c607-2944-55ddb4ef609b",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "f95ed27a-e3b3-fce8-bf0b-9a7c969d3f8e",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "7a9ad170-5f4f-cca6-eab0-505357664780",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "d3f81655-b36e-f7db-5ae6-bfb2c36fd936",
+                            "model": {
+                              "text": "Galileo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "00a0ed84-3134-3992-b16b-ec79cdd9595e",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "41e69ca4-1cfc-f534-1495-c19346e964db",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "aede9200-a0db-0dfa-9bd4-1b1813692443",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "93df6d3d-946b-4295-86ab-8cc5330769b5",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "blockId": "56b487bc-3148-3a0d-163a-8d5738a8d212",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT4M59S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "blockId": "b973c91b-8afb-73c8-e594-41b0d21b21e0",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "21eda773-0528-0d76-4184-fe7da309c845",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "a0ec9585-f001-f1ee-e19f-32b65b815652",
+                            "model": {
+                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "69bbfb27-4a9e-82fa-ba61-2f7d003def00",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "7fe1b433-a14b-efa7-c612-77caef1634c8",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "a177d941-4631-ce0e-2029-6926fb6a681a",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "d055bb39-e887-a215-387a-5574e2714781",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "5a73b29f-2f87-4a98-332f-794f59689b6a",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "667de807-354c-4f89-ab0c-4b17bfaad7f9",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1eebc6d1-ee1f-c72a-bfd2-aa5eddbb14c7",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "840bb9b1-72ba-67f2-c010-fca58b7e8f45",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "d06d953b-000c-4ed1-ae4d-c126326ad78f",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p068lkw4",
+            "blocks": [
+              {
+                "blockId": "f35bbded-4709-5327-ee05-e1251bb111af",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT4M16S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p068lkw4"
+                }
+              },
+              {
+                "blockId": "e81c39f3-f423-590b-1f5f-172e486d880c",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a82ea891-15d9-cbaa-f553-22560115b546",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "8fe0d69b-b3c5-b104-9301-876bda995278",
+                            "model": {
+                              "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "6ff171c2-fbfb-3a80-8a7d-690eedcad5a8",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "58fcb9f6-5819-5f31-d8da-7acddea84d1e",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "01153f9e-a9d9-d2f8-0e40-58be5d5ff0cc",
+                            "model": {
+                              "text": "Highlights: Peru 2-0 Scotland",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Highlights: Peru 2-0 Scotland",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d8a54b4d-b8ab-8029-e946-5cd39ebd7e13",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "9d05c1da-a702-6224-f927-6b425d7f0593",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "BBC Sport"
+                      }
+                    },
+                    {
+                      "blockId": "56bf8717-49c8-674a-c704-7b6d4e2f1e15",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "960f40ab-fbdc-2b0c-774d-d5be6e8e6500",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "739811b0-3988-9bcc-059e-bb9308c686f9",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "0edab00a-355a-48c1-98c6-31e61d682950",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p068hxjb",
+            "blocks": [
+              {
+                "blockId": "fe350967-2f3d-a4b1-9817-9757b9ac6a1b",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2M18S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p068hxjb"
+                }
+              },
+              {
+                "blockId": "2318d6e1-91ec-70f9-e5f4-94ce1732bb12",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "9819964c-894d-55ba-6a12-6cc35d85c021",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "de55e89e-0d0c-6e12-f5a0-818f431450b2",
+                            "model": {
+                              "text": "This video contains a portrait vpid p068hxjd",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video contains a portrait vpid p068hxjd",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "591c2ada-acea-cd41-bcfc-8e7ce613c832",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a47dd29f-cba7-a6ce-81eb-18e396d41892",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "8db2a64b-aafa-fc68-6477-a98e3a2df2bc",
+                            "model": {
+                              "text": "How the Skripals were saved",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "How the Skripals were saved",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "bbdf78e0-3361-b06b-9a11-3691897b1c6d",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "ff074be7-7319-7a77-0639-6b06e538476e",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "3661b537-f415-eabb-9259-6ce8dfb3f4b2",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "fbd37b21-a993-5403-c90c-c696c65b4e40",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "36c4a52b-70d5-9433-a04b-c67f9831ed79",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "32157e44-a97d-495b-a492-b2878186e623",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01hsgv6",
+            "blocks": [
+              {
+                "blockId": "8bbdc841-8f28-b1e5-489a-f4a18c9d210d",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": "Contains flashing images",
+                  "isLive": false,
+                  "duration": "PT4M59S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p01hsgv6"
+                }
+              },
+              {
+                "blockId": "d8370996-d19e-0252-ac5d-15fff6354459",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "9d680abb-6948-6ddb-bb5f-efb6b85e42e9",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "d5f33496-45aa-d210-0f31-9c3a3ecfda4e",
+                            "model": {
+                              "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "da03b7c8-3df4-4606-0a1a-4aca50d0fa15",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3bd820ea-0a71-4d4f-402c-13df24377f51",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "0b34a8d4-c45a-617f-040d-8ab88ede0808",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "8599e70c-1754-3ff2-592c-89a4acc25397",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "b7038bbf-df9f-2a8d-7f45-65d9ccf85121",
+                                  "model": {
+                                    "text": "Rio Olympics 2016",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Rio Olympics 2016",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064gl4v",
+            "blocks": [
+              {
+                "blockId": "1b4e7f26-5f2d-8404-5eda-6019efed2b80",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT4M59S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064gl4v"
+                }
+              },
+              {
+                "blockId": "aeb0eaa1-8455-02cd-560e-0f14ece83b01",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "da344b27-cf49-75a0-a416-d1ab5f68cf80",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "09ccf5fa-b190-a102-65fb-0ebada55aeca",
+                            "model": {
+                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "9322bf92-357d-66d4-89b7-1ad90ebb7b0f",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "58ce7c35-5bf3-e0f3-70b0-7d419f952ca4",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "e609bf1d-043c-ba64-2d3d-f956fc626910",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "d190c959-c142-e247-318c-bff0ff72fc4f",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "714131d0-a478-0d47-9c16-0cb75360461c",
+                                  "model": {
+                                    "text": "This video contains some guidance and no caption.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This video contains some guidance and no caption.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000013o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000013o"
+    },
+    "summary": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor felis eu convallis.",
+    "timestamp": 1514811600000
+  }
+}
