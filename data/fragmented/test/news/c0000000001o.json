@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "1443ccf4-604f-7c59-83d5-7d038ecd5fd4",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "tags": {
+      "about": null,
+      "mentions": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "feb207ee-d708-4bd9-9c77-616bdfb43bcf",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "cafd1bff-a31b-03a8-a029-171eaad3e41a",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "ce0e3616-fe03-e3be-9da8-45461a0f726c",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "8fa4a490-e7f5-46bd-9d88-c100d9919211",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1e67d233-7f45-ecd2-f4f7-a1286f4c06ee",
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
+    },
+    "summary": "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "timestamp": 1514811600000
+  }
+}
