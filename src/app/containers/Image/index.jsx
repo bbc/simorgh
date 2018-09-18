@@ -33,16 +33,19 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator, copyrightHolder } = rawImageBlock.model;
+  const hardcodedImageWidth = 820; // this should be defined by the viewport width or a static number
+  const { locator, copyrightHolder, height, width } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
+  const ratio = (height / width) * 100;
+  const rawImageSrc = `https://ichef.bbci.co.uk/news/${hardcodedImageWidth}${locator}`;
 
   return (
     <Figure
       src={rawImageSrc}
       alt={altText}
+      ratio={ratio}
       copyright={copyright}
       caption={caption}
     />

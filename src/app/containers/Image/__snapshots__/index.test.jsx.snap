@@ -5,7 +5,8 @@ exports[`Image with data should render an image with alt text 1`] = `
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
   copyright={null}
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  ratio={65.625}
+  src="https://ichef.bbci.co.uk/news/820/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
 
@@ -14,7 +15,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
   copyright={null}
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  ratio={65.625}
+  src="https://ichef.bbci.co.uk/news/820/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
 
@@ -23,6 +25,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
   copyright="Getty images"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  ratio={65.625}
+  src="https://ichef.bbci.co.uk/news/820/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;

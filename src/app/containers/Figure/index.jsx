@@ -1,8 +1,8 @@
 import React from 'react';
-import { string } from 'prop-types';
-import styled from 'styled-components';
+import { string, number } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
+import ImageWrapper from '../../components/Figure/ImageWrapper';
 import Copyright from '../../components/Figure/Copyright';
 import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
@@ -15,16 +15,12 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const RelativeDiv = styled.div`
-  position: relative;
-`;
-
-const FigureContainer = ({ src, alt, copyright, caption }) => (
+const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
   <Figure>
-    <RelativeDiv>
+    <ImageWrapper ratio={ratio}>
       <Image alt={alt} src={src} />
       {renderCopyright(copyright)}
-    </RelativeDiv>
+    </ImageWrapper>
     {renderCaption(caption)}
   </Figure>
 );
@@ -32,6 +28,7 @@ const FigureContainer = ({ src, alt, copyright, caption }) => (
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  ratio: number.isRequired,
   copyright: string,
   caption: string,
 };

@@ -2,23 +2,23 @@
 
 exports[`Figure should render an image with alt text 1`] = `
 <Figure>
-  <RelativeDiv>
+  <ImageWrapper>
     <Image
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     />
-  </RelativeDiv>
+  </ImageWrapper>
 </Figure>
 `;
 
 exports[`Figure should render caption text 1`] = `
 <Figure>
-  <RelativeDiv>
+  <ImageWrapper>
     <Image
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     />
-  </RelativeDiv>
+  </ImageWrapper>
   <Text
     paragraphOverride={[Function]}
     text="This is a caption"
@@ -28,7 +28,7 @@ exports[`Figure should render caption text 1`] = `
 
 exports[`Figure should render copyright text 1`] = `
 <Figure>
-  <RelativeDiv>
+  <ImageWrapper>
     <Image
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -36,6 +36,6 @@ exports[`Figure should render copyright text 1`] = `
     <Copyright>
       Getty Images
     </Copyright>
-  </RelativeDiv>
+  </ImageWrapper>
 </Figure>
 `;

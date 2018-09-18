@@ -3,6 +3,8 @@
 exports[`Image should render correctly 1`] = `
 .c0 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
