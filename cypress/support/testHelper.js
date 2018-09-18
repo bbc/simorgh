@@ -62,7 +62,7 @@ export const figureVisibility = figure => {
   figure.should('to.have.descendants', 'img');
 };
 
-export const metaDataTags = (metaDataTag, content) => {
+export const retrieveMetaDataContent = (metaDataTag, content) => {
   const metaElement = getElement(metaDataTag);
   metaElement.should('have.attr', 'content', content);
 };
@@ -78,14 +78,14 @@ export const openGraphMeta = (
   url,
 ) => {
   it('should have OpenGraph meta data', () => {
-    metaDataTags('head meta[name="og:description"]', description);
-    metaDataTags('head meta[name="og:image"]', imageUrl);
-    metaDataTags('head meta[name="og:image:alt"]', altText);
-    metaDataTags('head meta[name="og:locale"]', locale);
-    metaDataTags('head meta[name="og:site_name"]', siteName);
-    metaDataTags('head meta[name="og:title"]', title);
-    metaDataTags('head meta[name="og:type"]', type);
-    metaDataTags('head meta[name="og:url"]', url);
+    retrieveMetaDataContent('head meta[name="og:description"]', description);
+    retrieveMetaDataContent('head meta[name="og:image"]', imageUrl);
+    retrieveMetaDataContent('head meta[name="og:image:alt"]', altText);
+    retrieveMetaDataContent('head meta[name="og:locale"]', locale);
+    retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
+    retrieveMetaDataContent('head meta[name="og:title"]', title);
+    retrieveMetaDataContent('head meta[name="og:type"]', type);
+    retrieveMetaDataContent('head meta[name="og:url"]', url);
   });
 };
 
@@ -99,13 +99,16 @@ export const twitterMeta = (
   title,
 ) => {
   it('should have Twitter meta data', () => {
-    metaDataTags('head meta[name="twitter:card"]', card);
-    metaDataTags('head meta[name="twitter:creator"]', creator);
-    metaDataTags('head meta[name="twitter:description"]', description);
-    metaDataTags('head meta[name="twitter:image:alt"]', imageAlt);
-    metaDataTags('head meta[name="twitter:image:src"]', imageSrc);
-    metaDataTags('head meta[name="twitter:site"]', site);
-    metaDataTags('head meta[name="twitter:title"]', title);
+    retrieveMetaDataContent('head meta[name="twitter:card"]', card);
+    retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
+    retrieveMetaDataContent(
+      'head meta[name="twitter:description"]',
+      description,
+    );
+    retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
+    retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
+    retrieveMetaDataContent('head meta[name="twitter:site"]', site);
+    retrieveMetaDataContent('head meta[name="twitter:title"]', title);
   });
 };
 

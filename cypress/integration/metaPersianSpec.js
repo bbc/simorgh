@@ -1,7 +1,7 @@
 import {
   getElement,
-  metaDataTags,
   openGraphMeta,
+  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/testHelper';
 
@@ -18,7 +18,7 @@ describe('Persian Article Meta Tests', () => {
   });
 
   it('should have Facebook meta data', () => {
-    metaDataTags(
+    retrieveMetaDataContent(
       'head meta[name="article:author"]',
       'https://www.facebook.com/bbcnews',
     );
