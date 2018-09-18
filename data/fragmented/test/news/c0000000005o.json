@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000005o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "e14dfcec-7035-0de9-4d31-b74fe25b97aa",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
+          "topicId": "cwlw3xz0lvvt",
+          "topicName": "Brexit",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
+          "thingLabel": "Brexit",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/b7498154-88a4-43ac-8790-c3bb93d5e18f#id",
+          "topicId": "cjkm56d0p7et",
+          "topicName": "Manchester",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "b7498154-88a4-43ac-8790-c3bb93d5e18f",
+          "thingLabel": "Manchester",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "426a17aa-c4a3-4c04-b6f6-850ffaa2d75b",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "87bac169-b2c6-338d-4253-c294723e0c5f",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "6b3f82ec-ddc1-9ede-b1f1-02b03b1a48d2",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H2O",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "2",
+                              "attributes": [
+                                "subscript"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "O",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "8b851516-b175-4092-a398-692f84cd7268",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "1475d1fb-5883-4c57-908a-2a89ba330ff6",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "13097b46-67c7-cbe6-5777-63088d479fea",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "4ed25e4b-c68c-71e6-901b-9534af64472c",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3a0d2608-e2a4-a956-0d1a-4db91c1e6807",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "a7ea79c6-6824-45fb-7d71-5ebd8a3268c3",
+                            "model": {
+                              "text": "Fusce tincidunt lectus eget augue mollis.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fusce tincidunt lectus eget augue mollis.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "bab00a0a-5148-2acc-5805-618026484615",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "44f0e618-46a9-37a9-eda4-8cefbb83fa3a",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "6e8ba222-9bf7-114f-44d0-71ef73a04bc4",
+                            "model": {
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Suspendisse blandit tincidunt ante",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ", non finibus nisl ornare non.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "da611d38-08ef-4105-a288-3385a343cb9b",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
+              {
+                "blockId": "db0f400f-ec66-19d3-ff93-493ab2808366",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT1M34S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p067gq6h"
+                }
+              },
+              {
+                "blockId": "7f9b3c1a-210f-3280-e870-6bd9718be661",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "b390efc1-8323-058a-3b7f-d458c0dc47dc",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "21ac41e5-3fab-7479-bca8-aa7798c53280",
+                            "model": {
+                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "78a69a88-3c8c-330f-113e-0f8e110e179c",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "e6973f43-2e14-ed75-0220-899169f7a559",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "8bc5417e-daa9-d215-c380-3a1520c16bef",
+                            "model": {
+                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "436b013e-9df5-b9f7-63e9-cd8bf43eadd3",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "e317dc0b-2b12-b029-5454-0eac6c5eed3e",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "Getty Images"
+                      }
+                    },
+                    {
+                      "blockId": "b88f0acf-1bd1-f8d4-3dde-3ab0d68aa435",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "e6c7c4f2-ee0e-2b44-27de-3bb3aaad5788",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "32b8211d-35c1-6bc8-8760-48935e54caaa",
+                                  "model": {
+                                    "text": "Pellentesque pellentesque sem magna.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Pellentesque pellentesque sem magna.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000005o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H~2~O"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
+    },
+    "summary": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "timestamp": 1514811600000
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000002o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000002o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "1fc453a1-7758-24af-5674-f08d7e286362",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Bill",
+          "thingUri": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
+          "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
+          "thingType": [
+            "Film",
+            "Thing"
+          ]
+        }
+      ],
+      "mentions": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "21cbb616-613e-4750-8c52-8a46c39456e0",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "94e712e8-99d1-0ef5-bb61-39f68de9f5ed",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "635ebabb-1b25-b334-f8f7-a1811e2665c6",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "adipiscing",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "4b9ae65b-dc27-4cf1-82c6-36a24b005cbc",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f14d8799-d0dd-24d8-ca19-1cc5812b704e",
+                "type": "rawImage",
+                "model": {
+                  "width": 2362,
+                  "height": 2952,
+                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "0bf98a03-f289-1e2d-7750-942c9cd56ef7",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "96aef962-d69d-763f-4709-bebb15dad9b3",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "6a4485f6-0d25-3ee7-6829-f24126bd5d8a",
+                            "model": {
+                              "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "3afcff52-a969-3b35-d56d-ba773573ca59",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "b236c09d-498b-f0ad-f049-b4a9910852ba",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "0578282b-6903-5b5e-4a7c-bc10d44090ff",
+                            "model": {
+                              "text": "Praesent sagittis fringilla nibh ut vulputate. Ut nec purus est. Vestibulum in eleifend nibh.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Praesent sagittis fringilla nibh ut vulputate. Ut ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "nec purus",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " est. Vestibulum in eleifend nibh.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "da00008c-fc2b-44eb-8eae-30d65b26bd70",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "72c50ef4-f423-c09b-ec56-78b5c53ad574",
+                "type": "paragraph",
+                "model": {
+                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque This is superscript vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque This is ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "superscript",
+                        "attributes": [
+                          "superscript"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "b2b8dbe1-8ba5-3bc1-1f59-5ac1f8158562",
+                "type": "paragraph",
+                "model": {
+                  "text": "Quisque quis libero bibendum, feugiat felis ut, dignissim tortor. Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Quisque quis libero bibendum, feugiat felis ut, dignissim tortor. Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000002o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000002o"
+    },
+    "summary": "Ut dictum pellentesque risus nec tristique.",
+    "timestamp": 1514811600000
+  }
+}

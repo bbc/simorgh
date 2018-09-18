@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000022o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000022o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "d5952976-f642-e4c1-8ffd-70472190879e",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "334bcb1d-03ee-4bee-b838-b105c0189f9b",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "5ad74fa7-8f40-9f91-82b1-04b262541455",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "7b3df064-7025-45aa-9e7f-593991bdfd79",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "7b2863ac-2297-1589-1101-90c1fd5c8ab0",
+                "type": "rawImage",
+                "model": {
+                  "width": 640,
+                  "height": 640,
+                  "locator": "/cpsprodpb/4341/production/_102971271__101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "780018fd-f765-369b-e780-96a7f022c5cb",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a264725f-7492-c716-115b-806d82a394fc",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "0fd08a51-605c-7225-edf4-ba00e7528be1",
+                            "model": {
+                              "text": "Integer varius eleifend ligula id semper.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Integer varius eleifend ligula id semper.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "5c6c63b9-2962-a012-32a2-4a8de069cee6",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "2e70c439-81ab-5084-aade-943a3fe6deff",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "bc1bdafc-134d-2ab7-e727-2f4951d03cdd",
+                            "model": {
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "1505dc33-4fc6-4b37-848f-af287e56fcae",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "c8a30249-7557-d103-8ace-3ac7e602af51",
+                "type": "rawImage",
+                "model": {
+                  "width": 640,
+                  "height": 475,
+                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "57048e35-3289-a3f0-a2aa-50a2bfef3963",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "120d4af6-795d-122c-500c-ebd2192386cd",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "c2ccd85d-cd81-4308-8b95-cb06b5fd9191",
+                            "model": {
+                              "text": "Integer varius eleifend ligula id semper.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Integer varius eleifend ligula id semper.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "11ad7b36-93c8-b6ae-5ddb-dfe25f9466bc",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "7d2d80f0-9cbd-f8c5-b999-e3d09078736d",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "55661000-92c7-89c9-2281-361c6a5e5a82",
+                            "model": {
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "f85205c8-1c69-45ed-9c25-0611c53fda16",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "5a2576cf-d6c4-0857-153d-db5bf03ee34a",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "f3c43c8c-043f-42a3-97a1-77deaaf20789",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1a45f47f-186e-e134-e331-75b3060a390f",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "d7e4ef35-d9a8-45fd-a75c-a55d307e208c",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "blockId": "eca2a954-2708-c801-a871-942cb013ff00",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "blockId": "0d35840a-c2be-76b6-bcc4-a9fcd1e462a0",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "cb977234-4fc2-f0fb-8704-48b20fddaeec",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "68362be7-459f-95bc-dcb2-f19d05bf1f28",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "59924f9e-0624-6000-a281-fe9fd1b26334",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3f059790-248f-bbbf-5955-b70c480309a5",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "c0c5ef91-bf60-de9f-20ac-243e456420e7",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Retail giant to close down 100 stores",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "2faa5910-9f49-fb53-c53f-cd24127da2f0",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3f21f7d5-3232-03a1-1ce2-f9eb642afe0d",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "e62e9eb7-5b23-1a58-0aab-139a65fd1cfd",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "19b7e2d6-2237-2a6c-c530-9296bf87435f",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "8f2848fa-46a4-a8bf-cffd-c58f05494f13",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9e6f0289-18fe-4b03-8c3e-263d834a148e",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "blockId": "3a70c261-d945-1988-e82b-9bdc933a0617",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "blockId": "43a6893b-4262-ea8e-889e-7f9a9a86ac89",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "cf135053-be5c-f65a-df66-7cb4d4eaf111",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "28155b86-a9c5-5b02-ae8f-eb912f0c1cc7",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "a5de4ef5-95ab-2c23-758b-40b735a351d9",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "67c57a69-c9c4-ddf8-d4b1-57ce9ec112ab",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "1b25bb0c-8b98-3239-6f30-2d207a226dfa",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Retail giant to close down 100 stores",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "909e85f6-4da3-ec1a-9d69-56de1e471b4a",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "b4a5e545-6d5f-7e48-961c-5cdb0494d10d",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "fc90376e-6cb1-8168-c862-2af19131ece8",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "be7188b1-2413-2f58-213d-ab424efb3a1b",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "569eabb2-0be1-656f-4263-6926d76cabd4",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "e93e39f9-d847-434b-ad85-7ef0b5987051",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1806de44-104f-e539-2d0a-e87f7148e4e6",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "879a24c5-3b3e-097f-9cb5-fc1da0149d4c",
+                      "model": {
+                        "text": "Morbi malesuada lacus at nibh vestibulum",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi malesuada lacus at nibh vestibulum",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "3c8f44e8-2158-452c-b0f3-6edd0e9d2c8e",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1fd05b35-80fe-37ee-72c8-7830cc1d8baf",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000022o",
+    "headlines": {
+      "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio",
+      "promoHeadline": "Morbi malesuada lacus at nibh vestibulum"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000022o"
+    },
+    "summary": "Proin sollicitudin elit neque, in mollis turpis pharetra non. Ut quis neque faucibus, ultrices ante sit amet, fringilla est.",
+    "timestamp": 1514811600000
+  }
+}

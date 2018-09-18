@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000007o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000007o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "a620e927-ac13-ef10-dc3e-2b2ea2778369",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "opinion",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "subheading",
+      "fragment",
+      "urlLink"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+          "topicId": "cg3mq45zq4xt",
+          "topicName": "Duchess of Sussex",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
+          "thingLabel": "Duchess of Sussex",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/b60cc878-3998-474a-9db8-939e097b1341#id",
+          "topicId": "c486m50k1ejt",
+          "topicName": "David Hasselhoff",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "b60cc878-3998-474a-9db8-939e097b1341",
+          "thingLabel": "David Hasselhoff",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/5801200d-8765-4cc6-a002-6541b6921f04#id",
+          "topicId": "c8zwnrr1k88t",
+          "topicName": "Inverquharity",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "5801200d-8765-4cc6-a002-6541b6921f04",
+          "thingLabel": "Inverquharity",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/e80a8d15-0987-45a9-8152-097f23ce29e1#id",
+          "topicId": "cllmr11nz66t",
+          "topicName": "Ivinghoe",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "e80a8d15-0987-45a9-8152-097f23ce29e1",
+          "thingLabel": "Ivinghoe",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "d5569d0a-0d46-41d9-ac4c-5b90dd1f4c60",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "a93516d5-bdcd-6221-e05d-4c994a41e7c3",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nam accumsan nisl est, non vehicula nulla bibendum vitae. Aliquam erat volutpat. Cras volutpat egestas lacus, a gravida sem condimentum sit amet. Integer luctus ac lacus in hendrerit. Donec congue ornare sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nam accumsan nisl est, non vehicula nulla bibendum vitae. Aliquam erat volutpat. Cras volutpat egestas lacus, a gravida sem condimentum sit amet. Integer luctus ac lacus in hendrerit. Donec congue ornare sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "60b08878-84ef-47ae-bca2-9a55d247d8dc",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f5c4b1c9-12d1-4069-61b8-ea5b978de46c",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "52b7fbf9-e40f-051f-3553-9cb9511b5c6a",
+                      "model": {
+                        "text": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "64c1383b-a0fb-4434-97ce-92b909182253",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "56b4ad9b-1c43-153a-583d-ca29f29c3819",
+                "type": "paragraph",
+                "model": {
+                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Morbi lacinia leo sed tellus faucibus",
+                        "locator": "/news/articles/c0000000004o",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi lacinia leo sed tellus faucibus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", nec vulputate metus sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "c0c98238-f3e8-75af-ba98-90937c26880c",
+                "type": "paragraph",
+                "model": {
+                  "text": "Quisque quis libero bibendum, feugiat felis ut, dignissim tortor. Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Quisque quis libero bibendum, feugiat felis ut, dignissim tortor. Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "22e5a292-3897-4859-a5ae-21ae0ad40606",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "0121be51-4598-aaff-7ba1-1eddbb7632ee",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "be9b1344-9905-c155-9cbd-fcb9097421ac",
+                      "model": {
+                        "text": "Morbi malesuada lacus at nibh vestibulum",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi malesuada lacus at nibh vestibulum",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "3bf2ed43-0a72-4821-a118-f5f3a43ac855",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "9fc16eb5-fa20-eb9b-1d0d-ad6ca89c3127",
+                "type": "paragraph",
+                "model": {
+                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cras porttitor dictum tellus",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000007o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Phasellus erat dui, varius at porttitor eget, mattis et purus suspendisse potenti donec tempus tincidunt laoreet, sed eget diam nunc"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000007o"
+    },
+    "summary": "Nunc ut ligula in metus scelerisque tincidunt vitae vel odio.",
+    "timestamp": 1514811600000
+  }
+}
