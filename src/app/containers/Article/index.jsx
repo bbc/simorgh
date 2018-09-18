@@ -30,7 +30,15 @@ const validateId = id => {
   }
 };
 
-const metadataProps = (amp, config, id, metadata, metaTags, promo, service) => {
+/* An array of each thingLabel from tags.about & tags.mention */
+const allTags = tags => {
+  const { about, mentions } = tags;
+  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
+  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
+  return aboutTags.concat(mentionTags);
+};
+
+const metadataProps = (amp, config, id, metadata, promo, service) => {
   /* Canonical link generated from servicename and id */
   const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
@@ -46,7 +54,7 @@ const metadataProps = (amp, config, id, metadata, metaTags, promo, service) => {
     description: promo.summary,
     lang: metadata.passport.language,
     locale: config.locale,
-    metaTags,
+    metaTags: allTags(metadata.tags),
     opengraphSiteName: config.opengraphSiteName,
     timeFirstPublished,
     timeLastUpdated,
@@ -55,14 +63,6 @@ const metadataProps = (amp, config, id, metadata, metaTags, promo, service) => {
     twitterSite: config.twitterSite,
     type: metadata.type,
   };
-};
-
-/* An array of each thingLabel from tags.about & tags.mention */
-const metaTags = tags => {
-  const { about, mentions } = tags;
-  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
-  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
-  return aboutTags.concat(mentionTags);
 };
 
 class ArticleContainer extends Component {
@@ -102,22 +102,14 @@ class ArticleContainer extends Component {
       return 'Loading...'; /* [1] */
     }
     const { content, metadata, promo } = data;
-    const { id: aresArticleId, tags } = metadata;
+    const { id: aresArticleId } = metadata;
     const id = aresArticleId.split(':').pop();
     const config = serviceConfig[service];
     return (
       <Fragment>
         <Header />
         <Metadata
-          {...metadataProps(
-            amp,
-            config,
-            id,
-            metadata,
-            metaTags(tags),
-            promo,
-            service,
-          )}
+          {...metadataProps(amp, config, id, metadata, promo, service)}
         />
         <MainContent blocks={content.model.blocks} />
         <Footer />
