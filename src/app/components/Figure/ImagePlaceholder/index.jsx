@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { number } from 'prop-types';
 import { C_OAT, BBCBlocksSVG } from '../../../lib/constants/styles';
 
-const ImageWrapper = styled.div`
+const ImagePlaceholder = styled.div`
   position: relative;
   height: 0;
   overflow: hidden;
@@ -17,8 +17,8 @@ const ImageWrapper = styled.div`
   background-image: url(data:image/svg+xml;base64,${BBCBlocksSVG});
 `;
 
-ImageWrapper.propTypes = {
+ImagePlaceholder.propTypes = {
   ratio: number.isRequired,
 };
 
-export default ImageWrapper;
+export default ImagePlaceholder;

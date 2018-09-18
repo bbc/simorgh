@@ -1,12 +1,12 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
-import ImageWrapper from './index';
+import ImagePlaceholder from './index';
 
 const landscapeImageRatio = 56.25;
 
-describe('ImageWrapper', () => {
+describe('ImagePlaceholder', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <ImageWrapper ratio={landscapeImageRatio} />,
+    <ImagePlaceholder ratio={landscapeImageRatio} />,
   );
 });
