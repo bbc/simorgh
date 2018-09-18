@@ -3,7 +3,7 @@ import {
   getSecondElement,
   openGraphMeta,
   retrieveMetaDataContent,
-  twitterMeta
+  twitterMeta,
 } from '../support/testHelper';
 
 describe('Article Meta Tests', () => {
