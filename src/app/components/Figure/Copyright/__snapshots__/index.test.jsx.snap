@@ -18,6 +18,7 @@ exports[`Copyright should render correctly 1`] = `
   font-size: 0.75em;
   line-height: 1em;
   background-color: #222222;
+  text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.5rem;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;

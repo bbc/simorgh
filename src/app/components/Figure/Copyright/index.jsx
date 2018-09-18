@@ -15,6 +15,7 @@ const StyledCopyright = styled.span.attrs({
 })`
   ${T_MINION};
   background-color: ${C_EBON};
+  text-transform: uppercase;
   color: ${C_WHITE};
   padding: ${GEL_SPACING};
   font-family: ${FF_NEWS_SANS_REG};
