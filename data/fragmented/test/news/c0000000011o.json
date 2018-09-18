@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000011o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000011o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "7ad1ab20-99de-d29e-58c3-cd330b6a3feb",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "opinion",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "fragment",
+      "urlLink"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
+          "topicId": "cwlw3xz0lvvt",
+          "topicName": "Brexit",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
+          "thingLabel": "Brexit",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
+          "topicId": "cwm11216mzyt",
+          "topicName": "US mid-term elections 2018",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "01fc38c4-244c-4641-8549-0243c92e4c24",
+          "thingLabel": "US mid-term elections 2018",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
+          "topicId": "cvenzmgyev0t",
+          "topicName": "US Election 2016",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "530d1350-d83c-405b-b6c3-809473e23c58",
+          "thingLabel": "US Election 2016",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
+          "topicId": "cky4yx910j3t",
+          "topicName": "Russian presidential election 2018",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "8ece91c9-56df-4c55-a6d2-f00e98f28335",
+          "thingLabel": "Russian presidential election 2018",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id",
+          "topicId": "c1038wnxn57t",
+          "topicName": "German federal elections 2017",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "bf922d40-1842-479d-a4bf-2ce36bdf1f94",
+          "thingLabel": "German federal elections 2017",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/59ab9b46-cb29-4394-bea7-59b2d6c74bc2#id",
+          "topicId": "cnegp3k7ev4t",
+          "topicName": "Scottish Parliament",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "59ab9b46-cb29-4394-bea7-59b2d6c74bc2",
+          "thingLabel": "Scottish Parliament",
+          "thingType": [
+            "Thing",
+            "Organisation"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/d52a204b-7408-4494-9ca1-ba93c3b0b230#id",
+          "topicId": "cremq255gygt",
+          "topicName": "Theresa Villiers",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "d52a204b-7408-4494-9ca1-ba93c3b0b230",
+          "thingLabel": "Theresa Villiers",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
+          "topicId": "c50znx8v4z7t",
+          "topicName": "Theresa May",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
+          "thingLabel": "Theresa May",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/ed9d1ef3-eded-4f81-b158-be49cfc1ea8f#id",
+          "topicId": "c1038wnxye0t",
+          "topicName": "David Cameron",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "ed9d1ef3-eded-4f81-b158-be49cfc1ea8f",
+          "thingLabel": "David Cameron",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/71e97cc0-8bec-416b-82f0-a6bbb85d7f1f#id",
+          "topicId": "cwlw3xz041gt",
+          "topicName": "Jeremy Corbyn",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "71e97cc0-8bec-416b-82f0-a6bbb85d7f1f",
+          "thingLabel": "Jeremy Corbyn",
+          "thingType": [
+            "Person",
+            "Thing"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "86bb0b0f-f265-4bce-b89c-8c590a283a1a",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "a39cecf2-153a-eaa1-2ff4-358d3ac35912",
+                "type": "paragraph",
+                "model": {
+                  "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "d8a16c7b-d162-4cc4-b885-12c5570c3e93",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1a43632e-4171-8103-157d-64fed7162cbd",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "d83f9beb-a7f3-3a5a-d15f-51452ae82542",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a16c6db5-c0af-85ef-2f93-998bce337c49",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "91406faf-51f6-a1c0-dc37-3ce8c7f68a48",
+                            "model": {
+                              "text": "Galileo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "31c58fe7-d97b-fd40-ef64-f21a4c67ef99",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "184a0f9c-69fa-0487-3b59-022232ef2f50",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "c29de723-648c-39d7-26ba-6a9a3e167799",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "70d7df75-ca90-40f7-addf-fe6e0646cf7b",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "e513514c-cd57-19f4-163f-90d879e883c6",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "5d3ab777-bc9e-0739-1d5a-3fe88438330e",
+                      "model": {
+                        "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "32a2afb9-958d-4c16-9138-4947c2ca9476",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "737be311-8920-11e7-1ce5-b58c0ec55936",
+                "type": "paragraph",
+                "model": {
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Morbi lacinia leo sed tellus faucibus",
+                        "locator": "/news/articles/c0000000004o",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi lacinia leo sed tellus faucibus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", nec vulputate metus sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "a43fdfcf-5992-44cb-9b0f-e1d55a90a34f",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "04e41d54-35cb-32c1-03f6-91336faf64d4",
+                "type": "paragraph",
+                "model": {
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. Morbi lacinia leo sed tellus faucibus.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Morbi lacinia leo sed tellus faucibus",
+                        "locator": "/news/articles/c0000000004o",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi lacinia leo sed tellus faucibus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "6ec8b669-bb52-4b4e-9fb8-f94303d1d5ed",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f5673fc7-fc6d-92d7-c2b6-7b8bb6c0d057",
+                "type": "paragraph",
+                "model": {
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "8b69faf4-2a99-432a-b77f-fbb565ac5249",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f2b9d1d5-086b-c182-efa7-467d44c4e90e",
+                "type": "paragraph",
+                "model": {
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Morbi lacinia leo sed tellus faucibus",
+                        "locator": "/news/articles/c0000000004o",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Morbi lacinia leo sed tellus faucibus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", nec vulputate metus sagittis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000011o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "GDPR: 'Don't panic!' data watchdog tells firms"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000011o"
+    },
+    "summary": "Pellentesque fringilla, dui facilisis suscipit auctor, ligula ex consequat ex, ut sodales velit sem id nibh.",
+    "timestamp": 1514811600000
+  }
+}

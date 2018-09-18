@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000024o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000024o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "6f06a1b6-db72-97cd-1ff2-3c85a674b8f8",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "4793311b-f874-4e87-87f8-286cbd3df775",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "599ff36f-3af4-0fb7-1599-951294cd4dac",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "8d59db30-903f-19a7-c4c0-9b95f3c95c67",
+                      "model": {
+                        "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000024o",
+    "headlines": {
+      "seoHeadline": "Mauris tristique commodo nisi eget sagittis phasellus eu orci odio",
+      "promoHeadline": "GDPR: 'Don't panic!' data watchdog tells firms"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000024o"
+    },
+    "summary": "Fusce in mi augue. Quisque fringilla posuere finibus. Nulla ac pulvinar magna, venenatis pharetra libero.",
+    "timestamp": 1514811600000
+  }
+}
