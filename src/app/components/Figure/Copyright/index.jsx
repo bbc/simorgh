@@ -1,3 +1,5 @@
+import React from 'react';
+import { node } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -6,12 +8,14 @@ import {
   GEL_SPACING,
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
+import VisuallyHiddenText from '../../VisuallyHiddenText';
 
-const Copyright = styled.span.attrs({
+const StyledCopyright = styled.span.attrs({
   role: 'text',
 })`
   ${T_MINION};
   background-color: ${C_EBON};
+  text-transform: uppercase;
   color: ${C_WHITE};
   padding: ${GEL_SPACING};
   font-family: ${FF_NEWS_SANS_REG};
@@ -28,5 +32,16 @@ const Copyright = styled.span.attrs({
     color: ${C_EBON}; /* This needs to match the background-color */
   }
 `;
+
+const Copyright = ({ children }) => (
+  <StyledCopyright>
+    <VisuallyHiddenText>Image source,</VisuallyHiddenText>
+    {children}
+  </StyledCopyright>
+);
+
+Copyright.propTypes = {
+  children: node.isRequired,
+};
 
 export default Copyright;

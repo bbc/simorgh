@@ -1,10 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Copyright should render correctly 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c0 {
   font-size: 0.75em;
   line-height: 1em;
   background-color: #222222;
+  text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.5rem;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -22,6 +36,11 @@ exports[`Copyright should render correctly 1`] = `
   className="c0"
   role="text"
 >
+  <span
+    className="c1"
+  >
+    Image source,
+  </span>
   Getty Images
 </span>
 `;
