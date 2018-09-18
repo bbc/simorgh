@@ -36,29 +36,19 @@
           "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
           "topicId": "c207p54m45dt",
           "topicName": "Abortion",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
           "thingLabel": "Abortion",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/f314d54b-01c4-496f-a137-972185085d88#id",
           "topicId": "cn54x92e7y8t",
           "topicName": "Irish abortion referendum",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f314d54b-01c4-496f-a137-972185085d88",
           "thingLabel": "Irish abortion referendum",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         }
       ],
       "mentions": []

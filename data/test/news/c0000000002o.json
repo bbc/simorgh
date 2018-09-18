@@ -1,8 +1,8 @@
-{ 
+{
   "metadata": {
-    "id" : "urn:bbc:ares::article:c0000000002o",
-    "locators" : {
-      "optimoUrn" : "urn:bbc:optimo:asset:c0000000002o"
+    "id": "urn:bbc:ares::article:c0000000002o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000002o"
     },
     "type": "article",
     "createdBy": "",
@@ -23,15 +23,23 @@
           "thingLabel": "Bill",
           "thingUri": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
           "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
-          "thingType": [ "Film", "Thing" ]
+          "thingType": ["Film", "Thing"]
         }
       ],
       "mentions": null
     },
-    "version" : "v0.3.2",
-    "blockTypes" : [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption" ]
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption"
+    ]
   },
-  "content" : {
+  "content": {
     "model": {
       "blocks": [
         {
@@ -147,16 +155,16 @@
       ]
     }
   },
-  "promo" : {
-    "id" : "urn:bbc:ares::article:c0000000002o",
-    "headlines" : {
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000002o",
+    "headlines": {
       "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
       "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
-    "locators" : {
-      "optimoUrn" : "urn:bbc:optimo:asset:c0000000002o"
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000002o"
     },
-    "summary" : "Ut dictum pellentesque risus nec tristique.",
-    "timestamp" : 1514811600000
+    "summary": "Ut dictum pellentesque risus nec tristique.",
+    "timestamp": 1514811600000
   }
 }

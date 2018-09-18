@@ -36,88 +36,58 @@
           "thingUri": "http://www.bbc.co.uk/things/fbb858f6-5eb5-4ffc-be8c-06ee49179aa9#id",
           "thingId": "fbb858f6-5eb5-4ffc-be8c-06ee49179aa9",
           "thingLabel": "Election 2015 - EU",
-          "thingType": [
-            "Thing"
-          ]
+          "thingType": ["Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/2aa1610b-9675-4a15-981b-e239e99ac223#id",
           "thingId": "2aa1610b-9675-4a15-981b-e239e99ac223",
           "thingLabel": "Election 2015 Northern Ireland",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "topicId": "cwlw3xz0lvvt",
           "topicName": "Brexit",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
           "thingLabel": "Brexit",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
           "topicId": "cwm11216mzyt",
           "topicName": "US mid-term elections 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "01fc38c4-244c-4641-8549-0243c92e4c24",
           "thingLabel": "US mid-term elections 2018",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
           "topicId": "cvenzmgyev0t",
           "topicName": "US Election 2016",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "530d1350-d83c-405b-b6c3-809473e23c58",
           "thingLabel": "US Election 2016",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
           "topicId": "cky4yx910j3t",
           "topicName": "Russian presidential election 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "8ece91c9-56df-4c55-a6d2-f00e98f28335",
           "thingLabel": "Russian presidential election 2018",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id",
           "topicId": "c1038wnxn57t",
           "topicName": "German federal elections 2017",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "bf922d40-1842-479d-a4bf-2ce36bdf1f94",
           "thingLabel": "German federal elections 2017",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         }
       ],
       "mentions": [
@@ -125,28 +95,19 @@
           "thingUri": "http://www.bbc.co.uk/things/2daa28ee-c47e-4214-b97d-08ecc8881d98#id",
           "thingId": "2daa28ee-c47e-4214-b97d-08ecc8881d98",
           "thingLabel": "2015 UK election",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/7a50cd42-14a5-4b12-8952-a72e867fb1cc#id",
           "thingId": "7a50cd42-14a5-4b12-8952-a72e867fb1cc",
           "thingLabel": "Ireland election 2016",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/f8cf6f0a-64b2-490f-a2ad-1f0f15df454d#id",
           "thingId": "f8cf6f0a-64b2-490f-a2ad-1f0f15df454d",
           "thingLabel": "Australia election 2016",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         }
       ]
     }
@@ -461,9 +422,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "Cras porttitor dictum tellus",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "attributes": ["bold"]
                       }
                     },
                     {

@@ -36,29 +36,19 @@
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "topicId": "cwlw3xz0lvvt",
           "topicName": "Brexit",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
           "thingLabel": "Brexit",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/b7498154-88a4-43ac-8790-c3bb93d5e18f#id",
           "topicId": "cjkm56d0p7et",
           "topicName": "Manchester",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "b7498154-88a4-43ac-8790-c3bb93d5e18f",
           "thingLabel": "Manchester",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []
@@ -94,9 +84,7 @@
                             "type": "fragment",
                             "model": {
                               "text": "2",
-                              "attributes": [
-                                "subscript"
-                              ]
+                              "attributes": ["subscript"]
                             }
                           },
                           {
@@ -207,9 +195,7 @@
                                   "type": "fragment",
                                   "model": {
                                     "text": "Suspendisse blandit tincidunt ante",
-                                    "attributes": [
-                                      "bold"
-                                    ]
+                                    "attributes": ["bold"]
                                   }
                                 },
                                 {
