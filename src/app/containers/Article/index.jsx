@@ -5,7 +5,6 @@ import Header from '../../components/Header';
 import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
-import isAmpPath from '../../helpers/isAmpPath';
 
 const validateService = service => {
   const services = ['news', 'persian'];
@@ -32,13 +31,19 @@ const validateId = id => {
 class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
-      const { path } = match;
+      // const { path } = match;
       const { id, service } = match.params;
 
       validateService(service);
-      validateId(id);
+      let amp = false;
+      let sanitisedId = id;
+      if (id.endsWith('.amp')) {
+        amp = true;
+        sanitisedId = sanitisedId.replace('.amp', '');
+      }
+      validateId(sanitisedId);
 
-      let url = `/data/${service}/${id}.json`;
+      let url = `/data/${service}/${sanitisedId}.json`;
 
       if (req) {
         url = `${process.env.RAZZLE_BASE_PATH}${url}`;
@@ -46,7 +51,6 @@ class ArticleContainer extends Component {
 
       const response = await fetch(url);
       const data = await response.json();
-      const amp = isAmpPath(path);
 
       return { amp, data };
     } catch (error) {
