@@ -87,6 +87,12 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
       className="c2"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
     />
+    <noscript>
+      <img
+        alt="Pauline Clayton"
+        className="c2"
+      />
+    </noscript>
   </div>
   <figcaption
     className="c3"
@@ -169,6 +175,12 @@ exports[`Figure with a caption should render correctly 1`] = `
       className="c2"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
     />
+    <noscript>
+      <img
+        alt="Pauline Clayton"
+        className="c2"
+      />
+    </noscript>
   </div>
   <figcaption
     className="c3"
@@ -263,6 +275,12 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
       className="c2"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
     />
+    <noscript>
+      <img
+        alt="Pauline Clayton"
+        className="c2"
+      />
+    </noscript>
     <span
       className="c3"
       role="text"
@@ -346,6 +364,12 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
       className="c2"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
     />
+    <noscript>
+      <img
+        alt="Pauline Clayton"
+        className="c2"
+      />
+    </noscript>
     <span
       className="c3"
       role="text"
@@ -388,6 +412,12 @@ exports[`Figure without a caption should render correctly 1`] = `
       className="c2"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
     />
+    <noscript>
+      <img
+        alt="Pauline Clayton"
+        className="c2"
+      />
+    </noscript>
   </div>
 </figure>
 `;

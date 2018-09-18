@@ -19,10 +19,13 @@ const RelativeDiv = styled.div`
   position: relative;
 `;
 
-const FigureContainer = ({ src, alt, copyright, caption }) => (
+const FigureContainer = ({ src, lowResSrc, alt, copyright, caption }) => (
   <Figure>
     <RelativeDiv>
       <Image alt={alt} src={src} />
+      <noscript>
+        <Image alt={alt} src={lowResSrc} />
+      </noscript>
       {renderCopyright(copyright)}
     </RelativeDiv>
     {renderCaption(caption)}
@@ -32,6 +35,7 @@ const FigureContainer = ({ src, alt, copyright, caption }) => (
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  lowResSrc: string.isRequired,
   copyright: string,
   caption: string,
 };

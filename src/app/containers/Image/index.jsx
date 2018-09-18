@@ -38,10 +38,12 @@ const ImageContainer = ({ blocks }) => {
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
+  const lowResSrc = `https://ichef.bbci.co.uk/news/360${locator}`;
 
   return (
     <Figure
       src={rawImageSrc}
+      lowResSrc={lowResSrc}
       alt={altText}
       copyright={copyright}
       caption={caption}
