@@ -2,6 +2,8 @@ import {
   getElement,
   getSecondElement,
   metaDataTags,
+  openGraphMeta,
+  twitterMeta,
 } from '../support/testHelper';
 
 describe('Article Meta Tests', () => {
@@ -66,45 +68,24 @@ describe('Article Meta Tests', () => {
     );
   });
 
-  it('should have OpenGraph meta data', () => {
-    metaDataTags(
-      'head meta[name="og:description"]',
-      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    );
-    metaDataTags(
-      'head meta[name="og:image"]',
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
-    );
-    metaDataTags('head meta[name="og:image:alt"]', 'BBC News');
-    metaDataTags('head meta[name="og:locale"]', 'en_GB');
-    metaDataTags('head meta[name="og:site_name"]', 'BBC News');
-    metaDataTags(
-      'head meta[name="og:title"]',
-      "Meghan's bouquet laid on tomb of unknown warrior",
-    );
-    metaDataTags('head meta[name="og:type"]', 'article');
-    metaDataTags(
-      'head meta[name="og:url"]',
-      'https://www.bbc.com/news/articles/c0000000025o',
-    );
-  });
+  openGraphMeta(
+    'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'BBC News',
+    'en_GB',
+    'BBC News',
+    "Meghan's bouquet laid on tomb of unknown warrior",
+    'article',
+    'https://www.bbc.com/news/articles/c0000000025o',
+  );
 
-  it('should have Twitter meta data', () => {
-    metaDataTags('head meta[name="twitter:card"]', 'summary_large_image');
-    metaDataTags('head meta[name="twitter:creator"]', '@BBCNews');
-    metaDataTags(
-      'head meta[name="twitter:description"]',
-      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    );
-    metaDataTags('head meta[name="twitter:image:alt"]', 'BBC News');
-    metaDataTags(
-      'head meta[name="twitter:image:src"]',
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
-    );
-    metaDataTags('head meta[name="twitter:site"]', '@BBCNews');
-    metaDataTags(
-      'head meta[name="twitter:title"]',
-      "Meghan's bouquet laid on tomb of unknown warrior",
-    );
-  });
+  twitterMeta(
+    'summary_large_image',
+    '@BBCNews',
+    'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    'BBC News',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    '@BBCNews',
+    "Meghan's bouquet laid on tomb of unknown warrior",
+  );
 });

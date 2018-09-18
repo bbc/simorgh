@@ -67,6 +67,48 @@ export const metaDataTags = (metaDataTag, content) => {
   metaElement.should('have.attr', 'content', content);
 };
 
+export const openGraphMeta = (
+  description,
+  imageUrl,
+  altText,
+  locale,
+  siteName,
+  title,
+  type,
+  url,
+) => {
+  it('should have OpenGraph meta data', () => {
+    metaDataTags('head meta[name="og:description"]', description);
+    metaDataTags('head meta[name="og:image"]', imageUrl);
+    metaDataTags('head meta[name="og:image:alt"]', altText);
+    metaDataTags('head meta[name="og:locale"]', locale);
+    metaDataTags('head meta[name="og:site_name"]', siteName);
+    metaDataTags('head meta[name="og:title"]', title);
+    metaDataTags('head meta[name="og:type"]', type);
+    metaDataTags('head meta[name="og:url"]', url);
+  });
+};
+
+export const twitterMeta = (
+  card,
+  creator,
+  description,
+  imageAlt,
+  imageSrc,
+  site,
+  title,
+) => {
+  it('should have Twitter meta data', () => {
+    metaDataTags('head meta[name="twitter:card"]', card);
+    metaDataTags('head meta[name="twitter:creator"]', creator);
+    metaDataTags('head meta[name="twitter:description"]', description);
+    metaDataTags('head meta[name="twitter:image:alt"]', imageAlt);
+    metaDataTags('head meta[name="twitter:image:src"]', imageSrc);
+    metaDataTags('head meta[name="twitter:site"]', site);
+    metaDataTags('head meta[name="twitter:title"]', title);
+  });
+};
+
 export const visibleImageNoCaption = figure => {
   figureVisibility(figure);
   figure.should('not.to.have.descendants', 'figcaption');
