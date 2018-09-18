@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
-
+import { blockContainingText, singleTextBlock } from '../../models/blocks';
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
@@ -29,44 +29,8 @@ describe('ArticleContainer', () => {
     content: {
       model: {
         blocks: [
-          {
-            blockId: 'h-1',
-            type: 'headline',
-            model: {
-              blocks: [
-                {
-                  blockId: 't-1',
-                  type: 'text',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'paragraph',
-                        blockId: 'p-1',
-                        model: {
-                          text: 'Article Headline',
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            type: 'text',
-            blockId: 't-2',
-            model: {
-              blocks: [
-                {
-                  blockId: 'p-2',
-                  type: 'paragraph',
-                  model: {
-                    text: 'A paragraph.',
-                  },
-                },
-              ],
-            },
-          },
+          blockContainingText('headline', 'Article Headline'),
+          singleTextBlock('A paragraph.'),
         ],
       },
     },

@@ -15,15 +15,12 @@ exports[`ArticleContainer Component should render correctly 1`] = `
     blocks={
       Array [
         Object {
-          "blockId": "h-1",
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "t-1",
                 "model": Object {
                   "blocks": Array [
                     Object {
-                      "blockId": "p-1",
                       "model": Object {
                         "text": "Article Headline",
                       },
@@ -38,11 +35,9 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           "type": "headline",
         },
         Object {
-          "blockId": "t-2",
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "p-2",
                 "model": Object {
                   "text": "A paragraph.",
                 },
