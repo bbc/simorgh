@@ -62,6 +62,11 @@ export const figureVisibility = figure => {
   figure.should('to.have.descendants', 'img');
 };
 
+export const metaDataTags = (metaDataTag, content) => {
+  const metaElement = getElement(metaDataTag);
+  metaElement.should('have.attr', 'content', content);
+};
+
 export const visibleImageNoCaption = figure => {
   figureVisibility(figure);
   figure.should('not.to.have.descendants', 'figcaption');
