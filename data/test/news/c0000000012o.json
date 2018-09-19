@@ -18,255 +18,177 @@
       "genre": "business"
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/1b585edd-d06e-40a4-9337-2addd072b10c#id",
           "topicId": "cxrlk204040t",
           "topicName": "East Kilbride",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "1b585edd-d06e-40a4-9337-2addd072b10c",
           "thingLabel": "East Kilbride",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/21135bbb-cfb9-47a6-89ff-aabbc0828bce#id",
           "topicId": "cwdnmry5d4nt",
           "topicName": "Northampton",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "21135bbb-cfb9-47a6-89ff-aabbc0828bce",
           "thingLabel": "Northampton",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/235a251e-f6e8-445c-b802-8253d34f6509#id",
           "topicId": "cgmxjppkwl7t",
           "topicName": "London",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "235a251e-f6e8-445c-b802-8253d34f6509",
           "thingLabel": "London",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/2cece916-a555-4572-9bb0-6efc17463817#id",
           "topicId": "cllmrkzwp8dt",
           "topicName": "Walsall",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "2cece916-a555-4572-9bb0-6efc17463817",
           "thingLabel": "Walsall",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
           "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
           "thingLabel": "Business",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ]
+          "thingType": ["Theme", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/343e8826-6d38-4f99-86bf-3ee4a5ea8a8a#id",
           "topicId": "cdd52egw8wzt",
           "topicName": "Newmarket",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "343e8826-6d38-4f99-86bf-3ee4a5ea8a8a",
           "thingLabel": "Newmarket",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/37e67301-1f31-4e94-b2e0-f92e29834802#id",
           "topicId": "ce1qrvlegjyt",
           "topicName": "Retailing",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "37e67301-1f31-4e94-b2e0-f92e29834802",
           "thingLabel": "Retailing",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/6b563a6a-9cb7-4f24-bfe2-97f8fb2179f1#id",
           "topicId": "ck7rdn2xmn9t",
           "topicName": "Stockton-on-Tees",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "6b563a6a-9cb7-4f24-bfe2-97f8fb2179f1",
           "thingLabel": "Stockton-on-Tees",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/7785ddd0-b39f-4bf9-bef2-4300cf5ae30d#id",
           "topicId": "c0n16pl8x5et",
           "topicName": "Clacton-on-Sea",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "7785ddd0-b39f-4bf9-bef2-4300cf5ae30d",
           "thingLabel": "Clacton-on-Sea",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/7a5d4c3a-ea0f-4045-86e7-ee551d90663e#id",
           "topicId": "c27968gy296t",
           "topicName": "Speke",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "7a5d4c3a-ea0f-4045-86e7-ee551d90663e",
           "thingLabel": "Speke",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/82597510-ad56-440e-b5d4-953108d85332#id",
           "topicId": "cmgm2jl7896t",
           "topicName": "Darlington",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "82597510-ad56-440e-b5d4-953108d85332",
           "thingLabel": "Darlington",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/86de11f6-d2cc-4976-88f1-831d3799ee25#id",
           "topicId": "cerlz99eddjt",
           "topicName": "Kettering",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "86de11f6-d2cc-4976-88f1-831d3799ee25",
           "thingLabel": "Kettering",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/9b75ec79-a876-46f8-b8ca-6f56fd6881d1#id",
           "topicId": "cllmr11np26t",
           "topicName": "Fleetwood",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "9b75ec79-a876-46f8-b8ca-6f56fd6881d1",
           "thingLabel": "Fleetwood",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/9f52c5bc-73a7-47c8-a6b5-e70eafbf6716#id",
           "topicId": "c0repyjnd84t",
           "topicName": "Companies",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "9f52c5bc-73a7-47c8-a6b5-e70eafbf6716",
           "thingLabel": "Companies",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/a72fe9dd-f8d6-43a0-b71e-80c82582b848#id",
           "topicId": "c8zwn8k9z05t",
           "topicName": "Newton Abbot",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "a72fe9dd-f8d6-43a0-b71e-80c82582b848",
           "thingLabel": "Newton Abbot",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/a9209061-66f7-4fc6-8d91-a4fbdba9e689#id",
           "topicId": "c7yjn8g612lt",
           "topicName": "Walsall Wood",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "a9209061-66f7-4fc6-8d91-a4fbdba9e689",
           "thingLabel": "Walsall Wood",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/bc676037-f750-40af-92b4-b41042fc1a83#id",
           "topicId": "c51z9eewd96t",
           "topicName": "Falkirk",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "bc676037-f750-40af-92b4-b41042fc1a83",
           "thingLabel": "Falkirk",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/d4ec2662-755e-4ac3-a37a-921880b9d4a7#id",
           "topicId": "cywd23g0ggxt",
           "topicName": "Marks & Spencer",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "d4ec2662-755e-4ac3-a37a-921880b9d4a7",
           "thingLabel": "Marks & Spencer",
-          "thingType": [
-            "Organisation",
-            "Thing"
-          ]
+          "thingType": ["Organisation", "Thing"]
         }
       ],
       "mentions": []
@@ -648,6 +570,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000012o"
     },
     "summary": "The retail giant speeds up the pace of closures that it says are \"vital for the future of M&S\".",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

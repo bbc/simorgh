@@ -23,24 +23,16 @@
           "thingLabel": "Bill",
           "thingUri": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
           "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
-          "thingType": [
-            "Film",
-            "Thing"
-          ]
+          "thingType": ["Film", "Thing"]
         },
         {
           "thingLabel": "Theresa May",
           "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
           "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingType": ["Person", "Thing"],
           "topidName": "Theresa May",
           "topicId": "c50znx8v4z7t",
-          "curationType": [
-            "vivo-stream"
-          ]
+          "curationType": ["vivo-stream"]
         }
       ],
       "mentions": null
@@ -267,9 +259,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "2",
-                        "attributes": [
-                          "subscript"
-                        ]
+                        "attributes": ["subscript"]
                       }
                     },
                     {

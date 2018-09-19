@@ -18,7 +18,7 @@
       "genre": "business"
     },
     "version": "v0.3.2",
-    "blockTypes": [ "text", "paragraph", "subheading" ],
+    "blockTypes": ["text", "paragraph", "subheading"],
     "tags": {
       "about": [],
       "mentions": []
@@ -99,6 +99,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000021o"
     },
     "summary": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

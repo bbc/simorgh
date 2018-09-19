@@ -35,141 +35,91 @@
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "topicId": "cwlw3xz0lvvt",
           "topicName": "Brexit",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
           "thingLabel": "Brexit",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/01fc38c4-244c-4641-8549-0243c92e4c24#id",
           "topicId": "cwm11216mzyt",
           "topicName": "US mid-term elections 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "01fc38c4-244c-4641-8549-0243c92e4c24",
           "thingLabel": "US mid-term elections 2018",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/530d1350-d83c-405b-b6c3-809473e23c58#id",
           "topicId": "cvenzmgyev0t",
           "topicName": "US Election 2016",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "530d1350-d83c-405b-b6c3-809473e23c58",
           "thingLabel": "US Election 2016",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/8ece91c9-56df-4c55-a6d2-f00e98f28335#id",
           "topicId": "cky4yx910j3t",
           "topicName": "Russian presidential election 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "8ece91c9-56df-4c55-a6d2-f00e98f28335",
           "thingLabel": "Russian presidential election 2018",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/bf922d40-1842-479d-a4bf-2ce36bdf1f94#id",
           "topicId": "c1038wnxn57t",
           "topicName": "German federal elections 2017",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "bf922d40-1842-479d-a4bf-2ce36bdf1f94",
           "thingLabel": "German federal elections 2017",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/59ab9b46-cb29-4394-bea7-59b2d6c74bc2#id",
           "topicId": "cnegp3k7ev4t",
           "topicName": "Scottish Parliament",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "59ab9b46-cb29-4394-bea7-59b2d6c74bc2",
           "thingLabel": "Scottish Parliament",
-          "thingType": [
-            "Thing",
-            "Organisation"
-          ]
+          "thingType": ["Thing", "Organisation"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/d52a204b-7408-4494-9ca1-ba93c3b0b230#id",
           "topicId": "cremq255gygt",
           "topicName": "Theresa Villiers",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "d52a204b-7408-4494-9ca1-ba93c3b0b230",
           "thingLabel": "Theresa Villiers",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
           "topicId": "c50znx8v4z7t",
           "topicName": "Theresa May",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
           "thingLabel": "Theresa May",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/ed9d1ef3-eded-4f81-b158-be49cfc1ea8f#id",
           "topicId": "c1038wnxye0t",
           "topicName": "David Cameron",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "ed9d1ef3-eded-4f81-b158-be49cfc1ea8f",
           "thingLabel": "David Cameron",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/71e97cc0-8bec-416b-82f0-a6bbb85d7f1f#id",
           "topicId": "cwlw3xz041gt",
           "topicName": "Jeremy Corbyn",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "71e97cc0-8bec-416b-82f0-a6bbb85d7f1f",
           "thingLabel": "Jeremy Corbyn",
-          "thingType": [
-            "Person",
-            "Thing"
-          ]
+          "thingType": ["Person", "Thing"]
         }
       ],
       "mentions": []

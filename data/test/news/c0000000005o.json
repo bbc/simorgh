@@ -18,36 +18,36 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "topicId": "cwlw3xz0lvvt",
           "topicName": "Brexit",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
           "thingLabel": "Brexit",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/b7498154-88a4-43ac-8790-c3bb93d5e18f#id",
           "topicId": "cjkm56d0p7et",
           "topicName": "Manchester",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "b7498154-88a4-43ac-8790-c3bb93d5e18f",
           "thingLabel": "Manchester",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []
@@ -280,6 +280,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000005o"
     },
     "summary": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

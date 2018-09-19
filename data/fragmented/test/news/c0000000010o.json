@@ -18,84 +18,53 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "subheading",
-      "fragment"
-    ],
+    "blockTypes": ["headline", "text", "paragraph", "subheading", "fragment"],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/16c0db56-63ce-4603-8d46-25a90c4162e4#id",
           "topicId": "cpme0nn8kzzt",
           "topicName": "#TimesUp campaign",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "16c0db56-63ce-4603-8d46-25a90c4162e4",
           "thingLabel": "#TimesUp campaign",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/1bb8573b-fbf1-42c7-8c4a-95baed384de5#id",
           "topicId": "cn89pdz0pd4t",
           "topicName": "Sexual harassment",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "1bb8573b-fbf1-42c7-8c4a-95baed384de5",
           "thingLabel": "Sexual harassment",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
           "topicId": "cg41ylwvgjyt",
           "topicName": "Film",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
           "thingLabel": "Film",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/2cadb94f-1d71-4d7f-be16-006677bcc467#id",
           "topicId": "cql0269k80xt",
           "topicName": "#MeToo campaign",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "2cadb94f-1d71-4d7f-be16-006677bcc467",
           "thingLabel": "#MeToo campaign",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/97b1cae0-16a8-49f8-bbe1-605669ea745e#id",
           "topicId": "c9eddyqn66yt",
           "topicName": "New York City",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "97b1cae0-16a8-49f8-bbe1-605669ea745e",
           "thingLabel": "New York City",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []
