@@ -25,6 +25,7 @@ describe('ArticleContainer', () => {
         category: 'news',
         genre: null,
       },
+      tags: {},
     },
     content: {
       model: {
@@ -87,6 +88,7 @@ describe('ArticleContainer', () => {
   const data = {
     data: articleData,
     amp: false,
+    service: 'news',
   };
 
   describe('Component', () => {

@@ -42,7 +42,7 @@ const getInitialData = async ({ match }) => {
     const data = await response.json();
     const amp = isAmpPath(path);
 
-    return { amp, data };
+    return { amp, data, service };
   } catch (error) {
     console.log(error); // eslint-disable-line no-console
     return {};
