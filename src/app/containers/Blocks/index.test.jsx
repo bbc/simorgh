@@ -147,8 +147,14 @@ describe('Blocks', () => {
     },
   ];
 
+  const whitelistedBlocks = {
+    headline: () => <h1>A headline</h1>,
+    subheading: () => <h2>A subheading</h2>,
+    text: () => <p>Some text</p>,
+  };
+
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <Blocks blocks={blocks} />,
+    <Blocks blocks={blocks} whitelistedBlocks={whitelistedBlocks} />,
   );
 });
