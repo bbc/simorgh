@@ -55,7 +55,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           },
         ]
       }
-      whitelistedBlocks={
+      blocksToRender={
         Object {
           "headline": [Function],
           "image": [Function],
