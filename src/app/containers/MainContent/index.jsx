@@ -1,9 +1,6 @@
 import React from 'react';
-import headings from '../Headings';
-import text from '../Text';
-import image from '../Image';
+import { shape, func } from 'prop-types';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
-import MainContent from '../../components/MainContent';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -11,20 +8,13 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
-const Blocks = {
-  headline: headings,
-  subheading: headings,
-  text,
-  image,
-};
-
-const render = blocks =>
+const Blocks = ({ blocks, whitelistedBlocks }) =>
   blocks.map((block, index) => {
     const { type, blockId, model } = block;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
-    const Block = Blocks[type] || BlockString;
+    const Block = whitelistedBlocks[type] || BlockString;
 
     return (
       <Block
@@ -36,11 +26,14 @@ const render = blocks =>
     );
   });
 
-const MainContentContainer = ({ blocks }) => {
-  const renderedContent = render(blocks);
-  return <MainContent>{renderedContent}</MainContent>;
+Blocks.propTypes = {
+  ...mainContentModelPropTypes,
+  whitelistedBlocks: shape({
+    headline: func,
+    subheading: func,
+    text: func,
+    image: func,
+  }).isRequired,
 };
 
-MainContentContainer.propTypes = mainContentModelPropTypes;
-
-export default MainContentContainer;
+export default Blocks;

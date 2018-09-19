@@ -2,7 +2,7 @@ import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import MainContentContainer from './index';
 
-describe('MainContent', () => {
+describe('Blocks', () => {
   const blocks = [
     {
       type: 'headline',
