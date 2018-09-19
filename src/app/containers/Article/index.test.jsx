@@ -63,7 +63,7 @@ describe('ArticleContainer', () => {
       expect(response).toEqual({
         amp: false,
         data: mockSuccessfulResponse,
-        service: 'news',
+        service: defaultServiceParam,
       });
     });
 
