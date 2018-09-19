@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import MainContentContainer from './index';
+import Blocks from './index';
 
 describe('Blocks', () => {
   const blocks = [
@@ -149,6 +149,6 @@ describe('Blocks', () => {
 
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <MainContentContainer blocks={blocks} />,
+    <Blocks blocks={blocks} />,
   );
 });

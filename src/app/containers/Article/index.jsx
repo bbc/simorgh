@@ -6,7 +6,7 @@ import Footer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
-import Blocks from '../MainContent';
+import Blocks from '../Blocks';
 import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
