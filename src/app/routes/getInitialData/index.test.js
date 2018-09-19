@@ -35,7 +35,11 @@ describe('getInitialData', () => {
 
   it('should return the fetch response', async () => {
     const response = await callGetInitialData();
-    expect(response).toEqual({ amp: false, data: mockSuccessfulResponse });
+    expect(response).toEqual({
+      amp: false,
+      data: mockSuccessfulResponse,
+      service: 'news',
+    });
   });
 
   describe('On client', () => {
