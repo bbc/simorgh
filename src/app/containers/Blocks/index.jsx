@@ -8,13 +8,13 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
-const Blocks = ({ blocks, whitelistedBlocks }) =>
+const Blocks = ({ blocks, blocksToRender }) =>
   blocks.map((block, index) => {
     const { type, blockId, model } = block;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
-    const Block = whitelistedBlocks[type] || BlockString;
+    const Block = blocksToRender[type] || BlockString;
 
     return (
       <Block
@@ -28,7 +28,7 @@ const Blocks = ({ blocks, whitelistedBlocks }) =>
 
 Blocks.propTypes = {
   ...mainContentModelPropTypes,
-  whitelistedBlocks: shape({
+  blocksToRender: shape({
     headline: func,
     subheading: func,
     text: func,
