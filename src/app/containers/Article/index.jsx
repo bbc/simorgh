@@ -33,7 +33,7 @@ const validateId = id => {
   }
 };
 
-const whitelistedBlocks = {
+const blocksToRender = {
   headline: headings,
   subheading: headings,
   text,
@@ -96,7 +96,7 @@ class ArticleContainer extends Component {
         <Header />
         <Metadata {...metadataProps} />
         <MainContent>
-          <Blocks blocks={blocks} whitelistedBlocks={whitelistedBlocks} />
+          <Blocks blocks={blocks} blocksToRender={blocksToRender} />
         </MainContent>
         <Footer />
       </Fragment>
