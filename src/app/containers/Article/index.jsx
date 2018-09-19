@@ -3,7 +3,11 @@ import 'isomorphic-fetch';
 import Metadata from '../../components/Metadata';
 import Header from '../../components/Header';
 import Footer from '../Footer';
-import MainContent from '../MainContent';
+import headings from '../Headings';
+import text from '../Text';
+import image from '../Image';
+import Blocks from '../MainContent';
+import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
 
@@ -27,6 +31,13 @@ const validateId = id => {
       `Invalid route parameter: ${id}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
     );
   }
+};
+
+const whitelistedBlocks = {
+  headline: headings,
+  subheading: headings,
+  text,
+  image,
 };
 
 class ArticleContainer extends Component {
@@ -84,7 +95,9 @@ class ArticleContainer extends Component {
       <Fragment>
         <Header />
         <Metadata {...metadataProps} />
-        <MainContent blocks={blocks} />
+        <MainContent>
+          <Blocks blocks={blocks} whitelistedBlocks={whitelistedBlocks} />
+        </MainContent>
         <Footer />
       </Fragment>
     );
