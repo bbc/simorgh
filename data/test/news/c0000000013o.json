@@ -18,36 +18,36 @@
       "genre": "business"
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
           "topicId": "c207p54m45dt",
           "topicName": "Abortion",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
           "thingLabel": "Abortion",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/f314d54b-01c4-496f-a137-972185085d88#id",
           "topicId": "cn54x92e7y8t",
           "topicName": "Irish abortion referendum",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "f314d54b-01c4-496f-a137-972185085d88",
           "thingLabel": "Irish abortion referendum",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         }
       ],
       "mentions": []
@@ -643,6 +643,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000013o"
     },
     "summary": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam eleifend tempor felis eu convallis.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

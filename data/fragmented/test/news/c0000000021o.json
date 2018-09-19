@@ -18,12 +18,7 @@
       "genre": "business"
     },
     "version": "v0.3.2",
-    "blockTypes": [
-      "text",
-      "paragraph",
-      "subheading",
-      "fragment"
-    ],
+    "blockTypes": ["text", "paragraph", "subheading", "fragment"],
     "tags": {
       "about": [],
       "mentions": []

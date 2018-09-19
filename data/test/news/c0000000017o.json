@@ -18,7 +18,18 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo", "subheading"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "subheading"
+    ],
     "tags": {
       "about": [],
       "mentions": []
@@ -678,6 +689,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000017o"
     },
     "summary": null,
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }
