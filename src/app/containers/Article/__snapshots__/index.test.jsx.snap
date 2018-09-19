@@ -2,59 +2,122 @@
 
 exports[`ArticleContainer Component no data should render correctly 1`] = `"Loading..."`;
 
+exports[`ArticleContainer Component should render Persian article correctly 1`] = `
+<React.Fragment>
+  <ServiceContextProvider
+    service="persian"
+  >
+    <Header />
+    <Metadata
+      amp={false}
+      canonicalLink="https://www.bbc.com/news/articles/c0000000028o"
+      lang="fa"
+      title="سرصفحه مقاله"
+    />
+    <MainContentContainer
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "blockId": "t-1",
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "blockId": "p-1",
+                        "model": Object {
+                          "text": "سرصفحه مقاله",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+            "type": "headline",
+          },
+          Object {
+            "blockId": "t-2",
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "blockId": "p-2",
+                  "model": Object {
+                    "text": "یک پاراگراف.",
+                  },
+                  "type": "paragraph",
+                },
+              ],
+            },
+            "type": "text",
+          },
+        ]
+      }
+    />
+    <FooterContainer />
+  </ServiceContextProvider>
+</React.Fragment>
+`;
+
 exports[`ArticleContainer Component should render correctly 1`] = `
 <React.Fragment>
-  <Header />
-  <Metadata
-    amp={false}
-    canonicalLink="https://www.bbc.com/news/articles/c0000000001o"
-    lang="en-gb"
-    title="Article Headline for SEO"
-  />
-  <MainContentContainer
-    blocks={
-      Array [
-        Object {
-          "blockId": "h-1",
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "blockId": "t-1",
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "blockId": "p-1",
-                      "model": Object {
-                        "text": "Article Headline",
+  <ServiceContextProvider
+    service="news"
+  >
+    <Header />
+    <Metadata
+      amp={false}
+      canonicalLink="https://www.bbc.com/news/articles/c0000000001o"
+      lang="en-gb"
+      title="Article Headline for SEO"
+    />
+    <MainContentContainer
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "blockId": "t-1",
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "blockId": "p-1",
+                        "model": Object {
+                          "text": "Article Headline",
+                        },
+                        "type": "paragraph",
                       },
-                      "type": "paragraph",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "text",
                 },
-                "type": "text",
-              },
-            ],
+              ],
+            },
+            "type": "headline",
           },
-          "type": "headline",
-        },
-        Object {
-          "blockId": "t-2",
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "blockId": "p-2",
-                "model": Object {
-                  "text": "A paragraph.",
+          Object {
+            "blockId": "t-2",
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "blockId": "p-2",
+                  "model": Object {
+                    "text": "A paragraph.",
+                  },
+                  "type": "paragraph",
                 },
-                "type": "paragraph",
-              },
-            ],
+              ],
+            },
+            "type": "text",
           },
-          "type": "text",
-        },
-      ]
-    }
-  />
-  <FooterContainer />
+        ]
+      }
+    />
+    <FooterContainer />
+  </ServiceContextProvider>
 </React.Fragment>
 `;

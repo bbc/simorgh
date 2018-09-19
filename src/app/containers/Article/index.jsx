@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import { ServiceContextProvider } from '../../components/ServiceContext';
 
 const validateService = service => {
   const services = ['news', 'persian'];
@@ -48,7 +49,7 @@ class ArticleContainer extends Component {
       const data = await response.json();
       const amp = isAmpPath(path);
 
-      return { amp, data };
+      return { amp, data, service };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
       return {};
@@ -56,7 +57,7 @@ class ArticleContainer extends Component {
   }
 
   render() {
-    const { amp, data } = this.props;
+    const { amp, data, service } = this.props;
     /*
       This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
       After.JS gives no explicit loading state, so we just have to check for a lack of data.
@@ -82,10 +83,12 @@ class ArticleContainer extends Component {
 
     return (
       <Fragment>
-        <Header />
-        <Metadata {...metadataProps} />
-        <MainContent blocks={blocks} />
-        <Footer />
+        <ServiceContextProvider service={service}>
+          <Header />
+          <Metadata {...metadataProps} />
+          <MainContent blocks={blocks} />
+          <Footer />
+        </ServiceContextProvider>
       </Fragment>
     );
   }
