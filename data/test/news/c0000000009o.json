@@ -18,87 +18,69 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "video", "rawVideo", "subheading"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "video",
+      "rawVideo",
+      "subheading"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/e1ad1570-0b97-414d-b61a-15008c27f6c7#id",
           "topicId": "cwlw3xz01m7t",
           "topicName": "Ruth Davidson",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "e1ad1570-0b97-414d-b61a-15008c27f6c7",
           "thingLabel": "Ruth Davidson",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
           "topicId": "cp7r8vgl2lgt",
           "topicName": "Donald Trump",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
           "thingLabel": "Donald Trump",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/5784428d-a30a-4091-82f2-3f4d9b336f75#id",
           "topicId": "c302m85qe1vt",
           "topicName": "UK immigration",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "5784428d-a30a-4091-82f2-3f4d9b336f75",
           "thingLabel": "UK immigration",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ]
+          "thingType": ["Theme", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/6618bdb2-7f48-4bc2-a62a-17e409dd944a#id",
           "topicId": "ck7rdppjl6rt",
           "topicName": "Liff",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "6618bdb2-7f48-4bc2-a62a-17e409dd944a",
           "thingLabel": "Liff",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/88500fe4-39d6-4991-bab1-01dcb1ad26dd#id",
           "thingId": "88500fe4-39d6-4991-bab1-01dcb1ad26dd",
           "thingLabel": "NHS Scotland",
-          "thingType": [
-            "Thing",
-            "Organisation"
-          ]
+          "thingType": ["Thing", "Organisation"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/814465c5-404b-4c88-889f-45907ba1f402#id",
           "topicId": "cwlw3xz04egt",
           "topicName": "Mental health",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "814465c5-404b-4c88-889f-45907ba1f402",
           "thingLabel": "Mental health",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ]
+          "thingType": ["Theme", "Thing"]
         }
       ],
       "mentions": []
@@ -374,6 +356,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000009o"
     },
     "summary": "Pellentesque non eros vitae nunc auctor aliquam. Mauris ac metus dui.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

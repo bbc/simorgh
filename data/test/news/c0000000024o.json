@@ -18,7 +18,7 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph" ],
+    "blockTypes": ["headline", "text", "paragraph"],
     "tags": {
       "about": [],
       "mentions": []
@@ -63,6 +63,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000024o"
     },
     "summary": "Fusce in mi augue. Quisque fringilla posuere finibus. Nulla ac pulvinar magna, venenatis pharetra libero.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

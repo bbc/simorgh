@@ -35,15 +35,10 @@
           "thingUri": "http://www.bbc.co.uk/things/7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376#id",
           "topicId": "cly498dwj1lt",
           "topicName": "Cardiff Airport link road",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376",
           "thingLabel": "Cardiff Airport link road",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         }
       ],
       "mentions": []
@@ -442,9 +437,7 @@
                             "type": "fragment",
                             "model": {
                               "text": "Galileo project",
-                              "attributes": [
-                                "italic"
-                              ]
+                              "attributes": ["italic"]
                             }
                           }
                         ]

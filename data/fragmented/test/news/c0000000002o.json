@@ -23,10 +23,7 @@
           "thingLabel": "Bill",
           "thingUri": "http://www.bbc.co.uk/things/3fbfd244-928b-498d-a585-9e39bd27fad3#id",
           "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
-          "thingType": [
-            "Film",
-            "Thing"
-          ]
+          "thingType": ["Film", "Thing"]
         }
       ],
       "mentions": null
@@ -73,9 +70,7 @@
                             "type": "fragment",
                             "model": {
                               "text": "adipiscing",
-                              "attributes": [
-                                "italic"
-                              ]
+                              "attributes": ["italic"]
                             }
                           },
                           {
@@ -169,9 +164,7 @@
                                   "type": "fragment",
                                   "model": {
                                     "text": "nec purus",
-                                    "attributes": [
-                                      "italic"
-                                    ]
+                                    "attributes": ["italic"]
                                   }
                                 },
                                 {
@@ -215,9 +208,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "superscript",
-                        "attributes": [
-                          "superscript"
-                        ]
+                        "attributes": ["superscript"]
                       }
                     },
                     {
