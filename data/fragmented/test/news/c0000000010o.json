@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000010o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000010o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "6e4ee4d1-19a1-93b3-70ab-167455ea83a8",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "subheading",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/16c0db56-63ce-4603-8d46-25a90c4162e4#id",
+          "topicId": "cpme0nn8kzzt",
+          "topicName": "#TimesUp campaign",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "16c0db56-63ce-4603-8d46-25a90c4162e4",
+          "thingLabel": "#TimesUp campaign",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/1bb8573b-fbf1-42c7-8c4a-95baed384de5#id",
+          "topicId": "cn89pdz0pd4t",
+          "topicName": "Sexual harassment",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "1bb8573b-fbf1-42c7-8c4a-95baed384de5",
+          "thingLabel": "Sexual harassment",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+          "topicId": "cg41ylwvgjyt",
+          "topicName": "Film",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+          "thingLabel": "Film",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2cadb94f-1d71-4d7f-be16-006677bcc467#id",
+          "topicId": "cql0269k80xt",
+          "topicName": "#MeToo campaign",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "2cadb94f-1d71-4d7f-be16-006677bcc467",
+          "thingLabel": "#MeToo campaign",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/97b1cae0-16a8-49f8-bbe1-605669ea745e#id",
+          "topicId": "c9eddyqn66yt",
+          "topicName": "New York City",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "97b1cae0-16a8-49f8-bbe1-605669ea745e",
+          "thingLabel": "New York City",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "d6d376fc-e9c9-4b6c-8dc4-17334ba54c54",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "c70237b8-3ca0-723f-e7c9-7cd80080d3c1",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "94164f6d-84b6-e77f-ecc0-92a8143210ab",
+                      "model": {
+                        "text": "What is GDPR?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is GDPR?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "482429bb-88a7-4dc0-bbb9-506fa9b74056",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "cfe17c2c-e4f8-d0bd-681c-a27786536521",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "dd55668f-346f-10e1-6e51-87f432f7c8c3",
+                      "model": {
+                        "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "a705bbde-5200-4569-acda-b39c01d7da80",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2d115dcc-8b80-843e-aa45-e8d203968a94",
+                "type": "paragraph",
+                "model": {
+                  "text": "The penalties for wrongdoing could be quite hefty, especially for big companies. The new rules give the Information Commissioner's Office (ICO) powers to fine firms up to €20m (£17.5m) or 4% of global annual turnover for serious breaches.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The penalties for wrongdoing could be quite hefty, especially for big companies. The new rules give the Information Commissioner's Office (ICO) powers to fine firms up to €20m (£17.5m) or 4% of global annual turnover for serious breaches.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d1a6b7e1-7b85-843a-8ff6-6baa0877938d",
+                "type": "paragraph",
+                "model": {
+                  "text": "Many smaller firms may not be prepared for the regulations coming into force, business body the Federation of Small Businesses (FSB) says. \"GDPR is here and the likelihood is that many of the UK's 5.7 million smaller businesses will not be compliant,\" chairman Mike Cherry said. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Many smaller firms may not be prepared for the regulations coming into force, business body the Federation of Small Businesses (FSB) says. \"GDPR is here and the likelihood is that many of the UK's 5.7 million smaller businesses will not be compliant,\" chairman Mike Cherry said. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "95747576-f0da-1782-b9ab-11c9021ad5a6",
+                "type": "paragraph",
+                "model": {
+                  "text": "He says the \"burden and scale\" of the reforms have proven too much to handle for some.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "He says the \"burden and scale\" of the reforms have proven too much to handle for some.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "a9d6e19b-e4a1-44d3-a25d-6470598fd5a6",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "1298ebe2-ce1e-5310-aebb-05d0fd5641f5",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "45248cea-0bd5-4e47-02f3-0b862ecbe73f",
+                      "model": {
+                        "text": "What does the watchdog say?.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What does the watchdog say?.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000010o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "GDPR: 'Don't panic!' data watchdog tells firms"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000010o"
+    },
+    "summary": "Maecenas pretium libero ut augue bibendum tristique eget at enim.",
+    "timestamp": 1514811600000
+  }
+}
