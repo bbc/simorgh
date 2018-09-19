@@ -36,16 +36,20 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator, copyrightHolder } = rawImageBlock.model;
+  const hardcodedImageWidth = 728;
+  const { locator, copyrightHolder, height, width } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
+  const ratio = height / width;
+  const reservedImageHeight = hardcodedImageWidth * ratio;
+  const rawImageSrc = `https://ichef.bbci.co.uk/news/${hardcodedImageWidth}${locator}`;
 
   return (
     <Figure
       src={rawImageSrc}
       alt={altText}
+      reservedImageHeight={reservedImageHeight}
       copyright={copyright}
       caption={caption}
     />

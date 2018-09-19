@@ -1,5 +1,6 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
+import LazyLoad from 'react-lazyload';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
@@ -14,17 +15,39 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, alt, copyright, caption }) => (
+const getPlaceholder = reservedImageHeight => (
+  <Image
+    alt="blah blah blah"
+    src="https://www.wpfreeware.com/wp-content/uploads/2014/09/placeholder-images.jpg"
+    height={reservedImageHeight}
+  />
+);
+
+const FigureContainer = ({
+  src,
+  alt,
+  reservedImageHeight,
+  copyright,
+  caption,
+}) => (
   <Figure>
-    <Image alt={alt} src={src} />
-    {renderCopyright(copyright)}
-    {renderCaption(caption)}
+    <LazyLoad
+      height={reservedImageHeight}
+      offset={100}
+      placeholder={getPlaceholder(reservedImageHeight)}
+      once
+    >
+      <Image alt={alt} src={src} />
+      {renderCopyright(copyright)}
+      {renderCaption(caption)}
+    </LazyLoad>
   </Figure>
 );
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  reservedImageHeight: number.isRequired,
   copyright: string,
   caption: string,
 };
