@@ -1,0 +1,447 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000006o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000006o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "53294b49-4ab9-0d16-b99e-295646c74f4e",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment",
+      "urlLink"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
+          "topicId": "c50znx8v4z7t",
+          "topicName": "Theresa May",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
+          "thingLabel": "Theresa May",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/42069d65-f3b1-41e2-b3e9-35ac9d799a1a#id",
+          "topicId": "cmj34zmwx1lt",
+          "topicName": "England local elections 2017",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "42069d65-f3b1-41e2-b3e9-35ac9d799a1a",
+          "thingLabel": "England local elections 2017",
+          "thingType": [
+            "Event",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/3c6a4e42-9efd-4440-89df-647121c87452#id",
+          "topicId": "cg41ylwvx45t",
+          "topicName": "Wales local elections 2017",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "3c6a4e42-9efd-4440-89df-647121c87452",
+          "thingLabel": "Wales local elections 2017",
+          "thingType": [
+            "Thing",
+            "Event"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/12dbc9e0-8685-45d3-881f-856aac744fa7#id",
+          "thingId": "12dbc9e0-8685-45d3-881f-856aac744fa7",
+          "thingLabel": "Selahattin Demirtas",
+          "thingType": [
+            "Thing",
+            "Person"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/809d4af1-1ab8-4467-8ac7-5f61651dbf8c#id",
+          "thingId": "809d4af1-1ab8-4467-8ac7-5f61651dbf8c",
+          "thingLabel": "Temel Karamollaoglu",
+          "thingType": [
+            "Person",
+            "Thing"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "37282fc9-7663-45af-90da-6f109be6865e",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f4fca1a3-5bc6-f9be-3f9e-727dea2ae126",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "3e6859dd-e79f-fdf0-5daa-22e1fe546319",
+                      "model": {
+                        "text": "Phasellus at elit eget ante e=mc2 malesuada tempus",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Phasellus at elit eget ante e=mc",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "2",
+                              "attributes": [
+                                "superscript"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " malesuada tempus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "6cba8e86-f184-462b-95cf-09c38571d600",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "8414c280-a6c3-e5f4-6485-8841489e02f8",
+                "type": "paragraph",
+                "model": {
+                  "text": "Fusce maximus ipsum nec orci semper dapibus. Donec pulvinar, nibh eu consectetur elementum, dui neque consectetur magna, vel suscipit metus metus sit amet lacus. Sed ornare, mi eget condimentum fringilla, nunc erat pretium metus, sit amet convallis orci diam vulputate leo.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fusce maximus ipsum nec orci semper dapibus. Donec pulvinar, nibh eu consectetur elementum, ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "dui neque consectetur magna",
+                        "locator": "https://www.nature.com/articles/s41586-018-0095-1",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "dui neque consectetur magna",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", vel suscipit metus metus sit amet lacus. Sed ornare, mi eget condimentum fringilla, nunc erat pretium metus, sit amet convallis orci diam vulputate leo.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
+              {
+                "blockId": "ab452204-117f-a85f-f226-ca9b2c4b64aa",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT1M34S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p067gq6h"
+                }
+              },
+              {
+                "blockId": "3fa5f885-6377-20fa-77a6-ae2b9ebe8029",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "88b95218-c5f6-aa46-771f-e6d831fc5ef5",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "d4d1159d-9c10-70de-d67d-1ff23dd98d05",
+                            "model": {
+                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "6052eb5b-8669-bef2-e848-b4ac9fed6d29",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a9a78705-e1e8-03d2-b224-9e18249b8bd0",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "9c499256-25d5-7926-a744-a2edb33ea3de",
+                            "model": {
+                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "773e812f-8974-b4d8-df9a-529c6f6d3137",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "41a5621e-afab-dbc6-8af7-ece441388a7c",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "Getty Images"
+                      }
+                    },
+                    {
+                      "blockId": "9c3eb4ca-ed8d-e67d-1391-1f88a4e6b84a",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "3a26e7b3-7517-6f4a-4b9f-c169369db5bc",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "b5dfbf92-722d-9d6a-340d-1048b61f1246",
+                                  "model": {
+                                    "text": "Pellentesque pellentesque sem magna.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Pellentesque pellentesque sem magna.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "d061cfb9-6a79-4481-ab3a-28b25f9b94fe",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "c98f3b3e-c5c9-0309-cf00-445a8ed00d0f",
+                "type": "rawImage",
+                "model": {
+                  "width": 2362,
+                  "height": 2952,
+                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "557eb893-3a55-e6e2-653e-b6da7ba333b4",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "4191e4cb-3449-a359-ea2e-75266bd8a3ea",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "b9067dd3-7cfe-b2a5-dd82-2f32e242f786",
+                            "model": {
+                              "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "4f9b569f-a46a-0b7b-e882-01eacb0db307",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "91a90204-3eb0-60f6-732f-fca2fce2ea4a",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "8fcb1c55-b920-4e84-72b4-683923c5c6b2",
+                            "model": {
+                              "text": "Praesent sagittis fringilla nibh ut vulputate. Ut nec purus est. Vestibulum in eleifend nibh.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Praesent sagittis fringilla nibh ut vulputate. Ut ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "nec purus",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " est. Vestibulum in eleifend nibh.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000006o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Phasellus at elit eget ante e=mc<sup>2</sup> malesuada tempus"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000006o"
+    },
+    "summary": "Donec a urna odio. Donec vestibulum ut enim a sollicitudin. Curabitur sit amet interdum odio.",
+    "timestamp": 1514811600000
+  }
+}

@@ -1,0 +1,779 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000012o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000012o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "9cb41905-459f-7770-d754-99b066abd09a",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "review",
+      "genre": "business"
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/1b585edd-d06e-40a4-9337-2addd072b10c#id",
+          "topicId": "cxrlk204040t",
+          "topicName": "East Kilbride",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "1b585edd-d06e-40a4-9337-2addd072b10c",
+          "thingLabel": "East Kilbride",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/21135bbb-cfb9-47a6-89ff-aabbc0828bce#id",
+          "topicId": "cwdnmry5d4nt",
+          "topicName": "Northampton",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "21135bbb-cfb9-47a6-89ff-aabbc0828bce",
+          "thingLabel": "Northampton",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/235a251e-f6e8-445c-b802-8253d34f6509#id",
+          "topicId": "cgmxjppkwl7t",
+          "topicName": "London",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "235a251e-f6e8-445c-b802-8253d34f6509",
+          "thingLabel": "London",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2cece916-a555-4572-9bb0-6efc17463817#id",
+          "topicId": "cllmrkzwp8dt",
+          "topicName": "Walsall",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "2cece916-a555-4572-9bb0-6efc17463817",
+          "thingLabel": "Walsall",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+          "thingLabel": "Business",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/343e8826-6d38-4f99-86bf-3ee4a5ea8a8a#id",
+          "topicId": "cdd52egw8wzt",
+          "topicName": "Newmarket",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "343e8826-6d38-4f99-86bf-3ee4a5ea8a8a",
+          "thingLabel": "Newmarket",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/37e67301-1f31-4e94-b2e0-f92e29834802#id",
+          "topicId": "ce1qrvlegjyt",
+          "topicName": "Retailing",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "37e67301-1f31-4e94-b2e0-f92e29834802",
+          "thingLabel": "Retailing",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/6b563a6a-9cb7-4f24-bfe2-97f8fb2179f1#id",
+          "topicId": "ck7rdn2xmn9t",
+          "topicName": "Stockton-on-Tees",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "6b563a6a-9cb7-4f24-bfe2-97f8fb2179f1",
+          "thingLabel": "Stockton-on-Tees",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/7785ddd0-b39f-4bf9-bef2-4300cf5ae30d#id",
+          "topicId": "c0n16pl8x5et",
+          "topicName": "Clacton-on-Sea",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "7785ddd0-b39f-4bf9-bef2-4300cf5ae30d",
+          "thingLabel": "Clacton-on-Sea",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/7a5d4c3a-ea0f-4045-86e7-ee551d90663e#id",
+          "topicId": "c27968gy296t",
+          "topicName": "Speke",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "7a5d4c3a-ea0f-4045-86e7-ee551d90663e",
+          "thingLabel": "Speke",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/82597510-ad56-440e-b5d4-953108d85332#id",
+          "topicId": "cmgm2jl7896t",
+          "topicName": "Darlington",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "82597510-ad56-440e-b5d4-953108d85332",
+          "thingLabel": "Darlington",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/86de11f6-d2cc-4976-88f1-831d3799ee25#id",
+          "topicId": "cerlz99eddjt",
+          "topicName": "Kettering",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "86de11f6-d2cc-4976-88f1-831d3799ee25",
+          "thingLabel": "Kettering",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/9b75ec79-a876-46f8-b8ca-6f56fd6881d1#id",
+          "topicId": "cllmr11np26t",
+          "topicName": "Fleetwood",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "9b75ec79-a876-46f8-b8ca-6f56fd6881d1",
+          "thingLabel": "Fleetwood",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/9f52c5bc-73a7-47c8-a6b5-e70eafbf6716#id",
+          "topicId": "c0repyjnd84t",
+          "topicName": "Companies",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "9f52c5bc-73a7-47c8-a6b5-e70eafbf6716",
+          "thingLabel": "Companies",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/a72fe9dd-f8d6-43a0-b71e-80c82582b848#id",
+          "topicId": "c8zwn8k9z05t",
+          "topicName": "Newton Abbot",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "a72fe9dd-f8d6-43a0-b71e-80c82582b848",
+          "thingLabel": "Newton Abbot",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/a9209061-66f7-4fc6-8d91-a4fbdba9e689#id",
+          "topicId": "c7yjn8g612lt",
+          "topicName": "Walsall Wood",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "a9209061-66f7-4fc6-8d91-a4fbdba9e689",
+          "thingLabel": "Walsall Wood",
+          "thingType": [
+            "Place",
+            "Thing"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/bc676037-f750-40af-92b4-b41042fc1a83#id",
+          "topicId": "c51z9eewd96t",
+          "topicName": "Falkirk",
+          "curationType": [
+            "location-stream"
+          ],
+          "thingId": "bc676037-f750-40af-92b4-b41042fc1a83",
+          "thingLabel": "Falkirk",
+          "thingType": [
+            "Thing",
+            "Place"
+          ]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/d4ec2662-755e-4ac3-a37a-921880b9d4a7#id",
+          "topicId": "cywd23g0ggxt",
+          "topicName": "Marks & Spencer",
+          "curationType": [
+            "vivo-stream"
+          ],
+          "thingId": "d4ec2662-755e-4ac3-a37a-921880b9d4a7",
+          "thingLabel": "Marks & Spencer",
+          "thingType": [
+            "Organisation",
+            "Thing"
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "47ca6b9e-eb93-4800-8678-47fbf443e17e",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "89cee09e-cb72-708a-074e-323d3469dab1",
+                "type": "paragraph",
+                "model": {
+                  "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "653786c0-d623-48a8-802c-4491b128aefe",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
+              {
+                "blockId": "b40a00b1-0b73-d8cd-d58f-08a2da35636f",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT1M34S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p067gq6h"
+                }
+              },
+              {
+                "blockId": "b39fdb15-705a-ae0e-b891-a73099e933be",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "120c3875-f813-dd43-5c7e-df5d3b92eeb8",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "58b9c718-cbd5-aaeb-71d9-66907a152319",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "43e796a3-7646-9016-476c-95073803063c",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "5dd99fc2-6154-98e2-b032-4944a60ecf4a",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "646166f2-8264-221e-3cf4-1e7bfd0360b2",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "34761fa4-3336-ed5c-79da-ec2069dbdbcd",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "618e7071-a7f1-6edc-d608-29558465f71c",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "ee131b44-ca70-42d5-92a1-a92b41bbd638",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f38581f9-a77a-27f1-f072-331f2e5af1de",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "9707b19f-9fce-0938-79e6-9c0d7fb72004",
+                      "model": {
+                        "text": "M&S to close 100 stores by 2022",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "M&S to close 100 stores by 2022",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "13140be5-c780-4766-abd9-667178fd211a",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "28582749-98da-68dc-4f54-1d764454d9cc",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/F86B/production/_101659536_m-s_getty.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "06f19fb0-cad2-a0b4-2850-96e189ab0e9a",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "18ac2173-2b90-c34b-3fa2-9b1ddece7c1c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "3c4192a7-ad39-d118-85f0-28a6fd4dad55",
+                            "model": {
+                              "text": "M&S store closures.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "M&S store closures.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "6d47d17a-814d-2fd4-7523-8d94d3b3b191",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "694c9524-25f3-41d5-c39e-07861a86fd0b",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "61bb8d94-69d1-9eb6-5cf5-39a76c34d2ab",
+                            "model": {
+                              "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "blockId": "61bb8d94-69d1-9eb6-5cf5-39a76c34d2ab",
+                            "model": {
+                              "text": "This latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "14db1e9f-7744-4f63-bbea-c475c9ae4bd2",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "eccf1274-a175-4ed0-3c3d-6f2ff5a1f6f7",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "6b87ee99-36f0-11b2-3feb-127382e09091",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "44fa2745-67c3-d876-64d7-9ca8b179e2be",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "cacdb3d5-1662-aa46-bdd8-82fb5f34cc0e",
+                            "model": {
+                              "text": "Map of M&S store closures",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map of M&S store closures",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d0c8eb2a-b0c1-02d9-7bf1-18f30fbc9ec6",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "1fa8c9dc-06ae-85c5-e05e-4dbb88f1aaea",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "c92ba8ae-0fbd-3821-a82f-9ec24f139f81",
+                            "model": {
+                              "text": "Map of Marks and Spencer store closure by 2020",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map of Marks and Spencer store closure by 2020",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "546ea2ab-412f-4fbe-a10f-cf11b7f843ac",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "d10dc292-081a-00e3-c19b-e48165383f8a",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 419,
+                  "locator": "/cpsprodpb/16FBB/production/_97493149_1_protests_getty_624.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "89edc85b-1bd6-3e53-87c8-81c59a090c13",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "169f796e-dc64-6603-8144-8fff349a0079",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "2eaaafb0-4ce8-3fd7-16f6-beb3f5a02206",
+                            "model": {
+                              "text": "Syrian protesters",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Syrian protesters",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "7ff105f6-c58e-4aa5-8575-15f738b3f351",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "183d6585-c044-5b54-081e-1c5954a0aefc",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/1758D/production/_94792659_bbcbudget_new.gif",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "58784874-d3a5-6bf7-aea3-094c5c110df1",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "bbc32078-d24e-4d8c-f69e-afced05c2f34",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "fe1464a5-03fa-d29c-2256-65ddf692b349",
+                            "model": {
+                              "text": "BBC Scotland money",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC Scotland money",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "b538b34e-29e1-fff0-5664-86252e275d68",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "7abd3d7e-6a4c-5447-f5b5-704510b364a4",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "824898d4-bb90-287f-70bc-67cb790672b6",
+                            "model": {
+                              "text": "BBC Scotland money",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC Scotland money",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000012o",
+    "headlines": {
+      "seoHeadline": "Marks & Spencer to close 100 stores by 2022",
+      "promoHeadline": "M&S to close 100 stores by 2022"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000012o"
+    },
+    "summary": "The retail giant speeds up the pace of closures that it says are \"vital for the future of M&S\".",
+    "timestamp": 1514811600000
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000019o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000019o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "3e225590-5388-a7e4-7282-3d84b2aeb14c",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "subheading",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "fb981c19-12ea-4df7-92ea-9823feaecaa8",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "d8f1198b-c3c7-5fb4-f44d-73cd3d93f9f7",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "deefcfff-8184-3ca9-c8fe-67a4edb7c596",
+                      "model": {
+                        "text": "Quisque feugiat quam ut lorem euismod",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Quisque feugiat quam ut lorem euismod",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "5bc27597-cd89-4230-a5fc-7dcf73f3b00c",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "3f5366e8-c73e-39c5-217f-f60ee1403f79",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "6e338ce0-9a11-47a9-8829-1022d00d6a08",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "d6377b72-5fac-b584-06e4-8c0593a2f0f5",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "9715348d-f79a-133c-05c3-c4f276b64171",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9678d230-4e08-4ec8-8346-bf761874098c",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p054n8j9",
+            "blocks": [
+              {
+                "blockId": "90afbdd8-698d-2bb6-e96c-7109a5102f84",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT15M23S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p054n8j9"
+                }
+              },
+              {
+                "blockId": "61290c6e-75d4-e06f-3dd1-92ed1ccf2b6f",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "408004f3-1830-7e51-c377-0b343642725a",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "02058029-ecdf-90aa-4480-57607b44914d",
+                            "model": {
+                              "text": "Fusce interdum semper lacus eget malesuada.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fusce interdum semper lacus eget malesuada.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "9835fbc2-bac9-3d40-d9fa-314652329234",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "31fa2ffe-2a1a-8e08-6afb-aa882a3a5632",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 832,
+                        "height": 468,
+                        "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "BBC"
+                      }
+                    },
+                    {
+                      "blockId": "a5d2d2b6-c7e7-4c4d-6743-979d0ba9df77",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "ad43f8e0-f584-2ff8-e94d-a1b4186e3560",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "dfb27652-dcb6-8911-db7c-5d7f66d9e79a",
+                                  "model": {
+                                    "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000019o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod."
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000019o"
+    },
+    "summary": "Nulla lectus justo, congue in feugiat quis, pharetra at leo.",
+    "timestamp": 1514811600000
+  }
+}
