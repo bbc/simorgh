@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { arrayOf, element } from 'prop-types';
+import { node } from 'prop-types';
 import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 import {
   group4ScreenWidthMin,
@@ -35,7 +35,7 @@ const MainContent = ({ children }) => (
 );
 
 MainContent.propTypes = {
-  children: arrayOf(element).isRequired,
+  children: node.isRequired,
 };
 
 export default MainContent;
