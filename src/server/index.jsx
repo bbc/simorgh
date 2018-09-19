@@ -4,6 +4,7 @@ import { ServerUni, loadInitialData } from '@jtart/uni';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import expressStaticGzip from 'express-static-gzip';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
 
@@ -47,7 +48,12 @@ const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static(dataFolderToRender))
-  .use(express.static(publicDirectory))
+  .use(
+    expressStaticGzip(publicDirectory, {
+      enableBrotli: true,
+      orderPreference: ['br'],
+    }),
+  )
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
