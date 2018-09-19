@@ -22,6 +22,85 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     href="https://www.bbc.com/news/articles/amp/c0000000001o"
     rel="canonical"
   />
+  <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1514811600000}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News"
+    name="og:image:alt"
+  />
+  <meta
+    content="en_GB"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News"
+    name="og:site_name"
+  />
+  <meta
+    content="An article title"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/news/articles/amp/c0000000001o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:site"
+  />
+  <meta
+    content="An article title"
+    name="twitter:title"
+  />
 </HelmetWrapper>
 `;
 
@@ -45,6 +124,85 @@ exports[`Metadata News article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1514811600000}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News"
+    name="og:image:alt"
+  />
+  <meta
+    content="en_GB"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News"
+    name="og:site_name"
+  />
+  <meta
+    content="An article title"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/news/articles/c0000000001o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:site"
+  />
+  <meta
+    content="An article title"
+    name="twitter:title"
   />
 </HelmetWrapper>
 `;
@@ -71,6 +229,85 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     href="https://www.bbc.com/persian/articles/amp/c0000000028o"
     rel="canonical"
   />
+  <meta
+    content="BBC News فارسی"
+    name="article:author"
+  />
+  <meta
+    content={1514811600000}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:image:alt"
+  />
+  <meta
+    content="fa"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:site_name"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:site"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="twitter:title"
+  />
 </HelmetWrapper>
 `;
 
@@ -94,6 +331,192 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/persian/articles/c0000000028o"
     rel="canonical"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="article:author"
+  />
+  <meta
+    content={1514811600000}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:image:alt"
+  />
+  <meta
+    content="fa"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:site_name"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/persian/articles/c0000000028o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:site"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="twitter:title"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Metadata articleSection is not null should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en-GB",
+    }
+  }
+>
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    An article title
+  </title>
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    rel="canonical"
+  />
+  <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1514811600000}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="Politics"
+    name="article:section"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News"
+    name="og:image:alt"
+  />
+  <meta
+    content="en_GB"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News"
+    name="og:site_name"
+  />
+  <meta
+    content="An article title"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/news/articles/c0000000001o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:site"
+  />
+  <meta
+    content="An article title"
+    name="twitter:title"
   />
 </HelmetWrapper>
 `;

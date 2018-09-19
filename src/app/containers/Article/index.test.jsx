@@ -25,6 +25,7 @@ describe('ArticleContainer', () => {
         category: 'news',
         genre: null,
       },
+      tags: {},
     },
     content: {
       model: {
@@ -87,7 +88,7 @@ describe('ArticleContainer', () => {
   describe('Component', () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
-      <ArticleContainer data={articleData} />,
+      <ArticleContainer data={articleData} service="news" />,
     );
 
     describe('no data', () => {
@@ -132,7 +133,11 @@ describe('ArticleContainer', () => {
 
     it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual({ amp: false, data: mockSuccessfulResponse });
+      expect(response).toEqual({
+        amp: false,
+        data: mockSuccessfulResponse,
+        service: defaultServiceParam,
+      });
     });
 
     describe('On client', () => {
