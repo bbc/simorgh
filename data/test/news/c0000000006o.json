@@ -18,68 +18,57 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/96e2c26f-e5ed-465b-bcc7-88811af261b9#id",
           "topicId": "c50znx8v4z7t",
           "topicName": "Theresa May",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "96e2c26f-e5ed-465b-bcc7-88811af261b9",
           "thingLabel": "Theresa May",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/42069d65-f3b1-41e2-b3e9-35ac9d799a1a#id",
           "topicId": "cmj34zmwx1lt",
           "topicName": "England local elections 2017",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "42069d65-f3b1-41e2-b3e9-35ac9d799a1a",
           "thingLabel": "England local elections 2017",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/3c6a4e42-9efd-4440-89df-647121c87452#id",
           "topicId": "cg41ylwvx45t",
           "topicName": "Wales local elections 2017",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "3c6a4e42-9efd-4440-89df-647121c87452",
           "thingLabel": "Wales local elections 2017",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/12dbc9e0-8685-45d3-881f-856aac744fa7#id",
           "thingId": "12dbc9e0-8685-45d3-881f-856aac744fa7",
           "thingLabel": "Selahattin Demirtas",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/809d4af1-1ab8-4467-8ac7-5f61651dbf8c#id",
           "thingId": "809d4af1-1ab8-4467-8ac7-5f61651dbf8c",
           "thingLabel": "Temel Karamollaoglu",
-          "thingType": [
-            "Person",
-            "Thing"
-          ]
+          "thingType": ["Person", "Thing"]
         }
       ],
       "mentions": []
@@ -312,6 +301,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000006o"
     },
     "summary": "Donec a urna odio. Donec vestibulum ut enim a sollicitudin. Curabitur sit amet interdum odio.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

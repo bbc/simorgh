@@ -18,7 +18,17 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "subheading", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "subheading",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [],
       "mentions": []
@@ -186,6 +196,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000019o"
     },
     "summary": "Nulla lectus justo, congue in feugiat quis, pharetra at leo.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

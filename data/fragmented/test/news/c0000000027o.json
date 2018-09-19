@@ -35,57 +35,37 @@
           "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
           "topicId": "cpwpy79d6dxt",
           "topicName": "Royal Wedding 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
           "thingLabel": "Royal Wedding 2018",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
           "topicId": "cg3mq45zq4xt",
           "topicName": "Duchess of Sussex",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
           "thingLabel": "Duchess of Sussex",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/282061c0-3743-4eb0-9dde-6d710389630f#id",
           "topicId": "c8zwn8k9nlet",
           "topicName": "Windsor",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "282061c0-3743-4eb0-9dde-6d710389630f",
           "thingLabel": "Windsor",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/f2815ef8-ea42-414b-865c-d5e92b5207e7#id",
           "topicId": "cy4ng11dgygt",
           "topicName": "Hackney",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "f2815ef8-ea42-414b-865c-d5e92b5207e7",
           "thingLabel": "Hackney",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []

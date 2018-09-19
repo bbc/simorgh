@@ -18,26 +18,28 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
           "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
           "thingLabel": "ایالات متحده آمریکا",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id",
           "thingId": "590ec892-07c1-49d5-b7b7-1de0b05d0500",
           "thingLabel": "کره شمالی",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []
@@ -183,6 +185,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000026o"
     },
     "summary": "کیم یونگ-چول، از مقامات ارشد و نزدیک به رهبر و رئیس سابق سرویس اطلاعاتی آن کشور وارد پکن، پایتخت چین شده و گفته می‌شود در نظر دارد برای ملاقات با مقامات آمریکایی عازم آن کشور شود. انتظار می‌رود هدف از این دیدار گفتگو درباره نشست رهبران آمریکا و کره شمالی باشد.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

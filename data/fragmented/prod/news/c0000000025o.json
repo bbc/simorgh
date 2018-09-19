@@ -36,43 +36,28 @@
           "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
           "topicId": "cpwpy79d6dxt",
           "topicName": "Royal Wedding 2018",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
           "thingLabel": "Royal Wedding 2018",
-          "thingType": [
-            "Thing",
-            "Event"
-          ]
+          "thingType": ["Thing", "Event"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
           "topicId": "cg3mq45zq4xt",
           "topicName": "Duchess of Sussex",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
           "thingLabel": "Duchess of Sussex",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/e248c597-4f16-40f9-8313-678e7e911891#id",
           "topicId": "ck6z09186yet",
           "topicName": "Westminster Abbey",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "e248c597-4f16-40f9-8313-678e7e911891",
           "thingLabel": "Westminster Abbey",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         }
       ],
       "mentions": [
@@ -80,38 +65,25 @@
           "thingUri": "http://www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id",
           "topicId": "c2gze9gn5lkt",
           "topicName": "Diana, Princess of Wales",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "b2412496-55d2-43ab-9a76-d205428090e2",
           "thingLabel": "Diana, Princess of Wales",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
           "thingId": "1efbf3e5-b330-49a1-b531-b507ab027c96",
           "thingLabel": "Queen Victoria",
-          "thingType": [
-            "Person",
-            "Thing"
-          ]
+          "thingType": ["Person", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/ec71caf7-c451-4ab8-8a29-70582347a42c#id",
           "topicId": "cz4pr2gd414t",
           "topicName": "Duchess of Cambridge",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "ec71caf7-c451-4ab8-8a29-70582347a42c",
           "thingLabel": "Duchess of Cambridge",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         }
       ]
     }

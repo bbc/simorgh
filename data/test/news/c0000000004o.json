@@ -18,36 +18,36 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/27094cb6-a61c-4236-ba93-f8ca99921444#id",
           "topicId": "c8zwnrr1ezmt",
           "topicName": "Llandaff",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "27094cb6-a61c-4236-ba93-f8ca99921444",
           "thingLabel": "Llandaff",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/d3200c79-82f2-4f4d-a03f-fe1b8df9c3c4#id",
           "topicId": "c7047e7xdvmt",
           "topicName": "Elton John",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "d3200c79-82f2-4f4d-a03f-fe1b8df9c3c4",
           "thingLabel": "Elton John",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         }
       ],
       "mentions": []
@@ -308,6 +308,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000004o"
     },
     "summary": "Donec in ante id justo interdum pellentesque non vitae tortor.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }

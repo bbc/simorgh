@@ -18,7 +18,17 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption", "video", "rawVideo"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo"
+    ],
     "tags": {
       "about": [],
       "mentions": []
@@ -469,6 +479,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000022o"
     },
     "summary": "Proin sollicitudin elit neque, in mollis turpis pharetra non. Ut quis neque faucibus, ultrices ante sit amet, fringilla est.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }
