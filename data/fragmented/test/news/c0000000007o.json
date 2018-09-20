@@ -32,57 +32,37 @@
           "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
           "topicId": "cg3mq45zq4xt",
           "topicName": "Duchess of Sussex",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
           "thingLabel": "Duchess of Sussex",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/b60cc878-3998-474a-9db8-939e097b1341#id",
           "topicId": "c486m50k1ejt",
           "topicName": "David Hasselhoff",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "b60cc878-3998-474a-9db8-939e097b1341",
           "thingLabel": "David Hasselhoff",
-          "thingType": [
-            "Thing",
-            "Person"
-          ]
+          "thingType": ["Thing", "Person"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/5801200d-8765-4cc6-a002-6541b6921f04#id",
           "topicId": "c8zwnrr1k88t",
           "topicName": "Inverquharity",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "5801200d-8765-4cc6-a002-6541b6921f04",
           "thingLabel": "Inverquharity",
-          "thingType": [
-            "Place",
-            "Thing"
-          ]
+          "thingType": ["Place", "Thing"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/e80a8d15-0987-45a9-8152-097f23ce29e1#id",
           "topicId": "cllmr11nz66t",
           "topicName": "Ivinghoe",
-          "curationType": [
-            "location-stream"
-          ],
+          "curationType": ["location-stream"],
           "thingId": "e80a8d15-0987-45a9-8152-097f23ce29e1",
           "thingLabel": "Ivinghoe",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ],
       "mentions": []
@@ -264,9 +244,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "Cras porttitor dictum tellus",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "attributes": ["bold"]
                       }
                     },
                     {

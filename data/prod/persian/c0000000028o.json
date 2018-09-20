@@ -18,17 +18,22 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1#id",
           "thingId": "c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1",
           "thingLabel": " پهپاد",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ]
+          "thingType": ["Thing", "Theme"]
         }
       ],
       "mentions": []
@@ -323,6 +328,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000028o"
     },
     "summary": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
-    "timestamp" : 1535122662000
+    "timestamp": 1535122662000
   }
 }

@@ -18,22 +18,25 @@
       "genre": "politics"
     },
     "version": "v0.3.2",
-    "blockTypes": [ "headline", "text", "paragraph", "image", "rawImage", "altText", "caption"],
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption"
+    ],
     "tags": {
       "about": [
         {
           "thingUri": "http://www.bbc.co.uk/things/7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376#id",
           "topicId": "cly498dwj1lt",
           "topicName": "Cardiff Airport link road",
-          "curationType": [
-            "vivo-stream"
-          ],
+          "curationType": ["vivo-stream"],
           "thingId": "7bfe15e1-c2a9-4b7f-95d1-92ba6a8a8376",
           "thingLabel": "Cardiff Airport link road",
-          "thingType": [
-            "Event",
-            "Thing"
-          ]
+          "thingType": ["Event", "Thing"]
         }
       ],
       "mentions": []
@@ -308,6 +311,6 @@
       "optimoUrn": "urn:bbc:optimo:asset:c0000000014o"
     },
     "summary": "The UK steps up its war of words with the EU over being shut out of new satellite navigation system.",
-    "timestamp" : 1514811600000
+    "timestamp": 1514811600000
   }
 }
