@@ -56,7 +56,11 @@ describe('Article Body Tests', () => {
         getElement('span').eq(0);
       });
     copyrightLabel.should('contain', 'PA');
-    shouldContainStyles(copyrightLabel, 'background-color', 'rgb(34, 34, 34)');
+    shouldContainStyles(
+      copyrightLabel,
+      'background-color',
+      'rgba(34, 34, 34, 0.75)',
+    );
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
 
