@@ -8,13 +8,13 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
-const Blocks = ({ blocks, blocksToRender }) =>
+const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, blockId, model } = block;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
-    const Block = blocksToRender[type] || BlockString;
+    const Block = componentsToRender[type] || BlockString;
 
     return (
       <Block
@@ -28,7 +28,7 @@ const Blocks = ({ blocks, blocksToRender }) =>
 
 Blocks.propTypes = {
   ...mainContentModelPropTypes,
-  blocksToRender: shape({
+  componentsToRender: shape({
     headline: func,
     subheading: func,
     text: func,

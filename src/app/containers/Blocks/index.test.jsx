@@ -147,7 +147,7 @@ describe('Blocks', () => {
     },
   ];
 
-  const blocksToRender = {
+  const componentsToRender = {
     headline: () => <h1>A headline</h1>,
     subheading: () => <h2>A subheading</h2>,
     text: () => <p>Some text</p>,
@@ -155,6 +155,6 @@ describe('Blocks', () => {
 
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <Blocks blocks={blocks} blocksToRender={blocksToRender} />,
+    <Blocks blocks={blocks} componentsToRender={componentsToRender} />,
   );
 });

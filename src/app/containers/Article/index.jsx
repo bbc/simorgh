@@ -34,7 +34,7 @@ const validateId = id => {
   }
 };
 
-const blocksToRender = {
+const componentsToRender = {
   headline: headings,
   subheading: headings,
   text,
@@ -125,7 +125,7 @@ class ArticleContainer extends Component {
         <MainContent>
           <Blocks
             blocks={content.model.blocks}
-            blocksToRender={blocksToRender}
+            componentsToRender={componentsToRender}
           />
         </MainContent>
         <Footer />
