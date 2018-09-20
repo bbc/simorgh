@@ -5,6 +5,7 @@ import {
   FF_NEWS_SANS_REG,
   C_WHITE,
   GEL_SPACING,
+  GEL_SPACING_HLF,
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
@@ -16,7 +17,10 @@ const StyledCopyright = styled.span.attrs({
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: ${C_WHITE};
-  padding: ${GEL_SPACING};
+  padding-top: ${GEL_SPACING_HLF};
+  padding-bottom: ${GEL_SPACING_HLF};
+  padding-left: ${GEL_SPACING};
+  padding-right: ${GEL_SPACING};
   font-family: ${FF_NEWS_SANS_REG};
   position: absolute;
   bottom: 0;
