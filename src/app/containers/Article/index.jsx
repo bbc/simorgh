@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import { ServiceContextProvider } from '../../components/ServiceContext';
 import serviceConfig from '../../lib/serviceConfig';
 
 const validateService = service => {
@@ -107,12 +108,14 @@ class ArticleContainer extends Component {
     const config = serviceConfig[service];
     return (
       <Fragment>
-        <Header />
-        <Metadata
-          {...metadataProps(amp, config, id, metadata, promo, service)}
-        />
-        <MainContent blocks={content.model.blocks} />
-        <Footer />
+        <ServiceContextProvider service={service}>
+          <Header />
+          <Metadata
+            {...metadataProps(amp, config, id, metadata, promo, service)}
+          />
+          <MainContent blocks={content.model.blocks} />
+          <Footer />
+        </ServiceContextProvider>
       </Fragment>
     );
   }

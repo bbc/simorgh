@@ -2,14 +2,19 @@ import React from 'react';
 import Brand from './index';
 
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { ServiceContextProvider } from '../ServiceContext';
 
 describe('Brand', () => {
   shouldMatchSnapshot(
     'should render correctly with a default indented logo',
-    <Brand />,
+    <ServiceContextProvider>
+      <Brand />
+    </ServiceContextProvider>,
   );
   shouldMatchSnapshot(
     'should render correctly with indentedLogo false',
-    <Brand indentedLogo={false} />,
+    <ServiceContextProvider>
+      <Brand indentedLogo={false} />
+    </ServiceContextProvider>,
   );
 });
