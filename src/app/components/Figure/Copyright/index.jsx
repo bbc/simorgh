@@ -17,10 +17,7 @@ const StyledCopyright = styled.span.attrs({
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: ${C_WHITE};
-  padding-top: ${GEL_SPACING_HLF};
-  padding-bottom: ${GEL_SPACING_HLF};
-  padding-left: ${GEL_SPACING};
-  padding-right: ${GEL_SPACING};
+  padding: ${GEL_SPACING_HLF} ${GEL_SPACING};
   font-family: ${FF_NEWS_SANS_REG};
   position: absolute;
   bottom: 0;
