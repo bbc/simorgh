@@ -7,7 +7,6 @@ const readScenario = require('./readScenario');
 const defaultDataPath = './data';
 
 let fileToValidateSpy;
-let readScenarioSpy;
 
 const expectMethodToBeCalledTimes = (
   number,
@@ -20,8 +19,14 @@ const expectMethodToBeCalledTimes = (
 };
 
 describe('readdirSync helper', () => {
+  afterEach(() => {
+    if (fileToValidateSpy) {
+      fileToValidateSpy.mockRestore();
+    }
+  });
+
   it('should call readScenario for every file in the /data directory', () => {
-    readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
+    const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
 
     expectMethodToBeCalledTimes(79, readScenarioSpy);
   });
@@ -33,7 +38,6 @@ describe('readdirSync helper', () => {
   });
 
   it('should call fileToValidate for only the files in /data/prod/news', () => {
-    fileToValidateSpy.mockRestore();
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
     expectMethodToBeCalledTimes(2, fileToValidateSpy, './data/prod/news');
