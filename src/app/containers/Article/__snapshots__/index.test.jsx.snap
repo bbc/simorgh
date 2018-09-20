@@ -68,7 +68,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           },
         ]
       }
-      blocksToRender={
+      componentsToRender={
         Object {
           "headline": [Function],
           "image": [Function],
