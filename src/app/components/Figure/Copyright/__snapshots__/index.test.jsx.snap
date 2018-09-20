@@ -17,7 +17,7 @@ exports[`Copyright should render correctly 1`] = `
 .c0 {
   font-size: 0.75em;
   line-height: 1em;
-  background-color: #222222;
+  background-color: rgba(34,34,34,0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.5rem;
@@ -29,7 +29,7 @@ exports[`Copyright should render correctly 1`] = `
 
 .c0::after {
   content: '.';
-  color: #222222;
+  color: rgba(34,34,34,0);
 }
 
 <span

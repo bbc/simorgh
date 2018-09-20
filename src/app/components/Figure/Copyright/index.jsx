@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
   C_WHITE,
-  C_EBON,
   GEL_SPACING,
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
@@ -14,7 +13,7 @@ const StyledCopyright = styled.span.attrs({
   role: 'text',
 })`
   ${T_MINION};
-  background-color: ${C_EBON};
+  background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: ${C_WHITE};
   padding: ${GEL_SPACING};
@@ -29,7 +28,7 @@ const StyledCopyright = styled.span.attrs({
   */
   &::after {
     content: '.';
-    color: ${C_EBON}; /* This needs to match the background-color */
+    color: rgba(34, 34, 34, 0); /* This needs to be completely transparent */
   }
 `;
 
