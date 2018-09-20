@@ -55,6 +55,7 @@ const articlePropTypes = {
       timestamp: number,
     }).isRequired,
   }),
+  service: string,
 };
 
 export default articlePropTypes;
