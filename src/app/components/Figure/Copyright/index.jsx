@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { node } from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -10,9 +10,7 @@ import {
 import { T_MINION } from '../../../lib/constants/typography';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 
-const StyledCopyright = styled.span.attrs({
-  role: 'text',
-})`
+const StyledCopyright = styled.span`
   ${T_MINION};
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
@@ -22,22 +20,13 @@ const StyledCopyright = styled.span.attrs({
   position: absolute;
   bottom: 0;
   right: 0;
-
-  /*
-    The hidden '.' is required for accessibility reasons
-    https://github.com/bbc/simorgh/issues/456#issuecomment-419405600
-  */
-  &::after {
-    content: '.';
-    color: rgba(34, 34, 34, 0); /* This needs to be completely transparent */
-  }
 `;
 
 const Copyright = ({ children }) => (
-  <StyledCopyright>
-    <VisuallyHiddenText>Image source,</VisuallyHiddenText>
-    {children}
-  </StyledCopyright>
+  <Fragment>
+    <VisuallyHiddenText>Image source, {children}</VisuallyHiddenText>
+    <StyledCopyright aria-hidden="true">{children}</StyledCopyright>
+  </Fragment>
 );
 
 Copyright.propTypes = {

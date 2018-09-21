@@ -195,7 +195,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   width: 100%;
 }
 
-.c4 {
+.c3 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -208,7 +208,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   top: 0;
 }
 
-.c3 {
+.c4 {
   font-size: 0.75em;
   line-height: 1em;
   background-color: rgba(34,34,34,0.75);
@@ -219,11 +219,6 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.c3::after {
-  content: '.';
-  color: rgba(34,34,34,0);
 }
 
 .c5 {
@@ -265,13 +260,14 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
     />
     <span
       className="c3"
-      role="text"
     >
-      <span
-        className="c4"
-      >
-        Image source,
-      </span>
+      Image source, 
+      Getty Images
+    </span>
+    <span
+      aria-hidden="true"
+      className="c4"
+    >
       Getty Images
     </span>
   </div>
@@ -279,7 +275,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
     className="c5"
   >
     <span
-      className="c4"
+      className="c3"
     >
       Image caption, 
     </span>
@@ -300,7 +296,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -313,7 +309,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   top: 0;
 }
 
-.c3 {
+.c4 {
   font-size: 0.75em;
   line-height: 1em;
   background-color: rgba(34,34,34,0.75);
@@ -324,11 +320,6 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.c3::after {
-  content: '.';
-  color: rgba(34,34,34,0);
 }
 
 .c1 {
@@ -348,13 +339,14 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
     />
     <span
       className="c3"
-      role="text"
     >
-      <span
-        className="c4"
-      >
-        Image source,
-      </span>
+      Image source, 
+      Getty Images
+    </span>
+    <span
+      aria-hidden="true"
+      className="c4"
+    >
       Getty Images
     </span>
   </div>

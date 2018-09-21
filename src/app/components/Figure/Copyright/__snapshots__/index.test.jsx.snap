@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Copyright should render correctly 1`] = `
-.c1 {
+Array [
+  .c0 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -14,7 +15,13 @@ exports[`Copyright should render correctly 1`] = `
   top: 0;
 }
 
-.c0 {
+<span
+    className="c0"
+  >
+    Image source, 
+    Getty Images
+  </span>,
+  .c0 {
   font-size: 0.75em;
   line-height: 1em;
   background-color: rgba(34,34,34,0.75);
@@ -27,20 +34,11 @@ exports[`Copyright should render correctly 1`] = `
   right: 0;
 }
 
-.c0::after {
-  content: '.';
-  color: rgba(34,34,34,0);
-}
-
 <span
-  className="c0"
-  role="text"
->
-  <span
-    className="c1"
+    aria-hidden="true"
+    className="c0"
   >
-    Image source,
-  </span>
-  Getty Images
-</span>
+    Getty Images
+  </span>,
+]
 `;

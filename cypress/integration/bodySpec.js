@@ -53,7 +53,7 @@ describe('Article Body Tests', () => {
     const copyrightLabel = getElement('figure')
       .eq(0)
       .within(() => {
-        getElement('span').eq(0);
+        getElement('span').eq(1);
       });
     copyrightLabel.should('contain', 'PA');
     shouldContainStyles(
