@@ -3,7 +3,7 @@ import { node, string } from 'prop-types';
 import services from '../../lib/config/services';
 
 /* Create ServiceContext using the default service */
-const ServiceContext = React.createContext(services.default);
+export const ServiceContext = React.createContext(services.default);
 
 export const ServiceContextProvider = ({ children, service }) => (
   <ServiceContext.Provider value={services[service]}>

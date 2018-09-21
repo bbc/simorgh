@@ -11,8 +11,7 @@ import {
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
 import { T_LONG_PRIMER } from '../../../lib/constants/typography';
-
-const captionOffscreenText = 'Image caption, ';
+import { ServiceContextConsumer } from '../../ServiceContext';
 
 const StyledCaption = styled.figcaption`
   ${T_LONG_PRIMER};
@@ -28,7 +27,11 @@ const StyledCaption = styled.figcaption`
 
 const Caption = ({ children }) => (
   <StyledCaption>
-    <VisuallyHiddenText>{captionOffscreenText}</VisuallyHiddenText>
+    <ServiceContextConsumer>
+      {({ imageCaptionOffscreenText }) => (
+        <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
+      )}
+    </ServiceContextConsumer>
     {children}
   </StyledCaption>
 );

@@ -2,6 +2,8 @@ import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import Text from './index';
 import Caption from '../Figure/Caption/index';
+import { ServiceContext } from '../ServiceContext';
+import serviceContextStub from '../../helpers/contextHelpers';
 
 describe('Text', () => {
   describe('with no data', () => {
@@ -35,9 +37,11 @@ describe('Text', () => {
 
   shouldMatchSnapshot(
     'should render a <figcaption> as per the Caption component override',
-    <Text
-      text="This is text that contains an [inline link](https://www.bbc.com/news) inside it."
-      paragraphOverride={Caption}
-    />,
+    <ServiceContext.Provider value={serviceContextStub.news}>
+      <Text
+        text="This is text that contains an [inline link](https://www.bbc.com/news) inside it."
+        paragraphOverride={Caption}
+      />
+    </ServiceContext.Provider>,
   );
 });
