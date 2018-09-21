@@ -22,9 +22,14 @@ const StyledCopyright = styled.span`
   right: 0;
 `;
 
+const hiddenTextPrefix = `Image source, `;
+
 const Copyright = ({ children }) => (
   <Fragment>
-    <VisuallyHiddenText>Image source, {children}</VisuallyHiddenText>
+    <VisuallyHiddenText>
+      {hiddenTextPrefix}
+      {children}
+    </VisuallyHiddenText>
     <StyledCopyright aria-hidden="true">{children}</StyledCopyright>
   </Fragment>
 );
