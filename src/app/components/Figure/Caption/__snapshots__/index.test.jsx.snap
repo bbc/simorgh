@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Caption should render correctly for news 1`] = `
+exports[`Caption should render correctly with news ServiceContext 1`] = `
 .c1 {
   position: absolute;
   width: 1px;
@@ -48,7 +48,7 @@ exports[`Caption should render correctly for news 1`] = `
 </figcaption>
 `;
 
-exports[`Caption should render correctly for persian 1`] = `
+exports[`Caption should render correctly with persian ServiceContext 1`] = `
 .c1 {
   position: absolute;
   width: 1px;
