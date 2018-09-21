@@ -261,8 +261,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
     <span
       className="c3"
     >
-      Image source, 
-      Getty Images
+      Image source, Getty Images
     </span>
     <span
       aria-hidden="true"
@@ -340,8 +339,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
     <span
       className="c3"
     >
-      Image source, 
-      Getty Images
+      Image source, Getty Images
     </span>
     <span
       aria-hidden="true"

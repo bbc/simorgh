@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { node } from 'prop-types';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -22,20 +22,20 @@ const StyledCopyright = styled.span`
   right: 0;
 `;
 
-const hiddenTextPrefix = `Image source, `;
+const Copyright = ({ children }) => {
+  const attributionText = `Image source, `;
+  const hiddenText = `${attributionText}${children}`;
 
-const Copyright = ({ children }) => (
-  <Fragment>
-    <VisuallyHiddenText>
-      {hiddenTextPrefix}
-      {children}
-    </VisuallyHiddenText>
-    <StyledCopyright aria-hidden="true">{children}</StyledCopyright>
-  </Fragment>
-);
+  return (
+    <Fragment>
+      <VisuallyHiddenText>{hiddenText}</VisuallyHiddenText>
+      <StyledCopyright aria-hidden="true">{children}</StyledCopyright>
+    </Fragment>
+  );
+};
 
 Copyright.propTypes = {
-  children: node.isRequired,
+  children: string.isRequired,
 };
 
 export default Copyright;
