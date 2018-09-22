@@ -1,6 +1,7 @@
 import express from 'express';
 import expressStaticGzip from 'express-static-gzip';
 import { render } from '@jaredpalmer/after';
+import compression from 'compression';
 import routes from '../app/routes';
 import Document from '../app/containers/Document';
 
@@ -43,6 +44,7 @@ const dataFolderToRender =
 const server = express();
 server
   .disable('x-powered-by')
+  .use(compression())
   .use('/data', express.static(dataFolderToRender))
   .use(
     expressStaticGzip(publicDirectory, {
