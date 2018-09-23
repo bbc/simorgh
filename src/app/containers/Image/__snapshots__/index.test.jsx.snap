@@ -1,31 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render an image with alt text 1`] = `
-<figure>
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-</figure>
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyright={null}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-.c0 {
-  background-color: #d5d0cd;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  padding: 8px;
-}
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
+  copyright={null}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
+`;
 
-<figure>
-  <img
-    alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  />
-  <figcaption
-    className="c0"
-  >
-    Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-  </figcaption>
-</figure>
+exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyright="Copyright Getty images"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
 `;

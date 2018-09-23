@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copyright should render correctly 1`] = `
+.c0 {
+  font-size: 0.75em;
+  line-height: 1em;
+  background-color: #222222;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.c0::after {
+  content: '.';
+  color: #222222;
+}
+
+<span
+  className="c0"
+  role="text"
+>
+  Getty Images
+</span>
+`;

@@ -1,25 +1,36 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import Figure from './index';
-
-const image = {
-  alt:
-    'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-  src:
-    'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-};
-
-const caption = 'This is a caption!';
+import {
+  FigureImage,
+  FigureImageWithCaption,
+  FigureImageWithCopyright,
+  FigureImageWithCopyrightAndCaption,
+  FigureImageWithCaptionContainingLink,
+} from './fixtureData';
 
 describe('Figure', () => {
   describe('with a caption', () => {
+    shouldMatchSnapshot('should render correctly', FigureImageWithCaption);
+  });
+
+  describe('with a caption containing a link', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <Figure {...image} caption={caption} />,
+      FigureImageWithCaptionContainingLink,
     );
   });
 
   describe('without a caption', () => {
-    shouldMatchSnapshot('should render correctly', <Figure {...image} />);
+    shouldMatchSnapshot('should render correctly', FigureImage);
+  });
+
+  describe('with non-BBC copyright', () => {
+    shouldMatchSnapshot('should render correctly', FigureImageWithCopyright);
+  });
+
+  describe('with caption and non-BBC copyright', () => {
+    shouldMatchSnapshot(
+      'should render correctly',
+      FigureImageWithCopyrightAndCaption,
+    );
   });
 });

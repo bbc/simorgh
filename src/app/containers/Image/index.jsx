@@ -1,10 +1,7 @@
 import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
-import {
-  imagePropTypes,
-  emptyBlockArrayDefaultProps,
-} from '../../models/propTypes';
-import Figure from '../../components/Figure';
+import { imageModelPropTypes } from '../../models/propTypes/image';
+import Figure from '../Figure';
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -15,7 +12,22 @@ const getCaption = block => {
   return getText(block);
 };
 
+const getCopyright = copyrightHolder => {
+  if (copyrightHolder === 'BBC') {
+    return null;
+  }
+
+  const copyrightOffscreenText = 'Copyright';
+  const copyrightText = `${copyrightOffscreenText} ${copyrightHolder}`;
+
+  return copyrightText;
+};
+
 const ImageContainer = ({ blocks }) => {
+  if (!blocks) {
+    return null;
+  }
+
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
@@ -24,21 +36,22 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator } = rawImageBlock.model;
+  const { locator, copyrightHolder } = rawImageBlock.model;
   const altText = getText(altTextBlock);
+  const copyright = getCopyright(copyrightHolder);
+  const caption = getCaption(captionBlock);
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
   return (
     <Figure
       src={rawImageSrc}
       alt={altText}
-      caption={getCaption(captionBlock)}
+      copyright={copyright}
+      caption={caption}
     />
   );
 };
 
-ImageContainer.propTypes = imagePropTypes;
-
-ImageContainer.defaultProps = emptyBlockArrayDefaultProps;
+ImageContainer.propTypes = imageModelPropTypes;
 
 export default ImageContainer;

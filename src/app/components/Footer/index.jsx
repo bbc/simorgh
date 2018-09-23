@@ -1,81 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import Brand from '../Brand';
+import Link from './Link';
+import FooterList from './List';
 import {
   C_ORBIT_GREY,
   C_WHITE,
   FF_NEWS_SANS_REG,
-  GEL_SPACING,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
+import {
+  layoutGridWrapper,
+  layoutGridItemFullWidth,
+} from '../../lib/layoutGrid';
+import { T_BREVIER } from '../../lib/constants/typography';
 
-const StyledFooter = styled.footer`
+const StyledFooterLinksWrapper = styled.div`
+  ${layoutGridWrapper};
   background-color: ${C_ORBIT_GREY};
+`;
+
+const StyledFooterLinks = styled.div`
+  ${layoutGridItemFullWidth}
+  ${T_BREVIER}
   font-family: ${FF_NEWS_SANS_REG};
-  padding: ${GEL_SPACING_DBL}px ${GEL_SPACING}px;
-`;
-
-const StyledList = styled.ul`
-  border-bottom: 1px solid ${C_WHITE};
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(4, 50%);
-  list-style-type: none;
-  margin: 0 0 ${GEL_SPACING}px 0;
-  padding: 0 0 ${GEL_SPACING}px 0;
-  > li:first-child {
-    border-bottom: 1px solid ${C_WHITE};
-    grid-column: 1/3;
-    margin-bottom: ${GEL_SPACING}px;
-    @supports not (display: grid) {
-      width: 100%;
-    }
-  }
-`;
-
-const StyledListItem = styled.li`
-  min-width: 50%;
-  padding: ${GEL_SPACING}px;
-  @supports not (display: grid) {
-    padding: ${GEL_SPACING}px 0;
-    display: inline-block;
-  }
-`;
-
-const StyledLink = styled.a`
-  color: ${C_WHITE};
-  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
 `;
 
 const StyledParagraph = styled.p`
   color: ${C_WHITE};
-  padding: ${GEL_SPACING}px 0 0 0;
   margin: 0;
+  padding: ${GEL_SPACING_DBL} 0;
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
-  <StyledFooter role="contentinfo">
-    <StyledList>
-      {links.map((link, index) => (
-        // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
-        // eslint-disable-next-line react/no-array-index-key
-        <StyledListItem key={index}>
-          <StyledLink href={link.href}>{link.text}</StyledLink>
-        </StyledListItem>
-      ))}
-    </StyledList>
-    <StyledParagraph>
-      {copyrightText}
-      <StyledLink href={externalLink.href}>{externalLink.text}</StyledLink>
-    </StyledParagraph>
-  </StyledFooter>
+  <footer role="contentinfo">
+    <Brand indentedLogo={false} />
+    <StyledFooterLinksWrapper>
+      <StyledFooterLinks>
+        <FooterList links={links} />
+        <StyledParagraph>
+          {copyrightText}
+          <Link text={externalLink.text} href={externalLink.href} inline />
+        </StyledParagraph>
+      </StyledFooterLinks>
+    </StyledFooterLinksWrapper>
+  </footer>
 );
 
 const linkPropTypes = shape({

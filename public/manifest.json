@@ -1,11 +1,11 @@
 {
-  "name": "Simorgh",
-  "short_name": "Simorgh",
-  "Scope": "/",
-  "background_color": "#bb1919",
-  "display": "browser",
-  "start_url": "/",
-  "theme_color": "#bb1919",
+  "name": "BBC News",
+  "short_name": "BBC News",
+  "Scope": "/news/",
+  "background_color": "#b80000",
+  "display": "standalone",
+  "start_url": "/news/",
+  "theme_color": "#b80000",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

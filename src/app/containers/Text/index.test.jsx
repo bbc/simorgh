@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
@@ -18,23 +21,24 @@ describe('TextContainer', () => {
 
     const data = {
       blocks: [
-        paragraphBlock(
-          '01',
-          "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c000000000ro).",
-        ),
-        paragraphBlock(
-          '02',
-          'This is another paragraph with some **bold** text.',
-        ),
-        paragraphBlock('03', 'This is a paragraph with _italic_ text.'),
-        paragraphBlock(
-          '04',
-          '~~This is a paragraph with some strike-through text~~.',
-        ),
-        paragraphBlock('05', 'This is a paragraph with some `inline code.`'),
+        paragraphBlock('01', 'This is a 1st paragraph block.'),
+        paragraphBlock('02', 'This is a 2nd paragraph block.'),
+        paragraphBlock('03', 'This is a 3rd paragraph block.'),
+        paragraphBlock('04', 'This is a 4th paragraph block..'),
+        paragraphBlock('05', 'This is a 5th paragraph block.'),
       ],
     };
 
-    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <TextContainer {...data} />,
+    );
+
+    describe('with a passed previous block type', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <TextContainer {...data} type="text" typeOfPreviousBlock="text" />,
+      );
+    });
   });
 });

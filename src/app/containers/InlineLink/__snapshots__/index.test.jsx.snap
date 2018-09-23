@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLink with link matching routes for SPA should render correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <InlineLinkContainer
+    href="/news/articles/c0000000027o"
+  >
+    Internal SPA article
+  </InlineLinkContainer>
+</Router>
+`;
+
+exports[`InlineLink with link not matching SPA route should render correctly 1`] = `
+<InlineLink
+  href="https://www.bbc.com/news"
+>
+  BBC News
+</InlineLink>
+`;

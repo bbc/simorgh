@@ -1,41 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-Array [
-  <p>
-    It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, 
-    <a
-      href="/news/articles/c000000000ro"
-    >
-      which were later donated to local hospices
-    </a>
-    .
-  </p>,
-  <p>
-    This is another paragraph with some 
-    <strong>
-      bold
-    </strong>
-     text.
-  </p>,
-  <p>
-    This is a paragraph with 
-    <em>
-      italic
-    </em>
-     text.
-  </p>,
-  <p>
-    <del>
-      This is a paragraph with some strike-through text
-    </del>
-    .
-  </p>,
-  <p>
-    This is a paragraph with some 
-    <code>
-      inline code.
-    </code>
-  </p>,
-]
+<React.Fragment>
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 1st paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 2nd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 3rd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 4th paragraph block.."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 5th paragraph block."
+  />
+</React.Fragment>
+`;
+
+exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
+<React.Fragment>
+  <hr />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 1st paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 2nd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 3rd paragraph block."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 4th paragraph block.."
+  />
+  <Text
+    paragraphOverride={[Function]}
+    text="This is a 5th paragraph block."
+  />
+</React.Fragment>
 `;

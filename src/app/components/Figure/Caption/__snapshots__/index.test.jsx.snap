@@ -1,16 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Caption should render correctly 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  top: 0;
+}
+
 .c0 {
-  background-color: #d5d0cd;
+  font-size: 0.9375em;
+  line-height: 1.125rem;
+  background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Arial,Helvetica,freesans,sans-serif;
-  padding: 8px;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    padding: 0.5rem 1rem;
+  }
 }
 
 <figcaption
   className="c0"
 >
+  <span
+    className="c1"
+  >
+    Image caption, 
+  </span>
+  <span
+    className="c1"
+  >
+    Image caption,
+  </span>
   This is some Caption text
 </figcaption>
 `;

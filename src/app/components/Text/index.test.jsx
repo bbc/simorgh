@@ -1,6 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import Text from './index';
+import Caption from '../Figure/Caption/index';
 
 describe('Text', () => {
   describe('with no data', () => {
@@ -25,5 +26,18 @@ describe('Text', () => {
   shouldMatchSnapshot(
     'should render inline-code',
     <Text text="This is text with `some inline code`." />,
+  );
+
+  shouldMatchSnapshot(
+    'should render an inline link',
+    <Text text="This is text that contains an [inline link](https://www.bbc.com/news) inside it." />,
+  );
+
+  shouldMatchSnapshot(
+    'should render a <figcaption> as per the Caption component override',
+    <Text
+      text="This is text that contains an [inline link](https://www.bbc.com/news) inside it."
+      paragraphOverride={Caption}
+    />,
   );
 });

@@ -13,21 +13,29 @@ exports[`Document should render correctly 1`] = `
       charSet="utf-8"
     />
     <meta
-      content="width=device-width, initial-scale=1"
-      name="viewport"
-    />
-    <meta
       content="nofollow"
       name="robots"
     />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
     <link
-      href="manifest.json"
+      href="/manifest.json"
       rel="manifest"
     />
     <ResourceHints />
     <title>
       Test title
     </title>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000025o"
+      rel="canonical"
+    />
     <style>
       html { color: red; }
     </style>

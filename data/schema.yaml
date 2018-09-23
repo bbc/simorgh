@@ -61,67 +61,152 @@ components:
     article:
       type: object
       required:
-        - lastUpdatedDateTime
-        - locator
-        - metaDescription
-        - model
-        - passport
-        - publishedDateTime
-        - seoHeadline
-        - type
+        - content
+        - metadata
+        - promo
       properties:
-        lastUpdatedDateTime:
-          example: 2017-12-21 17:32:28 +00:00
-          format: date-time
-          type: string
-        locator:
-          example: "urn:bjk:hello:asset:c000zk2l88wo"
-          format: uuid
-          type: string
-        metaDescription:
-          example: "story about a young brave hero"
-          type: string
-        model:
-          properties:
-            blocks:
-              $ref: "#/components/schemas/blocks"
-          required:
-            - blocks
+        content:
           type: object
-        passport:
+          required:
+            - model
           properties:
-            articleType:
+            model:
+              type: object
+              required:
+                - blocks
+              properties:
+                blocks:
+                  $ref: "#/components/schemas/blocks"
+        metadata:
+          type: object
+          required:
+            - blockId
+            - created
+            - firstPublished
+            - id
+            - lastPublished
+            - lastUpdated
+            - locators
+            - passport
+            - tags
+            - type
+          properties:
+            category:
               enum:
                 - analysis
+                - askTheAudience
+                - explainer
+                - factCheck
                 - feature
                 - news
+                - opinion
+                - review
+                - summary
               example: analysis
+            blockId:
               type: string
-            home:
-              example: "http://www.bbc.co.uk/ontologies/passport/home/News"
+            blockTypes:
+              type: object
+              items:
+                type: string
+              minItems: 2
+            created:
+              type: number
+            createdBy:
               type: string
-            language:
-              example: en-gb
+            firstPublished:
+              type: number
+            id:
               type: string
-          required:
-            - articleType
-            - home
-            - language
+            lastPublished:
+              type: number
+            lastUpdated:
+              type: number
+            locators:
+              type: object
+              required:
+                - optimoUrn
+              properties:
+                optimoUrn:
+                  type: string
+            passport:
+              type: object
+              required:
+                - category
+                - home
+                - language
+              properties:
+                category:
+                  enum:
+                    - analysis
+                    - askTheAudience
+                    - explainer
+                    - factCheck
+                    - feature
+                    - news
+                    - opinion
+                    - review
+                    - summary
+                  example: analysis
+                  type: string
+                genre:
+                  type: string
+                home:
+                  example: "http://www.bbc.co.uk/ontologies/passport/home/News"
+                  type: string
+                language:
+                  example: "en-gb"
+                  type: string
+            tags:
+              type: object
+              properties:
+                about:
+                  type: object
+                  items:
+                    type: object
+                mentions:
+                  type: object
+                  items:
+                    type: object
+            type:
+              enum:
+                - article
+              type: string
+            version:
+              type: string
+        promo:
           type: object
-        publishedDateTime:
-          example: 2017-07-21 17:32:28 +00:00
-          format: date-time
-          type: string
-        seoHeadline:
-          example: "UK pledges extra £44m for Channel border security"
-          type: string
-        socialHeadline:
-          example: "Royals gather for Prince Louis Christening"
-          type: string
-        type:
-          enum:
-            - article
-          type: string
+          required:
+            - headlines
+            - id
+            - locators
+            - summary
+            - timestamp
+          properties:
+            headlines:
+              type: object
+              required:
+                - seoHeadline
+                - promoHeadline
+              properties:
+                seoHeadline:
+                  example: "UK pledges extra £44m for Channel border security"
+                  type: string
+                promoHeadline:
+                  type: string
+            id:
+              type: string
+            locators:
+              type: object
+              required:
+                - optimoUrn
+              properties:
+                optimoUrn:
+                  type: string
+            summary:
+              type: string
+            timestamp:
+              type: number
 
     # schema definitions for referred blocks below
 
@@ -133,13 +218,13 @@ components:
           - $ref: "#/components/schemas/caption"
           - $ref: "#/components/schemas/headline"
           - $ref: "#/components/schemas/image"
-          - $ref: "#/components/schemas/modelWithText"
           - $ref: "#/components/schemas/paragraph"
           - $ref: "#/components/schemas/rawImage"
           - $ref: "#/components/schemas/rawVideo"
+          - $ref: "#/components/schemas/subheading"
           - $ref: "#/components/schemas/text"
           - $ref: "#/components/schemas/video"
-      minItems: 1
+      minItems: 2
 
     altText:
       type: object
@@ -221,13 +306,6 @@ components:
             - image
           type: string
 
-    modelWithText:
-      type: object
-      properties:
-        text:
-          example: "Aliquam quis sodales nisl."
-          type: string
-
     paragraph:
       type: object
       required:
@@ -239,10 +317,12 @@ components:
           example: 0f29a57f-3492-3c0d-af51-837208b657fb
           type: string
         model:
-          properties:
-            blocks:
-              $ref: "#/components/schemas/blocks"
           type: object
+          required:
+            - text
+          properties:
+            text:
+              type: string
         type:
           enum:
             - paragraph
@@ -265,16 +345,16 @@ components:
               type: string
             height:
               example: 420
-              type: integer
+              type: number
             locator:
               example: "https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg"
               type: string
             originCode:
-              example: true
-              type: boolean
+              example: "cpsprodpb"
+              type: string
             width:
               example: 640
-              type: integer
+              type: number
           required:
             - copyrightHolder
             - height
@@ -307,10 +387,10 @@ components:
               type: string
             guidance:
               example: true
-              type: boolean
+              type: string
             isLive:
               example: false
-              type: string
+              type: boolean
             locator:
               example: "xyz:abc:pips:pid:p019fch9"
               type: string
@@ -324,6 +404,26 @@ components:
         type:
           enum:
             - rawVideo
+          type: string
+
+    subheading:
+      type: object
+      required:
+        - blockId
+        - model
+        - type
+      properties:
+        blockId:
+          example: 0f29a57f-3492-3c0d-af51-837208b657fb
+          type: string
+        model:
+          properties:
+            blocks:
+              $ref: "#/components/schemas/blocks"
+          type: object
+        type:
+          enum:
+            - subheading
           type: string
 
     text:

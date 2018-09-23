@@ -1,0 +1,956 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000017o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000017o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "87687662-a7b1-16fc-8aec-70387bc98900",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "analysis",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "subheading",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "42a49ee8-2edd-4c9e-97df-e9a2f4464146",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p060njgk",
+            "blocks": [
+              {
+                "blockId": "7c71e71a-2232-17c0-c92d-c4bdf1fa0dd3",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT1M31S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p060njgk"
+                }
+              },
+              {
+                "blockId": "e362db26-ac15-15f2-d61b-28ad302128cd",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "80c58750-d790-4e0f-23a0-9f1492f35a4c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "9af3d131-8aad-924c-6904-8ebae9a1cd01",
+                            "model": {
+                              "text": "Aliquam quis sodales nisl.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aliquam quis sodales nisl.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "93fb855f-40e4-5f54-d535-1c2f387c58f5",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "d166dad0-7813-a5e1-00a1-6950b4e47cc5",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "Getty Images"
+                      }
+                    },
+                    {
+                      "blockId": "ee33885b-e88c-06f8-42a7-094905ae3492",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "d6b8cda1-797f-db29-e2a3-5d8c8d9b53f4",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "f10e3e11-f4d4-a155-ac07-6e6097a311d1",
+                                  "model": {
+                                    "text": "Aliquam sodales lectus in augue posuere tempus.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Aliquam sodales lectus in augue posuere tempus.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9c142a95-cb1d-4a02-a603-e08d9af4da92",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "44f60817-2313-6430-4e10-bb33ed61940d",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "a6b66f72-28a7-a8ff-4d79-71bfb7948381",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "05cc4dc5-22aa-81f8-6e81-83ed9355ad03",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "6d9c63d4-02da-ec4c-1763-377677f691a9",
+                            "model": {
+                              "text": "Aenean a elit sagittis, ullamcorper ipsum eget, commodo odio.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aenean a elit sagittis, ullamcorper ipsum eget, commodo odio.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "bff1abe4-153c-4b5d-8b88-1ae49c3c090f",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "a05d5876-6e95-88e6-c530-1341649e208b",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "2c3fb0aa-9246-8f1a-a4ef-67f059d27c81",
+                      "model": {
+                        "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "1cff2b9d-9bef-450d-b508-e3b44e965709",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "0f29a57f-3492-3c0d-af51-837208b657fb",
+                "type": "paragraph",
+                "model": {
+                  "text": "Mauris aliquam leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Mauris aliquam leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "f9c5fe04-3e3d-9a47-ece2-26efe5f5d0c5",
+                "type": "paragraph",
+                "model": {
+                  "text": "Duis ornare odio in orci scelerisque, efficitur ornare nisl aliquet. Nunc a sapien sit amet massa pellentesque ultricies sed in lorem. Integer ultrices risus eget est bibendum ullamcorper.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Duis ornare odio in orci scelerisque, efficitur ornare nisl aliquet. Nunc a sapien sit amet massa pellentesque ultricies sed in lorem. Integer ultrices risus eget est bibendum ullamcorper.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "4f6eb5ad-ac23-8398-cbd8-551ca13792e0",
+                "type": "paragraph",
+                "model": {
+                  "text": "Suspendisse rutrum, ante vel consequat gravida, diam nisi pretium turpis, eu aliquam orci diam nec felis. Sed tempus enim massa, at luctus dui efficitur aliquam.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Suspendisse rutrum, ante vel consequat gravida, diam nisi pretium turpis, eu aliquam orci diam nec felis. Sed tempus enim massa, at luctus dui efficitur aliquam.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "67723033-3d70-bc08-50eb-61564e23b844",
+                "type": "paragraph",
+                "model": {
+                  "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed malesuada tellus vel lectus aliquam blandit.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed malesuada tellus vel lectus aliquam blandit.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "9f940d56-9994-407f-8f5e-38bccc62777c",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2151162d-0149-be06-9f0b-e939c8327205",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "6c078c10-5aae-f0ac-99e2-bb7f609aa49d",
+                      "model": {
+                        "text": "Praesent eget tempus lacus",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Praesent eget tempus lacus",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "263e6ad2-e56c-434d-959d-e794bff1d083",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "b09da18c-83b7-a6aa-1670-1e72f46a1beb",
+                "type": "paragraph",
+                "model": {
+                  "text": "Donec enim justo, lobortis ut tellus ut, venenatis pulvinar sem.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Donec enim justo, lobortis ut tellus ut, venenatis pulvinar sem.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "3dc3fea9-1efc-eaa7-faf9-06f0a993ff11",
+                "type": "paragraph",
+                "model": {
+                  "text": "In hac habitasse platea dictumst. Fusce libero purus, condimentum sit amet elit eget, fringilla egestas enim. Sed at tempus erat. Morbi a odio et quam iaculis pulvinar sit amet et odio.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "In hac habitasse platea dictumst. Fusce libero purus, condimentum sit amet elit eget, fringilla egestas enim. Sed at tempus erat. Morbi a odio et quam iaculis pulvinar sit amet et odio.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "22153a9e-ebac-9aa0-0dab-3206ce0f0577",
+                "type": "paragraph",
+                "model": {
+                  "text": "Duis erat mauris, placerat posuere diam nec, ultricies mollis mauris.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Duis erat mauris, placerat posuere diam nec, ultricies mollis mauris.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "5b3e3fb6-0615-21fe-7fd7-b6ca33af9439",
+                "type": "paragraph",
+                "model": {
+                  "text": "Fusce gravida, dui eget sodales tristique, orci tellus rhoncus diam, efficitur elementum augue velit a diam.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fusce gravida, dui eget sodales tristique, orci tellus rhoncus diam, efficitur elementum augue velit a diam.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "08c845e5-2605-4f56-87aa-37cbe92bfa17",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:b08qm073",
+            "blocks": [
+              {
+                "blockId": "00de9269-267b-30e9-8940-9b9918d44a9b",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT3H13M00S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:b08qm073"
+                }
+              },
+              {
+                "blockId": "41398158-ee86-0505-ff9e-e2a890fae8d5",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "39bc3bce-0e18-b890-11b5-144d1665367f",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "08b0156d-0fbe-00cf-316b-b23cdaaf8d09",
+                            "model": {
+                              "text": "In aliquam libero at hendrerit auctor.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "In aliquam libero at hendrerit auctor.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "d8dfe1fc-f4e9-485c-0b48-a209110d6be4",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "8817c8b6-bb89-9911-4d0f-cf4c2d81c351",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "BBC"
+                      }
+                    },
+                    {
+                      "blockId": "27a0ead7-436e-faa4-7d46-ed4d0ece95f6",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "2c768839-1a39-e555-cc7b-1d0c7be86d2f",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "3d41ce47-13cd-90b9-3e36-9e0f2bfb4b6c",
+                                  "model": {
+                                    "text": "Duis nec tempus erat, sit amet auctor lacus.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Duis nec tempus erat, sit amet auctor lacus.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "20207aef-a19e-4ffd-ba6f-50de8907d424",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "a6299c84-91bd-b513-0e58-ba3c9920e09a",
+                "type": "paragraph",
+                "model": {
+                  "text": "Fusce in odio nulla. Fusce ullamcorper ante vitae auctor tempor. Proin sit amet nibh at velit luctus vulputate vel eu sapien. Phasellus sollicitudin elit quis volutpat vulputate.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fusce in odio nulla. Fusce ullamcorper ante vitae auctor tempor. Proin sit amet nibh at velit luctus vulputate vel eu sapien. Phasellus sollicitudin elit quis volutpat vulputate.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "6681ee1d-6aa8-496f-9484-719ff5015f3e",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "524a1cad-36db-2a04-d47d-04d66e94552d",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "fd839d52-21d7-b914-1cee-7ab337b1fb99",
+                      "model": {
+                        "text": "Nam lorem felis, vulputate sed pretium nec",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nam lorem felis, vulputate sed pretium nec",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "b262115a-f7d5-4a3e-a9e2-07cf3a41b8bc",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "d96b83c5-ea26-2816-5477-af54d675e9b9",
+                "type": "paragraph",
+                "model": {
+                  "text": "Etiam consectetur faucibus nisi, ut mollis elit rutrum at. Sed tincidunt justo sed arcu dictum, eu ultrices est euismod. Aliquam massa turpis, ornare nec interdum in, congue sit amet libero.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Etiam consectetur faucibus nisi, ut mollis elit rutrum at. Sed tincidunt justo sed arcu dictum, eu ultrices est euismod. Aliquam massa turpis, ornare nec interdum in, congue sit amet libero.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "af20354f-d80a-13d9-c3e6-196d75a18153",
+                "type": "paragraph",
+                "model": {
+                  "text": "Sed sit amet volutpat tellus, pellentesque placerat enim. Praesent et velit maximus, mollis tellus sit amet, consequat enim.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Sed sit amet volutpat tellus, pellentesque placerat enim. Praesent et velit maximus, mollis tellus sit amet, consequat enim.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "df5a55c2-c5e3-4fe5-8ed5-7f1cbe34a523",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f13ca921-5c4a-9b7e-0391-1bacd0016ed0",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/DCBD/production/_101790565_gettyimages-924021296.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "560a256b-8152-7acd-dcf7-7987753f82be",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "48547ced-6975-73d8-d34b-00fbeb66068e",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "1a3c579e-44cc-54cc-35d9-c390b42fc190",
+                            "model": {
+                              "text": "Aenean a velit at velit dignissim dapibus at in magna.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aenean a velit at velit dignissim dapibus at in magna.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "8477c407-e3fa-0184-f2d1-2b746685fdbe",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "bdaef226-f814-e42f-1ff9-cab91a7955eb",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "439a8555-9a97-0778-1fb4-97bd1edb3509",
+                            "model": {
+                              "text": "Phasellus arcu mi, fermentum vehicula iaculis sed, pellentesque quis ex",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Phasellus arcu mi, fermentum vehicula iaculis sed, pellentesque quis ex",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "9392d285-f38c-4850-9448-9faf44f89595",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "70807d18-ec90-0180-b11c-2dea0602276d",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nullam sagittis magna sit amet dui iaculis, nec volutpat quam laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nullam sagittis magna sit amet dui iaculis, nec volutpat quam laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "3a13268a-6985-4803-a8f2-88887241c0c7",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "6c8af248-81e7-335d-7a34-efe6594b7346",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "a197f73f-7c00-9375-87ae-ce10e1c61bf4",
+                      "model": {
+                        "text": "Suspendisse sed felis porta, malesuada nisl quis",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Suspendisse sed felis porta, malesuada nisl quis",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "65db39a1-83f7-482b-bba2-f1a5379fe0f9",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "88c88343-64e7-611d-d007-b5434f72af20",
+                "type": "paragraph",
+                "model": {
+                  "text": "Sed maximus non elit ut imperdiet. Proin in interdum diam, id egestas arcu. Nulla fermentum efficitur libero sed mattis.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Sed maximus non elit ut imperdiet. Proin in interdum diam, id egestas arcu. Nulla fermentum efficitur libero sed mattis.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "622fdb5b-e1e3-0dc0-ca80-8326ffaee9c4",
+                "type": "paragraph",
+                "model": {
+                  "text": "Sed finibus laoreet felis. Nulla consequat in ligula sit amet vestibulum. Mauris maximus non leo eu facilisis. Etiam porta, nisl sed sagittis dignissim, ipsum nulla tristique urna, nec faucibus ipsum enim at massa.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Sed finibus laoreet felis. Nulla consequat in ligula sit amet vestibulum. Mauris maximus non leo eu facilisis. Etiam porta, nisl sed sagittis dignissim, ipsum nulla tristique urna, nec faucibus ipsum enim at massa.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "000112f0-05ad-4446-a626-f62557e052b3",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p06702pc",
+            "blocks": [
+              {
+                "blockId": "714a0060-7953-5679-cf94-e9bfa2f0ccc5",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT3M00S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p06702pc"
+                }
+              },
+              {
+                "blockId": "bf5af338-b93a-2516-1aee-d0e30c48028a",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "56401adf-29d6-75a4-c3b6-3a0165222924",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "63f2932d-96e9-3a69-d01a-6bd802d774d9",
+                            "model": {
+                              "text": "Proin non nisl sem.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Proin non nisl sem.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "42c536c3-78e4-6af2-cb34-cec4d1e8469a",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "ec87c9e2-2afb-d531-27e9-5a6acfc07008",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 976,
+                        "height": 549,
+                        "locator": "https://ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "EBU"
+                      }
+                    },
+                    {
+                      "blockId": "36152a3c-b196-28e4-e269-4234e53820dc",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "70ec9674-88b4-9985-c59a-e0dad7466835",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "c26c465a-2ebe-91ea-33ea-7f78d744de9a",
+                                  "model": {
+                                    "text": "Ut et porttitor tellus. Integer vitae sollicitudin ligula.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Ut et porttitor tellus. Integer vitae sollicitudin ligula.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "blockId": "2859296f-4d18-61c1-6fad-7876cd466f13",
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "a1d90aa9-e06c-3a6d-a428-f2b5bfccfc5b",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "4ae5c959-c131-a961-89aa-2dfd984dde0f",
+                                  "model": {
+                                    "text": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "1be4bf74-acaf-466b-a559-9e8b0ae9ba40",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "782d9e41-b6c0-24fb-601f-b98196469f35",
+                "type": "paragraph",
+                "model": {
+                  "text": "Pellentesque urna nunc, tincidunt ac nisi ut, iaculis imperdiet dui.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Pellentesque urna nunc, tincidunt ac nisi ut, iaculis imperdiet dui.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000017o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000017o"
+    },
+    "summary": null,
+    "timestamp": 1514811600000
+  }
+}

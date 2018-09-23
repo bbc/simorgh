@@ -1,18 +1,42 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
+import { articleDataNews, articleDataPersian } from './fixtureData';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
   describe('Component', () => {
-    shouldMatchSnapshot('should render correctly', <ArticleContainer />);
+    shouldShallowMatchSnapshot(
+      'should render correctly',
+      <ArticleContainer data={articleDataNews} service="news" />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render Persian article correctly',
+      <ArticleContainer data={articleDataPersian} service="persian" />,
+    );
+
+    describe('no data', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer />,
+      );
+    });
   });
 
   describe('getInitialProps', () => {
-    const defaultIdParam = 'scenario-01';
-    const defaultContext = { match: { params: { id: defaultIdParam } } };
+    const defaultIdParam = 'c0000000001o';
+    const defaultServiceParam = 'news';
+    const defaultContext = {
+      match: {
+        params: {
+          id: defaultIdParam,
+          service: defaultServiceParam,
+        },
+      },
+    };
     const mockSuccessfulResponse = { data: '12345' };
 
     const mockFetchSuccess = () =>
@@ -36,13 +60,70 @@ describe('ArticleContainer', () => {
 
     it('should return the fetch response', async () => {
       const response = await callGetInitialProps();
-      expect(response).toEqual({ data: mockSuccessfulResponse });
+      expect(response).toEqual({
+        amp: false,
+        data: mockSuccessfulResponse,
+        service: defaultServiceParam,
+      });
     });
 
     describe('On client', () => {
       it('should call fetch with a relative URL', () => {
         callGetInitialProps();
-        expect(fetch.mock.calls[0][0]).toEqual(`/data/${defaultIdParam}.json`);
+        expect(fetch.mock.calls[0][0]).toEqual(
+          `/data/${defaultServiceParam}/${defaultIdParam}.json`,
+        );
+      });
+    });
+
+    describe('Validate route parameter ', () => {
+      it('checks the id is invalid before returning an empty object', async () => {
+        jest.spyOn(global.console, 'log');
+        const invalidIdParam = 'route-21';
+        const invalidContext = {
+          match: {
+            params: {
+              id: invalidIdParam,
+              service: defaultServiceParam,
+            },
+          },
+        };
+        const response = await callGetInitialProps(invalidContext);
+
+        expect(fetch).not.toHaveBeenCalled();
+
+        /* eslint-disable no-console */
+        expect(console.log).toBeCalledWith(
+          new Error(
+            `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
+          ),
+        );
+        /* eslint-enable no-console */
+
+        expect(response).toEqual({});
+      });
+
+      it('checks the service is invalid before returning an empty object', async () => {
+        jest.spyOn(global.console, 'log');
+        const invalidServiceParam = 'route-21';
+        const invalidContext = {
+          match: {
+            params: { id: 'c0000000027o', service: invalidServiceParam },
+          },
+        };
+        const response = await callGetInitialProps(invalidContext);
+
+        expect(fetch).not.toHaveBeenCalled();
+
+        /* eslint-disable no-console */
+        expect(console.log).toBeCalledWith(
+          new Error(
+            `Invalid route parameter: ${invalidServiceParam}. Service parameter must be news or persian.`,
+          ),
+        );
+        /* eslint-enable no-console */
+
+        expect(response).toEqual({});
       });
     });
 
@@ -54,7 +135,7 @@ describe('ArticleContainer', () => {
       it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
         callGetInitialProps(serverContext);
         expect(fetch.mock.calls[0][0]).toEqual(
-          `${BASE_PATH}/data/${defaultIdParam}.json`,
+          `${BASE_PATH}/data/${defaultServiceParam}/${defaultIdParam}.json`,
         );
       });
     });
