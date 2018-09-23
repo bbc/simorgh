@@ -41,9 +41,20 @@ exports[`Document should render correctly 1`] = `
     </style>
   </head>
   <body>
-    <AfterRoot />
-    <AfterData
-      data={Object {}}
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1>App!</h1>",
+        }
+      }
+      id="root"
+    />
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
+        }
+      }
     />
     <script
       defer={true}

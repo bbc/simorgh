@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleContainer Component no data should render correctly 1`] = `"Loading..."`;
+exports[`ArticleContainer Component no data should render correctly 1`] = `null`;
 
 exports[`ArticleContainer Component should render Persian article correctly 1`] = `
 <React.Fragment>

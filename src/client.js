@@ -2,8 +2,7 @@
 import React from 'react';
 import 'babel-polyfill';
 import { hydrate } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { ensureReady, After } from '@jaredpalmer/after';
+import { ClientUni } from '@jtart/uni';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import routes from './app/routes';
 
@@ -16,16 +15,10 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 
-ensureReady(routes).then(data =>
-  hydrate(
-    <BrowserRouter>
-      <After data={data} routes={routes} />
-    </BrowserRouter>,
-    root,
-  ),
-);
+hydrate(<ClientUni data={data} routes={routes} />, root);
 
 if (module.hot) {
   module.hot.accept();
