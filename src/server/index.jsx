@@ -48,6 +48,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static(dataFolderToRender))
+  .use('/public', express.static('public'))
   .use(
     expressStaticGzip(publicDirectory, {
       enableBrotli: true,
