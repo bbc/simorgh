@@ -1,0 +1,149 @@
+{
+  "model": {
+    "blocks": [
+      {
+        "blockId": "82cf835e-5ce6-4c7a-ba17-98f8b0a301fa",
+        "type": "text",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "d798152f-ad8d-4f36-9bf8-9f43b1dd786d",
+              "type": "unordered-list",
+              "model": {
+                "blocks": [
+                  {
+                    "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                    "type": "list-item",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Text 1"
+                          }
+                        },
+                        {
+                          "type": "ordered-list",
+                          "model": {
+                            "blocks": [
+                              {
+                                "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                                "type": "list-item",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "This is editable **rich** text, and _italic_"
+                                      }
+                                    },
+                                    {
+                                      "blockId": "d798152f-ad8d-4f36-9bf8-9f43b1dd786d",
+                                      "type": "unordered-list",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                                            "type": "list-item",
+                                            "model": {
+                                              "blocks": [
+                                                {
+                                                  "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                                                  "type": "paragraph",
+                                                  "model": {
+                                                    "text": "Text 1"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "ordered-list",
+                                                  "model": {
+                                                    "blocks": [
+                                                      {
+                                                        "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                                                        "type": "list-item",
+                                                        "model": {
+                                                          "blocks": [
+                                                            {
+                                                              "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                                                              "type": "paragraph",
+                                                              "model": {
+                                                                "text": "This is editable **rich** text, and _italic_"
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
+                                                      {
+                                                        "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                                                        "type": "list-item",
+                                                        "model": {
+                                                          "blocks": [
+                                                            {
+                                                              "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                                                              "type": "paragraph",
+                                                              "model": {
+                                                                "text": "This is editable **rich** text, and _italic_"
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "blockId": "b9f4e5b2-7c3f-4331-a6c1-d1c1308a49dd",
+                                "type": "list-item",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "blockId": "54f1f384-4cdc-4d46-8024-e291480d0734",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "This is editable **rich** text, and _italic_"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "blockId": "82998361-add4-4a5d-a828-87b5dc00a365",
+                    "type": "list-item",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "b0c004b4-953c-42bb-b3d8-f2d79c5dbe01",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Text 2"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
