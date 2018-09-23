@@ -6,6 +6,8 @@ import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import isAmpPath from '../../helpers/isAmpPath';
+import { ServiceContextProvider } from '../../components/ServiceContext';
+import serviceConfig from '../../lib/serviceConfig';
 
 const validateService = service => {
   const services = ['news', 'persian'];
@@ -29,6 +31,41 @@ const validateId = id => {
   }
 };
 
+/* An array of each thingLabel from tags.about & tags.mention */
+const allTags = tags => {
+  const { about, mentions } = tags;
+  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
+  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
+  return aboutTags.concat(mentionTags);
+};
+
+const metadataProps = (amp, config, id, metadata, promo, service) => {
+  /* Canonical link generated from servicename and id */
+  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+  const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
+  const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
+
+  return {
+    amp,
+    articleAuthor: config.articleAuthor,
+    articleSection: metadata.passport.genre,
+    canonicalLink,
+    defaultImage: config.defaultImage,
+    defaultImageAltText: config.defaultImageAltText,
+    description: promo.summary,
+    lang: metadata.passport.language,
+    locale: config.locale,
+    metaTags: allTags(metadata.tags),
+    opengraphSiteName: config.opengraphSiteName,
+    timeFirstPublished,
+    timeLastUpdated,
+    title: promo.headlines.seoHeadline,
+    twitterCreator: config.twitterCreator,
+    twitterSite: config.twitterSite,
+    type: metadata.type,
+  };
+};
+
 class ArticleContainer extends Component {
   static async getInitialProps({ req, match } = {}) {
     try {
@@ -48,44 +85,37 @@ class ArticleContainer extends Component {
       const data = await response.json();
       const amp = isAmpPath(path);
 
-      return { amp, data };
+      return { amp, data, service };
     } catch (error) {
       console.log(error); // eslint-disable-line no-console
       return {};
     }
   }
 
-  render() {
-    const { amp, data } = this.props;
-    /*
-      This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
+  /*
+    [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
       After.JS gives no explicit loading state, so we just have to check for a lack of data.
       After.JS should handle async data fetching in a more informative way, which will be become an issue for error handling.
-    */
+  */
+  render() {
+    const { amp, data, service } = this.props;
     if (!data) {
-      return 'Loading...';
+      return 'Loading...'; /* [1] */
     }
-
     const { content, metadata, promo } = data;
     const { id: aresArticleId } = metadata;
-
     const id = aresArticleId.split(':').pop();
-    const { blocks } = content.model;
-    const canonicalLink = `https://www.bbc.com/news/articles/${id}`;
-
-    const metadataProps = {
-      amp,
-      canonicalLink,
-      lang: metadata.passport.language,
-      title: promo.headlines.seoHeadline,
-    };
-
+    const config = serviceConfig[service];
     return (
       <Fragment>
-        <Header />
-        <Metadata {...metadataProps} />
-        <MainContent blocks={blocks} />
-        <Footer />
+        <ServiceContextProvider service={service}>
+          <Header />
+          <Metadata
+            {...metadataProps(amp, config, id, metadata, promo, service)}
+          />
+          <MainContent blocks={content.model.blocks} />
+          <Footer />
+        </ServiceContextProvider>
       </Fragment>
     );
   }

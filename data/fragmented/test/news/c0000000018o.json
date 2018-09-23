@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000018o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000018o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "ae8fe896-19cb-6016-108b-f5d86aacd567",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "subheading",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "text",
+          "blockId": "2da1da2a-9398-4a35-b473-83d4f3e1e24d",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "0b86ce54-fe8d-8bbf-7022-ef583e64a3f7",
+                "type": "paragraph",
+                "model": {
+                  "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nunc congue enim nec erat mollis, in fringilla tellus ultrices. Duis posuere commodo turpis non varius. Nam vehicula nisi ac fermentum euismod.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "123a1140-55de-4e3b-a9f2-4b34c4d921dc",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "84bd25f2-0047-8a64-87f6-d7c2d03b790b",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "731578aa-cfda-e45e-8ebe-338ab1eee366",
+                      "model": {
+                        "text": "Where are the richest households in the UK?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Where are the richest households in the UK?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "78352446-5003-4824-8c2d-ee0de9dc67f0",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "6211b326-e2c7-45b8-24f5-85b0531b7a8b",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "a5433cb3-3b46-0421-9ce8-593c23df3058",
+                      "model": {
+                        "text": "Pellentesque pellentesque, massa a aliquam laoreet",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Pellentesque pellentesque, massa a aliquam laoreet",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "008de738-75ab-4eee-b3b4-f2ffc6288e13",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "b43cf664-db00-4c96-8550-172d22afbcbd",
+                "type": "rawImage",
+                "model": {
+                  "width": 640,
+                  "height": 475,
+                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "37d550af-8591-6678-3356-eb20aca1fcdd",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "8b92f221-5bbd-25a0-b51c-530e46c42b0c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "c1667b8c-2b85-ad9d-9f0f-72199c86ac32",
+                            "model": {
+                              "text": "Integer varius eleifend ligula id semper.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Integer varius eleifend ligula id semper.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "66988dfc-28d1-4dc2-9a8f-335852a02bb9",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p054n8j9",
+            "blocks": [
+              {
+                "blockId": "14da2b7c-d234-e319-dc99-a4adfaa4a795",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT15M23S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p054n8j9"
+                }
+              },
+              {
+                "blockId": "1fd922cb-e7fa-8456-dfdf-cb1810700d8f",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "a16a034d-c4fe-1471-4fa7-8f6bbcc2f34f",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "69816a2d-acaf-5d72-d51a-46169ee70c38",
+                            "model": {
+                              "text": "Fusce interdum semper lacus eget malesuada.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fusce interdum semper lacus eget malesuada.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "0ae75d14-94d4-1f7e-ba40-ffb30330e8cb",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "666409e6-5b20-758b-0a57-f2f11040329a",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 832,
+                        "height": 468,
+                        "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "BBC"
+                      }
+                    },
+                    {
+                      "blockId": "c8773c35-5b35-3fce-ceed-50170fd86be3",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "9e250007-36ba-52ea-33f2-6f3c3e23f5ad",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "47beb0ae-7afa-e879-2f3f-677b8a42a07e",
+                                  "model": {
+                                    "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "4ac6e87f-0212-44ef-97ee-72b13a01a2a3",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "e5bb1109-ba9b-84da-302c-99cf58a962f7",
+                "type": "rawImage",
+                "model": {
+                  "width": 640,
+                  "height": 475,
+                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "dcea1520-388c-4436-df23-8efc8af5437d",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "cd7e6c3c-f399-2d47-03f9-057f8cf8e7ae",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "567fe2b6-4601-1fb3-b01a-5e503fb22a98",
+                            "model": {
+                              "text": "Integer varius eleifend ligula id semper.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Integer varius eleifend ligula id semper.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "a26f244d-39f9-409b-9686-bf192c6cbb40",
+          "type": "subheading",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "85fbf118-595c-c647-b747-ebeb7de76d27",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "36d6c54a-3916-7ab4-2566-ede09f99830e",
+                      "model": {
+                        "text": "Quisque feugiat quam ut lorem euismod",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Quisque feugiat quam ut lorem euismod",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "62f01427-28ca-4059-899d-e726a88d93f2",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "92e71a86-e8ad-a9d1-150e-e5f9079910e7",
+                "type": "rawImage",
+                "model": {
+                  "width": 640,
+                  "height": 475,
+                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "5af7d18a-1bac-4bd9-c649-990d37d4ee62",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "246f778b-6655-5786-9b5c-db0c54245cd3",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "7a8cf3f6-1019-5a42-85be-748e30c7a939",
+                            "model": {
+                              "text": "Integer varius eleifend ligula id semper.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Integer varius eleifend ligula id semper.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000018o",
+    "headlines": {
+      "seoHeadline": "Marks & Spencer to close 100 stores by 2022",
+      "promoHeadline": "Pellentesque pellentesque, massa a aliquam laoreet"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000018o"
+    },
+    "summary": "Nulla quis mi ut ex tempus rutrum. Aenean faucibus libero turpis, vel facilisis ex imperdiet at.",
+    "timestamp": 1514811600000
+  }
+}

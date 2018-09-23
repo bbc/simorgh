@@ -139,7 +139,7 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
         <span
           className="c6"
         >
-          BBC News
+          Default Brand Name
         </span>
       </span>
     </a>
@@ -266,7 +266,7 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
         <span
           className="c6"
         >
-          BBC News
+          Default Brand Name
         </span>
       </span>
     </a>

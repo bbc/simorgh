@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000015o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000015o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "blockId": "fda72a64-85ce-5ab1-d8e6-b94e8fa143a0",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "blockId": "d892c48b-5d47-40f3-bcca-2fce9e964211",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "61dfcd49-4798-802e-7d4b-daa32a0e863d",
+                "type": "rawImage",
+                "model": {
+                  "width": 320,
+                  "height": 180,
+                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "blockId": "ba3547f2-355e-62a7-5cbc-1a31f770b622",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "e1d4102d-55a2-40af-9416-eb1f6f2ad518",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "2c9d8701-e3d9-b626-d4db-0e88534a6174",
+                            "model": {
+                              "text": "Galileo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "663f388e-4d2a-b541-aa7d-50768aaa1719",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "38045c2b-1f64-5c3c-2d61-e4016dfc1efe",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "9b6393a5-4d4a-7ac9-5853-4a9e1e6f89dd",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "blockId": "919f0940-e35e-b78f-9404-58153f3bf9a4",
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "blockId": "baf8b746-7a72-387d-e955-d1393211a712",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "df676045-7ae4-47ce-16f8-17a5e2a1995c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "ca62f8c7-4b74-e16c-bfa5-2118cc5bcf1b",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "9944a462-ac23-de6f-ea5e-bd41e7e1bc5f",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "22bd2267-e9ff-821d-a648-bf7c133dd038",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "cfc4d3f0-cec1-b6ad-c804-000518ddf00a",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Retail giant to close down 100 stores",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "7ee5ddb4-41f8-f4fa-4a5e-39763f0ad451",
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "930f6924-9693-7bf0-5a5a-98d98e07792c",
+                      "type": "rawImage",
+                      "model": {
+                        "width": 320,
+                        "height": 180,
+                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "originCode": null,
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "blockId": "5ca9bf4c-efab-cbee-6454-6518ff7f25ee",
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "b93e4e12-6009-b833-a2eb-8fd380ce456c",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "blockId": "b79349aa-54c7-2b9b-6841-e310898e6756",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "7f801ede-99f5-4a04-bdc1-b670664c8ae1",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "f557fd6a-5a4c-bd03-8c90-2ad0d961abf8",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "0bc625b3-1f0a-a153-149c-21b5077ab976",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "80ed74d2-a178-41aa-839a-6195349f7e3e",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "99766b7e-9299-c96c-3904-c86ccb19f08a",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "ac70bc4b-c73d-65d9-50b5-39f6cd81d1e2",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "43a53112-1eda-4b34-8129-143551431029",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "68ab81a9-b69d-8b35-1c3f-07f0aa3d63d9",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "157a8040-066b-5f0b-520d-148954bf73ab",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "214ece59-d8fc-42d0-bd74-a3d29a8ad707",
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "b4b15292-f020-20cc-332f-cc47a8ff8ea9",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "blockId": "106013d6-d0c6-4205-0d44-0738720e6271",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000015o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000015o"
+    },
+    "summary": "Morbi tempus eros id nulla aliquet, ut fermentum nulla aliquet.",
+    "timestamp": 1514811600000
+  }
+}

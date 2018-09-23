@@ -1,8 +1,8 @@
-{ 
+{
   "metadata": {
-    "id" : "urn:bbc:ares::article:c0000000001o",
-    "locators" : {
-      "optimoUrn" : "urn:bbc:optimo:asset:c0000000001o"
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
     },
     "type": "article",
     "createdBy": "",
@@ -21,10 +21,10 @@
       "about": null,
       "mentions": null
     },
-    "version" : "v0.3.2",
-    "blockTypes" : [ "headline", "text", "paragraph" ]
+    "version": "v0.3.2",
+    "blockTypes": ["headline", "text", "paragraph"]
   },
-  "content" : {
+  "content": {
     "model": {
       "blocks": [
         {
@@ -68,16 +68,16 @@
       ]
     }
   },
-  "promo" : {
-    "id" : "urn:bbc:ares::article:c0000000001o",
-    "headlines" : {
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "headlines": {
       "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
       "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
-    "locators" : {
-      "optimoUrn" : "urn:bbc:optimo:asset:c0000000001o"
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
     },
-    "summary" : "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-    "timestamp" : 1514811600000
+    "summary": "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "timestamp": 1514811600000
   }
 }
