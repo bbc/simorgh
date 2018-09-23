@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
+import { ServiceContextConsumer } from '../ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import {
   C_POSTBOX,
@@ -76,7 +77,11 @@ const Brand = ({ indentedLogo }) => {
                 <path d="m117.86 3.36h9.83v2.21h-7.35v5.29h7.1v2.22h-7.1v5.39h7.58v2.21h-10.06z M154.18,3.36h2.48l-7,17.41h-.55l-5.67-14.1-5.73,14.1h-.53l-7-17.41h2.5l4.78,12,4.81-12h2.35l4.83,12Z M163.38,13.43l-1.89-1.15A8.57,8.57,0,0,1,159,10.16a4,4,0,0,1-.75-2.41,4.26,4.26,0,0,1,1.42-3.33,5.31,5.31,0,0,1,3.69-1.28,7,7,0,0,1,4,1.22V7.17a5.74,5.74,0,0,0-4-1.8,3.34,3.34,0,0,0-2,.56,1.71,1.71,0,0,0-.78,1.44,2.22,2.22,0,0,0,.58,1.46,7.25,7.25,0,0,0,1.85,1.43l1.9,1.12Q168,13.28,168,16.21a4.42,4.42,0,0,1-1.4,3.39A5.11,5.11,0,0,1,163,20.9a7.63,7.63,0,0,1-4.68-1.58V16.17a5.84,5.84,0,0,0,4.65,2.55,2.93,2.93,0,0,0,1.94-.65,2,2,0,0,0,.78-1.63Q165.67,14.85,163.38,13.43Z" />
               </g>
             </BrandSvg>
-            <VisuallyHiddenText>BBC News</VisuallyHiddenText>
+            <ServiceContextConsumer>
+              {({ brandName }) => (
+                <VisuallyHiddenText>{brandName}</VisuallyHiddenText>
+              )}
+            </ServiceContextConsumer>
           </StyledSpan>
         </StyledLink>
       </StyledGridItem>

@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../Footer';
 import MainContent from '../MainContent';
 import articlePropTypes from '../../models/propTypes/article';
+import { ServiceContextProvider } from '../../components/ServiceContext';
 import serviceConfig from '../../lib/serviceConfig';
 
 /* An array of each thingLabel from tags.about & tags.mention */
@@ -60,12 +61,14 @@ const ArticleContainer = ({ loading, error, data }) => {
 
     return (
       <Fragment>
-        <Header />
-        <Metadata
-          {...metadataProps(amp, config, id, metadata, promo, service)}
-        />
-        <MainContent blocks={content.model.blocks} />
-        <Footer />
+        <ServiceContextProvider service={service}>
+          <Header />
+          <Metadata
+            {...metadataProps(amp, config, id, metadata, promo, service)}
+          />
+          <MainContent blocks={content.model.blocks} />
+          <Footer />
+        </ServiceContextProvider>
       </Fragment>
     );
   }

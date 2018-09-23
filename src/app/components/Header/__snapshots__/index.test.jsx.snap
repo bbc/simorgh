@@ -122,7 +122,7 @@ exports[`Header should render correctly 1`] = `
           <span
             className="c6"
           >
-            BBC News
+            Default Brand Name
           </span>
         </span>
       </a>
