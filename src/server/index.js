@@ -1,4 +1,5 @@
 import express from 'express';
+import expressStaticGzip from 'express-static-gzip';
 import { render } from '@jaredpalmer/after';
 import routes from '../app/routes';
 import Document from '../app/containers/Document';
@@ -37,13 +38,18 @@ const getPublicDirectory = () =>
 
 const publicDirectory = getPublicDirectory();
 const dataFolderToRender =
-  process.env.NODE_ENV === 'production' ? 'data/prod' : 'data';
+  process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
 const server = express();
 server
   .disable('x-powered-by')
   .use('/data', express.static(dataFolderToRender))
-  .use(express.static(publicDirectory))
+  .use(
+    expressStaticGzip(publicDirectory, {
+      enableBrotli: true,
+      orderPreference: ['br'],
+    }),
+  )
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })

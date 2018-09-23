@@ -19,12 +19,21 @@ const Blocks = {
 };
 
 const render = blocks =>
-  blocks.map(block => {
+  blocks.map((block, index) => {
     const { type, blockId, model } = block;
+
+    const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
     const Block = Blocks[type] || BlockString;
 
-    return <Block key={blockId} type={type} {...model} />;
+    return (
+      <Block
+        key={blockId}
+        type={type}
+        typeOfPreviousBlock={typeOfPreviousBlock}
+        {...model}
+      />
+    );
   });
 
 const MainContentContainer = ({ blocks }) => {

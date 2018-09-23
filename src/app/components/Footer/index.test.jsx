@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './index';
-
+import { ServiceContextProvider } from '../ServiceContext';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 describe(`Footer`, () => {
@@ -13,6 +13,8 @@ describe(`Footer`, () => {
 
   shouldMatchSnapshot(
     'should render correctly',
-    <Footer links={links} copyrightText="Text here. " externalLink={link} />,
+    <ServiceContextProvider>
+      <Footer links={links} copyrightText="Text here. " externalLink={link} />
+    </ServiceContextProvider>,
   );
 });
