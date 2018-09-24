@@ -1,8 +1,7 @@
 import React from 'react';
 import OfflinePluginRuntime from 'offline-plugin/runtime';
+import { ClientUni } from '@jtart/uni';
 import * as reactDom from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import * as after from '@jaredpalmer/after';
 import routes from './app/routes';
 
 jest.mock('offline-plugin/runtime', () => ({
@@ -14,10 +13,7 @@ jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('@jaredpalmer/after', () => ({
-  ensureReady: jest.fn().mockResolvedValue('someData'),
-  After: jest.fn().mockReturnValue(<div />),
-}));
+jest.mock('@jtart/uni');
 
 jest.mock('./app/routes', () => ({
   default: [],
@@ -27,6 +23,14 @@ const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
 describe('Client', () => {
+  beforeAll(() => {
+    window.SIMORGH_DATA = 'someData';
+  });
+
+  afterAll(() => {
+    window.SIMORGH_DATA = null;
+  });
+
   describe('on production environment', () => {
     process.env.NODE_ENV = 'production';
 
@@ -48,12 +52,9 @@ describe('Client', () => {
 
   it('should hydrate client once routes are ready', async () => {
     await import('./client');
-    await after.ensureReady;
 
     expect(reactDom.hydrate).toHaveBeenCalledWith(
-      <BrowserRouter>
-        <after.After routes={routes} data="someData" />
-      </BrowserRouter>,
+      <ClientUni routes={routes} data={window.SIMORGH_DATA} />,
       mockRootElement,
     );
   });
