@@ -1,4 +1,4 @@
-import { blockContainingText } from '../../models/blocks';
+import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
 export const serviceContextNews = {
   brandName: 'BBC News',
@@ -9,8 +9,6 @@ export const serviceContextPersian = {
   brandName: 'BBC News فارسی',
   service: 'Persian',
 };
-
-const headlineBlock = headline => blockContainingText('headline', headline);
 
 const articleDataBuilder = (
   id,
@@ -45,22 +43,8 @@ const articleDataBuilder = (
   content: {
     model: {
       blocks: [
-        headlineBlock(headlineText),
-        {
-          type: 'text',
-          blockId: 't-2',
-          model: {
-            blocks: [
-              {
-                blockId: 'p-2',
-                type: 'paragraph',
-                model: {
-                  text: paragraphText,
-                },
-              },
-            ],
-          },
-        },
+        blockContainingText('headline', headlineText),
+        singleTextBlock(paragraphText),
       ],
     },
   },
