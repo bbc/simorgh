@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceContext should have a brand name for default 1`] = `
+<span>
+  Default Brand Name
+</span>
+`;
+
+exports[`ServiceContext should have a brand name for news 1`] = `
+<span>
+  BBC News
+</span>
+`;
+
+exports[`ServiceContext should have a brand name for persian 1`] = `
+<span>
+  BBC News فارسی
+</span>
+`;
