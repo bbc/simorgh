@@ -14,6 +14,12 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
     <script key={asset} type="text/javascript" src={asset} defer />
   ));
 
+  if (helmet.htmlAttributes.toString().includes('amp')) {
+    scripts.push(
+      <script key="amp" async src="https://cdn.ampproject.org/v0.js" />,
+    );
+  }
+
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
