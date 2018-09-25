@@ -1,27 +1,13 @@
 import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import MainContentContainer from './index';
-import { blockContainingText } from '../../models/blocks';
+import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
 describe('MainContent', () => {
   const blocks = [
     blockContainingText('headline', 'This is a headline!'),
     blockContainingText('subheading', 'This is a subheading!'),
-    {
-      type: 'text',
-      blockId: '2',
-      model: {
-        blocks: [
-          {
-            type: 'paragraph',
-            blockId: '2-1',
-            model: {
-              text: 'This is some text content!',
-            },
-          },
-        ],
-      },
-    },
+    singleTextBlock('This is some text content!'),
     {
       type: 'test', // causes prop validation errors
       blockId: '3',
