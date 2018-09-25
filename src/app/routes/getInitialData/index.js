@@ -26,13 +26,15 @@ const validateId = id => {
 
 const getInitialData = async ({ match }) => {
   try {
-    const { path } = match;
     const { id, service } = match.params;
 
-    validateService(service);
-    validateId(id);
+    const amp = isAmpPath(id);
+    const sanitisedId = id.replace('.amp', '');
 
-    let url = `/data/${service}/${id}.json`;
+    validateService(service);
+    validateId(sanitisedId);
+
+    let url = `/data/${service}/${sanitisedId}.json`;
 
     if (isServer()) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;
@@ -40,7 +42,6 @@ const getInitialData = async ({ match }) => {
 
     const response = await fetch(url);
     const data = await response.json();
-    const amp = isAmpPath(path);
 
     return { amp, data, service };
   } catch (error) {
