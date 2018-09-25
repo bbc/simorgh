@@ -50,7 +50,10 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a title', () => {
-    cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
+    cy.title().should(
+      'eq',
+      "BBC News – Meghan's bouquet laid on tomb of unknown warrior",
+    );
   });
 
   it('should have an inline link with focus styling', () => {
