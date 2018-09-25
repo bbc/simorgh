@@ -52,11 +52,11 @@ const shallowDocument = helmetValue =>
   );
 
 describe('Document', () => {
-  it('should render correctly', () => {
+  it('should render with client side application', () => {
     expect(shallowDocument(helmetWithOutAmp)).toMatchSnapshot();
   });
 
-  it('should add amp <script> if "amp" in helmet HTML htmlAttributes', () => {
+  it('should add amp <script> if "amp" in helmet HTML htmlAttributes and not render client side application', () => {
     expect(shallowDocument(helmetWithAmp)).toMatchSnapshot();
   });
 });

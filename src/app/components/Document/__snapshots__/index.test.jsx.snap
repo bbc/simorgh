@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes 1`] = `
+exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes and not render client side application 1`] = `
 <html
   0="a"
   1="m"
@@ -42,6 +42,10 @@ exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes
     <style>
       html { color: red; }
     </style>
+    <script
+      async={true}
+      src="https://cdn.ampproject.org/v0.js"
+    />
   </head>
   <body>
     <div
@@ -52,27 +56,11 @@ exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes
       }
       id="root"
     />
-    <script
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
-        }
-      }
-    />
-    <script
-      defer={true}
-      src="http://example.com/file.js"
-      type="text/javascript"
-    />
-    <script
-      async={true}
-      src="https://cdn.ampproject.org/v0.js"
-    />
   </body>
 </html>
 `;
 
-exports[`Document should render correctly 1`] = `
+exports[`Document should render with client side application 1`] = `
 <html
   lang="test"
 >
