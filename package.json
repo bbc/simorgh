@@ -67,7 +67,7 @@
     "markdown-to-jsx": "^6.7.0",
     "offline-plugin": "^5.0.5",
     "prop-types": "^15.6.2",
-    "razzle": "^2.4.0",
+    "razzle": "2.4.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
