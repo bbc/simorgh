@@ -35,7 +35,7 @@ const Metadata = ({
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>
-        {serviceName} - {title}
+        {serviceName} &#8211; {title}
       </title>
       <link rel="canonical" href={canonicalLink} />
       <meta name="article:author" content={articleAuthor} />

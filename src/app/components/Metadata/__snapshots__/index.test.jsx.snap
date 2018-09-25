@@ -16,7 +16,8 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-     - 
+    BBC News
+     – 
     An article title
   </title>
   <link
@@ -120,7 +121,8 @@ exports[`Metadata News article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-     - 
+    BBC News
+     – 
     An article title
   </title>
   <link
@@ -225,7 +227,8 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-     - 
+    BBC News فارسی
+     – 
     پهپادی که برایتان قهوه می‌آورد
   </title>
   <link
@@ -329,7 +332,8 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-     - 
+    BBC News فارسی
+     – 
     پهپادی که برایتان قهوه می‌آورد
   </title>
   <link
@@ -433,7 +437,8 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="viewport"
   />
   <title>
-     - 
+    BBC News
+     – 
     An article title
   </title>
   <link
