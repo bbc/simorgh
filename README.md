@@ -6,7 +6,7 @@ Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of
 
 ## Overview
 
-Simorgh is a universal react renderer it uses [razzle](https://github.com/jaredpalmer/razzle) which is built on [after](https://github.com/jaredpalmer/after.js/blob/master/README.md). This repo is publicly accessible and the application will be used to generate the future pan-BBC article.
+Simorgh is a universal react renderer. It uses [Razzle](https://github.com/jaredpalmer/razzle) and is built on [Uni](https://github.com/jtart/uni/blob/master/README.md). This repo is publicly accessible and the application will be used to generate the future, pan-BBC article.
 
 It currently has an embedded components library which will be split out as the number of components grow.
 
