@@ -35,7 +35,7 @@ Articles 25 & 27 are available on the Production environment as well as locally.
 [http://localhost:7080/news/articles/c0000000025o](http://localhost:7080/news/articles/c0000000025o)
 [http://localhost:7080/news/articles/c0000000027o](http://localhost:7080/news/articles/c0000000027o).
 
-There is also an AMP route at `/news/articles/amp/:id` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
+There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 
 ### Storybook (UI Development Environment/Style Guide)
 

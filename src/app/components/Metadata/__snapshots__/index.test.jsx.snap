@@ -19,7 +19,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     An article title
   </title>
   <link
-    href="https://www.bbc.com/news/articles/amp/c0000000001o"
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
     rel="canonical"
   />
   <meta
@@ -70,7 +70,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/news/articles/amp/c0000000001o"
+    content="https://www.bbc.com/news/articles/c0000000001o.amp"
     name="og:url"
   />
   <meta
@@ -226,7 +226,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     پهپادی که برایتان قهوه می‌آورد
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    href="https://www.bbc.com/persian/articles/c0000000028o.amp"
     rel="canonical"
   />
   <meta
@@ -277,7 +277,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    content="https://www.bbc.com/persian/articles/c0000000028o.amp"
     name="og:url"
   />
   <meta
