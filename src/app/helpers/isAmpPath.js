@@ -1,3 +1,3 @@
-const isAmpPath = path => path.endsWith('.amp');
+const isAmpPath = id => id.endsWith('.amp');
 
 export default isAmpPath;
