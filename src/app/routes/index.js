@@ -9,13 +9,7 @@ const routes = [
     getInitialData,
   },
   {
-    path: '/:service/articles/:id',
-    exact: true,
-    component: Article,
-    getInitialData,
-  },
-  {
-    path: '/:service/articles/:id.amp',
+    path: '/:service/articles/:id(.amp)?',
     exact: true,
     component: Article,
     getInitialData,
