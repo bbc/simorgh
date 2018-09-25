@@ -6,11 +6,9 @@ exports[`MainContent should render correctly 1`] = `
     blocks={
       Array [
         Object {
-          "blockId": "t-1",
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "p-1",
                 "model": Object {
                   "text": "This is a headline!",
                 },
@@ -28,11 +26,9 @@ exports[`MainContent should render correctly 1`] = `
     blocks={
       Array [
         Object {
-          "blockId": "t-1",
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "p-1",
                 "model": Object {
                   "text": "This is a subheading!",
                 },
@@ -51,7 +47,6 @@ exports[`MainContent should render correctly 1`] = `
     blocks={
       Array [
         Object {
-          "blockId": "2-1",
           "model": Object {
             "text": "This is some text content!",
           },
@@ -93,11 +88,9 @@ exports[`MainContent should render correctly 1`] = `
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "t-1",
                 "model": Object {
                   "blocks": Array [
                     Object {
-                      "blockId": "p-1",
                       "model": Object {
                         "text": "Pauline Clayton",
                       },
@@ -115,11 +108,9 @@ exports[`MainContent should render correctly 1`] = `
           "model": Object {
             "blocks": Array [
               Object {
-                "blockId": "t-1",
                 "model": Object {
                   "blocks": Array [
                     Object {
-                      "blockId": "p-1",
                       "model": Object {
                         "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
                       },
