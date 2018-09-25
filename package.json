@@ -80,7 +80,7 @@
     "@storybook/react": "4.0.0-alpha.8",
     "amphtml-validator": "^1.0.23",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
     "bbc-a11y": "^2.2.5",
     "cypress": "^3.0.3",
