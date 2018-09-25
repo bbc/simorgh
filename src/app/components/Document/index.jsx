@@ -5,7 +5,10 @@ import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
-  const isAmpPayload = () => helmet.htmlAttributes.toString().includes('amp');
+  const isAmpPayload = () => {
+    const htmlAttributes = helmet.htmlAttributes.toString();
+    return htmlAttributes.includes('amp');
+  };
 
   /* eslint-disable react/no-danger */
   /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */
