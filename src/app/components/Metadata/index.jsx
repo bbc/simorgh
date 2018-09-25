@@ -24,7 +24,7 @@ const Metadata = ({
   const htmlAttributes = { lang };
 
   if (amp) {
-    htmlAttributes.amp = amp;
+    htmlAttributes.amp = String(amp);
   }
 
   return (
