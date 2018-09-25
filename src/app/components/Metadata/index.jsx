@@ -14,6 +14,7 @@ const Metadata = ({
   locale,
   metaTags,
   opengraphSiteName,
+  serviceName,
   timeFirstPublished,
   timeLastUpdated,
   title,
@@ -33,7 +34,9 @@ const Metadata = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>{title}</title>
+      <title>
+        {serviceName} - {title}
+      </title>
       <link rel="canonical" href={canonicalLink} />
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastUpdated} />
@@ -75,6 +78,7 @@ Metadata.propTypes = {
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
   opengraphSiteName: string.isRequired,
+  serviceName: string.isRequired,
   timeFirstPublished: string.isRequired,
   timeLastUpdated: string.isRequired,
   title: string.isRequired,

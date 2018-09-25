@@ -34,6 +34,7 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
     locale: config.locale,
     metaTags: allTags(metadata.tags),
     opengraphSiteName: config.opengraphSiteName,
+    serviceName: config.opengraphSiteName,
     timeFirstPublished,
     timeLastUpdated,
     title: promo.headlines.seoHeadline,

@@ -20,6 +20,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       locale="fa"
       metaTags={Array []}
       opengraphSiteName="BBC News فارسی"
+      serviceName="BBC News فارسی"
       timeFirstPublished="2018-01-01T12:01:00.000Z"
       timeLastUpdated="2018-01-01T13:00:00.000Z"
       title="سرصفحه مقاله"
@@ -93,6 +94,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       locale="en_GB"
       metaTags={Array []}
       opengraphSiteName="BBC News"
+      serviceName="BBC News"
       timeFirstPublished="2018-01-01T12:01:00.000Z"
       timeLastUpdated="2018-01-01T13:00:00.000Z"
       title="Article Headline for SEO"
