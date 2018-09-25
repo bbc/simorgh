@@ -51,11 +51,9 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "type": "headline",
           },
           Object {
-            "blockId": "t-2",
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "p-2",
                   "model": Object {
                     "text": "یک پاراگراف.",
                   },
@@ -122,11 +120,9 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "type": "headline",
           },
           Object {
-            "blockId": "t-2",
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "p-2",
                   "model": Object {
                     "text": "A paragraph.",
                   },
