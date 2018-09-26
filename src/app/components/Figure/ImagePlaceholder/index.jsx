@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { number } from 'prop-types';
-import { C_OAT, BBCBlocksSVG } from '../../../lib/constants/styles';
+import { C_CHALK, BBCBlocksSVG } from '../../../lib/constants/styles';
 
 const ImagePlaceholder = styled.div`
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: ${C_OAT};
+  background-color: ${C_CHALK};
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;

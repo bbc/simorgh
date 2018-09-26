@@ -12,6 +12,7 @@ export const C_OAT_LHT = '#F5F3F1';
 export const C_OAT = '#F2EFEC';
 export const C_PEBBLE = '#5C5752';
 export const C_STONE = '#D5D0CD';
+export const C_CHALK = '#ECEAE7';
 // Colours from other services
 export const C_ORBIT_GREY = '#4C4C4C';
 
