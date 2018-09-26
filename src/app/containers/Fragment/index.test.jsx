@@ -5,14 +5,14 @@ import Fragment from './index';
 describe('Fragment', () => {
   describe('with no attributes', () => {
     shouldMatchSnapshot(
-      'should render correctly',
+      'should render just text',
       <Fragment text="This is some text with no attributes" attributes={[]} />,
     );
   });
 
   describe('with bold attributes', () => {
     shouldMatchSnapshot(
-      'should render correctly',
+      'should render text wrapped in a bold DOM element',
       <Fragment
         text="This is some text with bold attributes"
         attributes={['bold']}
@@ -22,7 +22,7 @@ describe('Fragment', () => {
 
   describe('with italic attributes', () => {
     shouldMatchSnapshot(
-      'should render correctly',
+      'should render text wrapped in an italic DOM element',
       <Fragment
         text="This is some text with italic attributes"
         attributes={['italic']}
@@ -32,7 +32,7 @@ describe('Fragment', () => {
 
   describe('with bold and italic attributes', () => {
     shouldMatchSnapshot(
-      'should render correctly',
+      'should render text wrapped in bold and italic DOM elements',
       <Fragment
         text="This is some text with bold and italic attributes"
         attributes={['bold', 'italic']}
