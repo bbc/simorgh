@@ -42,10 +42,6 @@ exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes
     <style>
       html { color: red; }
     </style>
-    <script
-      async={true}
-      src="https://cdn.ampproject.org/v0.js"
-    />
   </head>
   <body>
     <div

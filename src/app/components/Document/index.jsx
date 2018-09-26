@@ -13,13 +13,6 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const scripts = assets.map(asset => (
     <script key={asset} type="text/javascript" src={asset} defer />
   ));
-  let ampScript;
-
-  if (helmet.htmlAttributes.toString().includes('amp')) {
-    ampScript = (
-      <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
-    );
-  }
 
   return (
     <html lang="en-GB" {...htmlAttrs}>
@@ -34,7 +27,6 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {title}
         {links}
         {styleTags}
-        {ampScript}
       </head>
       <body>
         {/* eslint-disable react/no-danger */
