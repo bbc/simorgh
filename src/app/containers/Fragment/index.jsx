@@ -11,7 +11,9 @@ const attributeComponents = {
 
 const Fragment = ({ text, attributes }) =>
   /*
-    Iterates through the attribute array and returns a component based on the attribute type (i.e. 'italic' or 'bold'). These components are nested inside each other as children as the array is iterated through. The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
+    Iterates through the attribute array and returns a component based on the attribute type (i.e. 'italic' or 'bold').
+    These components are nested inside each other as children as the array is iterated through.
+    The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
   attributes.reduce((previousAttribute, attribute) => {
     const Attribute = attributeComponents[attribute];
