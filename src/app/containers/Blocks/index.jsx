@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, func } from 'prop-types';
+import { objectOf, func } from 'prop-types';
 import mainContentModelPropTypes from '../../models/propTypes/mainContent';
 
 // Inlined as this is a temporary component
@@ -28,12 +28,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
 Blocks.propTypes = {
   ...mainContentModelPropTypes,
-  componentsToRender: shape({
-    headline: func,
-    subheading: func,
-    text: func,
-    image: func,
-  }).isRequired,
+  componentsToRender: objectOf(func).isRequired,
 };
 
 export default Blocks;
