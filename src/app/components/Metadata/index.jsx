@@ -14,7 +14,6 @@ const Metadata = ({
   lang,
   locale,
   metaTags,
-  opengraphSiteName,
   timeFirstPublished,
   timeLastUpdated,
   title,
@@ -51,7 +50,7 @@ const Metadata = ({
       <meta name="og:image" content={defaultImage} />
       <meta name="og:image:alt" content={defaultImageAltText} />
       <meta name="og:locale" content={locale} />
-      <meta name="og:site_name" content={opengraphSiteName} />
+      <meta name="og:site_name" content={brandName} />
       <meta name="og:title" content={title} />
       <meta name="og:type" content={type} />
       <meta name="og:url" content={canonicalLink} />
@@ -78,7 +77,6 @@ Metadata.propTypes = {
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
-  opengraphSiteName: string.isRequired,
   timeFirstPublished: string.isRequired,
   timeLastUpdated: string.isRequired,
   title: string.isRequired,
