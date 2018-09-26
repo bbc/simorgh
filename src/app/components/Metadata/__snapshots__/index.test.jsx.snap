@@ -44,7 +44,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   />
   <meta
     content={101010}
-    name="fb:admin"
+    name="fb:admins"
   />
   <meta
     content={202020}
@@ -155,7 +155,7 @@ exports[`Metadata News article should render correctly 1`] = `
   />
   <meta
     content={101010}
-    name="fb:admin"
+    name="fb:admins"
   />
   <meta
     content={202020}
@@ -267,7 +267,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   />
   <meta
     content={101010}
-    name="fb:admin"
+    name="fb:admins"
   />
   <meta
     content={202020}
@@ -378,7 +378,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
   />
   <meta
     content={101010}
-    name="fb:admin"
+    name="fb:admins"
   />
   <meta
     content={202020}
@@ -493,7 +493,7 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   />
   <meta
     content={101010}
-    name="fb:admin"
+    name="fb:admins"
   />
   <meta
     content={202020}
