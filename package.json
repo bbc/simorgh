@@ -17,9 +17,6 @@
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c0000000027o --output-path=./reports/report.html --view",
-    "postmerge": "./scripts/dependencyUpdateCheck.sh",
-    "precommit": "npm run test:lint",
-    "prepush": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -37,6 +34,13 @@
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "razzle test --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "./scripts/dependencyUpdateCheck.sh",
+      "pre-commit": "npm run test:lint",
+      "pre-push": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit"
+    }
   },
   "repository": {
     "type": "git",
