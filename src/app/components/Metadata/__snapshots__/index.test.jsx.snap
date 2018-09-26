@@ -6,7 +6,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
-      "amp": true,
+      "amp": "",
       "lang": "en-GB",
     }
   }
@@ -213,7 +213,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
-      "amp": true,
+      "amp": "",
       "lang": "fa",
     }
   }
