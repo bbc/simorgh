@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fragment with bold and italic attributes should render correctly 1`] = `
+<i>
+  <b>
+    This is some text with italic attributes
+  </b>
+</i>
+`;
+
+exports[`Fragment with bold attributes should render correctly 1`] = `
+<b>
+  This is some text with bold attributes
+</b>
+`;
+
+exports[`Fragment with italic attributes should render correctly 1`] = `
+<i>
+  This is some text with italic attributes
+</i>
+`;
+
+exports[`Fragment with no attributes should render correctly 1`] = `"This is some text with no attributes"`;
