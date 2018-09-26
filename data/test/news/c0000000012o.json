@@ -263,7 +263,7 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
+                        "locator": "http://c.files.bbci.co.uk/5BD5/production/_101690532_2.jpg",
                         "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
@@ -331,7 +331,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/F86B/production/_101659536_m-s_getty.jpg",
+                  "locator": "http://c.files.bbci.co.uk/F86B/production/_101659536_m-s_getty.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
@@ -396,7 +396,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/A237/production/_101672514_ms-mapclosures-nc.png",
+                  "locator": "http://c.files.bbci.co.uk/A237/production/_101672514_ms-mapclosures-nc.png",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
@@ -461,7 +461,7 @@
                 "model": {
                   "width": 1024,
                   "height": 419,
-                  "locator": "/cpsprodpb/16FBB/production/_97493149_1_protests_getty_624.jpg",
+                  "locator": "http://c.files.bbci.co.uk/16FBB/production/_97493149_1_protests_getty_624.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
@@ -503,7 +503,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/1758D/production/_94792659_bbcbudget_new.gif",
+                  "locator": "http://c.files.bbci.co.uk/1758D/production/_94792659_bbcbudget_new.gif",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }

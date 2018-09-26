@@ -189,7 +189,7 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
+                        "locator": "http://c.files.bbci.co.uk/6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
@@ -234,7 +234,7 @@
                 "model": {
                   "width": 2362,
                   "height": 2952,
-                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "locator": "http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
