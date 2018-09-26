@@ -1,6 +1,5 @@
 import React from 'react';
-import { objectOf, func } from 'prop-types';
-import mainContentModelPropTypes from '../../models/propTypes/mainContent';
+import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -27,7 +26,12 @@ const Blocks = ({ blocks, componentsToRender }) =>
   });
 
 Blocks.propTypes = {
-  ...mainContentModelPropTypes,
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      model: objectOf(any).isRequired,
+    }),
+  ).isRequired,
   componentsToRender: objectOf(func).isRequired,
 };
 
