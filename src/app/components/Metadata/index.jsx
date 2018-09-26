@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, string } from 'prop-types';
+import { arrayOf, bool, string, number } from 'prop-types';
 
 const Metadata = ({
   amp,
@@ -10,6 +10,8 @@ const Metadata = ({
   defaultImage,
   defaultImageAltText,
   description,
+  facebookAdmin,
+  facebookAppID,
   lang,
   locale,
   metaTags,
@@ -44,6 +46,8 @@ const Metadata = ({
       {metaTags.map(tag => (
         <meta name="article:tag" content={tag} key={tag} />
       ))}
+      <meta name="fb:admin" content={facebookAdmin} />
+      <meta name="fb:app_id" content={facebookAppID} />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
       <meta name="og:image:alt" content={defaultImageAltText} />
@@ -71,6 +75,8 @@ Metadata.propTypes = {
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
   description: string.isRequired,
+  facebookAdmin: number.isRequired,
+  facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
