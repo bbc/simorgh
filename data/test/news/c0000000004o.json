@@ -106,7 +106,7 @@
                   "width": 1024,
                   "height": 761,
                   "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -226,7 +226,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/14D21/production/_101718258_bluegirlsgetty.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
                     },

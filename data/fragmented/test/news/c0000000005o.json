@@ -139,7 +139,7 @@
                   "width": 1024,
                   "height": 576,
                   "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -310,7 +310,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
                     },

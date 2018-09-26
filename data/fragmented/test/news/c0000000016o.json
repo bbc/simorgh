@@ -100,7 +100,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -258,7 +258,7 @@
                   "width": 624,
                   "height": 100,
                   "locator": "/cpsprodpb/13376/production/_95301787_bbc_ouch_website_image_624x100_2.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -365,7 +365,7 @@
                   "width": 1024,
                   "height": 576,
                   "locator": "/cpsprodpb/1736/production/_97424950_976mleedfinal.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -504,7 +504,7 @@
                   "width": 1024,
                   "height": 576,
                   "locator": "/cpsprodpb/8A79/production/_101694453_capture.png",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -611,7 +611,7 @@
                   "width": 1024,
                   "height": 576,
                   "locator": "/cpsprodpb/15F44/production/_101742998_homebasepeople_newscast.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

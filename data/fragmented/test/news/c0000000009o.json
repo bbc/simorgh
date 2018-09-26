@@ -151,7 +151,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -318,7 +318,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },

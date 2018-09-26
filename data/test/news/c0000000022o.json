@@ -64,7 +64,7 @@
                   "width": 640,
                   "height": 640,
                   "locator": "/cpsprodpb/4341/production/_102971271__101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -129,7 +129,7 @@
                   "width": 640,
                   "height": 475,
                   "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -287,7 +287,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -395,7 +395,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },

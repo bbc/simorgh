@@ -50,7 +50,7 @@
                   "width": 320,
                   "height": 180,
                   "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-                  "originCode": null,
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -214,7 +214,7 @@
                         "width": 320,
                         "height": 180,
                         "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
