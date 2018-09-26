@@ -17,13 +17,6 @@ describe('AMP Tests', () => {
     getElement('html').should('have.attr', 'amp');
   });
 
-  it('should only load one JS script', () => {
-    const amountOfScripts = getElement('html script').its('length');
-    // This will return two JS scripts, however one is provided by Cypress and is not related to the AMP article.
-    amountOfScripts.should('be.lt', 3);
-    amountOfScripts.should('be.gt', 0);
-  });
-
   it('should load the AMP framework', () => {
     // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
     const ampScript = getElement('html script').eq(1);
