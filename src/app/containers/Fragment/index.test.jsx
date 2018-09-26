@@ -34,7 +34,7 @@ describe('Fragment', () => {
     shouldMatchSnapshot(
       'should render correctly',
       <Fragment
-        text="This is some text with italic attributes"
+        text="This is some text with bold and italic attributes"
         attributes={['bold', 'italic']}
       />,
     );

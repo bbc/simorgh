@@ -3,7 +3,7 @@
 exports[`Fragment with bold and italic attributes should render correctly 1`] = `
 <i>
   <b>
-    This is some text with italic attributes
+    This is some text with bold and italic attributes
   </b>
 </i>
 `;
