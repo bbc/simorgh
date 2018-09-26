@@ -6,6 +6,7 @@ const Metadata = ({
   amp,
   articleAuthor,
   articleSection,
+  brandName,
   canonicalLink,
   defaultImage,
   defaultImageAltText,
@@ -14,7 +15,6 @@ const Metadata = ({
   locale,
   metaTags,
   opengraphSiteName,
-  serviceName,
   timeFirstPublished,
   timeLastUpdated,
   title,
@@ -35,7 +35,7 @@ const Metadata = ({
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>
-        {serviceName} &#8211; {title}
+        {title} &#8211; {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
       <meta name="article:author" content={articleAuthor} />
@@ -70,6 +70,7 @@ Metadata.propTypes = {
   amp: bool.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
+  brandName: string.isRequired,
   canonicalLink: string.isRequired,
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
@@ -78,7 +79,6 @@ Metadata.propTypes = {
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
   opengraphSiteName: string.isRequired,
-  serviceName: string.isRequired,
   timeFirstPublished: string.isRequired,
   timeLastUpdated: string.isRequired,
   title: string.isRequired,

@@ -16,9 +16,8 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    BBC News
-     – 
     An article title
+     – 
   </title>
   <link
     href="https://www.bbc.com/news/articles/amp/c0000000001o"
@@ -121,9 +120,8 @@ exports[`Metadata News article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    BBC News
-     – 
     An article title
+     – 
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
@@ -227,9 +225,8 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    BBC News فارسی
-     – 
     پهپادی که برایتان قهوه می‌آورد
+     – 
   </title>
   <link
     href="https://www.bbc.com/persian/articles/amp/c0000000028o"
@@ -332,9 +329,8 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    BBC News فارسی
-     – 
     پهپادی که برایتان قهوه می‌آورد
+     – 
   </title>
   <link
     href="https://www.bbc.com/persian/articles/c0000000028o"
@@ -437,9 +433,8 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    BBC News
-     – 
     An article title
+     – 
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
