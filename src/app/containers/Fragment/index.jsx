@@ -9,6 +9,8 @@ const attributeComponents = {
   bold,
 };
 
+const fallbackAttributeComponent = ({ children }) => children;
+
 const Fragment = ({ text, attributes }) =>
   /*
     Iterates through the attribute array and returns a component based on the attribute type (i.e. 'italic' or 'bold').
@@ -16,7 +18,8 @@ const Fragment = ({ text, attributes }) =>
     The text string is passed in as the initial value, so it is the first child or the returned value if there are no attributes.
   */
   attributes.reduce((previousAttribute, attribute) => {
-    const Attribute = attributeComponents[attribute];
+    const Attribute =
+      attributeComponents[attribute] || fallbackAttributeComponent; // If attribute is unknown, will use a fallback component that just returns the passed children
     return <Attribute>{previousAttribute}</Attribute>;
   }, text);
 

@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Fragment with an unknown attribute should ignore the attribute 1`] = `
+<b>
+  This is some text with a bold and unknown attribute
+</b>
+`;
+
 exports[`Fragment with bold and italic attributes should render text wrapped in bold and italic DOM elements 1`] = `
 <i>
   <b>

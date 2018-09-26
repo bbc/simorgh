@@ -39,4 +39,14 @@ describe('Fragment', () => {
       />,
     );
   });
+
+  describe('with an unknown attribute', () => {
+    shouldMatchSnapshot(
+      'should ignore the attribute',
+      <Fragment
+        text="This is some text with a bold and unknown attribute"
+        attributes={['bold', 'unknown']}
+      />,
+    );
+  });
 });
