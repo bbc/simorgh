@@ -56,6 +56,18 @@ exports[`Document should add amp <script> if "amp" in helmet HTML htmlAttributes
       }
       id="root"
     />
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
+        }
+      }
+    />
+    <script
+      defer={true}
+      src="http://example.com/file.js"
+      type="text/javascript"
+    />
   </body>
 </html>
 `;
