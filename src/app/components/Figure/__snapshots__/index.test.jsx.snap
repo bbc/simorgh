@@ -18,7 +18,7 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -136,7 +136,7 @@ exports[`Figure with a caption should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -223,7 +223,7 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -334,7 +334,7 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -413,7 +413,7 @@ exports[`Figure without a caption should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;

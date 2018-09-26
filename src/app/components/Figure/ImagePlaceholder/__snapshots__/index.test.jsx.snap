@@ -5,7 +5,7 @@ exports[`ImagePlaceholder should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2EFEC;
+  background-color: #ECEAE7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
