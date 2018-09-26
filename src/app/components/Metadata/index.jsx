@@ -24,7 +24,7 @@ const Metadata = ({
   const htmlAttributes = { lang };
 
   if (amp) {
-    htmlAttributes.amp = amp;
+    htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   }
 
   return (
