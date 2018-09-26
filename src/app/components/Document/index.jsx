@@ -37,7 +37,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {ampScript}
       </head>
       <body>
-       {/* eslint-disable react/no-danger */
+        {/* eslint-disable react/no-danger */
         /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
         <script
