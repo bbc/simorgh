@@ -37,6 +37,7 @@ exports[`SubHeading component attribute id should render without double quotes 1
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 1rem 0;
+  font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5rem;
 }
@@ -70,6 +71,7 @@ exports[`SubHeading component attribute id should render without exclamation mar
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 1rem 0;
+  font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5rem;
 }
@@ -103,6 +105,7 @@ exports[`SubHeading component attribute id should render without quotes 1`] = `
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 1rem 0;
+  font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5rem;
 }
@@ -136,6 +139,7 @@ exports[`SubHeading component should render correctly 1`] = `
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 1rem 0;
+  font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5rem;
 }
