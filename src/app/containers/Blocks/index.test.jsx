@@ -23,7 +23,7 @@ describe('Blocks', () => {
       },
     },
     {
-      type: 'test', // causes prop validation errors
+      type: 'test',
       blockId: '3',
       model: {
         blocks: [
