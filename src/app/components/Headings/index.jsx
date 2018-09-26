@@ -29,5 +29,6 @@ export const SubHeading = styled.h2.attrs({
   font-family: ${FF_NEWS_SANS_REG};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING_DBL} 0;
+  font-weight: 400;
   ${T_TRAFALGAR};
 `;
