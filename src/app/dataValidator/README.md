@@ -4,7 +4,7 @@
 
 Using the OpenAPI 3.0 standard we've defined a schema to both validate our data against but also to document our applications data source using the framework Swagger.
 
-This validator takes the yaml [schema](https://github.com/bbc/simorgh/blob/latest/data/schema.yaml) we've defined and validates the JSON payload against it. This allows us to ensure the data is in a format we expect before attempting to render it.
+This validator takes the yaml [schema](https://github.com/bbc-news/simorgh/blob/latest/data/schema.yaml) we've defined and validates the JSON payload against it. This allows us to ensure the data is in a format we expect before attempting to render it.
 
 ## Complexities
 
