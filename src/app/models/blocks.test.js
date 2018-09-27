@@ -28,12 +28,10 @@ describe('Block Containing Text', () => {
         blocks: [
           {
             type: 'text',
-            blockId: 't-1',
             model: {
               blocks: [
                 {
                   type: 'paragraph',
-                  blockId: 'p-1',
                   model: {
                     text: 'hello',
                   },

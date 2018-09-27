@@ -14,12 +14,9 @@ describe('AMP Tests', () => {
   });
 
   it('should have AMP attribute', () => {
-    const regex = /true/;
-
-    getElement('html')
-      .should('have.attr', 'amp')
-      .and('match', regex);
+    getElement('html').should('have.attr', 'amp');
   });
+
   it('should not have an AMP attribute on the main article', () => {
     cy.visit('/news/articles/c0000000027o');
     getElement('html').should('not.have.attr', 'amp');

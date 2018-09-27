@@ -78,4 +78,4 @@ Potential complexity of understanding due to nesting components, depending on ho
     <li>https://zellwk.com/blog/rem-vs-em/</li>
 </ul>
 
-This spike arises from https://github.com/bbc/simorgh/issues/407.
+This spike arises from https://github.com/bbc-news/simorgh/issues/407.

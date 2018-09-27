@@ -4,6 +4,7 @@ import { ServerUni, loadInitialData } from '@jtart/uni';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
@@ -47,6 +48,7 @@ const dataFolderToRender =
 const server = express();
 server
   .disable('x-powered-by')
+  .use(compression())
   .use('/data', express.static(dataFolderToRender))
   .use(
     expressStaticGzip(publicDirectory, {
