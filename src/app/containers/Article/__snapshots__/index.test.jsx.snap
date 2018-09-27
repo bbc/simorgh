@@ -34,11 +34,9 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "t-1",
                   "model": Object {
                     "blocks": Array [
                       Object {
-                        "blockId": "p-1",
                         "model": Object {
                           "text": "سرصفحه مقاله",
                         },
@@ -53,11 +51,9 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "type": "headline",
           },
           Object {
-            "blockId": "t-2",
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "p-2",
                   "model": Object {
                     "text": "یک پاراگراف.",
                   },
@@ -107,11 +103,9 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "t-1",
                   "model": Object {
                     "blocks": Array [
                       Object {
-                        "blockId": "p-1",
                         "model": Object {
                           "text": "Article Headline",
                         },
@@ -126,11 +120,9 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "type": "headline",
           },
           Object {
-            "blockId": "t-2",
             "model": Object {
               "blocks": Array [
                 Object {
-                  "blockId": "p-2",
                   "model": Object {
                     "text": "A paragraph.",
                   },

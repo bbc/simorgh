@@ -45,8 +45,6 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
 
 /*
   [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
-    After.JS gives no explicit loading state, so we just have to check for a lack of data.
-    After.JS should handle async data fetching in a more informative way, which will be become an issue for error handling.
 */
 const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
