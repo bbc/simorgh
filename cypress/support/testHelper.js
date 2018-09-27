@@ -121,3 +121,7 @@ export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
 };
+
+export const renderedTitle = title => {
+  cy.title().should('eq', title);
+};
