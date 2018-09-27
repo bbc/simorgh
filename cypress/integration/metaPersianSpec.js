@@ -1,7 +1,7 @@
 import {
+  facebookMeta,
   getElement,
   openGraphMeta,
-  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/testHelper';
 
@@ -17,12 +17,11 @@ describe('Persian Article Meta Tests', () => {
     metaElement.should('have.attr', 'content', 'nofollow');
   });
 
-  it('should have Facebook meta data', () => {
-    retrieveMetaDataContent(
-      'head meta[name="article:author"]',
-      'https://www.facebook.com/bbcnews',
-    );
-  });
+  facebookMeta(
+    '100004154058350',
+    '1609039196070050',
+    'https://www.facebook.com/bbcnews',
+  );
 
   openGraphMeta(
     'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',

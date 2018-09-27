@@ -1,8 +1,8 @@
 import {
+  facebookMeta,
   getElement,
   getSecondElement,
   openGraphMeta,
-  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/testHelper';
 
@@ -61,12 +61,11 @@ describe('Article Meta Tests', () => {
     });
   });
 
-  it('should have Facebook meta data', () => {
-    retrieveMetaDataContent(
-      'head meta[name="article:author"]',
-      'https://www.facebook.com/bbcnews',
-    );
-  });
+  facebookMeta(
+    '100004154058350',
+    '1609039196070050',
+    'https://www.facebook.com/bbcnews',
+  );
 
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
