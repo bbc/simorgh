@@ -1,28 +1,29 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import Caption from './index';
 
-describe('Caption', () => {
-  const CaptionWithContext = (captionText, stubbedContext) =>
-    shallow(<Caption>{captionText}</Caption>, {
-      context: { props: stubbedContext },
-    });
-
-  const newsContextStub = {
+jest.mock('../../../helpers/contextHelpers', () => ({
+  default: {
+    imageCaptionOffscreenText: 'Default image caption prefix, ',
+  },
+  news: {
     imageCaptionOffscreenText: 'Image caption, ',
-  };
-  it('should render correctly with news ServiceContext', () => {
-    expect(
-      CaptionWithContext('This is some Caption text', newsContextStub),
-    ).toMatchSnapshot();
-  });
-
-  const persianContextStub = {
+  },
+  persian: {
     imageCaptionOffscreenText: ' ، عنوان تصویر',
-  };
-  it('should render correctly with news ServiceContext', () => {
-    expect(
-      CaptionWithContext('توصیف چیزی که اتفاق می افتد', persianContextStub),
-    ).toMatchSnapshot();
-  });
+  },
+}));
+
+const component = captionText => <Caption>{captionText}</Caption>;
+
+describe('Caption', () => {
+  shouldMatchSnapshot(
+    'should render correctly with news ServiceContext',
+    component('This is some Caption text'),
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly with persian ServiceContext',
+    component('توصیف چیزی که اتفاق می افتد'),
+  );
 });
