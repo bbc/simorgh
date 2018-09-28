@@ -33,6 +33,7 @@ const getInitialData = async ({ match }) => {
 
     let url = `/data/${service}/${id}.json`;
 
+    // URL on server
     if (process.env.RAZZLE_BASE_PATH) {
       url = `${process.env.RAZZLE_BASE_PATH}${url}`;
     }
