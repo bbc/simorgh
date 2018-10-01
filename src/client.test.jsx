@@ -1,6 +1,6 @@
 import React from 'react';
 import OfflinePluginRuntime from 'offline-plugin/runtime';
-import { ClientUni } from '@jtart/uni';
+import { ClientApp } from 'react-universal-app';
 import * as reactDom from 'react-dom';
 import routes from './app/routes';
 
@@ -13,7 +13,7 @@ jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('@jtart/uni');
+jest.mock('react-universal-app');
 
 jest.mock('./app/routes', () => ({
   default: [],
@@ -54,7 +54,7 @@ describe('Client', () => {
     await import('./client');
 
     expect(reactDom.hydrate).toHaveBeenCalledWith(
-      <ClientUni routes={routes} data={window.SIMORGH_DATA} />,
+      <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
       mockRootElement,
     );
   });
