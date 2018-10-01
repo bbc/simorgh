@@ -2,11 +2,11 @@ import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   getElement,
-  visibleImageNoCaption,
-  visibleImageWithCaption,
   shouldContainText,
   shouldContainStyles,
-} from '../support/testHelper';
+  visibleImageNoCaption,
+  visibleImageWithCaption,
+} from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef

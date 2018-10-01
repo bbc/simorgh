@@ -1,4 +1,5 @@
-import { getElement, testNonHTMLResponseCode } from '../support/testHelper';
+import { getElement } from '../support/bodyTestHelper';
+import { testNonHTMLResponseCode } from '../support/metaTestHelper';
 
 describe('AMP Tests', () => {
   // eslint-disable-next-line no-undef
