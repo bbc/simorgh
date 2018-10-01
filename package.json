@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/simorgh.git"
+    "url": "git+https://github.com/bbc-news/simorgh.git"
   },
   "keywords": [
     "BBC",
@@ -53,9 +53,9 @@
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/bbc/simorgh/issues"
+    "url": "https://github.com/bbc-news/simorgh/issues"
   },
-  "homepage": "https://github.com/bbc/simorgh#readme",
+  "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
     "@jtart/uni": "^1.0.0-alpha.1",
     "babel-plugin-styled-components": "^1.7.1",
