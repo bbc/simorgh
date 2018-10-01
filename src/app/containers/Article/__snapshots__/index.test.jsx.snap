@@ -29,45 +29,55 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       twitterSite="@bbcpersian"
       type="article"
     />
-    <MainContentContainer
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "سرصفحه مقاله",
+    <MainContent>
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "text": "سرصفحه مقاله",
+                          },
+                          "type": "paragraph",
                         },
-                        "type": "paragraph",
-                      },
-                    ],
+                      ],
+                    },
+                    "type": "text",
                   },
-                  "type": "text",
-                },
-              ],
+                ],
+              },
+              "type": "headline",
             },
-            "type": "headline",
-          },
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "text": "یک پاراگراف.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ]
+        }
+        componentsToRender={
           Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "یک پاراگراف.",
-                  },
-                  "type": "paragraph",
-                },
-              ],
-            },
-            "type": "text",
-          },
-        ]
-      }
-    />
+            "headline": [Function],
+            "image": [Function],
+            "subheading": [Function],
+            "text": [Function],
+          }
+        }
+      />
+    </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>
@@ -100,45 +110,55 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       twitterSite="@BBCNews"
       type="article"
     />
-    <MainContentContainer
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "Article Headline",
+    <MainContent>
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "text": "Article Headline",
+                          },
+                          "type": "paragraph",
                         },
-                        "type": "paragraph",
-                      },
-                    ],
+                      ],
+                    },
+                    "type": "text",
                   },
-                  "type": "text",
-                },
-              ],
+                ],
+              },
+              "type": "headline",
             },
-            "type": "headline",
-          },
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "text": "A paragraph.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ]
+        }
+        componentsToRender={
           Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "A paragraph.",
-                  },
-                  "type": "paragraph",
-                },
-              ],
-            },
-            "type": "text",
-          },
-        ]
-      }
-    />
+            "headline": [Function],
+            "image": [Function],
+            "subheading": [Function],
+            "text": [Function],
+          }
+        }
+      />
+    </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>
