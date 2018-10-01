@@ -3,6 +3,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ParagraphContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({
+  blockId: 'f-01',
   type: 'fragment',
   model: {
     text,

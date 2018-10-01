@@ -6,6 +6,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
     blocks={
       Array [
         Object {
+          "blockId": "f-01",
           "model": Object {
             "attributes": Array [
               "bold",
