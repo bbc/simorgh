@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParagraphContainer should render correctly 1`] = `
+<Paragraph>
+  <Blocks
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [],
+            "text": "Some text",
+          },
+          "type": "bold",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+      }
+    }
+  />
+</Paragraph>
+`;
