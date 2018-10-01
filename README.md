@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+[![Build Status](https://travis-ci.org/bbc-news/simorgh.svg?branch=latest)](https://travis-ci.org/bbc-news/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc-news/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc-news/simorgh/badge.svg)](https://snyk.io/test/github/bbc-news/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc-news/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc-news/simorgh/maintainability)
 
 Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
 
@@ -18,7 +18,7 @@ Install Node 8. [https://nodejs.org/en/](https://nodejs.org/en/)
 Update to use the latest npm `npm i -g npm`
 
 ```
-git clone git@github.com:bbc/simorgh.git
+git clone git@github.com:bbc-news/simorgh.git
 npm install
 ```
 
@@ -80,7 +80,7 @@ Cypress can be run interactively using `npm run test:e2e:interactive`. This load
 
 #### Storybook
 
-We also have a [Cypress](https://www.cypress.io/) project which runs a different set of end-to-end tests on [Storybook](https://github.com/bbc/simorgh#storybook-ui-development-environmentstyle-guide). For running the tests locally we need two terminals running:
+We also have a [Cypress](https://www.cypress.io/) project which runs a different set of end-to-end tests on [Storybook](https://github.com/bbc-news/simorgh#storybook-ui-development-environmentstyle-guide). For running the tests locally we need two terminals running:
 
 1. `npm run storybook` with the application,
 2. `npm run test:storybook` with the Cypress integration tests.
@@ -89,7 +89,7 @@ We also have a [Cypress](https://www.cypress.io/) project which runs a different
 
 We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. For running the tests locally we need two terminals running:
 
-1. [Start the production server](https://github.com/bbc/simorgh#production-build)
+1. [Start the production server](https://github.com/bbc-news/simorgh#production-build)
 2. `npm run lighthouse` runs our Lighthouse tests.
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.

@@ -21,7 +21,7 @@ const Copyright = styled.span.attrs({
 
   /*
     The hidden '.' is required for accessibility reasons
-    https://github.com/bbc/simorgh/issues/456#issuecomment-419405600
+    https://github.com/bbc-news/simorgh/issues/456#issuecomment-419405600
   */
   &::after {
     content: '.';

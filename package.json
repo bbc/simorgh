@@ -17,9 +17,6 @@
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c0000000027o --output-path=./reports/report.html --view",
-    "postmerge": "./scripts/dependencyUpdateCheck.sh",
-    "precommit": "npm run test:lint",
-    "prepush": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -38,9 +35,16 @@
     "test:unit": "razzle test --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
   },
+  "husky": {
+    "hooks": {
+      "post-merge": "./scripts/dependencyUpdateCheck.sh",
+      "pre-commit": "npm run test:lint",
+      "pre-push": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit"
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/simorgh.git"
+    "url": "git+https://github.com/bbc-news/simorgh.git"
   },
   "keywords": [
     "BBC",
@@ -49,9 +53,9 @@
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/bbc/simorgh/issues"
+    "url": "https://github.com/bbc-news/simorgh/issues"
   },
-  "homepage": "https://github.com/bbc/simorgh#readme",
+  "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
     "@jtart/uni": "^1.0.0-alpha.1",
     "babel-plugin-styled-components": "^1.7.1",
@@ -91,7 +95,7 @@
     "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.1",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "jest-fetch-mock": "^1.6.6",
     "jest-styled-components": "^6.2.1",
     "lighthouse": "^3.1.1",
