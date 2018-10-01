@@ -1,7 +1,13 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';ted upstream
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../ServiceContext';
 import Caption from './index';
+
+const CaptionWithContext = (captionText, contextStub) => (
+  <ServiceContext.Provider value={contextStub}>
+    <Caption>{captionText}</Caption>
+  </ServiceContext.Provider>
+);
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -12,14 +18,10 @@ const persianServiceContextStub = {
 
 shouldMatchSnapshot(
   'should render Caption with news service context',
-  <ServiceContext.Provider value={newsServiceContextStub}>
-    <Caption>This is some Caption text</Caption>
-  </ServiceContext.Provider>,
+  CaptionWithContext('This is some Caption text', newsServiceContextStub),
 );
 
 shouldMatchSnapshot(
   'should render Caption with persian service context',
-  <ServiceContext.Provider value={persianServiceContextStub}>
-    <Caption>توصیف چیزی که اتفاق می افتد</Caption>
-  </ServiceContext.Provider>,
+  CaptionWithContext('توصیف چیزی که اتفاق می افتد', persianServiceContextStub),
 );

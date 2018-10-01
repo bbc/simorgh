@@ -42,7 +42,7 @@ exports[`should render Caption with news service context 1`] = `
   <span
     className="c1"
   >
-    Default image caption prefix, 
+    Image caption, 
   </span>
   This is some Caption text
 </figcaption>
@@ -90,7 +90,7 @@ exports[`should render Caption with persian service context 1`] = `
   <span
     className="c1"
   >
-    Default image caption prefix, 
+     ، عنوان تصویر
   </span>
   توصیف چیزی که اتفاق می افتد
 </figcaption>
