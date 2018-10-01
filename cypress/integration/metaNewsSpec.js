@@ -14,8 +14,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    const metaElement = getElement('head meta[name="robots"]');
-    metaElement.should('have.attr', 'content', 'nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
 
   it('should load a maximum of two Reith font files', () => {

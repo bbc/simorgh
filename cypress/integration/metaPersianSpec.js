@@ -1,5 +1,4 @@
 import {
-  getElement,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -13,8 +12,7 @@ describe('Persian Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    const metaElement = getElement('head meta[name="robots"]');
-    metaElement.should('have.attr', 'content', 'nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
 
   it('should have Facebook meta data', () => {
