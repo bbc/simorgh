@@ -7,10 +7,12 @@ exports[`ParagraphContainer should render correctly 1`] = `
       Array [
         Object {
           "model": Object {
-            "attributes": Array [],
-            "text": "Some text",
+            "attributes": Array [
+              "bold",
+            ],
+            "text": "This is some text.",
           },
-          "type": "bold",
+          "type": "fragment",
         },
       ]
     }
