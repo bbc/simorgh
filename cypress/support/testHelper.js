@@ -112,6 +112,12 @@ export const twitterMeta = (
   });
 };
 
+export const retrieve404BodyResponse = (url, bodyResponse) => {
+  cy.request({ url, failOnStatusCode: false })
+    .its('body')
+    .should('include', bodyResponse);
+};
+
 export const visibleImageNoCaption = figure => {
   figureVisibility(figure);
   figure.should('not.to.have.descendants', 'figcaption');
