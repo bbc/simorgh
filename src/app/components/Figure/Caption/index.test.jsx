@@ -1,29 +1,25 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';ted upstream
+import { ServiceContext } from '../../ServiceContext';
 import Caption from './index';
 
-jest.mock('../../../helpers/contextHelpers', () => ({
-  default: {
-    imageCaptionOffscreenText: 'Default image caption prefix, ',
-  },
-  news: {
-    imageCaptionOffscreenText: 'Image caption, ',
-  },
-  persian: {
-    imageCaptionOffscreenText: ' ، عنوان تصویر',
-  },
-}));
+const newsServiceContextStub = {
+  imageCaptionOffscreenText: 'Image caption, ',
+};
+const persianServiceContextStub = {
+  imageCaptionOffscreenText: ' ، عنوان تصویر',
+};
 
-const component = captionText => <Caption>{captionText}</Caption>;
+shouldMatchSnapshot(
+  'should render Caption with news service context',
+  <ServiceContext.Provider value={newsServiceContextStub}>
+    <Caption>This is some Caption text</Caption>
+  </ServiceContext.Provider>,
+);
 
-describe('Caption', () => {
-  shouldMatchSnapshot(
-    'should render correctly with news ServiceContext',
-    component('This is some Caption text'),
-  );
-
-  shouldMatchSnapshot(
-    'should render correctly with persian ServiceContext',
-    component('توصیف چیزی که اتفاق می افتد'),
-  );
-});
+shouldMatchSnapshot(
+  'should render Caption with persian service context',
+  <ServiceContext.Provider value={persianServiceContextStub}>
+    <Caption>توصیف چیزی که اتفاق می افتد</Caption>
+  </ServiceContext.Provider>,
+);

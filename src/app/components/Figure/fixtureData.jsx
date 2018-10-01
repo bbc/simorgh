@@ -1,7 +1,6 @@
 import React from 'react';
 import FigureContainer from '../../containers/Figure';
 import { ServiceContext } from '../ServiceContext';
-import serviceContextStub from '../../helpers/contextHelpers';
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
@@ -12,8 +11,12 @@ const captionValueContainingLink =
   'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Copyright Getty images';
 
+const serviceContextStubNews = {
+  imageCaptionOffscreenText: 'Image caption, ',
+};
+
 const generateFixtureData = (caption, copyright) => (
-  <ServiceContext.Provider value={serviceContextStub.news}>
+  <ServiceContext.Provider value={serviceContextStubNews}>
     <FigureContainer
       src={imageSrc}
       alt={imageAlt}
