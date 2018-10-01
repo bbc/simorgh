@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph should render correctly 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+  className="c0"
+>
+  This is some paragraph content.
+</p>
+`;
