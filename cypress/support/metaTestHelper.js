@@ -1,4 +1,4 @@
-import { getElement, figureVisibility } from './bodyTestHelper';
+import { getElement } from './bodyTestHelper';
 
 export const testNonHTMLResponseCode = (path, responseCode) => {
   cy.request(path).then(({ status }) => {
@@ -64,14 +64,4 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')
     .should('include', bodyResponse);
-};
-
-export const visibleImageNoCaption = figure => {
-  figureVisibility(figure);
-  figure.should('not.to.have.descendants', 'figcaption');
-};
-
-export const visibleImageWithCaption = figure => {
-  figureVisibility(figure);
-  figure.should('to.have.descendants', 'figcaption');
 };
