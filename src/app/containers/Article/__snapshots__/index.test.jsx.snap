@@ -9,7 +9,6 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
   >
     <Header />
     <Metadata
-      amp={false}
       articleAuthor="https://www.facebook.com/bbcnews"
       articleSection={null}
       canonicalLink="https://www.bbc.com/persian/articles/c0000000028o"
@@ -88,7 +87,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
   >
     <Header />
     <Metadata
-      amp={false}
       articleAuthor="https://www.facebook.com/bbcnews"
       articleSection={null}
       canonicalLink="https://www.bbc.com/news/articles/c0000000001o"

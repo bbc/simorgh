@@ -14,10 +14,10 @@ const getInitialData = async ({ match }) => {
     const response = await fetch(url);
 
     const data = await response.json();
-    const isAmp = amp === '.amp';
+    const isAmp = !!amp;
 
     return {
-      amp: isAmp,
+      isAmp,
       data,
       service,
     };

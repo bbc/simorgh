@@ -27,14 +27,14 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
-const metadataProps = (amp, config, id, metadata, promo, service) => {
+const metadataProps = (isAmp, config, id, metadata, promo, service) => {
   /* Canonical link generated from servicename and id */
   const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
 
   return {
-    amp,
+    isAmp,
     articleAuthor: config.articleAuthor,
     articleSection: metadata.passport.genre,
     canonicalLink,
@@ -61,7 +61,7 @@ const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) return 'Something went wrong :(';
   if (data) {
-    const { amp, data: articleData, service } = data;
+    const { isAmp, data: articleData, service } = data;
     const { content, metadata, promo } = articleData;
 
     const { id: aresArticleId } = metadata;
@@ -73,7 +73,7 @@ const ArticleContainer = ({ loading, error, data }) => {
         <ServiceContextProvider service={service}>
           <Header />
           <Metadata
-            {...metadataProps(amp, config, id, metadata, promo, service)}
+            {...metadataProps(isAmp, config, id, metadata, promo, service)}
           />
           <MainContent>
             <Blocks

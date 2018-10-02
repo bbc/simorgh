@@ -4,7 +4,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 const metadataSnapshotTest = (
   testDescription,
-  amp,
+  isAmp,
   articleAuthor,
   articleSection,
   canonicalLink,
@@ -23,7 +23,7 @@ const metadataSnapshotTest = (
 ) =>
   describe(testDescription, () => {
     const metadataProps = {
-      amp,
+      isAmp,
       articleAuthor,
       articleSection,
       canonicalLink,

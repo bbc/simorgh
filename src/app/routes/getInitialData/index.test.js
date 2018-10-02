@@ -37,7 +37,7 @@ describe('getInitialData', () => {
   it('should return the fetch response', async () => {
     const response = await callGetInitialData();
     expect(response).toEqual({
-      amp: false,
+      isAmp: false,
       data: mockSuccessfulResponse,
       service: 'news',
     });
@@ -56,7 +56,7 @@ describe('getInitialData', () => {
 
     const response = await callGetInitialData(contextWithAmp);
     expect(response).toEqual({
-      amp: true,
+      isAmp: true,
       data: mockSuccessfulResponse,
       service: 'news',
     });
