@@ -1,5 +1,5 @@
 import {
-  getElement,
+  metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -13,8 +13,13 @@ describe('Persian Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    const metaElement = getElement('head meta[name="robots"]');
-    metaElement.should('have.attr', 'content', 'nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+  });
+
+  it('should have description meta data', () => {
+    metaDataDescription(
+      'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
+    );
   });
 
   it('should have Facebook meta data', () => {

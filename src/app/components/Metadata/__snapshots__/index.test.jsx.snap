@@ -44,6 +44,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   />
   <meta
     content="This is a description"
+    name="description"
+  />
+  <meta
+    content="This is a description"
     name="og:description"
   />
   <meta
@@ -101,6 +105,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <script
+    async={true}
+    src="https://cdn.ampproject.org/v0.js"
+  />
 </HelmetWrapper>
 `;
 
@@ -144,6 +152,10 @@ exports[`Metadata News article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -251,6 +263,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   />
   <meta
     content="This is a description"
+    name="description"
+  />
+  <meta
+    content="This is a description"
     name="og:description"
   />
   <meta
@@ -308,6 +324,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
   />
+  <script
+    async={true}
+    src="https://cdn.ampproject.org/v0.js"
+  />
 </HelmetWrapper>
 `;
 
@@ -351,6 +371,10 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -458,6 +482,10 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
