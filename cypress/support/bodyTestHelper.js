@@ -51,6 +51,10 @@ export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   shouldContainText(anchorElement, 'BBC News');
 };
 
+export const renderedTitle = title => {
+  cy.title().should('eq', title);
+};
+
 export const figureVisibility = figure => {
   figure.should('be.visible');
   figure.should('to.have.descendants', 'img');
