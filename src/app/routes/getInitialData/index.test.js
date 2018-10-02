@@ -1,5 +1,4 @@
 import getInitialData from './index';
-import * as isServer from '../../helpers/isServer';
 
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
@@ -43,9 +42,11 @@ describe('getInitialData', () => {
   });
 
   describe('On client', () => {
-    it('should call fetch with a relative URL', () => {
-      isServer.default = jest.fn().mockReturnValueOnce(false);
+    beforeEach(() => {
+      process.env = {};
+    });
 
+    it('should call fetch with a relative URL', () => {
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
         `/data/${defaultServiceParam}/${defaultIdParam}.json`,
@@ -106,11 +107,11 @@ describe('getInitialData', () => {
 
   describe('On Server', () => {
     const BASE_PATH = 'https://test.com';
-    process.env.RAZZLE_BASE_PATH = BASE_PATH;
+    beforeEach(() => {
+      process.env.RAZZLE_BASE_PATH = BASE_PATH;
+    });
 
     it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
-      isServer.default = jest.fn().mockReturnValueOnce(true);
-
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
         `${BASE_PATH}/data/${defaultServiceParam}/${defaultIdParam}.json`,
