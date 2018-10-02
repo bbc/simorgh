@@ -67,6 +67,10 @@ export const retrieveMetaDataContent = (metaDataTag, content) => {
   metaElement.should('have.attr', 'content', content);
 };
 
+export const metaDataDescription = description => {
+  retrieveMetaDataContent('head meta[name="description"]', description);
+};
+
 export const openGraphMeta = (
   description,
   imageUrl,

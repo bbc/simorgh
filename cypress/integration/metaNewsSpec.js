@@ -1,6 +1,7 @@
 import {
   getElement,
   getSecondElement,
+  metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -58,6 +59,12 @@ describe('Article Meta Tests', () => {
       const secondElement = getSecondElement(selector);
       secondElement.should('have.attr', 'rel', 'dns-prefetch');
     });
+  });
+
+  it('should have description meta data', () => {
+    metaDataDescription(
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    );
   });
 
   it('should have Facebook meta data', () => {
