@@ -5,7 +5,7 @@ import {
   shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
-} from '../support/testHelper';
+} from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
