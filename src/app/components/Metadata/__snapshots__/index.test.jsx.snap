@@ -44,6 +44,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   />
   <meta
     content="This is a description"
+    name="description"
+  />
+  <meta
+    content="This is a description"
     name="og:description"
   />
   <meta
@@ -151,6 +155,10 @@ exports[`Metadata News article should render correctly 1`] = `
   />
   <meta
     content="This is a description"
+    name="description"
+  />
+  <meta
+    content="This is a description"
     name="og:description"
   />
   <meta
@@ -252,6 +260,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -362,6 +374,10 @@ exports[`Metadata Persian article should render correctly 1`] = `
   />
   <meta
     content="This is a description"
+    name="description"
+  />
+  <meta
+    content="This is a description"
     name="og:description"
   />
   <meta
@@ -466,6 +482,10 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
