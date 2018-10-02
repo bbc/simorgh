@@ -1,5 +1,6 @@
 import React from 'react';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
+import nanoid from 'nanoid';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -17,7 +18,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        key={index.toString()}
+        key={nanoid()}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}

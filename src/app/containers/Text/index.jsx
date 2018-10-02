@@ -1,5 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
+import nanoid from 'nanoid';
 import { textModelPropTypes } from '../../models/propTypes/text';
 import Text from '../../components/Text';
 
@@ -10,8 +11,8 @@ const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
 
   const HorizontalRule = shouldPrependHR(typeOfPreviousBlock) ? <hr /> : null;
 
-  const textBlocks = blocks.map(({ model }, index) => (
-    <Text key={index.toString()} {...model} />
+  const textBlocks = blocks.map(({ model }) => (
+    <Text key={nanoid()} {...model} />
   ));
 
   return (
