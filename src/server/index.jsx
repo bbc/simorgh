@@ -50,7 +50,6 @@ server
   .disable('x-powered-by')
   .use(compression())
   .use('/data', express.static(dataFolderToRender))
-  .use('/public', express.static('public'))
   .use(
     expressStaticGzip(publicDirectory, {
       enableBrotli: true,

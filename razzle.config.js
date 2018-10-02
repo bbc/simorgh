@@ -43,7 +43,6 @@ module.exports = {
             // an alternative would be html-webpack-plugin
             caches: 'all',
             externals: [
-              '/public/manifest.json',
               'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
               'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
               'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
