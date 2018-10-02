@@ -10,8 +10,8 @@ const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
 
   const HorizontalRule = shouldPrependHR(typeOfPreviousBlock) ? <hr /> : null;
 
-  const textBlocks = blocks.map(({ blockId, model }) => (
-    <Text key={blockId} {...model} />
+  const textBlocks = blocks.map(({ model }, index) => (
+    <Text key={index.toString()} {...model} />
   ));
 
   return (

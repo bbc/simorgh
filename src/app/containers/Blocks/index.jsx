@@ -9,7 +9,7 @@ const BlockString = props => {
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
-    const { type, blockId, model } = block;
+    const { type, model } = block;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
@@ -17,7 +17,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        key={blockId}
+        key={index.toString()}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}
