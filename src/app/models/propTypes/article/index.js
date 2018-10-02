@@ -2,7 +2,7 @@ import { arrayOf, bool, number, shape, string } from 'prop-types';
 import mainContentPropTypes from '../mainContent';
 
 const articlePropTypes = {
-  amp: bool,
+  isAmp: bool,
   data: shape({
     metadata: shape({
       id: string.isRequired,
