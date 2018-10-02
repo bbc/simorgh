@@ -6,7 +6,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
-      "amp": true,
+      "amp": "",
       "lang": "en-GB",
     }
   }
@@ -17,6 +17,8 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   />
   <title>
     An article title
+     – 
+    BBC News
   </title>
   <link
     href="https://www.bbc.com/news/articles/amp/c0000000001o"
@@ -41,6 +43,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -101,6 +107,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <script
+    async={true}
+    src="https://cdn.ampproject.org/v0.js"
+  />
 </HelmetWrapper>
 `;
 
@@ -120,6 +130,8 @@ exports[`Metadata News article should render correctly 1`] = `
   />
   <title>
     An article title
+     – 
+    BBC News
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
@@ -144,6 +156,10 @@ exports[`Metadata News article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -213,7 +229,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
-      "amp": true,
+      "amp": "",
       "lang": "fa",
     }
   }
@@ -224,6 +240,8 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   />
   <title>
     پهپادی که برایتان قهوه می‌آورد
+     – 
+    BBC News فارسی
   </title>
   <link
     href="https://www.bbc.com/persian/articles/amp/c0000000028o"
@@ -248,6 +266,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -308,6 +330,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
   />
+  <script
+    async={true}
+    src="https://cdn.ampproject.org/v0.js"
+  />
 </HelmetWrapper>
 `;
 
@@ -327,6 +353,8 @@ exports[`Metadata Persian article should render correctly 1`] = `
   />
   <title>
     پهپادی که برایتان قهوه می‌آورد
+     – 
+    BBC News فارسی
   </title>
   <link
     href="https://www.bbc.com/persian/articles/c0000000028o"
@@ -351,6 +379,10 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"
@@ -430,6 +462,8 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   />
   <title>
     An article title
+     – 
+    BBC News
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
@@ -458,6 +492,10 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="tagB"
     name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
   />
   <meta
     content="This is a description"

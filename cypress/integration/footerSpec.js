@@ -4,7 +4,7 @@ import {
   getElement,
   shouldContainText,
   shouldContainStyles,
-} from '../support/testHelper';
+} from '../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef

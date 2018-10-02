@@ -4,7 +4,7 @@ servers:
     url: https://virtserver.swaggerhub.com/no-name2/article/1.0.0
 info:
   description: This is an early draft of an Article API definition for web and apps.
-  version: "1.1.1"
+  version: '1.1.1'
   title: News web and apps article API
   contact:
     email: benjamin.hobbs@bbc.co.uk
@@ -18,7 +18,7 @@ paths:
   /article:
     get:
       tags:
-      - news-developers
+        - news-developers
       summary: returns article/s
       operationId: getArticles
       description: |
@@ -76,11 +76,10 @@ components:
                 - blocks
               properties:
                 blocks:
-                  $ref: "#/components/schemas/blocks"
+                  $ref: '#/components/schemas/blocks'
         metadata:
           type: object
           required:
-            - blockId
             - created
             - firstPublished
             - id
@@ -103,8 +102,6 @@ components:
                 - review
                 - summary
               example: analysis
-            blockId:
-              type: string
             blockTypes:
               type: object
               items:
@@ -152,10 +149,10 @@ components:
                 genre:
                   type: string
                 home:
-                  example: "http://www.bbc.co.uk/ontologies/passport/home/News"
+                  example: 'http://www.bbc.co.uk/ontologies/passport/home/News'
                   type: string
                 language:
-                  example: "en-gb"
+                  example: 'en-gb'
                   type: string
             tags:
               type: object
@@ -190,7 +187,7 @@ components:
                 - promoHeadline
               properties:
                 seoHeadline:
-                  example: "UK pledges extra £44m for Channel border security"
+                  example: 'UK pledges extra £44m for Channel border security'
                   type: string
                 promoHeadline:
                   type: string
@@ -214,32 +211,28 @@ components:
       type: object
       items:
         oneOf:
-          - $ref: "#/components/schemas/altText"
-          - $ref: "#/components/schemas/caption"
-          - $ref: "#/components/schemas/headline"
-          - $ref: "#/components/schemas/image"
-          - $ref: "#/components/schemas/paragraph"
-          - $ref: "#/components/schemas/rawImage"
-          - $ref: "#/components/schemas/rawVideo"
-          - $ref: "#/components/schemas/subheading"
-          - $ref: "#/components/schemas/text"
-          - $ref: "#/components/schemas/video"
+          - $ref: '#/components/schemas/altText'
+          - $ref: '#/components/schemas/caption'
+          - $ref: '#/components/schemas/headline'
+          - $ref: '#/components/schemas/image'
+          - $ref: '#/components/schemas/paragraph'
+          - $ref: '#/components/schemas/rawImage'
+          - $ref: '#/components/schemas/rawVideo'
+          - $ref: '#/components/schemas/subheading'
+          - $ref: '#/components/schemas/text'
+          - $ref: '#/components/schemas/video'
       minItems: 2
 
     altText:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -249,17 +242,13 @@ components:
     caption:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -269,17 +258,13 @@ components:
     headline:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -289,17 +274,13 @@ components:
     image:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -309,13 +290,9 @@ components:
     paragraph:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           type: object
           required:
@@ -331,13 +308,9 @@ components:
     rawImage:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             copyrightHolder:
@@ -347,10 +320,10 @@ components:
               example: 420
               type: number
             locator:
-              example: "https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg"
+              example: 'https://fishchips.co.uk/images/ic/640x360/p052ww1r.jpg'
               type: string
             originCode:
-              example: "cpsprodpb"
+              example: 'cpsprodpb'
               type: string
             width:
               example: 640
@@ -370,13 +343,9 @@ components:
     rawVideo:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             allowffsiteEmbedding:
@@ -392,7 +361,7 @@ components:
               example: false
               type: boolean
             locator:
-              example: "xyz:abc:pips:pid:p019fch9"
+              example: 'xyz:abc:pips:pid:p019fch9'
               type: string
           required:
             - allowOffsiteEmbedding
@@ -409,17 +378,13 @@ components:
     subheading:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -429,17 +394,13 @@ components:
     text:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:
@@ -449,17 +410,13 @@ components:
     video:
       type: object
       required:
-        - blockId
         - model
         - type
       properties:
-        blockId:
-          example: 0f29a57f-3492-3c0d-af51-837208b657fb
-          type: string
         model:
           properties:
             blocks:
-              $ref: "#/components/schemas/blocks"
+              $ref: '#/components/schemas/blocks'
           type: object
         type:
           enum:

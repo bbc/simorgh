@@ -36,18 +36,18 @@ pipeline {
       steps {
         sh "rm -rf ${env.APP_DIRECTORY}"
         checkout([
-          $class: 'GitSCM', 
+          $class: 'GitSCM',
           branches: [[name: "*/${env.BRANCH_NAME}"]],
-          doGenerateSubmoduleConfigurations: false, 
+          doGenerateSubmoduleConfigurations: false,
           extensions: [[
-            $class: 'RelativeTargetDirectory', 
+            $class: 'RelativeTargetDirectory',
             relativeTargetDir: "${env.APP_DIRECTORY}"
-          ]], 
-          submoduleCfg: [], 
+          ]],
+          submoduleCfg: [],
           userRemoteConfigs: [[
             credentialsId: 'github',
             name: "origin/${env.BRANCH_NAME}",
-            url: 'https://github.com/bbc/simorgh.git'
+            url: 'https://github.com/bbc-news/simorgh.git'
           ]]
         ])
         script {
