@@ -1,8 +1,8 @@
+import { getElement } from '../support/bodyTestHelper';
 import {
-  getElement,
-  retrieve404BodyResponse,
   testNonHTMLResponseCode,
-} from '../support/testHelper';
+  retrieve404BodyResponse,
+} from '../support/metaTestHelper';
 
 describe('AMP Tests', () => {
   // eslint-disable-next-line no-undef

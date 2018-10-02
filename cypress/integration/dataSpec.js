@@ -1,4 +1,4 @@
-import { testNonHTMLResponseCode } from '../support/testHelper';
+import { testNonHTMLResponseCode } from '../support/metaTestHelper';
 
 describe('Static Articles data', () => {
   it('should return a 200 status code', () => {
