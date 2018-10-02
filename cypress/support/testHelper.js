@@ -75,6 +75,10 @@ export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
   });
 };
 
+export const metaDataDescription = description => {
+  retrieveMetaDataContent('head meta[name="description"]', description);
+};
+
 export const openGraphMeta = (
   description,
   imageUrl,

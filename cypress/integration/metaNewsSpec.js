@@ -2,6 +2,7 @@ import {
   facebookMeta,
   getElement,
   getSecondElement,
+  metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -66,6 +67,12 @@ describe('Article Meta Tests', () => {
     '1609039196070050',
     'https://www.facebook.com/bbcnews',
   );
+
+  it('should have description meta data', () => {
+    metaDataDescription(
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    );
+  });
 
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
