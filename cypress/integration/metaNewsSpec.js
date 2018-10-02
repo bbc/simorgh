@@ -3,6 +3,7 @@ import {
   getElement,
   getSecondElement,
   openGraphMeta,
+  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/testHelper';
 

@@ -1,7 +1,7 @@
 import {
   facebookMeta,
-  getElement,
   openGraphMeta,
+  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/testHelper';
 
