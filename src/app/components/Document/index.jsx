@@ -52,7 +52,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet="utf-8" />
-        <meta name="robots" content="nofollow" />
+        <meta name="robots" content="noindex,nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
         {meta}
         <link rel="manifest" href="/manifest.json" />

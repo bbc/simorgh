@@ -73,7 +73,7 @@ exports[`Document should render with client side application 1`] = `
       charSet="utf-8"
     />
     <meta
-      content="nofollow"
+      content="noindex,nofollow"
       name="robots"
     />
     <meta
