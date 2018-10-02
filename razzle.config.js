@@ -44,14 +44,10 @@ module.exports = {
             caches: 'all',
             externals: [
               '/public/manifest.json',
-              '/public/images/icons/icon-72x72.png',
-              '/public/images/icons/icon-96x96.png',
-              '/public/images/icons/icon-128x128.png',
-              '/public/images/icons/icon-144x144.png',
-              '/public/images/icons/icon-152x152.png',
-              '/public/images/icons/icon-192x192.png',
-              '/public/images/icons/icon-384x384.png',
-              '/public/images/icons/icon-512x512.png',
+              'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2',
+              'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff',
+              'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2',
+              'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
             ],
             ServiceWorker: {
               events: true,
