@@ -1,6 +1,7 @@
 import {
   getElement,
   getSecondElement,
+  metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -14,8 +15,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    const metaElement = getElement('head meta[name="robots"]');
-    metaElement.should('have.attr', 'content', 'nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -59,6 +59,12 @@ describe('Article Meta Tests', () => {
       const secondElement = getSecondElement(selector);
       secondElement.should('have.attr', 'rel', 'dns-prefetch');
     });
+  });
+
+  it('should have description meta data', () => {
+    metaDataDescription(
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    );
   });
 
   it('should have Facebook meta data', () => {
