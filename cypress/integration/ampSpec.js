@@ -26,7 +26,7 @@ describe('AMP Tests', () => {
 
   it('should load the AMP framework', () => {
     // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
-    const ampScript = getElement('html script').eq(1);
+    const ampScript = getElement('head script').eq(1);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
   });
 
