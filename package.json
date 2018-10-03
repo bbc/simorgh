@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/simorgh.git"
+    "url": "git+https://github.com/bbc-news/simorgh.git"
   },
   "keywords": [
     "BBC",
@@ -53,9 +53,9 @@
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/bbc/simorgh/issues"
+    "url": "https://github.com/bbc-news/simorgh/issues"
   },
-  "homepage": "https://github.com/bbc/simorgh#readme",
+  "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
     "@jtart/uni": "^1.0.0-alpha.1",
     "babel-plugin-styled-components": "^1.7.1",
@@ -84,7 +84,7 @@
     "@storybook/react": "4.0.0-alpha.8",
     "amphtml-validator": "^1.0.23",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
     "bbc-a11y": "^2.2.5",
     "cypress": "^3.0.3",
@@ -94,7 +94,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.0.0",
     "jest-fetch-mock": "^1.6.6",
     "jest-styled-components": "^6.2.1",
