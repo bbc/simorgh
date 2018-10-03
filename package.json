@@ -57,7 +57,6 @@
   },
   "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
-    "@jtart/uni": "^1.0.0-alpha.1",
     "babel-plugin-styled-components": "^1.7.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -77,6 +76,7 @@
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
+    "react-universal-app": "^1.0.0",
     "speculate": "^1.7.4",
     "styled-components": "^3.4.9",
     "styled-normalize": "^8.0.1"
