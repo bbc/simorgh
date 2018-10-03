@@ -94,7 +94,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.0.0",
     "jest-fetch-mock": "^1.6.6",
     "jest-styled-components": "^6.2.1",
