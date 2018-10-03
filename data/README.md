@@ -14,7 +14,7 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 | 2        | | Headline, Image (portrait, caption), Text (2 pars, superscript) | One tag, no topics | |
 | 3        | | Headline, Video (caption), Text (3 pars, subscript) | Two tags, one topic (person) | |
 | 4        | | Headline, Text (1 par), Image (tall landscape), Text (1 par), Video (caption), Text (4 pars) | Two tags, two topics (place & person) | |
-| 5        | | Headline, Text (1 par), Image (caption), Video (caption) | Two tags, two topics (event & place) | |
+| 5        | | Headline, Text (1 par), Image (copyright) (caption), Text (1 par), Image (copyright), Text (1 par), Video (caption) | Two tags, two topics (event & place) | |
 | 6        | | Headline, Text (1 par, external link), Video (caption), Image (portrait, caption) | 5 tags, 3 topics (person & 2 events) | |
 | 7        | Category: Opinion | Text (1 par), Headline, Text (2 pars, internal link), Subheadline, Text (1 long par) | Four tags, four topics (2 people, 2 places) | Will fail in v1.0 - blocks before headline |
 | 8        | Category: Opinion | Image (caption), Headline, Subheadline, Image (caption), Subheadline, Text (bold) | 7 about tags (events - 5 topics), 3 mentions tags | Will fail in v1.0 - blocks before headline |
