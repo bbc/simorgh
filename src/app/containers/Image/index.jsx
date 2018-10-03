@@ -3,6 +3,8 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
+const DEFAULT_IMAGE_RES = 640;
+
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCaption = block => {
@@ -33,7 +35,7 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const hardcodedImageWidth = 820; // this should be defined by the viewport width or a static number
+  const hardcodedImageWidth = DEFAULT_IMAGE_RES;
   const { locator, copyrightHolder, height, width } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
