@@ -2,14 +2,13 @@ import React from 'react';
 import FigureContainer from '../../containers/Figure';
 import { ServiceContext } from '../ServiceContext';
 
-const imageAlt =
-  'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
+const imageAlt = 'Pauline Clayton';
 const imageSrc =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const captionValue = 'This is a caption';
 const captionValueContainingLink =
   'This is a caption [with a link](https://bbc.com/news)';
-const copyrightText = 'Copyright Getty images';
+const copyrightText = 'Getty Images';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
