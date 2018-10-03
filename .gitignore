@@ -4,3 +4,5 @@ build
 node_modules
 coverage
 reports/report.html
+reports/webpackBundleReport.html
+reports/webpackBundleReport.json 
