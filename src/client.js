@@ -2,7 +2,7 @@
 import React from 'react';
 import 'babel-polyfill';
 import { hydrate } from 'react-dom';
-import { ClientUni } from '@jtart/uni';
+import { ClientApp } from 'react-universal-app';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import routes from './app/routes';
 
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 
-hydrate(<ClientUni data={data} routes={routes} />, root);
+hydrate(<ClientApp data={data} routes={routes} />, root);
 
 if (module.hot) {
   module.hot.accept();
