@@ -3,8 +3,6 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
-const DEFAULT_IMAGE_RES = 640;
-
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCaption = block => {
@@ -35,19 +33,16 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const hardcodedImageWidth = DEFAULT_IMAGE_RES;
-  const { locator, copyrightHolder, height, width } = rawImageBlock.model;
+  const { locator, copyrightHolder } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
-  const ratio = (height / width) * 100;
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/${hardcodedImageWidth}${locator}`;
+  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
 
   return (
     <Figure
       src={rawImageSrc}
       alt={altText}
-      ratio={ratio}
       copyright={copyright}
       caption={caption}
     />
