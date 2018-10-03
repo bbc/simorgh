@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string, arrayOf, shape } from 'prop-types';
+import nanoid from 'nanoid';
 import {
   C_WHITE,
   GEL_SPACING,
@@ -61,10 +62,8 @@ const StyledListItem = styled.li`
 
 const FooterList = ({ links }) => (
   <StyledList role="list">
-    {links.map((link, index) => (
-      // It is redundant to add ids when list items are static, have no ids by default and are never reordered or filtered
-      // eslint-disable-next-line react/no-array-index-key
-      <StyledListItem key={index} role="listitem">
+    {links.map(link => (
+      <StyledListItem key={nanoid()} role="listitem">
         <Link text={link.text} href={link.href} />
       </StyledListItem>
     ))}

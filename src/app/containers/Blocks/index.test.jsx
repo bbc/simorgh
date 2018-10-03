@@ -10,7 +10,6 @@ describe('Blocks', () => {
     singleTextBlock('This is some text content!'),
     {
       type: 'test',
-      blockId: '3',
       model: {
         blocks: [
           {
@@ -22,12 +21,10 @@ describe('Blocks', () => {
       },
     },
     {
-      blockId: '4',
       type: 'image',
       model: {
         blocks: [
           {
-            blockId: '4-1',
             type: 'rawImage',
             model: {
               width: 640,
