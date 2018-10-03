@@ -31,6 +31,9 @@ injectGlobal`
 `;
 
 /* Unused fonts
+  - When adding fonts, be sure to add them to the externals array for Offline-Plugin here:
+  https://github.com/BBC-News/simorgh/blob/latest/razzle.config.js#L38
+
   @font-face {
     font-display: optional;
     font-family: ReithSansNewsLight;
