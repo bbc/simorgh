@@ -4,7 +4,7 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/testHelper';
+} from '../support/metaTestHelper';
 
 describe('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
