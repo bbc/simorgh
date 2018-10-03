@@ -7,7 +7,7 @@ const imageAlt =
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
 const caption = 'This is a caption';
-const copyrightText = 'Copyright Getty images';
+const copyrightText = 'Getty Images';
 
 describe('Figure', () => {
   shouldShallowMatchSnapshot(
