@@ -1,11 +1,10 @@
+import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
-  getElement,
-  getSecondElement,
   metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/testHelper';
+} from '../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
