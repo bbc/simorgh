@@ -160,6 +160,78 @@
           }
         },
         {
+          "type": "text",
+          "blockId": "8b851516-b175-4092-a398-692f84cd7268",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId": "1475d1fb-5883-4c57-908a-2a89ba330ff6",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "13097b46-67c7-cbe6-5777-63088d479fea",
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": null,
+                  "copyrightHolder": "Getty Images"
+                }
+              },
+              {
+                "blockId": "4ed25e4b-c68c-71e6-901b-9534af64472c",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "3a0d2608-e2a4-a956-0d1a-4db91c1e6807",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "blockId": "a7ea79c6-6824-45fb-7d71-5ebd8a3268c3",
+                            "model": {
+                              "text": "Fusce tincidunt lectus eget augue mollis."
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "blockId": "8b851516-b175-4092-a398-692f84cd7268",
+          "model": {
+            "blocks": [
+              {
+                "blockId": "2996f344-7d91-90ec-9ba7-4b2f19677c3b",
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™."
+                }
+              }
+            ]
+          }
+        },
+        {
           "blockId": "da611d38-08ef-4105-a288-3385a343cb9b",
           "type": "video",
           "model": {
