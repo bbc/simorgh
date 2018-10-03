@@ -3,7 +3,7 @@ import FigureContainer from '../../containers/Figure';
 
 const imageAlt = 'Pauline Clayton';
 const imageSrc =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg';
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageRatio = 56.25;
 const captionValue = 'This is a caption';
 const captionValueContainingLink =
