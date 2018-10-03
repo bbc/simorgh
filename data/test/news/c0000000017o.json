@@ -335,7 +335,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
-                        "originCode": "cpsprodpb",
+                        "originCode": "pips",
                         "copyrightHolder": "BBC"
                       }
                     },
@@ -605,7 +605,7 @@
                         "width": 976,
                         "height": 549,
                         "locator": "https://ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
-                        "originCode": "cpsprodpb",
+                        "originCode": "pips",
                         "copyrightHolder": "EBU"
                       }
                     },
