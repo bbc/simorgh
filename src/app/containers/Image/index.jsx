@@ -17,10 +17,7 @@ const getCopyright = copyrightHolder => {
     return null;
   }
 
-  const copyrightOffscreenText = 'Copyright';
-  const copyrightText = `${copyrightOffscreenText} ${copyrightHolder}`;
-
-  return copyrightText;
+  return copyrightHolder;
 };
 
 const ImageContainer = ({ blocks }) => {
