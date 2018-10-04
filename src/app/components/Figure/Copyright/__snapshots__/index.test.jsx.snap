@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Copyright should render correctly 1`] = `
-Array [
-  .c0 {
+.c1 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -15,12 +14,7 @@ Array [
   top: 0;
 }
 
-<span
-    className="c0"
-  >
-    Image source, Getty Images
-  </span>,
-  .c0 {
+.c0 {
   font-size: 0.75em;
   line-height: 1em;
   background-color: rgba(34,34,34,0.75);
@@ -31,13 +25,18 @@ Array [
   position: absolute;
   bottom: 0;
   right: 0;
+  margin: 0;
 }
 
-<span
-    aria-hidden="true"
-    className="c0"
+<p
+  className="c0"
+  role="text"
+>
+  <span
+    className="c1"
   >
-    Getty Images
-  </span>,
-]
+    Image source, 
+  </span>
+  Getty Images
+</p>
 `;

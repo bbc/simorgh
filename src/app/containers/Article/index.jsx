@@ -14,7 +14,7 @@ import serviceConfig from '../../lib/serviceConfig';
 
 const componentsToRender = {
   headline: headings,
-  subheading: headings,
+  subheadline: headings,
   text,
   image,
 };
