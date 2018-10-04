@@ -22,7 +22,7 @@ Array [
     }
     type="headline"
   />,
-  <subheading
+  <subheadline
     blocks={
       Array [
         Object {
@@ -30,7 +30,7 @@ Array [
             "blocks": Array [
               Object {
                 "model": Object {
-                  "text": "This is a subheading!",
+                  "text": "This is a subheadline!",
                 },
                 "type": "paragraph",
               },
@@ -40,7 +40,7 @@ Array [
         },
       ]
     }
-    type="subheading"
+    type="subheadline"
     typeOfPreviousBlock="headline"
   />,
   <text
@@ -55,7 +55,7 @@ Array [
       ]
     }
     type="text"
-    typeOfPreviousBlock="subheading"
+    typeOfPreviousBlock="subheadline"
   />,
   <BlockString
     blocks={
@@ -74,7 +74,6 @@ Array [
     blocks={
       Array [
         Object {
-          "blockId": "4-1",
           "model": Object {
             "copyrightHolder": "BBC",
             "height": 420,

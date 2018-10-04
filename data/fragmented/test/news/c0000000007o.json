@@ -22,7 +22,7 @@
       "headline",
       "text",
       "paragraph",
-      "subheading",
+      "subheadline",
       "fragment",
       "urlLink"
     ],
@@ -192,7 +192,7 @@
         },
         {
           "blockId": "22e5a292-3897-4859-a5ae-21ae0ad40606",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
