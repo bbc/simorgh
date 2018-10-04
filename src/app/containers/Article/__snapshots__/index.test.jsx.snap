@@ -70,7 +70,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
           Object {
             "headline": [Function],
             "image": [Function],
-            "subheading": [Function],
+            "subheadline": [Function],
             "text": [Function],
           }
         }
@@ -149,7 +149,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           Object {
             "headline": [Function],
             "image": [Function],
-            "subheading": [Function],
+            "subheadline": [Function],
             "text": [Function],
           }
         }
