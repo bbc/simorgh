@@ -8,7 +8,6 @@ const articlePropTypes = {
       id: string.isRequired,
       type: string.isRequired,
       createdBy: string,
-      blockId: string.isRequired,
       created: number.isRequired,
       firstPublished: number.isRequired,
       lastPublished: number.isRequired,
