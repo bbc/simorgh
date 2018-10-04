@@ -1,4 +1,4 @@
-// global.console.log = jest.fn(); // silence console.log during jest tests
+global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { readdirSync } = require('./readdirSync');
