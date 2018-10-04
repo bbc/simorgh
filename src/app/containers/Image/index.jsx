@@ -44,6 +44,8 @@ const ImageContainer = ({ blocks }) => {
         }`
       : locator;
 
+  console.log('rawImageBlock', rawImageBlock);
+  console.log('rawImageSrc', rawImageSrc);
   return (
     <Figure
       src={rawImageSrc}

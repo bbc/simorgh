@@ -18,8 +18,8 @@ describe('Image', () => {
         width: 640,
         height: 420,
         locator:
-          '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: null,
+          'http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+        originCode: 'cpsprodpb',
         copyrightHolder: 'BBC',
       },
     };
@@ -30,8 +30,8 @@ describe('Image', () => {
         width: 640,
         height: 420,
         locator:
-          '/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: null,
+          'http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+        originCode: 'cpsprodpb',
         copyrightHolder: 'Getty images',
       },
     };
