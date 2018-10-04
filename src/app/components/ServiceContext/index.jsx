@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { func, node, string } from 'prop-types';
 import services from '../../lib/config/services';
 
 /* Create ServiceContext using the default service */
@@ -25,5 +25,5 @@ ServiceContextProvider.defaultProps = {
 };
 
 ServiceContextConsumer.propTypes = {
-  children: node.isRequired,
+  children: func.isRequired,
 };

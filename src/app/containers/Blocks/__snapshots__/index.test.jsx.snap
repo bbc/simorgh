@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainContent should render correctly 1`] = `
-<MainContent>
-  <HeadingsContainer
+exports[`Blocks should render correctly 1`] = `
+Array [
+  <headline
     blocks={
       Array [
         Object {
@@ -21,8 +21,8 @@ exports[`MainContent should render correctly 1`] = `
       ]
     }
     type="headline"
-  />
-  <HeadingsContainer
+  />,
+  <subheading
     blocks={
       Array [
         Object {
@@ -42,8 +42,8 @@ exports[`MainContent should render correctly 1`] = `
     }
     type="subheading"
     typeOfPreviousBlock="headline"
-  />
-  <TextContainer
+  />,
+  <text
     blocks={
       Array [
         Object {
@@ -56,7 +56,7 @@ exports[`MainContent should render correctly 1`] = `
     }
     type="text"
     typeOfPreviousBlock="subheading"
-  />
+  />,
   <BlockString
     blocks={
       Array [
@@ -69,12 +69,11 @@ exports[`MainContent should render correctly 1`] = `
     }
     type="test"
     typeOfPreviousBlock="text"
-  />
-  <ImageContainer
+  />,
+  <BlockString
     blocks={
       Array [
         Object {
-          "blockId": "4-1",
           "model": Object {
             "copyrightHolder": "BBC",
             "height": 420,
@@ -128,6 +127,6 @@ exports[`MainContent should render correctly 1`] = `
     }
     type="image"
     typeOfPreviousBlock="test"
-  />
-</MainContent>
+  />,
+]
 `;

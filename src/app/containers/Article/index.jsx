@@ -3,10 +3,21 @@ import { bool, string, shape } from 'prop-types';
 import Metadata from '../../components/Metadata';
 import Header from '../../components/Header';
 import Footer from '../Footer';
-import MainContent from '../MainContent';
+import headings from '../Headings';
+import text from '../Text';
+import image from '../Image';
+import Blocks from '../Blocks';
+import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 import serviceConfig from '../../lib/serviceConfig';
+
+const componentsToRender = {
+  headline: headings,
+  subheading: headings,
+  text,
+  image,
+};
 
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
@@ -26,6 +37,7 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
     amp,
     articleAuthor: config.articleAuthor,
     articleSection: metadata.passport.genre,
+    brandName: config.brandName,
     canonicalLink,
     defaultImage: config.defaultImage,
     defaultImageAltText: config.defaultImageAltText,
@@ -35,7 +47,6 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
     lang: metadata.passport.language,
     locale: config.locale,
     metaTags: allTags(metadata.tags),
-    opengraphSiteName: config.opengraphSiteName,
     timeFirstPublished,
     timeLastUpdated,
     title: promo.headlines.seoHeadline,
@@ -66,7 +77,12 @@ const ArticleContainer = ({ loading, error, data }) => {
           <Metadata
             {...metadataProps(amp, config, id, metadata, promo, service)}
           />
-          <MainContent blocks={content.model.blocks} />
+          <MainContent>
+            <Blocks
+              blocks={content.model.blocks}
+              componentsToRender={componentsToRender}
+            />
+          </MainContent>
           <Footer />
         </ServiceContextProvider>
       </Fragment>

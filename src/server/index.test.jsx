@@ -2,7 +2,7 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
-import { loadInitialData } from '@jtart/uni';
+import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
 
 import server from './index';
@@ -32,9 +32,9 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('@jtart/uni', () => ({
+jest.mock('react-universal-app', () => ({
   loadInitialData: jest.fn(),
-  ServerUni: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
+  ServerApp: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
 }));
 
 styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({

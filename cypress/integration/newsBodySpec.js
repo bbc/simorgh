@@ -2,11 +2,12 @@ import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   getElement,
-  visibleImageNoCaption,
-  visibleImageWithCaption,
+  renderedTitle,
   shouldContainText,
   shouldContainStyles,
-} from '../support/testHelper';
+  visibleImageNoCaption,
+  visibleImageWithCaption,
+} from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -49,8 +50,25 @@ describe('Article Body Tests', () => {
     visibleImageWithCaption(getElement('figure').eq(2));
   });
 
+  it('should have an image copyright label with styling', () => {
+    const copyrightLabel = getElement('figure')
+      .eq(0)
+      .within(() => {
+        getElement('span').eq(1);
+      });
+    copyrightLabel.should('contain', 'PA');
+    shouldContainStyles(
+      copyrightLabel,
+      'background-color',
+      'rgba(34, 34, 34, 0.75)',
+    );
+    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+  });
+
   it('should render a title', () => {
-    cy.title().should('eq', "Meghan's bouquet laid on tomb of unknown warrior");
+    renderedTitle(
+      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
+    );
   });
 
   it('should have an inline link with focus styling', () => {

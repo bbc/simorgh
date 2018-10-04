@@ -1,9 +1,3 @@
-export const testNonHTMLResponseCode = (path, responseCode) => {
-  cy.request(path).then(({ status }) => {
-    expect(status).to.eq(responseCode);
-  });
-};
-
 export const getElement = element => cy.get(element);
 
 export const getSecondElement = element => cy.get(element).eq(1);
@@ -55,6 +49,10 @@ export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   cy.url().should('contain', url);
   const anchorElement = getElement('header a');
   shouldContainText(anchorElement, 'BBC News');
+};
+
+export const renderedTitle = title => {
+  cy.title().should('eq', title);
 };
 
 export const figureVisibility = figure => {

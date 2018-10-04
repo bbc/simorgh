@@ -1,10 +1,11 @@
+import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
   facebookMeta,
-  getElement,
-  getSecondElement,
+  metaDataDescription,
   openGraphMeta,
+  retrieveMetaDataContent,
   twitterMeta,
-} from '../support/testHelper';
+} from '../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
@@ -14,8 +15,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    const metaElement = getElement('head meta[name="robots"]');
-    metaElement.should('have.attr', 'content', 'nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -66,6 +66,19 @@ describe('Article Meta Tests', () => {
     '1609039196070050',
     'https://www.facebook.com/bbcnews',
   );
+
+  it('should have description meta data', () => {
+    metaDataDescription(
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    );
+  });
+
+  it('should have Facebook meta data', () => {
+    retrieveMetaDataContent(
+      'head meta[name="article:author"]',
+      'https://www.facebook.com/bbcnews',
+    );
+  });
 
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',

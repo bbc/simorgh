@@ -1,16 +1,15 @@
 import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import MainContentContainer from './index';
+import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
-describe('MainContent', () => {
+describe('Blocks', () => {
   const blocks = [
     blockContainingText('headline', 'This is a headline!'),
     blockContainingText('subheading', 'This is a subheading!'),
     singleTextBlock('This is some text content!'),
     {
-      type: 'test', // causes prop validation errors
-      blockId: '3',
+      type: 'test',
       model: {
         blocks: [
           {
@@ -22,12 +21,10 @@ describe('MainContent', () => {
       },
     },
     {
-      blockId: '4',
       type: 'image',
       model: {
         blocks: [
           {
-            blockId: '4-1',
             type: 'rawImage',
             model: {
               width: 640,
@@ -48,8 +45,14 @@ describe('MainContent', () => {
     },
   ];
 
+  const componentsToRender = {
+    headline: () => <h1>A headline</h1>,
+    subheading: () => <h2>A subheading</h2>,
+    text: () => <p>Some text</p>,
+  };
+
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <MainContentContainer blocks={blocks} />,
+    <Blocks blocks={blocks} componentsToRender={componentsToRender} />,
   );
 });
