@@ -11,8 +11,7 @@ describe('TextContainer', () => {
   });
 
   describe('with data', () => {
-    const paragraphBlock = (blockId, text) => ({
-      blockId,
+    const paragraphBlock = text => ({
       type: 'paragraph',
       model: {
         text,
@@ -21,11 +20,11 @@ describe('TextContainer', () => {
 
     const data = {
       blocks: [
-        paragraphBlock('01', 'This is a 1st paragraph block.'),
-        paragraphBlock('02', 'This is a 2nd paragraph block.'),
-        paragraphBlock('03', 'This is a 3rd paragraph block.'),
-        paragraphBlock('04', 'This is a 4th paragraph block..'),
-        paragraphBlock('05', 'This is a 5th paragraph block.'),
+        paragraphBlock('This is a 1st paragraph block.'),
+        paragraphBlock('This is a 2nd paragraph block.'),
+        paragraphBlock('This is a 3rd paragraph block.'),
+        paragraphBlock('This is a 4th paragraph block..'),
+        paragraphBlock('This is a 5th paragraph block.'),
       ],
     };
 

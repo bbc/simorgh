@@ -27,7 +27,6 @@ const articleDataBuilder = (
     },
     type: 'article',
     createdBy: '',
-    blockId: 'a-1',
     created: 1514808060000,
     firstPublished: 1514808060000,
     lastPublished: 1514811600000,

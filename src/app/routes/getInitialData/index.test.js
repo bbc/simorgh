@@ -78,6 +78,7 @@ describe('getInitialData', () => {
   describe('On Server', () => {
     const BASE_PATH = 'https://test.com';
     beforeEach(() => {
+      process.env.NODE = true;
       process.env.RAZZLE_BASE_PATH = BASE_PATH;
     });
 
