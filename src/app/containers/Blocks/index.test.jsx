@@ -6,11 +6,10 @@ import { blockContainingText, singleTextBlock } from '../../models/blocks';
 describe('Blocks', () => {
   const blocks = [
     blockContainingText('headline', 'This is a headline!'),
-    blockContainingText('subheading', 'This is a subheading!'),
+    blockContainingText('subheadline', 'This is a subheadline!'),
     singleTextBlock('This is some text content!'),
     {
       type: 'test',
-      blockId: '3',
       model: {
         blocks: [
           {
@@ -22,12 +21,10 @@ describe('Blocks', () => {
       },
     },
     {
-      blockId: '4',
       type: 'image',
       model: {
         blocks: [
           {
-            blockId: '4-1',
             type: 'rawImage',
             model: {
               width: 640,
@@ -50,7 +47,7 @@ describe('Blocks', () => {
 
   const componentsToRender = {
     headline: () => <h1>A headline</h1>,
-    subheading: () => <h2>A subheading</h2>,
+    subheadline: () => <h2>A subheadline</h2>,
     text: () => <p>Some text</p>,
   };
 
