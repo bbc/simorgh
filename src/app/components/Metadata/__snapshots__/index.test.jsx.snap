@@ -49,6 +49,14 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="description"
   />
   <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
     content="This is a description"
     name="og:description"
   />
@@ -162,6 +170,14 @@ exports[`Metadata News article should render correctly 1`] = `
     name="description"
   />
   <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
     content="This is a description"
     name="og:description"
   />
@@ -270,6 +286,14 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"
@@ -385,6 +409,14 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="description"
   />
   <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
     content="This is a description"
     name="og:description"
   />
@@ -496,6 +528,14 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"
