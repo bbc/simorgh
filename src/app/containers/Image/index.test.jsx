@@ -36,6 +36,30 @@ describe('Image', () => {
       },
     };
 
+    const rawImageBlockWithNullOriginCode = {
+      type: 'rawImage',
+      model: {
+        width: 640,
+        height: 420,
+        locator:
+          'http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+        originCode: null,
+        copyrightHolder: 'Getty images',
+      },
+    };
+
+    const rawImageBlockWithOtherlOriginCode = {
+      type: 'rawImage',
+      model: {
+        width: 640,
+        height: 420,
+        locator:
+          'http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png',
+        originCode: 'other',
+        copyrightHolder: 'Getty images',
+      },
+    };
+
     const data = blockArrayModel([
       rawImageBlock,
       blockContainingText(
@@ -97,6 +121,32 @@ describe('Image', () => {
     shouldShallowMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
+    );
+
+    const dataWithNullOriginCode = blockArrayModel([
+      rawImageBlockWithNullOriginCode,
+      blockContainingText(
+        'altText',
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      ),
+    ]);
+
+    shouldShallowMatchSnapshot(
+      'should render an image with src as locator',
+      <ImageContainer {...dataWithNullOriginCode} />,
+    );
+
+    const dataWithOtherOriginCode = blockArrayModel([
+      rawImageBlockWithOtherlOriginCode,
+      blockContainingText(
+        'altText',
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      ),
+    ]);
+
+    shouldShallowMatchSnapshot(
+      'should render an image with src as locator',
+      <ImageContainer {...dataWithOtherOriginCode} />,
     );
   });
 });
