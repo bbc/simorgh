@@ -48,7 +48,7 @@ describe('Image', () => {
       },
     };
 
-    const rawImageBlockWithOtherlOriginCode = {
+    const rawImageBlockWithOtherOriginCode = {
       type: 'rawImage',
       model: {
         width: 640,
@@ -137,7 +137,7 @@ describe('Image', () => {
     );
 
     const dataWithOtherOriginCode = blockArrayModel([
-      rawImageBlockWithOtherlOriginCode,
+      rawImageBlockWithOtherOriginCode,
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
