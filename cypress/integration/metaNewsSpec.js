@@ -73,13 +73,6 @@ describe('Article Meta Tests', () => {
     );
   });
 
-  it('should have Facebook meta data', () => {
-    retrieveMetaDataContent(
-      'head meta[name="article:author"]',
-      'https://www.facebook.com/bbcnews',
-    );
-  });
-
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
