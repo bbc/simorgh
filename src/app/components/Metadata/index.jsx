@@ -52,9 +52,9 @@ const Metadata = ({
       {metaTags.map(tag => (
         <meta name="article:tag" content={tag} key={tag} />
       ))}
+      <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
-      <meta name="description" content={description} />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
       <meta name="og:image:alt" content={defaultImageAltText} />
