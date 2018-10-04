@@ -25,5 +25,5 @@ describe('Headings', () => {
   });
 
   template('with headline data', 'This is a headline!', 'headline');
-  template('with subheading data', 'This is a subheading', 'subheading');
+  template('with subheadline data', 'This is a subheadline', 'subheadline');
 });
