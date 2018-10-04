@@ -17,6 +17,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       defaultImage="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
       defaultImageAltText="BBC News فارسی"
       description="خلاصه مقاله"
+      facebookAdmin={100004154058350}
+      facebookAppID={1609039196070050}
       lang="fa"
       locale="fa"
       metaTags={Array []}
@@ -70,7 +72,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
           Object {
             "headline": [Function],
             "image": [Function],
-            "subheading": [Function],
+            "subheadline": [Function],
             "text": [Function],
           }
         }
@@ -96,6 +98,8 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       defaultImage="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1"
       defaultImageAltText="BBC News"
       description="Article summary."
+      facebookAdmin={100004154058350}
+      facebookAppID={1609039196070050}
       lang="en-gb"
       locale="en_GB"
       metaTags={Array []}
@@ -149,7 +153,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           Object {
             "headline": [Function],
             "image": [Function],
-            "subheading": [Function],
+            "subheadline": [Function],
             "text": [Function],
           }
         }

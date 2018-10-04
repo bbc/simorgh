@@ -1,4 +1,5 @@
 import {
+  facebookMeta,
   metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
@@ -16,16 +17,15 @@ describe('Persian Article Meta Tests', () => {
     retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
 
+  facebookMeta(
+    '100004154058350',
+    '1609039196070050',
+    'https://www.facebook.com/bbcnews',
+  );
+
   it('should have description meta data', () => {
     metaDataDescription(
       'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
-    );
-  });
-
-  it('should have Facebook meta data', () => {
-    retrieveMetaDataContent(
-      'head meta[name="article:author"]',
-      'https://www.facebook.com/bbcnews',
     );
   });
 

@@ -14,7 +14,7 @@ import serviceConfig from '../../lib/serviceConfig';
 
 const componentsToRender = {
   headline: headings,
-  subheading: headings,
+  subheadline: headings,
   text,
   image,
 };
@@ -42,6 +42,8 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
     defaultImage: config.defaultImage,
     defaultImageAltText: config.defaultImageAltText,
     description: promo.summary,
+    facebookAdmin: 100004154058350,
+    facebookAppID: 1609039196070050,
     lang: metadata.passport.language,
     locale: config.locale,
     metaTags: allTags(metadata.tags),
