@@ -22,7 +22,6 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         <meta name="robots" content="noindex,nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
         {meta}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
