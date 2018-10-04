@@ -11,6 +11,14 @@ export const retrieveMetaDataContent = (metaDataTag, content) => {
   metaElement.should('have.attr', 'content', content);
 };
 
+export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
+  it('should have Facebook meta data', () => {
+    retrieveMetaDataContent('head meta[name="fb:admins"]', fbAdmins);
+    retrieveMetaDataContent('head meta[name="fb:app_id"]', appID);
+    retrieveMetaDataContent('head meta[name="article:author"]', articleAuthor);
+  });
+};
+
 export const metaDataDescription = description => {
   retrieveMetaDataContent('head meta[name="description"]', description);
 };
