@@ -218,7 +218,7 @@ components:
           - $ref: '#/components/schemas/paragraph'
           - $ref: '#/components/schemas/rawImage'
           - $ref: '#/components/schemas/rawVideo'
-          - $ref: '#/components/schemas/subheading'
+          - $ref: '#/components/schemas/subheadline'
           - $ref: '#/components/schemas/text'
           - $ref: '#/components/schemas/video'
       minItems: 2
@@ -375,7 +375,7 @@ components:
             - rawVideo
           type: string
 
-    subheading:
+    subheadline:
       type: object
       required:
         - model
@@ -388,7 +388,7 @@ components:
           type: object
         type:
           enum:
-            - subheading
+            - subheadline
           type: string
 
     text:
