@@ -28,7 +28,7 @@
       "caption",
       "video",
       "rawVideo",
-      "subheading",
+      "subheadline",
       "fragment"
     ],
     "tags": {
@@ -216,7 +216,7 @@
         },
         {
           "blockId": "5111278d-88d8-46fb-9f19-c0502a51b0d2",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -323,7 +323,7 @@
         },
         {
           "blockId": "a90cee1c-5e88-466e-81fe-eb643b4db285",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -462,7 +462,7 @@
         },
         {
           "blockId": "8af5f61a-5503-42b3-b421-2880909f047f",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -569,7 +569,7 @@
         },
         {
           "blockId": "f2cdfb7d-19e4-4cab-b4a9-6a0114a70668",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

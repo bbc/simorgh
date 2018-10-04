@@ -26,7 +26,7 @@
       "rawImage",
       "altText",
       "caption",
-      "subheading",
+      "subheadline",
       "fragment",
       "urlLink"
     ],
@@ -338,7 +338,7 @@
         },
         {
           "blockId": "b8fe8f38-6b3f-45ac-890b-759e0aecb893",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -581,7 +581,7 @@
         },
         {
           "blockId": "098a7015-0197-4225-ad86-b1e7a26db43c",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -760,7 +760,7 @@
         },
         {
           "blockId": "ca761723-8b9d-4a9b-9fae-4e00bdf1dae2",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

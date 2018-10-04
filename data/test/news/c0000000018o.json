@@ -25,7 +25,7 @@
       "image",
       "rawImage",
       "altText",
-      "subheading",
+      "subheadline",
       "video",
       "rawVideo"
     ],
@@ -54,7 +54,7 @@
         },
         {
           "blockId": "123a1140-55de-4e3b-a9f2-4b34c4d921dc",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -269,7 +269,7 @@
         },
         {
           "blockId": "a26f244d-39f9-409b-9686-bf192c6cbb40",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

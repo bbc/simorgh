@@ -25,7 +25,7 @@
       "image",
       "rawImage",
       "altText",
-      "subheading",
+      "subheadline",
       "video",
       "rawVideo",
       "fragment"
@@ -40,7 +40,7 @@
       "blocks": [
         {
           "blockId": "fb981c19-12ea-4df7-92ea-9823feaecaa8",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

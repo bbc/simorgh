@@ -26,7 +26,7 @@
       "rawImage",
       "altText",
       "caption",
-      "subheading"
+      "subheadline"
     ],
     "tags": {
       "about": [
@@ -203,7 +203,7 @@
         },
         {
           "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -291,7 +291,7 @@
         },
         {
           "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
