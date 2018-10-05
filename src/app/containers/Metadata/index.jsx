@@ -57,7 +57,7 @@ const MetadataContainer = ({ isAmp, metadata, promo, service }) => {
 };
 
 MetadataContainer.propTypes = {
-  amp: bool.isRequired,
+  isAmp: bool.isRequired,
   metadata: shape({
     id: string.isRequired,
     type: string.isRequired,
