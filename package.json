@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/ && (amphtml-validator http://localhost:7080/news/articles/amp/c0000000025o || true)",
+    "amp:validate": "wait-on http://localhost:7080/ && (amphtml-validator http://localhost:7080/news/articles/c0000000025o.amp || true)",
     "bbcA11y": "bbc-a11y",
     "build": "razzle build",
     "cypress": "cypress run",

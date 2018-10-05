@@ -9,7 +9,6 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
   >
     <Header />
     <Metadata
-      amp={false}
       articleAuthor="https://www.facebook.com/bbcnews"
       articleSection={null}
       brandName="BBC News فارسی"
@@ -19,6 +18,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       description="خلاصه مقاله"
       facebookAdmin={100004154058350}
       facebookAppID={1609039196070050}
+      isAmp={false}
       lang="fa"
       locale="fa"
       metaTags={Array []}
@@ -90,7 +90,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
   >
     <Header />
     <Metadata
-      amp={false}
       articleAuthor="https://www.facebook.com/bbcnews"
       articleSection={null}
       brandName="BBC News"
@@ -100,6 +99,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       description="Article summary."
       facebookAdmin={100004154058350}
       facebookAppID={1609039196070050}
+      isAmp={false}
       lang="en-gb"
       locale="en_GB"
       metaTags={Array []}
