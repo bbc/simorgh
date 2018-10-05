@@ -9,6 +9,7 @@ import persian from './persian';
 export default {
   default: {
     brandName: 'Default Brand Name',
+    imageCaptionOffscreenText: 'Default image caption prefix, ',
     service: 'default',
   },
   news,
