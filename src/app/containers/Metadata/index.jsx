@@ -1,7 +1,9 @@
 import React from 'react';
-import { bool, string, shape, number, arrayOf } from 'prop-types';
+import { bool, string, shape } from 'prop-types';
 import { ServiceContextConsumer } from '../../components/ServiceContext';
 import Metadata from '../../components/Metadata';
+import metadataPropTypes from '../../models/propTypes/metadata';
+import promoPropTypes from '../../models/propTypes/promo';
 
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
@@ -63,52 +65,8 @@ const MetadataContainer = ({ isAmp, metadata, promo, service }) => {
 
 MetadataContainer.propTypes = {
   isAmp: bool.isRequired,
-  metadata: shape({
-    id: string.isRequired,
-    type: string.isRequired,
-    createdBy: string,
-    created: number.isRequired,
-    firstPublished: number.isRequired,
-    lastPublished: number.isRequired,
-    lastUpdated: number.isRequired,
-    locators: shape({
-      optimoUrn: string.isRequired,
-    }),
-    passport: shape({
-      language: string.isRequired,
-      home: string.isRequired,
-      category: string.isRequired,
-      genre: string,
-    }),
-    tags: shape({
-      about: arrayOf(
-        shape({
-          thingUri: string,
-          topicId: string,
-          topicName: string,
-          curationType: arrayOf(string),
-          thingId: string,
-          thingLabel: string,
-          thingType: arrayOf(string),
-        }),
-      ),
-      mentions: arrayOf(shape({})),
-    }),
-    version: string,
-    blockTypes: arrayOf(string),
-  }).isRequired,
-  promo: shape({
-    id: string.isRequired,
-    headlines: shape({
-      seoHeadline: string.isRequired,
-      promoHeadline: string,
-    }),
-    locators: shape({
-      optimoUrn: string.isRequired,
-    }),
-    summary: string,
-    timestamp: number,
-  }).isRequired,
+  metadata: shape(metadataPropTypes).isRequired,
+  promo: shape(promoPropTypes).isRequired,
   service: string.isRequired,
 };
 
