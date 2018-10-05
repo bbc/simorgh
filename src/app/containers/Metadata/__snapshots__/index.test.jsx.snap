@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MetadataContainer deep snapshot should render correctly for news 1`] = `null`;
+
+exports[`MetadataContainer deep snapshot should render correctly for persian 1`] = `null`;
+
+exports[`MetadataContainer no data should render null 1`] = `null`;
+
 exports[`MetadataContainer should render correctly for news 1`] = `
 <Context.Provider
   value={
@@ -115,5 +121,3 @@ exports[`MetadataContainer should render correctly for persian 1`] = `
   />
 </Context.Provider>
 `;
-
-exports[`no data should render null 1`] = `null`;
