@@ -137,8 +137,8 @@
                 "model": {
                   "width": 640,
                   "height": 475,
-                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -238,7 +238,7 @@
                         "width": 832,
                         "height": 468,
                         "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
-                        "originCode": null,
+                        "originCode": "pips",
                         "copyrightHolder": "BBC"
                       }
                     },
@@ -291,8 +291,8 @@
                 "model": {
                   "width": 640,
                   "height": 475,
-                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -374,8 +374,8 @@
                 "model": {
                   "width": 640,
                   "height": 475,
-                  "locator": "/cpsprodpb/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
