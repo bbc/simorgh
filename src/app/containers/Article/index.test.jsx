@@ -7,11 +7,11 @@ import { articleDataNews, articleDataPersian } from './fixtureData';
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
-  const newsData = { data: articleDataNews, amp: false, service: 'news' };
+  const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
 
   const persianData = {
     data: articleDataPersian,
-    amp: false,
+    isAmp: false,
     service: 'persian',
   };
 
