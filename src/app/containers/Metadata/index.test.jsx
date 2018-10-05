@@ -11,7 +11,7 @@ describe('MetadataContainer', () => {
   const MetadataWithContext = () => (
     <ServiceContextProvider service="news">
       <MetadataContainer
-        amp={false}
+        isAmp={false}
         metadata={metadata}
         promo={promo}
         service={'news'}
