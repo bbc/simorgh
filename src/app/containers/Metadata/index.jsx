@@ -13,6 +13,11 @@ const allTags = tags => {
 
 const MetadataContainer = ({ isAmp, metadata, promo, service }) => {
   const { id: aresArticleId } = metadata;
+
+  if (!aresArticleId) {
+    return null;
+  }
+
   const id = aresArticleId.split(':').pop();
   /* Canonical link generated from servicename and id */
   const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
