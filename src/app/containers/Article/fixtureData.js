@@ -1,15 +1,5 @@
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
-export const serviceContextNews = {
-  brandName: 'BBC News',
-  service: 'News',
-};
-
-export const serviceContextPersian = {
-  brandName: 'BBC News فارسی',
-  service: 'Persian',
-};
-
 const articleDataBuilder = (
   id,
   passportLanguage,
