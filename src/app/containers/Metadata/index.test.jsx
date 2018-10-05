@@ -2,21 +2,38 @@ import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import MetadataContainer from './index';
 import { ServiceContextProvider } from '../../components/ServiceContext';
-import { articleDataNews } from '../Article/fixtureData';
+import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 
-describe('MetadataContainer', () => {
-  const { metadata, promo } = articleDataNews;
+const MetadataWithContext = (service, serviceFixtureData) => {
+  const { metadata, promo } = serviceFixtureData;
 
-  const MetadataWithContext = () => (
-    <ServiceContextProvider service="news">
+  return (
+    <ServiceContextProvider service={service}>
       <MetadataContainer
         isAmp={false}
         metadata={metadata}
         promo={promo}
-        service="news"
+        service={service}
       />
     </ServiceContextProvider>
   );
+};
 
-  shouldShallowMatchSnapshot('should render correctly', MetadataWithContext());
+describe('MetadataContainer', () => {
+  shouldShallowMatchSnapshot(
+    'should render correctly for news',
+    MetadataWithContext('news', articleDataNews),
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render correctly for persian',
+    MetadataWithContext('persian', articleDataPersian),
+  );
+});
+
+describe('no data', () => {
+  shouldShallowMatchSnapshot(
+    'should render null',
+    <MetadataContainer isAmp={false} metadata={{}} promo={{}} service="" />,
+  );
 });
