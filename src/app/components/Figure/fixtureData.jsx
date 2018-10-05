@@ -1,5 +1,6 @@
 import React from 'react';
 import FigureContainer from '../../containers/Figure';
+import { ServiceContext } from '../ServiceContext';
 
 const imageAlt = 'Pauline Clayton';
 const imageSrc =
@@ -10,14 +11,20 @@ const captionValueContainingLink =
   'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Getty Images';
 
+const serviceContextStubNews = {
+  imageCaptionOffscreenText: 'Image caption, ',
+};
+
 const generateFixtureData = (caption, copyright) => (
-  <FigureContainer
-    src={imageSrc}
-    alt={imageAlt}
-    ratio={imageRatio}
-    caption={caption}
-    copyright={copyright}
-  />
+  <ServiceContext.Provider value={serviceContextStubNews}>
+    <FigureContainer
+      src={imageSrc}
+      alt={imageAlt}
+      ratio={imageRatio}
+      caption={caption}
+      copyright={copyright}
+    />
+  </ServiceContext.Provider>
 );
 
 export const FigureImage = generateFixtureData();

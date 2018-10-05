@@ -4,7 +4,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 const metadataSnapshotTest = (
   testDescription,
-  amp,
+  isAmp,
   articleAuthor,
   articleSection,
   brandName,
@@ -25,7 +25,7 @@ const metadataSnapshotTest = (
 ) =>
   describe(testDescription, () => {
     const metadataProps = {
-      amp,
+      isAmp,
       articleAuthor,
       articleSection,
       brandName,
@@ -80,7 +80,7 @@ describe('Metadata', () => {
     'BBC News',
     null,
     'BBC News',
-    'https://www.bbc.com/news/articles/amp/c0000000001o',
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
     'https://www.bbc.com/news/image.png',
     'BBC News',
     'This is a description',
@@ -124,7 +124,7 @@ describe('Metadata', () => {
     'BBC News فارسی',
     null,
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/amp/c0000000028o',
+    'https://www.bbc.com/persian/articles/c0000000028o.amp',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',

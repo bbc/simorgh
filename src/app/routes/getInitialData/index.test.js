@@ -3,11 +3,13 @@ import getInitialData from './index';
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
   const defaultServiceParam = 'news';
+  const defaultAmpParam = '';
   const defaultContext = {
     match: {
       params: {
         id: defaultIdParam,
         service: defaultServiceParam,
+        amp: defaultAmpParam,
       },
     },
   };
@@ -35,7 +37,26 @@ describe('getInitialData', () => {
   it('should return the fetch response', async () => {
     const response = await callGetInitialData();
     expect(response).toEqual({
-      amp: false,
+      isAmp: false,
+      data: mockSuccessfulResponse,
+      service: 'news',
+    });
+  });
+
+  it('should return an amp value of true, when .amp passed in context params', async () => {
+    const contextWithAmp = {
+      match: {
+        params: {
+          id: defaultIdParam,
+          service: defaultServiceParam,
+          amp: '.amp',
+        },
+      },
+    };
+
+    const response = await callGetInitialData(contextWithAmp);
+    expect(response).toEqual({
+      isAmp: true,
       data: mockSuccessfulResponse,
       service: 'news',
     });
@@ -51,57 +72,6 @@ describe('getInitialData', () => {
       expect(fetch.mock.calls[0][0]).toEqual(
         `/data/${defaultServiceParam}/${defaultIdParam}.json`,
       );
-    });
-  });
-
-  describe('Validate route parameter ', () => {
-    it('checks the id is invalid before returning an empty object', async () => {
-      jest.spyOn(global.console, 'log');
-      const invalidIdParam = 'route-21';
-      const invalidContext = {
-        match: {
-          params: {
-            id: invalidIdParam,
-            service: defaultServiceParam,
-          },
-        },
-      };
-      const response = await callGetInitialData(invalidContext);
-
-      expect(fetch).not.toHaveBeenCalled();
-
-      /* eslint-disable no-console */
-      expect(console.log).toBeCalledWith(
-        new Error(
-          `Invalid route parameter: ${invalidIdParam}. ID parameter must be in format 'c[xxxxxxxxxx]o', where the middle part could be 0000000001 to 0000000027.`,
-        ),
-      );
-      /* eslint-enable no-console */
-
-      expect(response).toEqual({});
-    });
-
-    it('checks the service is invalid before returning an empty object', async () => {
-      jest.spyOn(global.console, 'log');
-      const invalidServiceParam = 'route-21';
-      const invalidContext = {
-        match: {
-          params: { id: 'c0000000027o', service: invalidServiceParam },
-        },
-      };
-      const response = await callGetInitialData(invalidContext);
-
-      expect(fetch).not.toHaveBeenCalled();
-
-      /* eslint-disable no-console */
-      expect(console.log).toBeCalledWith(
-        new Error(
-          `Invalid route parameter: ${invalidServiceParam}. Service parameter must be news or persian.`,
-        ),
-      );
-      /* eslint-enable no-console */
-
-      expect(response).toEqual({});
     });
   });
 
