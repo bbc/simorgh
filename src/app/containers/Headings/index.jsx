@@ -7,7 +7,7 @@ import { Headline, SubHeading } from '../../components/Headings';
 
 const Headings = {
   headline: Headline,
-  subheading: SubHeading,
+  subheadline: SubHeading,
 };
 
 const HeadingsContainer = ({ blocks, type }) => {

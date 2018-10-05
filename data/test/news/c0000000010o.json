@@ -18,7 +18,7 @@
       "genre": null
     },
     "version": "v0.3.2",
-    "blockTypes": ["headline", "text", "paragraph", "subheading"],
+    "blockTypes": ["headline", "text", "paragraph", "subheadline"],
     "tags": {
       "about": [
         {
@@ -75,7 +75,7 @@
       "blocks": [
         {
           "blockId": "d6d376fc-e9c9-4b6c-8dc4-17334ba54c54",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -150,7 +150,7 @@
         },
         {
           "blockId": "a9d6e19b-e4a1-44d3-a25d-6470598fd5a6",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

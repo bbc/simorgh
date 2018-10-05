@@ -1,6 +1,6 @@
 import React from 'react';
 import express from 'express';
-import { ServerUni, loadInitialData } from '@jtart/uni';
+import { ServerApp, loadInitialData } from 'react-universal-app';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
@@ -66,7 +66,7 @@ server
 
       const app = renderToString(
         sheet.collectStyles(
-          <ServerUni url={url} routes={routes} data={data} />,
+          <ServerApp location={url} routes={routes} data={data} />,
         ),
       );
 

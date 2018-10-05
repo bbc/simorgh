@@ -16,13 +16,6 @@ injectGlobal`
 
   @font-face {
     font-display: optional;
-    font-family: ReithSansNewsLight;
-    font-style: normal;
-    font-weight: 300;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff') format('woff');
-  }
-  @font-face {
-    font-display: optional;
     font-family: ReithSansNewsRegular;
     font-style: normal;
     font-weight: 400;
@@ -30,17 +23,23 @@ injectGlobal`
   }
   @font-face {
     font-display: optional;
-    font-family: ReithSansNewsMedium;
+    font-family: ReithSerifNewsMedium;
     font-style: normal;
     font-weight: 600;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Md.woff') format('woff');
+    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff');
   }
+`;
+
+/* Unused fonts
+  - When adding fonts, be sure to add them to the externals array for Offline-Plugin here:
+  https://github.com/BBC-News/simorgh/blob/latest/razzle.config.js#L38
+
   @font-face {
     font-display: optional;
-    font-family: ReithSansNewsBold;
+    font-family: ReithSansNewsLight;
     font-style: normal;
-    font-weight: 700;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff') format('woff');
+    font-weight: 300;
+    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff') format('woff');
   }
   @font-face {
     font-display: optional;
@@ -58,16 +57,9 @@ injectGlobal`
   }
   @font-face {
     font-display: optional;
-    font-family: ReithSerifNewsMedium;
-    font-style: normal;
-    font-weight: 600;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff');
-  }
-  @font-face {
-    font-display: optional;
     font-family: ReithSerifNewsBold;
     font-style: normal;
     font-weight: 700;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff') format('woff');
   }
-`;
+End of unused fonts */
