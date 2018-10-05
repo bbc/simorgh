@@ -126,8 +126,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -273,8 +273,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

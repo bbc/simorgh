@@ -20,6 +20,14 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
+const getIChefURL = (originCode, locator) =>
+  `https://ichef.bbci.co.uk/news/640/${originCode}/${
+    locator.split('http://c.files.bbci.co.uk/')[1]
+  }`;
+
+const getRawImageSrc = (originCode, locator) =>
+  originCode === 'cpsprodpb' ? getIChefURL(originCode, locator) : locator;
+
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
     return null;
@@ -33,11 +41,11 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator, copyrightHolder } = rawImageBlock.model;
+  const { locator, originCode, copyrightHolder } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
-  const rawImageSrc = `https://ichef.bbci.co.uk/news/640${locator}`;
+  const rawImageSrc = getRawImageSrc(originCode, locator);
 
   return (
     <Figure
