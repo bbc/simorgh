@@ -4,7 +4,7 @@
   "Scope": "/news/",
   "background_color": "#b80000",
   "display": "standalone",
-  "start_url": "/news/",
+  "start_url": "/news/articles/c0000000025o",
   "theme_color": "#b80000",
   "icons": [
     {
