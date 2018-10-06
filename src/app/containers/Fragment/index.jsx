@@ -3,6 +3,9 @@ import { string, node, arrayOf } from 'prop-types';
 
 const italic = ({ children }) => <i>{children}</i>;
 const bold = ({ children }) => <b>{children}</b>;
+// const spanWithLang = ({ children, lang }) => (
+//   <span lang={lang}>{children}</span>
+// );
 
 const attributeComponents = {
   italic,
@@ -35,5 +38,10 @@ bold.propTypes = {
 italic.propTypes = {
   children: node.isRequired,
 };
+
+// spanWithLang.propTypes = {
+//   children: node.isRequired,
+//   lang: string.isRequired,
+// };
 
 export default Fragment;
