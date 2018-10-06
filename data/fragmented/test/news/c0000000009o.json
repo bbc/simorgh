@@ -150,8 +150,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "locator": "http://c.files.bbci.co.uk/5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -317,8 +317,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "locator": "http://c.files.bbci.co.uk/5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },

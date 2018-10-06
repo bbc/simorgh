@@ -30,8 +30,8 @@ describe('Blocks', () => {
               width: 640,
               height: 420,
               locator:
-                '/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
-              originCode: null,
+                'http://c.files.bbci.co.uk/E7DB/production/_101655395_paulineclayton.jpg',
+              originCode: 'cpsprodpb',
               copyrightHolder: 'BBC',
             },
           },
