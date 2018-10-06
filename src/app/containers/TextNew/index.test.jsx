@@ -1,47 +1,37 @@
-// import React from 'react';
-// import {
-//   shouldShallowMatchSnapshot,
-//   isNull,
-// } from '../../helpers/tests/testHelpers';
-// import TextWithFragmentAndUrlLink from './index';
+import React from 'react';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import TextWithFragmentAndUrlLink from './index';
 
-// describe('TextWithFragmentAndUrlLink', () => {
-//   describe('with no data', () => {
-//     isNull('should return null', <TextWithFragmentAndUrlLink />);
-//   });
+const simpleTextBlock = {
+  type: 'text',
+  model: {
+    blocks: [
+      {
+        type: 'paragraph',
+        model: {
+          lang: 'en_GB',
+          script: 'latin',
+          text: 'Hello, I am a single text block.',
+          blocks: [
+            {
+              type: 'fragment',
+              model: {
+                text: 'Hello, I am a single text block.',
+                attributes: [],
+                lang: 'en_GB',
+                script: 'latin',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
 
-//   describe('with data', () => {
-//     const paragraphBlock = text => ({
-//       type: 'paragraph',
-//       model: {
-//         text,
-//       },
-//     });
-
-//     const data = {
-//       blocks: [
-//         paragraphBlock('This is a 1st paragraph block.'),
-//         paragraphBlock('This is a 2nd paragraph block.'),
-//         paragraphBlock('This is a 3rd paragraph block.'),
-//         paragraphBlock('This is a 4th paragraph block..'),
-//         paragraphBlock('This is a 5th paragraph block.'),
-//       ],
-//     };
-
-//     shouldShallowMatchSnapshot(
-//       'should render correctly',
-//       <TextWithFragmentAndUrlLink {...data} />,
-//     );
-
-//     describe('with a passed previous block type', () => {
-//       shouldShallowMatchSnapshot(
-//         'should render correctly',
-//         <TextWithFragmentAndUrlLink
-//           {...data}
-//           type="text"
-//           typeOfPreviousBlock="text"
-//         />,
-//       );
-//     });
-//   });
-// });
+describe('TextWithFragmentAndUrlLink', () => {
+  shouldShallowMatchSnapshot(
+    'should render correctly',
+    <TextWithFragmentAndUrlLink {...simpleTextBlock} />,
+  );
+});

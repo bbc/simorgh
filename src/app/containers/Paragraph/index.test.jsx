@@ -16,6 +16,6 @@ const blocks = [fragmentBlock('This is some text.', ['bold'])];
 describe('ParagraphContainer', () => {
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <ParagraphContainer blocks={blocks} />,
+    <ParagraphContainer blocks={blocks} lang="en_GB" script="latin" />,
   );
 });

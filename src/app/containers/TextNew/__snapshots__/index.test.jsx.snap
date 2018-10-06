@@ -1,52 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextContainer with data should render correctly 1`] = `
+exports[`TextWithFragmentAndUrlLink should render correctly 1`] = `
 <React.Fragment>
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 1st paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 2nd paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 3rd paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 4th paragraph block.."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 5th paragraph block."
-  />
-</React.Fragment>
-`;
-
-exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
-<React.Fragment>
-  <hr />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 1st paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 2nd paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 3rd paragraph block."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 4th paragraph block.."
-  />
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a 5th paragraph block."
+  <ParagraphContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [],
+            "lang": "en_GB",
+            "script": "latin",
+            "text": "Hello, I am a single text block.",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+        "urlLink": [Function],
+      }
+    }
+    lang="en_GB"
+    script="latin"
   />
 </React.Fragment>
 `;
