@@ -26,7 +26,7 @@
       "rawImage",
       "altText",
       "caption",
-      "subheading",
+      "subheadline",
       "fragment",
       "urlLink"
     ],
@@ -134,8 +134,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/A933/production/_101651334_bouquet_pa.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -296,8 +296,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "PA"
                 }
               },
@@ -338,7 +338,7 @@
         },
         {
           "blockId": "b8fe8f38-6b3f-45ac-890b-759e0aecb893",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -451,8 +451,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "PA"
                 }
               },
@@ -581,7 +581,7 @@
         },
         {
           "blockId": "098a7015-0197-4225-ad86-b1e7a26db43c",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -646,8 +646,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "AFP/Getty Images"
                 }
               },
@@ -760,7 +760,7 @@
         },
         {
           "blockId": "ca761723-8b9d-4a9b-9fae-4e00bdf1dae2",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -801,8 +801,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "Getty Images"
                 }
               },

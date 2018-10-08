@@ -56,8 +56,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/13225/production/_101237387_mediaitem101237386.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -164,7 +164,7 @@
         },
         {
           "blockId": "9f4f70af-112f-4002-a880-d56a69427826",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -239,7 +239,7 @@
         },
         {
           "blockId": "583f3e6e-2663-45c6-bb4a-eadb997e8e6d",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -262,7 +262,7 @@
         },
         {
           "blockId": "2e51abfa-81b6-4de5-9b43-b73864323076",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

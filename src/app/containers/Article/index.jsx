@@ -14,7 +14,7 @@ import serviceConfig from '../../lib/serviceConfig';
 
 const componentsToRender = {
   headline: headings,
-  subheading: headings,
+  subheadline: headings,
   text,
   image,
 };
@@ -27,14 +27,14 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
-const metadataProps = (amp, config, id, metadata, promo, service) => {
+const metadataProps = (isAmp, config, id, metadata, promo, service) => {
   /* Canonical link generated from servicename and id */
   const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
 
   return {
-    amp,
+    isAmp,
     articleAuthor: config.articleAuthor,
     articleSection: metadata.passport.genre,
     brandName: config.brandName,
@@ -42,6 +42,8 @@ const metadataProps = (amp, config, id, metadata, promo, service) => {
     defaultImage: config.defaultImage,
     defaultImageAltText: config.defaultImageAltText,
     description: promo.summary,
+    facebookAdmin: 100004154058350,
+    facebookAppID: 1609039196070050,
     lang: metadata.passport.language,
     locale: config.locale,
     metaTags: allTags(metadata.tags),
@@ -61,7 +63,7 @@ const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) return 'Something went wrong :(';
   if (data) {
-    const { amp, data: articleData, service } = data;
+    const { isAmp, data: articleData, service } = data;
     const { content, metadata, promo } = articleData;
 
     const { id: aresArticleId } = metadata;
@@ -73,7 +75,7 @@ const ArticleContainer = ({ loading, error, data }) => {
         <ServiceContextProvider service={service}>
           <Header />
           <Metadata
-            {...metadataProps(amp, config, id, metadata, promo, service)}
+            {...metadataProps(isAmp, config, id, metadata, promo, service)}
           />
           <MainContent>
             <Blocks

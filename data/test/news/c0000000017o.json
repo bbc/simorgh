@@ -28,7 +28,7 @@
       "caption",
       "video",
       "rawVideo",
-      "subheading"
+      "subheadline"
     ],
     "tags": {
       "about": [],
@@ -89,8 +89,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/E92C/production/_101729695_briefcasedollars.jpg",
-                        "originCode": null,
+                        "locator": "http://c.files.bbci.co.uk/E92C/production/_101729695_briefcasedollars.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
                     },
@@ -134,8 +134,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/14489/production/_101218038_91c17269-57b8-44dc-b123-64fb93bde785.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -226,7 +226,7 @@
         },
         {
           "blockId": "9f940d56-9994-407f-8f5e-38bccc62777c",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -335,7 +335,7 @@
                         "width": 1024,
                         "height": 576,
                         "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
-                        "originCode": null,
+                        "originCode": "pips",
                         "copyrightHolder": "BBC"
                       }
                     },
@@ -385,7 +385,7 @@
         },
         {
           "blockId": "6681ee1d-6aa8-496f-9484-719ff5015f3e",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -439,8 +439,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/DCBD/production/_101790565_gettyimages-924021296.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/DCBD/production/_101790565_gettyimages-924021296.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },
@@ -510,7 +510,7 @@
         },
         {
           "blockId": "3a13268a-6985-4803-a8f2-88887241c0c7",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -605,7 +605,7 @@
                         "width": 976,
                         "height": 549,
                         "locator": "https://ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
-                        "originCode": null,
+                        "originCode": "pips",
                         "copyrightHolder": "EBU"
                       }
                     },

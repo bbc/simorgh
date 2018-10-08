@@ -21,7 +21,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     BBC News
   </title>
   <link
-    href="https://www.bbc.com/news/articles/amp/c0000000001o"
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
     rel="canonical"
   />
   <meta
@@ -47,6 +47,14 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"
@@ -76,7 +84,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/news/articles/amp/c0000000001o"
+    content="https://www.bbc.com/news/articles/c0000000001o.amp"
     name="og:url"
   />
   <meta
@@ -162,6 +170,14 @@ exports[`Metadata News article should render correctly 1`] = `
     name="description"
   />
   <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
     content="This is a description"
     name="og:description"
   />
@@ -244,7 +260,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    href="https://www.bbc.com/persian/articles/c0000000028o.amp"
     rel="canonical"
   />
   <meta
@@ -270,6 +286,14 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"
@@ -299,7 +323,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/amp/c0000000028o"
+    content="https://www.bbc.com/persian/articles/c0000000028o.amp"
     name="og:url"
   />
   <meta
@@ -383,6 +407,14 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"
@@ -496,6 +528,14 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="This is a description"
     name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
   />
   <meta
     content="This is a description"

@@ -100,8 +100,8 @@
                 "model": {
                   "width": 2362,
                   "height": 2952,
-                  "locator": "/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

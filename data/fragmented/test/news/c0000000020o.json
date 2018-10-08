@@ -80,8 +80,8 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "/cpsprodpb/D6C0/production/_101767945_gettyimages-519045912.jpg",
-                  "originCode": null,
+                  "locator": "http://c.files.bbci.co.uk/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
               },

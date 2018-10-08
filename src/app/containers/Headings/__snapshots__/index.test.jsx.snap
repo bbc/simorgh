@@ -8,10 +8,10 @@ exports[`Headings with headline data should render correctly 1`] = `
 </Headline>
 `;
 
-exports[`Headings with subheading data should render correctly 1`] = `
+exports[`Headings with subheadline data should render correctly 1`] = `
 <SubHeading
-  text="This is a subheading"
+  text="This is a subheadline"
 >
-  This is a subheading
+  This is a subheadline
 </SubHeading>
 `;

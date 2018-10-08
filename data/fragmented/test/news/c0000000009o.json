@@ -27,7 +27,7 @@
       "altText",
       "video",
       "rawVideo",
-      "subheading",
+      "subheadline",
       "fragment"
     ],
     "tags": {
@@ -150,8 +150,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "locator": "http://c.files.bbci.co.uk/5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -227,7 +227,7 @@
         },
         {
           "blockId": "6a7ade5b-cac8-41dc-8e03-d6e6b7eaebc9",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {
@@ -317,8 +317,8 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "/cpsprodpb/5BD5/production/_101690532_2.jpg",
-                        "originCode": null,
+                        "locator": "http://c.files.bbci.co.uk/5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
                         "copyrightHolder": "NASA"
                       }
                     },
@@ -362,7 +362,7 @@
         },
         {
           "blockId": "68767319-7fdb-4189-8a29-95ce0d8a0923",
-          "type": "subheading",
+          "type": "subheadline",
           "model": {
             "blocks": [
               {

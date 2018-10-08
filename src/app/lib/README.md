@@ -16,7 +16,7 @@ Here are the font sizes and line heights in `em`s, assuming a base font size of 
 | :----------- | :------------ | :-------------- | :------------ | :-------------- | :------------ | :-------------- | :--------------------------------------------------------------- |
 | **Type**     | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Article Usage**                                                |
 | Canon        | 1.75          | 2               | 2             | 3.5             | 2.75          | 3               | Headline (h1)                                                    |
-| Trafalgar    | 1.25          | 1.5             | 1.5           | 2.5             | 2             | 2.25            | Subheading (h2)                                                  |
+| Trafalgar    | 1.25          | 1.5             | 1.5           | 2.5             | 2             | 2.25            | Subheadline (h2)                                                  |
 | Paragon      | 1.25          | 1.5             | 1.375         | 2               | 1.75          | 2               |                                                                  |
 | Double Pica  | 1.25          | 1.5             | 1.25          | 1.875           | 1.5           | 1.75            |                                                                  |
 | Great Primer | 1.125         | 1.375           | 1.125         | 1.5             | 1.25          | 1.5             | Heading for single onward journey box (e.g. More on Archaeology) |
@@ -32,7 +32,7 @@ Here are the font sizes in `px`s:
 | :----------- | :------------ | :-------------- | :------------ | :-------------- | :------------ | :-------------- | :--------------------------------------------------------------- |
 | **Type**     | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Article Usage**                                                |
 | Canon        | 28            | 32              | 32            | 36              | 44            | 48              | Headline (h1)                                                    |
-| Trafalgar    | 20            | 24              | 24            | 28              | 32            | 36              | Subheading (h2)                                                  |
+| Trafalgar    | 20            | 24              | 24            | 28              | 32            | 36              | Subheadline (h2)                                                  |
 | Paragon      | 20            | 24              | 22            | 26              | 28            | 32              |                                                                  |
 | Double Pica  | 20            | 24              | 20            | 24              | 24            | 28              |                                                                  |
 | Great Primer | 18            | 22              | 18            | 22              | 20            | 24              | Heading for single onward journey box (e.g. More on Archaeology) |
