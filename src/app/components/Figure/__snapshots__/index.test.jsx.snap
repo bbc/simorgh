@@ -9,6 +9,8 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
 
 .c2 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
@@ -116,6 +118,8 @@ exports[`Figure with a caption should render correctly 1`] = `
 
 .c2 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
@@ -192,6 +196,8 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 
 .c2 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
@@ -293,6 +299,8 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
 
 .c2 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
@@ -362,6 +370,8 @@ exports[`Figure without a caption should render correctly 1`] = `
 
 .c2 {
   display: block;
+  height: 100%;
+  position: absolute;
   width: 100%;
 }
 
