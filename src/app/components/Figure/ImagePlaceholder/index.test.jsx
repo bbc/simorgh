@@ -3,10 +3,15 @@ import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import ImagePlaceholder from './index';
 
 const landscapeImageRatio = 56.25;
+const portraitImageRatio = 177.78;
 
 describe('ImagePlaceholder', () => {
   shouldMatchSnapshot(
-    'should render correctly',
+    'should render landscape images correctly',
     <ImagePlaceholder ratio={landscapeImageRatio} />,
+  );
+  shouldMatchSnapshot(
+    'should render protrait images correctly',
+    <ImagePlaceholder ratio={portraitImageRatio} />,
   );
 });
