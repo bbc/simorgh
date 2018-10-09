@@ -19,7 +19,7 @@ exports[`ImagePlaceholder should render landscape images correctly 1`] = `
 />
 `;
 
-exports[`ImagePlaceholder should render protrait images correctly 1`] = `
+exports[`ImagePlaceholder should render portrait images correctly 1`] = `
 .c0 {
   position: relative;
   height: 0;

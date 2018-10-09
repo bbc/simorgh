@@ -11,7 +11,7 @@ describe('ImagePlaceholder', () => {
     <ImagePlaceholder ratio={landscapeImageRatio} />,
   );
   shouldMatchSnapshot(
-    'should render protrait images correctly',
+    'should render portrait images correctly',
     <ImagePlaceholder ratio={portraitImageRatio} />,
   );
 });
