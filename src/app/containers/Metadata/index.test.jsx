@@ -3,8 +3,9 @@ import renderer from 'react-test-renderer';
 import Helmet from 'react-helmet';
 import MetadataContainer from './index';
 import { ServiceContextProvider } from '../../components/ServiceContext';
-import { articleDataPersian } from '../Article/fixtureData';
+import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import services from '../../lib/config/services/index';
 
 const MetadataWithContextAsObject = (service, serviceFixtureData) => {
   const { metadata, promo } = serviceFixtureData;
@@ -30,60 +31,71 @@ describe('no data', () => {
   );
 });
 
-const persianFixtureData = {
-  htmlAttributes: { lang: 'fa' },
-  linkTags: [
-    {
-      rel: 'canonical',
-      href: 'https://www.bbc.com/persian/articles/c0000000028o',
-    },
-  ],
-  metaTags: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1, minimum-scale=1',
-    },
-    {
-      name: 'article:author',
-      content: 'https://www.facebook.com/bbcnews',
-    },
-    {
-      name: 'article:modified_time',
-      content: '2018-01-01T13:00:00.000Z',
-    },
-    {
-      name: 'article:published_time',
-      content: '2018-01-01T12:01:00.000Z',
-    },
-    { name: 'description', content: 'خلاصه مقاله' },
-    { name: 'fb:admins', content: 100004154058350 },
-    { name: 'fb:app_id', content: 1609039196070050 },
-    { name: 'og:description', content: 'خلاصه مقاله' },
-    {
-      name: 'og:image',
-      content: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-    },
-    { name: 'og:image:alt', content: 'BBC News فارسی' },
-    { name: 'og:locale', content: 'fa' },
-    { name: 'og:site_name', content: 'BBC News فارسی' },
-    { name: 'og:title', content: 'سرصفحه مقاله' },
-    { name: 'og:type', content: 'article' },
-    {
-      name: 'og:url',
-      content: 'https://www.bbc.com/persian/articles/c0000000028o',
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:creator', content: '@bbcpersian' },
-    { name: 'twitter:description', content: 'خلاصه مقاله' },
-    { name: 'twitter:image:alt', content: 'BBC News فارسی' },
-    {
-      name: 'twitter:image:src',
-      content: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-    },
-    { name: 'twitter:site', content: '@bbcpersian' },
-    { name: 'twitter:title', content: 'سرصفحه مقاله' },
-  ],
-  title: ['سرصفحه مقاله', ' – ', 'BBC News فارسی'],
+const articleMetadataBuilder = (
+  serviceName,
+  lang,
+  title,
+  description,
+  id,
+  seoTitle,
+) => {
+  const serviceConfig = services[serviceName];
+
+  return {
+    htmlAttributes: { lang },
+    linkTags: [
+      {
+        rel: 'canonical',
+        href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
+      },
+    ],
+    metaTags: [
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, minimum-scale=1',
+      },
+      {
+        name: 'article:author',
+        content: serviceConfig.articleAuthor,
+      },
+      {
+        name: 'article:modified_time',
+        content: '2018-01-01T13:00:00.000Z',
+      },
+      {
+        name: 'article:published_time',
+        content: '2018-01-01T12:01:00.000Z',
+      },
+      { name: 'description', content: description },
+      { name: 'fb:admins', content: 100004154058350 },
+      { name: 'fb:app_id', content: 1609039196070050 },
+      { name: 'og:description', content: description },
+      {
+        name: 'og:image',
+        content: serviceConfig.defaultImage,
+      },
+      { name: 'og:image:alt', content: serviceConfig.brandName },
+      { name: 'og:locale', content: serviceConfig.locale },
+      { name: 'og:site_name', content: serviceConfig.brandName },
+      { name: 'og:title', content: seoTitle },
+      { name: 'og:type', content: 'article' },
+      {
+        name: 'og:url',
+        content: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:creator', content: serviceConfig.twitterCreator },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image:alt', content: serviceConfig.brandName },
+      {
+        name: 'twitter:image:src',
+        content: serviceConfig.defaultImage,
+      },
+      { name: 'twitter:site', content: serviceConfig.twitterSite },
+      { name: 'twitter:title', content: seoTitle },
+    ],
+    title: [seoTitle, ' – ', serviceConfig.brandName],
+  };
 };
 
 const doesMatch = (result, fixture) => {
@@ -93,14 +105,29 @@ const doesMatch = (result, fixture) => {
 };
 
 describe('MetadataContainer deep snapshot', () => {
-  // doesMatch(
-  //   MetadataWithContextAsObject('news', articleDataNews),
-  //   persianFixtureData,
-  // );
-  it('something', () => {
+  it('successfully passes data to the Metadata component via React context', () => {
+    doesMatch(
+      MetadataWithContextAsObject('news', articleDataNews),
+      articleMetadataBuilder(
+        'news',
+        'en-gb',
+        'Article Headline',
+        'Article summary.',
+        'c0000000001o',
+        'Article Headline for SEO',
+      ),
+    );
+
     doesMatch(
       MetadataWithContextAsObject('persian', articleDataPersian),
-      persianFixtureData,
+      articleMetadataBuilder(
+        'persian',
+        'fa',
+        'سرصفحه مقاله',
+        'خلاصه مقاله',
+        'c0000000028o',
+        'سرصفحه مقاله',
+      ),
     );
   });
 });
