@@ -8,6 +8,7 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
+import { BBCBlocksSVG } from '../../src/app/lib/constants/styles';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -40,6 +41,22 @@ describe('Article Body Tests', () => {
       p,
       'The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.',
     );
+  });
+
+  it('should have a placeholder image', () => {
+    const placeholderImage = getElement('figure div').eq(0);
+
+    shouldContainStyles(
+      placeholderImage,
+      'background-color',
+      'rgb(236, 234, 231)',
+    );
+    shouldContainStyles(
+      placeholderImage,
+      'background-image',
+      `url("data:image/svg+xml;base64,${BBCBlocksSVG}")`,
+    );
+    shouldContainStyles(placeholderImage, 'background-position', '50% 50%');
   });
 
   it('should have a visible image without a caption', () => {
