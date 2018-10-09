@@ -22,5 +22,6 @@
   "rules": {
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/label-has-associated-control": "off",
+    "linebreak-style": "off"
   }
 }
