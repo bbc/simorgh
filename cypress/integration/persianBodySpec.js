@@ -1,13 +1,12 @@
 import {
   checkElementStyles,
   getElement,
+  placeholderImageLoaded,
   renderedTitle,
   shouldContainText,
-  shouldContainStyles,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
-import { BBCBlocksSVG } from '../../src/app/lib/constants/styles';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -34,18 +33,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    const placeholderImage = getElement('figure div').eq(0);
-    shouldContainStyles(
-      placeholderImage,
-      'background-color',
-      'rgb(236, 234, 231)',
-    );
-    shouldContainStyles(
-      placeholderImage,
-      'background-image',
-      `url("data:image/svg+xml;base64,${BBCBlocksSVG}")`,
-    );
-    shouldContainStyles(placeholderImage, 'background-position', '50% 50%');
+    placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
   it('should have a visible image without a caption', () => {
