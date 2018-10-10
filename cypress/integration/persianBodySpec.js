@@ -20,7 +20,7 @@ describe('Article Body Tests', () => {
       'h1',
       'پهپادی که برایتان قهوه می‌آورد',
       'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      'ReithSerifNewsMedium, Georgia, serif',
     );
   });
 

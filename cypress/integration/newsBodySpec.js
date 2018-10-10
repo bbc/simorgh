@@ -22,7 +22,7 @@ describe('Article Body Tests', () => {
       'h1',
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
       'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      'ReithSerifNewsMedium, Georgia, serif',
     );
   });
 
