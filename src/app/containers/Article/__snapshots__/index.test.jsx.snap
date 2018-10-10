@@ -28,8 +28,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "language": "fa",
           },
           "tags": Object {
-            "about": Array [],
-            "mentions": Array [],
+            "about": null,
+            "mentions": null,
           },
           "type": "article",
         }
