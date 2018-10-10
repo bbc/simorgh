@@ -123,7 +123,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           "passport": Object {
             "category": "news",
             "genre": null,
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
             "language": "en-gb",
           },
           "tags": Object {},
