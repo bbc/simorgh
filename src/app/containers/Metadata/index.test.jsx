@@ -38,6 +38,7 @@ const articleMetadataBuilder = (
   description,
   id,
   seoTitle,
+  things,
 ) => {
   const serviceConfig = services[serviceName];
 
@@ -100,36 +101,47 @@ const articleMetadataBuilder = (
 
 const doesMatch = (result, fixture) => {
   Object.keys(fixture).forEach(key => {
-    expect(result[key]).toEqual(fixture[key]);
+    expect(fixture[key]).toEqual(result[key]);
   });
 };
 
 describe('Successfully passes data to the Metadata component via React context', () => {
-  it('it should pass news data to the Metadata component', () => {
-    doesMatch(
-      MetadataWithContextAsObject('news', articleDataNews),
-      articleMetadataBuilder(
-        'news',
-        'en-gb',
-        'Article Headline',
-        'Article summary.',
-        'c0000000001o',
-        'Article Headline for SEO',
-      ),
+  it('should pass persian data to the Metadata component', () => {
+    const result = MetadataWithContextAsObject('persian', articleDataPersian);
+    const expected = articleMetadataBuilder(
+      'persian',
+      'fa',
+      'سرصفحه مقاله',
+      'خلاصه مقاله',
+      'c0000000028o',
+      'سرصفحه مقاله',
+      [],
     );
+
+    doesMatch(result, expected);
   });
 
-  it('should pass persian data to the Metadata component', () => {
-    doesMatch(
-      MetadataWithContextAsObject('persian', articleDataPersian),
-      articleMetadataBuilder(
-        'persian',
-        'fa',
-        'سرصفحه مقاله',
-        'خلاصه مقاله',
-        'c0000000028o',
-        'سرصفحه مقاله',
-      ),
+  it('it should pass news data to the Metadata component', () => {
+    const result = MetadataWithContextAsObject('news', articleDataNews);
+    const expected = articleMetadataBuilder(
+      'news',
+      'en-gb',
+      'Article Headline',
+      'Article summary.',
+      'c0000000001o',
+      'Article Headline for SEO',
+      [
+        {
+          content: 'Royal Wedding 2018',
+          name: 'article:tag',
+        },
+        {
+          content: 'Queen Victoria',
+          name: 'article:tag',
+        },
+      ],
     );
+
+    doesMatch(result, expected);
   });
 });

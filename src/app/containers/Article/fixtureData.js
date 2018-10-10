@@ -9,6 +9,7 @@ const articleDataBuilder = (
   seoHeadline,
   promoHeadline,
   summary,
+  things,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -23,11 +24,11 @@ const articleDataBuilder = (
     lastUpdated: 1514811600000,
     passport: {
       language: passportLanguage,
-      home: 'http://www.bbc.co.uk/ontologies/passport/home/Persian',
+      home,
       category: 'news',
       genre: null,
     },
-    tags: {},
+    tags: things,
   },
   content: {
     model: {
@@ -51,6 +52,35 @@ const articleDataBuilder = (
   },
 });
 
+const presetThings = {
+  about: [
+    {
+      thingUri:
+        'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id',
+      topicId: 'cpwpy79d6dxt',
+      topicName: 'Royal Wedding 2018',
+      curationType: ['vivo-stream'],
+      thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
+      thingLabel: 'Royal Wedding 2018',
+      thingType: ['Thing', 'Event'],
+    },
+  ],
+  mentions: [
+    {
+      thingUri:
+        'http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id',
+      thingId: '1efbf3e5-b330-49a1-b531-b507ab027c96',
+      thingLabel: 'Queen Victoria',
+      thingType: ['Person', 'Thing'],
+    },
+  ],
+};
+
+const emptyThings = {
+  about: [],
+  mentions: [],
+};
+
 export const articleDataNews = articleDataBuilder(
   'c0000000001o',
   'en-gb',
@@ -60,6 +90,7 @@ export const articleDataNews = articleDataBuilder(
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
+  presetThings,
 );
 
 export const articleDataPersian = articleDataBuilder(
@@ -71,4 +102,5 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله',
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
+  emptyThings,
 );
