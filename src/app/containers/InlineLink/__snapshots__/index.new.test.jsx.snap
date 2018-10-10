@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InlineLink with link matching routes for SPA should render correctly 1`] = `
+exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
 <Router
   history={
     Object {
@@ -39,7 +39,7 @@ exports[`InlineLink with link matching routes for SPA should render correctly 1`
 </Router>
 `;
 
-exports[`InlineLink with link not matching SPA route should render correctly 1`] = `
+exports[`InlineLinkContainer with link not matching SPA route should render correctly 1`] = `
 <InlineLink
   href="https://www.bbc.com/news"
 >

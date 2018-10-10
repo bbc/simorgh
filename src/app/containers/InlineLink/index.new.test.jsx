@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import InlineLinkContainer from './index';
+import InlineLinkContainer from './index.new';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
@@ -11,7 +11,7 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-describe('InlineLink', () => {
+describe('InlineLinkContainer', () => {
   describe('with link matching routes for SPA', () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
