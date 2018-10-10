@@ -104,8 +104,8 @@ const doesMatch = (result, fixture) => {
   });
 };
 
-describe('MetadataContainer deep snapshot', () => {
-  it('successfully passes data to the Metadata component via React context', () => {
+describe('Successfully passes data to the Metadata component via React context', () => {
+  it('it should pass news data to the Metadata component', () => {
     doesMatch(
       MetadataWithContextAsObject('news', articleDataNews),
       articleMetadataBuilder(
@@ -117,7 +117,9 @@ describe('MetadataContainer deep snapshot', () => {
         'Article Headline for SEO',
       ),
     );
+  });
 
+  it('should pass persian data to the Metadata component', () => {
     doesMatch(
       MetadataWithContextAsObject('persian', articleDataPersian),
       articleMetadataBuilder(
