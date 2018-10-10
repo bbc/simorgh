@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { string } from 'prop-types';
 import InlineLink from '../../components/InlineLink';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
+import { paragraphModelPropTypes } from '../../models/propTypes/paragraph';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
 
@@ -28,4 +30,8 @@ const InlineLinkContainer = ({ locator, blocks }) => {
   );
 };
 
+InlineLinkContainer.propTypes = {
+  locator: string.isRequired,
+  ...paragraphModelPropTypes,
+};
 export default InlineLinkContainer;
