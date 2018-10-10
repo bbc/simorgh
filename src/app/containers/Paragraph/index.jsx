@@ -2,9 +2,10 @@ import React from 'react';
 import Paragraph from '../../components/Paragraph';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
+import InlineLink from '../InlineLinkNew';
 import { paragraphModelPropTypes } from '../../models/propTypes/paragraph';
 
-const componentsToRender = { fragment };
+const componentsToRender = { fragment, urlLink: InlineLink };
 
 const ParagraphContainer = ({ blocks }) => (
   <Paragraph>
