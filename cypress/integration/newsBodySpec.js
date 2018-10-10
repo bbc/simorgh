@@ -2,6 +2,7 @@ import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   getElement,
+  placeholderImageLoaded,
   renderedTitle,
   shouldContainText,
   shouldContainStyles,
@@ -40,6 +41,10 @@ describe('Article Body Tests', () => {
       p,
       'The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.',
     );
+  });
+
+  it('should have a placeholder image', () => {
+    placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
   it('should have a visible image without a caption', () => {

@@ -1,6 +1,7 @@
 import {
   checkElementStyles,
   getElement,
+  placeholderImageLoaded,
   renderedTitle,
   shouldContainText,
   visibleImageNoCaption,
@@ -29,6 +30,10 @@ describe('Article Body Tests', () => {
       p,
       'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
     );
+  });
+
+  it('should have a placeholder image', () => {
+    placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
   it('should have a visible image without a caption', () => {

@@ -3,6 +3,8 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
+const DEFAULT_IMAGE_RES = 640;
+
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCaption = block => {
@@ -21,7 +23,7 @@ const getCopyright = copyrightHolder => {
 };
 
 const getIChefURL = (originCode, locator) =>
-  `https://ichef.bbci.co.uk/news/640/${originCode}/${
+  `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${originCode}/${
     locator.split('http://c.files.bbci.co.uk/')[1]
   }`;
 
@@ -41,16 +43,24 @@ const ImageContainer = ({ blocks }) => {
     return null;
   }
 
-  const { locator, originCode, copyrightHolder } = rawImageBlock.model;
+  const {
+    locator,
+    originCode,
+    copyrightHolder,
+    height,
+    width,
+  } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
+  const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
 
   return (
     <Figure
       src={rawImageSrc}
       alt={altText}
+      ratio={ratio}
       copyright={copyright}
       caption={caption}
     />
