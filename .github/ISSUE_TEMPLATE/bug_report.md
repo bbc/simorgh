@@ -34,4 +34,4 @@ If applicable, add screenshots to help explain your problem.
 **Additional context**
 Add any other context about the problem here.
 
-- [ ] Intially labelled with "bug"
+- [ ] Intially labelled with ["bug"](https://github.com/BBC-News/simorgh/labels/bug)
