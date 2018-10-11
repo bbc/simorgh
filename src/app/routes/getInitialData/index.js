@@ -4,7 +4,11 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    let url = `/data/${service}/${id}.json`;
+    let url = `/${service}/articles/${id}.json`;
+
+    if (process.env.RAZZLE_BASE_PATH === 'http://localhost:7080') {
+      url = `/data/${service}/${id}.json`;
+    }
 
     // URL on server
     if (process.env.NODE) {
