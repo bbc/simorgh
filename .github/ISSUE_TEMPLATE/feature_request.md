@@ -18,3 +18,5 @@ Will Cypress tests be required or are unit tests sufficient?
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+- [ ] Intially labelled with "Refinement needed"
