@@ -51,6 +51,16 @@ describe('Server', () => {
     expect(headerKeys).not.toContain('x-powered-by');
   });
 
+  it(`should set 'x-frame-options' header to 'DENY'`, async () => {
+    const { headers } = await makeRequest('/status');
+    const headerKeys = Object.keys(headers);
+    const headerValues = Object.values(headers);
+    const indexOfXFrame = headerKeys.indexOf('x-frame-options');
+
+    expect(headerKeys).toContain('x-frame-options');
+    expect(headerValues[indexOfXFrame]).toEqual('DENY');
+  });
+
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
