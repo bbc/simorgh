@@ -10,23 +10,22 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, blocks }) => {
-  const InlineLinkComponent = {
-    Component: InlineLink,
-    props: { href: locator },
-  };
-
   const regex = '^/news/articles/c[a-zA-Z0-9]{10}o$';
+
   // if URL matches a valid route, use a react-router link
   if (locator.match(regex)) {
-    InlineLinkComponent.Component = InternalInlineLink;
-    InlineLinkComponent.props = { to: locator };
+    return (
+      <InternalInlineLink to={locator}>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </InternalInlineLink>
+    );
   }
 
   // else return a normal hyperlink
   return (
-    <InlineLinkComponent.Component {...InlineLinkComponent.props}>
+    <InlineLink href={locator}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </InlineLinkComponent.Component>
+    </InlineLink>
   );
 };
 
