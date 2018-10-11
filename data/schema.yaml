@@ -80,7 +80,7 @@ components:
         metadata:
           type: object
           required:
-            - created
+            # - created   not currently in the optimo test feed
             - firstPublished
             - id
             - lastPublished
@@ -129,7 +129,7 @@ components:
             passport:
               type: object
               required:
-                - category
+                # - category  currently to in the optimo test datafeed
                 - home
                 - language
               properties:
@@ -182,9 +182,9 @@ components:
           properties:
             headlines:
               type: object
-              required:
-                - seoHeadline
-                - promoHeadline
+              # required:
+                # - seoHeadline   # currently not in the test optimo datafeed
+                # - promoHeadline  # currently not in the test optimo datafeed
               properties:
                 seoHeadline:
                   example: 'UK pledges extra £44m for Channel border security'
@@ -212,6 +212,7 @@ components:
       items:
         oneOf:
           - $ref: '#/components/schemas/altText'
+          - $ref: '#/components/schemas/alt-text'
           - $ref: '#/components/schemas/caption'
           - $ref: '#/components/schemas/headline'
           - $ref: '#/components/schemas/image'
@@ -221,6 +222,7 @@ components:
           - $ref: '#/components/schemas/subheadline'
           - $ref: '#/components/schemas/text'
           - $ref: '#/components/schemas/video'
+          - $ref: '#/components/schemas/aresMedia'
       minItems: 2
 
     altText:
@@ -238,6 +240,75 @@ components:
           enum:
             - altText
           type: string
+
+    alt-text:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - alt-text
+          type: string
+
+    aresMedia:
+      type: object
+      required:
+        - model
+      properties:
+        model:
+          type: object
+          properties:
+            advertising:
+              type: boolean
+              example: true
+            duration:
+              type: number
+              example: 43
+            embedding:
+              type: boolean
+              example: true
+            format:
+              type: string     # probably should be an enum in the future
+              example: audio_video
+            id:
+              type: string
+              example: 'p01jvmg5'
+            imageUrl:
+              type: string
+              example: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01jvmms.jpg'
+            subType:
+              type: string     # probably should be an enum in the future
+              example: 'clip'
+            synopses:
+              type: object
+              properties:
+                long:
+                  type: string
+                  example: "New Zealand suffered a spectacular capsize in their America's Cup semi-final against Great Britain but lead the best-of-nine series 3-1.\nThe catamaran fell forwards on the run-in to the start, leaving some crew suspended in the hull above the water.\nThree were thrown overboard but all of New Zealand's crew were accounted for."
+                medium:
+                  type: string
+                  example: "The catamaran fell forwards on the run-in to the start, leaving some crew suspended in the hull above the water."
+                short:
+                  type: string
+                  example: "New Zealand suffered a spectacular capsize in their America's Cup semi-final against Great"
+            title:
+              type: string
+              example: "Dramatic capsize in America's Cup yacht"
+            versionId:
+              type: string
+              example: 'p01jvmg7'
+            versionType:
+              type: string     # probably should be an enum in the future
+              example: 'Original'
+            warnings:
+              type: object
 
     caption:
       type: object
