@@ -6,6 +6,8 @@ import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
+// not part of react-helmet
+import helmet from 'helmet';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
 
@@ -51,6 +53,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(compression())
+  .use(helmet.frameguard({ action: 'deny' }))
   .use('/data', express.static(dataFolderToRender))
   .use(
     expressStaticGzip(publicDirectory, {
@@ -72,7 +75,7 @@ server
         ),
       );
 
-      const helmet = Helmet.renderStatic();
+      const headHelmet = Helmet.renderStatic();
 
       const styleTags = sheet.getStyleElement();
 
@@ -82,7 +85,7 @@ server
           app={app}
           data={data}
           styleTags={styleTags}
-          helmet={helmet}
+          helmet={headHelmet}
         />,
       );
 

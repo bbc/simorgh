@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <InlineLinkContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [],
+            "text": "This is text for an internal link",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    locator="/news/articles/c0000000027o"
+  />
+</Router>
+`;
+
+exports[`InlineLinkContainer with link not matching SPA route should render correctly 1`] = `
+<InlineLink
+  href="https://www.bbc.com/news"
+>
+  <Blocks
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [
+              "bold",
+            ],
+            "text": "This is bold text for a link",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+      }
+    }
+  />
+</InlineLink>
+`;
