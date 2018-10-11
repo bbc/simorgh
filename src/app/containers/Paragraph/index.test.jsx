@@ -3,7 +3,6 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ParagraphContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({
-  blockId: 'f-01',
   type: 'fragment',
   model: {
     text,
@@ -11,7 +10,21 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const blocks = [fragmentBlock('This is some text.', ['bold'])];
+const inlineLinkBlock = (locator, blocks) => ({
+  type: 'urlLink',
+  model: {
+    locator,
+    blocks,
+  },
+});
+
+const inlineLink = inlineLinkBlock('/bbc-test', [
+  fragmentBlock('Some text'),
+  fragmentBlock(' for the ', ['bold']),
+  fragmentBlock(' link!', ['italic']),
+]);
+
+const blocks = [fragmentBlock('This is some text.', ['bold']), inlineLink];
 
 describe('ParagraphContainer', () => {
   shouldShallowMatchSnapshot(
