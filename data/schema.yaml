@@ -212,7 +212,6 @@ components:
       items:
         oneOf:
           - $ref: '#/components/schemas/altText'
-          - $ref: '#/components/schemas/alt-text'
           - $ref: '#/components/schemas/caption'
           - $ref: '#/components/schemas/headline'
           - $ref: '#/components/schemas/image'
@@ -239,22 +238,6 @@ components:
         type:
           enum:
             - altText
-          type: string
-
-    alt-text:
-      type: object
-      required:
-        - model
-        - type
-      properties:
-        model:
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
-          type: object
-        type:
-          enum:
-            - alt-text
           type: string
 
     aresMedia:

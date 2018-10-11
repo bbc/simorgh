@@ -168,7 +168,7 @@
                 "type": "text"
               }]
             },
-            "type": "alt-text"
+            "type": "altText"
           }]
         },
         "type": "image"
@@ -177,7 +177,7 @@
   },
   "metadata": {
     "analyticsLabels": {},
-    "blockTypes": ["headline", "text", "paragraph", "subheadline", "video", "caption", "image", "rawImage", "alt-text"],
+    "blockTypes": ["headline", "text", "paragraph", "subheadline", "video", "caption", "image", "rawImage", "altText"],
     "createdBy": "News",
     "firstPublished": 1538382949675.0,
     "id": "urn:bbc:ares::article:clm0kzply9po",
