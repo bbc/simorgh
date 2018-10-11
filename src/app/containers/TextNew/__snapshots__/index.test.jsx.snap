@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextWithFragmentAndUrlLink should render correctly 1`] = `
+<React.Fragment>
+  <ParagraphContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [],
+            "lang": "en_GB",
+            "script": "latin",
+            "text": "Hello, I am a single text block.",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+        "urlLink": [Function],
+      }
+    }
+    lang="en_GB"
+    script="latin"
+  />
+</React.Fragment>
+`;

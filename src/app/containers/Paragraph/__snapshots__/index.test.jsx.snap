@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ParagraphContainer should render correctly 1`] = `
-<Paragraph>
+<Paragraph
+  dir="ltr"
+  lang="en_GB"
+>
   <Blocks
     blocks={
       Array [
@@ -16,11 +19,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
           "type": "fragment",
         },
       ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-      }
     }
   />
 </Paragraph>
