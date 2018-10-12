@@ -23,11 +23,8 @@ const getCopyright = copyrightHolder => {
 };
 
 const getIChefURL = (originCode, locator) => {
-  let overridableOriginCode = originCode;
   // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
-  if (!overridableOriginCode) {
-    overridableOriginCode = 'cpsdevpb';
-  }
+  const overridableOriginCode = originCode || 'cpsdevpb';
 
   return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
 };
