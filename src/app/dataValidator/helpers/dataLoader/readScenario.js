@@ -32,6 +32,9 @@ const readScenario = (fileName, dirName) => {
 
   return new Promise(resolve => {
     resolve(module.exports.fileToValidate(fullFileName));
+  }).catch(reason => {
+    console.log(reason); // eslint-disable-line no-console
+    process.exit(1);
   });
 };
 
