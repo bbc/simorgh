@@ -51,6 +51,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(compression())
+  .use(helmet())
   .use(helmet.frameguard({ action: 'deny' }))
   .use('/data', express.static(dataFolderToRender))
   .use(
