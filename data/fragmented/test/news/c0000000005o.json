@@ -138,7 +138,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "locator": "D6C0/production/_101767945_gettyimages-519045912.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
@@ -309,7 +309,7 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "http://c.files.bbci.co.uk/6E15/production/_101718182_scischoolgetty.jpg",
+                        "locator": "6E15/production/_101718182_scischoolgetty.jpg",
                         "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }
