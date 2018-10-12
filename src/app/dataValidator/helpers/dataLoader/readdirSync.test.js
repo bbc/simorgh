@@ -1,4 +1,4 @@
-global.console.log = jest.fn(); // silence console.log during jest tests
+// global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { readdirSync } = require('./readdirSync');
@@ -7,14 +7,21 @@ const readScenario = require('./readScenario');
 const defaultDataPath = './data';
 
 const expectMethodToBeCalledTimes = (number, spyMethod, dataPath) =>
-  readdirSync(dataPath).then(() =>
-    expect(spyMethod).toHaveBeenCalledTimes(number),
-  );
+  readdirSync(dataPath)
+    .then(() => expect(spyMethod).toHaveBeenCalledTimes(number))
+    .catch(reason => {
+      console.log(reason);
+      // console.error(reason);
+      // => { throw reason; }
+      expect(true).toEqual(false);
+    });
 
-const testReaddirSync = (number, spyMethod, dataPath = defaultDataPath) =>
+const testReaddirSync = (number, spyMethod, dataPath = defaultDataPath) => {
   expectMethodToBeCalledTimes(number, spyMethod, dataPath).catch(() => {
-    process.exit('Async test failed, promise reject caught.');
+    expect(true).toEqual(false);
+    expect(true).toBe(false);
   });
+};
 
 describe('readdirSync helper', () => {
   let fileToValidateSpy;
@@ -36,7 +43,7 @@ describe('readdirSync helper', () => {
   it('should call fileToValidate for only the valid json file in the /data directory', () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    testReaddirSync(60, fileToValidateSpy);
+    testReaddirSync(90, fileToValidateSpy);
   });
 
   it('should call fileToValidate for only the files in /data/prod/news', () => {
