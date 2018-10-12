@@ -1,0 +1,67 @@
+{
+  "content": {
+    "model": {
+      "blocks": [{
+        "model": {
+          "blocks": [{
+            "model": {
+              "blocks": [{
+                "model": {
+                  "blocks": [{
+                    "model": {
+                      "attributes": [],
+                      "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                    },
+                    "type": "fragment"
+                  }],
+                  "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                },
+                "type": "paragraph"
+              }]
+            },
+            "type": "text"
+          }]
+        },
+        "type": "headline"
+      }]
+    }
+  },
+  "metadata": {
+    "analyticsLabels": {},
+    "blockTypes": ["headline", "text", "paragraph", "fragment"],
+    "createdBy": "News",
+    "firstPublished": 1539254989849.0,
+    "id": "urn:bbc:ares::article:c5nd2n466ppo",
+    "language": "en-gb",
+    "lastPublished": 1539254989849.0,
+    "lastUpdated": 1539254994.0,
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c5nd2n466ppo"
+    },
+    "options": {},
+    "passport": {
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "language": "en-gb"
+    },
+    "tags": {},
+    "type": "article",
+    "version": "v0.4.9"
+  },
+  "promo": {
+    "headlines": {},
+    "id": "urn:bbc:ares::article:c5nd2n466ppo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c5nd2n466ppo"
+    },
+    "summary": "",
+    "timestamp": 1539254989849.0
+  },
+  "relatedContent": {
+    "groups": [],
+    "site": {
+      "name": "News",
+      "subType": "site",
+      "uri": "/news"
+    }
+  }
+}
