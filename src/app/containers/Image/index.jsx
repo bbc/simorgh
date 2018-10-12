@@ -22,13 +22,18 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-const getIChefURL = (originCode, locator) =>
-  `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${originCode}/${
-    locator.split('http://c.files.bbci.co.uk/')[1]
-  }`;
+const getIChefURL = (originCode, locator) => {
+  let overridableOriginCode = originCode;
+  // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
+  if (!overridableOriginCode) {
+    overridableOriginCode = 'cpsdevpb';
+  }
+
+  return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
+};
 
 const getRawImageSrc = (originCode, locator) =>
-  originCode === 'cpsprodpb' ? getIChefURL(originCode, locator) : locator;
+  originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
