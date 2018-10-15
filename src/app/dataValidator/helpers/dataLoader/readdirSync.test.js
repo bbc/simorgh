@@ -11,9 +11,6 @@ const expectMethodToBeCalledTimes = (number, spyMethod, dataPath) =>
     .then(() => expect(spyMethod).toHaveBeenCalledTimes(number))
     .catch(reason => {
       console.log(reason);
-      // console.error(reason);
-      // => { throw reason; }
-      expect(true).toEqual(false);
     });
 
 const testReaddirSync = (number, spyMethod, dataPath = defaultDataPath) => {
