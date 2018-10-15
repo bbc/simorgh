@@ -30,3 +30,12 @@ export const isNull = (title, component) => {
     expect(tree).toBeNull();
   });
 };
+
+export const correctHeader = (headers, headerKey, expectedHeaderValue) => {
+  const headerKeys = Object.keys(headers);
+  const headerValues = Object.values(headers);
+  const indexOfXFrame = headerKeys.indexOf(headerKey);
+
+  expect(headerKeys).toContain(headerKey);
+  expect(headerValues[indexOfXFrame]).toEqual(expectedHeaderValue);
+};
