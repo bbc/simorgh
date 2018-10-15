@@ -62,36 +62,6 @@ describe('getInitialData', () => {
     });
   });
 
-  describe('Using www.test data', () => {
-    const BASE_PATH = 'https://www.test.bbc.com';
-    beforeEach(() => {
-      process.env.NODE = true;
-      process.env.RAZZLE_BASE_PATH = BASE_PATH;
-    });
-
-    it('should call fetch with a relative URL', () => {
-      callGetInitialData();
-      expect(fetch.mock.calls[0][0]).toEqual(
-        `${BASE_PATH}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
-      );
-    });
-  });
-
-  describe('Using local data', () => {
-    const BASE_PATH = 'http://localhost:7080/data';
-    beforeEach(() => {
-      process.env.NODE = true;
-      process.env.RAZZLE_BASE_PATH = BASE_PATH;
-    });
-
-    it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
-      callGetInitialData();
-      expect(fetch.mock.calls[0][0]).toEqual(
-        `${BASE_PATH}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
-      );
-    });
-  });
-
   describe('Rejected fetch', () => {
     it('should return an empty object', async () => {
       const response = await callGetInitialData({}, mockFetchFailure);
