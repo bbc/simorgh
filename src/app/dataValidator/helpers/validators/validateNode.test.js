@@ -165,7 +165,7 @@ describe('Validate block', () => {
 
     validateNode.validateBlock(data, 'article');
 
-    expect(validateNodeSpy).toHaveBeenCalledTimes(56);
+    expect(validateNodeSpy).toHaveBeenCalledTimes(57);
   });
 
   it('handleSchemaItems: should handle null value when array expected', () => {
