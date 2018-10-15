@@ -10,14 +10,12 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, blocks }) => {
-  const regex = '^https://www.bbc.(co.uk|com)/news/articles/c[a-zA-Z0-9]{10}o$';
+  const schemeHostPrefix = 'https://www.bbc.(co.uk|com)';
+  const regex = RegExp(`^${schemeHostPrefix}/news/articles/c[a-zA-Z0-9]{10}o$`);
 
   // if URL matches a valid route, use a react-router link
   if (locator.match(regex)) {
-    const internalLocator = locator.replace(
-      /https:\/\/www.bbc.(co.uk|com)/,
-      '',
-    );
+    const internalLocator = locator.replace(RegExp(schemeHostPrefix), '');
 
     return (
       <InternalInlineLink to={internalLocator}>
