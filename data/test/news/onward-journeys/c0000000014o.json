@@ -23,7 +23,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/DA54/production/_101729855_airport11.jpg",
+                    "locator": "DA54/production/_101729855_airport11.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "PA"
                   }
@@ -60,7 +60,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/DA54/production/_101729855_airport11.jpg",
+                    "locator": "DA54/production/_101729855_airport11.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "PA"
                   }
@@ -88,7 +88,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/6242/production/_101745152_ruthcole2.jpg",
+                    "locator": "6242/production/_101745152_ruthcole2.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -116,7 +116,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/FAE9/production/_101733246_pendoylan1.jpg",
+                    "locator": "FAE9/production/_101733246_pendoylan1.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -144,7 +144,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/314D/production/_100912621_peterston2.jpg",
+                    "locator": "314D/production/_100912621_peterston2.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -177,7 +177,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/E7D5/production/_103094395_gettyimages-692144392.jpg",
+                "locator": "E7D5/production/_103094395_gettyimages-692144392.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -205,7 +205,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
+                "locator": "D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Edmund von der Burg "
               }
@@ -233,7 +233,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/B17E/production/_103083454_dragons.jpg",
+                "locator": "B17E/production/_103083454_dragons.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "BBC"
               }
@@ -261,7 +261,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
+                "locator": "2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -289,7 +289,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/2573/production/_103078590_adamfb.jpg",
+                "locator": "2573/production/_103078590_adamfb.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Adam Rowe"
               }
@@ -317,7 +317,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/F5F5/production/_103056926_northampton_sts.jpg",
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -345,7 +345,7 @@
               "model": {
                 "width": 2048,
                 "height": 1152,
-                "locator": "http://c.files.bbci.co.uk/10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -373,7 +373,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Shutterstock"
               }
@@ -401,7 +401,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/16AA4/production/_103063829_gunmen_bus976.jpg",
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Alamy"
               }
@@ -429,7 +429,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/1238E/production/_103083647_048751998-1.jpg",
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "EPA"
               }
