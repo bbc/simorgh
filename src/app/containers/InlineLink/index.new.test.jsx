@@ -28,6 +28,19 @@ describe('InlineLinkContainer', () => {
         />
       </StaticRouter>,
     );
+
+    shouldMatchSnapshot(
+      'should render correctly for TEST environment',
+      /*
+        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
+      */
+      <StaticRouter>
+        <InlineLinkContainer
+          locator="https://www.test.bbc.com/news/articles/c0000000027o"
+          blocks={[fragmentBlock('This is text for an internal link')]}
+        />
+      </StaticRouter>,
+    );
   });
 
   describe('with link not matching SPA route', () => {
