@@ -1,4 +1,4 @@
-// global.console.log = jest.fn(); // silence console.log during jest tests
+global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { readdirSync } = require('./readdirSync');
@@ -10,7 +10,7 @@ const expectMethodToBeCalledTimes = (number, spyMethod, dataPath) =>
   readdirSync(dataPath)
     .then(() => expect(spyMethod).toHaveBeenCalledTimes(number))
     .catch(reason => {
-      console.log(reason);
+      console.error(reason); // eslint-disable-line no-console
     });
 
 const testReaddirSync = (number, spyMethod, dataPath = defaultDataPath) => {
