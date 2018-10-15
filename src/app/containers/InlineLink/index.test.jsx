@@ -6,30 +6,28 @@ import {
 } from '../../helpers/tests/testHelpers';
 import InlineLink from './index';
 
+const testInternalInlineLink = (description, href) => {
+  shouldMatchSnapshot(
+    description,
+    /*
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
+    */
+    <StaticRouter>
+      <InlineLink href={href}>Internal SPA article</InlineLink>
+    </StaticRouter>,
+  );
+};
+
 describe('InlineLink', () => {
   describe('with link matching routes for SPA', () => {
-    shouldMatchSnapshot(
+    testInternalInlineLink(
       'should render correctly',
-      /*
-        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
-      */
-      <StaticRouter>
-        <InlineLink href="https://www.bbc.co.uk/news/articles/c0000000027o">
-          Internal SPA article
-        </InlineLink>
-      </StaticRouter>,
+      'https://www.bbc.co.uk/news/articles/c0000000027o',
     );
 
-    shouldMatchSnapshot(
+    testInternalInlineLink(
       'should render correctly for TEST',
-      /*
-        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
-      */
-      <StaticRouter>
-        <InlineLink href="https://www.test.bbc.co.uk/news/articles/c0000000027o">
-          Internal SPA article
-        </InlineLink>
-      </StaticRouter>,
+      'https://www.test.bbc.co.uk/news/articles/c0000000027o',
     );
   });
 

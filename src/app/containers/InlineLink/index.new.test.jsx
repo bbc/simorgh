@@ -14,32 +14,30 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
+const testInternalInlineLink = (description, locator, blocks) => {
+  shouldMatchSnapshot(
+    description,
+    /*
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
+    */
+    <StaticRouter>
+      <InlineLinkContainer locator={locator} blocks={blocks} />
+    </StaticRouter>,
+  );
+};
+
 describe('InlineLinkContainer', () => {
   describe('with link matching routes for SPA', () => {
-    shouldMatchSnapshot(
+    testInternalInlineLink(
       'should render correctly',
-      /*
-        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
-      */
-      <StaticRouter>
-        <InlineLinkContainer
-          locator="https://www.bbc.com/news/articles/c0000000027o"
-          blocks={[fragmentBlock('This is text for an internal link')]}
-        />
-      </StaticRouter>,
+      'https://www.bbc.com/news/articles/c0000000027o',
+      [fragmentBlock('This is text for an internal link')],
     );
 
-    shouldMatchSnapshot(
+    testInternalInlineLink(
       'should render correctly for TEST environment',
-      /*
-        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
-      */
-      <StaticRouter>
-        <InlineLinkContainer
-          locator="https://www.test.bbc.com/news/articles/c0000000027o"
-          blocks={[fragmentBlock('This is text for an internal link')]}
-        />
-      </StaticRouter>,
+      'https://www.test.bbc.com/news/articles/c0000000027o',
+      [fragmentBlock('This is text for an internal link')],
     );
   });
 
