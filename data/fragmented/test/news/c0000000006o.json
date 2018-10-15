@@ -6,7 +6,6 @@
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "53294b49-4ab9-0d16-b99e-295646c74f4e",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -80,18 +79,15 @@
     "model": {
       "blocks": [
         {
-          "blockId": "37282fc9-7663-45af-90da-6f109be6865e",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "f4fca1a3-5bc6-f9be-3f9e-727dea2ae126",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "3e6859dd-e79f-fdf0-5daa-22e1fe546319",
                       "model": {
                         "text": "Phasellus at elit eget ante e=mc2 malesuada tempus",
                         "blocks": [
@@ -127,11 +123,9 @@
         },
         {
           "type": "text",
-          "blockId": "6cba8e86-f184-462b-95cf-09c38571d600",
           "model": {
             "blocks": [
               {
-                "blockId": "8414c280-a6c3-e5f4-6485-8841489e02f8",
                 "type": "paragraph",
                 "model": {
                   "text": "Fusce maximus ipsum nec orci semper dapibus. Donec pulvinar, nibh eu consectetur elementum, dui neque consectetur magna, vel suscipit metus metus sit amet lacus. Sed ornare, mi eget condimentum fringilla, nunc erat pretium metus, sit amet convallis orci diam vulputate leo.",
@@ -173,13 +167,11 @@
           }
         },
         {
-          "blockId": "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "blockId": "ab452204-117f-a85f-f226-ca9b2c4b64aa",
                 "type": "rawVideo",
                 "model": {
                   "guidance": null,
@@ -190,18 +182,15 @@
                 }
               },
               {
-                "blockId": "3fa5f885-6377-20fa-77a6-ae2b9ebe8029",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "88b95218-c5f6-aa46-771f-e6d831fc5ef5",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "d4d1159d-9c10-70de-d67d-1ff23dd98d05",
                             "model": {
                               "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
                               "blocks": [
@@ -222,18 +211,15 @@
                 }
               },
               {
-                "blockId": "6052eb5b-8669-bef2-e848-b4ac9fed6d29",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "a9a78705-e1e8-03d2-b224-9e18249b8bd0",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "9c499256-25d5-7926-a744-a2edb33ea3de",
                             "model": {
                               "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
                               "blocks": [
@@ -254,12 +240,10 @@
                 }
               },
               {
-                "blockId": "773e812f-8974-b4d8-df9a-529c6f6d3137",
                 "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "41a5621e-afab-dbc6-8af7-ece441388a7c",
                       "type": "rawImage",
                       "model": {
                         "width": 1024,
@@ -270,18 +254,15 @@
                       }
                     },
                     {
-                      "blockId": "9c3eb4ca-ed8d-e67d-1391-1f88a4e6b84a",
                       "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "blockId": "3a26e7b3-7517-6f4a-4b9f-c169369db5bc",
                             "type": "text",
                             "model": {
                               "blocks": [
                                 {
                                   "type": "paragraph",
-                                  "blockId": "b5dfbf92-722d-9d6a-340d-1048b61f1246",
                                   "model": {
                                     "text": "Pellentesque pellentesque sem magna.",
                                     "blocks": [
@@ -308,12 +289,10 @@
           }
         },
         {
-          "blockId": "d061cfb9-6a79-4481-ab3a-28b25f9b94fe",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "c98f3b3e-c5c9-0309-cf00-445a8ed00d0f",
                 "type": "rawImage",
                 "model": {
                   "width": 2362,
@@ -324,18 +303,15 @@
                 }
               },
               {
-                "blockId": "557eb893-3a55-e6e2-653e-b6da7ba333b4",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "4191e4cb-3449-a359-ea2e-75266bd8a3ea",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "b9067dd3-7cfe-b2a5-dd82-2f32e242f786",
                             "model": {
                               "text": "ICras dapibus ligula sit amet est aliquam, nec dignissim diam gravida.",
                               "blocks": [
@@ -356,18 +332,15 @@
                 }
               },
               {
-                "blockId": "4f9b569f-a46a-0b7b-e882-01eacb0db307",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "91a90204-3eb0-60f6-732f-fca2fce2ea4a",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "8fcb1c55-b920-4e84-72b4-683923c5c6b2",
                             "model": {
                               "text": "Praesent sagittis fringilla nibh ut vulputate. Ut nec purus est. Vestibulum in eleifend nibh.",
                               "blocks": [
