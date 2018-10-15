@@ -26,7 +26,9 @@
       "rawImage",
       "altText",
       "caption",
-      "subheadline"
+      "subheadline",
+      "fragment",
+      "urlLink"
     ],
     "tags": {
       "about": [
@@ -103,7 +105,16 @@
                       "type": "paragraph",
                       "blockId": "0aad25bb-9af3-978c-ab02-69feefb3c7a4",
                       "model": {
-                        "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior"
+                        "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -142,7 +153,16 @@
                             "type": "paragraph",
                             "blockId": "915920ff-462f-6d6b-60cb-bacaef8ef88a",
                             "model": {
-                              "text": "Duchess of Sussex's bouquet on the tomb of the unknown warrior"
+                              "text": "Duchess of Sussex's bouquet on the tomb of the unknown warrior",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Duchess of Sussex's bouquet on the tomb of the unknown warrior",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -163,35 +183,103 @@
                 "blockId": "08aa723b-6292-51f0-1304-7f817c2645ef",
                 "type": "paragraph",
                 "model": {
-                  "text": "The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey."
+                  "text": "The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "d2bc82b1-0fd1-0a11-19ff-b6bdc8cc6828",
                 "type": "paragraph",
                 "model": {
-                  "text": "The royal tradition, started by the Queen Mother, usually takes place the day after the wedding."
+                  "text": "The royal tradition, started by the Queen Mother, usually takes place the day after the wedding.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The royal tradition, started by the Queen Mother, usually takes place the day after the wedding.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "47deb0b3-ee3d-0af0-071a-bf4cf2fe2ae0",
                 "type": "paragraph",
                 "model": {
-                  "text": "Meghan paid tribute to Prince Harry's mother, Princess Diana, at their wedding by including forget-me-nots, her favourite flowers, in the bouquet."
+                  "text": "Meghan paid tribute to Prince Harry's mother, Princess Diana, at their wedding by including forget-me-nots, her favourite flowers, in the bouquet.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Meghan paid tribute to Prince Harry's mother, Princess Diana, at their wedding by including forget-me-nots, her favourite flowers, in the bouquet.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "9f8a23d3-9c63-d242-ee28-1772e791c1f6",
                 "type": "paragraph",
                 "model": {
-                  "text": "It also contained flowers handpicked by the prince at Kensington Palace."
+                  "text": "It also contained flowers handpicked by the prince at Kensington Palace.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "It also contained flowers handpicked by the prince at Kensington Palace.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "8eb06d3b-4c93-9685-f2d1-cba0a9c49966",
                 "type": "paragraph",
                 "model": {
-                  "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, [which were later donated to local hospices](/news/articles/c85pqyj5m2ko)."
+                  "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, which were later donated to local hospices.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage,",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "which were later donated to local hospices",
+                        "locator": "/news/articles/c85pqyj5m2ko",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "which were later donated to local hospices",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
@@ -227,7 +315,16 @@
                             "type": "paragraph",
                             "blockId": "76403cb6-8de5-3374-e103-725906a3acae",
                             "model": {
-                              "text": "Prince Harry and Meghan Markle leave St George's Chapel though a gateway of flowers."
+                              "text": "Prince Harry and Meghan Markle leave St George's Chapel though a gateway of flowers.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Prince Harry and Meghan Markle leave St George's Chapel though a gateway of flowers.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -253,7 +350,16 @@
                       "type": "paragraph",
                       "blockId": "91637987-343f-b4be-044a-2d067b9c35f6",
                       "model": {
-                        "text": "Queen Victoria's myrtle"
+                        "text": "Queen Victoria's myrtle",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Queen Victoria's myrtle",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -271,28 +377,64 @@
                 "blockId": "a4386ea7-3389-2a0a-180c-860866689b51",
                 "type": "paragraph",
                 "model": {
-                  "text": "Myrtle sprigs from stems planted by Queen Victoria at Osborne House, on the Isle of Wight, in 1845 were included, as well as sprigs taken from a plant grown from the myrtle used in the Queen's wedding bouquet in 1947."
+                  "text": "Myrtle sprigs from stems planted by Queen Victoria at Osborne House, on the Isle of Wight, in 1845 were included, as well as sprigs taken from a plant grown from the myrtle used in the Queen's wedding bouquet in 1947.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Myrtle sprigs from stems planted by Queen Victoria at Osborne House, on the Isle of Wight, in 1845 were included, as well as sprigs taken from a plant grown from the myrtle used in the Queen's wedding bouquet in 1947.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "75014082-27c1-c676-2423-c00c6bf43fb3",
                 "type": "paragraph",
                 "model": {
-                  "text": "The plant became a family favourite after Queen Victoria was given myrtle by Prince Albert's grandmother during a visit to Gotha in Germany."
+                  "text": "The plant became a family favourite after Queen Victoria was given myrtle by Prince Albert's grandmother during a visit to Gotha in Germany.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The plant became a family favourite after Queen Victoria was given myrtle by Prince Albert's grandmother during a visit to Gotha in Germany.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "a8f66894-3c15-1dd9-9da8-7a04727b6e0c",
                 "type": "paragraph",
                 "model": {
-                  "text": "Later that year, the couple bought Osborne House as a family retreat and they planted the sprig against the terrace walls, where it continues to bloom."
+                  "text": "Later that year, the couple bought Osborne House as a family retreat and they planted the sprig against the terrace walls, where it continues to bloom.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Later that year, the couple bought Osborne House as a family retreat and they planted the sprig against the terrace walls, where it continues to bloom.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "4b5ff288-60c1-69c0-1469-525404e7a5dc",
                 "type": "paragraph",
                 "model": {
-                  "text": "It then became tradition for royal brides to carry the plant after Queen Victoria's eldest daughter, Princess Victoria, used it in her bouquet in 1858 - including the Duchess of Cambridge and Princess Diana."
+                  "text": "It then became tradition for royal brides to carry the plant after Queen Victoria's eldest daughter, Princess Victoria, used it in her bouquet in 1858 - including the Duchess of Cambridge and Princess Diana.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "It then became tradition for royal brides to carry the plant after Queen Victoria's eldest daughter, Princess Victoria, used it in her bouquet in 1858 - including the Duchess of Cambridge and Princess Diana.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
@@ -311,7 +453,7 @@
                   "height": 576,
                   "locator": "http://c.files.bbci.co.uk/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
                   "originCode": "cpsprodpb",
-                  "copyrightHolder": "AFP/Getty Images"
+                  "copyrightHolder": "PA"
                 }
               },
               {
@@ -328,7 +470,16 @@
                             "type": "paragraph",
                             "blockId": "3a1fce89-79f7-ba6d-2ad0-9103e4b6074b",
                             "model": {
-                              "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)"
+                              "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -351,7 +502,16 @@
                             "type": "paragraph",
                             "blockId": "5328ca53-7c03-ae11-7c95-b10c16eec3af",
                             "model": {
-                              "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)"
+                              "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -372,21 +532,48 @@
                 "blockId": "0d884afd-c2be-44f5-ce8a-6d1fd9e7611a",
                 "type": "paragraph",
                 "model": {
-                  "text": "The petite bouquet carried by Meghan also contained scented sweet peas, lily of the valley, astilbe, jasmine and astrantia."
+                  "text": "The petite bouquet carried by Meghan also contained scented sweet peas, lily of the valley, astilbe, jasmine and astrantia.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The petite bouquet carried by Meghan also contained scented sweet peas, lily of the valley, astilbe, jasmine and astrantia.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "dd7eb608-8cac-d1f0-3380-a5fac779a4e4",
                 "type": "paragraph",
                 "model": {
-                  "text": "Lily of the valley - the birth flower for May - is said to represent love and appreciation, the astilbe is said to symbolise patience and dedication, and astrantia means strength and courage."
+                  "text": "Lily of the valley - the birth flower for May - is said to represent love and appreciation, the astilbe is said to symbolise patience and dedication, and astrantia means strength and courage.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Lily of the valley - the birth flower for May - is said to represent love and appreciation, the astilbe is said to symbolise patience and dedication, and astrantia means strength and courage.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "1b9bff17-d1b0-6176-899d-05532eb5ed16",
                 "type": "paragraph",
                 "model": {
-                  "text": "The flowers were then bound with a naturally dyed, raw silk ribbon."
+                  "text": "The flowers were then bound with a naturally dyed, raw silk ribbon.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The flowers were then bound with a naturally dyed, raw silk ribbon.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
@@ -406,7 +593,16 @@
                       "type": "paragraph",
                       "blockId": "595d8bda-f499-d1c7-ea2f-c2a9e2e3760a",
                       "model": {
-                        "text": "The origins of the tradition"
+                        "text": "The origins of the tradition",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The origins of the tradition",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -424,7 +620,16 @@
                 "blockId": "04bec03d-22cd-4b92-cc7f-085ddedefd31",
                 "type": "paragraph",
                 "model": {
-                  "text": "The Queen Mother began the tradition of leaving the flowers on the grave in Westminster Abbey in 1923 after her wedding to the Duke of York - who later became King George VI."
+                  "text": "The Queen Mother began the tradition of leaving the flowers on the grave in Westminster Abbey in 1923 after her wedding to the Duke of York - who later became King George VI.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The Queen Mother began the tradition of leaving the flowers on the grave in Westminster Abbey in 1923 after her wedding to the Duke of York - who later became King George VI.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
@@ -443,7 +648,7 @@
                   "height": 576,
                   "locator": "http://c.files.bbci.co.uk/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
                   "originCode": "cpsprodpb",
-                  "copyrightHolder": "Getty Images"
+                  "copyrightHolder": "AFP/Getty Images"
                 }
               },
               {
@@ -460,7 +665,16 @@
                             "type": "paragraph",
                             "blockId": "c3794514-aadc-cd72-1739-a42aa615c06f",
                             "model": {
-                              "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923"
+                              "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -483,7 +697,16 @@
                             "type": "paragraph",
                             "blockId": "b791ac68-07a9-4b5a-8fa6-e43adfe0fd2d",
                             "model": {
-                              "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923"
+                              "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -504,14 +727,32 @@
                 "blockId": "93904838-2ca9-fda9-6930-f54c18eccf52",
                 "type": "paragraph",
                 "model": {
-                  "text": "She is said to have left the flowers there in tribute to her brother Fergus, who was killed in 1915 during World War One."
+                  "text": "She is said to have left the flowers there in tribute to her brother Fergus, who was killed in 1915 during World War One.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "She is said to have left the flowers there in tribute to her brother Fergus, who was killed in 1915 during World War One.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "48573168-217b-e54a-9b6f-4c985dbb7e2e",
                 "type": "paragraph",
                 "model": {
-                  "text": "The Duchess of Cambridge also followed the tradition by having her bouquet left on the grave in 2011."
+                  "text": "The Duchess of Cambridge also followed the tradition by having her bouquet left on the grave in 2011.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The Duchess of Cambridge also followed the tradition by having her bouquet left on the grave in 2011.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
@@ -531,7 +772,16 @@
                       "type": "paragraph",
                       "blockId": "a993528e-6283-0cf6-287d-e20e5734124f",
                       "model": {
-                        "text": "What is the tomb of the unknown warrior?"
+                        "text": "What is the tomb of the unknown warrior?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is the tomb of the unknown warrior?",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -553,7 +803,7 @@
                   "height": 576,
                   "locator": "http://c.files.bbci.co.uk/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
                   "originCode": "cpsprodpb",
-                  "copyrightHolder": "BBC"
+                  "copyrightHolder": "Getty Images"
                 }
               },
               {
@@ -570,7 +820,16 @@
                             "type": "paragraph",
                             "blockId": "9ea54de1-d53a-f925-6746-234e3319b5ac",
                             "model": {
-                              "text": "Tomb of the unknown warrior"
+                              "text": "Tomb of the unknown warrior",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Tomb of the unknown warrior",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -591,35 +850,80 @@
                 "blockId": "8e83fe86-db87-4b6b-b472-923929c97fe1",
                 "type": "paragraph",
                 "model": {
-                  "text": "The grave - which is at the west of the Nave of the Abbey - contains the body of a soldier brought back from France after World War One."
+                  "text": "The grave - which is at the west of the Nave of the Abbey - contains the body of a soldier brought back from France after World War One.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The grave - which is at the west of the Nave of the Abbey - contains the body of a soldier brought back from France after World War One.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "1fc2f979-c195-c7cf-b7e5-412497702766",
                 "type": "paragraph",
                 "model": {
-                  "text": "He was buried on Remembrance Day, 11 November, in 1920, along with soil from the country."
+                  "text": "He was buried on Remembrance Day, 11 November, in 1920, along with soil from the country.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "He was buried on Remembrance Day, 11 November, in 1920, along with soil from the country.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "3edffb19-01d9-0838-b838-2663beca0d26",
                 "type": "paragraph",
                 "model": {
-                  "text": "The idea is thought to have come from a chaplain, the Reverend David Railton, who served at the front during the war, after he saw a grave in a back garden in France with the words \"an unknown British soldier\" pencilled on."
+                  "text": "The idea is thought to have come from a chaplain, the Reverend David Railton, who served at the front during the war, after he saw a grave in a back garden in France with the words \"an unknown British soldier\" pencilled on.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The idea is thought to have come from a chaplain, the Reverend David Railton, who served at the front during the war, after he saw a grave in a back garden in France with the words \"an unknown British soldier\" pencilled on.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "a46d26ac-1e1c-2714-f41c-2d044cf35e67",
                 "type": "paragraph",
                 "model": {
-                  "text": "A large public ceremony took place for the burial, which included King George V laying a wreath of red roses and bay leaves on the coffin."
+                  "text": "A large public ceremony took place for the burial, which included King George V laying a wreath of red roses and bay leaves on the coffin.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "A large public ceremony took place for the burial, which included King George V laying a wreath of red roses and bay leaves on the coffin.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               },
               {
                 "blockId": "8bf3a7cf-14d0-aac3-9ff6-3d14eaef1bf7",
                 "type": "paragraph",
                 "model": {
-                  "text": "The grave is covered by a slab of black Belgian marble and contains a long inscription, including the words: \"They buried him among the kings because he had done good toward God and toward his house.\""
+                  "text": "The grave is covered by a slab of black Belgian marble and contains a long inscription, including the words: \"They buried him among the kings because he had done good toward God and toward his house.\"",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The grave is covered by a slab of black Belgian marble and contains a long inscription, including the words: \"They buried him among the kings because he had done good toward God and toward his house.\"",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]

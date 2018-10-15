@@ -9,7 +9,7 @@ import {
 describe('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
+    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
     cy.visit('/persian/articles/c0000000028o');
   });
 
