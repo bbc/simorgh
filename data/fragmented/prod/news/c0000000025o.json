@@ -128,7 +128,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/A933/production/_101651334_bouquet_pa.jpg",
+                  "locator": "A933/production/_101651334_bouquet_pa.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "PA"
                 }
@@ -279,7 +279,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
+                  "locator": "7336/production/_101649492_17b2937a-e24b-4e9a-a025-02fcc288cbda.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "PA"
                 }
@@ -421,7 +421,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
+                  "locator": "C156/production/_101649494_f0ec9870-b508-4b64-8612-4023c946e8c4.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "PA"
                 }
@@ -599,7 +599,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
+                  "locator": "1743E/production/_101649259_850742ef-c5c5-4537-97b1-6d0eec101534.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "AFP/Getty Images"
                 }
@@ -740,7 +740,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
+                  "locator": "89DE/production/_101649253_6468ae5f-eb26-45c7-b65f-42ac4092f32c.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "Getty Images"
                 }

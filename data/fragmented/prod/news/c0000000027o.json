@@ -111,7 +111,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/E7DB/production/_101655395_paulineclayton.jpg",
+                  "locator": "E7DB/production/_101655395_paulineclayton.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "St Joseph's Hospice"
                 }
@@ -306,7 +306,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/DE8F/production/_101657965_hi046913336.jpg",
+                  "locator": "DE8F/production/_101657965_hi046913336.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "EPA"
                 }
@@ -381,7 +381,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/6CE3/production/_101657872_hi046905593.jpg",
+                  "locator": "6CE3/production/_101657872_hi046905593.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "Reuters"
                 }
@@ -493,7 +493,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/3256/production/_98968821_hi032280080.jpg",
+                  "locator": "3256/production/_98968821_hi032280080.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "Press Association"
                 }
@@ -620,7 +620,7 @@
                 "model": {
                   "width": 1024,
                   "height": 576,
-                  "locator": "http://c.files.bbci.co.uk/22AB/production/_101657880_hi046918757.jpg",
+                  "locator": "22AB/production/_101657880_hi046918757.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "EPA"
                 }

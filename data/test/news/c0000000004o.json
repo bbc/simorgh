@@ -105,7 +105,7 @@
                 "model": {
                   "width": 1024,
                   "height": 761,
-                  "locator": "http://c.files.bbci.co.uk/128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
+                  "locator": "128BA/production/_101726957_datapic-ofsted-hpjs0-nc.jpg",
                   "originCode": "cpsprodpb",
                   "copyrightHolder": "BBC"
                 }
@@ -225,7 +225,7 @@
                       "model": {
                         "width": 1024,
                         "height": 576,
-                        "locator": "http://c.files.bbci.co.uk/14D21/production/_101718258_bluegirlsgetty.jpg",
+                        "locator": "14D21/production/_101718258_bluegirlsgetty.jpg",
                         "originCode": "cpsprodpb",
                         "copyrightHolder": "Getty Images"
                       }

@@ -23,7 +23,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/13FCC/production/_101786818_capture.jpg",
+                    "locator": "13FCC/production/_101786818_capture.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Pacemaker"
                   }
@@ -60,7 +60,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/13FCC/production/_101786818_capture.jpg",
+                    "locator": "13FCC/production/_101786818_capture.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Pacemaker"
                   }
@@ -88,7 +88,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/126E4/production/_102529457_badges.jpg",
+                    "locator": "126E4/production/_102529457_badges.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -116,7 +116,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/1B15/production/_101033960_abortion.jpg",
+                    "locator": "1B15/production/_101033960_abortion.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Science Photo Library"
                   }
@@ -144,7 +144,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/1B15/production/_101033960_abortion.jpg",
+                    "locator": "1B15/production/_101033960_abortion.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Science Photo Library"
                   }
@@ -172,7 +172,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/12A47/production/_101995367_hi046816972.jpg",
+                    "locator": "12A47/production/_101995367_hi046816972.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "PA"
                   }
@@ -200,7 +200,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/D9A1/production/_101931755_protest_getty.jpg",
+                    "locator": "D9A1/production/_101931755_protest_getty.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -235,7 +235,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/4965/production/_102298781_amy-coney-barrett-cspan.jpg",
+                    "locator": "4965/production/_102298781_amy-coney-barrett-cspan.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "C-Span"
                   }
@@ -263,7 +263,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/1037F/production/_101613466_gettyimages-621836318-1.jpg",
+                    "locator": "1037F/production/_101613466_gettyimages-621836318-1.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -291,7 +291,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/F376/production/_98262326_de27.jpg",
+                    "locator": "F376/production/_98262326_de27.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -319,7 +319,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/101CE/production/_102889956_argentina-composite.jpg",
+                    "locator": "101CE/production/_102889956_argentina-composite.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Reuters/AFP"
                   }
@@ -347,7 +347,7 @@
                   "model": {
                     "width": 1024,
                     "height": 576,
-                    "locator": "http://c.files.bbci.co.uk/E28F/production/_102899975_p06h15pc.jpg",
+                    "locator": "E28F/production/_102899975_p06h15pc.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -375,7 +375,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/543F/production/_102876512_newnew.jpg",
+                    "locator": "543F/production/_102876512_newnew.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -408,7 +408,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/E7D5/production/_103094395_gettyimages-692144392.jpg",
+                "locator": "E7D5/production/_103094395_gettyimages-692144392.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -436,7 +436,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
+                "locator": "D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Edmund von der Burg "
               }
@@ -464,7 +464,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/B17E/production/_103083454_dragons.jpg",
+                "locator": "B17E/production/_103083454_dragons.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "BBC"
               }
@@ -492,7 +492,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
+                "locator": "2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -520,7 +520,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/2573/production/_103078590_adamfb.jpg",
+                "locator": "2573/production/_103078590_adamfb.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Adam Rowe"
               }
@@ -548,7 +548,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/F5F5/production/_103056926_northampton_sts.jpg",
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -576,7 +576,7 @@
               "model": {
                 "width": 2048,
                 "height": 1152,
-                "locator": "http://c.files.bbci.co.uk/10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -604,7 +604,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Shutterstock"
               }
@@ -632,7 +632,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/16AA4/production/_103063829_gunmen_bus976.jpg",
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Alamy"
               }
@@ -660,7 +660,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/1238E/production/_103083647_048751998-1.jpg",
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "EPA"
               }

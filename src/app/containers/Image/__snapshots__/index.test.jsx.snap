@@ -30,22 +30,32 @@ exports[`Image with data should render an image with alt text and offscreen copy
 />
 `;
 
-exports[`Image with data should render an image with src as locator 1`] = `
+exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
   copyright="Getty images"
   ratio={65.625}
-  src="http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
 
-exports[`Image with data should render an image with src as locator 2`] = `
+exports[`Image with data should render an image with the default originCode \`cpsdevpb\` - empty string 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   caption={null}
   copyright="Getty images"
   ratio={65.625}
-  src="http://c.files.bbci.co.uk/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+/>
+`;
+
+exports[`Image with data should render an image with the default originCode \`cpsdevpb\` - null 1`] = `
+<FigureContainer
+  alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+  caption={null}
+  copyright="Getty images"
+  ratio={65.625}
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
 />
 `;
