@@ -31,7 +31,7 @@ export const isNull = (title, component) => {
   });
 };
 
-export const correctHeader = (headers, headerKey, expectedHeaderValue) => {
+export const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
   const headerValues = Object.values(headers);
   const indexOfXFrame = headerKeys.indexOf(headerKey);
