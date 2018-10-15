@@ -1,15 +1,5 @@
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
-export const serviceContextNews = {
-  brandName: 'BBC News',
-  service: 'News',
-};
-
-export const serviceContextPersian = {
-  brandName: 'BBC News فارسی',
-  service: 'Persian',
-};
-
 const articleDataBuilder = (
   id,
   passportLanguage,
@@ -33,7 +23,7 @@ const articleDataBuilder = (
     lastUpdated: 1514811600000,
     passport: {
       language: passportLanguage,
-      home: 'http://www.bbc.co.uk/ontologies/passport/home/Persian',
+      home,
       category: 'news',
       genre: null,
     },
