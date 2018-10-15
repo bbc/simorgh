@@ -6,7 +6,6 @@
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "9cb41905-459f-7770-d754-99b066abd09a",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -200,11 +199,9 @@
       "blocks": [
         {
           "type": "text",
-          "blockId": "47ca6b9e-eb93-4800-8678-47fbf443e17e",
           "model": {
             "blocks": [
               {
-                "blockId": "89cee09e-cb72-708a-074e-323d3469dab1",
                 "type": "paragraph",
                 "model": {
                   "text": "Marks and Spencer plans to close 100 stores by 2022, accelerating a reorganisation that it says is \"vital\" for the retailer's future.",
@@ -223,13 +220,11 @@
           }
         },
         {
-          "blockId": "653786c0-d623-48a8-802c-4491b128aefe",
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "blockId": "b40a00b1-0b73-d8cd-d58f-08a2da35636f",
                 "type": "rawVideo",
                 "model": {
                   "guidance": null,
@@ -240,18 +235,15 @@
                 }
               },
               {
-                "blockId": "b39fdb15-705a-ae0e-b891-a73099e933be",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "120c3875-f813-dd43-5c7e-df5d3b92eeb8",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "58b9c718-cbd5-aaeb-71d9-66907a152319",
                             "model": {
                               "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning.",
                               "blocks": [
@@ -272,12 +264,10 @@
                 }
               },
               {
-                "blockId": "43e796a3-7646-9016-476c-95073803063c",
                 "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "5dd99fc2-6154-98e2-b032-4944a60ecf4a",
                       "type": "rawImage",
                       "model": {
                         "width": 1024,
@@ -288,18 +278,15 @@
                       }
                     },
                     {
-                      "blockId": "646166f2-8264-221e-3cf4-1e7bfd0360b2",
                       "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "blockId": "34761fa4-3336-ed5c-79da-ec2069dbdbcd",
                             "type": "text",
                             "model": {
                               "blocks": [
                                 {
                                   "type": "paragraph",
-                                  "blockId": "618e7071-a7f1-6edc-d608-29558465f71c",
                                   "model": {
                                     "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
                                     "blocks": [
@@ -326,18 +313,15 @@
           }
         },
         {
-          "blockId": "ee131b44-ca70-42d5-92a1-a92b41bbd638",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "f38581f9-a77a-27f1-f072-331f2e5af1de",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "9707b19f-9fce-0938-79e6-9c0d7fb72004",
                       "model": {
                         "text": "M&S to close 100 stores by 2022",
                         "blocks": [
@@ -358,12 +342,10 @@
           }
         },
         {
-          "blockId": "13140be5-c780-4766-abd9-667178fd211a",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "28582749-98da-68dc-4f54-1d764454d9cc",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -374,18 +356,15 @@
                 }
               },
               {
-                "blockId": "06f19fb0-cad2-a0b4-2850-96e189ab0e9a",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "18ac2173-2b90-c34b-3fa2-9b1ddece7c1c",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "3c4192a7-ad39-d118-85f0-28a6fd4dad55",
                             "model": {
                               "text": "M&S store closures.",
                               "blocks": [
@@ -406,18 +385,15 @@
                 }
               },
               {
-                "blockId": "6d47d17a-814d-2fd4-7523-8d94d3b3b191",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "694c9524-25f3-41d5-c39e-07861a86fd0b",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "61bb8d94-69d1-9eb6-5cf5-39a76c34d2ab",
                             "model": {
                               "text": "M&S store closures are always big news, especially for the towns where the shops have been reassuring fixtures on the high street for decades. ",
                               "blocks": [
@@ -433,7 +409,6 @@
                           },
                           {
                             "type": "paragraph",
-                            "blockId": "61bb8d94-69d1-9eb6-5cf5-39a76c34d2ab",
                             "model": {
                               "text": "This latest wave of closures will feel like a body blow to locations that are already under pressure. But the hard truth is that M&S has more stores than it needs, given our changing shopping habits.",
                               "blocks": [
@@ -457,12 +432,10 @@
           }
         },
         {
-          "blockId": "14db1e9f-7744-4f63-bbea-c475c9ae4bd2",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "eccf1274-a175-4ed0-3c3d-6f2ff5a1f6f7",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -473,18 +446,15 @@
                 }
               },
               {
-                "blockId": "6b87ee99-36f0-11b2-3feb-127382e09091",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "44fa2745-67c3-d876-64d7-9ca8b179e2be",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "cacdb3d5-1662-aa46-bdd8-82fb5f34cc0e",
                             "model": {
                               "text": "Map of M&S store closures",
                               "blocks": [
@@ -505,18 +475,15 @@
                 }
               },
               {
-                "blockId": "d0c8eb2a-b0c1-02d9-7bf1-18f30fbc9ec6",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "1fa8c9dc-06ae-85c5-e05e-4dbb88f1aaea",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "c92ba8ae-0fbd-3821-a82f-9ec24f139f81",
                             "model": {
                               "text": "Map of Marks and Spencer store closure by 2020",
                               "blocks": [
@@ -540,12 +507,10 @@
           }
         },
         {
-          "blockId": "546ea2ab-412f-4fbe-a10f-cf11b7f843ac",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "d10dc292-081a-00e3-c19b-e48165383f8a",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -556,18 +521,15 @@
                 }
               },
               {
-                "blockId": "89edc85b-1bd6-3e53-87c8-81c59a090c13",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "169f796e-dc64-6603-8144-8fff349a0079",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "2eaaafb0-4ce8-3fd7-16f6-beb3f5a02206",
                             "model": {
                               "text": "Syrian protesters",
                               "blocks": [
@@ -591,12 +553,10 @@
           }
         },
         {
-          "blockId": "7ff105f6-c58e-4aa5-8575-15f738b3f351",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "183d6585-c044-5b54-081e-1c5954a0aefc",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -607,18 +567,15 @@
                 }
               },
               {
-                "blockId": "58784874-d3a5-6bf7-aea3-094c5c110df1",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "bbc32078-d24e-4d8c-f69e-afced05c2f34",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "fe1464a5-03fa-d29c-2256-65ddf692b349",
                             "model": {
                               "text": "BBC Scotland money",
                               "blocks": [
@@ -639,18 +596,15 @@
                 }
               },
               {
-                "blockId": "b538b34e-29e1-fff0-5664-86252e275d68",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "7abd3d7e-6a4c-5447-f5b5-704510b364a4",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "824898d4-bb90-287f-70bc-67cb790672b6",
                             "model": {
                               "text": "BBC Scotland money",
                               "blocks": [
