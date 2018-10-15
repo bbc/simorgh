@@ -6,6 +6,7 @@ import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
 
 import server from './index';
+import { validateHttpHeader } from '../app/helpers/tests/testHelpers';
 
 jest.mock(
   process.env.RAZZLE_ASSETS_MANIFEST,
@@ -44,22 +45,6 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 
 describe('Server', () => {
   const makeRequest = async path => request(server).get(path);
-
-  it(`should not pass an 'x-powered-by' response header`, async () => {
-    const { headers } = await makeRequest('/status');
-    const headerKeys = Object.keys(headers);
-    expect(headerKeys).not.toContain('x-powered-by');
-  });
-
-  it(`should set 'x-frame-options' header to 'DENY'`, async () => {
-    const { headers } = await makeRequest('/status');
-    const headerKeys = Object.keys(headers);
-    const headerValues = Object.values(headers);
-    const indexOfXFrame = headerKeys.indexOf('x-frame-options');
-
-    expect(headerKeys).toContain('x-frame-options');
-    expect(headerValues[indexOfXFrame]).toEqual('DENY');
-  });
 
   describe('/status', () => {
     it('should respond with a 200', async () => {
@@ -130,5 +115,49 @@ describe('Server', () => {
         }`,
       );
     });
+  });
+});
+
+describe('Server HTTP Header', () => {
+  const makeRequest = async path => request(server).get(path);
+
+  it(`should not contain 'x-powered-by'`, async () => {
+    const { headers } = await makeRequest('/status');
+    const headerKeys = Object.keys(headers);
+    expect(headerKeys).not.toContain('x-powered-by');
+  });
+
+  it(`should have 'x-frame-options' set to 'DENY'`, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(headers, 'x-frame-options', 'DENY');
+  });
+
+  it(`should have X-DNS-Prefetch-Control set to 'off' `, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(headers, 'x-dns-prefetch-control', 'off');
+  });
+
+  it(`should have Strict-Transport-Security set to 'max-age=15552000; includeSubDomains' `, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(
+      headers,
+      'strict-transport-security',
+      'max-age=15552000; includeSubDomains',
+    );
+  });
+
+  it(`should have X-Download-Options set to 'noopen' `, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(headers, 'x-download-options', 'noopen');
+  });
+
+  it(`should have X-Content-Type-Options set to 'nosniff' `, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(headers, 'x-content-type-options', 'nosniff');
+  });
+
+  it(`should have X-XSS-Protection set to '1; mode=block' `, async () => {
+    const { headers } = await makeRequest('/status');
+    validateHttpHeader(headers, 'x-xss-protection', '1; mode=block');
   });
 });
