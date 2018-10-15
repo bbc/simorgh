@@ -6,7 +6,6 @@
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "6f06a1b6-db72-97cd-1ff2-3c85a674b8f8",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -28,18 +27,15 @@
     "model": {
       "blocks": [
         {
-          "blockId": "4793311b-f874-4e87-87f8-286cbd3df775",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "599ff36f-3af4-0fb7-1599-951294cd4dac",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "8d59db30-903f-19a7-c4c0-9b95f3c95c67",
                       "model": {
                         "text": "GDPR: 'Don't panic!' data watchdog tells firms",
                         "blocks": [
