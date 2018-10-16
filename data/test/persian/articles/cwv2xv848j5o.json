@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::article:c0000000028o",
+    "id": "urn:bbc:ares::article:cwv2xv848j5o",
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000028o"
+      "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o"
     },
     "type": "article",
     "createdBy": "",
@@ -319,13 +319,13 @@
     }
   },
   "promo": {
-    "id": "urn:bbc:ares::article:c0000000028o",
+    "id": "urn:bbc:ares::article:cwv2xv848j5o",
     "headlines": {
       "seoHeadline": "پهپادی که برایتان قهوه می‌آورد",
       "promoHeadline": "پهپادی که برایتان قهوه می‌آورد"
     },
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000028o"
+      "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o"
     },
     "summary": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
     "timestamp": 1535122662000
