@@ -6,15 +6,12 @@ import InlineLink from '../../components/InlineLink';
 const InternalInlineLink = InlineLink.withComponent(Link);
 
 const InlineLinkContainer = ({ href, children, ...rest }) => {
-  const schemeHostPrefix = 'https://www(.int|.test|.stage|).bbc.(co.uk|com)';
-  const regex = RegExp(`^${schemeHostPrefix}/news/articles/c[a-zA-Z0-9]{10}o$`);
+  const regex = '^/news/articles/c[a-zA-Z0-9]{10}o$';
 
   // if URL matches a valid route, use a react-router link
   if (href.match(regex)) {
-    const internalHref = href.replace(RegExp(schemeHostPrefix), '');
-
     return (
-      <InternalInlineLink to={internalHref} {...rest}>
+      <InternalInlineLink to={href} {...rest}>
         {children}
       </InternalInlineLink>
     );
