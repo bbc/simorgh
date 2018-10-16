@@ -273,7 +273,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
-                        "locator": "/news/articles/c0000000004o",
+                        "locator": "https://www.bbc.co.uk/news/articles/c0000000004o",
                         "blocks": [
                           {
                             "type": "fragment",
@@ -318,7 +318,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
-                        "locator": "/news/articles/c0000000004o",
+                        "locator": "https://www.bbc.co.uk/news/articles/c0000000004o",
                         "blocks": [
                           {
                             "type": "fragment",
@@ -378,7 +378,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
-                        "locator": "/news/articles/c0000000004o",
+                        "locator": "https://www.bbc.co.uk/news/articles/c0000000004o",
                         "blocks": [
                           {
                             "type": "fragment",

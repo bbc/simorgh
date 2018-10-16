@@ -238,7 +238,7 @@
                 "blockId": "737be311-8920-11e7-1ce5-b58c0ec55936",
                 "type": "paragraph",
                 "model": {
-                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus](/news/articles/c0000000004o), nec vulputate metus sagittis."
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus](https://www.bbc.co.uk/news/articles/c0000000004o), nec vulputate metus sagittis."
                 }
               }
             ]
@@ -253,7 +253,7 @@
                 "blockId": "04e41d54-35cb-32c1-03f6-91336faf64d4",
                 "type": "paragraph",
                 "model": {
-                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus.](/news/articles/c0000000004o)"
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus.](https://www.bbc.co.uk/news/articles/c0000000004o)"
                 }
               }
             ]
@@ -283,7 +283,7 @@
                 "blockId": "f2b9d1d5-086b-c182-efa7-467d44c4e90e",
                 "type": "paragraph",
                 "model": {
-                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus](/news/articles/c0000000004o), nec vulputate metus sagittis. [Morbi lacinia leo sed tellus faucibus](/news/articles/c0000000004o), nec vulputate metus sagittis."
+                  "text": "Morbi eleifend ligula nibh. Morbi auctor pretium nibh. Suspendisse ut nisi eu ipsum interdum consectetur. [Morbi lacinia leo sed tellus faucibus](https://www.bbc.co.uk/news/articles/c0000000004o), nec vulputate metus sagittis. [Morbi lacinia leo sed tellus faucibus](https://www.bbc.co.uk/news/articles/c0000000004o), nec vulputate metus sagittis."
                 }
               }
             ]
