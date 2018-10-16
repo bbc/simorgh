@@ -239,7 +239,7 @@ exports[`Metadata News article should render correctly 1`] = `
 </HelmetWrapper>
 `;
 
-exports[`Metadata News article with title value should render correctly 1`] = `
+exports[`Metadata News article with null title value should render correctly 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
