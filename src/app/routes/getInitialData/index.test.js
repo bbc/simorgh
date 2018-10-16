@@ -62,6 +62,31 @@ describe('getInitialData', () => {
     });
   });
 
+  describe('On client', () => {
+    beforeEach(() => {
+      process.env = {};
+    });
+    it('should call fetch with a relative URL', () => {
+      callGetInitialData();
+      expect(fetch.mock.calls[0][0]).toEqual(
+        `/data/${defaultServiceParam}/articles/${defaultIdParam}.json`,
+      );
+    });
+  });
+  describe('On Server', () => {
+    const BASE_PATH = 'https://test.com';
+    beforeEach(() => {
+      process.env.NODE = true;
+      process.env.RAZZLE_BASE_PATH = BASE_PATH;
+    });
+    it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
+      callGetInitialData();
+      expect(fetch.mock.calls[0][0]).toEqual(
+        `${BASE_PATH}/data/${defaultServiceParam}/articles/${defaultIdParam}.json`,
+      );
+    });
+  });
+
   describe('Rejected fetch', () => {
     it('should return an empty object', async () => {
       const response = await callGetInitialData({}, mockFetchFailure);
