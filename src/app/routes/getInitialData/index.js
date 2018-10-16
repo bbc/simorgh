@@ -4,7 +4,6 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    // we have to hardcode the /data here until
     let url = `/data/${service}/articles/${id}.json`;
 
     // URL on server
