@@ -75,6 +75,28 @@ describe('Metadata', () => {
   );
 
   metadataSnapshotTest(
+    'News article with title value',
+    false,
+    'BBC News',
+    null,
+    'BBC News',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    101010,
+    202020,
+    'en-GB',
+    'en_GB',
+    ['tagA', 'tagB'],
+    1514811600000,
+    1514811600000,
+    null,
+    '@BBCNews',
+    '@BBCNews',
+  );
+
+  metadataSnapshotTest(
     'News AMP article',
     true,
     'BBC News',
