@@ -182,9 +182,9 @@ components:
           properties:
             headlines:
               type: object
-              required:
-                - seoHeadline
-                - promoHeadline
+              # required:
+              #   - seoHeadline   currently not in the test optimo datafeed
+              #   - promoHeadline   currently not in the test optimo datafeed
               properties:
                 seoHeadline:
                   example: 'UK pledges extra £44m for Channel border security'
