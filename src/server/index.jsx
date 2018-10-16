@@ -8,6 +8,7 @@ import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 // not part of react-helmet
 import helmet from 'helmet';
+import gnuTP from 'gnu-terry-pratchett';
 import routes from '../app/routes';
 import Document from '../app/components/Document';
 
@@ -59,6 +60,7 @@ server
       orderPreference: ['br'],
     }),
   )
+  .use(gnuTP())
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
