@@ -1,11 +1,9 @@
-import { string } from 'prop-types';
 import { blockOfSpecificTypeAndModel, blocksWithTypes } from '../general';
+import { paragraphBlockPropTypes } from '../paragraph';
 
-const paragraphBlock = blockOfSpecificTypeAndModel('paragraph', {
-  text: string.isRequired,
-});
-
-export const textModelPropTypes = blocksWithTypes([paragraphBlock.isRequired]);
+export const textModelPropTypes = blocksWithTypes([
+  paragraphBlockPropTypes.isRequired,
+]);
 
 export const textModelDefaultProps = {
   blocks: [],
