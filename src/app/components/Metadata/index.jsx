@@ -91,7 +91,7 @@ Metadata.propTypes = {
   metaTags: arrayOf(string).isRequired,
   timeFirstPublished: string.isRequired,
   timeLastUpdated: string.isRequired,
-  title: string.isRequired,
+  title: string,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
@@ -99,6 +99,7 @@ Metadata.propTypes = {
 
 Metadata.defaultProps = {
   articleSection: null,
+  title: '', // defaulting as an empty string because Optimo cannot produce seoHeadlines at this time
 };
 
 export default Metadata;
