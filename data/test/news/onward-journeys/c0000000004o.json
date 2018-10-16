@@ -23,7 +23,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/76B1/production/_103058303_overturned.jpg",
+                    "locator": "76B1/production/_103058303_overturned.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -60,7 +60,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/F95A/production/_103043836_arethabbc.jpg",
+                    "locator": "F95A/production/_103043836_arethabbc.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -88,7 +88,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/9D66/production/_101949204_mediaitem101949203.jpg",
+                    "locator": "9D66/production/_101949204_mediaitem101949203.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "PA"
                   }
@@ -116,7 +116,7 @@
                   "model": {
                     "width": 1024,
                     "height": 576,
-                    "locator": "http://c.files.bbci.co.uk/B148/production/_101948354_p069k875.jpg",
+                    "locator": "B148/production/_101948354_p069k875.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -144,7 +144,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/10421/production/_101939566_hi047315356.jpg",
+                    "locator": "10421/production/_101939566_hi047315356.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -172,7 +172,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/B148/production/_101248354_p066rjlc.jpg",
+                    "locator": "B148/production/_101248354_p066rjlc.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "The Nunthorpe and Marton Knitters, from Teesside i"
                   }
@@ -200,7 +200,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/3537/production/_101232631_rich_index2.jpg",
+                    "locator": "3537/production/_101232631_rich_index2.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "PA/Reuters"
                   }
@@ -235,7 +235,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/76B1/production/_103058303_overturned.jpg",
+                    "locator": "76B1/production/_103058303_overturned.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -263,7 +263,7 @@
                   "model": {
                     "width": 2048,
                     "height": 1152,
-                    "locator": "http://c.files.bbci.co.uk/2AE1/production/_103077901_cdf_120318_cf_glamorgan_fitness_52.jpg",
+                    "locator": "2AE1/production/_103077901_cdf_120318_cf_glamorgan_fitness_52.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Huw Evans Agency"
                   }
@@ -291,7 +291,7 @@
                   "model": {
                     "width": 2048,
                     "height": 1152,
-                    "locator": "http://c.files.bbci.co.uk/15A1/production/_103073550_cdf_170818_cf_glamorgan_v_surrey_13.jpg",
+                    "locator": "15A1/production/_103073550_cdf_170818_cf_glamorgan_v_surrey_13.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Chris Fairweather/Huw Evans Agency"
                   }
@@ -319,7 +319,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/111E4/production/_103061107_p06hr1kr.jpg",
+                    "locator": "111E4/production/_103061107_p06hr1kr.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Getty Images"
                   }
@@ -347,7 +347,7 @@
                   "model": {
                     "width": 976,
                     "height": 549,
-                    "locator": "http://c.files.bbci.co.uk/D012/production/_103066235_gorseinon.jpg",
+                    "locator": "D012/production/_103066235_gorseinon.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "BBC"
                   }
@@ -375,7 +375,7 @@
                   "model": {
                     "width": 2048,
                     "height": 1152,
-                    "locator": "http://c.files.bbci.co.uk/176D4/production/_103065959_cdf_170818_cf_glamorgan_v_surrey_46.jpg",
+                    "locator": "176D4/production/_103065959_cdf_170818_cf_glamorgan_v_surrey_46.jpg",
                     "originCode": "cpsprodpb",
                     "copyrightHolder": "Huw Evans picture agency"
                   }
@@ -408,7 +408,7 @@
               "model": {
                 "width": 2048,
                 "height": 1152,
-                "locator": "http://c.files.bbci.co.uk/4B26/production/_103083291_mediaitem103083290.jpg",
+                "locator": "4B26/production/_103083291_mediaitem103083290.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Mulberry"
               }
@@ -436,7 +436,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/B17E/production/_103083454_dragons.jpg",
+                "locator": "B17E/production/_103083454_dragons.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "BBC"
               }
@@ -464,7 +464,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/6CF9/production/_103079872_mediaitem103079871.jpg",
+                "locator": "6CF9/production/_103079872_mediaitem103079871.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "BBC"
               }
@@ -492,7 +492,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/F5F5/production/_103056926_northampton_sts.jpg",
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -520,7 +520,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/2573/production/_103078590_adamfb.jpg",
+                "locator": "2573/production/_103078590_adamfb.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Adam Rowe"
               }
@@ -548,7 +548,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/1238E/production/_103083647_048751998-1.jpg",
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "EPA"
               }
@@ -576,7 +576,7 @@
               "model": {
                 "width": 2048,
                 "height": 1152,
-                "locator": "http://c.files.bbci.co.uk/10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Getty Images"
               }
@@ -604,7 +604,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/15FCB/production/_103095009_gatwick_sherritracysengsouvanna.jpg",
+                "locator": "15FCB/production/_103095009_gatwick_sherritracysengsouvanna.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Sherri Tracy Sengsouvanna "
               }
@@ -632,7 +632,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/16AA4/production/_103063829_gunmen_bus976.jpg",
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Alamy"
               }
@@ -660,7 +660,7 @@
               "model": {
                 "width": 976,
                 "height": 549,
-                "locator": "http://c.files.bbci.co.uk/4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
                 "originCode": "cpsprodpb",
                 "copyrightHolder": "Shutterstock"
               }
