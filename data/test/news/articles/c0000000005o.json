@@ -204,6 +204,112 @@
           }
         },
         {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "™",
+                        "attributes": ["superscript"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "D6C0/production/_101767945_gettyimages-519045912.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Fusce tincidunt lectus eget augue mollis.",
+                              "model": {
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p067gq6h",
