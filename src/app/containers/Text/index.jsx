@@ -1,8 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
-import nanoid from 'nanoid';
+import paragraph from '../Paragraph';
+import Blocks from '../Blocks';
 import { textModelPropTypes } from '../../models/propTypes/text';
-import Text from '../../components/Text';
+
+const componentsToRender = { paragraph };
 
 const shouldPrependHR = typeOfPreviousBlock => typeOfPreviousBlock === 'text';
 
@@ -11,14 +13,10 @@ const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
 
   const HorizontalRule = shouldPrependHR(typeOfPreviousBlock) ? <hr /> : null;
 
-  const textBlocks = blocks.map(({ model }) => (
-    <Text key={nanoid()} {...model} />
-  ));
-
   return (
     <React.Fragment>
       {HorizontalRule}
-      {textBlocks}
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </React.Fragment>
   );
 };

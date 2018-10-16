@@ -11,20 +11,28 @@ describe('TextContainer', () => {
   });
 
   describe('with data', () => {
-    const paragraphBlock = text => ({
-      type: 'paragraph',
+    const fragmentBlock = (text, attributes = []) => ({
+      type: 'fragment',
       model: {
         text,
+        attributes,
+      },
+    });
+
+    const paragraphBlock = blocks => ({
+      type: 'paragraph',
+      model: {
+        blocks,
       },
     });
 
     const data = {
       blocks: [
-        paragraphBlock('This is a 1st paragraph block.'),
-        paragraphBlock('This is a 2nd paragraph block.'),
-        paragraphBlock('This is a 3rd paragraph block.'),
-        paragraphBlock('This is a 4th paragraph block..'),
-        paragraphBlock('This is a 5th paragraph block.'),
+        paragraphBlock([fragmentBlock('This is a 1st paragraph block.')]),
+        paragraphBlock([fragmentBlock('This is a 2nd paragraph block.')]),
+        paragraphBlock([fragmentBlock('This is a 3rd paragraph block.')]),
+        paragraphBlock([fragmentBlock('This is a 4th paragraph block..')]),
+        paragraphBlock([fragmentBlock('This is a 5th paragraph block.')]),
       ],
     };
 
@@ -36,7 +44,7 @@ describe('TextContainer', () => {
     describe('with a passed previous block type', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <TextContainer {...data} type="text" typeOfPreviousBlock="text" />,
+        <TextContainer {...data} typeOfPreviousBlock="text" />,
       );
     });
   });
