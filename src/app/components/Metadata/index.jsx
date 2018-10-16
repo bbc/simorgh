@@ -99,7 +99,7 @@ Metadata.propTypes = {
 
 Metadata.defaultProps = {
   articleSection: null,
-  title: 'Default Title',
+  title: '', // defaulting as an empty string because Optimo cannot produce seoHeadlines at this time
 };
 
 export default Metadata;
