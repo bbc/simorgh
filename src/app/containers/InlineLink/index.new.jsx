@@ -1,24 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import pathToRegexp from 'path-to-regexp';
 import InlineLink from '../../components/InlineLink';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
+import { articleRegexPath } from '../../routes';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
 
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, blocks }) => {
-  const schemeHostPrefix = 'https://www(.int|.test|.stage|).bbc.(co.uk|com)';
-  const regex = RegExp(`^${schemeHostPrefix}/news/articles/c[a-zA-Z0-9]{10}o$`);
+  const regexp = pathToRegexp(articleRegexPath, [], {
+    start: false,
+    end: false,
+  });
 
+  const result = regexp.exec(locator);
   // if URL matches a valid route, use a react-router link
-  if (locator.match(regex)) {
-    const internalLocator = locator.replace(RegExp(schemeHostPrefix), '');
-
+  if (result) {
+    // the path is the first item in the array
+    const path = result[0];
     return (
-      <InternalInlineLink to={internalLocator}>
+      <InternalInlineLink to={path}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );
