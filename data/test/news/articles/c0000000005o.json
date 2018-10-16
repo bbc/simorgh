@@ -215,21 +215,7 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "™",
-                        "attributes": ["superscript"]
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem™.",
                         "attributes": []
                       }
                     }
