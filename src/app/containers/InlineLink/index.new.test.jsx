@@ -20,7 +20,7 @@ describe('InlineLinkContainer', () => {
       */
       <StaticRouter>
         <InlineLinkContainer
-          locator="/news/articles/c0000000027o"
+          locator="/news/articles/c85pqyj5m2ko"
           blocks={[fragmentBlock('This is text for an internal link')]}
         />
       </StaticRouter>,
