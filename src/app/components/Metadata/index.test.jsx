@@ -75,7 +75,7 @@ describe('Metadata', () => {
   );
 
   metadataSnapshotTest(
-    'News article with title value',
+    'News article with null title value',
     false,
     'BBC News',
     null,
