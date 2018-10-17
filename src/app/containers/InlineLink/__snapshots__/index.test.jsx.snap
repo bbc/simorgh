@@ -23,7 +23,7 @@ exports[`InlineLink with link matching routes for SPA should render correctly 1`
   }
 >
   <InlineLinkContainer
-    href="/news/articles/c0000000027o"
+    href="/news/articles/c85pqyj5m2ko"
   >
     Internal SPA article
   </InlineLinkContainer>

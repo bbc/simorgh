@@ -28,7 +28,7 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
 
 <a
   className="-Link c0"
-  href="/news/articles/c0000000027o"
+  href="/news/articles/c85pqyj5m2ko"
   onClick={[Function]}
 >
   This is text for an internal link
@@ -63,7 +63,7 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
 
 <a
   className="-Link c0"
-  href="/news/articles/c0000000027o"
+  href="/news/articles/c85pqyj5m2ko"
   onClick={[Function]}
 >
   This is text for an internal link
