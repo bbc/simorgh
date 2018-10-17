@@ -6,7 +6,6 @@
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "8e66e76f-aaec-0e9d-98b3-4511e77e4c28",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -26,7 +25,9 @@
       "rawImage",
       "altText",
       "caption",
-      "subheadline"
+      "subheadline",
+      "fragment",
+      "urlLink"
     ],
     "tags": {
       "about": [
@@ -114,12 +115,10 @@
     "model": {
       "blocks": [
         {
-          "blockId": "263e730e-1d9d-48ee-aa56-505771c78450",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "66f56750-539c-e357-00b9-ed94a1098aa5",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -130,20 +129,26 @@
                 }
               },
               {
-                "blockId": "d69d8cfe-c05e-1462-f431-20ab81ae80ff",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "fc5945eb-6a70-a0f9-5300-864d261b968c",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "8aa13ea3-e0c2-60b8-4384-efd306267302",
                             "model": {
-                              "text": "Galileo."
+                              "text": "Galileo.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -153,20 +158,26 @@
                 }
               },
               {
-                "blockId": "8bc637d9-3463-77aa-a313-8c6ef6fd7792",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "e221e50c-4655-4eb5-4103-95008389b130",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "e35f4ea4-082f-c48f-3e10-90bf4ba00d21",
                             "model": {
-                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability"
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -179,20 +190,26 @@
           }
         },
         {
-          "blockId": "4243856b-a493-4b2e-960e-46777f0d46a0",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "69ec8a6d-f0fd-8d03-95fe-8ee506fb591c",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "99082a72-c42f-cea2-1a9d-026733bb696f",
                       "model": {
-                        "text": "GDPR: 'Don't panic!' data watchdog tells firms"
+                        "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GDPR: 'Don't panic!' data watchdog tells firms",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -202,20 +219,26 @@
           }
         },
         {
-          "blockId": "c715d727-7c6b-4556-ac10-ecc648606fdb",
           "type": "subheadline",
           "model": {
             "blocks": [
               {
-                "blockId": "3b96c0a9-3ee6-0b8d-0291-82c833ce9aed",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "a72f8adb-3fd2-b03d-d447-4957fa5dbdce",
                       "model": {
-                        "text": "What is GDPR?"
+                        "text": "What is GDPR?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is GDPR?",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -225,12 +248,10 @@
           }
         },
         {
-          "blockId": "ab0a0ffb-8abe-4836-9a60-4cecc526f76d",
           "type": "image",
           "model": {
             "blocks": [
               {
-                "blockId": "fc3d38c2-e96e-0cc9-70bf-641f4f7eaca8",
                 "type": "rawImage",
                 "model": {
                   "width": 1024,
@@ -241,20 +262,26 @@
                 }
               },
               {
-                "blockId": "90108546-1594-71e0-4c80-b71092e5de2b",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "d3714c4d-0ee5-a8b9-379a-77a4bf45ab5d",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "146c5121-bf4a-3ead-3484-a22e72262832",
                             "model": {
-                              "text": "Fusce tincidunt lectus eget augue mollis."
+                              "text": "Fusce tincidunt lectus eget augue mollis.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fusce tincidunt lectus eget augue mollis.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -264,20 +291,49 @@
                 }
               },
               {
-                "blockId": "1f73fad9-95e9-68b3-a795-4528c2db6359",
                 "type": "caption",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "75c8c23a-72f7-1411-92ad-a578f0bfcb0d",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "bd7a48bc-7642-7e46-6dd9-5b3f97521b39",
                             "model": {
-                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. [Morbi lacinia leo sed tellus faucibus](/news/articles/c0000000004o), nec vulputate metus sagittis."
+                              "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. Morbi lacinia leo sed tellus faucibus, nec vulputate metus sagittis.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Suspendisse blandit tincidunt ante, non finibus nisl ornare non. ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Morbi lacinia leo sed tellus faucibus",
+                                    "locator": "/news/articles/c0000000004o",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Morbi lacinia leo sed tellus faucibus",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ", nec vulputate metus sagittis.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -290,20 +346,26 @@
           }
         },
         {
-          "blockId": "5d7b22e5-f604-4a84-9481-66ed2b7da97a",
           "type": "subheadline",
           "model": {
             "blocks": [
               {
-                "blockId": "8a60d4a6-1110-2cca-aa7c-7a2988b77c4a",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "c8cb0c7e-c3a1-42d7-ca10-72c8e4e2c526",
                       "model": {
-                        "text": "What is GDPR?"
+                        "text": "What is GDPR?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "What is GDPR?",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -314,14 +376,35 @@
         },
         {
           "type": "text",
-          "blockId": "e1e101f1-3cca-4b32-b3ae-4ac2f323b940",
           "model": {
             "blocks": [
               {
-                "blockId": "5f8f03c0-2e36-728f-bf2a-66bd98ef106f",
                 "type": "paragraph",
                 "model": {
-                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. **Cras porttitor dictum tellus**, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cras porttitor dictum tellus",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
