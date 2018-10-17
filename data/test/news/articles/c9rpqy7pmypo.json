@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::article:c0000000025o",
+    "id": "urn:bbc:ares::article:c9rpqy7pmypo",
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
+      "optimoUrn": "urn:bbc:optimo:asset:c9rpqy7pmypo"
     },
     "type": "article",
     "createdBy": "",
@@ -130,7 +130,7 @@
                   "height": 576,
                   "locator": "A933/production/_101651334_bouquet_pa.jpg",
                   "originCode": "cpsprodpb",
-                  "copyrightHolder": "BBC"
+                  "copyrightHolder": "PA"
                 }
               },
               {
@@ -245,7 +245,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "which were later donated to local hospices",
-                        "locator": "/news/articles/c0000000027o",
+                        "locator": "/news/articles/c85pqyj5m2ko",
                         "blocks": [
                           {
                             "type": "fragment",
@@ -863,13 +863,13 @@
     }
   },
   "promo": {
-    "id": "urn:bbc:ares::article:c0000000025o",
+    "id": "urn:bbc:ares::article:c9rpqy7pmypo",
     "headlines": {
       "seoHeadline": "Meghan's bouquet laid on tomb of unknown warrior",
       "promoHeadline": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior"
     },
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
+      "optimoUrn": "urn:bbc:optimo:asset:c9rpqy7pmypo"
     },
     "summary": "Meghan follows the royal bridal tradition started by the Queen Mother in 1923.",
     "timestamp": 1514811600000

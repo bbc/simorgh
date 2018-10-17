@@ -7,28 +7,28 @@ import {
 describe('AMP Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
-    cy.visit('/news/articles/c0000000027o.amp');
+    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
+    cy.visit('/news/articles/c85pqyj5m2ko.amp');
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testNonHTMLResponseCode('/news/articles/c0000000027o.amp', 200);
+      testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
     });
   });
 
   it('should error gracefully', () => {
     retrieve404BodyResponse(
-      '/news/articles/c0000000027o.cake',
-      'No route was found for /news/articles/c0000000027o.cake.',
+      '/news/articles/c85pqyj5m2ko.cake',
+      'No route was found for /news/articles/c85pqyj5m2ko.cake.',
     );
     retrieve404BodyResponse(
-      '/news/lol/c0000000027o.amp',
-      'No route was found for /news/lol/c0000000027o.amp.',
+      '/news/lol/c85pqyj5m2ko.amp',
+      'No route was found for /news/lol/c85pqyj5m2ko.amp.',
     );
     retrieve404BodyResponse(
-      '/cake/articles/c0000000027o.amp',
-      'No route was found for /cake/articles/c0000000027o.amp.',
+      '/cake/articles/c85pqyj5m2ko.amp',
+      'No route was found for /cake/articles/c85pqyj5m2ko.amp.',
     );
   });
 
@@ -43,7 +43,7 @@ describe('AMP Tests', () => {
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit('/news/articles/c0000000027o');
+    cy.visit('/news/articles/c85pqyj5m2ko');
     getElement('html').should('not.have.attr', 'amp');
   });
 });
