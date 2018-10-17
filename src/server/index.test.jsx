@@ -60,6 +60,28 @@ describe('Server', () => {
     expect(headerValues[indexOfXFrame]).toEqual('DENY');
   });
 
+  describe("should set 'x-clacks-overhead' header", () => {
+    it('should send the message on', async () => {
+      const { headers } = await makeRequest('/status');
+      const headerKeys = Object.keys(headers);
+
+      expect(headerKeys).toContain('x-clacks-overhead');
+      expect(headers['x-clacks-overhead']).toEqual('GNU Terry Pratchett');
+    });
+
+    it('should not log the message', async () => {
+      global.console.log = jest.fn();
+
+      await makeRequest('/status');
+
+      expect(global.console.log).not.toHaveBeenCalledWith(
+        'GNU Terry Pratchett',
+      );
+    });
+
+    // It should turn the message around at the end of the line and send it back again (Currently untested)
+  });
+
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');

@@ -10,7 +10,9 @@ import fs from 'fs';
 import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
+import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
+
 import Document from '../app/components/Document';
 /*
   Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
@@ -61,6 +63,7 @@ server
       orderPreference: ['br'],
     }),
   )
+  .use(gnuTP())
   .get(articleDataRegexPath, async ({ params }, res) => {
     const { service, id } = params;
 
