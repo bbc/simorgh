@@ -61,16 +61,29 @@ server
       orderPreference: ['br'],
     }),
   )
-  .get(articleDataRegexPath, ({ params }, res) => {
+  .get(articleDataRegexPath, async ({ params }, res) => {
     const { service, id } = params;
-    const articleData = fs.readFileSync(
-      path.join(dataFolderToRender, service, 'articles', `${id}.json`),
+
+    const dataFilePath = path.join(
+      dataFolderToRender,
+      service,
+      'articles',
+      `${id}.json`,
     );
 
-    const articleJSON = JSON.parse(articleData);
+    fs.readFile(dataFilePath, (error, data) => {
+      if (error) {
+        res.sendStatus(404);
+        console.log(error);
+        return null;
+      }
 
-    res.setHeader('Content-Type', 'application/json');
-    res.json(articleJSON);
+      const articleJSON = JSON.parse(data);
+
+      res.setHeader('Content-Type', 'application/json');
+      res.json(articleJSON);
+      return null;
+    });
   })
   .get('/status', (req, res) => {
     res.sendStatus(200);
