@@ -69,7 +69,8 @@ server
 
     const articleJSON = JSON.parse(articleData);
 
-    res.send(articleJSON);
+    res.setHeader('Content-Type', 'application/json');
+    res.json(articleJSON);
   })
   .get('/status', (req, res) => {
     res.sendStatus(200);
