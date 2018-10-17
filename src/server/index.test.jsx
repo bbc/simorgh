@@ -4,7 +4,6 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
-
 import server from './index';
 
 jest.mock(
@@ -87,6 +86,24 @@ describe('Server', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
       expect(statusCode).toBe(200);
+    });
+  });
+
+  describe('Data', () => {
+    it('should respond with JSON', async () => {
+      const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+
+    describe('with non-existent data', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest(
+          '/news/articles/cERROR00025o.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
     });
   });
 
