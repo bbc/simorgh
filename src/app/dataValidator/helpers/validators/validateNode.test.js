@@ -5,7 +5,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 
 const validateNode = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
-const data = require('../../../../../data/test/news/c0000000001o.json');
+const data = require('../../../../../data/test/news/articles/c0000000001o.json');
 
 const schemas = getAllSchemas();
 const { article } = schemas;
@@ -165,7 +165,7 @@ describe('Validate block', () => {
 
     validateNode.validateBlock(data, 'article');
 
-    expect(validateNodeSpy).toHaveBeenCalledTimes(56);
+    expect(validateNodeSpy).toHaveBeenCalledTimes(57);
   });
 
   it('handleSchemaItems: should handle null value when array expected', () => {
