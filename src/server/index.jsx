@@ -74,7 +74,7 @@ server
     fs.readFile(dataFilePath, (error, data) => {
       if (error) {
         res.sendStatus(404);
-        console.log(error);
+        console.log(error); // eslint-disable-line no-console
         return null;
       }
 
