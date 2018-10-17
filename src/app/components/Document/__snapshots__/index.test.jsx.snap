@@ -38,7 +38,7 @@ exports[`Document should render correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c0000000025o"
+      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
     <style>
