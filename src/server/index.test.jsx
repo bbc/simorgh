@@ -74,6 +74,15 @@ describe('Server', () => {
         expect.objectContaining({ content: expect.any(Object) }),
       );
     });
+
+    describe('with non-existent data', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest(
+          '/news/articles/cERROR00025o.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
+    });
   });
 
   describe('/*', () => {
