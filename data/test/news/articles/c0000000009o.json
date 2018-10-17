@@ -6,7 +6,6 @@
     },
     "type": "article",
     "createdBy": "",
-    "blockId": "6576d9c9-9bb7-db8a-ab97-f6cab3e41d03",
     "created": 1514808060000,
     "firstPublished": 1514808060000,
     "lastPublished": 1514811600000,
@@ -27,7 +26,8 @@
       "altText",
       "video",
       "rawVideo",
-      "subheadline"
+      "subheadline",
+      "fragment"
     ],
     "tags": {
       "about": [
@@ -90,13 +90,11 @@
     "model": {
       "blocks": [
         {
-          "blockId": "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "blockId": "1269ae82-776b-a9c8-affe-1033d2f4459f",
                 "type": "rawVideo",
                 "model": {
                   "guidance": null,
@@ -107,20 +105,26 @@
                 }
               },
               {
-                "blockId": "2e24f33d-77c2-c62e-0353-e14dc8276e3e",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "0cb5e07f-9881-d1d1-31a7-727e295eaa67",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "dc943001-529b-5545-41c3-0456e6a7ae5d",
                             "model": {
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -130,12 +134,10 @@
                 }
               },
               {
-                "blockId": "34c923d7-b86e-6e63-bc3a-96d183ae55ed",
                 "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "b4d778d9-b1fc-11fc-cf65-1afe5ed93c22",
                       "type": "rawImage",
                       "model": {
                         "width": 1024,
@@ -146,20 +148,26 @@
                       }
                     },
                     {
-                      "blockId": "8a285581-eb53-0aea-b4ba-d575edbc7d71",
                       "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "blockId": "ce40c253-3fff-a227-b27d-e2da5bc248e8",
                             "type": "text",
                             "model": {
                               "blocks": [
                                 {
                                   "type": "paragraph",
-                                  "blockId": "415a1cc9-1448-170e-f835-dabf9ed6171a",
                                   "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
                                   }
                                 }
                               ]
@@ -175,20 +183,26 @@
           }
         },
         {
-          "blockId": "e8495951-d6cb-4f62-855c-cbc4a8d9c906",
           "type": "headline",
           "model": {
             "blocks": [
               {
-                "blockId": "329367ec-c6b6-a437-edb7-427c284185b4",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "730b6efd-1ed3-3dc6-e0a4-d09c3643cae9",
                       "model": {
-                        "text": "Nulla euismod semper turpis at vulputate"
+                        "text": "Nulla euismod semper turpis at vulputate",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nulla euismod semper turpis at vulputate",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -198,20 +212,26 @@
           }
         },
         {
-          "blockId": "6a7ade5b-cac8-41dc-8e03-d6e6b7eaebc9",
           "type": "subheadline",
           "model": {
             "blocks": [
               {
-                "blockId": "7378eafa-b1b0-801d-c203-85d4b583cd40",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "f134dcec-69e1-68c9-6878-aadd0bc64c36",
                       "model": {
-                        "text": "Donec ut fermentum risus, eu sodales mauris"
+                        "text": "Donec ut fermentum risus, eu sodales mauris",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Donec ut fermentum risus, eu sodales mauris",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -221,13 +241,11 @@
           }
         },
         {
-          "blockId": "caa319be-e5a5-4d9b-b7f4-dc0c76d5bd95",
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "blockId": "0fdaa22a-5fc9-06f7-3ded-f433d8ef6c8c",
                 "type": "rawVideo",
                 "model": {
                   "guidance": null,
@@ -238,20 +256,26 @@
                 }
               },
               {
-                "blockId": "b5e1fa91-29ac-a925-515b-89f31d9cf83a",
                 "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "85557d5e-98e0-bdc3-0a06-a518dccdfc21",
                       "type": "text",
                       "model": {
                         "blocks": [
                           {
                             "type": "paragraph",
-                            "blockId": "10c6221c-c3fb-e505-fd73-8443145177f2",
                             "model": {
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning"
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -261,12 +285,10 @@
                 }
               },
               {
-                "blockId": "e8e2a26b-928a-b165-90e0-e21fd8d1c8b4",
                 "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "f2906a43-4dbd-6761-6f2f-e24c5d403952",
                       "type": "rawImage",
                       "model": {
                         "width": 1024,
@@ -277,20 +299,26 @@
                       }
                     },
                     {
-                      "blockId": "85853ee7-6b75-1f93-4a19-63aa36c66f54",
                       "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "blockId": "cea9e575-0ec0-6723-3aa0-187a89590cc6",
                             "type": "text",
                             "model": {
                               "blocks": [
                                 {
                                   "type": "paragraph",
-                                  "blockId": "ffb88992-8629-eadf-0553-d28641414335",
                                   "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar."
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
                                   }
                                 }
                               ]
@@ -306,20 +334,40 @@
           }
         },
         {
-          "blockId": "68767319-7fdb-4189-8a29-95ce0d8a0923",
           "type": "subheadline",
           "model": {
             "blocks": [
               {
-                "blockId": "bcdd266f-edcb-863b-3e8e-419db8184105",
                 "type": "text",
                 "model": {
                   "blocks": [
                     {
                       "type": "paragraph",
-                      "blockId": "038d3b51-fc3c-bfcc-bbc3-4493a4c7919b",
                       "model": {
-                        "text": "Donec ut fermentum risus, eu _sodales mauris_ ."
+                        "text": "Donec ut fermentum risus, eu sodales mauris .",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Donec ut fermentum risus, eu ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "sodales mauris",
+                              "attributes": ["italic"]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " .",
+                              "attributes": []
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -330,14 +378,35 @@
         },
         {
           "type": "text",
-          "blockId": "dac41846-7dab-4f75-a56a-d9f60a0d5f47",
           "model": {
             "blocks": [
               {
-                "blockId": "a6a22aca-0c61-0eb3-ab68-7a91abf1c529",
                 "type": "paragraph",
                 "model": {
-                  "text": "Integer convallis elit in mauris suscipit venenatis. **_Pellentesque et orci et arcu sollicitudin sagittis_** a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed."
+                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Integer convallis elit in mauris suscipit venenatis. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Pellentesque et orci et arcu sollicitudin sagittis",
+                        "attributes": ["bold", "italic"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                        "attributes": []
+                      }
+                    }
+                  ]
                 }
               }
             ]
