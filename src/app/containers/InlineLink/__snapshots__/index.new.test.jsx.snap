@@ -34,7 +34,7 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
         },
       ]
     }
-    locator="/news/articles/c0000000027o"
+    locator="/news/articles/c85pqyj5m2ko"
   />
 </Router>
 `;
