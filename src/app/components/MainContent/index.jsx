@@ -4,8 +4,9 @@ import { node } from 'prop-types';
 
 export const StyledMainContent = styled.main`
   display: grid;
-  grid-template-columns: [leftCol] 1fr [mainCol] 1280px [rightCol] 1fr;
+  grid-template-columns: [start] 1fr [main-start] repeat(10, minmax(0, 128px)) [main-end] 1fr [end];
 `;
+
 const MainContent = ({ children }) => (
   <StyledMainContent role="main">{children}</StyledMainContent>
 );

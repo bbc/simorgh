@@ -2,95 +2,16 @@
 
 exports[`MainContent should render correctly 1`] = `
 .c0 {
-  margin: auto;
-}
-
-.c1 {
   display: grid;
-}
-
-@media (min-width:63em) and (max-width:80em) {
-  .c0 {
-    max-width: 1008px;
-  }
-}
-
-@media (min-width:80em) {
-  .c0 {
-    max-width: 1280px;
-  }
-}
-
-@media (max-width:37.5em) {
-  .c1 {
-    grid-gap: 0.5rem;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c1 {
-    grid-gap: 1rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:62.9375em) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63em) and (max-width:80em) {
-  .c1 {
-    grid-template-columns: repeat(8,1fr);
-  }
-}
-
-@media (min-width:80em) {
-  .c1 {
-    grid-template-columns: repeat(10,1fr);
-  }
-}
-
-@media (max-width:56.1875em) {
-  .c2 {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width:37.5em) and (max-width:62.9375em) {
-  .c2 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:63em) and (max-width:80em) {
-  .c2 {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width:80em) {
-  .c2 {
-    grid-column: 3 / -3;
-  }
+  grid-template-columns: [start] 1fr [main-start] repeat(10,minmax(0,128px)) [main-end] 1fr [end];
 }
 
 <main
   className="c0"
   role="main"
 >
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <h1>
-        This is some content
-      </h1>
-    </div>
-  </div>
+  <h1>
+    This is some content
+  </h1>
 </main>
 `;

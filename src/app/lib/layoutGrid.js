@@ -36,13 +36,13 @@ export const layoutGridItem = css`
     grid-column: 1 / -1;
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
-    grid-column: 2 / -2;
+    grid-column: 3 / -3;
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-column: 2 / -2;
+    grid-column: 3 / -3;
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-column: 3 / -3;
+    grid-column: 4 / -4;
   }
 `;
 
