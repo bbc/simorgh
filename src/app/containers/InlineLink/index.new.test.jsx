@@ -18,7 +18,7 @@ const testInternalInlineLink = (description, locator, blocks) => {
   shouldMatchSnapshot(
     description,
     /*
-      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
     */
     <StaticRouter>
       <InlineLinkContainer locator={locator} blocks={blocks} />
