@@ -48,53 +48,71 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       service="persian"
     />
     <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "سرصفحه مقاله",
+      <TitleContent>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "text": "سرصفحه مقاله",
+                            },
+                            "type": "paragraph",
                           },
-                          "type": "paragraph",
-                        },
-                      ],
+                        ],
+                      },
+                      "type": "text",
                     },
-                    "type": "text",
-                  },
-                ],
+                  ],
+                },
+                "type": "headline",
               },
-              "type": "headline",
-            },
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "یک پاراگراف.",
-                    },
-                    "type": "paragraph",
-                  },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
+            ]
           }
-        }
-      />
+          componentsToRender={
+            Object {
+              "headline": [Function],
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </TitleContent>
+      <BodyContent>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "یک پاراگراف.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "headline": [Function],
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </BodyContent>
     </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
@@ -147,53 +165,71 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       service="news"
     />
     <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "Article Headline",
+      <TitleContent>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "text": "Article Headline",
+                            },
+                            "type": "paragraph",
                           },
-                          "type": "paragraph",
-                        },
-                      ],
+                        ],
+                      },
+                      "type": "text",
                     },
-                    "type": "text",
-                  },
-                ],
+                  ],
+                },
+                "type": "headline",
               },
-              "type": "headline",
-            },
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "A paragraph.",
-                    },
-                    "type": "paragraph",
-                  },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
+            ]
           }
-        }
-      />
+          componentsToRender={
+            Object {
+              "headline": [Function],
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </TitleContent>
+      <BodyContent>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "A paragraph.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "headline": [Function],
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </BodyContent>
     </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
