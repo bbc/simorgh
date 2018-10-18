@@ -69,7 +69,7 @@ describe('getInitialData', () => {
     it('should call fetch with a relative URL', () => {
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
-        `/data/${defaultServiceParam}/articles/${defaultIdParam}.json`,
+        `/${defaultServiceParam}/articles/${defaultIdParam}.json`,
       );
     });
   });
@@ -82,7 +82,7 @@ describe('getInitialData', () => {
     it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
-        `${BASE_PATH}/data/${defaultServiceParam}/articles/${defaultIdParam}.json`,
+        `${BASE_PATH}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
       );
     });
   });

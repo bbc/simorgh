@@ -7,8 +7,8 @@ import {
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit('/news/articles/c0000000025o');
-    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
+    cy.visit('/news/articles/c9rpqy7pmypo');
+    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
   });
 
   it('should render the BBC News branding', () => {

@@ -4,7 +4,6 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
-
 import server from './index';
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
@@ -54,10 +53,50 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 describe('Server', () => {
   const makeRequest = async path => request(server).get(path);
 
+  describe("should set 'x-clacks-overhead' header", () => {
+    it('should send the message on', async () => {
+      const { headers } = await makeRequest('/status');
+      const headerKeys = Object.keys(headers);
+
+      expect(headerKeys).toContain('x-clacks-overhead');
+      expect(headers['x-clacks-overhead']).toEqual('GNU Terry Pratchett');
+    });
+
+    it('should not log the message', async () => {
+      global.console.log = jest.fn();
+
+      await makeRequest('/status');
+
+      expect(global.console.log).not.toHaveBeenCalledWith(
+        'GNU Terry Pratchett',
+      );
+    });
+
+    // It should turn the message around at the end of the line and send it back again (Currently untested)
+  });
+
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
       expect(statusCode).toBe(200);
+    });
+  });
+
+  describe('Data', () => {
+    it('should respond with JSON', async () => {
+      const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+
+    describe('with non-existent data', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest(
+          '/news/articles/cERROR00025o.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
     });
   });
 
