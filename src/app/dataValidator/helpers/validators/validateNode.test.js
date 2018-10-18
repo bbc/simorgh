@@ -138,9 +138,13 @@ describe('Validate block', () => {
     const textBlock = headlineModel.blocks[0];
     const textModel = textBlock.model;
     const paragraphBlock = textModel.blocks[0];
+    const paragraphModel = paragraphBlock.model;
+    const fragmentBlock = paragraphModel.blocks[0];
     const textBlock2 = articleBlocks[1];
     const textModel2 = textBlock2.model;
     const paragraphBlock2 = textModel2.blocks[0];
+    const paragraphModel2 = paragraphBlock2.model;
+    const fragmentBlock2 = paragraphModel2.blocks[0];
 
     validateNode.validateBlock(data, 'article');
 
@@ -153,9 +157,13 @@ describe('Validate block', () => {
       [textBlock,       'text',       ':article:content:model:blocks:headline:model:blocks'],
       [textModel,       'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model'],
       [paragraphBlock,  'paragraph',  ':article:content:model:blocks:headline:model:blocks:text:model:blocks'],
+      [paragraphModel,  'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
+      [fragmentBlock,   'fragment',   ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks'],
       [textBlock2,      'text',       ':article:content:model:blocks'],
       [textModel2,      'blocks',     ':article:content:model:blocks:text:model'],
       [paragraphBlock2, 'paragraph',  ':article:content:model:blocks:text:model:blocks'],
+      [paragraphModel2, 'blocks',     ':article:content:model:blocks:text:model:blocks:paragraph:model'],
+      [fragmentBlock2,   'fragment',   ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks'],
     ]);
     // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
   });
@@ -165,7 +173,7 @@ describe('Validate block', () => {
 
     validateNode.validateBlock(data, 'article');
 
-    expect(validateNodeSpy).toHaveBeenCalledTimes(57);
+    expect(validateNodeSpy).toHaveBeenCalledTimes(69);
   });
 
   it('handleSchemaItems: should handle null value when array expected', () => {
