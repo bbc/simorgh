@@ -67,7 +67,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
       );
     }
 
-    // top level blocks are in componentsToRender should be handled better made static array for `topLeveLComponents`
+    // top level blocks are in componentsToRender should be handled better than this
     if (['headline', 'subheadline', 'text', 'image'].includes(type)) {
       return (
         <GridItem>
