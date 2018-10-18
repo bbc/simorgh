@@ -2,28 +2,32 @@
 
 exports[`Blocks should render correctly 1`] = `
 Array [
-  <GridItem>
-    <headline
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "This is a headline!",
-                  },
-                  "type": "paragraph",
+  <GridItemFullWidth>
+    <StyledHeadlineWrapper>
+      <GridItem>
+        <headline
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "This is a headline!",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
                 },
-              ],
-            },
-            "type": "text",
-          },
-        ]
-      }
-      type="headline"
-    />
-  </GridItem>,
+                "type": "text",
+              },
+            ]
+          }
+          type="headline"
+        />
+      </GridItem>
+    </StyledHeadlineWrapper>
+  </GridItemFullWidth>,
   <GridItem>
     <subheadline
       blocks={
@@ -63,22 +67,20 @@ Array [
       typeOfPreviousBlock="subheadline"
     />
   </GridItem>,
-  <GridItem>
-    <BlockString
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "text": "This is some test content!",
-            },
+  <BlockString
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "text": "This is some test content!",
           },
-        ]
-      }
-      type="test"
-      typeOfPreviousBlock="text"
-    />
-  </GridItem>,
-  <StyleGridFullWidthWrapper>
+        },
+      ]
+    }
+    type="test"
+    typeOfPreviousBlock="text"
+  />,
+  <GridItem>
     <BlockString
       blocks={
         Array [
@@ -137,6 +139,6 @@ Array [
       type="image"
       typeOfPreviousBlock="test"
     />
-  </StyleGridFullWidthWrapper>,
+  </GridItem>,
 ]
 `;
