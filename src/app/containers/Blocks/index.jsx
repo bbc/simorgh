@@ -2,10 +2,20 @@ import React from 'react';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
 import styled from 'styled-components';
-import { layoutGridItem } from '../../lib/layoutGrid';
+import {
+  layoutGridItem,
+  layoutGridItemFullWidth,
+  layoutGridWrapper,
+} from '../../lib/layoutGrid';
+import { C_WHITE } from '../../lib/constants/styles';
 
-const StyleGridFullWidthWrapper = styled.div`
-  grid-column: 1 / -1;
+export const StyledHeadlineWrapper = styled.div`
+  ${layoutGridWrapper};
+  background-color: ${C_WHITE};
+`;
+
+const GridItemFullWidth = styled.div`
+  ${layoutGridItemFullWidth};
 `;
 
 const GridItem = styled.div`
@@ -26,29 +36,58 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     const Block = componentsToRender[type] || BlockString;
 
-    // make all images full bleed
-    if (type === 'image') {
+    if (type === 'headline') {
       return (
-        <StyleGridFullWidthWrapper>
+        <GridItemFullWidth>
+          <StyledHeadlineWrapper>
+            <GridItem>
+              <Block
+                key={nanoid()}
+                type={type}
+                typeOfPreviousBlock={typeOfPreviousBlock}
+                {...model}
+              />
+            </GridItem>
+          </StyledHeadlineWrapper>
+        </GridItemFullWidth>
+      );
+    }
+
+    // HACK make second images full bleed & headline
+    if (type === 'image' && index === 3) {
+      return (
+        <GridItemFullWidth>
           <Block
             key={nanoid()}
             type={type}
             typeOfPreviousBlock={typeOfPreviousBlock}
             {...model}
           />
-        </StyleGridFullWidthWrapper>
+        </GridItemFullWidth>
+      );
+    }
+
+    // top level blocks are in componentsToRender should be handled better made static array for `topLeveLComponents`
+    if (['headline', 'subheadline', 'text', 'image'].includes(type)) {
+      return (
+        <GridItem>
+          <Block
+            key={nanoid()}
+            type={type}
+            typeOfPreviousBlock={typeOfPreviousBlock}
+            {...model}
+          />
+        </GridItem>
       );
     }
 
     return (
-      <GridItem>
-        <Block
-          key={nanoid()}
-          type={type}
-          typeOfPreviousBlock={typeOfPreviousBlock}
-          {...model}
-        />
-      </GridItem>
+      <Block
+        key={nanoid()}
+        type={type}
+        typeOfPreviousBlock={typeOfPreviousBlock}
+        {...model}
+      />
     );
   });
 
