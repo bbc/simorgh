@@ -234,6 +234,7 @@ components:
         oneOf:
           - $ref: '#/components/schemas/altText'
           - $ref: '#/components/schemas/caption'
+          - $ref: '#/components/schemas/fragment'
           - $ref: '#/components/schemas/headline'
           - $ref: '#/components/schemas/image'
           - $ref: '#/components/schemas/paragraph'
@@ -241,6 +242,7 @@ components:
           - $ref: '#/components/schemas/rawVideo'
           - $ref: '#/components/schemas/subheadline'
           - $ref: '#/components/schemas/text'
+          - $ref: '#/components/schemas/urlLink'
           - $ref: '#/components/schemas/video'
           - $ref: '#/components/schemas/aresMedia'
       minItems: 2
@@ -330,6 +332,27 @@ components:
             - caption
           type: string
 
+    fragment:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          type: object
+          required:
+            - text
+            - attributes
+          properties:
+            text:
+              type: string
+            attributes:
+              type: object
+        type:
+          enum:
+            - fragment
+          type: string
+
     headline:
       type: object
       required:
@@ -371,8 +394,11 @@ components:
         model:
           type: object
           required:
+            - blocks
             - text
           properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
             text:
               type: string
         type:
@@ -480,6 +506,31 @@ components:
         type:
           enum:
             - text
+          type: string
+
+    urlLink:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          type: object
+          required:
+            - text
+            - locator
+            - blocks
+          properties:
+            text:
+              type: string
+            locator:
+              type: string
+              example: 'https://www.bbc.com/news/articles/c0000000027o'
+            blocks:
+              $ref: '#/components/schemas/blocks'
+        type:
+          enum:
+            - urlLink
           type: string
 
     video:
