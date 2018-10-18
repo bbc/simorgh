@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::article:c0000000027o",
+    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000027o"
+      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
     },
     "type": "article",
     "createdBy": "",
@@ -242,7 +242,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "placed on the tomb of the unknown warrior",
-                        "locator": "/news/articles/c0000000025o",
+                        "locator": "/news/articles/c9rpqy7pmypo",
                         "blocks": [
                           {
                             "type": "fragment",
@@ -742,13 +742,13 @@
     }
   },
   "promo": {
-    "id": "urn:bbc:ares::article:c0000000027o",
+    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
     "headlines": {
       "seoHeadline": "Royal wedding flowers given to Hackney hospice",
       "promoHeadline": "Royal wedding flowers given to Hackney hospice"
     },
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000027o"
+      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
     },
     "summary": "St Joseph's Hospice's residents were \"thrilled\" to receive the flowers from the Windsor chapel.",
     "timestamp": 1514811600000

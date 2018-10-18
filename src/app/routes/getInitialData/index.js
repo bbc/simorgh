@@ -4,7 +4,7 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    let url = `/data/${service}/articles/${id}.json`;
+    let url = `/${service}/articles/${id}.json`;
 
     // URL on server
     if (process.env.NODE) {

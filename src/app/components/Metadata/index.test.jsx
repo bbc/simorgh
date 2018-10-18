@@ -75,6 +75,28 @@ describe('Metadata', () => {
   );
 
   metadataSnapshotTest(
+    'News article with null title value',
+    false,
+    'BBC News',
+    null,
+    'BBC News',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    101010,
+    202020,
+    'en-GB',
+    'en_GB',
+    ['tagA', 'tagB'],
+    1514811600000,
+    1514811600000,
+    null,
+    '@BBCNews',
+    '@BBCNews',
+  );
+
+  metadataSnapshotTest(
     'News AMP article',
     true,
     'BBC News',
@@ -102,7 +124,7 @@ describe('Metadata', () => {
     'BBC News فارسی',
     null,
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/c0000000028o',
+    'https://www.bbc.com/persian/articles/cwv2xv848j5o',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',
@@ -124,7 +146,7 @@ describe('Metadata', () => {
     'BBC News فارسی',
     null,
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/c0000000028o.amp',
+    'https://www.bbc.com/persian/articles/cwv2xv848j5o.amp',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',
