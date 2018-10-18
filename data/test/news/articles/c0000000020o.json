@@ -132,7 +132,7 @@
                                   "type": "urlLink",
                                   "model": {
                                     "text": "placed on the tomb of the unknown warrior",
-                                    "locator": "/news/articles/c9rpqy7pmypo",
+                                    "locator": "https://www.bbc.com/news/articles/c9rpqy7pmypo",
                                     "blocks": [
                                       {
                                         "type": "fragment",
