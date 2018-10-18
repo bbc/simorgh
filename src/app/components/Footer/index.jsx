@@ -18,6 +18,7 @@ import { T_BREVIER } from '../../lib/constants/typography';
 
 const StyledFooterLinksWrapper = styled.div`
   ${layoutGridWrapper};
+  padding: 0 ${GEL_SPACING_DBL};
   background-color: ${C_ORBIT_GREY};
 `;
 

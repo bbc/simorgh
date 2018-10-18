@@ -8,6 +8,7 @@ import {
   C_WHITE,
   GEL_SPACING,
   GEL_SPACING_HLF,
+  GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
 import {
   layoutGridWrapper,
@@ -57,7 +58,9 @@ const BrandSvg = styled.svg`
 
 const Brand = ({ indentedLogo }) => {
   const StyledGridItem = styled.div`
-    ${indentedLogo ? layoutGridItem : layoutGridItemFullWidth};
+    ${indentedLogo
+      ? layoutGridItem
+      : `${layoutGridItemFullWidth}; padding: 0 ${GEL_SPACING_DBL};`};
   `;
 
   return (
