@@ -53,7 +53,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
       );
     }
 
-    // HACK make second images full bleed & headline
+    // HACK: make second image full bleed & headline
     if (type === 'image' && index === 3) {
       return (
         <GridItemFullWidth>
