@@ -24,14 +24,14 @@ export const layoutGridWrapper = css`
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
     /* 
       Math: (1008 - (7*16))/8 = 112
-      Explainer: (width - 7 gaps of 16) / 8 columns = signle column width
+      Explainer: (width - 7 gaps of 16) / 8 columns = single column width
     */
     grid-template-columns: [start] 1fr repeat(8, [col] minmax(0, 7rem)) 1fr [end];
   }
   @media (min-width: ${group5ScreenWidthMin}) {
     /* 
       Math: (1280 - (9*16))/10 = 113.6
-      Explainer: (width - 9 gaps of 16) / 10 columns = signle column width
+      Explainer: (width - 9 gaps of 16) / 10 columns = single column width
     */
     grid-template-columns: [start] 1fr repeat(10, [col] minmax(0, 7.1rem)) 1fr [end];
   }
