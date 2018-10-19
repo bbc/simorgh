@@ -13,8 +13,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
-    cy.visit('/news/articles/c0000000025o');
+    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
+    cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
   it('should render a headline', () => {
@@ -94,6 +94,6 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a working first inline link', () => {
-    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c0000000027o');
+    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
   });
 });

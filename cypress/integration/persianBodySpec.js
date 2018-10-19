@@ -11,8 +11,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000028o' is available within the PROD enviroment
-    cy.visit('/persian/articles/c0000000028o');
+    // Only 'cwv2xv848j5o' is available within the PROD enviroment
+    cy.visit('/persian/articles/cwv2xv848j5o');
   });
 
   it('should render a headline', () => {

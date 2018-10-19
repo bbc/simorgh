@@ -17,7 +17,7 @@ describe('Document', () => {
     link: mockHelmetToComponent(
       <link
         rel="canonical"
-        href="https://www.bbc.com/news/articles/c0000000025o"
+        href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       />,
     ),
     meta: mockHelmetToComponent(
