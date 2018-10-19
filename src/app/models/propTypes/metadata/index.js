@@ -4,7 +4,7 @@ const metadataPropTypes = {
   id: string.isRequired,
   type: string.isRequired,
   createdBy: string,
-  created: number.isRequired,
+  created: number,
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
   lastUpdated: number.isRequired,
@@ -14,7 +14,7 @@ const metadataPropTypes = {
   passport: shape({
     language: string.isRequired,
     home: string.isRequired,
-    category: string.isRequired,
+    category: string,
     genre: string,
   }),
   tags: shape({
