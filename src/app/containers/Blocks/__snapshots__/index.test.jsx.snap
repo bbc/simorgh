@@ -2,71 +2,61 @@
 
 exports[`Blocks should render correctly 1`] = `
 Array [
-  <GridItemFullWidth>
-    <StyledHeadlineWrapper>
-      <GridItem>
-        <headline
-          blocks={
-            Array [
+  <headline
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
               Object {
                 "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "text": "This is a headline!",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
+                  "text": "This is a headline!",
                 },
-                "type": "text",
+                "type": "paragraph",
               },
-            ]
-          }
-          type="headline"
-        />
-      </GridItem>
-    </StyledHeadlineWrapper>
-  </GridItemFullWidth>,
-  <GridItem>
-    <subheadline
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "This is a subheadline!",
-                  },
-                  "type": "paragraph",
+            ],
+          },
+          "type": "text",
+        },
+      ]
+    }
+    type="headline"
+  />,
+  <subheadline
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "text": "This is a subheadline!",
                 },
-              ],
-            },
-            "type": "text",
+                "type": "paragraph",
+              },
+            ],
           },
-        ]
-      }
-      type="subheadline"
-      typeOfPreviousBlock="headline"
-    />
-  </GridItem>,
-  <GridItem>
-    <text
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "text": "This is some text content!",
-            },
-            "type": "paragraph",
+          "type": "text",
+        },
+      ]
+    }
+    type="subheadline"
+    typeOfPreviousBlock="headline"
+  />,
+  <text
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "text": "This is some text content!",
           },
-        ]
-      }
-      type="text"
-      typeOfPreviousBlock="subheadline"
-    />
-  </GridItem>,
+          "type": "paragraph",
+        },
+      ]
+    }
+    type="text"
+    typeOfPreviousBlock="subheadline"
+  />,
   <BlockString
     blocks={
       Array [
@@ -80,65 +70,63 @@ Array [
     type="test"
     typeOfPreviousBlock="text"
   />,
-  <GridItem>
-    <BlockString
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "copyrightHolder": "BBC",
-              "height": 420,
-              "locator": "E7DB/production/_101655395_paulineclayton.jpg",
-              "originCode": "cpsprodpb",
-              "width": 640,
-            },
-            "type": "rawImage",
+  <BlockString
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "copyrightHolder": "BBC",
+            "height": 420,
+            "locator": "E7DB/production/_101655395_paulineclayton.jpg",
+            "originCode": "cpsprodpb",
+            "width": 640,
           },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "Pauline Clayton",
-                        },
-                        "type": "paragraph",
+          "type": "rawImage",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "Pauline Clayton",
                       },
-                    ],
-                  },
-                  "type": "text",
+                      "type": "paragraph",
+                    },
+                  ],
                 },
-              ],
-            },
-            "type": "altText",
+                "type": "text",
+              },
+            ],
           },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
-                        },
-                        "type": "paragraph",
+          "type": "altText",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
                       },
-                    ],
-                  },
-                  "type": "text",
+                      "type": "paragraph",
+                    },
+                  ],
                 },
-              ],
-            },
-            "type": "caption",
+                "type": "text",
+              },
+            ],
           },
-        ]
-      }
-      type="image"
-      typeOfPreviousBlock="test"
-    />
-  </GridItem>,
+          "type": "caption",
+        },
+      ]
+    }
+    type="image"
+    typeOfPreviousBlock="test"
+  />,
 ]
 `;

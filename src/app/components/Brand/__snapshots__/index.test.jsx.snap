@@ -47,56 +47,57 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
 
 @media (max-width:37.5em) {
   .c0 {
-    grid-gap: 0 0.5rem;
+    grid-gap: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
-    grid-gap: 0 1rem;
+    grid-gap: 1rem;
+    padding: 0 1rem;
   }
 }
 
 @media (max-width:62.9375em) {
   .c0 {
-    grid-template-columns: repeat(6,[col] 1fr);
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: [start] 1fr repeat(8,[col] minmax(0,112px)) 1fr [end];
+    grid-template-columns: repeat(8,1fr);
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: [start] 1fr repeat(10,[col] minmax(0,113.6px)) 1fr [end];
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
 @media (max-width:56.1875em) {
   .c1 {
     grid-column: 1 / -1;
-    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
   .c1 {
-    grid-column: col 2 / span 4;
+    grid-column: 2 / -2;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    grid-column: col 2 / span 6;
+    grid-column: 2 / -2;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    grid-column: col 3 / span 6;
+    grid-column: 3 / -3;
   }
 }
 
@@ -193,36 +194,37 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
 
 .c1 {
   grid-column: 1 / -1;
-  padding: 0 1rem;
 }
 
 @media (max-width:37.5em) {
   .c0 {
-    grid-gap: 0 0.5rem;
+    grid-gap: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
-    grid-gap: 0 1rem;
+    grid-gap: 1rem;
+    padding: 0 1rem;
   }
 }
 
 @media (max-width:62.9375em) {
   .c0 {
-    grid-template-columns: repeat(6,[col] 1fr);
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: [start] 1fr repeat(8,[col] minmax(0,112px)) 1fr [end];
+    grid-template-columns: repeat(8,1fr);
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: [start] 1fr repeat(10,[col] minmax(0,113.6px)) 1fr [end];
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
