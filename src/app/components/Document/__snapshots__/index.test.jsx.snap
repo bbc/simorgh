@@ -33,6 +33,10 @@ exports[`Document should render correctly 1`] = `
       href="/manifest.json"
       rel="manifest"
     />
+    <script
+      async={true}
+      src="https://cdn.ampproject.org/shadow-v0.js"
+    />
     <ResourceHints />
     <title>
       Test title
