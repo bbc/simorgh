@@ -91,6 +91,35 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
+  .get('/archive', async ({ url, query }, res) => {
+    try {
+      const sheet = new ServerStyleSheet();
+
+      const app = renderToString(
+        sheet.collectStyles(
+          <ServerApp location={url} routes={routes} data={query} />,
+        ),
+      );
+
+      const headHelmet = Helmet.renderStatic();
+
+      const styleTags = sheet.getStyleElement();
+
+      const doc = renderToStaticMarkup(
+        <Document
+          assets={assets}
+          app={app}
+          data={query}
+          styleTags={styleTags}
+          helmet={headHelmet}
+        />,
+      );
+
+      res.send(`<!doctype html>${doc}`);
+    } catch ({ message }) {
+      res.status(404).send(message);
+    }
+  })
   .get('/*', async ({ url }, res) => {
     try {
       const sheet = new ServerStyleSheet();

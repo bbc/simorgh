@@ -24,6 +24,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
+        <script async src="https://cdn.ampproject.org/shadow-v0.js" />
         <ResourceHints />
         {title}
         {links}
