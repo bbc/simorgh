@@ -245,7 +245,7 @@
                       "type": "urlLink",
                       "model": {
                         "text": "which were later donated to local hospices",
-                        "locator": "/news/articles/c85pqyj5m2ko",
+                        "locator": "https://www.test.bbc.com/news/articles/c85pqyj5m2ko",
                         "blocks": [
                           {
                             "type": "fragment",
