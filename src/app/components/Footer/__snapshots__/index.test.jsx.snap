@@ -81,6 +81,7 @@ exports[`Footer should render correctly 1`] = `
 .c9 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
   padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
   grid-column: 1/-1;
 }
 
@@ -146,40 +147,31 @@ exports[`Footer should render correctly 1`] = `
   .c9 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 3rem 2.5rem repeat(2,1fr);
-  }
-
-  .c9 li:nth-child(3n-1) {
-    margin-top: 8px;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c9 {
-    grid-column-gap: 1rem;
-    grid-template-rows: 3rem 2.5rem 1fr;
-  }
-
-  .c9 li:nth-child(2n) {
-    margin-top: 8px;
+    grid-template-rows: repeat(4,auto);
   }
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
   .c9 {
+    grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c9 {
+    grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,auto);
   }
 }
 
 @media (min-width:80em) {
   .c9 {
+    grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,auto);
   }
 }
 
