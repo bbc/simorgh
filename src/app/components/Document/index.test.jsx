@@ -27,6 +27,9 @@ describe('Document', () => {
       />,
     ),
     title: mockHelmetToComponent(<title>Test title</title>),
+    script: mockHelmetToComponent(
+      <script async href="www.test.com/script.js" />,
+    ),
   };
   const styleTags = <style>{'html { color: red; }'}</style>;
 

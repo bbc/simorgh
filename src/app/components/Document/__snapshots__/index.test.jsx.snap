@@ -44,6 +44,10 @@ exports[`Document should render correctly 1`] = `
     <style>
       html { color: red; }
     </style>
+    <script
+      async={true}
+      href="www.test.com/script.js"
+    />
   </head>
   <body>
     <div
