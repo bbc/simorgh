@@ -1,12 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { node } from 'prop-types';
+import { number } from 'prop-types';
 import { T_BREVIER } from '../../lib/constants/typography';
 import {
   C_RHINO,
   GEL_SPACING_DBL,
   FF_NEWS_SANS_REG,
 } from '../../lib/constants/styles';
+
+const formatTimestamp = timestamp => {
+  const dateTime = new Date(timestamp * 1000);
+  const day = dateTime.toLocaleString('en-GB', {
+    day: 'numeric',
+  });
+  const month = dateTime.toLocaleString('en-GB', {
+    month: 'long',
+  });
+  const year = dateTime.toLocaleString('en-GB', {
+    year: 'numeric',
+  });
+
+  return `${day} ${month} ${year}`;
+};
 
 const StyledTimestamp = styled.span`
   ${T_BREVIER};
@@ -15,12 +30,22 @@ const StyledTimestamp = styled.span`
   padding-bottom: ${GEL_SPACING_DBL};
 `;
 
-const Timestamp = ({ children }) => (
-  <StyledTimestamp>{children}</StyledTimestamp>
-);
+const Timestamp = ({ timestamp }) => {
+  if (!timestamp) {
+    return null;
+  }
+
+  const formattedTimestamp = formatTimestamp(timestamp);
+
+  return (
+    <StyledTimestamp>
+      <time dateTime={timestamp}>{formattedTimestamp}</time>
+    </StyledTimestamp>
+  );
+};
 
 Timestamp.propTypes = {
-  children: node.isRequired,
+  timestamp: number.isRequired,
 };
 
 export default Timestamp;
