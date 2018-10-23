@@ -10,17 +10,12 @@ import {
 
 const formatTimestamp = timestamp => {
   const dateTime = new Date(timestamp * 1000);
-  const day = dateTime.toLocaleString('en-GB', {
+
+  return dateTime.toLocaleDateString('en-GB', {
     day: 'numeric',
-  });
-  const month = dateTime.toLocaleString('en-GB', {
     month: 'long',
-  });
-  const year = dateTime.toLocaleString('en-GB', {
     year: 'numeric',
   });
-
-  return `${day} ${month} ${year}`;
 };
 
 const StyledTimestamp = styled.span`
