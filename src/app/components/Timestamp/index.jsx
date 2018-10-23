@@ -13,7 +13,7 @@ const formatTimestamp = timestamp => {
 
   // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
   if (
-    !(dateTime instanceof Date && !isNaN(dateTime)) // eslint-disable-line no-restricted-globals
+    isNaN(dateTime) // eslint-disable-line no-restricted-globals
   ) {
     return null;
   }
@@ -35,7 +35,7 @@ const StyledTimestamp = styled.span`
 const Timestamp = ({ timestamp }) => {
   const formattedTimestamp = formatTimestamp(timestamp);
 
-  if (formattedTimestamp === null) {
+  if (!formattedTimestamp) {
     return null;
   }
 
