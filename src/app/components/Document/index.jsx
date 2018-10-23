@@ -9,6 +9,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
+  const helmetScripts = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scripts = assets.map(asset => (
     <script key={asset} type="text/javascript" src={asset} defer />
@@ -28,6 +29,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {title}
         {links}
         {styleTags}
+        {helmetScripts}
       </head>
       <body>
         {/* eslint-disable react/no-danger */
