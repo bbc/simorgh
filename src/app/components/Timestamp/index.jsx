@@ -8,38 +8,27 @@ import {
   FF_NEWS_SANS_REG,
 } from '../../lib/constants/styles';
 
-const formatTimestamp = timestamp => {
-  const dateObj = new Date(timestamp * 1000);
+// if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
+const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
-  // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
-  if (
-    isNaN(dateObj) // eslint-disable-line no-restricted-globals
-  ) {
-    return {};
-  }
-
+const formatDateTime = dateObj => {
   const fullYear = dateObj.getFullYear();
-  const monthLong = dateObj.toLocaleDateString('en-GB', {
-    month: 'long',
-  });
   const monthTwoDigit = dateObj.toLocaleDateString('en-GB', {
     month: '2-digit',
-  });
-  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
-    day: 'numeric',
   });
   const dayTwoDigit = dateObj.toLocaleDateString('en-GB', {
     day: '2-digit',
   });
 
-  const dateTime = `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
-  const formattedTimestamp = `${dayNumeric} ${monthLong} ${fullYear}`;
-
-  return {
-    dateTime,
-    formattedTimestamp,
-  };
+  return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
 };
+
+const formatTimestamp = dateObj =>
+  dateObj.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
 const StyledTimestamp = styled.span`
   ${T_BREVIER};
@@ -49,15 +38,15 @@ const StyledTimestamp = styled.span`
 `;
 
 const Timestamp = ({ timestamp }) => {
-  const { formattedTimestamp, dateTime } = formatTimestamp(timestamp);
+  const dateObj = new Date(timestamp * 1000);
 
-  if (!formattedTimestamp || !formattedTimestamp) {
+  if (!isValidDateTime(dateObj)) {
     return null;
   }
 
   return (
     <StyledTimestamp>
-      <time dateTime={dateTime}>{formattedTimestamp}</time>
+      <time dateTime={formatDateTime(dateObj)}>{formatTimestamp(dateObj)}</time>
     </StyledTimestamp>
   );
 };
