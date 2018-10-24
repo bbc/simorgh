@@ -80,7 +80,7 @@ components:
         metadata:
           type: object
           required:
-            - created
+            # - created   currently not in the optimo test feed
             - firstPublished
             - id
             - lastPublished
@@ -90,6 +90,8 @@ components:
             - tags
             - type
           properties:
+            analyticsLabels:
+              type: object
             category:
               enum:
                 - analysis
@@ -115,6 +117,9 @@ components:
               type: number
             id:
               type: string
+            language:
+              type: string
+
             lastPublished:
               type: number
             lastUpdated:
@@ -126,10 +131,12 @@ components:
               properties:
                 optimoUrn:
                   type: string
+            options:
+              type: object
             passport:
               type: object
               required:
-                - category
+                # - category  currently not in the optimo test datafeed
                 - home
                 - language
               properties:
@@ -154,6 +161,20 @@ components:
                 language:
                   example: 'en-gb'
                   type: string
+            relatedContent:
+              type: object
+              properties:
+                groups:
+                  type: object
+                site:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    subType:
+                      type: string
+                    uri:
+                      type: string
             tags:
               type: object
               properties:
@@ -213,6 +234,7 @@ components:
         oneOf:
           - $ref: '#/components/schemas/altText'
           - $ref: '#/components/schemas/caption'
+          - $ref: '#/components/schemas/fragment'
           - $ref: '#/components/schemas/headline'
           - $ref: '#/components/schemas/image'
           - $ref: '#/components/schemas/paragraph'
@@ -220,7 +242,9 @@ components:
           - $ref: '#/components/schemas/rawVideo'
           - $ref: '#/components/schemas/subheadline'
           - $ref: '#/components/schemas/text'
+          - $ref: '#/components/schemas/urlLink'
           - $ref: '#/components/schemas/video'
+          - $ref: '#/components/schemas/aresMedia'
       minItems: 2
 
     altText:
@@ -239,6 +263,59 @@ components:
             - altText
           type: string
 
+    aresMedia:
+      type: object
+      required:
+        - model
+      properties:
+        model:
+          type: object
+          properties:
+            advertising:
+              type: boolean
+              example: true
+            duration:
+              type: number
+              example: 43
+            embedding:
+              type: boolean
+              example: true
+            format:
+              type: string # probably should be an enum in the future
+              example: audio_video
+            id:
+              type: string
+              example: 'p01jvmg5'
+            imageUrl:
+              type: string
+              example: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01jvmms.jpg'
+            subType:
+              type: string # probably should be an enum in the future
+              example: 'clip'
+            synopses:
+              type: object
+              properties:
+                long:
+                  type: string
+                  example: "New Zealand suffered a spectacular capsize in their America's Cup semi-final against Great Britain but lead the best-of-nine series 3-1.\nThe catamaran fell forwards on the run-in to the start, leaving some crew suspended in the hull above the water.\nThree were thrown overboard but all of New Zealand's crew were accounted for."
+                medium:
+                  type: string
+                  example: 'The catamaran fell forwards on the run-in to the start, leaving some crew suspended in the hull above the water.'
+                short:
+                  type: string
+                  example: "New Zealand suffered a spectacular capsize in their America's Cup semi-final against Great"
+            title:
+              type: string
+              example: "Dramatic capsize in America's Cup yacht"
+            versionId:
+              type: string
+              example: 'p01jvmg7'
+            versionType:
+              type: string # probably should be an enum in the future
+              example: 'Original'
+            warnings:
+              type: object
+
     caption:
       type: object
       required:
@@ -253,6 +330,27 @@ components:
         type:
           enum:
             - caption
+          type: string
+
+    fragment:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          type: object
+          required:
+            - text
+            - attributes
+          properties:
+            text:
+              type: string
+            attributes:
+              type: object
+        type:
+          enum:
+            - fragment
           type: string
 
     headline:
@@ -296,8 +394,11 @@ components:
         model:
           type: object
           required:
+            - blocks
             - text
           properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
             text:
               type: string
         type:
@@ -405,6 +506,31 @@ components:
         type:
           enum:
             - text
+          type: string
+
+    urlLink:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          type: object
+          required:
+            - text
+            - locator
+            - blocks
+          properties:
+            text:
+              type: string
+            locator:
+              type: string
+              example: 'https://www.bbc.com/news/articles/c0000000027o'
+            blocks:
+              $ref: '#/components/schemas/blocks'
+        type:
+          enum:
+            - urlLink
           type: string
 
     video:

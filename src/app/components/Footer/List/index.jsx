@@ -25,22 +25,22 @@ const StyledList = styled.ul`
   @media (max-width: ${group2ScreenWidthMax}) {
     grid-column-gap: ${GEL_SPACING};
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 50%);
+    grid-template-rows: repeat(4, auto);
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 33.333%);
+    grid-template-rows: repeat(3, auto);
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 33.333%);
+    grid-template-rows: repeat(3, auto);
   }
   @media (min-width: ${group5ScreenWidthMin}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 33.333%);
+    grid-template-rows: repeat(3, auto);
   }
   > li:first-child {
     border-bottom: 1px solid ${C_WHITE};
