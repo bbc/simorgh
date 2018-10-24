@@ -30,12 +30,3 @@ export const isNull = (title, component) => {
     expect(tree).toBeNull();
   });
 };
-
-export const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
-  const headerKeys = Object.keys(headers);
-  const headerValues = Object.values(headers);
-  const indexOfXFrame = headerKeys.indexOf(headerKey);
-
-  expect(headerKeys).toContain(headerKey);
-  expect(headerValues[indexOfXFrame]).toEqual(expectedHeaderValue);
-};

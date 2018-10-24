@@ -165,7 +165,7 @@ describe('Server', () => {
   });
 });
 
-describe('Server HTTP Header', () => {
+describe('Server HTTP Headers', () => {
   let statusRequest;
 
   beforeAll(async () => {

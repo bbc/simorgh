@@ -56,8 +56,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(compression())
-  .use(helmet())
-  .use(helmet.frameguard({ action: 'deny' }))
+  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
     expressStaticGzip(publicDirectory, {
       enableBrotli: true,
