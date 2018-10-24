@@ -9,20 +9,36 @@ import {
 } from '../../lib/constants/styles';
 
 const formatTimestamp = timestamp => {
-  const dateTime = new Date(timestamp * 1000);
+  const dateObj = new Date(timestamp * 1000);
 
   // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
   if (
-    isNaN(dateTime) // eslint-disable-line no-restricted-globals
+    isNaN(dateObj) // eslint-disable-line no-restricted-globals
   ) {
-    return null;
+    return {};
   }
 
-  return dateTime.toLocaleDateString('en-GB', {
-    day: 'numeric',
+  const fullYear = dateObj.getFullYear();
+  const monthLong = dateObj.toLocaleDateString('en-GB', {
     month: 'long',
-    year: 'numeric',
   });
+  const monthTwoDigit = dateObj.toLocaleDateString('en-GB', {
+    month: '2-digit',
+  });
+  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
+    day: 'numeric',
+  });
+  const dayTwoDigit = dateObj.toLocaleDateString('en-GB', {
+    day: '2-digit',
+  });
+
+  const dateTime = `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
+  const formattedTimestamp = `${dayNumeric} ${monthLong} ${fullYear}`;
+
+  return {
+    dateTime,
+    formattedTimestamp,
+  };
 };
 
 const StyledTimestamp = styled.span`
@@ -33,15 +49,15 @@ const StyledTimestamp = styled.span`
 `;
 
 const Timestamp = ({ timestamp }) => {
-  const formattedTimestamp = formatTimestamp(timestamp);
+  const { formattedTimestamp, dateTime } = formatTimestamp(timestamp);
 
-  if (!formattedTimestamp) {
+  if (!formattedTimestamp || !formattedTimestamp) {
     return null;
   }
 
   return (
     <StyledTimestamp>
-      <time dateTime={timestamp}>{formattedTimestamp}</time>
+      <time dateTime={dateTime}>{formattedTimestamp}</time>
     </StyledTimestamp>
   );
 };

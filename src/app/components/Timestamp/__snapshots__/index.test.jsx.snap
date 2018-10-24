@@ -27,9 +27,9 @@ exports[`Timestamp should render correctly 1`] = `
   className="c0"
 >
   <time
-    dateTime={1539969006}
+    dateTime="2018-10-19"
   >
-    October 19, 2018
+    19 October 2018
   </time>
 </span>
 `;
@@ -59,9 +59,9 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   className="c0"
 >
   <time
-    dateTime={1530947227}
+    dateTime="2018-07-07"
   >
-    July 7, 2018
+    7 July 2018
   </time>
 </span>
 `;
