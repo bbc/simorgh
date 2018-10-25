@@ -7,7 +7,7 @@ import {
 } from '../general';
 import { textBlockPropTypes } from '../text';
 
-const rawImageBlockPropTypes = blockObjectOfSpecificTypeAndModel('rawImage', {
+const rawImageBlockPropTypes = blockObjectOfSpecificTypeAndModel(['rawImage'], {
   width: number.isRequired,
   height: number.isRequired,
   locator: string.isRequired,
@@ -15,12 +15,12 @@ const rawImageBlockPropTypes = blockObjectOfSpecificTypeAndModel('rawImage', {
 });
 
 const altTextBlockPropTypes = blockObjectOfSpecificTypeAndModel(
-  'altText',
+  ['altText'],
   blocksWithTypes([textBlockPropTypes]),
 );
 
 const captionBlockPropTypes = blockObjectOfSpecificTypeAndModel(
-  'caption',
+  ['caption'],
   blocksWithTypes([textBlockPropTypes]),
 );
 

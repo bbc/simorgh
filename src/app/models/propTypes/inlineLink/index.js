@@ -8,6 +8,6 @@ export const inlineLinkModelPropTypes = {
 };
 
 export const inlineLinkBlockPropTypes = blockOfSpecificTypeAndModel(
-  'urlLink',
+  ['urlLink'],
   inlineLinkModelPropTypes,
 );
