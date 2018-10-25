@@ -40,7 +40,6 @@ export const openGraphMeta = (
     retrieveMetaDataContent('head meta[name="og:locale"]', locale);
     retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
     // retrieveMetaDataContent('head meta[name="og:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
-
     retrieveMetaDataContent('head meta[name="og:type"]', type);
     retrieveMetaDataContent('head meta[name="og:url"]', url);
   });
