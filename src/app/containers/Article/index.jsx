@@ -11,11 +11,26 @@ import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 
-const componentsToRender = {
+const componentsToRenderHeadline = {
   headline: headings,
+};
+
+const componentsToRenderMain = {
   subheadline: headings,
   text,
   image,
+};
+
+const splitBlocksByHeadline = ({ model }) => {
+  const { blocks } = model;
+
+  const headlineIndexPlusOne =
+    blocks.findIndex(({ type }) => type === 'headline') + 1;
+
+  const headlineBlocks = blocks.slice(0, headlineIndexPlusOne);
+  const mainBlocks = blocks.slice(headlineIndexPlusOne, blocks.length);
+
+  return { headlineBlocks, mainBlocks };
 };
 
 /*
@@ -27,6 +42,8 @@ const ArticleContainer = ({ loading, error, data }) => {
   if (data) {
     const { isAmp, data: articleData, service } = data;
     const { content, metadata, promo } = articleData;
+
+    const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
     return (
       <Fragment>
@@ -40,8 +57,12 @@ const ArticleContainer = ({ loading, error, data }) => {
           />
           <MainContent>
             <Blocks
-              blocks={content.model.blocks}
-              componentsToRender={componentsToRender}
+              blocks={headlineBlocks}
+              componentsToRender={componentsToRenderHeadline}
+            />
+            <Blocks
+              blocks={mainBlocks}
+              componentsToRender={componentsToRenderMain}
             />
           </MainContent>
           <Footer />
