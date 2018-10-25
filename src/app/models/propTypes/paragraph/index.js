@@ -8,6 +8,6 @@ export const paragraphModelPropTypes = blocksWithTypes([
 ]);
 
 export const paragraphBlockPropTypes = blockOfSpecificTypeAndModel(
-  'paragraph',
+  ['paragraph'],
   paragraphModelPropTypes,
 );

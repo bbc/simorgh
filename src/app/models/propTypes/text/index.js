@@ -10,6 +10,6 @@ export const textModelDefaultProps = {
 };
 
 export const textBlockPropTypes = blockOfSpecificTypeAndModel(
-  'text',
+  ['text'],
   textModelPropTypes,
 );

@@ -6,6 +6,6 @@ export const headlineModelPropTypes = blocksWithTypes([
 ]);
 
 export const headlineBlockPropTypes = blockOfSpecificTypeAndModel(
-  'headline',
+  ['headline', 'subheadline'],
   headlineModelPropTypes,
 );

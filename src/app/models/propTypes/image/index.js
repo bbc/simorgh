@@ -47,6 +47,6 @@ export const imageModelPropTypes = {
 };
 
 export const imageBlockPropTypes = blockOfSpecificTypeAndModel(
-  'image',
+  ['image'],
   imageModelPropTypes,
 );
