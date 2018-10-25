@@ -53,28 +53,6 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 describe('Server', () => {
   const makeRequest = async path => request(server).get(path);
 
-  describe("should set 'x-clacks-overhead' header", () => {
-    it('should send the message on', async () => {
-      const { headers } = await makeRequest('/status');
-      const headerKeys = Object.keys(headers);
-
-      expect(headerKeys).toContain('x-clacks-overhead');
-      expect(headers['x-clacks-overhead']).toEqual('GNU Terry Pratchett');
-    });
-
-    it('should not log the message', async () => {
-      global.console.log = jest.fn();
-
-      await makeRequest('/status');
-
-      expect(global.console.log).not.toHaveBeenCalledWith(
-        'GNU Terry Pratchett',
-      );
-    });
-
-    // It should turn the message around at the end of the line and send it back again (Currently untested)
-  });
-
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
@@ -211,5 +189,29 @@ describe('Server HTTP Headers', () => {
       'x-xss-protection',
       '1; mode=block',
     );
+  });
+
+  describe("should set 'x-clacks-overhead' header", () => {
+    it('should send the message on', async () => {
+      validateHttpHeader(
+        statusRequest.headers,
+        'x-clacks-overhead',
+        'GNU Terry Pratchett',
+      );
+    });
+
+    it('should not log the message', async () => {
+      global.console.log = jest.fn();
+
+      const makeRequest = async path => request(server).get(path);
+
+      await makeRequest('/status');
+
+      expect(global.console.log).not.toHaveBeenCalledWith(
+        'GNU Terry Pratchett',
+      );
+    });
+
+    // It should turn the message around at the end of the line and send it back again (Currently untested)
   });
 });
