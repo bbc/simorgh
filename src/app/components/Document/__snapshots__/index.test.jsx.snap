@@ -62,6 +62,7 @@ exports[`Document should render correctly 1`] = `
       }
     />
     <script
+      crossOrigin="anonymous"
       defer={true}
       src="http://example.com/file.js"
       type="text/javascript"

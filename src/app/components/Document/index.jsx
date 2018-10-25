@@ -11,7 +11,13 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
   const scripts = assets.map(asset => (
-    <script key={asset} type="text/javascript" src={asset} defer />
+    <script
+      crossOrigin="anonymous"
+      key={asset}
+      type="text/javascript"
+      src={asset}
+      defer
+    />
   ));
 
   return (
