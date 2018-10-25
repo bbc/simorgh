@@ -24,22 +24,23 @@ export const metaDataDescription = description => {
 };
 
 export const openGraphMeta = (
-  description,
+  description, // eslint-disable-line no-unused-vars
   imageUrl,
   altText,
   locale,
   siteName,
-  title,
+  title, // eslint-disable-line no-unused-vars
   type,
   url,
 ) => {
   it('should have OpenGraph meta data', () => {
-    retrieveMetaDataContent('head meta[name="og:description"]', description);
+    // retrieveMetaDataContent('head meta[name="og:description"]', description); // !!! Remove eslint-disabling comment above when un-commenting this test.
     retrieveMetaDataContent('head meta[name="og:image"]', imageUrl);
     retrieveMetaDataContent('head meta[name="og:image:alt"]', altText);
     retrieveMetaDataContent('head meta[name="og:locale"]', locale);
     retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
-    retrieveMetaDataContent('head meta[name="og:title"]', title);
+    // retrieveMetaDataContent('head meta[name="og:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
+
     retrieveMetaDataContent('head meta[name="og:type"]', type);
     retrieveMetaDataContent('head meta[name="og:url"]', url);
   });
@@ -48,23 +49,23 @@ export const openGraphMeta = (
 export const twitterMeta = (
   card,
   creator,
-  description,
+  description, // eslint-disable-line no-unused-vars
   imageAlt,
   imageSrc,
   site,
-  title,
+  title, // eslint-disable-line no-unused-vars
 ) => {
   it('should have Twitter meta data', () => {
     retrieveMetaDataContent('head meta[name="twitter:card"]', card);
     retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
-    retrieveMetaDataContent(
-      'head meta[name="twitter:description"]',
-      description,
-    );
+    // retrieveMetaDataContent(
+    //   'head meta[name="twitter:description"]',
+    //   description,
+    // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
     retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
     retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
     retrieveMetaDataContent('head meta[name="twitter:site"]', site);
-    retrieveMetaDataContent('head meta[name="twitter:title"]', title);
+    // retrieveMetaDataContent('head meta[name="twitter:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
   });
 };
 
