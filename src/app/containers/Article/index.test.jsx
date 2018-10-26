@@ -9,6 +9,7 @@ global.console.log = jest.fn();
 describe('ArticleContainer', () => {
   const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
 
+  // temporary: will be removed with https://github.com/BBC-News/simorgh/issues/836
   const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
   newsDataNoHeadline.data.content.model.blocks.shift();
 
