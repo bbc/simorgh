@@ -74,6 +74,17 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               },
               "type": "headline",
             },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
+          }
+        }
+      />
+      <Blocks
+        blocks={
+          Array [
             Object {
               "model": Object {
                 "blocks": Array [
@@ -91,7 +102,6 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
         }
         componentsToRender={
           Object {
-            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
@@ -201,6 +211,17 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               },
               "type": "headline",
             },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
+          }
+        }
+      />
+      <Blocks
+        blocks={
+          Array [
             Object {
               "model": Object {
                 "blocks": Array [
@@ -218,7 +239,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
         }
         componentsToRender={
           Object {
-            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
@@ -230,3 +250,5 @@ exports[`ArticleContainer Component should render correctly 1`] = `
   </ServiceContextProvider>
 </React.Fragment>
 `;
+
+exports[`ArticleContainer Component should render null if no headline block 1`] = `null`;
