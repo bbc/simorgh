@@ -1,5 +1,5 @@
 import { string } from 'prop-types';
-import { blockOfSpecificTypeAndModel, blocksWithTypes } from '../general';
+import { blockOfValidTypeAndModel, blocksWithTypes } from '../general';
 import fragmentBlockPropTypes from '../fragment';
 
 export const inlineLinkModelPropTypes = {
@@ -7,7 +7,7 @@ export const inlineLinkModelPropTypes = {
   ...blocksWithTypes([fragmentBlockPropTypes]),
 };
 
-export const inlineLinkBlockPropTypes = blockOfSpecificTypeAndModel(
+export const inlineLinkBlockPropTypes = blockOfValidTypeAndModel(
   ['urlLink'],
   inlineLinkModelPropTypes,
 );

@@ -1,25 +1,25 @@
 import { number, string } from 'prop-types';
 import {
-  blockOfSpecificTypeAndModel,
-  blockObjectOfSpecificTypeAndModel,
+  blockOfValidTypeAndModel,
+  blockObjectOfValidTypeAndModel,
   blocksWithTypes,
   arrayOfSpecificBlocks,
 } from '../general';
 import { textBlockPropTypes } from '../text';
 
-const rawImageBlockPropTypes = blockObjectOfSpecificTypeAndModel(['rawImage'], {
+const rawImageBlockPropTypes = blockObjectOfValidTypeAndModel(['rawImage'], {
   width: number.isRequired,
   height: number.isRequired,
   locator: string.isRequired,
   copyrightHolder: string,
 });
 
-const altTextBlockPropTypes = blockObjectOfSpecificTypeAndModel(
+const altTextBlockPropTypes = blockObjectOfValidTypeAndModel(
   ['altText'],
   blocksWithTypes([textBlockPropTypes]),
 );
 
-const captionBlockPropTypes = blockObjectOfSpecificTypeAndModel(
+const captionBlockPropTypes = blockObjectOfValidTypeAndModel(
   ['caption'],
   blocksWithTypes([textBlockPropTypes]),
 );
@@ -46,7 +46,7 @@ export const imageModelPropTypes = {
   blocks: arrayOfSpecificBlocks(blockProps),
 };
 
-export const imageBlockPropTypes = blockOfSpecificTypeAndModel(
+export const imageBlockPropTypes = blockOfValidTypeAndModel(
   ['image'],
   imageModelPropTypes,
 );

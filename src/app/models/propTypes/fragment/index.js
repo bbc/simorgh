@@ -1,7 +1,7 @@
 import { string, arrayOf, oneOf } from 'prop-types';
-import { blockOfSpecificTypeAndModel } from '../general';
+import { blockOfValidTypeAndModel } from '../general';
 
-const fragmentBlockPropTypes = blockOfSpecificTypeAndModel(['fragment'], {
+const fragmentBlockPropTypes = blockOfValidTypeAndModel(['fragment'], {
   text: string.isRequired,
   attributes: arrayOf(oneOf(['bold', 'italic'])).isRequired,
 });
