@@ -1,6 +1,5 @@
 import {
   facebookMeta,
-  metaDataDescription,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -23,11 +22,11 @@ describe('Persian Article Meta Tests', () => {
     'https://www.facebook.com/bbcnews',
   );
 
-  it('should have description meta data', () => {
-    metaDataDescription(
-      'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
-    );
-  });
+  // it('should have description meta data', () => {
+  //   metaDataDescription(
+  //     'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
+  //   );
+  // });
 
   openGraphMeta(
     'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
