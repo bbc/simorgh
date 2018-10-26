@@ -45,6 +45,8 @@ const ArticleContainer = ({ loading, error, data }) => {
 
     const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
+    if (headlineBlocks.length < 1) return null;
+
     return (
       <Fragment>
         <ServiceContextProvider service={service}>
