@@ -10,6 +10,7 @@ import Blocks from '../Blocks';
 import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
+import Timestamp from '../../components/Timestamp';
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -66,6 +67,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                 blocks={headlineBlocks}
                 componentsToRender={componentsToRenderHeadline}
               />
+              <Timestamp timestamp={metadata.firstPublished} />
               <Blocks
                 blocks={mainBlocks}
                 componentsToRender={componentsToRenderMain}
