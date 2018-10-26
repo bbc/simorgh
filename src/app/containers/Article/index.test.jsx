@@ -15,13 +15,6 @@ describe('ArticleContainer', () => {
     service: 'persian',
   };
 
-  const newsDataNoHeadline = {
-    data: articleDataNews,
-    isAmp: false,
-    service: 'news',
-  };
-  newsDataNoHeadline.data.content.model.blocks.shift();
-
   describe('Component', () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
@@ -33,9 +26,12 @@ describe('ArticleContainer', () => {
       <ArticleContainer data={persianData} />,
     );
 
+    // remove the headline block
+    newsData.data.content.model.blocks.shift();
+
     shouldShallowMatchSnapshot(
       'should render null if no headline block',
-      <ArticleContainer data={newsDataNoHeadline} />,
+      <ArticleContainer data={newsData} />,
     );
 
     describe('no data', () => {
