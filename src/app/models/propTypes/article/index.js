@@ -1,58 +1,16 @@
-import { arrayOf, bool, number, shape, string } from 'prop-types';
+import { bool, shape, string } from 'prop-types';
+import metadataPropTypes from '../metadata';
+import promoPropTypes from '../promo';
 import mainContentPropTypes from '../mainContent';
 
 const articlePropTypes = {
-  amp: bool,
+  isAmp: bool,
   data: shape({
-    metadata: shape({
-      id: string.isRequired,
-      type: string.isRequired,
-      createdBy: string,
-      created: number.isRequired,
-      firstPublished: number.isRequired,
-      lastPublished: number.isRequired,
-      lastUpdated: number.isRequired,
-      locators: shape({
-        optimoUrn: string.isRequired,
-      }),
-      passport: shape({
-        language: string.isRequired,
-        home: string.isRequired,
-        category: string.isRequired,
-        genre: string,
-      }),
-      tags: shape({
-        about: arrayOf(
-          shape({
-            thingUri: string,
-            topicId: string,
-            topicName: string,
-            curationType: arrayOf(string),
-            thingId: string,
-            thingLabel: string,
-            thingType: arrayOf(string),
-          }),
-        ),
-        mentions: arrayOf(shape({})),
-      }),
-      version: string,
-      blockTypes: arrayOf(string),
-    }).isRequired,
+    metadata: shape(metadataPropTypes).isRequired,
     content: shape({
       model: shape(mainContentPropTypes),
     }).isRequired,
-    promo: shape({
-      id: string.isRequired,
-      headlines: shape({
-        seoHeadline: string.isRequired,
-        promoHeadline: string,
-      }),
-      locators: shape({
-        optimoUrn: string.isRequired,
-      }),
-      summary: string,
-      timestamp: number,
-    }).isRequired,
+    promo: shape(promoPropTypes).isRequired,
   }),
   service: string,
 };

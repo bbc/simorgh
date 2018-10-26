@@ -6,7 +6,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
     blocks={
       Array [
         Object {
-          "blockId": "f-01",
           "model": Object {
             "attributes": Array [
               "bold",
@@ -15,11 +14,45 @@ exports[`ParagraphContainer should render correctly 1`] = `
           },
           "type": "fragment",
         },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "attributes": Array [],
+                  "text": "Some text",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "bold",
+                  ],
+                  "text": " for the ",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "italic",
+                  ],
+                  "text": " link!",
+                },
+                "type": "fragment",
+              },
+            ],
+            "locator": "/bbc-test",
+          },
+          "type": "urlLink",
+        },
       ]
     }
     componentsToRender={
       Object {
         "fragment": [Function],
+        "urlLink": [Function],
       }
     }
   />

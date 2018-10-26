@@ -1,7 +1,7 @@
 import {
   checkElementStyles,
   getElement,
-  renderedTitle,
+  placeholderImageLoaded,
   shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
@@ -10,8 +10,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000028o' is available within the PROD enviroment
-    cy.visit('/persian/articles/c0000000028o');
+    // Only 'cwv2xv848j5o' is available within the PROD enviroment
+    cy.visit('/persian/articles/cwv2xv848j5o');
   });
 
   it('should render a headline', () => {
@@ -31,6 +31,10 @@ describe('Article Body Tests', () => {
     );
   });
 
+  it('should have a placeholder image', () => {
+    placeholderImageLoaded(getElement('figure div').eq(0));
+  });
+
   it('should have a visible image without a caption', () => {
     visibleImageNoCaption(getElement('figure').eq(0));
   });
@@ -39,7 +43,7 @@ describe('Article Body Tests', () => {
     visibleImageWithCaption(getElement('figure').eq(2));
   });
 
-  it('should render a title', () => {
-    renderedTitle('پهپادی که برایتان قهوه می‌آورد – BBC News فارسی');
-  });
+  // it('should render a title', () => {
+  //   renderedTitle('پهپادی که برایتان قهوه می‌آورد – BBC News فارسی');
+  // });
 });

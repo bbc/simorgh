@@ -11,7 +11,13 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
   const scripts = assets.map(asset => (
-    <script key={asset} type="text/javascript" src={asset} defer />
+    <script
+      crossOrigin="anonymous"
+      key={asset}
+      type="text/javascript"
+      src={asset}
+      defer
+    />
   ));
 
   return (
@@ -22,6 +28,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         <meta name="robots" content="noindex,nofollow" />
         <meta name="theme-color" content={C_POSTBOX} />
         {meta}
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}

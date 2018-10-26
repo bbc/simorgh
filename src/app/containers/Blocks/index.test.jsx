@@ -29,9 +29,8 @@ describe('Blocks', () => {
             model: {
               width: 640,
               height: 420,
-              locator:
-                '/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
-              originCode: null,
+              locator: 'E7DB/production/_101655395_paulineclayton.jpg',
+              originCode: 'cpsprodpb',
               copyrightHolder: 'BBC',
             },
           },

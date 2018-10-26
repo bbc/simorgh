@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
-import Metadata from '../../components/Metadata';
+import MetadataContainer from '../Metadata';
 import Header from '../../components/Header';
 import Footer from '../Footer';
 import headings from '../Headings';
@@ -10,50 +10,27 @@ import Blocks from '../Blocks';
 import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
-import serviceConfig from '../../lib/serviceConfig';
 
-const componentsToRender = {
+const componentsToRenderHeadline = {
   headline: headings,
+};
+
+const componentsToRenderMain = {
   subheadline: headings,
   text,
   image,
 };
 
-/* An array of each thingLabel from tags.about & tags.mention */
-const allTags = tags => {
-  const { about, mentions } = tags;
-  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
-  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
-  return aboutTags.concat(mentionTags);
-};
+const splitBlocksByHeadline = ({ model }) => {
+  const { blocks } = model;
 
-const metadataProps = (amp, config, id, metadata, promo, service) => {
-  /* Canonical link generated from servicename and id */
-  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
-  const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
-  const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
+  const headlineIndexPlusOne =
+    blocks.findIndex(({ type }) => type === 'headline') + 1;
 
-  return {
-    amp,
-    articleAuthor: config.articleAuthor,
-    articleSection: metadata.passport.genre,
-    brandName: config.brandName,
-    canonicalLink,
-    defaultImage: config.defaultImage,
-    defaultImageAltText: config.defaultImageAltText,
-    description: promo.summary,
-    facebookAdmin: 100004154058350,
-    facebookAppID: 1609039196070050,
-    lang: metadata.passport.language,
-    locale: config.locale,
-    metaTags: allTags(metadata.tags),
-    timeFirstPublished,
-    timeLastUpdated,
-    title: promo.headlines.seoHeadline,
-    twitterCreator: config.twitterCreator,
-    twitterSite: config.twitterSite,
-    type: metadata.type,
-  };
+  const headlineBlocks = blocks.slice(0, headlineIndexPlusOne);
+  const mainBlocks = blocks.slice(headlineIndexPlusOne, blocks.length);
+
+  return { headlineBlocks, mainBlocks };
 };
 
 /*
@@ -63,30 +40,42 @@ const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) return 'Something went wrong :(';
   if (data) {
-    const { amp, data: articleData, service } = data;
+    const { isAmp, data: articleData, service } = data;
     const { content, metadata, promo } = articleData;
 
-    const { id: aresArticleId } = metadata;
-    const id = aresArticleId.split(':').pop();
-    const config = serviceConfig[service];
+    const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
-    return (
-      <Fragment>
-        <ServiceContextProvider service={service}>
-          <Header />
-          <Metadata
-            {...metadataProps(amp, config, id, metadata, promo, service)}
-          />
-          <MainContent>
-            <Blocks
-              blocks={content.model.blocks}
-              componentsToRender={componentsToRender}
+    /*
+    * headlineBlocks length check is temporary
+    * Simorgh will respond with 400 to lack of headline block in issue 
+    * https://github.com/BBC-News/simorgh/issues/836
+    */
+    if (headlineBlocks.length > 0) {
+      return (
+        <Fragment>
+          <ServiceContextProvider service={service}>
+            <Header />
+            <MetadataContainer
+              isAmp={isAmp}
+              metadata={metadata}
+              promo={promo}
+              service={service}
             />
-          </MainContent>
-          <Footer />
-        </ServiceContextProvider>
-      </Fragment>
-    );
+            <MainContent>
+              <Blocks
+                blocks={headlineBlocks}
+                componentsToRender={componentsToRenderHeadline}
+              />
+              <Blocks
+                blocks={mainBlocks}
+                componentsToRender={componentsToRenderMain}
+              />
+            </MainContent>
+            <Footer />
+          </ServiceContextProvider>
+        </Fragment>
+      );
+    }
   }
 
   return null;

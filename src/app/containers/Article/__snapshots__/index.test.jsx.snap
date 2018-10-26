@@ -8,26 +8,44 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
     service="persian"
   >
     <Header />
-    <Metadata
-      amp={false}
-      articleAuthor="https://www.facebook.com/bbcnews"
-      articleSection={null}
-      brandName="BBC News فارسی"
-      canonicalLink="https://www.bbc.com/persian/articles/c0000000028o"
-      defaultImage="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      defaultImageAltText="BBC News فارسی"
-      description="خلاصه مقاله"
-      facebookAdmin={100004154058350}
-      facebookAppID={1609039196070050}
-      lang="fa"
-      locale="fa"
-      metaTags={Array []}
-      timeFirstPublished="2018-01-01T12:01:00.000Z"
-      timeLastUpdated="2018-01-01T13:00:00.000Z"
-      title="سرصفحه مقاله"
-      twitterCreator="@bbcpersian"
-      twitterSite="@bbcpersian"
-      type="article"
+    <MetadataContainer
+      isAmp={false}
+      metadata={
+        Object {
+          "created": 1514808060000,
+          "createdBy": "",
+          "firstPublished": 1514808060000,
+          "id": "urn:bbc:ares::article:cwv2xv848j5o",
+          "lastPublished": 1514811600000,
+          "lastUpdated": 1514811600000,
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+          },
+          "passport": Object {
+            "category": "news",
+            "genre": null,
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+            "language": "fa",
+          },
+          "tags": Object {},
+          "type": "article",
+        }
+      }
+      promo={
+        Object {
+          "headlines": Object {
+            "promoHeadline": "سرصفحه مقاله برای ارتقاء",
+            "seoHeadline": "سرصفحه مقاله",
+          },
+          "id": "urn:bbc:ares::article:cwv2xv848j5o",
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+          },
+          "summary": "خلاصه مقاله",
+          "timestamp": 1514811600000,
+        }
+      }
+      service="persian"
     />
     <MainContent>
       <Blocks
@@ -53,6 +71,17 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               },
               "type": "headline",
             },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
+          }
+        }
+      />
+      <Blocks
+        blocks={
+          Array [
             Object {
               "model": Object {
                 "blocks": Array [
@@ -70,7 +99,6 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
         }
         componentsToRender={
           Object {
-            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
@@ -89,26 +117,44 @@ exports[`ArticleContainer Component should render correctly 1`] = `
     service="news"
   >
     <Header />
-    <Metadata
-      amp={false}
-      articleAuthor="https://www.facebook.com/bbcnews"
-      articleSection={null}
-      brandName="BBC News"
-      canonicalLink="https://www.bbc.com/news/articles/c0000000001o"
-      defaultImage="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1"
-      defaultImageAltText="BBC News"
-      description="Article summary."
-      facebookAdmin={100004154058350}
-      facebookAppID={1609039196070050}
-      lang="en-gb"
-      locale="en_GB"
-      metaTags={Array []}
-      timeFirstPublished="2018-01-01T12:01:00.000Z"
-      timeLastUpdated="2018-01-01T13:00:00.000Z"
-      title="Article Headline for SEO"
-      twitterCreator="@BBCNews"
-      twitterSite="@BBCNews"
-      type="article"
+    <MetadataContainer
+      isAmp={false}
+      metadata={
+        Object {
+          "created": 1514808060000,
+          "createdBy": "",
+          "firstPublished": 1514808060000,
+          "id": "urn:bbc:ares::article:c0000000001o",
+          "lastPublished": 1514811600000,
+          "lastUpdated": 1514811600000,
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+          },
+          "passport": Object {
+            "category": "news",
+            "genre": null,
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+            "language": "en-gb",
+          },
+          "tags": Object {},
+          "type": "article",
+        }
+      }
+      promo={
+        Object {
+          "headlines": Object {
+            "promoHeadline": "Article Headline for Promo",
+            "seoHeadline": "Article Headline for SEO",
+          },
+          "id": "urn:bbc:ares::article:c0000000001o",
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+          },
+          "summary": "Article summary.",
+          "timestamp": 1514811600000,
+        }
+      }
+      service="news"
     />
     <MainContent>
       <Blocks
@@ -134,6 +180,17 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               },
               "type": "headline",
             },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
+          }
+        }
+      />
+      <Blocks
+        blocks={
+          Array [
             Object {
               "model": Object {
                 "blocks": Array [
@@ -151,7 +208,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
         }
         componentsToRender={
           Object {
-            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
@@ -163,3 +219,5 @@ exports[`ArticleContainer Component should render correctly 1`] = `
   </ServiceContextProvider>
 </React.Fragment>
 `;
+
+exports[`ArticleContainer Component should render null if no headline block 1`] = `null`;

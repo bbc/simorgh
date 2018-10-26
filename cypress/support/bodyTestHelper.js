@@ -1,3 +1,5 @@
+import { BBCBlocksSVG } from '../../src/app/lib/constants/styles';
+
 export const getElement = element => cy.get(element);
 
 export const getSecondElement = element => cy.get(element).eq(1);
@@ -53,6 +55,19 @@ export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
 
 export const renderedTitle = title => {
   cy.title().should('eq', title);
+};
+
+export const placeholderImageLoaded = placeholderImage => {
+  shouldContainStyles(
+    placeholderImage,
+    'background-color',
+    'rgb(236, 234, 231)',
+  );
+  shouldContainStyles(
+    placeholderImage,
+    'background-image',
+    `url("data:image/svg+xml;base64,${BBCBlocksSVG}")`,
+  );
 };
 
 export const figureVisibility = figure => {

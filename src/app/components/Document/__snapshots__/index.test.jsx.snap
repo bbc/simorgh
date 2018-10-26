@@ -25,6 +25,11 @@ exports[`Document should render correctly 1`] = `
       name="viewport"
     />
     <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
       href="/manifest.json"
       rel="manifest"
     />
@@ -33,7 +38,7 @@ exports[`Document should render correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c0000000025o"
+      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
     <style>
@@ -57,6 +62,7 @@ exports[`Document should render correctly 1`] = `
       }
     />
     <script
+      crossOrigin="anonymous"
       defer={true}
       src="http://example.com/file.js"
       type="text/javascript"

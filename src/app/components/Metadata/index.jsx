@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { arrayOf, bool, string, number } from 'prop-types';
 
 const Metadata = ({
-  amp,
+  isAmp,
   articleAuthor,
   articleSection,
   brandName,
@@ -25,11 +25,11 @@ const Metadata = ({
 }) => {
   const htmlAttributes = { lang };
 
-  if (amp) {
+  if (isAmp) {
     htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   }
 
-  const injectAmpScript = amp ? (
+  const injectAmpScript = isAmp ? (
     <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
   ) : null;
 
@@ -76,7 +76,7 @@ const Metadata = ({
 };
 
 Metadata.propTypes = {
-  amp: bool.isRequired,
+  isAmp: bool.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,
@@ -91,7 +91,7 @@ Metadata.propTypes = {
   metaTags: arrayOf(string).isRequired,
   timeFirstPublished: string.isRequired,
   timeLastUpdated: string.isRequired,
-  title: string.isRequired,
+  title: string,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
@@ -99,6 +99,7 @@ Metadata.propTypes = {
 
 Metadata.defaultProps = {
   articleSection: null,
+  title: '', // defaulting as an empty string because Optimo cannot produce seoHeadlines at this time
 };
 
 export default Metadata;

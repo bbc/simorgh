@@ -7,11 +7,15 @@ import { articleDataNews, articleDataPersian } from './fixtureData';
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
-  const newsData = { data: articleDataNews, amp: false, service: 'news' };
+  const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
+
+  // temporary: will be removed with https://github.com/BBC-News/simorgh/issues/836
+  const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
+  newsDataNoHeadline.data.content.model.blocks.shift();
 
   const persianData = {
     data: articleDataPersian,
-    amp: false,
+    isAmp: false,
     service: 'persian',
   };
 
@@ -24,6 +28,11 @@ describe('ArticleContainer', () => {
     shouldShallowMatchSnapshot(
       'should render Persian article correctly',
       <ArticleContainer data={persianData} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render null if no headline block',
+      <ArticleContainer data={newsDataNoHeadline} />,
     );
 
     describe('no data', () => {
