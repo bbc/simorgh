@@ -1,6 +1,9 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shouldMatchSnapshot,
+  shouldShallowMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 import InlineLinkContainer from './index.new';
 
 const fragmentBlock = (text, attributes = []) => ({
@@ -11,19 +14,30 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
+const testInternalInlineLink = (description, locator, blocks) => {
+  shouldMatchSnapshot(
+    description,
+    /*
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
+    */
+    <StaticRouter>
+      <InlineLinkContainer locator={locator} blocks={blocks} />
+    </StaticRouter>,
+  );
+};
+
 describe('InlineLinkContainer', () => {
   describe('with link matching routes for SPA', () => {
-    shouldShallowMatchSnapshot(
+    testInternalInlineLink(
       'should render correctly',
-      /*
-        for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
-      */
-      <StaticRouter>
-        <InlineLinkContainer
-          locator="/news/articles/c0000000027o"
-          blocks={[fragmentBlock('This is text for an internal link')]}
-        />
-      </StaticRouter>,
+      'https://www.bbc.com/news/articles/c85pqyj5m2ko',
+      [fragmentBlock('This is text for an internal link')],
+    );
+
+    testInternalInlineLink(
+      'should render correctly for TEST environment',
+      'https://www.test.bbc.com/news/articles/c85pqyj5m2ko',
+      [fragmentBlock('This is text for an internal link')],
     );
   });
 
