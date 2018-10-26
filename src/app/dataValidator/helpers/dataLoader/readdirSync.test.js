@@ -34,13 +34,13 @@ describe('readdirSync helper', () => {
   it('should call readScenario for every file in the /data directory', () => {
     const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
 
-    testReaddirSync(78, readScenarioSpy);
+    testReaddirSync(44, readScenarioSpy);
   });
 
   it('should call fileToValidate for only the valid json file in the /data directory', () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    testReaddirSync(90, fileToValidateSpy);
+    testReaddirSync(30, fileToValidateSpy);
   });
 
   it('should call fileToValidate for only the files in /data/prod/news', () => {
