@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
+.c0 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c0:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c0:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+<a
+  className="-Link c0"
+  href="/news/articles/c85pqyj5m2ko"
+  onClick={[Function]}
+>
+  This is text for an internal link
+</a>
+`;
+
+exports[`InlineLinkContainer with link matching routes for SPA should render correctly for TEST environment 1`] = `
+.c0 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c0:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c0:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+<a
+  className="-Link c0"
+  href="/news/articles/c85pqyj5m2ko"
+  onClick={[Function]}
+>
+  This is text for an internal link
+</a>
+`;
+
+exports[`InlineLinkContainer with link not matching SPA route should render correctly 1`] = `
+<InlineLink
+  href="https://www.bbc.com/news"
+>
+  <Blocks
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [
+              "bold",
+            ],
+            "text": "This is bold text for a link",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+      }
+    }
+  />
+</InlineLink>
+`;

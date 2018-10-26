@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000009o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000009o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "opinion",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "video",
+      "rawVideo",
+      "subheadline",
+      "fragment"
+    ],
+    "tags": {
+      "about": [
+        {
+          "thingUri": "http://www.bbc.co.uk/things/e1ad1570-0b97-414d-b61a-15008c27f6c7#id",
+          "topicId": "cwlw3xz01m7t",
+          "topicName": "Ruth Davidson",
+          "curationType": ["vivo-stream"],
+          "thingId": "e1ad1570-0b97-414d-b61a-15008c27f6c7",
+          "thingLabel": "Ruth Davidson",
+          "thingType": ["Thing", "Person"]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+          "topicId": "cp7r8vgl2lgt",
+          "topicName": "Donald Trump",
+          "curationType": ["vivo-stream"],
+          "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+          "thingLabel": "Donald Trump",
+          "thingType": ["Thing", "Person"]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/5784428d-a30a-4091-82f2-3f4d9b336f75#id",
+          "topicId": "c302m85qe1vt",
+          "topicName": "UK immigration",
+          "curationType": ["vivo-stream"],
+          "thingId": "5784428d-a30a-4091-82f2-3f4d9b336f75",
+          "thingLabel": "UK immigration",
+          "thingType": ["Theme", "Thing"]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/6618bdb2-7f48-4bc2-a62a-17e409dd944a#id",
+          "topicId": "ck7rdppjl6rt",
+          "topicName": "Liff",
+          "curationType": ["location-stream"],
+          "thingId": "6618bdb2-7f48-4bc2-a62a-17e409dd944a",
+          "thingLabel": "Liff",
+          "thingType": ["Place", "Thing"]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/88500fe4-39d6-4991-bab1-01dcb1ad26dd#id",
+          "thingId": "88500fe4-39d6-4991-bab1-01dcb1ad26dd",
+          "thingLabel": "NHS Scotland",
+          "thingType": ["Thing", "Organisation"]
+        },
+        {
+          "thingUri": "http://www.bbc.co.uk/things/814465c5-404b-4c88-889f-45907ba1f402#id",
+          "topicId": "cwlw3xz04egt",
+          "topicName": "Mental health",
+          "curationType": ["vivo-stream"],
+          "thingId": "814465c5-404b-4c88-889f-45907ba1f402",
+          "thingLabel": "Mental health",
+          "thingType": ["Theme", "Thing"]
+        }
+      ],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Nulla euismod semper turpis at vulputate",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nulla euismod semper turpis at vulputate",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Donec ut fermentum risus, eu sodales mauris",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Donec ut fermentum risus, eu sodales mauris",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Donec ut fermentum risus, eu sodales mauris .",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Donec ut fermentum risus, eu ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "sodales mauris",
+                              "attributes": ["italic"]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " .",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Integer convallis elit in mauris suscipit venenatis. Pellentesque et orci et arcu sollicitudin sagittis a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Integer convallis elit in mauris suscipit venenatis. ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Pellentesque et orci et arcu sollicitudin sagittis",
+                        "attributes": ["bold", "italic"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " a ac neque. Sed eget ultricies diam, a blandit augue. Vivamus id nisi ex. Cras porttitor dictum tellus, ut mollis neque lobortis et. Mauris at risus sit amet lorem tincidunt condimentum at sed leo. Praesent porttitor turpis quis sapien blandit tincidunt. Sed sagittis nunc velit, sed cursus libero hendrerit sed.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000009o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Nulla euismod semper turpis at vulputate"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000009o"
+    },
+    "summary": "Pellentesque non eros vitae nunc auctor aliquam. Mauris ac metus dui.",
+    "timestamp": 1514811600000
+  }
+}

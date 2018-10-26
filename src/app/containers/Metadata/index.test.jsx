@@ -117,7 +117,7 @@ const articleMetadataBuilder = (
 
 const doesMatch = (result, fixture) => {
   Object.keys(fixture).forEach(key => {
-    expect(fixture[key]).toEqual(result[key]);
+    expect(result[key]).toEqual(fixture[key]);
   });
 };
 
@@ -129,7 +129,7 @@ describe('Successfully passes data to the Metadata component via React context',
       'fa',
       'سرصفحه مقاله',
       'خلاصه مقاله',
-      'c0000000028o',
+      'cwv2xv848j5o',
       'سرصفحه مقاله',
       [],
     );

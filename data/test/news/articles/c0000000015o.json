@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000015o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000015o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "image",
+      "rawImage",
+      "altText",
+      "caption",
+      "video",
+      "rawVideo",
+      "fragment"
+    ],
+    "tags": {
+      "about": [],
+      "mentions": []
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 320,
+                  "height": 180,
+                  "locator": "13225/production/_101237387_mediaitem101237386.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Galileo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Galileo",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
+              {
+                "type": "rawVideo",
+                "model": {
+                  "guidance": null,
+                  "isLive": false,
+                  "duration": "PT2H34M25S",
+                  "allowOffsiteEmbedding": false,
+                  "locator": "urn:bbc:pips:pid:p064nsyw"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Retail giant to close down 100 stores",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 320,
+                        "height": 180,
+                        "locator": "5BD5/production/_101690532_2.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "NASA"
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000015o",
+    "headlines": {
+      "seoHeadline": "In malesuada interdum malesuada pellentesque nisl neque",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000015o"
+    },
+    "summary": "Morbi tempus eros id nulla aliquet, ut fermentum nulla aliquet.",
+    "timestamp": 1514811600000
+  }
+}

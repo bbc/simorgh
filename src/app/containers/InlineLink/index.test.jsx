@@ -11,7 +11,7 @@ describe('InlineLink', () => {
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass come mocked context.
       */
       <StaticRouter>
-        <InlineLink href="/news/articles/c0000000027o">
+        <InlineLink href="/news/articles/c85pqyj5m2ko">
           Internal SPA article
         </InlineLink>
       </StaticRouter>,

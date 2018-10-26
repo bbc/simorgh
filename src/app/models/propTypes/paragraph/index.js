@@ -1,13 +1,10 @@
-import { string, arrayOf, oneOf } from 'prop-types';
 import { blockOfSpecificTypeAndModel, blocksWithTypes } from '../general';
-
-const fragmentBlockPropTypes = blockOfSpecificTypeAndModel('fragment', {
-  text: string.isRequired,
-  attributes: arrayOf(oneOf(['bold', 'italic'])).isRequired,
-});
+import fragmentBlockPropTypes from '../fragment';
+import { inlineLinkBlockPropTypes } from '../inlineLink';
 
 export const paragraphModelPropTypes = blocksWithTypes([
   fragmentBlockPropTypes,
+  inlineLinkBlockPropTypes,
 ]);
 
 export const paragraphBlockPropTypes = blockOfSpecificTypeAndModel(
