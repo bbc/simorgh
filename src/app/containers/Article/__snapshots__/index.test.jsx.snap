@@ -111,6 +111,113 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
 </React.Fragment>
 `;
 
-exports[`ArticleContainer Component should render correctly 1`] = `null`;
+exports[`ArticleContainer Component should render correctly 1`] = `
+<React.Fragment>
+  <ServiceContextProvider
+    service="news"
+  >
+    <Header />
+    <MetadataContainer
+      isAmp={false}
+      metadata={
+        Object {
+          "created": 1514808060000,
+          "createdBy": "",
+          "firstPublished": 1514808060000,
+          "id": "urn:bbc:ares::article:c0000000001o",
+          "lastPublished": 1514811600000,
+          "lastUpdated": 1514811600000,
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+          },
+          "passport": Object {
+            "category": "news",
+            "genre": null,
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+            "language": "en-gb",
+          },
+          "tags": Object {},
+          "type": "article",
+        }
+      }
+      promo={
+        Object {
+          "headlines": Object {
+            "promoHeadline": "Article Headline for Promo",
+            "seoHeadline": "Article Headline for SEO",
+          },
+          "id": "urn:bbc:ares::article:c0000000001o",
+          "locators": Object {
+            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+          },
+          "summary": "Article summary.",
+          "timestamp": 1514811600000,
+        }
+      }
+      service="news"
+    />
+    <MainContent>
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "text": "Article Headline",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ],
+              },
+              "type": "headline",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
+          }
+        }
+      />
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "text": "A paragraph.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "image": [Function],
+            "subheadline": [Function],
+            "text": [Function],
+          }
+        }
+      />
+    </MainContent>
+    <FooterContainer />
+  </ServiceContextProvider>
+</React.Fragment>
+`;
 
 exports[`ArticleContainer Component should render null if no headline block 1`] = `null`;

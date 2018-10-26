@@ -9,6 +9,9 @@ global.console.log = jest.fn();
 describe('ArticleContainer', () => {
   const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
 
+  const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
+  newsDataNoHeadline.data.content.model.blocks.shift();
+
   const persianData = {
     data: articleDataPersian,
     isAmp: false,
@@ -26,12 +29,9 @@ describe('ArticleContainer', () => {
       <ArticleContainer data={persianData} />,
     );
 
-    // remove the headline block
-    newsData.data.content.model.blocks.shift();
-
     shouldShallowMatchSnapshot(
       'should render null if no headline block',
-      <ArticleContainer data={newsData} />,
+      <ArticleContainer data={newsDataNoHeadline} />,
     );
 
     describe('no data', () => {
