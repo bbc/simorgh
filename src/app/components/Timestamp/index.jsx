@@ -23,12 +23,17 @@ const formatDateTime = dateObj => {
   return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
 };
 
-const formatTimestamp = dateObj =>
-  dateObj.toLocaleDateString('en-GB', {
-    day: 'numeric',
+const formatTimestamp = dateObj => {
+  const fullYear = dateObj.getFullYear();
+  const monthLong = dateObj.toLocaleDateString('en-GB', {
     month: 'long',
-    year: 'numeric',
   });
+  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
+    day: 'numeric',
+  });
+
+  return `${dayNumeric} ${monthLong} ${fullYear}`;
+};
 
 const StyledTimestamp = styled.div`
   ${T_BREVIER};
