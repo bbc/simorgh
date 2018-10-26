@@ -2,7 +2,6 @@ import {
   checkElementStyles,
   getElement,
   placeholderImageLoaded,
-  renderedTitle,
   shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
@@ -44,7 +43,7 @@ describe('Article Body Tests', () => {
     visibleImageWithCaption(getElement('figure').eq(2));
   });
 
-  it('should render a title', () => {
-    renderedTitle('پهپادی که برایتان قهوه می‌آورد – BBC News فارسی');
-  });
+  // it('should render a title', () => {
+  //   renderedTitle('پهپادی که برایتان قهوه می‌آورد – BBC News فارسی');
+  // });
 });
