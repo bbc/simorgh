@@ -45,32 +45,32 @@ const ArticleContainer = ({ loading, error, data }) => {
 
     const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
-    if (headlineBlocks.length < 1) return null;
-
-    return (
-      <Fragment>
-        <ServiceContextProvider service={service}>
-          <Header />
-          <MetadataContainer
-            isAmp={isAmp}
-            metadata={metadata}
-            promo={promo}
-            service={service}
-          />
-          <MainContent>
-            <Blocks
-              blocks={headlineBlocks}
-              componentsToRender={componentsToRenderHeadline}
+    if (headlineBlocks.length > 0) {
+      return (
+        <Fragment>
+          <ServiceContextProvider service={service}>
+            <Header />
+            <MetadataContainer
+              isAmp={isAmp}
+              metadata={metadata}
+              promo={promo}
+              service={service}
             />
-            <Blocks
-              blocks={mainBlocks}
-              componentsToRender={componentsToRenderMain}
-            />
-          </MainContent>
-          <Footer />
-        </ServiceContextProvider>
-      </Fragment>
-    );
+            <MainContent>
+              <Blocks
+                blocks={headlineBlocks}
+                componentsToRender={componentsToRenderHeadline}
+              />
+              <Blocks
+                blocks={mainBlocks}
+                componentsToRender={componentsToRenderMain}
+              />
+            </MainContent>
+            <Footer />
+          </ServiceContextProvider>
+        </Fragment>
+      );
+    }
   }
 
   return null;
