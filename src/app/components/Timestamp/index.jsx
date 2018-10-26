@@ -30,7 +30,7 @@ const formatTimestamp = dateObj =>
     year: 'numeric',
   });
 
-const StyledTimestamp = styled.span`
+const StyledTimestamp = styled.div`
   ${T_BREVIER};
   color: ${C_RHINO};
   font-family: ${FF_NEWS_SANS_REG};
@@ -38,7 +38,7 @@ const StyledTimestamp = styled.span`
 `;
 
 const Timestamp = ({ timestamp }) => {
-  const dateObj = new Date(timestamp * 1000);
+  const dateObj = new Date(timestamp);
 
   if (!isValidDateTime(dateObj)) {
     return null;
