@@ -77,8 +77,8 @@ const presetThings = {
 };
 
 const emptyThings = {
-  about: [],
-  mentions: [],
+  about: null,
+  mentions: null,
 };
 
 export const articleDataNews = articleDataBuilder(
