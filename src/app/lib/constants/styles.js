@@ -10,6 +10,7 @@ export const C_BLUEJAY = '#0F556C';
 export const C_BLUEJAY_LHT = '#C3DEE7';
 export const C_OAT_LHT = '#F5F3F1';
 export const C_PEBBLE = '#5C5752';
+export const C_RHINO = '#5A5A5A';
 export const C_STONE = '#D5D0CD';
 export const C_CHALK = '#ECEAE7';
 // Colours from other services
@@ -37,7 +38,7 @@ export const GEL_SPACING_TRPL = `1.5rem`;
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING_QUAD = `2rem`;
 
-/*
+/* 
    Screen sizes for GEL Typography
    These namings are based on the GEL description. They are also known as group B and group D
    Link to relevant GEL docs: http://www.bbc.co.uk/gel/guidelines/typography#type-sizes
