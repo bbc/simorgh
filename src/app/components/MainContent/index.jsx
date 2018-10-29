@@ -10,7 +10,7 @@ import {
 
 export const StyledMainContent = styled.main``;
 
-export const StyleGridWrapper = styled.div`
+export const StyleGridWrapperStyled = styled.div`
   ${layoutGridWrapper};
 `;
 
@@ -25,13 +25,18 @@ export const GridItem = styled.div`
   }
 `;
 
-export const ConstrainedGridItem = ({ fullWidthBackgroundColor, children }) => (
-  <StyleGridWrapper style={{ backgroundColor: fullWidthBackgroundColor }}>
-    <GridItem>{children}</GridItem>
-  </StyleGridWrapper>
+export const GridItemFullWidth = styled.div`
+  grid-column: full;
+  background-color: red;
+`;
+
+export const StyleGridWrapper = ({ fullWidthBackgroundColor, children }) => (
+  <StyleGridWrapperStyled style={{ backgroundColor: fullWidthBackgroundColor }}>
+    {children}
+  </StyleGridWrapperStyled>
 );
 
-ConstrainedGridItem.propTypes = {
+StyleGridWrapper.propTypes = {
   children: node.isRequired,
   fullWidthBackgroundColor: string.isRequired,
 };

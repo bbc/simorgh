@@ -21,13 +21,13 @@ export const layoutGridWrapper = css`
     padding: 0 ${GEL_SPACING_DBL}; /* On grid wrapper */
   }
   @media (max-width: ${group3ScreenWidthMax}) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: [full-start] repeat(6, 1fr) [full-end];
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: [full-start] repeat(8, 1fr) [full-end];
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: [full-start] repeat(10, 1fr) [full-end];
   }
 `;
 

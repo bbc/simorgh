@@ -1,6 +1,7 @@
 import React from 'react';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
+import { GridItem, GridItemFullWidth } from '../../components/MainContent';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
@@ -16,13 +17,27 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     const Block = componentsToRender[type] || BlockString;
 
+    if (type === 'image') {
+      return (
+        <GridItemFullWidth>
+          <Block
+            key={nanoid()}
+            type={type}
+            typeOfPreviousBlock={typeOfPreviousBlock}
+            {...model}
+          />
+        </GridItemFullWidth>
+      );
+    }
     return (
-      <Block
-        key={nanoid()}
-        type={type}
-        typeOfPreviousBlock={typeOfPreviousBlock}
-        {...model}
-      />
+      <GridItem>
+        <Block
+          key={nanoid()}
+          type={type}
+          typeOfPreviousBlock={typeOfPreviousBlock}
+          {...model}
+        />
+      </GridItem>
     );
   });
 
