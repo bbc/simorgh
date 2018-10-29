@@ -7,7 +7,11 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import MainContent from '../../components/MainContent';
+import {
+  MainContent,
+  StyleGridWrapper,
+  GridItem,
+} from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 
@@ -62,14 +66,22 @@ const ArticleContainer = ({ loading, error, data }) => {
               service={service}
             />
             <MainContent>
-              <Blocks
-                blocks={headlineBlocks}
-                componentsToRender={componentsToRenderHeadline}
-              />
-              <Blocks
-                blocks={mainBlocks}
-                componentsToRender={componentsToRenderMain}
-              />
+              <StyleGridWrapper style={{ backgroundColor: 'white' }}>
+                <GridItem>
+                  <Blocks
+                    blocks={headlineBlocks}
+                    componentsToRender={componentsToRenderHeadline}
+                  />
+                </GridItem>
+              </StyleGridWrapper>
+              <StyleGridWrapper style={{ backgroundColor: '#f5f3f1' }}>
+                <GridItem>
+                  <Blocks
+                    blocks={mainBlocks}
+                    componentsToRender={componentsToRenderMain}
+                  />
+                </GridItem>
+              </StyleGridWrapper>
             </MainContent>
             <Footer />
           </ServiceContextProvider>

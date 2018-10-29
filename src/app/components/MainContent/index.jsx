@@ -8,7 +8,14 @@ import {
   group5ScreenWidthMin,
 } from '../../lib/constants/styles';
 
-export const StyledMainContent = styled.main`
+export const StyledMainContent = styled.main``;
+
+export const StyleGridWrapper = styled.div`
+  ${layoutGridWrapper};
+`;
+
+export const GridItem = styled.div`
+  ${layoutGridItem};
   margin: auto;
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
     max-width: 1008px;
@@ -18,20 +25,8 @@ export const StyledMainContent = styled.main`
   }
 `;
 
-const StyleGridWrapper = styled.div`
-  ${layoutGridWrapper};
-`;
-
-const GridItem = styled.div`
-  ${layoutGridItem};
-`;
-
-const MainContent = ({ children }) => (
-  <StyledMainContent role="main">
-    <StyleGridWrapper>
-      <GridItem>{children}</GridItem>
-    </StyleGridWrapper>
-  </StyledMainContent>
+export const MainContent = ({ children }) => (
+  <StyledMainContent role="main">{children}</StyledMainContent>
 );
 
 MainContent.propTypes = {
