@@ -58,13 +58,13 @@ The following is a breakdown of the article layout design for given breakpoints:
 
 - left and right margin of 8px
 - article content full width of the page EG: all columns used
-See Figures 1 and 2
+- *See Figures 1 and 2*
 
 **Between 600px - 1007px**
 
 - left and right margin of 16px
 - of 6 columns the article body content spans the central 4
-See Figure 3
+- *See Figure 3*
 
 **Between 1008px - 1279px**
 
@@ -72,7 +72,7 @@ See Figure 3
 - the 8 columns are restricted to a width of 1008px
   EG: at a 1208px viewport the layout should be { 100px | 8 columns | 100px } where the 100px are flexible making up the difference between the 1008px columns max width and the viewport
 - of 8 columns the article body content spans the central 6
-See Figure 4
+- *See Figure 4*
 
 **Between 600px - 1007px**
 
@@ -80,7 +80,7 @@ See Figure 4
 - the 10 columns are restricted to a width of 1280px
   EG: at a 1400px viewport the layout should be { 60px | 10 columns | 60px } where the 60px are flexible making up the difference between the 1280px columns max width and the viewport
 - of 10 columns the article body content spans the central 6
-See Figure 5
+- *See Figure 5*
 
 ## Product requirements
 
@@ -131,4 +131,4 @@ Solution example detailing columns - https://codepen.io/phil-lee/full/zmjaMO/
 <img width="1280" alt="Screenshot detailing the use of columns" src="https://user-images.githubusercontent.com/7791726/47646334-868a6300-db6b-11e8-972a-281e94d31491.png">
 
 ### Figure 7
-<img width="1424" alt="Screenshot of the potential complex layouts we may support in the future" src"https://user-images.githubusercontent.com/7791726/47646694-99e9fe00-db6c-11e8-8d42-82315b5e93e8.png">
+<img width="1424" alt="Screenshot of the potential complex layouts we may support in the future" src="https://user-images.githubusercontent.com/7791726/47646694-99e9fe00-db6c-11e8-8d42-82315b5e93e8.png">
