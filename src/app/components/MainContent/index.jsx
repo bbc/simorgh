@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 import {
   group4ScreenWidthMin,
@@ -24,6 +24,17 @@ export const GridItem = styled.div`
     max-width: 1280px;
   }
 `;
+
+export const ConstrainedGridItem = ({ fullWidthBackgroundColor, children }) => (
+  <StyleGridWrapper style={{ backgroundColor: fullWidthBackgroundColor }}>
+    <GridItem>{children}</GridItem>
+  </StyleGridWrapper>
+);
+
+ConstrainedGridItem.propTypes = {
+  children: node.isRequired,
+  fullWidthBackgroundColor: string.isRequired,
+};
 
 export const MainContent = ({ children }) => (
   <StyledMainContent role="main">{children}</StyledMainContent>
