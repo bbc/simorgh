@@ -92,7 +92,7 @@ See Figure 7 for an example of the potential layout we may have to support.
 
 ## Problems
 
-As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as full bleed spans to the very edge of the viewport each individual component will need to know about the layout margins.
+As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as a full bleed component will span to the very edge of the viewport the wrapper of each individual component will need to know about the layout margins.
 
 ## Solution
 
