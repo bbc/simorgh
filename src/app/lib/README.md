@@ -16,13 +16,13 @@ Here are the font sizes and line heights in `em`s, assuming a base font size of 
 | :----------- | :------------ | :-------------- | :------------ | :-------------- | :------------ | :-------------- | :--------------------------------------------------------------- |
 | **Type**     | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Article Usage**                                                |
 | Canon        | 1.75          | 2               | 2             | 3.5             | 2.75          | 3               | Headline (h1)                                                    |
-| Trafalgar    | 1.25          | 1.5             | 1.5           | 2.5             | 2             | 2.25            | Subheadline (h2)                                                  |
+| Trafalgar    | 1.25          | 1.5             | 1.5           | 2.5             | 2             | 2.25            | Subheadline (h2)                                                 |
 | Paragon      | 1.25          | 1.5             | 1.375         | 2               | 1.75          | 2               |                                                                  |
 | Double Pica  | 1.25          | 1.5             | 1.25          | 1.875           | 1.5           | 1.75            |                                                                  |
 | Great Primer | 1.125         | 1.375           | 1.125         | 1.5             | 1.25          | 1.5             | Heading for single onward journey box (e.g. More on Archaeology) |
 | Body Copy    | 0.9375        | 1.25            | 1             | 1.5             | 1             | 1.375           | Body copy (p)                                                    |
 | Pica         | 0.9375        | 1.25            | 1             | 1.375           | 1             | 1.25            | Headline for single onward journey                               |
-| Long Primer  | 0.9375        | 1.125           | 0.9375        | 1.125            | 0.875         | 1.125           | Image caption & Video caption & Onward journey timestamps        |
+| Long Primer  | 0.9375        | 1.125           | 0.9375        | 1.125           | 0.875         | 1.125           | Image caption & Video caption & Onward journey timestamps        |
 | Brevier      | 0.875         | 1               | 0.875         | 1.125           | 0.8125        | 1               | Article timestamps                                               |
 | Minion       | 0.75          | 1               | 0.75          | 1               | 0.75          | 1               | Article category                                                 |
 
@@ -32,7 +32,7 @@ Here are the font sizes in `px`s:
 | :----------- | :------------ | :-------------- | :------------ | :-------------- | :------------ | :-------------- | :--------------------------------------------------------------- |
 | **Type**     | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Font Size** | **Line Height** | **Article Usage**                                                |
 | Canon        | 28            | 32              | 32            | 36              | 44            | 48              | Headline (h1)                                                    |
-| Trafalgar    | 20            | 24              | 24            | 28              | 32            | 36              | Subheadline (h2)                                                  |
+| Trafalgar    | 20            | 24              | 24            | 28              | 32            | 36              | Subheadline (h2)                                                 |
 | Paragon      | 20            | 24              | 22            | 26              | 28            | 32              |                                                                  |
 | Double Pica  | 20            | 24              | 20            | 24              | 24            | 28              |                                                                  |
 | Great Primer | 18            | 22              | 18            | 22              | 20            | 24              | Heading for single onward journey box (e.g. More on Archaeology) |
@@ -41,3 +41,94 @@ Here are the font sizes in `px`s:
 | Long Primer  | 15            | 18              | 15            | 18              | 14            | 18              | Image caption & Video caption & Onward journey timestamps        |
 | Brevier      | 14            | 16              | 14            | 18              | 13            | 16              | Article timestamps                                               |
 | Minion       | 12            | 16              | 12            | 16              | 12            | 16              | Article category                                                 |
+
+# Layout requirements
+
+As per the https://www.bbc.co.uk/gel/guidelines/grid we have the following columns:
+
+- 1px - 239px (1 column)
+- 240px - 399px (6 column)
+- 400px - 599px (6 column)
+- 600px - 1007px (6 column)
+- 1008px - 1279px (8 column)
+- 1280px+ (10 column)
+
+The following is a breakdown of the article layout design for given breakpoints:
+_Between 1px - 599px_
+
+- left and right margin of 8px
+- article content full width of the page EG: all columns used
+  Figure 1
+
+**Between 600px - 1007px**
+
+- left and right margin of 16px
+- of 6 columns the article body content spans the central 4
+  Figure 2
+
+**Between 1008px - 1279px**
+
+- left and right margin of 16px
+- the 8 columns are restricted to a width of 1008px
+  EG: at a 1208px viewport the layout should be { 100px | 8 columns | 100px } where the 100px are flexible making up the
+  difference between the 1008px columns max width and the viewport
+- of 8 columns the article body content spans the central 6
+  Figure 3
+
+**Between 600px - 1007px**
+
+- left and right margin of 16px
+- the 10 columns are restricted to a width of 1280px
+  EG: at a 1400px viewport the layout should be { 60px | 10 columns | 60px } where the 60px are flexible making up the
+  difference between the 1280px columns max width and the viewport
+- of 10 columns the article body content spans the central 6
+  Figure 4
+
+## Detailed UX future layouts
+
+Figure 5 - 240px
+Figure 6 - 400px
+Figure 7 - 600px
+Figure 8 - 1008px
+Figure 9 - 1280px
+
+## Product requirements
+
+We have requirements for components within the article body to go "full bleed" in which they will break out of all defined
+columns and fill the entire viewport. This is simple to achieve for viewports under 1008px as the columns span the entire width
+of the viewport, however for viewports greater than 1007px this is more complex as we need to limit the max width of the columns
+whilst still supporting the ability for indivdual components to expand outside of the max width. For details see
+"article layout design for given breakpoints" in Layout Requirements.
+
+We also want flexiblity when placing components such as a single onward journey, and potentially adverts or similar, alongside the
+article body content. In the future the placement of this type of component will be content aware and potentially personalised. This
+requires another level of flexibilty.
+
+Figure 10 - my example of a very wide screen
+
+## Problems
+
+As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as full bleed spans
+to the very edge of the viewport each indivdual component will need to know about the layout margins.
+
+## Solution
+
+This is where CSS grid comes in.
+
+Using grid we can statically define the 1008|1280px column layouts while having a flexible additional column either side of the
+main column layout. This also reduces the need for having a grid within a grid which would cause issues where both the parent and
+child would need matching CSS to meet the "full bleed" requirement.
+
+Figure 11 - a screensshot of a pen with the columns well named
+
+This then allows every component to be aware of the viewport width, allowing it to go "full bleed", while also being aware of the
+UX grid layout for rendering within the article body content.
+
+In terms of components such as the single onward journey which need very flexible placement we are also helped out by using CSS grid
+because of it's ability to span across all rows and columns with simple CSS.
+
+## Additional content
+
+Investigation PR - https://github.com/BBC-News/simorgh/pull/824
+Layout flexibilty example Pen - https://codepen.io/phil-lee/pen/NOMzmB
+Solution example detailing columns - https://codepen.io/phil-lee/full/zmjaMO/
