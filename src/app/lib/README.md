@@ -44,7 +44,7 @@ Here are the font sizes in `px`s:
 
 # Layout requirements
 
-As per the https://www.bbc.co.uk/gel/guidelines/grid we have the following columns:
+As per the [GEL grid Guidelines](https://www.bbc.co.uk/gel/guidelines/grid) we have the following columns:
 
 - 1px - 239px (1 column)
 - 240px - 399px (6 column)
@@ -54,7 +54,8 @@ As per the https://www.bbc.co.uk/gel/guidelines/grid we have the following colum
 - 1280px+ (10 column)
 
 The following is a breakdown of the article layout design for given breakpoints:
-_Between 1px - 599px_
+
+**Between 1px - 599px**
 
 - left and right margin of 8px
 - article content full width of the page EG: all columns used
