@@ -85,7 +85,7 @@
     "styled-normalize": "^8.0.1"
   },
   "devDependencies": {
-    "@storybook/react": "4.0.0-alpha.8",
+    "@storybook/react": "4.0.0",
     "amphtml-validator": "^1.0.23",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.0",
