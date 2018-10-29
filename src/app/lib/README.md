@@ -130,5 +130,5 @@ because of it's ability to span across all rows and columns with simple CSS.
 ## Additional content
 
 Investigation PR - https://github.com/BBC-News/simorgh/pull/824
-Layout flexibilty example Pen - https://codepen.io/phil-lee/pen/NOMzmB
+Layout flexibilty example - https://codepen.io/phil-lee/pen/NOMzmB
 Solution example detailing columns - https://codepen.io/phil-lee/full/zmjaMO/
