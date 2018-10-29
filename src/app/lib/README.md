@@ -108,27 +108,27 @@ In terms of components such as the single onward journey which need very flexibl
 
 ## Additional content
 
-Investigation PR - https://github.com/BBC-News/simorgh/pull/824
-Layout flexibilty example - https://codepen.io/phil-lee/pen/NOMzmB
-Solution example detailing columns - https://codepen.io/phil-lee/full/zmjaMO/
+* [Investigation PR](https://github.com/BBC-News/simorgh/pull/824)
+* [Layout flexibilty example](https://codepen.io/phil-lee/pen/NOMzmB)
+* [Solution example detailing columns](https://codepen.io/phil-lee/full/zmjaMO/)
 
-### Figure 1
+### Figure 1 - Article grid layout at 240px
 <img width="240" alt="Screenshot showing the article layout at 240px" src="https://user-images.githubusercontent.com/7791726/47645523-327e7f00-db69-11e8-9d79-b3bb59cc5cba.png">
 
-### Figure 2
+### Figure 2 - Article grid layout at 400px
 <img width="400" alt="Screenshot showing the article layout at 400px" src="https://user-images.githubusercontent.com/7791726/47645641-8ab58100-db69-11e8-9643-a6c8686673d0.png">
 
-### Figure 3
+### Figure 3 - Article grid layout at 600px
 <img width="600" alt="Screenshot showing the article layout at 600px" src="https://user-images.githubusercontent.com/7791726/47645696-b0db2100-db69-11e8-93bc-3c600077e101.png">
 
-### Figure 4
+### Figure 4 - Article grid layout at 1008px
 <img width="1008" alt="Screenshot showing the article layout at 1008px" src="https://user-images.githubusercontent.com/7791726/47646167-fa783b80-db6a-11e8-9767-d87e61602683.png">
 
-### Figure 5
+### Figure 5 - Article grid layout at 1280px
 <img width="1280" alt="Screenshot showing the article layout at 1280px" src="https://user-images.githubusercontent.com/7791726/47646276-517e1080-db6b-11e8-8fe2-e4b83c26d2fd.png">
 
-### Figure 6
+### Figure 6 - Screenshot highlighting the CSS Grid solution
 <img width="1280" alt="Screenshot detailing the use of columns" src="https://user-images.githubusercontent.com/7791726/47646334-868a6300-db6b-11e8-972a-281e94d31491.png">
 
-### Figure 7
+### Figure 7 - Screenshot of potential future layouts
 <img width="1424" alt="Screenshot of the potential complex layouts we may support in the future" src="https://user-images.githubusercontent.com/7791726/47646694-99e9fe00-db6c-11e8-8d42-82315b5e93e8.png">
