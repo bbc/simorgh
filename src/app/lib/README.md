@@ -84,7 +84,7 @@ The following is a breakdown of the article layout design for given breakpoints:
 
 ## Product requirements
 
-We have requirements for components within the article body to go "full bleed" in which they will break out of all defined columns and fill the entire viewport. This is simple to achieve for viewports under 1008px as the columns span the entire width of the viewport, however for viewports greater than 1007px this is more complex as we need to limit the max width of the columns whilst still supporting the ability for indivdual components to expand outside of the max width. For details see "article layout design for given breakpoints" in Layout Requirements.
+We have requirements for components within the article body to go "full bleed" in which they will break out of all defined columns and fill the entire viewport. This is simple to achieve for viewports under 1008px as the columns span the entire width of the viewport, however for viewports greater than 1007px this is more complex as we need to limit the max width of the columns whilst still supporting the ability for individual components to expand outside of the max width. For details see "article layout design for given breakpoints" in Layout Requirements.
 
 We also want flexiblity when placing components such as a single onward journey, and potentially adverts or similar, alongside the article body content. In the future the placement of this type of component will be content aware and potentially personalised. This requires another level of flexibilty.
 
@@ -92,7 +92,7 @@ See Figure 7 for an example of the potential layout we may have to support.
 
 ## Problems
 
-As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as full bleed spans to the very edge of the viewport each indivdual component will need to know about the layout margins.
+As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as full bleed spans to the very edge of the viewport each individual component will need to know about the layout margins.
 
 ## Solution
 
