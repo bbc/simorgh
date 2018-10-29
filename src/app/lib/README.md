@@ -74,7 +74,7 @@ The following is a breakdown of the article layout design for given breakpoints:
 - of 8 columns the article body content spans the central 6
 - *See Figure 4*
 
-**Between 600px - 1007px**
+**Above 1280px**
 
 - left and right margin of 16px
 - the 10 columns are restricted to a width of 1280px
