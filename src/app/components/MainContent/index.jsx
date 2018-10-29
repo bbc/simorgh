@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { node, string } from 'prop-types';
-import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
+import {
+  layoutGridWrapper,
+  layoutGridItem,
+  layoutGridItemFullWidth,
+} from '../../lib/layoutGrid';
 import {
   group4ScreenWidthMin,
   group4ScreenWidthMax,
@@ -26,8 +30,7 @@ export const GridItem = styled.div`
 `;
 
 export const GridItemFullWidth = styled.div`
-  grid-column: full;
-  background-color: red;
+  ${layoutGridItemFullWidth};
 `;
 
 export const StyleGridWrapper = ({ fullWidthBackgroundColor, children }) => (

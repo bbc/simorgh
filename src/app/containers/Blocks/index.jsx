@@ -17,6 +17,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     const Block = componentsToRender[type] || BlockString;
 
+    // @TODO - have a better conditional
     if (type === 'image') {
       return (
         <GridItemFullWidth>
