@@ -67,7 +67,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                 blocks={headlineBlocks}
                 componentsToRender={componentsToRenderHeadline}
               />
-              <Timestamp timestamp={metadata.firstPublished} />
+              <Timestamp timestamp={metadata.lastUpdated} />
               <Blocks
                 blocks={mainBlocks}
                 componentsToRender={componentsToRenderMain}
