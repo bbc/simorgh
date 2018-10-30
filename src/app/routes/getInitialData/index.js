@@ -4,12 +4,7 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    let url = `/${service}/articles/${id}.json`;
-
-    // URL on server
-    if (process.env.NODE) {
-      url = `${process.env.RAZZLE_BASE_PATH}${url}`;
-    }
+    const url = `${process.env.BASE_PATH}/${service}/articles/${id}.json`;
 
     const response = await fetch(url);
 
