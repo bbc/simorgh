@@ -89,7 +89,7 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
   }
 }
 
-@media (min-width:25em) and (max-width:56.1875em) {
+@media (min-width:25em) and (max-width:37.4375) {
   .c1 {
     grid-column: 1 / -1;
   }

@@ -36,7 +36,7 @@ exports[`FooterList should render correctly 1`] = `
   min-width: 50%;
 }
 
-@media (max-width:56.1875em) {
+@media (max-width:37.4375) {
   .c0 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
