@@ -11,9 +11,7 @@ module.exports = merge(common, {
   mode: 'development',
   plugins: [
     new StartServerPlugin(paths.node.outputFile),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
   ],
   externals: [
     nodeExternals({
@@ -21,4 +19,7 @@ module.exports = merge(common, {
     }),
   ],
   devtool: 'cheap-eval-source-map',
+  optimization: {
+    noEmitOnErrors: true,
+  },
 });

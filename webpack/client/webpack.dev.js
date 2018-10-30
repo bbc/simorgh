@@ -31,9 +31,8 @@ module.exports = merge(common, {
     disableHostCheck: true,
   },
   devtool: 'cheap-eval-source-map',
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  optimization: {
+    noEmitOnErrors: true,
+  },
 });
