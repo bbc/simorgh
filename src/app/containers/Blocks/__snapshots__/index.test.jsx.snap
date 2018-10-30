@@ -133,141 +133,131 @@ Array [
 
 exports[`Blocks should render correctly for isTopLevel true 1`] = `
 Array [
-  <Item>
-    <headline
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "This is a headline!",
-                  },
-                  "type": "paragraph",
+  <headline
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "text": "This is a headline!",
                 },
-              ],
-            },
-            "type": "text",
+                "type": "paragraph",
+              },
+            ],
           },
-        ]
-      }
-      type="headline"
-    />
-  </Item>,
-  <Item>
-    <subheadline
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "text": "This is a subheadline!",
-                  },
-                  "type": "paragraph",
+          "type": "text",
+        },
+      ]
+    }
+    type="headline"
+  />,
+  <subheadline
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "text": "This is a subheadline!",
                 },
-              ],
-            },
-            "type": "text",
+                "type": "paragraph",
+              },
+            ],
           },
-        ]
-      }
-      type="subheadline"
-      typeOfPreviousBlock="headline"
-    />
-  </Item>,
-  <Item>
-    <text
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "text": "This is some text content!",
-            },
-            "type": "paragraph",
+          "type": "text",
+        },
+      ]
+    }
+    type="subheadline"
+    typeOfPreviousBlock="headline"
+  />,
+  <text
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "text": "This is some text content!",
           },
-        ]
-      }
-      type="text"
-      typeOfPreviousBlock="subheadline"
-    />
-  </Item>,
-  <Item>
-    <BlockString
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "text": "This is some test content!",
-            },
+          "type": "paragraph",
+        },
+      ]
+    }
+    type="text"
+    typeOfPreviousBlock="subheadline"
+  />,
+  <BlockString
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "text": "This is some test content!",
           },
-        ]
-      }
-      type="test"
-      typeOfPreviousBlock="text"
-    />
-  </Item>,
-  <Item>
-    <BlockString
-      blocks={
-        Array [
-          Object {
-            "model": Object {
-              "copyrightHolder": "BBC",
-              "height": 420,
-              "locator": "E7DB/production/_101655395_paulineclayton.jpg",
-              "originCode": "cpsprodpb",
-              "width": 640,
-            },
-            "type": "rawImage",
+        },
+      ]
+    }
+    type="test"
+    typeOfPreviousBlock="text"
+  />,
+  <BlockString
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "copyrightHolder": "BBC",
+            "height": 420,
+            "locator": "E7DB/production/_101655395_paulineclayton.jpg",
+            "originCode": "cpsprodpb",
+            "width": 640,
           },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "Pauline Clayton",
-                        },
-                        "type": "paragraph",
+          "type": "rawImage",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "Pauline Clayton",
                       },
-                    ],
-                  },
-                  "type": "text",
+                      "type": "paragraph",
+                    },
+                  ],
                 },
-              ],
-            },
-            "type": "altText",
+                "type": "text",
+              },
+            ],
           },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
-                        },
-                        "type": "paragraph",
+          "type": "altText",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
                       },
-                    ],
-                  },
-                  "type": "text",
+                      "type": "paragraph",
+                    },
+                  ],
                 },
-              ],
-            },
-            "type": "caption",
+                "type": "text",
+              },
+            ],
           },
-        ]
-      }
-      type="image"
-      typeOfPreviousBlock="test"
-    />
-  </Item>,
+          "type": "caption",
+        },
+      ]
+    }
+    type="image"
+    typeOfPreviousBlock="test"
+  />,
 ]
 `;
