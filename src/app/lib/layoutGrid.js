@@ -2,6 +2,7 @@ import { css } from 'styled-components';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  group2ScreenWidthMin,
   group2ScreenWidthMax,
   group3ScreenWidthMin,
   group3ScreenWidthMax,
@@ -58,10 +59,10 @@ const group5Const = `7.1rem`;
 
 export const gridWrapperStyles = css`
   display: grid;
-  @media (max-width: ${group3ScreenWidthMin}) {
+  @media (max-width: ${group2ScreenWidthMin}) {
     grid-gap: ${GEL_SPACING};
   }
-  @media (min-width: ${group3ScreenWidthMin}) {
+  @media (min-width: ${group2ScreenWidthMin}) {
     grid-gap: ${GEL_SPACING_DBL};
   }
   @media (max-width: ${group3ScreenWidthMax}) {
@@ -76,20 +77,24 @@ export const gridWrapperStyles = css`
 `;
 
 export const gridItemStyles = css`
-  @media (max-width: ${group2ScreenWidthMax}) {
+  @media (max-width: ${group2ScreenWidthMin}) {
     grid-column: 1 / -1;
     padding: 0 ${GEL_SPACING};
   }
+  @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group2ScreenWidthMax}) {
+    grid-column: 1 / -1;
+    padding: 0 ${GEL_SPACING_DBL};
+  }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
     grid-column: 2 / -2;
-    padding: 0 ${GEL_SPACING_DBL};
+    padding: 0;
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-column: 2 / -2;
-    padding: 0 ${GEL_SPACING_DBL};
+    grid-column: 3 / -3;
+    padding: 0;
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-column: 3 / -3;
-    padding: 0 ${GEL_SPACING_DBL};
+    grid-column: 4 / -4;
+    padding: 0;
   }
 `;
