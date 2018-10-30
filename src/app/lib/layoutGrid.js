@@ -56,6 +56,7 @@ export const layoutGridItem = css`
   }
   @media (min-width: ${group5ScreenWidthMin}) {
     grid-column: 4 / -4;
+  }
 `;
 
 export const layoutGridItemFullWidth = css`
