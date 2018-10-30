@@ -87,6 +87,12 @@ exports[`Header should render correctly 1`] = `
   }
 }
 
+@media (min-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 <header
   role="banner"
 >

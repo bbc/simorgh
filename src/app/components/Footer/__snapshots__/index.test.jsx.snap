@@ -149,6 +149,12 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
+@media (min-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width:37.4375) {
   .c9 {
     grid-column-gap: 0.5rem;
