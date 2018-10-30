@@ -92,19 +92,16 @@ See Figure 7 for an example of the potential layout we may have to support.
 
 ## Problems
 
-As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts. Also as a full bleed component will span to the very edge of the viewport the wrapper of each individual component will need to know about the layout margins.
+As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts as defined by UX. Also as a full bleed component will span to the very edge of the viewport the wrapper of each component's wrapper will need to know about the layout margins.
 
 ## Solution
 
 This is where CSS grid comes in.
 
-Using grid we can statically define the 1008|1280px column layouts while having a flexible additional column either side of the main column layout. This also reduces the need for having a grid within a grid which would cause issues where both the parent and child would need matching CSS to meet the "full bleed" requirement.
+Using grid we can statically define the 1008|1280px column layouts while having a flexible additional column either side of the main column layout, see example [codepen](https://codepen.io/phil-lee/full/GYLBrd/). This allows each grid row to be capable of going full-bleed while still knowing about the UX defined grid, which also allows for styling of a row across the entire viewport rather than within a defined width or wrapper. 
+See Figure 6 or example Codepen for details
 
-See Figure 6 or the code pen https://codepen.io/phil-lee/full/zmjaMO/
-
-This then allows every component to be aware of the viewport width, allowing it to go "full bleed", while also being aware of the UX grid layout for rendering within the article body content.
-
-In terms of components such as the single onward journey which need very flexible placement we are also helped out by using CSS grid because of it's ability to span across all rows and columns with simple CSS.
+In terms of components such as the single onward journey which need very flexible placement we are also helped out by using CSS grid because of it's ability to span across all rows and columns with simple CSS. 
 
 ## Additional content
 
@@ -127,8 +124,8 @@ In terms of components such as the single onward journey which need very flexibl
 ### Figure 5 - Article grid layout at 1280px
 <img width="1280" alt="Screenshot showing the article layout at 1280px" src="https://user-images.githubusercontent.com/7791726/47646276-517e1080-db6b-11e8-8fe2-e4b83c26d2fd.png">
 
-### Figure 6 - Screenshot highlighting the CSS Grid solution
-<img width="1280" alt="Screenshot detailing the use of columns" src="https://user-images.githubusercontent.com/7791726/47646334-868a6300-db6b-11e8-972a-281e94d31491.png">
+### Figure 6 - Screenshot highlighting the CSS Grid solution at various viewports
+<img width="1280" alt="Screenshot detailing the use of columns" src="https://user-images.githubusercontent.com/7791726/47719329-b6586a00-dc42-11e8-8e6c-4c8747452537.png">
 
 ### Figure 7 - Screenshot of potential future layouts
 <img width="1424" alt="Screenshot of the potential complex layouts we may support in the future" src="https://user-images.githubusercontent.com/7791726/47646694-99e9fe00-db6c-11e8-8d42-82315b5e93e8.png">
