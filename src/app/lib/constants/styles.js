@@ -59,7 +59,7 @@ export const group0ScreenWidthMax = `14.9375em`; // 239px
 export const group1ScreenWidthMin = `15em`; // 240px
 export const group1ScreenWidthMax = `24.9375em`; // 399px
 
-export const group2ScreenWidthMin = `37.5em`; // 400px
+export const group2ScreenWidthMin = `25em`; // 400px
 export const group2ScreenWidthMax = `56.1875em`; // 599px
 
 export const group3ScreenWidthMin = `37.5em`; // 600px
