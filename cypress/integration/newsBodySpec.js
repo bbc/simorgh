@@ -3,7 +3,6 @@ import {
   checkElementStyles,
   getElement,
   placeholderImageLoaded,
-  renderedTitle,
   shouldContainText,
   shouldContainStyles,
   visibleImageNoCaption,
@@ -24,6 +23,20 @@ describe('Article Body Tests', () => {
       'rgb(34, 34, 34)',
       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
     );
+  });
+
+  it('should render a timestamp', () => {
+    cy.window().then(win => {
+      const { lastUpdated } = win.SIMORGH_DATA.data.metadata;
+      const timeStamp = Cypress.moment(lastUpdated).format('D MMMM YYYY');
+
+      checkElementStyles(
+        'time',
+        timeStamp,
+        'rgb(90, 90, 90)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
   it('should render a subheading', () => {
@@ -70,11 +83,11 @@ describe('Article Body Tests', () => {
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
 
-  it('should render a title', () => {
-    renderedTitle(
-      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
-    );
-  });
+  // it('should render a title', () => {
+  //   renderedTitle(
+  //     "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
+  //   );
+  // });
 
   it('should have an inline link with focus styling', () => {
     const firstInlineLink = getElement('main a');
