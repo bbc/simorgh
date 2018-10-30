@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
+import styled from 'styled-components';
 import MetadataContainer from '../Metadata';
 import Header from '../../components/Header';
 import Footer from '../Footer';
@@ -11,6 +12,20 @@ import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 import Timestamp from '../../components/Timestamp';
+import { gridWrapperStyles, gridItemStyles } from '../../lib/layoutGrid';
+import { C_OAT_LHT } from '../../lib/constants/styles';
+
+const Wrapper = styled.div`
+  ${gridWrapperStyles};
+`;
+
+const OatWrapper = styled(Wrapper)`
+  background: ${C_OAT_LHT};
+`;
+
+const Item = styled.div`
+  ${gridItemStyles};
+`;
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -63,15 +78,23 @@ const ArticleContainer = ({ loading, error, data }) => {
               service={service}
             />
             <MainContent>
-              <Blocks
-                blocks={headlineBlocks}
-                componentsToRender={componentsToRenderHeadline}
-              />
-              <Timestamp timestamp={metadata.lastUpdated} />
-              <Blocks
-                blocks={mainBlocks}
-                componentsToRender={componentsToRenderMain}
-              />
+              <Wrapper>
+                <Blocks
+                  blocks={headlineBlocks}
+                  componentsToRender={componentsToRenderHeadline}
+                  isTopLevel
+                />
+                <Item>
+                  <Timestamp timestamp={metadata.lastUpdated} />
+                </Item>
+              </Wrapper>
+              <OatWrapper>
+                <Blocks
+                  blocks={mainBlocks}
+                  componentsToRender={componentsToRenderMain}
+                  isTopLevel
+                />
+              </OatWrapper>
             </MainContent>
             <Footer />
           </ServiceContextProvider>

@@ -130,3 +130,144 @@ Array [
   />,
 ]
 `;
+
+exports[`Blocks should render correctly for isTopLevel true 1`] = `
+Array [
+  <Item>
+    <headline
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "text": "This is a headline!",
+                  },
+                  "type": "paragraph",
+                },
+              ],
+            },
+            "type": "text",
+          },
+        ]
+      }
+      type="headline"
+    />
+  </Item>,
+  <Item>
+    <subheadline
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "text": "This is a subheadline!",
+                  },
+                  "type": "paragraph",
+                },
+              ],
+            },
+            "type": "text",
+          },
+        ]
+      }
+      type="subheadline"
+      typeOfPreviousBlock="headline"
+    />
+  </Item>,
+  <Item>
+    <text
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "text": "This is some text content!",
+            },
+            "type": "paragraph",
+          },
+        ]
+      }
+      type="text"
+      typeOfPreviousBlock="subheadline"
+    />
+  </Item>,
+  <Item>
+    <BlockString
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "text": "This is some test content!",
+            },
+          },
+        ]
+      }
+      type="test"
+      typeOfPreviousBlock="text"
+    />
+  </Item>,
+  <Item>
+    <BlockString
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "copyrightHolder": "BBC",
+              "height": 420,
+              "locator": "E7DB/production/_101655395_paulineclayton.jpg",
+              "originCode": "cpsprodpb",
+              "width": 640,
+            },
+            "type": "rawImage",
+          },
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "text": "Pauline Clayton",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+            "type": "altText",
+          },
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+            "type": "caption",
+          },
+        ]
+      }
+      type="image"
+      typeOfPreviousBlock="test"
+    />
+  </Item>,
+]
+`;

@@ -48,35 +48,33 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       service="persian"
     />
     <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "سرصفحه مقاله",
+      <Wrapper>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "text": "سرصفحه مقاله",
+                            },
+                            "type": "paragraph",
                           },
-                          "type": "paragraph",
-                        },
-                      ],
+                        ],
+                      },
+                      "type": "text",
                     },
-                    "type": "text",
-                  },
-                ],
+                  ],
+                },
+                "type": "headline",
               },
-              "type": "headline",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
+            ]
           }
+<<<<<<< Updated upstream
         }
       />
       <Timestamp
@@ -85,29 +83,50 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       <Blocks
         blocks={
           Array [
+=======
+          componentsToRender={
+>>>>>>> Stashed changes
             Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "یک پاراگراف.",
-                    },
-                    "type": "paragraph",
-                  },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
+              "headline": [Function],
+            }
           }
-        }
-      />
+          isTopLevel={true}
+        />
+        <Item>
+          <Timestamp
+            timestamp={1514811600}
+          />
+        </Item>
+      </Wrapper>
+      <OatWrapper>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "یک پاراگراف.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+          isTopLevel={true}
+        />
+      </OatWrapper>
     </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
@@ -160,35 +179,33 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       service="news"
     />
     <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "Article Headline",
+      <Wrapper>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "text": "Article Headline",
+                            },
+                            "type": "paragraph",
                           },
-                          "type": "paragraph",
-                        },
-                      ],
+                        ],
+                      },
+                      "type": "text",
                     },
-                    "type": "text",
-                  },
-                ],
+                  ],
+                },
+                "type": "headline",
               },
-              "type": "headline",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
+            ]
           }
+<<<<<<< Updated upstream
         }
       />
       <Timestamp
@@ -197,29 +214,50 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       <Blocks
         blocks={
           Array [
+=======
+          componentsToRender={
+>>>>>>> Stashed changes
             Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "A paragraph.",
-                    },
-                    "type": "paragraph",
-                  },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
+              "headline": [Function],
+            }
           }
-        }
-      />
+          isTopLevel={true}
+        />
+        <Item>
+          <Timestamp
+            timestamp={1514811600}
+          />
+        </Item>
+      </Wrapper>
+      <OatWrapper>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "text": "A paragraph.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+          isTopLevel={true}
+        />
+      </OatWrapper>
     </MainContent>
     <FooterContainer />
   </ServiceContextProvider>
