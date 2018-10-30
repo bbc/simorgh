@@ -74,18 +74,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               },
             ]
           }
-<<<<<<< Updated upstream
-        }
-      />
-      <Timestamp
-        timestamp={1514811600000}
-      />
-      <Blocks
-        blocks={
-          Array [
-=======
           componentsToRender={
->>>>>>> Stashed changes
             Object {
               "headline": [Function],
             }
@@ -94,7 +83,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
         />
         <Item>
           <Timestamp
-            timestamp={1514811600}
+            timestamp={1514811600000}
           />
         </Item>
       </Wrapper>
@@ -205,18 +194,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               },
             ]
           }
-<<<<<<< Updated upstream
-        }
-      />
-      <Timestamp
-        timestamp={1514811600000}
-      />
-      <Blocks
-        blocks={
-          Array [
-=======
           componentsToRender={
->>>>>>> Stashed changes
             Object {
               "headline": [Function],
             }
@@ -225,7 +203,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
         />
         <Item>
           <Timestamp
-            timestamp={1514811600}
+            timestamp={1514811600000}
           />
         </Item>
       </Wrapper>

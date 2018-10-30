@@ -61,6 +61,10 @@ export const gridWrapperStyles = css`
   display: grid;
   @media (max-width: ${group2ScreenWidthMin}) {
     grid-gap: ${GEL_SPACING};
+    padding: 0 ${GEL_SPACING};
+  }
+  @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group2ScreenWidthMax}) {
+    padding: 0 ${GEL_SPACING_DBL};
   }
   @media (min-width: ${group2ScreenWidthMin}) {
     grid-gap: ${GEL_SPACING_DBL};
@@ -77,24 +81,20 @@ export const gridWrapperStyles = css`
 `;
 
 export const gridItemStyles = css`
+  padding: 0;
   @media (max-width: ${group2ScreenWidthMin}) {
     grid-column: 1 / -1;
-    padding: 0 ${GEL_SPACING};
   }
   @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group2ScreenWidthMax}) {
     grid-column: 1 / -1;
-    padding: 0 ${GEL_SPACING_DBL};
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
     grid-column: 2 / -2;
-    padding: 0;
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
     grid-column: 3 / -3;
-    padding: 0;
   }
   @media (min-width: ${group5ScreenWidthMin}) {
     grid-column: 4 / -4;
-    padding: 0;
   }
 `;
