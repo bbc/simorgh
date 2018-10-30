@@ -12,11 +12,11 @@ import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 import Timestamp from '../../components/Timestamp';
-import { gridWrapperStyles, gridItemStyles } from '../../lib/layoutGrid';
+import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 import { C_OAT_LHT } from '../../lib/constants/styles';
 
 const Wrapper = styled.div`
-  ${gridWrapperStyles};
+  ${layoutGridWrapper};
 `;
 
 const OatWrapper = styled(Wrapper)`
@@ -24,7 +24,7 @@ const OatWrapper = styled(Wrapper)`
 `;
 
 const Item = styled.div`
-  ${gridItemStyles};
+  ${layoutGridItem};
 `;
 
 const componentsToRenderHeadline = {
@@ -79,21 +79,23 @@ const ArticleContainer = ({ loading, error, data }) => {
             />
             <MainContent>
               <Wrapper>
-                <Blocks
-                  blocks={headlineBlocks}
-                  componentsToRender={componentsToRenderHeadline}
-                  isTopLevel
-                />
                 <Item>
+                  <Blocks
+                    blocks={headlineBlocks}
+                    componentsToRender={componentsToRenderHeadline}
+                    isTopLevel
+                  />
                   <Timestamp timestamp={metadata.lastUpdated} />
                 </Item>
               </Wrapper>
               <OatWrapper>
-                <Blocks
-                  blocks={mainBlocks}
-                  componentsToRender={componentsToRenderMain}
-                  isTopLevel
-                />
+                <Item>
+                  <Blocks
+                    blocks={mainBlocks}
+                    componentsToRender={componentsToRenderMain}
+                    isTopLevel
+                  />
+                </Item>
               </OatWrapper>
             </MainContent>
             <Footer />

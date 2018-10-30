@@ -1,18 +1,12 @@
 import React from 'react';
 import { bool, objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
-import styled from 'styled-components';
-import { gridItemStyles } from '../../lib/layoutGrid';
 
 // Inlined as this is a temporary component
 const BlockString = props => {
   const stringProps = JSON.stringify(props);
   return <p>{stringProps}</p>;
 };
-
-const Item = styled.div`
-  ${gridItemStyles};
-`;
 
 const Blocks = ({ blocks, componentsToRender, isTopLevel }) =>
   blocks.map((block, index) => {
@@ -23,14 +17,12 @@ const Blocks = ({ blocks, componentsToRender, isTopLevel }) =>
     const Block = componentsToRender[type] || BlockString;
     if (isTopLevel) {
       return (
-        <Item>
-          <Block
-            key={nanoid()}
-            type={type}
-            typeOfPreviousBlock={typeOfPreviousBlock}
-            {...model}
-          />
-        </Item>
+        <Block
+          key={nanoid()}
+          type={type}
+          typeOfPreviousBlock={typeOfPreviousBlock}
+          {...model}
+        />
       );
     }
     return (
