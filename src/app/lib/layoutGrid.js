@@ -3,7 +3,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   group2ScreenWidthMin,
-  group2ScreenWidthMax,
   group3ScreenWidthMin,
   group3ScreenWidthMax,
   group4ScreenWidthMin,
@@ -42,10 +41,7 @@ export const layoutGridWrapper = css`
 `;
 
 export const layoutGridItem = css`
-  @media (max-width: ${group2ScreenWidthMin}) {
-    grid-column: 1 / -1;
-  }
-  @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group2ScreenWidthMax}) {
+  @media (max-width: ${group3ScreenWidthMin}) {
     grid-column: 1 / -1;
   }
   @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {

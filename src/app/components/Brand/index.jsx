@@ -7,7 +7,9 @@ import {
   C_POSTBOX,
   C_WHITE,
   GEL_SPACING,
+  GEL_SPACING_DBL,
   GEL_SPACING_HLF,
+  group3ScreenWidthMax,
 } from '../../lib/constants/styles';
 import {
   layoutGridWrapper,
@@ -31,6 +33,9 @@ const StyledGridWrapper = styled.div`
   background-color: ${C_POSTBOX};
   height: ${BANNER_HEIGHT};
   width: 100%;
+  @media (min-width: ${group3ScreenWidthMax}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
 `;
 
 const StyledLink = styled.a`
