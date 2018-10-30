@@ -21,7 +21,7 @@
         }
       }
     ],
-    "razzle/babel"
+    "react"
   ],
   "plugins": [
     [
@@ -29,6 +29,12 @@
       {
         "ssr": true,
         "fileName": false
+      }
+    ],
+    [
+      "transform-object-rest-spread",
+      {
+        "useBuiltIns": true
       }
     ]
   ]
