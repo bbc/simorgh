@@ -87,13 +87,11 @@
     "model": {
       "blocks": [
         {
-          "blockId" : "163ab733-b2ff-452a-a2b0-ba13f1a01fa1",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p064nsyw",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p064nsyw",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p064nsyw",

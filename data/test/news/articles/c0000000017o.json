@@ -39,13 +39,11 @@
     "model": {
       "blocks": [
         {
-          "blockId" : "42a49ee8-2edd-4c9e-97df-e9a2f4464146",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p060njgk",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p060njgk",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p060njgk",
@@ -316,13 +314,11 @@
           }
         },
         {
-          "blockId" : "08c845e5-2605-4f56-87aa-37cbe92bfa17",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:b08qm073",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:b08qm073",
                 "type" : "aresMedia",
                 "model" : {
                   "statusCode" : 410,
@@ -585,13 +581,11 @@
           }
         },
         {
-          "blockId" : "000112f0-05ad-4446-a626-f62557e052b3",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p06702pc",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p06702pc",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p06702pc",

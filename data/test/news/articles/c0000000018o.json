@@ -164,13 +164,11 @@
           }
         },
         {
-          "blockId" : "66988dfc-28d1-4dc2-9a8f-335852a02bb9",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p054n8j6",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p054n8j6",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p054n8j6",

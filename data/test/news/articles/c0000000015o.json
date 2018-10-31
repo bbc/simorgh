@@ -113,13 +113,11 @@
           }
         },
         {
-          "blockId" : "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p064nsyw",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p064nsyw",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p064nsyw",

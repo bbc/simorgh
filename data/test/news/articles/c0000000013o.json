@@ -154,24 +154,20 @@
           }
         },
         {
-          "blockId" : "93df6d3d-946b-4295-86ab-8cc5330769b5",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p064nsyw",
             "blocks" : [
               {
-                "blockId" : "b973c91b-8afb-73c8-e594-41b0d21b21e0",
-                "type" : "altText",
+                "type" : "caption",
                 "model" : {
                   "blocks" : [
                     {
-                      "blockId" : "21eda773-0528-0d76-4184-fe7da309c845",
                       "type" : "text",
                       "model" : {
                         "blocks" : [
                           {
                             "type" : "paragraph",
-                            "blockId" : "a0ec9585-f001-f1ee-e19f-32b65b815652",
                             "model" : {
                               "text" : "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
                             }
@@ -183,7 +179,6 @@
                 }
               },
               {
-                "blockId" : "urn:bbc:ares::clip:p064nsyw",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p064nsyw",
@@ -245,24 +240,20 @@
           }
         },
         {
-          "blockId" : "d06d953b-000c-4ed1-ae4d-c126326ad78f",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p068lkw4",
             "blocks" : [
               {
-                "blockId" : "6ff171c2-fbfb-3a80-8a7d-690eedcad5a8",
                 "type" : "caption",
                 "model" : {
                   "blocks" : [
                     {
-                      "blockId" : "58fcb9f6-5819-5f31-d8da-7acddea84d1e",
                       "type" : "text",
                       "model" : {
                         "blocks" : [
                           {
                             "type" : "paragraph",
-                            "blockId" : "01153f9e-a9d9-d2f8-0e40-58be5d5ff0cc",
                             "model" : {
                               "text" : "Highlights: Peru 2-0 Scotland"
                             }
@@ -274,7 +265,6 @@
                 }
               },
               {
-                "blockId" : "urn:bbc:ares::clip:p068lkw4",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p068lkw4",
@@ -309,24 +299,20 @@
           }
         },
         {
-          "blockId" : "0edab00a-355a-48c1-98c6-31e61d682950",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p068hxjb",
             "blocks" : [
               {
-                "blockId" : "591c2ada-acea-cd41-bcfc-8e7ce613c832",
                 "type" : "caption",
                 "model" : {
                   "blocks" : [
                     {
-                      "blockId" : "a47dd29f-cba7-a6ce-81eb-18e396d41892",
                       "type" : "text",
                       "model" : {
                         "blocks" : [
                           {
                             "type" : "paragraph",
-                            "blockId" : "8db2a64b-aafa-fc68-6477-a98e3a2df2bc",
                             "model" : {
                               "text" : "How the Skripals were saved"
                             }
@@ -338,7 +324,6 @@
                 }
               },
               {
-                "blockId" : "urn:bbc:ares::clip:p068hxjb",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p068hxjb",
@@ -371,13 +356,11 @@
           }
         },
         {
-          "blockId" : "32157e44-a97d-495b-a492-b2878186e623",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p01hsgv6",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p01hsgv6",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p01hsgv6",
@@ -411,13 +394,11 @@
           }
         },
         {
-          "blockId" : "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p064gl4v",
             "blocks" : [
               {
-                "blockId" : "urn:bbc:ares::clip:p064gl4v",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p064gl4v",

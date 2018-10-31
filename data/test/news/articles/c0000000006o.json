@@ -167,24 +167,20 @@
           }
         },
         {
-          "blockId" : "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
           "type" : "video",
           "model" : {
             "locator" : "urn:bbc:pips:pid:p067gq6h",
             "blocks" : [
               {
-              "blockId" : "6052eb5b-8669-bef2-e848-b4ac9fed6d29",
               "type" : "caption",
               "model" : {
                 "blocks" : [
                   {
-                  "blockId" : "a9a78705-e1e8-03d2-b224-9e18249b8bd0",
                   "type" : "text",
                   "model" : {
                     "blocks" : [
                       {
                         "type" : "paragraph",
-                        "blockId" : "9c499256-25d5-7926-a744-a2edb33ea3de",
                         "model" : {
                         "text" : "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
                         }
@@ -196,7 +192,6 @@
             }
           },
           {
-            "blockId" : "urn:bbc:ares::clip:p067gq6h",
             "type" : "aresMedia",
             "model" : {
               "id" : "p067gq6h",

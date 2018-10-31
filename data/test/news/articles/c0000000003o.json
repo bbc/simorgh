@@ -85,7 +85,6 @@
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "blockId" : "urn:bbc:ares::clip:p067gq6h",
                 "type" : "aresMedia",
                 "model" : {
                   "id" : "p067gq6h",
