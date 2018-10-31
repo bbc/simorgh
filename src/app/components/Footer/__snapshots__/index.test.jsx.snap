@@ -111,9 +111,20 @@ exports[`Footer should render correctly 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:25em) {
+@media (max-width:37.5em) {
   .c0 {
     grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
@@ -124,15 +135,8 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
-  .c0 {
-    grid-gap: 1rem;
-  }
-}
-
 @media (max-width:62.9375em) {
   .c0 {
-    grid-gap: 1rem;
     grid-template-columns: repeat(6,1fr);
   }
 }
@@ -199,9 +203,20 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (max-width:25em) {
+@media (max-width:37.5em) {
   .c7 {
     grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c7 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c7 {
     padding: 0 0.5rem;
   }
 }
@@ -212,15 +227,8 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
-  .c7 {
-    grid-gap: 1rem;
-  }
-}
-
 @media (max-width:62.9375em) {
   .c7 {
-    grid-gap: 1rem;
     grid-template-columns: repeat(6,1fr);
   }
 }
