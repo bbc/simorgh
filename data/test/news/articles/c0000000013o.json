@@ -163,13 +163,13 @@
                 "model" : {
                   "blocks" : [
                     {
-                      "type" : "text",
-                      "model" : {
-                        "blocks" : [
+                      "type": "text",
+                      "model": {
+                        "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
                               "blocks": [
                                 {
                                   "type": "fragment",

@@ -267,9 +267,9 @@
                       "model": {
                         "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "Retail giant to close down 100 stores",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
                               "blocks": [
                                 {
                                   "type": "fragment",
@@ -333,9 +333,9 @@
                       "model": {
                         "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "Retail giant to close down 100 stores",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Retail giant to close down 100 stores",
                               "blocks": [
                                 {
                                   "type": "fragment",

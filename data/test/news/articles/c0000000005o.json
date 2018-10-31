@@ -309,9 +309,9 @@
                       "model": {
                         "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
                               "blocks": [
                                 {
                                   "type": "fragment",
@@ -347,9 +347,9 @@
                   "advertising" : false,
                   "versions" : [ 
                     {
-                      "versionId" : "p067gq6k",
-                      "types" : [ "Original" ],
-                      "duration" : 94,
+                      "versionId": "p067gq6k",
+                      "types": [ "Original" ],
+                      "duration": 94,
                       "availableTerritories" : {
                         "uk" : true,
                         "nonUk" : false
