@@ -51,7 +51,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       role="main"
     >
       <Wrapper>
-        <Item>
+        <GridItemConstrained>
           <Blocks
             blocks={
               Array [
@@ -86,10 +86,10 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
           <Timestamp
             timestamp={1514811600000}
           />
-        </Item>
+        </GridItemConstrained>
       </Wrapper>
       <OatWrapper>
-        <Item>
+        <GridItemConstrained>
           <Blocks
             blocks={
               Array [
@@ -116,7 +116,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               }
             }
           />
-        </Item>
+        </GridItemConstrained>
       </OatWrapper>
     </main>
     <FooterContainer />
@@ -173,7 +173,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       role="main"
     >
       <Wrapper>
-        <Item>
+        <GridItemConstrained>
           <Blocks
             blocks={
               Array [
@@ -208,10 +208,10 @@ exports[`ArticleContainer Component should render correctly 1`] = `
           <Timestamp
             timestamp={1514811600000}
           />
-        </Item>
+        </GridItemConstrained>
       </Wrapper>
       <OatWrapper>
-        <Item>
+        <GridItemConstrained>
           <Blocks
             blocks={
               Array [
@@ -238,7 +238,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               }
             }
           />
-        </Item>
+        </GridItemConstrained>
       </OatWrapper>
     </main>
     <FooterContainer />

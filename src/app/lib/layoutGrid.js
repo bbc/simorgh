@@ -53,7 +53,7 @@ export const layoutGridWrapper = css`
   }
 `;
 
-export const layoutGridItem = css`
+export const layoutGridItemConstrained = css`
   @media (max-width: ${group3ScreenWidthMin}) {
     grid-column: 1 / -1;
   }
@@ -68,6 +68,6 @@ export const layoutGridItem = css`
   }
 `;
 
-export const layoutGridItemFullWidth = css`
+export const layoutGridItem = css`
   grid-column: 1 / -1;
 `;

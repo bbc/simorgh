@@ -11,7 +11,10 @@ import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 import Timestamp from '../../components/Timestamp';
-import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
+import {
+  layoutGridWrapper,
+  layoutGridItemConstrained,
+} from '../../lib/layoutGrid';
 import { C_OAT_LHT } from '../../lib/constants/styles';
 
 const Wrapper = styled.div`
@@ -22,8 +25,8 @@ const OatWrapper = styled(Wrapper)`
   background: ${C_OAT_LHT};
 `;
 
-const Item = styled.div`
-  ${layoutGridItem};
+const GridItemConstrained = styled.div`
+  ${layoutGridItemConstrained};
 `;
 
 const componentsToRenderHeadline = {
@@ -78,21 +81,21 @@ const ArticleContainer = ({ loading, error, data }) => {
             />
             <main role="main">
               <Wrapper>
-                <Item>
+                <GridItemConstrained>
                   <Blocks
                     blocks={headlineBlocks}
                     componentsToRender={componentsToRenderHeadline}
                   />
                   <Timestamp timestamp={metadata.lastUpdated} />
-                </Item>
+                </GridItemConstrained>
               </Wrapper>
               <OatWrapper>
-                <Item>
+                <GridItemConstrained>
                   <Blocks
                     blocks={mainBlocks}
                     componentsToRender={componentsToRenderMain}
                   />
-                </Item>
+                </GridItemConstrained>
               </OatWrapper>
             </main>
             <Footer />

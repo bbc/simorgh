@@ -13,8 +13,8 @@ import {
 } from '../../lib/constants/styles';
 import {
   layoutGridWrapper,
+  layoutGridItemConstrained,
   layoutGridItem,
-  layoutGridItemFullWidth,
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
@@ -62,7 +62,7 @@ const BrandSvg = styled.svg`
 
 const Brand = ({ indentedLogo }) => {
   const StyledGridItem = styled.div`
-    ${indentedLogo ? layoutGridItem : layoutGridItemFullWidth};
+    ${indentedLogo ? layoutGridItemConstrained : layoutGridItem};
   `;
 
   return (
