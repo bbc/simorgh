@@ -47,7 +47,9 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       }
       service="persian"
     />
-    <MainContent>
+    <main
+      role="main"
+    >
       <Wrapper>
         <Item>
           <Blocks
@@ -80,7 +82,6 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                 "headline": [Function],
               }
             }
-            isTopLevel={true}
           />
           <Timestamp
             timestamp={1514811600000}
@@ -114,11 +115,10 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                 "text": [Function],
               }
             }
-            isTopLevel={true}
           />
         </Item>
       </OatWrapper>
-    </MainContent>
+    </main>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>
@@ -169,7 +169,9 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       }
       service="news"
     />
-    <MainContent>
+    <main
+      role="main"
+    >
       <Wrapper>
         <Item>
           <Blocks
@@ -202,7 +204,6 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                 "headline": [Function],
               }
             }
-            isTopLevel={true}
           />
           <Timestamp
             timestamp={1514811600000}
@@ -236,11 +237,10 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                 "text": [Function],
               }
             }
-            isTopLevel={true}
           />
         </Item>
       </OatWrapper>
-    </MainContent>
+    </main>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>

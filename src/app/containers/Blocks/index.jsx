@@ -8,23 +8,14 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
-const Blocks = ({ blocks, componentsToRender, isTopLevel }) =>
+const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, model } = block;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
 
     const Block = componentsToRender[type] || BlockString;
-    if (isTopLevel) {
-      return (
-        <Block
-          key={nanoid()}
-          type={type}
-          typeOfPreviousBlock={typeOfPreviousBlock}
-          {...model}
-        />
-      );
-    }
+
     return (
       <Block
         key={nanoid()}

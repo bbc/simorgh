@@ -8,7 +8,6 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
 import Timestamp from '../../components/Timestamp';
@@ -77,13 +76,12 @@ const ArticleContainer = ({ loading, error, data }) => {
               promo={promo}
               service={service}
             />
-            <MainContent>
+            <main role="main">
               <Wrapper>
                 <Item>
                   <Blocks
                     blocks={headlineBlocks}
                     componentsToRender={componentsToRenderHeadline}
-                    isTopLevel
                   />
                   <Timestamp timestamp={metadata.lastUpdated} />
                 </Item>
@@ -93,11 +91,10 @@ const ArticleContainer = ({ loading, error, data }) => {
                   <Blocks
                     blocks={mainBlocks}
                     componentsToRender={componentsToRenderMain}
-                    isTopLevel
                   />
                 </Item>
               </OatWrapper>
-            </MainContent>
+            </main>
             <Footer />
           </ServiceContextProvider>
         </Fragment>
