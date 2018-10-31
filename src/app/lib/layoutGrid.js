@@ -5,6 +5,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_GUTTER_ABOVE_600PX,
   group2ScreenWidthMin,
+  group2ScreenWidthMax,
   group3ScreenWidthMin,
   group3ScreenWidthMax,
   group4ScreenWidthMin,
@@ -29,7 +30,7 @@ const group5ColWidth = `6.9rem`;
 
 export const layoutGridWrapper = css`
   display: grid;
-  @media (max-width: ${group3ScreenWidthMin}) {
+  @media (max-width: ${group2ScreenWidthMax}) {
     grid-gap: ${GEL_GUTTER_BELOW_600PX};
   }
   @media (min-width: ${group3ScreenWidthMin}) {

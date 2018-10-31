@@ -49,7 +49,7 @@ exports[`Header should render correctly 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
   }

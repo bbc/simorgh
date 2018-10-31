@@ -70,7 +70,7 @@ export const group1ScreenWidthMin = `15em`; // 240px
 export const group1ScreenWidthMax = `24.9375em`; // 399px
 
 export const group2ScreenWidthMin = `25em`; // 400px
-export const group2ScreenWidthMax = `37.4375`; // 599px
+export const group2ScreenWidthMax = `37.4375em`; // 599px
 
 export const group3ScreenWidthMin = `37.5em`; // 600px
 export const group3ScreenWidthMax = `62.9375em`; // 1007px

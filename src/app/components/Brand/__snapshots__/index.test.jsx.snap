@@ -45,7 +45,7 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
   margin-top: 1.25rem;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
   }
@@ -212,7 +212,7 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
   }

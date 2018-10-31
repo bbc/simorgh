@@ -111,7 +111,7 @@ exports[`Footer should render correctly 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
   }
@@ -159,7 +159,7 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (max-width:37.4375) {
+@media (max-width:37.4375em) {
   .c9 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
@@ -203,7 +203,7 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c7 {
     grid-gap: 0.5rem;
   }
