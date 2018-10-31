@@ -16,6 +16,6 @@ describe('Image', () => {
 
   shouldMatchSnapshot(
     'should render AMP version correctly',
-    <AmpImage alt={imageAlt} src={imageSrc} />,
+    <AmpImage alt={imageAlt} src={imageSrc} ratio="56.25" />,
   );
 });
