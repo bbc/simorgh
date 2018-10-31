@@ -25,6 +25,20 @@ describe('Article Body Tests', () => {
     );
   });
 
+  it('should render a timestamp', () => {
+    cy.window().then(win => {
+      const { lastUpdated } = win.SIMORGH_DATA.data.metadata;
+      const timeStamp = Cypress.moment(lastUpdated).format('D MMMM YYYY');
+
+      checkElementStyles(
+        'time',
+        timeStamp,
+        'rgb(90, 90, 90)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
+  });
+
   it('should render a subheading', () => {
     checkElementStyles(
       'h2',
