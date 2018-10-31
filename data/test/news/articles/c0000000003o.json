@@ -42,10 +42,7 @@
       "text",
       "paragraph",
       "video",
-      "rawVideo",
-      "image",
-      "rawImage",
-      "altText",
+      "aresClip",
       "caption",
       "fragment"
     ]

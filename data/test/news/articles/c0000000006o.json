@@ -167,120 +167,60 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p067gq6h",
-            "blocks": [
+          "blockId" : "8428aff4-99fd-4d7a-8a7c-cb403486ad64",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p067gq6h",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT1M34S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p067gq6h"
+              "blockId" : "6052eb5b-8669-bef2-e848-b4ac9fed6d29",
+              "type" : "caption",
+              "model" : {
+                "blocks" : [
+                  {
+                  "blockId" : "a9a78705-e1e8-03d2-b224-9e18249b8bd0",
+                  "type" : "text",
+                  "model" : {
+                    "blocks" : [
+                      {
+                        "type" : "paragraph",
+                        "blockId" : "9c499256-25d5-7926-a744-a2edb33ea3de",
+                        "model" : {
+                        "text" : "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
+                        }
+                      }
+                    ]
+                  }
                 }
+              ]
+            }
+          },
+          {
+            "blockId" : "urn:bbc:ares::clip:p067gq6h",
+            "type" : "aresMedia",
+            "model" : {
+              "id" : "p067gq6h",
+              "subType" : "clip",
+              "format" : "audio_video",
+              "title" : "Mark and Isla Royal Wedding",
+              "synopses" : {
+                "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                "medium" : null,
+                "long" : null
               },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "Getty Images"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Pellentesque pellentesque sem magna.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Pellentesque pellentesque sem magna.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
+              "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+              "embedding" : true,
+              "warnings" : { },
+              "advertising" : false,
+              "versions" : [
+                {
+                "versionId" : "p067gq6k",
+                "types" : [ "Original" ],
+                "duration" : 94,
+                "availableTerritories" : {
+                  "uk" : true,
+                  "nonUk" : false
+                  }
                     }
                   ]
                 }

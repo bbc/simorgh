@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -296,43 +296,28 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p067gq6h",
-            "blocks": [
+          "blockId" : "da611d38-08ef-4105-a288-3385a343cb9b",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p067gq6h",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT1M34S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p067gq6h"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "78a69a88-3c8c-330f-113e-0f8e110e179c",
+                "type" : "caption",
+                "model" : {
+                  "blocks" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
+                      "blockId" : "e6973f43-2e14-ed75-0220-899169f7a559",
+                      "type" : "text",
+                      "model" : {
+                        "blocks" : [
                           {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
+                            "type" : "paragraph",
+                            "blockId" : "8bc5417e-daa9-d215-c380-3a1520c16bef",
+                            "model" : {
+                              "text" : "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
                             }
-                          }
+                          } 
                         ]
                       }
                     }
@@ -340,75 +325,30 @@
                 }
               },
               {
-                "type": "caption",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p067gq6h",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p067gq6h",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Mark and Isla Royal Wedding",
+                  "synopses" : {
+                    "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                  "embedding" : true,
+                  "warnings" : { },
+                  "advertising" : false,
+                  "versions" : [ 
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "Getty Images"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Pellentesque pellentesque sem magna.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Pellentesque pellentesque sem magna.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p067gq6k",
+                      "types" : [ "Original" ],
+                      "duration" : 94,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
