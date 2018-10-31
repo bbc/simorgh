@@ -101,7 +101,7 @@ Pick a JSON file under `data/test/news/articles/[id].json`, and:
 1) add an example of your block somewhere in the `content.model.blocks` array.
 2) add your new component to the `blockTypes` array.
 
-Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000027o
+Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
 ### Add a container
 We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
