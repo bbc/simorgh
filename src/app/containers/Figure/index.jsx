@@ -16,17 +16,14 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, alt, ratio, copyright, caption, isAmp }) => (
+const FigureContainer = ({ src, alt, ratio, copyright, caption, platform }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      {isAmp
-        ? (
-          <AmpImage alt={alt} src={src}></AmpImage>
-        )
-        : (
-          <Image alt={alt} src={src} />
-        )
-      }
+      {platform === 'amp' ? (
+        <AmpImage alt={alt} src={src} />
+      ) : (
+        <Image alt={alt} src={src} />
+      )}
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(caption)}
@@ -39,6 +36,7 @@ FigureContainer.propTypes = {
   ratio: number.isRequired,
   copyright: string,
   caption: string,
+  platform: string.isRequired,
 };
 
 FigureContainer.defaultProps = {

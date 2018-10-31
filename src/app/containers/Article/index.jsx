@@ -64,13 +64,13 @@ const ArticleContainer = ({ loading, error, data }) => {
             />
             <MainContent>
               <Blocks
-                isAmp={isAmp}
+                platform={isAmp ? 'amp' : 'canonical'}
                 blocks={headlineBlocks}
                 componentsToRender={componentsToRenderHeadline}
               />
               <Timestamp timestamp={metadata.lastUpdated} />
               <Blocks
-                isAmp={isAmp}
+                platform={isAmp ? 'amp' : 'canonical'}
                 blocks={mainBlocks}
                 componentsToRender={componentsToRenderMain}
               />
