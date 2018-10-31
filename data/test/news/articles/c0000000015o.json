@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -113,119 +113,36 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p064nsyw",
-            "blocks": [
+          "blockId" : "ebab40e5-f56b-4857-8a5e-cf3821a1757e",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p064nsyw",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT2H34M25S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p064nsyw"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p064nsyw",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p064nsyw",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Plastic - The Story So Far",
+                  "synopses" : {
+                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                  "embedding" : true,
+                  "warnings" : { },
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Retail giant to close down 100 stores",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Retail giant to close down 100 stores",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 320,
-                        "height": 180,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p064nsz3",
+                      "types" : [ "Original" ],
+                      "duration" : 299,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]

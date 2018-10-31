@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -154,41 +154,26 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p064nsyw",
-            "blocks": [
+          "blockId" : "93df6d3d-946b-4295-86ab-8cc5330769b5",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p064nsyw",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT4M59S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p064nsyw"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "b973c91b-8afb-73c8-e594-41b0d21b21e0",
+                "type" : "altText",
+                "model" : {
+                  "blocks" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
+                      "blockId" : "21eda773-0528-0d76-4184-fe7da309c845",
+                      "type" : "text",
+                      "model" : {
+                        "blocks" : [
                           {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
+                            "type" : "paragraph",
+                            "blockId" : "a0ec9585-f001-f1ee-e19f-32b65b815652",
+                            "model" : {
+                              "text" : "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
                             }
                           }
                         ]
@@ -198,46 +183,30 @@
                 }
               },
               {
-                "type": "image",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p064nsyw",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p064nsyw",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Plastic - The Story So Far",
+                  "synopses" : {
+                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                  "embedding" : true,
+                  "warnings" : { },
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p064nsz3",
+                      "types" : [ "Original" ],
+                      "duration" : 299,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
@@ -276,41 +245,26 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p068lkw4",
-            "blocks": [
+          "blockId" : "d06d953b-000c-4ed1-ae4d-c126326ad78f",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p068lkw4",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT4M16S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p068lkw4"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "6ff171c2-fbfb-3a80-8a7d-690eedcad5a8",
+                "type" : "caption",
+                "model" : {
+                  "blocks" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
+                      "blockId" : "58fcb9f6-5819-5f31-d8da-7acddea84d1e",
+                      "type" : "text",
+                      "model" : {
+                        "blocks" : [
                           {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
+                            "type" : "paragraph",
+                            "blockId" : "01153f9e-a9d9-d2f8-0e40-58be5d5ff0cc",
+                            "model" : {
+                              "text" : "Highlights: Peru 2-0 Scotland"
                             }
                           }
                         ]
@@ -320,26 +274,61 @@
                 }
               },
               {
-                "type": "caption",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p068lkw4",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p068lkw4",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Highlights: Peru 2-0 Scotland",
+                  "synopses" : {
+                    "short" : "Highlights: Peru 2-0 Scotland",
+                    "long" : "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give World Cup-bound Peru a low-key victory in Lima.",
+                    "medium" : "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima."
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p068lkx0.jpg",
+                  "imageCopyright" : "SNS",
+                  "embedding" : false,
+                  "warnings" : { },
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
+                      "versionId" : "p068lkw6",
+                      "types" : [ "Original" ],
+                      "duration" : 256,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
+                      },
+                      "availableUntil" : 1528257204
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "blockId" : "0edab00a-355a-48c1-98c6-31e61d682950",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p068hxjb",
+            "blocks" : [
+              {
+                "blockId" : "591c2ada-acea-cd41-bcfc-8e7ce613c832",
+                "type" : "caption",
+                "model" : {
+                  "blocks" : [
+                    {
+                      "blockId" : "a47dd29f-cba7-a6ce-81eb-18e396d41892",
+                      "type" : "text",
+                      "model" : {
+                        "blocks" : [
                           {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Highlights: Peru 2-0 Scotland",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Highlights: Peru 2-0 Scotland",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
+                            "type" : "paragraph",
+                            "blockId" : "8db2a64b-aafa-fc68-6477-a98e3a2df2bc",
+                            "model" : {
+                              "text" : "How the Skripals were saved"
                             }
                           }
                         ]
@@ -349,46 +338,30 @@
                 }
               },
               {
-                "type": "image",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p068hxjb",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p068hxjb",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "How the Skripals were saved",
+                  "synopses" : {
+                    "short" : "How the Skripals were saved",
+                    "long" : "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal.",
+                    "medium" : "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal."
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p01tlf61.jpg",
+                  "embedding" : true,
+                  "warnings" : { },
+                  "advertising" : true,
+                  "versions" : [
                     {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "BBC Sport"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p068hxjd",
+                      "types" : [ "Portrait" ],
+                      "duration" : 138,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : true
                       }
                     }
                   ]
@@ -398,119 +371,37 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p068hxjb",
-            "blocks": [
+          "blockId" : "32157e44-a97d-495b-a492-b2878186e623",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p01hsgv6",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT2M18S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p068hxjb"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p01hsgv6",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p01hsgv6",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Gemma short headline",
+                  "synopses" : {
+                    "short" : "Gemma SEO",
+                    "long" : "Two paragraphs go here",
+                    "medium" : "Gemma summary"
+                  },
+                  "imageUrl" : "ichef.test.bbci.co.uk/images/ic/$recipe/p01hxr1j.jpg",
+                  "imageCopyright" : "BBC",
+                  "embedding" : true,
+                  "warnings" : { },
+                  "advertising" : true,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This video contains a portrait vpid p068hxjd",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This video contains a portrait vpid p068hxjd",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "How the Skripals were saved",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "How the Skripals were saved",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar. We know this is landscape.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p01hsgv8",
+                      "types" : [ "Original" ],
+                      "duration" : 14,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
@@ -520,184 +411,38 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01hsgv6",
-            "blocks": [
+          "blockId" : "2e5cc642-0ae2-40d3-b977-7d7467c506d5",
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p064gl4v",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": "Contains flashing images",
-                  "isLive": false,
-                  "duration": "PT4M59S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p01hsgv6"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "blockId" : "urn:bbc:ares::clip:p064gl4v",
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p064gl4v",
+                  "subType" : "episode",
+                  "format" : "audio_video",
+                  "title" : "Turning Off Porn",
+                  "synopses" : {
+                    "short" : "New laws will require users to prove their age with ID. But will they make a difference?",
+                    "medium" : "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.",
+                    "long" : "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.\n\n\n\nMany people don’t realise that a major change is imminent in the way pornography is consumed.  There's confusion as to how the law will be enforced, and concerns that sensitive personal information may not be protected. \n\n\n\nNick finds out how widely people will be affected, and visits porn shoots to speak to actors and producers, and meet those who have had their lives made, and ruined by porn."
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p065f0c3.jpg",
+                  "embedding" : false,
+                  "warnings" : { },
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This video on castaway test has a vpid with rights set to UK only, this is the version pid: p01hsgv8",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Rio Olympics 2016",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Rio Olympics 2016",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p064gl4v",
-            "blocks": [
-              {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT4M59S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p064gl4v"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "This video contains some guidance and no caption.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This video contains some guidance and no caption.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
+                      "versionId" : "p064glg6",
+                      "types" : [ "Original" ],
+                      "duration" : 1135,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
+                      },
+                      "availableUntil" : 1556341200
                     }
                   ]
                 }
