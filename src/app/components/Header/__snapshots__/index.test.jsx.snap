@@ -77,13 +77,13 @@ exports[`Header should render correctly 1`] = `
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,7rem)) 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: 1fr repeat(10,minmax(0,7.1rem)) 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
   }
 }
 

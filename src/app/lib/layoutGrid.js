@@ -10,11 +10,11 @@ import {
   group5ScreenWidthMin,
 } from './constants/styles';
 
-const group4Const = `7rem`;
-/* (1008px width - 7 * 16px gap) / 8 columns = 112px = 7rem single column width */
+const group4ColWidth = `6.75rem`;
+/* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
 
-const group5Const = `7.1rem`;
-/* (1280px width - 9 * 16px gap) / 10 columns = 113.6px = 7.1rem single column width */
+const group5ColWidth = `6.9rem`;
+/* (1280px - (2*16px margins + 9*16px gutters)  / 10 columns = 110.4px = 6.9rem single column width */
 
 export const layoutGridWrapper = css`
   display: grid;
@@ -33,10 +33,10 @@ export const layoutGridWrapper = css`
     grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
-    grid-template-columns: 1fr repeat(8, minmax(0, ${group4Const})) 1fr;
+    grid-template-columns: 1fr repeat(8, minmax(0, ${group4ColWidth})) 1fr;
   }
   @media (min-width: ${group5ScreenWidthMin}) {
-    grid-template-columns: 1fr repeat(10, minmax(0, ${group5Const})) 1fr;
+    grid-template-columns: 1fr repeat(10, minmax(0, ${group5ColWidth})) 1fr;
   }
 `;
 
