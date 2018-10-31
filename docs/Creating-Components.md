@@ -1,5 +1,5 @@
 # How to create a new component
-There are a lot of moving parts to Simorgh. We use the [Presentational & Container pattern](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) for our components, which we build in two corresponding parts.
+There are a lot of moving parts to Simorgh. We use the [Presentational & Container pattern](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) for our components, which we build in a few stages.
 
 ## Part 1: Create the presentational component
 Run the storybook (`npm run storybook`) and visit http://localhost:9001.
@@ -38,7 +38,7 @@ storiesOf('Blockquote', module).add('quote with cite', () => (
 ));
 ```
 
-## Part 2: Create the container component and integrate it
+## Part 2: Create the container component
 Once your component front-end is merged, you'll need to integrate it into the renderer. Let's work from the lowest level to the highest level:
 
 ### Add a test
@@ -118,7 +118,9 @@ As part of this work, you'll need to...
 ### Define your component propTypes
 Under `src/app/models/propTypes/[Component Name (lowercase)]`, create an `index.jsx` which describes the propTypes your component needs. Import this into your `src/app/containers/[Component Name]/index.jsx`.
 
-### Update the Article component
-As a final step, you need to import your component's container and add to the `componentsToRenderMain` object in `src/app/containers/Article/index.jsx`.
+## Part 3: Integrate the component into the Article
+Before your component can be used in production, it must go through a full accessibility and UX review. These steps don't happen as much in the first two PRs as we don't want them to become a bottleneck for development.
+
+As part of the final review process, you'll need to import your component's container and add it to the `componentsToRenderMain` object in `src/app/containers/Article/index.jsx`.
 
 This feels like duplication of the schema - and it kind of is - but is currently our solution for preventing bundling _all components_ into the application JS.
