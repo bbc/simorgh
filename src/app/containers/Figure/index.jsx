@@ -20,7 +20,7 @@ const FigureContainer = ({ src, alt, ratio, copyright, caption, platform }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
       {platform === 'amp' ? (
-        <AmpImage alt={alt} src={src} />
+        <AmpImage alt={alt} src={src} ratio={ratio} />
       ) : (
         <Image alt={alt} src={src} />
       )}
