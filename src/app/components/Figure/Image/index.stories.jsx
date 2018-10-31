@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Image from './index';
 import AmpImage from './amp/index';
 
@@ -8,14 +8,11 @@ const imageAlt =
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
 
-describe('Image', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Image alt={imageAlt} src={imageSrc} />,
-  );
+storiesOf('Image', module)
+  .add('default', () => (
+    <Image alt={imageAlt} src={imageSrc} />
+  ))
+  .add('default - AMP version', () => (
+    <AmpImage alt={imageAlt} src={imageSrc} />
+  ));
 
-  shouldMatchSnapshot(
-    'should render AMP version correctly',
-    <AmpImage alt={imageAlt} src={imageSrc} />,
-  );
-});
