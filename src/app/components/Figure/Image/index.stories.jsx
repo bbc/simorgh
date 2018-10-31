@@ -13,6 +13,6 @@ storiesOf('Image', module)
     <Image alt={imageAlt} src={imageSrc} />
   ))
   .add('default - AMP version', () => (
-    <AmpImage alt={imageAlt} src={imageSrc} />
+    <AmpImage alt={imageAlt} src={imageSrc} ratio="56.25" />
   ));
 
