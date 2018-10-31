@@ -6,15 +6,8 @@ const chromeLauncher = require('chrome-launcher');
 
 const commandLineArguments = process.argv.slice(2);
 
-// const requiredThresholds = commandLineArguments.map(metric => {
-//   const str = metric.split(/=/);
-//   return {
-//     id: str[0].substring(2),
-//     score: str[1],
-//   };
-// });
-
 const minimumThresholds = {};
+
 commandLineArguments.forEach(metric => {
   const str = metric.split(/=/);
   const id = str[0].substring(2);
@@ -23,6 +16,8 @@ commandLineArguments.forEach(metric => {
 });
 
 function launchChromeAndRunLighthouse(url, opts, config = null) {
+  console.log(`Checking URL: ${url}`);
+
   return chromeLauncher
     .launch({ chromeFlags: opts.chromeFlags })
     .then(chrome => {
@@ -38,7 +33,6 @@ const opts = {
 };
 
 function getScoresPerCategory(reportCategories, url) {
-  console.log(`Checking URL: ${url}`);
   const categoriesArray = Object.keys(reportCategories).map(
     category => reportCategories[category],
   );
@@ -48,17 +42,23 @@ function getScoresPerCategory(reportCategories, url) {
 }
 
 function validateScores(resultsArray, thresholds) {
+  const validatedResults = [];
+
   resultsArray.forEach(result => {
-    console.log('result', result);
-    const resultsObject = { url: result.url };
-    // const keys = Object.keys(thresholds);
+    const minThresholds = thresholds;
     result.scores.forEach(actual => {
-      resultsObject.id = actual.id;
-      resultsObject.score = actual.score;
-      // why are some scores null?
-      console.log(resultsObject);
+      const key = actual.id;
+      const expectedScore = minThresholds[`${key}`];
+      validatedResults.push({
+        url: result.url,
+        id: key,
+        actualScore: actual.score,
+        expectedScore,
+        passes: actual.score < expectedScore,
+      });
     });
   });
+  return validatedResults;
 }
 
 const urls = [
@@ -68,11 +68,26 @@ const urls = [
 
 const lighthouseRuns = urls.map(url =>
   launchChromeAndRunLighthouse(url, opts).then(results =>
-    // no results.categories here are null..
     getScoresPerCategory(results.categories, url),
   ),
 );
 
+function returnFailures(failuresArray) {
+  failuresArray.forEach(failure => {
+    console.log('failure.id', failure.id);
+    console.log('failure.actualScore', failure.actualScore);
+    console.log('failure.expectedScore', failure.expectedScore);
+  });
+
+  // to-do: 
+  // provide detailed metric of failure
+  // exit script so travis fails
+}
+
 Promise.all(lighthouseRuns).then(scoresArray => {
-  validateScores(scoresArray, minimumThresholds);
+  const results = validateScores(scoresArray, minimumThresholds);
+  const failures = results.filter(url => url.passes === false);
+  failures.length > 0
+    ? returnFailures(failures)
+    : console.log('there are no failures');
 });
