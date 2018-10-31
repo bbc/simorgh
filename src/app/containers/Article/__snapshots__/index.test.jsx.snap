@@ -78,6 +78,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "headline": [Function],
           }
         }
+        platform="canonical"
       />
       <Timestamp
         timestamp={1514811600000}
@@ -107,6 +108,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "text": [Function],
           }
         }
+        platform="canonical"
       />
     </MainContent>
     <FooterContainer />
@@ -190,6 +192,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "headline": [Function],
           }
         }
+        platform="canonical"
       />
       <Timestamp
         timestamp={1514811600000}
@@ -219,6 +222,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "text": [Function],
           }
         }
+        platform="canonical"
       />
     </MainContent>
     <FooterContainer />
