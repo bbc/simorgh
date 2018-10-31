@@ -22,6 +22,6 @@ module.exports = {
   "rules": {
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "linebreak-style": ["error", process.platform === 'win32' ? "windows" : "unix"]
+    "linebreak-style": process.platform === 'win32' ? "off" : ["error", "unix"]
   }
 }
