@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, objectOf, arrayOf, func, shape, string, any } from 'prop-types';
+import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
 
 // Inlined as this is a temporary component
@@ -34,11 +34,6 @@ Blocks.propTypes = {
     }),
   ).isRequired,
   componentsToRender: objectOf(func).isRequired,
-  isTopLevel: bool,
-};
-
-Blocks.defaultPropTypes = {
-  isTopLevel: false,
 };
 
 export default Blocks;

@@ -54,13 +54,4 @@ describe('Blocks', () => {
     'should render correctly',
     <Blocks blocks={blocks} componentsToRender={componentsToRender} />,
   );
-
-  shouldShallowMatchSnapshot(
-    'should render correctly for isTopLevel true',
-    <Blocks
-      blocks={blocks}
-      componentsToRender={componentsToRender}
-      isTopLevel
-    />,
-  );
 });
