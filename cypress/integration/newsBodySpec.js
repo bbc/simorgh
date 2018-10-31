@@ -60,6 +60,17 @@ describe('Article Body Tests', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
+  it('should have a loaded image', () => {
+    const firstImage = getElement('img').eq(0);
+    firstImage.should('be.visible');
+    firstImage
+      .invoke('attr', 'src')
+      .and(
+        'eq',
+        'https://ichef.bbci.co.uk/news/640/cpsprodpb/A933/production/_101651334_bouquet_pa.jpg',
+      );
+  });
+
   it('should have a visible image without a caption', () => {
     visibleImageNoCaption(getElement('figure').eq(0));
   });
