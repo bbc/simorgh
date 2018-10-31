@@ -154,10 +154,10 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p064nsyw",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
               {
                 "type" : "caption",
                 "model" : {
@@ -169,7 +169,16 @@
                           {
                             "type" : "paragraph",
                             "model" : {
-                              "text" : "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum."
+                              "text" : "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -240,22 +249,31 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p068lkw4",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p068lkw4",
+            "blocks": [
               {
-                "type" : "caption",
-                "model" : {
-                  "blocks" : [
+                "type": "caption",
+                "model": {
+                  "blocks": [
                     {
-                      "type" : "text",
-                      "model" : {
-                        "blocks" : [
+                      "type": "text",
+                      "model": {
+                        "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "Highlights: Peru 2-0 Scotland"
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Highlights: Peru 2-0 Scotland",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Highlights: Peru 2-0 Scotland",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -299,22 +317,31 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p068hxjb",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p068hxjb",
+            "blocks": [
               {
-                "type" : "caption",
-                "model" : {
-                  "blocks" : [
+                "type": "caption",
+                "model": {
+                  "blocks": [
                     {
-                      "type" : "text",
-                      "model" : {
-                        "blocks" : [
+                      "type": "text",
+                      "model": {
+                        "blocks": [
                           {
-                            "type" : "paragraph",
-                            "model" : {
-                              "text" : "How the Skripals were saved"
+                            "type": "paragraph",
+                            "model": {
+                              "text": "How the Skripals were saved",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "How the Skripals were saved",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
