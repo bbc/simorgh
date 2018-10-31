@@ -301,19 +301,19 @@
             "locator" : "urn:bbc:pips:pid:p067gq6h",
             "blocks" : [
               {
-                "type" : "caption",
-                "model" : {
-                  "blocks" : [
+                "type": "caption",
+                "model": {
+                  "blocks": [
                     {
-                      "type" : "text",
-                      "model" : {
-                        "blocks" : [
+                      "type": "text",
+                      "model": {
+                        "blocks": [
                           {
                             "type" : "paragraph",
                             "model" : {
                               "text" : "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet."
                             }
-                          } 
+                          }
                         ]
                       }
                     }

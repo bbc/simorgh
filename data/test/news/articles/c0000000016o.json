@@ -39,10 +39,10 @@
     "model": {
       "blocks": [
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p064nsyw",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
               {
                 "type" : "aresMedia",
                 "model" : {

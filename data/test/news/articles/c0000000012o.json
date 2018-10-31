@@ -220,10 +220,10 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p067gq6h",
-            "blocks" : [ 
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
               {
                 "type" : "aresMedia",
                 "model" : {
