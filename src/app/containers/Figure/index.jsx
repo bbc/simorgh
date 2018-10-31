@@ -2,6 +2,7 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
+import AmpImage from '../../components/Figure/Image/amp';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
 import Copyright from '../../components/Figure/Copyright';
 import Caption from '../../components/Figure/Caption';
@@ -15,10 +16,17 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
+const FigureContainer = ({ src, alt, ratio, copyright, caption, isAmp }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      <Image alt={alt} src={src} />
+      {isAmp
+        ? (
+          <AmpImage alt={alt} src={src}></AmpImage>
+        )
+        : (
+          <Image alt={alt} src={src} />
+        )
+      }
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(caption)}
