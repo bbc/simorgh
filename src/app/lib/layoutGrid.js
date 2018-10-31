@@ -1,7 +1,9 @@
 import { css } from 'styled-components';
 import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_GUTTER_BELOW_600PX,
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_GUTTER_ABOVE_600PX,
   group2ScreenWidthMin,
   group3ScreenWidthMin,
   group3ScreenWidthMax,
@@ -19,17 +21,17 @@ const group5ColWidth = `6.9rem`;
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: ${group2ScreenWidthMin}) {
-    grid-gap: ${GEL_SPACING};
-    padding: 0 ${GEL_SPACING};
+    grid-gap: ${GEL_GUTTER_BELOW_600PX};
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
   @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
-    padding: 0 ${GEL_SPACING_DBL};
+    padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
   @media (min-width: ${group3ScreenWidthMin}) {
-    grid-gap: ${GEL_SPACING_DBL};
+    grid-gap: ${GEL_GUTTER_ABOVE_600PX};
   }
   @media (max-width: ${group3ScreenWidthMax}) {
-    grid-gap: ${GEL_SPACING_DBL};
+    grid-gap: ${GEL_GUTTER_ABOVE_600PX};
     grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
