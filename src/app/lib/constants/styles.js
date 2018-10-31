@@ -38,6 +38,16 @@ export const GEL_SPACING_TRPL = `1.5rem`;
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING_QUAD = `2rem`;
 
+/*
+    GEL Grid
+    Margins and Gutters are defined here
+    https://www.bbc.co.uk/gel/guidelines/grid#grid-sizes
+*/
+export const GEL_MARGIN_BELOW_400PX = `${GEL_SPACING}`;
+export const GEL_GUTTER_BELOW_600PX = `${GEL_SPACING}`;
+export const GEL_MARGIN_ABOVE_400PX = `${GEL_SPACING_DBL}`;
+export const GEL_GUTTER_ABOVE_600PX = `${GEL_SPACING_DBL}`;
+
 /* 
    Screen sizes for GEL Typography
    These namings are based on the GEL description. They are also known as group B and group D
@@ -59,8 +69,8 @@ export const group0ScreenWidthMax = `14.9375em`; // 239px
 export const group1ScreenWidthMin = `15em`; // 240px
 export const group1ScreenWidthMax = `24.9375em`; // 399px
 
-export const group2ScreenWidthMin = `37.5em`; // 400px
-export const group2ScreenWidthMax = `56.1875em`; // 599px
+export const group2ScreenWidthMin = `25em`; // 400px
+export const group2ScreenWidthMax = `37.4375em`; // 599px
 
 export const group3ScreenWidthMin = `37.5em`; // 600px
 export const group3ScreenWidthMax = `62.9375em`; // 1007px

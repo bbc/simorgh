@@ -98,7 +98,7 @@ server
 
       const app = renderToString(
         sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} />,
+          <ServerApp location={url} routes={routes} data={data} context={{}} />,
         ),
       );
 
