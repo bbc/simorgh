@@ -10,10 +10,7 @@ import {
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
-import {
-  layoutGridWrapper,
-  layoutGridItemFullWidth,
-} from '../../lib/layoutGrid';
+import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
 import { T_BREVIER } from '../../lib/constants/typography';
 
 const StyledFooterLinksWrapper = styled.div`
@@ -22,7 +19,7 @@ const StyledFooterLinksWrapper = styled.div`
 `;
 
 const StyledFooterLinks = styled.div`
-  ${layoutGridItemFullWidth}
+  ${layoutGridItem}
   ${T_BREVIER}
   font-family: ${FF_NEWS_SANS_REG};
 `;
