@@ -1,4 +1,5 @@
 import 'isomorphic-fetch';
+import axios from 'axios';
 
 const getInitialData = async ({ match }) => {
   try {
@@ -8,9 +9,10 @@ const getInitialData = async ({ match }) => {
       process.env.RAZZLE_BASE_PATH
     }/${service}/articles/${id}.json`;
 
-    const response = await fetch(url);
+    const articleJsonResponse = await axios.get(url);
 
-    const data = await response.json();
+    const { data } = articleJsonResponse;
+
     const isAmp = !!amp;
 
     return {
