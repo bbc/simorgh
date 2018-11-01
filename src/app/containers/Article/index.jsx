@@ -10,6 +10,7 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
+import { PlatformContextProvider } from '../../components/PlatformContext';
 import Timestamp from '../../components/Timestamp';
 import {
   layoutGridWrapper,
@@ -80,25 +81,25 @@ const ArticleContainer = ({ loading, error, data }) => {
               service={service}
             />
             <main role="main">
-              <Wrapper>
-                <GridItemConstrained>
-                  <Blocks
-                    platform={isAmp ? 'amp' : 'canonical'}
-                    blocks={headlineBlocks}
-                    componentsToRender={componentsToRenderHeadline}
-                  />
-                  <Timestamp timestamp={metadata.lastUpdated} />
-                </GridItemConstrained>
-              </Wrapper>
-              <OatWrapper>
-                <GridItemConstrained>
-                  <Blocks
-                    platform={isAmp ? 'amp' : 'canonical'}
-                    blocks={mainBlocks}
-                    componentsToRender={componentsToRenderMain}
-                  />
-                </GridItemConstrained>
-              </OatWrapper>
+              <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+                <Wrapper>
+                  <GridItemConstrained>
+                    <Blocks
+                      blocks={headlineBlocks}
+                      componentsToRender={componentsToRenderHeadline}
+                    />
+                    <Timestamp timestamp={metadata.lastUpdated} />
+                  </GridItemConstrained>
+                </Wrapper>
+                <OatWrapper>
+                  <GridItemConstrained>
+                    <Blocks
+                      blocks={mainBlocks}
+                      componentsToRender={componentsToRenderMain}
+                    />
+                  </GridItemConstrained>
+                </OatWrapper>
+              </PlatformContextProvider>
             </main>
             <Footer />
           </ServiceContextProvider>

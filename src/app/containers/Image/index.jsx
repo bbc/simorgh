@@ -32,7 +32,7 @@ const getIChefURL = (originCode, locator) => {
 const getRawImageSrc = (originCode, locator) =>
   originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
-const ImageContainer = ({ blocks, platform }) => {
+const ImageContainer = ({ blocks }) => {
   if (!blocks) {
     return null;
   }
@@ -60,7 +60,6 @@ const ImageContainer = ({ blocks, platform }) => {
 
   return (
     <Figure
-      platform={platform}
       src={rawImageSrc}
       alt={altText}
       ratio={ratio}

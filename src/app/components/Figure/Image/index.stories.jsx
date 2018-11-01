@@ -9,7 +9,7 @@ const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png';
 
 storiesOf('Image', module)
-  .add('default', () => <Image alt={imageAlt} src={imageSrc} />)
+  .add('default', () => <Image alt={imageAlt} src={imageSrc} ratio="56.25" />)
   .add('default - AMP version', () => (
     <AmpImage alt={imageAlt} src={imageSrc} ratio="56.25" />
   ));

@@ -7,6 +7,7 @@ import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
 import Copyright from '../../components/Figure/Copyright';
 import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
+import { PlatformContextConsumer } from '../../components/PlatformContext';
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -16,14 +17,18 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, alt, ratio, copyright, caption, platform }) => (
+const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      {platform === 'amp' ? (
-        <AmpImage alt={alt} src={src} ratio={ratio} />
-      ) : (
-        <Image alt={alt} src={src} />
-      )}
+      <PlatformContextConsumer>
+        {({ platform }) =>
+          platform === 'amp' ? (
+            <AmpImage alt={alt} src={src} ratio={ratio} />
+          ) : (
+            <Image alt={alt} src={src} ratio={ratio} />
+          )
+        }
+      </PlatformContextConsumer>
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(caption)}
@@ -36,7 +41,6 @@ FigureContainer.propTypes = {
   ratio: number.isRequired,
   copyright: string,
   caption: string,
-  platform: string.isRequired,
 };
 
 FigureContainer.defaultProps = {

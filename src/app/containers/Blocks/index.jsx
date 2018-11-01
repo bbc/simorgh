@@ -8,7 +8,7 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
-const Blocks = ({ blocks, componentsToRender, platform }) =>
+const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, model } = block;
 
@@ -18,7 +18,6 @@ const Blocks = ({ blocks, componentsToRender, platform }) =>
 
     return (
       <Block
-        platform={platform}
         key={nanoid()}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
