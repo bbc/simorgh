@@ -4,11 +4,26 @@ const chromeLauncher = require('chrome-launcher');
 // run this with
 // node scripts/lighthouseRunner.js --accessibility=2 --seo=2 --best-practices=2 --pwa=2 --performance=2
 
-const commandLineArguments = process.argv.slice(2);
+const thresholdTypes = [
+  'acessibility',
+  'seo',
+  'best-practices',
+  'pwa',
+  'performance',
+];
+
+if (process.argv.length < 3) {
+  process.on('exit', () => {
+    console.log(
+      `Supply thresholds for: ${thresholdTypes.slice(' ').join(', ')}`,
+    );
+  });
+  process.exit(9);
+}
 
 const minimumThresholds = {};
 
-commandLineArguments.forEach(metric => {
+process.argv.slice(2).forEach(metric => {
   const str = metric.split(/=/);
   const id = str[0].substring(2);
   const score = str[1];
