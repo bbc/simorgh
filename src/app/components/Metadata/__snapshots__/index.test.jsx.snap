@@ -115,10 +115,6 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
-  <script
-    async={true}
-    src="https://cdn.ampproject.org/v0.js"
-  />
 </HelmetWrapper>
 `;
 
@@ -469,10 +465,6 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
-  />
-  <script
-    async={true}
-    src="https://cdn.ampproject.org/v0.js"
   />
 </HelmetWrapper>
 `;
