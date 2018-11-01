@@ -1,13 +1,13 @@
 import { shape, oneOf, arrayOf, oneOfType, checkPropTypes } from 'prop-types';
 import getMissingRequiredProps from './getMissingRequiredProps';
 
-export const blockObjectOfSpecificTypeAndModel = (type, model) => ({
-  type: oneOf([type]).isRequired,
+export const blockObjectOfTypesAndModel = (types, model) => ({
+  type: oneOf(types).isRequired,
   model: shape(model).isRequired,
 });
 
-export const blockOfSpecificTypeAndModel = (type, model) =>
-  shape(blockObjectOfSpecificTypeAndModel(type, model));
+export const blockOfTypesAndModel = (types, model) =>
+  shape(blockObjectOfTypesAndModel(types, model));
 
 export const blocksWithTypes = blockTypes => ({
   blocks: arrayOf(oneOfType(blockTypes).isRequired).isRequired,

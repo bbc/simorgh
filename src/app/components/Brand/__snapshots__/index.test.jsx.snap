@@ -45,16 +45,26 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
   margin-top: 1.25rem;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
-    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
     padding: 0 1rem;
   }
 }
@@ -67,17 +77,23 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
   }
 }
 
-@media (max-width:56.1875em) {
+@media (min-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:37.5em) {
   .c1 {
     grid-column: 1 / -1;
   }
@@ -91,13 +107,13 @@ exports[`Brand should render correctly with a default indented logo 1`] = `
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    grid-column: 2 / -2;
+    grid-column: 3 / -3;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    grid-column: 3 / -3;
+    grid-column: 4 / -4;
   }
 }
 
@@ -196,16 +212,26 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
-    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
     padding: 0 1rem;
   }
 }
@@ -218,13 +244,19 @@ exports[`Brand should render correctly with indentedLogo false 1`] = `
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
   }
 }
 
