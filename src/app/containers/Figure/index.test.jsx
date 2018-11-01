@@ -1,6 +1,13 @@
 import React from 'react';
 import FigureContainer from './index';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { PlatformContext } from '../../components/PlatformContext';
+
+const FigureWithContext = (children, platform) => (
+  <PlatformContext.Provider value={{ platform }}>
+    {children}
+  </PlatformContext.Provider>
+);
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
@@ -12,16 +19,26 @@ const copyrightText = 'Getty Images';
 describe('Figure', () => {
   shouldShallowMatchSnapshot(
     'should render an image with alt text',
-    <FigureContainer src={imageSrc} alt={imageAlt} />,
+    <FigureWithContext platform="canonical">
+      <FigureContainer src={imageSrc} alt={imageAlt} />
+    </FigureWithContext>,
   );
 
   shouldShallowMatchSnapshot(
     'should render copyright text',
-    <FigureContainer src={imageSrc} alt={imageAlt} copyright={copyrightText} />,
+    <FigureWithContext platform="canonical">
+      <FigureContainer
+        src={imageSrc}
+        alt={imageAlt}
+        copyright={copyrightText}
+      />
+    </FigureWithContext>,
   );
 
   shouldShallowMatchSnapshot(
     'should render caption text',
-    <FigureContainer src={imageSrc} alt={imageAlt} caption={caption} />,
+    <FigureWithContext platform="canonical">
+      <FigureContainer src={imageSrc} alt={imageAlt} caption={caption} />
+    </FigureWithContext>,
   );
 });

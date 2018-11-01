@@ -1,7 +1,7 @@
 import React from 'react';
 import { func, node, string } from 'prop-types';
 
-export const PlatformContext = React.createContext(/* services.default */);
+export const PlatformContext = React.createContext({});
 
 export const PlatformContextProvider = ({ children, platform }) => (
   <PlatformContext.Provider value={{ platform }}>

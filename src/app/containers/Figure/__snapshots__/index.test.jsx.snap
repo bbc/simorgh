@@ -1,41 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure should render an image with alt text 1`] = `
-<Figure>
-  <ImagePlaceholder>
-    <Image
+<Context.Provider
+  value={
+    Object {
+      "platform": Object {},
+    }
+  }
+>
+  Object {
+    "children": <FigureContainer
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      caption={null}
+      copyright={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-    />
-  </ImagePlaceholder>
-</Figure>
+    />,
+    "platform": "canonical",
+  }
+</Context.Provider>
 `;
 
 exports[`Figure should render caption text 1`] = `
-<Figure>
-  <ImagePlaceholder>
-    <Image
+<Context.Provider
+  value={
+    Object {
+      "platform": Object {},
+    }
+  }
+>
+  Object {
+    "children": <FigureContainer
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      caption="This is a caption"
+      copyright={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-    />
-  </ImagePlaceholder>
-  <Text
-    paragraphOverride={[Function]}
-    text="This is a caption"
-  />
-</Figure>
+    />,
+    "platform": "canonical",
+  }
+</Context.Provider>
 `;
 
 exports[`Figure should render copyright text 1`] = `
-<Figure>
-  <ImagePlaceholder>
-    <Image
+<Context.Provider
+  value={
+    Object {
+      "platform": Object {},
+    }
+  }
+>
+  Object {
+    "children": <FigureContainer
       alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+      caption={null}
+      copyright="Getty Images"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-    />
-    <Copyright>
-      Getty Images
-    </Copyright>
-  </ImagePlaceholder>
-</Figure>
+    />,
+    "platform": "canonical",
+  }
+</Context.Provider>
 `;

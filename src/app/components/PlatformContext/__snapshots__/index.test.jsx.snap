@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlatformContext should forward the amp type 1`] = `
+<span>
+  amp
+</span>
+`;
+
+exports[`PlatformContext should forward the canonical type 1`] = `
+<span>
+  canonical
+</span>
+`;
