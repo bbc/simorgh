@@ -11,6 +11,8 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !data.isAmp;
+  const ampNoscriptStyling = `body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}`;
+  const ampScriptStyling = `body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}`;
   const scripts = assets.map(asset => (
     <script
       crossOrigin="anonymous"
@@ -35,6 +37,12 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {title}
         {links}
         {styleTags}
+        {data.isAmp && <style amp-boilerplate="">{ampScriptStyling}</style>}
+        {data.isAmp && (
+          <noscript>
+            <style amp-boilerplate="">{ampNoscriptStyling}</style>
+          </noscript>
+        )}
         {data.isAmp && (
           <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
         )}
