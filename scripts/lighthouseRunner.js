@@ -1,9 +1,6 @@
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
-// run this with
-// node scripts/lighthouseRunner.js --accessibility=2 --seo=2 --best-practices=2 --pwa=2 --performance=2
-
 const thresholdTypes = [
   'acessibility',
   'seo',
@@ -29,8 +26,6 @@ process.argv.slice(2).forEach(metric => {
 });
 
 function launchChromeAndRunLighthouse(url, opts, config = null) {
-  console.log(`Checking URL: ${url}`);
-
   return chromeLauncher
     .launch({ chromeFlags: opts.chromeFlags })
     .then(chrome => {
@@ -45,13 +40,13 @@ const opts = {
   chromeFlags: ['--headless'],
 };
 
-function getScoresPerCategory(reportCategories, url) {
+function getScoresPerCategory(reportCategories, audits, url) {
   const categoriesArray = Object.keys(reportCategories).map(
     category => reportCategories[category],
   );
   const scores = categoriesArray.map(({ id, score }) => ({ id, score }));
 
-  return { scores, url };
+  return { scores, url, audits };
 }
 
 function validateScores(resultsArray, thresholds) {
@@ -59,17 +54,24 @@ function validateScores(resultsArray, thresholds) {
 
   resultsArray.forEach(result => {
     const minThresholds = thresholds;
+
+    const resultsObj = {
+      url: result.url,
+      scores: [],
+    };
+
     result.scores.forEach(actual => {
       const key = actual.id;
       const expectedScore = minThresholds[`${key}`];
-      validatedResults.push({
-        url: result.url,
+      resultsObj.scores.push({
         id: key,
         actualScore: actual.score,
         expectedScore,
-        passes: actual.score >= expectedScore,
+        pass: actual.score >= expectedScore,
       });
     });
+
+    validatedResults.push(resultsObj);
   });
   return validatedResults;
 }
@@ -81,31 +83,34 @@ const urls = [
 
 const lighthouseRuns = urls.map(url => {
   return launchChromeAndRunLighthouse(url, opts).then(results => {
-    // console.log('results', results);
-    return getScoresPerCategory(results.categories, url);
+    return getScoresPerCategory(results.categories, results.audits, url);
   });
 });
 
-function logHighLevelScores(scoresArray) {
-  scoresArray.forEach(scoreObj => {
-    console.log(`\nLighthouse results for ${scoreObj.url}:`);
-    scoreObj.scores.forEach(score => {
-      console.log(`${score.id}: ${score.score}`);
+function logHighLevelScores(results) {
+  const failures = [];
+  results.forEach(result => {
+    console.log(`\nLighthouse results for ${result.url}:`);
+    result.scores.forEach(score => {
+      console.log(
+        `Category: ${score.id}, actual: ${score.actualScore}, expected: ${
+          score.expectedScore
+        }, pass: ${score.pass}`,
+      );
+      if (!score.pass) {
+        failures.push({ url: result.url, category: score.id });
+      }
     });
   });
+  return failures;
 }
-
-// function logFailureDetails(failures) {
-//   console.log('failures-----', failures);
-// }
 
 Promise.all(lighthouseRuns).then(scoresArray => {
   const results = validateScores(scoresArray, minimumThresholds);
-  // console.log('validated results', results);
-  logHighLevelScores(scoresArray);
+  const failures = logHighLevelScores(results);
 
-  // const failures = results.filter(url => url.passes === false);
-  // if (failures.length > 0) {
-  //   logFailureDetails(failures);
-  // }
+  if (failures.length > 0) {
+    process.on('exit', () => `Lighthouse tests failed`);
+    process.exit(1);
+  }
 });
