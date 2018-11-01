@@ -42,78 +42,84 @@ Here are the font sizes in `px`s:
 | Brevier      | 14            | 16              | 14            | 18              | 13            | 16              | Article timestamps                                               |
 | Minion       | 12            | 16              | 12            | 16              | 12            | 16              | Article category                                                 |
 
-# Layout requirements
+# Layout
 
-As per the [GEL grid Guidelines](https://www.bbc.co.uk/gel/guidelines/grid) we have the following columns:
+## UX grid definition
 
-- 240px - 399px (6 column) 
-- 400px - 599px (6 column)
-- 600px - 1007px (6 column)
-- 1008px - 1279px (8 column)
-- 1280px+ (10 column)
+As per the [GEL grid Guidelines](https://www.bbc.co.uk/gel/guidelines/grid) we have the following UX grid definition:
 
-The following is a breakdown of the article layout design for given breakpoints:
+| Breakpoints     | Gutters | Margins | Grid width limitations |
+| :-------------- | :------ | :------ | :--------------------- |
+| 0px - 399px     | 8px     | 8px     | dynamic / full width   |
+| 400px - 599px   | 8px     | 16px    | dynamic / full width   |
+| 600px - 1007px  | 16px    | 16px    | dynamic / full width   |
+| 1008px - 1280px | 16px    | 16px    | static / 1008px        |
+| 1280px +        | 16px    | 16px    | static / 1280px        |
 
-**Between 1px - 599px**
+## Article layout requirements
 
-- left and right margin of 8px
-- article content full width of the page EG: all columns used
-- *See Figures 1 and 2*
+In the article project we have requirements for items to span wider than the grid, these "full bleed" items will span the full width of the viewport effectively breaking out of the grid.
 
-**Between 600px - 1007px**
+The article layout UX design has the following requirements:
 
-- left and right margin of 16px
-- of 6 columns the article body content spans the central 4
-- *See Figure 3*
+| Breakpoints     | Columns | Content* spans X columns | 
+| :-------------- | :------ | :----------------------- | 
+| 0px - 399px     | 1       | 1 of 1                   | 
+| 400px - 599px   | 6       | 4 of 6                   | 
+| 400px - 599px   | 6       | 4 of 6                   | 
+| 600px - 1007px  | 6       | 4 of 6                   | 
+| 1008px - 1280px | 8       | 6 of 8                   | 
+| 1280px +        | 10      | 6 of 10                  | 
+* content contained within the grid, therefore not "full bleed"
 
-**Between 1008px - 1279px**
+## Our CSS grid implementation
 
-- left and right margin of 16px
-- the 8 columns are restricted to a width of 1008px
-  EG: at a 1208px viewport the layout should be { 100px | 8 columns | 100px } where the 100px are flexible making up the difference between the 1008px columns max width and the viewport
-- of 8 columns the article body content spans the central 6
-- *See Figure 4*
+Because of the above requirements we have a complex implementation of the grid mainly to support the "full bleed" component requirement.
 
-**Above 1280px**
+To achieve this we have used CSS grid which allows us to define both static or responsive columns depending on the UX grid definition.
 
-- left and right margin of 16px
-- the 10 columns are restricted to a width of 1280px
-  EG: at a 1400px viewport the layout should be { 60px | 10 columns | 60px } where the 60px are flexible making up the difference between the 1280px columns max width and the viewport
-- of 10 columns the article body content spans the central 6
-- *See Figure 5*
+CSS Grid has the ability to add "grid-gaps" which are rendered inclusive of the grid as gaps between the columns/rows. This means we can directly use them as the gutters to match the UX grid.
 
-## Product requirements
+Below 1008px we define all columns to be dynamic. 
 
-We have requirements for components within the article body to go "full bleed" in which they will break out of all defined columns and fill the entire viewport. This is simple to achieve for viewports under 1008px as the columns span the entire width of the viewport, however for viewports greater than 1007px this is more complex as we need to limit the max width of the columns whilst still supporting the ability for individual components to expand outside of the max width. For details see "article layout design for given breakpoints" in Layout Requirements.
+Above 1007px we statically define the widths of the columns due to the fact they are limited in the UX definition, which then allows us to have a dynamic column either side of the UX grid. 
+  EG: In CSS grid values we can specific `grid-template-columns: 1fr repeat(10, minmax(0, ${staticColWidth})) 1fr;` where the `1fr`s are dymanic and the columns and `repeat()` are the static width columns.
 
-We also want flexiblity when placing components such as a single onward journey, and potentially adverts or similar, alongside the article body content. In the future the placement of this type of component will be content aware and potentially personalised. This requires another level of flexibilty.
+The combination of the UX grid having margins prior to the column definitions and the product requirements for a "full bleed" component creates an interesting problem. We can't use CSS paddings or margins before the CSS grid implementation otherwise all components in the grid will be limited to the padding/margin and not able to go "full bleed". Our solution to this problem stems from the implementation of the static columns above 1007px - we can define a CSS grid that has an additional column either side of the UX defined columns so that the grid-gaps act both inbetween the columns as gutters and also outside of the grid as margins. 
+**NB: This implementation means at every viewport we have an additional column either side of the UX defined columns, often as a 0px column.**
 
-See Figure 7 for an example of the potential layout we may have to support. 
+Therefore to meet all requirements we implement the following CSS grid where gutters and margins are grid-gaps:
 
-## Problems
+| Breakpoints     | Columns           | Gutters   | Margins          | Figure |
+| :-------------- | :---------------- | :-------- | :--------------- | :----- |
+| 0px - 399px     | 1 + 2 of 0px      | 0 of 8px  | 2 of 8px         | 1      |
+| 400px - 599px   | 6 + 2 of 8px*     | 5 of 8px  | 2 of 16px        | 2      |
+| 600px - 1007px  | 6 + 2 of 0px      | 5 of 16px | 2 of 16px        | 3      |
+| 1008px - 1280px | 8 + 2 of 1fr      | 7 of 16px | 2 of 16px        | 4      |
+| 1280px +        | 10 + 2 of 1fr     | 9 of 16px | 2 of 16px        | 5      |
 
-As we want content to go "full bleed" we cannot use max-width to define the 1008|1280px column layouts as defined by UX. Also as a full bleed component will span to the very edge of the viewport the wrapper of each component's wrapper will need to know about the layout margins.
+`6 + 2 of 0px` - is based on having a 0px column either side of UX  grid so we can use CSS grid-gaps as the UX margin while allowing a grid item to be able to go "full bleed". 
+`6 + 2 of 8px*` - between 400px and 599px we have an 8px column either side of the UX grid so that the grid-gap (8px) and additional column (8px) combined meet the 16px UX margin.
+`0 of 8px` - under 400px we have only 1 column and therefore no gutters.
 
-## Solution
-
-This is where CSS grid comes in.
-
-Using grid we can statically define the 1008|1280px column layouts while having a flexible additional column either side of the main column layout, see example [codepen](https://codepen.io/phil-lee/full/GYLBrd/). This allows each grid row to be capable of going full-bleed while still knowing about the UX defined grid, which also allows for styling of a row across the entire viewport rather than within a defined width or wrapper. 
-See Figure 6 or example Codepen for details
-
-In terms of components such as the single onward journey which need very flexible placement we are also helped out by using CSS grid because of it's ability to span across all rows and columns with simple CSS. 
+## TL;DR 
+- We work to a UX grid
+- UX margins are exclusive of the UX column definition
+- We have a requirement to allow some items to break out of the grid
+- To achieve these requirement we've used CSS grid to define an additional column either side of the UX grid
+- 
+- This [Codepen](https://codepen.io/phil-lee/full/MPMrzJ/) is a working demo
 
 ## Additional content
 
 * [Investigation PR](https://github.com/BBC-News/simorgh/pull/824)
-* [Layout flexibilty example](https://codepen.io/phil-lee/pen/NOMzmB)
-* [Solution example detailing columns](https://codepen.io/phil-lee/full/zmjaMO/)
+* [Statically defined columns for above 1280px example](https://codepen.io/phil-lee/full/zmjaMO/)
 
-### Figure 1 - Article grid layout at 240px
-<img width="240" alt="Screenshot showing the article layout at 240px" src="https://user-images.githubusercontent.com/7791726/47645523-327e7f00-db69-11e8-9d79-b3bb59cc5cba.png">
+### Figure 1 - Article grid layout at 300px
+<img width="315" alt="Screenshot showing the article layout at 300px" src="https://user-images.githubusercontent.com/7791726/47848179-69e96780-ddc5-11e8-9f9d-b5e3f2fb7cca.png">
 
-### Figure 2 - Article grid layout at 400px
-<img width="400" alt="Screenshot showing the article layout at 400px" src="https://user-images.githubusercontent.com/7791726/47645641-8ab58100-db69-11e8-9643-a6c8686673d0.png">
+### Figure 2 - Article grid layout at 500px
+<img width="500" alt="Screenshot showing the article layout at 500px" src="https://user-images.githubusercontent.com/7791726/47848281-c3519680-ddc5-11e8-91fd-ec354b179cc1.png">
 
 ### Figure 3 - Article grid layout at 600px
 <img width="600" alt="Screenshot showing the article layout at 600px" src="https://user-images.githubusercontent.com/7791726/47645696-b0db2100-db69-11e8-93bc-3c600077e101.png">
@@ -123,9 +129,3 @@ In terms of components such as the single onward journey which need very flexibl
 
 ### Figure 5 - Article grid layout at 1280px
 <img width="1280" alt="Screenshot showing the article layout at 1280px" src="https://user-images.githubusercontent.com/7791726/47646276-517e1080-db6b-11e8-8fe2-e4b83c26d2fd.png">
-
-### Figure 6 - Screenshot highlighting the CSS Grid solution at various viewports
-<img width="1280" alt="Screenshot detailing the use of columns" src="https://user-images.githubusercontent.com/7791726/47719329-b6586a00-dc42-11e8-8e6c-4c8747452537.png">
-
-### Figure 7 - Screenshot of potential future layouts
-<img width="1424" alt="Screenshot of the potential complex layouts we may support in the future" src="https://user-images.githubusercontent.com/7791726/47646694-99e9fe00-db6c-11e8-8d42-82315b5e93e8.png">
