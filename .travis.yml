@@ -2,22 +2,22 @@ language: node_js
 before_install: npm install -g npm@6.4.1
 jobs:
   include:
-    - stage: test
-      install: npm ci
-      before_script:
-        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        - chmod +x ./cc-test-reporter
-        - ./cc-test-reporter before-build
-      script:
-        - npm run test
-        - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-        # - xvfb-run npm run test:e2e:storybook:ci
-        - xvfb-run npm run test:lighthouse:ci
+    # - stage: test
+    #   install: npm ci
+    #   before_script:
+    #     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    #     - chmod +x ./cc-test-reporter
+    #     - ./cc-test-reporter before-build
+    #   script:
+    #     - npm run test
+    #     - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+    #     - xvfb-run npm run test:e2e:storybook:ci
     - stage: test
       install: npm ci --only=production
       script:
         - npm run build
         - xvfb-run npm run test:prod:ci
+        - xvfb-run npm run test:lighthouse:ci
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
