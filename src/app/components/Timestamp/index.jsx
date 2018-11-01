@@ -23,14 +23,19 @@ const formatDateTime = dateObj => {
   return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
 };
 
-const formatTimestamp = dateObj =>
-  dateObj.toLocaleDateString('en-GB', {
-    day: 'numeric',
+const formatTimestamp = dateObj => {
+  const fullYear = dateObj.getFullYear();
+  const monthLong = dateObj.toLocaleDateString('en-GB', {
     month: 'long',
-    year: 'numeric',
+  });
+  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
+    day: 'numeric',
   });
 
-const StyledTimestamp = styled.span`
+  return `${dayNumeric} ${monthLong} ${fullYear}`;
+};
+
+const StyledTimestamp = styled.div`
   ${T_BREVIER};
   color: ${C_RHINO};
   font-family: ${FF_NEWS_SANS_REG};
@@ -38,7 +43,7 @@ const StyledTimestamp = styled.span`
 `;
 
 const Timestamp = ({ timestamp }) => {
-  const dateObj = new Date(timestamp * 1000);
+  const dateObj = new Date(timestamp);
 
   if (!isValidDateTime(dateObj)) {
     return null;
