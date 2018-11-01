@@ -14,9 +14,7 @@ const thresholdTypes = [
 
 if (process.argv.length < 3) {
   process.on('exit', () => {
-    console.log(
-      `Supply thresholds for: ${thresholdTypes.slice(' ').join(', ')}`,
-    );
+    console.log(`Supply thresholds for: ${thresholdTypes.join(', ')}`);
   });
   process.exit(9);
 }
@@ -44,7 +42,7 @@ function launchChromeAndRunLighthouse(url, opts, config = null) {
 }
 
 const opts = {
-  chromeFlags: ['--show-paint-rects'],
+  chromeFlags: ['--headless'],
 };
 
 function getScoresPerCategory(reportCategories, url) {
@@ -69,7 +67,7 @@ function validateScores(resultsArray, thresholds) {
         id: key,
         actualScore: actual.score,
         expectedScore,
-        passes: actual.score < expectedScore,
+        passes: actual.score >= expectedScore,
       });
     });
   });
@@ -81,28 +79,33 @@ const urls = [
   'http://localhost:7080/news/articles/c85pqyj5m2ko',
 ];
 
-const lighthouseRuns = urls.map(url =>
-  launchChromeAndRunLighthouse(url, opts).then(results =>
-    getScoresPerCategory(results.categories, url),
-  ),
-);
-
-function returnFailures(failuresArray) {
-  failuresArray.forEach(failure => {
-    console.log('failure.id', failure.id);
-    console.log('failure.actualScore', failure.actualScore);
-    console.log('failure.expectedScore', failure.expectedScore);
+const lighthouseRuns = urls.map(url => {
+  return launchChromeAndRunLighthouse(url, opts).then(results => {
+    // console.log('results', results);
+    return getScoresPerCategory(results.categories, url);
   });
+});
 
-  // to-do: 
-  // provide detailed metric of failure
-  // exit script so travis fails
+function logHighLevelScores(scoresArray) {
+  scoresArray.forEach(scoreObj => {
+    console.log(`\nLighthouse results for ${scoreObj.url}:`);
+    scoreObj.scores.forEach(score => {
+      console.log(`${score.id}: ${score.score}`);
+    });
+  });
 }
+
+// function logFailureDetails(failures) {
+//   console.log('failures-----', failures);
+// }
 
 Promise.all(lighthouseRuns).then(scoresArray => {
   const results = validateScores(scoresArray, minimumThresholds);
-  const failures = results.filter(url => url.passes === false);
-  failures.length > 0
-    ? returnFailures(failures)
-    : console.log('there are no failures');
+  // console.log('validated results', results);
+  logHighLevelScores(scoresArray);
+
+  // const failures = results.filter(url => url.passes === false);
+  // if (failures.length > 0) {
+  //   logFailureDetails(failures);
+  // }
 });
