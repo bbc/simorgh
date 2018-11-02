@@ -2,7 +2,7 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
 const thresholdTypes = [
-  'acessibility',
+  'accessibility',
   'seo',
   'best-practices',
   'pwa',
