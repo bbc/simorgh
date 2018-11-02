@@ -1,29 +1,7 @@
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
-const thresholdTypes = [
-  'accessibility',
-  'seo',
-  'best-practices',
-  'pwa',
-  'performance',
-];
-
-if (process.argv.length < 3) {
-  process.on('exit', () => {
-    console.log(`Supply thresholds for: ${thresholdTypes.join(', ')}`);
-  });
-  process.exit(9);
-}
-
-const minimumThresholds = {};
-
-process.argv.slice(2).forEach(metric => {
-  const str = metric.split(/=/);
-  const id = str[0].substring(2);
-  const score = str[1];
-  minimumThresholds[id] = score;
-});
+const config = require(`./../lighthouse`);
 
 function launchChromeAndRunLighthouse(url, opts, config = null) {
   return chromeLauncher
@@ -35,10 +13,6 @@ function launchChromeAndRunLighthouse(url, opts, config = null) {
       });
     });
 }
-
-const opts = {
-  chromeFlags: ['--headless'],
-};
 
 function getScoresPerCategory(reportCategories, audits, url) {
   const categoriesArray = Object.keys(reportCategories).map(
@@ -76,13 +50,8 @@ function validateScores(resultsArray, thresholds) {
   return validatedResults;
 }
 
-const urls = [
-  'http://localhost:7080/news/articles/c9rpqy7pmypo',
-  'http://localhost:7080/news/articles/c85pqyj5m2ko',
-];
-
-const lighthouseRuns = urls.map(url => {
-  return launchChromeAndRunLighthouse(url, opts).then(results => {
+const lighthouseRuns = config.urls.map(url => {
+  return launchChromeAndRunLighthouse(url, config.opts).then(results => {
     return getScoresPerCategory(results.categories, results.audits, url);
   });
 });
@@ -106,7 +75,7 @@ function logHighLevelScores(results) {
 }
 
 Promise.all(lighthouseRuns).then(scoresArray => {
-  const results = validateScores(scoresArray, minimumThresholds);
+  const results = validateScores(scoresArray, config.thresholds);
   const failures = logHighLevelScores(results);
 
   // Uncomment to fail Travis build
