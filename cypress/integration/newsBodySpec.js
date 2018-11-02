@@ -3,6 +3,7 @@ import {
   checkElementStyles,
   getElement,
   placeholderImageLoaded,
+  renderedTitle,
   shouldContainText,
   shouldContainStyles,
   visibleImageNoCaption,
@@ -83,11 +84,11 @@ describe('Article Body Tests', () => {
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
 
-  // it('should render a title', () => {
-  //   renderedTitle(
-  //     "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
-  //   );
-  // });
+  it('should render a title', () => {
+    renderedTitle(
+      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
+    );
+  });
 
   it('should have an inline link with focus styling', () => {
     const firstInlineLink = getElement('main a');
