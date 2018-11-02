@@ -25,7 +25,8 @@ const englishRelativeExpectedOutput = '4 hours ago';
 const persianAbsoluteExpectedOutput = persianDateAsCharArray
   .join('')
   .toString();
-const persianRelativeExpectedOutput = '۴ ساعت پیش';
+// const persianRelativeExpectedOutput = '۴ ساعت پیش';
+const persianRelativeExpectedOutputWithLatinNumbers = '4 ساعت پیش';
 
 const testLocalisedTimestamp = (locale, expected, relative = false) => {
   let output = '';
@@ -72,11 +73,11 @@ describe('LocalisedTimestamp', () => {
 
   describe('Static assertions to ensure timestamp format', () => {
     it('should render an english absolute date in the format D MMM YYYY', () => {
-      testLocalisedTimestamp('en-gb', englishAbsoluteExpectedOutput);
+      testLocalisedTimestamp('en', englishAbsoluteExpectedOutput);
     });
 
     it('should render an english relative date in the format D MMM YYYY', () => {
-      testLocalisedTimestamp('en-gb', englishRelativeExpectedOutput, true);
+      testLocalisedTimestamp('en', englishRelativeExpectedOutput, true);
     });
 
     it('should render an persian absolute date in the format D MMM YYYY', () => {
@@ -84,7 +85,11 @@ describe('LocalisedTimestamp', () => {
     });
 
     it('should render an persian relative date in the format D MMM YYYY', () => {
-      testLocalisedTimestamp('fa', persianRelativeExpectedOutput, true);
+      testLocalisedTimestamp(
+        'fa',
+        persianRelativeExpectedOutputWithLatinNumbers,
+        true,
+      );
     });
   });
 });
