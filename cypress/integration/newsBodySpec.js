@@ -1,10 +1,13 @@
 import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
+  checkElementStylesWithText,
+  checkHeadline,
   getElement,
   placeholderImageLoaded,
   shouldContainText,
   shouldContainStyles,
+  visibleImage,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
@@ -17,9 +20,9 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a headline', () => {
+    checkHeadline('h1');
     checkElementStyles(
       'h1',
-      'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
       'rgb(34, 34, 34)',
       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
     );
@@ -30,7 +33,7 @@ describe('Article Body Tests', () => {
       const { lastUpdated } = win.SIMORGH_DATA.data.metadata;
       const timeStamp = Cypress.moment(lastUpdated).format('D MMMM YYYY');
 
-      checkElementStyles(
+      checkElementStylesWithText(
         'time',
         timeStamp,
         'rgb(90, 90, 90)',
@@ -40,7 +43,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a subheading', () => {
-    checkElementStyles(
+    checkElementStylesWithText(
       'h2',
       "Queen Victoria's myrtle",
       'rgb(64, 64, 64)',
@@ -58,6 +61,10 @@ describe('Article Body Tests', () => {
 
   it('should have a placeholder image', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
+  });
+
+  it('should render the first image', () => {
+    visibleImage('img');
   });
 
   it('should have a visible image without a caption', () => {

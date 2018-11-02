@@ -14,9 +14,20 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-export const checkElementStyles = (elementString, text, color, fontFamily) => {
+export const checkElementStylesWithText = (
+  elementString,
+  text,
+  color,
+  fontFamily,
+) => {
   const el = getElement(elementString);
   shouldContainText(el, text);
+  shouldContainStyles(el, 'color', color);
+  shouldContainStyles(el, 'font-family', fontFamily);
+};
+
+export const checkElementStyles = (element, color, fontFamily) => {
+  const el = getElement(element);
   shouldContainStyles(el, 'color', color);
   shouldContainStyles(el, 'font-family', fontFamily);
 };
@@ -26,6 +37,13 @@ export const checkFooterLinks = (position, url) => {
     .eq(position)
     .should('have.attr', 'href')
     .and('contain', url);
+};
+
+export const checkHeadline = headlinePosition => {
+  cy.window().then(win => {
+    const { promoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+    getElement(headlinePosition).should('contain', promoHeadline);
+  });
 };
 
 export const checkLinkStyling = position => {
@@ -73,6 +91,18 @@ export const placeholderImageLoaded = placeholderImage => {
 export const figureVisibility = figure => {
   figure.should('be.visible');
   figure.should('to.have.descendants', 'img');
+};
+
+export const visibleImage = image => {
+  cy.window().then(win => {
+    const {
+      locator,
+    } = win.SIMORGH_DATA.data.content.model.blocks[1].model.blocks[0].model;
+    getElement(image)
+      .eq(0)
+      .should('have.attr', 'src')
+      .and('contain', locator);
+  });
 };
 
 export const visibleImageNoCaption = figure => {

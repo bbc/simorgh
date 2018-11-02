@@ -1,5 +1,5 @@
 import {
-  checkElementStyles,
+  checkElementStylesWithText,
   getElement,
   placeholderImageLoaded,
   shouldContainText,
@@ -15,7 +15,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a headline', () => {
-    checkElementStyles(
+    checkElementStylesWithText(
       'h1',
       'پهپادی که برایتان قهوه می‌آورد',
       'rgb(34, 34, 34)',
