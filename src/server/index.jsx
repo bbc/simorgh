@@ -6,11 +6,14 @@ import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
+import fs from 'fs';
+import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
-import routes from '../app/routes';
-import Document from '../app/components/Document';
+import gnuTP from 'gnu-terry-pratchett';
+import routes, { articleRegexPath } from '../app/routes';
 
+import Document from '../app/components/Document';
 /*
   Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
   Maps through the manifest file and extracts the JavaScript URLs.
@@ -47,18 +50,44 @@ const publicDirectory = getPublicDirectory();
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
+const articleDataRegexPath = `${articleRegexPath}.json`;
+
 const server = express();
 server
   .disable('x-powered-by')
   .use(compression())
-  .use(helmet.frameguard({ action: 'deny' }))
-  .use('/data', express.static(dataFolderToRender))
+  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
     expressStaticGzip(publicDirectory, {
       enableBrotli: true,
       orderPreference: ['br'],
     }),
   )
+  .use(gnuTP())
+  .get(articleDataRegexPath, async ({ params }, res) => {
+    const { service, id } = params;
+
+    const dataFilePath = path.join(
+      dataFolderToRender,
+      service,
+      'articles',
+      `${id}.json`,
+    );
+
+    fs.readFile(dataFilePath, (error, data) => {
+      if (error) {
+        res.sendStatus(404);
+        console.log(error); // eslint-disable-line no-console
+        return null;
+      }
+
+      const articleJSON = JSON.parse(data);
+
+      res.setHeader('Content-Type', 'application/json');
+      res.json(articleJSON);
+      return null;
+    });
+  })
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
@@ -69,7 +98,7 @@ server
 
       const app = renderToString(
         sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} />,
+          <ServerApp location={url} routes={routes} data={data} context={{}} />,
         ),
       );
 

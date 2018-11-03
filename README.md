@@ -19,6 +19,7 @@ Update to use the latest npm `npm i -g npm`
 
 ```
 git clone git@github.com:bbc-news/simorgh.git
+cd simorgh
 npm install
 ```
 
@@ -32,8 +33,8 @@ The application will start on [http://localhost:7080](http://localhost:7080). To
 The route is `/news/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
 Articles 25 & 27 are available on the Production environment as well as locally. These can be used for testing.
-[http://localhost:7080/news/articles/c0000000025o](http://localhost:7080/news/articles/c0000000025o)
-[http://localhost:7080/news/articles/c0000000027o](http://localhost:7080/news/articles/c0000000027o).
+[http://localhost:7080/news/articles/c9rpqy7pmypo](http://localhost:7080/news/articles/c9rpqy7pmypo)
+[http://localhost:7080/news/articles/c85pqyj5m2ko](http://localhost:7080/news/articles/c85pqyj5m2ko).
 
 There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 

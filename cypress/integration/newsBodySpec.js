@@ -3,7 +3,6 @@ import {
   checkElementStyles,
   getElement,
   placeholderImageLoaded,
-  renderedTitle,
   shouldContainText,
   shouldContainStyles,
   visibleImageNoCaption,
@@ -13,8 +12,8 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c0000000025o' & 'c0000000027o' are available within the PROD enviroment
-    cy.visit('/news/articles/c0000000025o');
+    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
+    cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
   it('should render a headline', () => {
@@ -24,6 +23,20 @@ describe('Article Body Tests', () => {
       'rgb(34, 34, 34)',
       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
     );
+  });
+
+  it('should render a timestamp', () => {
+    cy.window().then(win => {
+      const { lastUpdated } = win.SIMORGH_DATA.data.metadata;
+      const timeStamp = Cypress.moment(lastUpdated).format('D MMMM YYYY');
+
+      checkElementStyles(
+        'time',
+        timeStamp,
+        'rgb(90, 90, 90)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
   it('should render a subheading', () => {
@@ -70,11 +83,11 @@ describe('Article Body Tests', () => {
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
 
-  it('should render a title', () => {
-    renderedTitle(
-      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
-    );
-  });
+  // it('should render a title', () => {
+  //   renderedTitle(
+  //     "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
+  //   );
+  // });
 
   it('should have an inline link with focus styling', () => {
     const firstInlineLink = getElement('main a');
@@ -94,6 +107,6 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a working first inline link', () => {
-    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c0000000027o');
+    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
   });
 });

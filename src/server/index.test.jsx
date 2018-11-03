@@ -4,8 +4,16 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
-
 import server from './index';
+
+const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
+  const headerKeys = Object.keys(headers);
+  const headerValues = Object.values(headers);
+  const indexOfXFrame = headerKeys.indexOf(headerKey);
+
+  expect(headerKeys).toContain(headerKey);
+  expect(headerValues[indexOfXFrame]).toEqual(expectedHeaderValue);
+};
 
 jest.mock(
   process.env.RAZZLE_ASSETS_MANIFEST,
@@ -45,26 +53,28 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 describe('Server', () => {
   const makeRequest = async path => request(server).get(path);
 
-  it(`should not pass an 'x-powered-by' response header`, async () => {
-    const { headers } = await makeRequest('/status');
-    const headerKeys = Object.keys(headers);
-    expect(headerKeys).not.toContain('x-powered-by');
-  });
-
-  it(`should set 'x-frame-options' header to 'DENY'`, async () => {
-    const { headers } = await makeRequest('/status');
-    const headerKeys = Object.keys(headers);
-    const headerValues = Object.values(headers);
-    const indexOfXFrame = headerKeys.indexOf('x-frame-options');
-
-    expect(headerKeys).toContain('x-frame-options');
-    expect(headerValues[indexOfXFrame]).toEqual('DENY');
-  });
-
   describe('/status', () => {
     it('should respond with a 200', async () => {
       const { statusCode } = await makeRequest('/status');
       expect(statusCode).toBe(200);
+    });
+  });
+
+  describe('Data', () => {
+    it('should respond with JSON', async () => {
+      const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+
+    describe('with non-existent data', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest(
+          '/news/articles/cERROR00025o.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
     });
   });
 
@@ -130,5 +140,78 @@ describe('Server', () => {
         }`,
       );
     });
+  });
+});
+
+describe('Server HTTP Headers', () => {
+  let statusRequest;
+
+  beforeAll(async () => {
+    statusRequest = await request(server).get('/status');
+  });
+
+  it(`should not contain 'x-powered-by'`, () => {
+    const headerKeys = Object.keys(statusRequest.headers);
+    expect(headerKeys).not.toContain('x-powered-by');
+  });
+
+  it(`should have 'x-frame-options' set to 'DENY'`, () => {
+    validateHttpHeader(statusRequest.headers, 'x-frame-options', 'DENY');
+  });
+
+  it(`should have X-DNS-Prefetch-Control set to 'off' `, () => {
+    validateHttpHeader(statusRequest.headers, 'x-dns-prefetch-control', 'off');
+  });
+
+  it(`should have Strict-Transport-Security set to 'max-age=15552000; includeSubDomains' `, () => {
+    validateHttpHeader(
+      statusRequest.headers,
+      'strict-transport-security',
+      'max-age=15552000; includeSubDomains',
+    );
+  });
+
+  it(`should have X-Download-Options set to 'noopen' `, () => {
+    validateHttpHeader(statusRequest.headers, 'x-download-options', 'noopen');
+  });
+
+  it(`should have X-Content-Type-Options set to 'nosniff' `, () => {
+    validateHttpHeader(
+      statusRequest.headers,
+      'x-content-type-options',
+      'nosniff',
+    );
+  });
+
+  it(`should have X-XSS-Protection set to '1; mode=block' `, () => {
+    validateHttpHeader(
+      statusRequest.headers,
+      'x-xss-protection',
+      '1; mode=block',
+    );
+  });
+
+  describe("should set 'x-clacks-overhead' header", () => {
+    it('should send the message on', async () => {
+      validateHttpHeader(
+        statusRequest.headers,
+        'x-clacks-overhead',
+        'GNU Terry Pratchett',
+      );
+    });
+
+    it('should not log the message', async () => {
+      global.console.log = jest.fn();
+
+      const makeRequest = async path => request(server).get(path);
+
+      await makeRequest('/status');
+
+      expect(global.console.log).not.toHaveBeenCalledWith(
+        'GNU Terry Pratchett',
+      );
+    });
+
+    // It should turn the message around at the end of the line and send it back again (Currently untested)
   });
 });
