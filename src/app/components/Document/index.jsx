@@ -1,6 +1,6 @@
 import React from 'react';
 import ResourceHints from './ResourceHints';
-import '../../lib/globalStyles';
+import GlobalStyles from '../../lib/globalStyles';
 import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
@@ -30,6 +30,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
+        <GlobalStyles />
         <ResourceHints />
         {title}
         {links}

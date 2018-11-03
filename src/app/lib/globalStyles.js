@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import styledNormalize from 'styled-normalize';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   ${styledNormalize}
 
   /* Box Sizing https://bit.ly/1A91I0J */
@@ -29,6 +29,8 @@ injectGlobal`
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff');
   }
 `;
+
+export default GlobalStyles;
 
 /* Unused fonts
   - When adding fonts, be sure to add them to the externals array for Offline-Plugin here:
