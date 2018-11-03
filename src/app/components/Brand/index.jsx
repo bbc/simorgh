@@ -7,12 +7,14 @@ import {
   C_POSTBOX,
   C_WHITE,
   GEL_SPACING,
+  GEL_SPACING_DBL,
   GEL_SPACING_HLF,
+  group3ScreenWidthMax,
 } from '../../lib/constants/styles';
 import {
   layoutGridWrapper,
+  layoutGridItemConstrained,
   layoutGridItem,
-  layoutGridItemFullWidth,
 } from '../../lib/layoutGrid';
 
 const SVG_TOP_OFFSET = '1.25rem'; // 20px
@@ -31,6 +33,9 @@ const StyledGridWrapper = styled.div`
   background-color: ${C_POSTBOX};
   height: ${BANNER_HEIGHT};
   width: 100%;
+  @media (min-width: ${group3ScreenWidthMax}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
 `;
 
 const StyledLink = styled.a`
@@ -57,7 +62,7 @@ const BrandSvg = styled.svg`
 
 const Brand = ({ indentedLogo }) => {
   const StyledGridItem = styled.div`
-    ${indentedLogo ? layoutGridItem : layoutGridItemFullWidth};
+    ${indentedLogo ? layoutGridItemConstrained : layoutGridItem};
   `;
 
   return (

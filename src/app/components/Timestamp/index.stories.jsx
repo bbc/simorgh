@@ -3,5 +3,5 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import Timestamp from './index';
 
 storiesOf('Timestamp', module).add('default', () => (
-  <Timestamp timestamp={1530947227} />
+  <Timestamp timestamp={1530947227000} />
 ));

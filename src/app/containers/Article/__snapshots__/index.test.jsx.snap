@@ -50,65 +50,78 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       }
       service="persian"
     />
-    <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "سرصفحه مقاله",
-                          },
-                          "type": "paragraph",
+    <main
+      role="main"
+    >
+      <Wrapper>
+        <GridItemConstrained>
+          <Blocks
+            blocks={
+              Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "text": "سرصفحه مقاله",
+                              },
+                              "type": "paragraph",
+                            },
+                          ],
                         },
-                      ],
-                    },
-                    "type": "text",
+                        "type": "text",
+                      },
+                    ],
                   },
-                ],
-              },
-              "type": "headline",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-          }
-        }
-      />
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "یک پاراگراف.",
-                    },
-                    "type": "paragraph",
+                  "type": "headline",
+                },
+              ]
+            }
+            componentsToRender={
+              Object {
+                "headline": [Function],
+              }
+            }
+          />
+          <Timestamp
+            timestamp={1514811600000}
+          />
+        </GridItemConstrained>
+      </Wrapper>
+      <OatWrapper>
+        <GridItemConstrained>
+          <Blocks
+            blocks={
+              Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "text": "یک پاراگراف.",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
                   },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
-          }
-        }
-      />
-    </MainContent>
+                  "type": "text",
+                },
+              ]
+            }
+            componentsToRender={
+              Object {
+                "image": [Function],
+                "subheadline": [Function],
+                "text": [Function],
+              }
+            }
+          />
+        </GridItemConstrained>
+      </OatWrapper>
+    </main>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>
@@ -187,65 +200,78 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       }
       service="news"
     />
-    <MainContent>
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "blocks": Array [
-                        Object {
-                          "model": Object {
-                            "text": "Article Headline",
-                          },
-                          "type": "paragraph",
+    <main
+      role="main"
+    >
+      <Wrapper>
+        <GridItemConstrained>
+          <Blocks
+            blocks={
+              Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "text": "Article Headline",
+                              },
+                              "type": "paragraph",
+                            },
+                          ],
                         },
-                      ],
-                    },
-                    "type": "text",
+                        "type": "text",
+                      },
+                    ],
                   },
-                ],
-              },
-              "type": "headline",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-          }
-        }
-      />
-      <Blocks
-        blocks={
-          Array [
-            Object {
-              "model": Object {
-                "blocks": Array [
-                  Object {
-                    "model": Object {
-                      "text": "A paragraph.",
-                    },
-                    "type": "paragraph",
+                  "type": "headline",
+                },
+              ]
+            }
+            componentsToRender={
+              Object {
+                "headline": [Function],
+              }
+            }
+          />
+          <Timestamp
+            timestamp={1514811600000}
+          />
+        </GridItemConstrained>
+      </Wrapper>
+      <OatWrapper>
+        <GridItemConstrained>
+          <Blocks
+            blocks={
+              Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "text": "A paragraph.",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
                   },
-                ],
-              },
-              "type": "text",
-            },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "image": [Function],
-            "subheadline": [Function],
-            "text": [Function],
-          }
-        }
-      />
-    </MainContent>
+                  "type": "text",
+                },
+              ]
+            }
+            componentsToRender={
+              Object {
+                "image": [Function],
+                "subheadline": [Function],
+                "text": [Function],
+              }
+            }
+          />
+        </GridItemConstrained>
+      </OatWrapper>
+    </main>
     <FooterContainer />
   </ServiceContextProvider>
 </React.Fragment>
