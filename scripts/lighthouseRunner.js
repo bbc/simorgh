@@ -1,5 +1,6 @@
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
+const chalk = require('chalk');
 
 const config = require(`./../lighthouse`);
 
@@ -8,17 +9,17 @@ function launchChromeAndRunLighthouse(url, opts, config = null) {
     .launch({ chromeFlags: opts.chromeFlags })
     .then(chrome => {
       opts.port = chrome.port;
-      return lighthouse(url, opts, config).then(results => {
-        return chrome.kill().then(() => results.lhr);
-      });
+      return lighthouse(url, opts, config).then(results =>
+        chrome.kill().then(() => results.lhr),
+      );
     });
 }
 
 function getScoresPerCategory(reportCategories, audits, url) {
-  const categoriesArray = Object.keys(reportCategories).map(
-    category => reportCategories[category],
-  );
-  const scores = categoriesArray.map(({ id, score }) => ({ id, score }));
+  const scores = Object.keys(reportCategories).map(category => ({
+    id: reportCategories[category].id,
+    score: reportCategories[category].score,
+  }));
 
   return { scores, url, audits };
 }
@@ -36,7 +37,7 @@ function validateScores(resultsArray, thresholds) {
 
     result.scores.forEach(actual => {
       const key = actual.id;
-      const expectedScore = minThresholds[`${key}`];
+      const expectedScore = minThresholds[key];
       resultsObj.scores.push({
         id: key,
         actualScore: actual.score,
@@ -50,11 +51,11 @@ function validateScores(resultsArray, thresholds) {
   return validatedResults;
 }
 
-const lighthouseRuns = config.urls.map(url => {
-  return launchChromeAndRunLighthouse(url, config.opts).then(results => {
-    return getScoresPerCategory(results.categories, results.audits, url);
-  });
-});
+const lighthouseRuns = config.urls.map(url =>
+  launchChromeAndRunLighthouse(url, config.opts).then(results =>
+    getScoresPerCategory(results.categories, results.audits, url),
+  ),
+);
 
 function logHighLevelScores(results) {
   const failures = [];
