@@ -2,6 +2,7 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const chalk = require('chalk');
 
+const log = console.log;
 const config = require(`./../lighthouse`);
 
 function launchChromeAndRunLighthouse(url, opts, config = null) {
@@ -46,16 +47,28 @@ const lighthouseRuns = config.urls.map(url =>
   ),
 );
 
+function formatResult(result) {
+  if (result.pass) {
+    log(
+      `${chalk.black.bgGreen(' PASS ')} ${result.id}, actual: ${
+        result.actualScore
+      }, expected: ${result.expectedScore}`,
+    );
+  } else {
+    log(
+      `${chalk.black.bgRed(' FAIL ')} ${result.id}, actual: ${
+        result.actualScore
+      }, expected: ${result.expectedScore}`,
+    );
+  }
+}
+
 function logHighLevelScores(results) {
   const failures = [];
   results.forEach(result => {
-    console.log(`\nLighthouse results for ${result.url}:`);
+    log(chalk.underline(`\nLighthouse results for ${result.url}:`));
     result.scores.forEach(score => {
-      console.log(
-        `Category: ${score.id}, actual: ${score.actualScore}, expected: ${
-          score.expectedScore
-        }, pass: ${score.pass}`,
-      );
+      formatResult(score);
       if (!score.pass) {
         failures.push({ url: result.url, category: score.id });
       }
