@@ -48,18 +48,13 @@ const lighthouseRuns = config.urls.map(url =>
 );
 
 function formatResult(result) {
+  const resultDetail = `${result.id}, actual: ${
+    result.actualScore
+  }, expected: ${result.expectedScore}`;
   if (result.pass) {
-    log(
-      `${chalk.black.bgGreen(' PASS ')} ${result.id}, actual: ${
-        result.actualScore
-      }, expected: ${result.expectedScore}`,
-    );
+    log(`${chalk.black.bgGreen(' PASS ')} ${resultDetail}`);
   } else {
-    log(
-      `${chalk.black.bgRed(' FAIL ')} ${result.id}, actual: ${
-        result.actualScore
-      }, expected: ${result.expectedScore}`,
-    );
+    log(`${chalk.black.bgRed(' FAIL ')} ${resultDetail}`);
   }
 }
 
