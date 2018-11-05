@@ -8,7 +8,7 @@ const getInitialData = async ({ match }) => {
       process.env.RAZZLE_BASE_PATH
     }/${service}/articles/${id}.json`;
 
-    const response = await fetch(url);
+    const response = await fetch(url, { mode: 'cors' });
 
     const data = await response.json();
     const isAmp = !!amp;
