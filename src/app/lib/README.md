@@ -66,7 +66,6 @@ The article layout UX design has the following requirements:
 | :-------------- | :------ | :----------------------- | 
 | 0px - 399px     | 1       | 1 of 1                   | 
 | 400px - 599px   | 6       | 4 of 6                   | 
-| 400px - 599px   | 6       | 4 of 6                   | 
 | 600px - 1007px  | 6       | 4 of 6                   | 
 | 1008px - 1280px | 8       | 6 of 8                   | 
 | 1280px +        | 10      | 6 of 10                  | 
@@ -129,3 +128,6 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 ### Figure 5 - Article grid layout at 1280px
 <img width="1280" alt="Screenshot showing the article layout at 1280px" src="https://user-images.githubusercontent.com/7791726/47646276-517e1080-db6b-11e8-8fe2-e4b83c26d2fd.png">
+
+### Figure 6 - Very large viewport example of breakpoints
+<img width="1280" alt="Example of how component should render for very wide viewports EG: 2200px" src="https://user-images.githubusercontent.com/7791726/48010164-f9b84a00-e114-11e8-9c3b-d77e8ac06696.jpg">
