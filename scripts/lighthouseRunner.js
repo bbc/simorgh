@@ -51,6 +51,7 @@ function formatResult(result) {
   const resultDetail = `${result.id}, actual: ${
     result.actualScore
   }, expected: ${result.expectedScore}`;
+
   if (result.pass) {
     log(`${chalk.black.bgGreen(' PASS ')} ${resultDetail}`);
   } else {
@@ -59,15 +60,17 @@ function formatResult(result) {
 }
 
 function logHighLevelScores(results) {
-  return results.map(result => {
+  const failures = [];
+  results.forEach(result => {
     log(chalk.underline(`\nLighthouse results for ${result.url}:`));
     result.scores.forEach(score => {
       formatResult(score);
       if (!score.pass) {
-        return { url: result.url, category: score.id };
+        failures.push({ url: result.url, category: score.id });
       }
     });
   });
+  return failures;
 }
 
 function checkFailures(failures) {
