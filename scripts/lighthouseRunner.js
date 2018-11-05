@@ -79,7 +79,10 @@ function logHighLevelScores(results) {
 
 function checkFailures(failures) {
   if (failures.length > 0) {
-    process.on('exit', () => `Lighthouse tests failed`);
+    process.on(
+      'exit',
+      () => `${chalk.red('Lighthouse threshold tests failed')}`,
+    );
     process.exit(1);
   }
 }
