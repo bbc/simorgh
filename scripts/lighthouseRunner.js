@@ -24,31 +24,20 @@ function getScoresPerCategory(reportCategories, audits, url) {
   return { scores, url, audits };
 }
 
-function validateScores(resultsArray, thresholds) {
-  const validatedResults = [];
-
-  resultsArray.forEach(result => {
-    const minThresholds = thresholds;
-
-    const resultsObj = {
-      url: result.url,
-      scores: [],
-    };
-
-    result.scores.forEach(actual => {
+function validateScores(resultsArray) {
+  return resultsArray.map(result => ({
+    url: result.url,
+    scores: result.scores.map(actual => {
       const key = actual.id;
-      const expectedScore = minThresholds[key];
-      resultsObj.scores.push({
+      const expectedScore = config.thresholds[key];
+      return {
         id: key,
         actualScore: actual.score,
         expectedScore,
         pass: actual.score >= expectedScore,
-      });
-    });
-
-    validatedResults.push(resultsObj);
-  });
-  return validatedResults;
+      };
+    }),
+  }));
 }
 
 const lighthouseRuns = config.urls.map(url =>
@@ -76,7 +65,7 @@ function logHighLevelScores(results) {
 }
 
 Promise.all(lighthouseRuns).then(scoresArray => {
-  const results = validateScores(scoresArray, config.thresholds);
+  const results = validateScores(scoresArray);
   const failures = logHighLevelScores(results);
 
   // Uncomment to fail Travis build
