@@ -79,16 +79,14 @@ function logHighLevelScores(results) {
 
 function checkFailures(failures) {
   if (failures.length > 0) {
-    process.on(
-      'exit',
-      () => `${chalk.red('Lighthouse threshold tests failed')}`,
+    process.on('exit', () =>
+      log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
     );
-    process.exit(1);
+    // process.exit(1); Uncomment to fail Travis build
   }
 }
 
 Promise.all(lighthouseRuns)
   .then(validateScores)
-  .then(logHighLevelScores);
-// Uncomment to fail Travis build
-// then(failures => checkFailures(failures));
+  .then(logHighLevelScores)
+  .then(checkFailures);
