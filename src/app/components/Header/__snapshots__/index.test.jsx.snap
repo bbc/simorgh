@@ -49,16 +49,26 @@ exports[`Header should render correctly 1`] = `
   grid-column: 1 / -1;
 }
 
-@media (max-width:37.5em) {
+@media (max-width:37.4375em) {
   .c0 {
     grid-gap: 0.5rem;
-    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
     grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
     padding: 0 1rem;
   }
 }
@@ -71,13 +81,19 @@ exports[`Header should render correctly 1`] = `
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
   }
 }
 

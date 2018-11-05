@@ -37,9 +37,9 @@
   },
   "husky": {
     "hooks": {
-      "post-merge": "./scripts/dependencyUpdateCheck.sh",
+      "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "./scripts/stopPushOnLatest.sh && ./scripts/upToDateWithLatest.sh && npm run test:unit"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && npm run test:unit"
     }
   },
   "repository": {
