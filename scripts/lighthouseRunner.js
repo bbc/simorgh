@@ -59,17 +59,15 @@ function formatResult(result) {
 }
 
 function logHighLevelScores(results) {
-  const failures = [];
-  results.forEach(result => {
+  return results.map(result => {
     log(chalk.underline(`\nLighthouse results for ${result.url}:`));
     result.scores.forEach(score => {
       formatResult(score);
       if (!score.pass) {
-        failures.push({ url: result.url, category: score.id });
+        return { url: result.url, category: score.id };
       }
     });
   });
-  return failures;
 }
 
 function checkFailures(failures) {
