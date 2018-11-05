@@ -64,13 +64,15 @@ function logHighLevelScores(results) {
   return failures;
 }
 
-Promise.all(lighthouseRuns).then(scoresArray => {
-  const results = validateScores(scoresArray);
-  const failures = logHighLevelScores(results);
+function checkFailures(failures) {
+  if (failures.length > 0) {
+    process.on('exit', () => `Lighthouse tests failed`);
+    process.exit(1);
+  }
+}
 
-  // Uncomment to fail Travis build
-  // if (failures.length > 0) {
-  //   process.on('exit', () => `Lighthouse tests failed`);
-  //   process.exit(1);
-  // }
-});
+Promise.all(lighthouseRuns)
+  .then(validateScores)
+  .then(logHighLevelScores);
+// Uncomment to fail Travis build
+// then(failures => checkFailures(failures));
