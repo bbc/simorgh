@@ -2,8 +2,8 @@
 import localiseTimestamp from './index';
 // import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
-const testTimestamp = 1517403600; // 31/01/2018 - 13:00:00 UTC
-const testTimestampFourHoursAhead = 1517418000; // 31/01/2018 - 17:00:00 UTC
+const testTimestamp = 1517403600000; // 31/01/2018 - 13:00:00 UTC
+const testTimestampFourHoursAhead = 1517418000000; // 31/01/2018 - 17:00:00 UTC
 
 const persianDateAsCharArray = [
   '۱',

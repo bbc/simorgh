@@ -31,6 +31,22 @@ exports[`Timestamp should render correctly 1`] = `
   >
     19 October 2018
   </time>
+  <br />
+  19 October 2018
+  <br />
+  in 10 months
+  <br />
+  <span
+    dir="rtl"
+  >
+    19 اکتبر 2018
+  </span>
+  <br />
+  <span
+    dir="rtl"
+  >
+    in 10 months
+  </span>
 </div>
 `;
 
@@ -63,5 +79,21 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   >
     7 July 2018
   </time>
+  <br />
+  7 July 2018
+  <br />
+  in 7 months
+  <br />
+  <span
+    dir="rtl"
+  >
+    7 ژوئیه 2018
+  </span>
+  <br />
+  <span
+    dir="rtl"
+  >
+    in 7 months
+  </span>
 </div>
 `;

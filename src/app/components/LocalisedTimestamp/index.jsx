@@ -11,19 +11,12 @@ import 'dayjs/locale/fa';
 const localiseTimestamp = (publishedTimestamp, locale, currentTimestamp) => {
   dayjs.locale(locale);
 
-  const publishedTimestampInMilliseconds = publishedTimestamp * 1000;
-
   if (currentTimestamp) {
-    const currentTimestampInMilliseconds = currentTimestamp * 1000;
-
     dayjs.extend(relativeTime);
-
-    const result = dayjs(publishedTimestampInMilliseconds);
-
-    return result.from(dayjs(currentTimestampInMilliseconds));
+    return dayjs(publishedTimestamp).from(dayjs(currentTimestamp));
   }
 
-  return dayjs(publishedTimestampInMilliseconds).format('DD MMMM YYYY');
+  return dayjs(publishedTimestamp).format('D MMMM YYYY');
 };
 
 export default localiseTimestamp;

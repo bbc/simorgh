@@ -7,6 +7,7 @@ import {
   GEL_SPACING_DBL,
   FF_NEWS_SANS_REG,
 } from '../../lib/constants/styles';
+import localiseTimestamp from '../LocalisedTimestamp';
 
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
@@ -49,9 +50,22 @@ const Timestamp = ({ timestamp }) => {
     return null;
   }
 
+  const localised = localiseTimestamp(timestamp, 'en');
+  const localisedRelative = localiseTimestamp(timestamp, 'en', 1514826000000);
+  const localisedFa = localiseTimestamp(timestamp, 'fa');
+  const localisedFaRelative = localiseTimestamp(timestamp, 'en', 1514826000000);
+
   return (
     <StyledTimestamp>
       <time dateTime={formatDateTime(dateObj)}>{formatTimestamp(dateObj)}</time>
+      <br />
+      {localised}
+      <br />
+      {localisedRelative}
+      <br />
+      <span dir="rtl">{localisedFa}</span>
+      <br />
+      <span dir="rtl">{localisedFaRelative}</span>
     </StyledTimestamp>
   );
 };
