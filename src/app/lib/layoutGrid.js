@@ -29,11 +29,11 @@ export const layoutWrapperWithoutGrid = css`
 `;
 
 /*
-0-599px: 8px gutter
-600+: 16px gutter
+  0-599px: 8px gutter
+  600+: 16px gutter
 
-0-399px: 8px margin
-400-1007px: 16px margin
+  0-399px: 8px margin
+  400-1007px: 16px margin
   1008+: no explicit margin, since we use 16px gutters as margin
 */
 
