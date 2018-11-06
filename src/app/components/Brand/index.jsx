@@ -23,7 +23,7 @@ const SVG_WIDTH = `${SVG_WIDTH_PX / 16}rem`;
 
 const VIEWBOX_VALUES = `0 0 ${SVG_WIDTH_PX} ${SVG_HEIGHT_PX}`;
 
-const StyledGridWrapper = styled.div`
+const StyledWrapper = styled.div`
   ${layoutWrapperWithoutGrid};
   background-color: ${C_POSTBOX};
   height: ${BANNER_HEIGHT};
@@ -56,7 +56,7 @@ const BrandSvg = styled.svg`
 `;
 
 const Brand = () => (
-  <StyledGridWrapper>
+  <StyledWrapper>
     <StyledLink href="https://www.bbc.co.uk/news">
       <StyledSpan>
         <BrandSvg
@@ -78,7 +78,7 @@ const Brand = () => (
         </ServiceContextConsumer>
       </StyledSpan>
     </StyledLink>
-  </StyledGridWrapper>
+  </StyledWrapper>
 );
 
 export default Brand;
