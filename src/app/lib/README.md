@@ -64,8 +64,7 @@ The article layout UX design has the following requirements:
 
 | Breakpoints     | Columns | Content* spans X columns | 
 | :-------------- | :------ | :----------------------- | 
-| 0px - 399px     | 1       | 1 of 1                   | 
-| 400px - 599px   | 6       | 4 of 6                   | 
+| 0px - 599px     | 6       | 6 of 6                   | 
 | 600px - 1007px  | 6       | 4 of 6                   | 
 | 1008px - 1280px | 8       | 6 of 8                   | 
 | 1280px +        | 10      | 6 of 10                  | 
@@ -91,7 +90,7 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 | Breakpoints     | Columns           | Gutters   | Margins          | Figure |
 | :-------------- | :---------------- | :-------- | :--------------- | :----- |
-| 0px - 399px     | 1 + 2 of 0px      | 0 of 8px  | 2 of 8px         | 1      |
+| 0px - 399px     | 6 + 2 of 0px      | 0 of 8px  | 2 of 8px         | 1      |
 | 400px - 599px   | 6 + 2 of 8px*     | 5 of 8px  | 2 of 16px        | 2      |
 | 600px - 1007px  | 6 + 2 of 0px      | 5 of 16px | 2 of 16px        | 3      |
 | 1008px - 1280px | 8 + 2 of 1fr      | 7 of 16px | 2 of 16px        | 4      |
