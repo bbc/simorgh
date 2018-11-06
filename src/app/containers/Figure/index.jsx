@@ -15,10 +15,10 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
+const FigureContainer = ({ src, srcSet, alt, ratio, copyright, caption }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      <Image alt={alt} src={src} />
+      <Image alt={alt} src={src} srcSet={srcSet} />
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(caption)}
@@ -28,6 +28,7 @@ const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  srcSet: string.isRequired,
   ratio: number.isRequired,
   copyright: string,
   caption: string,

@@ -4,6 +4,7 @@ import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
 const DEFAULT_IMAGE_RES = 640;
+const srcSetValues = [360, 480, 600, 720, 840, 1024, 2048];
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -20,6 +21,21 @@ const getCopyright = copyrightHolder => {
   }
 
   return copyrightHolder;
+};
+
+const getSrcSet = imgUrl => {
+  let sourceSet = '';
+
+  srcSetValues.forEach((value, index) => {
+    const srcSetUrl = imgUrl.replace(DEFAULT_IMAGE_RES, value);
+    sourceSet += `${srcSetUrl} ${value}w, `; // add a comma and space after every srcset value
+
+    if (index === srcSetValues.length - 1) {
+      sourceSet = sourceSet.substring(0, sourceSet.length - 2); // remove the trailing comma and space from the end of the string
+    }
+  });
+
+  return sourceSet;
 };
 
 const getIChefURL = (originCode, locator) => {
@@ -57,10 +73,12 @@ const ImageContainer = ({ blocks }) => {
   const caption = getCaption(captionBlock);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
+  const srcSet = getSrcSet(rawImageSrc);
 
   return (
     <Figure
       src={rawImageSrc}
+      srcSet={srcSet}
       alt={altText}
       ratio={ratio}
       copyright={copyright}
