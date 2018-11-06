@@ -6,14 +6,17 @@ const readScenario = require('./readScenario');
 
 const defaultDataPath = './data';
 
-const expectMethodToBeCalledTimes = (
+const expectMethodToBeCalledTimes = async (
   number,
   spyMethod,
   dataPath = defaultDataPath,
 ) => {
-  readdirSync(dataPath).then(() => {
+  await readdirSync(dataPath);
+  try {
     expect(spyMethod).toHaveBeenCalledTimes(number);
-  });
+  } catch (error) {
+    expect(spyMethod).toHaveBeenCalledTimes(number);
+  }
 };
 
 describe('readdirSync helper', () => {
@@ -27,22 +30,22 @@ describe('readdirSync helper', () => {
     fileToValidateSpy.mockRestore();
   });
 
-  it('should call readScenario for every file in the /data directory', () => {
+  it('should call readScenario for every file in the /data directory', async () => {
     const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
 
-    expectMethodToBeCalledTimes(79, readScenarioSpy);
+    await expectMethodToBeCalledTimes(44, readScenarioSpy);
   });
 
-  it('should call fileToValidate for only the valid json file in the /data directory', () => {
+  it('should call fileToValidate for only the valid json file in the /data directory', async () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    expectMethodToBeCalledTimes(60, fileToValidateSpy);
+    await expectMethodToBeCalledTimes(30, fileToValidateSpy);
   });
 
-  it('should call fileToValidate for only the files in /data/prod/news', () => {
+  it('should call fileToValidate for only the files in /data/prod/news', async () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    expectMethodToBeCalledTimes(2, fileToValidateSpy, './data/prod/news');
+    await expectMethodToBeCalledTimes(2, fileToValidateSpy, './data/prod/news');
   });
 
   it('should return a promise', () => {
