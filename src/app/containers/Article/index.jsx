@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
+import styled from 'styled-components';
 import MetadataContainer from '../Metadata';
 import Header from '../../components/Header';
 import Footer from '../Footer';
@@ -7,9 +8,26 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import MainContent from '../../components/MainContent';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../components/ServiceContext';
+import Timestamp from '../../components/Timestamp';
+import {
+  layoutGridWrapper,
+  layoutGridItemConstrained,
+} from '../../lib/layoutGrid';
+import { C_OAT_LHT } from '../../lib/constants/styles';
+
+const Wrapper = styled.div`
+  ${layoutGridWrapper};
+`;
+
+const OatWrapper = styled(Wrapper)`
+  background: ${C_OAT_LHT};
+`;
+
+const GridItemConstrained = styled.div`
+  ${layoutGridItemConstrained};
+`;
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -61,16 +79,25 @@ const ArticleContainer = ({ loading, error, data }) => {
               promo={promo}
               service={service}
             />
-            <MainContent>
-              <Blocks
-                blocks={headlineBlocks}
-                componentsToRender={componentsToRenderHeadline}
-              />
-              <Blocks
-                blocks={mainBlocks}
-                componentsToRender={componentsToRenderMain}
-              />
-            </MainContent>
+            <main role="main">
+              <Wrapper>
+                <GridItemConstrained>
+                  <Blocks
+                    blocks={headlineBlocks}
+                    componentsToRender={componentsToRenderHeadline}
+                  />
+                  <Timestamp timestamp={metadata.lastUpdated} />
+                </GridItemConstrained>
+              </Wrapper>
+              <OatWrapper>
+                <GridItemConstrained>
+                  <Blocks
+                    blocks={mainBlocks}
+                    componentsToRender={componentsToRenderMain}
+                  />
+                </GridItemConstrained>
+              </OatWrapper>
+            </main>
             <Footer />
           </ServiceContextProvider>
         </Fragment>
