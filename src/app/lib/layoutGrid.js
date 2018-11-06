@@ -19,15 +19,6 @@ const group4ColWidth = `6.75rem`;
 const group5ColWidth = `6.9rem`;
 /* (1280px - (2*16px margins + 9*16px gutters)  / 10 columns = 110.4px = 6.9rem single column width */
 
-/*
-  0-599px: 8px gutter
-  600+: 16px gutter
-
-  0-399px: 8px margin
-  400-1007px: 16px margin
-  1008+: no explicit margin, since we use 16px gutters as margin
-*/
-
 export const layoutWrapperWithoutGrid = css`
   @media (max-width: ${group2ScreenWidthMin}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
@@ -37,6 +28,14 @@ export const layoutWrapperWithoutGrid = css`
   }
 `;
 
+/*
+  0-599px: 8px gutter
+  600+: 16px gutter
+
+  0-399px: 8px margin
+  400-1007px: 16px margin
+  1008+: no explicit margin, since we use 16px gutters as margin
+*/
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: ${group2ScreenWidthMax}) {
