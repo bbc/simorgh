@@ -25,19 +25,21 @@ function getScoresPerCategory(reportCategories, audits, url) {
   return { scores, url, audits };
 }
 
+const mapScores = scores =>
+  scores.map(({ id, score }) => {
+    const expectedScore = config.thresholds[id];
+    return {
+      id,
+      score,
+      expectedScore,
+      pass: score >= expectedScore,
+    };
+  });
+
 function validateScores(resultsArray) {
-  return resultsArray.map(result => ({
-    url: result.url,
-    scores: result.scores.map(actual => {
-      const key = actual.id;
-      const expectedScore = config.thresholds[key];
-      return {
-        id: key,
-        actualScore: actual.score,
-        expectedScore,
-        pass: actual.score >= expectedScore,
-      };
-    }),
+  return resultsArray.map(({ url, scores }) => ({
+    url,
+    scores: mapScores(scores),
   }));
 }
 
@@ -47,12 +49,9 @@ const lighthouseRuns = config.urls.map(url =>
   ),
 );
 
-function formatResult(result) {
-  const resultDetail = `${result.id}, actual: ${
-    result.actualScore
-  }, expected: ${result.expectedScore}`;
-
-  if (result.pass) {
+function formatResult({ id, score, expectedScore, pass }) {
+  const resultDetail = `${id}, actual: ${score}, expected: ${expectedScore}`;
+  if (pass) {
     log(`${chalk.black.bgGreen(' PASS ')} ${resultDetail}`);
   } else {
     log(`${chalk.black.bgRed(' FAIL ')} ${resultDetail}`);
