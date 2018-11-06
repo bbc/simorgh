@@ -36,6 +36,7 @@ export const layoutWrapperWithoutGrid = css`
   400-1007px: 16px margin
   1008+: no explicit margin, since we use 16px gutters as margin
 */
+
 export const layoutGridWrapper = css`
   display: grid;
   @media (max-width: ${group2ScreenWidthMax}) {
