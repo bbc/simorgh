@@ -3,6 +3,10 @@ const chromeLauncher = require('chrome-launcher');
 
 let config = {};
 
+// just mock lighthouse, beacuse although chromeLancher is a dep
+// ultimately it is just lighthouse which is returned (an object with a lhr property)
+// jest.mock('lighthouse', () => Promise.resolve({ lhr: {} }));
+
 function launchChromeAndRunLighthouse(url, opts, lConfig = null) {
   return chromeLauncher
     .launch({ chromeFlags: opts.chromeFlags })
@@ -26,6 +30,12 @@ function getScoresPerCategory(reportCategories, url) {
 const mapScores = scores =>
   scores.map(({ id, score }) => {
     const expectedScore = config.thresholds[id];
+    console.log('mapScores', {
+      id,
+      score,
+      expectedScore,
+      pass: score >= expectedScore,
+    });
     return {
       id,
       score,
@@ -35,6 +45,13 @@ const mapScores = scores =>
   });
 
 function validateScores(resultsArray) {
+  console.log(
+    'validateScores',
+    resultsArray.map(({ url, scores }) => ({
+      url,
+      scores: mapScores(scores),
+    })),
+  );
   return resultsArray.map(({ url, scores }) => ({
     url,
     scores: mapScores(scores),
