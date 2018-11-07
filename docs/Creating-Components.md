@@ -58,7 +58,7 @@ describe('Blockquote', () => {
 ```
 
 ### Update the schema
-data/schema.yaml describes the Article API definition for web and apps. We need to make it aware of our new component.
+data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
 
 Your component is more than likely a new 'block', so you'll need to add it to the array of what blocks are allowed to look like:
 
