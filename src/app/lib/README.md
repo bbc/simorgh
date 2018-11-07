@@ -114,7 +114,7 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 - [Investigation PR](https://github.com/BBC-News/simorgh/pull/824)
 - [Statically defined columns for above 1280px example](https://codepen.io/phil-lee/full/zmjaMO/)
 
-### Figure 1 - Article grid layout at 300px
+### Figure 1 - Article grid layout at 375px
 
 <img width="375" alt="Screenshot showing the article layout at 375px" src="https://user-images.githubusercontent.com/7791726/48127457-a6144080-e27b-11e8-9f8c-dc827e1ca4a0.png">
 
