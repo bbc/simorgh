@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const log = console.log;
+const { log } = console;
 const config = require(`../../lighthouse`);
 const launchLighthouse = require('./runLighthouse');
 

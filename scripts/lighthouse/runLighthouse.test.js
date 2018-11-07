@@ -1,4 +1,4 @@
-// import * as lighthouse from 'lighthouse';
+// import * as lighthouse from 'lighthouse';  not needed - why?
 import config from './mockConfig';
 import runLighthouse from './runLighthouse';
 
