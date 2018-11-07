@@ -1,9 +1,37 @@
-const lighthouse = require('lighthouse');
-const chromeLauncher = require('chrome-launcher');
-const mockConfig = require('./mockConfig');
-const runLighthouse = require('./runLighthouse');
+// import * as lighthouse from 'lighthouse';
+import config from './mockConfig';
+import runLighthouse from './runLighthouse';
 
-jest.mock('lighthouse', () => Promise.resolve({ lhr: {} }));
+jest.mock('lighthouse', () =>
+  jest.fn().mockResolvedValue({
+    lhr: {
+      categories: {
+        performance: {
+          id: 'performance',
+          score: 0.72,
+        },
+        pwa: {
+          id: 'pwa',
+          score: 0.58,
+        },
+        accessibility: {
+          id: 'accessibility',
+          score: 1,
+        },
+        'best-practices': {
+          id: 'best-practices',
+          score: 0.93,
+        },
+        seo: {
+          id: 'seo',
+          score: 0.8,
+        },
+      },
+    },
+  }),
+);
+
+// jest.setTimeout(30000);
 
 const validatedScores = [
   {
@@ -29,14 +57,8 @@ const validatedScores = [
 ];
 
 describe('runLighthouse', () => {
-  it('Validates scores based on on config', () => {
-    expect(runLighthouse(mockConfig)).resolves.toEqual(validatedScores);
+  it('Validates scores based on on config', async () => {
+    const result = await runLighthouse(config);
+    expect(result).toEqual(validatedScores);
   });
-  // it('thing', () => expect(runLighthouse(mockConfig)).resolves.toEqual('Paul'));
-  // mockimports
-  // mockLighthouseResponse
-  // setInputOne
-  // await import('./lighthouseRunner');
-  // expect output to equal output 1
-  // expect output to equal output 1
 });
