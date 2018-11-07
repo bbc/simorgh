@@ -81,7 +81,7 @@ CSS Grid has the ability to add "grid-gaps" which are rendered inclusive of the 
 Below 1008px we define all columns to be dynamic. 
 
 Above 1007px we statically define the widths of the columns due to the fact they are limited in the UX definition, which then allows us to have a dynamic column either side of the UX grid. 
-  EG: In CSS grid values we can specific `grid-template-columns: 1fr repeat(10, minmax(0, ${staticColWidth})) 1fr;` where the `1fr`s are dymanic and the columns and `repeat()` are the static width columns.
+  EG: In CSS grid values we can specific `grid-template-columns: 1fr repeat(10, minmax(0, ${staticColWidth})) 1fr;` where the `1fr`s are dynamic and the columns and `repeat()` are the static width columns.
 
 The combination of the UX grid having margins prior to the column definitions and the product requirements for a "full bleed" component creates an interesting problem. We can't use CSS paddings or margins before the CSS grid implementation otherwise all components in the grid will be limited to the padding/margin and not able to go "full bleed". Our solution to this problem stems from the implementation of the static columns above 1007px - we can define a CSS grid that has an additional column either side of the UX defined columns so that the grid-gaps act both inbetween the columns as gutters and also outside of the grid as margins. 
 **NB: This implementation means at every viewport we have an additional column either side of the UX defined columns, often as a 0px column.**
