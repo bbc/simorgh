@@ -23,21 +23,6 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-// const getSrcSet = imgUrl => {
-//   let sourceSet = '';
-
-//   srcSetValues.forEach((value, index) => {
-//     const srcSetUrl = imgUrl.replace(DEFAULT_IMAGE_RES, value);
-//     sourceSet += `${srcSetUrl} ${value}w, `; // add a comma and space after every srcset value
-
-//     if (index === srcSetValues.length - 1) {
-//       sourceSet = sourceSet.substring(0, sourceSet.length - 2); // remove the trailing comma and space from the end of the string
-//     }
-//   });
-
-//   return sourceSet;
-// };
-
 const getSrcSet = imgUrl => {
   const srcSetUrls = srcSetValues.map(
     value => `${imgUrl.replace(DEFAULT_IMAGE_RES, value)} ${value}w`,
