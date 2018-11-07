@@ -91,7 +91,7 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 | Breakpoints     | Columns       | Gutters   | Margins   |
 | :-------------- | :------------ | :-------- | :-------- |
-| 0px - 399px     | 6 + 2 of 0px  | 0 of 8px  | 2 of 8px  |
+| 0px - 399px     | 6 + 2 of 0px  | 5 of 8px  | 2 of 8px  |
 | 400px - 599px   | 6 + 2 of 8px  | 5 of 8px  | 2 of 16px |
 | 600px - 1007px  | 6 + 2 of 0px  | 5 of 16px | 2 of 16px |
 | 1008px - 1280px | 8 + 2 of 1fr  | 7 of 16px | 2 of 16px |
@@ -99,7 +99,6 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 - `6 + 2 of 0px` - is based on having a 0px column either side of UX grid so we can use CSS grid-gaps as the UX margin while allowing a grid item to be able to go "full bleed".
 - `6 + 2 of 8px` - between 400px and 599px we have an 8px column either side of the UX grid so that the grid-gap (8px) and additional column (8px) combined meet the 16px UX margin.
-- `0 of 8px` - under 400px we have only 1 column and therefore no gutters.
 
 ## TL;DR
 
@@ -113,6 +112,14 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 - [Investigation PR](https://github.com/BBC-News/simorgh/pull/824)
 - [Statically defined columns for above 1280px example](https://codepen.io/phil-lee/full/zmjaMO/)
+
+## Final note
+
+The UX article grid is currently defined as follows:
+
+<img width="720" alt="screen shot 2018-11-05 at 16 25 34" src="https://user-images.githubusercontent.com/7791726/48130054-402bb700-e283-11e8-92c8-b1f43c7a378e.png">
+
+This said we currently don't have any use case, designs or required support for under 240px and therefore we are making a technical descision not to implement the single column and will have 6 columns from 0 - 1007px viewports.
 
 ### Figure 1 - Article grid layout at 375px
 
