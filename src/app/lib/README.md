@@ -98,7 +98,9 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 `6 + 2 of 0px` - is based on having a 0px column either side of UX  grid so we can use CSS grid-gaps as the UX margin while allowing a grid item to be able to go "full bleed". 
 `6 + 2 of 8px*` - between 400px and 599px we have an 8px column either side of the UX grid so that the grid-gap (8px) and additional column (8px) combined meet the 16px UX margin.
-`0 of 8px` - under 400px we have only 1 column and therefore no gutters.
+* `6 + 2 of 0px` - is based on having a 0px column either side of UX  grid so we can use CSS grid-gaps as the UX margin while allowing a grid item to be able to go "full bleed". 
+* `6 + 2 of 8px` - between 400px and 599px we have an 8px column either side of the UX grid so that the grid-gap (8px) and additional column (8px) combined meet the 16px UX margin.
+* `0 of 8px` - under 400px we have only 1 column and therefore no gutters.
 
 ## TL;DR 
 - We work to a UX grid
