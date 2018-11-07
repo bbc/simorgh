@@ -29,7 +29,7 @@
     "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
-    "test:lighthouse": "node scripts/lighthouseRunner.js",
+    "test:lighthouse": "node scripts/lighthouse/index.js",
     "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
@@ -120,6 +120,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
+      "**/scripts/*test.js",
       "**/src/**/*.{js,jsx}",
       "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx"
