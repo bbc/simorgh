@@ -68,7 +68,7 @@ The article layout UX design has the following requirements:
 | 600px - 1007px  | 6       | 4 of 6                   | 
 | 1008px - 1280px | 8       | 6 of 8                   | 
 | 1280px +        | 10      | 6 of 10                  | 
-* content contained within the grid, therefore not "full bleed"
+\* content contained within the grid, therefore not "full bleed"
 
 ## Our CSS grid implementation
 
