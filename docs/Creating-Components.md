@@ -111,7 +111,7 @@ We've added our _component_, which should be kept as simple as possible. Now we 
 Add a new folder under `src/app/containers/[Component Name]/`. You will need:
 
 * index.jsx - describes the mapping of Optimo block data to React parameters
-* index.stories.jsx - describes the behaviour of your component under different data conditions
+* index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
 
 This step is quite complicated, so copy and paste from a similar example and tweak the code to your requirements.
 
