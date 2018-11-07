@@ -11,6 +11,8 @@ Add your component in `src/app/components/[Component Name]/`. You will need:
 
 Work locally within these two files - the Storybook pattern library will be updated automatically with hot module reloading - to create the component front-end you need.
 
+NB: we try to build "AMP-first", but this is difficult in practice because we are unable to inject the AMP dependency into Storybook. For now, check the AMP output manually in Part 2 of the process. Simorgh currently only supports one 'view' of components; components which require a different implementation for AMP must wait for the outcome of our [AMP/canonical component investigation](https://github.com/BBC-News/simorgh/issues/884).
+
 Once done, make a PR - this first step will need code review and UX QA.
 
 Example implementations below:
@@ -34,7 +36,7 @@ import Blockquote from './index';
 
 storiesOf('Blockquote', module).add('default - quote only', () => <Blockquote>To be or not to be, that is the question</Blockquote>);
 storiesOf('Blockquote', module).add('quote with cite', () => (
-    <Blockquote cite="William Shakespeare">To be or not to be, that is the question</Blockquote>
+  <Blockquote cite="William Shakespeare">To be or not to be, that is the question</Blockquote>
 ));
 ```
 
@@ -121,6 +123,27 @@ Under `src/app/models/propTypes/[Component Name (lowercase)]`, create an `index.
 ## Part 3: Integrate the component into the Article
 Before your component can be used in production, it must go through a full accessibility and UX review. These steps don't happen as much in the first two PRs as we don't want them to become a bottleneck for development.
 
+### Build dependency into article renderer
 As part of the final review process, you'll need to import your component's container and add it to the `componentsToRenderMain` object in `src/app/containers/Article/index.jsx`.
 
 This feels like duplication of the schema - and it kind of is - but is currently our solution for preventing bundling _all components_ into the application JS.
+
+### Testing
+Before merge, if your new component requires integration testing it should be covered in the end-to-end (E2E) tests.
+
+The test team is responsible for writing integration tests - [which live in Simorgh](https://github.com/BBC-News/simorgh/tree/latest/cypress) - covering your component's functionality.
+
+### Publishing
+By now, you should have all the automatic PR checks passing, 2 manual code reviews Approved, and all the UX/accessibility/test QA completed.
+
+NB, the automatic checks are:
+
+* CodeClimate (diff coverage, total coverage, code quality)
+* Travis (runs the tests, [updates the storybook](https://simorghstorybook.now.sh/))
+* Jenkins CI* (`bbc-news-simorgh` job - runs the tests).
+
+\* Currently we run tests on Jenkins with a view to moving away from Travis, so tests are currently run twice. We hope to simplify things soon.
+
+Now you're ready to hit the Merge button! When you hit merge, an additional CI job is run (`simorgh-infrastructure`) which creates RPMs, publishes them to Cosmos, deploys to Test, runs E2Es on Test, promotes to Live, and runs E2Es on Live.
+
+All being well, your code should be live within an hour of merge.
