@@ -8,10 +8,13 @@ Add your component in `src/app/components/[Component Name]/`. You will need:
 
 * index.jsx - defines the component
 * index.stories.jsx - defines variations of the component.
+* index.test.jsx - describe how to take "snapshots" to protect against regressions to the component.
 
-Work locally within these two files - the Storybook pattern library will be updated automatically with hot module reloading - to create the component front-end you need.
+Work locally within these first two files - the Storybook pattern library will be updated automatically with hot module reloading - to create the component front-end you need.
 
 NB: we try to build "AMP-first", but this is difficult in practice because we are unable to inject the AMP dependency into Storybook. For now, check the AMP output manually in Part 2 of the process. Simorgh currently only supports one 'view' of components; components which require a different implementation for AMP must wait for the outcome of our [AMP/canonical component investigation](https://github.com/BBC-News/simorgh/issues/884).
+
+Once you're happy with how your component looks (in all its variants), work on your index.test.jsx file to take snapshots of them. If the structure of the component changes in the future, the unit test suite will fail.
 
 Once done, make a PR - this first step will need code review and UX QA.
 
@@ -40,12 +43,7 @@ storiesOf('Blockquote', module).add('quote with cite', () => (
 ));
 ```
 
-## Part 2: Create the container component
-Once your component front-end is merged, you'll need to integrate it into the renderer. Let's work from the lowest level to the highest level:
-
-### Add a test
-In your component subdirectory, add a `index.test.jsx` to take a "snapshot" so that we can protect against regressions to the component. If the structure of the component changes, the unit test suite will fail.
-
+### index.test.jsx
 ```js
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
@@ -58,6 +56,9 @@ describe('Blockquote', () => {
   );
 });
 ```
+
+## Part 2: Create container component and fixture data
+Once your component front-end is merged, you'll need to integrate it into the renderer.
 
 ### Update the schema
 data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
@@ -105,7 +106,7 @@ Pick a JSON file under `data/test/news/articles/[id].json`, and:
 
 Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
-### Add a container
+### Create the container
 We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
 
 Add a new folder under `src/app/containers/[Component Name]/`. You will need:
