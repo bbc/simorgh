@@ -214,7 +214,7 @@
               },
               "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
               "embedding" : true,
-              "warnings" : { },
+              "warnings" : {},
               "advertising" : false,
               "versions" : [
                 {

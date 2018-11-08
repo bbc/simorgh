@@ -182,7 +182,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p05cmbxc.jpg",
                   "embedding" : false,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : true,
                   "versions" : [
                     {

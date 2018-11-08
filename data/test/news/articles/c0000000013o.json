@@ -201,7 +201,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
                   "embedding" : true,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : false,
                   "versions" : [
                     {
@@ -297,7 +297,7 @@
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p068lkx0.jpg",
                   "imageCopyright" : "SNS",
                   "embedding" : false,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : false,
                   "versions" : [
                     {
@@ -364,7 +364,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p01tlf61.jpg",
                   "embedding" : true,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : true,
                   "versions" : [
                     {
@@ -402,7 +402,7 @@
                   "imageUrl" : "ichef.test.bbci.co.uk/images/ic/$recipe/p01hxr1j.jpg",
                   "imageCopyright" : "BBC",
                   "embedding" : true,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : true,
                   "versions" : [
                     {
@@ -439,7 +439,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p065f0c3.jpg",
                   "embedding" : false,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : false,
                   "versions" : [
                     {

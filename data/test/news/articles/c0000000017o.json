@@ -57,7 +57,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p060nk8l.jpg",
                   "embedding" : true,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : false,
                   "versions" : [
                     {
@@ -599,7 +599,7 @@
                   },
                   "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p06704bb.jpg",
                   "embedding" : true,
-                  "warnings" : { },
+                  "warnings" : {},
                   "advertising" : false,
                   "versions" : [
                     {
