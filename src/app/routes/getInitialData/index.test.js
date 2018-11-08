@@ -76,9 +76,9 @@ describe('getInitialData', () => {
   });
 
   describe('Rejected fetch', () => {
-    it('should return an empty object', async () => {
+    it('should throw an error', async () => {
       const response = await callGetInitialData({}, mockFetchFailure);
-      expect(response).toEqual({});
+      expect(response).toThrowError(`TypeError: Failed to fetch`);
     });
   });
 });

@@ -19,8 +19,7 @@ const getInitialData = async ({ match }) => {
       service,
     };
   } catch (error) {
-    console.log(error); // eslint-disable-line no-console
-    return {};
+    throw error;
   }
 };
 
