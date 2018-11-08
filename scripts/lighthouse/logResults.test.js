@@ -14,4 +14,18 @@ describe('logHighLevelScores', () => {
   });
 });
 
-describe('checkFailures', () => {});
+describe('checkFailures', () => {
+  describe('no failures', () => {
+    it('Should return false if there are no failures', () => {
+      const result = checkFailures([]);
+      expect(result).toBe(false);
+    });
+  });
+  describe('failures', () => {
+    it('Should return true', () => {
+      const result = checkFailures(failures);
+      expect(result).toBe(true);
+    });
+    it('Should log failure message if failures are present', () => {});
+  });
+});

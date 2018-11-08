@@ -30,8 +30,10 @@ function checkFailures(failures) {
     process.on('exit', () =>
       log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
     );
+    return true;
     // process.exit(1); Uncomment to fail Travis build
   }
+  return false;
 }
 
 module.exports = {
