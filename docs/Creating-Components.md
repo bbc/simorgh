@@ -135,7 +135,7 @@ Before merge, if your new component requires integration testing it should be co
 The test team is responsible for writing integration tests - [which live in Simorgh](https://github.com/BBC-News/simorgh/tree/latest/cypress) - covering your component's functionality.
 
 ### Publishing
-By now, you should have all the automatic PR checks passing, 2 manual code reviews Approved, and all the UX/accessibility/test QA completed.
+By now, you should have all the automatic PR checks passing, 2 manual code reviews approved, and all the UX/accessibility/test QA completed.
 
 NB, the automatic checks are:
 
