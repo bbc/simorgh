@@ -1,6 +1,5 @@
-import config from './mockConfig';
 import runLighthouse from './runLighthouse';
-import { validatedPassingScores } from './fixtures';
+import { validatedPassingScores, config } from './fixtures';
 
 jest.mock('lighthouse', () =>
   jest.fn().mockResolvedValue({

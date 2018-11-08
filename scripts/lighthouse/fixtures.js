@@ -1,6 +1,21 @@
+const url = 'http://localhost:7080/news/articles/c9rpqy7pmypo';
+const config = {
+  urls: [url],
+  thresholds: {
+    accessibility: 0,
+    seo: 0,
+    pwa: 0,
+    performance: 0,
+    'best-practices': 0,
+  },
+  opts: {
+    chromeFlags: ['--headless'],
+  },
+};
+
 const validatedPassingScores = [
   {
-    url: 'http://localhost:7080/news/articles/c9rpqy7pmypo',
+    url,
     scores: [
       {
         id: 'performance',
@@ -23,7 +38,7 @@ const validatedPassingScores = [
 
 const validatedFailingScores = [
   {
-    url: 'http://localhost:7080/news/articles/c9rpqy7pmypo',
+    url,
     scores: [
       {
         id: 'performance',
@@ -46,11 +61,11 @@ const validatedFailingScores = [
 
 const failures = [
   {
-    url: 'http://localhost:7080/news/articles/c9rpqy7pmypo',
+    url,
     category: 'best-practices',
   },
   {
-    url: 'http://localhost:7080/news/articles/c9rpqy7pmypo',
+    url,
     category: 'seo',
   },
 ];
@@ -59,4 +74,5 @@ module.exports = {
   validatedPassingScores,
   validatedFailingScores,
   failures,
+  config,
 };
