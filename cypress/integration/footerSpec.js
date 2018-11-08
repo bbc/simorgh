@@ -54,7 +54,7 @@ describe('Footer Tests', () => {
     const footerCopyrightArea = getElement('footer p');
     footerCopyrightArea.should(
       'contain',
-      'Copyright © 2018 BBC. The BBC is not responsible for the content of external sites. ',
+      '© 2018 BBC. The BBC is not responsible for the content of external sites. ',
     );
   });
   it('should contain a link in the copyright text', () => {
