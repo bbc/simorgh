@@ -19,45 +19,34 @@ const validatedPassingScores = [
     scores: [
       {
         id: 'performance',
-        score: 0.72,
+        score: 1,
         expectedScore: 0,
         pass: true,
       },
-      { id: 'pwa', score: 0.58, expectedScore: 0, pass: true },
+      { id: 'pwa', score: 1, expectedScore: 0, pass: true },
       { id: 'accessibility', score: 1, expectedScore: 0, pass: true },
       {
         id: 'best-practices',
-        score: 0.93,
+        score: 0.5,
         expectedScore: 0,
         pass: true,
       },
-      { id: 'seo', score: 0.8, expectedScore: 0, pass: true },
+      { id: 'seo', score: 0.5, expectedScore: 0, pass: true },
     ],
   },
 ];
 
-const validatedFailingScores = [
-  {
-    url,
-    scores: [
-      {
-        id: 'performance',
-        score: 0.72,
-        expectedScore: 0,
-        pass: true,
-      },
-      { id: 'pwa', score: 0.58, expectedScore: 0, pass: true },
-      { id: 'accessibility', score: 1, expectedScore: 0, pass: true },
-      {
-        id: 'best-practices',
-        score: 0.93,
-        expectedScore: 1,
-        pass: false,
-      },
-      { id: 'seo', score: 0.8, expectedScore: 1, pass: false },
-    ],
-  },
-];
+const validatedFailingScores = JSON.parse(
+  JSON.stringify(validatedPassingScores),
+);
+
+function createFailingScores(index) {
+  validatedFailingScores[0].scores[index].expectedScore = 1;
+  validatedFailingScores[0].scores[index].pass = false;
+}
+
+createFailingScores(3);
+createFailingScores(4);
 
 const failures = [
   {

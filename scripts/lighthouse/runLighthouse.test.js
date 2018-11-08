@@ -7,11 +7,11 @@ jest.mock('lighthouse', () =>
       categories: {
         performance: {
           id: 'performance',
-          score: 0.72,
+          score: 1,
         },
         pwa: {
           id: 'pwa',
-          score: 0.58,
+          score: 1,
         },
         accessibility: {
           id: 'accessibility',
@@ -19,11 +19,11 @@ jest.mock('lighthouse', () =>
         },
         'best-practices': {
           id: 'best-practices',
-          score: 0.93,
+          score: 0.5,
         },
         seo: {
           id: 'seo',
-          score: 0.8,
+          score: 0.5,
         },
       },
     },
