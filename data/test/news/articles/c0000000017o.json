@@ -188,12 +188,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo",
+                        "text": "Maecenas $,%,+,-,=,_,£,¥,©,°,²,³,¹,×,ẞ,ß,à,á,â,æ,ç,è,é,ê,î,ô,÷,û,Ŵ,ŵ,Ŷ,ŷ,⁰,⁴,⁵,⁶,⁷,⁸,⁹,₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,€ diam in mi dignissim, eget maximus lacus commodo",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Maecenas varius diam in mi dignissim, eget maximus lacus commodo",
+                              "text": "Maecenas $,%,+,-,=,_,£,¥,©,°,²,³,¹,×,ẞ,ß,à,á,â,æ,ç,è,é,ê,î,ô,÷,û,Ŵ,ŵ,Ŷ,ŷ,⁰,⁴,⁵,⁶,⁷,⁸,⁹,₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,€ diam in mi dignissim, eget maximus lacus commodo",
                               "attributes": []
                             }
                           }
@@ -213,12 +213,12 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Mauris aliquam leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
+                  "text": "Mauris $,%,+,-,=,_,£,¥,©,°,²,³,¹,×,ẞ,ß,à,á,â,æ,ç,è,é,ê,î,ô,÷,û,Ŵ,ŵ,Ŷ,ŷ,⁰,⁴,⁵,⁶,⁷,⁸,⁹,₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,€ leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Mauris aliquam leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
+                        "text": "Mauris $,%,+,-,=,_,£,¥,©,°,²,³,¹,×,ẞ,ß,à,á,â,æ,ç,è,é,ê,î,ô,÷,û,Ŵ,ŵ,Ŷ,ŷ,⁰,⁴,⁵,⁶,⁷,⁸,⁹,₀,₁,₂,₃,₄,₅,₆,₇,₈,₉,€ leo enim. Sed convallis eget libero quis placerat. Etiam eros enim, aliquam sed massa vitae, scelerisque aliquet ex.",
                         "attributes": []
                       }
                     }
