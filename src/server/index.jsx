@@ -104,14 +104,17 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      const styleTags = sheet.getStyleElement();
+      // const styleTags = sheet.getStyleElement();
+      const styles = sheet.getStyleElement()[0];
+      const inlineCss = styles ? styles.props.dangerouslySetInnerHTML.__html : '';
 
       const doc = renderToStaticMarkup(
         <Document
           assets={assets}
           app={app}
           data={data}
-          styleTags={styleTags}
+          // styleTags={styleTags}
+          inlineCss={inlineCss}
           helmet={headHelmet}
         />,
       );

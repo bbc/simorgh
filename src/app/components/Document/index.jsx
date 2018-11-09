@@ -4,7 +4,7 @@ import '../../lib/globalStyles';
 import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, app, data, styleTags, helmet }) => {
+const Document = ({ assets, app, data, /* styleTags, */ inlineCss, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -33,7 +33,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         <ResourceHints />
         {title}
         {links}
-        {styleTags}
+        <style amp-custom="">{inlineCss}</style>
       </head>
       <body>
         {/* eslint-disable react/no-danger */
