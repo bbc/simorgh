@@ -1,20 +1,18 @@
 const chalk = require('chalk');
 
-const { log } = console;
-
 function formatResult({ id, score, expectedScore, pass }) {
   const resultDetail = `${id}, actual: ${score}, expected: ${expectedScore}`;
   if (pass) {
-    log(`${chalk.black.bgGreen(' PASS ')} ${resultDetail}`);
+    console.log(`${chalk.black.bgGreen(' PASS ')} ${resultDetail}`); // eslint-disable-line no-console
   } else {
-    log(`${chalk.black.bgRed(' FAIL ')} ${resultDetail}`);
+    console.log(`${chalk.black.bgRed(' FAIL ')} ${resultDetail}`); // eslint-disable-line no-console
   }
 }
 
 function logHighLevelScores(results) {
   const failures = [];
   results.forEach(result => {
-    log(chalk.underline(`\nLighthouse results for ${result.url}:`));
+    console.log(chalk.underline(`\nLighthouse results for ${result.url}:`)); // eslint-disable-line no-console
     result.scores.forEach(score => {
       formatResult(score);
       if (!score.pass) {
@@ -27,11 +25,13 @@ function logHighLevelScores(results) {
 
 function checkFailures(failures) {
   if (failures.length > 0) {
-    process.on('exit', () =>
-      log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
-    );
+    console.log(`\n${chalk.red('Lighthouse threshold tests failed')}`); // eslint-disable-line no-console
     return true;
-    // process.exit(1); Uncomment to fail Travis build
+    // Uncomment the following to fail Travis build
+    // process.on('exit', () =>
+    //   console.log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
+    // );
+    // process.exit(1);
   }
   return false;
 }

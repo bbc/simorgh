@@ -11,7 +11,7 @@ jest.mock('./logResults', () => ({
 }));
 
 describe('index', () => {
-  it('promise chain', async () => {
+  it('launchLighthouseAndLogResults', async () => {
     await launchLighthouseAndLogResults();
     expect(runLighthouse).toHaveBeenCalledWith(config);
     expect(logResults.logHighLevelScores).toHaveBeenCalledWith(1);

@@ -26,6 +26,11 @@ describe('checkFailures', () => {
       const result = checkFailures(failures);
       expect(result).toBe(true);
     });
-    it('Should log failure message if failures are present', () => {});
+    it('Should log failure message if failures are present', () => {
+      global.console.log = jest.fn();
+
+      checkFailures(failures);
+      expect(global.console.log).toHaveBeenCalled();
+    });
   });
 });
