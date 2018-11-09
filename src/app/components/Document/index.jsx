@@ -20,7 +20,8 @@ const Document = ({ assets, app, data, inlineCss, helmet }) => {
     />
   ));
   const inlineStyleAttributes = {};
-  inlineStyleAttributes[data.isAmp ? 'amp-custom' : 'data-styled-components'] = '';
+  inlineStyleAttributes[data.isAmp ? 'amp-custom' : 'data-styled-components'] =
+    '';
 
   return (
     <html lang="en-GB" {...htmlAttrs}>

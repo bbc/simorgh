@@ -99,7 +99,7 @@ describe('Server', () => {
             assets={['one.js']}
             data={{ some: 'data' }}
             helmet={{ head: 'tags' }}
-            styleTags={<styles />}
+            inlineCss=""
           />,
         );
 

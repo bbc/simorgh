@@ -105,7 +105,9 @@ server
       const headHelmet = Helmet.renderStatic();
 
       const styles = sheet.getStyleElement()[0];
-      const inlineCss = styles ? styles.props.dangerouslySetInnerHTML.__html : '';
+      const inlineCss = styles
+        ? styles.props.dangerouslySetInnerHTML.__html // eslint-disable-line no-underscore-dangle
+        : '';
 
       const doc = renderToStaticMarkup(
         <Document

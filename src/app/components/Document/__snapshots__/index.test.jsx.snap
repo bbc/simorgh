@@ -41,9 +41,9 @@ exports[`Document should render correctly 1`] = `
       href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
-    <style>
-      html { color: red; }
-    </style>
+    <style
+      data-styled-components=""
+    />
   </head>
   <body>
     <div
