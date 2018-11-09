@@ -30,8 +30,6 @@ jest.mock('lighthouse', () =>
   }),
 );
 
-// jest.setTimeout(30000);
-
 describe('runLighthouse', () => {
   it('Validates scores based on on config', async () => {
     const result = await runLighthouse(config);
