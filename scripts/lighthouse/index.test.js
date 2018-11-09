@@ -1,12 +1,20 @@
-import { config } from './fixtures';
-// import { validatedPassingScores } from './fixtures';
+import config from '../../lighthouse';
 
-const { indexRunner } = require('./index');
+import runLighthouse from './runLighthouse';
+import launchLighthouseAndLogResults from './index';
+import logResults from './logResults';
 
-jest.setTimeout(30000);
+jest.mock('./runLighthouse', () => jest.fn().mockResolvedValue(1));
+jest.mock('./logResults', () => ({
+  logHighLevelScores: jest.fn().mockResolvedValue(2),
+  checkFailures: jest.fn().mockResolvedValue(3),
+}));
 
-describe('indexRunner', () => {
-  it('Should resolve to true if called with passing config', async () => {
-    await expect(indexRunner(config)).resolves.toEqual(true);
+describe('index', () => {
+  it('promise chain', async () => {
+    await launchLighthouseAndLogResults();
+    expect(runLighthouse).toHaveBeenCalledWith(config);
+    expect(logResults.logHighLevelScores).toHaveBeenCalledWith(1);
+    expect(logResults.checkFailures).toHaveBeenCalledWith(2);
   });
 });
