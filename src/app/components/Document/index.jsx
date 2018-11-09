@@ -4,12 +4,13 @@ import '../../lib/globalStyles';
 import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, app, data, /* styleTags, */ inlineCss, helmet }) => {
+const Document = ({ assets, app, data, inlineCss, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
+  const scriptsAllowed = !data.isAmp;
   const scripts = assets.map(asset => (
     <script
       crossOrigin="anonymous"
@@ -19,6 +20,10 @@ const Document = ({ assets, app, data, /* styleTags, */ inlineCss, helmet }) => 
       defer
     />
   ));
+  const inlineStyleAttributes = {
+    'amp-custom': data.isAmp ? '' : undefined,
+    'data-styled-components': data.isAmp ? undefined : '',
+  };
 
   return (
     <html lang="en-GB" {...htmlAttrs}>
@@ -33,18 +38,23 @@ const Document = ({ assets, app, data, /* styleTags, */ inlineCss, helmet }) => 
         <ResourceHints />
         {title}
         {links}
-        <style amp-custom="">{inlineCss}</style>
+        {data.isAmp && (
+          <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+        )}
+        <style {...inlineStyleAttributes}>{inlineCss}</style>
       </head>
       <body>
         {/* eslint-disable react/no-danger */
         /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.SIMORGH_DATA=${serialisedData}`,
-          }}
-        />
-        {scripts}
+        {scriptsAllowed && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.SIMORGH_DATA=${serialisedData}`,
+            }}
+          />
+        )}
+        {scriptsAllowed && scripts}
       </body>
     </html>
   );
