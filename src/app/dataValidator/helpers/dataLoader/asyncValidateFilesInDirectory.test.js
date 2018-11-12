@@ -1,7 +1,9 @@
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
-const { readdirSync } = require('./readdirSync');
+const {
+  asyncValidateFilesInDirectory,
+} = require('./asyncValidateFilesInDirectory');
 const readScenario = require('./readScenario');
 
 const defaultDataPath = './data';
@@ -11,7 +13,7 @@ const expectMethodToBeCalledTimes = async (
   spyMethod,
   dataPath = defaultDataPath,
 ) => {
-  await readdirSync(dataPath);
+  await asyncValidateFilesInDirectory(dataPath);
   try {
     expect(spyMethod).toHaveBeenCalledTimes(number);
   } catch (error) {
@@ -19,7 +21,7 @@ const expectMethodToBeCalledTimes = async (
   }
 };
 
-describe('readdirSync helper', () => {
+describe('asyncValidateFilesInDirectory helper', () => {
   let fileToValidateSpy;
 
   beforeEach(() => {
@@ -49,6 +51,8 @@ describe('readdirSync helper', () => {
   });
 
   it('should return a promise', () => {
-    expect(readdirSync('./data') instanceof Promise).toEqual(true);
+    expect(asyncValidateFilesInDirectory('./data') instanceof Promise).toEqual(
+      true,
+    );
   });
 });

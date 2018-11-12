@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const { validateData } = require('../validators/validateData');
 const { countScenarios } = require('../../utilities/countScenarios');
-const readdirSync = require('./readdirSync');
+const asyncValidateFilesInDirectory = require('./asyncValidateFilesInDirectory');
 
 const ifDirectoryThenValidateNestedFiles = fullFileName => {
   const fileStats = fs.statSync(fullFileName);
 
   if (fileStats.isDirectory()) {
-    readdirSync.readdirSync(fullFileName);
+    asyncValidateFilesInDirectory.asyncValidateFilesInDirectory(fullFileName);
   }
 };
 
