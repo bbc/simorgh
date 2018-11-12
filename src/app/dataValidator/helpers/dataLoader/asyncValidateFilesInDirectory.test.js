@@ -8,17 +8,17 @@ const readScenario = require('./readScenario');
 
 const defaultDataPath = './data';
 
+/*
+  Becase the it() blocks are using this utility function and an expect returns a Promise both
+  the it() block and the method execution require an `await` prefix
+*/
 const expectMethodToBeCalledTimes = async (
   number,
   spyMethod,
   dataPath = defaultDataPath,
 ) => {
   await asyncValidateFilesInDirectory(dataPath);
-  try {
-    expect(spyMethod).toHaveBeenCalledTimes(number);
-  } catch (error) {
-    expect(spyMethod).toHaveBeenCalledTimes(number);
-  }
+  expect(spyMethod).toHaveBeenCalledTimes(number);
 };
 
 describe('asyncValidateFilesInDirectory helper', () => {
