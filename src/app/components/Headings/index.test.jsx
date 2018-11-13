@@ -21,9 +21,7 @@ describe('SubHeading component', () => {
 
   shouldMatchSnapshot(
     'attribute id should render without double quotes',
-    <SubHeading text="This &quot;is&quot; a SubHeading">
-      This is a SubHeading
-    </SubHeading>,
+    <SubHeading text='This "is" a SubHeading'>This is a SubHeading</SubHeading>,
   );
 
   shouldMatchSnapshot(
