@@ -36,6 +36,7 @@ const validatedPassingScores = [
   },
 ];
 
+// create a copy of validatedPassingScores
 const validatedFailingScores = JSON.parse(
   JSON.stringify(validatedPassingScores),
 );
@@ -45,6 +46,7 @@ function createFailingScores(index) {
   validatedFailingScores[0].scores[index].pass = false;
 }
 
+// create failing scores for best-practices and seo
 createFailingScores(3);
 createFailingScores(4);
 
