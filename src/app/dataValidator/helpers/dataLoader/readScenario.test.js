@@ -42,6 +42,19 @@ describe('readScenario helper', () => {
     testReadScenario(fileNames, expectedCalls);
   });
 
+  it('should process exit on validation error', () => {
+    const fileName = 'invalidScenario.json';
+    const invalidDataPath = './src/app/dataValidator';
+
+    process.exit = jest.fn();
+
+    try {
+      readScenario.readScenario(fileName, invalidDataPath);
+    } catch (error) {
+      expect(process.exit).toHaveBeenCalled();
+    }
+  });
+
   it('should ignore c0000000023o.json', () => {
     const fileNames = ['c0000000023o.json', 'c0000000003o.json'];
     const expectedCalls = [['./././data/test/news/articles/c0000000003o.json']];

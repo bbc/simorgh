@@ -1,8 +1,9 @@
 import {
-  clickInlineLinkAndTestPageHasHTML,
+  // clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   getElement,
   placeholderImageLoaded,
+  renderedTitle,
   shouldContainText,
   shouldContainStyles,
   visibleImageNoCaption,
@@ -83,11 +84,11 @@ describe('Article Body Tests', () => {
     shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
   });
 
-  // it('should render a title', () => {
-  //   renderedTitle(
-  //     "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
-  //   );
-  // });
+  it('should render a title', () => {
+    renderedTitle(
+      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
+    );
+  });
 
   it('should have an inline link with focus styling', () => {
     const firstInlineLink = getElement('main a');
@@ -106,7 +107,12 @@ describe('Article Body Tests', () => {
     );
   });
 
-  it('should have a working first inline link', () => {
-    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
-  });
+  /*
+    The following test is commented out due to it breaking the E2E tests once we are integrated with Mozart and Ares.
+    The issue https://github.com/BBC-News/simorgh/issues/930 has further details.
+  */
+
+  // it('should have a working first inline link', () => {
+  //   clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
+  // });
 });
