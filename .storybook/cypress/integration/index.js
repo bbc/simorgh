@@ -14,7 +14,7 @@ describe('Storybook Article', () => {
 
   it('each story render panel should not be blank', () => {
     cy.get('ul>li>a').each($a => {
-      cy.wrap($a).click();
+      cy.wrap($a).click({ force: true });
       cy.get('#storybook-preview-iframe').then($iframe => {
         // .sb-show-main is the class of the storybook display panel
         const $root = $iframe.contents().find('body.sb-show-main #root');
