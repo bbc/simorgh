@@ -64,10 +64,10 @@ const ArticleContainer = ({ loading, error, data }) => {
     const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
     /*
-    * headlineBlocks length check is temporary
-    * Simorgh will respond with 400 to lack of headline block in issue 
-    * https://github.com/BBC-News/simorgh/issues/836
-    */
+     * headlineBlocks length check is temporary
+     * Simorgh will respond with 400 to lack of headline block in issue
+     * https://github.com/BBC-News/simorgh/issues/836
+     */
     if (headlineBlocks.length > 0) {
       return (
         <Fragment>
