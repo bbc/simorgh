@@ -15,11 +15,6 @@ const ifDirectoryThenValidateNestedFiles = fullFileName => {
 const readScenario = (fileName, dirName) => {
   const fullFileName = `${dirName}/${fileName}`;
 
-  // explicitly ignore c0000000023o as it's a example of invalid data
-  if (fileName.includes('c0000000023o.json')) {
-    return false;
-  }
-
   if (fileName !== 'onward-journeys') {
     ifDirectoryThenValidateNestedFiles(fullFileName);
   }
