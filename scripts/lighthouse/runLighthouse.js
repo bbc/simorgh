@@ -24,8 +24,16 @@ function getScoresPerCategory(reportCategories, url) {
   return { scores, url };
 }
 
-const mapScores = scores =>
-  scores.map(({ id, score }) => {
+function createLighthouseRuns(configs) {
+  return configs.urls.map(url =>
+    launchChromeAndRunLighthouse(url, configs.opts).then(results =>
+      getScoresPerCategory(results.categories, url),
+    ),
+  );
+}
+
+function mapScores(scores) {
+  return scores.map(({ id, score }) => {
     const expectedScore = config.thresholds[id];
     return {
       id,
@@ -34,6 +42,7 @@ const mapScores = scores =>
       pass: score >= expectedScore,
     };
   });
+}
 
 function validateScores(resultsArray) {
   return resultsArray.map(({ url, scores }) => ({
@@ -42,17 +51,10 @@ function validateScores(resultsArray) {
   }));
 }
 
-const createLighthouseRuns = configs =>
-  configs.urls.map(url =>
-    launchChromeAndRunLighthouse(url, configs.opts).then(results =>
-      getScoresPerCategory(results.categories, url),
-    ),
-  );
-
-const launchLighthouse = simorghConfig => {
+function launchLighthouse(simorghConfig) {
   config = simorghConfig;
   const lighthouseRuns = createLighthouseRuns(simorghConfig);
   return Promise.all(lighthouseRuns).then(validateScores);
-};
+}
 
 module.exports = launchLighthouse;
