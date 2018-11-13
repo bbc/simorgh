@@ -2,16 +2,14 @@
 
 exports[`Footer should render correctly 1`] = `
 .c6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
   width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 .c0 {
@@ -90,12 +88,10 @@ exports[`Footer should render correctly 1`] = `
 }
 
 .c7 {
-  display: grid;
   background-color: #4C4C4C;
 }
 
 .c8 {
-  grid-column: 1 / -1;
   font-size: 0.875em;
   line-height: 1rem;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -203,45 +199,15 @@ exports[`Footer should render correctly 1`] = `
   }
 }
 
-@media (max-width:37.4375em) {
-  .c7 {
-    grid-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c7 {
-    grid-gap: 1rem;
-  }
-}
-
 @media (max-width:25em) {
   .c7 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25em) {
   .c7 {
     padding: 0 1rem;
-  }
-}
-
-@media (max-width:62.9375em) {
-  .c7 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63em) and (max-width:80em) {
-  .c7 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-  }
-}
-
-@media (min-width:80em) {
-  .c7 {
-    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
   }
 }
 
