@@ -7,7 +7,7 @@ import logResults from './logResults';
 jest.mock('./runLighthouse', () => jest.fn().mockResolvedValue(1));
 jest.mock('./logResults', () => ({
   logHighLevelScores: jest.fn().mockResolvedValue(2),
-  checkFailures: jest.fn().mockResolvedValue(3),
+  checkFailures: jest.fn(),
 }));
 
 describe('index', () => {
