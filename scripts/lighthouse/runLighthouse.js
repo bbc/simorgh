@@ -1,14 +1,15 @@
-const lighthouse = require('lighthouse');
-const chromeLauncher = require('chrome-launcher');
+const lighthouse = require('lighthouse'); // eslint-disable-line import/no-extraneous-dependencies
+const chromeLauncher = require('chrome-launcher'); // eslint-disable-line import/no-extraneous-dependencies
 
 let config = {};
 
 function launchChromeAndRunLighthouse(url, opts, lConfig = null) {
+  const options = opts;
   return chromeLauncher
-    .launch({ chromeFlags: opts.chromeFlags })
+    .launch({ chromeFlags: options.chromeFlags })
     .then(chrome => {
-      opts.port = chrome.port;
-      return lighthouse(url, opts, lConfig).then(results =>
+      options.port = chrome.port;
+      return lighthouse(url, options, lConfig).then(results =>
         chrome.kill().then(() => results.lhr),
       );
     });
