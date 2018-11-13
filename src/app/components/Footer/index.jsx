@@ -10,17 +10,16 @@ import {
   FF_NEWS_SANS_REG,
   GEL_SPACING_DBL,
 } from '../../lib/constants/styles';
-import { layoutGridWrapper, layoutGridItem } from '../../lib/layoutGrid';
+import { layoutWrapperWithoutGrid } from '../../lib/layoutGrid';
 import { T_BREVIER } from '../../lib/constants/typography';
 
 const StyledFooterLinksWrapper = styled.div`
-  ${layoutGridWrapper};
+  ${layoutWrapperWithoutGrid};
   background-color: ${C_ORBIT_GREY};
 `;
 
 const StyledFooterLinks = styled.div`
-  ${layoutGridItem}
-  ${T_BREVIER}
+  ${T_BREVIER};
   font-family: ${FF_NEWS_SANS_REG};
 `;
 
