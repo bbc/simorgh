@@ -43,11 +43,10 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should not have any non-amp scripts in the body or the head', () => {
-    //  The reason we expect '2' is because Cypress injects a script into the head, which we have had to allocate for.
     getElement('body script').should('not.exist');
     getElement('head script')
       .its('length')
-      .should('be', 2);
+      .should('be', 2); // 1 for amp.js + 1 that Cypress injects into the head
   });
 
   it('should not have an AMP attribute on the main article', () => {
