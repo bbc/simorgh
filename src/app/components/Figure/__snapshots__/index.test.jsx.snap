@@ -26,16 +26,14 @@ exports[`Figure with a caption containing a link should render correctly 1`] = `
 }
 
 .c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
   width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 .c3 {
@@ -142,16 +140,14 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 .c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
   width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 .c3 {
@@ -227,16 +223,14 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 }
 
 .c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
   width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 .c3 {
@@ -337,16 +331,14 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
 }
 
 .c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
   width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  top: 0;
 }
 
 .c3 {
