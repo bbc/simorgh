@@ -1,6 +1,5 @@
 const logResults = require('./logResults');
-
-const config = require(`../../lighthouse`);
+const config = require('../../lighthouse');
 const launchLighthouse = require('./runLighthouse');
 
 const launchLighthouseAndLogResults = () =>
