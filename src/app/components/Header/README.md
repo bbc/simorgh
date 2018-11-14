@@ -13,7 +13,7 @@ HTML:
 Link (NB: Sits within header)
 
 Announced text:
-BBC News
+BBC News (Service name from brand)
 
 Landmark:
 Banner
