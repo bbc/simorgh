@@ -4,11 +4,10 @@ const chromeLauncher = require('chrome-launcher'); // eslint-disable-line import
 let config = {};
 
 function launchChromeAndRunLighthouse(url, opts, lConfig = null) {
-  const options = opts;
   return chromeLauncher
-    .launch({ chromeFlags: options.chromeFlags })
+    .launch({ chromeFlags: opts.chromeFlags })
     .then(chrome => {
-      options.port = chrome.port;
+      const options = { ...opts, port: chrome.port };
       return lighthouse(url, options, lConfig).then(results =>
         chrome.kill().then(() => results.lhr),
       );
