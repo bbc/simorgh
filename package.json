@@ -120,8 +120,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/scripts/lighthouse/(index|runLighthouse|logResults).js",
-      "**/src/**/*.{js,jsx}",
+      "**/(src|scripts)/**/*.{js,jsx}",
       "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx"
     ],
