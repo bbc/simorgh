@@ -1,19 +1,19 @@
-# Header
+# Header [![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://simorghstorybook.now.sh/?selectedKind=Header)
 
-## Description
-<!-- (high-level summary that will be accessible to product/UX/Test, plus link to Storybook, explain the different cases) -->
+### Description
+This component functions as a wrapper for the [Brand](../Brand) component which is also used in the [Footer](../Footer). The wrapper is a HTML 'header' element with the 'role' of 'banner' for accessibility. This is component is distinct from brand as the 'header' HTML element is unique and cannot be reused elsewhere on the page.
+	
+### When to use this component
+Header is designed to be used at the top of the document above all other content.
 
-## When to use this component
-<!-- (including where it is currently used) -->
+As this component uses the [Brand](../Brand) which consumes the service context via the [ServiceContextConsumer](../ServiceContextConsumer) component.
 
-## When to not use this component
-<!-- (if this is not known, can leave the section empty) -->
+### Accessibility notes
+HTML: 
+Link (NB: Sits within header)
 
-## Accessibility notes
-<!-- (using accessiblity notes on Zeplin https://app.zeplin.io/project/5baa564c05c2eba0d2b89568/screen/5babb3dea83a3937890e374c, ensuring they make sense to non-technical audiences) -->
+Announced text:
+BBC News
 
-## Roadmap
-<!-- (what we have planned for this component) -->
-
-## Additional notes
-<!-- (link to any relevant ADRs) -->
+Landmark:
+Banner
