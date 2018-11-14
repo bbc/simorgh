@@ -11,7 +11,9 @@ const AmpDecorator = storyFn => (
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,minimum-scale=1" />
       <style amp-boilerplate="">{ampScriptStyling}</style>
-      <style amp-boilerplate="">{ampNoscriptStyling}</style>
+      <noscript>
+        <style amp-boilerplate="">{ampNoscriptStyling}</style>
+      </noscript>
       <script async src="https://cdn.ampproject.org/v0.js" />
     </Helmet>
     {storyFn()}
