@@ -29,10 +29,6 @@ const Metadata = ({
     htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   }
 
-  const injectAmpScript = isAmp ? (
-    <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
-  ) : null;
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta
@@ -70,7 +66,6 @@ const Metadata = ({
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
-      {injectAmpScript}
     </Helmet>
   );
 };
