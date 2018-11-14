@@ -3,7 +3,7 @@ import { number, shape, string } from 'prop-types';
 const promoPropTypes = {
   id: string.isRequired,
   headlines: shape({
-    seoHeadline: string,
+    seoHeadline: string.isRequired,
     promoHeadline: string,
   }),
   locators: shape({

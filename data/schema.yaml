@@ -203,8 +203,8 @@ components:
           properties:
             headlines:
               type: object
-              # required:
-              #   - seoHeadline   currently not in the test optimo datafeed
+              required:
+                - seoHeadline
               #   - promoHeadline   currently not in the test optimo datafeed
               properties:
                 seoHeadline:
