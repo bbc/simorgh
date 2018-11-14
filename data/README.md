@@ -38,3 +38,14 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 | 26       | Home: Persian | Headline, Image (caption), Text (4 pars) | 2 tags (places) | |
 | 27       | | Headline, Image (caption), Text (6 pars, internal link), Image (caption), Image (caption), Text (2 pars), Image (caption), Text (3 pars), Image (caption), Text (3 pars) | 4 tags, 4 topics (event, person, 2 places) | Prod and Test |
 | 28       | Home: Persian | Headline, Image, Text (5 pars), Image (wide), Text (3 pars), Image (wide, caption), Text (3 pars) | One tag | Prod and Test |
+
+## Video test assets
+
+All these are included in article cmejqde986vo on the Test environment
+
+| PID | Availability |
+|---------:|----------|
+| p01k6msm | International |
+| p01kdbwr | International |
+| p01kdbns | UK |
+| p01kdbpz | Ex-UK |

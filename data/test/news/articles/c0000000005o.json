@@ -251,17 +251,15 @@
                             "type": "paragraph",
                             "model": {
                               "text": "Fusce tincidunt lectus eget augue mollis.",
-                              "model": {
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
-                                      "attributes": []
-                                    }
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
+                                    "attributes": []
                                   }
-                                ]
-                              }
+                                }
+                              ]
                             }
                           }
                         ]
