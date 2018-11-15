@@ -5,3 +5,4 @@ node_modules
 coverage
 reports/*
 !reports/.keep
+src/app/helpers/__tests__
