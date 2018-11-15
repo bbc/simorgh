@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -251,17 +251,15 @@
                             "type": "paragraph",
                             "model": {
                               "text": "Fusce tincidunt lectus eget augue mollis.",
-                              "model": {
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
-                                      "attributes": []
-                                    }
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem",
+                                    "attributes": []
                                   }
-                                ]
-                              }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -296,49 +294,10 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p067gq6h",
-            "blocks": [
-              {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT1M34S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p067gq6h"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Vestibulum sagittis neque at consequat porttitor. Maecenas vitae arcu vitae augue lobortis porta eget non erat.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p067gq6h",
+            "blocks" : [
               {
                 "type": "caption",
                 "model": {
@@ -369,46 +328,29 @@
                 }
               },
               {
-                "type": "image",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p067gq6h",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Mark and Isla Royal Wedding",
+                  "synopses" : {
+                    "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                  "embedding" : true,
+                  "warnings" : {},
+                  "advertising" : false,
+                  "versions" : [ 
                     {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "6E15/production/_101718182_scischoolgetty.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "Getty Images"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Pellentesque pellentesque sem magna.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Pellentesque pellentesque sem magna.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId": "p067gq6k",
+                      "types": [ "Original" ],
+                      "duration": 94,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
