@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const { validateData } = require('../validators/validateData');
 const { countScenarios } = require('../../utilities/countScenarios');
-const readdirSync = require('./readdirSync');
+const asyncValidateDir = require('./asyncValidateDir');
 
 const ifDirectoryThenValidateNestedFiles = fullFileName => {
   const fileStats = fs.statSync(fullFileName);
 
   if (fileStats.isDirectory()) {
-    readdirSync.readdirSync(fullFileName);
+    asyncValidateDir.asyncValidateDir(fullFileName);
   }
 };
 
@@ -32,6 +32,10 @@ const readScenario = (fileName, dirName) => {
 
   return new Promise(resolve => {
     resolve(module.exports.fileToValidate(fullFileName));
+  }).catch(reason => {
+    console.log(fullFileName); // eslint-disable-line no-console
+    console.log(reason); // eslint-disable-line no-console
+    process.exit(1);
   });
 };
 
