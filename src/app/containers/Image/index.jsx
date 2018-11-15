@@ -3,8 +3,11 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
-const DEFAULT_IMAGE_RES = 640;
-const srcSetValues = [360, 480, 600, 720, 840, 1024, 2048];
+const noJsSrcValue = 320;
+const noJsSrcSetValues = [240, 320, 480, 624];
+const srcValue = 480;
+const srcSetValues = [240, 320, 480, 624, 800];
+const recipeRegex = /\$recipe/;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -23,9 +26,12 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-const getSrcSet = imgUrl => {
-  const srcSetUrls = srcSetValues.map(
-    value => `${imgUrl.replace(DEFAULT_IMAGE_RES, value)} ${value}w`,
+const generateImageSrc = (imgUrl, recipeValue) =>
+  imgUrl.replace(recipeRegex, recipeValue);
+
+const generateSrcSet = (imgUrl, srcSetArray) => {
+  const srcSetUrls = srcSetArray.map(
+    value => `${generateImageSrc(imgUrl, value)} ${value}w`,
   );
 
   return srcSetUrls.join(', ');
@@ -35,10 +41,10 @@ const getIChefURL = (originCode, locator) => {
   // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
   const overridableOriginCode = originCode || 'cpsdevpb';
 
-  return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
+  return `https://ichef.bbci.co.uk/news/$recipe/${overridableOriginCode}/${locator}`;
 };
 
-const getRawImageSrc = (originCode, locator) =>
+const getImageUrl = (originCode, locator) =>
   originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
 const ImageContainer = ({ blocks }) => {
@@ -65,13 +71,18 @@ const ImageContainer = ({ blocks }) => {
   const copyright = getCopyright(copyrightHolder);
   const caption = getCaption(captionBlock);
   const ratio = (height / width) * 100;
-  const rawImageSrc = getRawImageSrc(originCode, locator);
-  const srcSet = getSrcSet(rawImageSrc);
+  const imageUrl = getImageUrl(originCode, locator);
+  const rawImageSrc = generateImageSrc(imageUrl, srcValue);
+  const noJsSrc = generateImageSrc(imageUrl, noJsSrcValue);
+  const srcSet = generateSrcSet(imageUrl, srcSetValues);
+  const noJsSrcSet = generateSrcSet(imageUrl, noJsSrcSetValues);
 
   return (
     <Figure
       src={rawImageSrc}
+      noJsSrc={noJsSrc}
       srcSet={srcSet}
+      noJsSrcSet={noJsSrcSet}
       alt={altText}
       ratio={ratio}
       copyright={copyright}

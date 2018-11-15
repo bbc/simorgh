@@ -15,10 +15,27 @@ const renderCaption = captionValue =>
     <Text text={captionValue} paragraphOverride={Caption} />
   ) : null;
 
-const FigureContainer = ({ src, srcSet, alt, ratio, copyright, caption }) => (
+const renderNoJsImage = (alt, noJsSrc, noJsSrcSet) =>
+  noJsSrc && noJsSrcSet ? (
+    <noscript>
+      <Image alt={alt} src={noJsSrc} srcSet={noJsSrcSet} />
+    </noscript>
+  ) : null;
+
+const FigureContainer = ({
+  src,
+  noJsSrc,
+  srcSet,
+  noJsSrcSet,
+  alt,
+  ratio,
+  copyright,
+  caption,
+}) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
       <Image alt={alt} src={src} srcSet={srcSet} />
+      {renderNoJsImage(alt, noJsSrc, noJsSrcSet)}
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(caption)}
@@ -28,7 +45,9 @@ const FigureContainer = ({ src, srcSet, alt, ratio, copyright, caption }) => (
 FigureContainer.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  noJsSrc: string,
   srcSet: string.isRequired,
+  noJsSrcSet: string,
   ratio: number.isRequired,
   copyright: string,
   caption: string,
@@ -37,6 +56,8 @@ FigureContainer.propTypes = {
 FigureContainer.defaultProps = {
   copyright: null,
   caption: null,
+  noJsSrc: null,
+  noJsSrcSet: null,
 };
 
 export default FigureContainer;
