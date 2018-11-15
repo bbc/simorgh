@@ -1,5 +1,6 @@
 import React from 'react';
 import Video from '../../components/Video';
+import Figure from '../../components/Figure';
 import {
   videoPropTypes,
   emptyBlockArrayDefaultProps,
@@ -31,14 +32,16 @@ const VideoContainer = ({ blocks }) => {
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
 
   return (
-    <Video
-      videoLocator={videoLocator}
-      duration={duration}
-      rawImageSrc={rawImageSrc}
-      versionID={versionID}
-      imageLocator={imageLocator}
-      kind={kind}
-    />
+    <Figure>
+      <Video
+        videoLocator={videoLocator}
+        duration={duration}
+        rawImageSrc={rawImageSrc}
+        versionID={versionID}
+        imageLocator={imageLocator}
+        kind={kind}
+      />
+    </Figure>
   );
 };
 
