@@ -10,7 +10,7 @@ Finally, the brand is hard-coded to `BBC News`, which is temprorary - see Roadma
 
 ## When to use this component
 
-It is currently used at the bottom of new BBC News and BBC News Persian article pages, which is its only intended usage, although it does not have to be used just on article pages/for those services.
+It is currently used at the bottom of new BBC News and BBC News Persian article pages, which is its only intended usage. It does not have to be used just on article pages/those services (but is currently hard-coded to `BBC News` in the `Banner`).
 
 ## When to not use this component
 
