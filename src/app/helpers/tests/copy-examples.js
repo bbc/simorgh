@@ -8,28 +8,31 @@ import BabelRegister from 'babel-register';
 import path from 'path';
 import fs from 'fs-extra';
 import jsxToString from 'jsx-to-string';
+import requireContext from 'require-context'; // can't use Webpack's one
 
 BabelRegister({
   extensions: ['.jsx'],
 });
 
+const componentsDir = path.resolve(__dirname, `../../components/`);
 const testsDir = path.resolve(__dirname, '../__tests__');
-const components = ['InlineLink'];
+const componentDirs = requireContext(componentsDir, true, /\.examples\.jsx$/);
+const components = componentDirs
+  .keys()
+  .map(filepath => filepath.match(/(.+)\/index\.examples\.jsx$/)[1]);
 
 // clear dir
 fs.removeSync(testsDir);
 fs.mkdirSync(testsDir);
 
 components.forEach(componentName => {
-  const componentDir = path.resolve(
-    __dirname,
-    `../../components/${componentName}`,
-  );
-  const examples = require(`${componentDir}/index.examples.jsx`).default; // eslint-disable-line
+  // eslint-disable-next-line
+  const examples = require(`${componentsDir}/${componentName}/index.examples.jsx`)
+    .default;
 
   // copy snapshots
   fs.copySync(
-    `${componentDir}/__snapshots__`,
+    `${componentsDir}/${componentName}/__snapshots__`,
     `${testsDir}/${componentName}/__snapshots__/`,
   );
 
