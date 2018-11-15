@@ -26,7 +26,7 @@
       "altText",
       "subheadline",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -166,88 +166,32 @@
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p054n8j9",
+            "locator": "urn:bbc:pips:pid:p054n8j6",
             "blocks": [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT15M23S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p054n8j9"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p054n8j6",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "How America solves racism",
+                  "synopses" : {
+                    "short" : "Racism in the US: Is there a single step that can bring equality?",
+                    "medium" : "Seeking steps to end racism in the US",
+                    "long" : "Aleem Maqbool has been travelling the US for years reporting on race. He examines paths to healing that have come up in his reporting."
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p05cmbxc.jpg",
+                  "embedding" : false,
+                  "warnings" : {},
+                  "advertising" : true,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Fusce interdum semper lacus eget malesuada.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Fusce interdum semper lacus eget malesuada.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 832,
-                        "height": 468,
-                        "locator": "https://ichef.bbci.co.uk/images/ic/832x468/p05cmbxc.jpg",
-                        "originCode": "pips",
-                        "copyrightHolder": "BBC"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Suspendisse ultrices non enim vitae tempus. Praesent tristique risus orci, tincidunt consectetur erat tincidunt venenatis.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p054n8j9",
+                      "types" : [ "Original" ],
+                      "duration" : 923,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : true
                       }
                     }
                   ]
