@@ -42,6 +42,17 @@ describe('AMP Tests on a .amp page', () => {
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
   });
 
+  it('should contain the AMP boilerplate', () => {
+    // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
+    const ampBoilerplateStyled = getElement('head style').eq(2);
+    ampBoilerplateStyled.should('have.attr', 'amp-boilerplate');
+  });
+
+  it('should contain the AMP boilerplate noscript version', () => {
+    const ampBoilerplateNoscript = getElement('head noscript');
+    ampBoilerplateNoscript.should('contain', 'amp-boilerplate');
+  });
+
   it('should not have any non-amp scripts in the body or the head', () => {
     getElement('body script').should('not.exist');
     getElement('head script')
