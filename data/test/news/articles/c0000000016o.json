@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "subheadline",
       "fragment"
     ],
@@ -44,85 +44,29 @@
             "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT4M59S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p064nsyw"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p064nsyw",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Plastic - The Story So Far",
+                  "synopses" : {
+                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                  "embedding" : true,
+                  "warnings" : {},
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Maecenas non metus erat. Maecenas ornare quam ut vehicula fermentum.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p064nsz3",
+                      "types" : [ "Original" ],
+                      "duration" : 299,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
