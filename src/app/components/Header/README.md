@@ -6,14 +6,8 @@ This component functions as a wrapper for the [Brand](../Brand) component (which
 ### When to use this component
 Header is designed to be used at the top of the document above all other content.
 
-As this component uses the [Brand](../Brand) which consumes the service context via the [ServiceContextConsumer](../ServiceContextConsumer) component.
+As this component uses the [Brand](../Brand), which consumes the service context via the [ServiceContextConsumer](../ServiceContext) component, the service context must be provided to the Header by the [ServiceContextProvider](../ServiceContext).
 
 ### Accessibility notes
-HTML: 
-Link (NB: Sits within header)
-
-Announced text:
-BBC News (Service name from brand)
-
 Landmark:
 Banner
