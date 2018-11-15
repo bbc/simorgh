@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "fragment"
     ],
     "tags": {
@@ -183,49 +183,10 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p067gq6h",
-            "blocks": [
-              {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT1M34S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p067gq6h"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Sed et molestie justo.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Sed et molestie justo.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p067gq6h",
+            "blocks" : [
               {
                 "type": "caption",
                 "model": {
@@ -256,46 +217,29 @@
                 }
               },
               {
-                "type": "image",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p067gq6h",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Mark and Isla Royal Wedding",
+                  "synopses" : {
+                    "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                  "embedding" : true,
+                  "warnings" : {},
+                  "advertising" : false,
+                  "versions" : [ 
                     {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "14D21/production/_101718258_bluegirlsgetty.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "Getty Images"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Nulla eget erat sed orci efficitur euismod eget eu nunc.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Nulla eget erat sed orci efficitur euismod eget eu nunc.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p067gq6k",
+                      "types" : [ "Original" ],
+                      "duration" : 94,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]

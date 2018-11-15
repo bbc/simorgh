@@ -2,7 +2,7 @@ const fs = require('fs');
 // don't use destructuring assignment otherwise jest spy does not work
 const readScenario = require('./readScenario');
 
-module.exports.readdirSync = dirName => {
+module.exports.asyncValidateDir = dirName => {
   const fileNames = fs.readdirSync(dirName);
 
   return Promise.all(
