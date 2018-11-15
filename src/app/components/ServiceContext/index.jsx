@@ -27,3 +27,5 @@ ServiceContextProvider.defaultProps = {
 ServiceContextConsumer.propTypes = {
   children: func.isRequired,
 };
+
+export default ServiceContext;

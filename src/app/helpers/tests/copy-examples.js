@@ -4,6 +4,7 @@
  * had to import babel-register to get JSX working.
  * @TODO: could uninstall esm and use babel-register for all?
  */
+import React from 'react';
 import BabelRegister from 'babel-register';
 import path from 'path';
 import fs from 'fs-extra';
@@ -14,18 +15,21 @@ BabelRegister({
   extensions: ['.jsx'],
 });
 
+const avoidTranspile = input =>
+  React.isValidElement(input) ? jsxToString(input) : input;
+
 const componentsDir = path.resolve(__dirname, `../../components/`);
 const testsDir = path.resolve(__dirname, '../__tests__');
 const componentDirs = requireContext(componentsDir, true, /\.examples\.jsx$/);
-const components = componentDirs
-  .keys()
-  .map(filepath => filepath.match(/(.+)\/index\.examples\.jsx$/)[1]);
+const components = componentDirs.keys();
 
 // clear dir
 fs.removeSync(testsDir);
 fs.mkdirSync(testsDir);
 
-components.forEach(componentName => {
+components.forEach(componentPath => {
+  const componentName = componentPath.match(/(.+)\/index\.examples\.jsx$/)[1];
+
   // eslint-disable-next-line
   const examples = require(`${componentsDir}/${componentName}/index.examples.jsx`)
     .default;
@@ -36,28 +40,58 @@ components.forEach(componentName => {
     `${testsDir}/${componentName}/__snapshots__/`,
   );
 
-  const snapshots = examples.reduce(
-    (str, example) => `${str}
+  const assertions = examples.reduce((str, example) => {
+    if (example.validate) {
+      // manual validate callback method applies:
+      return `${str}
+      {
+        const validationFunction = ${example.validate};
+        it('${example.description}', () => {
+          const renderedComponent = renderer.create(${avoidTranspile(
+            example.render,
+          )}).toJSON();
+          expect(validationFunction(renderedComponent)).toBeTruthy();
+        });
+      }
+      `;
+    }
+    return `${str}
     shouldMatchSnapshot(
       '${example.description}',
-      ${jsxToString(example.render)},
+      ${avoidTranspile(example.render)},
+    );`;
+  }, '');
+
+  const importComponentDependencies = examples
+    .filter(example => example.dependencies)
+    .reduce(
+      (dependenciesObj, example) =>
+        Object.assign(dependenciesObj, example.dependencies),
+      {},
     );
-  `,
+  const importComponentDependenciesString = Object.keys(
+    importComponentDependencies,
+  ).reduce(
+    (importStrings, dependency) => `${importStrings}
+        import ${dependency} from '${path.resolve(
+      `${componentsDir}/${componentPath}`,
+      `../${importComponentDependencies[dependency]}`,
+    )}';`,
     '',
   );
-
-  console.log('snapshots:', snapshots);
 
   // generate test
   fs.writeFileSync(
     `${testsDir}/${componentName}/index.test.jsx`,
     `
     import React from 'react';
-    import ${componentName} from '../../../components/${componentName}';
+    import renderer from 'react-test-renderer';
     import { shouldMatchSnapshot } from '../../tests/testHelpers';
+    import ${componentName} from '../../../components/${componentName}';
+    ${importComponentDependenciesString}
 
     describe('${componentName}', () => {
-      ${snapshots}
+      ${assertions}
     });
     `,
     { encoding: 'utf8' },
