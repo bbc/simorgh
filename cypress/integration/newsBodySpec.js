@@ -85,9 +85,10 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a title', () => {
-    renderedTitle(
-      "Meghan's bouquet laid on tomb of unknown warrior – BBC News",
-    );
+    cy.window().then(win => {
+      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      renderedTitle(`${seoHeadline} – BBC News`);
+    });
   });
 
   it('should have an inline link with focus styling', () => {
