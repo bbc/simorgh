@@ -5,6 +5,7 @@ import Document from './index';
 describe('Document', () => {
   const assets = ['http://example.com/file.js'];
   const data = { test: 'data' };
+  const ampData = { test: 'data', isAmp: true };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
@@ -40,7 +41,21 @@ describe('Document', () => {
     />,
   );
 
+  const shallowDocumentAmp = shallowRender(
+    <Document
+      assets={assets}
+      app={'<h1>App!</h1>'}
+      data={ampData}
+      helmet={helmet}
+      styleTags={styleTags}
+    />,
+  );
+
   it('should render correctly', () => {
     expect(shallowDocument).toMatchSnapshot();
+  });
+
+  it('should render AMP version correctly', () => {
+    expect(shallowDocumentAmp).toMatchSnapshot();
   });
 });
