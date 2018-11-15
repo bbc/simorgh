@@ -43,7 +43,6 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should contain the AMP boilerplate', () => {
-    // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
     const ampBoilerplateStyled = getElement('head style').eq(2);
     ampBoilerplateStyled.should('have.attr', 'amp-boilerplate');
   });
