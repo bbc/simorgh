@@ -20,7 +20,7 @@ const avoidTranspile = input =>
 
 const componentsDir = path.resolve(__dirname, `../../components/`);
 const testsDir = path.resolve(__dirname, '../__tests__');
-const componentDirs = requireContext(componentsDir, true, /\.examples\.jsx$/);
+const componentDirs = requireContext(componentsDir, true, /examples\.jsx$/);
 const components = componentDirs.keys();
 
 // clear dir
@@ -28,10 +28,10 @@ fs.removeSync(testsDir);
 fs.mkdirSync(testsDir);
 
 components.forEach(componentPath => {
-  const componentName = componentPath.match(/(.+)\/index\.examples\.jsx$/)[1];
+  const componentName = componentPath.match(/(.+)\/examples\.jsx$/)[1];
 
   // eslint-disable-next-line
-  const examples = require(`${componentsDir}/${componentName}/index.examples.jsx`)
+  const examples = require(`${componentsDir}/${componentName}/examples.jsx`)
     .default;
 
   // copy snapshots

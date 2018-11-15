@@ -6,15 +6,15 @@ function loadStories() {
   const req = require.context('../src/app', true, /\.stories\.jsx$/);
   req.keys().forEach(filename => req(filename));
 
-  console.log('Loading components with index.examples.jsx');
+  console.log('Loading components with examples.jsx');
   const componentsWithExamples = require.context(
     '../src/app',
     true,
-    /\.examples\.jsx$/,
+    /examples\.jsx$/,
   );
   componentsWithExamples.keys().forEach(pathToComponent => {
     const componentName = pathToComponent.match(
-      /components\/(.+)\/index\.examples\.jsx$/,
+      /components\/(.+)\/examples\.jsx$/,
     )[1];
     const componentExamples = componentsWithExamples(pathToComponent).default;
     componentExamples.forEach(example => {
