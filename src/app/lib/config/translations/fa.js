@@ -1,13 +1,12 @@
 const fa = {
-  brandName: 'BBC News فارسی',
-  serviceName: 'Persian',
-  service: 'persian',
-  articleAuthor: 'https://www.facebook.com/bbcnews',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-  defaultImageAltText: 'BBC News فارسی',
-  locale: 'fa',
-  twitterCreator: '@bbcpersian',
-  twitterSite: '@bbcpersian',
+  show_more: 'نمایش همه',
+  back_to_top: 'بازگشت به بالا',
+  breaking: 'خبر فوری:',
+  share: 'اشتراک گذاری ::',
+  auto_updates: 'این صفحه به طورخودکار به روز می‌شود',
+  loading: 'بارگذاری',
+  share_post_on: 'همرسانی در ::',
+  read_more_on_links: 'لینک های دیگر ::',
 };
 
 export default fa;

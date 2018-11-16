@@ -1,4 +1,5 @@
-import translations from '../translations/fa';
+import faTranslations from '../translations/fa';
+import enGbTranslations from '../translations/en-gb';
 
 const persian = {
   brandName: 'BBC News فارسی',
@@ -10,7 +11,7 @@ const persian = {
   locale: 'fa',
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
-  translations,
+  translations: { ...enGbTranslations, ...faTranslations },
 };
 
 export default persian;

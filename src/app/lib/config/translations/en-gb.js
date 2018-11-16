@@ -1,13 +1,14 @@
 const enGb = {
-  brandName: 'BBC News فارسی',
-  serviceName: 'Persian',
-  service: 'persian',
-  articleAuthor: 'https://www.facebook.com/bbcnews',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-  defaultImageAltText: 'BBC News فارسی',
-  locale: 'fa',
-  twitterCreator: '@bbcpersian',
-  twitterSite: '@bbcpersian',
+  show_more: 'show more',
+  back_to_top: 'go back to the top',
+  live: 'live',
+  breaking: 'Breaking',
+  share: 'share',
+  report: 'report',
+  duration: 'duration',
+  loading: 'loading',
+  share_post_on: 'Share post on',
+  read_more_on_links: 'Read more on',
 };
 
 export default enGb;
