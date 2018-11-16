@@ -1,6 +1,4 @@
-import translations from '../translations/fa';
-
-const persian = {
+const enGb = {
   brandName: 'BBC News فارسی',
   serviceName: 'Persian',
   service: 'persian',
@@ -10,7 +8,6 @@ const persian = {
   locale: 'fa',
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
-  translations,
 };
 
-export default persian;
+export default enGb;

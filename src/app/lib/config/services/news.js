@@ -1,3 +1,5 @@
+import translations from '../translations/en-gb';
+
 const news = {
   brandName: 'BBC News',
   serviceName: 'News',
@@ -9,6 +11,7 @@ const news = {
   locale: 'en_GB',
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
+  translations,
 };
 
 export default news;
