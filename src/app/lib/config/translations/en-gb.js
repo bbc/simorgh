@@ -9,6 +9,7 @@ const enGb = {
   loading: 'loading',
   share_post_on: 'Share post on',
   read_more_on_links: 'Read more on',
+  attributionText: 'Image source, ',
 };
 
 export default enGb;

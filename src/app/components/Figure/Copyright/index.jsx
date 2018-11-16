@@ -9,6 +9,7 @@ import {
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
+import { ServiceContextConsumer } from '../../ServiceContext';
 
 const StyledCopyright = styled.p.attrs({
   role: 'text',
@@ -25,16 +26,16 @@ const StyledCopyright = styled.p.attrs({
   margin: 0;
 `;
 
-const Copyright = ({ children }) => {
-  const attributionText = `Image source, `;
-
-  return (
-    <StyledCopyright>
-      <VisuallyHiddenText>{attributionText}</VisuallyHiddenText>
-      {children}
-    </StyledCopyright>
-  );
-};
+const Copyright = ({ children }) => (
+  <ServiceContextConsumer>
+    {({ translations }) => (
+      <StyledCopyright>
+        <VisuallyHiddenText>{translations.attributionText}</VisuallyHiddenText>
+        {children}
+      </StyledCopyright>
+    )}
+  </ServiceContextConsumer>
+);
 
 Copyright.propTypes = {
   children: string.isRequired,

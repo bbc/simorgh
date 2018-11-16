@@ -7,6 +7,7 @@ const fa = {
   loading: 'بارگذاری',
   share_post_on: 'همرسانی در ::',
   read_more_on_links: 'لینک های دیگر ::',
+  attributionText: 'من نمیفهمم ایرانی, ',
 };
 
 export default fa;
