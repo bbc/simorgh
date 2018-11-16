@@ -93,6 +93,7 @@
     "babel-loader": "^8.0.0",
     "bbc-a11y": "^2.2.5",
     "chalk": "^2.4.1",
+    "chrome-launcher": "^0.10.5",
     "cypress": "^3.1.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
