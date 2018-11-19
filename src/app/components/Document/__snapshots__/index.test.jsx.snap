@@ -43,7 +43,9 @@ exports[`Document should render correctly 1`] = `
     />
     <style
       data-styled-components=""
-    />
+    >
+      html { color: red; }
+    </style>
   </head>
   <body>
     <div

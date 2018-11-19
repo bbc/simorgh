@@ -28,7 +28,6 @@ describe('Document', () => {
     ),
     title: mockHelmetToComponent(<title>Test title</title>),
   };
-  const styleTags = <style>{'html { color: red; }'}</style>;
 
   const shallowDocument = shallowRender(
     <Document
@@ -36,7 +35,7 @@ describe('Document', () => {
       app={'<h1>App!</h1>'}
       data={data}
       helmet={helmet}
-      styleTags={styleTags}
+      inlineCss={'html { color: red; }'}
     />,
   );
 
