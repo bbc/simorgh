@@ -133,7 +133,7 @@ exports[`Document should render correctly 1`] = `
     <script
       dangerouslySetInnerHTML={
         Object {
-          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\",\\"isAmp\\":false}",
         }
       }
     />
