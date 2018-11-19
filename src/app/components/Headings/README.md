@@ -2,7 +2,7 @@
 
 ## Description
 
-The Headings are a set of two components, `Headline` and `Subheading`. They use a `h1` and `h1` HTML element respectively, with the `Headline` being designed for a single use on the page, with `Subheading` being aimed at repeate use.
+The Headings are a set of two components, `Headline` and `Subheading`. They use a `h1` and `h2` HTML element respectively, with the `Headline` being designed for a single use on the page, with `Subheading` being aimed at repeated use.
 
 ## When to use this component
 
