@@ -5,7 +5,6 @@ import Document from './index';
 describe('Document', () => {
   const assets = ['http://example.com/file.js'];
   const data = { test: 'data' };
-  const ampData = { test: 'data', isAmp: true };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
@@ -36,7 +35,7 @@ describe('Document', () => {
       <Document
         assets={assets}
         app={'<h1>App!</h1>'}
-        data={isAmp ? ampData : data}
+        data={{ ...data, isAmp }}
         helmet={helmet}
         styleTags={styleTags}
       />,
