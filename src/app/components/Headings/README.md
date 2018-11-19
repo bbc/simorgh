@@ -6,7 +6,7 @@ The Headings are a set of two components, `Headline` and `Subheading`. They use 
 
 ## When to use this component
 
-These components can be used at any point on the page, however the `Headline` is designed to be used once at the top of the page. The `Subheadline` adds an `id` value to the `h2` which can be used as an ancor when referencing content.
+These components can be used at any point on the page, however the `Headline` is designed to be used once at the top of the page. The `Subheadline` adds an `id` value to the `h2` which can be used as an anchor when referencing content.
 
 ## Accessibility notes
 
