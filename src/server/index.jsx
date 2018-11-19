@@ -104,18 +104,13 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      // Doesn't always return an array. TODO: fix in https://github.com/BBC-News/simorgh/issues/976
-      const stylesheets =
-        sheet.getStyleElement().length > 0 ? sheet.getStyleElement() : [];
-      const inlineCss = stylesheets.reduce(
-        (inlineStyles, currentStylesheet) =>
-          currentStylesheet
-            ? `${inlineStyles}${
-                currentStylesheet.props.dangerouslySetInnerHTML.__html // eslint-disable-line no-underscore-dangle
-              }`
-            : inlineStyles,
-        '',
-      );
+      let inlineCss = '';
+      try {
+        // eslint-disable-next-line prefer-destructuring
+        inlineCss = renderToString(sheet.getStyleElement()).match(
+          /^<style (?:[^>]+)>([\S\s.]+)<\/style>$/,
+        )[1];
+      } catch (e) {} // eslint-disable-line no-empty
 
       const doc = renderToStaticMarkup(
         <Document
