@@ -3,7 +3,7 @@
 
 ## Description
 
-The `Footer` is intended to be used at the bottom of an article. It is made up of a [`Brand banner`](https://github.com/BBC-News/simorgh/blob/footer-readme/src/app/components/Banner/index.jsx) and links to other BBC pages. These links are generally intended to be to more general and legal BBC pages, but do not have to be. It also includes information about copyright. 
+The `Footer` is intended to be used at the bottom of an article. It is made up of a [`Brand banner`](../Brand) and links to other BBC pages. These links are generally intended to be to more general and legal BBC pages, but do not have to be. It also includes information about copyright. 
 
 Finally, the brand is hard-coded to `BBC News`, which is temprorary - see Roadmap.
 
