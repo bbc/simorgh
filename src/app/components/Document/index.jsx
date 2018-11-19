@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ResourceHints from './ResourceHints';
 import '../../lib/globalStyles';
-import { C_POSTBOX } from '../../lib/constants/styles';
+import { C_POSTBOX, ampScript, ampNoscript } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, inlineCss, helmet }) => {
@@ -38,6 +38,14 @@ const Document = ({ assets, app, data, inlineCss, helmet }) => {
         {title}
         {links}
         <style {...inlineStyleAttributes}>{inlineCss}</style>
+        {data.isAmp && (
+          <Fragment>
+            <style amp-boilerplate="">{ampScript}</style>
+            <noscript>
+              <style amp-boilerplate="">{ampNoscript}</style>
+            </noscript>
+          </Fragment>
+        )}
         {data.isAmp && (
           <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
         )}
