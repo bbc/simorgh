@@ -20,4 +20,4 @@ It should not be used when the brand is not `BBC News`.
 The component's parent element that it exports is a [`footer` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer), which typically contains information about the author and other connected content. The links are wrapped in a [`contentinfo` landmark](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/contentinfo.html), which denotes content around copyright, privacy and related content.
 
 ## Roadmap
-- Removal of hard-coded `BBC News` brand - although this is not directly related to this component; will be done in the [Banner](https://github.com/BBC-News/simorgh/blob/footer-readme/src/app/components/Banner/index.jsx)
+- Removal of hard-coded `BBC News` brand - although this is not directly related to this component; will be done in the [Brand](../Brand)
