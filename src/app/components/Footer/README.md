@@ -1,6 +1,5 @@
 # Footer [![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://simorghstorybook.now.sh/?selectedKind= Footer)
 
-[Storybook link](https://simorghstorybook.now.sh/?selectedKind=Footer)
 
 ## Description
 
