@@ -55,13 +55,6 @@ describe('readScenario helper', () => {
     }
   });
 
-  it('should ignore c0000000023o.json', () => {
-    const fileNames = ['c0000000023o.json', 'c0000000003o.json'];
-    const expectedCalls = [['./././data/test/news/articles/c0000000003o.json']];
-
-    testReadScenario(fileNames, expectedCalls);
-  });
-
   it('should ignore onward-journeys', () => {
     const fileNames = ['c0000000001o.json', 'onward-journeys'];
     const expectedCalls = [['./././data/test/news/articles/c0000000001o.json']];
