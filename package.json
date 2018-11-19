@@ -29,8 +29,9 @@
     "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
-    "test:lighthouse": "npm run killApp && npm run build && run-p --race start lighthouse",
-    "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
+    "test:lighthouse": "node scripts/lighthouse/index.js",
+    "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
+    "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "razzle test --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
@@ -91,6 +92,8 @@
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
     "bbc-a11y": "^2.2.5",
+    "chalk": "^2.4.1",
+    "chrome-launcher": "^0.10.5",
     "cypress": "^3.1.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
@@ -102,7 +105,7 @@
     "husky": "^1.1.3",
     "jest-fetch-mock": "^1.6.6",
     "jest-styled-components": "^6.2.2",
-    "lighthouse": "^3.1.1",
+    "lighthouse": "^3.2.1",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.15.0",
     "react-test-renderer": "^16.6.0",
@@ -118,12 +121,16 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/src/**/*.{js,jsx}",
+      "**/(src|scripts)/**/*.{js,jsx}",
       "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx"
     ],
     "setupFiles": [
       "./src/app/helpers/tests/jest-setup.js"
+    ],
+    "testMatch": [	
+      "**/__tests__/**/*.js?(x)",	
+      "**/?(*.)+(spec|test).js?(x)"	
     ]
   }
 }
