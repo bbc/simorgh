@@ -31,7 +31,7 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <Brand indentedLogo={false} />
+    <Brand />
     <StyledFooterLinksWrapper>
       <StyledFooterLinks>
         <FooterList links={links} />

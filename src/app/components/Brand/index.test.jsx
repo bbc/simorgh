@@ -6,15 +6,9 @@ import { ServiceContextProvider } from '../ServiceContext';
 
 describe('Brand', () => {
   shouldMatchSnapshot(
-    'should render correctly with a default indented logo',
+    'should render correctly',
     <ServiceContextProvider>
       <Brand />
-    </ServiceContextProvider>,
-  );
-  shouldMatchSnapshot(
-    'should render correctly with indentedLogo false',
-    <ServiceContextProvider>
-      <Brand indentedLogo={false} />
     </ServiceContextProvider>,
   );
 });
