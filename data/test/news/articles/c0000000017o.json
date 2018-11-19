@@ -26,7 +26,7 @@
       "altText",
       "caption",
       "video",
-      "rawVideo",
+      "aresMedia",
       "subheadline",
       "fragment"
     ],
@@ -39,90 +39,34 @@
     "model": {
       "blocks": [
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p060njgk",
-            "blocks": [
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p060njgk",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT1M31S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p060njgk"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p060njgk",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Mark and Isla",
+                  "synopses" : {
+                    "short" : "Mark and Isla are back, with some very helpful tips about Mother's Day.",
+                    "medium" : null,
+                    "long" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p060nk8l.jpg",
+                  "embedding" : true,
+                  "warnings" : {},
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Aliquam quis sodales nisl.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Aliquam quis sodales nisl.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "E92C/production/_101729695_briefcasedollars.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "Getty Images"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Aliquam sodales lectus in augue posuere tempus.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Aliquam sodales lectus in augue posuere tempus.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p060njgr",
+                      "types" : [ "Original" ],
+                      "duration" : 91,
+                      "availableTerritories" : {
+                        "uk" : true,
+                        "nonUk" : false
                       }
                     }
                   ]
@@ -370,93 +314,16 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:b08qm073",
-            "blocks": [
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:b08qm073",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT3H13M00S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:b08qm073"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "In aliquam libero at hendrerit auctor.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "In aliquam libero at hendrerit auctor.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "https://ichef.bbci.co.uk/images/ic/640x360/p052ww1r.jpg",
-                        "originCode": "pips",
-                        "copyrightHolder": "BBC"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Duis nec tempus erat, sit amet auctor lacus.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Duis nec tempus erat, sit amet auctor lacus.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
+                "type" : "aresMedia",
+                "model" : {
+                  "statusCode" : 410,
+                  "id" : "urn:bbc:ares::clip:b08qm073",
+                  "statusMessage" : "Asset could not be found. Perhaps it was withdrawn."
                 }
               }
             ]
@@ -714,119 +581,34 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p06702pc",
-            "blocks": [
+          "type" : "video",
+          "model" : {
+            "locator" : "urn:bbc:pips:pid:p06702pc",
+            "blocks" : [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT3M00S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p06702pc"
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+                "type" : "aresMedia",
+                "model" : {
+                  "id" : "p06702pc",
+                  "subType" : "clip",
+                  "format" : "audio_video",
+                  "title" : "Winning performance: Netta (Israel) performs 'Toy'",
+                  "synopses" : {
+                    "short" : "Written by Doron Medalie, Stav Beger.",
+                    "long" : null,
+                    "medium" : null
+                  },
+                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p06704bb.jpg",
+                  "embedding" : true,
+                  "warnings" : {},
+                  "advertising" : false,
+                  "versions" : [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Proin non nisl sem.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Proin non nisl sem.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "image",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "rawImage",
-                      "model": {
-                        "width": 976,
-                        "height": 549,
-                        "locator": "https://ichef.bbci.co.uk/images/ic/976x549/p06704bb.jpg",
-                        "originCode": "pips",
-                        "copyrightHolder": "EBU"
-                      }
-                    },
-                    {
-                      "type": "altText",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Ut et porttitor tellus. Integer vitae sollicitudin ligula.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Ut et porttitor tellus. Integer vitae sollicitudin ligula.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "caption",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Etiam lectus tortor, malesuada nec ex vel, ornare vulputate erat.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                      "versionId" : "p06702pf",
+                      "types" : [ "Original" ],
+                      "duration" : 127,
+                      "availableTerritories" : {
+                        "uk" : false,
+                        "nonUk" : false
                       }
                     }
                   ]
