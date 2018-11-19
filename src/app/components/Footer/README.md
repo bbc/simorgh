@@ -1,6 +1,5 @@
 # Footer [![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://simorghstorybook.now.sh/?selectedKind=Footer)
 
-
 ## Description
 
 The `Footer` is intended to be used at the bottom of an article. It is made up of a [`Brand banner`](../Brand) and links to other BBC pages. These links are generally intended to be to more general and legal BBC pages, but do not have to be. It also includes information about copyright. 
