@@ -104,7 +104,9 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      const stylesheets = [...sheet.getStyleElement()];
+      // Doesn't always return an array. TODO: fix in https://github.com/BBC-News/simorgh/issues/976
+      const stylesheets =
+        sheet.getStyleElement().length > 0 ? sheet.getStyleElement() : [];
       const inlineCss = stylesheets.reduce(
         (inlineStyles, currentStylesheet) =>
           currentStylesheet
