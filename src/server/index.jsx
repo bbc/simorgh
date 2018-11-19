@@ -104,7 +104,8 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      const inlineCss = sheet.getStyleElement().reduce(
+      const stylesheets = [...sheet.getStyleElement()];
+      const inlineCss = stylesheets.reduce(
         (inlineStyles, currentStylesheet) =>
           currentStylesheet
             ? `${inlineStyles}${
