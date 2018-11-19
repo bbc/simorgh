@@ -31,7 +31,7 @@ describe('Document', () => {
   };
   const styleTags = <style>{'html { color: red; }'}</style>;
 
-  const shallowDocument = isAmp =>
+  const shallowDocument = ({ isAmp }) =>
     shallowRender(
       <Document
         assets={assets}
@@ -43,10 +43,10 @@ describe('Document', () => {
     );
 
   it('should render correctly', () => {
-    expect(shallowDocument(false)).toMatchSnapshot();
+    expect(shallowDocument({ isAmp: false })).toMatchSnapshot();
   });
 
   it('should render AMP version correctly', () => {
-    expect(shallowDocument(true)).toMatchSnapshot();
+    expect(shallowDocument({ isAmp: true })).toMatchSnapshot();
   });
 });
