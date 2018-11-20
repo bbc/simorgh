@@ -30,17 +30,22 @@ describe('Document', () => {
   };
   const styleTags = <style>{'html { color: red; }'}</style>;
 
-  const shallowDocument = shallowRender(
-    <Document
-      assets={assets}
-      app={'<h1>App!</h1>'}
-      data={data}
-      helmet={helmet}
-      styleTags={styleTags}
-    />,
-  );
+  const shallowDocument = ({ isAmp }) =>
+    shallowRender(
+      <Document
+        assets={assets}
+        app={'<h1>App!</h1>'}
+        data={{ ...data, isAmp }}
+        helmet={helmet}
+        styleTags={styleTags}
+      />,
+    );
 
   it('should render correctly', () => {
-    expect(shallowDocument).toMatchSnapshot();
+    expect(shallowDocument({ isAmp: false })).toMatchSnapshot();
+  });
+
+  it('should render AMP version correctly', () => {
+    expect(shallowDocument({ isAmp: true })).toMatchSnapshot();
   });
 });
