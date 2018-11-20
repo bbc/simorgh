@@ -14,7 +14,9 @@ A clear and concise description of what you want to happen.
 A clear and concise description of any alternative solutions or features you've considered.
 
 **Testing notes**
-Will Cypress tests be required or are unit tests sufficient?
+[Tester to complete]
+
+Dev insight: Will Cypress tests be required or are unit tests sufficient? Will there be any potential regression? etc
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
