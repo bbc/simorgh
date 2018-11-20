@@ -40,7 +40,7 @@ describe('Document', () => {
         app={'<h1>App!</h1>'}
         data={{ ...data, isAmp }}
         helmet={helmet}
-        inlineStyleTag={isAmp ? styleTagsAmp : styleTags}
+        styleTags={isAmp ? styleTagsAmp : styleTags}
       />,
     );
 

@@ -110,7 +110,7 @@ server
           assets={assets}
           app={app}
           data={data}
-          inlineStyleTag={getStyleTag(sheet, data.isAmp)}
+          styleTags={getStyleTag(sheet, data.isAmp)}
           helmet={headHelmet}
         />,
       );

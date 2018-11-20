@@ -4,7 +4,7 @@ import '../../lib/globalStyles';
 import { C_POSTBOX, ampScript, ampNoscript } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, app, data, inlineStyleTag, helmet }) => {
+const Document = ({ assets, app, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -34,7 +34,7 @@ const Document = ({ assets, app, data, inlineStyleTag, helmet }) => {
         <ResourceHints />
         {title}
         {links}
-        {inlineStyleTag}
+        {styleTags}
         {data.isAmp && (
           <Fragment>
             <style amp-boilerplate="">{ampScript}</style>
