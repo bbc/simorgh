@@ -8,7 +8,7 @@ The `Inline Link` component is made up of a styled HTML `<a>` element with an `h
 
 The purpose of this component is to return an inline link element.
 
-`Inline Link` is made use of indirectly in the [Text](../Text) component, which uses the [Inline Link Container](../../containers/InlineLink) to render an `Inline Link` differently based on whether the href points in or outisde of Simorgh.
+`Inline Link` is made use of indirectly in the [Text](../Text) component, which uses the [Inline Link Container](../../containers/InlineLink) to render an `Inline Link` differently based on whether the href points in or outside of Simorgh.
 
 The [Paragraph Container](../../containers/Paragraph) and the [Inline Link Container](../../containers/InlineLink) also render the `Inline Link`.
 
