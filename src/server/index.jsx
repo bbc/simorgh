@@ -12,6 +12,7 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
+import { getStyleTag } from './styles';
 
 import Document from '../app/components/Document';
 /*
@@ -104,20 +105,12 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      let inlineCss = '';
-      try {
-        // eslint-disable-next-line prefer-destructuring
-        inlineCss = renderToString(sheet.getStyleElement()).match(
-          /^<style (?:[^>]+)>([\S\s.]+)<\/style>$/,
-        )[1];
-      } catch (e) {} // eslint-disable-line no-empty
-
       const doc = renderToStaticMarkup(
         <Document
           assets={assets}
           app={app}
           data={data}
-          inlineCss={inlineCss}
+          inlineStyleTag={getStyleTag(sheet, data.isAmp)}
           helmet={headHelmet}
         />,
       );

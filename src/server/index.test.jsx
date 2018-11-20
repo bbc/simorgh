@@ -47,7 +47,7 @@ jest.mock('react-universal-app', () => ({
 
 styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
-  getStyleElement: jest.fn().mockReturnValue(<styles />),
+  getStyleElement: jest.fn().mockReturnValue(<style />),
 }));
 
 describe('Server', () => {
@@ -99,7 +99,7 @@ describe('Server', () => {
             assets={['one.js']}
             data={{ some: 'data' }}
             helmet={{ head: 'tags' }}
-            inlineCss=""
+            inlineStyleTag={<style />}
           />,
         );
 

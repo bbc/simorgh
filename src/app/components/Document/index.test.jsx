@@ -28,6 +28,10 @@ describe('Document', () => {
     ),
     title: mockHelmetToComponent(<title>Test title</title>),
   };
+  const styleTags = (
+    <style data-styled-components="abc">{'html { color: red; }'}</style>
+  );
+  const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
   const shallowDocument = ({ isAmp }) =>
     shallowRender(
@@ -36,7 +40,7 @@ describe('Document', () => {
         app={'<h1>App!</h1>'}
         data={{ ...data, isAmp }}
         helmet={helmet}
-        inlineCss={'html { color: red; }'}
+        inlineStyleTag={isAmp ? styleTagsAmp : styleTags}
       />,
     );
 

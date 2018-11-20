@@ -120,7 +120,7 @@ exports[`Document should render correctly 1`] = `
       rel="canonical"
     />
     <style
-      data-styled-components=""
+      data-styled-components="abc"
     >
       html { color: red; }
     </style>
