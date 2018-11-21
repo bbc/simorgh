@@ -4,21 +4,18 @@ export const getStyleTag = (sheet, isAmp = false) => {
   const styleTags = sheet.getStyleElement();
   if (!isAmp) return styleTags;
 
-  // `getStyleElement()` doesn't always return an array, so wrap in a try-catch.
-  // TODO: fix in https://github.com/BBC-News/simorgh/issues/976
+  // `getStyleElement()` doesn't always return an array (in our tests)
   const styleTagsArray = Array.isArray(styleTags) ? styleTags : [styleTags];
 
-  const inlineCss = styleTagsArray.reduce(
-    (inlineStyles, currentStylesheet) =>
-      // sometimes `currentStylesheet.props` is undefined in the tests. TODO: raise an issue
-      currentStylesheet && currentStylesheet.props
-        ? `${inlineStyles}${
-            // eslint-disable-next-line no-underscore-dangle
-            currentStylesheet.props.dangerouslySetInnerHTML.__html
-          }`
-        : inlineStyles,
-    '',
-  );
+  const inlineCss = styleTagsArray.reduce((inlineStyles, currentStylesheet) => {
+    if (currentStylesheet && currentStylesheet.props) {
+      return `${inlineStyles}${
+        // eslint-disable-next-line no-underscore-dangle
+        currentStylesheet.props.dangerouslySetInnerHTML.__html
+      }`;
+    }
+    return inlineStyles;
+  }, '');
 
   return <style amp-custom="">{inlineCss}</style>;
 };
