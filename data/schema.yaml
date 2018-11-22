@@ -272,6 +272,18 @@ components:
 
     # schema definitions for referred blocks below
 
+    textAttribute:
+      enum:
+        - italic
+        - bold
+      example: italic
+      type: string
+
+    textAttributes:
+      type: array
+      items:
+        $ref: '#/components/schemas/textAttribute'
+
     blocks:
       type: array
       items:
@@ -392,7 +404,8 @@ components:
               type: string
             attributes:
               type: array
-
+              items:
+                $ref: '#/components/schemas/textAttribute'
         type:
           enum:
             - fragment
