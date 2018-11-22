@@ -11,7 +11,7 @@ For example, the [Figure Copyright](../Figure/Copyright) component may seem obvi
 ### When not to use this component
 Avoid using this component with text that would cause unnecessary repetition. For example, there is no need to add visually hidden text stating "Image" next to an `img` tag, as assistive tech already explicitly communicates the presence of an image, and this would likely only prove confusing or irritating to users.
 
-Similarly, when adding hidden text that will occur partway through an article, avoid using phrases that may imply that the main body is over. Suddenly hearing a phrase like "Read more on ___" may suggest to users that they have finished the article. To mitigate this, you may wish to wrap the content in an [`aside` ARIA landmark](https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/complementary.html) or include a ["skip link"](https://www.w3.org/TR/WCAG20-TECHS/G1.html), giving users the option to skip back to the main body before the assistive technology reads the full content of the interjection.
+Similarly, when adding hidden text that will occur partway through an article, avoid using phrases that may imply that the main body is over. Suddenly hearing a phrase like "Read more on [subject]" may suggest to users that they have finished the article. To mitigate this, you may wish to wrap the content in an [`aside` ARIA landmark](https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/complementary.html) or include a ["skip link"](https://www.w3.org/TR/WCAG20-TECHS/G1.html), giving users the option to skip back to the main body before the assistive technology reads the full content of the interjection.
 
 ### Additional notes
 
