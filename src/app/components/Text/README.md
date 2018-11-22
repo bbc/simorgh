@@ -2,7 +2,7 @@
 
 ## Description
 
-The 'Text' component is intended to be used to parse all article story text. It takes [markdown](https://en.wikipedia.org/wiki/Markdown) as an input and converts it to the desired HTML markup. It has special treatment for inline links as they are handled differently if they point to a link inside Simorgh.
+The 'Text' component is being used to parse all article story text. It takes [markdown](https://en.wikipedia.org/wiki/Markdown) as an input and converts it to the desired HTML markup. 
 
 ## When to use this component
 
