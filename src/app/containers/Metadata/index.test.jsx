@@ -6,18 +6,20 @@ import { ServiceContextProvider } from '../../components/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
+import { PlatformContextProvider } from '../../components/PlatformContext';
 
 const MetadataWithContextAsObject = (service, serviceFixtureData) => {
   const { metadata, promo } = serviceFixtureData;
 
   renderer.create(
     <ServiceContextProvider service={service}>
-      <MetadataContainer
-        isAmp={false}
-        metadata={metadata}
-        promo={promo}
-        service={service}
-      />
+      <PlatformContextProvider platform="canonical">
+        <MetadataContainer
+          metadata={metadata}
+          promo={promo}
+          service={service}
+        />
+      </PlatformContextProvider>
     </ServiceContextProvider>,
   );
 
@@ -27,7 +29,7 @@ const MetadataWithContextAsObject = (service, serviceFixtureData) => {
 describe('no data', () => {
   shouldShallowMatchSnapshot(
     'should render null',
-    <MetadataContainer isAmp={false} metadata={{}} promo={{}} service="" />,
+    <MetadataContainer metadata={{}} promo={{}} service="" />,
   );
 });
 
