@@ -119,6 +119,9 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "yaml-js": "^0.2.3"
   },
+  "resolutions": {
+    "**/event-stream": "3.3.4"
+  },
   "jest": {
     "collectCoverageFrom": [
       "**/(src|scripts)/**/*.{js,jsx}",
