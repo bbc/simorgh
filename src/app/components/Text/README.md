@@ -10,4 +10,4 @@ This component is used throughout the page in visible text. It uses the [`Paragr
 
 ## Accessibility notes
 
-This component has no features specifically targeted at accessibility however it does ensure that the correct HTML tags are used, such as `<i>`, `<b>` and `<p>` which should ensure that users using screen readers are aware of the desired inference.
+This component has no features specifically targeted at accessibility however it does ensure that the correct HTML tags are used, such as `<i>`, `<b>` and `<p>` which should ensure that the full desired editorial impact is put across.
