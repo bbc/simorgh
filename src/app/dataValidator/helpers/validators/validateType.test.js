@@ -25,7 +25,7 @@ describe('Validate type', () => {
     expect(() => {
       validateType(schemaType, data, schemaName);
     }).toThrowError(
-      `Error: Type does not match for 'article' - expected 'array' got 'object'`,
+      `Error: Type does not match for 'article' - expected 'array'`,
     );
   });
 
