@@ -5,6 +5,7 @@ const { validateType } = require('./validateType');
 const data = {
   type: 'article',
 };
+const dataAsArray = ['key', 'value'];
 const schemaName = 'article';
 
 describe('Validate type', () => {
@@ -18,11 +19,29 @@ describe('Validate type', () => {
     );
   });
 
+  it('should throw an error when schema type is array and data type does not match', () => {
+    const schemaType = 'array';
+
+    expect(() => {
+      validateType(schemaType, data, schemaName);
+    }).toThrowError(
+      `Error: Type does not match for 'article' - expected 'array' got 'object'`,
+    );
+  });
+
   it('should not error when schema type and data type match', () => {
     const schemaType = 'object';
 
     expect(() => {
       validateType(schemaType, data, schemaName);
+    }).not.toThrowError();
+  });
+
+  it('should not error when schema type and data type are array', () => {
+    const schemaType = 'array';
+
+    expect(() => {
+      validateType(schemaType, dataAsArray, schemaName);
     }).not.toThrowError();
   });
 
