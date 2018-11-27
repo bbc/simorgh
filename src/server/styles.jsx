@@ -17,7 +17,9 @@ export const getStyleTag = (sheet, isAmp = false) => {
     return inlineStyles;
   }, '');
 
-  return <style amp-custom="">{inlineCss}</style>;
+  return (
+    <style amp-custom="" dangerouslySetInnerHTML={{ __html: inlineCss }} />
+  );
 };
 
 export default getStyleTag;

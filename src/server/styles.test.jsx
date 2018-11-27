@@ -37,18 +37,9 @@ describe('getStyleTag', () => {
 
   describe('AMP version', () => {
     const isAmp = true;
-    it('should respond with amp-custom attribute', async () => {
+    it('should respond with amp-custom attribute and should not URL-encode quotes', async () => {
       const inlineCss = renderToString(getStyleTag(sheet, isAmp));
       expect(inlineCss).toBe(expectedOutput('amp-custom=""'));
     });
   });
-
-  // it('should not URL-encode quotes', async () => {
-  //   const StyledDivUsingQuotes = styled.div`
-  //     background-image: url('https://placehold.it/640x360');
-  //   `;
-  //       const inlineCss = renderToString(getStyleTag(sheet2, isAmp));
-  //       expect(inlineCss).toBe(styleOfDivWithQuotes);
-  //     });
-  //   });
 });
