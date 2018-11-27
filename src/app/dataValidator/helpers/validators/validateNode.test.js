@@ -149,20 +149,20 @@ describe('Validate block', () => {
 
     // prettier-ignore
     expect(validateBlockSpy.mock.calls).toEqual([
-      [data,            'article'],
-      [articleBlocks,   'blocks',     ':article:content:model'],
-      [headlineBlock,   'headline',   ':article:content:model:blocks'],
-      [headlineBlocks,   'blocks',     ':article:content:model:blocks:headline:model'],
-      [textBlock,       'text',       ':article:content:model:blocks:headline:model:blocks'],
-      [textBlocks,       'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model'],
-      [paragraphBlock,  'paragraph',  ':article:content:model:blocks:headline:model:blocks:text:model:blocks'],
-      [paragraphBlocks,  'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
-      [fragmentBlock,   'fragment',   ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks'],
-      [textBlock2,      'text',       ':article:content:model:blocks'],
-      [textBlocks2,      'blocks',     ':article:content:model:blocks:text:model'],
-      [paragraphBlock2, 'paragraph',  ':article:content:model:blocks:text:model:blocks'],
-      [paragraphBlocks2, 'blocks',     ':article:content:model:blocks:text:model:blocks:paragraph:model'],
-      [fragmentBlock2,   'fragment',   ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks'],
+      [data,              'article'],
+      [articleBlocks,     'blocks',     ':article:content:model'],
+      [headlineBlock,     'headline',   ':article:content:model:blocks'],
+      [headlineBlocks,    'blocks',     ':article:content:model:blocks:headline:model'],
+      [textBlock,         'text',       ':article:content:model:blocks:headline:model:blocks'],
+      [textBlocks,        'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model'],
+      [paragraphBlock,    'paragraph',  ':article:content:model:blocks:headline:model:blocks:text:model:blocks'],
+      [paragraphBlocks,   'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
+      [fragmentBlock,     'fragment',   ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks'],
+      [textBlock2,        'text',       ':article:content:model:blocks'],
+      [textBlocks2,       'blocks',     ':article:content:model:blocks:text:model'],
+      [paragraphBlock2,   'paragraph',  ':article:content:model:blocks:text:model:blocks'],
+      [paragraphBlocks2,  'blocks',     ':article:content:model:blocks:text:model:blocks:paragraph:model'],
+      [fragmentBlock2,    'fragment',   ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks'],
     ]);
     // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
   });
