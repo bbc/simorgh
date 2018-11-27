@@ -8,16 +8,30 @@ const sheet = new ServerStyleSheet();
 const StyledHeading = styled.h1`
   color: teal;
 `;
-const styleWithAttr = inlineAttribute => `<style ${inlineAttribute} data-reactroot="">
+const StyledDivUsingQuotes = styled.div`
+  background-image: url('https://placehold.it/640x360');
+`;
+const expectedOutput = inlineAttribute => `<style ${inlineAttribute} data-reactroot="">
 /* sc-component-id: StyledHeading-av5ml9-0 */
-.StyledHeading-av5ml9-0 {} .gDvQnu{color:teal;}</style>`;
-renderToString(sheet.collectStyles(<StyledHeading>Hello world</StyledHeading>));
+.StyledHeading-av5ml9-0 {} .gDvQnu{color:teal;}
+/* sc-component-id: StyledDivUsingQuotes-av5ml9-1 */
+.StyledDivUsingQuotes-av5ml9-1 {} .bKGMUB{background-image:url('https://placehold.it/640x360');}</style>`;
+
+renderToString(
+  sheet.collectStyles(
+    <StyledDivUsingQuotes>
+      <StyledHeading>Hello world</StyledHeading>
+    </StyledDivUsingQuotes>,
+  ),
+);
 
 describe('getStyleTag', () => {
   describe('canonical version', () => {
     it('should respond with data-styled-component attribute', async () => {
       const inlineCss = renderToString(getStyleTag(sheet));
-      expect(inlineCss).toBe(styleWithAttr('data-styled-components="gDvQnu"'));
+      expect(inlineCss).toBe(
+        expectedOutput('data-styled-components="gDvQnu bKGMUB"'),
+      );
     });
   });
 
@@ -25,7 +39,16 @@ describe('getStyleTag', () => {
     const isAmp = true;
     it('should respond with amp-custom attribute', async () => {
       const inlineCss = renderToString(getStyleTag(sheet, isAmp));
-      expect(inlineCss).toBe(styleWithAttr('amp-custom=""'));
+      expect(inlineCss).toBe(expectedOutput('amp-custom=""'));
     });
   });
+
+  // it('should not URL-encode quotes', async () => {
+  //   const StyledDivUsingQuotes = styled.div`
+  //     background-image: url('https://placehold.it/640x360');
+  //   `;
+  //       const inlineCss = renderToString(getStyleTag(sheet2, isAmp));
+  //       expect(inlineCss).toBe(styleOfDivWithQuotes);
+  //     });
+  //   });
 });
