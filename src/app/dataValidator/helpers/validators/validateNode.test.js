@@ -131,38 +131,37 @@ describe('Validate block', () => {
     const validateBlockSpy = jest.spyOn(validateNode, 'validateBlock');
 
     const articleContent = data.content;
-    const articleModel = articleContent.model;
-    const articleBlocks = articleModel.blocks;
+    const articleBlocks = articleContent.model.blocks;
     const headlineBlock = articleBlocks[0];
-    const headlineModel = headlineBlock.model;
-    const textBlock = headlineModel.blocks[0];
-    const textModel = textBlock.model;
-    const paragraphBlock = textModel.blocks[0];
-    const paragraphModel = paragraphBlock.model;
-    const fragmentBlock = paragraphModel.blocks[0];
+    const headlineBlocks = headlineBlock.model.blocks;
+    const textBlock = headlineBlocks[0];
+    const textBlocks = textBlock.model.blocks;
+    const paragraphBlock = textBlocks[0];
+    const paragraphBlocks = paragraphBlock.model.blocks;
+    const fragmentBlock = paragraphBlocks[0];
     const textBlock2 = articleBlocks[1];
-    const textModel2 = textBlock2.model;
-    const paragraphBlock2 = textModel2.blocks[0];
-    const paragraphModel2 = paragraphBlock2.model;
-    const fragmentBlock2 = paragraphModel2.blocks[0];
+    const textBlocks2 = textBlock2.model.blocks;
+    const paragraphBlock2 = textBlocks2[0];
+    const paragraphBlocks2 = paragraphBlock2.model.blocks;
+    const fragmentBlock2 = paragraphBlocks2[0];
 
     validateNode.validateBlock(data, 'article');
 
     // prettier-ignore
     expect(validateBlockSpy.mock.calls).toEqual([
       [data,            'article'],
-      [articleModel,    'blocks',     ':article:content:model'],
+      [articleBlocks,   'blocks',     ':article:content:model'],
       [headlineBlock,   'headline',   ':article:content:model:blocks'],
-      [headlineModel,   'blocks',     ':article:content:model:blocks:headline:model'],
+      [headlineBlocks,   'blocks',     ':article:content:model:blocks:headline:model'],
       [textBlock,       'text',       ':article:content:model:blocks:headline:model:blocks'],
-      [textModel,       'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model'],
+      [textBlocks,       'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model'],
       [paragraphBlock,  'paragraph',  ':article:content:model:blocks:headline:model:blocks:text:model:blocks'],
-      [paragraphModel,  'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
+      [paragraphBlocks,  'blocks',     ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
       [fragmentBlock,   'fragment',   ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks'],
       [textBlock2,      'text',       ':article:content:model:blocks'],
-      [textModel2,      'blocks',     ':article:content:model:blocks:text:model'],
+      [textBlocks2,      'blocks',     ':article:content:model:blocks:text:model'],
       [paragraphBlock2, 'paragraph',  ':article:content:model:blocks:text:model:blocks'],
-      [paragraphModel2, 'blocks',     ':article:content:model:blocks:text:model:blocks:paragraph:model'],
+      [paragraphBlocks2, 'blocks',     ':article:content:model:blocks:text:model:blocks:paragraph:model'],
       [fragmentBlock2,   'fragment',   ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks'],
     ]);
     // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
