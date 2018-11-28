@@ -12,6 +12,7 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
+import { getStyleTag } from './styles';
 
 import Document from '../app/components/Document';
 /*
@@ -104,14 +105,12 @@ server
 
       const headHelmet = Helmet.renderStatic();
 
-      const styleTags = sheet.getStyleElement();
-
       const doc = renderToStaticMarkup(
         <Document
           assets={assets}
           app={app}
           data={data}
-          styleTags={styleTags}
+          styleTags={getStyleTag(sheet, data.isAmp)}
           helmet={headHelmet}
         />,
       );
