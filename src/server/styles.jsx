@@ -18,6 +18,7 @@ export const getStyleTag = (sheet, isAmp = false) => {
   }, '');
 
   return (
+    // eslint-disable-next-line react/no-danger
     <style amp-custom="" dangerouslySetInnerHTML={{ __html: inlineCss }} />
   );
 };
