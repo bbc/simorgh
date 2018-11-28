@@ -8,48 +8,48 @@ const data = {
 const dataAsArray = ['key', 'value'];
 const schemaName = 'article';
 
+const shouldThrowError = (type, dataNode, nodeName, errorMsg) => {
+  expect(() => {
+    validateType(type, dataNode, nodeName);
+  }).toThrowError(errorMsg);
+};
+
+const shouldNotThrowError = (type, dataNode, nodeName) => {
+  expect(() => {
+    validateType(type, dataNode, nodeName);
+  }).not.toThrowError();
+};
+
 describe('Validate type', () => {
   it('should throw an error when schema type and data type do not match', () => {
     const schemaType = 'string';
+    const errorMsg = `Error: Type does not match for 'article' - expected 'string' got 'object'`;
 
-    expect(() => {
-      validateType(schemaType, data, schemaName);
-    }).toThrowError(
-      `Error: Type does not match for 'article' - expected 'string' got 'object'`,
-    );
+    shouldThrowError(schemaType, data, schemaName, errorMsg);
   });
 
   it('should throw an error when schema type is array and data type does not match', () => {
     const schemaType = 'array';
+    const errorMsg = `Error: Type does not match for 'article' - expected 'array`;
 
-    expect(() => {
-      validateType(schemaType, data, schemaName);
-    }).toThrowError(
-      `Error: Type does not match for 'article' - expected 'array'`,
-    );
+    shouldThrowError(schemaType, data, schemaName, errorMsg);
   });
 
   it('should not error when schema type and data type match', () => {
     const schemaType = 'object';
 
-    expect(() => {
-      validateType(schemaType, data, schemaName);
-    }).not.toThrowError();
+    shouldNotThrowError(schemaType, data, schemaName);
   });
 
   it('should not error when schema type and data type are array', () => {
     const schemaType = 'array';
 
-    expect(() => {
-      validateType(schemaType, dataAsArray, schemaName);
-    }).not.toThrowError();
+    shouldNotThrowError(schemaType, dataAsArray, schemaName);
   });
 
   it('should ignore the type check of properties that have a value of null', () => {
     const schemaType = 'object';
 
-    expect(() => {
-      validateType(schemaType, null, schemaName);
-    }).not.toThrowError();
+    shouldNotThrowError(schemaType, null, schemaName);
   });
 });
