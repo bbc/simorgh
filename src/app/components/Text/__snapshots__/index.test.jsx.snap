@@ -65,7 +65,7 @@ exports[`Text should render a <figcaption> as per the Caption component override
   <span
     className="c1"
   >
-    Image caption, 
+    
   </span>
   This is text that contains an 
   <a
