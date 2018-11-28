@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlatformContext should have a platform string for amp 1`] = `
+<span>
+  amp
+</span>
+`;
+
+exports[`PlatformContext should have a platform string for canonical 1`] = `
+<span>
+  canonical
+</span>
+`;
+
+exports[`PlatformContext should have a platform string for default 1`] = `
+<span>
+  default
+</span>
+`;
