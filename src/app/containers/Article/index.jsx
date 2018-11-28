@@ -16,6 +16,7 @@ import {
   layoutGridItemConstrained,
 } from '../../lib/layoutGrid';
 import { C_OAT_LHT } from '../../lib/constants/styles';
+import { PlatformContextProvider } from '../../components/PlatformContext';
 
 const Wrapper = styled.div`
   ${layoutGridWrapper};
@@ -72,33 +73,34 @@ const ArticleContainer = ({ loading, error, data }) => {
       return (
         <Fragment>
           <ServiceContextProvider service={service}>
-            <Header />
-            <MetadataContainer
-              isAmp={isAmp}
-              metadata={metadata}
-              promo={promo}
-              service={service}
-            />
-            <main role="main">
-              <Wrapper>
-                <GridItemConstrained>
-                  <Blocks
-                    blocks={headlineBlocks}
-                    componentsToRender={componentsToRenderHeadline}
-                  />
-                  <Timestamp timestamp={metadata.lastUpdated} />
-                </GridItemConstrained>
-              </Wrapper>
-              <OatWrapper>
-                <GridItemConstrained>
-                  <Blocks
-                    blocks={mainBlocks}
-                    componentsToRender={componentsToRenderMain}
-                  />
-                </GridItemConstrained>
-              </OatWrapper>
-            </main>
-            <Footer />
+            <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+              <Header />
+              <MetadataContainer
+                metadata={metadata}
+                promo={promo}
+                service={service}
+              />
+              <main role="main">
+                <Wrapper>
+                  <GridItemConstrained>
+                    <Blocks
+                      blocks={headlineBlocks}
+                      componentsToRender={componentsToRenderHeadline}
+                    />
+                    <Timestamp timestamp={metadata.lastUpdated} />
+                  </GridItemConstrained>
+                </Wrapper>
+                <OatWrapper>
+                  <GridItemConstrained>
+                    <Blocks
+                      blocks={mainBlocks}
+                      componentsToRender={componentsToRenderMain}
+                    />
+                  </GridItemConstrained>
+                </OatWrapper>
+              </main>
+              <Footer />
+            </PlatformContextProvider>
           </ServiceContextProvider>
         </Fragment>
       );

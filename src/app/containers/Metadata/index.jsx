@@ -1,6 +1,7 @@
 import React from 'react';
-import { bool, string, shape } from 'prop-types';
+import { string, shape } from 'prop-types';
 import { ServiceContextConsumer } from '../../components/ServiceContext';
+import { PlatformContextConsumer } from '../../components/PlatformContext';
 import Metadata from '../../components/Metadata';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
@@ -13,7 +14,7 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
-const MetadataContainer = ({ isAmp, metadata, promo, service }) => {
+const MetadataContainer = ({ metadata, promo, service }) => {
   const { id: aresArticleId } = metadata;
 
   if (!aresArticleId) {
@@ -27,44 +28,47 @@ const MetadataContainer = ({ isAmp, metadata, promo, service }) => {
   const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
 
   return (
-    <ServiceContextConsumer>
-      {({
-        brandName,
-        articleAuthor,
-        defaultImage,
-        defaultImageAltText,
-        locale,
-        twitterCreator,
-        twitterSite,
-      }) => (
-        <Metadata
-          isAmp={isAmp}
-          articleAuthor={articleAuthor}
-          articleSection={metadata.passport.genre}
-          brandName={brandName}
-          canonicalLink={canonicalLink}
-          defaultImage={defaultImage}
-          defaultImageAltText={defaultImageAltText}
-          description={promo.summary}
-          facebookAdmin={100004154058350}
-          facebookAppID={1609039196070050}
-          lang={metadata.passport.language}
-          locale={locale}
-          metaTags={allTags(metadata.tags)}
-          timeFirstPublished={timeFirstPublished}
-          timeLastUpdated={timeLastUpdated}
-          title={promo.headlines.seoHeadline}
-          twitterCreator={twitterCreator}
-          twitterSite={twitterSite}
-          type={metadata.type}
-        />
+    <PlatformContextConsumer>
+      {platform => (
+        <ServiceContextConsumer>
+          {({
+            brandName,
+            articleAuthor,
+            defaultImage,
+            defaultImageAltText,
+            locale,
+            twitterCreator,
+            twitterSite,
+          }) => (
+            <Metadata
+              isAmp={platform === 'amp'}
+              articleAuthor={articleAuthor}
+              articleSection={metadata.passport.genre}
+              brandName={brandName}
+              canonicalLink={canonicalLink}
+              defaultImage={defaultImage}
+              defaultImageAltText={defaultImageAltText}
+              description={promo.summary}
+              facebookAdmin={100004154058350}
+              facebookAppID={1609039196070050}
+              lang={metadata.passport.language}
+              locale={locale}
+              metaTags={allTags(metadata.tags)}
+              timeFirstPublished={timeFirstPublished}
+              timeLastUpdated={timeLastUpdated}
+              title={promo.headlines.seoHeadline}
+              twitterCreator={twitterCreator}
+              twitterSite={twitterSite}
+              type={metadata.type}
+            />
+          )}
+        </ServiceContextConsumer>
       )}
-    </ServiceContextConsumer>
+    </PlatformContextConsumer>
   );
 };
 
 MetadataContainer.propTypes = {
-  isAmp: bool.isRequired,
   metadata: shape(metadataPropTypes).isRequired,
   promo: shape(promoPropTypes).isRequired,
   service: string.isRequired,
