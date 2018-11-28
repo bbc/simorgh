@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import { C_ORBIT_GREY, C_WHITE } from '@bbc/psammead-styles/colours';
+import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 import Brand from '../Brand';
 import Link from './Link';
 import FooterList from './List';
-import {
-  C_ORBIT_GREY,
-  C_WHITE,
-  FF_NEWS_SANS_REG,
-  GEL_SPACING_DBL,
-} from '../../lib/constants/styles';
+import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 import { layoutWrapperWithoutGrid } from '../../lib/layoutGrid';
 import { T_BREVIER } from '../../lib/constants/typography';
 
