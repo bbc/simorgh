@@ -90,3 +90,7 @@ To run these on your forked version follow these steps.
 - To setup CodeClimate you need to login to the 'quality' option on [https://codeclimate.com/](https://codeclimate.com/) and obtain a code coverage [CC_TEST_REPORTER_ID](https://docs.codeclimate.com/docs/finding-your-test-coverage-token), this then needs to be added as an environment variable in TravisCI (see the TravisCI settings page).
 - Now create a branch and start committing and pushing to it!
 - You should see Travis CI and codecoverage now running against your branch and PRs within your fork. :white_check_mark:
+
+### Merging a Pull Request
+
+There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
