@@ -23,14 +23,14 @@ const shouldNotThrowError = (type, dataNode, nodeName) => {
 describe('Validate type', () => {
   it('should throw an error when schema type and data type do not match', () => {
     const schemaType = 'string';
-    const errorMsg = `Error: Type does not match for 'article' - expected 'string' got 'object'`;
+    const errorMsg = `Error: Type does not match for 'article' - expected 'string' for: {"type":"article"}`;
 
     shouldThrowError(schemaType, data, schemaName, errorMsg);
   });
 
   it('should throw an error when schema type is array and data type does not match', () => {
     const schemaType = 'array';
-    const errorMsg = `Error: Type does not match for 'article' - expected 'array`;
+    const errorMsg = `Error: Type does not match for 'article' - expected 'array' for: {"type":"article"}`;
 
     shouldThrowError(schemaType, data, schemaName, errorMsg);
   });

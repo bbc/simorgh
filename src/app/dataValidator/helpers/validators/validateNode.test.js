@@ -51,7 +51,7 @@ describe('Validate node & properties helper', () => {
         parentSchemaName,
       );
     }).toThrowError(
-      `Error: Type does not match for ':article:locator' - expected 'string' got 'object'`,
+      `Error: Type does not match for ':article:locator' - expected 'string' for: {}`,
     );
   });
 
