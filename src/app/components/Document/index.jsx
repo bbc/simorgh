@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { ampScript, ampNoscript } from '../../lib/constants/styles';
 import ResourceHints from './ResourceHints';
 import '../../lib/globalStyles';
-import { ampScript, ampNoscript } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
