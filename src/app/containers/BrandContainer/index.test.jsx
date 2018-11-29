@@ -1,8 +1,8 @@
 import React from 'react';
 import BrandContainer from './index';
 
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 describe(`BrandContainer`, () => {
-  shouldShallowMatchSnapshot('should render correctly', <BrandContainer />);
+  shouldMatchSnapshot('should render correctly', <BrandContainer />);
 });
