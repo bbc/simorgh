@@ -72,6 +72,9 @@ describe('Validate node & properties helper', () => {
               category: {
                 type: 'string',
               },
+              anArray: {
+                type: 'array',
+              },
             },
           },
         },
@@ -82,6 +85,7 @@ describe('Validate node & properties helper', () => {
         language: 'en-gb',
         home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
         category: 'news',
+        anArray: [],
       },
     };
     const schemaName = 'article';
