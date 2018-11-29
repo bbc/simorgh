@@ -282,6 +282,7 @@ components:
     # This looks orphaned but is important for the app team where
     # the schema is used to generate a set of reference model objects
     # and this creates a nice enum model for them
+    # See https://github.com/bbc/ArticleUIKit/tree/master/ArticleUIKitExampleTests/autogen-reference
     textAttributes:
       type: array
       items:
