@@ -8,7 +8,7 @@ describe('Brand', () => {
   shouldMatchSnapshot(
     'should render correctly',
     <ServiceContextProvider>
-      <Brand />
+      <Brand brandName="Default Brand Name" />
     </ServiceContextProvider>,
   );
 });

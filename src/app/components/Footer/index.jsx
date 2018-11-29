@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
-import Brand from '../Brand';
+import BrandContainer from '../../containers/BrandContainer';
 import Link from './Link';
 import FooterList from './List';
 import {
@@ -31,7 +31,7 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <Brand />
+    <BrandContainer />
     <StyledFooterLinksWrapper>
       <StyledFooterLinks>
         <FooterList links={links} />

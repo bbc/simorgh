@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../Metadata';
-import Header from '../../components/Header';
+import BrandContainer from '../BrandContainer';
 import Footer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
@@ -74,7 +74,9 @@ const ArticleContainer = ({ loading, error, data }) => {
         <Fragment>
           <ServiceContextProvider service={service}>
             <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
-              <Header />
+              <header role="banner">
+                <BrandContainer />
+              </header>
               <MetadataContainer
                 metadata={metadata}
                 promo={promo}
