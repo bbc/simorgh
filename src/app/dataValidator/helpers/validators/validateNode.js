@@ -56,7 +56,7 @@ const validateNode = (schemaNode, dataNode, schemaName, parentSchemaName) => {
   }
 
   if (schemaNode.items) {
-    handleSchemaItems(schemaNode.items, dataNode, schemaName, parentSchemaName);
+    handleSchemaItems(schemaNode.items, dataNode, parentSchemaName);
   }
 };
 
@@ -74,13 +74,7 @@ const validateProperties = (
 
       log(`\nValidating Property '${property}' in '${parentSchemaName}'`);
 
-      validateProperty(
-        propertySchema,
-        dataNode,
-        property,
-        schemaName,
-        parentSchemaName,
-      );
+      validateProperty(propertySchema, dataNode, property, parentSchemaName);
     } else {
       log(`\nOptional Property '${property}' not in '${schemaName}'`);
     }
@@ -91,12 +85,11 @@ const validateProperty = (
   propertySchema,
   dataNode,
   property,
-  schemaName,
   parentSchemaName,
 ) => {
   if (referencesSchemaDefinition(propertySchema)) {
     recursivelyCallValidateBlock(
-      dataNode,
+      dataNode[property],
       getSchemaRefName(propertySchema),
       parentSchemaName,
     );
@@ -104,25 +97,18 @@ const validateProperty = (
     recursivelyCallValidateNode(
       propertySchema,
       dataNode[property],
-      schemaName,
+      property,
       `${parentSchemaName}:${property}`,
     );
   }
 };
 
-const handleSchemaItems = (
-  referencedItems,
-  dataNode,
-  schemaName,
-  parentSchemaName,
-) => {
+const handleSchemaItems = (referencedItems, dataNode, parentSchemaName) => {
   // if the value is null and not an array EG: article:promo:tags:about
   if (dataNode) {
     // oneOf declaration require $ref inside
     if (referencedItems.oneOf) {
-      const dataNodeArray = dataNode[schemaName];
-
-      dataNodeArray.forEach(dataItem => {
+      dataNode.forEach(dataItem => {
         validateOneOf(referencedItems.oneOf, dataItem, parentSchemaName);
 
         recursivelyCallValidateBlock(
