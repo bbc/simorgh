@@ -404,6 +404,7 @@ components:
               type: string
             attributes:
               type: array
+              uniqueItems: true
               items:
                 $ref: '#/components/schemas/textAttribute'
         type:
