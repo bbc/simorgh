@@ -279,6 +279,9 @@ components:
       example: italic
       type: string
 
+    # This looks orphaned but is important for the app team where
+    # the schema is used to generate a set of reference model objects
+    # and this creates a nice enum model for them
     textAttributes:
       type: array
       items:
