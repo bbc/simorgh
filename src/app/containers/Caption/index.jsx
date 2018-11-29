@@ -9,7 +9,9 @@ const CaptionWithOffscreenText = ({ children }) => (
   <ServiceContext.Consumer>
     {({ imageCaptionOffscreenText }) => (
       <Caption>
-        <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
+        {imageCaptionOffscreenText ? (
+          <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
+        ) : null}
         {children}
       </Caption>
     )}
