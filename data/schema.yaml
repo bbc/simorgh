@@ -1,3 +1,6 @@
+# The app team are using this schema to generate a set of reference model objects
+# See https://github.com/bbc/ArticleUIKit/tree/master/ArticleUIKitExampleTests/autogen-reference
+
 openapi: 3.0.0
 servers:
   - description: SwaggerHub API Auto Mocking
@@ -272,21 +275,15 @@ components:
 
     # schema definitions for referred blocks below
 
-    textAttribute:
-      enum:
-        - italic
-        - bold
-      example: italic
-      type: string
-
-    # This looks orphaned but is important for the app team where
-    # the schema is used to generate a set of reference model objects
-    # and this creates a nice enum model for them
-    # See https://github.com/bbc/ArticleUIKit/tree/master/ArticleUIKitExampleTests/autogen-reference
     textAttributes:
       type: array
       items:
-        $ref: '#/components/schemas/textAttribute'
+        enum:
+          - italic
+          - bold
+          - superscript
+          - subscript
+        type: string
 
     blocks:
       type: array
@@ -407,10 +404,7 @@ components:
             text:
               type: string
             attributes:
-              type: array
-              uniqueItems: true
-              items:
-                $ref: '#/components/schemas/textAttribute'
+              $ref: '#/components/schemas/textAttributes'
         type:
           enum:
             - fragment
