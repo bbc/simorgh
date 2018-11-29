@@ -25,3 +25,8 @@ shouldMatchSnapshot(
   'should render caption text with example Farsi offscreen text',
   CaptionWithContext(persianServiceContextStub),
 );
+
+shouldMatchSnapshot(
+  'should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext',
+  CaptionWithContext({ imageCaptionOffscreenText: undefined }),
+);
