@@ -1,5 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import Brand from './index';
+import BrandContainer from '../../containers/BrandContainer/index';
 
-storiesOf('Brand', module).add('default', () => <Brand brandName="BBC News" />);
+storiesOf('Brand', module).add('default', () => <BrandContainer />);
