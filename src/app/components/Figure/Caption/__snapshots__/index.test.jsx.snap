@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Caption with some offscreen text 1`] = `
+.c0 {
+  font-size: 0.9375em;
+  line-height: 1.125rem;
+  background-color: #D5D0CD;
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+
 .c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -10,16 +20,6 @@ exports[`should render Caption with some offscreen text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
-}
-
-.c0 {
-  font-size: 0.9375em;
-  line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
-  width: 100%;
 }
 
 @media (min-width:37.5em) {
@@ -37,11 +37,11 @@ exports[`should render Caption with some offscreen text 1`] = `
 <figcaption
   className="c0"
 >
+  This is some Caption text
   <span
     className="c1"
   >
-    Some offscreenn text
+    Some offscreen text
   </span>
-  This is some Caption text
 </figcaption>
 `;

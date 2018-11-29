@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -8,7 +8,6 @@ import {
   GEL_SPACING_DBL,
   C_STONE,
 } from '../../../lib/constants/styles';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
 import { T_LONG_PRIMER } from '../../../lib/constants/typography';
 
@@ -24,21 +23,11 @@ const StyledCaption = styled.figcaption`
   }
 `;
 
-const Caption = ({ children, offscreenTextPrefix }) => (
-  <StyledCaption>
-    <VisuallyHiddenText>{offscreenTextPrefix}</VisuallyHiddenText>
-    {children}
-  </StyledCaption>
-);
+const Caption = ({ children }) => <StyledCaption>{children}</StyledCaption>;
 
 Caption.propTypes = {
   // children will be "element.isRequired" in the future to support embedded <lang> and markdown
   children: node.isRequired,
-  offscreenTextPrefix: string,
-};
-
-Caption.defaultProps = {
-  offscreenTextPrefix: '',
 };
 
 export default Caption;
