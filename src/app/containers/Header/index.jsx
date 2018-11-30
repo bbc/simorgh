@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandContainer from '../BrandContainer';
+import BrandContainer from '../Brand';
 
 const HeaderContainer = () => (
   <header role="banner">

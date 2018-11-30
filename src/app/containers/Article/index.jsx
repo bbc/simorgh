@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../Metadata';
-import HeaderContainer from '../HeaderContainer';
+import HeaderContainer from '../Header';
 import Footer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
