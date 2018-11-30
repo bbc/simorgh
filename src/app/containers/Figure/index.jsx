@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { string, number, node } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
@@ -27,7 +27,7 @@ FigureContainer.propTypes = {
   src: string.isRequired,
   ratio: number.isRequired,
   copyright: string,
-  caption: string,
+  caption: node,
 };
 
 FigureContainer.defaultProps = {
