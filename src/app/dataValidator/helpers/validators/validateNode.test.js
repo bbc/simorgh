@@ -143,13 +143,13 @@ describe('Validate block', () => {
     const paragraphBlock = textBlocks[0];
     const paragraphBlocks = paragraphBlock.model.blocks;
     const fragmentBlock = paragraphBlocks[0];
-    const textAttributes = fragmentBlock.model.attributes;
+    const fragmentAttrs = fragmentBlock.model.attributes;
     const textBlock2 = articleBlocks[1];
     const textBlocks2 = textBlock2.model.blocks;
     const paragraphBlock2 = textBlocks2[0];
     const paragraphBlocks2 = paragraphBlock2.model.blocks;
     const fragmentBlock2 = paragraphBlocks2[0];
-    const textAttributes2 = fragmentBlock2.model.attributes;
+    const fragmentAttrs2 = fragmentBlock2.model.attributes;
 
     validateNode.validateBlock(data, 'article');
 
@@ -164,13 +164,13 @@ describe('Validate block', () => {
       [paragraphBlock,    'paragraph',      ':article:content:model:blocks:headline:model:blocks:text:model:blocks'],
       [paragraphBlocks,   'blocks',         ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model'],
       [fragmentBlock,     'fragment',       ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks'],
-      [textAttributes,    'textAttributes', ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks:fragment:model'],
+      [fragmentAttrs,     'fragmentAttrs',  ':article:content:model:blocks:headline:model:blocks:text:model:blocks:paragraph:model:blocks:fragment:model'],
       [textBlock2,        'text',           ':article:content:model:blocks'],
       [textBlocks2,       'blocks',         ':article:content:model:blocks:text:model'],
       [paragraphBlock2,   'paragraph',      ':article:content:model:blocks:text:model:blocks'],
       [paragraphBlocks2,  'blocks',         ':article:content:model:blocks:text:model:blocks:paragraph:model'],
       [fragmentBlock2,    'fragment',       ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks'],
-      [textAttributes2,   'textAttributes', ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks:fragment:model'],
+      [fragmentAttrs2,    'fragmentAttrs',  ':article:content:model:blocks:text:model:blocks:paragraph:model:blocks:fragment:model'],
     ]);
     // The prettier ignore finishes here - https://prettier.io/docs/en/ignore.html
   });

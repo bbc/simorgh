@@ -275,7 +275,7 @@ components:
 
     # schema definitions for referred blocks below
 
-    textAttributes:
+    fragmentAttrs:
       type: array
       items:
         enum:
@@ -404,7 +404,7 @@ components:
             text:
               type: string
             attributes:
-              $ref: '#/components/schemas/textAttributes'
+              $ref: '#/components/schemas/fragmentAttrs'
         type:
           enum:
             - fragment
