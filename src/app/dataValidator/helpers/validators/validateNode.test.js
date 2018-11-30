@@ -51,7 +51,7 @@ describe('Validate node & properties helper', () => {
         parentSchemaName,
       );
     }).toThrowError(
-      `Error: Type does not match for ':article:locator' - expected 'string' got 'object'`,
+      `Error: Type does not match for ':article:locator' - expected 'string' for: {}`,
     );
   });
 
@@ -72,6 +72,9 @@ describe('Validate node & properties helper', () => {
               category: {
                 type: 'string',
               },
+              anArray: {
+                type: 'array',
+              },
             },
           },
         },
@@ -82,6 +85,7 @@ describe('Validate node & properties helper', () => {
         language: 'en-gb',
         home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
         category: 'news',
+        anArray: [],
       },
     };
     const schemaName = 'article';
