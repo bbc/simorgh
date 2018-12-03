@@ -1,5 +1,3 @@
-import React from 'react';
-import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   FF_NEWS_SANS_REG,
@@ -8,9 +6,8 @@ import {
   GEL_SPACING_HLF,
 } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
 
-const StyledCopyright = styled.p.attrs({
+const Copyright = styled.p.attrs({
   role: 'text',
 })`
   ${T_MINION};
@@ -24,20 +21,5 @@ const StyledCopyright = styled.p.attrs({
   right: 0;
   margin: 0;
 `;
-
-const Copyright = ({ children }) => {
-  const attributionText = `Image source, `;
-
-  return (
-    <StyledCopyright>
-      <VisuallyHiddenText>{attributionText}</VisuallyHiddenText>
-      {children}
-    </StyledCopyright>
-  );
-};
-
-Copyright.propTypes = {
-  children: string.isRequired,
-};
 
 export default Copyright;
