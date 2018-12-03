@@ -1,6 +1,6 @@
 import React from 'react';
 import FigureContainer from '../../containers/Figure';
-import { ServiceContext } from '../ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const imageAlt = 'Pauline Clayton';
 const imageSrc =

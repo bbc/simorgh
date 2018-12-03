@@ -10,13 +10,13 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContextProvider } from '../../components/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Timestamp from '../../components/Timestamp';
 import {
   layoutGridWrapper,
   layoutGridItemConstrained,
 } from '../../lib/layoutGrid';
-import { PlatformContextProvider } from '../../components/PlatformContext';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
 
 const Wrapper = styled.div`
   ${layoutGridWrapper};
