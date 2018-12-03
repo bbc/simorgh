@@ -1,45 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-<Footer
-  copyrightText="© 2018 BBC. The BBC is not responsible for the content of external sites. "
-  externalLink={
-    Object {
-      "href": "https://www.bbc.co.uk/help/web/links/",
-      "text": "Read about our approach to external linking.",
+<footer
+  role="contentinfo"
+>
+  <BrandContainer />
+  <Footer
+    copyrightText="© 2018 BBC. The BBC is not responsible for the content of external sites. "
+    externalLink={
+      Object {
+        "href": "https://www.bbc.co.uk/help/web/links/",
+        "text": "Read about our approach to external linking.",
+      }
     }
-  }
-  links={
-    Array [
-      Object {
-        "href": "https://www.bbc.com/news/help-41670342",
-        "text": "Why you can trust the BBC",
-      },
-      Object {
-        "href": "https://www.bbc.com/terms",
-        "text": "Terms of Use",
-      },
-      Object {
-        "href": "https://www.bbc.co.uk/aboutthebbc/",
-        "text": "About the BBC",
-      },
-      Object {
-        "href": "https://www.bbc.com/privacy/",
-        "text": "Privacy Policy",
-      },
-      Object {
-        "href": "https://www.bbc.com/usingthebbc/cookies/",
-        "text": "Cookies",
-      },
-      Object {
-        "href": "https://www.bbc.com/accessibility/",
-        "text": "Accessibility Help",
-      },
-      Object {
-        "href": "https://www.bbc.com/contact/",
-        "text": "Contact the BBC",
-      },
-    ]
-  }
-/>
+    links={
+      Array [
+        Object {
+          "href": "https://www.bbc.com/news/help-41670342",
+          "text": "Why you can trust the BBC",
+        },
+        Object {
+          "href": "https://www.bbc.com/terms",
+          "text": "Terms of Use",
+        },
+        Object {
+          "href": "https://www.bbc.co.uk/aboutthebbc/",
+          "text": "About the BBC",
+        },
+        Object {
+          "href": "https://www.bbc.com/privacy/",
+          "text": "Privacy Policy",
+        },
+        Object {
+          "href": "https://www.bbc.com/usingthebbc/cookies/",
+          "text": "Cookies",
+        },
+        Object {
+          "href": "https://www.bbc.com/accessibility/",
+          "text": "Accessibility Help",
+        },
+        Object {
+          "href": "https://www.bbc.com/contact/",
+          "text": "Contact the BBC",
+        },
+      ]
+    }
+  />
+</footer>
 `;

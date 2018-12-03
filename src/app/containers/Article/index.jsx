@@ -3,7 +3,7 @@ import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../Metadata';
 import HeaderContainer from '../Header';
-import Footer from '../Footer';
+import FooterContainer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -99,7 +99,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                   </GridItemConstrained>
                 </OatWrapper>
               </main>
-              <Footer />
+              <FooterContainer />
             </PlatformContextProvider>
           </ServiceContextProvider>
         </Fragment>
