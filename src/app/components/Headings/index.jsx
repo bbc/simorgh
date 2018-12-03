@@ -1,12 +1,10 @@
 import styled from 'styled-components';
+import { C_EBON, C_STORM } from '@bbc/psammead-styles/colours';
 import {
-  C_EBON,
-  C_STORM,
   FF_NEWS_SERIF_MDM,
   FF_NEWS_SANS_REG,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '../../lib/constants/styles';
+} from '@bbc/psammead-styles/fonts';
+import { GEL_SPACING_DBL, GEL_SPACING_QUAD } from '../../lib/constants/styles';
 import { T_CANON, T_TRAFALGAR } from '../../lib/constants/typography';
 
 export const Headline = styled.h1`

@@ -1,10 +1,7 @@
 import styled from 'styled-components';
-import {
-  FF_NEWS_SANS_REG,
-  C_WHITE,
-  GEL_SPACING,
-  GEL_SPACING_HLF,
-} from '../../../lib/constants/styles';
+import { C_WHITE } from '@bbc/psammead-styles/colours';
+import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
+import { GEL_SPACING, GEL_SPACING_HLF } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 
 const Copyright = styled.p.attrs({

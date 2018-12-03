@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { number } from 'prop-types';
-import { C_CHALK, BBCBlocksSVG } from '../../../lib/constants/styles';
+import { C_CHALK } from '@bbc/psammead-styles/colours';
+import { BBCBlocksSVG } from '../../../lib/constants/styles';
 
 const ImagePlaceholder = styled.div`
   position: relative;

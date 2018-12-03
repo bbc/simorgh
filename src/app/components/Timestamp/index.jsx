@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { number } from 'prop-types';
+import { C_RHINO } from '@bbc/psammead-styles/colours';
+import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 import { T_BREVIER } from '../../lib/constants/typography';
-import {
-  C_RHINO,
-  GEL_SPACING_DBL,
-  FF_NEWS_SANS_REG,
-} from '../../lib/constants/styles';
+import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
