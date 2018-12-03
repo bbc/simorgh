@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
-import Brand from '../Brand';
+import BrandContainer from '../../containers/Blocks';
 import Link from './Link';
 import FooterList from './List';
 import {
@@ -31,7 +31,11 @@ const StyledParagraph = styled.p`
 
 const Footer = ({ links, copyrightText, externalLink }) => (
   <footer role="contentinfo">
-    <Brand />
+    {/*
+     Components should not import containers, but this preliminary step
+     is needed until https://github.com/BBC-News/simorgh/issues/1034 is resolved
+    */}
+    <BrandContainer />
     <StyledFooterLinksWrapper>
       <StyledFooterLinks>
         <FooterList links={links} />
