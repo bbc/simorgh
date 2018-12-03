@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
-import BrandContainer from '../../containers/Blocks';
+import BrandContainer from '../../containers/Brand';
 import Link from './Link';
 import FooterList from './List';
 import {

@@ -225,7 +225,9 @@ exports[`Footer should render correctly 1`] = `
         </svg>
         <span
           className="c5"
-        />
+        >
+          Default Brand Name
+        </span>
       </span>
     </a>
   </div>
