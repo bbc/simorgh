@@ -7,8 +7,6 @@ const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageRatio = 56.25;
 const captionValue = 'This is a caption';
-const captionValueContainingLink =
-  'This is a caption [with a link](https://bbc.com/news)';
 const copyrightText = 'Getty Images';
 
 const serviceContextStubNews = {
@@ -30,10 +28,6 @@ const generateFixtureData = (caption, copyright) => (
 export const FigureImage = generateFixtureData();
 
 export const FigureImageWithCaption = generateFixtureData(captionValue);
-
-export const FigureImageWithCaptionContainingLink = generateFixtureData(
-  captionValueContainingLink,
-);
 
 export const FigureImageWithCopyright = generateFixtureData(
   null,

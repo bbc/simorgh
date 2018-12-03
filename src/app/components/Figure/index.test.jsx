@@ -4,19 +4,11 @@ import {
   FigureImageWithCaption,
   FigureImageWithCopyright,
   FigureImageWithCopyrightAndCaption,
-  FigureImageWithCaptionContainingLink,
 } from './fixtureData';
 
 describe('Figure', () => {
   describe('with a caption', () => {
     shouldMatchSnapshot('should render correctly', FigureImageWithCaption);
-  });
-
-  describe('with a caption containing a link', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      FigureImageWithCaptionContainingLink,
-    );
   });
 
   describe('without a caption', () => {
