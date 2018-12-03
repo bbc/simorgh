@@ -1,5 +1,3 @@
-import React from 'react';
-import { node } from 'prop-types';
 import styled from 'styled-components';
 import { C_STORM, C_STONE } from '@bbc/psammead-styles/colours';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
@@ -7,9 +5,8 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '../../../lib/constants/styles';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import mediaQuery from '../../../helpers/mediaQueries';
 import { T_LONG_PRIMER } from '../../../lib/constants/typography';
-import { ServiceContext } from '../../ServiceContext';
 
-const StyledCaption = styled.figcaption`
+const Caption = styled.figcaption`
   ${T_LONG_PRIMER};
   background-color: ${C_STONE};
   color: ${C_STORM};
@@ -20,21 +17,5 @@ const StyledCaption = styled.figcaption`
     padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
 `;
-
-const Caption = ({ children }) => (
-  <StyledCaption>
-    <ServiceContext.Consumer>
-      {({ imageCaptionOffscreenText }) => (
-        <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
-      )}
-    </ServiceContext.Consumer>
-    {children}
-  </StyledCaption>
-);
-
-Caption.propTypes = {
-  // children will be "element.isRequired" in the future to support embedded <lang> and markdown
-  children: node.isRequired,
-};
 
 export default Caption;
