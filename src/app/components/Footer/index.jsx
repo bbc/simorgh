@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, shape, string } from 'prop-types';
+import Brand from '../Brand';
 import Link from './Link';
 import FooterList from './List';
 import {
@@ -29,15 +30,18 @@ const StyledParagraph = styled.p`
 `;
 
 const Footer = ({ links, copyrightText, externalLink }) => (
-  <StyledFooterLinksWrapper>
-    <StyledFooterLinks>
-      <FooterList links={links} />
-      <StyledParagraph>
-        {copyrightText}
-        <Link text={externalLink.text} href={externalLink.href} inline />
-      </StyledParagraph>
-    </StyledFooterLinks>
-  </StyledFooterLinksWrapper>
+  <footer role="contentinfo">
+    <Brand />
+    <StyledFooterLinksWrapper>
+      <StyledFooterLinks>
+        <FooterList links={links} />
+        <StyledParagraph>
+          {copyrightText}
+          <Link text={externalLink.text} href={externalLink.href} inline />
+        </StyledParagraph>
+      </StyledFooterLinks>
+    </StyledFooterLinksWrapper>
+  </footer>
 );
 
 const linkPropTypes = shape({
