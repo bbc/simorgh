@@ -26,9 +26,4 @@ describe('Text', () => {
     'should render inline-code',
     <Text text="This is text with `some inline code`." />,
   );
-
-  shouldMatchSnapshot(
-    'should render an inline link',
-    <Text text="This is text that contains an [inline link](https://www.bbc.com/news) inside it." />,
-  );
 });

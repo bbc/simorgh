@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
+import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
 import MetadataContainer from '../Metadata';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
@@ -15,7 +16,6 @@ import {
   layoutGridWrapper,
   layoutGridItemConstrained,
 } from '../../lib/layoutGrid';
-import { C_OAT_LHT } from '../../lib/constants/styles';
 import { PlatformContextProvider } from '../../components/PlatformContext';
 
 const Wrapper = styled.div`
