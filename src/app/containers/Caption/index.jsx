@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { node } from 'prop-types';
 import Caption from '../../components/Figure/Caption';
 import { ServiceContext } from '../../components/ServiceContext';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
@@ -18,7 +18,7 @@ const CaptionContainer = ({ captionValue }) => (
 );
 
 CaptionContainer.propTypes = {
-  captionValue: string.isRequired,
+  captionValue: node.isRequired,
 };
 
 export default CaptionContainer;
