@@ -8,5 +8,5 @@ The `Brand` component is designed to be used where a BBC logo is required as SVG
 
 ## Accessibility notes	
 * Visually hidden text is provided (e.g. for screen reader users)
-* `Brand`is keyboard accessible and provides hover and focus styles
+* `Brand` is keyboard-accessible and provides hover and focus styles
 
