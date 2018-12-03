@@ -4,7 +4,7 @@ import {
   C_BLUEJAY_LHT,
   C_OAT_LHT,
   C_PEBBLE,
-} from '../../lib/constants/styles';
+} from '@bbc/psammead-styles/colours';
 
 const InlineLink = styled.a`
   color: ${C_BLUEJAY};
