@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { string, arrayOf, shape } from 'prop-types';
 import nanoid from 'nanoid';
+import { C_WHITE } from '@bbc/psammead-styles/colours';
 import {
-  C_WHITE,
   GEL_SPACING,
   GEL_SPACING_DBL,
   group2ScreenWidthMax,

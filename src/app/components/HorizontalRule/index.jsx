@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { C_POSTBOX, GEL_SPACING_DBL } from '../../lib/constants/styles';
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING_DBL } from '../../lib/constants/styles';
 
 const HorizontalRule = styled.hr`
   background-color: ${C_POSTBOX};

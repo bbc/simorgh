@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { ServiceContextConsumer } from '../ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import {
-  C_POSTBOX,
-  C_WHITE,
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_HLF,
