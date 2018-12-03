@@ -1,5 +1,6 @@
 import React from 'react';
-import Footer from '../../components/Footer';
+import SitewideLinks from '../../components/SitewideLinks';
+import Brand from '../../components/Brand';
 
 const externalLink = {
   href: 'https://www.bbc.co.uk/help/web/links/',
@@ -41,11 +42,14 @@ const currentYear = new Date().getFullYear();
 const copyrightText = `\u00A9 ${currentYear} BBC. The BBC is not responsible for the content of external sites. `;
 
 const FooterContainer = () => (
-  <Footer
-    links={links}
-    copyrightText={copyrightText}
-    externalLink={externalLink}
-  />
+  <footer role="contentinfo">
+    <Brand />
+    <SitewideLinks
+      links={links}
+      copyrightText={copyrightText}
+      externalLink={externalLink}
+    />
+  </footer>
 );
 
 export default FooterContainer;
