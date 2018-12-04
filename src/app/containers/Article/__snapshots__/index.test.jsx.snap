@@ -55,8 +55,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       <main
         role="main"
       >
-        <Wrapper>
-          <GridItemConstrained>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -91,10 +91,10 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             <Timestamp
               timestamp={1514811600000}
             />
-          </GridItemConstrained>
-        </Wrapper>
-        <OatWrapper>
-          <GridItemConstrained>
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -121,8 +121,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                 }
               }
             />
-          </GridItemConstrained>
-        </OatWrapper>
+          </ForwardRef>
+        </ForwardRef>
       </main>
       <FooterContainer />
     </PlatformContextProvider>
@@ -208,8 +208,8 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       <main
         role="main"
       >
-        <Wrapper>
-          <GridItemConstrained>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -244,10 +244,10 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             <Timestamp
               timestamp={1514811600000}
             />
-          </GridItemConstrained>
-        </Wrapper>
-        <OatWrapper>
-          <GridItemConstrained>
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -274,8 +274,8 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                 }
               }
             />
-          </GridItemConstrained>
-        </OatWrapper>
+          </ForwardRef>
+        </ForwardRef>
       </main>
       <FooterContainer />
     </PlatformContextProvider>
