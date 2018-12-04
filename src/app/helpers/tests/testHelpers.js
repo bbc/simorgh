@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer'; // eslint-disable-line import/no-extraneous-dependencies
 import 'jest-styled-components'; // eslint-disable-line import/no-extraneous-dependencies
 import ShallowRenderer from 'react-test-renderer/shallow'; // eslint-disable-line import/no-extraneous-dependencies
 import { render } from 'react-testing-library'; // eslint-disable-line import/no-extraneous-dependencies
@@ -27,7 +26,7 @@ export const shouldShallowMatchSnapshot = (title, component) => {
 
 export const isNull = (title, component) => {
   it(title, () => {
-    const tree = renderer.create(component).toJSON();
-    expect(tree).toBeNull();
+    const { container } = render(component);
+    expect(container.firstChild).toBeNull();
   });
 };
