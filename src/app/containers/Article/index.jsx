@@ -17,6 +17,7 @@ import {
   layoutGridItemConstrained,
 } from '../../lib/layoutGrid';
 import { PlatformContextProvider } from '../../components/PlatformContext';
+import GlobalStyle from '../../lib/globalStyles';
 
 const Wrapper = styled.div`
   ${layoutGridWrapper};
@@ -72,6 +73,7 @@ const ArticleContainer = ({ loading, error, data }) => {
     if (headlineBlocks.length > 0) {
       return (
         <Fragment>
+          <GlobalStyle />
           <ServiceContextProvider service={service}>
             <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
               <HeaderContainer />

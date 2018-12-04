@@ -4,6 +4,7 @@ exports[`ArticleContainer Component no data should render correctly 1`] = `null`
 
 exports[`ArticleContainer Component should render Persian article correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="persian"
   >
@@ -132,6 +133,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
 
 exports[`ArticleContainer Component should render correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="news"
   >

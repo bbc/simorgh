@@ -34,7 +34,6 @@ exports[`Document should render AMP version correctly 1`] = `
       rel="manifest"
     />
     <ResourceHints />
-    <GlobalStyleComponent />
     <title>
       Test title
     </title>
@@ -113,7 +112,6 @@ exports[`Document should render correctly 1`] = `
       rel="manifest"
     />
     <ResourceHints />
-    <GlobalStyleComponent />
     <title>
       Test title
     </title>
