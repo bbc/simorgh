@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -18,8 +19,9 @@ exports[`Paragraph should render correctly 1`] = `
 }
 
 <p
-  className="c0"
->
-  This is some paragraph content.
-</p>
+    class="c0"
+  >
+    This is some paragraph content.
+  </p>
+</DocumentFragment>
 `;

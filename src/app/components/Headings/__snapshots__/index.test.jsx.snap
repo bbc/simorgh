@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Headline component should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -25,14 +26,16 @@ exports[`Headline component should render correctly 1`] = `
 }
 
 <h1
-  className="c0"
->
-  This is my headline.
-</h1>
+    class="c0"
+  >
+    This is my headline.
+  </h1>
+</DocumentFragment>
 `;
 
 exports[`SubHeading component attribute id should render without double quotes 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -57,16 +60,18 @@ exports[`SubHeading component attribute id should render without double quotes 1
 }
 
 <h2
-  className="c0"
-  id="This-is-a-SubHeading"
-  tabIndex="-1"
->
-  This is a SubHeading
-</h2>
+    class="c0"
+    id="This-is-a-SubHeading"
+    tabindex="-1"
+  >
+    This is a SubHeading
+  </h2>
+</DocumentFragment>
 `;
 
 exports[`SubHeading component attribute id should render without exclamation marks 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -91,16 +96,18 @@ exports[`SubHeading component attribute id should render without exclamation mar
 }
 
 <h2
-  className="c0"
-  id="This-is-a-SubHeading"
-  tabIndex="-1"
->
-  This is a SubHeading
-</h2>
+    class="c0"
+    id="This-is-a-SubHeading"
+    tabindex="-1"
+  >
+    This is a SubHeading
+  </h2>
+</DocumentFragment>
 `;
 
 exports[`SubHeading component attribute id should render without quotes 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -125,16 +132,18 @@ exports[`SubHeading component attribute id should render without quotes 1`] = `
 }
 
 <h2
-  className="c0"
-  id="This-is-a-SubHeading"
-  tabIndex="-1"
->
-  This is a SubHeading
-</h2>
+    class="c0"
+    id="This-is-a-SubHeading"
+    tabindex="-1"
+  >
+    This is a SubHeading
+  </h2>
+</DocumentFragment>
 `;
 
 exports[`SubHeading component should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -159,10 +168,11 @@ exports[`SubHeading component should render correctly 1`] = `
 }
 
 <h2
-  className="c0"
-  id="This-is-a-SubHeading"
-  tabIndex="-1"
->
-  This is a SubHeading
-</h2>
+    class="c0"
+    id="This-is-a-SubHeading"
+    tabindex="-1"
+  >
+    This is a SubHeading
+  </h2>
+</DocumentFragment>
 `;

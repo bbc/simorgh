@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure with a caption should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0;
   padding-bottom: 1rem;
   width: 100%;
@@ -59,32 +60,34 @@ exports[`Figure with a caption should render correctly 1`] = `
 }
 
 <figure
-  className="c0"
->
-  <div
-    className="c1"
+    class="c0"
   >
-    <img
-      alt="Pauline Clayton"
-      className="c2"
-      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-    />
-  </div>
-  <figcaption
-    className="c3"
-  >
-    <span
-      className="c4"
+    <div
+      class="c1"
     >
-      Image caption, 
-    </span>
-    This is a caption
-  </figcaption>
-</figure>
+      <img
+        alt="Pauline Clayton"
+        class="c2"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+      />
+    </div>
+    <figcaption
+      class="c3"
+    >
+      <span
+        class="c4"
+      >
+        Image caption, 
+      </span>
+      This is a caption
+    </figcaption>
+  </figure>
+</DocumentFragment>
 `;
 
 exports[`Figure with caption and non-BBC copyright should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0;
   padding-bottom: 1rem;
   width: 100%;
@@ -156,38 +159,40 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
 }
 
 <figure
-  className="c0"
->
-  <div
-    className="c1"
+    class="c0"
   >
-    <img
-      alt="Pauline Clayton"
-      className="c2"
-      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-    />
-    <p
-      className="c3"
-      role="text"
+    <div
+      class="c1"
     >
-      Getty Images
-    </p>
-  </div>
-  <figcaption
-    className="c4"
-  >
-    <span
-      className="c5"
+      <img
+        alt="Pauline Clayton"
+        class="c2"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+      />
+      <p
+        class="c3"
+        role="text"
+      >
+        Getty Images
+      </p>
+    </div>
+    <figcaption
+      class="c4"
     >
-      Image caption, 
-    </span>
-    This is a caption
-  </figcaption>
-</figure>
+      <span
+        class="c5"
+      >
+        Image caption, 
+      </span>
+      This is a caption
+    </figcaption>
+  </figure>
+</DocumentFragment>
 `;
 
 exports[`Figure with non-BBC copyright should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0;
   padding-bottom: 1rem;
   width: 100%;
@@ -226,28 +231,30 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
 }
 
 <figure
-  className="c0"
->
-  <div
-    className="c1"
+    class="c0"
   >
-    <img
-      alt="Pauline Clayton"
-      className="c2"
-      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-    />
-    <p
-      className="c3"
-      role="text"
+    <div
+      class="c1"
     >
-      Getty Images
-    </p>
-  </div>
-</figure>
+      <img
+        alt="Pauline Clayton"
+        class="c2"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+      />
+      <p
+        class="c3"
+        role="text"
+      >
+        Getty Images
+      </p>
+    </div>
+  </figure>
+</DocumentFragment>
 `;
 
 exports[`Figure without a caption should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0;
   padding-bottom: 1rem;
   width: 100%;
@@ -272,16 +279,17 @@ exports[`Figure without a caption should render correctly 1`] = `
 }
 
 <figure
-  className="c0"
->
-  <div
-    className="c1"
+    class="c0"
   >
-    <img
-      alt="Pauline Clayton"
-      className="c2"
-      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-    />
-  </div>
-</figure>
+    <div
+      class="c1"
+    >
+      <img
+        alt="Pauline Clayton"
+        class="c2"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+      />
+    </div>
+  </figure>
+</DocumentFragment>
 `;

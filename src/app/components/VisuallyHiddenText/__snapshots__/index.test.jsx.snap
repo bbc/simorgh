@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VisuallyHiddenText should render off screen text for screen readers 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -13,8 +14,9 @@ exports[`VisuallyHiddenText should render off screen text for screen readers 1`]
 }
 
 <span
-  className="c0"
->
-  Some offscreen text
-</span>
+    class="c0"
+  >
+    Some offscreen text
+  </span>
+</DocumentFragment>
 `;

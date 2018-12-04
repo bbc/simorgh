@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #0F556C;
   padding: 2px;
   border-bottom: 1px solid #0F556C;
@@ -27,16 +28,17 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
 }
 
 <a
-  className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
-  onClick={[Function]}
->
-  This is text for an internal link
-</a>
+    class="-Link c0"
+    href="/news/articles/c85pqyj5m2ko"
+  >
+    This is text for an internal link
+  </a>
+</DocumentFragment>
 `;
 
 exports[`InlineLinkContainer with link matching routes for SPA should render correctly for TEST environment 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #0F556C;
   padding: 2px;
   border-bottom: 1px solid #0F556C;
@@ -62,12 +64,12 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
 }
 
 <a
-  className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
-  onClick={[Function]}
->
-  This is text for an internal link
-</a>
+    class="-Link c0"
+    href="/news/articles/c85pqyj5m2ko"
+  >
+    This is text for an internal link
+  </a>
+</DocumentFragment>
 `;
 
 exports[`InlineLinkContainer with link not matching SPA route should render correctly 1`] = `

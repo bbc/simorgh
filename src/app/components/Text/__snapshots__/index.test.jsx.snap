@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render bold 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -18,18 +19,20 @@ exports[`Text should render bold 1`] = `
 }
 
 <p
-  className="c0"
->
-  This is text with 
-  <b>
-    some bold formatting
-  </b>
-  .
-</p>
+    class="c0"
+  >
+    This is text with 
+    <b>
+      some bold formatting
+    </b>
+    .
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Text should render inline-code 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -46,18 +49,20 @@ exports[`Text should render inline-code 1`] = `
 }
 
 <p
-  className="c0"
->
-  This is text with 
-  <code>
-    some inline code
-  </code>
-  .
-</p>
+    class="c0"
+  >
+    This is text with 
+    <code>
+      some inline code
+    </code>
+    .
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Text should render italics 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -74,18 +79,20 @@ exports[`Text should render italics 1`] = `
 }
 
 <p
-  className="c0"
->
-  This is text with 
-  <i>
-    some italic formatting
-  </i>
-  .
-</p>
+    class="c0"
+  >
+    This is text with 
+    <i>
+      some italic formatting
+    </i>
+    .
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Text should render strike-through 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -102,12 +109,13 @@ exports[`Text should render strike-through 1`] = `
 }
 
 <p
-  className="c0"
->
-  This is text with 
-  <del>
-    some strike-through formatting
-  </del>
-  .
-</p>
+    class="c0"
+  >
+    This is text with 
+    <del>
+      some strike-through formatting
+    </del>
+    .
+  </p>
+</DocumentFragment>
 `;

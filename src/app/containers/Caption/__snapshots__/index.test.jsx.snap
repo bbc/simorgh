@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render caption text with example Farsi offscreen text 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   font-size: 0.9375em;
   line-height: 1.125rem;
   background-color: #D5D0CD;
@@ -35,19 +36,21 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 }
 
 <figcaption
-  className="c0"
->
-  <span
-    className="c1"
+    class="c0"
   >
-     ، عنوان تصویر
-  </span>
-  Some caption text...
-</figcaption>
+    <span
+      class="c1"
+    >
+       ، عنوان تصویر
+    </span>
+    Some caption text...
+  </figcaption>
+</DocumentFragment>
 `;
 
 exports[`should render caption text with example News offscreen text 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   font-size: 0.9375em;
   line-height: 1.125rem;
   background-color: #D5D0CD;
@@ -81,19 +84,21 @@ exports[`should render caption text with example News offscreen text 1`] = `
 }
 
 <figcaption
-  className="c0"
->
-  <span
-    className="c1"
+    class="c0"
   >
-    Image caption, 
-  </span>
-  Some caption text...
-</figcaption>
+    <span
+      class="c1"
+    >
+      Image caption, 
+    </span>
+    Some caption text...
+  </figcaption>
+</DocumentFragment>
 `;
 
 exports[`should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   font-size: 0.9375em;
   line-height: 1.125rem;
   background-color: #D5D0CD;
@@ -116,8 +121,9 @@ exports[`should render caption text with no VisuallyHiddenText component when no
 }
 
 <figcaption
-  className="c0"
->
-  Some caption text...
-</figcaption>
+    class="c0"
+  >
+    Some caption text...
+  </figcaption>
+</DocumentFragment>
 `;

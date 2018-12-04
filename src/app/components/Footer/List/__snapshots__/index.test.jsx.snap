@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterList should render correctly 1`] = `
-.c3 {
+<DocumentFragment>
+  .c3 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -81,23 +82,24 @@ exports[`FooterList should render correctly 1`] = `
 }
 
 <ul
-  className="c0"
-  role="list"
->
-  <li
-    className="c1"
-    role="listitem"
+    class="c0"
+    role="list"
   >
-    <a
-      className="c2 c3"
-      href="https://www.bbc.co.uk/news"
+    <li
+      class="c1"
+      role="listitem"
     >
-      <span
-        className="c4"
+      <a
+        class="c2 c3"
+        href="https://www.bbc.co.uk/news"
       >
-        Link
-      </span>
-    </a>
-  </li>
-</ul>
+        <span
+          class="c4"
+        >
+          Link
+        </span>
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
 `;

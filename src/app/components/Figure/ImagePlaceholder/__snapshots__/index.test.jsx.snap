@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImagePlaceholder should render landscape images correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -15,12 +16,14 @@ exports[`ImagePlaceholder should render landscape images correctly 1`] = `
 }
 
 <div
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`ImagePlaceholder should render portrait images correctly 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -34,6 +37,7 @@ exports[`ImagePlaceholder should render portrait images correctly 1`] = `
 }
 
 <div
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
