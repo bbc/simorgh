@@ -8,9 +8,9 @@ The `SitewideLinks` component is designed to be used at the bottom of an article
 
 | Argument      | Type                  | Example                               |
 |:--------------|:----------------------|:--------------------------------------|
-| links         | Array of Link objects | `[{href:'bbc.com', text: 'The BBC'}]` |
+| links         | Array of Link objects | `[{href:'https://www.bbc.com', text: 'The BBC'}]` |
 | copyrightText | String                | `'Copyright BBC News'`                |
-| externalLink  | Link object           | `{href:'bbc.com', text: 'The BBC'}`   |
+| externalLink  | Link object           | `{href:'https://www.bbc.com', text: 'The BBC'}`   |
 
 ## When to use this component
 
