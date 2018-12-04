@@ -3,7 +3,7 @@ import { string, number } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
-import Copyright from '../../components/Figure/Copyright';
+import Copyright from '../Copyright';
 import Caption from '../Caption';
 
 const renderCopyright = copyright =>
