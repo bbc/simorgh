@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { ampScript, ampNoscript } from '../../lib/constants/styles';
 import ResourceHints from './ResourceHints';
-import '../../lib/globalStyles';
+import GlobalStyle from '../../lib/globalStyles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -32,6 +32,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
+        <GlobalStyle />
         <ResourceHints />
         {title}
         {links}
