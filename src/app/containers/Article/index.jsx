@@ -3,8 +3,8 @@ import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
 import MetadataContainer from '../Metadata';
-import Header from '../../components/Header';
-import Footer from '../Footer';
+import HeaderContainer from '../Header';
+import FooterContainer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -74,7 +74,7 @@ const ArticleContainer = ({ loading, error, data }) => {
         <Fragment>
           <ServiceContextProvider service={service}>
             <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
-              <Header />
+              <HeaderContainer />
               <MetadataContainer
                 metadata={metadata}
                 promo={promo}
@@ -99,7 +99,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                   </GridItemConstrained>
                 </OatWrapper>
               </main>
-              <Footer />
+              <FooterContainer />
             </PlatformContextProvider>
           </ServiceContextProvider>
         </Fragment>
