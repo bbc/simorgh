@@ -5,7 +5,7 @@ import Paragraph from '../Paragraph';
 
 storiesOf('HorizontalRule', module)
   .add('default', () => <HorizontalRule />)
-  .add('between text blocks', () => (
+  .add('between paragraphs', () => (
     <React.Fragment>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus

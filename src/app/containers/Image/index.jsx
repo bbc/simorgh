@@ -3,14 +3,14 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 import Blocks from '../Blocks';
-import fragment from '../Fragment';
+import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 
 const DEFAULT_IMAGE_RES = 640;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
-const componentsToRender = { fragment, urlLink: InlineLink };
+const captionComponentsToRender = { fragment: Fragment, urlLink: InlineLink };
 const getCaption = block => {
   if (!block) {
     return null;
@@ -19,7 +19,7 @@ const getCaption = block => {
   return (
     <Blocks
       blocks={block.model.blocks[0].model.blocks[0].model.blocks}
-      componentsToRender={componentsToRender}
+      componentsToRender={captionComponentsToRender}
     />
   );
 };
