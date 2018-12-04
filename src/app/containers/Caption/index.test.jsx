@@ -1,7 +1,7 @@
 import React from 'react';
 import Caption from './index';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { ServiceContext } from '../../components/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
