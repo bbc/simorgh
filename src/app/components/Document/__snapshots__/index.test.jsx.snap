@@ -20,6 +20,7 @@ exports[`Document should render AMP version correctly 1`] = `
       content="#B80000"
       name="theme-color"
     />
+    <GlobalStyleComponent />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
@@ -98,6 +99,7 @@ exports[`Document should render correctly 1`] = `
       content="#B80000"
       name="theme-color"
     />
+    <GlobalStyleComponent />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
