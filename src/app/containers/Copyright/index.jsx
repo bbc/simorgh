@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import Copyright from '../../components/Figure/Copyright';
-import { ServiceContextConsumer } from '../../components/ServiceContext';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const CopyrightContainer = ({ children }) => (
