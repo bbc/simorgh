@@ -10,7 +10,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
     <PlatformContextProvider
       platform="canonical"
     >
-      <Header />
+      <HeaderContainer />
       <MetadataContainer
         metadata={
           Object {
@@ -138,7 +138,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
     <PlatformContextProvider
       platform="canonical"
     >
-      <Header />
+      <HeaderContainer />
       <MetadataContainer
         metadata={
           Object {
