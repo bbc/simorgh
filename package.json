@@ -40,7 +40,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && npm run test:unit"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit"
     }
   },
   "repository": {
