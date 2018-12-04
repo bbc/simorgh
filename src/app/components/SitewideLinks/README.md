@@ -6,10 +6,10 @@ The `SitewideLinks` component is designed to be used at the bottom of an article
 
 ## Arguments
 
-| Argument      | Type                  | Example                               |
-|:--------------|:----------------------|:--------------------------------------|
+| Argument      | Type                  | Example                                           |
+|:--------------|:----------------------|:--------------------------------------------------|
 | links         | Array of Link objects | `[{href:'https://www.bbc.com', text: 'The BBC'}]` |
-| copyrightText | String                | `'Copyright BBC News'`                |
+| copyrightText | String                | `'Copyright BBC News'`                            |
 | externalLink  | Link object           | `{href:'https://www.bbc.com', text: 'The BBC'}`   |
 
 ## When to use this component
