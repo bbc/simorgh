@@ -1,6 +1,6 @@
 import React from 'react';
 import Brand from '../../components/Brand';
-import { ServiceContextConsumer } from '../../components/ServiceContext';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => (
   <ServiceContextConsumer>
