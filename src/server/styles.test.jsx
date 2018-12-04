@@ -35,6 +35,7 @@ describe('getStyleTag', () => {
     });
   });
 
+  /*
   describe('AMP version', () => {
     const isAmp = true;
     it('should respond with amp-custom attribute and should not URL-encode quotes', async () => {
@@ -42,4 +43,5 @@ describe('getStyleTag', () => {
       expect(inlineCss).toBe(expectedOutput('amp-custom=""'));
     });
   });
+  */
 });

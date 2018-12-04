@@ -1,7 +1,9 @@
-import React from 'react';
+/* import React from 'react'; */
 
-export const getStyleTag = (sheet, isAmp = false) => {
+export const getStyleTag = (sheet /* , isAmp = false */) => {
   const styleTags = sheet.getStyleElement();
+  return styleTags;
+  /*
   if (!isAmp) return styleTags;
 
   // `getStyleElement()` doesn't always return an array (in our tests)
@@ -21,6 +23,7 @@ export const getStyleTag = (sheet, isAmp = false) => {
     // eslint-disable-next-line react/no-danger
     <style amp-custom="" dangerouslySetInnerHTML={{ __html: inlineCss }} />
   );
+  */
 };
 
 export default getStyleTag;
