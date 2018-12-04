@@ -2,7 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
-import { ServiceContext } from '../../components/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const CaptionWithOffscreenText = ({ children }) => (
