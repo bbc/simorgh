@@ -4,6 +4,23 @@
 
 The `SitewideLinks` component is designed to be used at the bottom of an article, however can be used anywhere on a page. These links are generally intended to be to more general and legal BBC pages, but do not have to be. It also includes information about copyright. 
 
+## Arguments
+
+| Argument      | Value                 |
+|:--------------|:----------------------|
+| links         | Array of Link objects |
+| copyrightText | String                | 
+| externalLink  | Link object           |
+
+### Link object example
+
+```jsx
+{
+  href: 'https://www.bbc.co.uk/aboutthebbc/',
+  text: 'About the BBC',
+}
+```
+
 ## When to use this component
 
 It is currently used at the bottom of new BBC News and BBC News Persian article pages, however it has no markup requiring this to be its only application. It can be used anywhere on any page.
