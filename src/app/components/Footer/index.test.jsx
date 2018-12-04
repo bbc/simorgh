@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './index';
-import { ServiceContextProvider } from '../ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 describe(`Footer`, () => {
