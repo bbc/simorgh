@@ -1,6 +1,6 @@
 import React from 'react';
 import SitewideLinks from '../../components/SitewideLinks';
-import Brand from '../../components/Brand';
+import BrandContainer from '../Brand';
 
 const externalLink = {
   href: 'https://www.bbc.co.uk/help/web/links/',
@@ -43,7 +43,7 @@ const copyrightText = `\u00A9 ${currentYear} BBC. The BBC is not responsible for
 
 const FooterContainer = () => (
   <footer role="contentinfo">
-    <Brand />
+    <BrandContainer />
     <SitewideLinks
       links={links}
       copyrightText={copyrightText}
