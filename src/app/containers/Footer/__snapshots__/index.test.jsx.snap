@@ -4,7 +4,7 @@ exports[`FooterContainer should render correctly 1`] = `
 <footer
   role="contentinfo"
 >
-  <Brand />
+  <BrandContainer />
   <SitewideLinks
     copyrightText="© 2018 BBC. The BBC is not responsible for the content of external sites. "
     externalLink={
