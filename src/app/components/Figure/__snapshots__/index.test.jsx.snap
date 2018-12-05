@@ -148,11 +148,6 @@ exports[`Figure with caption and non-BBC copyright should render correctly 1`] =
       className="c3"
       role="text"
     >
-      <span
-        className="sc-bdVaJa hbhUhz"
-      >
-        Image source, 
-      </span>
       Getty Images
     </p>
   </div>
@@ -223,11 +218,6 @@ exports[`Figure with non-BBC copyright should render correctly 1`] = `
       className="c3"
       role="text"
     >
-      <span
-        className="sc-bdVaJa hbhUhz"
-      >
-        Image source, 
-      </span>
       Getty Images
     </p>
   </div>

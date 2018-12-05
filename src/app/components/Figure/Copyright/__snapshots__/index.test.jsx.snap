@@ -19,11 +19,6 @@ exports[`Copyright should render correctly 1`] = `
   className="c0"
   role="text"
 >
-  <span
-    className="sc-bdVaJa hbhUhz"
-  >
-    Image source, 
-  </span>
   Getty Images
 </p>
 `;

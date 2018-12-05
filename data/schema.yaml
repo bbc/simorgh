@@ -1,3 +1,7 @@
+# The app team are using this schema to generate a set of reference model objects
+# See https://github.com/bbc/ArticleUIKit/tree/master/ArticleUIKitExampleTests/autogen-reference
+# Whilst not solely for their benefit, the following have been added to the schema to improve their generated code:
+# * fragmentAttrs
 openapi: 3.0.0
 servers:
   - description: SwaggerHub API Auto Mocking
@@ -272,6 +276,16 @@ components:
 
     # schema definitions for referred blocks below
 
+    fragmentAttrs:
+      type: array
+      items:
+        enum:
+          - italic
+          - bold
+          - superscript
+          - subscript
+        type: string
+
     blocks:
       type: array
       items:
@@ -391,8 +405,7 @@ components:
             text:
               type: string
             attributes:
-              type: array
-
+              $ref: '#/components/schemas/fragmentAttrs'
         type:
           enum:
             - fragment

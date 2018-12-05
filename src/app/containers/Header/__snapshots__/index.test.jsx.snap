@@ -85,7 +85,7 @@ exports[`Header should render correctly 1`] = `
           </g>
         </svg>
         <span
-          className="sc-bdVaJa hbhUhz"
+          className="hbhUhz"
         >
           Default Brand Name
         </span>

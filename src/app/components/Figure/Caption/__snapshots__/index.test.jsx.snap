@@ -28,7 +28,7 @@ exports[`should render Caption with some offscreen text 1`] = `
 >
   This is some Caption text
   <span
-    className="sc-bdVaJa hbhUhz"
+    className="hbhUhz"
   >
     Some offscreen text
   </span>

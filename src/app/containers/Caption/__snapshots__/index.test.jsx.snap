@@ -27,7 +27,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   className="c0"
 >
   <span
-    className="sc-bdVaJa hbhUhz"
+    className="hbhUhz"
   >
      ، عنوان تصویر
   </span>
@@ -62,7 +62,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   className="c0"
 >
   <span
-    className="sc-bdVaJa hbhUhz"
+    className="hbhUhz"
   >
     Image caption, 
   </span>

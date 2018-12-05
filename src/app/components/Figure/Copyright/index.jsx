@@ -1,13 +1,10 @@
-import React from 'react';
-import { string } from 'prop-types';
 import styled from 'styled-components';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { GEL_SPACING, GEL_SPACING_HLF } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
 
-const StyledCopyright = styled.p.attrs({
+const Copyright = styled.p.attrs({
   role: 'text',
 })`
   ${T_MINION};
@@ -21,20 +18,5 @@ const StyledCopyright = styled.p.attrs({
   right: 0;
   margin: 0;
 `;
-
-const Copyright = ({ children }) => {
-  const attributionText = `Image source, `;
-
-  return (
-    <StyledCopyright>
-      <VisuallyHiddenText>{attributionText}</VisuallyHiddenText>
-      {children}
-    </StyledCopyright>
-  );
-};
-
-Copyright.propTypes = {
-  children: string.isRequired,
-};
 
 export default Copyright;
