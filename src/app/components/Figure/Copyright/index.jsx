@@ -3,9 +3,9 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { GEL_SPACING, GEL_SPACING_HLF } from '../../../lib/constants/styles';
 import { T_MINION } from '../../../lib/constants/typography';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
 
 const StyledCopyright = styled.p.attrs({
   role: 'text',
