@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Headings with headline data should render correctly 1`] = `
-<Headline
+<ForwardRef
   text="This is a headline!"
 >
   This is a headline!
-</Headline>
+</ForwardRef>
 `;
 
 exports[`Headings with subheadline data should render correctly 1`] = `
-<SubHeading
+<ForwardRef
   text="This is a subheadline"
 >
   This is a subheadline
-</SubHeading>
+</ForwardRef>
 `;
