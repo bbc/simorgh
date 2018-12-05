@@ -13,9 +13,9 @@ const StyledDivUsingQuotes = styled.div`
 `;
 const expectedOutput = inlineAttribute => `<style ${inlineAttribute} data-reactroot="">
 /* sc-component-id: StyledHeading-av5ml9-0 */
-.StyledHeading-av5ml9-0 {} .gDvQnu{color:teal;}
+.gDvQnu{color:teal;}
 /* sc-component-id: StyledDivUsingQuotes-av5ml9-1 */
-.StyledDivUsingQuotes-av5ml9-1 {} .bKGMUB{background-image:url('https://placehold.it/640x360');}</style>`;
+.bKGMUB{background-image:url('https://placehold.it/640x360');}</style>`;
 
 renderToString(
   sheet.collectStyles(
@@ -30,7 +30,9 @@ describe('getStyleTag', () => {
     it('should respond with data-styled-component attribute', async () => {
       const inlineCss = renderToString(getStyleTag(sheet));
       expect(inlineCss).toBe(
-        expectedOutput('data-styled-components="gDvQnu bKGMUB"'),
+        expectedOutput(
+          'data-styled="gDvQnu bKGMUB" data-styled-version="4.1.2"',
+        ),
       );
     });
   });
