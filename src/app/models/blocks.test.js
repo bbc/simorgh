@@ -34,6 +34,15 @@ describe('Block Containing Text', () => {
                   type: 'paragraph',
                   model: {
                     text: 'hello',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'hello',
+                          attributes: [],
+                        },
+                      },
+                    ],
                   },
                 },
               ],

@@ -68,6 +68,15 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                             "blocks": Array [
                               Object {
                                 "model": Object {
+                                  "blocks": Array [
+                                    Object {
+                                      "model": Object {
+                                        "attributes": Array [],
+                                        "text": "سرصفحه مقاله",
+                                      },
+                                      "type": "fragment",
+                                    },
+                                  ],
                                   "text": "سرصفحه مقاله",
                                 },
                                 "type": "paragraph",
@@ -103,6 +112,15 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                       "blocks": Array [
                         Object {
                           "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "attributes": Array [],
+                                  "text": "یک پاراگراف.",
+                                },
+                                "type": "fragment",
+                              },
+                            ],
                             "text": "یک پاراگراف.",
                           },
                           "type": "paragraph",
@@ -221,6 +239,15 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                             "blocks": Array [
                               Object {
                                 "model": Object {
+                                  "blocks": Array [
+                                    Object {
+                                      "model": Object {
+                                        "attributes": Array [],
+                                        "text": "Article Headline",
+                                      },
+                                      "type": "fragment",
+                                    },
+                                  ],
                                   "text": "Article Headline",
                                 },
                                 "type": "paragraph",
@@ -256,6 +283,15 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                       "blocks": Array [
                         Object {
                           "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "attributes": Array [],
+                                  "text": "A paragraph.",
+                                },
+                                "type": "fragment",
+                              },
+                            ],
                             "text": "A paragraph.",
                           },
                           "type": "paragraph",
