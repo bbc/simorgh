@@ -3,20 +3,21 @@ import { bool, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
 import MetadataContainer from '../Metadata';
-import Header from '../../components/Header';
-import Footer from '../Footer';
+import HeaderContainer from '../Header';
+import FooterContainer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContextProvider } from '../../components/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Timestamp from '../../components/Timestamp';
 import {
   layoutGridWrapper,
   layoutGridItemConstrained,
 } from '../../lib/layoutGrid';
-import { PlatformContextProvider } from '../../components/PlatformContext';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import GlobalStyle from '../../lib/globalStyles';
 
 const Wrapper = styled.div`
   ${layoutGridWrapper};
@@ -72,9 +73,10 @@ const ArticleContainer = ({ loading, error, data }) => {
     if (headlineBlocks.length > 0) {
       return (
         <Fragment>
+          <GlobalStyle />
           <ServiceContextProvider service={service}>
             <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
-              <Header />
+              <HeaderContainer />
               <MetadataContainer
                 metadata={metadata}
                 promo={promo}
@@ -99,7 +101,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                   </GridItemConstrained>
                 </OatWrapper>
               </main>
-              <Footer />
+              <FooterContainer />
             </PlatformContextProvider>
           </ServiceContextProvider>
         </Fragment>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, shape } from 'prop-types';
-import { ServiceContextConsumer } from '../../components/ServiceContext';
-import { PlatformContextConsumer } from '../../components/PlatformContext';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 import Metadata from '../../components/Metadata';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';

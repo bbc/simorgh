@@ -2,11 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Helmet from 'react-helmet';
 import MetadataContainer from './index';
-import { ServiceContextProvider } from '../../components/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
-import { PlatformContextProvider } from '../../components/PlatformContext';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
 
 const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
   const { metadata, promo } = serviceFixtureData;
