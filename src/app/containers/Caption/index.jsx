@@ -1,7 +1,7 @@
 import React from 'react';
 import { node } from 'prop-types';
 import Caption from '../../components/Figure/Caption';
-import { ServiceContext } from '../../components/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const CaptionContainer = ({ captionValue }) => (
