@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
 import { articleDataNews, articleDataPersian } from './fixtureData';
 
@@ -30,16 +33,12 @@ describe('ArticleContainer', () => {
       <ArticleContainer data={persianData} />,
     );
 
-    shouldShallowMatchSnapshot(
-      'should render null if no headline block',
-      <ArticleContainer data={newsDataNoHeadline} />,
-    );
+    describe('no headline block', () => {
+      isNull(<ArticleContainer data={newsDataNoHeadline} />);
+    });
 
     describe('no data', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly',
-        <ArticleContainer />,
-      );
+      isNull(<ArticleContainer />);
     });
   });
 });

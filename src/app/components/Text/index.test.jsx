@@ -4,7 +4,7 @@ import Text from './index';
 
 describe('Text', () => {
   describe('with no data', () => {
-    isNull('should return null', <Text />);
+    isNull(<Text />);
   });
 
   shouldMatchSnapshot(

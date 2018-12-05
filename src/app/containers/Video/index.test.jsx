@@ -17,10 +17,7 @@ describe('Video', () => {
   );
 
   describe('with no data', () => {
-    shouldShallowMatchSnapshot(
-      'should not render anything',
-      <VideoContainer />,
-    );
+    isNull(<VideoContainer />);
   });
 
   describe('with data', () => {
@@ -71,6 +68,6 @@ describe('Video', () => {
     const img = imageBlock(rIB);
     const data = blockArrayModel([rVB, img]);
 
-    isNull('should be null', <VideoContainer {...data} />);
+    isNull(<VideoContainer {...data} />);
   });
 });

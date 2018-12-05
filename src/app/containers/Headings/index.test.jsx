@@ -21,7 +21,7 @@ const template = (title, text, type) => {
 
 describe('Headings', () => {
   describe('with no data', () => {
-    isNull('should not render anything', <HeadingsContainer />);
+    isNull(<HeadingsContainer />);
   });
 
   template('with headline data', 'This is a headline!', 'headline');

@@ -24,8 +24,8 @@ export const shouldShallowMatchSnapshot = (title, component) => {
   });
 };
 
-export const isNull = (title, component) => {
-  it(title, () => {
+export const isNull = component => {
+  it('should return null', () => {
     const { container } = render(component);
     expect(container.firstChild).toBeNull();
   });

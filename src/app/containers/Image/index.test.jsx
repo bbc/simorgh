@@ -8,7 +8,7 @@ import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    isNull('should return null', <ImageContainer />);
+    isNull(<ImageContainer />);
   });
 
   describe('with data', () => {
@@ -85,14 +85,11 @@ describe('Image', () => {
     const dataWithoutAltText = blockArrayModel([rawImageBlock, null]);
 
     describe('with no rawImageBlock', () => {
-      isNull(
-        'should return null',
-        <ImageContainer {...dataWithoutRawImageBlock} />,
-      );
+      isNull(<ImageContainer {...dataWithoutRawImageBlock} />);
     });
 
     describe('with no altTextBlock', () => {
-      isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
+      isNull(<ImageContainer {...dataWithoutAltText} />);
     });
 
     shouldShallowMatchSnapshot(

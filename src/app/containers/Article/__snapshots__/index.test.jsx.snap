@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleContainer Component no data should render correctly 1`] = `null`;
-
 exports[`ArticleContainer Component should render Persian article correctly 1`] = `
 <React.Fragment>
   <GlobalStyleComponent />
@@ -284,5 +282,3 @@ exports[`ArticleContainer Component should render correctly 1`] = `
   </ServiceContextProvider>
 </React.Fragment>
 `;
-
-exports[`ArticleContainer Component should render null if no headline block 1`] = `null`;

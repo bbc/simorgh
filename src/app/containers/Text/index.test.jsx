@@ -7,7 +7,7 @@ import TextContainer from './index';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
-    isNull('should return null', <TextContainer />);
+    isNull(<TextContainer />);
   });
 
   describe('with data', () => {

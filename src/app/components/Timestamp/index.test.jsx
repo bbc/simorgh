@@ -8,7 +8,7 @@ const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 millisecond
 
 describe('Timestamp', () => {
   describe('with no data', () => {
-    isNull('should return null', <Timestamp />);
+    isNull(<Timestamp />);
   });
   shouldMatchSnapshot(
     'should render without a leading zero on the day',

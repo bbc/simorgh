@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import MetadataContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { isNull } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 
@@ -27,10 +27,7 @@ const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
 };
 
 describe('no data', () => {
-  shouldShallowMatchSnapshot(
-    'should render null',
-    <MetadataContainer metadata={{}} promo={{}} service="" />,
-  );
+  isNull(<MetadataContainer metadata={{}} promo={{}} service="" />);
 });
 
 const metaTagsBuilder = (serviceConfig, description, seoTitle, id, things) => {
