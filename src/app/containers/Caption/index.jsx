@@ -1,24 +1,35 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { objectOf, any } from 'prop-types';
 import Caption from '../../components/Figure/Caption';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import Blocks from '../Blocks';
+import Fragment from '../Fragment';
+import InlineLink from '../InlineLink';
 
-const CaptionContainer = ({ captionValue }) => (
+const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
+
+const renderText = block => {
+  const textBlocks = block.model.blocks[0].model.blocks[0].model.blocks;
+
+  return <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />;
+};
+
+const CaptionContainer = ({ block }) => (
   <ServiceContext.Consumer>
     {({ imageCaptionOffscreenText }) => (
       <Caption>
         {imageCaptionOffscreenText ? (
           <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
         ) : null}
-        {captionValue}
+        {renderText(block)}
       </Caption>
     )}
   </ServiceContext.Consumer>
 );
 
 CaptionContainer.propTypes = {
-  captionValue: node.isRequired,
+  block: objectOf(any).isRequired,
 };
 
 export default CaptionContainer;

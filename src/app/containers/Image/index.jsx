@@ -2,27 +2,10 @@ import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
-import Blocks from '../Blocks';
-import Fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 
 const DEFAULT_IMAGE_RES = 640;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
-
-const captionComponentsToRender = { fragment: Fragment, urlLink: InlineLink };
-const getCaption = block => {
-  if (!block) {
-    return null;
-  }
-
-  return (
-    <Blocks
-      blocks={block.model.blocks[0].model.blocks[0].model.blocks}
-      componentsToRender={captionComponentsToRender}
-    />
-  );
-};
 
 const getCopyright = copyrightHolder => {
   if (copyrightHolder === 'BBC') {
@@ -64,7 +47,6 @@ const ImageContainer = ({ blocks }) => {
   } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
-  const caption = getCaption(captionBlock);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
 
@@ -74,7 +56,7 @@ const ImageContainer = ({ blocks }) => {
       alt={altText}
       ratio={ratio}
       copyright={copyright}
-      caption={caption}
+      captionBlock={captionBlock}
     />
   );
 };
