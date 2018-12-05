@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, node, func } from 'prop-types';
 import Markdown from 'markdown-to-jsx';
+import Paragraph from '@bbc/psammead-paragraph';
 import InlineLink from '../../containers/InlineLink';
-import Paragraph from '../Paragraph';
 
 const Italic = ({ children }) => <i>{children}</i>;
 const Bold = ({ children }) => <b>{children}</b>;
