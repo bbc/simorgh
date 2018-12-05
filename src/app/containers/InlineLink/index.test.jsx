@@ -1,9 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import {
-  shouldMatchSnapshot,
-  shouldShallowMatchSnapshot,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import InlineLinkContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({
@@ -42,7 +39,7 @@ describe('InlineLinkContainer', () => {
   });
 
   describe('with link not matching SPA route', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <InlineLinkContainer
         locator="https://www.bbc.com/news"

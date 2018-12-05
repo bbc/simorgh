@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import {
   blockArrayModel,
   rawVideoModel,
@@ -48,7 +45,7 @@ describe('Video', () => {
       ],
     };
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render the important props in divs',
       <VideoContainer {...videoData} />,
     );
@@ -57,7 +54,7 @@ describe('Video', () => {
   describe('with data but no image', () => {
     const data = blockArrayModel([rVB, null]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should only render the video',
       <VideoContainer {...data} />,
     );

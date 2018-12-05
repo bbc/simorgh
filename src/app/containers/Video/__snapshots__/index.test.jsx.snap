@@ -1,14 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video with data but no image should only render the video 1`] = `null`;
+exports[`Video with data but no image should only render the video 1`] = `<DocumentFragment />`;
 
 exports[`Video with data should render the important props in divs 1`] = `
-<Video
-  duration="299"
-  imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
-  kind="clip"
-  rawImageSrc="https://ichef.bbci.co.uk/news/640/cpsprodpb/5BD5/production/_101690532_2.jpg"
-  versionID="p064nsz3"
-  videoLocator="urn:bbc:pips:pid:p064nsyw"
-/>
+<DocumentFragment>
+  <div>
+    <div>
+      video locator:urn:bbc:pips:pid:p064nsyw
+    </div>
+    <div>
+      duration:299
+    </div>
+    <div>
+      raw Image Src:https://ichef.bbci.co.uk/news/640/cpsprodpb/5BD5/production/_101690532_2.jpg
+    </div>
+    <div>
+      versionID:p064nsz3
+    </div>
+    <div>
+      imageLocator:/cpsprodpb/5BD5/production/_101690532_2.jpg
+    </div>
+    <div>
+      kind:clip
+    </div>
+  </div>
+</DocumentFragment>
 `;

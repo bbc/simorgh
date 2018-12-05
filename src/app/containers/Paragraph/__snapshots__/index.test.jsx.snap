@@ -1,60 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ParagraphContainer should render correctly 1`] = `
-<ForwardRef>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is some text.",
-          },
-          "type": "fragment",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "Some text",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "bold",
-                  ],
-                  "text": " for the ",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "italic",
-                  ],
-                  "text": " link!",
-                },
-                "type": "fragment",
-              },
-            ],
-            "locator": "/bbc-test",
-          },
-          "type": "urlLink",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-        "urlLink": [Function],
-      }
-    }
-  />
-</ForwardRef>
+<DocumentFragment>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c1 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c1:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c1:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    <b>
+      This is some text.
+    </b>
+    <a
+      class="c1"
+      href="/bbc-test"
+    >
+      Some text
+      <b>
+         for the 
+      </b>
+      <i>
+         link!
+      </i>
+    </a>
+  </p>
+</DocumentFragment>
 `;

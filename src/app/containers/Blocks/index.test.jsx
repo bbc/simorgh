@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
@@ -50,7 +50,7 @@ describe('Blocks', () => {
     text: () => <p>Some text</p>,
   };
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly',
     <Blocks blocks={blocks} componentsToRender={componentsToRender} />,
   );

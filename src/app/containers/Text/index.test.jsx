@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
@@ -36,13 +33,10 @@ describe('TextContainer', () => {
       ],
     };
 
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <TextContainer {...data} />,
-    );
+    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
 
     describe('with a passed previous block type', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should render correctly',
         <TextContainer {...data} typeOfPreviousBlock="text" />,
       );

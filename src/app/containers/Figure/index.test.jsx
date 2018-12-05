@@ -1,6 +1,6 @@
 import React from 'react';
 import FigureContainer from './index';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 const imageAlt =
   'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.';
@@ -10,17 +10,17 @@ const caption = 'This is a caption';
 const copyrightText = 'Getty Images';
 
 describe('Figure', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render an image with alt text',
     <FigureContainer src={imageSrc} alt={imageAlt} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render copyright text',
     <FigureContainer src={imageSrc} alt={imageAlt} copyright={copyrightText} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render caption text',
     <FigureContainer src={imageSrc} alt={imageAlt} caption={caption} />,
   );

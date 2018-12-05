@@ -1,132 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks should render correctly 1`] = `
-Array [
-  <headline
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "text": "This is a headline!",
-                },
-                "type": "paragraph",
-              },
-            ],
-          },
-          "type": "text",
-        },
-      ]
-    }
-    type="headline"
-  />,
-  <subheadline
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "text": "This is a subheadline!",
-                },
-                "type": "paragraph",
-              },
-            ],
-          },
-          "type": "text",
-        },
-      ]
-    }
-    type="subheadline"
-    typeOfPreviousBlock="headline"
-  />,
-  <text
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "text": "This is some text content!",
-          },
-          "type": "paragraph",
-        },
-      ]
-    }
-    type="text"
-    typeOfPreviousBlock="subheadline"
-  />,
-  <BlockString
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "text": "This is some test content!",
-          },
-        },
-      ]
-    }
-    type="test"
-    typeOfPreviousBlock="text"
-  />,
-  <BlockString
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "copyrightHolder": "BBC",
-            "height": 420,
-            "locator": "E7DB/production/_101655395_paulineclayton.jpg",
-            "originCode": "cpsprodpb",
-            "width": 640,
-          },
-          "type": "rawImage",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "text": "Pauline Clayton",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ],
-          },
-          "type": "altText",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ],
-          },
-          "type": "caption",
-        },
-      ]
-    }
-    type="image"
-    typeOfPreviousBlock="test"
-  />,
-]
+<DocumentFragment>
+  <h1>
+    A headline
+  </h1>
+  <h2>
+    A subheadline
+  </h2>
+  <p>
+    Some text
+  </p>
+  <p>
+    {"type":"test","typeOfPreviousBlock":"text","blocks":[{"model":{"text":"This is some test content!"}}]}
+  </p>
+  <p>
+    {"type":"image","typeOfPreviousBlock":"test","blocks":[{"type":"rawImage","model":{"width":640,"height":420,"locator":"E7DB/production/_101655395_paulineclayton.jpg","originCode":"cpsprodpb","copyrightHolder":"BBC"}},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Pauline Clayton"}}]}}]}},{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Former embroider Pauline Clayton described the gift as \\"lovely\\""}}]}}]}}]}
+  </p>
+</DocumentFragment>
 `;

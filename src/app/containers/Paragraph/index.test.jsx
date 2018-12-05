@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ParagraphContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({
@@ -27,7 +27,7 @@ const inlineLink = inlineLinkBlock('/bbc-test', [
 const blocks = [fragmentBlock('This is some text.', ['bold']), inlineLink];
 
 describe('ParagraphContainer', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly',
     <ParagraphContainer blocks={blocks} />,
   );

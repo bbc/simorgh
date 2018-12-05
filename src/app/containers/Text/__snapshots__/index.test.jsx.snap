@@ -1,174 +1,222 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-<React.Fragment>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 1st paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 2nd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 3rd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 4th paragraph block..",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 5th paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "paragraph": [Function],
-      }
-    }
-  />
-</React.Fragment>
+<DocumentFragment>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 1st paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 2nd paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 3rd paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 4th paragraph block..
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 5th paragraph block.
+  </p>
+</DocumentFragment>
 `;
 
 exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
-<React.Fragment>
+<DocumentFragment>
   <hr />
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 1st paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 2nd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 3rd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 4th paragraph block..",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 5th paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "paragraph": [Function],
-      }
-    }
-  />
-</React.Fragment>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 1st paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 2nd paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 3rd paragraph block.
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 4th paragraph block..
+  </p>
+  .c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c0 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+    class="c0"
+  >
+    This is a 5th paragraph block.
+  </p>
+</DocumentFragment>
 `;

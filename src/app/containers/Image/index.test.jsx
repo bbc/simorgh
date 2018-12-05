@@ -1,9 +1,6 @@
 import React from 'react';
 import ImageContainer from './index';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
@@ -92,7 +89,7 @@ describe('Image', () => {
       isNull(<ImageContainer {...dataWithoutAltText} />);
     });
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text',
       <ImageContainer {...data} />,
     );
@@ -105,7 +102,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
       <ImageContainer {...dataWithNonBbcCopyright} />,
     );
@@ -122,7 +119,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
     );
@@ -135,7 +132,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with the default originCode `cpsdevpb` - null',
       <ImageContainer {...dataWithNullOriginCode} />,
     );
@@ -148,7 +145,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with the default originCode `cpsdevpb` - empty string',
       <ImageContainer {...dataWithEmptyStringOriginCode} />,
     );
@@ -161,7 +158,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with other originCode - this would be a broken image',
       <ImageContainer {...dataWithOtherOriginCode} />,
     );
