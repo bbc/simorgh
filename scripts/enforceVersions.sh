@@ -10,6 +10,7 @@ if [[ $(pwd) =~ .+simorgh ]]; then
     exit 1
   fi
 
+  # cut is used to transform 'version=6.4.1' into '6.4.1' for easy comparison
   desired_npm_version=$(cat .npmrc | cut -d "=" -f2)
 
   if [[ $(npm -v) != $desired_npm_version ]]; then
