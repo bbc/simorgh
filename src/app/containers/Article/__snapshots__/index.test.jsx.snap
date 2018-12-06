@@ -4,6 +4,7 @@ exports[`ArticleContainer Component no data should render correctly 1`] = `null`
 
 exports[`ArticleContainer Component should render Persian article correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="persian"
   >
@@ -55,8 +56,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
       <main
         role="main"
       >
-        <Wrapper>
-          <GridItemConstrained>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -100,10 +101,10 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             <Timestamp
               timestamp={1514811600000}
             />
-          </GridItemConstrained>
-        </Wrapper>
-        <OatWrapper>
-          <GridItemConstrained>
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -139,8 +140,8 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
                 }
               }
             />
-          </GridItemConstrained>
-        </OatWrapper>
+          </ForwardRef>
+        </ForwardRef>
       </main>
       <FooterContainer />
     </PlatformContextProvider>
@@ -150,6 +151,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
 
 exports[`ArticleContainer Component should render correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="news"
   >
@@ -226,8 +228,8 @@ exports[`ArticleContainer Component should render correctly 1`] = `
       <main
         role="main"
       >
-        <Wrapper>
-          <GridItemConstrained>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -271,10 +273,10 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             <Timestamp
               timestamp={1514811600000}
             />
-          </GridItemConstrained>
-        </Wrapper>
-        <OatWrapper>
-          <GridItemConstrained>
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
             <Blocks
               blocks={
                 Array [
@@ -310,8 +312,8 @@ exports[`ArticleContainer Component should render correctly 1`] = `
                 }
               }
             />
-          </GridItemConstrained>
-        </OatWrapper>
+          </ForwardRef>
+        </ForwardRef>
       </main>
       <FooterContainer />
     </PlatformContextProvider>
