@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render bold 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
 <p
-  className="sc-bdVaJa dBWoxh"
+  className="c0"
 >
   This is text with 
   <b>
@@ -13,8 +20,15 @@ exports[`Text should render bold 1`] = `
 `;
 
 exports[`Text should render inline-code 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
 <p
-  className="sc-bdVaJa dBWoxh"
+  className="c0"
 >
   This is text with 
   <code>
@@ -25,8 +39,15 @@ exports[`Text should render inline-code 1`] = `
 `;
 
 exports[`Text should render italics 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
 <p
-  className="sc-bdVaJa dBWoxh"
+  className="c0"
 >
   This is text with 
   <i>
@@ -37,8 +58,15 @@ exports[`Text should render italics 1`] = `
 `;
 
 exports[`Text should render strike-through 1`] = `
+.c0 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
 <p
-  className="sc-bdVaJa dBWoxh"
+  className="c0"
 >
   This is text with 
   <del>
