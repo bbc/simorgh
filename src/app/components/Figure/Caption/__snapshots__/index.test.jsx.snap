@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Caption with some offscreen text 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   font-size: 0.9375em;
   line-height: 1.125rem;
@@ -28,7 +39,7 @@ exports[`should render Caption with some offscreen text 1`] = `
 >
   This is some Caption text
   <span
-    className="hbhUhz"
+    className="c1"
   >
     Some offscreen text
   </span>

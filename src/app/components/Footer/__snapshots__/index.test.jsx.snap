@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer should render correctly 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   background-color: #B80000;
   height: 5rem;
@@ -31,7 +42,7 @@ exports[`Footer should render correctly 1`] = `
   margin-top: 1.25rem;
 }
 
-.c10 {
+.c11 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -40,7 +51,7 @@ exports[`Footer should render correctly 1`] = `
   display: block;
 }
 
-.c13 {
+.c14 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -49,13 +60,13 @@ exports[`Footer should render correctly 1`] = `
   display: inline;
 }
 
-.c9:hover .c11,
-.c9:focus .c11 {
+.c10:hover .c12,
+.c10:focus .c12 {
   padding-bottom: 2px;
   border-bottom: 2px solid #FFFFFF;
 }
 
-.c7 {
+.c8 {
   border-bottom: 1px solid #FFFFFF;
   display: grid;
   grid-auto-flow: column;
@@ -64,28 +75,28 @@ exports[`Footer should render correctly 1`] = `
   padding: 0 0 0.5rem;
 }
 
-.c7 > li:first-child {
+.c8 > li:first-child {
   border-bottom: 1px solid #FFFFFF;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;
 }
 
-.c8 {
+.c9 {
   min-width: 50%;
 }
 
-.c5 {
+.c6 {
   background-color: #4C4C4C;
 }
 
-.c6 {
+.c7 {
   font-size: 0.875em;
   line-height: 1rem;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
 }
 
-.c12 {
+.c13 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
@@ -110,7 +121,7 @@ exports[`Footer should render correctly 1`] = `
 }
 
 @media (max-width:37.4375em) {
-  .c7 {
+  .c8 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,auto);
@@ -118,7 +129,7 @@ exports[`Footer should render correctly 1`] = `
 }
 
 @media (min-width:37.5em) and (max-width:62.9375em) {
-  .c7 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,auto);
@@ -126,7 +137,7 @@ exports[`Footer should render correctly 1`] = `
 }
 
 @media (min-width:63em) and (max-width:80em) {
-  .c7 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,auto);
@@ -134,7 +145,7 @@ exports[`Footer should render correctly 1`] = `
 }
 
 @media (min-width:80em) {
-  .c7 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,auto);
@@ -142,37 +153,37 @@ exports[`Footer should render correctly 1`] = `
 }
 
 @supports not (display:grid) {
-  .c7 > li:first-child {
+  .c8 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c8 {
+  .c9 {
     display: inline-block;
   }
 }
 
 @media (max-width:25em) {
-  .c5 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25em) {
-  .c5 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c6 {
+  .c7 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c6 {
+  .c7 {
     font-size: 0.8125em;
   }
 }
@@ -213,7 +224,7 @@ exports[`Footer should render correctly 1`] = `
           </g>
         </svg>
         <span
-          className="hbhUhz"
+          className="c5"
         >
           Default Brand Name
         </span>
@@ -221,25 +232,25 @@ exports[`Footer should render correctly 1`] = `
     </a>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="c6"
+      className="c7"
     >
       <ul
-        className="c7"
+        className="c8"
         role="list"
       >
         <li
-          className="c8"
+          className="c9"
           role="listitem"
         >
           <a
-            className="c9 c10"
+            className="c10 c11"
             href="https://www.bbc.co.uk/news"
           >
             <span
-              className="c11"
+              className="c12"
             >
               Link
             </span>
@@ -247,15 +258,15 @@ exports[`Footer should render correctly 1`] = `
         </li>
       </ul>
       <p
-        className="c12"
+        className="c13"
       >
         Text here. 
         <a
-          className="c9 c13"
+          className="c10 c14"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            className="c11"
+            className="c12"
           >
             Link
           </span>
