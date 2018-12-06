@@ -5,9 +5,9 @@ if [[ $(pwd) =~ .+simorgh ]]; then
   if [[ $(node -v) != "$desired_node_version"* ]]; then
     tput setaf 1
     echo "\nOh no! You're not using our version of node, please move to $desired_node_version in order to reduce bundling inconsistency"
-    tput sgr0
-    echo "This can be done by running 'nvm install $desired_node_version && nvm use $desired_node_version'\n "
     tput setaf 3
+    echo "This can be done by running 'nvm install $desired_node_version && nvm use $desired_node_version'\n "
+    tput sgr0
     exit 1
   fi
 
