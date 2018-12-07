@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render correctly 1`] = `
+.c3 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c2:hover .c4,
+.c2:focus .c4 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.c0 {
+  border-bottom: 1px solid #FFFFFF;
+  display: grid;
+  grid-auto-flow: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+.c0 > li:first-child {
+  border-bottom: 1px solid #FFFFFF;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+}
+
+.c1 {
+  min-width: 50%;
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c0 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@supports not (display:grid) {
+  .c0 > li:first-child {
+    width: 100%;
+  }
+}
+
+@supports not (display:grid) {
+  .c1 {
+    display: inline-block;
+  }
+}
+
+<ul
+  className="c0"
+  role="list"
+>
+  <li
+    className="c1"
+    role="listitem"
+  >
+    <a
+      className="c2 c3"
+      href="https://www.bbc.co.uk/news"
+    >
+      <span
+        className="c4"
+      >
+        Link
+      </span>
+    </a>
+  </li>
+</ul>
+`;
