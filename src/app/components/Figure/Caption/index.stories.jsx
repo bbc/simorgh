@@ -7,7 +7,7 @@ storiesOf('Caption', module)
   .add('default', () => <Caption>This is a caption.</Caption>)
   .add('containing an inline link', () => (
     <Caption>
-      This is a caption{' '}
+      {'This is a caption '}
       <InlineLink href="https://www.bbc.com">
         containing an inline link
       </InlineLink>
