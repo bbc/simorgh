@@ -40,7 +40,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && npm run test:unit"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit"
     }
   },
   "repository": {
@@ -58,6 +58,9 @@
   },
   "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
+    "@bbc/psammead-headings": "^0.1.2",
+    "@bbc/psammead-styles": "^0.1.1",
+    "@bbc/psammead-visually-hidden-text": "^0.1.2",
     "babel-plugin-styled-components": "^1.7.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -82,7 +85,7 @@
     "react-router-dom": "^4.3.1",
     "react-universal-app": "^1.0.0",
     "speculate": "^1.7.4",
-    "styled-components": "^3.4.10",
+    "styled-components": "^4.1.2",
     "styled-normalize": "^8.0.3"
   },
   "devDependencies": {

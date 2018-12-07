@@ -1,9 +1,9 @@
 import React from 'react';
 import { string } from 'prop-types';
+import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { extractText } from '../../helpers/blockHandlers';
 import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
-import { Headline, SubHeading } from '../../components/Headings';
 
 const Headings = {
   headline: Headline,

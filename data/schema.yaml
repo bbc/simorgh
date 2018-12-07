@@ -1,3 +1,7 @@
+# The app team are using this schema to generate a set of reference model objects
+# See https://github.com/bbc/ArticleUIKit/tree/master/ArticleUIKitExampleTests/autogen-reference
+# Whilst not solely for their benefit, the following have been added to the schema to improve their generated code:
+# * fragmentAttrs
 openapi: 3.0.0
 servers:
   - description: SwaggerHub API Auto Mocking
@@ -105,7 +109,7 @@ components:
                 - summary
               example: analysis
             blockTypes:
-              type: object
+              type: array
               items:
                 type: string
               minItems: 2
@@ -179,13 +183,57 @@ components:
               type: object
               properties:
                 about:
-                  type: object
+                  type: array
                   items:
                     type: object
+                    properties:
+                      thingUri:
+                        type: string
+                        example: 'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id'
+                      topicId:
+                        type: string
+                        example: 'cpwpy79d6dxt'
+                      topicName:
+                        type: string
+                        example: 'Royal Wedding 2018'
+                      curationType:
+                        type: array
+                        example:
+                        items:
+                          type: string
+                      thingId:
+                        type: string
+                      thingLabel:
+                        type: string
+                      thingType:
+                        type: array
+                        example: ['Thing', 'Event']
                 mentions:
-                  type: object
+                  type: array
                   items:
                     type: object
+                    properties:
+                      thingUri:
+                        type: string
+                        example: 'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id'
+                      topicId:
+                        type: string
+                        example: 'cpwpy79d6dxt'
+                      topicName:
+                        type: string
+                        example: 'Royal Wedding 2018'
+                      curationType:
+                        type: array
+                        example:
+                        items:
+                          type: string
+                      thingId:
+                        type: string
+                      thingLabel:
+                        type: string
+                      thingType:
+                        type: array
+                        example: ['Thing', 'Event']
             type:
               enum:
                 - article
@@ -228,8 +276,18 @@ components:
 
     # schema definitions for referred blocks below
 
+    fragmentAttrs:
+      type: array
+      items:
+        enum:
+          - italic
+          - bold
+          - superscript
+          - subscript
+        type: string
+
     blocks:
-      type: object
+      type: array
       items:
         oneOf:
           - $ref: '#/components/schemas/altText'
@@ -347,7 +405,7 @@ components:
             text:
               type: string
             attributes:
-              type: object
+              $ref: '#/components/schemas/fragmentAttrs'
         type:
           enum:
             - fragment

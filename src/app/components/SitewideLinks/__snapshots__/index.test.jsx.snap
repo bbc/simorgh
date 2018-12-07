@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SitewideLinks should render correctly 1`] = `
+.c4 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c7 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c3:hover .c5,
+.c3:focus .c5 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.c1 {
+  border-bottom: 1px solid #FFFFFF;
+  display: grid;
+  grid-auto-flow: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+.c1 > li:first-child {
+  border-bottom: 1px solid #FFFFFF;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+}
+
+.c2 {
+  min-width: 50%;
+}
+
+.c0 {
+  background-color: #4C4C4C;
+  font-size: 0.875em;
+  line-height: 1rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+@media (max-width:37.4375em) {
+  .c1 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+@supports not (display:grid) {
+  .c1 > li:first-child {
+    width: 100%;
+  }
+}
+
+@supports not (display:grid) {
+  .c2 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125em;
+  }
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+    role="list"
+  >
+    <li
+      className="c2"
+      role="listitem"
+    >
+      <a
+        className="c3 c4"
+        href="https://www.bbc.co.uk/news"
+      >
+        <span
+          className="c5"
+        >
+          Link
+        </span>
+      </a>
+    </li>
+  </ul>
+  <p
+    className="c6"
+  >
+    Text here. 
+    <a
+      className="c3 c7"
+      href="https://www.bbc.co.uk/news"
+    >
+      <span
+        className="c5"
+      >
+        Link
+      </span>
+    </a>
+  </p>
+</div>
+`;

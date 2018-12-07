@@ -2,22 +2,24 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Helmet from 'react-helmet';
 import MetadataContainer from './index';
-import { ServiceContextProvider } from '../../components/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
 
-const MetadataWithContextAsObject = (service, serviceFixtureData) => {
+const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
   const { metadata, promo } = serviceFixtureData;
 
   renderer.create(
     <ServiceContextProvider service={service}>
-      <MetadataContainer
-        isAmp={false}
-        metadata={metadata}
-        promo={promo}
-        service={service}
-      />
+      <PlatformContextProvider platform={platform}>
+        <MetadataContainer
+          metadata={metadata}
+          promo={promo}
+          service={service}
+        />
+      </PlatformContextProvider>
     </ServiceContextProvider>,
   );
 
@@ -27,7 +29,7 @@ const MetadataWithContextAsObject = (service, serviceFixtureData) => {
 describe('no data', () => {
   shouldShallowMatchSnapshot(
     'should render null',
-    <MetadataContainer isAmp={false} metadata={{}} promo={{}} service="" />,
+    <MetadataContainer metadata={{}} promo={{}} service="" />,
   );
 });
 
@@ -123,7 +125,11 @@ const doesMatch = (result, fixture) => {
 
 describe('Successfully passes data to the Metadata component via React context', () => {
   it('should pass persian data to the Metadata component', () => {
-    const result = MetadataWithContextAsObject('persian', articleDataPersian);
+    const result = MetadataWithContextAsObject(
+      'persian',
+      articleDataPersian,
+      'canonical',
+    );
     const expected = articleMetadataBuilder(
       'persian',
       'fa',
@@ -138,7 +144,11 @@ describe('Successfully passes data to the Metadata component via React context',
   });
 
   it('it should pass news data to the Metadata component', () => {
-    const result = MetadataWithContextAsObject('news', articleDataNews);
+    const result = MetadataWithContextAsObject(
+      'news',
+      articleDataNews,
+      'canonical',
+    );
     const expected = articleMetadataBuilder(
       'news',
       'en-gb',
@@ -159,5 +169,10 @@ describe('Successfully passes data to the Metadata component via React context',
     );
 
     doesMatch(result, expected);
+  });
+
+  it('should add amp to HTML attributes when platform is set to AMP', () => {
+    const result = MetadataWithContextAsObject('news', articleDataNews, 'amp');
+    expect(result.htmlAttributes.amp).not.toBe(undefined);
   });
 });

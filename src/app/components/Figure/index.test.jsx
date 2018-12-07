@@ -1,36 +1,7 @@
+import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import {
-  FigureImage,
-  FigureImageWithCaption,
-  FigureImageWithCopyright,
-  FigureImageWithCopyrightAndCaption,
-  FigureImageWithCaptionContainingLink,
-} from './fixtureData';
+import Figure from '.';
 
 describe('Figure', () => {
-  describe('with a caption', () => {
-    shouldMatchSnapshot('should render correctly', FigureImageWithCaption);
-  });
-
-  describe('with a caption containing a link', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      FigureImageWithCaptionContainingLink,
-    );
-  });
-
-  describe('without a caption', () => {
-    shouldMatchSnapshot('should render correctly', FigureImage);
-  });
-
-  describe('with non-BBC copyright', () => {
-    shouldMatchSnapshot('should render correctly', FigureImageWithCopyright);
-  });
-
-  describe('with caption and non-BBC copyright', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      FigureImageWithCopyrightAndCaption,
-    );
-  });
+  shouldMatchSnapshot('should render correctly', <Figure />);
 });

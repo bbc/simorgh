@@ -41,7 +41,9 @@ exports[`Document should render AMP version correctly 1`] = `
       href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
-    <style>
+    <style
+      amp-custom=""
+    >
       html { color: red; }
     </style>
     <React.Fragment>
@@ -117,7 +119,9 @@ exports[`Document should render correctly 1`] = `
       href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
-    <style>
+    <style
+      data-styled-components="abc"
+    >
       html { color: red; }
     </style>
   </head>
