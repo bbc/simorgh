@@ -60,7 +60,7 @@ const StyledListItem = styled.li`
   }
 `;
 
-const FooterList = ({ links }) => (
+const List = ({ links }) => (
   <StyledList role="list">
     {links.map(link => (
       <StyledListItem key={nanoid()} role="listitem">
@@ -75,8 +75,8 @@ const linkPropTypes = shape({
   text: string.isRequired,
 });
 
-FooterList.propTypes = {
+List.propTypes = {
   links: arrayOf(linkPropTypes.isRequired).isRequired,
 };
 
-export default FooterList;
+export default List;

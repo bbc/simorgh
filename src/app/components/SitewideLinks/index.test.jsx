@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from './index';
+import SitewideLinks from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
-describe(`Footer`, () => {
+describe(`SitewideLinks`, () => {
   const link = {
     href: 'https://www.bbc.co.uk/news',
     text: 'Link',
@@ -14,7 +14,11 @@ describe(`Footer`, () => {
   shouldMatchSnapshot(
     'should render correctly',
     <ServiceContextProvider>
-      <Footer links={links} copyrightText="Text here. " externalLink={link} />
+      <SitewideLinks
+        links={links}
+        copyrightText="Text here. "
+        externalLink={link}
+      />
     </ServiceContextProvider>,
   );
 });
