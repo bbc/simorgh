@@ -88,7 +88,6 @@ exports[`TextContainer with data should render correctly 1`] = `
 
 exports[`TextContainer with data with a passed previous block type should render correctly 1`] = `
 <React.Fragment>
-  <hr />
   <Blocks
     blocks={
       Array [

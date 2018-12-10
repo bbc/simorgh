@@ -6,16 +6,11 @@ import { textModelPropTypes } from '../../models/propTypes/text';
 
 const componentsToRender = { paragraph };
 
-const shouldPrependHR = typeOfPreviousBlock => typeOfPreviousBlock === 'text';
-
 const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
   if (!blocks) return null;
 
-  const HorizontalRule = shouldPrependHR(typeOfPreviousBlock) ? <hr /> : null;
-
   return (
     <React.Fragment>
-      {HorizontalRule}
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </React.Fragment>
   );
