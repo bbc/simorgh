@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import VisuallyHiddenText from '../VisuallyHiddenText';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

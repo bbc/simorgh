@@ -1,9 +1,9 @@
 import React from 'react';
 import { node, string } from 'prop-types';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '../../components/Figure/Caption';
 import Text from '../../components/Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const CaptionWithOffscreenText = ({ children }) => (
   <ServiceContext.Consumer>

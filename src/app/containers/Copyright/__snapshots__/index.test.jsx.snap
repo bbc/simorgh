@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Copyright with news service context 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   font-size: 0.75em;
   line-height: 1em;
@@ -13,17 +24,6 @@ exports[`should render Copyright with news service context 1`] = `
   bottom: 0;
   right: 0;
   margin: 0;
-}
-
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
 }
 
 <p
@@ -40,6 +40,17 @@ exports[`should render Copyright with news service context 1`] = `
 `;
 
 exports[`should render Copyright with persian service context 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   font-size: 0.75em;
   line-height: 1em;
@@ -52,17 +63,6 @@ exports[`should render Copyright with persian service context 1`] = `
   bottom: 0;
   right: 0;
   margin: 0;
-}
-
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
 }
 
 <p
