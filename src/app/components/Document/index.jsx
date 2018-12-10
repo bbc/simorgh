@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { ampScript, ampNoscript } from '../../lib/constants/styles';
 import ResourceHints from './ResourceHints';
-import '../../lib/globalStyles';
-import { C_POSTBOX } from '../../lib/constants/styles';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -10,6 +10,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
+  const scriptsAllowed = !data.isAmp;
   const scripts = assets.map(asset => (
     <script
       crossOrigin="anonymous"
@@ -34,17 +35,30 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {title}
         {links}
         {styleTags}
+        {data.isAmp && (
+          <Fragment>
+            <style amp-boilerplate="">{ampScript}</style>
+            <noscript>
+              <style amp-boilerplate="">{ampNoscript}</style>
+            </noscript>
+          </Fragment>
+        )}
+        {data.isAmp && (
+          <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+        )}
       </head>
       <body>
         {/* eslint-disable react/no-danger */
         /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.SIMORGH_DATA=${serialisedData}`,
-          }}
-        />
-        {scripts}
+        {scriptsAllowed && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.SIMORGH_DATA=${serialisedData}`,
+            }}
+          />
+        )}
+        {scriptsAllowed && scripts}
       </body>
     </html>
   );

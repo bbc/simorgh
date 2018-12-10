@@ -1,33 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { string, node } from 'prop-types';
+import pathToRegexp from 'path-to-regexp';
 import InlineLink from '../../components/InlineLink';
+import Blocks from '../Blocks';
+import fragment from '../Fragment';
+import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
+import { articleRegexPath } from '../../routes';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
 
-const InlineLinkContainer = ({ href, children, ...rest }) => {
-  const regex = '^/news/articles/c[a-zA-Z0-9]{10}o$';
+const componentsToRender = { fragment };
 
+const InlineLinkContainer = ({ locator, blocks }) => {
+  const regexp = pathToRegexp(articleRegexPath, [], {
+    start: false,
+    end: false,
+  });
+
+  const result = regexp.exec(locator);
   // if URL matches a valid route, use a react-router link
-  if (href.match(regex)) {
+  if (result) {
+    // the path is the first item in the array
+    const path = result[0];
     return (
-      <InternalInlineLink to={href} {...rest}>
-        {children}
+      <InternalInlineLink to={path}>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );
   }
 
   // else return a normal hyperlink
   return (
-    <InlineLink href={href} {...rest}>
-      {children}
+    <InlineLink href={locator}>
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </InlineLink>
   );
 };
 
-InlineLinkContainer.propTypes = {
-  href: string.isRequired,
-  children: node.isRequired,
-};
+InlineLinkContainer.propTypes = inlineLinkModelPropTypes;
 
 export default InlineLinkContainer;

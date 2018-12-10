@@ -1,5 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Document should render AMP version correctly 1`] = `
+<html
+  lang="test"
+>
+  <head>
+    <meta
+      content="IE=edge"
+      httpEquiv="X-UA-Compatible"
+    />
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="/manifest.json"
+      rel="manifest"
+    />
+    <ResourceHints />
+    <title>
+      Test title
+    </title>
+    <link
+      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+      rel="canonical"
+    />
+    <style
+      amp-custom=""
+    >
+      html { color: red; }
+    </style>
+    <React.Fragment>
+      <style
+        amp-boilerplate=""
+      >
+        body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      </style>
+      <noscript>
+        <style
+          amp-boilerplate=""
+        >
+          body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+        </style>
+      </noscript>
+    </React.Fragment>
+    <script
+      async={true}
+      src="https://cdn.ampproject.org/v0.js"
+    />
+  </head>
+  <body>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1>App!</h1>",
+        }
+      }
+      id="root"
+    />
+  </body>
+</html>
+`;
+
 exports[`Document should render correctly 1`] = `
 <html
   lang="test"
@@ -41,7 +119,9 @@ exports[`Document should render correctly 1`] = `
       href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
       rel="canonical"
     />
-    <style>
+    <style
+      data-styled-components="abc"
+    >
       html { color: red; }
     </style>
   </head>
@@ -57,7 +137,7 @@ exports[`Document should render correctly 1`] = `
     <script
       dangerouslySetInnerHTML={
         Object {
-          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\",\\"isAmp\\":false}",
         }
       }
     />

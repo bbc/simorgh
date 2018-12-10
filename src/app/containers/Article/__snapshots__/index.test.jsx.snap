@@ -4,244 +4,283 @@ exports[`ArticleContainer Component no data should render correctly 1`] = `null`
 
 exports[`ArticleContainer Component should render Persian article correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="persian"
   >
-    <Header />
-    <MetadataContainer
-      isAmp={false}
-      metadata={
-        Object {
-          "created": 1514808060000,
-          "createdBy": "",
-          "firstPublished": 1514808060000,
-          "id": "urn:bbc:ares::article:cwv2xv848j5o",
-          "lastPublished": 1514811600000,
-          "lastUpdated": 1514811600000,
-          "locators": Object {
-            "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
-          },
-          "passport": Object {
-            "category": "news",
-            "genre": null,
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-            "language": "fa",
-          },
-          "tags": Object {},
-          "type": "article",
-        }
-      }
-      promo={
-        Object {
-          "headlines": Object {
-            "promoHeadline": "سرصفحه مقاله برای ارتقاء",
-            "seoHeadline": "سرصفحه مقاله",
-          },
-          "id": "urn:bbc:ares::article:cwv2xv848j5o",
-          "locators": Object {
-            "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
-          },
-          "summary": "خلاصه مقاله",
-          "timestamp": 1514811600000,
-        }
-      }
-      service="persian"
-    />
-    <main
-      role="main"
+    <PlatformContextProvider
+      platform="canonical"
     >
-      <Wrapper>
-        <GridItemConstrained>
-          <Blocks
-            blocks={
-              Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "text": "سرصفحه مقاله",
+      <HeaderContainer />
+      <MetadataContainer
+        metadata={
+          Object {
+            "created": 1514808060000,
+            "createdBy": "",
+            "firstPublished": 1514808060000,
+            "id": "urn:bbc:ares::article:cwv2xv848j5o",
+            "lastPublished": 1514811600000,
+            "lastUpdated": 1514811600000,
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+            },
+            "passport": Object {
+              "category": "news",
+              "genre": null,
+              "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+              "language": "fa",
+            },
+            "tags": Object {
+              "about": null,
+              "mentions": null,
+            },
+            "type": "article",
+          }
+        }
+        promo={
+          Object {
+            "headlines": Object {
+              "promoHeadline": "سرصفحه مقاله برای ارتقاء",
+              "seoHeadline": "سرصفحه مقاله",
+            },
+            "id": "urn:bbc:ares::article:cwv2xv848j5o",
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+            },
+            "summary": "خلاصه مقاله",
+            "timestamp": 1514811600000,
+          }
+        }
+        service="persian"
+      />
+      <main
+        role="main"
+      >
+        <ForwardRef>
+          <ForwardRef>
+            <Blocks
+              blocks={
+                Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "text": "سرصفحه مقاله",
+                                },
+                                "type": "paragraph",
                               },
-                              "type": "paragraph",
-                            },
-                          ],
+                            ],
+                          },
+                          "type": "text",
                         },
-                        "type": "text",
-                      },
-                    ],
+                      ],
+                    },
+                    "type": "headline",
                   },
-                  "type": "headline",
-                },
-              ]
-            }
-            componentsToRender={
-              Object {
-                "headline": [Function],
+                ]
               }
-            }
-          />
-          <Timestamp
-            timestamp={1514811600000}
-          />
-        </GridItemConstrained>
-      </Wrapper>
-      <OatWrapper>
-        <GridItemConstrained>
-          <Blocks
-            blocks={
-              Array [
+              componentsToRender={
                 Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "یک پاراگراف.",
-                        },
-                        "type": "paragraph",
-                      },
-                    ],
-                  },
-                  "type": "text",
-                },
-              ]
-            }
-            componentsToRender={
-              Object {
-                "image": [Function],
-                "subheadline": [Function],
-                "text": [Function],
+                  "headline": [Function],
+                }
               }
-            }
-          />
-        </GridItemConstrained>
-      </OatWrapper>
-    </main>
-    <FooterContainer />
+            />
+            <Timestamp
+              timestamp={1514811600000}
+            />
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
+            <Blocks
+              blocks={
+                Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "text": "یک پاراگراف.",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ]
+              }
+              componentsToRender={
+                Object {
+                  "image": [Function],
+                  "subheadline": [Function],
+                  "text": [Function],
+                }
+              }
+            />
+          </ForwardRef>
+        </ForwardRef>
+      </main>
+      <FooterContainer />
+    </PlatformContextProvider>
   </ServiceContextProvider>
 </React.Fragment>
 `;
 
 exports[`ArticleContainer Component should render correctly 1`] = `
 <React.Fragment>
+  <GlobalStyleComponent />
   <ServiceContextProvider
     service="news"
   >
-    <Header />
-    <MetadataContainer
-      isAmp={false}
-      metadata={
-        Object {
-          "created": 1514808060000,
-          "createdBy": "",
-          "firstPublished": 1514808060000,
-          "id": "urn:bbc:ares::article:c0000000001o",
-          "lastPublished": 1514811600000,
-          "lastUpdated": 1514811600000,
-          "locators": Object {
-            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
-          },
-          "passport": Object {
-            "category": "news",
-            "genre": null,
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-            "language": "en-gb",
-          },
-          "tags": Object {},
-          "type": "article",
-        }
-      }
-      promo={
-        Object {
-          "headlines": Object {
-            "promoHeadline": "Article Headline for Promo",
-            "seoHeadline": "Article Headline for SEO",
-          },
-          "id": "urn:bbc:ares::article:c0000000001o",
-          "locators": Object {
-            "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
-          },
-          "summary": "Article summary.",
-          "timestamp": 1514811600000,
-        }
-      }
-      service="news"
-    />
-    <main
-      role="main"
+    <PlatformContextProvider
+      platform="canonical"
     >
-      <Wrapper>
-        <GridItemConstrained>
-          <Blocks
-            blocks={
-              Array [
+      <HeaderContainer />
+      <MetadataContainer
+        metadata={
+          Object {
+            "created": 1514808060000,
+            "createdBy": "",
+            "firstPublished": 1514808060000,
+            "id": "urn:bbc:ares::article:c0000000001o",
+            "lastPublished": 1514811600000,
+            "lastUpdated": 1514811600000,
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+            },
+            "passport": Object {
+              "category": "news",
+              "genre": null,
+              "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+              "language": "en-gb",
+            },
+            "tags": Object {
+              "about": Array [
                 Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "text": "Article Headline",
+                  "curationType": Array [
+                    "vivo-stream",
+                  ],
+                  "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
+                  "thingLabel": "Royal Wedding 2018",
+                  "thingType": Array [
+                    "Thing",
+                    "Event",
+                  ],
+                  "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
+                  "topicId": "cpwpy79d6dxt",
+                  "topicName": "Royal Wedding 2018",
+                },
+              ],
+              "mentions": Array [
+                Object {
+                  "thingId": "1efbf3e5-b330-49a1-b531-b507ab027c96",
+                  "thingLabel": "Queen Victoria",
+                  "thingType": Array [
+                    "Person",
+                    "Thing",
+                  ],
+                  "thingUri": "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+                },
+              ],
+            },
+            "type": "article",
+          }
+        }
+        promo={
+          Object {
+            "headlines": Object {
+              "promoHeadline": "Article Headline for Promo",
+              "seoHeadline": "Article Headline for SEO",
+            },
+            "id": "urn:bbc:ares::article:c0000000001o",
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+            },
+            "summary": "Article summary.",
+            "timestamp": 1514811600000,
+          }
+        }
+        service="news"
+      />
+      <main
+        role="main"
+      >
+        <ForwardRef>
+          <ForwardRef>
+            <Blocks
+              blocks={
+                Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "text": "Article Headline",
+                                },
+                                "type": "paragraph",
                               },
-                              "type": "paragraph",
-                            },
-                          ],
+                            ],
+                          },
+                          "type": "text",
                         },
-                        "type": "text",
-                      },
-                    ],
+                      ],
+                    },
+                    "type": "headline",
                   },
-                  "type": "headline",
-                },
-              ]
-            }
-            componentsToRender={
-              Object {
-                "headline": [Function],
+                ]
               }
-            }
-          />
-          <Timestamp
-            timestamp={1514811600000}
-          />
-        </GridItemConstrained>
-      </Wrapper>
-      <OatWrapper>
-        <GridItemConstrained>
-          <Blocks
-            blocks={
-              Array [
+              componentsToRender={
                 Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "text": "A paragraph.",
-                        },
-                        "type": "paragraph",
-                      },
-                    ],
-                  },
-                  "type": "text",
-                },
-              ]
-            }
-            componentsToRender={
-              Object {
-                "image": [Function],
-                "subheadline": [Function],
-                "text": [Function],
+                  "headline": [Function],
+                }
               }
-            }
-          />
-        </GridItemConstrained>
-      </OatWrapper>
-    </main>
-    <FooterContainer />
+            />
+            <Timestamp
+              timestamp={1514811600000}
+            />
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
+            <Blocks
+              blocks={
+                Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "text": "A paragraph.",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ]
+              }
+              componentsToRender={
+                Object {
+                  "image": [Function],
+                  "subheadline": [Function],
+                  "text": [Function],
+                }
+              }
+            />
+          </ForwardRef>
+        </ForwardRef>
+      </main>
+      <FooterContainer />
+    </PlatformContextProvider>
   </ServiceContextProvider>
 </React.Fragment>
 `;

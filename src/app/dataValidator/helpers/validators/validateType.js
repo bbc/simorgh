@@ -1,12 +1,21 @@
 const { log, throwError } = require('../../utilities/messaging');
 
+const isValidType = (schemaType, dataNode) => {
+  if (schemaType === 'array' && Array.isArray(dataNode)) {
+    return true;
+  }
+  return schemaType === `${typeof dataNode}`;
+};
+
 module.exports.validateType = (schemaType, dataNode, parentSchemaName) => {
   if (dataNode !== null) {
-    if (schemaType === `${typeof dataNode}`) {
-      log(`- Valid type of ${typeof dataNode}`);
+    if (isValidType(schemaType, dataNode)) {
+      log(`- Valid type of ${schemaType}`);
     } else {
       throwError(
-        `Error: Type does not match for '${parentSchemaName}' - expected '${schemaType}' got '${typeof dataNode}'`,
+        `Error: Type does not match for '${parentSchemaName}' - expected '${schemaType}' for: ${JSON.stringify(
+          dataNode,
+        )}`,
       );
     }
   }
