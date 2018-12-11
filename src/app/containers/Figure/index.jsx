@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, objectOf, any } from 'prop-types';
+import { string, number } from 'prop-types';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
@@ -9,15 +9,16 @@ import Caption from '../Caption';
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
 
-const renderCaption = block => (block ? <Caption block={block} /> : null);
+const renderCaption = captionValue =>
+  captionValue ? <Caption captionValue={captionValue} /> : null;
 
-const FigureContainer = ({ src, alt, ratio, copyright, captionBlock }) => (
+const FigureContainer = ({ src, alt, ratio, copyright, caption }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
       <Image alt={alt} src={src} />
       {renderCopyright(copyright)}
     </ImagePlaceholder>
-    {renderCaption(captionBlock)}
+    {renderCaption(caption)}
   </Figure>
 );
 
@@ -26,12 +27,12 @@ FigureContainer.propTypes = {
   src: string.isRequired,
   ratio: number.isRequired,
   copyright: string,
-  captionBlock: objectOf(any),
+  caption: string,
 };
 
 FigureContainer.defaultProps = {
   copyright: null,
-  captionBlock: null,
+  caption: null,
 };
 
 export default FigureContainer;

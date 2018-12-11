@@ -3,7 +3,7 @@
 exports[`Image with data should render an image with alt text 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={null}
+  caption={null}
   copyright={null}
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -13,37 +13,7 @@ exports[`Image with data should render an image with alt text 1`] = `
 exports[`Image with data should render an image with alt text and caption 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={
-    Object {
-      "model": Object {
-        "blocks": Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "attributes": Array [],
-                          "text": "Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme",
-                        },
-                        "type": "fragment",
-                      },
-                    ],
-                    "text": "Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme",
-                  },
-                  "type": "paragraph",
-                },
-              ],
-            },
-            "type": "text",
-          },
-        ],
-      },
-      "type": "caption",
-    }
-  }
+  caption="Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme"
   copyright={null}
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -53,7 +23,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={null}
+  caption={null}
   copyright="Getty images"
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -63,7 +33,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
 exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={null}
+  caption={null}
   copyright="Getty images"
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -73,7 +43,7 @@ exports[`Image with data should render an image with other originCode - this wou
 exports[`Image with data should render an image with the default originCode \`cpsdevpb\` - empty string 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={null}
+  caption={null}
   copyright="Getty images"
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
@@ -83,7 +53,7 @@ exports[`Image with data should render an image with the default originCode \`cp
 exports[`Image with data should render an image with the default originCode \`cpsdevpb\` - null 1`] = `
 <FigureContainer
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-  captionBlock={null}
+  caption={null}
   copyright="Getty images"
   ratio={65.625}
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"

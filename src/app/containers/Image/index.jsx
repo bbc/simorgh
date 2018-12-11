@@ -7,6 +7,13 @@ const DEFAULT_IMAGE_RES = 640;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
+const getCaption = block => {
+  if (!block) {
+    return null;
+  }
+  return getText(block);
+};
+
 const getCopyright = copyrightHolder => {
   if (copyrightHolder === 'BBC') {
     return null;
@@ -47,6 +54,7 @@ const ImageContainer = ({ blocks }) => {
   } = rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
+  const caption = getCaption(captionBlock);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
 
@@ -56,7 +64,7 @@ const ImageContainer = ({ blocks }) => {
       alt={altText}
       ratio={ratio}
       copyright={copyright}
-      captionBlock={captionBlock}
+      caption={caption}
     />
   );
 };

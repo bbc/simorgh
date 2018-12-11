@@ -1,35 +1,33 @@
 import React from 'react';
-import { objectOf, any } from 'prop-types';
+import { node, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '../../components/Figure/Caption';
+import Text from '../../components/Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import Blocks from '../Blocks';
-import Fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 
-const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
-
-const renderText = block => {
-  const textBlocks = block.model.blocks[0].model.blocks[0].model.blocks;
-
-  return <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />;
-};
-
-const CaptionContainer = ({ block }) => (
+const CaptionWithOffscreenText = ({ children }) => (
   <ServiceContext.Consumer>
     {({ imageCaptionOffscreenText }) => (
       <Caption>
         {imageCaptionOffscreenText ? (
           <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
         ) : null}
-        {renderText(block)}
+        {children}
       </Caption>
     )}
   </ServiceContext.Consumer>
 );
 
+CaptionWithOffscreenText.propTypes = {
+  children: node.isRequired,
+};
+
+const CaptionContainer = ({ captionValue }) => (
+  <Text text={captionValue} paragraphOverride={CaptionWithOffscreenText} />
+);
+
 CaptionContainer.propTypes = {
-  block: objectOf(any).isRequired,
+  captionValue: string.isRequired,
 };
 
 export default CaptionContainer;

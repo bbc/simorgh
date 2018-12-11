@@ -73,6 +73,7 @@
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.14.0",
     "isomorphic-fetch": "^2.2.1",
+    "markdown-to-jsx": "^6.8.3",
     "nanoid": "^2.0.0",
     "offline-plugin": "^5.0.5",
     "path-to-regexp": "^2.4.0",

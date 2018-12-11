@@ -11,15 +11,6 @@ export const singleTextBlock = text => ({
         type: 'paragraph',
         model: {
           text,
-          blocks: [
-            {
-              type: 'fragment',
-              model: {
-                text,
-                attributes: [],
-              },
-            },
-          ],
         },
       },
     ],

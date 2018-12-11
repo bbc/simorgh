@@ -2,7 +2,6 @@ import React from 'react';
 import Caption from './index';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { blockContainingText } from '../../models/blocks';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -11,11 +10,9 @@ const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
 };
 
-const block = blockContainingText('caption', 'Some caption text...');
-
 const CaptionWithContext = contextStub => (
   <ServiceContext.Provider value={contextStub}>
-    <Caption block={block} />
+    <Caption captionValue="Some caption text..." />
   </ServiceContext.Provider>
 );
 
