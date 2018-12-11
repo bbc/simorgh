@@ -1,12 +1,11 @@
 import React from 'react';
-import { string } from 'prop-types';
 import paragraph from '../Paragraph';
 import Blocks from '../Blocks';
 import { textModelPropTypes } from '../../models/propTypes/text';
 
 const componentsToRender = { paragraph };
 
-const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
+const TextContainer = ({ blocks }) => {
   if (!blocks) return null;
 
   return (
@@ -18,11 +17,6 @@ const TextContainer = ({ blocks, typeOfPreviousBlock }) => {
 
 TextContainer.propTypes = {
   ...textModelPropTypes,
-  typeOfPreviousBlock: string,
-};
-
-TextContainer.defaultProps = {
-  typeOfPreviousBlock: null,
 };
 
 export default TextContainer;
