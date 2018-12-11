@@ -4,6 +4,7 @@ import {
   FigureImageWithCaption,
   FigureImageWithCopyright,
   FigureImageWithCopyrightAndCaption,
+  FigureImageWithCaptionContainingLink,
 } from './fixtureData';
 
 storiesOf('Figure', module)
@@ -13,4 +14,8 @@ storiesOf('Figure', module)
   .add(
     'with a caption and non-BBC copyright',
     () => FigureImageWithCopyrightAndCaption,
+  )
+  .add(
+    'with a caption containing an inline link',
+    () => FigureImageWithCaptionContainingLink,
   );
