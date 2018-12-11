@@ -44,7 +44,7 @@ describe('TextContainer', () => {
     describe('with a passed previous block type', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <TextContainer {...data} typeOfPreviousBlock="text" />,
+        <TextContainer {...data} />,
       );
     });
   });
