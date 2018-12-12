@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import pathToRegexp from 'path-to-regexp';
-import InlineLink from '../../components/InlineLink';
+import InlineLink from '@bbc/psammead-inline-link';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';

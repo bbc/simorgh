@@ -54,7 +54,7 @@ exports[`BrandContainer should render correctly 1`] = `
   }
 }
 
-@media (min-width:62.9375em) {
+@media (min-width:) {
   .c0 {
     padding: 0 1rem;
   }
