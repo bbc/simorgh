@@ -37,7 +37,7 @@ const pathIfMatching = (regexString, url) => {
 const InlineLinkContainer = ({ locator, blocks }) => {
   const path = pathIfMatching(articleRegexPath, locator);
 
-  if (path) {
+  if (process.env.TOGGLE_ENABLE_CLIENTSIDE_ROUTING === 'true' && path) {
     return reactRouterLink(path, blocks);
   }
 
