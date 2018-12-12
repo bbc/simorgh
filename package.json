@@ -97,6 +97,7 @@
     "bbc-a11y": "^2.2.5",
     "chalk": "^2.4.1",
     "chrome-launcher": "^0.10.5",
+    "core-js": "^2.6.0",
     "cypress": "^3.1.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
