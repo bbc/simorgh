@@ -7,9 +7,19 @@ import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
 import { articleRegexPath } from '../../routes';
 
-const InternalInlineLink = InlineLink.withComponent(Link);
-
 const componentsToRender = { fragment };
+
+const reactRouterLink = (path, blocks) => {
+  const ReactRouterLink = InlineLink.withComponent(Link);
+
+  console.log('IAMAREACTROUTERLINK');
+
+  return (
+    <ReactRouterLink to={path}>
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+    </ReactRouterLink>
+  );
+};
 
 const InlineLinkContainer = ({ locator, blocks }) => {
   const regexp = pathToRegexp(articleRegexPath, [], {
@@ -22,12 +32,11 @@ const InlineLinkContainer = ({ locator, blocks }) => {
   if (result) {
     // the path is the first item in the array
     const path = result[0];
-    return (
-      <InternalInlineLink to={path}>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </InternalInlineLink>
-    );
+
+    return reactRouterLink(path, blocks);
   }
+
+  console.log('IAMASTANDARDLINK');
 
   // else return a normal hyperlink
   return (
