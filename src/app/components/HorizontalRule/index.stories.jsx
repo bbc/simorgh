@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import Paragraph from '@bbc/psammead-paragraph';
 import HorizontalRule from './index';
-import Paragraph from '../Paragraph';
 
 storiesOf('HorizontalRule', module)
   .add('default', () => <HorizontalRule />)

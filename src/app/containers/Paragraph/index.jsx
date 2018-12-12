@@ -1,5 +1,5 @@
 import React from 'react';
-import Paragraph from '../../components/Paragraph';
+import Paragraph from '@bbc/psammead-paragraph';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
