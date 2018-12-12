@@ -12,8 +12,6 @@ const componentsToRender = { fragment };
 const reactRouterLink = (path, blocks) => {
   const ReactRouterLink = InlineLink.withComponent(Link);
 
-  console.log('IAMAREACTROUTERLINK');
-
   return (
     <ReactRouterLink to={path}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
@@ -40,8 +38,6 @@ const InlineLinkContainer = ({ locator, blocks }) => {
   if (process.env.TOGGLE_ENABLE_CLIENTSIDE_ROUTING === 'true' && path) {
     return reactRouterLink(path, blocks);
   }
-
-  console.log('IAMASTANDARDLINK');
 
   return (
     <InlineLink href={locator}>
