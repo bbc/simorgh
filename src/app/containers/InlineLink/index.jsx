@@ -1,37 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
 import { articleRegexPath } from '../../routes';
-
-const InternalInlineLink = InlineLink.withComponent(Link);
+import pathIfMatching from './pathIfMatching';
 
 const componentsToRender = { fragment };
 
-const InlineLinkContainer = ({ locator, blocks }) => {
-  const regexp = pathToRegexp(articleRegexPath, [], {
-    start: false,
-    end: false,
-  });
+const reactRouterLink = (path, blocks) => {
+  const ReactRouterLink = InlineLink.withComponent(Link);
 
-  const result = regexp.exec(locator);
-  // if URL matches a valid route, use a react-router link
-  if (result) {
-    // the path is the first item in the array
-    const path = result[0];
-    return (
-      <InternalInlineLink to={path}>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </InternalInlineLink>
-    );
+  console.log('IAMAREACTROUTERLINK');
+
+  return (
+    <ReactRouterLink to={path}>
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+    </ReactRouterLink>
+  );
+};
+
+const InlineLinkContainer = ({ locator: url, blocks }) => {
+  const path = pathIfMatching(articleRegexPath, url);
+
+  if (process.env.TOGGLE_ENABLE_CLIENTSIDE_ROUTING === 'true' && path) {
+    return reactRouterLink(path, blocks);
   }
 
-  // else return a normal hyperlink
+  console.log('IAMASTANDARDLINK');
+
   return (
-    <InlineLink href={locator}>
+    <InlineLink href={url}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </InlineLink>
   );
