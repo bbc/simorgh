@@ -95,6 +95,12 @@ We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the perf
 
 Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
 
+### Feature toggles
+
+| Toggle | Default | Description |
+| :----- | :------ | :---------- |
+| `TOGGLE_ENABLE_CLIENTSIDE_ROUTING` | `'true'` | When set to `'true'` enables client-side routing with ReactRouter for inline links to Simorgh articles. <br /> When set to `'false'` or anything else, uses standard anchor links. |
+
 ### To-do
 
 - `nofollow` must be removed once this repo is ready for production use
