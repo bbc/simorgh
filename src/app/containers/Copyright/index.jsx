@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Copyright from '../../components/Figure/Copyright';
+import Copyright from '@bbc/psammead-copyright';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const CopyrightContainer = ({ children }) => (

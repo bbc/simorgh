@@ -1,5 +1,5 @@
 import React from 'react';
-import SitewideLinks from '../../components/SitewideLinks';
+import SitewideLinks from '@bbc/psammead-sitewide-links';
 import BrandContainer from '../Brand';
 
 const externalLink = {
