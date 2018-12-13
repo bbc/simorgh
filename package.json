@@ -59,6 +59,7 @@
   "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
     "@bbc/psammead-caption": "^0.1.0",
+    "@bbc/psammead-copyright": "^0.2.0",
     "@bbc/psammead-headings": "^0.1.2",
     "@bbc/psammead-sitewide-links": "^0.1.0",
     "@bbc/psammead-inline-link": "^0.1.0",
