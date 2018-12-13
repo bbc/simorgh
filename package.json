@@ -60,6 +60,7 @@
   "dependencies": {
     "@bbc/psammead-caption": "^0.1.0",
     "@bbc/psammead-headings": "^0.1.2",
+    "@bbc/psammead-sitewide-links": "^0.1.0",
     "@bbc/psammead-inline-link": "^0.1.0",
     "@bbc/psammead-paragraph": "^0.1.3",
     "@bbc/psammead-styles": "^0.1.1",
