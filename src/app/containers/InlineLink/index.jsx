@@ -6,6 +6,7 @@ import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
 import { articleRegexPath } from '../../routes';
+import { TOGGLE_ENABLE_CLIENTSIDE_ROUTING } from '../../lib/featureToggles';
 
 const componentsToRender = { fragment };
 
@@ -35,7 +36,7 @@ const pathIfMatching = (regexString, url) => {
 const InlineLinkContainer = ({ locator, blocks }) => {
   const path = pathIfMatching(articleRegexPath, locator);
 
-  if (process.env.TOGGLE_ENABLE_CLIENTSIDE_ROUTING === 'true' && path) {
+  if (TOGGLE_ENABLE_CLIENTSIDE_ROUTING === 'true' && path) {
     return reactRouterLink(path, blocks);
   }
 
