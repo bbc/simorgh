@@ -1,6 +1,6 @@
-import React from 'react';
-import { Img } from '.';
+import 'styled-components';
+import { StyledImg } from '.';
 
-const AmpImg = () => <Img as="amp-img" layout="responsive" />;
+const AmpImg = StyledImg.withComponent('amp-img');
 
 export default AmpImg;

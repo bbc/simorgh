@@ -57,6 +57,8 @@ const ImageContainer = ({ blocks }) => {
       ratio={ratio}
       copyright={copyright}
       captionBlock={captionBlock}
+      height={height}
+      width={width}
     />
   );
 };
