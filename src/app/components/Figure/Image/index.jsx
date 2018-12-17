@@ -18,4 +18,6 @@ Img.propTypes = {
   width: number.isRequired,
 };
 
-export default Img;
+const Image = Img;
+
+export default Image;
