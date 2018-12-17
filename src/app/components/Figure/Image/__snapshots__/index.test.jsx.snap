@@ -39,9 +39,9 @@ exports[`Image - imported as '{ Img }' should render portrait image correctly 1`
 <img
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   className="c0"
-  height={723}
-  src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  width={578}
+  height={1138}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  width={640}
 />
 `;
 
@@ -99,9 +99,9 @@ exports[`Image - imported as default 'Image' should render portrait image correc
 <img
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   className="c0"
-  height={723}
-  src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-  width={578}
+  height={1138}
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  width={640}
 />
 `;
 
