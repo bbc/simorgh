@@ -2,26 +2,54 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Img } from './index';
 import {
-  imageAltLandscape,
-  imageSrcLandscape,
-  imageAltPortrait,
-  imageSrcPortrait,
-  imageAltSquare,
-  imageSrcSquare,
-  imageAltCustom,
-  imageSrcCustom,
+  imageCustomAlt,
+  imageCustomHeight,
+  imageCustomSrc,
+  imageCustomWidth,
+  imageLandscapeAlt,
+  imageLandscapeHeight,
+  imageLandscapeSrc,
+  imageLandscapeWidth,
+  imagePortraitAlt,
+  imagePortraitHeight,
+  imagePortraitSrc,
+  imagePortraitWidth,
+  imageSquareAlt,
+  imageSquareHeight,
+  imageSquareSrc,
+  imageSquareWidth,
 } from './fixtureData';
 
 storiesOf('Image - Img', module)
   .add('16:9 landscape image', () => (
-    <Img alt={imageAltLandscape} src={imageSrcLandscape} />
+    <Img
+      alt={imageLandscapeAlt}
+      src={imageLandscapeSrc}
+      height={imageLandscapeHeight}
+      width={imageLandscapeWidth}
+    />
   ))
-  .add('16:9 portrait image', () => (
-    <Img alt={imageAltPortrait} src={imageSrcPortrait} />
+  .add('9:16 portrait image', () => (
+    <Img
+      alt={imagePortraitAlt}
+      src={imagePortraitSrc}
+      height={imagePortraitHeight}
+      width={imagePortraitWidth}
+    />
   ))
   .add('1:1 square image', () => (
-    <Img alt={imageAltSquare} src={imageSrcSquare} />
+    <Img
+      alt={imageSquareAlt}
+      src={imageSquareSrc}
+      height={imageSquareHeight}
+      width={imageSquareWidth}
+    />
   ))
   .add('custom ratio image', () => (
-    <Img alt={imageAltCustom} src={imageSrcCustom} />
+    <Img
+      alt={imageCustomAlt}
+      src={imageCustomSrc}
+      height={imageCustomHeight}
+      width={imageCustomWidth}
+    />
   ));

@@ -2,26 +2,54 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import AmpImg from './index.amp';
 import {
-  imageAltLandscape,
-  imageSrcLandscape,
-  imageAltPortrait,
-  imageSrcPortrait,
-  imageAltSquare,
-  imageSrcSquare,
-  imageAltCustom,
-  imageSrcCustom,
+  imageCustomAlt,
+  imageCustomHeight,
+  imageCustomSrc,
+  imageCustomWidth,
+  imageLandscapeAlt,
+  imageLandscapeHeight,
+  imageLandscapeSrc,
+  imageLandscapeWidth,
+  imagePortraitAlt,
+  imagePortraitHeight,
+  imagePortraitSrc,
+  imagePortraitWidth,
+  imageSquareAlt,
+  imageSquareHeight,
+  imageSquareSrc,
+  imageSquareWidth,
 } from './fixtureData';
 
 storiesOf('Image - AmpImg', module)
   .add('16:9 landscape image', () => (
-    <AmpImg alt={imageAltLandscape} src={imageSrcLandscape} />
+    <AmpImg
+      alt={imageLandscapeAlt}
+      src={imageLandscapeSrc}
+      height={imageLandscapeHeight}
+      width={imageLandscapeWidth}
+    />
   ))
-  .add('16:9 portrait image', () => (
-    <AmpImg alt={imageAltPortrait} src={imageSrcPortrait} />
+  .add('9:16 portrait image', () => (
+    <AmpImg
+      alt={imagePortraitAlt}
+      src={imagePortraitSrc}
+      height={imagePortraitHeight}
+      width={imagePortraitWidth}
+    />
   ))
   .add('1:1 square image', () => (
-    <AmpImg alt={imageAltSquare} src={imageSrcSquare} />
+    <AmpImg
+      alt={imageSquareAlt}
+      src={imageSquareSrc}
+      height={imageSquareHeight}
+      width={imageSquareWidth}
+    />
   ))
   .add('custom ratio image', () => (
-    <AmpImg alt={imageAltCustom} src={imageSrcCustom} />
+    <AmpImg
+      alt={imageCustomAlt}
+      src={imageCustomSrc}
+      height={imageCustomHeight}
+      width={imageCustomWidth}
+    />
   ));

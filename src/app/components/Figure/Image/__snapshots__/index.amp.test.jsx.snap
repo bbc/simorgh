@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Image - AmpImg should render 1:1 square image correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  className="c0"
+/>
+`;
+
+exports[`Image - AmpImg should render 9:16 portrait image correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  className="c0"
+/>
+`;
+
+exports[`Image - AmpImg should render 16:9 landscape image correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  className="c0"
+/>
+`;
+
 exports[`Image - AmpImg should render image with custom dimensions correctly 1`] = `
-.c0 {
-  display: block;
-  width: 100%;
-}
-
-<img
-  className="c0"
-/>
-`;
-
-exports[`Image - AmpImg should render landscape image correctly 1`] = `
-.c0 {
-  display: block;
-  width: 100%;
-}
-
-<img
-  className="c0"
-/>
-`;
-
-exports[`Image - AmpImg should render portrait image correctly 1`] = `
-.c0 {
-  display: block;
-  width: 100%;
-}
-
-<img
-  className="c0"
-/>
-`;
-
-exports[`Image - AmpImg should render square image correctly 1`] = `
 .c0 {
   display: block;
   width: 100%;

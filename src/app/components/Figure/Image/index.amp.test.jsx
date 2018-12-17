@@ -2,51 +2,59 @@ import React from 'react';
 import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import AmpImg from './index.amp';
 import {
-  imageAltLandscape,
-  imageSrcLandscape,
-  imageAltPortrait,
-  imageSrcPortrait,
-  imageAltSquare,
-  imageSrcSquare,
-  imageAltCustom,
-  imageSrcCustom,
+  imageCustomAlt,
+  imageCustomHeight,
+  imageCustomSrc,
+  imageCustomWidth,
+  imageLandscapeAlt,
+  imageLandscapeHeight,
+  imageLandscapeSrc,
+  imageLandscapeWidth,
+  imagePortraitAlt,
+  imagePortraitHeight,
+  imagePortraitSrc,
+  imagePortraitWidth,
+  imageSquareAlt,
+  imageSquareHeight,
+  imageSquareSrc,
+  imageSquareWidth,
 } from './fixtureData';
 
 describe('Image - AmpImg', () => {
   shouldMatchSnapshot(
-    'should render portrait image correctly',
+    'should render 16:9 landscape image correctly',
     <AmpImg
-      alt={imageAltPortrait}
-      src={imageSrcPortrait}
-      height={723}
-      width={578}
+      alt={imageLandscapeAlt}
+      src={imageLandscapeSrc}
+      height={imageLandscapeHeight}
+      width={imageLandscapeWidth}
     />,
   );
   shouldMatchSnapshot(
-    'should render landscape image correctly',
+    'should render 9:16 portrait image correctly',
     <AmpImg
-      alt={imageAltLandscape}
-      src={imageSrcLandscape}
-      height={1024}
-      width={578}
+      alt={imagePortraitAlt}
+      src={imagePortraitSrc}
+      height={imagePortraitHeight}
+      width={imagePortraitWidth}
     />,
   );
   shouldMatchSnapshot(
-    'should render square image correctly',
+    'should render 1:1 square image correctly',
     <AmpImg
-      alt={imageAltSquare}
-      src={imageSrcSquare}
-      height={660}
-      width={660}
+      alt={imageSquareAlt}
+      src={imageSquareSrc}
+      height={imageSquareHeight}
+      width={imageSquareWidth}
     />,
   );
   shouldMatchSnapshot(
     'should render image with custom dimensions correctly',
     <AmpImg
-      alt={imageAltCustom}
-      src={imageSrcCustom}
-      height={660}
-      width={660}
+      alt={imageCustomAlt}
+      src={imageCustomSrc}
+      height={imageCustomHeight}
+      width={imageCustomWidth}
     />,
   );
 });
