@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { Img } from './index';
+import AmpImg from './index.amp';
 import {
   imageAltLandscape,
   imageSrcLandscape,
@@ -12,16 +12,16 @@ import {
   imageSrcCustom,
 } from './fixtureData';
 
-storiesOf('Image - Img', module)
+storiesOf('Image - AmpImg', module)
   .add('16:9 landscape image', () => (
-    <Img alt={imageAltLandscape} src={imageSrcLandscape} />
+    <AmpImg alt={imageAltLandscape} src={imageSrcLandscape} />
   ))
   .add('16:9 portrait image', () => (
-    <Img alt={imageAltPortrait} src={imageSrcPortrait} />
+    <AmpImg alt={imageAltPortrait} src={imageSrcPortrait} />
   ))
   .add('1:1 square image', () => (
-    <Img alt={imageAltSquare} src={imageSrcSquare} />
+    <AmpImg alt={imageAltSquare} src={imageSrcSquare} />
   ))
   .add('custom ratio image', () => (
-    <Img alt={imageAltCustom} src={imageSrcCustom} />
+    <AmpImg alt={imageAltCustom} src={imageSrcCustom} />
   ));

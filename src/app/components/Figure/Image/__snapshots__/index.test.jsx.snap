@@ -1,6 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image should render correctly 1`] = `
+exports[`Image - Img should render image with custom dimensions correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  alt="By Elisa Decker, from her series \\"Sidewalk\\""
+  className="c0"
+  height={660}
+  src="https://ichef.bbci.co.uk/news/445/cpsprodpb/164BB/production/_104032319_03270dcc-9dda-4bd4-96a0-db89f6b915ae.jpg"
+  width={660}
+/>
+`;
+
+exports[`Image - Img should render landscape image correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  alt="Birthday illustration with llama and dogs"
+  className="c0"
+  height={1024}
+  src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/537D/production/_104837312_crazyrichbirthday_illustration_dogs-nc976.jpg"
+  width={578}
+/>
+`;
+
+exports[`Image - Img should render portrait image correctly 1`] = `
 .c0 {
   display: block;
   width: 100%;
@@ -9,6 +39,23 @@ exports[`Image should render correctly 1`] = `
 <img
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   className="c0"
+  height={723}
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+  width={578}
+/>
+`;
+
+exports[`Image - Img should render square image correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  alt="Tracks through the snow"
+  className="c0"
+  height={660}
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/114FE/production/_104801907_79010.jpg"
+  width={660}
 />
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
-import { Img } from './index';
+import AmpImg from './index.amp';
 import {
   imageAltLandscape,
   imageSrcLandscape,
@@ -12,10 +12,10 @@ import {
   imageSrcCustom,
 } from './fixtureData';
 
-describe('Image - Img', () => {
+describe('Image - AmpImg', () => {
   shouldMatchSnapshot(
     'should render portrait image correctly',
-    <Img
+    <AmpImg
       alt={imageAltPortrait}
       src={imageSrcPortrait}
       height={723}
@@ -24,7 +24,7 @@ describe('Image - Img', () => {
   );
   shouldMatchSnapshot(
     'should render landscape image correctly',
-    <Img
+    <AmpImg
       alt={imageAltLandscape}
       src={imageSrcLandscape}
       height={1024}
@@ -33,10 +33,20 @@ describe('Image - Img', () => {
   );
   shouldMatchSnapshot(
     'should render square image correctly',
-    <Img alt={imageAltSquare} src={imageSrcSquare} height={660} width={660} />,
+    <AmpImg
+      alt={imageAltSquare}
+      src={imageSrcSquare}
+      height={660}
+      width={660}
+    />,
   );
   shouldMatchSnapshot(
     'should render image with custom dimensions correctly',
-    <Img alt={imageAltCustom} src={imageSrcCustom} height={660} width={660} />,
+    <AmpImg
+      alt={imageAltCustom}
+      src={imageSrcCustom}
+      height={660}
+      width={660}
+    />,
   );
 });
