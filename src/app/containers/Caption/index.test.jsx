@@ -1,5 +1,5 @@
 import React from 'react';
-import Caption from './index';
+import Caption from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { blockContainingText } from '../../models/blocks';

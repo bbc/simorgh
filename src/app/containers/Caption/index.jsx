@@ -1,7 +1,7 @@
 import React from 'react';
 import { objectOf, any } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Caption from '../../components/Figure/Caption';
+import Caption from '@bbc/psammead-caption';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
