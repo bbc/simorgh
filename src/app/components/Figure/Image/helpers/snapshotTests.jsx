@@ -1,12 +1,11 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
-import AmpImg from './index.amp';
-import { custom, landscape, portrait, square } from './helpers/fixtureData';
+import { shouldMatchSnapshot } from '../../../../helpers/tests/testHelpers';
+import { custom, landscape, portrait, square } from './fixtureData';
 
-describe('Image - AmpImg', () => {
+const snapshotTests = Component => {
   shouldMatchSnapshot(
-    'should render 16:9 landscape image correctly',
-    <AmpImg
+    'should render landscape image correctly',
+    <Component
       alt={landscape.alt}
       src={landscape.src}
       height={landscape.height}
@@ -14,8 +13,8 @@ describe('Image - AmpImg', () => {
     />,
   );
   shouldMatchSnapshot(
-    'should render 9:16 portrait image correctly',
-    <AmpImg
+    'should render portrait image correctly',
+    <Component
       alt={portrait.alt}
       src={portrait.src}
       height={portrait.height}
@@ -23,8 +22,8 @@ describe('Image - AmpImg', () => {
     />,
   );
   shouldMatchSnapshot(
-    'should render 1:1 square image correctly',
-    <AmpImg
+    'should render square image correctly',
+    <Component
       alt={square.alt}
       src={square.src}
       height={square.height}
@@ -33,11 +32,13 @@ describe('Image - AmpImg', () => {
   );
   shouldMatchSnapshot(
     'should render image with custom dimensions correctly',
-    <AmpImg
+    <Component
       alt={custom.alt}
       src={custom.src}
       height={custom.height}
       width={custom.width}
     />,
   );
-});
+};
+
+export default snapshotTests;
