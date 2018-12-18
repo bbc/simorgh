@@ -16,17 +16,16 @@ const renderImage = (platform, alt, src, height, width) => {
   if (platform === 'amp') {
     return <AmpImg alt={alt} src={src} height={height} width={width} />;
   }
-
   return <Image alt={alt} src={src} height={height} width={width} />;
 };
 
 const FigureContainer = ({
-  src,
   alt,
-  ratio,
-  copyright,
   captionBlock,
+  copyright,
   height,
+  ratio,
+  src,
   width,
 }) => (
   <Figure>
@@ -40,17 +39,17 @@ const FigureContainer = ({
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
-  height: number.isRequired,
-  width: number.isRequired,
-  src: string.isRequired,
-  ratio: number.isRequired,
-  copyright: string,
   captionBlock: objectOf(any),
+  copyright: string,
+  height: number.isRequired,
+  ratio: number.isRequired,
+  src: string.isRequired,
+  width: number.isRequired,
 };
 
 FigureContainer.defaultProps = {
-  copyright: null,
   captionBlock: null,
+  copyright: null,
 };
 
 export default FigureContainer;
