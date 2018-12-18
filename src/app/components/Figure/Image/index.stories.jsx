@@ -1,4 +1,4 @@
 import { Img } from './index';
-import stories from './helpers/stories';
+import stories from './testHelpers/stories';
 
 stories(Img, 'Image - Img');

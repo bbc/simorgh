@@ -1,4 +1,4 @@
 import AmpImg from './index.amp';
-import stories from './helpers/stories';
+import stories from './testHelpers/stories';
 
 stories(AmpImg, 'Image - AmpImg');
