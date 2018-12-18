@@ -5,7 +5,7 @@
 Importing the standard Image component, which renders an `<img />` tag.
 
 ```jsx
-import { Img } from '../components/Image';
+import Image from '../components/Image';
 
 const WrappingContainer = ({ alt, height, src, width }) => (
   <Img alt={alt} src={src} height={height} width={width} />
@@ -15,7 +15,7 @@ const WrappingContainer = ({ alt, height, src, width }) => (
 Importing an Amp Image component, which renders an `<amp-img />` tag.
 
 ```jsx
-import { AmpImg } from '../components/Image';
+import AmpImg from '../components/Image/image.amp';
 
 const WrappingContainer = ({ alt, height, src, width }) => (
   <AmpImg alt={alt} src={src} height={height} width={width} />
