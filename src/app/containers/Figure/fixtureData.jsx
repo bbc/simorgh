@@ -1,6 +1,7 @@
 import React from 'react';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
@@ -69,17 +70,21 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
+const platformContextCanonical = 'canonical';
+
 const generateFixtureData = (caption, copyright) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <FigureContainer
-      src={imageSrc}
-      alt={imageAlt}
-      ratio={imageRatio}
-      captionBlock={caption}
-      copyright={copyright}
-      height={height}
-      width={width}
-    />
+    <PlatformContextProvider platform={platformContextCanonical}>
+      <FigureContainer
+        src={imageSrc}
+        alt={imageAlt}
+        ratio={imageRatio}
+        captionBlock={caption}
+        copyright={copyright}
+        height={height}
+        width={width}
+      />
+    </PlatformContextProvider>
   </ServiceContext.Provider>
 );
 

@@ -6,6 +6,7 @@ import AmpImg from '../../components/Figure/Image/index.amp';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
+import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -28,13 +29,17 @@ const FigureContainer = ({
   src,
   width,
 }) => (
-  <Figure>
-    <ImagePlaceholder ratio={ratio}>
-      {renderImage('canonical', alt, src, height, width)}
-      {renderCopyright(copyright)}
-    </ImagePlaceholder>
-    {renderCaption(captionBlock)}
-  </Figure>
+  <PlatformContextConsumer>
+    {platform => (
+      <Figure>
+        <ImagePlaceholder ratio={ratio}>
+          {renderImage(platform, alt, src, height, width)}
+          {renderCopyright(copyright)}
+        </ImagePlaceholder>
+        {renderCaption(captionBlock)}
+      </Figure>
+    )}
+  </PlatformContextConsumer>
 );
 
 FigureContainer.propTypes = {
