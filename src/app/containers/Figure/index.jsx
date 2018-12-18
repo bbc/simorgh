@@ -1,8 +1,7 @@
 import React from 'react';
 import { string, number, objectOf, any } from 'prop-types';
 import Figure from '../../components/Figure';
-import Image from '../../components/Figure/Image';
-import AmpImg from '../../components/Figure/Image/index.amp';
+import Image, { AmpImg } from '../../components/Figure/Image';
 import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';

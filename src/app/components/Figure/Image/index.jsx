@@ -18,6 +18,9 @@ Img.propTypes = {
   width: number.isRequired,
 };
 
+// eslint-disable-next-line global-require
+export const AmpImg = require('./index.amp');
+
 const Image = Img;
 
 export default Image;

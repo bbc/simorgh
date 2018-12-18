@@ -15,7 +15,7 @@ const WrappingContainer = ({ alt, height, src, width }) => (
 Importing an Amp Image component, which renders an `<amp-img />` tag.
 
 ```jsx
-import AmpImg from '../components/Image/image.amp';
+import { AmpImg } from '../components/Image';
 
 const WrappingContainer = ({ alt, height, src, width }) => (
   <AmpImg alt={alt} src={src} height={height} width={width} />
