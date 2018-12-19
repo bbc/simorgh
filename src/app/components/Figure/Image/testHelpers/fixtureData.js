@@ -2,6 +2,9 @@ export const landscape = {
   alt: 'Student sitting an exam',
   src:
     'https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg',
+  srcset:
+    'https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w',
+
   width: 1024,
   height: 576,
 };

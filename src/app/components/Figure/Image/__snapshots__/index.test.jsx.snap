@@ -15,6 +15,22 @@ exports[`Image - imported as '{ Img }' should render image with custom dimension
 />
 `;
 
+exports[`Image - imported as '{ Img }' should render image with srcset correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  alt="Student sitting an exam"
+  className="c0"
+  height={576}
+  src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg"
+  srcset="https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w"
+  width={1024}
+/>
+`;
+
 exports[`Image - imported as '{ Img }' should render landscape image correctly 1`] = `
 .c0 {
   display: block;
@@ -72,6 +88,22 @@ exports[`Image - imported as default 'Image' should render image with custom dim
   height={547}
   src="https://ichef.bbci.co.uk/news/445/cpsprodpb/164BB/production/_104032319_03270dcc-9dda-4bd4-96a0-db89f6b915ae.jpg"
   width={445}
+/>
+`;
+
+exports[`Image - imported as default 'Image' should render image with srcset correctly 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+}
+
+<img
+  alt="Student sitting an exam"
+  className="c0"
+  height={576}
+  src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg"
+  srcset="https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w"
+  width={1024}
 />
 `;
 

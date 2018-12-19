@@ -39,6 +39,16 @@ const snapshotTests = Component => {
       width={custom.width}
     />,
   );
+  shouldMatchSnapshot(
+    'should render image with srcset correctly',
+    <Component
+      alt={landscape.alt}
+      src={landscape.src}
+      srcset={landscape.srcset}
+      height={landscape.height}
+      width={landscape.width}
+    />,
+  );
 };
 
 export default snapshotTests;
