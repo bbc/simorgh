@@ -3,7 +3,21 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 
-const DEFAULT_IMAGE_RES = 640;
+// TODO: this should be generalised to work for various products.
+const DEFAULT_ICHEF_PRODUCT = 'news';
+const DEFAULT_WIDTH = 640;
+const ARRAY_OF_WIDTHS = ['270', '320', '480', '640', '900', '1024'];
+
+const srcValue = (ichefProduct, width, originCode, locator) =>
+  `https://ichef.bbci.co.uk/${ichefProduct}/${width}/${originCode}/${locator}`;
+
+const srcsetValue = (ichefProduct, widths, originCode, locator) =>
+  widths
+    .map(
+      width =>
+        `https://ichef.bbci.co.uk/${ichefProduct}/${width}/${originCode}/${locator} ${width}w`,
+    )
+    .join(', ');
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -14,16 +28,6 @@ const getCopyright = copyrightHolder => {
 
   return copyrightHolder;
 };
-
-const getIChefURL = (originCode, locator) => {
-  // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
-  const overridableOriginCode = originCode || 'cpsdevpb';
-
-  return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
-};
-
-const getRawImageSrc = (originCode, locator) =>
-  originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
@@ -48,21 +52,38 @@ const ImageContainer = ({ blocks }) => {
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
-  const rawImageSrc = getRawImageSrc(originCode, locator);
+  const src = srcValue(
+    DEFAULT_ICHEF_PRODUCT,
+    DEFAULT_WIDTH,
+    originCode,
+    locator,
+  );
+
+  const srcset = srcsetValue(
+    DEFAULT_ICHEF_PRODUCT,
+    ARRAY_OF_WIDTHS,
+    originCode,
+    locator,
+  );
 
   return (
     <Figure
-      src={rawImageSrc}
       alt={altText}
       ratio={ratio}
       copyright={copyright}
       captionBlock={captionBlock}
       height={height}
+      src={src}
+      srcset={srcset}
       width={width}
     />
   );
 };
 
 ImageContainer.propTypes = imageModelPropTypes;
+
+ImageContainer.defaultProps = {
+  srcset: null,
+};
 
 export default ImageContainer;

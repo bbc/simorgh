@@ -34,28 +34,6 @@ describe('Image', () => {
       },
     };
 
-    const rawImageBlockWithNullOriginCode = {
-      type: 'rawImage',
-      model: {
-        width: 640,
-        height: 420,
-        locator: '439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: null,
-        copyrightHolder: 'Getty images',
-      },
-    };
-
-    const rawImageBlockWithEmptyStringOriginCode = {
-      type: 'rawImage',
-      model: {
-        width: 640,
-        height: 420,
-        locator: '439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: '',
-        copyrightHolder: 'Getty images',
-      },
-    };
-
     const rawImageBlockWithOtherOriginCode = {
       type: 'rawImage',
       model: {
@@ -128,32 +106,6 @@ describe('Image', () => {
     shouldShallowMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
-    );
-
-    const dataWithNullOriginCode = blockArrayModel([
-      rawImageBlockWithNullOriginCode,
-      blockContainingText(
-        'altText',
-        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-      ),
-    ]);
-
-    shouldShallowMatchSnapshot(
-      'should render an image with the default originCode `cpsdevpb` - null',
-      <ImageContainer {...dataWithNullOriginCode} />,
-    );
-
-    const dataWithEmptyStringOriginCode = blockArrayModel([
-      rawImageBlockWithEmptyStringOriginCode,
-      blockContainingText(
-        'altText',
-        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-      ),
-    ]);
-
-    shouldShallowMatchSnapshot(
-      'should render an image with the default originCode `cpsdevpb` - empty string',
-      <ImageContainer {...dataWithEmptyStringOriginCode} />,
     );
 
     const dataWithOtherOriginCode = blockArrayModel([
