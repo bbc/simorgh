@@ -15,7 +15,6 @@ const FigureContainer = ({
   alt,
   copyright,
   captionBlock,
-  height,
   ratio,
   src,
   width,
