@@ -32,7 +32,6 @@ FigureContainer.propTypes = {
   alt: string.isRequired,
   captionBlock: objectOf(any),
   copyright: string,
-  height: number.isRequired,
   ratio: number.isRequired,
   src: string.isRequired,
   width: number.isRequired,
