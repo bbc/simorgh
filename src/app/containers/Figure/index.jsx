@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, number, objectOf, any } from 'prop-types';
+import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Figure from '../../components/Figure';
 import Image from '../../components/Figure/Image';
-import ImagePlaceholder from '../../components/Figure/ImagePlaceholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 
