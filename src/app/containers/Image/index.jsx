@@ -52,11 +52,13 @@ const ImageContainer = ({ blocks }) => {
 
   return (
     <Figure
-      src={rawImageSrc}
       alt={altText}
-      ratio={ratio}
-      copyright={copyright}
       captionBlock={captionBlock}
+      copyright={copyright}
+      height={height}
+      ratio={ratio}
+      src={rawImageSrc}
+      width={width}
     />
   );
 };

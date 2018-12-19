@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, number, objectOf, any } from 'prop-types';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import Image from '@bbc/psammead-image';
 import Figure from '../../components/Figure';
-import Image from '../../components/Figure/Image';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 
@@ -11,10 +11,18 @@ const renderCopyright = copyright =>
 
 const renderCaption = block => (block ? <Caption block={block} /> : null);
 
-const FigureContainer = ({ src, alt, ratio, copyright, captionBlock }) => (
+const FigureContainer = ({
+  alt,
+  copyright,
+  captionBlock,
+  height,
+  ratio,
+  src,
+  width,
+}) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      <Image alt={alt} src={src} />
+      <Image alt={alt} src={src} width={width} height={height} />
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(captionBlock)}
@@ -23,10 +31,12 @@ const FigureContainer = ({ src, alt, ratio, copyright, captionBlock }) => (
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
-  src: string.isRequired,
-  ratio: number.isRequired,
-  copyright: string,
   captionBlock: objectOf(any),
+  copyright: string,
+  height: number.isRequired,
+  ratio: number.isRequired,
+  src: string.isRequired,
+  width: number.isRequired,
 };
 
 FigureContainer.defaultProps = {
