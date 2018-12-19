@@ -22,7 +22,7 @@ const FigureContainer = ({
 }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      <Image alt={alt} src={src} width={width} height={height} />
+      <Image alt={alt} src={src} width={width} />
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(captionBlock)}
