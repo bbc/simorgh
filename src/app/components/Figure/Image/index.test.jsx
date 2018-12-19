@@ -1,4 +1,4 @@
-import Image, { Img } from './index';
+import Image, { Img } from '.';
 import snapshotTests from './testHelpers/snapshotTests';
 
 describe("Image - imported as '{ Img }'", () => {

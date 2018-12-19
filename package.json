@@ -133,7 +133,7 @@
       "**/(src|scripts)/**/*.{js,jsx}",
       "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx",
-      "!**/testHelpers/*.{js,jsx}"
+      "!**/testHelpers/**"
     ],
     "setupFiles": [
       "./src/app/helpers/tests/jest-setup.js"

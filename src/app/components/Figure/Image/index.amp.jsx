@@ -7,8 +7,8 @@ const AmpImg = ({ alt, height, src, srcset, width }) => {
     as: 'amp-img',
     layout: 'responsive',
     alt,
-    src,
     height,
+    src,
     width,
   };
 

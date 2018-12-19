@@ -26,6 +26,4 @@ Img.defaultProps = {
   srcset: null,
 };
 
-const Image = Img;
-
-export default Image;
+export default Img;
