@@ -8,7 +8,7 @@ export const Img = ({ alt, height, src, srcset, width }) => {
   const props = { alt, src, height, width };
 
   if (srcset) {
-    props.srcset = srcset;
+    props.srcSet = srcset;
   }
 
   return <StyledImg {...props} />;
@@ -16,9 +16,9 @@ export const Img = ({ alt, height, src, srcset, width }) => {
 
 Img.propTypes = {
   alt: string.isRequired,
-  height: number.isRequired,
   src: string.isRequired,
   srcset: string,
+  height: number.isRequired,
   width: number.isRequired,
 };
 

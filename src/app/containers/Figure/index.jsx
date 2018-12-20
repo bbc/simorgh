@@ -12,20 +12,34 @@ const renderCopyright = copyright =>
 
 const renderCaption = block => (block ? <Caption block={block} /> : null);
 
-const renderImage = (alt, height, platform, src, srcset, width) => {
+const renderImage = (
+  alt,
+  copyright,
+  height,
+  platform,
+  ratio,
+  src,
+  srcset,
+  width,
+) => {
   if (platform === 'amp') {
     return (
       <AmpImg
         alt={alt}
-        height={height}
         src={src}
         srcset={srcset}
+        height={height}
         width={width}
       />
     );
   }
 
-  return <Image alt={alt} src={src} srcset={srcset} width={width} />;
+  return (
+    <ImagePlaceholder ratio={ratio}>
+      <Image alt={alt} src={src} srcset={srcset} width={width} />
+      {renderCopyright(copyright)}
+    </ImagePlaceholder>
+  );
 };
 
 const FigureContainer = ({
@@ -41,10 +55,16 @@ const FigureContainer = ({
   <PlatformContextConsumer>
     {platform => (
       <Figure>
-        <ImagePlaceholder ratio={ratio}>
-          {renderImage(alt, height, platform, src, srcset, width)}
-          {renderCopyright(copyright)}
-        </ImagePlaceholder>
+        {renderImage(
+          alt,
+          copyright,
+          height,
+          platform,
+          ratio,
+          src,
+          srcset,
+          width,
+        )}
         {renderCaption(captionBlock)}
       </Figure>
     )}
@@ -55,11 +75,11 @@ FigureContainer.propTypes = {
   alt: string.isRequired,
   captionBlock: objectOf(any),
   copyright: string,
-  height: number.isRequired,
-  ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
+  height: number.isRequired,
   width: number.isRequired,
+  ratio: number.isRequired,
 };
 
 FigureContainer.defaultProps = {
