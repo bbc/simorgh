@@ -2,7 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '../../../../helpers/tests/testHelpers';
 import { custom, landscape, portrait, square } from './fixtureData';
 
-const snapshotTests = Component => {
+const snapshotTests = (Component, additionalProps) => {
   shouldMatchSnapshot(
     'should render landscape image correctly',
     <Component
@@ -10,6 +10,7 @@ const snapshotTests = Component => {
       src={landscape.src}
       height={landscape.height}
       width={landscape.width}
+      {...additionalProps}
     />,
   );
   shouldMatchSnapshot(
@@ -19,6 +20,7 @@ const snapshotTests = Component => {
       src={portrait.src}
       height={portrait.height}
       width={portrait.width}
+      {...additionalProps}
     />,
   );
   shouldMatchSnapshot(
@@ -28,6 +30,7 @@ const snapshotTests = Component => {
       src={square.src}
       height={square.height}
       width={square.width}
+      {...additionalProps}
     />,
   );
   shouldMatchSnapshot(
@@ -37,6 +40,7 @@ const snapshotTests = Component => {
       src={custom.src}
       height={custom.height}
       width={custom.width}
+      {...additionalProps}
     />,
   );
   shouldMatchSnapshot(

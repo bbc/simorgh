@@ -2,38 +2,47 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { custom, landscape, portrait, square } from './fixtureData';
 
-const stories = (Component, title) =>
+const stories = (Component, title, additionalProps) =>
   storiesOf(title, module)
     .add('16:9 landscape image', () => (
       <Component
         alt={landscape.alt}
         src={landscape.src}
-        height={landscape.height}
         width={landscape.width}
+        {...additionalProps}
       />
     ))
     .add('9:16 portrait image', () => (
       <Component
         alt={portrait.alt}
         src={portrait.src}
-        height={portrait.height}
         width={portrait.width}
+        {...additionalProps}
       />
     ))
     .add('1:1 square image', () => (
       <Component
         alt={square.alt}
         src={square.src}
-        height={square.height}
         width={square.width}
+        {...additionalProps}
       />
     ))
     .add('custom ratio image', () => (
       <Component
         alt={custom.alt}
         src={custom.src}
-        height={custom.height}
         width={custom.width}
+        {...additionalProps}
+      />
+    ))
+    .add('image with srcset', () => (
+      <Component
+        alt={landscape.alt}
+        src={landscape.src}
+        srcset={landscape.srcset}
+        width={landscape.width}
+        {...additionalProps}
       />
     ));
 

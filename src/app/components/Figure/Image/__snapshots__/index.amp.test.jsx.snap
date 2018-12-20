@@ -4,6 +4,7 @@ exports[`Image - AmpImg should render image with custom dimensions correctly 1`]
 <amp-img
   alt="By Elisa Decker, from her series \\"Sidewalk\\""
   height={547}
+  layout="responsive"
   src="https://ichef.bbci.co.uk/news/445/cpsprodpb/164BB/production/_104032319_03270dcc-9dda-4bd4-96a0-db89f6b915ae.jpg"
   width={445}
 />
@@ -23,6 +24,7 @@ exports[`Image - AmpImg should render landscape image correctly 1`] = `
 <amp-img
   alt="Student sitting an exam"
   height={576}
+  layout="responsive"
   src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg"
   width={1024}
 />
@@ -32,6 +34,7 @@ exports[`Image - AmpImg should render portrait image correctly 1`] = `
 <amp-img
   alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
   height={1138}
+  layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
   width={640}
 />
@@ -41,6 +44,7 @@ exports[`Image - AmpImg should render square image correctly 1`] = `
 <amp-img
   alt="Tracks through the snow"
   height={1024}
+  layout="responsive"
   src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/114FE/production/_104801907_79010.jpg"
   width={1024}
 />
