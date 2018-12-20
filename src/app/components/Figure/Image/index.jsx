@@ -1,10 +1,15 @@
 import React from 'react';
 import { number, string } from 'prop-types';
-import StyledImg from './styledImg';
+import styled from 'styled-components';
 
 export { default as AmpImg } from './index.amp';
 
-export const Img = ({ alt, height, src, srcset, width }) => {
+const StyledImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+
+export const Img = ({ alt, src, srcset, height, width }) => {
   const props = { alt, src, height, width };
 
   if (srcset) {

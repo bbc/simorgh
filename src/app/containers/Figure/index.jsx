@@ -28,6 +28,7 @@ const renderImage = (
         alt={alt}
         src={src}
         srcset={srcset}
+        layout="responsive"
         height={height}
         width={width}
       />

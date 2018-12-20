@@ -1,11 +1,9 @@
 import React from 'react';
 import { number, string } from 'prop-types';
-import StyledImg from './styledImg';
 
-const AmpImg = ({ alt, height, src, srcset, width }) => {
+const AmpImg = ({ layout, alt, src, srcset, height, width }) => {
   const props = {
-    as: 'amp-img',
-    layout: 'responsive',
+    layout,
     alt,
     src,
     height,
@@ -16,7 +14,7 @@ const AmpImg = ({ alt, height, src, srcset, width }) => {
     props.srcSet = srcset;
   }
 
-  return <StyledImg {...props} />;
+  return <amp-img {...props} />;
 };
 
 AmpImg.propTypes = {
@@ -25,6 +23,7 @@ AmpImg.propTypes = {
   srcset: string,
   height: number.isRequired,
   width: number.isRequired,
+  layout: string.isRequired,
 };
 
 AmpImg.defaultProps = {
