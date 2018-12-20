@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number, objectOf, any } from 'prop-types';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
-import Figure from '../../components/Figure';
+import Figure from '@bbc/psammead-figure';
 import Image from '../../components/Figure/Image';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
