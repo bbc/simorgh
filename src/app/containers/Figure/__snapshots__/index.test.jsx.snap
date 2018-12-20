@@ -34,6 +34,7 @@ exports[`Figure should render an image with alt text 1`] = `
     <img
       alt="Pauline Clayton"
       className="c2"
+      height={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       width={640}
     />
@@ -122,6 +123,7 @@ exports[`Figure should render caption and copyright 1`] = `
     <img
       alt="Pauline Clayton"
       className="c2"
+      height={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       width={640}
     />
@@ -212,6 +214,7 @@ exports[`Figure should render caption text 1`] = `
     <img
       alt="Pauline Clayton"
       className="c2"
+      height={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       width={640}
     />
@@ -321,6 +324,7 @@ exports[`Figure should render caption text with inline link 1`] = `
     <img
       alt="Pauline Clayton"
       className="c2"
+      height={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       width={640}
     />
@@ -393,6 +397,7 @@ exports[`Figure should render copyright text 1`] = `
     <img
       alt="Pauline Clayton"
       className="c2"
+      height={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       width={640}
     />

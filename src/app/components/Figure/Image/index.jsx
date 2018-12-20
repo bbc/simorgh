@@ -23,11 +23,12 @@ Img.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
   srcset: string,
-  height: number.isRequired,
+  height: number,
   width: number.isRequired,
 };
 
 Img.defaultProps = {
+  height: null,
   srcset: null,
 };
 

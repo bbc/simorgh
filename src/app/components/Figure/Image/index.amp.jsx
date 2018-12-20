@@ -1,10 +1,10 @@
 import React from 'react';
 import { number, string } from 'prop-types';
 
-const AmpImg = ({ layout, alt, src, srcset, height, width }) => {
+const AmpImg = ({ alt, layout, src, srcset, height, width }) => {
   const props = {
-    layout,
     alt,
+    layout,
     src,
     height,
     width,
@@ -19,11 +19,11 @@ const AmpImg = ({ layout, alt, src, srcset, height, width }) => {
 
 AmpImg.propTypes = {
   alt: string.isRequired,
+  layout: string.isRequired,
   src: string.isRequired,
   srcset: string,
   height: number.isRequired,
   width: number.isRequired,
-  layout: string.isRequired,
 };
 
 AmpImg.defaultProps = {
