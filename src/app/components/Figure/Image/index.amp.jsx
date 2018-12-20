@@ -1,9 +1,10 @@
 import React from 'react';
 import { number, string } from 'prop-types';
 
-const AmpImg = ({ alt, layout, src, srcset, height, width }) => {
+const AmpImg = ({ alt, attribution, layout, src, srcset, height, width }) => {
   const props = {
     alt,
+    attribution,
     layout,
     src,
     height,
@@ -19,6 +20,7 @@ const AmpImg = ({ alt, layout, src, srcset, height, width }) => {
 
 AmpImg.propTypes = {
   alt: string.isRequired,
+  attribution: string.isRequired,
   layout: string.isRequired,
   src: string.isRequired,
   srcset: string,

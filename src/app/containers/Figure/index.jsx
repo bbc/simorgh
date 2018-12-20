@@ -25,6 +25,7 @@ const renderImage = (
   if (platform === 'amp') {
     return (
       <AmpImg
+        attribution={copyright}
         alt={alt}
         src={src}
         srcset={srcset}
