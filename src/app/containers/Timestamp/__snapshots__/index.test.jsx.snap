@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timestamp should handle an invalid timestamp 1`] = `null`;
+
+exports[`Timestamp should render correctly 1`] = `
+.c0 {
+  font-size: 0.875em;
+  line-height: 1rem;
+  color: #5A5A5A;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125em;
+  }
+}
+
+<div
+  className="c0"
+>
+  <time
+    dateTime="2018-10-19"
+  >
+    19 October 2018
+  </time>
+</div>
+`;
+
+exports[`Timestamp should render without a leading zero on the day 1`] = `
+.c0 {
+  font-size: 0.875em;
+  line-height: 1rem;
+  color: #5A5A5A;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125em;
+  }
+}
+
+<div
+  className="c0"
+>
+  <time
+    dateTime="2018-07-07"
+  >
+    7 July 2018
+  </time>
+</div>
+`;
