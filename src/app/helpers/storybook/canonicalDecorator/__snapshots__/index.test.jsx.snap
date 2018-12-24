@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CanonicalDecorator should render correctly 1`] = `
+<React.Fragment>
+  <GlobalStyleComponent />
+  <span>
+    Text here
+  </span>
+</React.Fragment>
+`;
