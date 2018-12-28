@@ -18,7 +18,6 @@ module.exports = (shell = {}) => {
 
   const baseConfig = {
     mode: shell.production ? 'production' : 'development',
-    entry: ['babel-polyfill'],
     output: {
       publicPath: FULL_HOST,
       libraryTarget: 'commonjs2',
@@ -52,8 +51,6 @@ module.exports = (shell = {}) => {
     });
     return merge(baseConfig, specialisedConfig);
   });
-
-  console.log(JSON.stringify(combinedConfigs));
 
   return combinedConfigs;
 

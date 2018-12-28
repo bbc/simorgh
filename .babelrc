@@ -33,6 +33,15 @@
     ],
     "babel-plugin-syntax-dynamic-import", // allows `await import()`
     "babel-plugin-dynamic-import-node", // allows `return import()`
-    "transform-object-rest-spread" // allows ...spread notation
+    "transform-object-rest-spread", // allows ...spread notation
+    [
+      // polyfills code without polluting globals
+      // https://stackoverflow.com/a/36821986
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
   ]
 }
