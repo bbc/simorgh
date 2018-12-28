@@ -6,14 +6,14 @@
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/ && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
     "bbcA11y": "bbc-a11y",
-    "build": "razzle build",
+    "build": "webpack build",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dataValidate": "node src/app/dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
-    "dev": "razzle start",
+    "dev": "webpack start",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c85pqyj5m2ko --output-path=./reports/report.html --view",
@@ -33,7 +33,7 @@
     "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:unit": "razzle test --env=jsdom --coverage",
+    "test:unit": "jest --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
   },
   "husky": {
@@ -84,7 +84,6 @@
     "offline-plugin": "^5.0.5",
     "path-to-regexp": "^2.4.0",
     "prop-types": "^15.6.2",
-    "razzle": "2.4.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
