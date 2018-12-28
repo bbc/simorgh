@@ -65,7 +65,7 @@ describe('getInitialData', () => {
   describe('using test base path', () => {
     const BASE_PATH = 'https://www.test.com';
     beforeEach(() => {
-      process.env.RAZZLE_BASE_PATH = BASE_PATH;
+      process.env.BASE_URL = BASE_PATH;
     });
     it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
       callGetInitialData();

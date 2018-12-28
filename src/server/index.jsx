@@ -44,8 +44,8 @@ try {
 
 const getPublicDirectory = () =>
   process.env.NODE_ENV === 'production'
-    ? process.env.RAZZLE_PUBLIC_DIR
-    : process.env.RAZZLE_PUBLIC_DIR_DEV;
+    ? process.env.PUBLIC_DIR
+    : process.env.PUBLIC_DIR_DEV;
 
 const publicDirectory = getPublicDirectory();
 const dataFolderToRender =

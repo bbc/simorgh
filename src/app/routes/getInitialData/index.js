@@ -4,9 +4,7 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    const url = `${
-      process.env.RAZZLE_BASE_PATH
-    }/${service}/articles/${id}.json`;
+    const url = `${process.env.BASE_URL}/${service}/articles/${id}.json`;
 
     const response = await fetch(url);
 

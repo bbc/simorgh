@@ -6,6 +6,7 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const merge = require('webpack-merge');
+require('dotenv').config();
 
 // `shell` parameter populated via CLI, e.g. webpack --env.production  --env.platform=web
 module.exports = (shell = {}) => {
