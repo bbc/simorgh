@@ -20,7 +20,8 @@
           ]
         }
       }
-    ]
+    ],
+    "babel-preset-react" // transform JSX to JS
   ],
   "plugins": [
     [
@@ -29,6 +30,8 @@
         "ssr": true,
         "fileName": false
       }
-    ]
+    ],
+    "babel-plugin-syntax-dynamic-import", // allows `await import()`
+    "babel-plugin-dynamic-import-node" // allows `return import()`
   ]
 }

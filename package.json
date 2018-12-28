@@ -33,7 +33,7 @@
     "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:unit": "jest --env=jsdom --coverage",
+    "test:unit": "export RAZZLE_PUBLIC_DIR_DEV='public' && jest --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
   },
   "husky": {
@@ -99,6 +99,9 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-react": "^6.24.1",
     "bbc-a11y": "^2.2.5",
     "chalk": "^2.4.1",
     "chrome-launcher": "^0.10.5",
@@ -112,6 +115,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.1.3",
+    "jest": "^23.6.0",
     "jest-fetch-mock": "^2.0.0",
     "jest-styled-components": "^6.2.2",
     "lighthouse": "^3.2.1",
