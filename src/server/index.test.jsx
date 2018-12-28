@@ -16,7 +16,7 @@ const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
 };
 
 jest.mock(
-  process.env.RAZZLE_ASSETS_MANIFEST,
+  process.env.ASSETS_MANIFEST,
   () => ({
     one: {
       js: 'one.js',
@@ -127,7 +127,7 @@ describe('Server', () => {
   describe('no assets manifest', () => {
     it('should console log an error', async () => {
       jest.resetModules();
-      jest.mock(process.env.RAZZLE_ASSETS_MANIFEST, () => null, {
+      jest.mock(process.env.ASSETS_MANIFEST, () => null, {
         virtual: true,
       });
       global.console.log = jest.fn();
@@ -135,8 +135,8 @@ describe('Server', () => {
       await import('./index');
 
       expect(global.console.log).toHaveBeenCalledWith(
-        `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
-          process.env.RAZZLE_ASSETS_MANIFEST
+        `Error parsing assets manifest. ASSETS_MANIFEST = ${
+          process.env.ASSETS_MANIFEST
         }`,
       );
     });

@@ -16,12 +16,12 @@ import { getStyleTag } from './styles';
 
 import Document from '../app/components/Document';
 /*
-  Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
+  Safely imports the assets manifest file that the 'ASSETS_MANIFEST' does not exist.
   Maps through the manifest file and extracts the JavaScript URLs.
 */
 const assets = [];
 try {
-  const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
+  const assetManifest = require(process.env.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
   const assetsManifestKeys = Object.keys(assetManifest);
 
   /*
@@ -35,8 +35,8 @@ try {
 } catch (error) {
   /* eslint-disable no-console */
   console.log(
-    `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
-      process.env.RAZZLE_ASSETS_MANIFEST
+    `Error parsing assets manifest. ASSETS_MANIFEST = ${
+      process.env.ASSETS_MANIFEST
     }`,
   );
   /* eslint-enable no-console */
