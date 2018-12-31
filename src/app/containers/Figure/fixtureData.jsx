@@ -4,8 +4,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
+const imageHeight = 360;
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
+const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = blockContainingText('caption', 'This is a caption');
 // The following block is quite a large and ugly thing to keep in this file, but refactoring model/blocks.js to better allow for generating fragmented data is not in scope of the current task.
@@ -70,11 +72,13 @@ const serviceContextStubNews = {
 const generateFixtureData = (caption, copyright) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <FigureContainer
-      src={imageSrc}
       alt={imageAlt}
-      ratio={imageRatio}
       captionBlock={caption}
       copyright={copyright}
+      height={imageHeight}
+      ratio={imageRatio}
+      src={imageSrc}
+      width={imageWidth}
     />
   </ServiceContext.Provider>
 );
