@@ -1,6 +1,6 @@
 import React from 'react';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import Timestamp from './index';
+import Timestamp from '.';
 
 const timestamp = 1539969006000; // 19 October 2018
 const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
