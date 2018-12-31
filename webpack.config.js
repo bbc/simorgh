@@ -7,13 +7,12 @@ const merge = require('webpack-merge');
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
-  const IS_DEV = !IS_PROD;
   const IS_CI = process.env.CI;
   const START_SERVER = shell.startServer;
 
   const baseConfig = {
-    mode: IS_DEV ? 'development' : 'production',
-    devtool: IS_DEV ? 'cheap-eval-source-map' : 'source-map',
+    mode: IS_PROD ? 'production' : 'development',
+    devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     output: {
       publicPath: process.env.BASE_URL,
     },
@@ -37,7 +36,7 @@ module.exports = (shell = {}) => {
         },
       ],
     },
-    // This is to override bundle performance test
+    // This is to override bundle performance test. @TODO explain better
     performance: IS_CI
       ? {
           maxAssetSize: 245760, // 240kb - individual bundles
@@ -50,7 +49,7 @@ module.exports = (shell = {}) => {
   const combinedConfigs = ['client', 'server'].map(app => {
     const specialisedConfig = require(`./webpack.config.${app}.js`)({
       resolvePath,
-      IS_DEV,
+      IS_PROD,
       IS_CI,
       START_SERVER,
     });

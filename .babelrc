@@ -27,8 +27,8 @@
     [
       "babel-plugin-styled-components",
       {
-        "ssr": true,
-        "fileName": false
+        "ssr": true, // avoid checksum mismatches (different class generation between client & server)
+        "fileName": false // prevent filename forming part of class name (duplication)
       }
     ],
     "babel-plugin-syntax-dynamic-import", // allows `await import()`
