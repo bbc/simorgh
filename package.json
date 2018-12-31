@@ -32,7 +32,7 @@
     "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage",
+    "test:unit": "jest --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u"
   },
   "husky": {
