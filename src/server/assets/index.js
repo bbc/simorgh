@@ -19,7 +19,9 @@ const getAssetsArray = () => {
       */
     for (let i = assetsManifestKeys.length - 1; i >= 0; i -= 1) {
       const key = assetsManifestKeys[i];
-      assets.push(assetManifest[key].js);
+      if (key.length > 0) {
+        assets.push(assetManifest[key].js);
+      }
     }
   } catch (error) {
     /* eslint-disable no-console */

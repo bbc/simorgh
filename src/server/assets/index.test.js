@@ -24,4 +24,14 @@ describe('getAssetsArray', () => {
       expect(getAssetsArray()).toEqual(['one.js']);
     });
   });
+
+  describe('assets manifest corrupted', () => {
+    it('should return only assets which have a key', async () => {
+      process.env.ASSETS_MANIFEST_PATH = path.resolve(
+        __dirname,
+        'fixtureMissingKey.json',
+      );
+      expect(getAssetsArray()).toEqual(['foo.js']);
+    });
+  });
 });
