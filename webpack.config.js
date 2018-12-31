@@ -3,15 +3,16 @@ const path = require('path');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 const merge = require('webpack-merge');
-require('dotenv').config(); // populate process.env from .env file
 
 // `shell` parameter populated via CLI, e.g. webpack --env.production  --env.platform=web
 module.exports = (shell = {}) => {
   const IS_DEV = !shell.production;
   const IS_CI = process.env.CI;
+  const START_SERVER = shell.startServer;
 
   const baseConfig = {
     mode: shell.production ? 'production' : 'development',
+    devtool: shell.production ? 'source-map' : 'cheap-eval-source-map',
     output: {
       publicPath: process.env.BASE_URL,
       libraryTarget: 'commonjs2',
@@ -51,6 +52,7 @@ module.exports = (shell = {}) => {
       resolvePath,
       IS_DEV,
       IS_CI,
+      START_SERVER,
     });
     return merge(baseConfig, specialisedConfig);
   });
