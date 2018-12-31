@@ -15,7 +15,6 @@ module.exports = (shell = {}) => {
     devtool: shell.production ? 'source-map' : 'cheap-eval-source-map',
     output: {
       publicPath: process.env.BASE_URL,
-      libraryTarget: 'commonjs2',
     },
     resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
     module: {

@@ -17,7 +17,7 @@
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c85pqyj5m2ko --output-path=./reports/report.html --view",
     "speculate": "speculate",
-    "start": "export $(cat .env | xargs); node build/server.js",
+    "start": "export $(cat .env | xargs); NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "npm run test:lint && npm run dataValidate && npm run test:unit",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
@@ -95,6 +95,7 @@
   "devDependencies": {
     "@storybook/react": "4.0.0-alpha.8",
     "amphtml-validator": "^1.0.23",
+    "assets-webpack-plugin": "^3.9.7",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^7.1.5",

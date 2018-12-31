@@ -1,3 +1,5 @@
+const AssetsPlugin = require('assets-webpack-plugin');
+
 module.exports = ({ resolvePath, IS_DEV }) => {
   const clientConfig = {
     target: 'web',
@@ -20,6 +22,12 @@ module.exports = ({ resolvePath, IS_DEV }) => {
         },
       },
     },
+    plugins: [
+      new AssetsPlugin({
+        path: resolvePath('build'),
+        filename: 'assets.json',
+      }),
+    ],
   };
   if (!IS_DEV) {
     const BrotliPlugin = require('brotli-webpack-plugin');
@@ -27,7 +35,7 @@ module.exports = ({ resolvePath, IS_DEV }) => {
     const OfflinePlugin = require('offline-plugin');
     const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
 
-    clientConfig.plugins = [
+    clientConfig.plugins.push(
       new OfflinePlugin({
         AppCache: false, // because it's deprecated
         appShell: '/news/articles/',
@@ -82,7 +90,7 @@ module.exports = ({ resolvePath, IS_DEV }) => {
         reportFilename: '../../reports/webpackBundleReport.html',
         statsFilename: '../../reports/webpackBundleReport.json',
       }),
-    ];
+    );
   }
   return clientConfig;
 };

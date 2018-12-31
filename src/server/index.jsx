@@ -15,13 +15,17 @@ import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 
 import Document from '../app/components/Document';
+
 /*
   Safely imports the assets manifest file that the 'ASSETS_MANIFEST' does not exist.
   Maps through the manifest file and extracts the JavaScript URLs.
 */
 const assets = [];
+const assetsManifestEnv = 'ASSETS_MANIFEST_PATH';
 try {
-  const assetManifest = require(process.env.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
+  const assetManifest = JSON.parse(
+    fs.readFileSync(process.env[assetsManifestEnv]),
+  );
   const assetsManifestKeys = Object.keys(assetManifest);
 
   /*
@@ -35,8 +39,8 @@ try {
 } catch (error) {
   /* eslint-disable no-console */
   console.log(
-    `Error parsing assets manifest. ASSETS_MANIFEST = ${
-      process.env.ASSETS_MANIFEST
+    `Error parsing assets manifest. ${assetsManifestEnv} = ${
+      process.env[assetsManifestEnv]
     }`,
   );
   /* eslint-enable no-console */
