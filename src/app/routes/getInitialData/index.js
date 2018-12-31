@@ -1,13 +1,13 @@
 import 'isomorphic-fetch';
 
 const getBaseUrl = () => {
-  if (typeof window === 'undefined') {
+  if (process && process.env && process.env.BASE_URL) {
     // we are on the server
     return process.env.BASE_URL;
   }
   // we are on the client
   const { protocol, hostname, port } = window.location;
-  return `${protocol}//${hostname}:${port}`;
+  return `${protocol}//${hostname}${port.length > 0 ? `${port}:` : ''}`;
 };
 
 const getInitialData = async ({ match }) => {
