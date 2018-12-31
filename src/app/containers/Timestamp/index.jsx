@@ -37,10 +37,9 @@ const TimestampContainer = ({ timestamp }) => {
   }
 
   return (
-    <Timestamp
-      datetime={formatDateTime(dateObj)}
-      datetimeText={formatTimestamp(dateObj)}
-    />
+    <Timestamp datetime={formatDateTime(dateObj)}>
+      {formatTimestamp(dateObj)}
+    </Timestamp>
   );
 };
 
