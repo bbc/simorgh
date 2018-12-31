@@ -68,7 +68,7 @@ describe('Server', () => {
 
   describe('/*', () => {
     describe('Successful render', () => {
-      beforeEach(async () => {
+      beforeEach(() => {
         loadInitialData.mockImplementationOnce(() =>
           Promise.resolve({ some: 'data' }),
         );
