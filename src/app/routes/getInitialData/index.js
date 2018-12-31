@@ -7,7 +7,7 @@ const getBaseUrl = () => {
   }
   // we are on the client
   const { protocol, hostname, port } = window.location;
-  return `${protocol}//${hostname}${port.length > 0 ? `${port}:` : ''}`;
+  return `${protocol}//${hostname}${port.length > 0 ? `:${port}` : ''}`;
 };
 
 const getInitialData = async ({ match }) => {
