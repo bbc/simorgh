@@ -4,15 +4,16 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 const merge = require('webpack-merge');
 
-// `shell` parameter populated via CLI, e.g. webpack --env.production  --env.platform=web
+// `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const IS_DEV = !shell.production;
+  const IS_PROD = process.env.NODE_ENV === 'production';
+  const IS_DEV = !IS_PROD;
   const IS_CI = process.env.CI;
   const START_SERVER = shell.startServer;
 
   const baseConfig = {
-    mode: shell.production ? 'production' : 'development',
-    devtool: shell.production ? 'source-map' : 'cheap-eval-source-map',
+    mode: IS_DEV ? 'development' : 'production',
+    devtool: IS_DEV ? 'cheap-eval-source-map' : 'source-map',
     output: {
       publicPath: process.env.BASE_URL,
     },
