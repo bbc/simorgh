@@ -6,7 +6,7 @@ exports[`FooterContainer should render correctly 1`] = `
 >
   <BrandContainer />
   <SitewideLinks
-    copyrightText="© 2019 BBC. The BBC is not responsible for the content of external sites. "
+    copyrightText="© 3000 BBC. The BBC is not responsible for the content of external sites. "
     externalLink={
       Object {
         "href": "https://www.bbc.co.uk/help/web/links/",
