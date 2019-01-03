@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { ampScript, ampNoscript } from '../../lib/constants/styles';
+import {
+  AMP_SCRIPT,
+  AMP_NO_SCRIPT,
+} from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from './ResourceHints';
 
 /* eslint-disable react/prop-types */
@@ -37,9 +40,9 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         {styleTags}
         {data.isAmp && (
           <Fragment>
-            <style amp-boilerplate="">{ampScript}</style>
+            <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
-              <style amp-boilerplate="">{ampNoscript}</style>
+              <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
             </noscript>
           </Fragment>
         )}
