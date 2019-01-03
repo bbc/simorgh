@@ -38,15 +38,16 @@ const links = [
   },
 ];
 
-const currentYear = new Date().getFullYear();
-const copyrightText = `\u00A9 ${currentYear} BBC. The BBC is not responsible for the content of external sites. `;
+const currentYear = () => new Date().getFullYear();
+const copyrightText = () =>
+  `\u00A9 ${currentYear()} BBC. The BBC is not responsible for the content of external sites. `;
 
 const FooterContainer = () => (
   <footer role="contentinfo">
     <BrandContainer />
     <SitewideLinks
       links={links}
-      copyrightText={copyrightText}
+      copyrightText={copyrightText()}
       externalLink={externalLink}
     />
   </footer>
