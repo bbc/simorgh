@@ -4,7 +4,6 @@ import path from 'path';
 global.fetch = fetch;
 process.env.BASE_URL = 'http://localhost:7080';
 process.env.PUBLIC_DIR = 'build/public';
-process.env.PUBLIC_DIR_DEV = 'public';
 process.env.ASSETS_MANIFEST_PATH = path.resolve(
   __dirname,
   '../../../server/assets/fixture.json',

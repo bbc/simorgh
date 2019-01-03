@@ -19,12 +19,7 @@ import Document from '../app/components/Document';
 
 const assets = getAssetsArray();
 
-const getPublicDirectory = () =>
-  process.env.NODE_ENV === 'production'
-    ? process.env.PUBLIC_DIR
-    : process.env.PUBLIC_DIR_DEV;
-
-const publicDirectory = getPublicDirectory();
+const publicDirectory = process.env.PUBLIC_DIR;
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
