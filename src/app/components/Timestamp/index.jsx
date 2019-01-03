@@ -9,6 +9,7 @@ import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 const StyledTimestamp = styled.time`
   ${GEL_BREVIER};
   color: ${C_RHINO};
+  display: block;
   font-family: ${FF_NEWS_SANS_REG};
   padding-bottom: ${GEL_SPACING_DBL};
 `;

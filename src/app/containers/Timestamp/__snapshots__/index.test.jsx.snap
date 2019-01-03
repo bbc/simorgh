@@ -7,6 +7,7 @@ exports[`Timestamp should render correctly 1`] = `
   font-size: 0.875em;
   line-height: 1rem;
   color: #5A5A5A;
+  display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
 }
@@ -36,6 +37,7 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   font-size: 0.875em;
   line-height: 1rem;
   color: #5A5A5A;
+  display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
 }
