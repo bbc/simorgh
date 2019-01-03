@@ -1,4 +1,4 @@
-import { BBCBlocksSVG } from '../../src/app/lib/constants/styles';
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 
 export const getElement = element => cy.get(element);
 
@@ -66,7 +66,7 @@ export const placeholderImageLoaded = placeholderImage => {
   shouldContainStyles(
     placeholderImage,
     'background-image',
-    `url("data:image/svg+xml;base64,${BBCBlocksSVG}")`,
+    `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
   );
 };
 

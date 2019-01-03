@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GEL_SPACING_DBL } from '../../lib/constants/styles';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 const Figure = styled.figure`
   margin: 0;
