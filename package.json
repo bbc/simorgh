@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "index.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/ && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
     "bbcA11y": "bbc-a11y",
     "build": "razzle build",
     "cypress": "cypress run",
@@ -58,6 +58,8 @@
   },
   "homepage": "https://github.com/bbc-news/simorgh#readme",
   "dependencies": {
+    "@bbc/gel-foundations": "^0.1.3",
+    "@bbc/psammead-assets": "^0.1.3",
     "@bbc/psammead-brand": "^0.1.1",
     "@bbc/psammead-caption": "^0.1.0",
     "@bbc/psammead-copyright": "^0.2.0",
@@ -68,7 +70,7 @@
     "@bbc/psammead-inline-link": "^0.1.0",
     "@bbc/psammead-paragraph": "^0.1.3",
     "@bbc/psammead-sitewide-links": "^0.1.0",
-    "@bbc/psammead-styles": "^0.1.1",
+    "@bbc/psammead-styles": "^0.1.5",
     "@bbc/psammead-visually-hidden-text": "^0.1.2",
     "babel-plugin-styled-components": "^1.7.1",
     "babel-polyfill": "^6.26.0",
