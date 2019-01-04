@@ -2,6 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import Timestamp from '.';
 
-storiesOf('Timestamp', module).add('default', () => (
-  <Timestamp datetime="1530947227000">7 July 2018</Timestamp>
+storiesOf('TimestampContainer', module).add('default', () => (
+  <Timestamp timestamp={1530947227000} />
 ));
