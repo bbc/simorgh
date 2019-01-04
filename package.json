@@ -5,7 +5,7 @@
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
     "bbcA11y": "bbc-a11y",
-    "build": "export $(cat .env | xargs); NODE_ENV=production webpack --color --hide-modules",
+    "build": "export $(cat .env | xargs); NODE_ENV=production webpack --color",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
