@@ -1,12 +1,31 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 
-module.exports = ({ resolvePath, IS_PROD }) => {
+module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
+  const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
-    entry: ['./src/client'],
+    entry: START_DEV_SERVER
+      ? [
+          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
+          'webpack/hot/only-dev-server',
+          './src/client',
+        ]
+      : ['./src/client'],
+    devServer: {
+      host: 'localhost',
+      port: webpackDevServerPort,
+      historyApiFallback: true,
+      hot: true,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      disableHostCheck: true,
+    },
     output: {
       path: resolvePath('build/public'),
       filename: 'static/js/[name].[hash:8].js',
+      // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
+      publicPath: IS_PROD ? `/` : `http://localhost:${webpackDevServerPort}/`,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
@@ -32,6 +51,12 @@ module.exports = ({ resolvePath, IS_PROD }) => {
       }),
     ],
   };
+
+  if (START_DEV_SERVER) {
+    const webpack = require('webpack');
+    clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
+
   if (IS_PROD) {
     const BrotliPlugin = require('brotli-webpack-plugin');
     const CompressionPlugin = require('compression-webpack-plugin');
