@@ -6,7 +6,7 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
     entry: IS_PROD
       ? ['./src/client']
       : [
-          `webpack-dev-server/client?${process.env.BASE_URL}`,
+          `webpack-dev-server/client?http://localhost:7081`,
           'webpack/hot/only-dev-server',
           './src/client',
         ],
