@@ -11,11 +11,13 @@ module.exports = (shell = {}) => {
   const START_DEV_SERVER = !IS_PROD;
   const CONFIG_FILE = shell.config;
 
+  const url = 'http://localhost:7081'; // process.env.BASE_URL @TODO we need different port numbers for dev server
+
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     output: {
-      publicPath: process.env.BASE_URL,
+      publicPath: IS_PROD ? `/` : `${url}/`, // needed for dev server: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
     },
     resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
     module: {

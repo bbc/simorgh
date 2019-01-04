@@ -12,7 +12,7 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
         ],
     devServer: {
       host: 'localhost',
-      port: 7080,
+      port: 7081,
       historyApiFallback: true,
       hot: true,
       headers: {
@@ -21,7 +21,6 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
       disableHostCheck: true,
     },
     output: {
-      publicPath: IS_PROD ? '/' : `${process.env.BASE_URL}/`, // needed for dev server: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       path: resolvePath('build/public'),
       filename: 'static/js/[name].[hash:8].js',
     },
