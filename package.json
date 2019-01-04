@@ -32,7 +32,7 @@
     "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:unit": "jest --env=jsdom --coverage",
+    "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server'"
