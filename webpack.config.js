@@ -1,14 +1,15 @@
+const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
-const merge = require('webpack-merge');
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
-  const START_SERVER = shell.startServer;
+  const START_DEV_SERVER = !IS_PROD;
+  const CONFIG_FILE = shell.config;
 
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
@@ -45,16 +46,21 @@ module.exports = (shell = {}) => {
       : undefined,
   };
 
+  const configs = CONFIG_FILE ? [CONFIG_FILE] : ['client', 'server']; // compile both unless otherwise specified
+
+  console.log(`COMPILING ${configs}..........`);
+
   // merge client/server Webpack configs into the base config
-  const combinedConfigs = ['client', 'server'].map(app => {
+  const combinedConfigs = configs.map(app => {
     const specialisedConfig = require(`./webpack.config.${app}.js`)({
       resolvePath,
       IS_PROD,
       IS_CI,
-      START_SERVER,
+      START_DEV_SERVER,
     });
     return merge(baseConfig, specialisedConfig);
   });
 
-  return combinedConfigs;
+  // if only compiling one file, then return obj - not array
+  return combinedConfigs.length === 1 ? combinedConfigs[0] : combinedConfigs;
 };

@@ -1,10 +1,27 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 
-module.exports = ({ resolvePath, IS_PROD }) => {
+module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
   const clientConfig = {
     target: 'web', // compile for browser environment
-    entry: ['./src/client'],
+    entry: IS_PROD
+      ? ['./src/client']
+      : [
+          `webpack-dev-server/client?${process.env.BASE_URL}`,
+          'webpack/hot/only-dev-server',
+          './src/client',
+        ],
+    devServer: {
+      host: 'localhost',
+      port: 7080,
+      historyApiFallback: true,
+      hot: true,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      disableHostCheck: true,
+    },
     output: {
+      publicPath: IS_PROD ? '/' : `${process.env.BASE_URL}/`, // needed for dev server: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       path: resolvePath('build/public'),
       filename: 'static/js/[name].[hash:8].js',
     },
@@ -32,6 +49,12 @@ module.exports = ({ resolvePath, IS_PROD }) => {
       }),
     ],
   };
+
+  if (START_DEV_SERVER) {
+    const webpack = require('webpack');
+    clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
+
   if (IS_PROD) {
     const BrotliPlugin = require('brotli-webpack-plugin');
     const CompressionPlugin = require('compression-webpack-plugin');
