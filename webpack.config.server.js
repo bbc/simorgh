@@ -10,6 +10,10 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
       filename: 'server.js',
     },
     externals: [
+      /**
+       * Prevents `node_modules` from being bundled into the server.js
+       * And therefore stops `node_modules` being watched for file changes
+       */
       nodeExternals({
         whitelist: ['webpack/hot/poll?100'],
       }),
