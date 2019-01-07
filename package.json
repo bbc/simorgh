@@ -5,7 +5,7 @@
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
     "bbcA11y": "bbc-a11y",
-    "build": "export $(cat .env | xargs); NODE_ENV=production webpack --color",
+    "build": "export $(cat .env | xargs); NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
@@ -35,7 +35,7 @@
     "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage --colors",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server' --color --hide-modules"
+    "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server'"
   },
   "husky": {
     "hooks": {
