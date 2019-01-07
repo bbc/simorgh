@@ -10,11 +10,31 @@ module.exports = (shell = {}) => {
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
   const CONFIG_FILE = shell.config;
+  const stats = IS_PROD
+    ? {}
+    : {
+        // reduce verbosity of console output
+        assets: false,
+        children: false,
+        chunks: false,
+        hash: false,
+        modules: false,
+        publicPath: false,
+        timings: false,
+        version: false,
+        warnings: true,
+        colors: true, // color the console output in terminal
+        entrypoints: false,
+      };
 
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    devServer: {
+      stats,
+    },
+    stats,
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
