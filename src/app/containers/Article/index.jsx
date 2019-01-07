@@ -11,7 +11,7 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import Timestamp from '../../components/Timestamp';
+import Timestamp from '../Timestamp';
 import {
   layoutGridWrapper,
   layoutGridItemConstrained,
