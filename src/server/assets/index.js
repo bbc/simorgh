@@ -2,7 +2,7 @@ import fs from 'fs';
 
 const getAssetsArray = () => {
   const assets = [];
-  const assetsManifestEnv = 'ASSETS_MANIFEST_PATH';
+  const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
   try {
     const assetManifest = JSON.parse(
       fs.readFileSync(process.env[assetsManifestEnv]),

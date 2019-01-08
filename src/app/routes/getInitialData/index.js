@@ -1,9 +1,9 @@
 import 'isomorphic-fetch';
 
 const getBaseUrl = () => {
-  if (process && process.env && process.env.BASE_URL) {
+  if (process && process.env && process.env.SIMORGH_BASE_URL) {
     // we are on the server
-    return process.env.BASE_URL;
+    return process.env.SIMORGH_BASE_URL;
   }
   // we are on the client
   const { protocol, hostname, port } = window.location;
