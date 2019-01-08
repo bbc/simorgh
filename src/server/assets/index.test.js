@@ -8,7 +8,7 @@ describe('getAssetsArray', () => {
       global.console.log = jest.fn();
       getAssetsArray();
       expect(global.console.log).toHaveBeenCalledWith(
-        `Error parsing assets manifest. ASSETS_MANIFEST_PATH = ${
+        `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
           process.env.SIMORGH_ASSETS_MANIFEST_PATH
         }`,
       );
