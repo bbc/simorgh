@@ -94,6 +94,7 @@
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.14.0",
     "isomorphic-fetch": "^2.2.1",
+    "merge": "1.2.0",
     "nanoid": "^2.0.0",
     "offline-plugin": "^5.0.5",
     "path-to-regexp": "^2.4.0",
