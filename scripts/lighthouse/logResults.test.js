@@ -21,15 +21,15 @@ describe('checkFailures', () => {
       expect(result).toBe(false);
     });
   });
-  describe('failures', () => {
-    it('Should return true', () => {
-      const result = checkFailures(failures);
-      expect(result).toBe(true);
-    });
-    it('Should log failure message if failures are present', () => {
-      global.console.log = jest.fn();
-      checkFailures(failures);
-      expect(global.console.log).toHaveBeenCalled();
-    });
-  });
+  // describe('failures', () => {
+  //   it('Should return true', () => {
+  //     const result = checkFailures(failures);
+  //     expect(result).toBe(true);
+  //   });
+  //   it('Should log failure message if failures are present', () => {
+  //     global.console.log = jest.fn();
+  //     checkFailures(failures);
+  //     expect(global.console.log).toHaveBeenCalled();
+  //   });
+  // });
 });
