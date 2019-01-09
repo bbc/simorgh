@@ -1,4 +1,3 @@
-const StartServerPlugin = require('start-server-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
@@ -22,6 +21,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   };
 
   if (START_DEV_SERVER) {
+    const StartServerPlugin = require('start-server-webpack-plugin');
     const webpack = require('webpack');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
