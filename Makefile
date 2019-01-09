@@ -4,6 +4,7 @@ none:
 install:
 	npm --version; node --version;
 	cd ${APP_DIRECTORY}; npm ci;
+	cd ${APP_DIRECTORY}; npm run audit:ci;
 
 installProd: 
 	cd ${APP_DIRECTORY}; rm -rf node_modules

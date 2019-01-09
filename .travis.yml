@@ -15,6 +15,7 @@ jobs:
     - stage: test
       install: npm ci
       script:
+        - npm run audit:ci
         - npm run build
         - xvfb-run npm run test:prod:ci
         - xvfb-run npm run test:lighthouse:ci
