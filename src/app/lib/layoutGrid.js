@@ -4,14 +4,16 @@ import {
   GEL_GUTTER_BELOW_600PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_GUTTER_ABOVE_600PX,
-  group2ScreenWidthMin,
-  group2ScreenWidthMax,
-  group3ScreenWidthMin,
-  group3ScreenWidthMax,
-  group4ScreenWidthMin,
-  group4ScreenWidthMax,
-  group5ScreenWidthMin,
-} from './constants/styles';
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 
 const group4ColWidth = `6.75rem`;
 /* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
@@ -20,10 +22,10 @@ const group5ColWidth = `6.9rem`;
 /* (1280px - (2*16px margins + 9*16px gutters)  / 10 columns = 110.4px = 6.9rem single column width */
 
 export const layoutWrapperWithoutGrid = css`
-  @media (max-width: ${group2ScreenWidthMin}) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
-  @media (min-width: ${group2ScreenWidthMin}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
 `;
@@ -39,40 +41,40 @@ export const layoutWrapperWithoutGrid = css`
 
 export const layoutGridWrapper = css`
   display: grid;
-  @media (max-width: ${group2ScreenWidthMax}) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-gap: ${GEL_GUTTER_BELOW_600PX};
   }
-  @media (min-width: ${group3ScreenWidthMin}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-gap: ${GEL_GUTTER_ABOVE_600PX};
   }
-  @media (max-width: ${group2ScreenWidthMin}) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
-  @media (min-width: ${group2ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
-  @media (max-width: ${group3ScreenWidthMax}) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(6, 1fr);
   }
-  @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-template-columns: 1fr repeat(8, minmax(0, ${group4ColWidth})) 1fr;
   }
-  @media (min-width: ${group5ScreenWidthMin}) {
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-template-columns: 1fr repeat(10, minmax(0, ${group5ColWidth})) 1fr;
   }
 `;
 
 export const layoutGridItemConstrained = css`
-  @media (max-width: ${group3ScreenWidthMin}) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / -1;
   }
-  @media (min-width: ${group3ScreenWidthMin}) and (max-width: ${group3ScreenWidthMax}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: 2 / -2;
   }
-  @media (min-width: ${group4ScreenWidthMin}) and (max-width: ${group4ScreenWidthMax}) {
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / -3;
   }
-  @media (min-width: ${group5ScreenWidthMin}) {
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 4 / -4;
   }
 `;

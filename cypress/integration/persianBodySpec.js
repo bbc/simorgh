@@ -45,6 +45,6 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a title', () => {
-    renderedTitle('پهپادی که برایتان قهوه می‌آورد – BBC News فارسی');
+    renderedTitle('پهپادی که برایتان قهوه می‌آورد - BBC News فارسی');
   });
 });

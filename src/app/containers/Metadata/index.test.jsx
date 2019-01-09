@@ -113,7 +113,7 @@ const articleMetadataBuilder = (
       },
     ],
     metaTags: metaTagsBuilder(serviceConfig, description, seoTitle, id, things),
-    title: [seoTitle, ' – ', serviceConfig.brandName],
+    title: [seoTitle, ' - ', serviceConfig.brandName],
   };
 };
 
