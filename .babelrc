@@ -21,14 +21,26 @@
         }
       }
     ],
-    "razzle/babel"
+    "babel-preset-react" // transform JSX to JS
   ],
   "plugins": [
     [
       "babel-plugin-styled-components",
       {
-        "ssr": true,
-        "fileName": false
+        "ssr": true, // avoid checksum mismatches (different class generation between client & server)
+        "fileName": false // prevent filename forming part of class name (duplication)
+      }
+    ],
+    "babel-plugin-syntax-dynamic-import", // allows `await import()`
+    "babel-plugin-dynamic-import-node", // allows `return import()`
+    "transform-object-rest-spread", // allows ...spread notation
+    [
+      // polyfills code without polluting globals
+      // https://stackoverflow.com/a/36821986
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
       }
     ]
   ]
