@@ -13,41 +13,13 @@ import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
+import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
-/*
-  Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
-  Maps through the manifest file and extracts the JavaScript URLs.
-*/
-const assets = [];
-try {
-  const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
-  const assetsManifestKeys = Object.keys(assetManifest);
 
-  /*
-    Loops through the asset manifest, extracts the JS URL out of each entry and injects them into the assets array, which is passed to render.
-    Loops backwards as the client bundle is output first, but needs to be last
-  */
-  for (let i = assetsManifestKeys.length - 1; i >= 0; i -= 1) {
-    const key = assetsManifestKeys[i];
-    assets.push(assetManifest[key].js);
-  }
-} catch (error) {
-  /* eslint-disable no-console */
-  console.log(
-    `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
-      process.env.RAZZLE_ASSETS_MANIFEST
-    }`,
-  );
-  /* eslint-enable no-console */
-}
+const assets = getAssetsArray();
 
-const getPublicDirectory = () =>
-  process.env.NODE_ENV === 'production'
-    ? process.env.RAZZLE_PUBLIC_DIR
-    : process.env.RAZZLE_PUBLIC_DIR_DEV;
-
-const publicDirectory = getPublicDirectory();
+const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
