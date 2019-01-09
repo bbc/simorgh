@@ -1,6 +1,6 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 
-module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
+module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
@@ -61,7 +61,6 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
     const BrotliPlugin = require('brotli-webpack-plugin');
     const CompressionPlugin = require('compression-webpack-plugin');
     const OfflinePlugin = require('offline-plugin');
-    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
 
     clientConfig.plugins.push(
       new OfflinePlugin({
@@ -118,10 +117,15 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER }) => {
         threshold: 10240,
         minRatio: 0.8,
       }),
-      /**
-       * Visualize size of webpack output files with an interactive zoomable treemap.
-       * https://github.com/webpack-contrib/webpack-bundle-analyzer
-       */
+    );
+  }
+  if (!IS_CI && IS_PROD) {
+    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
+    /**
+     * Visualize size of webpack output files with an interactive zoomable treemap.
+     * https://github.com/webpack-contrib/webpack-bundle-analyzer
+     */
+    clientConfig.plugins.push(
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         defaultSizes: 'gzip',
