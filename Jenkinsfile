@@ -76,8 +76,8 @@ pipeline {
       }
       steps {
         sh 'make install'
-        withEnv(['LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"', 'CHROME_PATH="$(pwd)/chrome-linux/chrome"']) {
-          sh 'echo pwd'
+        withEnv(['LIGHTHOUSE_CHROMIUM_PATH=`$(pwd)/chrome-linux/chrome`', 'CHROME_PATH=`$(pwd)/chrome-linux/chrome`']) {
+          sh 'echo `pwd`'
           sh 'echo $LIGHTHOUSE_CHROMIUM_PATH'
           sh 'echo $CHROME_PATH'
           sh 'rm -rf $(pwd)/chrome-linux'
