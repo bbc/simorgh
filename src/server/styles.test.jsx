@@ -28,7 +28,7 @@ renderToString(
 
 describe('getStyleTag', () => {
   describe('canonical version', () => {
-    it('should respond with data-styled-component attribute', async () => {
+    it('should respond with styled-components style tag with correct attributes', async () => {
       const inlineCss = renderToString(getStyleTag(sheet));
       expect(inlineCss).toBe(
         expectedOutput(
