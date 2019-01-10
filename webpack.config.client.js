@@ -56,8 +56,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
         {
-          from: 'public/**/*',
-          to: '../',
+          from: 'public',
         },
       ]),
     ],
