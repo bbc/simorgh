@@ -1,6 +1,8 @@
 import React from 'react';
+import { render } from 'react-testing-library';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ParagraphContainer from './index';
+// import react-testing methods
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
@@ -31,4 +33,11 @@ describe('ParagraphContainer', () => {
     'should render correctly',
     <ParagraphContainer blocks={blocks} />,
   );
+});
+
+describe('A react testing lib test ', () => {
+  it('does a thing', () => {
+    const { container } = render(<ParagraphContainer blocks={blocks} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
