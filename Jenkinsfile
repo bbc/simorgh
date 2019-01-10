@@ -76,7 +76,7 @@ pipeline {
       }
       steps {
         sh 'make install'
-        withEnv(['LIGHTHOUSE_CHROME_PATH="$(pwd)/chrome-linux/chrome"']) {
+        withEnv(['LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"']) {
           sh 'curl https://raw.githubusercontent.com/GoogleChrome/chrome-launcher/v0.8.0/scripts/download-chrome.sh | bash'
         }
         sh 'make developmentTests'
