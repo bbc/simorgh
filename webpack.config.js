@@ -1,5 +1,4 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require, global-require */
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
