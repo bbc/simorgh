@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { ServerStyleSheet } from 'styled-components';
 import { renderToString } from 'react-dom/server';
 import { getStyleTag } from './styles'; // eslint-disable-line no-unused-vars
+import packageLock from '../../package-lock.json';
 
 // mock up and render a simple styled application
 const sheet = new ServerStyleSheet();
@@ -31,7 +32,9 @@ describe('getStyleTag', () => {
       const inlineCss = renderToString(getStyleTag(sheet));
       expect(inlineCss).toBe(
         expectedOutput(
-          'data-styled="gDvQnu bKGMUB" data-styled-version="4.1.2"',
+          `data-styled="gDvQnu bKGMUB" data-styled-version="${
+            packageLock.dependencies['styled-components'].version
+          }"`,
         ),
       );
     });
