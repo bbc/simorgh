@@ -1,6 +1,9 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 

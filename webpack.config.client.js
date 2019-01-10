@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
