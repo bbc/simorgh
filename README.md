@@ -21,6 +21,7 @@ Update to use the latest npm `npm i -g npm`
 git clone git@github.com:bbc-news/simorgh.git
 cd simorgh
 npm install
+npm run setupLocalEnvVariables
 ```
 
 ## Local Development
