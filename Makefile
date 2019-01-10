@@ -4,13 +4,13 @@ none:
 install:
 	npm --version; node --version;
 	cd ${APP_DIRECTORY}; npm ci;
-	cd ${APP_DIRECTORY}; npm run audit:ci;
 
-installProd: 
+installProd:
 	cd ${APP_DIRECTORY}; rm -rf node_modules
 	cd ${APP_DIRECTORY}; npm ci --only=production
 
 developmentTests:
+	cd ${APP_DIRECTORY}; npm run audit:ci;
 	cd ${APP_DIRECTORY}; npm run test; xvfb-run npm run test:e2e:storybook:ci
 
 productionTests:
