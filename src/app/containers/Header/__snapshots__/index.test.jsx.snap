@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
-.c5 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -42,6 +42,10 @@ exports[`Header should render correctly 1`] = `
   margin-top: 1.25rem;
 }
 
+.c5 {
+  fill: #fff;
+}
+
 @media (max-width:25em) {
   .c0 {
     padding: 0 0.5rem;
@@ -57,6 +61,12 @@ exports[`Header should render correctly 1`] = `
 @media (min-width:62.9375em) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c5 {
+    fill: windowText;
   }
 }
 
@@ -81,7 +91,8 @@ exports[`Header should render correctly 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fill="#fff"
+            className="c5"
+            fill="#000"
             fillRule="evenodd"
           >
             <path
@@ -96,7 +107,7 @@ exports[`Header should render correctly 1`] = `
           </g>
         </svg>
         <span
-          className="c5"
+          className="c6"
         >
           Default Brand Name
         </span>

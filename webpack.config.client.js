@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -26,7 +27,9 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       path: resolvePath('build/public'),
       filename: 'static/js/[name].[hash:8].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
-      publicPath: IS_PROD ? `/` : `http://localhost:${webpackDevServerPort}/`,
+      publicPath: IS_PROD
+        ? `${process.env.SIMORGH_BASE_URL}/`
+        : `http://localhost:${webpackDevServerPort}/`,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
@@ -50,7 +53,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         path: resolvePath('build'),
         filename: 'assets.json',
       }),
-      // copy static files otherwise untouched by Webpack, e.g. favicon 
+      // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
         {
           from: 'public/**/*',
