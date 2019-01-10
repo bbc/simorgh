@@ -17,6 +17,8 @@ import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
 
+require('dotenv').config();
+
 const assets = getAssetsArray();
 
 const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;

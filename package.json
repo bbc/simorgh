@@ -88,6 +88,7 @@
     "brotli-webpack-plugin": "^1.0.0",
     "compression": "^1.7.3",
     "compression-webpack-plugin": "^2.0.0",
+    "dotenv": "^6.2.0",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
     "express-static-gzip": "^1.1.3",
