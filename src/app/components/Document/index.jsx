@@ -47,7 +47,15 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
           </Fragment>
         )}
         {data.isAmp && (
-          <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+          <Fragment>
+            <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+            {/* @TODO - come up with strategy for AMP libraries */}
+            <script
+              async=""
+              custom-element="amp-iframe"
+              src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+            />
+          </Fragment>
         )}
       </head>
       <body>
