@@ -31,7 +31,7 @@
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
     "test:lighthouse": "node scripts/lighthouse/index.js",
-    "test:lighthouse:ci": "npm run build && run-p --race start test:lighthouse",
+    "test:lighthouse:ci": "npm run build && run-p start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage --colors",
