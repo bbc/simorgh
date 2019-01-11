@@ -5,20 +5,20 @@ ignore:
   'npm:chownr:20180731':
     - speculate > tar-fs > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
     - compression-webpack-plugin > cacache > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
     - uglifyjs-webpack-plugin > cacache > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
     - webpack > terser-webpack-plugin > cacache > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
     - brotli-webpack-plugin > iltorb > prebuild-install > tar-fs > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
     - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-10T14:49:08.511Z'
+        expires: '2019-04-01T12:00:00.000Z'
 patch: {}
