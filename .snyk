@@ -1,0 +1,24 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:chownr:20180731':
+    - speculate > tar-fs > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+    - compression-webpack-plugin > cacache > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+    - uglifyjs-webpack-plugin > cacache > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+    - webpack > terser-webpack-plugin > cacache > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+    - brotli-webpack-plugin > iltorb > prebuild-install > tar-fs > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-10T14:49:08.511Z'
+patch: {}
