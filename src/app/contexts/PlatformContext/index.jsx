@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string, func } from 'prop-types';
 
-const PlatformContext = React.createContext('default');
+export const PlatformContext = React.createContext('default');
 
 export const PlatformContextProvider = ({ children, platform }) => (
   <PlatformContext.Provider value={platform}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { PlatformContext } from '../../contexts/PlatformContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
@@ -69,27 +70,43 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = (caption, copyright) => (
+const generateFixtureData = (caption, copyright, platform = 'canonical') => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <FigureContainer
-      alt={imageAlt}
-      captionBlock={caption}
-      copyright={copyright}
-      height={imageHeight}
-      ratio={imageRatio}
-      src={imageSrc}
-      width={imageWidth}
-    />
+    <PlatformContext.Provider value={platform}>
+      <FigureContainer
+        alt={imageAlt}
+        captionBlock={caption ? captionBlock : null}
+        copyright={copyright ? copyrightText : null}
+        height={imageHeight}
+        ratio={imageRatio}
+        src={imageSrc}
+        width={imageWidth}
+      />
+    </PlatformContext.Provider>
   </ServiceContext.Provider>
 );
 
 export const FigureImage = generateFixtureData();
 
+export const FigureAmpImage = generateFixtureData(null, null, 'amp');
+
 export const FigureImageWithCaption = generateFixtureData(captionBlock);
+
+export const FigureAmpImageWithCaption = generateFixtureData(
+  captionBlock,
+  null,
+  'amp',
+);
 
 export const FigureImageWithCopyright = generateFixtureData(
   null,
   copyrightText,
+);
+
+export const FigureAmpImageWithCopyright = generateFixtureData(
+  null,
+  copyrightText,
+  'amp',
 );
 
 export const FigureImageWithCopyrightAndCaption = generateFixtureData(
@@ -97,7 +114,19 @@ export const FigureImageWithCopyrightAndCaption = generateFixtureData(
   copyrightText,
 );
 
+export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData(
+  captionBlock,
+  copyrightText,
+  'amp',
+);
+
 export const FigureImageWithCaptionContainingLink = generateFixtureData(
   captionBlockWithLink,
   null,
+);
+
+export const FigureAmpImageWithCaptionContainingLink = generateFixtureData(
+  captionBlockWithLink,
+  null,
+  'amp',
 );
