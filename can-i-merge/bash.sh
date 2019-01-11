@@ -20,15 +20,9 @@ fi
 
 LAST_BUILD_JOB_URL=$JENKINS_URL'job/simorgh-infrastructure/job/latest/lastBuild/api/json'
 
-lastBuildOutput1=$(curl $LAST_BUILD_JOB_URL --cert $COSMOS_CERT --key $COSMOS_KEY)
+lastBuildOutput=$(curl $LAST_BUILD_JOB_URL --cert $COSMOS_CERT --key $COSMOS_KEY)
 
-canIMerge lastBuildOutput1
-
-sleep 5 
-
-lastBuildOutput2=$(curl $LAST_BUILD_JOB_URL --cert $COSMOS_CERT --key $COSMOS_KEY)
-
-canIMerge lastBuildOutput2
+canIMerge lastBuildOutput
 
 echo "\\0/ you can merge! Try not to break live 🙃"
 
@@ -36,5 +30,3 @@ echo "\\0/ you can merge! Try not to break live 🙃"
 #
 # - We curl the simorgh-infrastructure Jenkins job and look explicitly for the `result` to equal `SUCCESS` with some super dumb regex
 # - The `result` of a currently building job is set to `null`, which will also equal a failure
-# - We run the job twice to mitigate the tiny chance of a race condition between the simorgh-infrastructure job being triggered
-#   and the /lastBuild/api/json being updated (3 seconds at worst)
