@@ -8,7 +8,7 @@ function launchChromeAndRunLighthouse(url, opts, lConfig = null) {
     .launch({ chromeFlags: opts.chromeFlags, port: 7070 })
     .then(chrome => {
       console.log('chrome object');
-      console.log(JSON.stringify(chrome));
+      console.log(chrome);
       console.log(`Attempting to launch chrome on ${chrome.port}`);
       const options = { ...opts, port: chrome.port };
       return lighthouse(url, options, lConfig).then(results =>
