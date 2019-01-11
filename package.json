@@ -4,6 +4,7 @@
   "description": "Simorgh",
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
+    "audit:ci": "audit-ci -low",
     "bbcA11y": "bbc-a11y",
     "build": "rm -rf build && export $(cat .env | xargs); NODE_ENV=production webpack",
     "cypress": "cypress run",
@@ -115,6 +116,7 @@
   "devDependencies": {
     "@storybook/react": "4.0.0-alpha.8",
     "amphtml-validator": "^1.0.23",
+    "audit-ci": "^1.2.1",
     "babel-eslint": "^10.0.0",
     "bbc-a11y": "^2.2.5",
     "chalk": "^2.4.1",
