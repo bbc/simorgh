@@ -7,7 +7,7 @@ const config = {
     accessibility: 1,
     seo: 0.8,
     pwa: 0,
-    performance: 0.9,
+    performance: 0.86,
     'best-practices': 0.87,
   },
   opts: {
