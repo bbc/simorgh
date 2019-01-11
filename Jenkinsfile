@@ -77,8 +77,6 @@ pipeline {
       steps {
         sh 'make install'
         sh 'make developmentTests'
-        sh 'make installProd'
-        sh 'make productionTests'
       }
       post {
         always {
