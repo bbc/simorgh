@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A react testing lib test  does a thing 1`] = `
+exports[`A react-testing-library snapthot test Should render a ParagraphContainer 1`] = `
 .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
@@ -63,7 +63,125 @@ exports[`A react testing lib test  does a thing 1`] = `
 </p>
 `;
 
-exports[`ParagraphContainer should render correctly 1`] = `
+exports[`Enzyme tests Enzyme shallow render Should render correctly with no props 1`] = `
+<Paragraph>
+  <Blocks
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [
+              "bold",
+            ],
+            "text": "This is some text.",
+          },
+          "type": "fragment",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "attributes": Array [],
+                  "text": "Some text",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "bold",
+                  ],
+                  "text": " for the ",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "italic",
+                  ],
+                  "text": " link!",
+                },
+                "type": "fragment",
+              },
+            ],
+            "locator": "/bbc-test",
+          },
+          "type": "urlLink",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+        "urlLink": [Function],
+      }
+    }
+  />
+</Paragraph>
+`;
+
+exports[`Enzyme tests Enzyme shallow render Should render correctly with text 1`] = `
+<Paragraph>
+  <Blocks
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [
+              "bold",
+            ],
+            "text": "This is some text.",
+          },
+          "type": "fragment",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "attributes": Array [],
+                  "text": "Some text",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "bold",
+                  ],
+                  "text": " for the ",
+                },
+                "type": "fragment",
+              },
+              Object {
+                "model": Object {
+                  "attributes": Array [
+                    "italic",
+                  ],
+                  "text": " link!",
+                },
+                "type": "fragment",
+              },
+            ],
+            "locator": "/bbc-test",
+          },
+          "type": "urlLink",
+        },
+      ]
+    }
+    componentsToRender={
+      Object {
+        "fragment": [Function],
+        "urlLink": [Function],
+      }
+    }
+  />
+</Paragraph>
+`;
+
+exports[`Existing snapshot test ParagraphContainer should render correctly 1`] = `
 <ForwardRef>
   <Blocks
     blocks={
@@ -120,122 +238,4 @@ exports[`ParagraphContainer should render correctly 1`] = `
     }
   />
 </ForwardRef>
-`;
-
-exports[`The Enzyme tests Paragraph tested with Enzyme shallow render should render correctly with no props 1`] = `
-<Paragraph>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is some text.",
-          },
-          "type": "fragment",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "Some text",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "bold",
-                  ],
-                  "text": " for the ",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "italic",
-                  ],
-                  "text": " link!",
-                },
-                "type": "fragment",
-              },
-            ],
-            "locator": "/bbc-test",
-          },
-          "type": "urlLink",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-        "urlLink": [Function],
-      }
-    }
-  />
-</Paragraph>
-`;
-
-exports[`The Enzyme tests Paragraph tested with Enzyme shallow render should render correctly with text 1`] = `
-<Paragraph>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is some text.",
-          },
-          "type": "fragment",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "Some text",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "bold",
-                  ],
-                  "text": " for the ",
-                },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "italic",
-                  ],
-                  "text": " link!",
-                },
-                "type": "fragment",
-              },
-            ],
-            "locator": "/bbc-test",
-          },
-          "type": "urlLink",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-        "urlLink": [Function],
-      }
-    }
-  />
-</Paragraph>
 `;
