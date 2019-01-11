@@ -28,7 +28,7 @@ const FigureContainer = ({
           platform === 'amp' ? (
             <AmpImg
               alt={alt}
-              attribution={copyright}
+              attribution={copyright || ''}
               layout="responsive"
               src={src}
               height={height}
