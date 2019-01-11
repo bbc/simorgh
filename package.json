@@ -20,7 +20,7 @@
     "speculate": "speculate",
     "start": "export $(cat .env | xargs); NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate",
+    "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build && run-p --race start amp:validate",
     "test:ampValidate:ci": "npm run build && run-p --race start amp:validate",
