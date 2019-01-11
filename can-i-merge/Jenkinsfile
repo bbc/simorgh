@@ -1,0 +1,19 @@
+#!/usr/bin/env groovy
+
+pipeline {
+  agent any
+  options {
+    timeout(time: 2, unit: 'MINUTES')
+    timestamps ()
+  }
+  stages {
+    stage ('Check if I can merge') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
+      steps {
+        sh "sh can-i-merge/bash.sh"
+      }
+    }
+  }
+}
