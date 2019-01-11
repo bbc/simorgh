@@ -17,7 +17,7 @@ const Envelope = ({ head, bodyInline, bodyLast }) => (
   </Fragment>
 );
 
-const AmpVjEnvelope = ({ canonicalUrl }) => (
+const AmpVjEnvelope = ({ canonicalUrl, img }) => (
   <amp-iframe
     width="640"
     height="360"
@@ -28,27 +28,29 @@ const AmpVjEnvelope = ({ canonicalUrl }) => (
     src={canonicalUrl + '/amp'}
   >
     <amp-img
-      width="640"
-      height="360"
+      width={img.width}
+      height={img.height}
       layout="fill"
-      src="https://c.files.bbci.co.uk/11763/production/_104632517_mp_vote_app_prom-nc.jpg"
+      src={img.url}
       placeholder=""
     />
-    <div overflow="" tabindex="0" role="button" aria-label="Read more">
+    <div overflow="" tabIndex="0" role="button" aria-label="Read more">
       Read more
     </div>
   </amp-iframe>
 );
 
 const EnvelopeContainer = ({ blocks }) => {
-  const attributes = blocks[0].model;
+  const envelope = blocks.find(block => block.type === 'rawEnvelope').model;
+  const meta = blocks.find(block => block.type === 'meta').model;
+
   return (
     <PlatformContextConsumer>
       {platform =>
         platform === 'amp' ? (
-          <AmpVjEnvelope {...attributes} />
+          <AmpVjEnvelope {...meta} />
         ) : (
-          <Envelope {...attributes} />
+          <Envelope {...envelope} />
         )
       }
     </PlatformContextConsumer>
