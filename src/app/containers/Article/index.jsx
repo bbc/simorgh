@@ -8,6 +8,7 @@ import FooterContainer from '../Footer';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
+import envelope from '../Envelope';
 import Blocks from '../Blocks';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -39,6 +40,7 @@ const componentsToRenderMain = {
   subheadline: headings,
   text,
   image,
+  envelope,
 };
 
 const splitBlocksByHeadline = ({ model }) => {
