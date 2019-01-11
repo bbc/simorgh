@@ -6,9 +6,9 @@ const config = {
   thresholds: {
     accessibility: 1,
     seo: 0.8,
-    pwa: 0,
-    performance: 0.83,
-    'best-practices': 0.87,
+    pwa: 0.92,
+    performance: 0.87,
+    'best-practices': 0.93,
   },
   opts: {
     chromeFlags: ['--headless'],
