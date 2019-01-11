@@ -5,10 +5,10 @@ const config = {
   ],
   thresholds: {
     accessibility: 1,
-    seo: 1,
+    seo: 0.8,
     pwa: 0,
     performance: 0.9,
-    'best-practices': 1,
+    'best-practices': 0.87,
   },
   opts: {
     chromeFlags: ['--headless', '--disable-gpu'],
