@@ -12,6 +12,7 @@ const config = {
   },
   opts: {
     chromeFlags: ['--headless'],
+    port: 7075,
   },
 };
 
