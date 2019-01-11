@@ -3,8 +3,7 @@ import Helmet from 'helmet';
 import { string, array } from 'prop-types';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 
-// @TODO - use `canonicalUrl` to create the AMP version markup
-const Envelope = ({ canonicalUrl, head, bodyInline, bodyLast }) => (
+const Envelope = ({ head, bodyInline, bodyLast }) => (
   <Fragment>
     {head.length > 0 ? (
       <Helmet>
@@ -32,7 +31,6 @@ const AmpVjEnvelope = ({ canonicalUrl }) => (
       width="640"
       height="360"
       layout="fill"
-      {/* @TODO make fallback image dynamic - think about block structure */}
       src="https://c.files.bbci.co.uk/11763/production/_104632517_mp_vote_app_prom-nc.jpg"
       placeholder=""
     />
