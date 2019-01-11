@@ -1,17 +1,32 @@
 import React, { Fragment } from 'react';
-import Helmet from 'helmet';
-import { string, array } from 'prop-types';
+import Helmet from 'react-helmet';
+import { string, array, object } from 'prop-types';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
+
+/**
+ * @TODO There MUST be a library that does this...
+ */
+const stringToJsx = head => {
+  const convertTags = tag => {
+    if (tag.startsWith('<link')) {
+      const cssUrl = tag.match(/<link(?:.)*href="(.+)"/)[1];
+      return (
+        <link
+          rel="stylesheet"
+          key={cssUrl} // React component needs `key` when iterating
+          href={cssUrl}
+        />
+      );
+    } else {
+      throw `Tag "${tag}" not a recognised <head> element.`;
+    }
+  };
+  return head.map(convertTags);
+};
 
 const Envelope = ({ head, bodyInline, bodyLast }) => (
   <Fragment>
-    {head.length > 0 ? (
-      <Helmet>
-        {head.map(style => (
-          <link rel="stylesheet" href={style} />
-        ))}
-      </Helmet>
-    ) : null}
+    {head.length > 0 ? <Helmet>{stringToJsx(head)}</Helmet> : null}
     <div dangerouslySetInnerHTML={{ __html: bodyInline }} />
     {/* @TODO - need a 'footer' solution for `bodyLast` */}
   </Fragment>
@@ -58,10 +73,14 @@ const EnvelopeContainer = ({ blocks }) => {
 };
 
 Envelope.propTypes = {
-  canonicalUrl: string.isRequired,
   head: array.isRequired,
   bodyInline: string.isRequired,
   bodyLast: array.isRequired,
+};
+
+AmpVjEnvelope.propTypes = {
+  canonicalUrl: string.isRequired,
+  img: object.isRequired,
 };
 
 export default EnvelopeContainer;
