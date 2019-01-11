@@ -21,6 +21,12 @@ const group4ColWidth = `6.75rem`;
 const group5ColWidth = `6.9rem`;
 /* (1280px - (2*16px margins + 9*16px gutters)  / 10 columns = 110.4px = 6.9rem single column width */
 
+const group3MaxWidth = `66%`;
+
+const group4MaxWidth = `75%`;
+
+const group5MaxWidth = `743px`;
+
 export const layoutWrapperWithoutGrid = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
@@ -65,17 +71,36 @@ export const layoutGridWrapper = css`
 `;
 
 export const layoutGridItemConstrained = css`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-column: 1 / -1;
-  }
+  margin-left: auto;
+  margin-right: auto;
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: 2 / -2;
+    max-width: ${group3MaxWidth};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: 3 / -3;
+    max-width: ${group4MaxWidth};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: 4 / -4;
+    max-width: ${group5MaxWidth};
+  }
+
+  @supports (display: grid) {
+    max-width: none;
+    margin-left: initial;
+    margin-right: initial;
+
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      grid-column: 1 / -1;
+    }
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      grid-column: 2 / -2;
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+      grid-column: 3 / -3;
+    }
+    @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+      grid-column: 4 / -4;
+    }
   }
 `;
 
