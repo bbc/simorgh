@@ -11,7 +11,7 @@ const config = {
     'best-practices': 1,
   },
   opts: {
-    chromeFlags: ['--headless'],
+    chromeFlags: ['--headless', '--disable-gpu'],
     port: 7075,
   },
 };
