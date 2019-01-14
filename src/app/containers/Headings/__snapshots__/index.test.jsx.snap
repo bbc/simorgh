@@ -1,17 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Headings with headline data should render correctly 1`] = `
-<ForwardRef
-  text="This is a headline!"
->
-  This is a headline!
-</ForwardRef>
+exports[`React-testing-library snapshot tests return null with no data 1`] = `null`;
+
+exports[`with headline data Should render a HeadlineContainer with headline data 1`] = `
+<div>
+  <h1
+    class="Headline-sc-1kh1qhu-0 edbytY"
+  >
+    This is a headline!
+  </h1>
+</div>
 `;
 
-exports[`Headings with subheadline data should render correctly 1`] = `
-<ForwardRef
-  text="This is a subheadline"
->
-  This is a subheadline
-</ForwardRef>
+exports[`with subheadline data Should render a HeadlineContainer with subheadline data 1`] = `
+<div>
+  <h2
+    class="SubHeading-sc-1kh1qhu-1 egmKQa"
+    id="This-is-a-subheadline"
+    tabindex="-1"
+  >
+    This is a subheadline
+  </h2>
+</div>
 `;
