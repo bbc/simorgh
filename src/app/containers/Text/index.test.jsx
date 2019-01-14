@@ -45,8 +45,8 @@ describe('TextContainer', () => {
 
     describe('A react-testing-library snapthot test', () => {
       it('Should render a TextContainer', () => {
-        const { container } = render(<TextContainer {...data} />);
-        expect(container.firstChild).toMatchSnapshot();
+        const { baseElement } = render(<TextContainer {...data} />);
+        expect(baseElement.firstChild).toMatchSnapshot();
       });
     });
   });
