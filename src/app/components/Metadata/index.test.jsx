@@ -54,7 +54,7 @@ const metadataSnapshotTest = (
 describe('Metadata', () => {
   metadataSnapshotTest(
     'News article',
-    false,
+    true,
     'BBC News',
     null,
     'BBC News',
