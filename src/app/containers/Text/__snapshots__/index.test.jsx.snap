@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextContainer with data A react-testing-library snapthot test Should render a TextContainer 1`] = `
+exports[`TextContainer with data A react-testing-library snaptshot test Should render a TextContainer with 5 paragraphs 1`] = `
 .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;

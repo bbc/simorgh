@@ -43,11 +43,16 @@ describe('TextContainer', () => {
       <TextContainer {...data} />,
     );
 
-    describe('A react-testing-library snapthot test', () => {
-      it('Should render a TextContainer', () => {
+    describe('A react-testing-library snaptshot test', () => {
+      it('Should render a TextContainer with 5 paragraphs', () => {
         const { baseElement } = render(<TextContainer {...data} />);
         expect(baseElement.firstChild).toMatchSnapshot();
       });
     });
+
+    // react-testing-library has a handy debug function
+    // an example usage:
+    // const { debug } = render(<TextContainer {...data} />);
+    // debug();
   });
 });

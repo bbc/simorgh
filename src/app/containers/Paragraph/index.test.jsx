@@ -43,7 +43,7 @@ describe('Existing snapshot test', () => {
   });
 });
 
-describe('A react-testing-library snapthot test', () => {
+describe('A react-testing-library snapshot test', () => {
   it('Should render a ParagraphContainer', () => {
     const { container } = render(<ParagraphContainer blocks={blocks} />);
     expect(container.firstChild).toMatchSnapshot();

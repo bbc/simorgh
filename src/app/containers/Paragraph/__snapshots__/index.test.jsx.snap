@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A react-testing-library snapthot test Should render a ParagraphContainer 1`] = `
+exports[`A react-testing-library snapshot test Should render a ParagraphContainer 1`] = `
 .c0 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
