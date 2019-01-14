@@ -49,6 +49,14 @@ describe('AMP Tests on a .amp page', () => {
       .should('be', 2); // 1 for amp.js + 1 that Cypress injects into the head
   });
 
+  it('should contain an amp-img', () => {
+    const figure = getElement('figure').eq(0);
+    figure.should('be.visible');
+    figure.within(() => {
+      getElement('amp-img');
+    });
+  });
+
   it('should not have an AMP attribute on the main article', () => {
     cy.visit('/news/articles/c85pqyj5m2ko');
     getElement('html').should('not.have.attr', 'amp');
