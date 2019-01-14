@@ -4,13 +4,13 @@ canIMerge() {
   # '$*' means all parameters passed to function https://www.cyberciti.biz/faq/unix-linux-bash-function-number-of-arguments-passed/
   # this is needed because of the way the JSON is set to a variable
   if [[ $* =~ "nextBuild\":null" ]]; then
-  if [[ $* =~ "result\":\"SUCCESS" ]]; then
-    echo "🎉 The latest build was successful 🎉"
-  else 
-    echo "Error: The latest build is not marked as 'SUCCESS'"
-    echo "Failed!"
-    exit 1
-  fi
+    if [[ $* =~ "result\":\"SUCCESS" ]]; then
+      echo "🎉 The latest build was successful 🎉"
+    else 
+      echo "Error: The latest build is not marked as 'SUCCESS'"
+      echo "Failed!"
+      exit 1
+    fi
 else
   echo "Error: This is not the latest build"
   echo "Failed!"
@@ -21,6 +21,8 @@ fi
 LAST_BUILD_JOB_URL=$JENKINS_URL'job/simorgh-infrastructure/job/latest/lastBuild/api/json'
 
 lastBuildOutput=$(curl $LAST_BUILD_JOB_URL --cert $COSMOS_CERT --key $COSMOS_KEY)
+
+echo $lastBuildOutput
 
 canIMerge lastBuildOutput
 
