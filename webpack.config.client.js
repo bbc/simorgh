@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
@@ -52,6 +53,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         path: resolvePath('build'),
         filename: 'assets.json',
       }),
+      // copy static files otherwise untouched by Webpack, e.g. favicon
+      new CopyWebpackPlugin([
+        {
+          from: 'public',
+        },
+      ]),
     ],
   };
 
