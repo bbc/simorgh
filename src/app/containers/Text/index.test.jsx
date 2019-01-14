@@ -1,4 +1,6 @@
 import React from 'react';
+// Import a react-testing-library method
+import { render } from 'react-testing-library';
 import {
   shouldShallowMatchSnapshot,
   isNull,
@@ -40,5 +42,12 @@ describe('TextContainer', () => {
       'should render correctly',
       <TextContainer {...data} />,
     );
+
+    describe('A react-testing-library snapthot test', () => {
+      it('Should render a TextContainer', () => {
+        const { container } = render(<TextContainer {...data} />);
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
   });
 });
