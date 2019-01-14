@@ -11,13 +11,23 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
+import dotenv from 'dotenv';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
 
-require('dotenv').config();
+const result = dotenv.config();
+
+if (result.error) {
+  console.log('Errors');
+  throw result.error;
+}
+
+console.log('Passed');
+console.log(result.parsed);
+console.log(process.env.SIMORGH_BASE_URL);
 
 const assets = getAssetsArray();
 
