@@ -657,7 +657,7 @@ exports[`Figure should render an image with copyright text 1`] = `
 </figure>
 `;
 
-exports[`Figure should render can AMP image with aption text 1`] = `
+exports[`Figure should render can AMP image with caption text 1`] = `
 .c0 {
   margin: 0;
   padding-bottom: 1rem;
