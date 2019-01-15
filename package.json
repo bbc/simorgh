@@ -171,8 +171,8 @@
       "./bake-scripts/01-env-variables.sh"
     ],
     "post": [
-      "cp -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts",
-      "mv /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts/"
+      "mkdir -p /etc/bake-scripts/",
+      "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ]
   }
 }
