@@ -40,6 +40,7 @@ export const layoutWrapperWithoutGrid = css`
 */
 
 export const layoutGridWrapper = css`
+  display: -ms-grid;
   display: grid;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-gap: ${GEL_GUTTER_BELOW_600PX};
@@ -54,27 +55,38 @@ export const layoutGridWrapper = css`
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    -ms-grid-columns: (1fr)[6]; // prettier-ignore
     grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    -ms-grid-columns: 1fr (minmax(0, ${group4ColWidth}))[8] 1fr; // prettier-ignore
     grid-template-columns: 1fr repeat(8, minmax(0, ${group4ColWidth})) 1fr;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    -ms-grid-columns: 1fr (minmax(0, ${group5ColWidth}))[10] 1fr; // prettier-ignore
     grid-template-columns: 1fr repeat(10, minmax(0, ${group5ColWidth})) 1fr;
   }
 `;
 
 export const layoutGridItemConstrained = css`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
     grid-column: 1 / -1;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
     grid-column: 2 / -2;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
     grid-column: 3 / -3;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
     grid-column: 4 / -4;
   }
 `;
