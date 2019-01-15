@@ -53,7 +53,7 @@ describe('AMP Tests on a .amp page', () => {
     const figure = getElement('figure').eq(0);
     figure.should('be.visible');
     figure.within(() => {
-      getElement('amp-img');
+      getElement('amp-img').should('be.visible');
     });
   });
 
