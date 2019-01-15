@@ -34,6 +34,7 @@
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage --colors",
+    "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server'"
@@ -42,7 +43,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && npm run snyk"
     }
   },
   "repository": {
@@ -139,6 +140,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.0",
     "react-test-renderer": "^16.6.3",
+    "snyk": "^1.122.0",
     "start-server-webpack-plugin": "^2.2.5",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0",
