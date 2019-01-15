@@ -1,6 +1,13 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const dotenv = require('dotenv');
+
+const result = dotenv.config();
+
+if (result.error) {
+  throw result.error;
+}
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
