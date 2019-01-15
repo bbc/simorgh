@@ -165,5 +165,10 @@
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
     ]
+  },
+  "spec": {
+    "post": [
+      "mv /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts/"
+    ]
   }
 }
