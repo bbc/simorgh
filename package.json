@@ -167,9 +167,11 @@
     ]
   },
   "spec": {
+    "executable": [
+      "./bake-scripts/01-env-variables.sh"
+    ],
     "post": [
-      "mv /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts/",
-      "chmod +x /etc/bake-scripts/*"
+      "mv /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts/"
     ]
   }
 }
