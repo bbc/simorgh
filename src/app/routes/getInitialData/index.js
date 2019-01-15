@@ -4,8 +4,6 @@ const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
 
-    console.log(process.env.SIMORGH_BASE_URL);
-
     const url = `${
       process.env.SIMORGH_BASE_URL
     }/${service}/articles/${id}.json`;

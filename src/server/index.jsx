@@ -21,13 +21,8 @@ import Document from '../app/components/Document';
 const result = dotenv.config();
 
 if (result.error) {
-  console.log('Errors');
   throw result.error;
 }
-
-console.log('Passed');
-console.log(result.parsed);
-console.log(process.env.SIMORGH_BASE_URL);
 
 const assets = getAssetsArray();
 
