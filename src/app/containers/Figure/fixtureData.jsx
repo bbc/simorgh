@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
@@ -69,35 +71,72 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = (caption, copyright) => (
+const generateFixtureData = ({ caption, copyright, platform }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <FigureContainer
-      alt={imageAlt}
-      captionBlock={caption}
-      copyright={copyright}
-      height={imageHeight}
-      ratio={imageRatio}
-      src={imageSrc}
-      width={imageWidth}
-    />
+    <PlatformContextProvider platform={platform}>
+      <FigureContainer
+        alt={imageAlt}
+        captionBlock={caption ? captionBlock : null}
+        copyright={copyright ? copyrightText : null}
+        height={imageHeight}
+        ratio={imageRatio}
+        src={imageSrc}
+        width={imageWidth}
+      />
+    </PlatformContextProvider>
   </ServiceContext.Provider>
 );
 
-export const FigureImage = generateFixtureData();
+generateFixtureData.propTypes = {
+  caption: PropTypes.objectOf(PropTypes.any),
+  copyright: PropTypes.string,
+  platform: PropTypes.string,
+};
 
-export const FigureImageWithCaption = generateFixtureData(captionBlock);
+generateFixtureData.defaultProps = {
+  caption: null,
+  copyright: null,
+  platform: 'canonical',
+};
 
-export const FigureImageWithCopyright = generateFixtureData(
-  null,
-  copyrightText,
-);
+export const FigureImage = generateFixtureData({});
 
-export const FigureImageWithCopyrightAndCaption = generateFixtureData(
-  captionBlock,
-  copyrightText,
-);
+export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
-export const FigureImageWithCaptionContainingLink = generateFixtureData(
-  captionBlockWithLink,
-  null,
-);
+export const FigureImageWithCaption = generateFixtureData({
+  caption: captionBlock,
+});
+
+export const FigureAmpImageWithCaption = generateFixtureData({
+  caption: captionBlock,
+  platform: 'amp',
+});
+
+export const FigureImageWithCopyright = generateFixtureData({
+  copyright: copyrightText,
+});
+
+export const FigureAmpImageWithCopyright = generateFixtureData({
+  copyright: copyrightText,
+  platform: 'amp',
+});
+
+export const FigureImageWithCopyrightAndCaption = generateFixtureData({
+  caption: captionBlock,
+  copyright: copyrightText,
+});
+
+export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
+  caption: captionBlock,
+  copyright: copyrightText,
+  platform: 'amp',
+});
+
+export const FigureImageWithCaptionContainingLink = generateFixtureData({
+  caption: captionBlockWithLink,
+});
+
+export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
+  caption: captionBlockWithLink,
+  platform: 'amp',
+});
