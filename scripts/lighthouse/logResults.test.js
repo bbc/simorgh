@@ -22,14 +22,16 @@ describe('checkFailures', () => {
     });
   });
   describe('failures', () => {
-    it('Should return true', () => {
-      const result = checkFailures(failures);
-      expect(result).toBe(true);
-    });
-    it('Should log failure message if failures are present', () => {
+    it('Should log failure message and exit 1 if failures are present', () => {
       global.console.log = jest.fn();
-      checkFailures(failures);
-      expect(global.console.log).toHaveBeenCalled();
+      process.exit = jest.fn();
+
+      try {
+        checkFailures(failures);
+      } catch (error) {
+        expect(global.console.log).toHaveBeenCalled();
+        expect(process.exit).toHaveBeenCalledWith(1);
+      }
     });
   });
 });
