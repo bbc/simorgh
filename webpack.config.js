@@ -2,9 +2,17 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+
+// Load in environment variables configured in `.env` file. Be aware the `.env` committed is changed by bake-scripts when on real servers.
+const result = dotenv.config();
+
+if (result.error) {
+  throw result.error;
+}
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {

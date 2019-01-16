@@ -168,5 +168,14 @@
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
     ]
+  },
+  "spec": {
+    "executable": [
+      "./bake-scripts/01-env-variables.sh"
+    ],
+    "post": [
+      "mkdir -p /etc/bake-scripts/",
+      "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
+    ]
   }
 }
