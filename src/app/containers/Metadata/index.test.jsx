@@ -45,7 +45,7 @@ const metaTagsBuilder = (serviceConfig, description, seoTitle, id, things) => {
     },
     {
       name: 'article:modified_time',
-      content: '2018-01-01T14:00:00.000Z',
+      content: '2018-01-01T13:00:00.000Z',
     },
     {
       name: 'article:published_time',
