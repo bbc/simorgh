@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Simorgh",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
     "audit:ci": "audit-ci -low",
     "bbcA11y": "bbc-a11y",
     "build": "rm -rf build && NODE_ENV=production webpack",
@@ -20,9 +20,10 @@
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "npm run test:lint && npm run dataValidate && npm run test:unit",
+    "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
-    "test:ampValidate": "npm run killApp && npm run build && run-p --race start amp:validate",
+    "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
+    "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:prod:ci": "npm install --no-save cypress bbc-a11y && run-p --race start cypress && run-p --race start bbcA11y",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
@@ -166,6 +167,15 @@
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
+    ]
+  },
+  "spec": {
+    "executable": [
+      "./bake-scripts/01-env-variables.sh"
+    ],
+    "post": [
+      "mkdir -p /etc/bake-scripts/",
+      "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ]
   }
 }
