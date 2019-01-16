@@ -4,15 +4,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 
-const result = dotenv.config();
+const dotenvConfig = dotenv.config();
 const SIMORGH = /^SIMORGH_/i;
 
-if (result.error) {
-  throw result.error;
+if (dotenvConfig.error) {
+  throw dotenvConfig.error;
 }
 
-const getClientEnvVars = () => {
-  const { parsed } = result;
+const getClientEnvVars = envConfig => {
+  const { parsed } = envConfig;
   const envVars = Object.keys(parsed);
   const clientEnvVars = {};
 
@@ -83,7 +83,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(),
+        'process.env': getClientEnvVars(dotenvConfig),
       }),
     ],
   };
