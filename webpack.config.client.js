@@ -57,7 +57,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new CopyWebpackPlugin([
         {
           from: 'public',
-          to: '[name].[hash:8].[ext]',
+          to: '[path][name].[hash:8].[ext]',
         },
       ]),
     ],
