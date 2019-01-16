@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
@@ -59,11 +60,19 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           from: 'public',
         },
       ]),
+      new webpack.DefinePlugin({
+        'process.env': {
+          SIMORGH_BASE_URL: JSON.stringify(process.env.SIMORGH_BASE_URL),
+          SIMORGH_ASSETS_MANIFEST_PATH: JSON.stringify(
+            process.env.SIMORGH_ASSETS_MANIFEST_PATH,
+          ),
+          SIMORGH_PUBLIC_DIR: JSON.stringify(process.env.SIMORGH_PUBLIC_DIR),
+        },
+      }),
     ],
   };
 
   if (START_DEV_SERVER) {
-    const webpack = require('webpack');
     clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
