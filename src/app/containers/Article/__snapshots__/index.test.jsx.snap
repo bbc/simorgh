@@ -20,7 +20,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
             "firstPublished": 1514808060000,
             "id": "urn:bbc:ares::article:cwv2xv848j5o",
             "lastPublished": 1514811600000,
-            "lastUpdated": 1514811600000,
+            "lastUpdated": 1514815200000,
             "locators": Object {
               "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
             },
@@ -99,7 +99,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               }
             />
             <TimestampContainer
-              timestamp={1514811600000}
+              timestamp={1514815200000}
             />
           </ForwardRef>
         </ForwardRef>
@@ -167,7 +167,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
             "firstPublished": 1514808060000,
             "id": "urn:bbc:ares::article:c0000000001o",
             "lastPublished": 1514811600000,
-            "lastUpdated": 1514811600000,
+            "lastUpdated": 1514815200000,
             "locators": Object {
               "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
             },
@@ -271,7 +271,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               }
             />
             <TimestampContainer
-              timestamp={1514811600000}
+              timestamp={1514815200000}
             />
           </ForwardRef>
         </ForwardRef>
