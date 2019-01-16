@@ -3,6 +3,30 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
+const dotenv = require('dotenv');
+
+const result = dotenv.config();
+
+const SIMORGH = /^SIMORGH_/i;
+
+if (result.error) {
+  throw result.error;
+}
+
+const getClientEnvVars = () => {
+  const { parsed } = result;
+  const envVars = Object.keys(parsed);
+  const clientEnvVars = {};
+
+  const prefixedEnvVars = envVars.filter(key => SIMORGH.test(key));
+
+  prefixedEnvVars.forEach(variable => {
+    clientEnvVars[variable] = JSON.stringify(parsed[variable]);
+  });
+
+  return clientEnvVars;
+};
+
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
@@ -61,13 +85,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': {
-          SIMORGH_BASE_URL: JSON.stringify(process.env.SIMORGH_BASE_URL),
-          SIMORGH_ASSETS_MANIFEST_PATH: JSON.stringify(
-            process.env.SIMORGH_ASSETS_MANIFEST_PATH,
-          ),
-          SIMORGH_PUBLIC_DIR: JSON.stringify(process.env.SIMORGH_PUBLIC_DIR),
-        },
+        'process.env': getClientEnvVars(),
       }),
     ],
   };
