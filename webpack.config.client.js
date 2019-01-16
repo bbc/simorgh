@@ -3,27 +3,13 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const dotenvConfig = dotenv.config();
-const SIMORGH = /^SIMORGH_/i;
 
 if (dotenvConfig.error) {
   throw dotenvConfig.error;
 }
-
-const getClientEnvVars = envConfig => {
-  const { parsed } = envConfig;
-  const envVars = Object.keys(parsed);
-  const clientEnvVars = {};
-
-  const prefixedEnvVars = envVars.filter(key => SIMORGH.test(key));
-
-  prefixedEnvVars.forEach(variable => {
-    clientEnvVars[variable] = JSON.stringify(parsed[variable]);
-  });
-
-  return clientEnvVars;
-};
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
