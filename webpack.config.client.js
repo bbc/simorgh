@@ -25,7 +25,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     },
     output: {
       path: resolvePath('build/public'),
-      filename: 'static/js/[name].[hash:8].js',
+      filename: 'static/js/[name].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: IS_PROD
         ? `${process.env.SIMORGH_BASE_URL}/`
@@ -57,6 +57,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new CopyWebpackPlugin([
         {
           from: 'public',
+          to: '[name].[hash:8].[ext]',
         },
       ]),
     ],
