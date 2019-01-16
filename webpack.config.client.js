@@ -2,11 +2,9 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-
 const dotenv = require('dotenv');
 
 const result = dotenv.config();
-
 const SIMORGH = /^SIMORGH_/i;
 
 if (result.error) {
