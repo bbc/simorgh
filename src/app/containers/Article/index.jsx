@@ -89,7 +89,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                       blocks={headlineBlocks}
                       componentsToRender={componentsToRenderHeadline}
                     />
-                    <Timestamp timestamp={metadata.lastUpdated} />
+                    <Timestamp timestamp={metadata.lastPublished} />
                   </GridItemConstrained>
                 </Wrapper>
                 <OatWrapper>

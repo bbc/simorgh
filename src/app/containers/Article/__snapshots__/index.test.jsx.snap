@@ -99,7 +99,7 @@ exports[`ArticleContainer Component should render Persian article correctly 1`] 
               }
             />
             <TimestampContainer
-              timestamp={1514815200000}
+              timestamp={1514811600000}
             />
           </ForwardRef>
         </ForwardRef>
@@ -271,7 +271,7 @@ exports[`ArticleContainer Component should render correctly 1`] = `
               }
             />
             <TimestampContainer
-              timestamp={1514815200000}
+              timestamp={1514811600000}
             />
           </ForwardRef>
         </ForwardRef>
