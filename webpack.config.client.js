@@ -2,7 +2,13 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER, ENVIRONMENT }) => {
+module.exports = ({
+  resolvePath,
+  IS_CI,
+  IS_PROD,
+  START_DEV_SERVER,
+  ENVIRONMENT,
+}) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
