@@ -14,7 +14,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const links = helmet.link.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !data.isAmp;
-  const scripts = assets.map(asset => (
+  const scripts = assets.js.map(asset => (
     <script
       crossOrigin="anonymous"
       key={asset}
@@ -33,7 +33,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
         <meta name="theme-color" content={C_POSTBOX} />
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href={assets.manifest} />
         <ResourceHints />
         {title}
         {links}
