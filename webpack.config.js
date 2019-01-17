@@ -7,19 +7,21 @@ const dotenv = require('dotenv');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
-// Load in environment variables configured in `.env` file. Be aware the `.env` committed is changed by bake-scripts when on real servers.
-const result = dotenv.config();
-
-if (result.error) {
-  throw result.error;
-}
-
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
+  const ENVIRONMENT = shell.environment;
+  // Load in environment variables configured in `.env` file. Be aware the `.env` committed is changed by bake-scripts when on real servers.
+  const result = dotenv.config({ path: `.env.${ENVIRONMENT}` });
+
+  if (result.error) {
+    throw result.error;
+  }
+
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
   const CONFIG_FILE = shell.config;
+
   const stats = IS_PROD
     ? {}
     : {
@@ -79,6 +81,7 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
+      ENVIRONMENT
     });
     return merge(baseConfig, specialisedConfig);
   };
