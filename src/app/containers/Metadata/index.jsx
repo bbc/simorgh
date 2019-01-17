@@ -55,7 +55,7 @@ const MetadataContainer = ({ metadata, promo, service }) => {
               locale={locale}
               metaTags={allTags(metadata.tags)}
               timeFirstPublished={timeFirstPublished}
-              timeLastUpdated={timeLastPublished}
+              timeLastPublished={timeLastPublished}
               title={promo.headlines.seoHeadline}
               twitterCreator={twitterCreator}
               twitterSite={twitterSite}
