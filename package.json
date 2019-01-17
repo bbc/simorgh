@@ -3,26 +3,29 @@
   "version": "0.0.1",
   "description": "Simorgh",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && (amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp || true)",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
     "audit:ci": "audit-ci -low",
     "bbcA11y": "bbc-a11y",
-    "build": "rm -rf build && export $(cat .env | xargs); NODE_ENV=production webpack",
+    "build": "rm -rf build && NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dataValidate": "node src/app/dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
-    "dev": "rm -rf build && export $(cat .env | xargs); run-p webpack:dev:client webpack:dev:server",
+    "dev": "rm -rf build && run-p webpack:dev:client webpack:dev:server",
+    "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
     "lighthouse": "lighthouse http://localhost:7080/news/articles/c85pqyj5m2ko --output-path=./reports/report.html --view",
+    "postshrinkwrap": "if test -z $CI; then \n npm run force-package-lock-https \n fi",
     "speculate": "speculate",
-    "start": "export $(cat .env | xargs); NODE_ENV=production node build/server.js",
+    "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "npm run test:lint && npm run dataValidate && npm run test:unit",
+    "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
-    "test:ampValidate": "npm run killApp && npm run build && run-p --race start amp:validate",
+    "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
+    "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:prod:ci": "npm install --no-save cypress bbc-a11y && run-p --race start cypress && run-p --race start bbcA11y",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
@@ -34,7 +37,8 @@
     "test:lighthouse:ci": "run-p --race start blah",
     "test:lint": "eslint --ext .js,jsx,json ./src ./scripts/lighthouse ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:unit": "export $(cat .env | xargs); jest --env=jsdom --coverage --colors",
+    "test:unit": "jest --env=jsdom --coverage --colors",
+    "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server'"
@@ -43,7 +47,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && npm run snyk"
     }
   },
   "repository": {
@@ -68,7 +72,7 @@
     "@bbc/psammead-copyright": "^0.2.4",
     "@bbc/psammead-figure": "^0.1.1",
     "@bbc/psammead-headings": "^0.1.7",
-    "@bbc/psammead-image": "^0.2.3",
+    "@bbc/psammead-image": "^0.3.0",
     "@bbc/psammead-image-placeholder": "^0.1.5",
     "@bbc/psammead-inline-link": "^0.1.3",
     "@bbc/psammead-paragraph": "^0.1.3",
@@ -90,6 +94,7 @@
     "compression": "^1.7.3",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.6.0",
+    "dotenv": "^6.2.0",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
     "express-static-gzip": "^1.1.3",
@@ -106,7 +111,7 @@
     "react-router-dom": "^4.3.1",
     "react-universal-app": "^1.0.0",
     "speculate": "^1.7.4",
-    "styled-components": "^4.1.2",
+    "styled-components": "^4.1.3",
     "styled-normalize": "^8.0.3",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.1",
@@ -141,6 +146,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.0",
     "react-test-renderer": "^16.6.3",
+    "snyk": "^1.122.0",
     "start-server-webpack-plugin": "^2.2.5",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0",
@@ -165,6 +171,15 @@
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
+    ]
+  },
+  "spec": {
+    "executable": [
+      "./bake-scripts/01-env-variables.sh"
+    ],
+    "post": [
+      "mkdir -p /etc/bake-scripts/",
+      "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ]
   }
 }

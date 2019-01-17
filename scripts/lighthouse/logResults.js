@@ -26,13 +26,10 @@ function logHighLevelScores(results) {
 
 function checkFailures(failures) {
   if (failures.length > 0) {
-    console.log(`\n${chalk.red('Lighthouse threshold tests failed')}`);
-    return true;
-    // Uncomment the following to fail Travis build
-    // process.on('exit', () =>
-    //   console.log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
-    // );
-    // process.exit(1);
+    process.on('exit', () =>
+      console.log(`\n${chalk.red('Lighthouse threshold tests failed')}`),
+    );
+    process.exit(1);
   }
   return false;
 }
