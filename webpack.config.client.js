@@ -1,6 +1,5 @@
 /* eslint-disable global-require */
-const AssetsPlugin = require('assets-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
@@ -25,7 +24,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     },
     output: {
       path: resolvePath('build/public'),
-      filename: 'static/js/[name].[hash:8].js',
+      filename: 'static/js/[name].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: IS_PROD
         ? `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/`
@@ -49,16 +48,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     plugins: [
       // keep track of the generated chunks in build/assets.json
       // this determines what scripts get put in the footer of the page
-      new AssetsPlugin({
-        path: resolvePath('build'),
-        filename: 'assets.json',
-      }),
-      // copy static files otherwise untouched by Webpack, e.g. favicon
-      new CopyWebpackPlugin([
-        {
-          from: 'public',
+      new WebpackAssetsManifest({
+        output: '../assets.json',
+        customize(entry) {
+          return !entry.key.endsWith('.map');
         },
-      ]),
+      }),
     ],
   };
 

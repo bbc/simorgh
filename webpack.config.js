@@ -62,6 +62,18 @@ module.exports = (shell = {}) => {
             },
           ],
         },
+        {
+          test: /\.(png)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[path][name]-[hash:8].[ext]',
+                publicPath: process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+              },
+            },
+          ],
+        },
       ],
     },
     // This is to override bundle performance test. @TODO explain better
