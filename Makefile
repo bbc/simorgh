@@ -15,4 +15,5 @@ developmentTests:
 	cd ${APP_DIRECTORY}; xvfb-run npm run test:e2e:storybook:ci
 
 productionTests:
+	export CHROME_PATH=/usr/bin/chromium
 	cd ${APP_DIRECTORY}; npm run build; xvfb-run npm run test:prod:ci; npm run test:lighthouse:ci;
