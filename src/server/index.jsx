@@ -12,11 +12,12 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import dotenv from 'dotenv';
-import routes, { articleRegexPath } from '../app/routes';
+import routes, { articleRegexPath, manifestRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
+import manifest from '../app/components/Manifest';
 
 const result = dotenv.config();
 
@@ -70,6 +71,11 @@ server
   })
   .get('/status', (req, res) => {
     res.sendStatus(200);
+  })
+  .get(manifestRegexPath, ({ params }, res) => {
+    const { service } = params;
+
+    res.json(manifest(service));
   })
   .get('/*', async ({ url }, res) => {
     try {
