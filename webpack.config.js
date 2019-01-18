@@ -9,9 +9,9 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const RUN_ENV = process.env.RUN_ENV || 'local';
+  const BUILD_ENV = process.env.BUILD_ENV || 'local';
   // Load in environment variables configured in `.env` file. Be aware the `.env` committed is changed by bake-scripts when on real servers.
-  const result = dotenv.config({ path: `.env.${RUN_ENV}` });
+  const result = dotenv.config({ path: `.env.${BUILD_ENV}` });
 
   if (result.error) {
     throw result.error;
@@ -81,7 +81,7 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
-      RUN_ENV
+      BUILD_ENV,
     });
     return merge(baseConfig, specialisedConfig);
   };

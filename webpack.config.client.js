@@ -7,7 +7,7 @@ module.exports = ({
   IS_CI,
   IS_PROD,
   START_DEV_SERVER,
-  RUN_ENV,
+  BUILD_ENV,
 }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
@@ -57,7 +57,7 @@ module.exports = ({
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: `assets.${RUN_ENV}.json`,
+        filename: `assets.${BUILD_ENV}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
