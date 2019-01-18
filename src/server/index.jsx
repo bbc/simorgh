@@ -18,7 +18,7 @@ import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
 
-const result = dotenv.config({ path: `.env.${process.env.ENVIRONMENT}` });
+const result = dotenv.config({ path: `.env.${process.env.RUN_ENV}` });
 
 if (result.error) {
   throw result.error;
