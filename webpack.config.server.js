@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+  /* eslint-disable global-require */
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
