@@ -41,6 +41,9 @@ module.exports = (shell = {}) => {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    node: {
+      __dirname: false,
+    },
     devServer: {
       stats,
     },
