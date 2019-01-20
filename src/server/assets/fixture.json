@@ -1,5 +1,3 @@
 {
-  "one": {
-    "js": "one.js"
-  }
+  "one": "one.js"
 }

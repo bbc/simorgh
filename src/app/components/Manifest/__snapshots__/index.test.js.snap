@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manifest should render correctly for \`news\` service 1`] = `
+Object {
+  "Scope": "/news/",
+  "background_color": "#B80000",
+  "display": "standalone",
+  "icons": Array [
+    Object {
+      "sizes": "72x72",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "96x96",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "128x128",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "144x144",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "152x152",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "192x192",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "384x384",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "512x512",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+  ],
+  "name": "BBC News",
+  "short_name": "BBC News",
+  "splash_pages": null,
+  "start_url": "/news/articles/c9rpqy7pmypo",
+  "theme_color": "#B80000",
+}
+`;
+
+exports[`Manifest should render correctly for \`persian\` service 1`] = `
+Object {
+  "Scope": "/persian/",
+  "background_color": "#B80000",
+  "display": "standalone",
+  "icons": Array [
+    Object {
+      "sizes": "72x72",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "96x96",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "128x128",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "144x144",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "152x152",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "192x192",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "384x384",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+    Object {
+      "sizes": "512x512",
+      "src": "test-file-stub",
+      "type": "image/png",
+    },
+  ],
+  "name": "BBC News فارسی",
+  "short_name": "BBC News فارسی",
+  "splash_pages": null,
+  "start_url": "/persian/articles/cwv2xv848j5o",
+  "theme_color": "#B80000",
+}
+`;

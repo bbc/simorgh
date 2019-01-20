@@ -48,6 +48,26 @@ describe('Server', () => {
     });
   });
 
+  describe('/manifest.json', () => {
+    let manifestRequest;
+
+    beforeAll(async () => {
+      manifestRequest = await request(server).get('/news/manifest.json');
+    });
+
+    it('should respond with a 200', async () => {
+      expect(manifestRequest.statusCode).toBe(200);
+    });
+
+    it(`should have 'content-type' set to 'json'`, () => {
+      validateHttpHeader(
+        manifestRequest.headers,
+        'content-type',
+        'application/json; charset=utf-8',
+      );
+    });
+  });
+
   describe('Data', () => {
     it('should respond with JSON', async () => {
       const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');

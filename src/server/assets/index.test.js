@@ -26,12 +26,12 @@ describe('getAssetsArray', () => {
   });
 
   describe('assets manifest corrupted', () => {
-    it('should return only assets which have a key', async () => {
+    it('should return all assets including those without a key', async () => {
       process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
         __dirname,
         'fixtureMissingKey.json',
       );
-      expect(getAssetsArray()).toEqual(['foo.js']);
+      expect(getAssetsArray()).toEqual(['foo.js', 'bar.js']);
     });
   });
 });

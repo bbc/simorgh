@@ -1,8 +1,4 @@
 {
-  "foo": {
-    "js": "foo.js"
-  },
-  "": {
-    "js": "bar.js"
-  }
+  "foo": "foo.js",
+  "": "bar.js"
 }
