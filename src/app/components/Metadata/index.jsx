@@ -17,7 +17,7 @@ const Metadata = ({
   locale,
   metaTags,
   timeFirstPublished,
-  timeLastUpdated,
+  timeLastPublished,
   title,
   twitterCreator,
   twitterSite,
@@ -40,7 +40,7 @@ const Metadata = ({
       </title>
       <link rel="canonical" href={canonicalLink} />
       <meta name="article:author" content={articleAuthor} />
-      <meta name="article:modified_time" content={timeLastUpdated} />
+      <meta name="article:modified_time" content={timeLastPublished} />
       <meta name="article:published_time" content={timeFirstPublished} />
       {articleSection ? (
         <meta name="article:section" content={articleSection} />
@@ -85,7 +85,7 @@ Metadata.propTypes = {
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
   timeFirstPublished: string.isRequired,
-  timeLastUpdated: string.isRequired,
+  timeLastPublished: string.isRequired,
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
