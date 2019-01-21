@@ -178,6 +178,10 @@
     "post": [
       "mkdir -p /etc/bake-scripts/",
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
+    ],
+    "requires": [
+      "td-agent-cosmos",
+      "cloudteam-td-agent-setup"
     ]
   }
 }
