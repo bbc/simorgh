@@ -25,7 +25,7 @@ const MetadataContainer = ({ metadata, promo, service }) => {
   /* Canonical link generated from servicename and id */
   const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
-  const timeLastUpdated = new Date(metadata.lastUpdated).toISOString();
+  const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
   return (
     <PlatformContextConsumer>
@@ -55,7 +55,7 @@ const MetadataContainer = ({ metadata, promo, service }) => {
               locale={locale}
               metaTags={allTags(metadata.tags)}
               timeFirstPublished={timeFirstPublished}
-              timeLastUpdated={timeLastUpdated}
+              timeLastPublished={timeLastPublished}
               title={promo.headlines.seoHeadline}
               twitterCreator={twitterCreator}
               twitterSite={twitterSite}
