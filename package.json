@@ -170,8 +170,8 @@
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
     ],
-    "moduleNameMapper": { 
-        "\\.(png)$": "<rootDir>/src/app/helpers/tests/fileMock.js" 
+    "moduleNameMapper": {
+      "\\.(png)$": "<rootDir>/src/app/helpers/tests/fileMock.js"
     }
   },
   "spec": {
