@@ -181,8 +181,7 @@
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ],
     "requires": [
-      "td-agent-cosmos",
-      "cloudteam-td-agent-setup"
+      "td-agent-confd"
     ]
   }
 }
