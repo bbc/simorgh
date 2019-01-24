@@ -66,7 +66,7 @@ module.exports = ({
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: `assets.${BUILD_ENV}.json`,
+        filename: `assets.${BUILD_ENV || 'live'}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([

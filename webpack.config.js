@@ -9,7 +9,7 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const BUILD_ENV = process.env.BUILD_ENV || 'local';
+  const BUILD_ENV = process.env.BUILD_ENV || 'live';
   // Load in environment variables configured in `.env` files.
   const result = dotenv.config({ path: `.env.${BUILD_ENV}` });
 
