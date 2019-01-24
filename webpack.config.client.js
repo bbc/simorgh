@@ -11,7 +11,13 @@ if (dotenvConfig.error) {
   throw dotenvConfig.error;
 }
 
-module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
+module.exports = ({
+  resolvePath,
+  IS_CI,
+  IS_PROD,
+  START_DEV_SERVER,
+  BUILD_ENV,
+}) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
@@ -60,7 +66,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: 'assets.json',
+        filename: `assets.${BUILD_ENV}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
