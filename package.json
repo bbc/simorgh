@@ -182,10 +182,8 @@
     ],
     "requires": [
       "td-agent-systemd",
-      "td-agent-s3"
-    ],
-    "environment": [
-      "TD_INGEST_BUCKET=simorgh-test-logs"
+      "td-agent-s3",
+      "td-agent-rubygem-fluent-plugin-forest"
     ]
   }
 }
