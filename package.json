@@ -181,7 +181,8 @@
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ],
     "requires": [
-      "td-agent-cosmos"
+      "td-agent-systemd",
+      "td-agent-s3"
     ]
   }
 }
