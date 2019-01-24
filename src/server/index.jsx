@@ -19,7 +19,7 @@ import getAssetsArray from './assets';
 import Document from '../app/components/Document';
 
 const result = dotenv.config({
-  path: `.env.${process.env.RUN_ENV || 'local'}`,
+  path: `.env.${process.env.RUN_ENV || 'live'}`,
 });
 
 if (result.error) {
