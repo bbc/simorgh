@@ -5,12 +5,6 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
-const dotenvConfig = dotenv.config();
-
-if (dotenvConfig.error) {
-  throw dotenvConfig.error;
-}
-
 module.exports = ({
   resolvePath,
   IS_CI,
@@ -19,6 +13,12 @@ module.exports = ({
   BUILD_ENV,
 }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
+  const dotenvConfig = dotenv.config({ path: `.env.${BUILD_ENV}` });
+
+  if (dotenvConfig.error) {
+    throw dotenvConfig.error;
+  }
+
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
