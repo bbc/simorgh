@@ -118,6 +118,7 @@ module.exports = ({
         ServiceWorker: {
           events: true,
           minify: true,
+          output: `sw.${BUILD_ENV || 'live'}.js`,
         },
         updateStrategy: 'changed',
       }),
