@@ -16,4 +16,3 @@ developmentTests:
 
 productionTests:
 	cd ${APP_DIRECTORY}; npm run build:local; xvfb-run npm run test:prod:ci;
-		
