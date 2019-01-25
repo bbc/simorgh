@@ -9,9 +9,9 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const BUILD_ENV = process.env.BUILD_ENV || 'live';
+  const APP_ENV = process.env.APP_ENV || 'live';
   // Load in environment variables configured in `.env` files.
-  const result = dotenv.config({ path: `.env.${BUILD_ENV}` });
+  const result = dotenv.config({ path: `.env.${APP_ENV}` });
 
   if (result.error) {
     throw result.error;
@@ -80,7 +80,7 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
-      BUILD_ENV,
+      APP_ENV,
     });
     return merge(baseConfig, specialisedConfig);
   };

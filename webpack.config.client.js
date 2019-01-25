@@ -10,10 +10,10 @@ module.exports = ({
   IS_CI,
   IS_PROD,
   START_DEV_SERVER,
-  BUILD_ENV,
+  APP_ENV,
 }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
-  const dotenvConfig = dotenv.config({ path: `.env.${BUILD_ENV}` });
+  const dotenvConfig = dotenv.config({ path: `.env.${APP_ENV}` });
 
   if (dotenvConfig.error) {
     throw dotenvConfig.error;
@@ -66,7 +66,7 @@ module.exports = ({
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: `assets.${BUILD_ENV || 'live'}.json`,
+        filename: `assets.${APP_ENV || 'live'}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
@@ -118,7 +118,7 @@ module.exports = ({
         ServiceWorker: {
           events: true,
           minify: true,
-          output: `sw.${BUILD_ENV || 'live'}.js`,
+          output: `sw.${APP_ENV || 'live'}.js`,
         },
         updateStrategy: 'changed',
       }),
