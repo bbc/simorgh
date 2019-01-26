@@ -1,23 +1,23 @@
 // Node.js logger utility
-const winston = require('winston');
+const fs = require('fs');
+const path = require('path');
+const { createLogger, format, transports } = require('winston');
 
-const { format } = winston;
-const { combine, printf, timestamp } = format;
+const { combine, label, printf, simple, timestamp } = format;
 
-const LOGGING_LEVEL = 'error';
+const LOGGING_LEVEL = 'info';
 const LOGGING_FILE = 'app.log';
 let LOGGING_DIR = '/var/log/simorgh/';
 let transport;
 
-const customFormatting = printf(
-  data => `${data.timestamp} level=${data.level} message=${data.message}`,
-);
-
 if (process.env.SIMORGH_LOGGING_TYPE === 'file') {
   LOGGING_DIR = process.env.SIMORGH_LOGGING_DIR || LOGGING_DIR;
+  if (!fs.existsSync(LOGGING_DIR)) {
+    fs.mkdirSync(LOGGING_DIR);
+  }
   // prettier-ignore
-  transport = new (winston.transports.File)({ 
-    filename: LOGGING_DIR + LOGGING_FILE,
+  transport = new (transports.File)({
+    filename: path.join(LOGGING_DIR, LOGGING_FILE),
     handleExceptions: true,
     humanReadableUnhandledException: true,
     json: false, // plain text logs
@@ -25,7 +25,7 @@ if (process.env.SIMORGH_LOGGING_TYPE === 'file') {
   });
 } else {
   // prettier-ignore
-  transport = new (winston.transports.Console)({ 
+  transport = new (transports.Console)({
     handleExceptions: true,
     humanReadableUnhandledException: true,
     level: LOGGING_LEVEL,
@@ -33,9 +33,19 @@ if (process.env.SIMORGH_LOGGING_TYPE === 'file') {
   });
 }
 
-const logger = winston.createLogger({
-  format: combine(timestamp(), customFormatting),
-  transports: [transport],
-});
+const customFormatting = printf(
+  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
+);
+
+const logger = callingFile =>
+  createLogger({
+    format: combine(
+      label({ label: path.basename(callingFile) }),
+      simple(),
+      timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+      customFormatting,
+    ),
+    transports: [transport],
+  });
 
 module.exports = logger;

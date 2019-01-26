@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+const logger = require('../../app/helpers/logger')(__filename);
+
 const getAssetsArray = () => {
   const assets = [];
   const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
@@ -21,13 +23,11 @@ const getAssetsArray = () => {
       }
     }
   } catch (error) {
-    /* eslint-disable no-console */
-    console.log(
+    logger.error(
       `Error parsing assets manifest. ${assetsManifestEnv} = ${
         process.env[assetsManifestEnv]
       }`,
     );
-    /* eslint-enable no-console */
   }
   return assets;
 };

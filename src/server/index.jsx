@@ -18,6 +18,8 @@ import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
 
+const logger = require('../app/helpers/logger')(__filename);
+
 const result = dotenv.config();
 
 if (result.error) {
@@ -57,7 +59,7 @@ server
     fs.readFile(dataFilePath, (error, data) => {
       if (error) {
         res.sendStatus(404);
-        console.log(error); // eslint-disable-line no-console
+        logger.error(error);
         return null;
       }
 
@@ -95,7 +97,8 @@ server
       );
 
       res.send(`<!doctype html>${doc}`);
-    } catch ({ message }) {
+    } catch ({ message, status }) {
+      logger.error(`status: ${status} - ${message}`);
       res.status(404).send(message);
     }
   });

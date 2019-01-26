@@ -45,6 +45,9 @@ module.exports = (shell = {}) => {
       stats,
     },
     stats,
+    node: {
+      fs: 'empty',
+    },
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
