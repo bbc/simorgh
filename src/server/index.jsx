@@ -99,7 +99,7 @@ server
 
       res.send(`<!doctype html>${doc}`);
     } catch ({ message, status }) {
-      logger.error(`status: ${status} - ${message}`);
+      logger.error(`status: ${status || 500} - ${message}`);
       res.status(404).send(message);
     }
   });
