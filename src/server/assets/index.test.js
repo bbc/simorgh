@@ -1,13 +1,15 @@
 import path from 'path';
 import getAssetsArray from '.';
 
+const logger = require('../../app/helpers/logger')('/example/index.js');
+
 describe('getAssetsArray', () => {
   describe('no assets manifest', () => {
-    it('should console log an error', async () => {
+    it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
-      global.console.log = jest.fn();
+      logger.error = jest.fn();
       getAssetsArray();
-      expect(global.console.log).toHaveBeenCalledWith(
+      expect(logger.error).toHaveBeenCalledWith(
         `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
           process.env.SIMORGH_ASSETS_MANIFEST_PATH
         }`,
