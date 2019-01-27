@@ -9,14 +9,19 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const APP_ENV = process.env.APP_ENV || 'live';
   // Load in environment variables configured in `.env` files.
-  const result = dotenv.config({ path: `.env.${APP_ENV}` });
+  const DOT_ENV_CONFIG = dotenv.config({
+    path:
+      process.env.APP_ENV && process.env.APP_ENV !== 'local'
+        ? `.env.${process.env.APP_ENV}`
+        : '.env',
+  });
 
-  if (result.error) {
-    throw result.error;
+  if (DOT_ENV_CONFIG.error) {
+    throw DOT_ENV_CONFIG.error;
   }
 
+  const APP_ENV = process.env.APP_ENV || 'live';
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
@@ -81,6 +86,7 @@ module.exports = (shell = {}) => {
       IS_CI,
       START_DEV_SERVER,
       APP_ENV,
+      DOT_ENV_CONFIG,
     });
     return merge(baseConfig, specialisedConfig);
   };

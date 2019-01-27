@@ -2,7 +2,6 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 module.exports = ({
@@ -11,13 +10,9 @@ module.exports = ({
   IS_PROD,
   START_DEV_SERVER,
   APP_ENV,
+  DOT_ENV_CONFIG,
 }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
-  const dotenvConfig = dotenv.config({ path: `.env.${APP_ENV}` });
-
-  if (dotenvConfig.error) {
-    throw dotenvConfig.error;
-  }
 
   const clientConfig = {
     target: 'web', // compile for browser environment
@@ -75,7 +70,7 @@ module.exports = ({
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(dotenvConfig),
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
     ],
   };
