@@ -23,6 +23,7 @@ const logger = require('../app/helpers/logger')(__filename);
 const result = dotenv.config();
 
 if (result.error) {
+  logger.error('config loading error');
   throw result.error;
 }
 
@@ -59,7 +60,7 @@ server
     fs.readFile(dataFilePath, (error, data) => {
       if (error) {
         res.sendStatus(404);
-        logger.error(error);
+        logger.error(`error reading article json, ${error}`);
         return null;
       }
 
