@@ -47,6 +47,8 @@ module.exports = (shell = {}) => {
     stats,
     node: {
       fs: 'empty',
+      __filename: true,
+      __dirname: true,
     },
     module: {
       rules: [

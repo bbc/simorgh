@@ -37,10 +37,16 @@ const customFormatting = printf(
   data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
 );
 
+// e.g. outputs 'Article/index.jsx'
+const folderAndFilename = name => {
+  const fileparts = name.split(path.sep);
+  return fileparts.splice(-2).join(path.sep);
+};
+
 const logger = callingFile =>
   createLogger({
     format: combine(
-      label({ label: path.basename(callingFile) }),
+      label({ label: folderAndFilename(callingFile) }),
       simple(),
       timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
       customFormatting,
