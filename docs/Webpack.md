@@ -14,7 +14,7 @@ We need a vulnerability-free, isomorphic (client & server) application with exce
 
 ## Decision
 
-Justification for removing Razzle: https://github.com/BBC-News/simorgh/issues/715
+Justification for removing Razzle: https://github.com/bbc/simorgh/issues/715
 
 Summary:
 
@@ -22,7 +22,7 @@ Summary:
 2. Unable to upgrade dependencies (styled-components v4 and babel v7)
 3. It's a black box (maintenance issue for us)
 
-Explanation of Webpack implementation: https://github.com/BBC-News/simorgh/pull/1117
+Explanation of Webpack implementation: https://github.com/bbc/simorgh/pull/1117
 
 Summary:
 

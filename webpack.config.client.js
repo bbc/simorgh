@@ -97,7 +97,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
           /* Unused fonts
             - When adding fonts, be sure to add them to the globalStyles object here:
-            https://github.com/BBC-News/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
+            https://github.com/bbc/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
 
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
