@@ -18,6 +18,7 @@ import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
 
+const morgan = require('morgan');
 const logger = require('../app/helpers/logger')(__filename);
 
 const result = dotenv.config();
@@ -35,9 +36,18 @@ const dataFolderToRender =
 
 const articleDataRegexPath = `${articleRegexPath}.json`;
 
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
+class LoggerStream {
+  write(message) {
+    logger.info(message.substring(0, message.lastIndexOf('\n')));
+  }
+}
+
 const server = express();
+// prettier-ignore
 server
   .disable('x-powered-by')
+  .use(morgan('combined', { 'stream': new LoggerStream() }))
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
