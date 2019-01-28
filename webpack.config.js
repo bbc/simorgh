@@ -2,20 +2,17 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const dotenv = require('dotenv');
+const getEnv = require('./src/server/env');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
-// Load in environment variables configured in `.env` file. Be aware the `.env` committed is changed by bake-scripts when on real servers.
-const result = dotenv.config();
-
-if (result.error) {
-  throw result.error;
-}
+// Load in environment variables configured in `.env` files.
+const DOT_ENV_CONFIG = getEnv();
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
+  const APP_ENV = process.env.APP_ENV || 'live';
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
@@ -79,6 +76,8 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
+      APP_ENV,
+      DOT_ENV_CONFIG,
     });
     return merge(baseConfig, specialisedConfig);
   };

@@ -16,7 +16,7 @@ jobs:
       install: npm ci
       script:
         - npm run audit:ci
-        - npm run build
+        - npm run build:local
         - xvfb-run npm run test:prod:ci
         - xvfb-run npm run test:lighthouse:ci
     - stage: deploy

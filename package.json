@@ -6,7 +6,8 @@
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
     "audit:ci": "audit-ci -low",
     "bbcA11y": "bbc-a11y",
-    "build": "rm -rf build && NODE_ENV=production webpack",
+    "build": "export NODE_ENV=production && rm -rf build && APP_ENV=test webpack && APP_ENV=live webpack",
+    "build:local": "rm -rf build && NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:storybook": "cypress run --project ./.storybook/.",
@@ -23,12 +24,12 @@
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
-    "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
+    "test:accessibility": "npm run killApp && npm run build:local && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
-    "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
+    "test:ampValidate:ci": "npm run build:local -- --hide-modules --colors && run-p --race start amp:validate",
     "test:prod:ci": "npm install --no-save cypress bbc-a11y && run-p --race start cypress && run-p --race start bbcA11y",
-    "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
-    "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
+    "test:e2e": "npm run killApp && npm run build:local && run-p --race start cypress",
+    "test:e2e:interactive": "npm run killApp && npm run build:local && run-p --race start cypress:interactive",
     "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
     "test:e2e:storybook:ci": "run-p --race storybook cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
@@ -40,7 +41,7 @@
     "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/assets.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/assets.local.json && NODE_ENV=development webpack --env.config='server'"
   },
   "husky": {
     "hooks": {
@@ -169,7 +170,8 @@
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)"
+      "**/?(*.)+(spec|test).js?(x)",
+      "!**/build/**/*.js"
     ]
   },
   "spec": {

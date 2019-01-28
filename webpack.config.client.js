@@ -2,16 +2,16 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
-const dotenvConfig = dotenv.config();
-
-if (dotenvConfig.error) {
-  throw dotenvConfig.error;
-}
-
-module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
+module.exports = ({
+  resolvePath,
+  IS_CI,
+  IS_PROD,
+  START_DEV_SERVER,
+  APP_ENV,
+  DOT_ENV_CONFIG,
+}) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
@@ -60,7 +60,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: 'assets.json',
+        filename: `assets.${APP_ENV}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
@@ -69,7 +69,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(dotenvConfig),
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
     ],
   };
@@ -112,6 +112,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         ServiceWorker: {
           events: true,
           minify: true,
+          output: `sw.${APP_ENV}.js`,
         },
         updateStrategy: 'changed',
       }),
