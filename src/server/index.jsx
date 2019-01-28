@@ -11,24 +11,16 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import dotenv from 'dotenv';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
+import getEnv from './env';
 
 import Document from '../app/components/Document';
 
-const result = dotenv.config({
-  path:
-    process.env.APP_ENV && process.env.APP_ENV !== 'local'
-      ? `.env.${process.env.APP_ENV}`
-      : '.env',
-});
+getEnv();
 
-if (result.error) {
-  throw result.error;
-}
-
+console.log(process.env);
 const assets = getAssetsArray();
 
 const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;

@@ -2,22 +2,13 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const dotenv = require('dotenv');
+const getEnv = require('./src/server/env');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 // Load in environment variables configured in `.env` files.
-const DOT_ENV_CONFIG = dotenv.config({
-  path:
-    process.env.APP_ENV && process.env.APP_ENV !== 'local'
-      ? `.env.${process.env.APP_ENV}`
-      : '.env',
-});
-
-if (DOT_ENV_CONFIG.error) {
-  throw DOT_ENV_CONFIG.error;
-}
+const DOT_ENV_CONFIG = getEnv();
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
