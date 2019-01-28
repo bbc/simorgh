@@ -5,7 +5,7 @@ const { createLogger, format, transports } = require('winston');
 
 const { combine, label, printf, simple, timestamp } = format;
 
-const LOGGING_LEVEL = 'info';
+const LOGGING_LEVEL = 'debug';
 const LOGGING_FILE = 'app.log';
 let LOGGING_DIR = '/var/log/simorgh/';
 
