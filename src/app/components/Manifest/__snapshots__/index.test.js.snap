@@ -8,42 +8,42 @@ Object {
   "icons": Array [
     Object {
       "sizes": "72x72",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "96x96",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "128x128",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "144x144",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "152x152",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "192x192",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "384x384",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "512x512",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
   ],
@@ -63,42 +63,42 @@ Object {
   "icons": Array [
     Object {
       "sizes": "72x72",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "96x96",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "128x128",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "144x144",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "152x152",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "192x192",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "384x384",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
     Object {
       "sizes": "512x512",
-      "src": "test-file-stub",
+      "src": "http://foobar.comtest-file-stub",
       "type": "image/png",
     },
   ],
