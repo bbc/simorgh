@@ -20,7 +20,6 @@ import Document from '../app/components/Document';
 
 getEnv();
 
-console.log(process.env);
 const assets = getAssetsArray();
 
 const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;
