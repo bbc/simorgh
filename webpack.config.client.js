@@ -60,7 +60,7 @@ module.exports = ({
       // this determines what scripts get put in the footer of the page
       new WebpackAssetsManifest({
         writeToDisk: true,
-        output: 'assets.json',
+        output: `assets.${APP_ENV}.json`,
         customize(entry) {
           return entry.key.endsWith('.js') ? entry : false;
         },

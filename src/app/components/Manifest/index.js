@@ -17,7 +17,7 @@ const Manifest = (service = 'news') => {
 
   Object.keys(config.icons).forEach(size => {
     template.icons.push({
-      src: config.icons[size],
+      src: process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH + config.icons[size],
       sizes: size,
       type: 'image/png',
     });

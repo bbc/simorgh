@@ -35,6 +35,7 @@ server
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
+    '/public',
     expressStaticGzip(publicDirectory, {
       enableBrotli: true,
       orderPreference: ['br'],
