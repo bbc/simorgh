@@ -42,12 +42,18 @@ There is also an AMP route at `/news/articles/:id.amp` with the article being AM
 
 To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
-## Production build
+## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build && npm run start`
+`npm run build:local && npm run start`. 
+
+We use `npm run build:local` locally which bundles the application pointing at localhost for data and static assets.
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
+
+## Production build on CI
+
+On deployment `npm run build` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
 
 ### Bundle analysis reports
 
