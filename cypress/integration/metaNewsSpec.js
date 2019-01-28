@@ -39,9 +39,9 @@ describe('Article Meta Tests', () => {
   // Testing the actual fetch is not currently possible
   it('should have script to fetch bundle', () => {
     cy.get('script')
-      .last()
+      .eq(2)
       .should('have.attr', 'src')
-      .and('match', /(\/static\/js\/main-\w+\.js)/g);
+      .and('match', /(\/static\/js\/main-[\d\w_.]*\.js)/g);
   });
 
   it('should have resource hints', () => {
