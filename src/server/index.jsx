@@ -73,9 +73,6 @@ server
 
     res.json(manifest(service));
   })
-  .get('/sw.js', (req, res) => {
-    res.sendFile(`${__dirname}/sw.js`);
-  })
   .get('/*', async ({ url }, res) => {
     try {
       const sheet = new ServerStyleSheet();
