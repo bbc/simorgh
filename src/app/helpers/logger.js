@@ -22,6 +22,8 @@ const fileTransport = new (transports.File)({
   humanReadableUnhandledException: true,
   json: false, // plain text logs
   level: LOGGING_LEVEL,
+  maxFiles: 1,
+  maxsize: 104857600, // 100MB
 });
 
 // prettier-ignore
