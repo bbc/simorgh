@@ -34,7 +34,7 @@ export default GlobalStyle;
 
 /* Unused fonts
   - When adding fonts, be sure to add them to the externals array for Offline-Plugin here:
-  https://github.com/BBC-News/simorgh/blob/latest/webpack.config.client.js
+  https://github.com/bbc/simorgh/blob/latest/webpack.config.client.js
 
   @font-face {
     font-display: optional;

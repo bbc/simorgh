@@ -11,19 +11,15 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import dotenv from 'dotenv';
 import routes, { articleRegexPath, manifestRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
+import getEnv from './env';
 
 import Document from '../app/components/Document';
 import manifest from '../app/components/Manifest';
 
-const result = dotenv.config();
-
-if (result.error) {
-  throw result.error;
-}
+getEnv();
 
 const assets = getAssetsArray();
 

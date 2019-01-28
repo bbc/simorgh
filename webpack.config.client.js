@@ -1,7 +1,16 @@
 /* eslint-disable global-require */
 const WebpackAssetsManifest = require('webpack-assets-manifest');
+const webpack = require('webpack');
+const { getClientEnvVars } = require('./src/clientEnvVars');
 
-module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
+module.exports = ({
+  resolvePath,
+  IS_CI,
+  IS_PROD,
+  START_DEV_SERVER,
+  APP_ENV,
+  DOT_ENV_CONFIG,
+}) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
   const publicPath = IS_PROD
@@ -57,11 +66,13 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
         publicPath,
       }),
+      new webpack.DefinePlugin({
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+      }),
     ],
   };
 
   if (START_DEV_SERVER) {
-    const webpack = require('webpack');
     clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
@@ -85,7 +96,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
           /* Unused fonts
             - When adding fonts, be sure to add them to the globalStyles object here:
-            https://github.com/BBC-News/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
+            https://github.com/bbc/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
 
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
@@ -100,6 +111,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         ServiceWorker: {
           events: true,
           minify: true,
+          output: `sw.${APP_ENV}.js`,
         },
         updateStrategy: 'changed',
       }),
