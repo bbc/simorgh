@@ -8,13 +8,15 @@ describe('getAssetsArray', () => {
     it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
 
-      Object.defineProperty(logger, 'error', { value: jest.fn() });
+      const spy = jest.spyOn(logger, 'error');
+
       getAssetsArray();
-      expect(logger.error).toHaveBeenCalledWith(
+      expect(spy).toHaveBeenCalledWith(
         `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
           process.env.SIMORGH_ASSETS_MANIFEST_PATH
         }`,
       );
+      spy.mockRestore();
     });
   });
 
