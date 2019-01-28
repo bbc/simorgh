@@ -47,7 +47,10 @@ const server = express();
 // prettier-ignore
 server
   .disable('x-powered-by')
-  .use(morgan('tiny', { 'stream': new LoggerStream() }))
+  .use(morgan('tiny', {
+    'skip': (req, res) => (res.statusCode === 200),
+    'stream': new LoggerStream()
+  }))
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
