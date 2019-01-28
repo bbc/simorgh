@@ -19,7 +19,7 @@ describe('getEnv', () => {
     expect(result).toEqual({ foo: 'bar' });
   });
 
-  it('calls dotenv with correct path when APP_ENV is "local"', async () => {
+  it('calls dotenv with correct path when APP_ENV is "test"', async () => {
     process.env.APP_ENV = 'test';
 
     const result = getEnv();
