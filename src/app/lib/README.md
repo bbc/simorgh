@@ -110,7 +110,7 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 ## Additional content
 
-- [Investigation PR](https://github.com/BBC-News/simorgh/pull/824)
+- [Investigation PR](https://github.com/bbc/simorgh/pull/824)
 - [Statically defined columns for above 1280px example](https://codepen.io/phil-lee/full/zmjaMO/)
 
 ## Final note
