@@ -7,7 +7,7 @@ const { combine, label, printf, simple, timestamp } = format;
 
 const LOGGING_LEVEL = 'debug';
 const LOGGING_FILE = 'app.log';
-let LOGGING_DIR = '/var/log/simorgh/';
+let LOGGING_DIR = 'log';
 
 LOGGING_DIR = process.env.SIMORGH_LOGGING_DIR || LOGGING_DIR;
 
