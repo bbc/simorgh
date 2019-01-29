@@ -5,7 +5,7 @@ const logger = require('../../app/helpers/logger')(__filename);
 
 describe('getAssetsArray', () => {
   describe('no assets manifest', () => {
-    it('should log an error', async () => {
+    xit('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
 
       const spy = jest.spyOn(logger, 'error');
