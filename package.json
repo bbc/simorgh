@@ -178,7 +178,7 @@
   },
   "spec": {
     "executable": [
-      "./bake-scripts/01-env-variables.sh"
+      "./bake-scripts/*"
     ],
     "post": [
       "mkdir -p /etc/bake-scripts/",
