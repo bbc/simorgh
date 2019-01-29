@@ -11,7 +11,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, { articleRegexPath } from '../app/routes';
+import routes, { articleRegexPath, swRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 import getEnv from './env';
@@ -67,7 +67,7 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
-  .get('/sw.js', (req, res, next) => {
+  .get(swRegexPath, (req, res, next) => {
     const swPath = `${__dirname}/public/sw.${process.env.APP_ENV}.js`;
     res.sendFile(swPath, {}, err => {
       if (err) {
