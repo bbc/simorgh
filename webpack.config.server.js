@@ -19,6 +19,9 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
       }),
     ],
     watch: true,
+    node: {
+      __dirname: false,
+    },
   };
 
   if (START_DEV_SERVER) {

@@ -67,6 +67,15 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
+  .get('/sw.js', (req, res, next) => {
+    const swPath = `${__dirname}/public/sw.${process.env.APP_ENV}.js`;
+    res.sendFile(swPath, {}, err => {
+      if (err) {
+        console.log(`Err fetching service worker at ${swPath}`, err);
+        next(err);
+      }
+    });
+  })
   .get('/*', async ({ url }, res) => {
     try {
       const sheet = new ServerStyleSheet();
