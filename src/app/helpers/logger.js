@@ -20,7 +20,7 @@ const fileTransport = new (transports.File)({
   filename: path.join(LOGGING_DIR, LOGGING_FILE),
   handleExceptions: true,
   humanReadableUnhandledException: true,
-  json: false, // plain text logs
+  json: true,
   level: LOGGING_LEVEL,
   maxFiles: 1,
   maxsize: 104857600, // 100MB
