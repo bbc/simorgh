@@ -5,23 +5,23 @@ const { createLogger, format, transports } = require('winston');
 
 const { combine, label, printf, simple, timestamp } = format;
 
-const LOGGING_LEVEL = 'debug';
-const LOGGING_FILE = 'app.log';
-let LOGGING_DIR = 'log';
+const LOG_LEVEL = 'debug';
+const LOG_FILE = 'app.log';
+let LOG_DIR = 'log';
 
-LOGGING_DIR = process.env.SIMORGH_LOGGING_DIR || LOGGING_DIR;
+LOG_DIR = process.env.SIMORGH_LOG_DIR || LOG_DIR;
 
-if (!fs.existsSync(LOGGING_DIR)) {
-  fs.mkdirSync(LOGGING_DIR);
+if (!fs.existsSync(LOG_DIR)) {
+  fs.mkdirSync(LOG_DIR);
 }
 
 // prettier-ignore
 const fileTransport = new (transports.File)({
-  filename: path.join(LOGGING_DIR, LOGGING_FILE),
+  filename: path.join(LOG_DIR, LOG_FILE),
   handleExceptions: true,
   humanReadableUnhandledException: true,
   json: true,
-  level: LOGGING_LEVEL,
+  level: LOG_LEVEL,
   maxFiles: 1,
   maxsize: 104857600, // 100MB
 });
@@ -30,7 +30,7 @@ const fileTransport = new (transports.File)({
 const consoleTransport = new (transports.Console)({
   handleExceptions: true,
   humanReadableUnhandledException: true,
-  level: LOGGING_LEVEL,
+  level: LOG_LEVEL,
   timestamp: true,
 });
 
