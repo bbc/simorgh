@@ -73,7 +73,7 @@ const ArticleContainer = ({ loading, error, data }) => {
     /*
      * headlineBlocks length check is temporary
      * Simorgh will respond with 400 to lack of headline block in issue
-     * https://github.com/BBC-News/simorgh/issues/836
+     * https://github.com/bbc/simorgh/issues/836
      */
     if (headlineBlocks.length > 0) {
       return (

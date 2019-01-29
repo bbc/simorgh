@@ -47,7 +47,7 @@ pipeline {
           userRemoteConfigs: [[
             credentialsId: 'github',
             name: "origin/${env.BRANCH_NAME}",
-            url: 'https://github.com/bbc-news/simorgh.git'
+            url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
         script {

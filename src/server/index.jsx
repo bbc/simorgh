@@ -11,22 +11,17 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import dotenv from 'dotenv';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
+import getEnv from './env';
 
 import Document from '../app/components/Document';
 
 const morgan = require('morgan');
 const logger = require('../app/helpers/logger')(__filename);
 
-const result = dotenv.config();
-
-if (result.error) {
-  logger.error('config loading error');
-  throw result.error;
-}
+getEnv();
 
 const assets = getAssetsArray();
 
