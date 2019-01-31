@@ -1,6 +1,10 @@
 import http from 'http';
-import app from './server';
 
+const getEnv = require('./server/env');
+
+getEnv();
+
+const app = require('./server').default;
 const logger = require('./app/helpers/logger')(__filename);
 
 const server = http.createServer(app);

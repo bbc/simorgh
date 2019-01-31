@@ -14,18 +14,15 @@ import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
-import getEnv from './env';
 
 import Document from '../app/components/Document';
 
 const morgan = require('morgan');
 const logger = require('../app/helpers/logger')(__filename);
 
-getEnv();
-
 const assets = getAssetsArray();
 
-const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;
+const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
