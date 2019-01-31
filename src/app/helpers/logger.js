@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
+require('../../server/env');
 
 const { combine, label, printf, simple, timestamp } = format;
 
