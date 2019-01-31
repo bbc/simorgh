@@ -9,7 +9,7 @@ const LOG_LEVEL = 'debug';
 const LOG_FILE = 'app.log';
 let LOG_DIR = 'log';
 
-console.log(process.env);
+console.log(process.env); // eslint-disable-line no-console
 
 LOG_DIR = process.env.SIMORGH_LOG_DIR || LOG_DIR;
 
@@ -17,8 +17,8 @@ if (!fs.existsSync(LOG_DIR)) {
   fs.mkdirSync(LOG_DIR);
 }
 
-const logLocation = path.join(LOG_DIR, LOG_FILE);
-console.log(`Application outputting logs to file ${logLocation}`);
+const logLocation = path.join(LOG_DIR, `/${LOG_FILE}`);
+console.log(`Application outputting logs to file ${logLocation}`); // eslint-disable-line no-console
 
 // prettier-ignore
 const fileTransport = new (transports.File)({
