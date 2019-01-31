@@ -3,6 +3,9 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const { getClientEnvVars } = require('./src/clientEnvVars');
+const { getEnv } = require('./src/server/envSetUp');
+
+console.log(getEnv());
 
 module.exports = ({
   resolvePath,
@@ -10,7 +13,6 @@ module.exports = ({
   IS_PROD,
   START_DEV_SERVER,
   APP_ENV,
-  DOT_ENV_CONFIG,
 }) => {
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
@@ -69,7 +71,7 @@ module.exports = ({
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+        'process.env': getClientEnvVars(getEnv()),
       }),
     ],
   };

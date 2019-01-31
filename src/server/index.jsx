@@ -14,11 +14,8 @@ import gnuTP from 'gnu-terry-pratchett';
 import routes, { articleRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
-import getEnv from './env';
 
 import Document from '../app/components/Document';
-
-getEnv();
 
 const assets = getAssetsArray();
 

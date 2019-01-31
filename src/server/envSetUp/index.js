@@ -1,6 +1,7 @@
 // written in ES5 due to need to be used in webpack
 const dotenv = require('dotenv');
 
+// A method to return the config, needed for webpack.config.client.js
 const getEnv = () => {
   const result = dotenv.config({
     path:
@@ -16,4 +17,7 @@ const getEnv = () => {
   return result;
 };
 
-module.exports = getEnv;
+// invoke the above method on a direct import, needed for src/index.js
+getEnv();
+
+module.exports = { getEnv };

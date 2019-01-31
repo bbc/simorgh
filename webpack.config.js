@@ -2,13 +2,9 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const getEnv = require('./src/server/env');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
-
-// Load in environment variables configured in `.env` files.
-const DOT_ENV_CONFIG = getEnv();
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
@@ -77,7 +73,6 @@ module.exports = (shell = {}) => {
       IS_CI,
       START_DEV_SERVER,
       APP_ENV,
-      DOT_ENV_CONFIG,
     });
     return merge(baseConfig, specialisedConfig);
   };
