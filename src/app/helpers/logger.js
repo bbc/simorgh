@@ -9,15 +9,20 @@ const LOG_LEVEL = 'debug';
 const LOG_FILE = 'app.log';
 let LOG_DIR = 'log';
 
+console.log(process.env);
+
 LOG_DIR = process.env.SIMORGH_LOG_DIR || LOG_DIR;
 
 if (!fs.existsSync(LOG_DIR)) {
   fs.mkdirSync(LOG_DIR);
 }
 
+const logLocation = path.join(LOG_DIR, LOG_FILE);
+console.log(`Application outputting logs to file ${logLocation}`);
+
 // prettier-ignore
 const fileTransport = new (transports.File)({
-  filename: path.join(LOG_DIR, LOG_FILE),
+  filename: logLocation,
   handleExceptions: true,
   humanReadableUnhandledException: true,
   json: true,
