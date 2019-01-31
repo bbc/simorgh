@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
-require('../../server/env');
+const getEnv = require('../../server/env');
+
+getEnv();
 
 const { combine, label, printf, simple, timestamp } = format;
 
@@ -10,7 +12,7 @@ const LOG_LEVEL = 'debug';
 const LOG_FILE = 'app.log';
 let LOG_DIR = 'log';
 
-console.log(process.env); // eslint-disable-line no-console
+console.log(process.env.SIMORGH_LOG_DIR); // eslint-disable-line no-console
 
 LOG_DIR = process.env.SIMORGH_LOG_DIR || LOG_DIR;
 
