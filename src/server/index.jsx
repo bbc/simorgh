@@ -69,10 +69,10 @@ server
   })
   .get(swRegexPath, (req, res, next) => {
     const swPath = `${__dirname}/public/sw.${process.env.APP_ENV}.js`;
-    res.sendFile(swPath, {}, err => {
-      if (err) {
-        console.log(`Err fetching service worker at ${swPath}`, err);
-        next(err);
+    res.sendFile(swPath, {}, error => {
+      if (error) {
+        console.log(error); // eslint-disable-line no-console
+        next(error);
       }
     });
   })
