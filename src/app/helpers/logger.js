@@ -1,10 +1,15 @@
 // Node.js logger utility using winston
+import dotenv from 'dotenv';
+
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
-const getEnv = require('../../server/env');
 
-getEnv();
+const result = dotenv.config();
+
+if (result.error) {
+  throw result.error;
+}
 
 const { combine, label, printf, simple, timestamp } = format;
 
