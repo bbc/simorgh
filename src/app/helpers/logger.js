@@ -7,18 +7,13 @@ const { combine, label, printf, simple, timestamp } = format;
 
 const LOG_LEVEL = 'debug';
 const LOG_FILE = 'app.log';
-let LOG_DIR = 'log';
-
-console.log(process.env.SIMORGH_LOG_DIR); // eslint-disable-line no-console
-
-LOG_DIR = process.env.SIMORGH_LOG_DIR || LOG_DIR;
+const LOG_DIR = process.env.SIMORGH_LOG_DIR;
 
 if (process.env.NODE_ENV === 'node' && !fs.existsSync(LOG_DIR)) {
   fs.mkdirSync(LOG_DIR);
 }
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
-console.log(`Application outputting logs to file ${logLocation}`); // eslint-disable-line no-console
 
 // prettier-ignore
 const fileTransport = new (transports.File)({
