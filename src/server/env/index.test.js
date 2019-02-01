@@ -17,32 +17,32 @@ describe('getEnv', () => {
     jest.clearAllMocks();
   });
 
-  it('calls dotenv with correct path when APP_ENV is "local"', async () => {
-    process.env.APP_ENV = 'local';
+  it('calls dotenv with correct path when ENV_FILE is "local"', async () => {
+    process.env.ENV_FILE = '.env';
 
     testGetEnv('.env');
   });
 
-  it('calls dotenv with correct path when APP_ENV is "test"', async () => {
-    process.env.APP_ENV = 'test';
+  it('calls dotenv with correct path when ENV_FILE is "test"', async () => {
+    process.env.ENV_FILE = '.env.test';
 
     testGetEnv('.env.test');
   });
 
-  it('calls dotenv with correct path when APP_ENV is "live"', async () => {
-    process.env.APP_ENV = 'live';
+  it('calls dotenv with correct path when ENV_FILE is "live"', async () => {
+    process.env.ENV_FILE = '.env.live';
 
     testGetEnv('.env.live');
   });
 
-  it('calls dotenv with correct path when APP_ENV is "foobar"', async () => {
-    process.env.APP_ENV = 'foobar';
+  it('calls dotenv with correct path when ENV_FILE is "foobar"', async () => {
+    process.env.ENV_FILE = 'foobar';
 
-    testGetEnv('.env.foobar');
+    testGetEnv('foobar');
   });
 
-  it('calls dotenv with correct path when APP_ENV is undefined', async () => {
-    delete process.env.APP_ENV;
+  it('calls dotenv with correct path when ENV_FILE is undefined', async () => {
+    delete process.env.ENV_FILE;
 
     testGetEnv('.env');
   });
