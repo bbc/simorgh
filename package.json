@@ -6,7 +6,7 @@
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
     "audit:ci": "audit-ci -low",
     "bbcA11y": "bbc-a11y",
-    "build": "export NODE_ENV=production && rm -rf build && APP_ENV=test webpack && APP_ENV=live webpack",
+    "build": "export NODE_ENV=production && rm -rf build && ENV_FILE=.env.test webpack && ENV_FILE=.env.live webpack",
     "build:local": "rm -rf build && NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",

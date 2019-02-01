@@ -10,9 +10,12 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 // Load in environment variables configured in `.env` files.
 const DOT_ENV_CONFIG = getEnv();
 
+console.log(DOT_ENV_CONFIG);
+
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const APP_ENV = process.env.APP_ENV || 'live';
+  const APP_ENV = DOT_ENV_CONFIG.parsed.APP_ENV || 'live';
+  console.log(APP_ENV);
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;

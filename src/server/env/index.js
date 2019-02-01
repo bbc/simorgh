@@ -3,10 +3,7 @@ const dotenv = require('dotenv');
 
 const getEnv = () => {
   const result = dotenv.config({
-    path:
-      process.env.APP_ENV && process.env.APP_ENV !== 'local'
-        ? `.env.${process.env.APP_ENV}`
-        : '.env',
+    path: process.env.ENV_FILE ? `${process.env.ENV_FILE}` : '.env',
   });
 
   if (result.error) {
