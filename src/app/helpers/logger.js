@@ -5,7 +5,7 @@ const { createLogger, format, transports } = require('winston');
 
 const { combine, label, printf, simple, timestamp } = format;
 
-const LOG_LEVEL = 'debug';
+const LOG_LEVEL = process.env.SIMORGH_LOG_LEVEL;
 const LOG_FILE = 'app.log';
 const LOG_DIR = process.env.SIMORGH_LOG_DIR;
 
