@@ -51,6 +51,16 @@ We use `npm run build:local` locally which bundles the application pointing at l
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
+### Varying which ENV_FILE is used locally
+
+`npm run build` creates both test and live bundles via the `process.env.ENV_FILE`. `npm run build:local` creates a local bundle.
+
+| Command | File used | 
+| ------- | --------- |
+| npm run build && npm run start:live | .env.live |
+| npm run build && npm run start:test | .env.test |
+| npm run build:local && npm run start | .env |
+
 ## Production build on CI
 
 On deployment `npm run build` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
