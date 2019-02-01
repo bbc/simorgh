@@ -170,8 +170,7 @@
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)",
-      "!**/build/**/*.js"
+      "**/?(*.)+(spec|test).js?(x)"
     ]
   },
   "spec": {
