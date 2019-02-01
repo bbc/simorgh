@@ -55,9 +55,6 @@ module.exports = ({
         },
       },
     },
-    node: {
-      fs: 'empty',
-    },
     plugins: [
       // keep track of the generated chunks in build/assets.json
       // this determines what scripts get put in the footer of the page
