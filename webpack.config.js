@@ -6,8 +6,6 @@ const path = require('path');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
-require('./src/server/env');
-
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
