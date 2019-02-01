@@ -1,6 +1,6 @@
 import http from 'http';
-// import and instantly trigger getEnv() to ensure the env vars are set to the correct env
-import './server/envSetUp';
+// import and instantly use 'process.env.APP_ENV' to define the correct `.env` file to use
+import './server/env';
 import app from './server';
 
 const server = http.createServer(app);
