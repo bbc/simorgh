@@ -6,9 +6,10 @@ const path = require('path');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
+require('./src/server/env');
+
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
-  const APP_ENV = process.env.APP_ENV || 'live';
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
@@ -72,7 +73,6 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
-      APP_ENV,
     });
     return merge(baseConfig, specialisedConfig);
   };
