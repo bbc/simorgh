@@ -68,7 +68,7 @@ server
     res.sendStatus(200);
   })
   .get(swRegexPath, (req, res, next) => {
-    const swPath = `${__dirname}/public/sw.${process.env.APP_ENV}.js`;
+    const swPath = `${__dirname}/public/sw-${process.env.APP_ENV}.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
         console.log(error); // eslint-disable-line no-console
