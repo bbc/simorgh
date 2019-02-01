@@ -14,7 +14,7 @@ const testGetEnv = path => {
 
 describe('getEnv', () => {
   afterEach(() => {
-    // jest.clearAllMocks();
+    jest.clearAllMocks();
     jest.resetModules(); // enforce all modules to be required fresh and not from cache
   });
 
