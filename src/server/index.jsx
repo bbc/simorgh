@@ -67,12 +67,12 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
-  .get(swRegexPath, (req, res, next) => {
+  .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw-${process.env.APP_ENV}.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
         console.log(error); // eslint-disable-line no-console
-        next(error);
+        res.status(404).send('Unable to find service worker.');
       }
     });
   })

@@ -20,6 +20,10 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
     ],
     watch: true,
     node: {
+      /**
+       * Override webpacks default handling of __dirname
+       * which replaces it with '/'.
+       */
       __dirname: false,
     },
   };
