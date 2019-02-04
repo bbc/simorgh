@@ -14,6 +14,19 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
+export const getBlockData = (blockType, win) => {
+  let blockData;
+  const { blocks } = win.SIMORGH_DATA.data.content.model;
+
+    blocks.forEach(block => {
+    console.log(block);
+      if (block.type === blockType) {
+        blockData = block;
+      }
+  });
+  return blockData;
+};
+
 export const checkElementStyles = (elementString, text, color, fontFamily) => {
   const el = getElement(elementString);
   shouldContainText(el, text);
