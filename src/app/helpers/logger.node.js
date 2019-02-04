@@ -5,9 +5,9 @@ const { createLogger, format, transports } = require('winston');
 
 const { combine, label, printf, simple, timestamp } = format;
 
-const LOG_LEVEL = process.env.SIMORGH_LOG_LEVEL;
+const LOG_LEVEL = process.env.SIMORGH_LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
-const LOG_DIR = process.env.SIMORGH_LOG_DIR;
+const LOG_DIR = process.env.SIMORGH_LOG_DIR || 'log';
 
 if (process.env.NODE_ENV === 'node' && !fs.existsSync(LOG_DIR)) {
   fs.mkdirSync(LOG_DIR);
