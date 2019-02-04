@@ -57,6 +57,7 @@ module.exports = ({
     },
     node: {
       fs: 'empty',
+      __filename: 'mock',
     },
     plugins: [
       // keep track of the generated chunks in build/assets.json
@@ -74,6 +75,15 @@ module.exports = ({
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
+      new webpack.NormalModuleReplacementPlugin(
+        /(.*)-logger.node(\.*)/,
+        resource => {
+          resource.request = resource.request.replace(
+            /-logger.node/,
+            `-logger.web`,
+          );
+        },
+      ),
     ],
   };
 
