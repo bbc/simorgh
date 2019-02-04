@@ -4,7 +4,7 @@ This is a wiki for helping developers working in this application. It has detail
 
 ## Code execution overview
 
-Webpack bundles the `src/` code into `build/server.js` which is what is actually executed via `npm run start`. The following describes the code execution order prior to webpack bundling the `src/` code. 
+Webpack creates two bundles, the first being `server` that has an entrypoint of `/src/index.js` and the second being `client` which has an entry point of `/src/client.js`
 
 The entry points to the application in terms of code execution are as follows: 
 - `npm run build` executes the webpack configs
