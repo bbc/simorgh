@@ -19,7 +19,7 @@ import Document from '../app/components/Document';
 
 const assets = getAssetsArray();
 
-const publicDirectory = process.env.SIMORGH_PUBLIC_DIR;
+const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
