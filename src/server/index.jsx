@@ -72,7 +72,7 @@ server
     res.sendFile(swPath, {}, error => {
       if (error) {
         console.log(error); // eslint-disable-line no-console
-        res.status(404).send('Unable to find service worker.');
+        res.status(500).send('Unable to find service worker.');
       }
     });
   })
