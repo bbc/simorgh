@@ -1,6 +1,6 @@
 # Developer help
 
-This is a wiki for helping developers working in this application. It has detailed explanations of the application an known gotchas. 
+This is a wiki for helping developers working in this application. It has detailed explanations of the application and known gotchas. 
 
 ## Code execution overview
 
