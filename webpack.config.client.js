@@ -76,12 +76,12 @@ module.exports = ({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
       new webpack.NormalModuleReplacementPlugin(
-        /(.*)-logger.node(\.*)/,
+        /(.*)logger.node(\.*)/,
         resource => {
           // eslint-disable-next-line no-param-reassign
           resource.request = resource.request.replace(
-            /-logger.node/,
-            `-logger.web`,
+            /logger.node/,
+            `logger.web`,
           );
         },
       ),
