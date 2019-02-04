@@ -4,6 +4,7 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
 import Document from '../app/components/Document';
+import './env'; // this is needed so the dotenv.config is setup before the server is invoked
 import server from './index';
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {

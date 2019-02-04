@@ -1,11 +1,7 @@
 import http from 'http';
 import nodeLogger from './app/helpers/logger.node';
-
-const getEnv = require('./server/env');
-
-getEnv();
-
-const app = require('./server').default;
+import './server/env'; // This import must be above the `app`. See details - https://github.com/bbc/simorgh/pull/1231
+import app from './server';
 
 const logger = nodeLogger(__filename);
 const server = http.createServer(app);
