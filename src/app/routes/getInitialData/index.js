@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
+import nodeLogger from '../../helpers/logger.node';
 
-const logger = require('../../helpers/logger.node')(__filename);
-
+const logger = nodeLogger(__filename);
 const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;

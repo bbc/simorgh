@@ -1,12 +1,13 @@
 import http from 'http';
+import nodeLogger from './app/helpers/logger.node';
 
 const getEnv = require('./server/env');
 
 getEnv();
 
 const app = require('./server').default;
-const logger = require('./app/helpers/logger.node')(__filename);
 
+const logger = nodeLogger(__filename);
 const server = http.createServer(app);
 const port = process.env.PORT || 7080;
 let currentApp = app;

@@ -18,9 +18,9 @@ import {
 } from '../../lib/layoutGrid';
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import GlobalStyle from '../../lib/globalStyles';
+import nodeLogger from '../../helpers/logger.node';
 
-const logger = require('../../helpers/logger.node')(__filename);
-
+const logger = nodeLogger(__filename);
 const Wrapper = styled.div`
   ${layoutGridWrapper};
 `;
