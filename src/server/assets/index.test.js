@@ -1,7 +1,7 @@
 import path from 'path';
 import getAssetsArray from '.';
 
-const logger = require('../../app/helpers/logger')(__filename);
+const logger = require('../../app/helpers/logger.node')(__filename);
 
 describe('getAssetsArray', () => {
   describe('no assets manifest', () => {

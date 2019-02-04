@@ -19,7 +19,7 @@ import {
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import GlobalStyle from '../../lib/globalStyles';
 
-const logger = require('../../helpers/logger')(__filename);
+const logger = require('../../helpers/logger.node')(__filename);
 
 const Wrapper = styled.div`
   ${layoutGridWrapper};

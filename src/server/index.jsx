@@ -18,7 +18,7 @@ import getAssetsArray from './assets';
 import Document from '../app/components/Document';
 
 const morgan = require('morgan');
-const logger = require('../app/helpers/logger')(__filename);
+const logger = require('../app/helpers/logger.node')(__filename);
 
 const assets = getAssetsArray();
 

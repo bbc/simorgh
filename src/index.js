@@ -5,7 +5,7 @@ const getEnv = require('./server/env');
 getEnv();
 
 const app = require('./server').default;
-const logger = require('./app/helpers/logger')(__filename);
+const logger = require('./app/helpers/logger.node')(__filename);
 
 const server = http.createServer(app);
 const port = process.env.PORT || 7080;

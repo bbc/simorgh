@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const logger = require('../../app/helpers/logger')(__filename);
+const logger = require('../../app/helpers/logger.node')(__filename);
 
 const getAssetsArray = () => {
   const assets = [];
