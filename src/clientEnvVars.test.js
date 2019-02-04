@@ -26,7 +26,6 @@ describe('webpack client config', () => {
     const dotenvConfigMock = {
       parsed: {
         SIMORGH_BASE_URL: 'https://www.bbc.com',
-        SIMORGH_PUBLIC_DIR: 'build/public',
         SIMORGH_ASSETS_MANIFEST_PATH: 'build/assets.json',
         CI: 'false',
         NOT_SIMORGH_PREFIXED: 'foobar',
@@ -35,7 +34,6 @@ describe('webpack client config', () => {
     const result = getClientEnvVars(dotenvConfigMock);
     const expected = {
       SIMORGH_BASE_URL: '"https://www.bbc.com"',
-      SIMORGH_PUBLIC_DIR: '"build/public"',
       SIMORGH_ASSETS_MANIFEST_PATH: '"build/assets.json"',
     };
 
