@@ -175,11 +175,16 @@
   },
   "spec": {
     "executable": [
-      "./bake-scripts/01-env-variables.sh"
+      "./bake-scripts/*"
     ],
     "post": [
       "mkdir -p /etc/bake-scripts/",
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
+    ],
+    "prune": false,
+    "requires": [
+      "td-agent",
+      "cloudteam-td-agent-setup"
     ]
   }
 }
