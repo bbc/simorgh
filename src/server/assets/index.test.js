@@ -1,31 +1,29 @@
+/* eslint-disable global-require */
 import path from 'path';
-import getAssetsArray from '.';
 import nodeLogger from '../../app/helpers/logger.node';
 
 const mockLogError = jest.fn();
-const mockLogConstructor = (filename) => {
-    return { error: mockLogError };
-  };
-const mockLogger = jest.mock('../../app/helpers/logger.node', () => {
-  console.log('constructorhere', mockLogConstructor);
-  return jest.fn().mockImplementation(mockLogConstructor);
-});
 
-console.log('error', mockLogError);
-console.log('constructor', mockLogConstructor);
-console.log('logger', mockLogger);
+jest.mock('../../app/helpers/logger.node', () => jest.fn());
+
+nodeLogger.mockImplementation(() => ({ error: mockLogError }));
 
 describe('getAssetsArray', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('no assets manifest', () => {
     it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
+      const getAssetsArray = require('./index.js').default;
       getAssetsArray();
       expect(mockLogError).toHaveBeenCalled();
-      // expect(spy).toHaveBeenCalledWith(
-      //   `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
-      //     process.env.SIMORGH_ASSETS_MANIFEST_PATH
-      //   }`,
-      // );
+      expect(mockLogError).toHaveBeenCalledWith(
+        `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
+          process.env.SIMORGH_ASSETS_MANIFEST_PATH
+        }`,
+      );
     });
   });
 
@@ -35,7 +33,9 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixture.json',
       );
+      const getAssetsArray = require('./index.js').default;
       expect(getAssetsArray()).toEqual(['one.js']);
+      expect(mockLogError).not.toHaveBeenCalled();
     });
   });
 
@@ -45,7 +45,9 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixtureMissingKey.json',
       );
+      const getAssetsArray = require('./index.js').default;
       expect(getAssetsArray()).toEqual(['foo.js']);
+      expect(mockLogError).not.toHaveBeenCalled();
     });
   });
 });
