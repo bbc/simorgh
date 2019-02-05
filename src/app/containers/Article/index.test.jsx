@@ -7,16 +7,22 @@ import { articleDataNews, articleDataPersian } from './fixtureData';
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
-  const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
+  const newsData = {
+    articleData: { data: articleDataNews, isAmp: false, service: 'news' },
+    status: 200,
+  };
 
   // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
   const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
-  newsDataNoHeadline.data.content.model.blocks.shift();
+  newsDataNoHeadline.articleData.data.content.model.blocks.shift();
 
   const persianData = {
-    data: articleDataPersian,
-    isAmp: false,
-    service: 'persian',
+    articleData: {
+      data: articleDataPersian,
+      isAmp: false,
+      service: 'persian',
+    },
+    status: 200,
   };
 
   describe('Component', () => {

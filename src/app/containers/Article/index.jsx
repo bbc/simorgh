@@ -60,7 +60,7 @@ const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) return 'Something went wrong :(';
   if (data) {
-    const { isAmp, data: articleData, service } = data;
+    const { isAmp, data: articleData, service } = data.articleData;
     const { content, metadata, promo } = articleData;
 
     const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);

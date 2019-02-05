@@ -37,9 +37,12 @@ describe('getInitialData', () => {
   it('should return the fetch response', async () => {
     const response = await callGetInitialData();
     expect(response).toEqual({
-      isAmp: false,
-      data: mockSuccessfulResponse,
-      service: 'news',
+      articleData: {
+        isAmp: false,
+        data: mockSuccessfulResponse,
+        service: 'news',
+      },
+      status: 200,
     });
   });
 
@@ -56,9 +59,12 @@ describe('getInitialData', () => {
 
     const response = await callGetInitialData(contextWithAmp);
     expect(response).toEqual({
-      isAmp: true,
-      data: mockSuccessfulResponse,
-      service: 'news',
+      articleData: {
+        isAmp: true,
+        data: mockSuccessfulResponse,
+        service: 'news',
+      },
+      status: 200,
     });
   });
 
@@ -81,7 +87,14 @@ describe('getInitialData', () => {
         defaultContext,
         mockFetchFailure,
       );
-      expect(response).toEqual({});
+      expect(response).toEqual({
+        articleData: {
+          data: undefined,
+          isAmp: false,
+          service: 'news',
+        },
+        status: 502,
+      });
     });
   });
 });
