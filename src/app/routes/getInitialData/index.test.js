@@ -21,6 +21,12 @@ describe('getInitialData', () => {
   const mockFetchFailure = () =>
     fetch.mockReject(JSON.stringify({ error: true }));
 
+  const mockFetchInvalidJSON = () =>
+    fetch.mockResponseOnce('Some Invalid: { JSON');
+
+  const mockFetchNotFound = () =>
+    fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
+
   const callGetInitialData = async (
     context = defaultContext,
     mockFetch = mockFetchSuccess,
@@ -94,6 +100,42 @@ describe('getInitialData', () => {
           service: 'news',
         },
         status: 502,
+      });
+    });
+  });
+
+  describe('Ares returns 200 status code, but invalid JSON', () => {
+    it('should return a 502 error code', async () => {
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchInvalidJSON,
+      );
+
+      expect(response).toEqual({
+        articleData: {
+          data: undefined,
+          isAmp: false,
+          service: 'news',
+        },
+        status: 502,
+      });
+    });
+  });
+
+  describe('Ares returns a non-200 status code', () => {
+    it('should return the status code as is', async () => {
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchNotFound,
+      );
+
+      expect(response).toEqual({
+        articleData: {
+          data: undefined,
+          isAmp: false,
+          service: 'news',
+        },
+        status: 404,
       });
     });
   });
