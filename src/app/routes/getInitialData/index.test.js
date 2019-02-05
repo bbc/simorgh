@@ -77,7 +77,10 @@ describe('getInitialData', () => {
 
   describe('Rejected fetch', () => {
     it('should return an empty object', async () => {
-      const response = await callGetInitialData({}, mockFetchFailure);
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchFailure,
+      );
       expect(response).toEqual({});
     });
   });
