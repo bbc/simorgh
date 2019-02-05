@@ -98,7 +98,22 @@ describe('Logger node - for the server', () => {
       expect(mockLogVerbose).not.toHaveBeenCalled();
       expect(mockLogDebug).not.toHaveBeenCalled();
     });
+
+    xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
   });
 
-  xdescribe('Logging to file', () => {});
+  describe('Logging to file', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('defaults writing to log/app.log', () => {
+      const loggerInstance = loggerNode('/path/to/file.js');
+      loggerInstance.error(message);
+    });
+
+    xit('writes to new_dir/app.log when SIMORGH_LOG_DIR=new_dir', () => {});
+
+    xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
+  });
 });
