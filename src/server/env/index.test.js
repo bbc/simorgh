@@ -1,11 +1,11 @@
-const dotenv = require('dotenv');
-const getEnv = require('./index');
-
-jest.mock('dotenv', () => ({
-  config: jest.fn().mockImplementation(() => ({ foo: 'bar' })),
-}));
-
 const testGetEnv = path => {
+  const dotenv = require('dotenv'); // eslint-disable-line global-require
+
+  jest.mock('dotenv', () => ({
+    config: jest.fn().mockImplementation(() => ({ foo: 'bar' })),
+  }));
+
+  const getEnv = require('./index'); // eslint-disable-line global-require
   const result = getEnv();
 
   expect(dotenv.config).toHaveBeenCalledWith({ path });
@@ -13,8 +13,9 @@ const testGetEnv = path => {
 };
 
 describe('getEnv', () => {
-  beforeEach(() => {
+  afterEach(() => {
     jest.clearAllMocks();
+    jest.resetModules(); // enforce all modules to be required fresh and not from cache
   });
 
   it('calls dotenv with correct path when ENV_FILE is "local"', async () => {
