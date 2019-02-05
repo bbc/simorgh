@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const loggerNode = require('./logger.node');
 
 const message = 'test message';
@@ -103,17 +105,57 @@ describe('Logger node - for the server', () => {
   });
 
   describe('Logging to file', () => {
+    const logger = require('./logger.node'); // eslint-disable-line global-require
+    const loggerInstance = logger('/path/to/file/that/is/using/the/logger.js');
+
     beforeEach(() => {
       jest.clearAllMocks();
     });
 
-    it('defaults writing to log/app.log', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.error(message);
+    const getLastLine = file =>
+      fs
+        .readFileSync(file, 'utf-8')
+        .toString()
+        .split(/[\n\r]/)[0];
+
+    it('defaults writing logger.error to file log/app.log', () => {
+      const logPath = path.join(__dirname, '../../..', 'log', 'app.log');
+
+      const errorMessage = 'test message for app.log';
+
+      loggerInstance.error(errorMessage);
+
+      expect(getLastLine(logPath)).toContain('error');
+      expect(getLastLine(logPath)).toContain(errorMessage);
+      // TODO: need to asynchronously call the expectation, after the logger has logged to file.
     });
 
-    xit('writes to new_dir/app.log when SIMORGH_LOG_DIR=new_dir', () => {});
+    describe('SIMORGH_LOG_DIR is path new_dir', () => {
+      const logPath = path.join(__dirname, 'new_dir', 'app.log');
+      process.env.SIMORGH_LOG_DIR = logPath;
+      process.env.NODE_ENV = 'node';
 
-    xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
+      it('creates directory new_dir & file app.log within it', async () => {
+        const errorMessage = 'test message for app.log';
+
+        loggerInstance.error(errorMessage);
+        // need to asyncronously call the expect, so the mkdir & app.log file creation
+        // can happen and log can be saved to the file.
+        expect(fs.statSync(logPath).isFile()).toBe(true);
+        // then cleanup with a 'rm logPath'
+      });
+
+      it('writes to new_dir/app.log file when SIMORGH_LOG_DIR=./new_dir', () => {
+        const errorMessage = 'test message for app.log';
+
+        loggerInstance.error(errorMessage);
+
+        // need to asynchronously call the expect after logger has logged to file
+        expect(getLastLine(logPath)).toContain('error');
+        expect(getLastLine(logPath)).toContain(errorMessage);
+      });
+
+      xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
+    });
   });
 });
