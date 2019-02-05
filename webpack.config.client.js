@@ -55,7 +55,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: `assets.${APP_ENV}.json`,
+        filename: `assets-${APP_ENV}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
@@ -107,7 +107,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         ServiceWorker: {
           events: true,
           minify: true,
-          output: `sw.${APP_ENV}.js`,
+          output: `sw-${APP_ENV}.js`,
         },
         updateStrategy: 'changed',
       }),
