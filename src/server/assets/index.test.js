@@ -2,21 +2,30 @@ import path from 'path';
 import getAssetsArray from '.';
 import nodeLogger from '../../app/helpers/logger.node';
 
-const logger = nodeLogger(__filename);
+const mockLogError = jest.fn();
+const mockLogConstructor = (filename) => {
+    return { error: mockLogError };
+  };
+const mockLogger = jest.mock('../../app/helpers/logger.node', () => {
+  console.log('constructorhere', mockLogConstructor);
+  return jest.fn().mockImplementation(mockLogConstructor);
+});
+
+console.log('error', mockLogError);
+console.log('constructor', mockLogConstructor);
+console.log('logger', mockLogger);
+
 describe('getAssetsArray', () => {
   describe('no assets manifest', () => {
-    xit('should log an error', async () => {
+    it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
-
-      const spy = jest.spyOn(logger, 'error');
-
       getAssetsArray();
-      expect(spy).toHaveBeenCalledWith(
-        `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
-          process.env.SIMORGH_ASSETS_MANIFEST_PATH
-        }`,
-      );
-      spy.mockRestore();
+      expect(mockLogError).toHaveBeenCalled();
+      // expect(spy).toHaveBeenCalledWith(
+      //   `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
+      //     process.env.SIMORGH_ASSETS_MANIFEST_PATH
+      //   }`,
+      // );
     });
   });
 

@@ -24,6 +24,8 @@ const getAssetsArray = () => {
       }
     }
   } catch (error) {
+    console.log(logger);
+    console.log(nodeLogger);
     logger.error(
       `Error parsing assets manifest. ${assetsManifestEnv} = ${
         process.env[assetsManifestEnv]
