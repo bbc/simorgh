@@ -71,7 +71,7 @@ describe('Server', () => {
     describe('Successful render', () => {
       beforeEach(() => {
         loadInitialData.mockImplementationOnce(() =>
-          Promise.resolve({ some: 'data' }),
+          Promise.resolve({ articleData: { some: 'data' }, status: 200 }),
         );
       });
 

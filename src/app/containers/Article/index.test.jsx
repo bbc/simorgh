@@ -8,21 +8,19 @@ global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
   const newsData = {
-    articleData: { data: articleDataNews, isAmp: false, service: 'news' },
-    status: 200,
+    data: articleDataNews,
+    isAmp: false,
+    service: 'news',
   };
 
   // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
   const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
-  newsDataNoHeadline.articleData.data.content.model.blocks.shift();
+  newsDataNoHeadline.data.content.model.blocks.shift();
 
   const persianData = {
-    articleData: {
-      data: articleDataPersian,
-      isAmp: false,
-      service: 'persian',
-    },
-    status: 200,
+    data: articleDataPersian,
+    isAmp: false,
+    service: 'persian',
   };
 
   describe('Component', () => {

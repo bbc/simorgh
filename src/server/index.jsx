@@ -68,10 +68,16 @@ server
     try {
       const sheet = new ServerStyleSheet();
       const data = await loadInitialData(url, routes);
+      const { articleData } = data;
 
       const app = renderToString(
         sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} context={{}} />,
+          <ServerApp
+            location={url}
+            routes={routes}
+            data={articleData}
+            context={{}}
+          />,
         ),
       );
 
@@ -81,8 +87,8 @@ server
         <Document
           assets={assets}
           app={app}
-          data={data}
-          styleTags={getStyleTag(sheet, data.isAmp)}
+          data={articleData}
+          styleTags={getStyleTag(sheet, articleData.isAmp)}
           helmet={headHelmet}
         />,
       );
