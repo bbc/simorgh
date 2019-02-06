@@ -53,7 +53,7 @@ To avoid indexing by search engines during our early development, there is a `no
 
 ### Varying which ENV_FILE is used locally
 
-- `npm run build` both test and live bundles using `.env.test` and `.env.live` respectively via the `ENV_FILE` environment variable.
+- `npm run build` builds both test and live bundles using `.env.test` and `.env.live` respectively via the `ENV_FILE` environment variable.
 - `npm run build:local` creates both a local bundle using `.env`.
 
 NB: `ENV_FILE` is used to decide which `.env*` file will be used within the application.
