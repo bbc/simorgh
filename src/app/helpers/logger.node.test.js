@@ -123,7 +123,7 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      xit('sets up console transport', () => {
+      it('sets up console transport', () => {
         process.env.SIMORGH_LOG_DIR = 'foobarDir';
 
         require('./logger.node');
@@ -136,7 +136,7 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      xit('calls printf', () => {
+      it('calls printf', () => {
         process.env.SIMORGH_LOG_DIR = 'foobarDir';
 
         require('./logger.node');
