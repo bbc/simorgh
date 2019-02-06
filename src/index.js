@@ -12,7 +12,7 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-const app = require('./server');
+const app = require('./server').default;
 
 const server = http.createServer(app);
 const port = process.env.PORT || 7080;

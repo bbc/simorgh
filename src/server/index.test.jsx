@@ -14,7 +14,7 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-const server = require('./index');
+const server = require('./index').default;
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
