@@ -1,166 +1,175 @@
+/* eslint-disable global-require */
 const fs = require('fs');
 const path = require('path');
-const loggerNode = require('./logger.node');
 
-const message = 'test message';
-const mockLogError = jest.fn();
-const mockLogWarn = jest.fn();
-const mockLogInfo = jest.fn();
-const mockLogVerbose = jest.fn();
-const mockLogDebug = jest.fn();
-const mockLogSilly = jest.fn();
-
-jest.mock('../../app/helpers/logger.node', () => jest.fn());
-
-loggerNode.mockImplementation(() => ({
-  error: mockLogError,
-  warn: mockLogWarn,
-  info: mockLogInfo,
-  verbose: mockLogVerbose,
-  debug: mockLogDebug,
-  silly: mockLogSilly,
-}));
-
-global.console.log = jest.fn();
+let winston;
 
 describe('Logger node - for the server', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  describe('Console logging', () => {
-    it('logger.error', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.error(message);
+  const deleteFile = (logPath, logFile) => {
+    fs.unlink(path.join(logPath, logFile), () => {});
+  };
 
-      expect(mockLogError).toHaveBeenCalledWith(message);
-      expect(mockLogWarn).not.toHaveBeenCalled();
-      expect(mockLogInfo).not.toHaveBeenCalled();
-      expect(mockLogVerbose).not.toHaveBeenCalled();
-      expect(mockLogDebug).not.toHaveBeenCalled();
-      expect(mockLogSilly).not.toHaveBeenCalled();
-    });
+  const deleteFolder = logPath => {
+    if (fs.existsSync(logPath)) {
+      deleteFile(logPath, 'app.log');
+      fs.rmdir(logPath, err => {
+        if (err) throw err;
+      });
+    }
+  };
 
-    it('logger.warn', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.warn(message);
-
-      expect(mockLogWarn).toHaveBeenCalledWith(message);
-      expect(mockLogError).not.toHaveBeenCalled();
-      expect(mockLogInfo).not.toHaveBeenCalled();
-      expect(mockLogVerbose).not.toHaveBeenCalled();
-      expect(mockLogDebug).not.toHaveBeenCalled();
-      expect(mockLogSilly).not.toHaveBeenCalled();
-    });
-
-    it('logger.info', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.info(message);
-
-      expect(mockLogInfo).toHaveBeenCalledWith(message);
-      expect(mockLogError).not.toHaveBeenCalled();
-      expect(mockLogWarn).not.toHaveBeenCalled();
-      expect(mockLogVerbose).not.toHaveBeenCalled();
-      expect(mockLogDebug).not.toHaveBeenCalled();
-      expect(mockLogSilly).not.toHaveBeenCalled();
-    });
-
-    it('logger.verbose', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.verbose(message);
-
-      expect(mockLogVerbose).toHaveBeenCalledWith(message);
-      expect(mockLogError).not.toHaveBeenCalled();
-      expect(mockLogWarn).not.toHaveBeenCalled();
-      expect(mockLogInfo).not.toHaveBeenCalled();
-      expect(mockLogDebug).not.toHaveBeenCalled();
-      expect(mockLogSilly).not.toHaveBeenCalled();
-    });
-
-    it('logger.debug', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.debug(message);
-
-      expect(mockLogDebug).toHaveBeenCalledWith(message);
-      expect(mockLogError).not.toHaveBeenCalled();
-      expect(mockLogWarn).not.toHaveBeenCalled();
-      expect(mockLogInfo).not.toHaveBeenCalled();
-      expect(mockLogVerbose).not.toHaveBeenCalled();
-      expect(mockLogSilly).not.toHaveBeenCalled();
-    });
-
-    it('logger.silly', () => {
-      const loggerInstance = loggerNode('/path/to/file.js');
-      loggerInstance.silly(message);
-
-      expect(mockLogSilly).toHaveBeenCalledWith(message);
-      expect(mockLogError).not.toHaveBeenCalled();
-      expect(mockLogWarn).not.toHaveBeenCalled();
-      expect(mockLogInfo).not.toHaveBeenCalled();
-      expect(mockLogVerbose).not.toHaveBeenCalled();
-      expect(mockLogDebug).not.toHaveBeenCalled();
-    });
-
-    xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
-  });
-
-  describe('Logging to file', () => {
-    const logger = require('./logger.node'); // eslint-disable-line global-require
-    const loggerInstance = logger('/path/to/file/that/is/using/the/logger.js');
-
+  describe('Setting up logger', () => {
     beforeEach(() => {
-      jest.clearAllMocks();
+      jest.resetModules();
     });
 
-    const getLastLine = file =>
-      fs
-        .readFileSync(file, 'utf-8')
-        .toString()
-        .split(/[\n\r]/)[0];
+    describe('folder creation', () => {
+      const logPath = path.join(__dirname, '../../..', 'log-temp');
 
-    it('defaults writing logger.error to file log/app.log', () => {
-      const logFile = path.join(__dirname, '../../..', 'log', 'app.log');
+      beforeEach(() => {
+        // These tests can only be run when SIMORGH_LOG_DIR is
+        // overridden due to the '.keep' file in /log
+        process.env.SIMORGH_LOG_DIR = logPath;
+        deleteFolder(logPath);
+        jest.resetModules();
+      });
 
-      const errorMessage = 'test message for app.log';
+      afterAll(() => {
+        deleteFolder(logPath);
+      });
 
-      loggerInstance.error(errorMessage);
+      it('creates folder log when NODE_ENV equals `node`', () => {
+        process.env.NODE_ENV = 'node';
 
-      // TODO: need to asynchronously call the expectations, after the logger has logged to logFile.
-      // Currently not working.
-      fs.watch(logFile, (event, filename) => {
-        if (filename && event === 'change') {
-          expect(getLastLine(logFile)).toContain('error');
-          expect(getLastLine(logFile)).toContain(errorMessage);
-        }
+        require('./logger.node');
+
+        expect(fs.existsSync(logPath)).toBe(true);
+      });
+
+      it('does not create folder log when NODE_ENV equals `foo`', () => {
+        process.env.NODE_ENV = 'foo';
+
+        require('./logger.node');
+
+        expect(fs.existsSync(logPath)).toBe(false);
+      });
+
+      it('does not create folder log when NODE_ENV equals `foo`', () => {
+        delete process.env.NODE_ENV;
+
+        require('./logger.node');
+
+        expect(fs.existsSync(logPath)).toBe(false);
       });
     });
 
-    describe('SIMORGH_LOG_DIR is path new_dir', () => {
-      const logFile = path.join(__dirname, 'new_dir', 'app.log');
-      process.env.SIMORGH_LOG_DIR = logFile;
-      process.env.NODE_ENV = 'node';
+    describe('stuff', () => {
+      beforeEach(() => {
+        jest.mock('winston', () => jest.fn());
 
-      it('creates directory new_dir & file app.log within it', async () => {
-        const errorMessage = 'test message for app.log';
+        winston = require('winston');
 
-        loggerInstance.error(errorMessage);
-        // need to asyncronously call the expect, so the mkdir & app.log file creation
-        // can happen and log can be saved to the file.
-        expect(fs.statSync(logFile).isFile()).toBe(true);
-        // then cleanup with a 'rm logFile'
+        winston.format = jest.fn();
+        winston.createLogger = jest.fn();
+        winston.format.combine = jest.fn();
+        winston.format.label = jest.fn();
+        winston.format.printf = jest.fn();
+        winston.format.simple = jest.fn();
+        winston.format.timestamp = jest.fn();
+        winston.transports = jest.fn();
+        winston.transports.File = jest.fn();
+        winston.transports.Console = jest.fn();
+
+        winston.format.label.mockImplementation(() => 'Label Mock');
+        winston.format.simple.mockImplementation(() => 'Simple Mock');
+        winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
+        winston.format.printf.mockImplementation(() => 'Printf Mock');
+        winston.format.combine.mockImplementation(() => 'Combine Mock');
       });
 
-      it('writes to new_dir/app.log file when SIMORGH_LOG_DIR=./new_dir', () => {
-        const errorMessage = 'test message for app.log';
+      it('sets up file transport', () => {
+        process.env.SIMORGH_LOG_DIR = 'foobarDir';
 
-        loggerInstance.error(errorMessage);
+        require('./logger.node');
 
-        // need to asynchronously call the expect after logger has logged to file
-        expect(getLastLine(logFile)).toContain('error');
-        expect(getLastLine(logFile)).toContain(errorMessage);
+        expect(winston.transports.File).toHaveBeenCalledWith({
+          filename: 'foobarDir/app.log',
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
+          json: true,
+          level: 'info',
+          maxFiles: 1,
+          maxsize: 104857600,
+        });
       });
 
-      xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
+      it('sets up file transport', () => {
+        delete process.env.SIMORGH_LOG_DIR;
+
+        require('./logger.node');
+
+        expect(winston.transports.File).toHaveBeenCalledWith({
+          filename: 'log/app.log',
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
+          json: true,
+          level: 'info',
+          maxFiles: 1,
+          maxsize: 104857600,
+        });
+      });
+
+      xit('sets up console transport', () => {
+        process.env.SIMORGH_LOG_DIR = 'foobarDir';
+
+        require('./logger.node');
+
+        expect(winston.transports.Console).toHaveBeenCalledWith({
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
+          level: 'info',
+          timestamp: true,
+        });
+      });
+
+      xit('calls printf', () => {
+        process.env.SIMORGH_LOG_DIR = 'foobarDir';
+
+        require('./logger.node');
+
+        expect(winston.format.printf).toHaveBeenCalledWith(
+          expect.any(Function),
+        );
+      });
+
+      describe('main logger', () => {
+        it('calls printf', () => {
+          const loggerNode = require('./logger.node');
+          loggerNode('path/file/foo.js');
+
+          expect(winston.format.combine).toHaveBeenCalledWith(
+            'Label Mock',
+            'Simple Mock',
+            'Timestamp Mock',
+            'Printf Mock',
+          );
+          expect(winston.format.label).toHaveBeenCalledWith({
+            label: 'file/foo.js',
+          });
+          expect(winston.format.simple).toHaveBeenCalled();
+          expect(winston.format.timestamp).toHaveBeenCalledWith({
+            format: 'YYYY-MM-DD HH:mm:ss',
+          });
+          expect(winston.createLogger).toHaveBeenCalledWith({
+            format: 'Combine Mock',
+            transports: [{}, {}],
+          });
+        });
+      });
     });
   });
 });
