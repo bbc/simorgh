@@ -14,6 +14,7 @@ const getInitialData = async ({ match }) => {
     const response = await fetch(url);
 
     status = response.status; // eslint-disable-line prefer-destructuring
+
     if (status === 200) {
       data = await response.json();
     } else if (!upstreamStatusCodesToPropagate.includes(status)) {

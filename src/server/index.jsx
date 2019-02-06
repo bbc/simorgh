@@ -25,6 +25,30 @@ const dataFolderToRender =
 
 const articleDataRegexPath = `${articleRegexPath}.json`;
 
+const renderArticle = async (url, data) => {
+  const sheet = new ServerStyleSheet();
+
+  const app = renderToString(
+    sheet.collectStyles(
+      <ServerApp location={url} routes={routes} data={data} context={{}} />,
+    ),
+  );
+
+  const headHelmet = Helmet.renderStatic();
+
+  const doc = renderToStaticMarkup(
+    <Document
+      assets={assets}
+      app={app}
+      data={data}
+      styleTags={getStyleTag(sheet, data.isAmp)}
+      helmet={headHelmet}
+    />,
+  );
+
+  return doc;
+};
+
 const server = express();
 server
   .disable('x-powered-by')
@@ -66,30 +90,15 @@ server
   })
   .get('/*', async ({ url }, res) => {
     try {
-      const sheet = new ServerStyleSheet();
       const data = await loadInitialData(url, routes);
+      const { status } = data;
 
-      const app = renderToString(
-        sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} context={{}} />,
-        ),
-      );
-
-      const headHelmet = Helmet.renderStatic();
-
-      const doc = renderToStaticMarkup(
-        <Document
-          assets={assets}
-          app={app}
-          data={data}
-          styleTags={getStyleTag(sheet, data.isAmp)}
-          helmet={headHelmet}
-        />,
-      );
-
-      res.send(`<!doctype html>${doc}`);
+      res
+        .status(status)
+        .send(`<!doctype html>${await renderArticle(url, data)}`);
     } catch ({ message }) {
-      res.status(404).send(message);
+      // Internal server error
+      res.status(500).send(message);
     }
   });
 
