@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
-const articleDataNewsNoHeadline = articleDataNews;
+const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
 describe('ArticleMain', () => {
@@ -14,7 +14,7 @@ describe('ArticleMain', () => {
   );
 
   shouldMatchSnapshot(
-    'should render a news article correctly',
+    'should render a persian article correctly',
     <ArticleMain service="persian" articleData={articleDataPersian} />,
   );
 
