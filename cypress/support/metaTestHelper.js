@@ -6,6 +6,12 @@ export const testNonHTMLResponseCode = (path, responseCode) => {
   });
 };
 
+export const testContentType = (path, contentType) => {
+  cy.request(path).then(({ headers }) => {
+    expect(headers).to.have.property('content-type', contentType);
+  });
+};
+
 export const retrieveMetaDataContent = (metaDataTag, content) => {
   const metaElement = getElement(metaDataTag);
   metaElement.should('have.attr', 'content', content);
