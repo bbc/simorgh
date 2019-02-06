@@ -4,5 +4,6 @@ build
 node_modules
 coverage
 reports/*
+.env
 !reports/.keep
 !.env/.keep
