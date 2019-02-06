@@ -1,6 +1,18 @@
 import http from 'http';
-import './server/env'; // This import must be above the `app`. See details - https://github.com/bbc/simorgh/pull/1231
-import app from './server';
+
+/*
+ * dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
+ */
+
+const dotenv = require('dotenv');
+
+const DOT_ENV_CONFIG = dotenv.config();
+
+if (DOT_ENV_CONFIG.error) {
+  throw DOT_ENV_CONFIG.error;
+}
+
+const app = require('./server');
 
 const server = http.createServer(app);
 const port = process.env.PORT || 7080;
