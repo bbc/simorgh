@@ -56,7 +56,7 @@ To avoid indexing by search engines during our early development, there is a `no
 - `npm run build` builds both test and live bundles using `.env.test` and `.env.live` respectively via the `ENV_FILE` environment variable.
 - `npm run build:local` creates both a local bundle using `.env`.
 
-NB: `ENV_FILE` is used to decide which `.env*` file will be used within the application.
+NB: `ENV_FILE` is used to decide which `.env*` file will be used within the application. If `ENV_FILE` isnt provided the default behaviour is to use the file `.env`
 
 ## Production build on CI
 
