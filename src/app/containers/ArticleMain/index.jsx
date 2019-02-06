@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { string, object } from 'prop-types';
+import { string, shape } from 'prop-types';
 import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
+import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
 import text from '../Text';
@@ -92,7 +93,7 @@ const ArticleMain = ({ service, articleData }) => {
 
 ArticleMain.propTypes = {
   service: string.isRequired,
-  articleData: object.isRequired, // eslint-disable-line
+  articleData: shape(articleDataPropTypes).isRequired,
 };
 
 export default ArticleMain;
