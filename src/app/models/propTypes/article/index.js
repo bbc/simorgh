@@ -1,4 +1,4 @@
-import { bool, shape, string } from 'prop-types';
+import { bool, shape, string, number } from 'prop-types';
 import metadataPropTypes from '../metadata';
 import promoPropTypes from '../promo';
 import mainContentPropTypes from '../mainContent';
@@ -15,6 +15,7 @@ const articlePropTypes = {
   isAmp: bool,
   data: shape(articleDataPropTypes),
   service: string,
+  status: number,
 };
 
 export default articlePropTypes;
