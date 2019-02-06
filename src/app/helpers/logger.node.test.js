@@ -119,20 +119,25 @@ describe('Logger node - for the server', () => {
         .split(/[\n\r]/)[0];
 
     it('defaults writing logger.error to file log/app.log', () => {
-      const logPath = path.join(__dirname, '../../..', 'log', 'app.log');
+      const logFile = path.join(__dirname, '../../..', 'log', 'app.log');
 
       const errorMessage = 'test message for app.log';
 
       loggerInstance.error(errorMessage);
 
-      expect(getLastLine(logPath)).toContain('error');
-      expect(getLastLine(logPath)).toContain(errorMessage);
-      // TODO: need to asynchronously call the expectation, after the logger has logged to file.
+      // TODO: need to asynchronously call the expectations, after the logger has logged to logFile.
+      // Currently not working.
+      fs.watch(logFile, (event, filename) => {
+        if (filename && event === 'change') {
+          expect(getLastLine(logFile)).toContain('error');
+          expect(getLastLine(logFile)).toContain(errorMessage);
+        }
+      });
     });
 
     describe('SIMORGH_LOG_DIR is path new_dir', () => {
-      const logPath = path.join(__dirname, 'new_dir', 'app.log');
-      process.env.SIMORGH_LOG_DIR = logPath;
+      const logFile = path.join(__dirname, 'new_dir', 'app.log');
+      process.env.SIMORGH_LOG_DIR = logFile;
       process.env.NODE_ENV = 'node';
 
       it('creates directory new_dir & file app.log within it', async () => {
@@ -141,8 +146,8 @@ describe('Logger node - for the server', () => {
         loggerInstance.error(errorMessage);
         // need to asyncronously call the expect, so the mkdir & app.log file creation
         // can happen and log can be saved to the file.
-        expect(fs.statSync(logPath).isFile()).toBe(true);
-        // then cleanup with a 'rm logPath'
+        expect(fs.statSync(logFile).isFile()).toBe(true);
+        // then cleanup with a 'rm logFile'
       });
 
       it('writes to new_dir/app.log file when SIMORGH_LOG_DIR=./new_dir', () => {
@@ -151,8 +156,8 @@ describe('Logger node - for the server', () => {
         loggerInstance.error(errorMessage);
 
         // need to asynchronously call the expect after logger has logged to file
-        expect(getLastLine(logPath)).toContain('error');
-        expect(getLastLine(logPath)).toContain(errorMessage);
+        expect(getLastLine(logFile)).toContain('error');
+        expect(getLastLine(logFile)).toContain(errorMessage);
       });
 
       xit('logs in format DATE TIME LEVEL [DIR/FILENAME] MESSAGE', () => {});
