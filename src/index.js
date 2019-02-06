@@ -1,4 +1,5 @@
 import http from 'http';
+import './server/env'; // This import must be above the `app`. See details - https://github.com/bbc/simorgh/pull/1231
 import app from './server';
 
 const server = http.createServer(app);

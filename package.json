@@ -41,7 +41,7 @@
     "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/assets.local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/assets-local.json && NODE_ENV=development webpack --env.config='server'"
   },
   "husky": {
     "hooks": {
@@ -170,17 +170,21 @@
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)",
-      "!**/build/**/*.js"
+      "**/?(*.)+(spec|test).js?(x)"
     ]
   },
   "spec": {
     "executable": [
-      "./bake-scripts/01-env-variables.sh"
+      "./bake-scripts/*"
     ],
     "post": [
       "mkdir -p /etc/bake-scripts/",
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
+    ],
+    "prune": false,
+    "requires": [
+      "td-agent",
+      "cloudteam-td-agent-setup"
     ]
   }
 }
