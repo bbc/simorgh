@@ -1,5 +1,5 @@
 /*
-  * This file sets up the environment variables based on the value of `process.env.ENV_FILE`.
+ * This file sets up the environment variables based on the value of `process.env.ENV_FILE`.
  * These variables are needed at both bundle time and at run time. The variables should be
  * set up at the entry point of the application prior to bundling.
  * Also written in ES5 due to need to be used in webpack.
