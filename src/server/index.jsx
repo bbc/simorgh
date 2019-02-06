@@ -11,7 +11,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, { articleRegexPath } from '../app/routes';
+import routes, { articleRegexPath, swRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 
@@ -84,6 +84,15 @@ server
   })
   .get('/status', (req, res) => {
     res.sendStatus(200);
+  })
+  .get(swRegexPath, (req, res) => {
+    const swPath = `${__dirname}/public/sw-${process.env.APP_ENV}.js`;
+    res.sendFile(swPath, {}, error => {
+      if (error) {
+        console.log(error); // eslint-disable-line no-console
+        res.status(500).send('Unable to find service worker.');
+      }
+    });
   })
   .get('/*', async ({ url }, res) => {
     try {

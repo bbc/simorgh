@@ -10,6 +10,8 @@ const ampRegex = '.amp';
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
 
+export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
+
 const routes = [
   {
     path: articleRegexPath,
