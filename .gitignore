@@ -6,4 +6,3 @@ coverage
 reports/*
 .env
 !reports/.keep
-!.env.keep
