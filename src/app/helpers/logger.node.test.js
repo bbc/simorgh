@@ -27,7 +27,7 @@ describe('Logger node - for the server', () => {
       jest.resetModules();
     });
 
-    describe('folder creation', () => {
+    describe('Folder creation', () => {
       const logPath = path.join(__dirname, '../../..', 'log-temp');
 
       beforeEach(() => {
@@ -67,7 +67,7 @@ describe('Logger node - for the server', () => {
       });
     });
 
-    describe('stuff', () => {
+    describe('Configuring Winston', () => {
       beforeEach(() => {
         jest.mock('winston', () => jest.fn());
 
@@ -91,7 +91,7 @@ describe('Logger node - for the server', () => {
         winston.format.combine.mockImplementation(() => 'Combine Mock');
       });
 
-      it('sets up file transport', () => {
+      it('sets up file transport when SIMORGH_LOG_DIR is set ', () => {
         process.env.SIMORGH_LOG_DIR = 'foobarDir';
 
         require('./logger.node');
@@ -107,7 +107,7 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      it('sets up file transport', () => {
+      it('sets up file transport when SIMORGH_LOG_DIR isnt set', () => {
         delete process.env.SIMORGH_LOG_DIR;
 
         require('./logger.node');
@@ -136,7 +136,7 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      it('calls printf', () => {
+      it('calls printf with a function', () => {
         process.env.SIMORGH_LOG_DIR = 'foobarDir';
 
         require('./logger.node');
@@ -146,8 +146,8 @@ describe('Logger node - for the server', () => {
         );
       });
 
-      describe('main logger', () => {
-        it('calls printf', () => {
+      describe('createLogger', () => {
+        it('is configured correctly', () => {
           const loggerNode = require('./logger.node');
           loggerNode('path/file/foo.js');
 
