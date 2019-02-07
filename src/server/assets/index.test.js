@@ -18,7 +18,6 @@ describe('getAssetsArray', () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
       const getAssetsArray = require('./index.js').default;
       getAssetsArray();
-      expect(mockLogError).toHaveBeenCalled();
       expect(mockLogError).toHaveBeenCalledWith(
         `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
           process.env.SIMORGH_ASSETS_MANIFEST_PATH
