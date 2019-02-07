@@ -95,6 +95,8 @@
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.6.0",
     "dotenv": "^6.2.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
     "express-static-gzip": "^1.1.3",
