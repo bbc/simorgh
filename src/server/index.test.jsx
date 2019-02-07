@@ -3,11 +3,10 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
+import dotenv from 'dotenv';
 import Document from '../app/components/Document';
 
-// setup dotenv.config is setup before the server is invoked
-const dotenv = require('dotenv');
-
+// mimic the logic in `src/index.js` which imports the `server/index.jsx`
 const DOT_ENV_CONFIG = dotenv.config();
 
 if (DOT_ENV_CONFIG.error) {
