@@ -31,7 +31,7 @@ const dataFolderToRender =
 const articleDataRegexPath = `${articleRegexPath}.json`;
 
 logger.debug(
-  `Application outputting logs to directory "${process.env.SIMORGH_LOG_DIR}"`,
+  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
 );
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */

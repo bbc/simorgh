@@ -31,9 +31,9 @@ describe('Logger node - for the server', () => {
       const logPath = path.join(__dirname, '../../..', 'log-temp');
 
       beforeEach(() => {
-        // These tests can only be run when SIMORGH_LOG_DIR is
+        // These tests can only be run when LOG_DIR is
         // overridden due to the '.keep' file in /log
-        process.env.SIMORGH_LOG_DIR = logPath;
+        process.env.LOG_DIR = logPath;
         deleteFolder(logPath);
         jest.resetModules();
       });
@@ -91,8 +91,8 @@ describe('Logger node - for the server', () => {
         winston.format.combine.mockImplementation(() => 'Combine Mock');
       });
 
-      it('sets up file transport when SIMORGH_LOG_DIR is set ', () => {
-        process.env.SIMORGH_LOG_DIR = 'foobarDir';
+      it('sets up file transport when LOG_DIR is set ', () => {
+        process.env.LOG_DIR = 'foobarDir';
 
         require('./logger.node');
 
@@ -107,8 +107,8 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      it('sets up file transport when SIMORGH_LOG_DIR isnt set', () => {
-        delete process.env.SIMORGH_LOG_DIR;
+      it('sets up file transport when LOG_DIR isnt set', () => {
+        delete process.env.LOG_DIR;
 
         require('./logger.node');
 
@@ -124,7 +124,7 @@ describe('Logger node - for the server', () => {
       });
 
       it('sets up console transport', () => {
-        process.env.SIMORGH_LOG_DIR = 'foobarDir';
+        process.env.LOG_DIR = 'foobarDir';
 
         require('./logger.node');
 
@@ -137,7 +137,7 @@ describe('Logger node - for the server', () => {
       });
 
       it('calls printf with a function', () => {
-        process.env.SIMORGH_LOG_DIR = 'foobarDir';
+        process.env.LOG_DIR = 'foobarDir';
 
         require('./logger.node');
 
