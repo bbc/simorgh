@@ -29,20 +29,21 @@ describe('Logger node - for the server', () => {
 
     describe('Folder creation', () => {
       const logPath = path.join(__dirname, '../../..', 'log-temp');
+      const defaultLogPath = path.join(__dirname, '../../..', 'log');
 
       beforeEach(() => {
-        // These tests can only be run when LOG_DIR is
-        // overridden due to the '.keep' file in /log
         process.env.LOG_DIR = logPath;
         deleteFolder(logPath);
+        deleteFolder(defaultLogPath);
         jest.resetModules();
       });
 
       afterAll(() => {
         deleteFolder(logPath);
+        deleteFolder(defaultLogPath);
       });
 
-      it('creates folder log when NODE_ENV equals `node`', () => {
+      it('creates folder log-temp when NODE_ENV equals `node`', () => {
         process.env.NODE_ENV = 'node';
 
         require('./logger.node');
@@ -50,7 +51,16 @@ describe('Logger node - for the server', () => {
         expect(fs.existsSync(logPath)).toBe(true);
       });
 
-      it('does not create folder log when NODE_ENV equals `foo`', () => {
+      it('creates default folder log when LOG_DIR isnt set', () => {
+        process.env.NODE_ENV = 'node';
+        delete process.env.LOG_DIR;
+
+        require('./logger.node');
+
+        expect(fs.existsSync(defaultLogPath)).toBe(true);
+      });
+
+      it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
         process.env.NODE_ENV = 'foo';
 
         require('./logger.node');
@@ -58,7 +68,7 @@ describe('Logger node - for the server', () => {
         expect(fs.existsSync(logPath)).toBe(false);
       });
 
-      it('does not create folder log when NODE_ENV equals `foo`', () => {
+      it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
         delete process.env.NODE_ENV;
 
         require('./logger.node');
