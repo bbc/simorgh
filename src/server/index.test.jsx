@@ -67,7 +67,7 @@ describe('Server', () => {
     });
   });
 
-  describe('/*', () => {
+  describe('/{service}/articles/{optimoID}', () => {
     const successDataResponse = {
       isAmp: false,
       data: { some: 'data' },
@@ -91,7 +91,9 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest('/some/route');
+          const { text, status } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
 
           expect(status).toBe(200);
 
@@ -123,7 +125,9 @@ describe('Server', () => {
         });
 
         it('should respond with a rendered 404', async () => {
-          const { status, text } = await makeRequest('/some/route');
+          const { status, text } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
           expect(status).toBe(404);
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
@@ -140,10 +144,20 @@ describe('Server', () => {
       });
 
       it('should respond with a 500', async () => {
-        const { status, text } = await makeRequest('/');
+        const { status, text } = await makeRequest(
+          '/news/articles/c0000000001o',
+        );
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
       });
+    });
+  });
+
+  describe('/someInvalidPath', () => {
+    it('should respond 404', async () => {
+      const { status } = await makeRequest('/blah');
+
+      expect(status).toBe(404);
     });
   });
 });

@@ -11,7 +11,11 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, { articleRegexPath, swRegexPath } from '../app/routes';
+import routes, {
+  articleRegexPath,
+  articleDataRegexPath,
+  swRegexPath,
+} from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 
@@ -22,8 +26,6 @@ const assets = getAssetsArray();
 const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
-
-const articleDataRegexPath = `${articleRegexPath}.json`;
 
 const renderArticle = async (url, data) => {
   const sheet = new ServerStyleSheet();
@@ -97,7 +99,7 @@ server
       }
     });
   })
-  .get('/*', async ({ url }, res) => {
+  .get(articleRegexPath, async ({ url }, res) => {
     try {
       const data = await loadInitialData(url, routes);
       const { status } = data;
