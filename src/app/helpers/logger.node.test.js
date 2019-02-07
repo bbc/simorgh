@@ -59,8 +59,8 @@ describe('Logger node - for the server', () => {
 
       it('does not create folder log-temp when it already exists', () => {
         fs.mkdirSync(logPath);
-        jest.mock('fs');
-        fs.mkdirSync = jest.fn();
+
+        jest.spyOn(fs, 'mkdirSync');
 
         require('./logger.node');
 
