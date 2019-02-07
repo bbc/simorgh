@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 
-const upstreamStatusCodesToPropagate = [200, 404, 502];
+const upstreamStatusCodesToPropagate = [200, 404];
 
 const getInitialData = async ({ match }) => {
   const { id, service, amp } = match.params;
