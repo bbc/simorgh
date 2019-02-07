@@ -16,7 +16,7 @@
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dataValidate": "node src/app/dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
-    "dev": "rm -rf build && run-p webpack:dev:client webpack:dev:server",
+    "dev": "rm -rf build && cp env-config/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
