@@ -44,7 +44,7 @@ export class App extends Component {
         this.setState({
           data: null,
           loading: false,
-          error: error,
+          error,
           loadInitialDataPromise: null,
         });
       }

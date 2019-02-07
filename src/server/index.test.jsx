@@ -2,7 +2,7 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
-import { loadInitialData } from 'react-universal-app';
+import { loadInitialData } from '../RUA';
 import Document from '../app/components/Document';
 import './env'; // this is needed so the dotenv.config is setup before the server is invoked
 import server from './index';
@@ -29,7 +29,7 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('react-universal-app', () => ({
+jest.mock('../RUA', () => ({
   loadInitialData: jest.fn(),
   ServerApp: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
 }));
