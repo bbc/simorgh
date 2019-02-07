@@ -45,19 +45,19 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 ## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build:local && npm run start`. 
+`npm run build && npm run start`. 
 
-We use `npm run build:local` locally which bundles the application pointing at localhost for data and static assets.
+We use `npm run build` locally which bundles the application pointing at localhost for data and static assets.
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
 ## Production build on CI
 
-On deployment `npm run build` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
+On deployment `npm run build:ci` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
 
 ### Bundle analysis reports
 
-Every run of `npm run build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
+Every run of `npm run build:ci` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
 
 ## Tests
 

@@ -7,7 +7,7 @@ This is a wiki for helping developers working in this application. It has detail
 Webpack creates two bundles, the first being `server` that has an entrypoint of `/src/index.js` and the second being `client` which has an entry point of `/src/client.js`
 
 The entry points to the application in terms of code execution are as follows: 
-- `npm run build` executes the webpack configs
+- `npm run build:ci` executes the webpack configs
 - `webpack.config.js` is executed and then executes both `webpack.config.client.js` and `webpack.config.server.js`
 - `webpack.config.client.js` then executes `src/client.js` 
 - `webpack.config.server.js` then executes `src/index.js` 
