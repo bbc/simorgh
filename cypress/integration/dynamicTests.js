@@ -1,10 +1,10 @@
 import {
-  // clickInlineLinkAndTestPageHasHTML,
-  // checkElementStyles,
-  // getElement,
-  // getBlockData,
-  // shouldContainText,
-  // shouldContainStyles,
+  clickInlineLinkAndTestPageHasHTML,
+  checkElementStyles,
+  getElement,
+  getBlockData,
+  shouldContainText,
+  shouldContainStyles,
 } from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
@@ -14,18 +14,26 @@ describe('Article Body Tests', () => {
     cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
-  // it('should display a headline', () => {
-  //   cy.window().then(win => {
-  //     const headlineData = getBlockData('headline', win);
-  //     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-  //   checkElementStyles(
-  //       'h1',
-  //       text,
-  //       'rgb(34, 34, 34)',
-  //       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-  //     );
-  //   });
-  // });
+  it('should display a headline', () => {
+    cy.window().then(win => {
+      const headlineData = getBlockData('headline', win);
+      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+    checkElementStyles(
+        'h1',
+        text,
+        'rgb(34, 34, 34)',
+        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      );
+    });
+  });
+
+  it('should return the service worker', () => {
+    cy.window().then(win => {
+      const { scriptURL } = win.clientInformation.serviceWorker.controller;
+      console.log(scriptURL)
+      expect(scriptURL).to.eq('http://localhost:7080/sw-local.js');
+    });
+  });
 
   // it('should return a subheading', () => {
   //   cy.window().then(win => {
