@@ -1,11 +1,13 @@
 const loggerWeb = require('./logger.web');
 
 const message = 'test message';
-global.console.error = jest.fn();
-global.console.warn = jest.fn();
-global.console.info = jest.fn();
-global.console.debug = jest.fn();
-global.console.log = jest.fn();
+global.console = {
+  error: jest.fn(),
+  warn: jest.fn(),
+  info: jest.fn(),
+  debug: jest.fn(),
+  log: jest.fn(),
+};
 
 const expectNotCalled = (object, keys) => {
   keys.forEach(key => {
