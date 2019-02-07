@@ -6,4 +6,3 @@ coverage
 reports/*
 !reports/.keep
 log/*
-!log/.keep
