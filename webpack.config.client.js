@@ -54,6 +54,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       },
     },
     node: {
+      // Override webpacks default handling for these as they arnt availible on the client.
       fs: 'empty',
       __filename: 'mock',
     },

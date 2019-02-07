@@ -38,6 +38,7 @@ module.exports = (shell = {}) => {
     },
     stats,
     node: {
+      // tell Webpack to provide a polyfill for this functionality.
       __filename: true,
       __dirname: true,
     },
