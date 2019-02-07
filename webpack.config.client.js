@@ -73,6 +73,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(getEnv()),
       }),
+      /*
+       * This replaces calls to logger.node.js with logger.web.js, a client
+       * side replacement, when building the bundle code for the client.
+       * This avoids the weight of winston being included in the bundles and
+       * issues arising from it trying to the use the file system
+       */
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
