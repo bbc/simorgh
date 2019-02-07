@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
 import { string, shape } from 'prop-types';
-import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -9,22 +7,7 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
-import {
-  layoutGridWrapper,
-  layoutGridItemConstrained,
-} from '../../lib/layoutGrid';
-
-const Wrapper = styled.div`
-  ${layoutGridWrapper};
-`;
-
-const OatWrapper = styled(Wrapper)`
-  background: ${C_OAT_LHT};
-`;
-
-const GridItemConstrained = styled.div`
-  ${layoutGridItemConstrained};
-`;
+import { Wrapper, OatWrapper, GridItemConstrained } from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
   headline: headings,

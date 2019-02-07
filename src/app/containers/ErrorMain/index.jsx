@@ -1,20 +1,8 @@
 import React from 'react';
 import { number } from 'prop-types';
-import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import {
-  layoutGridWrapper,
-  layoutGridItemConstrained,
-} from '../../lib/layoutGrid';
-
-const Wrapper = styled.div`
-  ${layoutGridWrapper};
-`;
-
-const GridItemConstrained = styled.div`
-  ${layoutGridItemConstrained};
-`;
+import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
 
 const ErrorMain = ({ status }) => (
   <main role="main">
