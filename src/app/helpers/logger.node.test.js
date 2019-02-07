@@ -45,7 +45,6 @@ describe('Logger node - for the server', () => {
 
       it('creates folder log-temp when NODE_ENV equals `node`', () => {
         process.env.NODE_ENV = 'node';
-
         require('./logger.node');
 
         expect(fs.existsSync(logPath)).toBe(true);
@@ -54,7 +53,6 @@ describe('Logger node - for the server', () => {
       it('creates default folder log when LOG_DIR isnt set', () => {
         process.env.NODE_ENV = 'node';
         delete process.env.LOG_DIR;
-
         require('./logger.node');
 
         expect(fs.existsSync(defaultLogPath)).toBe(true);
@@ -62,7 +60,6 @@ describe('Logger node - for the server', () => {
 
       it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
         process.env.NODE_ENV = 'foo';
-
         require('./logger.node');
 
         expect(fs.existsSync(logPath)).toBe(false);
@@ -70,7 +67,6 @@ describe('Logger node - for the server', () => {
 
       it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
         delete process.env.NODE_ENV;
-
         require('./logger.node');
 
         expect(fs.existsSync(logPath)).toBe(false);
@@ -80,7 +76,6 @@ describe('Logger node - for the server', () => {
     describe('Configuring Winston', () => {
       beforeEach(() => {
         jest.mock('winston', () => jest.fn());
-
         winston = require('winston');
 
         winston.format = jest.fn();
@@ -93,7 +88,6 @@ describe('Logger node - for the server', () => {
         winston.transports = jest.fn();
         winston.transports.File = jest.fn();
         winston.transports.Console = jest.fn();
-
         winston.format.label.mockImplementation(() => 'Label Mock');
         winston.format.simple.mockImplementation(() => 'Simple Mock');
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
@@ -103,7 +97,6 @@ describe('Logger node - for the server', () => {
 
       it('sets up file transport when LOG_DIR is set ', () => {
         process.env.LOG_DIR = 'foobarDir';
-
         require('./logger.node');
 
         expect(winston.transports.File).toHaveBeenCalledWith({
@@ -119,7 +112,6 @@ describe('Logger node - for the server', () => {
 
       it('sets up file transport when LOG_DIR isnt set', () => {
         delete process.env.LOG_DIR;
-
         require('./logger.node');
 
         expect(winston.transports.File).toHaveBeenCalledWith({
@@ -135,7 +127,6 @@ describe('Logger node - for the server', () => {
 
       it('sets up console transport', () => {
         process.env.LOG_DIR = 'foobarDir';
-
         require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({
@@ -148,7 +139,6 @@ describe('Logger node - for the server', () => {
 
       it('calls printf with a function', () => {
         process.env.LOG_DIR = 'foobarDir';
-
         require('./logger.node');
 
         expect(winston.format.printf).toHaveBeenCalledWith(
