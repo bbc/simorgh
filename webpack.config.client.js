@@ -35,11 +35,14 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     },
     output: {
       path: resolvePath('build/public'),
-      filename: 'static/js/[name].[hash:8].js',
+      // need unhashed client bundle when running dev server: https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
+      filename: START_DEV_SERVER
+        ? 'static/js/[name].js'
+        : 'static/js/[name].[hash:8].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
-      publicPath: IS_PROD
-        ? `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/`
-        : `http://localhost:${webpackDevServerPort}/`,
+      publicPath: START_DEV_SERVER
+        ? `http://localhost:${webpackDevServerPort}/`
+        : `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/`,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
