@@ -1,6 +1,5 @@
 import React from 'react';
 import express from 'express';
-import { ServerApp, loadInitialData } from 'react-universal-app';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
@@ -11,6 +10,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
+import { ServerApp, loadInitialData } from '../RUA';
 import routes, { articleRegexPath, swRegexPath } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';

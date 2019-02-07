@@ -1,6 +1,6 @@
 import React from 'react';
 import OfflinePluginRuntime from 'offline-plugin/runtime';
-import { ClientApp } from 'react-universal-app';
+import { ClientApp } from './RUA';
 import * as reactDom from 'react-dom';
 import routes from './app/routes';
 
