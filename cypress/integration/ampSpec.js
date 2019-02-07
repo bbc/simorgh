@@ -1,8 +1,5 @@
 import { getElement } from '../support/bodyTestHelper';
-import {
-  testNonHTMLResponseCode,
-  retrieve404BodyResponse,
-} from '../support/metaTestHelper';
+import { testNonHTMLResponseCode } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -18,18 +15,10 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should error gracefully', () => {
-    retrieve404BodyResponse(
-      '/news/articles/c85pqyj5m2ko.cake',
-      'No route was found for /news/articles/c85pqyj5m2ko.cake.',
-    );
-    retrieve404BodyResponse(
-      '/news/lol/c85pqyj5m2ko.amp',
-      'No route was found for /news/lol/c85pqyj5m2ko.amp.',
-    );
-    retrieve404BodyResponse(
-      '/cake/articles/c85pqyj5m2ko.amp',
-      'No route was found for /cake/articles/c85pqyj5m2ko.amp.',
-    );
+    testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
+    testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
+    testNonHTMLResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
+    testNonHTMLResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
   });
 
   it('should have AMP attribute', () => {
