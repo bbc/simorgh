@@ -5,6 +5,7 @@ import {
   getBlockData,
   shouldContainText,
   shouldContainStyles,
+  testNonHTMLResponseCode,
 } from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
@@ -14,25 +15,36 @@ describe('Article Body Tests', () => {
     cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
-  it('should display a headline', () => {
-    cy.window().then(win => {
-      const headlineData = getBlockData('headline', win);
-      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-    checkElementStyles(
-        'h1',
-        text,
-        'rgb(34, 34, 34)',
-        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-      );
-    });
-  });
+  // it('should display a headline', () => {
+  //   cy.window().then(win => {
+  //     const headlineData = getBlockData('headline', win);
+  //     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+  //   checkElementStyles(
+  //       'h1',
+  //       text,
+  //       'rgb(34, 34, 34)',
+  //       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+  //     );
+  //   });
+  // });
 
   it('should return the service worker', () => {
     cy.window().then(win => {
-      const { scriptURL } = win.clientInformation.serviceWorker.controller;
-      console.log(scriptURL)
+      const { controller } = win.clientInformation.serviceWorker;
+      const { scriptURL } = controller;
+      const { state } = controller;
       expect(scriptURL).to.eq('http://localhost:7080/sw-local.js');
+      expect(state).to.eq('activated');
+
+      cy.request(scriptURL).then(({ status }) => {
+        expect(status).to.eq(200);
+      });
     });
+  });
+
+  it('should do a thing', () => {
+    const body = getElement('body script').eq(1);
+    console.log(body)
   });
 
   // it('should return a subheading', () => {
