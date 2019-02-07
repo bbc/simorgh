@@ -36,6 +36,7 @@ describe('Logger node - for the server', () => {
         deleteFolder(logPath);
         deleteFolder(defaultLogPath);
         jest.resetModules();
+        jest.resetAllMocks();
       });
 
       afterAll(() => {
@@ -43,33 +44,27 @@ describe('Logger node - for the server', () => {
         deleteFolder(defaultLogPath);
       });
 
-      it('creates folder log-temp when NODE_ENV equals `node`', () => {
-        process.env.NODE_ENV = 'node';
+      it('creates folder log-temp', () => {
         require('./logger.node');
 
         expect(fs.existsSync(logPath)).toBe(true);
       });
 
       it('creates default folder log when LOG_DIR isnt set', () => {
-        process.env.NODE_ENV = 'node';
         delete process.env.LOG_DIR;
         require('./logger.node');
 
         expect(fs.existsSync(defaultLogPath)).toBe(true);
       });
 
-      it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
-        process.env.NODE_ENV = 'foo';
+      it('does not create folder log-temp when it already exists', () => {
+        fs.mkdirSync(logPath);
+        jest.mock('fs');
+        fs.mkdirSync = jest.fn();
+
         require('./logger.node');
 
-        expect(fs.existsSync(logPath)).toBe(false);
-      });
-
-      it('does not create folder log-temp when NODE_ENV equals `foo`', () => {
-        delete process.env.NODE_ENV;
-        require('./logger.node');
-
-        expect(fs.existsSync(logPath)).toBe(false);
+        expect(fs.mkdirSync).not.toHaveBeenCalled();
       });
     });
 
