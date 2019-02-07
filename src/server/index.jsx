@@ -108,7 +108,7 @@ server
         .status(status)
         .send(`<!doctype html>${await renderArticle(url, data)}`);
     } catch ({ message }) {
-      // Internal server error
+      // Return an internal server error for any uncaught errors
       res.status(500).send(message);
     }
   });
