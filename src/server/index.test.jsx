@@ -7,11 +7,7 @@ import dotenv from 'dotenv';
 import Document from '../app/components/Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
-const DOT_ENV_CONFIG = dotenv.config();
-
-if (DOT_ENV_CONFIG.error) {
-  throw DOT_ENV_CONFIG.error;
-}
+dotenv.config({ path: './env-config/local.env' });
 
 const server = require('./index').default;
 
