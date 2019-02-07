@@ -7,6 +7,12 @@ global.console.info = jest.fn();
 global.console.debug = jest.fn();
 global.console.log = jest.fn();
 
+const expectNotCalled = (object, keys) => {
+  keys.forEach(key => {
+    expect(object[key]).not.toHaveBeenCalled();
+  });
+};
+
 describe('Logger Web - for the client-side', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -16,10 +22,7 @@ describe('Logger Web - for the client-side', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.error(message);
     expect(global.console.error).toHaveBeenCalledWith(`error - ${message}`);
-    expect(global.console.warn).not.toHaveBeenCalled();
-    expect(global.console.info).not.toHaveBeenCalled();
-    expect(global.console.debug).not.toHaveBeenCalled();
-    expect(global.console.log).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['debug', 'info', 'log', 'warn']);
   });
 
   it('logger.warn should run console.warn', () => {
@@ -27,10 +30,7 @@ describe('Logger Web - for the client-side', () => {
     loggerInstance.warn(message);
 
     expect(global.console.warn).toHaveBeenCalledWith(`warn - ${message}`);
-    expect(global.console.error).not.toHaveBeenCalled();
-    expect(global.console.info).not.toHaveBeenCalled();
-    expect(global.console.debug).not.toHaveBeenCalled();
-    expect(global.console.log).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['debug', 'error', 'info', 'log']);
   });
 
   it('logger.info should run console.info', () => {
@@ -38,10 +38,7 @@ describe('Logger Web - for the client-side', () => {
     loggerInstance.info(message);
 
     expect(global.console.info).toHaveBeenCalledWith(`info - ${message}`);
-    expect(global.console.error).not.toHaveBeenCalled();
-    expect(global.console.warn).not.toHaveBeenCalled();
-    expect(global.console.debug).not.toHaveBeenCalled();
-    expect(global.console.log).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['debug', 'error', 'log', 'warn']);
   });
 
   it('logger.debug should run console.debug', () => {
@@ -49,10 +46,7 @@ describe('Logger Web - for the client-side', () => {
     loggerInstance.debug(message);
 
     expect(global.console.debug).toHaveBeenCalledWith(`debug - ${message}`);
-    expect(global.console.error).not.toHaveBeenCalled();
-    expect(global.console.warn).not.toHaveBeenCalled();
-    expect(global.console.info).not.toHaveBeenCalled();
-    expect(global.console.log).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['error', 'info', 'log', 'warn']);
   });
 
   it('logger.verbose should run console.log', () => {
@@ -60,10 +54,7 @@ describe('Logger Web - for the client-side', () => {
     loggerInstance.verbose(message);
 
     expect(global.console.log).toHaveBeenCalledWith(`verbose - ${message}`);
-    expect(global.console.error).not.toHaveBeenCalled();
-    expect(global.console.warn).not.toHaveBeenCalled();
-    expect(global.console.debug).not.toHaveBeenCalled();
-    expect(global.console.info).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['debug', 'error', 'info', 'warn']);
   });
 
   it('logger.silly should run console.log', () => {
@@ -71,9 +62,6 @@ describe('Logger Web - for the client-side', () => {
     loggerInstance.silly(message);
 
     expect(global.console.log).toHaveBeenCalledWith(`silly - ${message}`);
-    expect(global.console.error).not.toHaveBeenCalled();
-    expect(global.console.warn).not.toHaveBeenCalled();
-    expect(global.console.debug).not.toHaveBeenCalled();
-    expect(global.console.info).not.toHaveBeenCalled();
+    expectNotCalled(global.console, ['debug', 'error', 'info', 'warn']);
   });
 });
