@@ -18,7 +18,9 @@ import {
 } from '../../lib/layoutGrid';
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import GlobalStyle from '../../lib/globalStyles';
+import nodeLogger from '../../helpers/logger.node';
 
+const logger = nodeLogger(__filename);
 const Wrapper = styled.div`
   ${layoutGridWrapper};
 `;
@@ -58,7 +60,10 @@ const splitBlocksByHeadline = ({ model }) => {
 */
 const ArticleContainer = ({ loading, error, data }) => {
   if (loading) return 'Loading...'; /* [1] */
-  if (error) return 'Something went wrong :(';
+  if (error) {
+    logger.error(error);
+    return 'Something went wrong :(';
+  }
   if (data) {
     const { isAmp, data: articleData, service } = data;
     const { content, metadata, promo } = articleData;

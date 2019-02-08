@@ -1,5 +1,7 @@
 import 'isomorphic-fetch';
+import nodeLogger from '../../helpers/logger.node';
 
+const logger = nodeLogger(__filename);
 const getInitialData = async ({ match }) => {
   try {
     const { id, service, amp } = match.params;
@@ -19,7 +21,7 @@ const getInitialData = async ({ match }) => {
       service,
     };
   } catch (error) {
-    console.log(error); // eslint-disable-line no-console
+    logger.error(error);
     return {};
   }
 };

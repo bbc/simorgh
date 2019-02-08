@@ -16,6 +16,11 @@ import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
 
 import Document from '../app/components/Document';
+import nodeLogger from '../app/helpers/logger.node';
+
+const morgan = require('morgan');
+
+const logger = nodeLogger(__filename);
 
 const assets = getAssetsArray();
 
@@ -25,9 +30,25 @@ const dataFolderToRender =
 
 const articleDataRegexPath = `${articleRegexPath}.json`;
 
+logger.debug(
+  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
+);
+
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
+class LoggerStream {
+  write(message) {
+    logger.info(message.substring(0, message.lastIndexOf('\n')));
+  }
+}
+
 const server = express();
+// prettier-ignore
 server
   .disable('x-powered-by')
+  .use(morgan('tiny', {
+    'skip': (req, res) => (res.statusCode === 200),
+    'stream': new LoggerStream()
+  }))
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
@@ -50,7 +71,7 @@ server
     fs.readFile(dataFilePath, (error, data) => {
       if (error) {
         res.sendStatus(404);
-        console.log(error); // eslint-disable-line no-console
+        logger.error(`error reading article json, ${error}`);
         return null;
       }
 
@@ -97,7 +118,8 @@ server
       );
 
       res.send(`<!doctype html>${doc}`);
-    } catch ({ message }) {
+    } catch ({ message, status }) {
+      logger.error(`status: ${status || 500} - ${message}`);
       res.status(404).send(message);
     }
   });
