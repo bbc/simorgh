@@ -31,7 +31,7 @@ const ArticleContainer = ({ loading, error, data }) => {
           <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
             <HeaderContainer />
             {status === 200 ? (
-              <ArticleMain service={service} articleData={articleData} />
+              <ArticleMain articleData={articleData} />
             ) : (
               <ErrorMain status={status} />
             )}

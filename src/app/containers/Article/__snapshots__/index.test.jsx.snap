@@ -131,7 +131,6 @@ exports[`ArticleContainer Component 200 status code should render correctly 1`] 
             },
           }
         }
-        service="news"
       />
       <FooterContainer />
     </PlatformContextProvider>

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { string, shape } from 'prop-types';
+import { shape } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -31,7 +31,7 @@ const splitBlocksByHeadline = ({ model }) => {
   return { headlineBlocks, mainBlocks };
 };
 
-const ArticleMain = ({ service, articleData }) => {
+const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(content);
 
@@ -43,11 +43,7 @@ const ArticleMain = ({ service, articleData }) => {
   if (headlineBlocks.length > 0) {
     return (
       <Fragment>
-        <MetadataContainer
-          metadata={metadata}
-          promo={promo}
-          service={service}
-        />
+        <MetadataContainer metadata={metadata} promo={promo} />
         <main role="main">
           <Wrapper>
             <GridItemConstrained>
@@ -75,7 +71,6 @@ const ArticleMain = ({ service, articleData }) => {
 };
 
 ArticleMain.propTypes = {
-  service: string.isRequired,
   articleData: shape(articleDataPropTypes).isRequired,
 };
 
