@@ -12,3 +12,12 @@ The entry points to the application in terms of code execution are as follows:
 - `webpack.config.client.js` then executes `src/client.js` 
 - `webpack.config.server.js` then executes `src/index.js` 
 - `src/index.js` then executes `src/server/index.jsx`
+
+## `.env` is showing in my `git status`
+
+The `.env` file should not be commited as it is often overwritten by the values in `env-config/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application. 
+
+If the `.env` file is appearing in your `git status` it means it is now longer being assumed as unchanged, to fix this run:
+```
+git update-index --assume-unchanged .env
+```
