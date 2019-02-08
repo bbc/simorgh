@@ -1,7 +1,7 @@
-import { testNonHTMLResponseCode } from '../support/metaTestHelper';
+import { testResponseCode } from '../support/metaTestHelper';
 
 describe('Static Articles data', () => {
   it('should return a 200 status code', () => {
-    testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.json', 200);
+    testResponseCode('/news/articles/c85pqyj5m2ko.json', 200);
   });
 });

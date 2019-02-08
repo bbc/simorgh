@@ -1,5 +1,5 @@
 import { getElement } from '../support/bodyTestHelper';
-import { testNonHTMLResponseCode } from '../support/metaTestHelper';
+import { testResponseCode } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -10,14 +10,14 @@ describe('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
+      testResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
     });
   });
 
   it('should error gracefully', () => {
-    testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
-    testNonHTMLResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
-    testNonHTMLResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
+    testResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
+    testResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
+    testResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
   });
 
   it('should have AMP attribute', () => {

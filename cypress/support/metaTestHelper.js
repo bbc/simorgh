@@ -1,6 +1,6 @@
 import { getElement } from './bodyTestHelper';
 
-export const testNonHTMLResponseCode = (path, responseCode) => {
+export const testResponseCode = (path, responseCode) => {
   cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
     expect(status).to.eq(responseCode);
   });
