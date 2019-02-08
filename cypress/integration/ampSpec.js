@@ -16,7 +16,6 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
-    testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
     testNonHTMLResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
     testNonHTMLResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
   });
