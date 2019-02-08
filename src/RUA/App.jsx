@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 
@@ -59,5 +59,67 @@ export class App extends Component {
     });
   }
 }
+
+const App = props => {
+  const [data, setData] = useState(props.initialData);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [loadInitialDataPromise, setLoadInitialDataPromise] = useState(null);
+
+
+
+
+  async componentDidUpdate({ location: prevLocation }) {
+    if (props.location.pathname !== prevLocation.pathname) {
+      const initialData = loadInitialData(
+        props.location.pathname,
+        props.routes,
+      );
+
+      setData(null);
+      setLoading(true);
+      setError(null);
+      setLoadInitialDataPromise(initialData);
+    }
+
+    if (loading) {
+      try {
+        setData(await loadInitialDataPromise);
+        setLoading(false);
+        setError(null);
+        setLoadInitialDataPromise(null);
+      } catch (error) {
+        setData(null);
+        setLoading(false);
+        setError(error);
+        setLoadInitialDataPromise(null);
+      }
+    }
+  }
+
+
+
+
+
+
+
+  return renderRoutes(props.routes, {
+    data,
+    loading,
+    error,
+  });
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default withRouter(App);
