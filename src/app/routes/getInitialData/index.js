@@ -1,4 +1,7 @@
 import 'isomorphic-fetch';
+import nodeLogger from '../../helpers/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const upstreamStatusCodesToPropagate = [200, 404];
 
@@ -25,7 +28,7 @@ const getInitialData = async ({ match }) => {
       status = 502;
     }
   } catch (error) {
-    console.log(error); // eslint-disable-line no-console
+    logger.error(error);
     status = 502;
   }
 
