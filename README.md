@@ -51,6 +51,16 @@ We use `npm run build` locally which bundles the application pointing at localho
 
 To avoid indexing by search engines during our early development, there is a `nofollow` page level meta tag in `Document.jsx`.
 
+## Using environment builds locally
+
+This is mainly used for debugging `latest` using the TEST and LIVE environment bundles. Ensure that the bundles exist in the static asset location for the correct environment before starting to debug.
+
+To run TEST bundles on localhost:
+`rm -rf build && npm run build:test && npm run start`
+
+To run LIVE bundles on localhost:
+`rm -rf build && npm run build:live && npm run start`
+
 ## Production build on CI
 
 On deployment `npm run build:ci` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
