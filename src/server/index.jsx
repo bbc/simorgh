@@ -11,10 +11,13 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, { articleRegexPath, swRegexPath } from '../app/routes';
+import routes, {
+  articleRegexPath,
+  articleDataRegexPath,
+  swRegexPath,
+} from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
-
 import Document from '../app/components/Document';
 import nodeLogger from '../app/helpers/logger.node';
 
@@ -28,7 +31,29 @@ const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
-const articleDataRegexPath = `${articleRegexPath}.json`;
+const renderArticle = async (url, data) => {
+  const sheet = new ServerStyleSheet();
+
+  const app = renderToString(
+    sheet.collectStyles(
+      <ServerApp location={url} routes={routes} data={data} context={{}} />,
+    ),
+  );
+
+  const headHelmet = Helmet.renderStatic();
+
+  const doc = renderToStaticMarkup(
+    <Document
+      assets={assets}
+      app={app}
+      data={data}
+      styleTags={getStyleTag(sheet, data.isAmp)}
+      helmet={headHelmet}
+    />,
+  );
+
+  return doc;
+};
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -94,33 +119,18 @@ server
       }
     });
   })
-  .get('/*', async ({ url }, res) => {
+  .get(articleRegexPath, async ({ url }, res) => {
     try {
-      const sheet = new ServerStyleSheet();
       const data = await loadInitialData(url, routes);
+      const { status } = data;
 
-      const app = renderToString(
-        sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} context={{}} />,
-        ),
-      );
-
-      const headHelmet = Helmet.renderStatic();
-
-      const doc = renderToStaticMarkup(
-        <Document
-          assets={assets}
-          app={app}
-          data={data}
-          styleTags={getStyleTag(sheet, data.isAmp)}
-          helmet={headHelmet}
-        />,
-      );
-
-      res.send(`<!doctype html>${doc}`);
+      res
+        .status(status)
+        .send(`<!doctype html>${await renderArticle(url, data)}`);
     } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
-      res.status(404).send(message);
+      res.status(500).send(message);
     }
   });
 

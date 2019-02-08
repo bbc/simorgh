@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleMain should render a news article correctly 1`] = `
+<React.Fragment>
+  <MetadataContainer
+    metadata={
+      Object {
+        "created": 1514808060000,
+        "createdBy": "",
+        "firstPublished": 1514808060000,
+        "id": "urn:bbc:ares::article:c0000000001o",
+        "lastPublished": 1514811600000,
+        "lastUpdated": 1514815200000,
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+        },
+        "passport": Object {
+          "category": "news",
+          "genre": null,
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+          "language": "en-gb",
+        },
+        "tags": Object {
+          "about": Array [
+            Object {
+              "curationType": Array [
+                "vivo-stream",
+              ],
+              "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
+              "thingLabel": "Royal Wedding 2018",
+              "thingType": Array [
+                "Thing",
+                "Event",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
+              "topicId": "cpwpy79d6dxt",
+              "topicName": "Royal Wedding 2018",
+            },
+          ],
+          "mentions": Array [
+            Object {
+              "thingId": "1efbf3e5-b330-49a1-b531-b507ab027c96",
+              "thingLabel": "Queen Victoria",
+              "thingType": Array [
+                "Person",
+                "Thing",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+            },
+          ],
+        },
+        "type": "article",
+      }
+    }
+    promo={
+      Object {
+        "headlines": Object {
+          "promoHeadline": "Article Headline for Promo",
+          "seoHeadline": "Article Headline for SEO",
+        },
+        "id": "urn:bbc:ares::article:c0000000001o",
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+        },
+        "summary": "Article summary.",
+        "timestamp": 1514811600000,
+      }
+    }
+  />
+  <main
+    role="main"
+  >
+    <ForwardRef>
+      <ForwardRef>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "blocks": Array [
+                                Object {
+                                  "model": Object {
+                                    "attributes": Array [],
+                                    "text": "Article Headline",
+                                  },
+                                  "type": "fragment",
+                                },
+                              ],
+                              "text": "Article Headline",
+                            },
+                            "type": "paragraph",
+                          },
+                        ],
+                      },
+                      "type": "text",
+                    },
+                  ],
+                },
+                "type": "headline",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "headline": [Function],
+            }
+          }
+        />
+        <TimestampContainer
+          timestamp={1514811600000}
+        />
+      </ForwardRef>
+    </ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "attributes": Array [],
+                              "text": "A paragraph.",
+                            },
+                            "type": "fragment",
+                          },
+                        ],
+                        "text": "A paragraph.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </ForwardRef>
+    </ForwardRef>
+  </main>
+</React.Fragment>
+`;
+
+exports[`ArticleMain should render a persian article correctly 1`] = `
+<React.Fragment>
+  <MetadataContainer
+    metadata={
+      Object {
+        "created": 1514808060000,
+        "createdBy": "",
+        "firstPublished": 1514808060000,
+        "id": "urn:bbc:ares::article:cwv2xv848j5o",
+        "lastPublished": 1514811600000,
+        "lastUpdated": 1514815200000,
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+        },
+        "passport": Object {
+          "category": "news",
+          "genre": null,
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+          "language": "fa",
+        },
+        "tags": Object {
+          "about": null,
+          "mentions": null,
+        },
+        "type": "article",
+      }
+    }
+    promo={
+      Object {
+        "headlines": Object {
+          "promoHeadline": "سرصفحه مقاله برای ارتقاء",
+          "seoHeadline": "سرصفحه مقاله",
+        },
+        "id": "urn:bbc:ares::article:cwv2xv848j5o",
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+        },
+        "summary": "خلاصه مقاله",
+        "timestamp": 1514811600000,
+      }
+    }
+  />
+  <main
+    role="main"
+  >
+    <ForwardRef>
+      <ForwardRef>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "blocks": Array [
+                                Object {
+                                  "model": Object {
+                                    "attributes": Array [],
+                                    "text": "سرصفحه مقاله",
+                                  },
+                                  "type": "fragment",
+                                },
+                              ],
+                              "text": "سرصفحه مقاله",
+                            },
+                            "type": "paragraph",
+                          },
+                        ],
+                      },
+                      "type": "text",
+                    },
+                  ],
+                },
+                "type": "headline",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "headline": [Function],
+            }
+          }
+        />
+        <TimestampContainer
+          timestamp={1514811600000}
+        />
+      </ForwardRef>
+    </ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        <Blocks
+          blocks={
+            Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "attributes": Array [],
+                              "text": "یک پاراگراف.",
+                            },
+                            "type": "fragment",
+                          },
+                        ],
+                        "text": "یک پاراگراف.",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ]
+          }
+          componentsToRender={
+            Object {
+              "image": [Function],
+              "subheadline": [Function],
+              "text": [Function],
+            }
+          }
+        />
+      </ForwardRef>
+    </ForwardRef>
+  </main>
+</React.Fragment>
+`;
+
+exports[`ArticleMain should render null if no headline block 1`] = `null`;

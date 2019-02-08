@@ -1,8 +1,5 @@
 import { getElement } from '../support/bodyTestHelper';
-import {
-  testNonHTMLResponseCode,
-  retrieve404BodyResponse,
-} from '../support/metaTestHelper';
+import { testResponseCode } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -13,23 +10,14 @@ describe('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testNonHTMLResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
+      testResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
     });
   });
 
   it('should error gracefully', () => {
-    retrieve404BodyResponse(
-      '/news/articles/c85pqyj5m2ko.cake',
-      'No route was found for /news/articles/c85pqyj5m2ko.cake.',
-    );
-    retrieve404BodyResponse(
-      '/news/lol/c85pqyj5m2ko.amp',
-      'No route was found for /news/lol/c85pqyj5m2ko.amp.',
-    );
-    retrieve404BodyResponse(
-      '/cake/articles/c85pqyj5m2ko.amp',
-      'No route was found for /cake/articles/c85pqyj5m2ko.amp.',
-    );
+    testResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
+    testResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
+    testResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
   });
 
   it('should have AMP attribute', () => {
