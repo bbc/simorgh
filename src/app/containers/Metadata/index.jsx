@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape } from 'prop-types';
+import { shape } from 'prop-types';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 import Metadata from '../../components/Metadata';
@@ -14,7 +14,7 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
-const MetadataContainer = ({ metadata, promo, service }) => {
+const MetadataContainer = ({ metadata, promo }) => {
   const { id: aresArticleId } = metadata;
 
   if (!aresArticleId) {
@@ -22,8 +22,6 @@ const MetadataContainer = ({ metadata, promo, service }) => {
   }
 
   const id = aresArticleId.split(':').pop();
-  /* Canonical link generated from servicename and id */
-  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
@@ -32,6 +30,7 @@ const MetadataContainer = ({ metadata, promo, service }) => {
       {platform => (
         <ServiceContextConsumer>
           {({
+            service,
             brandName,
             articleAuthor,
             defaultImage,
@@ -39,29 +38,34 @@ const MetadataContainer = ({ metadata, promo, service }) => {
             locale,
             twitterCreator,
             twitterSite,
-          }) => (
-            <Metadata
-              isAmp={platform === 'amp'}
-              articleAuthor={articleAuthor}
-              articleSection={metadata.passport.genre}
-              brandName={brandName}
-              canonicalLink={canonicalLink}
-              defaultImage={defaultImage}
-              defaultImageAltText={defaultImageAltText}
-              description={promo.summary}
-              facebookAdmin={100004154058350}
-              facebookAppID={1609039196070050}
-              lang={metadata.passport.language}
-              locale={locale}
-              metaTags={allTags(metadata.tags)}
-              timeFirstPublished={timeFirstPublished}
-              timeLastPublished={timeLastPublished}
-              title={promo.headlines.seoHeadline}
-              twitterCreator={twitterCreator}
-              twitterSite={twitterSite}
-              type={metadata.type}
-            />
-          )}
+          }) => {
+            /* Canonical link generated from servicename and id */
+            const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+
+            return (
+              <Metadata
+                isAmp={platform === 'amp'}
+                articleAuthor={articleAuthor}
+                articleSection={metadata.passport.genre}
+                brandName={brandName}
+                canonicalLink={canonicalLink}
+                defaultImage={defaultImage}
+                defaultImageAltText={defaultImageAltText}
+                description={promo.summary}
+                facebookAdmin={100004154058350}
+                facebookAppID={1609039196070050}
+                lang={metadata.passport.language}
+                locale={locale}
+                metaTags={allTags(metadata.tags)}
+                timeFirstPublished={timeFirstPublished}
+                timeLastPublished={timeLastPublished}
+                title={promo.headlines.seoHeadline}
+                twitterCreator={twitterCreator}
+                twitterSite={twitterSite}
+                type={metadata.type}
+              />
+            );
+          }}
         </ServiceContextConsumer>
       )}
     </PlatformContextConsumer>
@@ -71,7 +75,6 @@ const MetadataContainer = ({ metadata, promo, service }) => {
 MetadataContainer.propTypes = {
   metadata: shape(metadataPropTypes).isRequired,
   promo: shape(promoPropTypes).isRequired,
-  service: string.isRequired,
 };
 
 export default MetadataContainer;
