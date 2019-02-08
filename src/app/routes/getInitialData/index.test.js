@@ -21,6 +21,15 @@ describe('getInitialData', () => {
   const mockFetchFailure = () =>
     fetch.mockReject(JSON.stringify({ error: true }));
 
+  const mockFetchInvalidJSON = () =>
+    fetch.mockResponseOnce('Some Invalid: { JSON');
+
+  const mockFetchNotFoundStatus = () =>
+    fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
+
+  const mockFetchTeapotStatus = () =>
+    fetch.mockResponseOnce(JSON.stringify({}), { status: 418 });
+
   const callGetInitialData = async (
     context = defaultContext,
     mockFetch = mockFetchSuccess,
@@ -40,6 +49,7 @@ describe('getInitialData', () => {
       isAmp: false,
       data: mockSuccessfulResponse,
       service: 'news',
+      status: 200,
     });
   });
 
@@ -59,6 +69,7 @@ describe('getInitialData', () => {
       isAmp: true,
       data: mockSuccessfulResponse,
       service: 'news',
+      status: 200,
     });
   });
 
@@ -77,8 +88,72 @@ describe('getInitialData', () => {
 
   describe('Rejected fetch', () => {
     it('should return an empty object', async () => {
-      const response = await callGetInitialData({}, mockFetchFailure);
-      expect(response).toEqual({});
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchFailure,
+      );
+      expect(response).toEqual({
+        data: undefined,
+        isAmp: false,
+        service: 'news',
+        status: 502,
+      });
+    });
+  });
+
+  describe('Ares returns 200 status code, but invalid JSON', () => {
+    it('should return a 502 error code', async () => {
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchInvalidJSON,
+      );
+
+      expect(response).toEqual({
+        data: undefined,
+        isAmp: false,
+        service: 'news',
+        status: 502,
+      });
+    });
+  });
+
+  describe('Ares returns a 404 status code', () => {
+    it('should return the status code as 404', async () => {
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchNotFoundStatus,
+      );
+
+      expect(response).toEqual({
+        data: undefined,
+        isAmp: false,
+        service: 'news',
+        status: 404,
+      });
+    });
+  });
+
+  describe('Ares returns a non-200, non-404 status code', () => {
+    it('should log, and return the status code as 502', async () => {
+      global.console.warn = jest.fn();
+
+      const response = await callGetInitialData(
+        defaultContext,
+        mockFetchTeapotStatus,
+      );
+
+      expect(global.console.warn).toBeCalledWith(
+        `Unexpected upstream response (HTTP status code 418) when requesting ${
+          process.env.SIMORGH_BASE_URL
+        }/news/articles/c0000000001o.json`,
+      );
+
+      expect(response).toEqual({
+        data: undefined,
+        isAmp: false,
+        service: 'news',
+        status: 502,
+      });
     });
   });
 });
