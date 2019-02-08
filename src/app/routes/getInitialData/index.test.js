@@ -24,10 +24,10 @@ describe('getInitialData', () => {
   const mockFetchInvalidJSON = () =>
     fetch.mockResponseOnce('Some Invalid: { JSON');
 
-  const mockFetchNotFound = () =>
+  const mockFetchNotFoundStatus = () =>
     fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
 
-  const mockFetchTeapot = () =>
+  const mockFetchTeapotStatus = () =>
     fetch.mockResponseOnce(JSON.stringify({}), { status: 418 });
 
   const callGetInitialData = async (
@@ -121,7 +121,7 @@ describe('getInitialData', () => {
     it('should return the status code as 404', async () => {
       const response = await callGetInitialData(
         defaultContext,
-        mockFetchNotFound,
+        mockFetchNotFoundStatus,
       );
 
       expect(response).toEqual({
@@ -139,7 +139,7 @@ describe('getInitialData', () => {
 
       const response = await callGetInitialData(
         defaultContext,
-        mockFetchTeapot,
+        mockFetchTeapotStatus,
       );
 
       expect(global.console.warn).toBeCalledWith(
