@@ -1,71 +1,8 @@
-import { Component, useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 
 import loadInitialData from './loadInitialData';
-
-// export class App extends Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       data: this.props.initialData,
-//       loading: false,
-//       error: null,
-//       loadInitialDataPromise: null,
-//     };
-//   }
-
-//   async componentDidUpdate({ location: prevLocation }) {
-//     if (this.props.location.pathname !== prevLocation.pathname) {
-
-//       console.log('OLD', prevLocation.pathname);
-//       console.log('CURRENT', this.props.location.pathname);
-
-//       const initialData = loadInitialData(
-//         this.props.location.pathname,
-//         this.props.routes,
-//       );
-
-//       this.setState({
-//         data: null,
-//         loading: true,
-//         error: null,
-//         loadInitialDataPromise: initialData,
-//       });
-//     }
-
-//     console.log('Always');
-
-//     if (this.state.loading) {
-//       console.log('Loading');
-//       try {
-//         const data = await this.state.loadInitialDataPromise;
-//         this.setState({
-//           data,
-//           loading: false,
-//           error: null,
-//           loadInitialDataPromise: null,
-//         });
-//       } catch (error) {
-//         this.setState({
-//           data: null,
-//           loading: false,
-//           error,
-//           loadInitialDataPromise: null,
-//         });
-//       }
-//     }
-//   }
-
-//   render() {
-//     return renderRoutes(this.props.routes, {
-//       data: this.state.data,
-//       loading: this.state.loading,
-//       error: this.state.error,
-//     });
-//   }
-// }
 
 const usePrevious = value => {
   const ref = useRef();
@@ -82,19 +19,24 @@ const App = ({ initialData, location, routes }) => {
   const [loadInitialDataPromise, setLoadInitialDataPromise] = useState(null);
   const previousLocation = usePrevious(location);
 
-  const stuff = async location => {
-    if(previousLocation && previousLocation != location){
-      const data = await loadInitialData(location.pathname, routes);
+  const stuff = async () => {
+    if (previousLocation && previousLocation.pathname !== location.pathname) {
+      setData(null);
+      setLoading(true);
+      setError(null);
+      setLoadInitialDataPromise(loadInitialData(location.pathname, routes));
+    }
 
-        try {
-        setData(data);
+    if (loading) {
+      try {
+        setData(await loadInitialDataPromise);
         setLoading(false);
         setError(null);
         setLoadInitialDataPromise(null);
-      } catch (error) {
+      } catch (err) {
         setData(null);
         setLoading(false);
-        setError(error);
+        setError(err);
         setLoadInitialDataPromise(null);
       }
     }
@@ -102,16 +44,16 @@ const App = ({ initialData, location, routes }) => {
 
   useEffect(
     () => {
-      stuff(location);
+      stuff();
     },
-    [location],
+    [location, loading],
   );
 
   return renderRoutes(routes, {
     data,
     loading,
     error,
-  });
+  }); 
 };
 
 export default withRouter(App);
