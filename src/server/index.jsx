@@ -10,7 +10,8 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import { ServerApp, loadInitialData } from '../RUA';
+import { ServerApp } from '../app/containers/App';
+import loadInitialData from '../app/containers/App/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,

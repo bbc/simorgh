@@ -28,7 +28,7 @@ const App = ({ initialData, location, routes }) => {
       setData(null);
       setLoading(false);
       setError(err);
-    } 
+    }
   };
 
   useEffect(

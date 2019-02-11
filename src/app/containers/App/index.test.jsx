@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClientApp, ServerApp } from './Wrappers';
+import { ClientApp, ServerApp } from '.';
 
 describe('ClientApp', () => {
   it('should render as exepcted', () => {

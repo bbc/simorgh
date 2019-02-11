@@ -3,7 +3,7 @@ import React from 'react';
 import 'babel-polyfill';
 import { hydrate } from 'react-dom';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-import { ClientApp } from './RUA';
+import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 
 if (process.env.NODE_ENV === 'production') {
