@@ -11,6 +11,7 @@ const Metadata = ({
   defaultImage,
   defaultImageAltText,
   description,
+  dir,
   facebookAdmin,
   facebookAppID,
   lang,
@@ -23,7 +24,7 @@ const Metadata = ({
   twitterSite,
   type,
 }) => {
-  const htmlAttributes = { lang };
+  const htmlAttributes = { dir, lang };
 
   if (isAmp) {
     htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
@@ -79,6 +80,7 @@ Metadata.propTypes = {
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
   description: string.isRequired,
+  dir: string.isRequired,
   facebookAdmin: number.isRequired,
   facebookAppID: number.isRequired,
   lang: string.isRequired,

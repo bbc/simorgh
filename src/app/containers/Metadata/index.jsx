@@ -35,6 +35,7 @@ const MetadataContainer = ({ metadata, promo }) => {
             articleAuthor,
             defaultImage,
             defaultImageAltText,
+            dir,
             locale,
             twitterCreator,
             twitterSite,
@@ -52,6 +53,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                 defaultImage={defaultImage}
                 defaultImageAltText={defaultImageAltText}
                 description={promo.summary}
+                dir={dir}
                 facebookAdmin={100004154058350}
                 facebookAppID={1609039196070050}
                 lang={metadata.passport.language}
