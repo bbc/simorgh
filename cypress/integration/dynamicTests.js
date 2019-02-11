@@ -15,18 +15,18 @@ describe('Article Body Tests', () => {
     cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
-  // it('should display a headline', () => {
-  //   cy.window().then(win => {
-  //     const headlineData = getBlockData('headline', win);
-  //     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-  //   checkElementStyles(
-  //       'h1',
-  //       text,
-  //       'rgb(34, 34, 34)',
-  //       'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-  //     );
-  //   });
-  // });
+  it('should display a headline', () => {
+    cy.window().then(win => {
+      const headlineData = getBlockData('headline', win);
+      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+    checkElementStyles(
+        'h1',
+        text,
+        'rgb(34, 34, 34)',
+        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      );
+    });
+  });
 
   it('should return the service worker', () => {
     cy.window().then(win => {
@@ -42,64 +42,58 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should do a thing', () => {
-    const body = getElement('body script').eq(1);
-    console.log(body)
+  it('should return a subheading', () => {
+    cy.window().then(win => {
+      const subheadingData = getBlockData('subheadline', win);
+      const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+
+      checkElementStyles(
+        'h2',
+        text,
+        'rgb(64, 64, 64)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
-  // it('should return a subheading', () => {
-  //   cy.window().then(win => {
-  //     const subheadingData = getBlockData('subheadline', win);
-  //     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+  it('should render a paragraph', () => {
+    cy.window().then(win => {
+      const paragraphData = getBlockData('text', win);
+      const { text } = paragraphData.model.blocks[0].model;
+      const paragraphExample = getElement('p')
 
-  //     checkElementStyles(
-  //       'h2',
-  //       text,
-  //       'rgb(64, 64, 64)',
-  //       'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-  //     );
-  //   });
-  // });
+      shouldContainText(paragraphExample, text);
+    });
+  });
 
-  // it('should render a paragraph', () => {
-  //   cy.window().then(win => {
-  //     const paragraphData = getBlockData('text', win);
-  //     const { text } = paragraphData.model.blocks[0].model;
-  //     const paragraphExample = getElement('p')
+  it('should render a timestamp', () => {
+    cy.window().then(win => {
+      const { lastPublished } = win.SIMORGH_DATA.data.metadata;
+      const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
 
-  //     shouldContainText(paragraphExample, text);
-  //   });
-  // });
+      checkElementStyles(
+        'time',
+        timeStamp,
+        'rgb(90, 90, 90)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
+  });
 
-  // it('should render a timestamp', () => {
-  //   cy.window().then(win => {
-  //     const { lastPublished } = win.SIMORGH_DATA.data.metadata;
-  //     const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
-
-  //     checkElementStyles(
-  //       'time',
-  //       timeStamp,
-  //       'rgb(90, 90, 90)',
-  //       'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-  //     );
-  //   });
-  // });
-
-  // it('should have an image copyright label with styling', () => {
-  //   cy.window().then(win => {
-  //     const copyrightData = getBlockData('image', win);
-  //     console.log(copyrightData);
-  //     // const { copyrightHolder } = copyrightData.model.blocks[0].model;
-  //     // console.log(copyrightHolder.shift());
-  //     // const copyrightLabel = getElement('figure p').eq(0);
-  //         // getElement('p').eq(0);
-  //   //   copyrightLabel.should('contain', copyrightHolder);
-  //   //   shouldContainStyles(
-  //   //     copyrightLabel,
-  //   //     'background-color',
-  //   //     'rgba(34, 34, 34, 0.75)',
-  //   //   );
-  //   //   shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
-  //   });
-  // });
+  it('should have an image copyright label with styling', () => {
+    cy.window().then(win => {
+      const copyrightData = getBlockData('image', win);
+      console.log(copyrightData);
+      const { copyrightHolder } = copyrightData.model.blocks[0].model;
+      const copyrightLabel = getElement('figure p').eq(0);
+          getElement('p').eq(0);
+      copyrightLabel.should('contain', copyrightHolder);
+      shouldContainStyles(
+        copyrightLabel,
+        'background-color',
+        'rgba(34, 34, 34, 0.75)',
+      );
+      shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+    });
+  });
 });

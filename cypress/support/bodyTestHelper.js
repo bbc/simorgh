@@ -20,7 +20,7 @@ export const getBlockData = (blockType, win) => {
 
     blocks.forEach(block => {
     console.log(block);
-      if (block.type === blockType) {
+      if (!blockData && block.type === blockType) {
         blockData = block;
       }
   });
