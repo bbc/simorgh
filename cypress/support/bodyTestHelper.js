@@ -14,6 +14,13 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
+export const checkElementStyles = (elementString, text, color, fontFamily) => {
+  const el = getElement(elementString);
+  shouldContainText(el, text);
+  shouldContainStyles(el, 'color', color);
+  shouldContainStyles(el, 'font-family', fontFamily);
+};
+
 export const getBlockData = (blockType, win) => {
   let blockData;
   const { blocks } = win.SIMORGH_DATA.data.content.model;
@@ -26,11 +33,56 @@ export const getBlockData = (blockType, win) => {
   return blockData;
 };
 
-export const checkElementStyles = (elementString, text, color, fontFamily) => {
-  const el = getElement(elementString);
-  shouldContainText(el, text);
-  shouldContainStyles(el, 'color', color);
-  shouldContainStyles(el, 'font-family', fontFamily);
+export const headlineDataWindow = data => {
+  cy.window().then(win => {
+    const headlineData = getBlockData(data, win);
+    const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+    checkElementStyles(
+      'h1',
+      text,
+      'rgb(34, 34, 34)',
+      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+    );
+  });
+};
+
+export const subheadlineDataWindow = data => {
+  cy.window().then(win => {
+    const subheadingData = getBlockData(data, win);
+    const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+
+    checkElementStyles(
+      'h2',
+      text,
+      'rgb(64, 64, 64)',
+      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+    );
+  });
+};
+
+export const paragraphDataWindow = data => {
+  cy.window().then(win => {
+    const paragraphData = getBlockData(data, win);
+    const { text } = paragraphData.model.blocks[0].model;
+    const paragraphExample = getElement('p');
+
+    shouldContainText(paragraphExample, text);
+  });
+};
+
+export const copyrightDataWindow = data => {
+  cy.window().then(win => {
+    const copyrightData = getBlockData(data, win);
+    const { copyrightHolder } = copyrightData.model.blocks[0].model;
+    const copyrightLabel = getElement('figure p').eq(0);
+    copyrightLabel.should('contain', copyrightHolder);
+    shouldContainStyles(
+      copyrightLabel,
+      'background-color',
+      'rgba(34, 34, 34, 0.75)',
+    );
+    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+  });
 };
 
 export const checkFooterLinks = (position, url) => {

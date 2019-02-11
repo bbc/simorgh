@@ -1,11 +1,13 @@
 import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
-  getBlockData,
+  copyrightDataWindow,
   getElement,
+  headlineDataWindow,
+  subheadlineDataWindow,
+  paragraphDataWindow,
   placeholderImageLoaded,
   renderedTitle,
-  shouldContainText,
   shouldContainStyles,
   visibleImageNoCaption,
   visibleImageWithCaption,
@@ -18,20 +20,11 @@ describe('Article Body Tests', () => {
     cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
-  it('should display a headline', () => {
-    cy.window().then(win => {
-      const headlineData = getBlockData('headline', win);
-      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-      checkElementStyles(
-        'h1',
-        text,
-        'rgb(34, 34, 34)',
-        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-      );
-    });
+  it('should render an H1, which contains/displays a styled headline', () => {
+    headlineDataWindow('headline');
   });
 
-  it('should render a timestamp', () => {
+  it('should render a formatted timestamp', () => {
     cy.window().then(win => {
       const { lastPublished } = win.SIMORGH_DATA.data.metadata;
       const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
@@ -45,28 +38,12 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should return a subheading', () => {
-    cy.window().then(win => {
-      const subheadingData = getBlockData('subheadline', win);
-      const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
-
-      checkElementStyles(
-        'h2',
-        text,
-        'rgb(64, 64, 64)',
-        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-      );
-    });
+  it('should render an H2, which contains/displays a styled subheading', () => {
+    subheadlineDataWindow('subheadline');
   });
 
-  it('should render a paragraph', () => {
-    cy.window().then(win => {
-      const paragraphData = getBlockData('text', win);
-      const { text } = paragraphData.model.blocks[0].model;
-      const paragraphExample = getElement('p');
-
-      shouldContainText(paragraphExample, text);
-    });
+  it('should render a paragraph, which contains/displays styled text', () => {
+    paragraphDataWindow('text');
   });
 
   it('should have a placeholder image', () => {
@@ -82,18 +59,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have an image copyright label with styling', () => {
-    cy.window().then(win => {
-      const copyrightData = getBlockData('image', win);
-      const { copyrightHolder } = copyrightData.model.blocks[0].model;
-      const copyrightLabel = getElement('figure p').eq(0);
-      copyrightLabel.should('contain', copyrightHolder);
-      shouldContainStyles(
-        copyrightLabel,
-        'background-color',
-        'rgba(34, 34, 34, 0.75)',
-      );
-      shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
-    });
+    copyrightDataWindow('image');
   });
 
   it('should render a title', () => {

@@ -1,10 +1,9 @@
 import {
-  checkElementStyles,
-  getBlockData,
+  headlineDataWindow,
   getElement,
+  paragraphDataWindow,
   placeholderImageLoaded,
   renderedTitle,
-  shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
@@ -16,27 +15,12 @@ describe('Article Body Tests', () => {
     cy.visit('/persian/articles/cwv2xv848j5o');
   });
 
-  it('should display a headline', () => {
-    cy.window().then(win => {
-      const headlineData = getBlockData('headline', win);
-      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-      checkElementStyles(
-        'h1',
-        text,
-        'rgb(34, 34, 34)',
-        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-      );
-    });
+  it('should render an H1, which contains/displays a styled headline', () => {
+    headlineDataWindow('headline');
   });
 
-  it('should render a paragraph', () => {
-    cy.window().then(win => {
-      const paragraphData = getBlockData('text', win);
-      const { text } = paragraphData.model.blocks[0].model;
-      const paragraphExample = getElement('p');
-
-      shouldContainText(paragraphExample, text);
-    });
+  it('should render a paragraph, which contains/displays styled text', () => {
+    paragraphDataWindow('text');
   });
 
   it('should have a placeholder image', () => {
