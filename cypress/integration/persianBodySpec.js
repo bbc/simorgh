@@ -1,5 +1,6 @@
 import {
   checkElementStyles,
+  getBlockData,
   getElement,
   placeholderImageLoaded,
   renderedTitle,
@@ -15,21 +16,27 @@ describe('Article Body Tests', () => {
     cy.visit('/persian/articles/cwv2xv848j5o');
   });
 
-  it('should render a headline', () => {
-    checkElementStyles(
-      'h1',
-      'پهپادی که برایتان قهوه می‌آورد',
-      'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-    );
+  it('should display a headline', () => {
+    cy.window().then(win => {
+      const headlineData = getBlockData('headline', win);
+      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+      checkElementStyles(
+        'h1',
+        text,
+        'rgb(34, 34, 34)',
+        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
   it('should render a paragraph', () => {
-    const p = getElement('p');
-    shouldContainText(
-      p,
-      'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
-    );
+    cy.window().then(win => {
+      const paragraphData = getBlockData('text', win);
+      const { text } = paragraphData.model.blocks[0].model;
+      const paragraphExample = getElement('p');
+
+      shouldContainText(paragraphExample, text);
+    });
   });
 
   it('should have a placeholder image', () => {
@@ -45,6 +52,9 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a title', () => {
-    renderedTitle('پهپادی که برایتان قهوه می‌آورد - BBC News فارسی');
+    cy.window().then(win => {
+      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      renderedTitle(`${seoHeadline} - BBC News فارسی`);
+    });
   });
 });

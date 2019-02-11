@@ -18,11 +18,10 @@ export const getBlockData = (blockType, win) => {
   let blockData;
   const { blocks } = win.SIMORGH_DATA.data.content.model;
 
-    blocks.forEach(block => {
-    console.log(block);
-      if (!blockData && block.type === blockType) {
-        blockData = block;
-      }
+  blocks.forEach(block => {
+    if (!blockData && block.type === blockType) {
+      blockData = block;
+    }
   });
   return blockData;
 };

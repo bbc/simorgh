@@ -1,6 +1,7 @@
 import {
-  // clickInlineLinkAndTestPageHasHTML,
+  clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
+  getBlockData,
   getElement,
   placeholderImageLoaded,
   renderedTitle,
@@ -17,13 +18,17 @@ describe('Article Body Tests', () => {
     cy.visit('/news/articles/c9rpqy7pmypo');
   });
 
-  it('should render a headline', () => {
-    checkElementStyles(
-      'h1',
-      'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
-      'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-    );
+  it('should display a headline', () => {
+    cy.window().then(win => {
+      const headlineData = getBlockData('headline', win);
+      const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+      checkElementStyles(
+        'h1',
+        text,
+        'rgb(34, 34, 34)',
+        'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
   it('should render a timestamp', () => {
@@ -40,21 +45,28 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should render a subheading', () => {
-    checkElementStyles(
-      'h2',
-      "Queen Victoria's myrtle",
-      'rgb(64, 64, 64)',
-      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-    );
+  it('should return a subheading', () => {
+    cy.window().then(win => {
+      const subheadingData = getBlockData('subheadline', win);
+      const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+
+      checkElementStyles(
+        'h2',
+        text,
+        'rgb(64, 64, 64)',
+        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+      );
+    });
   });
 
   it('should render a paragraph', () => {
-    const p = getElement('p');
-    shouldContainText(
-      p,
-      'The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.',
-    );
+    cy.window().then(win => {
+      const paragraphData = getBlockData('text', win);
+      const { text } = paragraphData.model.blocks[0].model;
+      const paragraphExample = getElement('p');
+
+      shouldContainText(paragraphExample, text);
+    });
   });
 
   it('should have a placeholder image', () => {
@@ -70,18 +82,18 @@ describe('Article Body Tests', () => {
   });
 
   it('should have an image copyright label with styling', () => {
-    const copyrightLabel = getElement('figure')
-      .eq(0)
-      .within(() => {
-        getElement('p').eq(0);
-      });
-    copyrightLabel.should('contain', 'PA');
-    shouldContainStyles(
-      copyrightLabel,
-      'background-color',
-      'rgba(34, 34, 34, 0.75)',
-    );
-    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+    cy.window().then(win => {
+      const copyrightData = getBlockData('image', win);
+      const { copyrightHolder } = copyrightData.model.blocks[0].model;
+      const copyrightLabel = getElement('figure p').eq(0);
+      copyrightLabel.should('contain', copyrightHolder);
+      shouldContainStyles(
+        copyrightLabel,
+        'background-color',
+        'rgba(34, 34, 34, 0.75)',
+      );
+      shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+    });
   });
 
   it('should render a title', () => {
@@ -108,12 +120,7 @@ describe('Article Body Tests', () => {
     );
   });
 
-  /*
-    The following test is commented out due to it breaking the E2E tests once we are integrated with Mozart and Ares.
-    The issue https://github.com/bbc/simorgh/issues/930 has further details.
-  */
-
-  // it('should have a working first inline link', () => {
-  //   clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
-  // });
+  it('should have a working first inline link', () => {
+    clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
+  });
 });
