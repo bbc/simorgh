@@ -1,3 +1,7 @@
+/*
+ * Credit Jordan Tart https://github.com/jtart
+ * https://github.com/jtart/react-universal-app
+ */
 import React from 'react';
 import * as reactRouterConfig from 'react-router-config';
 import { App } from './App';

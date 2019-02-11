@@ -11,7 +11,7 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import { ServerApp } from '../app/containers/App';
-import loadInitialData from '../app/containers/App/loadInitialData';
+import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,

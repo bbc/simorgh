@@ -1,50 +1,67 @@
-import { useEffect, useState, useRef } from 'react';
+/*
+ * Credit Jordan Tart https://github.com/jtart
+ * https://github.com/jtart/react-universal-app
+ */
+import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
-import loadInitialData from './loadInitialData';
 
-const usePrevious = value => {
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current || value;
-};
+import loadInitialData from '../../routes/loadInitialData';
 
-const App = ({ initialData, location, routes }) => {
-  const [data, setData] = useState(initialData);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const previousLocationPath = usePrevious(location.pathname);
+export class App extends Component {
+  constructor(props) {
+    super(props);
 
-  const fetchData = async () => {
-    try {
-      setData(null);
-      setLoading(true);
-      setError(null);
-      setData(await loadInitialData(location.pathname, routes));
-      setLoading(false);
-    } catch (err) {
-      setData(null);
-      setLoading(false);
-      setError(err);
+    this.state = {
+      data: this.props.initialData,
+      loading: false,
+      error: null,
+      loadInitialDataPromise: null,
+    };
+  }
+
+  async componentDidUpdate({ location: prevLocation }) {
+    if (this.props.location.pathname !== prevLocation.pathname) {
+      const initialData = loadInitialData(
+        this.props.location.pathname,
+        this.props.routes,
+      );
+
+      this.setState({
+        data: null,
+        loading: true,
+        error: null,
+        loadInitialDataPromise: initialData,
+      });
     }
-  };
 
-  useEffect(
-    () => {
-      if (previousLocationPath !== location.pathname) {
-        fetchData();
+    if (this.state.loading) {
+      try {
+        const data = await this.state.loadInitialDataPromise;
+        this.setState({
+          data,
+          loading: false,
+          error: null,
+          loadInitialDataPromise: null,
+        });
+      } catch (error) {
+        this.setState({
+          data: null,
+          loading: false,
+          error: error,
+          loadInitialDataPromise: null,
+        });
       }
-    },
-    [location],
-  );
+    }
+  }
 
-  return renderRoutes(routes, {
-    data,
-    loading,
-    error,
-  });
-};
+  render() {
+    return renderRoutes(this.props.routes, {
+      data: this.state.data,
+      loading: this.state.loading,
+      error: this.state.error,
+    });
+  }
+}
 
 export default withRouter(App);
