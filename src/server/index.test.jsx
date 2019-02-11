@@ -3,9 +3,13 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
+import dotenv from 'dotenv';
 import Document from '../app/components/Document';
-import './env'; // this is needed so the dotenv.config is setup before the server is invoked
-import server from './index';
+
+// mimic the logic in `src/index.js` which imports the `server/index.jsx`
+dotenv.config({ path: './envConfig/local.env' });
+
+const server = require('./index').default;
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
