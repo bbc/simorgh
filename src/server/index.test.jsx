@@ -3,9 +3,13 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import { loadInitialData } from 'react-universal-app';
+import dotenv from 'dotenv';
 import Document from '../app/components/Document';
-import './env'; // this is needed so the dotenv.config is setup before the server is invoked
-import server from './index';
+
+// mimic the logic in `src/index.js` which imports the `server/index.jsx`
+dotenv.config({ path: './envConfig/local.env' });
+
+const server = require('./index').default;
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
@@ -67,49 +71,97 @@ describe('Server', () => {
     });
   });
 
-  describe('/*', () => {
+  describe('/{service}/articles/{optimoID}', () => {
+    const successDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
     describe('Successful render', () => {
-      beforeEach(() => {
-        loadInitialData.mockImplementationOnce(() =>
-          Promise.resolve({ some: 'data' }),
-        );
+      describe('200 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(successDataResponse),
+          );
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={['one.js']}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
       });
 
-      it('should respond with rendered data', async () => {
-        const { text } = await makeRequest('/some/route');
+      describe('404 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(notFoundDataResponse),
+          );
+        });
 
-        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-          <h1>Mock app</h1>,
-        );
-
-        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-          <Document
-            app="<h1>Mock app</h1>"
-            assets={['one.js']}
-            data={{ some: 'data' }}
-            helmet={{ head: 'tags' }}
-            styleTags={<style />}
-          />,
-        );
-
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
       });
     });
 
-    describe('Error', () => {
+    describe('Unknown error within universal-react-app or its dependencies', () => {
       beforeEach(() => {
         loadInitialData.mockImplementationOnce(() =>
           Promise.reject(Error('Error!')),
         );
       });
 
-      it('should respond with a 404', async () => {
-        const { status, text } = await makeRequest('/');
-        expect(status).toEqual(404);
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(
+          '/news/articles/c0000000001o',
+        );
+        expect(status).toEqual(500);
         expect(text).toEqual('Error!');
       });
+    });
+  });
+
+  describe('/someInvalidPath', () => {
+    it('should respond 404', async () => {
+      const { status } = await makeRequest('/blah');
+
+      expect(status).toBe(404);
     });
   });
 });

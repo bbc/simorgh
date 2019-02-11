@@ -1,13 +1,24 @@
+/* eslint-disable global-require */
 import path from 'path';
-import getAssetsArray from '.';
+import nodeLogger from '../../app/helpers/logger.node';
+
+const mockLogError = jest.fn();
+
+jest.mock('../../app/helpers/logger.node', () => jest.fn());
+
+nodeLogger.mockImplementation(() => ({ error: mockLogError }));
 
 describe('getAssetsArray', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('no assets manifest', () => {
-    it('should console log an error', async () => {
+    it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
-      global.console.log = jest.fn();
+      const getAssetsArray = require('./index.js').default;
       getAssetsArray();
-      expect(global.console.log).toHaveBeenCalledWith(
+      expect(mockLogError).toHaveBeenCalledWith(
         `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
           process.env.SIMORGH_ASSETS_MANIFEST_PATH
         }`,
@@ -21,7 +32,9 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixture.json',
       );
+      const getAssetsArray = require('./index.js').default;
       expect(getAssetsArray()).toEqual(['one.js']);
+      expect(mockLogError).not.toHaveBeenCalled();
     });
   });
 
@@ -31,7 +44,9 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixtureMissingKey.json',
       );
+      const getAssetsArray = require('./index.js').default;
       expect(getAssetsArray()).toEqual(['foo.js']);
+      expect(mockLogError).not.toHaveBeenCalled();
     });
   });
 });

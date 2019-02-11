@@ -2,8 +2,14 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
-const getEnv = require('./src/server/env');
+
+const DOT_ENV_CONFIG = dotenv.config();
+
+if (DOT_ENV_CONFIG.error) {
+  throw DOT_ENV_CONFIG.error;
+}
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
@@ -53,6 +59,11 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       },
     },
+    node: {
+      // Override webpacks default handling for these as they arnt availible on the client.
+      fs: 'empty',
+      __filename: 'mock',
+    },
     plugins: [
       // keep track of the generated chunks in build/assets.json
       // this determines what scripts get put in the footer of the page
@@ -67,8 +78,24 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(getEnv()),
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
+      /*
+       * This replaces calls to logger.node.js with logger.web.js, a client
+       * side replacement, when building the bundle code for the client.
+       * This avoids the weight of winston being included in the bundles and
+       * issues arising from it trying to the use the file system
+       */
+      new webpack.NormalModuleReplacementPlugin(
+        /(.*)logger.node(\.*)/,
+        resource => {
+          // eslint-disable-next-line no-param-reassign
+          resource.request = resource.request.replace(
+            /logger.node/,
+            `logger.web`,
+          );
+        },
+      ),
     ],
   };
 
