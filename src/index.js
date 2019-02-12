@@ -1,7 +1,15 @@
-import http from 'http';
-import './server/env'; // This import must be above the `app`. See details - https://github.com/bbc/simorgh/pull/1231
-import nodeLogger from './app/helpers/logger.node';
-import app from './server';
+// dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
+const dotenv = require('dotenv');
+
+const DOT_ENV_CONFIG = dotenv.config();
+if (DOT_ENV_CONFIG.error) {
+  throw DOT_ENV_CONFIG.error;
+}
+
+// now `process.env.*` variables are set run the rest of the app
+const http = require('http');
+const nodeLogger = require('./app/helpers/logger.node');
+const app = require('./server').default;
 
 const logger = nodeLogger(__filename);
 const server = http.createServer(app);
