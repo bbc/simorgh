@@ -3,7 +3,7 @@
 exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
 .c0 {
   color: #0F556C;
-  padding: 2px;
+  padding: 0 2px;
   border-bottom: 1px solid #0F556C;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -38,7 +38,7 @@ exports[`InlineLinkContainer with link matching routes for SPA should render cor
 exports[`InlineLinkContainer with link matching routes for SPA should render correctly for TEST environment 1`] = `
 .c0 {
   color: #0F556C;
-  padding: 2px;
+  padding: 0 2px;
   border-bottom: 1px solid #0F556C;
   -webkit-text-decoration: none;
   text-decoration: none;
