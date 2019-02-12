@@ -120,12 +120,13 @@ server
       }
     });
   })
-  .get(manifestRegexPath, async (req, res) => {
-    const manifestPath = `${__dirname}/public/news/manifest.json`;
+  .get(manifestRegexPath, async ({ params }, res) => {
+    const { service } = params;
+    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
     res.sendFile(manifestPath, {}, error => {
       if (error) {
-        console.log(error);
-        res.status(500).send('Unable to find manifest');
+        console.log(error); // eslint-disable-line no-console
+        res.status(500).send('Unable to find manifest.');
       }
     })
   })
