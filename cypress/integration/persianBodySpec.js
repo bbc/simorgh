@@ -1,8 +1,8 @@
 import {
   copyrightDataWindow,
-  headlineDataWindow,
+  firstHeadlineDataWindow,
+  firstParagraphDataWindow,
   getElement,
-  paragraphDataWindow,
   placeholderImageLoaded,
   renderedTitle,
   visibleImageNoCaption,
@@ -17,11 +17,11 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
-    headlineDataWindow();
+    firstHeadlineDataWindow();
   });
 
   it('should render a paragraph, which contains/displays styled text', () => {
-    paragraphDataWindow();
+    firstParagraphDataWindow();
   });
 
   it('should have a placeholder image', () => {

@@ -2,10 +2,10 @@ import {
   clickInlineLinkAndTestPageHasHTML,
   checkElementStyles,
   copyrightDataWindow,
+  firstHeadlineDataWindow,
+  firstParagraphDataWindow,
+  firstSubheadlineDataWindow,
   getElement,
-  headlineDataWindow,
-  subheadlineDataWindow,
-  paragraphDataWindow,
   placeholderImageLoaded,
   renderedTitle,
   shouldContainStyles,
@@ -21,7 +21,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
-    headlineDataWindow();
+    firstHeadlineDataWindow();
   });
 
   it('should render a formatted timestamp', () => {
@@ -39,11 +39,11 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H2, which contains/displays a styled subheading', () => {
-    subheadlineDataWindow();
+    firstSubheadlineDataWindow();
   });
 
   it('should render a paragraph, which contains/displays styled text', () => {
-    paragraphDataWindow();
+    firstParagraphDataWindow();
   });
 
   it('should have a placeholder image', () => {

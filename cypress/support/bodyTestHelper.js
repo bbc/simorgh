@@ -33,7 +33,7 @@ export const getBlockData = (blockType, win) => {
   return blockData;
 };
 
-export const headlineDataWindow = () => {
+export const firstHeadlineDataWindow = () => {
   cy.window().then(win => {
     const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
@@ -46,7 +46,7 @@ export const headlineDataWindow = () => {
   });
 };
 
-export const subheadlineDataWindow = () => {
+export const firstSubheadlineDataWindow = () => {
   cy.window().then(win => {
     const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
@@ -60,7 +60,7 @@ export const subheadlineDataWindow = () => {
   });
 };
 
-export const paragraphDataWindow = () => {
+export const firstParagraphDataWindow = () => {
   cy.window().then(win => {
     const paragraphData = getBlockData('text', win);
     const { text } = paragraphData.model.blocks[0].model;
