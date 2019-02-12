@@ -14,6 +14,7 @@ import gnuTP from 'gnu-terry-pratchett';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
 import { getStyleTag } from './styles';
@@ -118,6 +119,15 @@ server
         res.status(500).send('Unable to find service worker.');
       }
     });
+  })
+  .get(manifestRegexPath, async (req, res) => {
+    const manifestPath = `${__dirname}/public/news/manifest.json`;
+    res.sendFile(manifestPath, {}, error => {
+      if (error) {
+        console.log(error);
+        res.status(500).send('Unable to find manifest');
+      }
+    })
   })
   .get(articleRegexPath, async ({ url }, res) => {
     try {
