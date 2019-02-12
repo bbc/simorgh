@@ -2,8 +2,14 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
-const getEnv = require('./src/server/env');
+
+const DOT_ENV_CONFIG = dotenv.config();
+
+if (DOT_ENV_CONFIG.error) {
+  throw DOT_ENV_CONFIG.error;
+}
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
@@ -72,7 +78,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ]),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(getEnv()),
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
