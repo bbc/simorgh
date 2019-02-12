@@ -33,9 +33,9 @@ export const getBlockData = (blockType, win) => {
   return blockData;
 };
 
-export const headlineDataWindow = data => {
+export const headlineDataWindow = () => {
   cy.window().then(win => {
-    const headlineData = getBlockData(data, win);
+    const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
     checkElementStyles(
       'h1',
@@ -46,9 +46,9 @@ export const headlineDataWindow = data => {
   });
 };
 
-export const subheadlineDataWindow = data => {
+export const subheadlineDataWindow = () => {
   cy.window().then(win => {
-    const subheadingData = getBlockData(data, win);
+    const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
 
     checkElementStyles(
@@ -60,9 +60,9 @@ export const subheadlineDataWindow = data => {
   });
 };
 
-export const paragraphDataWindow = data => {
+export const paragraphDataWindow = () => {
   cy.window().then(win => {
-    const paragraphData = getBlockData(data, win);
+    const paragraphData = getBlockData('text', win);
     const { text } = paragraphData.model.blocks[0].model;
     const paragraphExample = getElement('p');
 
@@ -70,9 +70,9 @@ export const paragraphDataWindow = data => {
   });
 };
 
-export const copyrightDataWindow = data => {
+export const copyrightDataWindow = () => {
   cy.window().then(win => {
-    const copyrightData = getBlockData(data, win);
+    const copyrightData = getBlockData('image', win);
     const { copyrightHolder } = copyrightData.model.blocks[0].model;
     const copyrightLabel = getElement('figure p').eq(0);
     copyrightLabel.should('contain', copyrightHolder);

@@ -21,7 +21,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
-    headlineDataWindow('headline');
+    headlineDataWindow();
   });
 
   it('should render a formatted timestamp', () => {
@@ -39,11 +39,11 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H2, which contains/displays a styled subheading', () => {
-    subheadlineDataWindow('subheadline');
+    subheadlineDataWindow();
   });
 
   it('should render a paragraph, which contains/displays styled text', () => {
-    paragraphDataWindow('text');
+    paragraphDataWindow();
   });
 
   it('should have a placeholder image', () => {
@@ -59,7 +59,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have an image copyright label with styling', () => {
-    copyrightDataWindow('image');
+    copyrightDataWindow();
   });
 
   it('should render a title', () => {

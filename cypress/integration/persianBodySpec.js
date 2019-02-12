@@ -1,4 +1,5 @@
 import {
+  copyrightDataWindow,
   headlineDataWindow,
   getElement,
   paragraphDataWindow,
@@ -16,15 +17,19 @@ describe('Article Body Tests', () => {
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
-    headlineDataWindow('headline');
+    headlineDataWindow();
   });
 
   it('should render a paragraph, which contains/displays styled text', () => {
-    paragraphDataWindow('text');
+    paragraphDataWindow();
   });
 
   it('should have a placeholder image', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
+  });
+
+  it('should have an image copyright label with styling', () => {
+    copyrightDataWindow();
   });
 
   it('should have a visible image without a caption', () => {
