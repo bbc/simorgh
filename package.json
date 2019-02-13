@@ -136,6 +136,7 @@
     "chrome-launcher": "^0.10.5",
     "core-js": "^2.6.0",
     "cypress": "^3.1.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^3.3.0",
@@ -178,6 +179,9 @@
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
       "**/?(*.)+(spec|test).js?(x)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "spec": {
