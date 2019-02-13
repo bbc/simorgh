@@ -111,7 +111,6 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     clientConfig.plugins.push(
       new OfflinePlugin({
         AppCache: false, // because it's deprecated: https://github.com/NekR/offline-plugin/blob/master/docs/options.md#appcache-object--null--false
-        appShell: '/news/articles/',
         autoUpdate: 1000 * 60 * 60 * 6, // 6 hours
         caches: 'all', // all webpack output assets and `externals` will be cached on install
         externals: [
