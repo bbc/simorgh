@@ -2,8 +2,8 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
-import loadInitialData from '../app/routes/loadInitialData';
 import dotenv from 'dotenv';
+import loadInitialData from '../app/routes/loadInitialData';
 import Document from '../app/components/Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`

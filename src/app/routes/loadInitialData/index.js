@@ -1,5 +1,5 @@
 /*
- * Credit Jordan Tart https://github.com/jtart
+ * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
 import { matchRoutes } from 'react-router-config';

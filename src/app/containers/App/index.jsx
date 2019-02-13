@@ -1,5 +1,6 @@
+/* eslint-disable */
 /*
- * Credit Jordan Tart https://github.com/jtart
+ * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';

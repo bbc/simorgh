@@ -1,5 +1,6 @@
+/* eslint-disable */
 /*
- * Credit Jordan Tart https://github.com/jtart
+ * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
 import { Component } from 'react';
@@ -17,7 +18,7 @@ export class App extends Component {
       loading: false,
       error: null,
       loadInitialDataPromise: null,
-    };
+    };  
   }
 
   async componentDidUpdate({ location: prevLocation }) {
@@ -48,7 +49,7 @@ export class App extends Component {
         this.setState({
           data: null,
           loading: false,
-          error: error,
+          error,
           loadInitialDataPromise: null,
         });
       }

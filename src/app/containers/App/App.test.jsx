@@ -1,11 +1,11 @@
 /*
- * Credit Jordan Tart https://github.com/jtart
+ * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
 import * as reactRouterConfig from 'react-router-config';
 import { App } from './App';
-import * as loadInitialData from './loadInitialData';
+import * as loadInitialData from '../../routes/loadInitialData';
 
 describe('App', () => {
   let wrapper;
@@ -18,6 +18,7 @@ describe('App', () => {
     .mockReturnValue(<h1>{initialData.data}</h1>);
 
   beforeAll(() => {
+    // eslint-disable-next-line no-undef
     wrapper = shallow(
       <App
         location={{ pathname: 'pathnameOne' }}
@@ -26,7 +27,7 @@ describe('App', () => {
       />,
     );
     setStateSpy = jest.spyOn(wrapper.instance(), 'setState');
-    loadInitialDataSpy = spyOn(loadInitialData, 'default');
+    loadInitialDataSpy = jest.spyOn(loadInitialData, 'default');
   });
 
   it('should return rendered routes', () => {

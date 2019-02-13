@@ -1,9 +1,9 @@
 /*
- * Credit Jordan Tart https://github.com/jtart
+ * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
 import * as reactRouterConfig from 'react-router-config';
-import loadInitialData from './loadInitialData';
+import loadInitialData from '.';
 
 describe('loadInitialData', () => {
   const data = 'Some data!';
@@ -45,7 +45,7 @@ describe('loadInitialData', () => {
 
       reactRouterConfig.matchRoutes = jest
         .fn()
-        .mockReturnValue([{ route: route, match: match }]);
+        .mockReturnValue([{ route, match }]);
 
       const initialData = await loadInitialData('url', ['url']);
 
@@ -65,12 +65,12 @@ describe('loadInitialData', () => {
 
         reactRouterConfig.matchRoutes = jest
           .fn()
-          .mockReturnValue([{ route: route, match: match }]);
+          .mockReturnValue([{ route, match }]);
 
         try {
           await loadInitialData(route, {});
-        } catch (error) {
-          expect(error).toEqual(error);
+        } catch (err) {
+          expect(err).toEqual(error);
         }
 
         expect(route.getInitialData).toHaveBeenCalledTimes(1);
