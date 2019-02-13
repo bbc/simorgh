@@ -21,6 +21,70 @@ export const checkElementStyles = (elementString, text, color, fontFamily) => {
   shouldContainStyles(el, 'font-family', fontFamily);
 };
 
+export const getBlockData = (blockType, win) => {
+  let blockData;
+  const { blocks } = win.SIMORGH_DATA.data.content.model;
+
+  blocks.forEach(block => {
+    if (!blockData && block.type === blockType) {
+      blockData = block;
+    }
+  });
+  return blockData;
+};
+
+export const firstHeadlineDataWindow = () => {
+  cy.window().then(win => {
+    const headlineData = getBlockData('headline', win);
+    const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+    checkElementStyles(
+      'h1',
+      text,
+      'rgb(34, 34, 34)',
+      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
+    );
+  });
+};
+
+export const firstSubheadlineDataWindow = () => {
+  cy.window().then(win => {
+    const subheadingData = getBlockData('subheadline', win);
+    const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+
+    checkElementStyles(
+      'h2',
+      text,
+      'rgb(64, 64, 64)',
+      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
+    );
+  });
+};
+
+export const firstParagraphDataWindow = () => {
+  cy.window().then(win => {
+    const paragraphData = getBlockData('text', win);
+    const { text } = paragraphData.model.blocks[0].model;
+    const paragraphExample = getElement('p');
+
+    shouldContainText(paragraphExample, text);
+  });
+};
+
+export const copyrightDataWindow = () => {
+  cy.window().then(win => {
+    const copyrightData = getBlockData('image', win);
+    const { copyrightHolder } = copyrightData.model.blocks[0].model;
+    const copyrightLabel = getElement('figure p').eq(0);
+    copyrightLabel.should('contain', copyrightHolder);
+    shouldContainStyles(
+      copyrightLabel,
+      'background-color',
+      'rgba(34, 34, 34, 0.75)',
+    );
+    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+  });
+};
+
 export const checkFooterLinks = (position, url) => {
   cy.get('a')
     .eq(position)
