@@ -9,6 +9,6 @@ self.addEventListener('fetch', function (event) {
   console.debug('SW ' + version + ': fetch event for ' + event.request.url);
 });
 
-self.addEventListener("activate", function(event) {
+self.addEventListener('activate', function (event) {
   console.log('SW ' + version + ': activate event.');
 });
