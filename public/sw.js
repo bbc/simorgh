@@ -1,7 +1,7 @@
 /* eslint-disable */
 var version = 'v0.0.1';
 
-self.addEventListener("install", function(event) {
+self.addEventListener('install', function (event) {
   console.log('SW ' + version + ': install event.');
 });
 
