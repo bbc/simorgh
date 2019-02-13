@@ -5,7 +5,7 @@ self.addEventListener('install', function (event) {
   console.log('SW ' + version + ': install event.');
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener('fetch', function (event) {
   console.debug('SW ' + version + ': fetch event for ' + event.request.url);
 });
 
