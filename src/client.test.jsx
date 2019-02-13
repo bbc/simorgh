@@ -25,23 +25,41 @@ describe('Client', () => {
     window.SIMORGH_DATA = null;
   });
 
-  describe('on production environment', () => {
-    process.env.NODE_ENV = 'production';
-
-    it('should install service worker updates', async () => {
-      Object.defineProperty(global.navigator, 'serviceWorker', {
-        value: {
-          register: jest.fn(),
-        },
-      });
+  describe('service worker', () => {
+    beforeEach(() => {
+      global.navigator.serviceWorker = {
+        register: jest.fn(),
+      };
 
       window.SIMORGH_DATA = {
         service: 'foobar',
       };
+    });
 
-      await import('./client');
+    describe('on production environment', () => {
+      beforeEach(() => {
+        process.env.NODE_ENV = 'production';
+      });
 
-      expect(navigator.serviceWorker.register).toHaveBeenCalledWith('/foobar/articles/sw.js');
+      it('should be installed', async () => {
+        await import('./client');
+
+        expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
+          '/foobar/articles/sw.js',
+        );
+      });
+    });
+
+    describe('on dev environment', () => {
+      beforeEach(() => {
+        process.env.NODE_ENV = 'dev';
+      });
+
+      it('should be installed', async () => {
+        await import('./client');
+
+        expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+      });
     });
   });
 
