@@ -55,7 +55,7 @@ describe('Client', () => {
         process.env.NODE_ENV = 'dev';
       });
 
-      it('should be installed', async () => {
+      it('should not be installed', async () => {
         await import('./client');
 
         expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
