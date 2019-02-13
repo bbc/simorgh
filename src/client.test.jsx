@@ -25,6 +25,26 @@ describe('Client', () => {
     window.SIMORGH_DATA = null;
   });
 
+  describe('on production environment', () => {
+    process.env.NODE_ENV = 'production';
+
+    it('should install service worker updates', async () => {
+      Object.defineProperty(global.navigator, 'serviceWorker', {
+        value: {
+          register: jest.fn(),
+        },
+      });
+
+      window.SIMORGH_DATA = {
+        service: 'foobar',
+      };
+
+      await import('./client');
+
+      expect(navigator.serviceWorker.register).toHaveBeenCalledWith('/foobar/articles/sw.js');
+    });
+  });
+
   it('should hydrate client once routes are ready', async () => {
     await import('./client');
 
