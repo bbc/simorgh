@@ -1,3 +1,4 @@
+import config from '../support/config';
 import {
   checkLinkStyling,
   checkFooterLinks,
@@ -10,7 +11,7 @@ describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/news/articles/c9rpqy7pmypo');
+    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
   it('should render the BBC News branding', () => {
     const headerBranding = getElement('footer div').eq(0);

@@ -1,3 +1,4 @@
+import config from '../support/config';
 import {
   facebookMeta,
   openGraphMeta,
@@ -9,7 +10,7 @@ describe('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/persian/articles/cwv2xv848j5o');
+    cy.visit(`/persian/articles/${config.assets.persian}`);
   });
 
   it('should have a nofollow meta tag', () => {

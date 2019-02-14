@@ -1,3 +1,4 @@
+import config from '../support/config';
 import { getElement } from '../support/bodyTestHelper';
 import { testResponseCode } from '../support/metaTestHelper';
 
@@ -5,19 +6,19 @@ describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/news/articles/c85pqyj5m2ko.amp');
+    cy.visit(`/news/articles/${config.assets.news}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode('/news/articles/c85pqyj5m2ko.amp', 200);
+      testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode('/news/articles/c85pqyj5m2ko.cake', 404);
-    testResponseCode('/news/lol/c85pqyj5m2ko.amp', 404);
-    testResponseCode('/cake/articles/c85pqyj5m2ko.amp', 404);
+    testResponseCode(`/news/articles/${config.assets.news}.cake`, 404);
+    testResponseCode(`/news/lol/${config.assets.news}.amp`, 404);
+    testResponseCode(`/cake/articles/${config.assets.news}.amp`, 404);
   });
 
   it('should have AMP attribute', () => {
@@ -46,7 +47,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit('/news/articles/c85pqyj5m2ko');
+    cy.visit(`/news/articles/${config.assets.news}`);
     getElement('html').should('not.have.attr', 'amp');
   });
 });
