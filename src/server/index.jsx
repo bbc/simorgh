@@ -11,6 +11,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
+import WebmoduleClient from '@bbc/webmodule-client';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
@@ -24,6 +25,52 @@ import nodeLogger from '../app/helpers/logger.node';
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
+
+const client = new WebmoduleClient({});
+
+const httpOptions = {
+  headers: {
+    Accept: 'application/json',
+  },
+  cert: '/etc/pki/tls/private/client.key',
+  key: '/etc/pki/tls/certs/client.crt',
+  ca: '/Users/newcob01/dev/certs/CA/bbc-cloud-ca.pem',
+};
+
+const orbitParams = {
+  page: {
+    destination: 'news_ps',
+    producer: 'news',
+    section: 'technology',
+    contentId: 'urn:bbc:ares:article:c85pqyj5m2ko',
+    contentType: 'article',
+  },
+};
+
+const options = {
+  modal: true,
+  disableCookieBanner: true,
+};
+
+client
+  .get(
+    'http://webmodules.dev.bbc.co.uk:5000/dev-orbit-webmodules/orbit.json', // I've explicitly copied JSON response, we'd have to send Accept header
+    httpOptions,
+  )
+  .then(webModule => {
+    // webModule is cacheable at this point and different params can be
+    // substituted into the same cached version as many times as you like
+    const orbit = webModule.renderHTML(orbitParams);
+    console.log(`Head HTML: ${orbit.head}`);
+    console.log(`Body First HTML: ${orbit.bodyFirst}`);
+    console.log(`Body Last HTML: ${orbit.bodyLast}`);
+  })
+  .catch(error => {
+    // handle error
+    // webmodule client serves stale caches on error, so this
+    // only happens when caches are cold
+    console.log(error);
+  });
 
 const assets = getAssetsArray();
 
