@@ -1,16 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorMain should correctly render 1`] = `
-.c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
-  line-height: 2rem;
+exports[`ErrorMain should correctly render for 404 1`] = `
+.c6 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c3 {
+.c6:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c6:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c6:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
   color: #404040;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -24,22 +40,41 @@ exports[`ErrorMain should correctly render 1`] = `
   display: grid;
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
-    font-size: 2em;
-    line-height: 2.25rem;
-  }
+.c2 {
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 2.75em;
-    line-height: 3rem;
-  }
+.c3 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+.c5 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20em) {
-  .c3 {
+  .c4 {
     font-size: 1em;
     line-height: 1.375rem;
   }
@@ -90,6 +125,34 @@ exports[`ErrorMain should correctly render 1`] = `
   }
 }
 
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 1.375em;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.75em;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
 @media (max-width:37.5em) {
   .c1 {
     -ms-grid-column: 1;
@@ -122,6 +185,13 @@ exports[`ErrorMain should correctly render 1`] = `
   }
 }
 
+@media (min-width:20em) {
+  .c5 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
 <main
   role="main"
 >
@@ -131,16 +201,542 @@ exports[`ErrorMain should correctly render 1`] = `
     <div
       className="c1"
     >
-      <h1
+      <p
+        aria-hidden="true"
         className="c2"
       >
-        Oops: something went wrong!
-      </h1>
-      <p
+        404
+      </p>
+      <h1
+        aria-label="404 - Page can not be found"
         className="c3"
       >
-        Response code: 
+        Page can not be found
+      </h1>
+      <p
+        className="c4"
+      >
+        Sorry, we’re unable to bring you the page you’re looking for. Please try:
+      </p>
+      <ul>
+        <li
+          className="-li c5"
+        >
+          Double checking the url
+        </li>
+        <li
+          className="-li c5"
+        >
+          Hitting the refresh button in your browser
+        </li>
+        <li
+          className="-li c5"
+        >
+          Searching for this page using the BBC search bar
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        Alternatively, please visit the 
+        <a
+          className="c6"
+          href="https://www.bbc.com/news"
+        >
+          BBC News homepage.
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for 500 1`] = `
+.c6 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c6:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c6:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c0 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.c2 {
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.c3 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+.c5 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c0 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.9rem))[10] 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 1.375em;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.75em;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / -4;
+  }
+}
+
+@media (min-width:20em) {
+  .c5 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <p
+        aria-hidden="true"
+        className="c2"
+      >
+        500
+      </p>
+      <h1
+        aria-label="500 - Internal server error"
+        className="c3"
+      >
+        Internal server error
+      </h1>
+      <p
+        className="c4"
+      >
+        Sorry, we’re currently unable to bring you the page you're looking for. Please try:
+      </p>
+      <ul>
+        <li
+          className="-li c5"
+        >
+          Hitting the refresh button in your browser
+        </li>
+        <li
+          className="-li c5"
+        >
+          Coming back again later
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        Alternatively, please visit the 
+        <a
+          className="c6"
+          href="https://www.bbc.com/news"
+        >
+          BBC News homepage.
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for other status code 1`] = `
+.c6 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c6:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c6:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c0 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.c2 {
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.c3 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+.c5 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c0 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.9rem))[10] 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 1.375em;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.75em;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / -4;
+  }
+}
+
+@media (min-width:20em) {
+  .c5 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <p
+        aria-hidden="true"
+        className="c2"
+      >
         451
+      </p>
+      <h1
+        aria-label="451 - Internal server error"
+        className="c3"
+      >
+        Internal server error
+      </h1>
+      <p
+        className="c4"
+      >
+        Sorry, we’re currently unable to bring you the page you're looking for. Please try:
+      </p>
+      <ul>
+        <li
+          className="-li c5"
+        >
+          Hitting the refresh button in your browser
+        </li>
+        <li
+          className="-li c5"
+        >
+          Coming back again later
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        Alternatively, please visit the 
+        <a
+          className="c6"
+          href="https://www.bbc.com/news"
+        >
+          BBC News homepage.
+        </a>
       </p>
     </div>
   </div>
