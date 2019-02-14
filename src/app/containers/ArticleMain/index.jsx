@@ -7,7 +7,7 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
-import { Wrapper, OatWrapper, GridItemConstrained } from '../../lib/styledGrid';
+import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -52,16 +52,12 @@ const ArticleMain = ({ articleData }) => {
                 componentsToRender={componentsToRenderHeadline}
               />
               <Timestamp timestamp={metadata.lastPublished} />
-            </GridItemConstrained>
-          </Wrapper>
-          <OatWrapper>
-            <GridItemConstrained>
               <Blocks
                 blocks={mainBlocks}
                 componentsToRender={componentsToRenderMain}
               />
             </GridItemConstrained>
-          </OatWrapper>
+          </Wrapper>
         </main>
       </Fragment>
     );
