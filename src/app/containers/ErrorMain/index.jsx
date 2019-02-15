@@ -16,7 +16,7 @@ const StatusCode = styled.p`
   color: ${C_POSTBOX};
   display: block;
   font-family: ${FF_NEWS_SANS_REG};
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 `;
 

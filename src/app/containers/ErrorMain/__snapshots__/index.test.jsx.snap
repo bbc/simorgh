@@ -46,7 +46,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   color: #B80000;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -298,7 +298,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   color: #B80000;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -550,7 +550,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   color: #B80000;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -797,7 +797,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   color: #B80000;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -1044,7 +1044,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   color: #B80000;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
