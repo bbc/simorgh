@@ -2,7 +2,7 @@
 import React from 'react';
 import 'babel-polyfill';
 import { hydrate } from 'react-dom';
-import { ClientApp } from 'react-universal-app';
+import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 
 const data = window.SIMORGH_DATA || {};

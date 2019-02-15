@@ -1,13 +1,13 @@
 import React from 'react';
-import { ClientApp } from 'react-universal-app';
 import * as reactDom from 'react-dom';
+import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 
 jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('react-universal-app');
+jest.mock('./app/containers/App');
 
 jest.mock('./app/routes', () => ({
   default: [],
