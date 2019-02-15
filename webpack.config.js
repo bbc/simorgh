@@ -37,6 +37,11 @@ module.exports = (shell = {}) => {
       stats,
     },
     stats,
+    node: {
+      // tell Webpack to provide a polyfill for this functionality.
+      __filename: true,
+      __dirname: true,
+    },
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS

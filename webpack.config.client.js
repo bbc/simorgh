@@ -1,8 +1,18 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+const { getClientEnvVars } = require('./src/clientEnvVars');
+
+const DOT_ENV_CONFIG = dotenv.config();
+
+if (DOT_ENV_CONFIG.error) {
+  throw DOT_ENV_CONFIG.error;
+}
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
+  const APP_ENV = process.env.APP_ENV || 'live';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const clientConfig = {
     target: 'web', // compile for browser environment
@@ -25,11 +35,14 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     },
     output: {
       path: resolvePath('build/public'),
-      filename: 'static/js/[name].[hash:8].js',
+      // need unhashed client bundle when running dev server: https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
+      filename: START_DEV_SERVER
+        ? 'static/js/[name].js'
+        : 'static/js/[name].[hash:8].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
-      publicPath: IS_PROD
-        ? `${process.env.SIMORGH_BASE_URL}/`
-        : `http://localhost:${webpackDevServerPort}/`,
+      publicPath: START_DEV_SERVER
+        ? `http://localhost:${webpackDevServerPort}/`
+        : `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/`,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
@@ -46,12 +59,17 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       },
     },
+    node: {
+      // Override webpacks default handling for these as they arnt availible on the client.
+      fs: 'empty',
+      __filename: 'mock',
+    },
     plugins: [
       // keep track of the generated chunks in build/assets.json
       // this determines what scripts get put in the footer of the page
       new AssetsPlugin({
         path: resolvePath('build'),
-        filename: 'assets.json',
+        filename: `assets-${APP_ENV}.json`,
       }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
@@ -59,11 +77,29 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           from: 'public',
         },
       ]),
+      new webpack.DefinePlugin({
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+      }),
+      /*
+       * This replaces calls to logger.node.js with logger.web.js, a client
+       * side replacement, when building the bundle code for the client.
+       * This avoids the weight of winston being included in the bundles and
+       * issues arising from it trying to the use the file system
+       */
+      new webpack.NormalModuleReplacementPlugin(
+        /(.*)logger.node(\.*)/,
+        resource => {
+          // eslint-disable-next-line no-param-reassign
+          resource.request = resource.request.replace(
+            /logger.node/,
+            `logger.web`,
+          );
+        },
+      ),
     ],
   };
 
   if (START_DEV_SERVER) {
-    const webpack = require('webpack');
     clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
@@ -75,7 +111,6 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     clientConfig.plugins.push(
       new OfflinePlugin({
         AppCache: false, // because it's deprecated: https://github.com/NekR/offline-plugin/blob/master/docs/options.md#appcache-object--null--false
-        appShell: '/news/articles/',
         autoUpdate: 1000 * 60 * 60 * 6, // 6 hours
         caches: 'all', // all webpack output assets and `externals` will be cached on install
         externals: [
@@ -86,7 +121,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           'https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff',
           /* Unused fonts
             - When adding fonts, be sure to add them to the globalStyles object here:
-            https://github.com/BBC-News/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
+            https://github.com/bbc/simorgh/blob/latest/src/app/lib/globalStyles.js#L5
 
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2',
             'https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff',
@@ -101,6 +136,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         ServiceWorker: {
           events: true,
           minify: true,
+          output: `sw-${APP_ENV}.js`,
         },
         updateStrategy: 'changed',
       }),

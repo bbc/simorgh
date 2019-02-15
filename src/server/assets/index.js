@@ -1,4 +1,7 @@
 import fs from 'fs';
+import nodeLogger from '../../app/helpers/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const getAssetsArray = () => {
   const assets = [];
@@ -21,13 +24,11 @@ const getAssetsArray = () => {
       }
     }
   } catch (error) {
-    /* eslint-disable no-console */
-    console.log(
+    logger.error(
       `Error parsing assets manifest. ${assetsManifestEnv} = ${
         process.env[assetsManifestEnv]
       }`,
     );
-    /* eslint-enable no-console */
   }
   return assets;
 };

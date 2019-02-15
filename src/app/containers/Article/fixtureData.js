@@ -21,7 +21,7 @@ const articleDataBuilder = (
     created: 1514808060000,
     firstPublished: 1514808060000,
     lastPublished: 1514811600000,
-    lastUpdated: 1514811600000,
+    lastUpdated: 1514815200000,
     passport: {
       language: passportLanguage,
       home,

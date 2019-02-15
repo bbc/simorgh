@@ -1,9 +1,10 @@
 import {
-  checkElementStyles,
+  copyrightDataWindow,
+  firstHeadlineDataWindow,
+  firstParagraphDataWindow,
   getElement,
   placeholderImageLoaded,
   renderedTitle,
-  shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
@@ -15,25 +16,20 @@ describe('Article Body Tests', () => {
     cy.visit('/persian/articles/cwv2xv848j5o');
   });
 
-  it('should render a headline', () => {
-    checkElementStyles(
-      'h1',
-      'پهپادی که برایتان قهوه می‌آورد',
-      'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-    );
+  it('should render an H1, which contains/displays a styled headline', () => {
+    firstHeadlineDataWindow();
   });
 
-  it('should render a paragraph', () => {
-    const p = getElement('p');
-    shouldContainText(
-      p,
-      'شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.',
-    );
+  it('should render a paragraph, which contains/displays styled text', () => {
+    firstParagraphDataWindow();
   });
 
   it('should have a placeholder image', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
+  });
+
+  it('should have an image copyright label with styling', () => {
+    copyrightDataWindow();
   });
 
   it('should have a visible image without a caption', () => {
@@ -45,6 +41,9 @@ describe('Article Body Tests', () => {
   });
 
   it('should render a title', () => {
-    renderedTitle('پهپادی که برایتان قهوه می‌آورد - BBC News فارسی');
+    cy.window().then(win => {
+      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      renderedTitle(`${seoHeadline} - BBC News فارسی`);
+    });
   });
 });

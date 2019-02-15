@@ -1,8 +1,14 @@
 import { getElement } from './bodyTestHelper';
 
-export const testNonHTMLResponseCode = (path, responseCode) => {
-  cy.request(path).then(({ status }) => {
+export const testResponseCode = (path, responseCode) => {
+  cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
     expect(status).to.eq(responseCode);
+  });
+};
+
+export const testContentType = (path, contentType) => {
+  cy.request(path).then(({ headers }) => {
+    expect(headers).to.have.property('content-type', contentType);
   });
 };
 
