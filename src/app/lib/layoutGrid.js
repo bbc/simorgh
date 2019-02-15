@@ -62,10 +62,15 @@ export const layoutGridWrapper = css`
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     max-width: ${group5WrapperMaxWidth};
   }
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0 ${GEL_MARGIN_ABOVE_400PX};
+  }
 
   @supports (display: grid) {
     max-width: none;
-    background-color: red;
     margin-left: initial;
     margin-right: initial;
 
@@ -74,12 +79,6 @@ export const layoutGridWrapper = css`
     }
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
       grid-gap: ${GEL_GUTTER_ABOVE_600PX};
-    }
-    @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      padding: 0 ${GEL_MARGIN_BELOW_400PX};
-    }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding: 0 ${GEL_MARGIN_ABOVE_400PX};
     }
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       -ms-grid-columns: (1fr)[6]; // prettier-ignore
