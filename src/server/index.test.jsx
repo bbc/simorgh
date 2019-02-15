@@ -2,8 +2,8 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
-import { loadInitialData } from 'react-universal-app';
 import dotenv from 'dotenv';
+import loadInitialData from '../app/routes/loadInitialData';
 import Document from '../app/components/Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
@@ -33,10 +33,7 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('react-universal-app', () => ({
-  loadInitialData: jest.fn(),
-  ServerApp: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
-}));
+jest.mock('../app/routes/loadInitialData');
 
 styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
