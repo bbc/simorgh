@@ -37,7 +37,9 @@ const httpOptions = {
   ca: '/Users/newcob01/dev/certs/CA/bbc-cloud-ca.pem',
 };
 
-const orbitParams = {
+const options = {
+  modal: true,
+  disableCookieBanner: false,
   page: {
     destination: 'news_ps',
     producer: 'news',
@@ -46,11 +48,6 @@ const orbitParams = {
     contentType: 'article',
   },
 };
-
-// const options = {
-//   modal: true,
-//   disableCookieBanner: true,
-// };
 
 const assets = getAssetsArray();
 
@@ -157,13 +154,13 @@ server
     // I've explicitly copied JSON response, we'd have to send Accept header
     // Do we have to block our render on this? :( Though Orbit do recommend heavy caching
     // Is this the right place? I think we only have to do this on first page load, but...
-    'http://webmodules.dev.bbc.co.uk:5000/dev-orbit-webmodules/orbit.json',
+    'http://webmodules.dev.bbc.co.uk:5000/dev-orbit-webmodules/orbit-modal.json',
     httpOptions,
   )
   .then(async webModule => {
     // webModule is cacheable at this point and different params can be
     // substituted into the same cached version as many times as you like
-    const orbit = webModule.renderHTML(orbitParams);
+    const orbit = webModule.renderHTML(options);
     // console.log(`Head HTML: ${orbit.head}`);
     // console.log(`Body First HTML: ${orbit.bodyFirst}`);
     // console.log(`Body Last HTML: ${orbit.bodyLast}`);
