@@ -31,34 +31,36 @@ const LongGridItemConstrained = styled(GridItemConstrained)`
 const ListItem = Paragraph.withComponent('li');
 
 const ErrorMain = ({ status }) => (
-  <main role="main">
-    <Wrapper>
-      <ServiceContextConsumer>
-        {({ translations }) => (
-          <LongGridItemConstrained>
-            <StatusCode aria-hidden="true">{status}</StatusCode>
-            <ShortHeadline
-              aria-label={`${status} - ${translations.error[status].title}`}
-            >
-              {translations.error[status].title}
-            </ShortHeadline>
-            <Paragraph>{translations.error[status].message}</Paragraph>
-            <ul>
-              {translations.error[status].solutions.map(text => (
-                <ListItem key={nanoid()}>{text}</ListItem>
-              ))}
-            </ul>
-            <Paragraph>
-              {translations.error[status].callToAction}
-              <InlineLink href={translations.error[status].callToActionLinkUrl}>
-                {translations.error[status].callToActionLinkText}
-              </InlineLink>
-            </Paragraph>
-          </LongGridItemConstrained>
-        )}
-      </ServiceContextConsumer>
-    </Wrapper>
-  </main>
+  <ServiceContextConsumer>
+    {({ translations }) => {
+      const messaging = translations.error[status] || translations.error[500];
+
+      return (
+        <main role="main">
+          <Wrapper>
+            <LongGridItemConstrained>
+              <StatusCode aria-hidden="true">{status}</StatusCode>
+              <ShortHeadline aria-label={`${status} - ${messaging.title}`}>
+                {messaging.title}
+              </ShortHeadline>
+              <Paragraph>{messaging.message}</Paragraph>
+              <ul>
+                {messaging.solutions.map(text => (
+                  <ListItem key={nanoid()}>{text}</ListItem>
+                ))}
+              </ul>
+              <Paragraph>
+                {messaging.callToAction}
+                <InlineLink href={messaging.callToActionLinkUrl}>
+                  {messaging.callToActionLinkText}
+                </InlineLink>
+              </Paragraph>
+            </LongGridItemConstrained>
+          </Wrapper>
+        </main>
+      );
+    }}
+  </ServiceContextConsumer>
 );
 
 ErrorMain.propTypes = {
