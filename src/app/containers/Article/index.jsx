@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
+import ConsentBanner from '../ConsentBanner';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
@@ -29,6 +30,7 @@ const ArticleContainer = ({ loading, error, data }) => {
         <GlobalStyle />
         <ServiceContextProvider service={service}>
           <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+            <ConsentBanner />
             <HeaderContainer />
             {status === 200 ? (
               <ArticleMain articleData={articleData} />
