@@ -107,7 +107,6 @@
     "isomorphic-fetch": "^2.2.1",
     "morgan": "^1.9.1",
     "nanoid": "^2.0.0",
-    "offline-plugin": "^5.0.5",
     "path-to-regexp": "^2.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
