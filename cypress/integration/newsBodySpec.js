@@ -17,7 +17,6 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
@@ -88,6 +87,11 @@ describe('Article Body Tests', () => {
   });
 
   // it('should have a working first inline link', () => {
-  //   clickInlineLinkAndTestPageHasHTML('main a', '/news/articles/c85pqyj5m2ko');
+  //   clickInlineLinkAndTestPageHasHTML(
+  //     'main a',
+  //     `/news/articles/${config.assets.news}`,
+  //   );
   // });
+
+  // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
 });

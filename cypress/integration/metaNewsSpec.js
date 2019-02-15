@@ -10,7 +10,6 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 

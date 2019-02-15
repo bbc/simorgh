@@ -13,7 +13,6 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'cwv2xv848j5o' is available within the PROD enviroment
     cy.visit(`/persian/articles/${config.assets.persian}`);
   });
 

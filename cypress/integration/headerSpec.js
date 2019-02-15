@@ -9,7 +9,6 @@ describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
   });
 
   it('should render the BBC News branding', () => {

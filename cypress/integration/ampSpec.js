@@ -5,7 +5,6 @@ import { testResponseCode } from '../support/metaTestHelper';
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
     cy.visit(`/news/articles/${config.assets.news}.amp`);
   });
 
