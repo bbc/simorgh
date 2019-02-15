@@ -32,7 +32,7 @@ const persian = {
         title: 'مشکلی پیش آمده است',
         message:
           'متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:',
-        solutions: ['صفحه را ریفرش کنید', 'Coming back again later'],
+        solutions: ['صفحه را ریفرش کنید', 'بعدا برگردید'],
         callToActionFirst: 'روش دیگر، لطفآ به ',
         callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
         callToActionLast: ' بازدید کنید',

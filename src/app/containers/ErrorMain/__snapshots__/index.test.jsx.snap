@@ -978,7 +978,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
         <li
           className="-li c5"
         >
-          Coming back again later
+          بعدا برگردید
         </li>
       </ul>
       <p
