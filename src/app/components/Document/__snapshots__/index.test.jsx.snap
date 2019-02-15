@@ -60,10 +60,17 @@ exports[`Document should render AMP version correctly 1`] = `
         </style>
       </noscript>
     </React.Fragment>
-    <script
-      async={true}
-      src="https://cdn.ampproject.org/v0.js"
-    />
+    <React.Fragment>
+      <script
+        async={true}
+        src="https://cdn.ampproject.org/v0.js"
+      />
+      <script
+        async={true}
+        custom-element="amp-consent"
+        src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+      />
+    </React.Fragment>
   </head>
   <body>
     <div
