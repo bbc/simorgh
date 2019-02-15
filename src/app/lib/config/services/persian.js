@@ -13,29 +13,30 @@ const persian = {
   translations: {
     error: {
       404: {
-        title: 'Page can not be found',
+        statusCode: '۴۰۴',
+        title: 'این صفحه یافت نشد',
         message:
-          'Sorry, we’re unable to bring you the page you’re looking for. Please try:',
+          'متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'لینک را چک کنید',
+          'صفحه را ریفرش کنید',
+          'با استفاده از نوار جستجوی بی بی سی برای این صفحه جستجو کنید',
         ],
-        callToAction: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: 'روش دیگر، لطفآ به ',
+        callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
+        callToActionLast: ' بازدید کنید',
+        callToActionLinkUrl: 'https://www.bbc.com/persian',
       },
       500: {
-        title: 'Internal server error',
+        statusCode: '۵۰۰',
+        title: 'مشکلی پیش آمده است',
         message:
-          "Sorry, we’re currently unable to bring you the page you're looking for. Please try:",
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-        callToAction: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+          'متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:',
+        solutions: ['صفحه را ریفرش کنید', 'Coming back again later'],
+        callToActionFirst: 'روش دیگر، لطفآ به ',
+        callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
+        callToActionLast: ' بازدید کنید',
+        callToActionLinkUrl: 'https://www.bbc.com/persian',
       },
     },
   },

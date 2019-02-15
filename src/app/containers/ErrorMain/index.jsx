@@ -39,8 +39,10 @@ const ErrorMain = ({ status }) => (
         <main role="main">
           <Wrapper>
             <LongGridItemConstrained>
-              <StatusCode aria-hidden="true">{status}</StatusCode>
-              <ShortHeadline aria-label={`${status} - ${messaging.title}`}>
+              <StatusCode aria-hidden="true">{messaging.statusCode}</StatusCode>
+              <ShortHeadline
+                aria-label={`${messaging.statusCode} - ${messaging.title}`}
+              >
                 {messaging.title}
               </ShortHeadline>
               <Paragraph>{messaging.message}</Paragraph>
@@ -50,10 +52,11 @@ const ErrorMain = ({ status }) => (
                 ))}
               </ul>
               <Paragraph>
-                {messaging.callToAction}
+                {messaging.callToActionFirst}
                 <InlineLink href={messaging.callToActionLinkUrl}>
                   {messaging.callToActionLinkText}
                 </InlineLink>
+                {messaging.callToActionLast}
               </Paragraph>
             </LongGridItemConstrained>
           </Wrapper>

@@ -245,6 +245,259 @@ exports[`ErrorMain should correctly render for 404 1`] = `
         >
           BBC News homepage.
         </a>
+        
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for 404 for persian 1`] = `
+.c6 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c6:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c6:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c0 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.c2 {
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.c3 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+.c5 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c0 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.9rem))[10] 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 1.375em;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.75em;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / -4;
+  }
+}
+
+@media (min-width:20em) {
+  .c5 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <p
+        aria-hidden="true"
+        className="c2"
+      >
+        ۴۰۴
+      </p>
+      <h1
+        aria-label="۴۰۴ - این صفحه یافت نشد"
+        className="c3"
+      >
+        این صفحه یافت نشد
+      </h1>
+      <p
+        className="c4"
+      >
+        متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:
+      </p>
+      <ul>
+        <li
+          className="-li c5"
+        >
+          لینک را چک کنید
+        </li>
+        <li
+          className="-li c5"
+        >
+          صفحه را ریفرش کنید
+        </li>
+        <li
+          className="-li c5"
+        >
+          با استفاده از نوار جستجوی بی بی سی برای این صفحه جستجو کنید
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        روش دیگر، لطفآ به 
+        <a
+          className="c6"
+          href="https://www.bbc.com/persian"
+        >
+          صفحه اصلی بی بی سی فارسی
+        </a>
+         بازدید کنید
       </p>
     </div>
   </div>
@@ -491,6 +744,254 @@ exports[`ErrorMain should correctly render for 500 1`] = `
         >
           BBC News homepage.
         </a>
+        
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for 500 for persian 1`] = `
+.c6 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c6:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c6:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c0 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.c2 {
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.c3 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+.c5 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c0 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.9rem))[10] 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 1.375em;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.75em;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / -4;
+  }
+}
+
+@media (min-width:20em) {
+  .c5 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <p
+        aria-hidden="true"
+        className="c2"
+      >
+        ۵۰۰
+      </p>
+      <h1
+        aria-label="۵۰۰ - مشکلی پیش آمده است"
+        className="c3"
+      >
+        مشکلی پیش آمده است
+      </h1>
+      <p
+        className="c4"
+      >
+        متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:
+      </p>
+      <ul>
+        <li
+          className="-li c5"
+        >
+          صفحه را ریفرش کنید
+        </li>
+        <li
+          className="-li c5"
+        >
+          Coming back again later
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        روش دیگر، لطفآ به 
+        <a
+          className="c6"
+          href="https://www.bbc.com/persian"
+        >
+          صفحه اصلی بی بی سی فارسی
+        </a>
+         بازدید کنید
       </p>
     </div>
   </div>
@@ -702,10 +1203,10 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
         aria-hidden="true"
         className="c2"
       >
-        451
+        500
       </p>
       <h1
-        aria-label="451 - Internal server error"
+        aria-label="500 - Internal server error"
         className="c3"
       >
         Internal server error
@@ -737,6 +1238,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
         >
           BBC News homepage.
         </a>
+        
       </p>
     </div>
   </div>

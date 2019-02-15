@@ -14,6 +14,7 @@ const news = {
   translations: {
     error: {
       404: {
+        statusCode: '404',
         title: 'Page can not be found',
         message:
           'Sorry, we’re unable to bring you the page you’re looking for. Please try:',
@@ -22,11 +23,13 @@ const news = {
           'Hitting the refresh button in your browser',
           'Searching for this page using the BBC search bar',
         ],
-        callToAction: 'Alternatively, please visit the ',
+        callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
+        callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/news',
       },
       500: {
+        statusCode: '500',
         title: 'Internal server error',
         message:
           "Sorry, we’re currently unable to bring you the page you're looking for. Please try:",
@@ -34,8 +37,9 @@ const news = {
           'Hitting the refresh button in your browser',
           'Coming back again later',
         ],
-        callToAction: 'Alternatively, please visit the ',
+        callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
+        callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/news',
       },
     },
