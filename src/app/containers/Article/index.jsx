@@ -9,33 +9,33 @@ import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 
-/*
-  [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
-*/
-const ArticleContainer = ({ loading, data }) => {
-  if (loading) return 'Loading...'; /* [1] */
-  if (data) {
-    const { isAmp, data: articleData, service, status } = data;
+const defaultData = {
+  isAmp: false,
+  service: 'news',
+  status: 500,
+};
 
-    return (
-      <Fragment>
-        <GlobalStyle />
-        <ServiceContextProvider service={service}>
-          <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
-            <HeaderContainer />
-            {status === 200 ? (
-              <ArticleMain articleData={articleData} />
-            ) : (
-              <ErrorMain status={status} />
-            )}
-            <FooterContainer />
-          </PlatformContextProvider>
-        </ServiceContextProvider>
-      </Fragment>
-    );
-  }
+const ArticleContainer = ({ loading, data = defaultData }) => {
+  const { isAmp, data: articleData, service, status } = data;
 
-  return null;
+  const showLoading = loading;
+  const showArticle = !showLoading && status === 200 && articleData;
+  const showError = !showLoading && !showArticle;
+
+  return (
+    <Fragment>
+      <GlobalStyle />
+      <ServiceContextProvider service={service}>
+        <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+          <HeaderContainer />
+          {showLoading && <h1>Loading...</h1>}
+          {showArticle && <ArticleMain articleData={articleData} />}
+          {showError && <ErrorMain status={status} />}
+          <FooterContainer />
+        </PlatformContextProvider>
+      </ServiceContextProvider>
+    </Fragment>
+  );
 };
 
 ArticleContainer.propTypes = {

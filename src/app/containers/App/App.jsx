@@ -19,7 +19,7 @@ const usePrevious = value => {
   return ref.current || value;
 };
 
-const App = ({ initialData, location, routes }) => {
+export const App = ({ initialData, location, routes }) => {
   const [data, setData] = useState(initialData);
   const [loading, setLoading] = useState(false);
   const previousLocationPath = usePrevious(location.pathname);

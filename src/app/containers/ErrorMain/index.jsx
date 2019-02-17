@@ -4,7 +4,7 @@ import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
 
-const ErrorMain = ({ status }) => (
+const ErrorMain = ({ status = 500 }) => (
   <main role="main">
     <Wrapper>
       <GridItemConstrained>
