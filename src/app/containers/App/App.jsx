@@ -19,6 +19,8 @@ const usePrevious = value => {
   return ref.current || value;
 };
 
+const resetScroll = () => window.scrollTo(0, 0);
+
 export const App = ({ initialData, location, routes }) => {
   const [data, setData] = useState(initialData);
   const [loading, setLoading] = useState(false);
@@ -27,13 +29,14 @@ export const App = ({ initialData, location, routes }) => {
   const fetchData = async () => {
     const timer = setTimeout(() => {
       setLoading(true);
+      resetScroll();
     }, loadingScreenDelay);
 
     setData(await loadInitialData(location.pathname, routes));
 
     clearTimeout(timer);
-    window.scrollTo(0, 0);
     setLoading(false);
+    resetScroll();
   };
 
   useEffect(
