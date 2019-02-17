@@ -1,68 +1,54 @@
-/* eslint-disable */
-/*
- * © Jordan Tart https://github.com/jtart
- * https://github.com/jtart/react-universal-app
- */
-import { Component } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
-
 import loadInitialData from '../../routes/loadInitialData';
 
-export class App extends Component {
-  constructor(props) {
-    super(props);
+// number of ms before the loading screen is displayed.
+const loadingScreenDelay = 1000;
 
-    this.state = {
-      data: this.props.initialData,
-      loading: false,
-      error: null,
-      loadInitialDataPromise: null,
-    };  
-  }
+const usePrevious = value => {
+  const ref = useRef();
 
-  async componentDidUpdate({ location: prevLocation }) {
-    if (this.props.location.pathname !== prevLocation.pathname) {
-      const initialData = loadInitialData(
-        this.props.location.pathname,
-        this.props.routes,
-      );
+  useEffect(
+    () => {
+      ref.current = value;
+    },
+    [value],
+  );
 
-      this.setState({
-        data: null,
-        loading: true,
-        error: null,
-        loadInitialDataPromise: initialData,
-      });
-    }
+  return ref.current || value;
+};
 
-    if (this.state.loading) {
-      try {
-        const data = await this.state.loadInitialDataPromise;
-        this.setState({
-          data,
-          loading: false,
-          error: null,
-          loadInitialDataPromise: null,
-        });
-      } catch (error) {
-        this.setState({
-          data: null,
-          loading: false,
-          error,
-          loadInitialDataPromise: null,
-        });
+const App = ({ initialData, location, routes }) => {
+  const [data, setData] = useState(initialData);
+  const [loading, setLoading] = useState(false);
+  const previousLocationPath = usePrevious(location.pathname);
+
+  const fetchData = async () => {
+    const timer = setTimeout(() => {
+      setLoading(true);
+    }, loadingScreenDelay);
+
+    setData(await loadInitialData(location.pathname, routes));
+
+    clearTimeout(timer);
+    window.scrollTo(0, 0);
+    setLoading(false);
+  };
+
+  useEffect(
+    () => {
+      if (previousLocationPath !== location.pathname) {
+        fetchData();
       }
-    }
-  }
+    },
+    [location],
+  );
 
-  render() {
-    return renderRoutes(this.props.routes, {
-      data: this.state.data,
-      loading: this.state.loading,
-      error: this.state.error,
-    });
-  }
-}
+  return renderRoutes(routes, {
+    data,
+    loading,
+  });
+};
 
 export default withRouter(App);
