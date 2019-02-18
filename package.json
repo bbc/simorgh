@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
-    "audit:ci": "audit-ci -low",
+    "audit:ci": "audit-ci --config audit-ci.json",
     "bbcA11y": "bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
@@ -107,7 +107,6 @@
     "isomorphic-fetch": "^2.2.1",
     "morgan": "^1.9.1",
     "nanoid": "^2.0.0",
-    "offline-plugin": "^5.0.5",
     "path-to-regexp": "^2.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
