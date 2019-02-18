@@ -60,46 +60,37 @@ const StyledButton = styled.button`
   padding-bottom: ${GEL_SPACING};
 `;
 
-const CookieBanner = ({
+const ConsentBanner = ({
   title,
   description,
   accept,
   reject,
-  acceptProps,
-  rejectProps,
-  idPrompt,
+  acceptButtonProps,
+  rejectButtonProps,
+  promptId,
 }) => (
-  <Prompt id={idPrompt}>
+  <Prompt id={promptId}>
     <StyledHeading>{title}</StyledHeading>
     <StyledParagraph>{description}</StyledParagraph>
     <StyledWrapper>
-      <StyledButton {...acceptProps} role="button">
+      <StyledButton {...acceptButtonProps} role="button">
         {accept}
       </StyledButton>
-      <StyledButton {...rejectProps} role="button">
+      <StyledButton {...rejectButtonProps} role="button">
         {reject}
       </StyledButton>
     </StyledWrapper>
   </Prompt>
 );
 
-CookieBanner.propTypes = {
-  acceptProps: string.isRequired,
-  rejectProps: string.isRequired,
-  idPrompt: string,
-  title: string,
-  description: string,
-  accept: string,
-  reject: string,
+ConsentBanner.propTypes = {
+  title: string.isRequired,
+  description: string.isRequired,
+  accept: string.isRequired,
+  reject: string.isRequired,
+  acceptButtonProps: string.isRequired,
+  rejectButtonProps: string.isRequired,
+  promptId: string.isRequired,
 };
 
-CookieBanner.defaultProps = {
-  title: 'Let us know you agree to cookies',
-  description:
-    'We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.',
-  accept: 'Accept',
-  reject: 'Reject',
-  idPrompt: 'consent-prompt',
-};
-
-export default CookieBanner;
+export default ConsentBanner;

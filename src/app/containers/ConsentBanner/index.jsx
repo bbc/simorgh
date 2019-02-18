@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import CookieBanner from '../../components/CookieBanner';
+import ConsentBanner from '../../components/ConsentBanner';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 
-const idParent = 'consent';
-const idPrompt = 'consent-prompt';
+const parentId = 'consent';
+const promptId = 'consent-prompt';
 
-const ampClickHandler = type => ({ on: `tap:${idParent}.${type}` });
+const ampOnTapHandler = type => ({ on: `tap:${parentId}.${type}` });
 
 const ampGeoData = {
   ISOCountryGroups: {
@@ -49,12 +49,12 @@ const ampConsentData = {
   consents: {
     'user-consent': {
       promptIfUnknownForGeoGroup: 'eu',
-      promptUI: idPrompt,
+      promptUI: promptId,
     },
   },
 };
 
-const ConsentBanner = () => (
+const ConsentBannerContainer = () => (
   <PlatformContextConsumer>
     {platform => {
       if (platform === 'amp') {
@@ -67,18 +67,21 @@ const ConsentBanner = () => (
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(ampGeoData) }}
               />
             </amp-geo>
-            <amp-consent id={idParent} layout="nodisplay">
+            <amp-consent id={parentId} layout="nodisplay">
               <script
                 type="application/json"
                 dangerouslySetInnerHTML={{
                   __html: JSON.stringify(ampConsentData),
                 }}
               />
-              <p {...ampClickHandler('boop')}>hi</p>
-              <CookieBanner
-                acceptProps={ampClickHandler('accept')}
-                rejectProps={ampClickHandler('reject')}
-                idPrompt={idPrompt}
+              <ConsentBanner
+                title="Let us know you agree to cookies"
+                description="We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies."
+                accept="Accept"
+                reject="Reject"
+                acceptButtonProps={ampOnTapHandler('accept')}
+                rejectButtonProps={ampOnTapHandler('reject')}
+                promptId={promptId}
               />
             </amp-consent>
           </Fragment>
@@ -89,4 +92,4 @@ const ConsentBanner = () => (
   </PlatformContextConsumer>
 );
 
-export default ConsentBanner;
+export default ConsentBannerContainer;
