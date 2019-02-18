@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { string } from 'prop-types';
 import { GEL_GREAT_PRIMER, GEL_PICA } from '@bbc/gel-foundations/typography';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 
@@ -63,7 +66,7 @@ const ConsentButton = styled.button`
     display: block;
   }
 
-  @include mq($until: $consent-dialog-mobile-limit) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     width: 25%;
   }
 
