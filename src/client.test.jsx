@@ -1,19 +1,13 @@
 import React from 'react';
-import OfflinePluginRuntime from 'offline-plugin/runtime';
-import { ClientApp } from 'react-universal-app';
 import * as reactDom from 'react-dom';
+import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
-
-jest.mock('offline-plugin/runtime', () => ({
-  install: jest.fn(),
-  applyUpdate: jest.fn(),
-}));
 
 jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('react-universal-app');
+jest.mock('./app/containers/App');
 
 jest.mock('./app/routes', () => ({
   default: [],
@@ -31,21 +25,40 @@ describe('Client', () => {
     window.SIMORGH_DATA = null;
   });
 
-  describe('on production environment', () => {
-    process.env.NODE_ENV = 'production';
+  describe('service worker', () => {
+    beforeEach(() => {
+      global.navigator.serviceWorker = {
+        register: jest.fn(),
+      };
 
-    describe('offline-plugin', () => {
-      it('should install runtime with functions for service worker updates', async () => {
+      window.SIMORGH_DATA = {
+        service: 'foobar',
+      };
+    });
+
+    describe('on production environment', () => {
+      beforeEach(() => {
+        process.env.NODE_ENV = 'production';
+      });
+
+      it('should be installed', async () => {
         await import('./client');
 
-        expect(OfflinePluginRuntime.install).toHaveBeenCalledTimes(1);
-        const installConfig = OfflinePluginRuntime.install.mock.calls[0][0];
+        expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
+          '/foobar/articles/sw.js',
+        );
+      });
+    });
 
-        installConfig.onUpdateReady();
-        expect(OfflinePluginRuntime.applyUpdate).toHaveBeenCalledTimes(1);
+    describe('on dev environment', () => {
+      beforeEach(() => {
+        process.env.NODE_ENV = 'dev';
+      });
 
-        installConfig.onUpdated();
-        expect(window.swUpdate).toEqual(true);
+      it('should not be installed', async () => {
+        await import('./client');
+
+        expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
       });
     });
   });
