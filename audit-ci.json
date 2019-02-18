@@ -1,0 +1,11 @@
+{
+  "low": true,
+  //
+  // Whitelist Jest issue 786 due to there being no available fix for v23
+  // https://github.com/facebook/jest/issues/7917
+  // Version 24 has a fix however support for Babel 6 was also dropped.
+  // This whitelist is temporary until we have time to move to Babel 7
+  //
+  "advisories": "786",
+  "whitelist": "jest"
+}
