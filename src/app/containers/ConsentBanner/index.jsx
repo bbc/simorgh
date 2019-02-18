@@ -9,7 +9,7 @@ const ampConsentData = {
   consents: {
     'user-consent': {
       promptIfUnknownForGeoGroup: 'eu',
-      promptUI: prompt,
+      promptUI: idPrompt,
     },
   },
 };
