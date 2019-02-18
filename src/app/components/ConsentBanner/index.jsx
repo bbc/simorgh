@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { shape, string } from 'prop-types';
 import { GEL_GREAT_PRIMER, GEL_PICA } from '@bbc/gel-foundations/typography';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
 import {
@@ -88,8 +88,8 @@ ConsentBanner.propTypes = {
   description: string.isRequired,
   accept: string.isRequired,
   reject: string.isRequired,
-  acceptButtonProps: string.isRequired,
-  rejectButtonProps: string.isRequired,
+  acceptButtonProps: shape({}).isRequired,
+  rejectButtonProps: shape({}).isRequired,
   promptId: string.isRequired,
 };
 

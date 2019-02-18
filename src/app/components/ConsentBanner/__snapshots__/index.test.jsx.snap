@@ -66,6 +66,7 @@ exports[`Consent Banner should render a prompt box 1`] = `
 
 <div
   className="c0"
+  id="consent-prompt"
 >
   <h2
     className="c1"

@@ -10,7 +10,7 @@ describe('Consent Banner', () => {
     reject: 'Reject',
     acceptButtonProps: {},
     rejectButtonProps: {},
-    idPrompt: 'consent-prompt',
+    promptId: 'consent-prompt',
   };
   shouldMatchSnapshot(
     'should render a prompt box',
