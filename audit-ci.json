@@ -1,0 +1,5 @@
+{
+  "low": true,
+  "advisories": "786",
+  "whitelist": "jest"
+}
