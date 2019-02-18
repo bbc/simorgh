@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import ConsentBanner from '../../components/ConsentBanner';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const parentId = 'consent';
 const promptId = 'consent-prompt';
@@ -73,15 +74,22 @@ const ConsentBannerContainer = () => (
             </amp-geo>
             <amp-consent id={parentId} layout="nodisplay">
               {jsonInlinedScript(ampConsentData)}
-              <ConsentBanner
-                title="Let us know you agree to cookies"
-                description="We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies."
-                accept="Accept"
-                reject="Reject"
-                acceptButtonProps={ampOnTapHandler('accept')}
-                rejectButtonProps={ampOnTapHandler('reject')}
-                promptId={promptId}
-              />
+              <ServiceContextConsumer>
+                {({ translations }) => {
+                  const { consentBanner } = translations;
+                  return (
+                    <ConsentBanner
+                      title={consentBanner.title}
+                      description={consentBanner.description}
+                      accept={consentBanner.accept}
+                      reject={consentBanner.reject}
+                      acceptButtonProps={ampOnTapHandler('accept')}
+                      rejectButtonProps={ampOnTapHandler('reject')}
+                      promptId={promptId}
+                    />
+                  );
+                }}
+              </ServiceContextConsumer>
             </amp-consent>
           </Fragment>
         );

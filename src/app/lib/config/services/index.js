@@ -13,7 +13,7 @@ export default {
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
     translations: {
-      cookieBanner: {
+      consentBanner: {
         title: 'Cookie banner heading',
         description: 'Cookie banner description',
         accept: 'Accept text',

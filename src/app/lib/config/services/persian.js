@@ -11,7 +11,7 @@ const persian = {
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
   translations: {
-    cookieBanner: {
+    consentBanner: {
       title: 'به ما اطلاع دهید که شما با کوکی ها موافقید',
       description:
         'ما از کوکی ها استفاده می کنیم تا بهترین تجربه آنلاین را به شما بدهیم. لطفا به ما اطلاع دهید اگر شما با تمام این کوکی ها موافقید.',

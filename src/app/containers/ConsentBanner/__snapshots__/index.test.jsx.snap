@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Consent Banner AMP should render a ConsentBannerContainer 1`] = `
+exports[`Consent Banner AMP should render a News ConsentBannerContainer 1`] = `
 Array [
   <amp-geo
     layout="nodisplay"
@@ -117,6 +117,130 @@ Array [
           role="button"
         >
           Reject
+        </button>
+      </div>
+    </div>
+  </amp-consent>,
+]
+`;
+
+exports[`Consent Banner AMP should render a Persian ConsentBannerContainer 1`] = `
+Array [
+  <amp-geo
+    layout="nodisplay"
+  >
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "{\\"ISOCountryGroups\\":{\\"eu\\":[\\"at\\",\\"be\\",\\"bg\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ie\\",\\"is\\",\\"it\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mt\\",\\"nl\\",\\"no\\",\\"pl\\",\\"pt\\",\\"ro\\",\\"se\\",\\"si\\",\\"sl\\"]}}",
+        }
+      }
+      type="application/json"
+    />
+  </amp-geo>,
+  .c0 {
+  background-color: #323232;
+  padding: 1rem;
+}
+
+.c1 {
+  font-size: 1.125em;
+  line-height: 1.375rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
+}
+
+.c2 {
+  color: #bebebe;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  text-align: center;
+}
+
+.c4 {
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  background: transparent;
+  border: none;
+  margin: 0 auto;
+  color: #f6a21d;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width:37.5em) {
+  .c0:after {
+    content: \\0020;
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c1 {
+    font-size: 1.25em;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c4 {
+    width: 25%;
+  }
+}
+
+<amp-consent
+    id="consent"
+    layout="nodisplay"
+  >
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eu\\",\\"promptUI\\":\\"consent-prompt\\"}}}",
+        }
+      }
+      type="application/json"
+    />
+    <div
+      className="c0"
+      id="consent-prompt"
+    >
+      <h2
+        className="c1"
+      >
+        عنوان تست
+      </h2>
+      <p
+        className="c2"
+      >
+        توصیف تست
+      </p>
+      <div
+        className="c3"
+      >
+        <button
+          className="c4"
+          role="button"
+        >
+          تایید کنید
+        </button>
+        <button
+          className="c4"
+          role="button"
+        >
+          رد کنید
         </button>
       </div>
     </div>

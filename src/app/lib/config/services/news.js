@@ -12,7 +12,7 @@ const news = {
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
   translations: {
-    cookieBanner: {
+    consentBanner: {
       title: 'Let us know you agree to cookies',
       description:
         'We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.',
