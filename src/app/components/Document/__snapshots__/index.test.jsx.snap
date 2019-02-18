@@ -67,6 +67,11 @@ exports[`Document should render AMP version correctly 1`] = `
       />
       <script
         async={true}
+        custom-element="amp-geo"
+        src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+      />
+      <script
+        async={true}
         custom-element="amp-consent"
         src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
       />
