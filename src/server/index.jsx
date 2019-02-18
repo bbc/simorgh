@@ -38,7 +38,7 @@ const httpOptions = {
 };
 
 const options = {
-  modal: true,
+  headless: true,
   disableCookieBanner: false,
   page: {
     destination: 'news_ps',
