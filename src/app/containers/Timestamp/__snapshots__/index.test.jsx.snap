@@ -24,12 +24,15 @@ exports[`Timestamp should render correctly 1`] = `
   }
 }
 
-<time
+<span
   className="c0"
-  dateTime="2018-10-19"
 >
-  19 October 2018
-</time>
+  <time
+    dateTime="2018-10-19"
+  >
+    19 October 2018
+  </time>
+</span>
 `;
 
 exports[`Timestamp should render without a leading zero on the day 1`] = `
@@ -54,10 +57,13 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   }
 }
 
-<time
+<span
   className="c0"
-  dateTime="2018-07-07"
 >
-  7 July 2018
-</time>
+  <time
+    dateTime="2018-07-07"
+  >
+    7 July 2018
+  </time>
+</span>
 `;
