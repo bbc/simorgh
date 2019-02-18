@@ -54,26 +54,25 @@ const ampConsentData = {
   },
 };
 
+const jsonInlinedScript = data => (
+  <script
+    type="application/json"
+    /* eslint-disable-next-line react/no-danger */
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+  />
+);
+
 const ConsentBannerContainer = () => (
   <PlatformContextConsumer>
     {platform => {
       if (platform === 'amp') {
         return (
           <Fragment>
-            {/* eslint-disable react/no-danger */}
             <amp-geo layout="nodisplay">
-              <script
-                type="application/json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(ampGeoData) }}
-              />
+              {jsonInlinedScript(ampGeoData)}
             </amp-geo>
             <amp-consent id={parentId} layout="nodisplay">
-              <script
-                type="application/json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify(ampConsentData),
-                }}
-              />
+              {jsonInlinedScript(ampConsentData)}
               <ConsentBanner
                 title="Let us know you agree to cookies"
                 description="We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies."
