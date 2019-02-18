@@ -74,15 +74,22 @@ const ConsentButton = styled.button`
   padding-bottom: ${GEL_SPACING};
 `;
 
-const CookieBanner = ({ title, description, accept, reject, id }) => (
-  <ConsentDialog id={id}>
+const CookieBanner = ({
+  title,
+  description,
+  accept,
+  reject,
+  idParent,
+  idPrompt,
+}) => (
+  <ConsentDialog id={idPrompt}>
     <ConsentTitle>{title}</ConsentTitle>
     <ConsentParagraph>{description}</ConsentParagraph>
     <ConsentOptionsBox>
-      <ConsentButton on="tap:amp-o-user-consent.accept" role="button">
+      <ConsentButton on={`tap:${idParent}.accept`} role="button">
         {accept}
       </ConsentButton>
-      <ConsentButton on="tap:amp-o-user-consent.reject" role="button">
+      <ConsentButton on={`tap:${idParent}.reject`} role="button">
         {reject}
       </ConsentButton>
     </ConsentOptionsBox>
@@ -90,7 +97,8 @@ const CookieBanner = ({ title, description, accept, reject, id }) => (
 );
 
 CookieBanner.propTypes = {
-  id: string,
+  idParent: string,
+  idPrompt: string,
   title: string,
   description: string,
   accept: string,
@@ -103,7 +111,8 @@ CookieBanner.defaultProps = {
     'We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.',
   accept: 'Accept',
   reject: 'Reject',
-  id: 'amp-o-user-consent-dialog',
+  idParent: 'consent',
+  idPrompt: 'consent-prompt',
 };
 
 export default CookieBanner;
