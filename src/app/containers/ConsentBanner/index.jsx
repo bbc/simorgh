@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CookieBanner from '../../components/CookieBanner';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 
 const idParent = 'consent';
 const idPrompt = 'consent-prompt';
+
+const ampGeoData = {
+  ISOCountryGroups: {
+    eu: [
+      'at',
+      'be',
+      'bg',
+      'cy',
+      'cz',
+      'de',
+      'dk',
+      'ee',
+      'es',
+      'fi',
+      'fr',
+      'gb',
+      'gr',
+      'hr',
+      'hu',
+      'ie',
+      'is',
+      'it',
+      'li',
+      'lt',
+      'lu',
+      'lv',
+      'mt',
+      'nl',
+      'no',
+      'pl',
+      'pt',
+      'ro',
+      'se',
+      'si',
+      'sl',
+    ],
+  },
+};
 
 const ampConsentData = {
   consents: {
@@ -19,17 +57,24 @@ const ConsentBanner = () => (
     {platform => {
       if (platform === 'amp') {
         return (
-          <amp-consent id={idParent} layout="nodisplay">
+          <Fragment>
             {/* eslint-disable react/no-danger */}
-            <script
-              type="application/json"
-              dangerouslySetInnerHTML={{
-                __html: ampConsentData,
-              }}
-            />
-            <p>hi</p>
-            <CookieBanner idParent={idParent} idPrompt={idPrompt} />
-          </amp-consent>
+            <amp-geo>
+              <script
+                type="application/json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(ampGeoData) }}
+              />
+            </amp-geo>
+            <amp-consent id={idParent} layout="nodisplay">
+              <script
+                type="application/json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify(ampConsentData),
+                }}
+              />
+              <CookieBanner idParent={idParent} idPrompt={idPrompt} />
+            </amp-consent>
+          </Fragment>
         );
       }
       return null;
