@@ -11,7 +11,7 @@ import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
-const StatusCode = styled.p`
+const StatusCode = styled.span`
   ${GEL_PARAGON}
   color: ${C_POSTBOX};
   display: block;
@@ -39,10 +39,8 @@ const ErrorMain = ({ status }) => (
         <main role="main">
           <Wrapper>
             <LongGridItemConstrained>
-              <StatusCode aria-hidden="true">{messaging.statusCode}</StatusCode>
-              <ShortHeadline
-                aria-label={`${messaging.statusCode} - ${messaging.title}`}
-              >
+              <ShortHeadline>
+                <StatusCode>{messaging.statusCode}</StatusCode>
                 {messaging.title}
               </ShortHeadline>
               <Paragraph>{messaging.message}</Paragraph>

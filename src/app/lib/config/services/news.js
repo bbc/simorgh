@@ -17,7 +17,7 @@ const news = {
         statusCode: '404',
         title: 'Page can not be found',
         message:
-          'Sorry, we’re unable to bring you the page you’re looking for. Please try:',
+          "Sorry, we're unable to bring you the page you’re looking for. Please try:",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
