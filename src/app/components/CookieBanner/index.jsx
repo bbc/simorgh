@@ -10,8 +10,12 @@ import {
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 
-const ConsentDialog = styled.div`
-  background-color: #323232;
+const mainBackgroundColor = '#323232';
+const buttonColor = '#f6a21d';
+const paragraphColor = '#bebebe';
+
+const Prompt = styled.div`
+  background-color: ${mainBackgroundColor};
   padding: ${GEL_SPACING_DBL};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -26,45 +30,24 @@ const ConsentDialog = styled.div`
   }
 `;
 
-const ConsentTitle = styled.h2`
+const StyledHeading = styled.h2`
   ${GEL_GREAT_PRIMER}
+  font-family: ${FF_NEWS_SANS_REG};
   color: ${C_WHITE};
-  font-family: ${FF_NEWS_SANS_REG};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    float: left;
-    width: 20%;
-    margin-right: ${GEL_SPACING_DBL};
-  }
 `;
 
-const ConsentParagraph = styled.p`
-  color: #bebebe;
+const StyledParagraph = styled.p`
+  color: ${paragraphColor};
   font-family: ${FF_NEWS_SANS_REG};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
-    width: 50%;
-    float: left;
-  }
 `;
 
-const ConsentOptionsBox = styled.div`
+const StyledWrapper = styled.div`
   text-align: center;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 20%;
-    float: right;
-  }
 `;
 
-const ConsentButton = styled.button`
-  ${GEL_PICA}; //'pica-bold';
+const StyledButton = styled.button`
+  ${GEL_PICA}
   font-family: ${FF_NEWS_SANS_REG};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: block;
-  }
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     width: 25%;
@@ -73,7 +56,7 @@ const ConsentButton = styled.button`
   background: transparent;
   border: none;
   margin: 0 auto;
-  color: #f6a21d;
+  color: ${buttonColor};
   padding-bottom: ${GEL_SPACING};
 `;
 
@@ -82,25 +65,27 @@ const CookieBanner = ({
   description,
   accept,
   reject,
-  idParent,
+  acceptProps,
+  rejectProps,
   idPrompt,
 }) => (
-  <ConsentDialog id={idPrompt}>
-    <ConsentTitle>{title}</ConsentTitle>
-    <ConsentParagraph>{description}</ConsentParagraph>
-    <ConsentOptionsBox>
-      <ConsentButton on={`tap:${idParent}.accept`} role="button">
+  <Prompt id={idPrompt}>
+    <StyledHeading>{title}</StyledHeading>
+    <StyledParagraph>{description}</StyledParagraph>
+    <StyledWrapper>
+      <StyledButton {...acceptProps} role="button">
         {accept}
-      </ConsentButton>
-      <ConsentButton on={`tap:${idParent}.reject`} role="button">
+      </StyledButton>
+      <StyledButton {...rejectProps} role="button">
         {reject}
-      </ConsentButton>
-    </ConsentOptionsBox>
-  </ConsentDialog>
+      </StyledButton>
+    </StyledWrapper>
+  </Prompt>
 );
 
 CookieBanner.propTypes = {
-  idParent: string,
+  acceptProps: string.isRequired,
+  rejectProps: string.isRequired,
   idPrompt: string,
   title: string,
   description: string,
@@ -114,7 +99,6 @@ CookieBanner.defaultProps = {
     'We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.',
   accept: 'Accept',
   reject: 'Reject',
-  idParent: 'consent',
   idPrompt: 'consent-prompt',
 };
 

@@ -5,6 +5,8 @@ import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 const idParent = 'consent';
 const idPrompt = 'consent-prompt';
 
+const ampClickHandler = type => ({ on: `tap:${idParent}.${type}` });
+
 const ampGeoData = {
   ISOCountryGroups: {
     eu: [
@@ -72,7 +74,12 @@ const ConsentBanner = () => (
                   __html: JSON.stringify(ampConsentData),
                 }}
               />
-              <CookieBanner idParent={idParent} idPrompt={idPrompt} />
+              <p {...ampClickHandler('boop')}>hi</p>
+              <CookieBanner
+                acceptProps={ampClickHandler('accept')}
+                rejectProps={ampClickHandler('reject')}
+                idPrompt={idPrompt}
+              />
             </amp-consent>
           </Fragment>
         );
