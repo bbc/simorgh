@@ -92,13 +92,9 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
   }
 }
 
-<span
+<time
   className="c0"
 >
-  <time
-    dateTime="1530947227000"
-  >
-    7 July 2018
-  </time>
-</span>
+  7 July 2018
+</time>
 `;

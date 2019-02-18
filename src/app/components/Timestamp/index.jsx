@@ -14,13 +14,23 @@ const StyledTimestamp = styled.span`
   padding-bottom: ${GEL_SPACING_DBL};
 `;
 
-const Timestamp = ({ children, datetime, prefix, suffix }) => (
-  <StyledTimestamp>
-    {prefix}
-    <time dateTime={datetime}>{children}</time>
-    {suffix}
-  </StyledTimestamp>
-);
+const Timestamp = ({ children, datetime, prefix, suffix }) => {
+  if (prefix || suffix) {
+    return (
+      <StyledTimestamp>
+        {prefix}
+        <time dateTime={datetime}>{children}</time>
+        {suffix}
+      </StyledTimestamp>
+    );
+  }
+
+  return (
+    <StyledTimestamp as="time" datetime={datetime}>
+      {children}
+    </StyledTimestamp>
+  );
+};
 
 Timestamp.propTypes = {
   children: node.isRequired,
