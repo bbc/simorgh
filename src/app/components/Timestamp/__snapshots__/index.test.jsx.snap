@@ -4,7 +4,7 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
 .c0 {
   font-size: 0.875em;
   line-height: 1rem;
-  color: #5A5A5A;
+  color: #757575;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
