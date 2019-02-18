@@ -59,7 +59,7 @@ const ConsentBanner = () => (
         return (
           <Fragment>
             {/* eslint-disable react/no-danger */}
-            <amp-geo>
+            <amp-geo layout="nodisplay">
               <script
                 type="application/json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(ampGeoData) }}
