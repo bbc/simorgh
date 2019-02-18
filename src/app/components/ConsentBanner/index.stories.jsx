@@ -7,6 +7,8 @@ const props = {
   description: 'Text here describing why this is necessary.',
   accept: 'Accept',
   reject: 'Reject',
+  acceptButtonProps: {},
+  rejectButtonProps: {},
   idPrompt: 'consent-prompt',
 };
 
