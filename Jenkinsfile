@@ -98,6 +98,7 @@ pipeline {
           job: 'simorgh-infrastructure/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
           ],
           propagate: true,

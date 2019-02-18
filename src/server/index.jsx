@@ -1,6 +1,5 @@
 import React from 'react';
 import express from 'express';
-import { ServerApp, loadInitialData } from 'react-universal-app';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
@@ -11,6 +10,8 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
+import { ServerApp } from '../app/containers/App';
+import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
@@ -111,7 +112,7 @@ server
     res.sendStatus(200);
   })
   .get(swRegexPath, (req, res) => {
-    const swPath = `${__dirname}/public/sw-${process.env.APP_ENV}.js`;
+    const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
         console.log(error); // eslint-disable-line no-console
