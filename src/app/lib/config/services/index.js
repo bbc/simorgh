@@ -1,4 +1,4 @@
-/* 
+/*
   This file includes data for the Service Context
   It will be used by the ServiceContext Component
 */
@@ -12,6 +12,14 @@ export default {
     imageCaptionOffscreenText: 'Default image caption prefix, ',
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
+    translations: {
+      cookieBanner: {
+        title: 'Cookie banner heading',
+        description: 'Cookie banner description',
+        accept: 'Accept text',
+        reject: 'Reject text',
+      },
+    },
   },
   news,
   persian,

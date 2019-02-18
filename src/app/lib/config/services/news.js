@@ -11,6 +11,15 @@ const news = {
   serviceName: 'News',
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
+  translations: {
+    cookieBanner: {
+      title: 'Let us know you agree to cookies',
+      description:
+        'We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.',
+      accept: 'Accept',
+      reject: 'Reject',
+    },
+  },
 };
 
 export default news;
