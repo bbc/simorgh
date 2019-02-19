@@ -31,7 +31,8 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should not have any non-amp scripts in the body or the head', () => {
-    getElement('body script').should('not.exist');
+    // getElement('body script').should('not.exist');
+    // Removed due to amp allowing scripts of `type="application/json"` within certain `amp` elements
     getElement('head script')
       .its('length')
       .should('be', 2); // 1 for amp.js + 1 that Cypress injects into the head
