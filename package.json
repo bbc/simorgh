@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c9rpqy7pmypo.amp && amphtml-validator http://localhost:7080/news/articles/c9rpqy7pmypo.amp",
-    "audit:ci": "audit-ci -low",
+    "audit:ci": "audit-ci --config audit-ci.json",
     "bbcA11y": "bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
@@ -133,7 +133,7 @@
     "chalk": "^2.4.1",
     "chrome-launcher": "^0.10.5",
     "core-js": "^2.6.0",
-    "cypress": "^3.1.1",
+    "cypress": "^3.1.5",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
