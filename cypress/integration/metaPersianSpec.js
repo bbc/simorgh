@@ -36,7 +36,7 @@ describe('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    'https://www.bbc.com/persian/articles/cwv2xv848j5o',
+    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
