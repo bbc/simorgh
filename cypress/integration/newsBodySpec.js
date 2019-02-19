@@ -1,6 +1,5 @@
 import {
   clickInlineLinkAndTestPageHasHTML,
-  checkElementStyles,
   copyrightDataWindow,
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
@@ -11,6 +10,7 @@ import {
   shouldContainStyles,
   visibleImageNoCaption,
   visibleImageWithCaption,
+  shouldContainText,
 } from '../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
@@ -28,13 +28,8 @@ describe('Article Body Tests', () => {
     cy.window().then(win => {
       const { lastPublished } = win.SIMORGH_DATA.data.metadata;
       const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
-
-      checkElementStyles(
-        'time',
-        timeStamp,
-        'rgb(90, 90, 90)',
-        'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-      );
+      const time = getElement('time');
+      shouldContainText(time, timeStamp);
     });
   });
 
