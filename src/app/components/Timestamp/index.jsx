@@ -26,7 +26,7 @@ const Timestamp = ({ children, datetime, prefix, suffix }) => {
   }
 
   return (
-    <StyledTimestamp as="time" datetime={datetime}>
+    <StyledTimestamp as="time" dateTime={datetime}>
       {children}
     </StyledTimestamp>
   );

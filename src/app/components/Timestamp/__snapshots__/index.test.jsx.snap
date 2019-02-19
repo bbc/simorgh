@@ -94,6 +94,7 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
 
 <time
   className="c0"
+  dateTime="1530947227000"
 >
   7 July 2018
 </time>
