@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-testing-library';
 import ConsentBannerContainer from '.';
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -35,6 +36,11 @@ const persianServiceContextStub = {
   },
 };
 
+const expectNodeToContainInlinedJSON = node =>
+  expect(
+    node.querySelectorAll('script[type="application/json"]').length,
+  ).toEqual(1);
+
 describe('Consent Banner', () => {
   describe('AMP', () => {
     shouldMatchSnapshot(
@@ -45,6 +51,18 @@ describe('Consent Banner', () => {
       'should render a Persian ConsentBannerContainer',
       component('amp', persianServiceContextStub),
     );
+    it('should render amp-geo element containing inlined JSON', () => {
+      const { container } = render(component('amp', newsServiceContextStub));
+      expect(container.querySelectorAll('amp-geo').length).toEqual(1);
+      const ampGeo = container.querySelector('amp-geo');
+      expectNodeToContainInlinedJSON(ampGeo);
+    });
+    it('should render amp-consent element containing inlined JSON', () => {
+      const { container } = render(component('amp', newsServiceContextStub));
+      expect(container.querySelectorAll('amp-consent').length).toEqual(1);
+      const ampConsent = container.querySelector('amp-consent');
+      expectNodeToContainInlinedJSON(ampConsent);
+    });
   });
 
   describe('Canonical', () => {
