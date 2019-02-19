@@ -3,13 +3,13 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import ConsentBanner from '.';
 
 const props = {
-  title: 'Let us know you agree to collecting analytics',
+  title: 'Agree to collecting analytics heading',
   description: 'Text here describing why this is necessary.',
   accept: 'Accept',
   reject: 'Reject',
   acceptButtonProps: {},
   rejectButtonProps: {},
-  idPrompt: 'consent-prompt',
+  promptId: 'consent-prompt',
 };
 
 storiesOf('ConsentBanner', module).add('default', () => (
