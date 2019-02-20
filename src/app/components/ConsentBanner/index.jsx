@@ -3,31 +3,17 @@ import styled from 'styled-components';
 import { shape, string } from 'prop-types';
 import { GEL_GREAT_PRIMER, GEL_PICA } from '@bbc/gel-foundations/typography';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 
-const mainBackgroundColor = '#323232';
-const buttonColor = '#f6a21d';
-const paragraphColor = '#bebebe';
+const C_CONSENT_BACKGROUND = '#323232';
+const C_CONSENT_ACTION = '#F6A21D';
+const C_CONSENT_CONTENT = '#BEBEBE';
 
 const Prompt = styled.div`
-  background-color: ${mainBackgroundColor};
+  background-color: ${C_CONSENT_BACKGROUND};
   padding: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    &:after {
-      content: \\0020;
-      clear: both;
-      display: block;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-    }
-  }
 `;
 
 const StyledHeading = styled.h2`
@@ -37,7 +23,7 @@ const StyledHeading = styled.h2`
 `;
 
 const StyledParagraph = styled.p`
-  color: ${paragraphColor};
+  color: ${C_CONSENT_CONTENT};
   font-family: ${FF_NEWS_SANS_REG};
 `;
 
@@ -56,8 +42,13 @@ const StyledButton = styled.button`
   background: transparent;
   border: none;
   margin: 0 auto;
-  color: ${buttonColor};
+  color: ${C_CONSENT_ACTION};
   padding-bottom: ${GEL_SPACING};
+
+  &:focus,
+  &:hover {
+    color: ${C_WHITE};
+  }
 `;
 
 const ConsentBanner = ({
