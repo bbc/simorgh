@@ -4,7 +4,6 @@ import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
 import text from '../Text';
-import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
 import { Wrapper, OatWrapper, GridItemConstrained } from '../../lib/styledGrid';
@@ -16,7 +15,6 @@ const componentsToRenderHeadline = {
 const componentsToRenderMain = {
   subheadline: headings,
   text,
-  image,
 };
 
 const splitBlocksByHeadline = ({ model }) => {

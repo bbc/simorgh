@@ -9,20 +9,22 @@ const BlockString = props => {
 };
 
 const Blocks = ({ blocks, componentsToRender }) =>
-  blocks.map((block, index) => {
+  blocks.map(block => {
     const { type, model } = block;
+    const subblocks = block.model.blocks;
 
-    const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
+    if (Object.keys(componentsToRender).includes(type)) {
+      const Block = componentsToRender[type] || BlockString;
 
-    const Block = componentsToRender[type] || BlockString;
+      return <Block key={nanoid()} type={type} {...model} />;
+    }
+
+    if (subblocks === undefined) {
+      return null;
+    }
 
     return (
-      <Block
-        key={nanoid()}
-        type={type}
-        typeOfPreviousBlock={typeOfPreviousBlock}
-        {...model}
-      />
+      <Blocks blocks={subblocks} componentsToRender={componentsToRender} /> // Not 100% sure this is tail recursive, so will be increasing memory usage
     );
   });
 
