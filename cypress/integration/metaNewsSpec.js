@@ -1,3 +1,4 @@
+import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
   facebookMeta,
@@ -9,8 +10,7 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/news/articles/c9rpqy7pmypo');
+    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
   it('should have a nofollow meta tag', () => {
@@ -80,7 +80,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    'https://www.bbc.com/news/articles/c9rpqy7pmypo',
+    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
