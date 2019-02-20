@@ -6,21 +6,6 @@ exports[`Document should render AMP version correctly 1`] = `
 >
   <head>
     <meta
-      content="IE=edge"
-      httpEquiv="X-UA-Compatible"
-    />
-    <meta
-      charSet="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
     />
@@ -83,21 +68,6 @@ exports[`Document should render correctly 1`] = `
   lang="test"
 >
   <head>
-    <meta
-      content="IE=edge"
-      httpEquiv="X-UA-Compatible"
-    />
-    <meta
-      charSet="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
