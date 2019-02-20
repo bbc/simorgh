@@ -6,6 +6,7 @@ import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
+import * as AmpHelpers from 'react-amphtml/helpers';
 
 const C_CONSENT_BACKGROUND = '#323232';
 const C_CONSENT_ACTION = '#F6A21D';
@@ -51,25 +52,33 @@ const StyledButton = styled.button`
   }
 `;
 
-const ConsentBanner = ({
-  title,
-  description,
-  accept,
-  reject,
-  acceptButtonProps,
-  rejectButtonProps,
-  promptId,
-}) => (
+const ConsentBanner = ({ title, description, accept, reject, promptId }) => (
   <Prompt id={promptId}>
     <StyledHeading>{title}</StyledHeading>
     <StyledParagraph>{description}</StyledParagraph>
     <StyledWrapper>
-      <StyledButton {...acceptButtonProps} role="button">
-        {accept}
-      </StyledButton>
-      <StyledButton {...rejectButtonProps} role="button">
-        {reject}
-      </StyledButton>
+      <AmpHelpers.Action
+        events={{
+          tap: ['tap:consent-prompt.accept'],
+        }}
+      >
+        {props => (
+          <StyledButton {...props} role="button">
+            {accept}
+          </StyledButton>
+        )}
+      </AmpHelpers.Action>
+      <AmpHelpers.Action
+        events={{
+          tap: ['tap:consent-prompt.accept'],
+        }}
+      >
+        {props => (
+          <StyledButton {...props} role="button">
+            {reject}
+          </StyledButton>
+        )}
+      </AmpHelpers.Action>
     </StyledWrapper>
   </Prompt>
 );

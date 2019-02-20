@@ -110,6 +110,7 @@
     "path-to-regexp": "^2.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
+    "react-amphtml": "^3.0.1",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-router-config": "^4.4.0-beta.6",
