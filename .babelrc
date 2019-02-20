@@ -3,6 +3,7 @@
     [
       "@babel/preset-env",
       {
+        "useBuiltIns": "entry", // converts `import "@babel/polyfill"` into polyfilling only explicitly what's needed
         "targets": {
           "browsers": [
             "chrome >= 53",
