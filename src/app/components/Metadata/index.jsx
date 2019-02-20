@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, string, number } from 'prop-types';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 
 const Metadata = ({
   isAmp,
@@ -17,6 +16,7 @@ const Metadata = ({
   lang,
   locale,
   metaTags,
+  themeColor,
   timeFirstPublished,
   timeLastPublished,
   title,
@@ -35,7 +35,7 @@ const Metadata = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
-      <meta name="theme-color" content={C_POSTBOX} />
+      <meta name="theme-color" content={themeColor} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -89,6 +89,7 @@ Metadata.propTypes = {
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
+  themeColor: string.isRequired,
   timeFirstPublished: string.isRequired,
   timeLastPublished: string.isRequired,
   title: string.isRequired,
