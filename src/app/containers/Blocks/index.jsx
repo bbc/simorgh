@@ -1,4 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
 
@@ -8,6 +11,13 @@ const BlockString = props => {
   return <p>{stringProps}</p>;
 };
 
+const UnrecognisedContent = styled.div`
+  font-family: ${FF_NEWS_SANS_REG};
+  background: ${C_LUNAR};
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+`;
+
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map(block => {
     const { type, model } = block;
@@ -15,6 +25,10 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     if (Object.keys(componentsToRender).includes(type)) {
       const Block = componentsToRender[type] || BlockString;
+
+      if (type === 'caption') {
+        return <Block key={nanoid()} type={type} block={block} />;
+      }
 
       return <Block key={nanoid()} type={type} {...model} />;
     }
@@ -24,7 +38,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
     }
 
     return (
-      <Blocks blocks={subblocks} componentsToRender={componentsToRender} /> // Not 100% sure this is tail recursive, so will be increasing memory usage
+      <Blocks blocks={subblocks} componentsToRender={componentsToRender} />
     );
   });
 

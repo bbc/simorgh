@@ -3,6 +3,7 @@ import { shape } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
+import caption from '../Caption';
 import text from '../Text';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
@@ -15,6 +16,7 @@ const componentsToRenderHeadline = {
 const componentsToRenderMain = {
   subheadline: headings,
   text,
+  caption,
 };
 
 const splitBlocksByHeadline = ({ model }) => {
