@@ -1,4 +1,5 @@
 import config from '../support/config';
+import { getElement } from '../support/bodyTestHelper';
 import {
   facebookMeta,
   openGraphMeta,
@@ -48,4 +49,13 @@ describe('Persian Article Meta Tests', () => {
     '@bbcpersian',
     'پهپادی که برایتان قهوه می‌آورد',
   );
+
+  it('should include the canonical URL', () => {
+    const canonical = getElement('head link[rel="canonical"]');
+    canonical.should(
+      'have.attr',
+      'href',
+      `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    );
+  });
 });

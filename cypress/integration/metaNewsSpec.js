@@ -92,4 +92,14 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );
+  it('should include the canonical URL', () => {
+    const canonical = getElement('head link[rel="canonical"]');
+    canonical.should(
+      'have.attr',
+      'href',
+      `https://www.bbc.com/news/articles/${
+        config.assets.newsThreeSubheadlines
+      }`,
+    );
+  });
 });
