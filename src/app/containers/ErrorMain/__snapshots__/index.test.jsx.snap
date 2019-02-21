@@ -38,9 +38,10 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
+  background: #FDFDFD;
 }
 
-.c2 {
+.c3 {
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #B80000;
@@ -50,7 +51,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -126,28 +127,28 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 1.375em;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c2 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 2.75em;
     line-height: 3rem;
   }
@@ -201,22 +202,20 @@ exports[`ErrorMain should correctly render for 404 1`] = `
     <div
       className="c1"
     >
-      <p
-        aria-hidden="true"
+      <h1
         className="c2"
       >
-        404
-      </p>
-      <h1
-        aria-label="404 - Page can not be found"
-        className="c3"
-      >
+        <span
+          className="c3"
+        >
+          404
+        </span>
         Page can not be found
       </h1>
       <p
         className="c4"
       >
-        Sorry, we’re unable to bring you the page you’re looking for. Please try:
+        Sorry, we're unable to bring you the page you’re looking for. Please try:
       </p>
       <ul>
         <li
@@ -290,9 +289,10 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
+  background: #FDFDFD;
 }
 
-.c2 {
+.c3 {
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #B80000;
@@ -302,7 +302,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -378,28 +378,28 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 1.375em;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c2 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 2.75em;
     line-height: 3rem;
   }
@@ -453,16 +453,14 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     <div
       className="c1"
     >
-      <p
-        aria-hidden="true"
+      <h1
         className="c2"
       >
-        ۴۰۴
-      </p>
-      <h1
-        aria-label="۴۰۴ - این صفحه یافت نشد"
-        className="c3"
-      >
+        <span
+          className="c3"
+        >
+          ۴۰۴
+        </span>
         این صفحه یافت نشد
       </h1>
       <p
@@ -542,9 +540,10 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
+  background: #FDFDFD;
 }
 
-.c2 {
+.c3 {
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #B80000;
@@ -554,7 +553,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -630,28 +629,28 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 1.375em;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c2 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 2.75em;
     line-height: 3rem;
   }
@@ -705,16 +704,14 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     <div
       className="c1"
     >
-      <p
-        aria-hidden="true"
+      <h1
         className="c2"
       >
-        500
-      </p>
-      <h1
-        aria-label="500 - Internal server error"
-        className="c3"
-      >
+        <span
+          className="c3"
+        >
+          500
+        </span>
         Internal server error
       </h1>
       <p
@@ -789,9 +786,10 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
+  background: #FDFDFD;
 }
 
-.c2 {
+.c3 {
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #B80000;
@@ -801,7 +799,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -877,28 +875,28 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 1.375em;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c2 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 2.75em;
     line-height: 3rem;
   }
@@ -952,16 +950,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     <div
       className="c1"
     >
-      <p
-        aria-hidden="true"
+      <h1
         className="c2"
       >
-        ۵۰۰
-      </p>
-      <h1
-        aria-label="۵۰۰ - مشکلی پیش آمده است"
-        className="c3"
-      >
+        <span
+          className="c3"
+        >
+          ۵۰۰
+        </span>
         مشکلی پیش آمده است
       </h1>
       <p
@@ -1036,9 +1032,10 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
+  background: #FDFDFD;
 }
 
-.c2 {
+.c3 {
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #B80000;
@@ -1048,7 +1045,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   color: #222222;
   font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -1124,28 +1121,28 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c2 {
+  .c3 {
     font-size: 1.375em;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c2 {
+  .c3 {
     font-size: 1.75em;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c3 {
+  .c2 {
     font-size: 2em;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c3 {
+  .c2 {
     font-size: 2.75em;
     line-height: 3rem;
   }
@@ -1199,16 +1196,14 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     <div
       className="c1"
     >
-      <p
-        aria-hidden="true"
+      <h1
         className="c2"
       >
-        500
-      </p>
-      <h1
-        aria-label="500 - Internal server error"
-        className="c3"
-      >
+        <span
+          className="c3"
+        >
+          500
+        </span>
         Internal server error
       </h1>
       <p

@@ -8,7 +8,7 @@ import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { GEL_PARAGON } from '@bbc/gel-foundations/typography';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
-import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
+import { GhostWrapper, GridItemConstrained } from '../../lib/styledGrid';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const StatusCode = styled.span`
@@ -37,7 +37,7 @@ const ErrorMain = ({ status }) => (
 
       return (
         <main role="main">
-          <Wrapper>
+          <GhostWrapper>
             <LongGridItemConstrained>
               <ShortHeadline>
                 <StatusCode>{messaging.statusCode}</StatusCode>
@@ -57,7 +57,7 @@ const ErrorMain = ({ status }) => (
                 {messaging.callToActionLast}
               </Paragraph>
             </LongGridItemConstrained>
-          </Wrapper>
+          </GhostWrapper>
         </main>
       );
     }}
