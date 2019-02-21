@@ -4,7 +4,7 @@ import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import ResourceHints from './ResourceHints';
+import ResourceHints from '../../app/components/ResourceHints';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {

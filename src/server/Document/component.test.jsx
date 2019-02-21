@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallowRender } from '../../helpers/tests/testHelpers';
-import Document from './index';
+import { shallowRender } from '../../app/helpers/tests/testHelpers';
+import Document from './component';
 
 describe('Document', () => {
   const assets = ['http://example.com/file.js'];

@@ -19,7 +19,7 @@ import routes, {
 } from '../app/routes';
 import { getStyleTag } from './styles';
 import getAssetsArray from './assets';
-import Document from '../app/components/Document';
+import Document from './Document/component';
 import nodeLogger from '../app/helpers/logger.node';
 
 const morgan = require('morgan');
