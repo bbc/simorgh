@@ -42,7 +42,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
@@ -128,14 +128,14 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c3 {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 }
@@ -293,7 +293,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
@@ -379,14 +379,14 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c3 {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 }
@@ -544,7 +544,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
@@ -630,14 +630,14 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c3 {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 }
@@ -790,7 +790,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
@@ -876,14 +876,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c3 {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 }
@@ -1036,7 +1036,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
@@ -1122,14 +1122,14 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c3 {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 2rem;
   }
 }
