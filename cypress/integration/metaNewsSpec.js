@@ -1,6 +1,7 @@
 import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
+  checkCanonicalURL,
   facebookMeta,
   openGraphMeta,
   retrieveMetaDataContent,
@@ -92,11 +93,9 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );
+
   it('should include the canonical URL', () => {
-    const canonical = getElement('head link[rel="canonical"]');
-    canonical.should(
-      'have.attr',
-      'href',
+    checkCanonicalURL(
       `https://www.bbc.com/news/articles/${
         config.assets.newsThreeSubheadlines
       }`,

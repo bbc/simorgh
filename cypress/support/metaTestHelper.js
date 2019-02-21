@@ -74,6 +74,11 @@ export const twitterMeta = (
   });
 };
 
+export const checkCanonicalURL = URL => {
+  const canonical = getElement('head link[rel="canonical"]');
+  canonical.should('have.attr', 'href', URL);
+};
+
 export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')

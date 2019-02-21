@@ -1,6 +1,6 @@
 import config from '../support/config';
-import { getElement } from '../support/bodyTestHelper';
 import {
+  checkCanonicalURL,
   facebookMeta,
   openGraphMeta,
   retrieveMetaDataContent,
@@ -51,10 +51,7 @@ describe('Persian Article Meta Tests', () => {
   );
 
   it('should include the canonical URL', () => {
-    const canonical = getElement('head link[rel="canonical"]');
-    canonical.should(
-      'have.attr',
-      'href',
+    checkCanonicalURL(
       `https://www.bbc.com/persian/articles/${config.assets.persian}`,
     );
   });
