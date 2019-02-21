@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cmejqde986vo",
+    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cmejqde986vo" },
+    "type": "article",
+    "createdBy": "News",
+    "language": "en-gb",
+    "lastUpdated": 1550668527174,
+    "firstPublished": 1541065630304,
+    "lastPublished": 1541065630304,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News"
+    },
+    "tags": {},
+    "version": "v0.4.16",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "video",
+      "caption"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video test",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Video test", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video is available everywhere in the world",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video is available everywhere in the world",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "urn:bbc:ares::clip:p01k6msm",
+                "type": "aresMedia",
+                "model": {
+                  "id": "p01k6msm",
+                  "subType": "clip",
+                  "format": "audio_video",
+                  "title": "Five things ants can teach us about management",
+                  "synopses": {
+                    "short": "They may be tiny, but us humans could learn a thing or two from ants.",
+                    "long": null,
+                    "medium": null
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                  "imageCopyright": "BBC",
+                  "embedding": true,
+                  "warnings": {},
+                  "advertising": true,
+                  "versions": [
+                    {
+                      "versionId": "p01k6msp",
+                      "types": ["Original"],
+                      "duration": 191,
+                      "availableTerritories": { "uk": true, "nonUk": true }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbns",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video is only available in the UK",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video is only available in the UK",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "urn:bbc:ares::clip:p01kdbns",
+                "type": "aresMedia",
+                "model": {
+                  "id": "p01kdbns",
+                  "subType": "clip",
+                  "format": "audio_video",
+                  "title": "How Germans remember the World Wars",
+                  "synopses": {
+                    "short": "Remembrance Day: How Germans remember the World Wars",
+                    "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? \nWe ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+                    "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+                  "imageCopyright": "BBC",
+                  "embedding": true,
+                  "warnings": {},
+                  "advertising": true,
+                  "caption": "How do Germans remember the World Wars?",
+                  "versions": [
+                    {
+                      "versionId": "p01kdbnv",
+                      "types": ["Original"],
+                      "duration": 162,
+                      "availableTerritories": { "uk": true, "nonUk": false }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbpz",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video is only available outside the UK",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video is only available ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "outside",
+                                    "attributes": ["bold"]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " the UK",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "urn:bbc:ares::clip:p01kdbpz",
+                "type": "aresMedia",
+                "model": {
+                  "id": "p01kdbpz",
+                  "subType": "clip",
+                  "format": "audio_video",
+                  "title": "'I lost my leg to type 2 diabetes' (NON UK)",
+                  "synopses": {
+                    "short": "Diabetes type 2: 'I blame myself for the loss of my leg'",
+                    "long": "Every week 170 people in the UK lose a limb because of diabetes. \nAround four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. \nDiabetes prescriptions are costing the NHS in England more than Â£1 billion a year, according to figures from NHS Digital.\nAnd a further 12 million people could be at risk of getting type 2 diabetes in the future.\nStephen Richardson has told the BBC he blames himself for the loss of his limb.",
+                    "medium": "Stephen Richardson admits he ignored advice about diet and exercise."
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
+                  "imageCopyright": "BBC",
+                  "embedding": true,
+                  "warnings": {},
+                  "advertising": true,
+                  "caption": "Stephen Richardson had to have his leg amputated because of type 2 diabetes",
+                  "versions": [
+                    {
+                      "versionId": "p01kdbq2",
+                      "types": ["Original"],
+                      "duration": 122,
+                      "availableTerritories": { "uk": false, "nonUk": true }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbwr",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This video is available everywhere (but is the same content as one above)",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This video is available everywhere (but is the same content as one above)",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "blockId": "urn:bbc:ares::clip:p01kdbwr",
+                "type": "aresMedia",
+                "model": {
+                  "id": "p01kdbwr",
+                  "subType": "clip",
+                  "format": "audio_video",
+                  "title": "How Germans remember the World Wars (INT)",
+                  "synopses": {
+                    "short": "Remembrance Day: How Germans remember the World Wars",
+                    "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+                    "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
+                  "imageCopyright": "BBC",
+                  "embedding": true,
+                  "warnings": {},
+                  "advertising": true,
+                  "caption": "How do Germans remember the World Wars?",
+                  "versions": [
+                    {
+                      "versionId": "p01kdbwt",
+                      "types": ["Original"],
+                      "duration": 162,
+                      "availableTerritories": { "uk": true, "nonUk": true }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": { "seoHeadline": "Video test" },
+    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cmejqde986vo" },
+    "summary": "",
+    "timestamp": 1541065630304,
+    "id": "urn:bbc:ares::article:cmejqde986vo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
