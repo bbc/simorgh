@@ -2,16 +2,16 @@ import React from 'react';
 import { number } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import { Wrapper, GridItemConstrained } from '../../lib/styledGrid';
+import { GhostWrapper, GridItemConstrained } from '../../lib/styledGrid';
 
 const ErrorMain = ({ status = 500 }) => (
   <main role="main">
-    <Wrapper>
+    <GhostWrapper>
       <GridItemConstrained>
         <Headline>Oops: something went wrong!</Headline>
         <Paragraph>Response code: {status}</Paragraph>
       </GridItemConstrained>
-    </Wrapper>
+    </GhostWrapper>
   </main>
 );
 
