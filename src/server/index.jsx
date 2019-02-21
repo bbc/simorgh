@@ -32,7 +32,7 @@ const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
-const renderArticle = async (url, data) => {
+const renderDocument = async (url, data) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
@@ -127,7 +127,7 @@ server
 
       res
         .status(status)
-        .send(`<!doctype html>${await renderArticle(url, data)}`);
+        .send(`<!doctype html>${await renderDocument(url, data)}`);
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
