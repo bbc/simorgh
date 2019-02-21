@@ -38,7 +38,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
     }
 
     return (
-      <Blocks blocks={subblocks} componentsToRender={componentsToRender} />
+      <Blocks blocks={subblocks} componentsToRender={componentsToRender} /> // I'm not 100% sure this would be tail recursive, so may be increasing memory usage
     );
   });
 
