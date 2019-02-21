@@ -48,7 +48,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -58,7 +58,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
   line-height: 2rem;
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .c1 {
@@ -299,7 +299,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -309,7 +309,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
   line-height: 2rem;
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .c1 {
@@ -550,7 +550,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -560,7 +560,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
   line-height: 2rem;
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .c1 {
@@ -796,7 +796,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -806,7 +806,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
   line-height: 2rem;
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .c1 {
@@ -1042,7 +1042,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -1052,7 +1052,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding: 2rem 0 1rem 0;
   font-size: 1.75em;
   line-height: 2rem;
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .c1 {

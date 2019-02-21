@@ -17,11 +17,11 @@ const StatusCode = styled.span`
   display: block;
   font-family: ${FF_NEWS_SANS_REG};
   font-weight: 600;
-  margin-bottom: 0;
+  padding-bottom: 0.5rem;
 `;
 
 const ShortHeadline = styled(Headline)`
-  padding: 1rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
 `;
 
 const LongGridItemConstrained = styled(GridItemConstrained)`
