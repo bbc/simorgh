@@ -115,10 +115,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
         <TimestampContainer
           timestamp={1514811600000}
         />
-      </ForwardRef>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef>
         <Blocks
           blocks={
             Array [
@@ -250,10 +246,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         <TimestampContainer
           timestamp={1514811600000}
         />
-      </ForwardRef>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef>
         <Blocks
           blocks={
             Array [
