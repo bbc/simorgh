@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorMain should correctly render for 404 1`] = `
+exports[`ErrorMain should correctly render for an error 1`] = `
 .c5 {
   color: #0F556C;
   padding: 2px;

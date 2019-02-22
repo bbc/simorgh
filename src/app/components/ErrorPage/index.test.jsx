@@ -15,7 +15,7 @@ describe('ErrorMain', () => {
   };
 
   shouldMatchSnapshot(
-    'should correctly render for 404',
+    'should correctly render for an error',
     <ErrorMain {...messaging} />,
   );
 });
