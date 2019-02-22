@@ -77,15 +77,16 @@ const CookieBanner = ({
   accept,
   reject,
   rejectUrl,
-  action,
+  allowAction,
+  denyAction,
 }) => (
   <GreyWrapper>
     <GridItemConstrained>
       <GhostSubHeading text={title}>{title}</GhostSubHeading>
       <GhostParagraph>{description}</GhostParagraph>
       <Options>
-        <AgreeButton onClick={action}>{accept}</AgreeButton>
-        <SettingsLink href={rejectUrl} onClick={action}>
+        <AgreeButton onClick={allowAction}>{accept}</AgreeButton>
+        <SettingsLink href={rejectUrl} onClick={denyAction}>
           {reject}
         </SettingsLink>
       </Options>
@@ -99,7 +100,8 @@ CookieBanner.propTypes = {
   accept: string.isRequired,
   reject: string.isRequired,
   rejectUrl: string.isRequired,
-  action: func.isRequired,
+  allowAction: func.isRequired,
+  denyAction: func.isRequired,
 };
 
 export default CookieBanner;

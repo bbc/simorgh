@@ -5,6 +5,13 @@ import CookieBannerComponent from '../../components/CookieBanner';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
+const POLICY_COOKIE = 'ckns_policy';
+
+const setPolicyCookieIfUnset = value => {
+  if (!Cookie.get(POLICY_COOKIE)) {
+    Cookie.set(POLICY_COOKIE, value);
+  }
+};
 
 const CookieBanner = () => {
   const [privacy, setPrivacy] = useState(false);
@@ -19,18 +26,27 @@ const CookieBanner = () => {
 
       if (!cookie && Cookie.get(EXPLICIT_COOKIE) !== '1') {
         setCookie(true);
-        Cookie.set(PRIVACY_COOKIE, '0');
+        Cookie.set(EXPLICIT_COOKIE, '0');
       }
     }
   }, []);
 
-  const privacyAction = () => {
+  const privacyAllowAction = () => {
     setPrivacy(false);
   };
 
-  const cookieAction = () => {
+  const privacyDenyAction = () => {
+    setPrivacy(false);
+  };
+
+  const cookieAllowAction = () => {
     setCookie(false);
     Cookie.set(EXPLICIT_COOKIE, '1');
+    setPolicyCookieIfUnset('111');
+  };
+
+  const cookieDenyAction = () => {
+    setPolicyCookieIfUnset('000');
   };
 
   return (
@@ -44,14 +60,16 @@ const CookieBanner = () => {
               <CookieBannerComponent
                 {...privacyBanner}
                 rejectUrl={privacyInfoUrl}
-                action={privacyAction}
+                allowAction={privacyAllowAction}
+                denyAction={privacyDenyAction}
               />
             ) : null}
             {!privacy && cookie ? (
               <CookieBannerComponent
                 {...consentBanner}
                 rejectUrl={cookieSettingsUrl}
-                action={cookieAction}
+                allowAction={cookieAllowAction}
+                denyAction={cookieDenyAction}
               />
             ) : null}
           </Fragment>
