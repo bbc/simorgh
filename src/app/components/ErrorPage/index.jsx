@@ -69,10 +69,10 @@ ErrorMain.propTypes = {
   title: string.isRequired,
   message: string.isRequired,
   solutions: arrayOf(string).isRequired,
-  callToActionFirst: string.isRequired,
+  callToActionFirst: string,
   callToActionLinkText: string.isRequired,
   callToActionLinkUrl: string.isRequired,
-  callToActionLast: string.isRequired,
+  callToActionLast: string,
 };
 
 export default ErrorMain;
