@@ -71,6 +71,7 @@ const Metadata = ({
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
 };

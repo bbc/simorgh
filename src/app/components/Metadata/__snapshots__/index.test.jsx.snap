@@ -130,6 +130,11 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -261,6 +266,11 @@ exports[`Metadata News article should render correctly 1`] = `
   <meta
     content="An article title"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
   />
 </HelmetWrapper>
 `;
@@ -395,6 +405,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -526,6 +541,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <meta
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
   />
 </HelmetWrapper>
 `;
@@ -662,6 +682,11 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="An article title"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
   />
 </HelmetWrapper>
 `;

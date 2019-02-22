@@ -10,11 +10,6 @@ exports[`Document should render AMP version correctly 1`] = `
       name="viewport"
     />
     <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <link
       href="/manifest.json"
       rel="manifest"
     />
@@ -71,11 +66,6 @@ exports[`Document should render correctly 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
     />
     <link
       href="/manifest.json"

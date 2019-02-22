@@ -27,7 +27,6 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
     <html lang="en-GB" {...htmlAttrs}>
       <head>
         {meta}
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}

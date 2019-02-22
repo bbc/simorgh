@@ -126,6 +126,7 @@ const articleMetadataBuilder = (
         rel: 'canonical',
         href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
       },
+      { href: '/favicon.ico', rel: 'shortcut icon', type: 'image/x-icon' },
     ],
     metaTags: metaTagsBuilder(serviceConfig, description, seoTitle, id, things),
     title: [seoTitle, ' - ', serviceConfig.brandName],
