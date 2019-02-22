@@ -19,6 +19,7 @@ const CookieBanner = () => {
 
       if (!cookie && Cookie.get(EXPLICIT_COOKIE) !== '1') {
         setCookie(true);
+        Cookie.set(PRIVACY_COOKIE, '0');
       }
     }
   }, []);
