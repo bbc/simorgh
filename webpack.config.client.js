@@ -38,7 +38,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // need unhashed client bundle when running dev server: https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
       filename: START_DEV_SERVER
         ? 'static/js/[name].js'
-        : 'static/js/[name].[hash:8].js',
+        : 'static/js/[name].[chunkhash:8].js',
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
