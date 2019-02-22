@@ -9,6 +9,7 @@ exports[`ArticleContainer Component 200 status code should render correctly 1`] 
     <PlatformContextProvider
       platform="canonical"
     >
+      <CookieBanner />
       <HeaderContainer />
       <ArticleMain
         articleData={
@@ -149,6 +150,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
     <PlatformContextProvider
       platform="canonical"
     >
+      <CookieBanner />
       <HeaderContainer />
       <ErrorMain
         status={451}

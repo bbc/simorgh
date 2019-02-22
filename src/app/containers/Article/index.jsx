@@ -9,6 +9,7 @@ import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
+import CookieBanner from '../CookieBanner';
 
 const logger = nodeLogger(__filename);
 
@@ -29,6 +30,7 @@ const ArticleContainer = ({ loading, error, data }) => {
         <GlobalStyle />
         <ServiceContextProvider service={service}>
           <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+            <CookieBanner />
             <HeaderContainer />
             {status === 200 ? (
               <ArticleMain articleData={articleData} />
