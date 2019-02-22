@@ -6,7 +6,7 @@ import { ServerApp } from '../../app/containers/App';
 
 import { getStyleTag } from '../styles';
 import getAssetsArray from '../assets';
-import Document from './component';
+import DocumentComponent from './component';
 
 const renderDocument = async (url, data, routes) => {
   const sheet = new ServerStyleSheet();
@@ -20,7 +20,7 @@ const renderDocument = async (url, data, routes) => {
   const headHelmet = Helmet.renderStatic();
   const assets = getAssetsArray();
   const doc = renderToStaticMarkup(
-    <Document
+    <DocumentComponent
       assets={assets}
       app={app}
       data={data}

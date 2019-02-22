@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallowRender } from '../../app/helpers/tests/testHelpers';
-import Document from './component';
+import DocumentComponent from './component';
 
-describe('Document', () => {
+describe('Document Component', () => {
   const assets = ['http://example.com/file.js'];
   const data = { test: 'data' };
 
@@ -35,7 +35,7 @@ describe('Document', () => {
 
   const shallowDocument = ({ isAmp }) =>
     shallowRender(
-      <Document
+      <DocumentComponent
         assets={assets}
         app={'<h1>App!</h1>'}
         data={{ ...data, isAmp }}
