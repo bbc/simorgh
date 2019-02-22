@@ -27,7 +27,7 @@ const LongGridItemConstrained = styled(GridItemConstrained)`
   padding-bottom: 4rem;
 `;
 
-const ErrorMain = ({
+const ErrorPage = ({
   statusCode,
   title,
   message,
@@ -64,7 +64,7 @@ const ErrorMain = ({
   </main>
 );
 
-ErrorMain.propTypes = {
+ErrorPage.propTypes = {
   statusCode: string.isRequired,
   title: string.isRequired,
   message: string.isRequired,
@@ -75,4 +75,9 @@ ErrorMain.propTypes = {
   callToActionLast: string,
 };
 
-export default ErrorMain;
+ErrorPage.defaultProps = {
+  callToActionFirst: null,
+  callToActionLast: null,
+};
+
+export default ErrorPage;
