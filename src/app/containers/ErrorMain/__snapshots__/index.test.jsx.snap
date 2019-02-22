@@ -22,7 +22,6 @@ exports[`ErrorMain should correctly render 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
-  background: #FDFDFD;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
