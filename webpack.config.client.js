@@ -80,6 +80,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
+      new webpack.HashedModuleIdsPlugin(),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
        * side replacement, when building the bundle code for the client.
