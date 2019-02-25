@@ -194,7 +194,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
         >
           404
         </span>
-        Page can not be found
+        Page cannot be found
       </h1>
       <p
         className="c4"
