@@ -1,6 +1,7 @@
 import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
+  checkCanonicalURL,
   facebookMeta,
   openGraphMeta,
   retrieveMetaDataContent,
@@ -90,5 +91,13 @@ describe('Article Meta Tests', () => {
 
   it('should include metadata that matches the JSON data', () => {
     returnMetadata();
+  });
+
+  it('should include the canonical URL', () => {
+    checkCanonicalURL(
+      `https://www.bbc.com/news/articles/${
+        config.assets.newsThreeSubheadlines
+      }`,
+    );
   });
 });
