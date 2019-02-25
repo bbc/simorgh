@@ -1,3 +1,5 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+
 const persian = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   brandName: 'BBC News فارسی',
@@ -8,6 +10,7 @@ const persian = {
   locale: 'fa',
   service: 'persian',
   serviceName: 'Persian',
+  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
 };

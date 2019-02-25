@@ -36,6 +36,21 @@ describe('no data', () => {
 const metaTagsBuilder = (serviceConfig, description, seoTitle, id, things) => {
   const metaTags = [
     {
+      content: 'IE=edge',
+      'http-equiv': 'X-UA-Compatible',
+    },
+    {
+      charset: 'utf-8',
+    },
+    {
+      content: 'noindex,nofollow',
+      name: 'robots',
+    },
+    {
+      content: '#B80000',
+      name: 'theme-color',
+    },
+    {
       name: 'viewport',
       content: 'width=device-width, initial-scale=1, minimum-scale=1',
     },
@@ -111,6 +126,7 @@ const articleMetadataBuilder = (
         rel: 'canonical',
         href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
       },
+      { href: '/favicon.ico', rel: 'shortcut icon', type: 'image/x-icon' },
     ],
     metaTags: metaTagsBuilder(serviceConfig, description, seoTitle, id, things),
     title: [seoTitle, ' - ', serviceConfig.brandName],
