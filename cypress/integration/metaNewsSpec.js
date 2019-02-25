@@ -4,6 +4,7 @@ import {
   facebookMeta,
   openGraphMeta,
   retrieveMetaDataContent,
+  returnMetadata,
   twitterMeta,
 } from '../support/metaTestHelper';
 
@@ -66,12 +67,6 @@ describe('Article Meta Tests', () => {
     'https://www.facebook.com/bbcnews',
   );
 
-  // it('should have description meta data', () => {
-  //   metaDataDescription(
-  //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-  //   );
-  // });
-
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
@@ -92,4 +87,8 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );
+
+  it('should include metadata that matches the JSON data', () => {
+    returnMetadata();
+  });
 });

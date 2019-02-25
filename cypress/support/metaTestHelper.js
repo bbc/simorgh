@@ -25,10 +25,6 @@ export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
   });
 };
 
-export const metaDataDescription = description => {
-  retrieveMetaDataContent('head meta[name="description"]', description);
-};
-
 export const openGraphMeta = (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
@@ -78,4 +74,32 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')
     .should('include', bodyResponse);
+};
+
+export const returnMetadata = () => {
+  cy.window().then(win => {
+    const windowData = win.SIMORGH_DATA.data;
+    const description = windowData.promo.summary;
+    const { language } = windowData.metadata.passport;
+    const title = windowData.promo.headlines.seoHeadline;
+    const { type } = windowData.metadata;
+    const firstPublished = new Date(
+      windowData.metadata.firstPublished,
+    ).toISOString();
+    const lastPublished = new Date(
+      windowData.metadata.lastPublished,
+    ).toISOString();
+    retrieveMetaDataContent('head meta[name="description"]', description);
+    retrieveMetaDataContent('head meta[name="og:title"]', title);
+    retrieveMetaDataContent('head meta[name="og:type"]', type);
+    retrieveMetaDataContent(
+      'head meta[name="article:published_time"]',
+      firstPublished,
+    );
+    retrieveMetaDataContent(
+      'head meta[name="article:modified_time"]',
+      lastPublished,
+    );
+    getElement('html').should('contain', language);
+  });
 };
