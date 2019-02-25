@@ -18,7 +18,7 @@ const news = {
     error: {
       404: {
         statusCode: '404',
-        title: 'Page can not be found',
+        title: 'Page cannot be found',
         message:
           "Sorry, we're unable to bring you the page you’re looking for. Please try:",
         solutions: [
