@@ -3,9 +3,9 @@ import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
   checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
   openGraphMeta,
   retrieveMetaDataContent,
-  returnMetadata,
   twitterMeta,
 } from '../support/metaTestHelper';
 
@@ -90,7 +90,7 @@ describe('Article Meta Tests', () => {
   );
 
   it('should include metadata that matches the JSON data', () => {
-    returnMetadata();
+    metadataAssertion();
   });
 
   it('should include the canonical URL', () => {

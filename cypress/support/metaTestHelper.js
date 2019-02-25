@@ -81,7 +81,7 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
     .should('include', bodyResponse);
 };
 
-export const returnMetadata = () => {
+export const metadataAssertion = () => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
     const description = windowData.promo.summary;
@@ -94,6 +94,7 @@ export const returnMetadata = () => {
     const lastPublished = new Date(
       windowData.metadata.lastPublished,
     ).toISOString();
+
     retrieveMetaDataContent('head meta[name="description"]', description);
     retrieveMetaDataContent('head meta[name="og:title"]', title);
     retrieveMetaDataContent('head meta[name="og:type"]', type);
