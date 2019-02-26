@@ -4,7 +4,7 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import loadInitialData from '../app/routes/loadInitialData';
-import Document from '../app/components/Document';
+import Document from './Document/component';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
