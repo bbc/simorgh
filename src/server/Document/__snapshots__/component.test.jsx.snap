@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document should render AMP version correctly 1`] = `
+exports[`Document Component should render AMP version correctly 1`] = `
 <html
   lang="test"
 >
@@ -58,7 +58,7 @@ exports[`Document should render AMP version correctly 1`] = `
 </html>
 `;
 
-exports[`Document should render correctly 1`] = `
+exports[`Document Component should render correctly 1`] = `
 <html
   lang="test"
 >
