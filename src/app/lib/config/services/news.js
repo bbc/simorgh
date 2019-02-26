@@ -1,3 +1,5 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   brandName: 'BBC News',
@@ -9,6 +11,7 @@ const news = {
   locale: 'en_GB',
   service: 'news',
   serviceName: 'News',
+  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
 };

@@ -1,8 +1,4 @@
-import React from 'react';
 import express from 'express';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
-import { Helmet } from 'react-helmet';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import fs from 'fs';
@@ -10,51 +6,22 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import { ServerApp } from '../app/containers/App';
 import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
   swRegexPath,
 } from '../app/routes';
-import { getStyleTag } from './styles';
-import getAssetsArray from './assets';
-import Document from '../app/components/Document';
 import nodeLogger from '../app/helpers/logger.node';
+import renderDocument from './Document';
 
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
 
-const assets = getAssetsArray();
-
 const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
-
-const renderArticle = async (url, data) => {
-  const sheet = new ServerStyleSheet();
-
-  const app = renderToString(
-    sheet.collectStyles(
-      <ServerApp location={url} routes={routes} data={data} context={{}} />,
-    ),
-  );
-
-  const headHelmet = Helmet.renderStatic();
-
-  const doc = renderToStaticMarkup(
-    <Document
-      assets={assets}
-      app={app}
-      data={data}
-      styleTags={getStyleTag(sheet, data.isAmp)}
-      helmet={headHelmet}
-    />,
-  );
-
-  return doc;
-};
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -127,7 +94,7 @@ server
 
       res
         .status(status)
-        .send(`<!doctype html>${await renderArticle(url, data)}`);
+        .send(await renderDocument(url, data, routes));
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
