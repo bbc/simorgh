@@ -12,6 +12,7 @@ export default {
     imageCaptionOffscreenText: 'Default image caption prefix, ',
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
+    themeColor: '#000',
   },
   news,
   persian,

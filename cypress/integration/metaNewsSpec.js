@@ -1,7 +1,9 @@
 import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
+  checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -66,12 +68,6 @@ describe('Article Meta Tests', () => {
     'https://www.facebook.com/bbcnews',
   );
 
-  // it('should have description meta data', () => {
-  //   metaDataDescription(
-  //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-  //   );
-  // });
-
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
@@ -92,4 +88,16 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );
+
+  it('should include metadata that matches the JSON data', () => {
+    metadataAssertion();
+  });
+
+  it('should include the canonical URL', () => {
+    checkCanonicalURL(
+      `https://www.bbc.com/news/articles/${
+        config.assets.newsThreeSubheadlines
+      }`,
+    );
+  });
 });

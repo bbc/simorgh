@@ -1,5 +1,6 @@
 import config from '../support/config';
 import {
+  checkCanonicalURL,
   facebookMeta,
   openGraphMeta,
   retrieveMetaDataContent,
@@ -48,4 +49,10 @@ describe('Persian Article Meta Tests', () => {
     '@bbcpersian',
     'پهپادی که برایتان قهوه می‌آورد',
   );
+
+  it('should include the canonical URL', () => {
+    checkCanonicalURL(
+      `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    );
+  });
 });
