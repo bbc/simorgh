@@ -6,9 +6,6 @@ ignore:
     - speculate > tar-fs > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
         expires: '2019-04-01T12:00:00.000Z'
-      webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
-        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
-        expires: '2019-02-13T10:00:38.435Z'
     - compression-webpack-plugin > cacache > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
         expires: '2019-04-01T12:00:00.000Z'
@@ -24,6 +21,9 @@ ignore:
     - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
         expires: '2019-04-01T12:00:00.000Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
+        reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
+        expires: '2019-02-13T10:00:38.435Z'
   SNYK-JS-CHOWNR-73502:
     - speculate > tar-fs > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
@@ -46,4 +46,10 @@ ignore:
     - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > chownr:
         reason: Known and accepted vulnerability. Snyk have been emailed to resolve.
         expires: '2019-02-13T10:00:38.435Z'
+  SNYK-JS-LODASHMERGE-173732:
+    - assets-webpack-plugin > lodash.merge:
+        reason: >-
+          Awaiting fix on low sev issue
+          https://github.com/ztoben/assets-webpack-plugin/issues/167
+        expires: '2019-03-29T22:10:57.898Z'
 patch: {}
