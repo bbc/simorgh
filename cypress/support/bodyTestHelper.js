@@ -14,13 +14,6 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-export const checkElementStyles = (elementString, text, color, fontFamily) => {
-  const el = getElement(elementString);
-  shouldContainText(el, text);
-  shouldContainStyles(el, 'color', color);
-  shouldContainStyles(el, 'font-family', fontFamily);
-};
-
 export const getBlockData = (blockType, win) => {
   let blockData;
   const { blocks } = win.SIMORGH_DATA.data.content.model;
@@ -37,12 +30,9 @@ export const firstHeadlineDataWindow = () => {
   cy.window().then(win => {
     const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-    checkElementStyles(
-      'h1',
-      text,
-      'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-    );
+    const headline = getElement('h1');
+
+    shouldContainText(headline, text);
   });
 };
 
@@ -50,13 +40,9 @@ export const firstSubheadlineDataWindow = () => {
   cy.window().then(win => {
     const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
+    const subheading = getElement('h2');
 
-    checkElementStyles(
-      'h2',
-      text,
-      'rgb(64, 64, 64)',
-      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-    );
+    shouldContainText(subheading, text);
   });
 };
 
@@ -75,13 +61,8 @@ export const copyrightDataWindow = () => {
     const copyrightData = getBlockData('image', win);
     const { copyrightHolder } = copyrightData.model.blocks[0].model;
     const copyrightLabel = getElement('figure p').eq(0);
-    copyrightLabel.should('contain', copyrightHolder);
-    shouldContainStyles(
-      copyrightLabel,
-      'background-color',
-      'rgba(34, 34, 34, 0.75)',
-    );
-    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+
+    shouldContainText(copyrightLabel, copyrightHolder);
   });
 };
 
@@ -92,28 +73,11 @@ export const checkFooterLinks = (position, url) => {
     .and('contain', url);
 };
 
-export const checkLinkStyling = position => {
-  const link = cy.get('a').eq(position);
-  shouldContainStyles(link, 'color', 'rgb(255, 255, 255)');
-  link.focus();
-  const linkSpan = link.get('span').eq(position);
-  shouldContainStyles(
-    linkSpan,
-    'border-bottom',
-    '2px solid rgb(255, 255, 255)',
-  );
-  link.invoke('mouseover');
-  shouldContainStyles(
-    linkSpan,
-    'border-bottom',
-    '2px solid rgb(255, 255, 255)',
-  );
-};
-
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   getElement(link).click();
   cy.url().should('contain', url);
   const anchorElement = getElement('header a');
+
   shouldContainText(anchorElement, 'BBC News');
 };
 
@@ -122,11 +86,6 @@ export const renderedTitle = title => {
 };
 
 export const placeholderImageLoaded = placeholderImage => {
-  shouldContainStyles(
-    placeholderImage,
-    'background-color',
-    'rgb(236, 234, 231)',
-  );
   shouldContainStyles(
     placeholderImage,
     'background-image',
