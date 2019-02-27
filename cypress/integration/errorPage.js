@@ -5,17 +5,17 @@ import { testResponseCode } from '../support/metaTestHelper';
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.nonexistant}`, {
+    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
       failOnStatusCode: false,
     });
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/news/articles/${config.assets.nonexistant}`, 404);
+    testResponseCode(`/news/articles/${config.assets.nonExistent}`, 404);
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/news/articles/${config.assets.nonexistant}`, {
+    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
       failOnStatusCode: false,
     });
     getElement('h1 span').should('contain', '404');
