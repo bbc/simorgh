@@ -14,6 +14,10 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
+export const shouldMatchReturnedData = (data, element) => {
+  getElement(element).should('contain', data);
+};
+
 export const getBlockData = (blockType, win) => {
   let blockData;
   const { blocks } = win.SIMORGH_DATA.data.content.model;
@@ -30,9 +34,8 @@ export const firstHeadlineDataWindow = () => {
   cy.window().then(win => {
     const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-    const headline = getElement('h1');
 
-    shouldContainText(headline, text);
+    shouldMatchReturnedData(text, 'h1');
   });
 };
 
@@ -40,9 +43,8 @@ export const firstSubheadlineDataWindow = () => {
   cy.window().then(win => {
     const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
-    const subheading = getElement('h2');
 
-    shouldContainText(subheading, text);
+    shouldMatchReturnedData(text, 'h2');
   });
 };
 
