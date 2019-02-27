@@ -1,4 +1,10 @@
-import getInitialData from './index';
+import nodeLogger from '../../helpers/logger.node';
+
+const mockLogWarn = jest.fn();
+jest.mock('../../helpers/logger.node', () => jest.fn());
+nodeLogger.mockImplementation(() => ({ warn: mockLogWarn, error: jest.fn() }));
+
+const getInitialData = require('./index').default;
 
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
@@ -135,14 +141,12 @@ describe('getInitialData', () => {
 
   describe('Ares returns a non-200, non-404 status code', () => {
     it('should log, and return the status code as 502', async () => {
-      global.console.warn = jest.fn();
-
       const response = await callGetInitialData(
         defaultContext,
         mockFetchTeapotStatus,
       );
 
-      expect(global.console.warn).toBeCalledWith(
+      expect(mockLogWarn).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${
           process.env.SIMORGH_BASE_URL
         }/news/articles/c0000000001o.json`,
