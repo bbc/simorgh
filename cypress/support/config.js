@@ -7,6 +7,7 @@ const config = {
       news: 'cxvxrj9yvppo',
       newsThreeSubheadlines: 'cpzk9lkk2p7o',
       persian: 'c5ml5n7w4m3o',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
   test: {
@@ -17,6 +18,7 @@ const config = {
       news: 'c85pqyj5m2ko',
       newsThreeSubheadlines: 'c9rpqy7pmypo',
       persian: 'cwv2xv848j5o',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
   local: {
@@ -27,6 +29,7 @@ const config = {
       news: 'c85pqyj5m2ko',
       newsThreeSubheadlines: 'c9rpqy7pmypo',
       persian: 'cwv2xv848j5o',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
 };

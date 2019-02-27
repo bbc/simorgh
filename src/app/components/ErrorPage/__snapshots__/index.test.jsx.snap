@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMain should correctly render for an error 1`] = `
+.c5 {
+  color: #0F556C;
+  padding: 2px;
+  border-bottom: 1px solid #0F556C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:visited {
+  color: #5C5752;
+  border-bottom: 1px solid #5C5752;
+}
+
+.c5:focus {
+  background-color: #0F556C;
+  border-bottom: 1px solid #F5F3F1;
+  color: #F5F3F1;
+}
+
+.c5:hover {
+  color: #0F556C;
+  background-color: #C3DEE7;
+  border-bottom: 1px solid #0F556C;
+}
+
+.c4 {
+  color: #404040;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 0.9375em;
+  line-height: 1.25rem;
+}
+
+.c0 {
+  display: -ms-grid;
+  display: grid;
+  background: #FDFDFD;
+}
+
+.c3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  color: #222222;
+  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem 0;
+  font-size: 1.75em;
+  line-height: 2rem;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.c1 {
+  padding-bottom: 4rem;
+}
+
+@media (min-width:20em) {
+  .c4 {
+    font-size: 1em;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375em) {
+  .c0 {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375em) {
+  .c0 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    -ms-grid-columns: 1fr (minmax(0,6.9rem))[10] 1fr;
+    grid-template-columns: 1fr repeat(10,minmax(0,6.9rem)) 1fr;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c3 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c2 {
+    font-size: 2em;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 2.75em;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:62.9375em) {
+  .c1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width:80em) {
+  .c1 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / -4;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        <span
+          className="c3"
+        >
+          StatusCode
+        </span>
+        A error has occured
+      </h1>
+      <p
+        className="c4"
+      >
+        Something happened, please try an option
+      </p>
+      <ul>
+        <li
+          className="c4"
+        >
+          Option one
+        </li>
+        <li
+          className="c4"
+        >
+          Option two
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        You can do 
+        <a
+          className="c5"
+          href="https://www.bbc.com"
+        >
+          this
+        </a>
+         thing
+      </p>
+    </div>
+  </div>
+</main>
+`;
