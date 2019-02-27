@@ -1,10 +1,5 @@
-import nodeLogger from '../../helpers/logger.node';
-
-const mockLogWarn = jest.fn();
-jest.mock('../../helpers/logger.node', () => jest.fn());
-nodeLogger.mockImplementation(() => ({ warn: mockLogWarn, error: jest.fn() }));
-
-const getInitialData = require('./index').default;
+import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
+import getInitialData from './index';
 
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
@@ -146,7 +141,7 @@ describe('getInitialData', () => {
         mockFetchTeapotStatus,
       );
 
-      expect(mockLogWarn).toBeCalledWith(
+      expect(loggerMock.warn).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${
           process.env.SIMORGH_BASE_URL
         }/news/articles/c0000000001o.json`,
