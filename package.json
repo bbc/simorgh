@@ -196,6 +196,7 @@
     "prune": false,
     "requires": [
       "td-agent",
+      "cfn-signal",
       "cloudteam-td-agent-setup",
       "cloud-httpd24-ssl-services-devs-staff"
     ]
