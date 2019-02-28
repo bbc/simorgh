@@ -8,7 +8,7 @@ import ErrorPageComponent from '../../components/ErrorPage';
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
  */
-const ErrorMetadata = ({ locale, messaging, brandName }) => {
+const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
   const { title } = messaging;
 
   return (
@@ -16,6 +16,7 @@ const ErrorMetadata = ({ locale, messaging, brandName }) => {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
+      <meta name="theme-color" content={themeColor} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -30,7 +31,7 @@ const ErrorMetadata = ({ locale, messaging, brandName }) => {
 
 const ErrorMain = ({ status }) => (
   <ServiceContextConsumer>
-    {({ brandName, locale, translations }) => {
+    {({ brandName, locale, themeColor, translations }) => {
       const messaging = translations.error[status] || translations.error[500];
 
       return (
@@ -39,6 +40,7 @@ const ErrorMain = ({ status }) => (
             brandName={brandName}
             locale={locale}
             messaging={messaging}
+            themeColor={themeColor}
           />
           <ErrorPageComponent {...messaging} />
         </Fragment>
@@ -55,6 +57,7 @@ ErrorMetadata.propTypes = {
   locale: string.isRequired,
   messaging: shape({ title: string.isRequired }).isRequired,
   brandName: string.isRequired,
+  themeColor: string.isRequired,
 };
 
 export default ErrorMain;
