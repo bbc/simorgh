@@ -54,12 +54,12 @@ describe('getInitialData', () => {
     });
   };
 
-  const windowLoc = window.location;
+  const windowLocation = window.location;
 
   afterEach(() => {
     // Reset window location
     Object.defineProperty(window, 'location', {
-      value: windowLoc,
+      value: windowLocation,
     });
 
     fetch.resetMocks();
