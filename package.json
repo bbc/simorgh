@@ -84,7 +84,7 @@
     "@bbc/psammead-sitewide-links": "^0.1.4",
     "@bbc/psammead-styles": "^0.2.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.7",
-    "assets-webpack-plugin": "^3.9.7",
+    "assets-webpack-plugin": "^3.9.8",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
