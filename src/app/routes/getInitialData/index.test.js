@@ -56,7 +56,7 @@ describe('getInitialData', () => {
 
   const windowLoc = window.location;
 
-  beforeEach(() => {
+  afterEach(() => {
     // Reset window location
     Object.defineProperty(window, 'location', {
       value: windowLoc,
