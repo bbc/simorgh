@@ -106,11 +106,10 @@ describe('Headings', () => {
       const renderedWrapper = render(
         <HeadingsContainer
           blocks={blocksSingleFragment('Plain subheading', [])}
-          type="subheading"
+          type="subheadline"
         />,
       );
       expect(renderedWrapper.html()).toBe('Plain subheading');
-      expect(renderedWrapper.find('[tabindex]')).toBe('-1');
     });
   });
 
@@ -122,7 +121,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.find('h1 i').html()).toBe('All is italic');
+      expect(renderedWrapper.html()).toBe('<i>All is italic</i>');
     });
 
     it('should render headline with bold text', () => {
@@ -132,7 +131,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.find('h1 b').html()).toBe('All is bold');
+      expect(renderedWrapper.html()).toBe('<b>All is bold</b>');
     });
 
     it('should render headline with bold & italic text', () => {
@@ -145,8 +144,8 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.find('h1 i b').html()).toBe(
-        'All is bold and italic',
+      expect(renderedWrapper.html()).toBe(
+        '<i><b>All is bold and italic</b></i>',
       );
     });
 
@@ -160,8 +159,8 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.find('h1 b i').html()).toBe(
-        'All is italic and bold',
+      expect(renderedWrapper.html()).toBe(
+        '<b><i>All is italic and bold</i></b>',
       );
     });
 
