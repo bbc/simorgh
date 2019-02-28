@@ -1,4 +1,10 @@
-import getInitialData from './index';
+import baseUrl from './getBaseUrl';
+
+const getBaseUrlMockOrigin = 'https://www.mockSite.com';
+jest.mock('./getBaseUrl', () => jest.fn());
+baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
+
+const getInitialData = require('./index').default;
 
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
@@ -39,7 +45,23 @@ describe('getInitialData', () => {
     return response;
   };
 
+  const setLocationOrigin = origin => {
+    const windowLocation = JSON.parse(JSON.stringify(window.location));
+    delete window.location;
+    windowLocation.origin = origin;
+    Object.defineProperty(window, 'location', {
+      value: windowLocation,
+    });
+  };
+
+  const windowLoc = window.location;
+
   beforeEach(() => {
+    // Reset window location
+    Object.defineProperty(window, 'location', {
+      value: windowLoc,
+    });
+
     fetch.resetMocks();
   });
 
@@ -73,15 +95,25 @@ describe('getInitialData', () => {
     });
   });
 
-  describe('using test base path', () => {
+  describe('using currect baseUrl', () => {
     const BASE_PATH = 'https://www.test.com';
     beforeEach(() => {
       process.env.SIMORGH_BASE_URL = BASE_PATH;
     });
-    it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
+
+    it('should call fetch with an absolute URL using BASE_PATH environment variable when window location origin is undefined', () => {
+      setLocationOrigin(undefined);
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
         `${BASE_PATH}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
+      );
+    });
+
+    it('should call fetch with an absolute URL using getBaseUrl() value when window location origin is availible', () => {
+      setLocationOrigin('https://website.com');
+      callGetInitialData();
+      expect(fetch.mock.calls[0][0]).toEqual(
+        `${getBaseUrlMockOrigin}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
       );
     });
   });
@@ -143,9 +175,7 @@ describe('getInitialData', () => {
       );
 
       expect(global.console.warn).toBeCalledWith(
-        `Unexpected upstream response (HTTP status code 418) when requesting ${
-          process.env.SIMORGH_BASE_URL
-        }/news/articles/c0000000001o.json`,
+        `Unexpected upstream response (HTTP status code 418) when requesting ${getBaseUrlMockOrigin}/news/articles/c0000000001o.json`,
       );
 
       expect(response).toEqual({

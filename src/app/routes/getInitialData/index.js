@@ -13,7 +13,7 @@ const getInitialData = async ({ match }) => {
   let status;
   let baseUrl = process.env.SIMORGH_BASE_URL;
 
-  if (window && window.location) {
+  if (window && window.location && window.location.origin) {
     baseUrl = getBaseUrl(window.location.origin);
   }
 
