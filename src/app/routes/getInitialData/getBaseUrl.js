@@ -2,6 +2,10 @@ const getBaseUrl = origin => {
   let base = 'https://www.bbc';
   let tld = '.com';
 
+  if (origin.includes('localhost')) {
+    return origin;
+  }
+
   if (origin.includes('.stage.')) {
     base = 'https://www.stage.bbc';
   }
@@ -12,10 +16,6 @@ const getBaseUrl = origin => {
 
   if (origin.includes('.co.uk')) {
     tld = '.co.uk';
-  }
-
-  if (origin.includes('localhost')) {
-    return origin;
   }
 
   return base + tld;
