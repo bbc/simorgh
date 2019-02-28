@@ -1,9 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
-import { extractText } from '../../helpers/blockHandlers';
 import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
+import Fragment from '../Fragment';
+import Blocks from '../Blocks';
 
 const Headings = {
   headline: Headline,
@@ -13,13 +14,19 @@ const Headings = {
 const HeadingsContainer = ({ blocks, type }) => {
   const Heading = Headings[type];
 
-  const { text } = extractText(blocks);
+  const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
-  if (!text) {
+  if (!arrayOfFragments || !Array.isArray(arrayOfFragments)) {
     return null;
   }
+  const { text } = blocks[0].model.blocks[0].model;
+  const componentsToRender = { fragment: Fragment };
 
-  return <Heading text={text}>{text}</Heading>;
+  const renderText = () => (
+    <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
+  );
+
+  return <Heading text={text}>{renderText()}</Heading>;
 };
 
 HeadingsContainer.propTypes = {
