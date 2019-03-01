@@ -5,6 +5,8 @@ const getBaseUrlMockOrigin = 'https://www.mockSite.com';
 jest.mock('./getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
+const getInitialData = require('./index').default;
+
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
   const defaultServiceParam = 'news';
