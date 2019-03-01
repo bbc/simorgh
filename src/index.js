@@ -1,14 +1,5 @@
-// dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
-
-const dotenv = require('dotenv');
-
-const DOT_ENV_CONFIG = dotenv.config();
-if (DOT_ENV_CONFIG.error) {
-  throw DOT_ENV_CONFIG.error;
-}
-
-const setupServer = require('@bbc/spartacus/index');
-const Logger = require('@bbc/spartacus/logger');
+import setupServer from '@bbc/spartacus/index';
+import Logger from '@bbc/spartacus/logger';
 
 const logger = Logger(__filename);
 const expressServer = require('./server').default;
