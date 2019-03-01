@@ -11,7 +11,7 @@ installProd:
 
 developmentTests:
 	cd ${APP_DIRECTORY}; npm run audit:ci;
-	cd ${APP_DIRECTORY}; apache2-license-checker;
+	cd ${APP_DIRECTORY}; npx apache2-license-checker;
 	cd ${APP_DIRECTORY}; npm run test;
 	cd ${APP_DIRECTORY}; xvfb-run npm run test:e2e:storybook:ci;
 
