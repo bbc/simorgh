@@ -13,7 +13,6 @@ When an date or time is to be displayed inline inside a paragraph.
 `npm install (package-name)`
 
 ## Props
-(a table of all the component's props, following the template below)
 
 | Argument   | Type   | Required | Default | Example                  |
 |------------|--------|----------|---------|--------------------------|
