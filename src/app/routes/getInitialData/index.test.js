@@ -1,3 +1,4 @@
+import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
 import getInitialData from './index';
 
 describe('getInitialData', () => {
@@ -135,14 +136,12 @@ describe('getInitialData', () => {
 
   describe('Ares returns a non-200, non-404 status code', () => {
     it('should log, and return the status code as 502', async () => {
-      global.console.warn = jest.fn();
-
       const response = await callGetInitialData(
         defaultContext,
         mockFetchTeapotStatus,
       );
 
-      expect(global.console.warn).toBeCalledWith(
+      expect(loggerMock.warn).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${
           process.env.SIMORGH_BASE_URL
         }/news/articles/c0000000001o.json`,

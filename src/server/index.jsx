@@ -82,7 +82,7 @@ server
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
-        console.log(error); // eslint-disable-line no-console
+        logger.error(error);
         res.status(500).send('Unable to find service worker.');
       }
     });
