@@ -31,8 +31,7 @@ const getInitialData = async ({ match }) => {
     if (status === 200) {
       data = await response.json();
     } else if (!upstreamStatusCodesToPropagate.includes(status)) {
-      // eslint-disable-next-line no-console
-      console.warn(
+      logger.warn(
         `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
       );
       status = 502;
