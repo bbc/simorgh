@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
-import 'babel-polyfill';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
