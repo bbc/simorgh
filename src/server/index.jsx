@@ -1,56 +1,24 @@
-import express from 'express';
-import compression from 'compression';
-import expressStaticGzip from 'express-static-gzip';
 import fs from 'fs';
 import path from 'path';
-// not part of react-helmet
-import helmet from 'helmet';
-import gnuTP from 'gnu-terry-pratchett';
-import loadInitialData from '../app/routes/loadInitialData';
+import { Helmet } from 'react-helmet';
+import { ServerStyleSheet } from 'styled-components';
+import { loadInitialData } from '@bbc/spartacus/utilities';
+import renderDocument from '@bbc/spartacus/document';
+import expressServer from '@bbc/spartacus/server';
+import Logger from '@bbc/spartacus/logger';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
   swRegexPath,
 } from '../app/routes';
-import nodeLogger from '../app/helpers/logger.node';
-import renderDocument from './Document';
+import ResourceHints from '../app/components/ResourceHints';
 
-const morgan = require('morgan');
+const logger = Logger(__filename);
 
-const logger = nodeLogger(__filename);
-
-const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
-logger.debug(
-  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
-);
-
-/* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
-class LoggerStream {
-  write(message) {
-    logger.info(message.substring(0, message.lastIndexOf('\n')));
-  }
-}
-
-const server = express();
-// prettier-ignore
-server
-  .disable('x-powered-by')
-  .use(morgan('tiny', {
-    'skip': (req, res) => (res.statusCode === 200),
-    'stream': new LoggerStream()
-  }))
-  .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
-  .use(
-    expressStaticGzip(publicDirectory, {
-      enableBrotli: true,
-      orderPreference: ['br'],
-    }),
-  )
-  .use(gnuTP())
+expressServer
   .get(articleDataRegexPath, async ({ params }, res) => {
     const { service, id } = params;
 
@@ -75,9 +43,6 @@ server
       return null;
     });
   })
-  .get('/status', (req, res) => {
-    res.sendStatus(200);
-  })
   .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
@@ -92,9 +57,16 @@ server
       const data = await loadInitialData(url, routes);
       const { status } = data;
 
-      res
-        .status(status)
-        .send(await renderDocument(url, data, routes));
+      res.status(status).send(
+        await renderDocument(
+          url,
+          data,
+          routes,
+          ResourceHints,
+          ServerStyleSheet, // needed for styled-components to remain a singleton
+          Helmet,
+        ),
+      );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
@@ -102,4 +74,4 @@ server
     }
   });
 
-export default server;
+export default expressServer;
