@@ -3,7 +3,6 @@
     [
       "@babel/preset-env",
       {
-        "useBuiltIns": "entry", // converts `import "@babel/polyfill"` into polyfilling only explicitly what's needed
         "targets": {
           "browsers": [
             "chrome >= 53",
@@ -19,6 +18,9 @@
             "ios_saf >= 10"
           ]
         }
+        // converts `import "@babel/polyfill"` into multiple, smaller imports that
+        // polyfills only the features that are used, and only for the targeted browsers
+        "useBuiltIns": "usage",
       }
     ],
     "@babel/preset-react" // transform JSX to JS
