@@ -1,9 +1,8 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
-        "useBuiltIns": true,
         "targets": {
           "browsers": [
             "chrome >= 53",
@@ -18,29 +17,23 @@
             "and_ff >= 49",
             "ios_saf >= 10"
           ]
-        }
+        },
+        // analyses code & polyfills only the features that are used, only for the targeted browsers
+        "useBuiltIns": "usage"
       }
     ],
-    "babel-preset-react" // transform JSX to JS
+    "@babel/preset-react" // transform JSX to JS
   ],
   "plugins": [
+    "@babel/plugin-transform-modules-commonjs", // allows module.exports at the helpers/logger.*.js
+    "@babel/plugin-proposal-object-rest-spread", // allows ...spread notation
+    "@babel/plugin-syntax-dynamic-import", // allows `await import()` syntax
+    "dynamic-import-node", // allows dynamic `import()` in Node tests. Webpack can do natively.
     [
       "babel-plugin-styled-components",
       {
         "ssr": true, // avoid checksum mismatches (different class generation between client & server)
         "fileName": false // prevent filename forming part of class name (duplication)
-      }
-    ],
-    "babel-plugin-syntax-dynamic-import", // allows `await import()`
-    "babel-plugin-dynamic-import-node", // allows `return import()`
-    "transform-object-rest-spread", // allows ...spread notation
-    [
-      // polyfills code without polluting globals
-      // https://stackoverflow.com/a/36821986
-      "transform-runtime",
-      {
-        "polyfill": false,
-        "regenerator": true
       }
     ]
   ]
