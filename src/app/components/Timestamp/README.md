@@ -1,4 +1,4 @@
-# psammead-timestamp &middot; (badges)
+# (package name) &middot; (badges)
 
 ## Description
 Displays a timestamp, with suitable semantic markup.
@@ -10,7 +10,7 @@ For displaying an isolated timestamp, separate from the other content in an arti
 When an date or time is to be displayed inline inside a paragraph.
 
 ## Installation
-`npm install @bbc/psammead-timestamp`
+`npm install (package-name)`
 
 ## Props
 (a table of all the component's props, following the template below)
@@ -23,8 +23,6 @@ When an date or time is to be displayed inline inside a paragraph.
 
 ## Usage
 ```
-import Timestamp from '@bbc/psammead-timestamp';
-
 const WrappingContainer = () => (
   <Timestamp
     datetime="2019-03-01T14:00+00:00"
