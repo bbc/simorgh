@@ -36,6 +36,7 @@ const MetadataContainer = ({ metadata, promo }) => {
             defaultImage,
             defaultImageAltText,
             locale,
+            themeColor,
             twitterCreator,
             twitterSite,
           }) => {
@@ -57,6 +58,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                 lang={metadata.passport.language}
                 locale={locale}
                 metaTags={allTags(metadata.tags)}
+                themeColor={themeColor}
                 timeFirstPublished={timeFirstPublished}
                 timeLastPublished={timeLastPublished}
                 title={promo.headlines.seoHeadline}

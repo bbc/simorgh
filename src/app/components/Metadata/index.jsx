@@ -16,6 +16,7 @@ const Metadata = ({
   lang,
   locale,
   metaTags,
+  themeColor,
   timeFirstPublished,
   timeLastPublished,
   title,
@@ -31,6 +32,10 @@ const Metadata = ({
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="utf-8" />
+      <meta name="robots" content="noindex,nofollow" />
+      <meta name="theme-color" content={themeColor} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -66,6 +71,7 @@ const Metadata = ({
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
 };
@@ -84,6 +90,7 @@ Metadata.propTypes = {
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
+  themeColor: string.isRequired,
   timeFirstPublished: string.isRequired,
   timeLastPublished: string.isRequired,
   title: string.isRequired,

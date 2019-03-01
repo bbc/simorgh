@@ -1,13 +1,10 @@
 import styled from 'styled-components';
-import { C_OAT_LHT } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { layoutGridWrapper, layoutGridItemConstrained } from './layoutGrid';
 
-export const Wrapper = styled.div`
+export const GhostWrapper = styled.div`
   ${layoutGridWrapper};
-`;
-
-export const OatWrapper = styled(Wrapper)`
-  background: ${C_OAT_LHT};
+  background: ${C_GHOST};
 `;
 
 export const GridItemConstrained = styled.div`
