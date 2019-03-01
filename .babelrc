@@ -17,10 +17,10 @@
             "and_ff >= 49",
             "ios_saf >= 10"
           ]
-        }
+        },
         // converts `import "@babel/polyfill"` into multiple, smaller imports that
         // polyfills only the features that are used, and only for the targeted browsers
-        "useBuiltIns": "usage",
+        "useBuiltIns": "usage"
       }
     ],
     "@babel/preset-react" // transform JSX to JS
