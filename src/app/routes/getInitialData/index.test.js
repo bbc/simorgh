@@ -95,7 +95,7 @@ describe('getInitialData', () => {
     });
   });
 
-  describe('using currect baseUrl', () => {
+  describe('using correct baseUrl', () => {
     const BASE_PATH = 'https://www.test.com';
     beforeEach(() => {
       process.env.SIMORGH_BASE_URL = BASE_PATH;
