@@ -9,7 +9,7 @@ global.fetch = fetch;
 global.shallow = shallow;
 global.mount = mount;
 
-process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
+process.env.SPARTACUS_ASSETS_MANIFEST_PATH = path.resolve(
   __dirname,
   '../../../server/assets/fixture.json',
 );

@@ -42,7 +42,7 @@ describe('Article Body Tests', () => {
 
   it('should render a title', () => {
     cy.window().then(win => {
-      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      const { seoHeadline } = win.SPARTACUS_DATA.data.promo.headlines;
       renderedTitle(`${seoHeadline} - BBC News فارسی`);
     });
   });

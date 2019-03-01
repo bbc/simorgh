@@ -24,7 +24,7 @@ describe('Article Body Tests', () => {
 
   it('should render a formatted timestamp', () => {
     cy.window().then(win => {
-      const { lastPublished } = win.SIMORGH_DATA.data.metadata;
+      const { lastPublished } = win.SPARTACUS_DATA.data.metadata;
       const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
       const time = getElement('time');
       shouldContainText(time, timeStamp);
@@ -57,7 +57,7 @@ describe('Article Body Tests', () => {
 
   it('should render a title', () => {
     cy.window().then(win => {
-      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      const { seoHeadline } = win.SPARTACUS_DATA.data.promo.headlines;
       renderedTitle(`${seoHeadline} - BBC News`);
     });
   });

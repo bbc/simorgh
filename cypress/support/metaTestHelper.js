@@ -83,7 +83,7 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
 
 export const metadataAssertion = () => {
   cy.window().then(win => {
-    const windowData = win.SIMORGH_DATA.data;
+    const windowData = win.SPARTACUS_DATA.data;
     const description = windowData.promo.summary;
     const { language } = windowData.metadata.passport;
     const title = windowData.promo.headlines.seoHeadline;

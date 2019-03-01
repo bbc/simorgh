@@ -77,7 +77,7 @@ describe('getInitialData', () => {
   describe('using test base path', () => {
     const BASE_PATH = 'https://www.test.com';
     beforeEach(() => {
-      process.env.SIMORGH_BASE_URL = BASE_PATH;
+      process.env.SPARTACUS_BASE_URL = BASE_PATH;
     });
     it('should call fetch with an absolute URL using BASE_PATH environment variable', () => {
       callGetInitialData();
@@ -143,7 +143,7 @@ describe('getInitialData', () => {
 
       expect(loggerMock.warn).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${
-          process.env.SIMORGH_BASE_URL
+          process.env.SPARTACUS_BASE_URL
         }/news/articles/c0000000001o.json`,
       );
 
