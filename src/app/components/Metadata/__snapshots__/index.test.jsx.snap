@@ -144,7 +144,6 @@ exports[`Metadata News article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
-      "amp": "",
       "lang": "en-GB",
     }
   }
