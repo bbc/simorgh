@@ -109,7 +109,7 @@ describe('getInitialData', () => {
       );
     });
 
-    it('should call fetch with an absolute URL using getBaseUrl() value when window location origin is availible', () => {
+    it('should call fetch with an absolute URL using getBaseUrl() value when window location origin is available', () => {
       setLocationOrigin('https://website.com');
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
