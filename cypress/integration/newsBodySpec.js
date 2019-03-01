@@ -7,7 +7,6 @@ import {
   getElement,
   placeholderImageLoaded,
   renderedTitle,
-  shouldContainStyles,
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
@@ -63,21 +62,8 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should have an inline link with focus styling', () => {
-    const firstInlineLink = getElement('main a');
-
-    firstInlineLink.focus();
-    shouldContainStyles(
-      firstInlineLink,
-      'background-color',
-      'rgb(15, 85, 108)',
-    );
-    shouldContainStyles(firstInlineLink, 'color', 'rgb(245, 243, 241)');
-    shouldContainStyles(
-      firstInlineLink,
-      'border-bottom',
-      '1px solid rgb(245, 243, 241)',
-    );
+  it('should have an inline link', () => {
+    getElement('main a');
   });
 
   // it('should have a working first inline link', () => {
