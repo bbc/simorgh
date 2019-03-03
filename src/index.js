@@ -13,11 +13,11 @@ const app = require('./server').default;
 
 const logger = nodeLogger(__filename);
 const server = http.createServer(app);
-const port = 7083;
+const port = 8080;
 let currentApp = app;
 
 server.listen(port, error => {
-  if (error) {s
+  if (error) {
     logger.error(error);
   }
 
