@@ -12,14 +12,14 @@ export const GhostWrapper = styled.div`
   background: ${C_GHOST};
 `;
 
-export const GridItemConstrainedMediumSmall = styled.div`
+export const GridItemConstrainedSmall = styled.div`
   ${layoutGridItemSmall};
 `;
 
-export const GridItemConstrainedMediumMedium = styled.div`
+export const GridItemConstrainedMedium = styled.div`
   ${layoutGridItemMedium};
 `;
 
-export const GridItemConstrainedMediumLarge = styled.div`
+export const GridItemConstrainedLarge = styled.div`
   ${layoutGridItemLarge};
 `;
