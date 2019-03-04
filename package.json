@@ -130,7 +130,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "@storybook/react": "^4.1.12",
+    "@storybook/react": "4.1.12",
     "amphtml-validator": "^1.0.23",
     "audit-ci": "^1.2.1",
     "babel-eslint": "^10.0.0",
