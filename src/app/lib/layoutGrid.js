@@ -83,6 +83,15 @@ export const layoutGridItemLarge = css`
   }
 `;
 
+export const layoutGridItemLargeWithMargin = css`
+  ${layoutGridItemLarge}
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 2 / -2;
+  }
+`;
+
 export const layoutGridItemMedium = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;

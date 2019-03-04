@@ -7,7 +7,11 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
-import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import {
+  GhostWrapper,
+  GridItemConstrainedMedium,
+  GridItemConstrainedLargeWithMargin,
+} from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -46,11 +50,13 @@ const ArticleMain = ({ articleData }) => {
         <MetadataContainer metadata={metadata} promo={promo} />
         <main role="main">
           <GhostWrapper>
-            <GridItemConstrainedMedium>
+            <GridItemConstrainedLargeWithMargin>
               <Blocks
                 blocks={headlineBlocks}
                 componentsToRender={componentsToRenderHeadline}
               />
+            </GridItemConstrainedLargeWithMargin>
+            <GridItemConstrainedMedium>
               <Timestamp timestamp={metadata.lastPublished} />
               <Blocks
                 blocks={mainBlocks}

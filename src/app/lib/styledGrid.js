@@ -5,6 +5,7 @@ import {
   layoutGridItemSmall,
   layoutGridItemMedium,
   layoutGridItemLarge,
+  layoutGridItemLargeWithMargin
 } from './layoutGrid';
 
 export const GhostWrapper = styled.div`
@@ -22,4 +23,8 @@ export const GridItemConstrainedMedium = styled.div`
 
 export const GridItemConstrainedLarge = styled.div`
   ${layoutGridItemLarge};
+`;
+
+export const GridItemConstrainedLargeWithMargin = styled.div`
+  ${layoutGridItemLargeWithMargin};
 `;
