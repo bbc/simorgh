@@ -51,6 +51,9 @@ const ImageContainer = ({ blocks }) => {
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
 
+  // This grid contain will be refactored in
+  // https://github.com/bbc/simorgh/issues/1369
+  // https://github.com/bbc/simorgh/issues/1319
   return (
     <GridItemConstrainedLarge>
       <Figure

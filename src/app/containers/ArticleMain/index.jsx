@@ -7,10 +7,7 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
-import {
-  GhostWrapper,
-  GridItemConstrainedMedium,
-} from '../../lib/styledGrid';
+import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
   headline: headings,
