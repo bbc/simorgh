@@ -81,6 +81,26 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
     .should('include', bodyResponse);
 };
 
+export const retrieveData = (
+  description,
+  title,
+  type,
+  firstPublished,
+  lastPublished,
+) => {
+  retrieveMetaDataContent('head meta[name="description"]', description);
+  retrieveMetaDataContent('head meta[name="og:title"]', title);
+  retrieveMetaDataContent('head meta[name="og:type"]', type);
+  retrieveMetaDataContent(
+    'head meta[name="article:published_time"]',
+    firstPublished,
+  );
+  retrieveMetaDataContent(
+    'head meta[name="article:modified_time"]',
+    lastPublished,
+  );
+};
+
 export const metadataAssertion = () => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
@@ -94,18 +114,17 @@ export const metadataAssertion = () => {
     const lastPublished = new Date(
       windowData.metadata.lastPublished,
     ).toISOString();
-
-    retrieveMetaDataContent('head meta[name="description"]', description);
-    retrieveMetaDataContent('head meta[name="og:title"]', title);
-    retrieveMetaDataContent('head meta[name="og:type"]', type);
-    retrieveMetaDataContent(
-      'head meta[name="article:published_time"]',
-      firstPublished,
-    );
-    retrieveMetaDataContent(
-      'head meta[name="article:modified_time"]',
-      lastPublished,
-    );
+    retrieveData(description, title, type, firstPublished, lastPublished);
     getElement('html').should('contain', language);
   });
+};
+
+export const retrieveAMPMetadata = data => {
+  const description = data.promo.summary;
+  // const { language } = data.metadata.passport;
+  const title = data.promo.headlines.seoHeadline;
+  const { type } = data.metadata;
+  const firstPublished = new Date(data.metadata.firstPublished).toISOString();
+  const lastPublished = new Date(data.metadata.lastPublished).toISOString();
+  retrieveData(description, title, type, firstPublished, lastPublished);
 };
