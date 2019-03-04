@@ -27,14 +27,14 @@ npm install
 
 To run this application locally, with hot-reloading, run: `npm run dev`.
 
-The application will start on [http://localhost:7080](http://localhost:7080). To view an article, visit this url
-[http://localhost:7080/news/articles/c0000000001o](http://localhost:7080/news/articles/c0000000001o).
+The application will start on [http://localhost:8080](http://localhost:8080). To view an article, visit this url
+[http://localhost:8080/news/articles/c0000000001o](http://localhost:8080/news/articles/c0000000001o).
 
 The route is `/news/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
 Articles 25 & 27 are available on the Production environment as well as locally. These can be used for testing.
-[http://localhost:7080/news/articles/c9rpqy7pmypo](http://localhost:7080/news/articles/c9rpqy7pmypo)
-[http://localhost:7080/news/articles/c85pqyj5m2ko](http://localhost:7080/news/articles/c85pqyj5m2ko).
+[http://localhost:8080/news/articles/c9rpqy7pmypo](http://localhost:8080/news/articles/c9rpqy7pmypo)
+[http://localhost:8080/news/articles/c85pqyj5m2ko](http://localhost:8080/news/articles/c85pqyj5m2ko).
 
 There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 
@@ -89,7 +89,7 @@ We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running 
 npm run test:e2e
 ```
 
-It will spin up a production server on port 7080 and run the Cypress tests against that.
+It will spin up a production server on port 8080 and run the Cypress tests against that.
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 

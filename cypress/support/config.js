@@ -20,9 +20,9 @@ const config = {
     },
   },
   local: {
-    baseUrl: 'http://localhost:7080',
-    dataUrl: 'http://localhost:7080',
-    assetUrl: 'http://localhost:7080',
+    baseUrl: 'http://localhost:8080',
+    dataUrl: 'http://localhost:8080',
+    assetUrl: 'http://localhost:8080',
     assets: {
       news: 'c85pqyj5m2ko',
       newsThreeSubheadlines: 'c9rpqy7pmypo',

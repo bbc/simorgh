@@ -13,7 +13,7 @@ if (DOT_ENV_CONFIG.error) {
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
-  const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
+  const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (8080)
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
