@@ -27,6 +27,9 @@
     "jszip@*": {
       "reason": "Dual-licensed under GPLv3 or MIT; https://github.com/Stuk/jszip#license"
     },
+    "mdn-data@*": {
+      "reason": "Licensed under Creative Commons Zero v1.0 Universal; https://github.com/mdn/data/blob/master/LICENSE"
+    },
     "node-forge@*": {
       "reason": "Dual-licensed under GPL or BSD; https://github.com/digitalbazaar/forge#contributing"
     },
