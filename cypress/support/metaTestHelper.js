@@ -128,3 +128,11 @@ export const retrieveAMPMetadata = data => {
   const lastPublished = new Date(data.metadata.lastPublished).toISOString();
   retrieveData(description, title, type, firstPublished, lastPublished);
 };
+
+export const metadataAssertionAMP = service => {
+  cy.window().then(win => {
+    const windowData = win.SIMORGH_DATA.data;
+    cy.visit(service);
+    retrieveAMPMetadata(windowData);
+  });
+};

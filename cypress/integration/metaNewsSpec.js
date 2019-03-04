@@ -4,8 +4,8 @@ import {
   checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
-  retrieveAMPMetadata,
   retrieveMetaDataContent,
   twitterMeta,
 } from '../support/metaTestHelper';
@@ -103,10 +103,8 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    cy.window().then(win => {
-      const windowData = win.SIMORGH_DATA.data;
-      cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
-      retrieveAMPMetadata(windowData);
-    });
+    metadataAssertionAMP(
+      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+    );
   });
 });
