@@ -10,7 +10,6 @@ import Timestamp from '../Timestamp';
 import {
   GhostWrapper,
   GridItemConstrainedMedium,
-  GridItemConstrainedLargeWithMargin,
 } from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
@@ -50,12 +49,10 @@ const ArticleMain = ({ articleData }) => {
         <MetadataContainer metadata={metadata} promo={promo} />
         <main role="main">
           <GhostWrapper>
-            <GridItemConstrainedLargeWithMargin>
-              <Blocks
-                blocks={headlineBlocks}
-                componentsToRender={componentsToRenderHeadline}
-              />
-            </GridItemConstrainedLargeWithMargin>
+            <Blocks
+              blocks={headlineBlocks}
+              componentsToRender={componentsToRenderHeadline}
+            />
             <GridItemConstrainedMedium>
               <Timestamp timestamp={metadata.lastPublished} />
             </GridItemConstrainedMedium>
