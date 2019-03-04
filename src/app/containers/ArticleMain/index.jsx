@@ -58,11 +58,11 @@ const ArticleMain = ({ articleData }) => {
             </GridItemConstrainedLargeWithMargin>
             <GridItemConstrainedMedium>
               <Timestamp timestamp={metadata.lastPublished} />
-              <Blocks
-                blocks={mainBlocks}
-                componentsToRender={componentsToRenderMain}
-              />
             </GridItemConstrainedMedium>
+            <Blocks
+              blocks={mainBlocks}
+              componentsToRender={componentsToRenderMain}
+            />
           </GhostWrapper>
         </main>
       </Fragment>

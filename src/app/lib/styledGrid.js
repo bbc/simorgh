@@ -5,7 +5,7 @@ import {
   layoutGridItemSmall,
   layoutGridItemMedium,
   layoutGridItemLarge,
-  layoutGridItemLargeWithMargin
+  layoutGridItemLargeWithMargin,
 } from './layoutGrid';
 
 export const GhostWrapper = styled.div`
