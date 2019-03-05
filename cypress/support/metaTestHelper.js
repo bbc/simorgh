@@ -81,9 +81,10 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
     .should('include', bodyResponse);
 };
 
-export const retrieveData = data => {
+export const checkDataMatchesMetadata = data => {
   const description = data.promo.summary;
   const title = data.promo.headlines.seoHeadline;
+  const { language } = data.metadata.passport;
   const { type } = data.metadata;
   const firstPublished = new Date(data.metadata.firstPublished).toISOString();
   const lastPublished = new Date(data.metadata.lastPublished).toISOString();
@@ -99,20 +100,27 @@ export const retrieveData = data => {
     'head meta[name="article:modified_time"]',
     lastPublished,
   );
+  getElement('html').should('have.attr', 'lang', language);
 };
 export const metadataAssertion = () => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
-    const { language } = windowData.metadata.passport;
-    retrieveData(windowData);
-    getElement('html').should('contain', language);
+    checkDataMatchesMetadata(windowData);
   });
 };
 
-export const metadataAssertionAMP = service => {
+// This will only work if you visit the matching canonical
+// url prior to running this.
+
+export const metadataAssertionAMP = AMPURL => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
-    cy.visit(service);
-    retrieveData(windowData);
+    cy.visit(AMPURL);
+    checkDataMatchesMetadata(windowData);
   });
 };
+
+// AMP overrides the Window data in window.SIMORGH_DATA. In order to get
+// around this we visit the canonical page first to retrieve
+// window.SIMORGH_DATA and use this to compare against the metadata
+// served in the head of an AMP page.
