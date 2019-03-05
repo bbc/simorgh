@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '../../helpers/logger.node';
+import getBaseUrl from './getBaseUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -8,12 +9,20 @@ const upstreamStatusCodesToPropagate = [200, 404];
 const getInitialData = async ({ match }) => {
   const { id, service, amp } = match.params;
   const isAmp = !!amp;
-  const url = `${
-    process.env.SPARTACUS_BASE_URL
-  }/${service}/articles/${id}.json`;
 
   let data;
   let status;
+  let baseUrl = process.env.SPARTACUS_BASE_URL;
+
+  if (
+    typeof window !== 'undefined' &&
+    window.location &&
+    window.location.origin
+  ) {
+    baseUrl = getBaseUrl(window.location.origin);
+  }
+
+  const url = `${baseUrl}/${service}/articles/${id}.json`;
 
   try {
     const response = await fetch(url);
