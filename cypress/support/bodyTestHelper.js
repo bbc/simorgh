@@ -109,3 +109,32 @@ export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
 };
+
+export const errorMessage = service => {
+  getElement('h1 span').should(
+    'contain',
+    `${service.translations.error[404].statusCode}`,
+  );
+  getElement('h1').should(
+    'contain',
+    `${service.translations.error[404].title}`,
+  );
+};
+
+export const errorPageInlineLink = service => {
+  getElement('p')
+    .eq(1)
+    .within(() => {
+      getElement('a').should(
+        'have.attr',
+        'href',
+        `${service.translations.error[404].callToActionLinkUrl}`,
+      );
+    });
+};
+
+export const errorTitle = service => {
+  renderedTitle(
+    `${service.translations.error[404].title} - ${service.brandName}`,
+  );
+};
