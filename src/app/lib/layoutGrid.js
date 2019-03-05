@@ -21,11 +21,13 @@ const group4ColWidth = `6.75rem`;
 const group5ColWidth = `2.95rem`;
 /* (1280px - (2*16px margins + 19*16px gutters)  / 20 columns = 47.2px = 2.95rem single column width */
 
-export const layoutWrapperWithoutGrid = css`
+// WHY
+  
+export const gelGridMargin = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
 `;
@@ -42,8 +44,6 @@ export const layoutWrapperWithoutGrid = css`
 export const layoutGridWrapper = css`
   display: -ms-grid;
   display: grid;
-  margin: 0 auto;
-  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column-gap: ${GEL_GUTTER_BELOW_600PX};
@@ -53,7 +53,7 @@ export const layoutGridWrapper = css`
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-columns: (1fr)[6]; // prettier-ignore
-    grid-template-columns: 0 repeat(6, 1fr) 0;
+    grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-columns: 1fr (minmax(0, ${group4ColWidth}))[8] 1fr; // prettier-ignore
@@ -61,15 +61,15 @@ export const layoutGridWrapper = css`
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     -ms-grid-columns: 1fr (minmax(0, ${group5ColWidth}))[20] 1fr; // prettier-ignore
-    grid-template-columns: 0 repeat(20, minmax(0, ${group5ColWidth})) 0;
+    grid-template-columns: 1fr repeat(20, minmax(0, ${group5ColWidth})) 1fr;
   }
 `;
 
-export const layoutGridItemLarge = css`
+export const layoutGridItemLargeNoMargin = css`
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 2 / -2;
+    grid-column: 1 / -1;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
@@ -83,25 +83,23 @@ export const layoutGridItemLarge = css`
   }
 `;
 
-export const layoutGridItemLargeNoMargin = css`
-  ${layoutGridItemLarge}
-  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+export const layoutGridItemLarge = css`
+  ${layoutGridItemLargeNoMargin}
+  ${gelGridMargin}
+`;
+
+export const layoutGridItemMedium = css`
+  ${gelGridMargin}
+
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1 / -1;
   }
-`;
-
-export const layoutGridItemMedium = css`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 2 / -2;
-  }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
-    grid-column: 2 / -3;
+    grid-column: 1 / -1;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
@@ -116,20 +114,22 @@ export const layoutGridItemMedium = css`
 `;
 
 export const layoutGridItemSmall = css`
+  ${gelGridMargin}
+
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 2 / -2;
+    grid-column: 1 / -1;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
-    grid-column: 2 / -4;
+    grid-column: 1 / -3;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
-    grid-column: 2 / -3;
+    grid-column: 1 / -2;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
@@ -139,7 +139,7 @@ export const layoutGridItemSmall = css`
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 6;
     -ms-grid-column-span: 8;
-    grid-column: 6 / -10;
+    grid-column: 5 / -10;
   }
 `;
 

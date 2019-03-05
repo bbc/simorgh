@@ -38,8 +38,6 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 .c0 {
   display: -ms-grid;
   display: grid;
-  margin: 0 auto;
-  max-width: 80em;
   background: #FDFDFD;
 }
 
@@ -103,7 +101,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 @media (min-width:80em) {
   .c0 {
     -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
-    grid-template-columns: 0 repeat(20,minmax(0,2.95rem)) 0;
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
 
