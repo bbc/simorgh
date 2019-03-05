@@ -19,7 +19,7 @@ const group4ColWidth = `6.75rem`;
 /* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
 
 const group5ColWidth = `2.95rem`;
-/* (1280px - (2*16px margins + 19*16px gutters)  / 20 columns = 110.4px = 2.95rem single column width */
+/* (1280px - (2*16px margins + 19*16px gutters)  / 20 columns = 47.2px = 2.95rem single column width */
 
 export const layoutWrapperWithoutGrid = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
