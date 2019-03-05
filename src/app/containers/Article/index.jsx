@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
+import Logger from '@bbc/spartacus/logger';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
@@ -8,9 +9,8 @@ import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../helpers/logger.node';
 
-const logger = nodeLogger(__filename);
+const logger = Logger(__filename);
 
 /*
   [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
