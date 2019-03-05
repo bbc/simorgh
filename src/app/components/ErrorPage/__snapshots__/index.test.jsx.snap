@@ -76,13 +76,13 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 
 @media (max-width:37.4375em) {
   .c0 {
-    grid-gap: 0 0.5rem;
+    grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c0 {
-    grid-gap: 0 1rem;
+    grid-column-gap: 1rem;
   }
 }
 
