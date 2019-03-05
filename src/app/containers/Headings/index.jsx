@@ -6,7 +6,7 @@ import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import {
   GridItemConstrainedMedium,
-  GridItemConstrainedLargeWithMargin,
+  GridItemConstrainedLarge,
 } from '../../lib/styledGrid';
 
 const Headings = {
@@ -15,7 +15,7 @@ const Headings = {
 };
 
 const GridConstrains = {
-  headline: GridItemConstrainedLargeWithMargin,
+  headline: GridItemConstrainedLarge,
   subheadline: GridItemConstrainedMedium,
 };
 

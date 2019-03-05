@@ -69,7 +69,7 @@ export const layoutGridItemLarge = css`
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 1 / -1;
+    grid-column: 2 / -2;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
@@ -83,12 +83,12 @@ export const layoutGridItemLarge = css`
   }
 `;
 
-export const layoutGridItemLargeWithMargin = css`
+export const layoutGridItemLargeNoMargin = css`
   ${layoutGridItemLarge}
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 2 / -2;
+    grid-column: 1 / -1;
   }
 `;
 
