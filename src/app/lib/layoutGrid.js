@@ -69,17 +69,17 @@ export const layoutGridItemLargeNoMargin = css`
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 1 / -1;
+    grid-column: 1 / span 6;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
     -ms-grid-column-span: 6;
-    grid-column: 3 / -3;
+    grid-column: 3 / span 6;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 6;
     -ms-grid-column-span: 12;
-    grid-column: 6 / -6;
+    grid-column: 6 / span 12;
   }
 `;
 
@@ -94,22 +94,22 @@ export const layoutGridItemMedium = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 1 / -1;
+    grid-column: 1 / span 6;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
-    grid-column: 1 / -1;
+    grid-column: 1 / span 5;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
     -ms-grid-column-span: 5;
-    grid-column: 3 / -4;
+    grid-column: 3 / span 5;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 6;
     -ms-grid-column-span: 10;
-    grid-column: 6 / -8;
+    grid-column: 6 / span 10;
   }
 `;
 
@@ -119,27 +119,27 @@ export const layoutGridItemSmall = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
-    grid-column: 1 / -1;
+    grid-column: 1 / span 6;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
-    grid-column: 1 / -3;
+    grid-column: 1 / span 4;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
-    grid-column: 1 / -2;
+    grid-column: 1 / span 5;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     -ms-grid-column: 3;
     -ms-grid-column-span: 4;
-    grid-column: 3 / -5;
+    grid-column: 3 / span 4;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     -ms-grid-column: 6;
     -ms-grid-column-span: 8;
-    grid-column: 5 / -10;
+    grid-column: 6 / span 8;
   }
 `;
 
