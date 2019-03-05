@@ -81,13 +81,13 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
     .should('include', bodyResponse);
 };
 
-export const retrieveData = (
-  description,
-  title,
-  type,
-  firstPublished,
-  lastPublished,
-) => {
+export const retrieveData = data => {
+  const description = data.promo.summary;
+  const title = data.promo.headlines.seoHeadline;
+  const { type } = data.metadata;
+  const firstPublished = new Date(data.metadata.firstPublished).toISOString();
+  const lastPublished = new Date(data.metadata.lastPublished).toISOString();
+
   retrieveMetaDataContent('head meta[name="description"]', description);
   retrieveMetaDataContent('head meta[name="og:title"]', title);
   retrieveMetaDataContent('head meta[name="og:type"]', type);
@@ -100,39 +100,19 @@ export const retrieveData = (
     lastPublished,
   );
 };
-
 export const metadataAssertion = () => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
-    const description = windowData.promo.summary;
     const { language } = windowData.metadata.passport;
-    const title = windowData.promo.headlines.seoHeadline;
-    const { type } = windowData.metadata;
-    const firstPublished = new Date(
-      windowData.metadata.firstPublished,
-    ).toISOString();
-    const lastPublished = new Date(
-      windowData.metadata.lastPublished,
-    ).toISOString();
-    retrieveData(description, title, type, firstPublished, lastPublished);
+    retrieveData(windowData);
     getElement('html').should('contain', language);
   });
-};
-
-export const retrieveAMPMetadata = data => {
-  const description = data.promo.summary;
-  // const { language } = data.metadata.passport;
-  const title = data.promo.headlines.seoHeadline;
-  const { type } = data.metadata;
-  const firstPublished = new Date(data.metadata.firstPublished).toISOString();
-  const lastPublished = new Date(data.metadata.lastPublished).toISOString();
-  retrieveData(description, title, type, firstPublished, lastPublished);
 };
 
 export const metadataAssertionAMP = service => {
   cy.window().then(win => {
     const windowData = win.SIMORGH_DATA.data;
     cy.visit(service);
-    retrieveAMPMetadata(windowData);
+    retrieveData(windowData);
   });
 };
