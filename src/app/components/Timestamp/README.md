@@ -8,7 +8,7 @@ Displays a timestamp, with suitable semantic markup.
 For displaying an isolated timestamp, separate from the other content in an article or cell.
 
 ## When not to use this component
-When an date or time is to be displayed inline inside a paragraph.
+When a date or time is to be displayed inline inside a paragraph.
 
 ## Installation
 `npm install (package-name)`
@@ -17,7 +17,7 @@ When an date or time is to be displayed inline inside a paragraph.
 
 | Argument   | Type   | Required | Default | Example                  |
 |------------|--------|----------|---------|--------------------------|
-| `datetime` | string | Yes      | N/A     | `2006-09-24T05:00-07:00` |
+| `datetime` | string ([supported formats](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#Valid_datetime_Values)) | Yes      | N/A     | `2006-09-24T05:00-07:00` |
 | `prefix`   | node   | No       | null    | `Last updated `          |
 | `suffix`   | node   | No       | null    | `, over 3 months ago`    |
 
