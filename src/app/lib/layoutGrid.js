@@ -49,7 +49,7 @@ export const layoutGridWrapper = css`
     grid-column-gap: ${GEL_GUTTER_BELOW_600PX};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-gap: 0 ${GEL_GUTTER_ABOVE_600PX};
+    grid-column-gap: ${GEL_GUTTER_ABOVE_600PX};
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     -ms-grid-columns: (1fr)[6]; // prettier-ignore
