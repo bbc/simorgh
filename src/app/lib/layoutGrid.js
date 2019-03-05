@@ -46,7 +46,7 @@ export const layoutGridWrapper = css`
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-gap: 0 ${GEL_GUTTER_BELOW_600PX};
+    grid-column-gap: ${GEL_GUTTER_BELOW_600PX};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-gap: 0 ${GEL_GUTTER_ABOVE_600PX};
