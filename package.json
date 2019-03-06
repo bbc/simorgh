@@ -93,7 +93,7 @@
     "@bbc/psammead-sitewide-links": "^0.1.4",
     "@bbc/psammead-styles": "^0.2.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.7",
-    "@bbc/spartacus": "^0.0.9",
+    "@bbc/spartacus": "^0.0.12",
     "assets-webpack-plugin": "^3.9.8",
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
