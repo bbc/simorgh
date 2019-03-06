@@ -1,4 +1,4 @@
-import loggerJestMock from '@bbc/spartacus/helpers'; // Must be imported before getInitialData
+import { loggerJestMock } from '@bbc/spartacus/helpers'; // Must be imported before getInitialData
 import baseUrl from './getBaseUrl';
 
 const getBaseUrlMockOrigin = 'https://www.mockSite.com';
