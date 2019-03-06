@@ -22,7 +22,7 @@ const group5ColWidth = `2.95rem`;
 /* (1280px - (2*16px margins + 19*16px gutters)  / 20 columns = 47.2px = 2.95rem single column width */
 
 // WHY
-  
+
 export const gelGridMargin = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
