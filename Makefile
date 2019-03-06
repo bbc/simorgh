@@ -16,10 +16,3 @@ developmentTests:
 
 productionTests:
 	cd ${APP_DIRECTORY}; npm run build; xvfb-run npm run test:prod:ci;
-
-canIntegrate:
-	npm run build; 
-	npm run test; 
-	xvfb-run npm run test:e2e:storybook:ci; 
-	xvfb-run npm run test:prod:ci; 
-	xvfb-run npm run test:lighthouse:ci;
