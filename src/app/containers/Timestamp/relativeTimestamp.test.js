@@ -1,12 +1,19 @@
 import relativeTimestamp from './relativeTimestamp';
 
-const timeStampGenerator = (timeDifference, magnitude) =>
-  Date.now() - timeDifference * magnitude;
+const timeStampGenerator = milliseconds =>
+  Date.now() - milliseconds.timeDifference * milliseconds.magnitude;
 
 const timestampWithDiffInHours = hours =>
-  timeStampGenerator(hours, 60 * 60 * 1000);
+  timeStampGenerator({
+    timeDifference: hours,
+    magnitude: 60 * 60 * 1000,
+  });
 
-const timestampWithDiffInMins = mins => timeStampGenerator(mins, 60 * 1000);
+const timestampWithDiffInMins = mins =>
+  timeStampGenerator({
+    timeDifference: mins,
+    magnitude: 60 * 1000,
+  });
 
 const relativeBehaviour = (description, input, expectedOutput) => {
   it(description, () => {
@@ -47,15 +54,33 @@ describe('relativeTimestamp', () => {
     '5 hours ago',
   );
 
-  it('returns hours when greater than 60 minutes', () => {
-    const timestamp = timestampWithDiffInHours(94);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('94 hours ago');
-  });
+  relativeBehaviour(
+    'returns 5 hours ago',
+    timestampWithDiffInHours(5),
+    '5 hours ago',
+  );
 
-  it('returns 1 minute ago for 2 milliseconds', () => {
-    const timestamp = timeStampGenerator(2, 1);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('1 minute ago');
-  });
+  relativeBehaviour(
+    'returns 1 minute ago for 2 milliseconds',
+    timeStampGenerator({
+      timeDifference: 2,
+      magnitude: 1,
+    }),
+    '1 minute ago',
+  );
+
+  relativeBehaviour(
+    'returns an empty string when greater than 10 hours ago',
+    timestampWithDiffInHours(94),
+    '',
+  );
+
+  relativeBehaviour(
+    'returns an empty string for 12 milliseconds in the future',
+    timeStampGenerator({
+      timeDifference: -12,
+      magnitude: 1,
+    }),
+    '',
+  );
 });
