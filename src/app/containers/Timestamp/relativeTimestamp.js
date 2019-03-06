@@ -8,7 +8,7 @@ const relativeTime = receivedTimestamp => {
   );
 
   if (timeDifferenceMinutes > 10 * 60 || timeDifferenceMilliseconds < 0) {
-    return '';
+    return null;
   }
 
   let timeDiff;
