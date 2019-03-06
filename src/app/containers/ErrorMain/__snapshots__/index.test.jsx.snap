@@ -36,7 +36,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c0 {
-  display: -ms-grid;
   display: grid;
   background: #FDFDFD;
 }
@@ -86,21 +85,18 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (max-width:62.9375em) {
   .c0 {
-    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
@@ -147,32 +143,24 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (max-width:25em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
     grid-column: 3 / span 5;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 10;
     grid-column: 6 / span 10;
   }
 }
@@ -271,7 +259,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c0 {
-  display: -ms-grid;
   display: grid;
   background: #FDFDFD;
 }
@@ -321,21 +308,18 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (max-width:62.9375em) {
   .c0 {
-    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
@@ -382,32 +366,24 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (max-width:25em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
     grid-column: 3 / span 5;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 10;
     grid-column: 6 / span 10;
   }
 }
@@ -506,7 +482,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c0 {
-  display: -ms-grid;
   display: grid;
   background: #FDFDFD;
 }
@@ -556,21 +531,18 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (max-width:62.9375em) {
   .c0 {
-    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
@@ -617,32 +589,24 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (max-width:25em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
     grid-column: 3 / span 5;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 10;
     grid-column: 6 / span 10;
   }
 }
@@ -736,7 +700,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c0 {
-  display: -ms-grid;
   display: grid;
   background: #FDFDFD;
 }
@@ -786,21 +749,18 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (max-width:62.9375em) {
   .c0 {
-    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
@@ -847,32 +807,24 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (max-width:25em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
     grid-column: 3 / span 5;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 10;
     grid-column: 6 / span 10;
   }
 }
@@ -966,7 +918,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c0 {
-  display: -ms-grid;
   display: grid;
   background: #FDFDFD;
 }
@@ -1016,21 +967,18 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (max-width:62.9375em) {
   .c0 {
-    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,6.75rem))[8] 1fr;
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
-    -ms-grid-columns: 1fr (minmax(0,2.95rem))[20] 1fr;
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
   }
 }
@@ -1077,32 +1025,24 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (max-width:25em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
     grid-column: 3 / span 5;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 10;
     grid-column: 6 / span 10;
   }
 }
