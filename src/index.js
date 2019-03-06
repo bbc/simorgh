@@ -4,7 +4,7 @@ import Logger from '@bbc/spartacus/logger';
 const logger = Logger(__filename);
 const app = require('./server').default;
 
-const server = setupServer({ app });
+const server = setupServer(app);
 
 let currentApp = app;
 
