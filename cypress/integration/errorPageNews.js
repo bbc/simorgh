@@ -1,6 +1,11 @@
 import config from '../support/config';
-import { getElement, renderedTitle } from '../support/bodyTestHelper';
+import {
+  errorMessage,
+  errorPageInlineLink,
+  errorTitle,
+} from '../support/bodyTestHelper';
 import { testResponseCode } from '../support/metaTestHelper';
+import news from '../../src/app/lib/config/services/news';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -18,19 +23,19 @@ describe('Article Body Tests', () => {
     cy.visit(`/news/articles/${config.assets.nonExistent}`, {
       failOnStatusCode: false,
     });
-    getElement('h1 span').should('contain', '404');
-    getElement('h1').should('contain', 'Page cannot be found');
+    errorMessage(news);
+
+    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+      failOnStatusCode: false,
+    });
+    errorMessage(news);
   });
 
   it('should have an inline link on the page that is linked to the home page', () => {
-    getElement('p')
-      .eq(1)
-      .within(() => {
-        getElement('a').should('have.attr', 'href', 'https://www.bbc.com/news');
-      });
+    errorPageInlineLink(news);
   });
 
   it('should have a relevant error title in the head', () => {
-    renderedTitle('Page cannot be found - BBC News');
+    errorTitle(news);
   });
 });
