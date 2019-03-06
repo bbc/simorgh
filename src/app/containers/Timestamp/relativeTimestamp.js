@@ -1,11 +1,13 @@
 const relativeTime = receivedTimestamp => {
   const currentTime = Date.now();
+  const timeDifferenceMilliseconds = currentTime - receivedTimestamp;
+  const toMinuteDivisor = 1000 * 60;
   const timeDifferenceMinutes = parseInt(
-    (currentTime - receivedTimestamp) / 1000 / 60,
+    timeDifferenceMilliseconds / toMinuteDivisor,
     10,
   );
 
-  if (timeDifferenceMinutes > 10 * 60 || currentTime - receivedTimestamp < 0) {
+  if (timeDifferenceMinutes > 10 * 60 || timeDifferenceMilliseconds < 0) {
     return '';
   }
 
