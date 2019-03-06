@@ -81,31 +81,46 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
     .should('include', bodyResponse);
 };
 
+export const checkDataMatchesMetadata = data => {
+  const description = data.promo.summary;
+  const title = data.promo.headlines.seoHeadline;
+  const { language } = data.metadata.passport;
+  const { type } = data.metadata;
+  const firstPublished = new Date(data.metadata.firstPublished).toISOString();
+  const lastPublished = new Date(data.metadata.lastPublished).toISOString();
+
+  retrieveMetaDataContent('head meta[name="description"]', description);
+  retrieveMetaDataContent('head meta[name="og:title"]', title);
+  retrieveMetaDataContent('head meta[name="og:type"]', type);
+  retrieveMetaDataContent(
+    'head meta[name="article:published_time"]',
+    firstPublished,
+  );
+  retrieveMetaDataContent(
+    'head meta[name="article:modified_time"]',
+    lastPublished,
+  );
+  getElement('html').should('have.attr', 'lang', language);
+};
 export const metadataAssertion = () => {
   cy.window().then(win => {
     const windowData = win.SPARTACUS_DATA.data;
-    const description = windowData.promo.summary;
-    const { language } = windowData.metadata.passport;
-    const title = windowData.promo.headlines.seoHeadline;
-    const { type } = windowData.metadata;
-    const firstPublished = new Date(
-      windowData.metadata.firstPublished,
-    ).toISOString();
-    const lastPublished = new Date(
-      windowData.metadata.lastPublished,
-    ).toISOString();
-
-    retrieveMetaDataContent('head meta[name="description"]', description);
-    retrieveMetaDataContent('head meta[name="og:title"]', title);
-    retrieveMetaDataContent('head meta[name="og:type"]', type);
-    retrieveMetaDataContent(
-      'head meta[name="article:published_time"]',
-      firstPublished,
-    );
-    retrieveMetaDataContent(
-      'head meta[name="article:modified_time"]',
-      lastPublished,
-    );
-    getElement('html').should('contain', language);
+    checkDataMatchesMetadata(windowData);
   });
 };
+
+// This will only work if you visit the matching canonical
+// url prior to running this.
+
+export const metadataAssertionAMP = AMPURL => {
+  cy.window().then(win => {
+    const windowData = win.SPARTACUS_DATA.data;
+    cy.visit(AMPURL);
+    checkDataMatchesMetadata(windowData);
+  });
+};
+
+// AMP overrides the Window data in window.SPARTACUS_DATA. In order to get
+// around this we visit the canonical page first to retrieve
+// window.SPARTACUS_DATA and use this to compare against the metadata
+// served in the head of an AMP page.
