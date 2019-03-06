@@ -2,6 +2,8 @@ import config from '../support/config';
 import {
   checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -54,5 +56,13 @@ describe('Persian Article Meta Tests', () => {
     checkCanonicalURL(
       `https://www.bbc.com/persian/articles/${config.assets.persian}`,
     );
+  });
+
+  it('should include metadata that matches the JSON data', () => {
+    metadataAssertion();
+  });
+
+  it('should include metadata in the head on AMP pages', () => {
+    metadataAssertionAMP(`/persian/articles/${config.assets.persian}.amp`);
   });
 });
