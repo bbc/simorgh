@@ -8,6 +8,13 @@ const timestampWithDiffInHours = hours =>
 
 const timestampWithDiffInMins = mins => timeStampGenerator(mins, 60 * 1000);
 
+const relativeBehaviour = (description, input, expectedOutput) => {
+  it(description, () => {
+    const result = relativeTimestamp(input);
+    expect(result).toEqual(expectedOutput);
+  });
+};
+
 describe('relativeTimestamp', () => {
   it('returns a string which ends in ago', () => {
     const timestamp = timestampWithDiffInMins(1);
@@ -16,29 +23,29 @@ describe('relativeTimestamp', () => {
     expect(result.split(' ').pop()).toEqual('ago');
   });
 
-  it('returns 1 minute ago', () => {
-    const timestamp = timestampWithDiffInMins(1);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('1 minute ago');
-  });
+  relativeBehaviour(
+    'returns 1 minute ago',
+    timestampWithDiffInMins(1),
+    '1 minute ago',
+  );
 
-  it('returns 5 minutes ago', () => {
-    const timestamp = timestampWithDiffInMins(5);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('5 minutes ago');
-  });
+  relativeBehaviour(
+    'returns 5 minutes ago',
+    timestampWithDiffInMins(5),
+    '5 minutes ago',
+  );
 
-  it('returns 1 hour ago', () => {
-    const timestamp = timestampWithDiffInHours(1);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('1 hour ago');
-  });
+  relativeBehaviour(
+    'returns 1 hour ago',
+    timestampWithDiffInHours(1),
+    '1 hour ago',
+  );
 
-  it('returns 5 hours ago', () => {
-    const timestamp = timestampWithDiffInHours(5);
-    const result = relativeTimestamp(timestamp);
-    expect(result).toEqual('5 hours ago');
-  });
+  relativeBehaviour(
+    'returns 5 hours ago',
+    timestampWithDiffInHours(5),
+    '5 hours ago',
+  );
 
   it('returns hours when greater than 60 minutes', () => {
     const timestamp = timestampWithDiffInHours(94);
