@@ -76,9 +76,9 @@ describe('relativeTimestamp', () => {
   );
 
   relativeBehaviour(
-    'returns an empty string for 12 milliseconds in the future',
+    'returns an empty string for 60 milliseconds in the future',
     timeStampGenerator({
-      timeDifference: -12,
+      timeDifference: -60,
       magnitude: 1,
     }),
     '',
