@@ -14,14 +14,14 @@ const Headings = {
   subheadline: SubHeading,
 };
 
-const GridConstrains = {
+const GridConstraints = {
   headline: GridItemConstrainedLarge,
   subheadline: GridItemConstrainedMedium,
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
   const Heading = Headings[type];
-  const GridConstrain = GridConstrains[type];
+  const GridConstrain = GridConstraints[type];
 
   const { text } = extractText(blocks);
 
