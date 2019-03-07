@@ -1,16 +1,16 @@
 import relativeTimestamp from './relativeTimestamp';
 
-const timeStampGenerator = timedifference =>
+const timestampGenerator = timedifference =>
   Date.now() - timedifference.milliseconds * timedifference.magnitude;
 
 const timestampWithDiffInHours = hours =>
-  timeStampGenerator({
+  timestampGenerator({
     milliseconds: hours,
     magnitude: 60 * 60 * 1000,
   });
 
 const timestampWithDiffInMins = mins =>
-  timeStampGenerator({
+  timestampGenerator({
     milliseconds: mins,
     magnitude: 60 * 1000,
   });
@@ -55,14 +55,8 @@ describe('relativeTimestamp', () => {
   );
 
   relativeBehaviour(
-    'returns 5 hours ago',
-    timestampWithDiffInHours(5),
-    '5 hours ago',
-  );
-
-  relativeBehaviour(
     'returns 1 minute ago for 10 seconds',
-    timeStampGenerator({
+    timestampGenerator({
       milliseconds: 10,
       magnitude: 1000,
     }),
@@ -77,7 +71,7 @@ describe('relativeTimestamp', () => {
 
   relativeBehaviour(
     'returns null for 10 seconds in the future',
-    timeStampGenerator({
+    timestampGenerator({
       milliseconds: -10,
       magnitude: 1000,
     }),
