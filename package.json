@@ -53,7 +53,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && npm run snyk"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && npm run snyk && apache2-license-checker"
     }
   },
   "repository": {
@@ -129,6 +129,7 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "@bbc/apache2-license-checker": "^1.1.4",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@storybook/react": "^4.1.12",
     "amphtml-validator": "^1.0.23",
