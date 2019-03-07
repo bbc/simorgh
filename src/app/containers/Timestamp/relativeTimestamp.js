@@ -3,7 +3,7 @@ const relativeTime = receivedTimestamp => {
   const timeDifferenceMilliseconds = currentTime - receivedTimestamp;
   const toMinuteDivisor = 1000 * 60;
   const timeDifferenceMinutes = parseInt(
-    timeDifferenceMilliseconds / toMinuteDivisor,
+    timeDifferenceMilliseconds / (1000 * 60),
     10,
   );
 
