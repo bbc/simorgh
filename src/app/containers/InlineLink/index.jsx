@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
@@ -11,7 +12,7 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 
 const componentsToRender = { fragment };
 
-const InlineLinkContainer = ({ locator, blocks }) => {
+const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   const regexp = pathToRegexp(articleRegexPath, [], {
     start: false,
     end: false,
@@ -33,6 +34,7 @@ const InlineLinkContainer = ({ locator, blocks }) => {
   return (
     <InlineLink href={locator}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      {isExternal ? <VisuallyHiddenText>, external</VisuallyHiddenText> : null}
     </InlineLink>
   );
 };

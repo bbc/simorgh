@@ -14,39 +14,57 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const testInternalInlineLink = (description, locator, blocks) => {
+const testInternalInlineLink = (description, locator, blocks, isExternal) => {
   shouldMatchSnapshot(
     description,
     /*
       for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
     */
     <StaticRouter>
-      <InlineLinkContainer locator={locator} blocks={blocks} />
+      <InlineLinkContainer
+        locator={locator}
+        blocks={blocks}
+        isExternal={isExternal}
+      />
     </StaticRouter>,
   );
 };
 
 describe('InlineLinkContainer', () => {
-  describe('with link matching routes for SPA', () => {
+  describe('link matching routes for SPA', () => {
     testInternalInlineLink(
       'should render correctly',
       'https://www.bbc.com/news/articles/c85pqyj5m2ko',
       [fragmentBlock('This is text for an internal link')],
+      false,
     );
 
     testInternalInlineLink(
       'should render correctly for TEST environment',
       'https://www.test.bbc.com/news/articles/c85pqyj5m2ko',
       [fragmentBlock('This is text for an internal link')],
+      false,
     );
   });
 
-  describe('with link not matching SPA route', () => {
+  describe('internal link not matching SPA route', () => {
     shouldShallowMatchSnapshot(
       'should render correctly',
       <InlineLinkContainer
         locator="https://www.bbc.com/news"
         blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
+        isExternal={false}
+      />,
+    );
+  });
+
+  describe('external link accessibility', () => {
+    shouldShallowMatchSnapshot(
+      'should be explicitly marked "external" for screen reader users',
+      <InlineLinkContainer
+        locator="https://www.google.com/"
+        blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
+        isExternal
       />,
     );
   });
