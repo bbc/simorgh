@@ -4,6 +4,7 @@ import {
   checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -98,6 +99,12 @@ describe('Article Meta Tests', () => {
       `https://www.bbc.com/news/articles/${
         config.assets.newsThreeSubheadlines
       }`,
+    );
+  });
+
+  it('should include metadata in the head on AMP pages', () => {
+    metadataAssertionAMP(
+      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
 });
