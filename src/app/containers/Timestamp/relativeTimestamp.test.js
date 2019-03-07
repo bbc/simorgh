@@ -1,19 +1,21 @@
 import relativeTimestamp from './relativeTimestamp';
 
-const timestampGenerator = timedifference =>
-  Date.now() - timedifference.milliseconds * timedifference.magnitude;
+const timestampGenerator = timeDifference => {
+  const magnitudes = {
+    hours: 60 * 60 * 1000,
+    minutes: 60 * 1000,
+    seconds: 1000,
+    milliseconds: 1,
+  };
+  let timestamp = Date.now();
+  const keyNames = Object.keys(timeDifference);
 
-const timestampWithDiffInHours = hours =>
-  timestampGenerator({
-    milliseconds: hours,
-    magnitude: 60 * 60 * 1000,
+  keyNames.forEach(diff => {
+    timestamp -= timeDifference[diff] * magnitudes[diff];
   });
 
-const timestampWithDiffInMins = mins =>
-  timestampGenerator({
-    milliseconds: mins,
-    magnitude: 60 * 1000,
-  });
+  return timestamp;
+};
 
 const relativeBehaviour = (description, input, expectedOutput) => {
   it(description, () => {
@@ -24,7 +26,7 @@ const relativeBehaviour = (description, input, expectedOutput) => {
 
 describe('relativeTimestamp', () => {
   it('returns a string which ends in ago', () => {
-    const timestamp = timestampWithDiffInMins(1);
+    const timestamp = timestampGenerator({ minutes: 1 });
     const result = relativeTimestamp(timestamp);
     expect(typeof result).toEqual('string');
     expect(result.split(' ').pop()).toEqual('ago');
@@ -32,49 +34,49 @@ describe('relativeTimestamp', () => {
 
   relativeBehaviour(
     'returns 1 minute ago',
-    timestampWithDiffInMins(1),
+    timestampGenerator({ minutes: 1 }),
     '1 minute ago',
   );
 
   relativeBehaviour(
     'returns 5 minutes ago',
-    timestampWithDiffInMins(5),
+    timestampGenerator({ minutes: 5 }),
     '5 minutes ago',
   );
 
   relativeBehaviour(
     'returns 1 hour ago',
-    timestampWithDiffInHours(1),
+    timestampGenerator({ hours: 1 }),
     '1 hour ago',
   );
 
   relativeBehaviour(
     'returns 5 hours ago',
-    timestampWithDiffInHours(5),
+    timestampGenerator({ hours: 5 }),
+    '5 hours ago',
+  );
+
+  relativeBehaviour(
+    'returns 5 hours ago for 5 hours 30 mins',
+    timestampGenerator({ hours: 5, minutes: 30 }),
     '5 hours ago',
   );
 
   relativeBehaviour(
     'returns 1 minute ago for 10 seconds',
-    timestampGenerator({
-      milliseconds: 10,
-      magnitude: 1000,
-    }),
+    timestampGenerator({ milliseconds: 10 }),
     '1 minute ago',
   );
 
   relativeBehaviour(
     'returns null when greater than 10 hours ago',
-    timestampWithDiffInHours(94),
+    timestampGenerator({ hours: 94 }),
     null,
   );
 
   relativeBehaviour(
     'returns null for 10 seconds in the future',
-    timestampGenerator({
-      milliseconds: -10,
-      magnitude: 1000,
-    }),
+    timestampGenerator({ seconds: -10 }),
     null,
   );
 });
