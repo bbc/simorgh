@@ -45,6 +45,12 @@ describe('relativeTimestamp', () => {
   );
 
   relativeBehaviour(
+    'returns 5 mins ago for 5 mins 50 seconds',
+    timestampGenerator({ minutes: 5, seconds: 50 }),
+    '5 minutes ago',
+  );
+
+  relativeBehaviour(
     'returns 1 hour ago',
     timestampGenerator({ hours: 1 }),
     '1 hour ago',

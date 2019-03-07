@@ -17,7 +17,7 @@ const relativeTime = receivedTimestamp => {
   let unit;
 
   if (timeDifferenceMinutes >= 60) {
-    timeDiff = timeDifferenceMinutes / 60;
+    timeDiff = parseInt(timeDifferenceMinutes / 60, 10);
     unit = timeDiff > 1 ? 'hours' : 'hour';
   } else {
     timeDiff = timeDifferenceMinutes <= 1 ? 1 : timeDifferenceMinutes;
