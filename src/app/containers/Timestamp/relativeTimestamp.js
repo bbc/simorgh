@@ -1,3 +1,18 @@
+const constructTimestamp = timeDiffMins => {
+  let timeDiff;
+  let unit;
+
+  if (timeDiffMins >= 60) {
+    timeDiff = parseInt(timeDiffMins / 60, 10);
+    unit = timeDiff > 1 ? 'hours' : 'hour';
+  } else {
+    timeDiff = timeDiffMins <= 1 ? 1 : timeDiffMins;
+    unit = timeDiff === 1 ? 'minute' : 'minutes';
+  }
+
+  return `${timeDiff} ${unit} ago`;
+};
+
 const relativeTime = receivedTimestamp => {
   const currentTime = Date.now();
   const timeDifferenceMilliseconds = currentTime - receivedTimestamp;
@@ -13,18 +28,7 @@ const relativeTime = receivedTimestamp => {
     return null;
   }
 
-  let timeDiff;
-  let unit;
-
-  if (timeDifferenceMinutes >= 60) {
-    timeDiff = parseInt(timeDifferenceMinutes / 60, 10);
-    unit = timeDiff > 1 ? 'hours' : 'hour';
-  } else {
-    timeDiff = timeDifferenceMinutes <= 1 ? 1 : timeDifferenceMinutes;
-    unit = timeDiff === 1 ? 'minute' : 'minutes';
-  }
-
-  return `${timeDiff} ${unit} ago`;
+  return constructTimestamp(timeDifferenceMinutes);
 };
 
 export default relativeTime;
