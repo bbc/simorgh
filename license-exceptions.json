@@ -1,8 +1,5 @@
 {
   "exceptions": {
-    "abab@*": {
-      "reason": "Licensed under W3C 3-clause BSD license; https://github.com/jsdom/abab/blob/master/LICENSE.md"
-    },
     "atob@*": {
       "reason": "Licensed under MIT or Apache 2.0; https://git.coolaj86.com/coolaj86/atob.js/src/branch/master/LICENSE"
     },
