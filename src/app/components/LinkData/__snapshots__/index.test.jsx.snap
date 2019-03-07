@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkData should correctly render for an error 1`] = `
+<script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "@context": "http://schema.org",
+        "@type": "article",
+        "headline": "nope",
+      },
+    }
+  }
+  type="application/ld+json"
+/>
+`;
