@@ -7,7 +7,8 @@ const relativeTime = receivedTimestamp => {
   );
 
   const isInFuture = timeDifferenceMilliseconds < 0;
-  const isMoreThanTenHoursAgo = timeDifferenceMinutes > (10 * 60);
+  const isMoreThanTenHoursAgo = timeDifferenceMinutes > 10 * 60;
+
   if (isInFuture || isMoreThanTenHoursAgo) {
     return null;
   }
@@ -18,12 +19,9 @@ const relativeTime = receivedTimestamp => {
   if (timeDifferenceMinutes >= 60) {
     timeDiff = timeDifferenceMinutes / 60;
     unit = timeDiff > 1 ? 'hours' : 'hour';
-  } else if (timeDifferenceMinutes <= 1) {
-    timeDiff = 1;
-    unit = 'minute';
   } else {
-    timeDiff = timeDifferenceMinutes;
-    unit = 'minutes';
+    timeDiff = timeDifferenceMinutes <= 1 ? 1 : timeDifferenceMinutes;
+    unit = timeDiff === 1 ? 'minute' : 'minutes';
   }
 
   return `${timeDiff} ${unit} ago`;
