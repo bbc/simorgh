@@ -8,7 +8,7 @@ import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { GEL_PARAGON } from '@bbc/gel-foundations/typography';
 import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
-import { GhostWrapper, GridItemConstrained } from '../../lib/styledGrid';
+import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const StatusCode = styled.span`
   ${GEL_PARAGON}
@@ -23,7 +23,7 @@ const ShortHeadline = styled(Headline)`
   padding: 2.5rem 0 2.5rem 0;
 `;
 
-const LongGridItemConstrained = styled(GridItemConstrained)`
+const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
   padding-bottom: 4rem;
 `;
 
@@ -39,7 +39,7 @@ const ErrorPage = ({
 }) => (
   <main role="main">
     <GhostWrapper>
-      <LongGridItemConstrained>
+      <LongGridItemConstrainedMedium>
         <ShortHeadline>
           <StatusCode>{statusCode}</StatusCode>
           {title}
@@ -59,7 +59,7 @@ const ErrorPage = ({
           </InlineLink>
           {callToActionLast}
         </Paragraph>
-      </LongGridItemConstrained>
+      </LongGridItemConstrainedMedium>
     </GhostWrapper>
   </main>
 );
