@@ -10,6 +10,7 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
 import nodeLogger from '../app/helpers/logger.node';
@@ -86,6 +87,16 @@ server
         res.status(500).send('Unable to find service worker.');
       }
     });
+  })
+  .get(manifestRegexPath, async ({ params }, res) => {
+    const { service } = params;
+    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+    res.sendFile(manifestPath, {}, error => {
+      if (error) {
+        console.log(error); // eslint-disable-line no-console
+        res.status(500).send('Unable to find manifest.');
+      }
+    })
   })
   .get(articleRegexPath, async ({ url }, res) => {
     try {
