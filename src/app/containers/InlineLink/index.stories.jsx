@@ -1,0 +1,65 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import InlineLinkContainer from '.';
+
+// const InternalInlineLink = (locator, blocks, isExternal) => {
+//   <InlineLinkContainer
+//     locator={locator}
+//     blocks={blocks}
+//     isExternal={isExternal}
+//   />;
+// };
+
+const fragmentBlock = (text, attributes = []) => ({
+  type: 'fragment',
+  model: {
+    text,
+    attributes,
+  },
+});
+
+storiesOf('InlineLink', module)
+  .add('internal link', () => (
+    <InlineLinkContainer
+      locator="https://www.bbc.com/news"
+      blocks={[fragmentBlock('This is an internal link', [])]}
+      isExternal={false}
+    />
+  ))
+  .add('internal link bold', () => (
+    <InlineLinkContainer
+      locator="https://www.bbc.com/news"
+      blocks={[
+        fragmentBlock('This is an internal link which is bold', ['bold']),
+      ]}
+      isExternal={false}
+    />
+  ))
+  .add('internal link italic', () => (
+    <InlineLinkContainer
+      locator="https://www.bbc.com/news"
+      blocks={[
+        fragmentBlock('This is an internal link which is italic', ['italic']),
+      ]}
+      isExternal={false}
+    />
+  ))
+  .add('internal link bold & italic', () => (
+    <InlineLinkContainer
+      locator="https://www.bbc.com/news"
+      blocks={[
+        fragmentBlock('This is an internal link which is bold & italic', [
+          'bold',
+          'italic',
+        ]),
+      ]}
+      isExternal={false}
+    />
+  ))
+  .add('external link', () => (
+    <InlineLinkContainer
+      locator="https://www.example.com"
+      blocks={[fragmentBlock('This is an external link', [])]}
+      isExternal
+    />
+  ));
