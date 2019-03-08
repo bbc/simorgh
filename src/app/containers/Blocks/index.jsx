@@ -6,18 +6,26 @@ const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, model } = block;
 
-    const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
+    if (!componentsToRender || !type) {
+      return null;
+    }
 
     const Block = componentsToRender[type];
 
-    return Block ? (
+    if (!Block) {
+      return null;
+    }
+
+    const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
+
+    return (
       <Block
         key={nanoid()}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}
       />
-    ) : null;
+    );
   });
 
 Blocks.propTypes = {
