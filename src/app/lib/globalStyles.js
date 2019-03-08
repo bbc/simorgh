@@ -1,6 +1,14 @@
 /* eslint-disable no-unused-expressions */
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
+import {
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_BOLD,
+  F_REITH_SERIF_LIGHT
+} from '@bbc/psammead-styles/fonts';
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -14,20 +22,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  @font-face {
-    font-display: optional;
-    font-family: ReithSansNewsRegular;
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Rg.woff') format('woff');
-  }
-  @font-face {
-    font-display: optional;
-    font-family: ReithSerifNewsMedium;
-    font-style: normal;
-    font-weight: 600;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff');
-  }
+  ${F_REITH_SERIF_MEDIUM}
+  ${F_REITH_SERIF_MEDIUM_ITALIC}
+  ${F_REITH_SANS_REGULAR}
+  ${F_REITH_SANS_ITALIC}
+  ${F_REITH_SANS_BOLD}
+  ${F_REITH_SERIF_LIGHT}
 `;
 
 export default GlobalStyle;
