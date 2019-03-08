@@ -9,8 +9,6 @@ const LinkData = ({
   optimoUrn,
   service,
 }) => {
-  const linkMetadata = {};
-
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
   const url =
@@ -46,16 +44,18 @@ const LinkData = ({
     noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
   };
 
-  linkMetadata['@context'] = 'http://schema.org';
-  linkMetadata['@type'] = type;
-  linkMetadata.url = `https://www.bbc.com/${service}/articles/${optimoId}`;
-  linkMetadata.publisher = publisher;
-  linkMetadata.datePublished = new Date(firstPublished).toISOString();
-  linkMetadata.dateModified = new Date(lastUpdated).toISOString();
-  linkMetadata.headline = seoHeadline;
-  linkMetadata.image = image;
-  linkMetadata.thumbnailUrl = url;
-  linkMetadata.author = author;
+  const linkMetadata = {
+    '@context': 'http://schema.org',
+    '@type': type,
+    url: `https://www.bbc.com/${service}/articles/${optimoId}`,
+    publisher,
+    datePublished: new Date(firstPublished).toISOString(),
+    dateModified: new Date(lastUpdated).toISOString(),
+    headline: seoHeadline,
+    image,
+    thumbnailUrl: url,
+    author,
+  };
 
   return (
     <Fragment>
