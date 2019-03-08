@@ -10,8 +10,9 @@ exports[`Document Component should render AMP version correctly 1`] = `
       name="viewport"
     />
     <link
-      href="/manifest.json"
-      rel="manifest"
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
     />
     <ResourceHints />
     <title>
@@ -68,8 +69,9 @@ exports[`Document Component should render correctly 1`] = `
       name="viewport"
     />
     <link
-      href="/manifest.json"
-      rel="manifest"
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
     />
     <ResourceHints />
     <title>
