@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import ResourceHints from './ResourceHints';
+import ResourceHints from '../../app/components/ResourceHints';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -27,10 +26,6 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta charSet="utf-8" />
-        <meta name="robots" content="noindex,nofollow" />
-        <meta name="theme-color" content={C_POSTBOX} />
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints />

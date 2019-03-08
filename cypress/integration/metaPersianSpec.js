@@ -1,5 +1,9 @@
+import config from '../support/config';
 import {
+  checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -8,8 +12,7 @@ import {
 describe('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/persian/articles/cwv2xv848j5o');
+    cy.visit(`/persian/articles/${config.assets.persian}`);
   });
 
   it('should have a nofollow meta tag', () => {
@@ -36,7 +39,7 @@ describe('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    'https://www.bbc.com/persian/articles/cwv2xv848j5o',
+    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -48,4 +51,18 @@ describe('Persian Article Meta Tests', () => {
     '@bbcpersian',
     'پهپادی که برایتان قهوه می‌آورد',
   );
+
+  it('should include the canonical URL', () => {
+    checkCanonicalURL(
+      `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    );
+  });
+
+  it('should include metadata that matches the JSON data', () => {
+    metadataAssertion();
+  });
+
+  it('should include metadata in the head on AMP pages', () => {
+    metadataAssertionAMP(`/persian/articles/${config.assets.persian}.amp`);
+  });
 });

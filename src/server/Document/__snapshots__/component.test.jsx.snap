@@ -1,25 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document should render AMP version correctly 1`] = `
+exports[`Document Component should render AMP version correctly 1`] = `
 <html
   lang="test"
 >
   <head>
-    <meta
-      content="IE=edge"
-      httpEquiv="X-UA-Compatible"
-    />
-    <meta
-      charSet="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
@@ -74,26 +59,11 @@ exports[`Document should render AMP version correctly 1`] = `
 </html>
 `;
 
-exports[`Document should render correctly 1`] = `
+exports[`Document Component should render correctly 1`] = `
 <html
   lang="test"
 >
   <head>
-    <meta
-      content="IE=edge"
-      httpEquiv="X-UA-Compatible"
-    />
-    <meta
-      charSet="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"

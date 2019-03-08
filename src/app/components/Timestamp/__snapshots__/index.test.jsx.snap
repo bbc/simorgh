@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Timestamp should render Timestamp with datetime attribute and text 1`] = `
+exports[`Timestamp should render Timestamp with a prefix 1`] = `
 .c0 {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   line-height: 1rem;
-  color: #5A5A5A;
+  color: #757575;
   display: block;
   font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
@@ -18,7 +18,77 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
 
 @media (min-width:37.5em) {
   .c0 {
-    font-size: 0.8125em;
+    font-size: 0.8125rem;
+  }
+}
+
+<span
+  className="c0"
+>
+  Updated 
+  <time
+    dateTime="1530947227000"
+  >
+    7 July 2018
+  </time>
+</span>
+`;
+
+exports[`Timestamp should render Timestamp with a suffix 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125rem;
+  }
+}
+
+<span
+  className="c0"
+>
+  <time
+    dateTime="1530947227000"
+  >
+    7 July 2018
+  </time>
+  <span>
+    Some custom markup
+  </span>
+</span>
+`;
+
+exports[`Timestamp should render Timestamp with datetime attribute and text 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125rem;
   }
 }
 

@@ -25,10 +25,6 @@ export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
   });
 };
 
-export const metaDataDescription = description => {
-  retrieveMetaDataContent('head meta[name="description"]', description);
-};
-
 export const openGraphMeta = (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
@@ -74,8 +70,57 @@ export const twitterMeta = (
   });
 };
 
+export const checkCanonicalURL = URL => {
+  const canonical = getElement('head link[rel="canonical"]');
+  canonical.should('have.attr', 'href', URL);
+};
+
 export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')
     .should('include', bodyResponse);
 };
+
+export const checkDataMatchesMetadata = data => {
+  const description = data.promo.summary;
+  const title = data.promo.headlines.seoHeadline;
+  const { language } = data.metadata.passport;
+  const { type } = data.metadata;
+  const firstPublished = new Date(data.metadata.firstPublished).toISOString();
+  const lastPublished = new Date(data.metadata.lastPublished).toISOString();
+
+  retrieveMetaDataContent('head meta[name="description"]', description);
+  retrieveMetaDataContent('head meta[name="og:title"]', title);
+  retrieveMetaDataContent('head meta[name="og:type"]', type);
+  retrieveMetaDataContent(
+    'head meta[name="article:published_time"]',
+    firstPublished,
+  );
+  retrieveMetaDataContent(
+    'head meta[name="article:modified_time"]',
+    lastPublished,
+  );
+  getElement('html').should('have.attr', 'lang', language);
+};
+export const metadataAssertion = () => {
+  cy.window().then(win => {
+    const windowData = win.SIMORGH_DATA.data;
+    checkDataMatchesMetadata(windowData);
+  });
+};
+
+// This will only work if you visit the matching canonical
+// url prior to running this.
+
+export const metadataAssertionAMP = AMPURL => {
+  cy.window().then(win => {
+    const windowData = win.SIMORGH_DATA.data;
+    cy.visit(AMPURL);
+    checkDataMatchesMetadata(windowData);
+  });
+};
+
+// AMP overrides the Window data in window.SIMORGH_DATA. In order to get
+// around this we visit the canonical page first to retrieve
+// window.SIMORGH_DATA and use this to compare against the metadata
+// served in the head of an AMP page.
