@@ -1,9 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import {
-  shouldMatchSnapshot,
-  shouldShallowMatchSnapshot,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import InlineLinkContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -49,7 +46,7 @@ describe('InlineLinkContainer', () => {
   });
 
   describe('internal link not matching SPA route', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <InlineLinkContainer
         locator="https://www.bbc.com/news"
@@ -60,7 +57,7 @@ describe('InlineLinkContainer', () => {
   });
 
   describe('external link accessibility', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should be explicitly marked "external" for screen reader users',
       <ServiceContextProvider service="news">
         <InlineLinkContainer
@@ -71,7 +68,7 @@ describe('InlineLinkContainer', () => {
       </ServiceContextProvider>,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should be explicitly marked "external" for screen reader users & localised',
       <ServiceContextProvider service="persian">
         <InlineLinkContainer

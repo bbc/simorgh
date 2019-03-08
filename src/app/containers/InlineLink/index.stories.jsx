@@ -3,14 +3,6 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-// const InternalInlineLink = (locator, blocks, isExternal) => {
-//   <InlineLinkContainer
-//     locator={locator}
-//     blocks={blocks}
-//     isExternal={isExternal}
-//   />;
-// };
-
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
   model: {
