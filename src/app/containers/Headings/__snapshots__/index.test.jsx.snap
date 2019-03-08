@@ -5,7 +5,24 @@ exports[`Headings with headline data should render correctly 1`] = `
   <ForwardRef
     text="This is a headline!"
   >
-    This is a headline!
+    <Blocks
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "attributes": Array [],
+              "text": "This is a headline!",
+            },
+            "type": "fragment",
+          },
+        ]
+      }
+      componentsToRender={
+        Object {
+          "fragment": [Function],
+        }
+      }
+    />
   </ForwardRef>
 </ForwardRef>
 `;
@@ -15,7 +32,24 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   <ForwardRef
     text="This is a subheadline"
   >
-    This is a subheadline
+    <Blocks
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "attributes": Array [],
+              "text": "This is a subheadline",
+            },
+            "type": "fragment",
+          },
+        ]
+      }
+      componentsToRender={
+        Object {
+          "fragment": [Function],
+        }
+      }
+    />
   </ForwardRef>
 </ForwardRef>
 `;
