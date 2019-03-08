@@ -103,10 +103,6 @@ export const layoutGridItemLargeNoMargin = css`
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 12;
   }
-
-  @supports (display: grid) {
-    max-width: initial;
-  }
 `;
 
 export const layoutGridItemLarge = css`
