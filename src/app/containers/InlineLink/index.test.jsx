@@ -5,6 +5,7 @@ import {
   shouldShallowMatchSnapshot,
 } from '../../helpers/tests/testHelpers';
 import InlineLinkContainer from './index';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
@@ -61,11 +62,24 @@ describe('InlineLinkContainer', () => {
   describe('external link accessibility', () => {
     shouldShallowMatchSnapshot(
       'should be explicitly marked "external" for screen reader users',
-      <InlineLinkContainer
-        locator="https://www.google.com/"
-        blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
-        isExternal
-      />,
+      <ServiceContextProvider service="news">
+        <InlineLinkContainer
+          locator="https://www.example.com/"
+          blocks={[fragmentBlock('This is a link', [])]}
+          isExternal
+        />
+      </ServiceContextProvider>,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should be explicitly marked "external" for screen reader users & localised',
+      <ServiceContextProvider service="persian">
+        <InlineLinkContainer
+          locator="https://www.example.com/"
+          blocks={[fragmentBlock('این لینک هست', [''])]}
+          isExternal
+        />
+      </ServiceContextProvider>,
     );
   });
 });

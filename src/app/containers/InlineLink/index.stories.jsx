@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import InlineLinkContainer from '.';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 // const InternalInlineLink = (locator, blocks, isExternal) => {
 //   <InlineLinkContainer
@@ -56,10 +57,21 @@ storiesOf('InlineLink', module)
       isExternal={false}
     />
   ))
-  .add('external link', () => (
-    <InlineLinkContainer
-      locator="https://www.example.com"
-      blocks={[fragmentBlock('This is an external link', [])]}
-      isExternal
-    />
+  .add('external link - English offscreen text', () => (
+    <ServiceContextProvider service="news">
+      <InlineLinkContainer
+        locator="https://www.example.com/"
+        blocks={[fragmentBlock('This is an external link', [])]}
+        isExternal
+      />
+    </ServiceContextProvider>
+  ))
+  .add('external link - Persian offscreen text', () => (
+    <ServiceContextProvider service="persian">
+      <InlineLinkContainer
+        locator="https://www.example.com/"
+        blocks={[fragmentBlock('این لینک هست', [''])]}
+        isExternal
+      />
+    </ServiceContextProvider>
   ));

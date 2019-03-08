@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
@@ -32,10 +33,16 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
 
   // else return a normal hyperlink
   return (
-    <InlineLink href={locator}>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      {isExternal ? <VisuallyHiddenText>, external</VisuallyHiddenText> : null}
-    </InlineLink>
+    <ServiceContextConsumer>
+      {({ externalLinkText }) => (
+        <InlineLink href={locator}>
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          {isExternal ? (
+            <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
+          ) : null}
+        </InlineLink>
+      )}
+    </ServiceContextConsumer>
   );
 };
 

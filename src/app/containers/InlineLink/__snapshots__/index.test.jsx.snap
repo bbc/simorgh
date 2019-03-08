@@ -1,60 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
-<ForwardRef
-  href="https://www.google.com/"
+exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "articleAuthor": "https://www.facebook.com/bbcnews",
+      "brandName": "BBC News فارسی",
+      "defaultImage": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "defaultImageAltText": "BBC News فارسی",
+      "externalLinkText": "، لینک خارجی",
+      "imageCaptionOffscreenText": " ، عنوان تصویر",
+      "imageCopyrightOffscreenText": " ، منبع تصویر",
+      "locale": "fa",
+      "service": "persian",
+      "serviceName": "Persian",
+      "themeColor": "#B80000",
+      "translations": Object {
+        "error": Object {
+          "404": Object {
+            "callToActionFirst": "روش دیگر، لطفآ به ",
+            "callToActionLast": " بازدید کنید",
+            "callToActionLinkText": "صفحه اصلی بی بی سی فارسی",
+            "callToActionLinkUrl": "https://www.bbc.com/persian",
+            "message": "متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:",
+            "solutions": Array [
+              "لینک را چک کنید",
+              "صفحه را ریفرش کنید",
+              "با استفاده از نوار جستجوی بی بی سی برای این صفحه جستجو کنید",
+            ],
+            "statusCode": "۴۰۴",
+            "title": "این صفحه یافت نشد",
+          },
+          "500": Object {
+            "callToActionFirst": "روش دیگر، لطفآ به ",
+            "callToActionLast": " بازدید کنید",
+            "callToActionLinkText": "صفحه اصلی بی بی سی فارسی",
+            "callToActionLinkUrl": "https://www.bbc.com/persian",
+            "message": "متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:",
+            "solutions": Array [
+              "صفحه را ریفرش کنید",
+              "بعدا برگردید",
+            ],
+            "statusCode": "۵۰۰",
+            "title": "مشکلی پیش آمده است",
+          },
+        },
+      },
+      "twitterCreator": "@bbcpersian",
+      "twitterSite": "@bbcpersian",
+    }
+  }
 >
-  <Blocks
+  <InlineLinkContainer
     blocks={
       Array [
         Object {
           "model": Object {
             "attributes": Array [
-              "bold",
+              "",
             ],
-            "text": "This is bold text for a link",
+            "text": "این لینک هست",
           },
           "type": "fragment",
         },
       ]
     }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-      }
-    }
+    isExternal={true}
+    locator="https://www.example.com/"
   />
-  <ForwardRef>
-    , external
-  </ForwardRef>
-</ForwardRef>
+</Context.Provider>
+`;
+
+exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "articleAuthor": "https://www.facebook.com/bbcnews",
+      "brandName": "BBC News",
+      "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+      "defaultImageAltText": "BBC News",
+      "externalLinkText": ", external",
+      "imageCaptionOffscreenText": "Image caption, ",
+      "imageCopyrightOffscreenText": "Image source, ",
+      "locale": "en_GB",
+      "service": "news",
+      "serviceName": "News",
+      "themeColor": "#B80000",
+      "translations": Object {
+        "error": Object {
+          "404": Object {
+            "callToActionFirst": "Alternatively, please visit the ",
+            "callToActionLast": "",
+            "callToActionLinkText": "BBC News homepage.",
+            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "message": "Sorry, we're unable to bring you the page you’re looking for. Please try:",
+            "solutions": Array [
+              "Double checking the url",
+              "Hitting the refresh button in your browser",
+              "Searching for this page using the BBC search bar",
+            ],
+            "statusCode": "404",
+            "title": "Page cannot be found",
+          },
+          "500": Object {
+            "callToActionFirst": "Alternatively, please visit the ",
+            "callToActionLast": "",
+            "callToActionLinkText": "BBC News homepage.",
+            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "message": "Sorry, we’re currently unable to bring you the page you're looking for. Please try:",
+            "solutions": Array [
+              "Hitting the refresh button in your browser",
+              "Coming back again later",
+            ],
+            "statusCode": "500",
+            "title": "Internal server error",
+          },
+        },
+      },
+      "twitterCreator": "@BBCNews",
+      "twitterSite": "@BBCNews",
+    }
+  }
+>
+  <InlineLinkContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "attributes": Array [],
+            "text": "This is a link",
+          },
+          "type": "fragment",
+        },
+      ]
+    }
+    isExternal={true}
+    locator="https://www.example.com/"
+  />
+</Context.Provider>
 `;
 
 exports[`InlineLinkContainer internal link not matching SPA route should render correctly 1`] = `
-<ForwardRef
-  href="https://www.bbc.com/news"
->
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is bold text for a link",
-          },
-          "type": "fragment",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-      }
-    }
-  />
-</ForwardRef>
+<ServiceContextConsumer>
+  [Function]
+</ServiceContextConsumer>
 `;
 
 exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
