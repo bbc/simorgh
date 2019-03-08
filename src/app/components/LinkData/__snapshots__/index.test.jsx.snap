@@ -1,13 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkData should correctly render for an error 1`] = `
+exports[`LinkData should correctly render metadata for links 1`] = `
 <script
   dangerouslySetInnerHTML={
     Object {
       "__html": Object {
         "@context": "http://schema.org",
         "@type": "article",
-        "headline": "nope",
+        "author": Object {
+          "@type": "NewsMediaOrganization",
+          "logo": Object {
+            "@type": "ImageObject",
+            "height": 576,
+            "url": "https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+            "width": 1024,
+          },
+          "name": "news",
+          "noBylinesPolicy": "http://www.bbc.com/news/help-41670342#authorexpertise",
+        },
+        "dateModified": "2019-02-26T11:25:10.555Z",
+        "datePublished": "2018-10-10T16:19:31.344Z",
+        "headline": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
+        "image": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+          "width": 1024,
+        },
+        "publisher": Object {
+          "@type": "NewsMediaOrganization",
+          "logo": Object {
+            "@type": "ImageObject",
+            "height": 576,
+            "url": "https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+            "width": 1024,
+          },
+          "name": "news",
+          "publishingPrinciples": "http://www.bbc.com/news/help-41670342",
+        },
+        "thumbnailUrl": "https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+        "url": "https://www.bbc.com/news/articles/c9rpqy7pmypo",
       },
     }
   }
