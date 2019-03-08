@@ -50,6 +50,17 @@ describe('Server', () => {
     });
   });
 
+  describe('Manifest json', () => {
+    describe('Services not on allowlist', () => {
+      it('should serve a 404 error for service foobar', async () => {
+        const { statusCode } = await makeRequest(
+          '/foobar/articles/manifest.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
+    });
+  });
+
   describe('Data', () => {
     it('should respond with JSON', async () => {
       const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
