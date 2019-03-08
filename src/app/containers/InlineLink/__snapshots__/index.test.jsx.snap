@@ -45,7 +45,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
   <span
     className="c1"
   >
-    ، لینک خارجی
+     ،لینک خارجی
   </span>
 </a>
 `;

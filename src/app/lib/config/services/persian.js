@@ -5,7 +5,7 @@ const persian = {
   brandName: 'BBC News فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
-  externalLinkText: '، لینک خارجی',
+  externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',
