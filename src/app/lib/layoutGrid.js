@@ -25,7 +25,7 @@ const group4WrapperMaxWidth = `45.5rem`;
 // (6.75rem * 6) + 5*16px gutters = 728 = 45.5 rem
 
 const group5WrapperMaxWidth = `46.4rem`;
-// (2.95rem * 10) + 9*16px gutters = 742.4 = 46.4 rem
+// (2.95rem * 12) + 11*16px gutters = 742.4 = 46.4 rem
 
 const fiveOfSixColumnsMaxWidthGroup4 = `37.75rem`;
 /* (group4ColWidth 6.75rem * 5) + (4 * 16px gutters) = 33.75rem + 4rem = 37.75rem */
