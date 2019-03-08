@@ -36,8 +36,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 }
 
 .c0 {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background: #FDFDFD;
 }
 
@@ -108,8 +107,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
   .c0 {
     display: grid;
     max-width: initial;
-    margin-left: initial;
-    margin-right: initial;
+    margin: initial;
   }
 }
 

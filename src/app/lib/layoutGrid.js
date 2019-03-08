@@ -64,8 +64,7 @@ export const gelGridMargin = css`
 */
 
 export const layoutGridWrapper = css`
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column-gap: ${GEL_GUTTER_BELOW_600PX};
@@ -88,8 +87,7 @@ export const layoutGridWrapper = css`
   @supports (display: grid) {
     display: grid;
     max-width: initial;
-    margin-left: initial;
-    margin-right: initial;
+    margin: initial;
   }
 `;
 
