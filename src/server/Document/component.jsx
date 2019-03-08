@@ -11,6 +11,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
+  const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !data.isAmp;
   const scripts = assets.map(asset => (
@@ -26,6 +27,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
+        {headScript}
         {meta}
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />

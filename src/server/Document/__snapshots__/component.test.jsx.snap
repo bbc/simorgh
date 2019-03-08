@@ -5,6 +5,9 @@ exports[`Document Component should render AMP version correctly 1`] = `
   lang="test"
 >
   <head>
+    <script
+      type="application/ld+json"
+    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
@@ -63,6 +66,9 @@ exports[`Document Component should render correctly 1`] = `
   lang="test"
 >
   <head>
+    <script
+      type="application/ld+json"
+    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
