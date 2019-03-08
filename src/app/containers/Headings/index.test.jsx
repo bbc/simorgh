@@ -100,16 +100,16 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.html()).toBe('Plain headline');
+      expect(renderedWrapper.find('h1').html()).toBe('Plain headline');
     });
-    it('should render subheading', () => {
+    it('should render subheadline', () => {
       const renderedWrapper = render(
         <HeadingsContainer
-          blocks={blocksSingleFragment('Plain subheading', [])}
+          blocks={blocksSingleFragment('Plain subheadline', [])}
           type="subheadline"
         />,
       );
-      expect(renderedWrapper.html()).toBe('Plain subheading');
+      expect(renderedWrapper.find('h2').html()).toBe('Plain subheadline');
     });
   });
 
@@ -121,7 +121,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.html()).toBe('<i>All is italic</i>');
+      expect(renderedWrapper.find('h1').html()).toBe('<i>All is italic</i>');
     });
 
     it('should render headline with bold text', () => {
@@ -131,7 +131,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.html()).toBe('<b>All is bold</b>');
+      expect(renderedWrapper.find('h1').html()).toBe('<b>All is bold</b>');
     });
 
     it('should render headline with bold & italic text', () => {
@@ -144,7 +144,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.html()).toBe(
+      expect(renderedWrapper.find('h1').html()).toBe(
         '<i><b>All is bold and italic</b></i>',
       );
     });
@@ -159,7 +159,7 @@ describe('Headings', () => {
           type="headline"
         />,
       );
-      expect(renderedWrapper.html()).toBe(
+      expect(renderedWrapper.find('h1').html()).toBe(
         '<b><i>All is italic and bold</i></b>',
       );
     });
@@ -172,7 +172,9 @@ describe('Headings', () => {
             type="headline"
           />,
         );
-        expect(renderedWrapper.html()).toBe('This is <i>very</i> important');
+        expect(renderedWrapper.find('h1').html()).toBe(
+          'This is <i>very</i> important',
+        );
       });
     });
   });
