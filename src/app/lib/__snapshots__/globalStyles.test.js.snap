@@ -70,9 +70,10 @@ Array [
   }",
   "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff\\") format(\\"woff\\");
-    font-weight: 300;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
 ]

@@ -7,7 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SANS_ITALIC,
   F_REITH_SANS_BOLD,
-  F_REITH_SERIF_LIGHT,
+  F_REITH_SANS_BOLD_ITALIC,
 } from '@bbc/psammead-styles/fonts';
 
 const GlobalStyle = createGlobalStyle`
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   ${F_REITH_SANS_REGULAR}
   ${F_REITH_SANS_ITALIC}
   ${F_REITH_SANS_BOLD}
-  ${F_REITH_SERIF_LIGHT}
+  ${F_REITH_SANS_BOLD_ITALIC}
 `;
 
 export default GlobalStyle;
