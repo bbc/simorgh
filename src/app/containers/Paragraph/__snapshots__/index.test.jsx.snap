@@ -2,59 +2,61 @@
 
 exports[`ParagraphContainer should render correctly 1`] = `
 <ForwardRef>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is some text.",
+  <ForwardRef>
+    <Blocks
+      blocks={
+        Array [
+          Object {
+            "model": Object {
+              "attributes": Array [
+                "bold",
+              ],
+              "text": "This is some text.",
+            },
+            "type": "fragment",
           },
-          "type": "fragment",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "Some text",
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "attributes": Array [],
+                    "text": "Some text",
+                  },
+                  "type": "fragment",
                 },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "bold",
-                  ],
-                  "text": " for the ",
+                Object {
+                  "model": Object {
+                    "attributes": Array [
+                      "bold",
+                    ],
+                    "text": " for the ",
+                  },
+                  "type": "fragment",
                 },
-                "type": "fragment",
-              },
-              Object {
-                "model": Object {
-                  "attributes": Array [
-                    "italic",
-                  ],
-                  "text": " link!",
+                Object {
+                  "model": Object {
+                    "attributes": Array [
+                      "italic",
+                    ],
+                    "text": " link!",
+                  },
+                  "type": "fragment",
                 },
-                "type": "fragment",
-              },
-            ],
-            "locator": "/bbc-test",
+              ],
+              "locator": "/bbc-test",
+            },
+            "type": "urlLink",
           },
-          "type": "urlLink",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-        "urlLink": [Function],
+        ]
       }
-    }
-  />
+      componentsToRender={
+        Object {
+          "fragment": [Function],
+          "urlLink": [Function],
+        }
+      }
+    />
+  </ForwardRef>
 </ForwardRef>
 `;

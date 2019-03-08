@@ -5,14 +5,24 @@ import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
+import {
+  GridItemConstrainedMedium,
+  GridItemConstrainedLarge,
+} from '../../lib/styledGrid';
 
 const Headings = {
   headline: Headline,
   subheadline: SubHeading,
 };
 
+const GridConstraints = {
+  headline: GridItemConstrainedLarge,
+  subheadline: GridItemConstrainedMedium,
+};
+
 const HeadingsContainer = ({ blocks, type }) => {
   const Heading = Headings[type];
+  const GridConstrain = GridConstraints[type];
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
@@ -26,7 +36,11 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
-  return <Heading text={text}>{renderText()}</Heading>;
+  return (
+    <GridConstrain>
+      <Heading text={text}>{renderText()}</Heading>
+    </GridConstrain>
+  );
 };
 
 HeadingsContainer.propTypes = {
