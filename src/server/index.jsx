@@ -56,15 +56,17 @@ expressServer
       const data = await loadInitialData(url, routes);
       const { status } = data;
 
-      res.status(status).send(
-        await renderDocument(
-          url,
-          data,
-          routes,
-          ResourceHints,
-          ServerStyleSheet, // pass in the stylesheet as it needs to remain a singleton
-        ),
-      );
+      res
+        .status(status)
+        .send(
+          await renderDocument(
+            url,
+            data,
+            routes,
+            ResourceHints,
+            ServerStyleSheet,
+          ),
+        );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
