@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { Helmet } from 'react-helmet';
-import { ServerStyleSheet } from 'styled-components';
 import { loadInitialData } from '@bbc/spartacus/utilities';
 import renderDocument from '@bbc/spartacus/document';
 import expressServer from '@bbc/spartacus/server';
@@ -57,16 +55,9 @@ expressServer
       const data = await loadInitialData(url, routes);
       const { status } = data;
 
-      res.status(status).send(
-        await renderDocument(
-          url,
-          data,
-          routes,
-          ResourceHints,
-          ServerStyleSheet, // needed for styled-components to remain a singleton
-          Helmet,
-        ),
-      );
+      res
+        .status(status)
+        .send(await renderDocument(url, data, routes, ResourceHints));
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
