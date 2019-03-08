@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { loadInitialData } from '@bbc/spartacus/utilities';
 import renderDocument from '@bbc/spartacus/document';
+import { ServerStyleSheet } from 'styled-components';
 import expressServer from '@bbc/spartacus/server';
 import Logger from '@bbc/spartacus/logger';
 import routes, {
@@ -55,9 +56,15 @@ expressServer
       const data = await loadInitialData(url, routes);
       const { status } = data;
 
-      res
-        .status(status)
-        .send(await renderDocument(url, data, routes, ResourceHints));
+      res.status(status).send(
+        await renderDocument(
+          url,
+          data,
+          routes,
+          ResourceHints,
+          ServerStyleSheet, // pass in the stylesheet as it needs to remain a singleton
+        ),
+      );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
