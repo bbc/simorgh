@@ -1,9 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
-import { extractText } from '../../helpers/blockHandlers';
 import { textDefaultPropTypes } from '../../models/propTypes';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
+import Fragment from '../Fragment';
+import Blocks from '../Blocks';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -23,15 +24,21 @@ const HeadingsContainer = ({ blocks, type }) => {
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
 
-  const { text } = extractText(blocks);
+  const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
-  if (!text) {
+  if (!arrayOfFragments || !Array.isArray(arrayOfFragments)) {
     return null;
   }
+  const { text } = blocks[0].model.blocks[0].model;
+  const componentsToRender = { fragment: Fragment };
+
+  const renderText = () => (
+    <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
+  );
 
   return (
     <GridConstrain>
-      <Heading text={text}>{text}</Heading>
+      <Heading text={text}>{renderText()}</Heading>
     </GridConstrain>
   );
 };
