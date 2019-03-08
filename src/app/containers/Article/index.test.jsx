@@ -1,16 +1,23 @@
 import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
-import { articleDataNews } from './fixtureData';
+import { articleDataNews, articleDataPersian } from './fixtureData';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
-  const goodData = {
+  const newsProps = {
     data: articleDataNews,
     isAmp: false,
     service: 'news',
+    status: 200,
+  };
+
+  const persianProps = {
+    data: articleDataPersian,
+    isAmp: false,
+    service: 'persian',
     status: 200,
   };
 
@@ -24,8 +31,12 @@ describe('ArticleContainer', () => {
   describe('Component', () => {
     describe('200 status code', () => {
       shouldShallowMatchSnapshot(
-        'should render correctly',
-        <ArticleContainer data={goodData} />,
+        'should render correctly for news',
+        <ArticleContainer data={newsProps} />,
+      );
+      shouldShallowMatchSnapshot(
+        'should render correctly for persian',
+        <ArticleContainer data={persianProps} />,
       );
     });
 
