@@ -14,6 +14,8 @@ export const articleDataRegexPath = `${articleRegexPath}.json`;
 
 export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
+export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
+
 const routes = [
   {
     path: articleRegexPath,

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, string, shape } from 'prop-types';
+import Helmet from 'react-helmet';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
@@ -29,6 +30,12 @@ const ArticleContainer = ({ loading, error, data }) => {
         <GlobalStyle />
         <ServiceContextProvider service={service}>
           <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+            <Helmet>
+              <link
+                rel="manifest"
+                href={`/${service}/articles/manifest.json`}
+              />
+            </Helmet>
             <HeaderContainer />
             {status === 200 ? (
               <ArticleMain articleData={articleData} />
