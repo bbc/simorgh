@@ -67,7 +67,7 @@ describe('Blocks', () => {
     ];
 
     shouldShallowMatchSnapshot(
-      'should render correctly',
+      'should render known blocks; unknown blocks rendered null',
       <Blocks blocks={mixedBlocks} componentsToRender={componentsToRender} />,
     );
   });
