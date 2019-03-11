@@ -2,19 +2,6 @@
 
 exports[`ArticleMain should render a news article correctly 1`] = `
 <React.Fragment>
-  <HelmetWrapper
-    defer={true}
-    encodeSpecialCharacters={true}
-  >
-    <LinkData
-      firstPublished={1514808060000}
-      lastUpdated={1514811600000}
-      optimoUrn="urn:bbc:optimo:asset:c0000000001o"
-      seoHeadline="Article Headline for SEO"
-      service=""
-      type="article"
-    />
-  </HelmetWrapper>
   <MetadataContainer
     metadata={
       Object {
@@ -171,19 +158,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <React.Fragment>
-  <HelmetWrapper
-    defer={true}
-    encodeSpecialCharacters={true}
-  >
-    <LinkData
-      firstPublished={1514808060000}
-      lastUpdated={1514811600000}
-      optimoUrn="urn:bbc:optimo:asset:cwv2xv848j5o"
-      seoHeadline="سرصفحه مقاله"
-      service=""
-      type="article"
-    />
-  </HelmetWrapper>
   <MetadataContainer
     metadata={
       Object {

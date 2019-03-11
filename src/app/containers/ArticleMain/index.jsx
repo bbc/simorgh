@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
-import Helmet from 'react-helmet';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -9,7 +8,6 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import Timestamp from '../Timestamp';
 import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
-import LinkData from '../../components/LinkData';
 
 const componentsToRenderHeadline = {
   headline: headings,
@@ -45,16 +43,6 @@ const ArticleMain = ({ articleData }) => {
   if (headlineBlocks.length > 0) {
     return (
       <Fragment>
-        <Helmet>
-          <LinkData
-            type={metadata.type}
-            seoHeadline={promo.headlines.seoHeadline}
-            firstPublished={metadata.firstPublished}
-            lastUpdated={metadata.lastPublished}
-            optimoUrn={metadata.locators.optimoUrn}
-            service={metadata.createdBy}
-          />
-        </Helmet>
         <MetadataContainer metadata={metadata} promo={promo} />
         <main role="main">
           <GhostWrapper>

@@ -4,12 +4,14 @@ import LinkData from '.';
 
 describe('LinkData', () => {
   const props = {
+    isAmp: false,
+    lang: 'en-GB',
     seoHeadline: 'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
     type: 'article',
-    optimoUrn: 'urn:bbc:optimo:asset:c9rpqy7pmypo',
+    optimoId: 'urn:bbc:optimo:asset:c9rpqy7pmypo',
     service: 'news',
-    lastUpdated: 1551180310555,
-    firstPublished: 1539188371344,
+    lastUpdated: '2019-02-26T11:25:10.555Z',
+    firstPublished: '2018-10-10T16:19:31.344Z',
   };
 
   shouldMatchSnapshot(

@@ -27,13 +27,13 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
-        {headScript}
         {meta}
         <link rel="manifest" href="/manifest.json" />
         <ResourceHints />
         {title}
         {links}
         {styleTags}
+        {headScript}
         {data.isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>

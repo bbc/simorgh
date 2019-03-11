@@ -1,20 +1,19 @@
-import React, { Fragment } from 'react';
-import { string, number } from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
+import { string } from 'prop-types';
 
 const LinkData = ({
   type,
   seoHeadline,
   firstPublished,
   lastUpdated,
-  optimoUrn,
+  optimoId,
   service,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
   const url =
     'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1';
-
-  const optimoId = optimoUrn.split(':').pop();
 
   const logo = {
     '@type': imgObject,
@@ -49,8 +48,8 @@ const LinkData = ({
     '@type': type,
     url: `https://www.bbc.com/${service}/articles/${optimoId}`,
     publisher,
-    datePublished: new Date(firstPublished).toISOString(),
-    dateModified: new Date(lastUpdated).toISOString(),
+    datePublished: firstPublished,
+    dateModified: lastUpdated,
     headline: seoHeadline,
     image,
     thumbnailUrl: url,
@@ -58,22 +57,22 @@ const LinkData = ({
   };
 
   return (
-    <Fragment>
+    <Helmet>
       {/* eslint-disable react/no-danger */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: linkMetadata }}
       />
-    </Fragment>
+    </Helmet>
   );
 };
 
 LinkData.propTypes = {
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: number.isRequired,
-  lastUpdated: number.isRequired,
-  optimoUrn: string.isRequired,
+  firstPublished: string.isRequired,
+  lastUpdated: string.isRequired,
+  optimoId: string.isRequired,
   service: string.isRequired,
 };
 
