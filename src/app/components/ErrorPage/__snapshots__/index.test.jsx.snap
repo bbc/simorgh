@@ -36,7 +36,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 }
 
 .c0 {
-  display: grid;
+  margin: 0 auto;
   background: #FDFDFD;
 }
 
@@ -92,12 +92,22 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 @media (min-width:63em) and (max-width:80em) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
   }
 }
 
 @media (min-width:80em) {
   .c0 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
   }
 }
 
@@ -150,18 +160,27 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 @media (min-width:25em) and (max-width:62.9375em) {
   .c1 {
     grid-column: 1 / span 5;
+    max-width: 83.33%;
   }
 }
 
 @media (min-width:63em) and (max-width:80em) {
   .c1 {
     grid-column: 3 / span 5;
+    max-width: 37.75rem;
   }
 }
 
 @media (min-width:80em) {
   .c1 {
     grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
   }
 }
 
