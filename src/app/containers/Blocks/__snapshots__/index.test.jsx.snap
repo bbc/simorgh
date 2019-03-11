@@ -87,7 +87,7 @@ Array [
 ]
 `;
 
-exports[`Blocks with mixed set of known and unknown blocks should render correctly 1`] = `
+exports[`Blocks with mixed set of known and unknown blocks should render known blocks; unknown blocks rendered null 1`] = `
 Array [
   <headline
     blocks={

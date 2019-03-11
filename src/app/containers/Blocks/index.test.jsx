@@ -16,7 +16,7 @@ const unknownTestBlock = {
   },
 };
 
-const unknownNestedBlock = {
+const parentBlockNotAllowed = {
   type: 'image',
   model: {
     blocks: [
@@ -63,7 +63,7 @@ describe('Blocks', () => {
       blockContainingText('subheadline', 'This is a subheadline!'),
       singleTextBlock('This is some text content!'),
       unknownTestBlock,
-      unknownNestedBlock,
+      parentBlockNotAllowed,
     ];
 
     shouldShallowMatchSnapshot(
@@ -73,7 +73,7 @@ describe('Blocks', () => {
   });
 
   describe('with unknown blocks', () => {
-    const unknownBlocks = [unknownTestBlock, unknownNestedBlock];
+    const unknownBlocks = [unknownTestBlock, parentBlockNotAllowed];
 
     shouldShallowMatchSnapshot(
       'should render correctly as null',
