@@ -18,7 +18,7 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 | 6        | | Headline, Text (1 par, external link), Video (caption), Image (portrait, caption) | 5 tags, 3 topics (person & 2 events) | |
 | 7        | Category: Opinion | Text (1 par), Headline, Text (2 pars, internal link), Subheadline, Text (1 long par) | Four tags, four topics (2 people, 2 places) | Will fail in v1.0 - blocks before headline |
 | 8        | Category: Opinion | Image (caption), Headline, Subheadline, Image (caption), Subheadline, Text (bold) | 7 about tags (events - 5 topics), 3 mentions tags | Will fail in v1.0 - blocks before headline |
-| 9        | Category: Opinion | Video, Headline, Subheadline, Video, Subheadline, Text (bold and italic) | 6 tags, 5 topics (people, places, themes) | Will fail in v1.0 - blocks before headline |
+| 9        | Category: Opinion | Video, Headline (italic), Subheadline, Video, Subheadline (italic), Text (bold and italic) | 6 tags, 5 topics (people, places, themes) | Will fail in v1.0 - blocks before headline |
 | 10       | | Subheadline, Headline, Text (3 pars), Subheadline | 5 tags, 5 topics (4 places, 1 theme) | Will fail in v1.0 - Subheadline before headline, ends with Subheadline |
 | 11       | Category: Opinion | Text (1 par), Image (caption), Headline, Text, Text, Text, Text (inline links) | 10 tags, 10 topics | Consecutive text blocks.  Will fail in v1.0 - blocks before headline |
 | 12       | Category: Review; Genre: Business | Text (1 par), Video, Headline, Image (caption), Image (caption), Image (wide), Image (caption) | Lots of tags/topics | Will fail in v1.0 - blocks before headline |
