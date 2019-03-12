@@ -90,7 +90,7 @@
     "@bbc/psammead-inline-link": "^0.1.3",
     "@bbc/psammead-paragraph": "^0.1.3",
     "@bbc/psammead-sitewide-links": "^0.1.4",
-    "@bbc/psammead-styles": "^0.2.0",
+    "@bbc/psammead-styles": "^0.3.2",
     "@bbc/psammead-visually-hidden-text": "^0.1.7",
     "assets-webpack-plugin": "^3.9.8",
     "babel-loader": "^8.0.5",

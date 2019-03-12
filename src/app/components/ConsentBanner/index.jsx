@@ -1,10 +1,16 @@
 import React from 'react';
 import { string, element } from 'prop-types';
 import styled from 'styled-components';
-import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
+import {
+  C_CONSENT_BACKGROUND,
+  C_CONSENT_ACTION,
+  C_CONSENT_CONTENT,
+  C_WHITE,
+} from '@bbc/psammead-styles/colours';
 import {
   GEL_GREAT_PRIMER,
   GEL_LONG_PRIMER,
+  GEL_FF_REITH_SANS,
 } from '@bbc/gel-foundations/typography';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -15,14 +21,9 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 
-const GREY = '#323232';
-const ORANGE = '#fa9900';
-const WHITE = '#ffffff';
-const LIGHTGREY = '#bdbdbd';
-
 const Wrapper = styled.div`
-  font-family: ${FF_NEWS_SANS_REG};
-  background-color: ${GREY};
+  font-family: ${GEL_FF_REITH_SANS};
+  background-color: ${C_CONSENT_BACKGROUND};
   padding: 16px ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -46,7 +47,7 @@ const CenterWrapper = styled.div`
 
 const Title = styled.h2`
   ${GEL_GREAT_PRIMER}
-  color: ${WHITE};
+  color: ${C_WHITE};
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -60,7 +61,7 @@ const Title = styled.h2`
 
 const Options = styled.ul`
   ${GEL_LONG_PRIMER}
-  color: ${ORANGE};
+  color: ${C_CONSENT_ACTION};
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -78,7 +79,7 @@ const Options = styled.ul`
 
 export const ConsentBannerText = styled.p`
   ${GEL_LONG_PRIMER};
-  color: ${LIGHTGREY};
+  color: ${C_CONSENT_CONTENT};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0;
@@ -89,7 +90,7 @@ export const ConsentBannerText = styled.p`
 
 export const ConsentBannerButton = styled.button`
   ${GEL_GREAT_PRIMER}
-  color: ${ORANGE};
+  color: ${C_CONSENT_ACTION};
   font-weight: 700;
   background: none;
   border: none;
@@ -99,7 +100,7 @@ export const ConsentBannerButton = styled.button`
 `;
 
 export const ConsentBannerLink = styled.a`
-  color: ${ORANGE};
+  color: ${C_CONSENT_ACTION};
   text-decoration: none;
 `;
 
@@ -110,6 +111,9 @@ export const ConsentBanner = ({ title, text, accept, reject }) => (
       {text}
       <Options>
         <li>{accept}</li>
+        <li>{reject}</li>
+        <li>{reject}</li>
+        <li>{reject}</li>
         <li>{reject}</li>
       </Options>
     </CenterWrapper>
