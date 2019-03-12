@@ -43,26 +43,35 @@ const LinkData = ({
     noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
   };
 
-  const linkMetadata = {
-    '@context': 'http://schema.org',
-    '@type': type,
-    url: `https://www.bbc.com/${service}/articles/${optimoId}`,
-    publisher,
-    datePublished: firstPublished,
-    dateModified: lastUpdated,
-    headline: seoHeadline,
-    image,
-    thumbnailUrl: url,
-    author,
-  };
+  // const linkMetadata = {
+  //   '@context': 'http://schema.org',
+  //   '@type': type,
+  //   url: `https://www.bbc.com/${service}/articles/${optimoId}`,
+  //   publisher,
+  //   datePublished: firstPublished,
+  //   dateModified: lastUpdated,
+  //   headline: seoHeadline,
+  //   image,
+  //   thumbnailUrl: url,
+  //   author,
+  // };
 
   return (
     <Helmet>
-      {/* eslint-disable react/no-danger */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: linkMetadata }}
-      />
+      <script type="application/ld+json">{`
+        {
+          "@context": "http://schema.org",
+          '@type': ${type},
+          url: ${`https://www.bbc.com/${service}/articles/${optimoId}`},
+          publisher: ${publisher},
+          datePublished: ${firstPublished},
+          dateModified: ${lastUpdated},
+          headline: ${seoHeadline},
+          image: ${image},
+          thumbnailUrl: ${url},
+          author: ${author},
+        }
+    `}</script>
     </Helmet>
   );
 };
