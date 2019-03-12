@@ -87,16 +87,14 @@ export const ConsentBannerText = styled.p`
     width: 53%;
   }
 
-  a,
-  a:visited {
+  a {
     color: ${C_CONSENT_ACTION};
-    border-bottom: none;
+    text-decoration: none;
   }
 
   a:focus,
   a:hover {
     color: ${C_WHITE};
-    border-bottom: none;
   }
 `;
 
@@ -110,7 +108,8 @@ export const ConsentBannerButton = styled.button`
   margin: 0;
   cursor: pointer;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     color: ${C_WHITE};
   }
 `;
