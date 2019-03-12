@@ -1,7 +1,7 @@
 import setupServer from '@bbc/spartacus/index';
 import Logger from '@bbc/spartacus/logger';
 
-const logger = Logger(__filename);
+const logger = Logger(`simorgh:${__filename}`);
 const app = require('./server').default;
 
 const server = setupServer(app);

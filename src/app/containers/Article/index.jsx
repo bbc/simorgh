@@ -11,7 +11,7 @@ import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 
-const logger = Logger(__filename);
+const logger = Logger(`simorgh:${__filename}`);
 
 /*
   [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.

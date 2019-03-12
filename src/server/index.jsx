@@ -14,7 +14,7 @@ import routes, {
 } from '../app/routes';
 import ResourceHints from '../app/components/ResourceHints';
 
-const logger = Logger(__filename);
+const logger = Logger(`simorgh:${__filename}`);
 
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';

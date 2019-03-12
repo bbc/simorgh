@@ -2,7 +2,7 @@ import 'isomorphic-fetch';
 import Logger from '@bbc/spartacus/logger';
 import getBaseUrl from './getBaseUrl';
 
-const logger = Logger(__filename);
+const logger = Logger(`simorgh:${__filename}`);
 
 const upstreamStatusCodesToPropagate = [200, 404];
 
