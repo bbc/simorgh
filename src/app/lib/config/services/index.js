@@ -1,4 +1,4 @@
-/* 
+/*
   This file includes data for the Service Context
   It will be used by the ServiceContext Component
 */
@@ -9,6 +9,7 @@ import persian from './persian';
 export default {
   default: {
     brandName: 'Default Brand Name',
+    externalLinkText: ', default external link suffix',
     imageCaptionOffscreenText: 'Default image caption prefix, ',
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
