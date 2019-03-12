@@ -2,7 +2,7 @@
 
 exports[`ConsentBanner should correctly render 1`] = `
 .c0 {
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
   padding: 16px 0.5rem;
 }
@@ -24,7 +24,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 .c2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -33,7 +33,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #fa9900;
+  color: #F6A21D;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -118,13 +118,18 @@ exports[`ConsentBannerButton should correctly render 1`] = `
 .c0 {
   font-size: 1.125rem;
   line-height: 1.375rem;
-  color: #fa9900;
+  color: #F6A21D;
   font-weight: 700;
   background: none;
   border: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #FFFFFF;
 }
 
 @media (min-width:37.5em) {
@@ -144,9 +149,14 @@ exports[`ConsentBannerButton should correctly render 1`] = `
 
 exports[`ConsentBannerLink should correctly render 1`] = `
 .c0 {
-  color: #fa9900;
+  color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #FFFFFF;
 }
 
 <a
@@ -162,7 +172,18 @@ exports[`ConsentBannerText should correctly render 1`] = `
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #bdbdbd;
+  color: #BEBEBE;
+}
+
+.c0 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus,
+.c0 a:hover {
+  color: #FFFFFF;
 }
 
 @media (min-width:37.5em) {
