@@ -5,3 +5,5 @@ import fetch from 'jest-fetch-mock'; // eslint-disable-line import/no-extraneous
 Enzyme.configure({ adapter: new Adapter() });
 
 global.fetch = fetch;
+global.shallow = shallow;
+global.mount = mount;
