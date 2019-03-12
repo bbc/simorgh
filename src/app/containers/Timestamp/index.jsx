@@ -29,22 +29,24 @@ const formatTimestamp = dateObj => {
   return `${dayNumeric} ${monthLong} ${fullYear}`;
 };
 
-const TimestampContainer = ({ lastPublished }) => {
-  const dateObj = new Date(lastPublished);
+const TimestampContainer = ({ lastPublished, firstPublished }) => {
+  const modifiedDate = new Date(lastPublished);
+  const publishedDate = new Date(firstPublished);
 
-  if (!isValidDateTime(dateObj)) {
+  if (!isValidDateTime(modifiedDate) || !isValidDateTime(publishedDate)) {
     return null;
   }
 
   return (
-    <Timestamp datetime={formatDateTime(dateObj)}>
-      {formatTimestamp(dateObj)}
+    <Timestamp datetime={formatDateTime(modifiedDate)}>
+      {formatTimestamp(modifiedDate)}
     </Timestamp>
   );
 };
 
 TimestampContainer.propTypes = {
   lastPublished: number.isRequired,
+  firstPublished: number.isRequired,
 };
 
 export default TimestampContainer;
