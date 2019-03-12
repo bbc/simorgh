@@ -86,6 +86,18 @@ export const ConsentBannerText = styled.p`
     float: left;
     width: 53%;
   }
+
+  a,
+  a:visited {
+    color: ${C_CONSENT_ACTION};
+    border-bottom: none;
+  }
+
+  a:focus,
+  a:hover {
+    color: ${C_WHITE};
+    border-bottom: none;
+  }
 `;
 
 export const ConsentBannerButton = styled.button`
@@ -97,11 +109,20 @@ export const ConsentBannerButton = styled.button`
   padding: 0;
   margin: 0;
   cursor: pointer;
+
+  &:focus, &:hover {
+    color: ${C_WHITE};
+  }
 `;
 
 export const ConsentBannerLink = styled.a`
   color: ${C_CONSENT_ACTION};
   text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: ${C_WHITE};
+  }
 `;
 
 export const ConsentBanner = ({ title, text, accept, reject }) => (
@@ -111,9 +132,6 @@ export const ConsentBanner = ({ title, text, accept, reject }) => (
       {text}
       <Options>
         <li>{accept}</li>
-        <li>{reject}</li>
-        <li>{reject}</li>
-        <li>{reject}</li>
         <li>{reject}</li>
       </Options>
     </CenterWrapper>

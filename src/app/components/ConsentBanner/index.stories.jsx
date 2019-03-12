@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import InlineLink from '@bbc/psammead-inline-link';
 import {
   ConsentBanner,
   ConsentBannerButton,
@@ -17,8 +18,9 @@ const Reject = (
 
 const Text = (
   <ConsentBannerText>
-    We have made some important changes to our Privacy and Cookies Policy and we
-    want you to know what this means for you and your data.
+    We have made some important changes to our Privacy and{' '}
+    <InlineLink href="https://www.bbc.com/news">Cookie</InlineLink> Policy and
+    we want you to know what this means for you and your data.
   </ConsentBannerText>
 );
 
