@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { loadInitialData } from '@bbc/spartacus/utilities';
+import { Helmet } from 'react-helmet';
 import renderDocument from '@bbc/spartacus/document';
 import { ServerStyleSheet } from 'styled-components';
 import expressServer from '@bbc/spartacus/server';
@@ -65,6 +66,7 @@ expressServer
             routes,
             ResourceHints,
             ServerStyleSheet,
+            Helmet,
           ),
         );
     } catch ({ message, status }) {
