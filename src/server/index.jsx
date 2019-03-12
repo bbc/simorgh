@@ -9,6 +9,7 @@ import Logger from '@bbc/spartacus/logger';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
 import ResourceHints from '../app/components/ResourceHints';
@@ -49,6 +50,16 @@ expressServer
       if (error) {
         logger.error(error);
         res.status(500).send('Unable to find service worker.');
+      }
+    });
+  })
+  .get(manifestRegexPath, async ({ params }, res) => {
+    const { service } = params;
+    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+    res.sendFile(manifestPath, {}, error => {
+      if (error) {
+        console.log(error); // eslint-disable-line no-console
+        res.status(500).send('Unable to find manifest.');
       }
     });
   })
