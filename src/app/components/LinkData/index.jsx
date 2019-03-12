@@ -59,10 +59,7 @@ const LinkData = ({
   return (
     <Helmet>
       {/* eslint-disable react/no-danger */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: linkMetadata }}
-      />
+      <script type="application/ld+json">{JSON.stringify(linkMetadata)}</script>
     </Helmet>
   );
 };
