@@ -60,8 +60,8 @@ const Title = styled.h2`
 
 const Options = styled.ul`
   ${GEL_LONG_PRIMER}
-  font-weight: 600;
   color: ${ORANGE};
+  font-weight: 600;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -77,8 +77,8 @@ const Options = styled.ul`
 `;
 
 export const ConsentBannerText = styled.p`
-  color: ${LIGHTGREY};
   ${GEL_LONG_PRIMER};
+  color: ${LIGHTGREY};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0;
@@ -89,8 +89,8 @@ export const ConsentBannerText = styled.p`
 
 export const ConsentBannerButton = styled.button`
   ${GEL_GREAT_PRIMER}
-  font-weight: 700;
   color: ${ORANGE};
+  font-weight: 700;
   background: none;
   border: none;
   padding: 0;
@@ -99,8 +99,8 @@ export const ConsentBannerButton = styled.button`
 `;
 
 export const ConsentBannerLink = styled.a`
-  text-decoration: none;
   color: ${ORANGE};
+  text-decoration: none;
 `;
 
 export const ConsentBanner = ({ title, text, accept, reject }) => (
