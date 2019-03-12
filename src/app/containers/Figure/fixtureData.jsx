@@ -38,6 +38,7 @@ const captionBlockWithLink = {
                     model: {
                       text: 'containing an inline link',
                       locator: 'https://www.bbc.com',
+                      isExternal: false,
                       blocks: [
                         {
                           type: 'fragment',
