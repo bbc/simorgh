@@ -12,14 +12,16 @@ describe('Timestamp', () => {
   });
   shouldMatchSnapshot(
     'should render without a leading zero on the day',
-    <Timestamp timestamp={noLeadingZeroTimestamp} />,
+    <Timestamp lastPublished={noLeadingZeroTimestamp} />,
   );
   shouldMatchSnapshot(
     'should render correctly',
-    <Timestamp timestamp={timestamp} />,
+    <Timestamp lastPublished={timestamp} />,
   );
   shouldMatchSnapshot(
     'should handle an invalid timestamp',
-    <Timestamp timestamp={invalidTimestamp} />,
+    <Timestamp lastPublished={invalidTimestamp} />,
   );
+
+  it('should display both a published & updated timestamp when firstPublished != lastPublished', () => {});
 });

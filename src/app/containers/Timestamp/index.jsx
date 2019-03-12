@@ -29,8 +29,8 @@ const formatTimestamp = dateObj => {
   return `${dayNumeric} ${monthLong} ${fullYear}`;
 };
 
-const TimestampContainer = ({ timestamp }) => {
-  const dateObj = new Date(timestamp);
+const TimestampContainer = ({ lastPublished }) => {
+  const dateObj = new Date(lastPublished);
 
   if (!isValidDateTime(dateObj)) {
     return null;
@@ -44,7 +44,7 @@ const TimestampContainer = ({ timestamp }) => {
 };
 
 TimestampContainer.propTypes = {
-  timestamp: number.isRequired,
+  lastPublished: number.isRequired,
 };
 
 export default TimestampContainer;

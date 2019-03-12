@@ -51,7 +51,7 @@ const ArticleMain = ({ articleData }) => {
               componentsToRender={componentsToRenderHeadline}
             />
             <GridItemConstrainedMedium>
-              <Timestamp timestamp={metadata.lastPublished} />
+              <Timestamp lastPublished={metadata.lastPublished} />
             </GridItemConstrainedMedium>
             <Blocks
               blocks={mainBlocks}
