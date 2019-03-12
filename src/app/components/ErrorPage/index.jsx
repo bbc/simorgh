@@ -6,15 +6,17 @@ import { Headline } from '@bbc/psammead-headings';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { GEL_PARAGON } from '@bbc/gel-foundations/typography';
-import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
+import {
+  GEL_PARAGON,
+  GEL_FF_REITH_SANS,
+} from '@bbc/gel-foundations/typography';
 import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const StatusCode = styled.span`
   ${GEL_PARAGON}
   color: ${C_POSTBOX};
   display: block;
-  font-family: ${FF_NEWS_SANS_REG};
+  font-family: ${GEL_FF_REITH_SANS};
   font-weight: 600;
   padding-bottom: 0.5rem;
 `;
