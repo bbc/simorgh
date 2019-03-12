@@ -18,6 +18,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ArticleMain
         articleData={
@@ -165,6 +166,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ArticleMain
         articleData={
@@ -289,6 +291,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ErrorMain
         status={451}

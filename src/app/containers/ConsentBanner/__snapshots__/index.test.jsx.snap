@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMain should correctly render amp banner 1`] = `null`;
+
+exports[`ErrorMain should correctly render canonical banner 1`] = `
+<h1>
+  Canonical Cookie banner
+</h1>
+`;
