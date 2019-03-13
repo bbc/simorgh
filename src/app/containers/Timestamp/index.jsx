@@ -35,6 +35,12 @@ const tenHoursAgo = timestamp => {
   return now - timestamp >= 10 * 60 * 60 * 1000;
 };
 
+const updatedTimestamp = (dateObj, timestamp) => (
+  <Timestamp datetime={formatDateTime(dateObj)} prefix="Updated">
+    {timestamp}
+  </Timestamp>
+);
+
 const TimestampContainer = ({ updated, published }) => {
   const updatedDate = new Date(updated);
   const publishedDate = new Date(published);
@@ -42,37 +48,24 @@ const TimestampContainer = ({ updated, published }) => {
   if (!isValidDateTime(updatedDate) || !isValidDateTime(publishedDate)) {
     return null;
   }
-
-  if (updatedDate === publishedDate) {
-    // just one timestmap
-    return (
-      <Timestamp datetime={formatDateTime(updatedDate)}>
-        {formatTimestamp(updatedDate)}
-      </Timestamp>
-    );
-  }
+  const firstTimestamp = updatedDate === publishedDate ? updated : published;
 
   let secondTimestamp;
-  if (tenHoursAgo(updated)) {
-    // absolute
-    secondTimestamp = (
-      <Timestamp datetime={formatDateTime(updatedDate)} prefix="Updated">
-        {formatTimestamp(updatedDate)}
-      </Timestamp>
-    );
-  } else {
-    // relative
-    secondTimestamp = (
-      <Timestamp datetime={formatDateTime(updatedDate)} prefix="Updated">
-        {relativeTime(updated)}
-      </Timestamp>
-    );
+  if (updatedDate !== publishedDate) {
+    if (tenHoursAgo(updated)) {
+      secondTimestamp = updatedTimestamp(
+        updatedDate,
+        formatTimestamp(new Date(updatedDate)),
+      );
+    } else {
+      secondTimestamp = updatedTimestamp(updatedDate, relativeTime(updated));
+    }
   }
 
   return (
     <Fragment>
-      <Timestamp datetime={formatDateTime(publishedDate)}>
-        {formatTimestamp(publishedDate)}
+      <Timestamp datetime={formatDateTime(new Date(firstTimestamp))}>
+        {formatTimestamp(new Date(firstTimestamp))}
       </Timestamp>
       {secondTimestamp || null}
     </Fragment>
