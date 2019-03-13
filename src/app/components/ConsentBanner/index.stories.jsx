@@ -11,7 +11,7 @@ const Accept = <ConsentBannerButton onClick={() => {}}>OK</ConsentBannerButton>;
 
 const Reject = (
   <ConsentBannerLink href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
-    Find out what's changed
+    Find out what&apos;s changed
   </ConsentBannerLink>
 );
 

@@ -29,7 +29,7 @@ describe('ConsentBannerLink', () => {
   shouldMatchSnapshot(
     'should correctly render',
     <ConsentBannerLink href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
-      Find out what's changed
+      Find out what&apos;s changed
     </ConsentBannerLink>,
   );
 });
