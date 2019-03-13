@@ -15,16 +15,18 @@ import {
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 
 const Wrapper = styled.div`
   font-family: ${GEL_FF_REITH_SANS};
   background-color: ${C_CONSENT_BACKGROUND};
-  padding: 16px ${GEL_MARGIN_BELOW_400PX};
+  padding: ${GEL_SPACING_DBL} ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_MARGIN_ABOVE_400PX};
@@ -37,7 +39,7 @@ const Wrapper = styled.div`
  * another div inside. This implementation mirrors the current orbit banner.
  */
 const CenterWrapper = styled.div`
-  max-width: 1280px;
+  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   margin: 0 auto;
 
   &::after {

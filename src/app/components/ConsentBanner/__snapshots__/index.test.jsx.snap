@@ -4,11 +4,11 @@ exports[`ConsentBanner should correctly render 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
-  padding: 16px 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .c1 {
-  max-width: 1280px;
+  max-width: 80em;
   margin: 0 auto;
 }
 
