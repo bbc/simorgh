@@ -21,6 +21,7 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
 
 const Wrapper = styled.div`
@@ -78,7 +79,7 @@ const Options = styled.ul`
   list-style-type: none;
 
   & li + li {
-    padding-top: 8px;
+    padding-top: ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

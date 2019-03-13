@@ -41,7 +41,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 }
 
 .c3 li + li {
-  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 
 @media (min-width:25em) {
