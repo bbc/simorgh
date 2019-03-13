@@ -58,17 +58,9 @@ const TimestampContainer = ({ updated, published }) => {
 
   let secondTimestamp;
   if (updated !== published) {
-    if (tenHoursAgo(updated)) {
-      secondTimestamp = updatedTimestamp(
-        dateObj.updated,
-        formatTimestamp(dateObj.updated),
-      );
-    } else {
-      secondTimestamp = updatedTimestamp(
-        dateObj.updated,
-        relativeTime(updated),
-      );
-    }
+    secondTimestamp = tenHoursAgo(updated)
+      ? updatedTimestamp(dateObj.updated, formatTimestamp(dateObj.updated))
+      : updatedTimestamp(dateObj.updated, relativeTime(updated));
   }
 
   return (
