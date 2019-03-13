@@ -42,26 +42,24 @@ const updatedTimestamp = (dateObj, timestamp) => (
 );
 
 const TimestampContainer = ({ updated, published }) => {
-  const dateObj = {
-    updated: new Date(updated),
-    published: new Date(published),
-  };
+  const updatedDateObject = new Date(updated);
+  const publishedDateObject = new Date(published);
 
   if (
-    !isValidDateTime(dateObj.updated) ||
-    !isValidDateTime(dateObj.published)
+    !isValidDateTime(updatedDateObject) ||
+    !isValidDateTime(publishedDateObject)
   ) {
     return null;
   }
 
   const firstTimestamp =
-    updated === published ? dateObj.updated : dateObj.published;
+    updated === published ? updatedDateObject : publishedDateObject;
 
   let secondTimestamp;
   if (updated !== published) {
     secondTimestamp = tenHoursAgo(updated)
-      ? updatedTimestamp(dateObj.updated, formatTimestamp(dateObj.updated))
-      : updatedTimestamp(dateObj.updated, relativeTime(updated));
+      ? updatedTimestamp(updatedDateObject, formatTimestamp(updatedDateObject))
+      : updatedTimestamp(updatedDateObject, relativeTime(updated));
   }
 
   return (
