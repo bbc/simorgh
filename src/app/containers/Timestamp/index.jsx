@@ -74,7 +74,7 @@ const TimestampContainer = ({ updated, published }) => {
       <Timestamp datetime={formatDateTime(publishedDate)}>
         {formatTimestamp(publishedDate)}
       </Timestamp>
-      {secondTimestamp}
+      {secondTimestamp || null}
     </Fragment>
   );
 };
