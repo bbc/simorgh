@@ -31,6 +31,11 @@ const Wrapper = styled.div`
   }
 `;
 
+/*
+ * The '&::after' below is to ensure that the background colour covers the
+ * banner as the inner elements are float. The alernative is to have
+ * another div inside. This implementation mirrors the current orbit banner.
+ */
 const CenterWrapper = styled.div`
   max-width: 1280px;
   margin: 0 auto;
@@ -59,6 +64,9 @@ const Title = styled.h2`
   }
 `;
 
+/*
+ * The '& li + li' below allows for styling every `li` element except the first.
+ */
 const Options = styled.ul`
   ${GEL_LONG_PRIMER}
   color: ${C_CONSENT_ACTION};
@@ -77,6 +85,13 @@ const Options = styled.ul`
   }
 `;
 
+const hoverFocusStyles = `
+  &:focus,
+  &:hover {
+    color: ${C_WHITE};
+  }
+`;
+
 export const ConsentBannerText = styled.p`
   ${GEL_LONG_PRIMER};
   color: ${C_CONSENT_CONTENT};
@@ -90,11 +105,8 @@ export const ConsentBannerText = styled.p`
   a {
     color: ${C_CONSENT_ACTION};
     text-decoration: none;
-  }
 
-  a:focus,
-  a:hover {
-    color: ${C_WHITE};
+    ${hoverFocusStyles}
   }
 `;
 
@@ -108,20 +120,14 @@ export const ConsentBannerButton = styled.button`
   margin: 0;
   cursor: pointer;
 
-  &:focus,
-  &:hover {
-    color: ${C_WHITE};
-  }
+  ${hoverFocusStyles}
 `;
 
 export const ConsentBannerLink = styled.a`
   color: ${C_CONSENT_ACTION};
   text-decoration: none;
 
-  &:focus,
-  &:hover {
-    color: ${C_WHITE};
-  }
+  ${hoverFocusStyles}
 `;
 
 export const ConsentBanner = ({ title, text, accept, reject }) => (
