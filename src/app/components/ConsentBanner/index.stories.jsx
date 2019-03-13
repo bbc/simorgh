@@ -17,9 +17,9 @@ const Reject = (
 
 const Text = (
   <ConsentBannerText>
-    We have made some <a href="https://www.bbc.com/news">important</a> changes
-    to our Privacy and Cookie Policy and we want you to know what this means for
-    you and your data.
+    This is some text with <a href="https://www.bbc.com/news">a link</a> inside
+    the consent banner. We have made some important changes to our Privacy and
+    Cookie Policy.
   </ConsentBannerText>
 );
 
