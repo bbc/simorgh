@@ -9,7 +9,7 @@ Array [
   line-height: 1rem;
   color: #757575;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
 }
 
@@ -72,7 +72,7 @@ Array [
   line-height: 1rem;
   color: #757575;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
 }
 

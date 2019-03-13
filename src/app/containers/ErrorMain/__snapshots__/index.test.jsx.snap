@@ -2,36 +2,33 @@
 
 exports[`ErrorMain should correctly render for 404 1`] = `
 .c5 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c5:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c5:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -45,17 +42,18 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   line-height: 1.5rem;
   color: #B80000;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 .c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
+  font-weight: 500;
+  font-size: 1.75rem;
   line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
@@ -66,7 +64,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (min-width:20em) {
   .c4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.375rem;
   }
 }
@@ -127,14 +125,14 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c2 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 3rem;
   }
 }
@@ -244,36 +242,33 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c5 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c5:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c5:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -287,17 +282,18 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   line-height: 1.5rem;
   color: #B80000;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 .c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
+  font-weight: 500;
+  font-size: 1.75rem;
   line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
@@ -308,7 +304,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:20em) {
   .c4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.375rem;
   }
 }
@@ -369,14 +365,14 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c2 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 3rem;
   }
 }
@@ -486,36 +482,33 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 exports[`ErrorMain should correctly render for 500 1`] = `
 .c5 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c5:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c5:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -529,17 +522,18 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   line-height: 1.5rem;
   color: #B80000;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 .c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
+  font-weight: 500;
+  font-size: 1.75rem;
   line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
@@ -550,7 +544,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (min-width:20em) {
   .c4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.375rem;
   }
 }
@@ -611,14 +605,14 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c2 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 3rem;
   }
 }
@@ -723,36 +717,33 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c5 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c5:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c5:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -766,17 +757,18 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   line-height: 1.5rem;
   color: #B80000;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 .c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
+  font-weight: 500;
+  font-size: 1.75rem;
   line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
@@ -787,7 +779,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20em) {
   .c4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.375rem;
   }
 }
@@ -848,14 +840,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c2 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 3rem;
   }
 }
@@ -960,36 +952,33 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 exports[`ErrorMain should correctly render for other status code 1`] = `
 .c5 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c5:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c5:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
-  color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
 }
 
@@ -1003,17 +992,18 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   line-height: 1.5rem;
   color: #B80000;
   display: block;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 .c2 {
-  color: #222222;
-  font-family: ReithSerifNewsMedium,Helvetica,Arial,sans-serif;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0 1rem 0;
-  font-size: 1.75em;
+  font-weight: 500;
+  font-size: 1.75rem;
   line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
@@ -1024,7 +1014,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (min-width:20em) {
   .c4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.375rem;
   }
 }
@@ -1085,14 +1075,14 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (min-width:20em) and (max-width:37.4375em) {
   .c2 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 3rem;
   }
 }
