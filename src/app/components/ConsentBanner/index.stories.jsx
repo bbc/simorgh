@@ -10,8 +10,8 @@ import {
 const Accept = <ConsentBannerButton onClick={() => {}}>OK</ConsentBannerButton>;
 
 const Reject = (
-  <ConsentBannerLink href="https://hello.com" onClick={() => {}}>
-    Find out whats changed
+  <ConsentBannerLink href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
+    Find out what's changed
   </ConsentBannerLink>
 );
 
