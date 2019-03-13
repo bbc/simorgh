@@ -30,44 +30,53 @@ const formatTimestamp = dateObj => {
   return `${dayNumeric} ${monthLong} ${fullYear}`;
 };
 
-const tenHoursAgo = timestamp => {
+const isTenHoursAgo = milliseconds => {
   const now = Date.now();
-  return now - timestamp >= 10 * 60 * 60 * 1000;
+  return now - milliseconds >= 10 * 60 * 60 * 1000;
 };
 
-const updatedTimestamp = (dateObj, timestamp) => (
+const updatedTimestamp = (dateObj, milliseconds) => (
   <Timestamp datetime={formatDateTime(dateObj)} prefix="Updated">
-    {timestamp}
+    {milliseconds}
   </Timestamp>
 );
 
+const hasBeenUpdated = (updated, published) => updated === published;
+
+const createSecondTimestamp = (updated, dateObj) =>
+  isTenHoursAgo(updated)
+    ? updatedTimestamp(dateObj.updated, formatTimestamp(dateObj.updated))
+    : updatedTimestamp(dateObj.updated, relativeTime(updated));
+
 const TimestampContainer = ({ updated, published }) => {
-  const updatedDateObject = new Date(updated);
-  const publishedDateObject = new Date(published);
+  const dateObj = {
+    updated: new Date(updated),
+    published: new Date(published),
+  };
 
   if (
-    !isValidDateTime(updatedDateObject) ||
-    !isValidDateTime(publishedDateObject)
+    !isValidDateTime(dateObj.updated) ||
+    !isValidDateTime(dateObj.published)
   ) {
     return null;
   }
 
-  const firstTimestamp =
-    updated === published ? updatedDateObject : publishedDateObject;
+  let publishDate;
+  let secondTimestampComponent;
 
-  let secondTimestamp;
-  if (updated !== published) {
-    secondTimestamp = tenHoursAgo(updated)
-      ? updatedTimestamp(updatedDateObject, formatTimestamp(updatedDateObject))
-      : updatedTimestamp(updatedDateObject, relativeTime(updated));
+  if (hasBeenUpdated(updated, published)) {
+    publishDate = dateObj.published;
+    secondTimestampComponent = createSecondTimestamp(updated, dateObj);
+  } else {
+    publishDate = dateObj.published;
   }
 
   return (
     <Fragment>
-      <Timestamp datetime={formatDateTime(firstTimestamp)}>
-        {formatTimestamp(firstTimestamp)}
+      <Timestamp datetime={formatDateTime(publishDate)}>
+        {formatTimestamp(publishDate)}
       </Timestamp>
-      {secondTimestamp || null}
+      {secondTimestampComponent || null}
     </Fragment>
   );
 };
