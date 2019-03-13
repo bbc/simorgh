@@ -54,7 +54,8 @@ const TimestampContainer = ({ updated, published }) => {
     return null;
   }
 
-  const firstTimestamp = updated === published ? updated : published;
+  const firstTimestamp =
+    updated === published ? dateObj.updated : dateObj.published;
 
   let secondTimestamp;
   if (updated !== published) {
@@ -65,8 +66,8 @@ const TimestampContainer = ({ updated, published }) => {
 
   return (
     <Fragment>
-      <Timestamp datetime={formatDateTime(new Date(firstTimestamp))}>
-        {formatTimestamp(new Date(firstTimestamp))}
+      <Timestamp datetime={formatDateTime(firstTimestamp)}>
+        {formatTimestamp(firstTimestamp)}
       </Timestamp>
       {secondTimestamp || null}
     </Fragment>
