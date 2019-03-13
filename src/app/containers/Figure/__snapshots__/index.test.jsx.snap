@@ -70,13 +70,13 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 }
 
 .c2 {
-  font-size: 0.75em;
-  line-height: 1em;
+  font-size: 0.75rem;
+  line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -84,18 +84,18 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 }
 
 .c3 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
@@ -171,18 +171,18 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 }
 
 .c2 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
@@ -241,13 +241,13 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
 }
 
 .c2 {
-  font-size: 0.75em;
-  line-height: 1em;
+  font-size: 0.75rem;
+  line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -357,13 +357,13 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 .c3 {
-  font-size: 0.75em;
-  line-height: 1em;
+  font-size: 0.75rem;
+  line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -371,18 +371,18 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 .c4 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c4 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
@@ -462,18 +462,18 @@ exports[`Figure should render an image with caption text 1`] = `
 }
 
 .c3 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
@@ -547,18 +547,18 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 .c3 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c3 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
@@ -621,13 +621,13 @@ exports[`Figure should render an image with copyright text 1`] = `
 }
 
 .c3 {
-  font-size: 0.75em;
-  line-height: 1em;
+  font-size: 0.75rem;
+  line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -689,18 +689,18 @@ exports[`Figure should render can AMP image with aption text 1`] = `
 }
 
 .c2 {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   line-height: 1.125rem;
   background-color: #D5D0CD;
   color: #404040;
-  font-family: ReithSansNewsRegular,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding: 0.5rem;
   width: 100%;
 }
 
 @media (min-width:37.5em) {
   .c2 {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 }
 
