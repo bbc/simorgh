@@ -42,23 +42,32 @@ const updatedTimestamp = (dateObj, timestamp) => (
 );
 
 const TimestampContainer = ({ updated, published }) => {
-  const updatedDate = new Date(updated);
-  const publishedDate = new Date(published);
+  const dateObj = {
+    updated: new Date(updated),
+    published: new Date(published),
+  };
 
-  if (!isValidDateTime(updatedDate) || !isValidDateTime(publishedDate)) {
+  if (
+    !isValidDateTime(dateObj.updated) ||
+    !isValidDateTime(dateObj.published)
+  ) {
     return null;
   }
-  const firstTimestamp = updatedDate === publishedDate ? updated : published;
+
+  const firstTimestamp = updated === published ? updated : published;
 
   let secondTimestamp;
-  if (updatedDate !== publishedDate) {
+  if (updated !== published) {
     if (tenHoursAgo(updated)) {
       secondTimestamp = updatedTimestamp(
-        updatedDate,
-        formatTimestamp(new Date(updatedDate)),
+        dateObj.updated,
+        formatTimestamp(dateObj.updated),
       );
     } else {
-      secondTimestamp = updatedTimestamp(updatedDate, relativeTime(updated));
+      secondTimestamp = updatedTimestamp(
+        dateObj.updated,
+        relativeTime(updated),
+      );
     }
   }
 
