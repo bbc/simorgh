@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { number } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
+import relativeTime from './relativeTimestamp';
 
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
@@ -29,24 +30,58 @@ const formatTimestamp = dateObj => {
   return `${dayNumeric} ${monthLong} ${fullYear}`;
 };
 
-const TimestampContainer = ({ lastPublished, firstPublished }) => {
-  const modifiedDate = new Date(lastPublished);
-  const publishedDate = new Date(firstPublished);
+const tenHoursAgo = timestamp => {
+  const now = Date.now();
+  return now - timestamp >= 10 * 60 * 60 * 1000;
+};
 
-  if (!isValidDateTime(modifiedDate) || !isValidDateTime(publishedDate)) {
+const TimestampContainer = ({ updated, published }) => {
+  const updatedDate = new Date(updated);
+  const publishedDate = new Date(published);
+
+  if (!isValidDateTime(updatedDate) || !isValidDateTime(publishedDate)) {
     return null;
   }
 
+  if (updatedDate === publishedDate) {
+    // just one timestmap
+    return (
+      <Timestamp datetime={formatDateTime(updatedDate)}>
+        {formatTimestamp(updatedDate)}
+      </Timestamp>
+    );
+  }
+
+  let secondTimestamp;
+  if (tenHoursAgo(updated)) {
+    // absolute
+    secondTimestamp = (
+      <Timestamp datetime={formatDateTime(updatedDate)} prefix="Updated">
+        {formatTimestamp(updatedDate)}
+      </Timestamp>
+    );
+  } else {
+    // relative
+    secondTimestamp = (
+      <Timestamp datetime={formatDateTime(updatedDate)} prefix="Updated">
+        {relativeTime(updated)}
+      </Timestamp>
+    );
+  }
+
   return (
-    <Timestamp datetime={formatDateTime(modifiedDate)}>
-      {formatTimestamp(modifiedDate)}
-    </Timestamp>
+    <Fragment>
+      <Timestamp datetime={formatDateTime(publishedDate)}>
+        {formatTimestamp(publishedDate)}
+      </Timestamp>
+      {secondTimestamp}
+    </Fragment>
   );
 };
 
 TimestampContainer.propTypes = {
-  lastPublished: number.isRequired,
-  firstPublished: number.isRequired,
+  updated: number.isRequired,
+  published: number.isRequired,
 };
 
 export default TimestampContainer;
