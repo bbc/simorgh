@@ -2,7 +2,11 @@ import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
-import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
+import {
+  GridItemConstrainedLargeNoMargin,
+  GridItemConstrainedMedium,
+  GridItemConstrainedSmall,
+} from '../../lib/styledGrid';
 
 const DEFAULT_IMAGE_RES = 640;
 
@@ -51,11 +55,20 @@ const ImageContainer = ({ blocks }) => {
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
 
+  let Wrapper = GridItemConstrainedLargeNoMargin;
+
+  if (height === width) {
+    Wrapper = GridItemConstrainedMedium;
+  }
+  if (height > width) {
+    Wrapper = GridItemConstrainedSmall;
+  }
+
   // This grid contain will be refactored in
   // https://github.com/bbc/simorgh/issues/1369
   // https://github.com/bbc/simorgh/issues/1319
   return (
-    <GridItemConstrainedLargeNoMargin>
+    <Wrapper>
       <Figure
         alt={altText}
         captionBlock={captionBlock}
@@ -65,7 +78,7 @@ const ImageContainer = ({ blocks }) => {
         src={rawImageSrc}
         width={width}
       />
-    </GridItemConstrainedLargeNoMargin>
+    </Wrapper>
   );
 };
 
