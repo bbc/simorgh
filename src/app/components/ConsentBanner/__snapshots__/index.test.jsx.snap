@@ -4,11 +4,11 @@ exports[`ConsentBanner should correctly render 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
-  padding: 16px 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .c1 {
-  max-width: 1280px;
+  max-width: 80em;
   margin: 0 auto;
 }
 
@@ -41,7 +41,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 }
 
 .c3 li + li {
-  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 
 @media (min-width:25em) {
@@ -161,10 +161,9 @@ exports[`ConsentBannerLink should correctly render 1`] = `
 
 <a
   className="c0"
-  href="https://hello.com"
-  onClick={[Function]}
+  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
 >
-  Find out whats changed
+  Find out what's changed
 </a>
 `;
 

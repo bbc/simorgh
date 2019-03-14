@@ -15,24 +15,32 @@ import {
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_DBL,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
 
 const Wrapper = styled.div`
   font-family: ${GEL_FF_REITH_SANS};
   background-color: ${C_CONSENT_BACKGROUND};
-  padding: 16px ${GEL_MARGIN_BELOW_400PX};
+  padding: ${GEL_SPACING_DBL} ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_MARGIN_ABOVE_400PX};
   }
 `;
 
+/*
+ * The '&::after' below is to ensure that the background colour covers the
+ * banner as the inner elements are float. The alernative is to have
+ * another div inside. This implementation mirrors the current orbit banner.
+ */
 const CenterWrapper = styled.div`
-  max-width: 1280px;
+  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   margin: 0 auto;
 
   &::after {
@@ -59,6 +67,9 @@ const Title = styled.h2`
   }
 `;
 
+/*
+ * The '& li + li' below allows for styling every `li` element except the first.
+ */
 const Options = styled.ul`
   ${GEL_LONG_PRIMER}
   color: ${C_CONSENT_ACTION};
@@ -68,12 +79,19 @@ const Options = styled.ul`
   list-style-type: none;
 
   & li + li {
-    padding-top: 8px;
+    padding-top: ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 18%;
     float: right;
+  }
+`;
+
+const hoverFocusStyles = `
+  &:focus,
+  &:hover {
+    color: ${C_WHITE};
   }
 `;
 
@@ -90,11 +108,8 @@ export const ConsentBannerText = styled.p`
   a {
     color: ${C_CONSENT_ACTION};
     text-decoration: none;
-  }
 
-  a:focus,
-  a:hover {
-    color: ${C_WHITE};
+    ${hoverFocusStyles}
   }
 `;
 
@@ -108,20 +123,14 @@ export const ConsentBannerButton = styled.button`
   margin: 0;
   cursor: pointer;
 
-  &:focus,
-  &:hover {
-    color: ${C_WHITE};
-  }
+  ${hoverFocusStyles}
 `;
 
 export const ConsentBannerLink = styled.a`
   color: ${C_CONSENT_ACTION};
   text-decoration: none;
 
-  &:focus,
-  &:hover {
-    color: ${C_WHITE};
-  }
+  ${hoverFocusStyles}
 `;
 
 export const ConsentBanner = ({ title, text, accept, reject }) => (
