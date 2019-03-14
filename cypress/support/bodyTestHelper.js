@@ -123,7 +123,7 @@ export const errorMessage = service => {
 
 export const errorPageInlineLink = service => {
   getElement('p')
-    .eq(1)
+    .eq(2)
     .within(() => {
       getElement('a').should(
         'have.attr',
