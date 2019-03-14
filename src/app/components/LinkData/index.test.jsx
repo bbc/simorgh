@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import LinkData from '.';
 
 describe('LinkData', () => {
@@ -14,7 +14,7 @@ describe('LinkData', () => {
     firstPublished: '2018-10-10T16:19:31.344Z',
   };
 
-  shouldMatchSnapshot(
+  shouldShallowMatchSnapshot(
     'should correctly render metadata for links',
     <LinkData {...props} />,
   );
