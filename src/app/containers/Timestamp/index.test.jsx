@@ -36,6 +36,7 @@ describe('Timestamp', () => {
       <Timestamp updated={eighthJan} published={eighthJan} />,
     );
     expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
+    expect(renderedWrapper.length).toEqual(1);
   });
 
   it('should display a relative timestamp when updated < 10 hours ago', () => {
@@ -44,6 +45,7 @@ describe('Timestamp', () => {
       <Timestamp updated={sixHoursAgo} published={eighthJan} />,
     );
 
+    expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
     expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
@@ -56,6 +58,7 @@ describe('Timestamp', () => {
       <Timestamp updated={eighthMarch} published={eighthJan} />,
     );
 
+    expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
     expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
