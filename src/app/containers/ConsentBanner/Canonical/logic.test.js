@@ -6,6 +6,7 @@ const POLICY_COOKIE = 'ckns_policy';
 let Cookie;
 const setShowPrivacyMock = jest.fn();
 const setShowCookieMock = jest.fn();
+const cookieOvenUrl = 'https://cookie-oven.api.bbc.com/ckns_policy';
 
 const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
   Cookie.get.mockImplementation(cookie => {
@@ -26,6 +27,7 @@ const getCanonicalLogic = () => {
   return canonicalLogic({
     setShowPrivacy: setShowPrivacyMock,
     setShowCookie: setShowCookieMock,
+    cookieOvenUrl,
   });
 };
 
@@ -114,9 +116,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
       });
-      expect(fetch).toHaveBeenCalledWith(
-        'https://cookie-oven.api.bbc.com/ckns_policy/000',
-      );
+      expect(fetch).toHaveBeenCalledWith(`${cookieOvenUrl}/000`);
       expect(setShowCookieMock).toHaveBeenCalledWith(true);
     });
   });
@@ -157,9 +157,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
       });
-      expect(fetch).toHaveBeenCalledWith(
-        'https://cookie-oven.api.bbc.com/ckns_policy/111',
-      );
+      expect(fetch).toHaveBeenCalledWith(`${cookieOvenUrl}/111`);
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
       });

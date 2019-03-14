@@ -4,7 +4,6 @@ import Cookie from 'js-cookie';
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
-const COOKIE_OVEN_URL = `https://cookie-oven.api.bbc.com/ckns_policy/`;
 const COOKIE_EXPIRY = 365;
 const BANNER_APPROVED = '1';
 const POLICY_APPROVED = '111';
@@ -15,22 +14,28 @@ const onClient = typeof document !== 'undefined';
 const setCookie = (name, value) =>
   Cookie.set(name, value, { expires: COOKIE_EXPIRY });
 
-const cookieOven = value => {
-  fetch(COOKIE_OVEN_URL + value);
+const cookieOven = (cookieOvenUrl, value) => {
+  try {
+    fetch(`${cookieOvenUrl}/${value}`);
+  } catch (e) {} // eslint-disable-line no-empty
 };
 
-const setPolicyCookie = value => {
+const setPolicyCookie = (cookieOvenUrl, value) => {
   setCookie(POLICY_COOKIE, value);
-  cookieOven(value);
+  cookieOven(cookieOvenUrl, value);
 };
 
-const setPolicyCookieIfUnset = value => {
+const setPolicyCookieIfUnset = (cookieOvenUrl, value) => {
   if (!Cookie.get(POLICY_COOKIE)) {
-    setPolicyCookie(value);
+    setPolicyCookie(cookieOvenUrl, value);
   }
 };
 
-const canonicalBannerLogic = ({ setShowPrivacy, setShowCookie }) => {
+const canonicalBannerLogic = ({
+  setShowPrivacy,
+  setShowCookie,
+  cookieOvenUrl,
+}) => {
   const runInitial = () => {
     if (onClient) {
       if (Cookie.get(PRIVACY_COOKIE) !== BANNER_APPROVED) {
@@ -40,7 +45,7 @@ const canonicalBannerLogic = ({ setShowPrivacy, setShowCookie }) => {
 
       if (Cookie.get(EXPLICIT_COOKIE) !== BANNER_APPROVED) {
         setShowCookie(true);
-        setPolicyCookieIfUnset(POLICY_DENIED);
+        setPolicyCookieIfUnset(cookieOvenUrl, POLICY_DENIED);
       }
     }
   };
@@ -56,7 +61,7 @@ const canonicalBannerLogic = ({ setShowPrivacy, setShowCookie }) => {
   const cookieOnAllow = () => {
     setShowCookie(false);
     setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
-    setPolicyCookie(POLICY_APPROVED);
+    setPolicyCookie(cookieOvenUrl, POLICY_APPROVED);
   };
 
   const cookieOnReject = () => {
