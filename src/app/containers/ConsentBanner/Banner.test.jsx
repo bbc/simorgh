@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Banner from './Banner';
 
-describe('ErrorMain', () => {
+describe('Consent Banner Container - Banner', () => {
   shouldMatchSnapshot(
     'should correctly render privacy banner',
     <ServiceContextProvider service="news">

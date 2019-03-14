@@ -6,7 +6,7 @@ jest.mock('./Canonical', () => () => <h1>Canonical Cookie banner</h1>);
 
 const ConsentBanner = require('./index').default;
 
-describe('ErrorMain', () => {
+describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render amp banner',
     <PlatformContextProvider platform="amp">
