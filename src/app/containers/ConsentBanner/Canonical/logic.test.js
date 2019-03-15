@@ -4,6 +4,7 @@ const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 
 let Cookie;
+let getCookieOvenBaseUrl
 const setShowPrivacyMock = jest.fn();
 const setShowCookieMock = jest.fn();
 const cookieOvenUrl = 'https://cookie-oven.api.bbc.com/ckns_policy';
@@ -41,6 +42,10 @@ describe('Consent Banner Canonical Logic', () => {
     Cookie = require('js-cookie');
     Cookie.get = jest.fn();
     Cookie.set = jest.fn();
+
+    jest.mock('./cookieOvenBaseUrl', () => jest.fn());
+    getCookieOvenBaseUrl = require('./cookieOvenBaseUrl');
+    getCookieOvenBaseUrl.mockImplementation(() => 'https://cookieoven.com');
   });
 
   describe('runInitial', () => {
@@ -105,8 +110,21 @@ describe('Consent Banner Canonical Logic', () => {
       expect(setShowCookieMock).toHaveBeenCalledWith(true);
     });
 
+    it('sets POLICY_COOKIE when it is not set', () => {
+      setCookieGetMock({ policy: null });
+
+      const { runInitial } = getCanonicalLogic();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
+        expires: 365,
+      });
+      expect(fetch).toHaveBeenCalledWith(`https://cookieoven.com/ckns_policy/000`);
+    });
+
     it('does not set POLICY_COOKIE when its already set', () => {
-      setCookieGetMock({ explict: null, privacy: null, policy: '010' });
+      setCookieGetMock({ policy: '010' });
 
       const { runInitial } = getCanonicalLogic();
 
@@ -130,7 +148,8 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
       });
-      expect(fetch).toHaveBeenCalledWith(`${cookieOvenUrl}/000`);
+      expect(getCookieOvenBaseUrl).toHaveBeenCalledWith(`http://localhost`);
+      expect(fetch).toHaveBeenCalledWith(`https://cookieoven.com/ckns_policy/000`);
       expect(setShowCookieMock).toHaveBeenCalledWith(true);
     });
   });
@@ -171,7 +190,8 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
       });
-      expect(fetch).toHaveBeenCalledWith(`${cookieOvenUrl}/111`);
+      expect(getCookieOvenBaseUrl).toHaveBeenCalledWith(`http://localhost`);
+      expect(fetch).toHaveBeenCalledWith(`https://cookieoven.com/ckns_policy/111`);
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
       });

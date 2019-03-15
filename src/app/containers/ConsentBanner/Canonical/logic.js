@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import Cookie from 'js-cookie';
+import getCookieOvenBaseUrl from './cookieOvenBaseUrl';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -9,33 +10,35 @@ const BANNER_APPROVED = '1';
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
 
-const onClient = typeof document !== 'undefined';
+const onClient = typeof window !== 'undefined';
 
 const setCookie = (name, value) =>
   Cookie.set(name, value, { expires: COOKIE_EXPIRY });
 
-const cookieOven = (cookieOvenUrl, value) => {
-  try {
-    fetch(`${cookieOvenUrl}/${value}`);
-  } catch (e) {} // eslint-disable-line no-empty
-};
-
-const setPolicyCookie = (cookieOvenUrl, value) => {
-  setCookie(POLICY_COOKIE, value);
-  cookieOven(cookieOvenUrl, value);
-};
-
-const setPolicyCookieIfUnset = (cookieOvenUrl, value) => {
-  if (!Cookie.get(POLICY_COOKIE)) {
-    setPolicyCookie(cookieOvenUrl, value);
+const cookieOven = value => {
+  if (window.location && window.location.origin) {
+    try {
+      fetch(
+        `${getCookieOvenBaseUrl(
+          window.location.origin,
+        )}/${POLICY_COOKIE}/${value}`,
+      );
+    } catch (e) {} // eslint-disable-line no-empty
   }
 };
 
-const canonicalBannerLogic = ({
-  setShowPrivacy,
-  setShowCookie,
-  cookieOvenUrl,
-}) => {
+const setPolicyCookie = value => {
+  setCookie(POLICY_COOKIE, value);
+  cookieOven(value);
+};
+
+const setPolicyCookieIfUnset = value => {
+  if (!Cookie.get(POLICY_COOKIE)) {
+    setPolicyCookie(value);
+  }
+};
+
+const canonicalBannerLogic = ({ setShowPrivacy, setShowCookie }) => {
   const runInitial = () => {
     if (onClient) {
       if (Cookie.get(PRIVACY_COOKIE) !== BANNER_APPROVED) {
@@ -45,7 +48,10 @@ const canonicalBannerLogic = ({
 
       if (Cookie.get(EXPLICIT_COOKIE) !== BANNER_APPROVED) {
         setShowCookie(true);
-        setPolicyCookieIfUnset(cookieOvenUrl, POLICY_DENIED);
+      }
+
+      if (!Cookie.get(POLICY_COOKIE)) {
+        setPolicyCookieIfUnset(POLICY_DENIED);
       }
     }
   };
@@ -61,7 +67,7 @@ const canonicalBannerLogic = ({
   const cookieOnAllow = () => {
     setShowCookie(false);
     setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
-    setPolicyCookie(cookieOvenUrl, POLICY_APPROVED);
+    setPolicyCookie(POLICY_APPROVED);
   };
 
   const cookieOnReject = () => {
