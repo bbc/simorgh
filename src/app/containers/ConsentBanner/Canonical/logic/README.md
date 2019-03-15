@@ -22,11 +22,6 @@ A function, which when called with a boolean, shows or hides the cookie banner.
 
 NB: It is down to the application to implement the rendering logic. On a fresh visit both `showPrivacyBanner` and `showCookieBanner` functions will be called with `true`. The privacy banner should be shown first, followed then by the cookie banner.
 
-
-It would be good to explain under input functions section below why this library is not providing the showPrivacyBanner showCookieBanner functions.
-Also, whether these functions should be carrying out the display: none; visibility: hidden; aspect of hiding/showing the front-end components.
-Currently, the expected behaviour of these input functions is not clear.
-
 **Why are the inputs functions?**  
 
 Functions were chosen due to how they integrate with React and other state based frameworks. Exporting a boolean value would add additional complexity to the application and allowing the user to pass their own function is designed to give more freedom than booleans would. 
