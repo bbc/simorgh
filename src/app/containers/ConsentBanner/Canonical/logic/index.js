@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import Cookie from 'js-cookie';
-import getCookieOvenBaseUrl from './cookieOvenBaseUrl';
+import cookieOvenUrl from './cookieOvenUrl';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -15,21 +15,22 @@ const onClient = typeof window !== 'undefined';
 const setCookie = (name, value) =>
   Cookie.set(name, value, { expires: COOKIE_EXPIRY });
 
-const setCookieOven = value => {
+const setCookieOven = (value, logger) => {
   if (window.location && window.location.origin) {
     try {
       fetch(
-        `${getCookieOvenBaseUrl(
-          window.location.origin,
-        )}/${POLICY_COOKIE}/${value}`,
+        `${cookieOvenUrl(window.location.origin)}/${POLICY_COOKIE}/${value}`,
       );
-    } catch (e) {} // eslint-disable-line no-empty
+    } catch (e) {
+      const log = logger || console;
+      log.error(e);
+    }
   }
 };
 
-const setPolicyCookie = value => {
+const setPolicyCookie = (value, logger) => {
   setCookie(POLICY_COOKIE, value);
-  setCookieOven(value);
+  setCookieOven(value, logger);
 };
 
 const seenPrivacyBanner = () => Cookie.get(PRIVACY_COOKIE) === BANNER_APPROVED;
@@ -37,12 +38,12 @@ const seenCookieBanner = () => Cookie.get(EXPLICIT_COOKIE) === BANNER_APPROVED;
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () => setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
-const setDefaultPolicy = () => setPolicyCookie(POLICY_DENIED);
-const setAppovedPolicy = () => setPolicyCookie(POLICY_APPROVED);
+const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
+const setAppovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
   setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
 
-const canonicalBannerLogic = ({ showPrivacyBanner, showCookieBanner }) => {
+const canonicalBannerLogic = ({ showPrivacyBanner, showCookieBanner, logger }) => {
   const runInitial = () => {
     if (onClient) {
       if (!seenPrivacyBanner()) {
@@ -55,7 +56,7 @@ const canonicalBannerLogic = ({ showPrivacyBanner, showCookieBanner }) => {
       }
 
       if (!policyCookieSet()) {
-        setDefaultPolicy();
+        setDefaultPolicy(logger);
       }
     }
   };
@@ -71,7 +72,7 @@ const canonicalBannerLogic = ({ showPrivacyBanner, showCookieBanner }) => {
   const cookieOnAllow = () => {
     showCookieBanner(false);
     setDismissedCookieBanner();
-    setAppovedPolicy();
+    setAppovedPolicy(logger);
   };
 
   const cookieOnReject = () => {

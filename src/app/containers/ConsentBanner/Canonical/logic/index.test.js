@@ -4,7 +4,7 @@ const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 
 let Cookie;
-let getCookieOvenBaseUrl;
+let cookieOvenUrlMock;
 const showPrivacyBannerMock = jest.fn();
 const showCookieBannerMock = jest.fn();
 const cookieOvenUrl = 'https://cookie-oven.api.bbc.com/ckns_policy';
@@ -23,12 +23,12 @@ const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
   });
 };
 
-const getCanonicalLogic = () => {
+const getCanonicalLogic = ({ logger } = {}) => {
   const canonicalLogic = require('./index').default;
   return canonicalLogic({
     showPrivacyBanner: showPrivacyBannerMock,
     showCookieBanner: showCookieBannerMock,
-    cookieOvenUrl,
+    logger,
   });
 };
 
@@ -43,9 +43,9 @@ describe('Consent Banner Canonical Logic', () => {
     Cookie.get = jest.fn();
     Cookie.set = jest.fn();
 
-    jest.mock('./cookieOvenBaseUrl', () => jest.fn());
-    getCookieOvenBaseUrl = require('./cookieOvenBaseUrl');
-    getCookieOvenBaseUrl.mockImplementation(() => 'https://cookieoven.com');
+    jest.mock('./cookieOvenUrl', () => jest.fn());
+    cookieOvenUrlMock = require('./cookieOvenUrl');
+    cookieOvenUrlMock.mockImplementation(() => 'https://cookieoven.com');
   });
 
   describe('runInitial', () => {
@@ -150,7 +150,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
       });
-      expect(getCookieOvenBaseUrl).toHaveBeenCalledWith(`http://localhost`);
+      expect(cookieOvenUrlMock).toHaveBeenCalledWith(`http://localhost`);
       expect(fetch).toHaveBeenCalledWith(
         `https://cookieoven.com/ckns_policy/000`,
       );
@@ -194,7 +194,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
       });
-      expect(getCookieOvenBaseUrl).toHaveBeenCalledWith(`http://localhost`);
+      expect(cookieOvenUrlMock).toHaveBeenCalledWith(`http://localhost`);
       expect(fetch).toHaveBeenCalledWith(
         `https://cookieoven.com/ckns_policy/111`,
       );
@@ -218,4 +218,38 @@ describe('Consent Banner Canonical Logic', () => {
       });
     });
   });
+
+  // describe('Logging Cookie Oven', () => {
+  //   beforeEach(() => {
+  //     fetch.mockReject(() => Promise.reject(new Error("something bad happened")));
+  //   });
+
+  //   afterEach(() => {
+  //     fetch.resetMocks();
+  //   });
+
+  //   it('Uses logger object to log error when provided', () => {
+  //     const logger = { error: jest.fn() };
+  //     global.console = { error: jest.fn() };
+
+  //     const { cookieOnAllow } = getCanonicalLogic({ logger });
+
+  //     cookieOnAllow();
+
+  //     expect(fetch).toHaveBeenCalled();
+  //     expect(logger.error).toHaveBeenCalledWith('hehe');
+  //     expect(global.console.error).no.toHaveBeenCalled();
+  //   });
+
+  //   it('Uses console.error to log error when logger object isnt provided', () => {
+  //     global.console = { error: jest.fn() };
+
+  //     const { cookieOnAllow } = getCanonicalLogic();
+
+  //     cookieOnAllow();
+
+  //     expect(fetch).toHaveBeenCalled();
+  //     expect(global.console.error).toHaveBeenCalledWith();
+  //   });
+  // });
 });
