@@ -12,6 +12,8 @@ describe('LinkData', () => {
     service: 'news',
     lastUpdated: '2019-02-26T11:25:10.555Z',
     firstPublished: '2018-10-10T16:19:31.344Z',
+    noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'http://www.bbc.com/news/help-41670342',
   };
 
   shouldShallowMatchSnapshot(

@@ -40,6 +40,8 @@ const MetadataContainer = ({ metadata, promo }) => {
             themeColor,
             twitterCreator,
             twitterSite,
+            publishingPrinciples,
+            noBylinesPolicy,
           }) => {
             /* Canonical link generated from servicename and id */
             const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
@@ -55,6 +57,8 @@ const MetadataContainer = ({ metadata, promo }) => {
                   lastUpdated={timeLastPublished}
                   optimoId={id}
                   service={metadata.createdBy}
+                  publishingPrinciples={publishingPrinciples}
+                  noBylinesPolicy={noBylinesPolicy}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}

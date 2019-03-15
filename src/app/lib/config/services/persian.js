@@ -14,6 +14,8 @@ const persian = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
+  noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'http://www.bbc.com/news/help-41670342',
   translations: {
     error: {
       404: {

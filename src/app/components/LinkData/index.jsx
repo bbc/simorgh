@@ -9,6 +9,8 @@ const LinkData = ({
   lastUpdated,
   optimoId,
   service,
+  publishingPrinciples,
+  noBylinesPolicy,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
@@ -32,7 +34,7 @@ const LinkData = ({
   const publisher = {
     '@type': newsMediaOrg,
     name: service,
-    publishingPrinciples: 'http://www.bbc.com/news/help-41670342',
+    publishingPrinciples,
     logo,
   };
 
@@ -40,7 +42,7 @@ const LinkData = ({
     '@type': newsMediaOrg,
     name: service,
     logo,
-    noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
+    noBylinesPolicy,
   };
 
   const linkMetadata = {
@@ -71,6 +73,8 @@ LinkData.propTypes = {
   lastUpdated: string.isRequired,
   optimoId: string.isRequired,
   service: string.isRequired,
+  publishingPrinciples: string.isRequired,
+  noBylinesPolicy: string.isRequired,
 };
 
 export default LinkData;
