@@ -3,8 +3,8 @@ import Banner from '../Banner';
 import logic from './logic';
 
 const Canonical = () => {
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showCookie, setShowCookie] = useState(false);
+  const [showPrivacy, showPrivacyBanner] = useState(false);
+  const [showCookie, showCookieBanner] = useState(false);
 
   const {
     runInitial,
@@ -12,7 +12,7 @@ const Canonical = () => {
     privacyOnReject,
     cookieOnAllow,
     cookieOnReject,
-  } = logic({ setShowPrivacy, setShowCookie });
+  } = logic({ showPrivacyBanner, showCookieBanner });
 
   useEffect(() => {
     runInitial();

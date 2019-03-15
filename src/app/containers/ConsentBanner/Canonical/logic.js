@@ -15,7 +15,7 @@ const onClient = typeof window !== 'undefined';
 const setCookie = (name, value) =>
   Cookie.set(name, value, { expires: COOKIE_EXPIRY });
 
-const cookieOven = value => {
+const setCookieOven = value => {
   if (window.location && window.location.origin) {
     try {
       fetch(
@@ -29,50 +29,54 @@ const cookieOven = value => {
 
 const setPolicyCookie = value => {
   setCookie(POLICY_COOKIE, value);
-  cookieOven(value);
+  setCookieOven(value);
 };
 
-const setPolicyCookieIfUnset = value => {
-  if (!Cookie.get(POLICY_COOKIE)) {
-    setPolicyCookie(value);
-  }
-};
+const seenPrivacyBanner = () => Cookie.get(PRIVACY_COOKIE) === BANNER_APPROVED;
+const seenCookieBanner = () => Cookie.get(EXPLICIT_COOKIE) === BANNER_APPROVED;
+const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
-const canonicalBannerLogic = ({ setShowPrivacy, setShowCookie }) => {
+const setSeenPrivacyBanner = () => setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
+const setDefaultPolicy = () => setPolicyCookie(POLICY_DENIED);
+const setAppovedPolicy = () => setPolicyCookie(POLICY_APPROVED);
+const setDismissedCookieBanner = () =>
+  setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
+
+const canonicalBannerLogic = ({ showPrivacyBanner, showCookieBanner }) => {
   const runInitial = () => {
     if (onClient) {
-      if (Cookie.get(PRIVACY_COOKIE) !== BANNER_APPROVED) {
-        setShowPrivacy(true);
-        setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
+      if (!seenPrivacyBanner()) {
+        showPrivacyBanner(true);
+        setSeenPrivacyBanner();
       }
 
-      if (Cookie.get(EXPLICIT_COOKIE) !== BANNER_APPROVED) {
-        setShowCookie(true);
+      if (!seenCookieBanner()) {
+        showCookieBanner(true);
       }
 
-      if (!Cookie.get(POLICY_COOKIE)) {
-        setPolicyCookieIfUnset(POLICY_DENIED);
+      if (!policyCookieSet()) {
+        setDefaultPolicy();
       }
     }
   };
 
   const privacyOnAllow = () => {
-    setShowPrivacy(false);
+    showPrivacyBanner(false);
   };
 
   const privacyOnReject = () => {
-    setShowPrivacy(false);
+    showPrivacyBanner(false);
   };
 
   const cookieOnAllow = () => {
-    setShowCookie(false);
-    setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
-    setPolicyCookie(POLICY_APPROVED);
+    showCookieBanner(false);
+    setDismissedCookieBanner();
+    setAppovedPolicy();
   };
 
   const cookieOnReject = () => {
-    setShowCookie(false);
-    setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
+    showCookieBanner(false);
+    setDismissedCookieBanner();
   };
 
   return {

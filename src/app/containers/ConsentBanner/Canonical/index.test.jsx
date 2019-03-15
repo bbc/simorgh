@@ -7,8 +7,8 @@ let CanonicalContainer;
 let logic;
 let container;
 
-let setShowPrivacyState;
-let setShowCookieState;
+let showPrivacyBannerState;
+let showCookieBannerState;
 
 const runInitial = jest.fn();
 const privacyOnAllow = jest.fn();
@@ -26,9 +26,9 @@ describe('Canonical Container', () => {
     jest.mock('./logic', () => jest.fn());
     logic = require('./logic');
 
-    logic.mockImplementation(({ setShowPrivacy, setShowCookie }) => {
-      setShowCookieState = setShowCookie;
-      setShowPrivacyState = setShowPrivacy;
+    logic.mockImplementation(({ showPrivacyBanner, showCookieBanner }) => {
+      showCookieBannerState = showCookieBanner;
+      showPrivacyBannerState = showPrivacyBanner;
 
       return {
         runInitial,
@@ -49,15 +49,15 @@ describe('Canonical Container', () => {
     act(() => {
       ReactDOM.render(<CanonicalContainer />, container);
 
-      setShowPrivacyState(true);
-      setShowCookieState(true);
+      showPrivacyBannerState(true);
+      showCookieBannerState(true);
     });
 
     expect(container.innerHTML).toBe('<div>Canonical privacy banner</div>');
     expect(runInitial).toHaveBeenCalled();
     expect(logic).toHaveBeenCalledWith({
-      setShowCookie: expect.any(Function),
-      setShowPrivacy: expect.any(Function),
+      showCookieBanner: expect.any(Function),
+      showPrivacyBanner: expect.any(Function),
     });
     expect(Banner).toHaveBeenCalledWith(
       {
@@ -73,14 +73,14 @@ describe('Canonical Container', () => {
     act(() => {
       ReactDOM.render(<CanonicalContainer />, container);
 
-      setShowPrivacyState(true);
+      showPrivacyBannerState(true);
     });
 
     expect(container.innerHTML).toBe('<div>Canonical privacy banner</div>');
     expect(runInitial).toHaveBeenCalled();
     expect(logic).toHaveBeenCalledWith({
-      setShowCookie: expect.any(Function),
-      setShowPrivacy: expect.any(Function),
+      showCookieBanner: expect.any(Function),
+      showPrivacyBanner: expect.any(Function),
     });
     expect(Banner).toHaveBeenCalledWith(
       {
@@ -96,14 +96,14 @@ describe('Canonical Container', () => {
     act(() => {
       ReactDOM.render(<CanonicalContainer />, container);
 
-      setShowCookieState(true);
+      showCookieBannerState(true);
     });
 
     expect(container.innerHTML).toBe('<div>Canonical cookie banner</div>');
     expect(runInitial).toHaveBeenCalled();
     expect(logic).toHaveBeenCalledWith({
-      setShowCookie: expect.any(Function),
-      setShowPrivacy: expect.any(Function),
+      showCookieBanner: expect.any(Function),
+      showPrivacyBanner: expect.any(Function),
     });
     expect(Banner).toHaveBeenCalledWith(
       { onAccept: cookieOnAllow, onReject: cookieOnReject, type: 'cookie' },
