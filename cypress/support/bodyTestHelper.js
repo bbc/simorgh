@@ -122,8 +122,8 @@ export const errorMessage = service => {
 };
 
 export const errorPageInlineLink = service => {
-  getElement('p')
-    .eq(2)
+  getElement('main p')
+    .eq(1)
     .within(() => {
       getElement('a').should(
         'have.attr',
