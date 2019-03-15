@@ -1,4 +1,4 @@
-export default timeDifference => {
+export default function timestampGenerator(timeDifference) {
   const magnitudes = {
     hours: 60 * 60 * 1000,
     minutes: 60 * 1000,
@@ -13,4 +13,4 @@ export default timeDifference => {
   });
 
   return timestamp;
-};
+}
