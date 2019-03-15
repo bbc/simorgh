@@ -29,17 +29,17 @@ NB: It is down to the application to implement the rendering logic. On a fresh v
 *Function:* Does initial checks to see what banners the user should be shown, and sets privacy and policy cookie.
 
 - **privacyOnAllow()**  
-*Purpose:* onClick action for Privacy `OK` button  
+*Purpose:* onClick action for Privacy Banner `OK` button  
 *Function:* Hides the privacy banner
 
 - **privacyOnReject()**  
-*Purpose:* onClick action for Privacy `Find out what's changed` link  
+*Purpose:* onClick action for Privacy Banner `Find out what's changed` link  
 *Function:* Hides the privacy banner
 
 - **cookieOnAllow()**  
-*Purpose:* onClick action for Privacy `Yes, I agree` button  
+*Purpose:* onClick action for Cookie Banner `Yes, I agree` button  
 *Function:* Hides the cookie banner, sets policy and explicit cookie
 
 - **cookieOnReject()**  
-*Purpose:* onClick action for Privacy `No, take me to settings` button  
+*Purpose:* onClick action for Cookie Banner `No, take me to settings` link  
 *Function:* Hides the cookie banner and sets explicit cookie
