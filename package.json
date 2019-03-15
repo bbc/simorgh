@@ -109,6 +109,7 @@
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.14.0",
     "isomorphic-fetch": "^2.2.1",
+    "js-cookie": "^2.2.0",
     "morgan": "^1.9.1",
     "nanoid": "^2.0.0",
     "path-to-regexp": "^2.4.0",
