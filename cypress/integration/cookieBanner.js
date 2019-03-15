@@ -15,7 +15,7 @@ describe('Article Body Tests', () => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
-  it('should have a cookie banner', () => {
+  it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
@@ -39,7 +39,7 @@ describe('Article Body Tests', () => {
     expectCookieExpiryDateOneYear('ckns_policy');
   });
 
-  it('do something', () => {
+  it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
@@ -61,7 +61,7 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('not.be.visible');
   });
 
-  it('should do something', () => {
+  it('should redirect the user once the privacy banner has been rejected', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
