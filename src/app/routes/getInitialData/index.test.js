@@ -63,7 +63,6 @@ describe('getInitialData', () => {
       value: windowLocation,
     });
 
-    fetch.mockReject(JSON.stringify({ error: true }));
     fetch.resetMocks();
   });
 
