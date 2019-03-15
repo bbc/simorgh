@@ -9,18 +9,18 @@ const {
     privacyOnReject,
     cookieOnAllow,
     cookieOnReject,
-  } = cookies({ showPrivacyBanner, showCookieBanner });
+  } = cookies({ setShowPrivacyBanner, setShowCookieBanner });
 ```
 
 ## Input Functions
 
-- **showPrivacyBanner(boolean)**  
+- **setShowPrivacyBanner(boolean)**  
 A function, which when called with a boolean, shows or hides the privacy banner.
 
-- **showCookieBanner(boolean)**  
+- **setShowCookieBanner(boolean)**  
 A function, which when called with a boolean, shows or hides the cookie banner.
 
-NB: It is down to the application to implement the rendering logic. On a fresh visit both `showPrivacyBanner` and `showCookieBanner` functions will be called with `true`. The privacy banner should be shown first, followed then by the cookie banner.
+NB: It is down to the application to implement the rendering logic. On a fresh visit both `setShowPrivacyBanner` and `setShowCookieBanner` functions will be called with `true`. The privacy banner should be shown first, followed then by the cookie banner.
 
 **Why are the inputs functions?**  
 

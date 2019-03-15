@@ -5,9 +5,8 @@ const POLICY_COOKIE = 'ckns_policy';
 
 let Cookie;
 let cookieOvenUrlMock;
-const showPrivacyBannerMock = jest.fn();
-const showCookieBannerMock = jest.fn();
-const cookieOvenUrl = 'https://cookie-oven.api.bbc.com/ckns_policy';
+const setShowPrivacyBannerMock = jest.fn();
+const setShowCookieBannerMock = jest.fn();
 
 const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
   Cookie.get.mockImplementation(cookie => {
@@ -26,8 +25,8 @@ const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
 const getCanonicalLogic = ({ logger } = {}) => {
   const canonicalLogic = require('./index').default;
   return canonicalLogic({
-    showPrivacyBanner: showPrivacyBannerMock,
-    showCookieBanner: showCookieBannerMock,
+    setShowPrivacyBanner: setShowPrivacyBannerMock,
+    setShowCookieBanner: setShowCookieBannerMock,
     logger,
   });
 };
@@ -57,7 +56,7 @@ describe('Consent Banner Canonical Logic', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(showPrivacyBannerMock).not.toHaveBeenCalled();
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
     });
 
     it('sets PRIVACY_COOKIE and shows privacy banner when cookie is 0', () => {
@@ -71,7 +70,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, '1', {
         expires: 365,
       });
-      expect(showPrivacyBannerMock).toHaveBeenCalledWith(true);
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
     it('sets PRIVACY_COOKIE and shows privacy banner when cookie is null', () => {
@@ -85,7 +84,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, '1', {
         expires: 365,
       });
-      expect(showPrivacyBannerMock).toHaveBeenCalledWith(true);
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1', () => {
@@ -96,7 +95,7 @@ describe('Consent Banner Canonical Logic', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(showCookieBannerMock).not.toHaveBeenCalled();
+      expect(setShowCookieBannerMock).not.toHaveBeenCalled();
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {
@@ -107,7 +106,7 @@ describe('Consent Banner Canonical Logic', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(showCookieBannerMock).toHaveBeenCalledWith(true);
+      expect(setShowCookieBannerMock).toHaveBeenCalledWith(true);
     });
 
     it('sets POLICY_COOKIE when it is not set', () => {
@@ -154,7 +153,7 @@ describe('Consent Banner Canonical Logic', () => {
       expect(fetch).toHaveBeenCalledWith(
         `https://cookieoven.com/ckns_policy/000`,
       );
-      expect(showCookieBannerMock).toHaveBeenCalledWith(true);
+      expect(setShowCookieBannerMock).toHaveBeenCalledWith(true);
     });
   });
 
@@ -164,8 +163,8 @@ describe('Consent Banner Canonical Logic', () => {
 
       privacyOnAllow();
 
-      expect(showPrivacyBannerMock).toHaveBeenCalledWith(false);
-      expect(showCookieBannerMock).not.toHaveBeenCalled();
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(false);
+      expect(setShowCookieBannerMock).not.toHaveBeenCalled();
       expect(Cookie.set).not.toHaveBeenCalled();
     });
   });
@@ -176,8 +175,8 @@ describe('Consent Banner Canonical Logic', () => {
 
       privacyOnReject();
 
-      expect(showPrivacyBannerMock).toHaveBeenCalledWith(false);
-      expect(showCookieBannerMock).not.toHaveBeenCalled();
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(false);
+      expect(setShowCookieBannerMock).not.toHaveBeenCalled();
       expect(Cookie.set).not.toHaveBeenCalled();
     });
   });
@@ -188,8 +187,8 @@ describe('Consent Banner Canonical Logic', () => {
 
       cookieOnAllow();
 
-      expect(showCookieBannerMock).toHaveBeenCalledWith(false);
-      expect(showPrivacyBannerMock).not.toHaveBeenCalled();
+      expect(setShowCookieBannerMock).toHaveBeenCalledWith(false);
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
       expect(Cookie.set).toHaveBeenCalledTimes(2);
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
@@ -210,8 +209,8 @@ describe('Consent Banner Canonical Logic', () => {
 
       cookieOnReject();
 
-      expect(showCookieBannerMock).toHaveBeenCalledWith(false);
-      expect(showPrivacyBannerMock).not.toHaveBeenCalled();
+      expect(setShowCookieBannerMock).toHaveBeenCalledWith(false);
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
       expect(Cookie.set).toHaveBeenCalledTimes(1);
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
