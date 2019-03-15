@@ -105,7 +105,21 @@ describe('Consent Banner Canonical Logic', () => {
       expect(setShowCookieMock).toHaveBeenCalledWith(true);
     });
 
-    it('shows cookie banner when EXPLICIT_COOKIE is 0 and sets PRIVACY_COOKIE when cookie is null', () => {
+    it('does not set POLICY_COOKIE when its already set', () => {
+      setCookieGetMock({ explict: null, privacy: null, policy: '010' });
+
+      const { runInitial } = getCanonicalLogic();
+
+      runInitial();
+
+      expect(Cookie.set).not.toHaveBeenCalledWith(
+        POLICY_COOKIE,
+        expect.anything(),
+        expect.anything(),
+      );
+    });
+
+    it('shows cookie banner when EXPLICIT_COOKIE is 0 and sets POLICY_COOKIE when cookie is null', () => {
       setCookieGetMock({ explict: '0', policy: null });
 
       const { runInitial } = getCanonicalLogic();
