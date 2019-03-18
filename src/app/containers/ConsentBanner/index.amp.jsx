@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import Banner from './Banner';
 
 const parentId = 'consent';
 const promptId = 'consent-prompt';
-
-const ampOnTapHandler = type => ({ tap: [`tap:${parentId}.${type}`] });
+const privacyId = 'privacy'
+const cookieId = 'cookie';
 
 const ampGeoData = {
   ISOCountryGroups: {
@@ -61,20 +62,35 @@ const jsonInlinedScript = data => (
   />
 );
 
+const AmpConsentWrapper = styled.div`
+  & amp-consent {
+    position: initial;
+    display: block;
+  }
+`;
+
 const Amp = () => (
-  <Fragment>
+  <AmpConsentWrapper>
     <amp-geo layout="nodisplay">{jsonInlinedScript(ampGeoData)}</amp-geo>
     <amp-consent id={parentId} layout="nodisplay">
       {jsonInlinedScript(ampConsentData)}
-
-      <Banner
-        type="cookie"
-        onAccept={ampOnTapHandler('accept')}
-        onReject={ampOnTapHandler('reject')}
-        promptId={promptId}
-      />
+      <div id={promptId}>
+        <Banner
+          type="privacy"
+          onAccept={{ tap: [`${cookieId}.show,${privacyId}.hide`] }}
+          onReject={{ tap: [`${cookieId}.show,${privacyId}.hide`] }}
+          promptId={privacyId}
+        />
+        <Banner
+          type="cookie"
+          onAccept={{ tap: [`${parentId}.accept`] }}
+          onReject={{ tap: [`${parentId}.reject`] }}
+          promptId={cookieId}
+          hidden
+        />
+      </div>
     </amp-consent>
-  </Fragment>
+  </AmpConsentWrapper>
 );
 
 export default Amp;

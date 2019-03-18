@@ -113,34 +113,36 @@ export const ConsentBannerText = styled.p`
   }
 `;
 
-export const ConsentBannerButton = styled.button`
-  ${GEL_GREAT_PRIMER}
-  color: ${C_CONSENT_ACTION};
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
+const ListItem = styled.li`
+  & button {
+    ${GEL_GREAT_PRIMER}
+    color: ${C_CONSENT_ACTION};
+    font-weight: 700;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
 
-  ${hoverFocusStyles}
+    ${hoverFocusStyles}
+  }
+
+  & a {
+    color: ${C_CONSENT_ACTION};
+    text-decoration: none;
+
+    ${hoverFocusStyles}
+  }
 `;
 
-export const ConsentBannerLink = styled.a`
-  color: ${C_CONSENT_ACTION};
-  text-decoration: none;
-
-  ${hoverFocusStyles}
-`;
-
-export const ConsentBanner = ({ title, text, accept, reject, id }) => (
-  <Wrapper id={id}>
+export const ConsentBanner = ({ title, text, accept, reject, id, hidden }) => (
+  <Wrapper id={id} hidden={hidden}>
     <CenterWrapper>
       <Title>{title}</Title>
       {text}
       <Options>
-        <li>{accept}</li>
-        <li>{reject}</li>
+        <ListItem>{accept}</ListItem>
+        <ListItem>{reject}</ListItem>
       </Options>
     </CenterWrapper>
   </Wrapper>
