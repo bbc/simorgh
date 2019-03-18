@@ -26,18 +26,20 @@ describe('Canonical Container', () => {
     jest.mock('./CanonicalLogic', () => jest.fn());
     logic = require('./CanonicalLogic');
 
-    logic.mockImplementation(({ setShowPrivacyBanner, setShowCookieBanner }) => {
-      setShowCookieBannerState = setShowCookieBanner;
-      setShowPrivacyBannerState = setShowPrivacyBanner;
+    logic.mockImplementation(
+      ({ setShowPrivacyBanner, setShowCookieBanner }) => {
+        setShowCookieBannerState = setShowCookieBanner;
+        setShowPrivacyBannerState = setShowPrivacyBanner;
 
-      return {
-        runInitial,
-        privacyOnAllow,
-        privacyOnReject,
-        cookieOnAllow,
-        cookieOnReject,
-      };
-    });
+        return {
+          runInitial,
+          privacyOnAllow,
+          privacyOnReject,
+          cookieOnAllow,
+          cookieOnReject,
+        };
+      },
+    );
 
     CanonicalContainer = require('./index').default;
 
