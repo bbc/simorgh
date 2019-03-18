@@ -133,8 +133,8 @@ export const ConsentBannerLink = styled.a`
   ${hoverFocusStyles}
 `;
 
-export const ConsentBanner = ({ title, text, accept, reject }) => (
-  <Wrapper>
+export const ConsentBanner = ({ title, text, accept, reject, id }) => (
+  <Wrapper id={id}>
     <CenterWrapper>
       <Title>{title}</Title>
       {text}
@@ -151,4 +151,5 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  id: string.isRequired,
 };

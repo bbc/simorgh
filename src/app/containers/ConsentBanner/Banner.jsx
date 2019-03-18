@@ -1,5 +1,6 @@
 import React from 'react';
 import { func, string } from 'prop-types';
+import * as AmpHelpers from 'react-amphtml/helpers';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import {
   ConsentBanner,
@@ -9,13 +10,19 @@ import {
 } from '../../components/ConsentBanner';
 
 const Accept = (message, onClick) => (
-  <ConsentBannerButton onClick={onClick}>{message}</ConsentBannerButton>
+  <AmpHelpers.Action events={onClick}>
+    {props => <ConsentBannerButton {...props} role="button">{message}</ConsentBannerButton>}
+  </AmpHelpers.Action>
 );
 
 const Reject = (message, href, onClick) => (
-  <ConsentBannerLink href={href} onClick={onClick}>
-    {message}
-  </ConsentBannerLink>
+  <AmpHelpers.Action events={onClick}>
+    {props => (
+      <ConsentBannerLink {...props} href={href}>
+        {message}
+      </ConsentBannerLink>
+    )}
+  </AmpHelpers.Action>
 );
 
 const Text = ({ first, linkText, linkUrl, last }) => {
@@ -37,13 +44,14 @@ Text.propTypes = {
   last: string.isRequired,
 };
 
-const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
+const ConsentBannerContainer = ({ type, onReject, onAccept, promptId }) => (
   <ServiceContextConsumer>
     {({ translations }) => {
       const messaging = translations.consentBanner[type];
 
       return (
         <ConsentBanner
+          id={promptId}
           title={messaging.title}
           text={Text(messaging.description)}
           accept={Accept(messaging.accept, onAccept)}
@@ -53,11 +61,5 @@ const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
     }}
   </ServiceContextConsumer>
 );
-
-ConsentBannerContainer.propTypes = {
-  type: string.isRequired,
-  onReject: func.isRequired,
-  onAccept: func.isRequired,
-};
 
 export default ConsentBannerContainer;
