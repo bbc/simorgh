@@ -3,7 +3,7 @@ import { shape } from 'prop-types';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import { PlatformContextConsumer } from '../../contexts/PlatformContext';
 import Metadata from '../../components/Metadata';
-import LinkData from '../../components/LinkData';
+import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
 
@@ -48,7 +48,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
             return (
               <Fragment>
-                <LinkData
+                <LinkedData
                   isAmp={platform === 'amp'}
                   lang={metadata.passport.language}
                   type={metadata.type}

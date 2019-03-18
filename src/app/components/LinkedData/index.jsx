@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { string } from 'prop-types';
 
-const LinkData = ({
+const LinkedData = ({
   type,
   seoHeadline,
   firstPublished,
@@ -65,7 +65,7 @@ const LinkData = ({
   );
 };
 
-LinkData.propTypes = {
+LinkedData.propTypes = {
   type: string.isRequired,
   seoHeadline: string.isRequired,
   firstPublished: string.isRequired,
@@ -77,4 +77,4 @@ LinkData.propTypes = {
   url: string.isRequired,
 };
 
-export default LinkData;
+export default LinkedData;
