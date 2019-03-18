@@ -34,7 +34,7 @@ This banner logic is designed to be compatible with any page or JavaScript appli
 
 - **runInitial()**  
 *Purpose:* Run once on page  
-*Function:* Does initial checks to see what banners the user should be shown, and sets privacy and policy cookie.
+*Function:* Does initial checks to see what banners the user should be shown, and sets privacy and policy cookie. This should be run on page load, before any onClick may be triggered by the user.
 
 - **privacyOnAllow()**  
 *Purpose:* onClick action for Privacy Banner `OK` button  
@@ -51,3 +51,7 @@ This banner logic is designed to be compatible with any page or JavaScript appli
 - **cookieOnReject()**  
 *Purpose:* onClick action for Cookie Banner `No, take me to settings` link  
 *Function:* Hides the cookie banner and sets explicit cookie
+
+## Actions
+
+This set of utility functions sets the cookie values of `ckns_privacy`, `ckns_explicit` and `ckns_policy` as well as making a request to the cookie oven to set `ckns_policy` on the other domain `(bbc.com/bbc.co.uk)` to what the user is currently on.

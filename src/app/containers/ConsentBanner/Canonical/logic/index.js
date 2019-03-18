@@ -25,7 +25,7 @@ const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () => setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
-const setAppovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
+const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
   setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
 
@@ -62,7 +62,7 @@ const consentBannerUtilities = ({
   const cookieOnAllow = () => {
     setShowCookieBanner(false);
     setDismissedCookieBanner();
-    setAppovedPolicy(logger);
+    setApprovedPolicy(logger);
   };
 
   const cookieOnReject = () => {
