@@ -52,7 +52,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                 canonicalLink={canonicalLink}
                 defaultImage={defaultImage}
                 defaultImageAltText={defaultImageAltText}
-                description={promo.summary}
+                description={promo.summary || promo.headlines.seoHeadline}
                 facebookAdmin={100004154058350}
                 facebookAppID={1609039196070050}
                 lang={metadata.passport.language}
