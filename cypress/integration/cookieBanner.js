@@ -39,6 +39,21 @@ describe('Article Body Tests', () => {
     expectCookieExpiryDateOneYear('ckns_policy');
   });
 
+  it('should make a client-side request to the Cookie Oven', () => {
+    let cookieEndpointHit = false;
+    cy.server()
+      .route('GET', 'https://cookie-oven.api.bbc.com/ckns_policy/111')
+      .as('cookieEndpoint');
+    cy.get('@cookieEndpoint').then(() => {
+      cookieEndpointHit = true;
+    });
+    cy.contains('OK').click(); // click on the privacy banner
+    cy.contains('Yes, I agree').click(); // this second click (cookie banner) should trigger the network request
+    cy.wait(3000).then(() => {
+      expect(cookieEndpointHit).to.equal(true);
+    });
+  });
+
   it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
