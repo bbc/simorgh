@@ -1,4 +1,4 @@
-# Canonical Cookie Banner Logic
+# Consent Banner Utilities
 
 ```js
 import consentBannerUtilities from '.';

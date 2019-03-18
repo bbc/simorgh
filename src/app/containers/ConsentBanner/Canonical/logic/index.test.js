@@ -31,7 +31,7 @@ const getConsentBannerUtilities = ({ logger } = {}) => {
   });
 };
 
-describe('Consent Banner Canonical Logic', () => {
+describe('Consent Banner Utilities', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
