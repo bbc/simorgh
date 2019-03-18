@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Banner from './Banner';
 
 const parentId = 'consent';
 const promptId = 'consent-prompt';
-const privacyId = 'privacy'
+const privacyId = 'privacy';
 const cookieId = 'cookie';
 
 const ampGeoData = {

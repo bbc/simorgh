@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string } from 'prop-types';
+import { func, string, bool } from 'prop-types';
 import * as AmpHelpers from 'react-amphtml/helpers';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import {
@@ -10,7 +10,7 @@ import {
 const Accept = (message, onClick) => (
   <AmpHelpers.Action events={onClick}>
     {props => (
-      <button {...props} role="button">
+      <button {...props} type="button">
         {message}
       </button>
     )}
@@ -70,5 +70,18 @@ const ConsentBannerContainer = ({
     }}
   </ServiceContextConsumer>
 );
+
+ConsentBannerContainer.propTypes = {
+  type: string.isRequired,
+  onReject: func.isRequired,
+  onAccept: func.isRequired,
+  promptId: string,
+  hidden: bool,
+};
+
+ConsentBannerContainer.defaultProps = {
+  promptId: null,
+  hidden: null,
+};
 
 export default ConsentBannerContainer;

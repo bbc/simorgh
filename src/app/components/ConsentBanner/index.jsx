@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, element } from 'prop-types';
+import { string, element, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   C_CONSENT_BACKGROUND,
@@ -153,5 +153,11 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
-  id: string.isRequired,
+  id: string,
+  hidden: bool,
+};
+
+ConsentBanner.defaultProps = {
+  id: null,
+  hidden: null,
 };
