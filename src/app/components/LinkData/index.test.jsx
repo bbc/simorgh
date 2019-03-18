@@ -12,8 +12,10 @@ describe('LinkData', () => {
     service: 'news',
     lastUpdated: '2019-02-26T11:25:10.555Z',
     firstPublished: '2018-10-10T16:19:31.344Z',
-    noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'http://www.bbc.com/news/help-41670342',
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    url:
+      'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
   };
 
   shouldShallowMatchSnapshot(

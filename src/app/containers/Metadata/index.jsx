@@ -59,6 +59,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   service={metadata.createdBy}
                   publishingPrinciples={publishingPrinciples}
                   noBylinesPolicy={noBylinesPolicy}
+                  url={defaultImage}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}

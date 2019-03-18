@@ -9,13 +9,12 @@ const LinkData = ({
   lastUpdated,
   optimoId,
   service,
+  url,
   publishingPrinciples,
   noBylinesPolicy,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
-  const url =
-    'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1';
 
   const logo = {
     '@type': imgObject,
@@ -75,6 +74,7 @@ LinkData.propTypes = {
   service: string.isRequired,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
+  url: string.isRequired,
 };
 
 export default LinkData;
