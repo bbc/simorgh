@@ -15,8 +15,8 @@ const news = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
-  noBylinesPolicy: 'http://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'http://www.bbc.com/news/help-41670342',
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   translations: {
     error: {
       404: {
