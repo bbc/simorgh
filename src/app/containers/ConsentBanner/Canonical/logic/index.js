@@ -1,6 +1,5 @@
-import 'isomorphic-fetch';
 import Cookie from 'js-cookie';
-import cookieOvenUrl from './cookieOvenUrl';
+import setCookieOven from './setCookieOven';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -15,22 +14,9 @@ const onClient = typeof window !== 'undefined';
 const setCookie = (name, value) =>
   Cookie.set(name, value, { expires: COOKIE_EXPIRY });
 
-const setCookieOven = (value, logger) => {
-  if (window.location && window.location.origin) {
-    try {
-      fetch(
-        `${cookieOvenUrl(window.location.origin)}/${POLICY_COOKIE}/${value}`,
-      );
-    } catch (e) {
-      const log = logger || console;
-      log.error(e);
-    }
-  }
-};
-
 const setPolicyCookie = (value, logger) => {
   setCookie(POLICY_COOKIE, value);
-  setCookieOven(value, logger);
+  setCookieOven(POLICY_COOKIE, value, logger);
 };
 
 const seenPrivacyBanner = () => Cookie.get(PRIVACY_COOKIE) === BANNER_APPROVED;
