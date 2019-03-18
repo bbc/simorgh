@@ -42,6 +42,8 @@ const consentBannerUtilities = ({
       }
 
       if (!seenCookieBanner()) {
+        // Up to the application renderer to show the privacy
+        // banner and cookie banner in the correct order
         setShowCookieBanner(true);
       }
 
