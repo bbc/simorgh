@@ -32,7 +32,7 @@ describe('setCookieOven', () => {
     beforeEach(() => {
       error = new Error('An error');
       fetchResponse = Promise.reject(error);
-      global.console = { error: jest.fn(), log: console.log };
+      global.console = { error: jest.fn() };
     });
 
     afterEach(() => {

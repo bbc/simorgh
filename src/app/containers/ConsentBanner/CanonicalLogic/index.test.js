@@ -8,7 +8,11 @@ let setCookieOvenMock;
 const setShowPrivacyBannerMock = jest.fn();
 const setShowCookieBannerMock = jest.fn();
 
-const setCookieGetMock = ({ privacy = '1', explicit = '1', policy = '111' }) => {
+const setCookieGetMock = ({
+  privacy = '1',
+  explicit = '1',
+  policy = '111',
+}) => {
   Cookie.get.mockImplementation(cookie => {
     if (cookie === PRIVACY_COOKIE) {
       return privacy;
