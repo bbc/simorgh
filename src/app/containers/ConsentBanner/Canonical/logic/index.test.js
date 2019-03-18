@@ -22,9 +22,9 @@ const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
   });
 };
 
-const getCanonicalLogic = ({ logger } = {}) => {
-  const canonicalLogic = require('./index').default;
-  return canonicalLogic({
+const getConsentBannerUtilities = ({ logger } = {}) => {
+  const consentBannerUtilities = require('./index').default;
+  return consentBannerUtilities({
     setShowPrivacyBanner: setShowPrivacyBannerMock,
     setShowCookieBanner: setShowCookieBannerMock,
     logger,
@@ -50,7 +50,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('does not show the privacy banner when PRIVACY_COOKIE is 1', () => {
       setCookieGetMock({ privacy: '1' });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -61,7 +61,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('sets PRIVACY_COOKIE and shows privacy banner when cookie is 0', () => {
       setCookieGetMock({ privacy: '0' });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -75,7 +75,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('sets PRIVACY_COOKIE and shows privacy banner when cookie is null', () => {
       setCookieGetMock({ privacy: null });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -89,7 +89,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1', () => {
       setCookieGetMock({ explict: '1' });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -100,7 +100,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {
       setCookieGetMock({ explict: '0' });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -111,7 +111,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('sets POLICY_COOKIE when it is not set', () => {
       setCookieGetMock({ policy: null });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -128,7 +128,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('does not set POLICY_COOKIE when its already set', () => {
       setCookieGetMock({ policy: '010' });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -142,7 +142,7 @@ describe('Consent Banner Canonical Logic', () => {
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and sets POLICY_COOKIE when cookie is null', () => {
       setCookieGetMock({ explict: '0', policy: null });
 
-      const { runInitial } = getCanonicalLogic();
+      const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
@@ -160,7 +160,7 @@ describe('Consent Banner Canonical Logic', () => {
 
     it('Passes logger object to setCookieOven when provided', async () => {
       const logger = () => {};
-      const { cookieOnAllow } = getCanonicalLogic({ logger });
+      const { cookieOnAllow } = getConsentBannerUtilities({ logger });
 
       cookieOnAllow();
 
@@ -174,7 +174,7 @@ describe('Consent Banner Canonical Logic', () => {
 
   describe('privacyOnAllow', () => {
     it('hides privacy banner', () => {
-      const { privacyOnAllow } = getCanonicalLogic();
+      const { privacyOnAllow } = getConsentBannerUtilities();
 
       privacyOnAllow();
 
@@ -186,7 +186,7 @@ describe('Consent Banner Canonical Logic', () => {
 
   describe('privacyOnReject', () => {
     it('hides privacy banner', () => {
-      const { privacyOnReject } = getCanonicalLogic();
+      const { privacyOnReject } = getConsentBannerUtilities();
 
       privacyOnReject();
 
@@ -198,7 +198,7 @@ describe('Consent Banner Canonical Logic', () => {
 
   describe('cookieOnAllow', () => {
     it('hides cookie banner, sets EXPLICIT_COOKIE to 1 and sets POLICY_COOKIE to 111', () => {
-      const { cookieOnAllow } = getCanonicalLogic();
+      const { cookieOnAllow } = getConsentBannerUtilities();
 
       cookieOnAllow();
 
@@ -221,7 +221,7 @@ describe('Consent Banner Canonical Logic', () => {
 
   describe('cookieOnReject', () => {
     it('hides cookie banner, sets EXPLICIT_COOKIE to 1 and does not set POLICY_COOKIE', () => {
-      const { cookieOnReject } = getCanonicalLogic();
+      const { cookieOnReject } = getConsentBannerUtilities();
 
       cookieOnReject();
 

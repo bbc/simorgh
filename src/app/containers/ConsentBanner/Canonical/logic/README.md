@@ -1,7 +1,7 @@
 # Canonical Cookie Banner Logic
 
 ```js
-import cookies from '.';
+import consentBannerUtilities from '.';
 
 const {
     runInitial,
@@ -9,7 +9,7 @@ const {
     privacyOnReject,
     cookieOnAllow,
     cookieOnReject,
-  } = cookies({ setShowPrivacyBanner, setShowCookieBanner });
+  } = consentBannerUtilities({ setShowPrivacyBanner, setShowCookieBanner });
 ```
 
 ## Input Functions

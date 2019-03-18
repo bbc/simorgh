@@ -29,7 +29,7 @@ const setAppovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
   setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
 
-const canonicalBannerLogic = ({
+const consentBannerUtilities = ({
   setShowPrivacyBanner,
   setShowCookieBanner,
   logger,
@@ -79,4 +79,4 @@ const canonicalBannerLogic = ({
   };
 };
 
-export default canonicalBannerLogic;
+export default consentBannerUtilities;
