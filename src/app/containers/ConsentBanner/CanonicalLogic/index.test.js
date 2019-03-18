@@ -8,14 +8,14 @@ let setCookieOvenMock;
 const setShowPrivacyBannerMock = jest.fn();
 const setShowCookieBannerMock = jest.fn();
 
-const setCookieGetMock = ({ privacy = '1', explict = '1', policy = '111' }) => {
+const setCookieGetMock = ({ privacy = '1', explicit = '1', policy = '111' }) => {
   Cookie.get.mockImplementation(cookie => {
     if (cookie === PRIVACY_COOKIE) {
       return privacy;
     }
 
     if (cookie === EXPLICIT_COOKIE) {
-      return explict;
+      return explicit;
     }
 
     return policy;
@@ -87,7 +87,7 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1', () => {
-      setCookieGetMock({ explict: '1' });
+      setCookieGetMock({ explicit: '1' });
 
       const { runInitial } = getConsentBannerUtilities();
 
@@ -98,7 +98,7 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {
-      setCookieGetMock({ explict: '0' });
+      setCookieGetMock({ explicit: '0' });
 
       const { runInitial } = getConsentBannerUtilities();
 
@@ -140,7 +140,7 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and sets POLICY_COOKIE when cookie is null', () => {
-      setCookieGetMock({ explict: '0', policy: null });
+      setCookieGetMock({ explicit: '0', policy: null });
 
       const { runInitial } = getConsentBannerUtilities();
 
