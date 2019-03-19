@@ -1,9 +1,9 @@
 # TESTING FOR ARTICLES
 
-## **- STORY REFINEMENT**
-## **- ISSUE REFINEMENT**
-## **- TESTING ON LOCAL**
-## **- TESTING ON TEST**
+## **- [STORY REFINEMENT](#story-refinement)**
+## **- [ISSUE REFINEMENT](#issue-refinement)**
+## **- [TESTING ON LOCAL](#testing-on-local)**
+## **- [TESTING ON TEST](#testing-on-test)**
 
 ## *STORY REFINEMENT*
 Story refinements sessions are with the Product Owner/Buisness Analyst, a developer and a tester. Issues will be raised off of the back of the story refinement session.
