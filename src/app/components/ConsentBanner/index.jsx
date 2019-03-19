@@ -113,6 +113,8 @@ export const ConsentBannerText = styled.p`
   }
 `;
 
+// Style `button` and `a` as children due to inability to set `on`
+// prop on styled component as required for the amp useage
 const ListItem = styled.li`
   & button {
     ${GEL_GREAT_PRIMER}
