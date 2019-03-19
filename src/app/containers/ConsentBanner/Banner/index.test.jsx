@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import Banner from './Banner';
+import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import Banner from '.';
 
 describe('Consent Banner Container - Banner', () => {
   shouldMatchSnapshot(

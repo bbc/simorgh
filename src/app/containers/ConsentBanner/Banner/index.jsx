@@ -1,12 +1,12 @@
 import React from 'react';
 import { func, string } from 'prop-types';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { ServiceContextConsumer } from '../../../contexts/ServiceContext';
 import {
   ConsentBanner,
   ConsentBannerButton,
   ConsentBannerLink,
-  ConsentBannerText,
-} from '../../components/ConsentBanner';
+} from '../../../components/ConsentBanner';
+import BannerText from './Text';
 
 const Accept = (message, onClick) => (
   <ConsentBannerButton onClick={onClick}>{message}</ConsentBannerButton>
@@ -18,25 +18,6 @@ const Reject = (message, href, onClick) => (
   </ConsentBannerLink>
 );
 
-const Text = ({ first, linkText, linkUrl, last }) => {
-  const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
-
-  return (
-    <ConsentBannerText>
-      {first}
-      {Link}
-      {last}
-    </ConsentBannerText>
-  );
-};
-
-Text.propTypes = {
-  first: string.isRequired,
-  linkText: string.isRequired,
-  linkUrl: string.isRequired,
-  last: string.isRequired,
-};
-
 const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
   <ServiceContextConsumer>
     {({ translations }) => {
@@ -45,7 +26,7 @@ const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
       return (
         <ConsentBanner
           title={consentBannerConfig.title}
-          text={Text(consentBannerConfig.description)}
+          text={BannerText(consentBannerConfig.description)}
           accept={Accept(consentBannerConfig.accept, onAccept)}
           reject={Reject(
             consentBannerConfig.reject,
