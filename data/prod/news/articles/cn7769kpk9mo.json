@@ -176,7 +176,7 @@
                           }
                         ],
                         "isExternal": false,
-                        "locator": "https://www.test.bbc.com/news/articles/c9rpqy7pmypo",
+                        "locator": "https://www.test.bbc.com/news/articles/cl55zn0w0l4o",
                         "text": "placed on the tomb of the unknown warrior"
                       },
                       "type": "urlLink"
@@ -686,13 +686,13 @@
     ],
     "createdBy": "News",
     "firstPublished": 1539188425274,
-    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
+    "id": "urn:bbc:ares::article:cn7769kpk9mo",
     "language": "en-gb",
     "lastPublished": 1539188425274,
     "lastUpdated": 1552558351143,
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c85pqyj5m2ko",
-      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
+      "canonicalUrl": "https://www.bbc.com/news/articles/cn7769kpk9mo",
+      "optimoUrn": "urn:bbc:optimo:asset:cn7769kpk9mo"
     },
     "options": {},
     "passport": {
@@ -705,10 +705,7 @@
           "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
           "thingLabel": "Wedding of Prince Harry and Meghan Markle",
           "thingSameAs": [],
-          "thingType": [
-            "Event",
-            "Thing"
-          ],
+          "thingType": ["Event", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id"
         },
         {
@@ -720,13 +717,8 @@
           ],
           "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
           "thingLabel": "Duchess of Sussex",
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Meghan_Markle"
-          ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
+          "thingType": ["Person", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
           "topicId": "cg3mq45zq4xt",
           "topicName": "Duchess of Sussex"
@@ -740,13 +732,8 @@
           ],
           "thingId": "dba7dfeb-87d3-4801-80ba-fa8be6c9555e",
           "thingLabel": "Hackney",
-          "thingSameAs": [
-            "http://sws.geonames.org/2647694/"
-          ],
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
+          "thingSameAs": ["http://sws.geonames.org/2647694/"],
+          "thingType": ["Place", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/dba7dfeb-87d3-4801-80ba-fa8be6c9555e#id",
           "topicId": "cmg0810x955t",
           "topicName": "Hackney"
@@ -760,13 +747,8 @@
           ],
           "thingId": "f94940f0-476c-4ec7-b48d-e58120bb1956",
           "thingLabel": "Windsor",
-          "thingSameAs": [
-            "http://sws.geonames.org/2633842/"
-          ],
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
+          "thingSameAs": ["http://sws.geonames.org/2633842/"],
+          "thingType": ["Place", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/f94940f0-476c-4ec7-b48d-e58120bb1956#id",
           "topicId": "cy489180198t",
           "topicName": "Windsor"
@@ -780,10 +762,10 @@
     "headlines": {
       "seoHeadline": "Royal wedding flowers given to Hackney hospice"
     },
-    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
+    "id": "urn:bbc:ares::article:cn7769kpk9mo",
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c85pqyj5m2ko",
-      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
+      "canonicalUrl": "https://www.bbc.com/news/articles/cn7769kpk9mo",
+      "optimoUrn": "urn:bbc:optimo:asset:cn7769kpk9mo"
     },
     "summary": "",
     "timestamp": 1539188425274,
