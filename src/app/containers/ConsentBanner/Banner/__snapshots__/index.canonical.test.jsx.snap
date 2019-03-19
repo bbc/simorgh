@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Consent Banner Container - Banner should correctly render cookie banner 1`] = `
+exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
@@ -61,7 +61,7 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
   color: #FFFFFF;
 }
 
-.c5 {
+.c5 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -73,19 +73,19 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
   cursor: pointer;
 }
 
-.c5:focus,
-.c5:hover {
+.c5 button:focus,
+.c5 button:hover {
   color: #FFFFFF;
 }
 
-.c6 {
+.c5 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:focus,
-.c6:hover {
+.c5 a:focus,
+.c5 a:hover {
   color: #FFFFFF;
 }
 
@@ -138,7 +138,7 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
 }
 
 @media (min-width:37.5em) {
-  .c5 {
+  .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -146,6 +146,8 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
 
 <div
   className="c0"
+  hidden={null}
+  id={null}
 >
   <div
     className="c1"
@@ -169,17 +171,20 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
     <ul
       className="c4"
     >
-      <li>
+      <li
+        className="c5"
+      >
         <button
-          className="c5"
           onClick={[Function]}
+          type="button"
         >
           Yes, I agree
         </button>
       </li>
-      <li>
+      <li
+        className="c5"
+      >
         <a
-          className="c6"
           href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           onClick={[Function]}
         >
@@ -191,7 +196,7 @@ exports[`Consent Banner Container - Banner should correctly render cookie banner
 </div>
 `;
 
-exports[`Consent Banner Container - Banner should correctly render privacy banner 1`] = `
+exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
@@ -252,7 +257,7 @@ exports[`Consent Banner Container - Banner should correctly render privacy banne
   color: #FFFFFF;
 }
 
-.c5 {
+.c5 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -264,19 +269,19 @@ exports[`Consent Banner Container - Banner should correctly render privacy banne
   cursor: pointer;
 }
 
-.c5:focus,
-.c5:hover {
+.c5 button:focus,
+.c5 button:hover {
   color: #FFFFFF;
 }
 
-.c6 {
+.c5 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:focus,
-.c6:hover {
+.c5 a:focus,
+.c5 a:hover {
   color: #FFFFFF;
 }
 
@@ -329,7 +334,7 @@ exports[`Consent Banner Container - Banner should correctly render privacy banne
 }
 
 @media (min-width:37.5em) {
-  .c5 {
+  .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -337,6 +342,8 @@ exports[`Consent Banner Container - Banner should correctly render privacy banne
 
 <div
   className="c0"
+  hidden={null}
+  id={null}
 >
   <div
     className="c1"
@@ -354,17 +361,20 @@ exports[`Consent Banner Container - Banner should correctly render privacy banne
     <ul
       className="c4"
     >
-      <li>
+      <li
+        className="c5"
+      >
         <button
-          className="c5"
           onClick={[Function]}
+          type="button"
         >
           OK
         </button>
       </li>
-      <li>
+      <li
+        className="c5"
+      >
         <a
-          className="c6"
           href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
           onClick={[Function]}
         >

@@ -1,18 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import {
-  ConsentBanner,
-  ConsentBannerButton,
-  ConsentBannerLink,
-  ConsentBannerText,
-} from '.';
+import { ConsentBanner, ConsentBannerText } from '.';
 
-const Accept = <ConsentBannerButton onClick={() => {}}>OK</ConsentBannerButton>;
+const Accept = (
+  <button onClick={() => {}} type="button">
+    OK
+  </button>
+);
 
 const Reject = (
-  <ConsentBannerLink href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
+  <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
     Find out what&apos;s changed
-  </ConsentBannerLink>
+  </a>
 );
 
 const Text = (

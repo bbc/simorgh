@@ -1,37 +1,32 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import {
-  ConsentBanner,
-  ConsentBannerButton,
-  ConsentBannerLink,
-  ConsentBannerText,
-} from '.';
+import { ConsentBanner, ConsentBannerText } from '.';
+
+const baseProps = {
+  title: "We've updated our Privacy and Cookies Policy",
+  text: <p>Hello</p>,
+  accept: <button type="button">Accept</button>,
+  reject: <a href="https://foobar.com">Reject</a>,
+  id: 'banner-id',
+};
 
 describe('ConsentBanner', () => {
-  const props = {
-    title: "We've updated our Privacy and Cookies Policy",
-    text: <p>Hello</p>,
-    accept: <a href="https://foobar.com">Accept</a>,
-    reject: <a href="https://foobar.com">Reject</a>,
-  };
-
-  shouldMatchSnapshot('should correctly render', <ConsentBanner {...props} />);
-});
-
-describe('ConsentBannerButton', () => {
   shouldMatchSnapshot(
     'should correctly render',
-    <ConsentBannerButton onClick={() => {}}>OK</ConsentBannerButton>,
+    <ConsentBanner {...baseProps} />,
   );
-});
 
-describe('ConsentBannerLink', () => {
-  shouldMatchSnapshot(
-    'should correctly render',
-    <ConsentBannerLink href="https://www.bbc.co.uk/usingthebbc/your-data-matters">
-      Find out what&apos;s changed
-    </ConsentBannerLink>,
-  );
+  describe('with hidden attribute on wrapper', () => {
+    const props = {
+      hidden: true,
+      ...baseProps,
+    };
+
+    shouldMatchSnapshot(
+      'should correctly render',
+      <ConsentBanner {...props} />,
+    );
+  });
 });
 
 describe('ConsentBannerText', () => {

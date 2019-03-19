@@ -3,6 +3,7 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { PlatformContextProvider } from '../../contexts/PlatformContext';
 
 jest.mock('./index.canonical', () => () => <h1>Canonical Cookie banner</h1>);
+jest.mock('./index.amp', () => () => <h1>Amp Cookie banner</h1>);
 
 const ConsentBanner = require('./index').default;
 
