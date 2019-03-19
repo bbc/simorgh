@@ -12,7 +12,7 @@ describe('Consent Banner Container - Banner', () => {
   );
 
   shouldMatchSnapshot(
-    'should correctly render privacy banner',
+    'should correctly render cookie banner',
     <ServiceContextProvider service="news">
       <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
     </ServiceContextProvider>,

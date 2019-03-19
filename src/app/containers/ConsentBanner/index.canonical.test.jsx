@@ -76,6 +76,7 @@ describe('Canonical Container', () => {
       ReactDOM.render(<CanonicalContainer />, container);
 
       setShowPrivacyBannerState(true);
+      setShowCookieBannerState(false);
     });
 
     expect(container.innerHTML).toBe('<div>Canonical privacy banner</div>');

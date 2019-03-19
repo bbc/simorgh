@@ -53,9 +53,9 @@ const news = {
         description: {
           first:
             "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-          linkText: '',
-          last: '',
-          linkUrl: '',
+          linkText: null,
+          last: null,
+          linkUrl: null,
         },
         accept: 'OK',
         reject: "Find out what's changed",

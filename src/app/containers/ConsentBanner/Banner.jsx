@@ -40,14 +40,14 @@ Text.propTypes = {
 const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
   <ServiceContextConsumer>
     {({ translations }) => {
-      const messaging = translations.consentBanner[type];
+      const consentBannerConfig = translations.consentBanner[type];
 
       return (
         <ConsentBanner
-          title={messaging.title}
-          text={Text(messaging.description)}
-          accept={Accept(messaging.accept, onAccept)}
-          reject={Reject(messaging.reject, messaging.rejectUrl, onReject)}
+          title={consentBannerConfig.title}
+          text={Text(consentBannerConfig.description)}
+          accept={Accept(consentBannerConfig.accept, onAccept)}
+          reject={Reject(consentBannerConfig.reject, consentBannerConfig.rejectUrl, onReject)}
         />
       );
     }}
