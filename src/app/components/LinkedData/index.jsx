@@ -9,7 +9,7 @@ const LinkedData = ({
   lastUpdated,
   optimoId,
   service,
-  url,
+  logoUrl,
   publishingPrinciples,
   noBylinesPolicy,
 }) => {
@@ -20,14 +20,14 @@ const LinkedData = ({
     '@type': imgObject,
     width: 1024,
     height: 576,
-    url,
+    url: logoUrl,
   };
 
   const image = {
     '@type': imgObject,
     width: 1024,
     height: 576,
-    url,
+    url: logoUrl,
   };
 
   const publisher = {
@@ -53,7 +53,7 @@ const LinkedData = ({
     dateModified: lastUpdated,
     headline: seoHeadline,
     image,
-    thumbnailUrl: url,
+    thumbnailUrl: logoUrl,
     author,
   };
 
@@ -74,7 +74,7 @@ LinkedData.propTypes = {
   service: string.isRequired,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
-  url: string.isRequired,
+  logoUrl: string.isRequired,
 };
 
 export default LinkedData;

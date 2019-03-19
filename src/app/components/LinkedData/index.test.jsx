@@ -14,7 +14,7 @@ describe('LinkData', () => {
     firstPublished: '2018-10-10T16:19:31.344Z',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    url:
+    logoUrl:
       'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
   };
 
