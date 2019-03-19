@@ -1,4 +1,5 @@
 import config from '../support/config';
+import skipLiveDescribe from '../support/skipLiveDescribe';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -10,7 +11,7 @@ import {
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
 
-describe('Article Body Tests', () => {
+skipLiveDescribe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
