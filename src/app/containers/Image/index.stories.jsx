@@ -8,6 +8,10 @@ import {
   landscape,
   portrait,
   square,
+  smallCustom,
+  smallLandscape,
+  smallPortrait,
+  smallSquare,
 } from './helpers/fixtureData';
 
 storiesOf('Image container within grid', module)
@@ -29,5 +33,25 @@ storiesOf('Image container within grid', module)
   .add('custom ratio image', () => (
     <GhostWrapper>
       <ImageContainer {...imageData(custom)} />
+    </GhostWrapper>
+  ))
+  .add('small landscape image', () => (
+    <GhostWrapper>
+      <ImageContainer {...imageData(smallLandscape)} />
+    </GhostWrapper>
+  ))
+  .add('small portrait image', () => (
+    <GhostWrapper>
+      <ImageContainer {...imageData(smallPortrait)} />
+    </GhostWrapper>
+  ))
+  .add('small square image', () => (
+    <GhostWrapper>
+      <ImageContainer {...imageData(smallSquare)} />
+    </GhostWrapper>
+  ))
+  .add('small custom ratio image', () => (
+    <GhostWrapper>
+      <ImageContainer {...imageData(smallCustom)} />
     </GhostWrapper>
   ));
