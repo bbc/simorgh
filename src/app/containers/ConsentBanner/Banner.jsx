@@ -47,7 +47,11 @@ const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
           title={consentBannerConfig.title}
           text={Text(consentBannerConfig.description)}
           accept={Accept(consentBannerConfig.accept, onAccept)}
-          reject={Reject(consentBannerConfig.reject, consentBannerConfig.rejectUrl, onReject)}
+          reject={Reject(
+            consentBannerConfig.reject,
+            consentBannerConfig.rejectUrl,
+            onReject,
+          )}
         />
       );
     }}
