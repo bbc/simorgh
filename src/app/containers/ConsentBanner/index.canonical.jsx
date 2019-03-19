@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Banner from './Banner';
-import logic from './CanonicalLogic';
+import consentBannerUtilities from './CanonicalLogic';
 
 const Canonical = () => {
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
@@ -12,7 +12,7 @@ const Canonical = () => {
     privacyOnReject,
     cookieOnAllow,
     cookieOnReject,
-  } = logic({ setShowPrivacyBanner, setShowCookieBanner });
+  } = consentBannerUtilities({ setShowPrivacyBanner, setShowCookieBanner });
 
   useEffect(() => {
     runInitial();
