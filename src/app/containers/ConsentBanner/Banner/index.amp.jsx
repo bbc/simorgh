@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string, bool } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import * as AmpHelpers from 'react-amphtml/helpers';
 import { ServiceContextConsumer } from '../../../contexts/ServiceContext';
 import { ConsentBanner } from '../../../components/ConsentBanner';
@@ -25,10 +25,10 @@ const Reject = (message, href, onClick) => (
   </AmpHelpers.Action>
 );
 
-const ConsentBannerContainer = ({
+const AmpConsentBannerContainer = ({
   type,
-  onReject,
-  onAccept,
+  acceptAction,
+  rejectAction,
   promptId,
   hidden,
 }) => (
@@ -41,8 +41,8 @@ const ConsentBannerContainer = ({
           id={promptId}
           title={messaging.title}
           text={BannerText(messaging.description)}
-          accept={Accept(messaging.accept, onAccept)}
-          reject={Reject(messaging.reject, messaging.rejectUrl, onReject)}
+          accept={Accept(messaging.accept, acceptAction)}
+          reject={Reject(messaging.reject, messaging.rejectUrl, rejectAction)}
           hidden={hidden}
         />
       );
@@ -50,17 +50,17 @@ const ConsentBannerContainer = ({
   </ServiceContextConsumer>
 );
 
-ConsentBannerContainer.propTypes = {
+AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
-  onReject: func.isRequired,
-  onAccept: func.isRequired,
+  acceptAction: shape({ tap: arrayOf(string) }).isRequired,
+  rejectAction: shape({ tap: arrayOf(string) }).isRequired,
   promptId: string,
   hidden: bool,
 };
 
-ConsentBannerContainer.defaultProps = {
+AmpConsentBannerContainer.defaultProps = {
   promptId: null,
   hidden: null,
 };
 
-export default ConsentBannerContainer;
+export default AmpConsentBannerContainer;

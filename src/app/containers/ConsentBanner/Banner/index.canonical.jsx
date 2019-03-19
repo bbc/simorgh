@@ -16,7 +16,7 @@ const Reject = (message, href, onClick) => (
   </a>
 );
 
-const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
+const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => (
   <ServiceContextConsumer>
     {({ translations }) => {
       const consentBannerConfig = translations.consentBanner[type];
@@ -37,10 +37,10 @@ const ConsentBannerContainer = ({ type, onReject, onAccept }) => (
   </ServiceContextConsumer>
 );
 
-ConsentBannerContainer.propTypes = {
+CanonicalConsentBannerContainer.propTypes = {
   type: string.isRequired,
   onReject: func.isRequired,
   onAccept: func.isRequired,
 };
 
-export default ConsentBannerContainer;
+export default CanonicalConsentBannerContainer;
