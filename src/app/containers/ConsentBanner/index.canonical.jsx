@@ -14,9 +14,7 @@ const Canonical = () => {
     cookieOnReject,
   } = consentBannerUtilities({ setShowPrivacyBanner, setShowCookieBanner });
 
-  useEffect(() => {
-    runInitial();
-  }, []);
+  useEffect(runInitial, []);
 
   return (
     <Fragment>
