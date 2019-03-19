@@ -16,6 +16,10 @@ describe('Article Meta Tests', () => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
+  it('should have the correct lang attribute', () => {
+    cy.get('html').should('have.attr', 'lang', 'en-gb');
+  });
+
   it('should have a nofollow meta tag', () => {
     retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
   });
