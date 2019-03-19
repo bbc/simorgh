@@ -152,6 +152,7 @@
     "prettier": "^1.15.0",
     "react-test-renderer": "^16.6.3",
     "snyk": "^1.129.0",
+    "start-server-webpack-plugin": "^2.2.5",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
