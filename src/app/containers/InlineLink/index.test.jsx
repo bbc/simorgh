@@ -32,14 +32,14 @@ describe('InlineLinkContainer', () => {
   describe('link matching routes for SPA', () => {
     testInternalInlineLink(
       'should render correctly',
-      'https://www.bbc.com/news/articles/c85pqyj5m2ko',
+      'https://www.bbc.com/news/articles/cn7769kpk9mo',
       [fragmentBlock('This is text for an internal link')],
       false,
     );
 
     testInternalInlineLink(
       'should render correctly for TEST environment',
-      'https://www.test.bbc.com/news/articles/c85pqyj5m2ko',
+      'https://www.test.bbc.com/news/articles/cn7769kpk9mo',
       [fragmentBlock('This is text for an internal link')],
       false,
     );
