@@ -3,6 +3,5 @@
    "chromeWebSecurity": false,
   "env": {
     "APP_ENV": "local"
-
   }
 }
