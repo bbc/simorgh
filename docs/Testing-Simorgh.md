@@ -1,6 +1,11 @@
 # TESTING FOR ARTICLES
 
-## STORY REFINEMENT
+## **- STORY REFINEMENT**
+## **- ISSUE REFINEMENT**
+## **- TESTING ON LOCAL**
+## **- TESTING ON TEST**
+
+## *STORY REFINEMENT*
 Story refinements sessions are with the Product Owner/Buisness Analyst, a developer and a tester. Issues will be raised off of the back of the story refinement session.
 ### PO/BA Role
 The PO/BA will discuss the importance of the work/component that will be commencing as a result of this meeting.
@@ -9,17 +14,17 @@ The developer will make notes about the technical requirements for this piece of
 ### Tester Role
 The tester will advise what testing efforts/resources will be required.
 
-## ISSUE REFINEMENT
+## *ISSUE REFINEMENT*
 After each stand up, two developers will discuss/flesh out the technical requirements of issues that contain the `Refinement needed` tag. Once this has been completed a third developer will sit down with a tester to discuss what testing will be required for each of the issues that were refined during the developers' Issue Refinement session.
 
-## TESTING ON LOCAL
-## *SIMORGH*
+## *TESTING ON LOCAL*
+## SIMORGH
 
 ## WRITING CYPRESS TESTS
 Once a developer has written their logic, a tester will checkout their branch to investigate the changes made. *To be clear, this is not testing. The PR has yet to clear Code Review.* The tester shall then branch off the developer's PR and write their Cypress tests there. Once the tests have been written, the tester's PR will go through the usual Code Review process.
 
 ## HOW TO TEST
-Make sure that your version of `latest` is up to date by using `git status` and then, if necessary, `git pull`. If your branch is not up to date when you do a `git pull` your machine will pull down all the dependencies required, which is automatically then followed by an `npm install`. Once your `latest` is up to date, check out the necessary branch. Once the branch has been checked out, make sure to run `npm ci`. Once this has been completed, you can now boot up your Local environment. Here are the commands required to boot up your Local enviroment.
+Make sure that your version of `latest` is up to date by using `git status` and then, if necessary, `git pull`. If your branch is not up to date when you do a `git pull` your machine will pull down all the dependencies required, which is automatically then followed by an `npm install`. Once your `latest` is up to date, check out the necessary branch. Once the branch has been checked out, make sure to run `npm ci`. Once this has been completed, you can now boot up your Local environment. Here are the command required to boot up your Local enviroment.
 
 `PROD` - `npm run build && npm run start`
 `DEV` - `npm run dev`
@@ -64,7 +69,7 @@ Lighthouse is a performance testing tool, which we have installed. In order to r
 The current testing on Psammead on your Local environment is mainly for checking that styles are loaded as expected and that breakpoints, which can be found on Zeppelin, are as expected. As Psammead is displaying components via an iframe, Articles have agreed that the browser/device testing should take place once each component has been intergrated into Simorgh.
 
 ## HOW TO TEST
-Make sure that your version of `latest` is up to date by using `git status` and then, if necessary, `git pull`. If your branch is not up to date when you do a `git pull`. Once your `latest` is up to date, check out the necessary branch. Once the branch has been checked out, make sure to run `npm run install:packages `. Once this has been completed, you can now boot up your Local environment. Once you've ran the command in Terminal, Storybook will open Firefox automatically. Here is the commands required to boot up your Local enviroment.
+Make sure that your version of `latest` is up to date by using `git status` and then, if necessary, `git pull`. If your branch is not up to date when you do a `git pull`. Once your `latest` is up to date, check out the necessary branch. Once the branch has been checked out, make sure to run `npm run install:packages `. Once this has been completed, you can now boot up your Local environment. Once you've ran the command in Terminal, Storybook will open Firefox automatically. Here is the command required to boot up your Local enviroment.
 
 - Storybook - `npm run storybook`
 
