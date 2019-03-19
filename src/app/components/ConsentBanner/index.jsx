@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, element } from 'prop-types';
+import { string, element, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   C_CONSENT_BACKGROUND,
@@ -113,34 +113,36 @@ export const ConsentBannerText = styled.p`
   }
 `;
 
-export const ConsentBannerButton = styled.button`
-  ${GEL_GREAT_PRIMER}
-  color: ${C_CONSENT_ACTION};
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
+const ListItem = styled.li`
+  & button {
+    ${GEL_GREAT_PRIMER}
+    color: ${C_CONSENT_ACTION};
+    font-weight: 700;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
 
-  ${hoverFocusStyles}
+    ${hoverFocusStyles}
+  }
+
+  & a {
+    color: ${C_CONSENT_ACTION};
+    text-decoration: none;
+
+    ${hoverFocusStyles}
+  }
 `;
 
-export const ConsentBannerLink = styled.a`
-  color: ${C_CONSENT_ACTION};
-  text-decoration: none;
-
-  ${hoverFocusStyles}
-`;
-
-export const ConsentBanner = ({ title, text, accept, reject }) => (
-  <Wrapper>
+export const ConsentBanner = ({ title, text, accept, reject, id, hidden }) => (
+  <Wrapper id={id} hidden={hidden}>
     <CenterWrapper>
       <Title>{title}</Title>
       {text}
       <Options>
-        <li>{accept}</li>
-        <li>{reject}</li>
+        <ListItem>{accept}</ListItem>
+        <ListItem>{reject}</ListItem>
       </Options>
     </CenterWrapper>
   </Wrapper>
@@ -151,4 +153,11 @@ ConsentBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  id: string,
+  hidden: bool,
+};
+
+ConsentBanner.defaultProps = {
+  id: null,
+  hidden: null,
 };
