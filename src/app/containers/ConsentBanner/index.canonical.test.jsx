@@ -47,6 +47,10 @@ describe('Canonical Container', () => {
     document.body.appendChild(container);
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should render privacy banner when both banners are set to be shown', () => {
     act(() => {
       ReactDOM.render(<CanonicalContainer />, container);
@@ -99,6 +103,7 @@ describe('Canonical Container', () => {
     act(() => {
       ReactDOM.render(<CanonicalContainer />, container);
 
+      setShowPrivacyBannerState(false);
       setShowCookieBannerState(true);
     });
 
@@ -112,5 +117,22 @@ describe('Canonical Container', () => {
       { onAccept: cookieOnAllow, onReject: cookieOnReject, type: 'cookie' },
       {},
     );
+  });
+
+  it('should render no banners when both are set to not be shown', () => {
+    act(() => {
+      ReactDOM.render(<CanonicalContainer />, container);
+
+      setShowPrivacyBannerState(false);
+      setShowCookieBannerState(false);
+    });
+
+    expect(container.innerHTML).toBe('');
+    expect(runInitial).toHaveBeenCalled();
+    expect(logic).toHaveBeenCalledWith({
+      setShowCookieBanner: expect.any(Function),
+      setShowPrivacyBanner: expect.any(Function),
+    });
+    expect(Banner).not.toHaveBeenCalled();
   });
 });
