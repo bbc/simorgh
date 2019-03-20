@@ -36,10 +36,10 @@
             "blocks": [
               {
                 "model": {
-                  "copyrightHolder": "St Joseph's Hospice",
+                  "copyrightHolder": "ST JOSEPH'S HOSPICE",
                   "height": 360,
-                  "locator": "4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg",
-                  "originCode": "cpsdevpb",
+                  "locator": "fd78/production/bf428660-2a02-11e9-8d34-21cc5838130a.jpg",
+                  "originCode": "cpsprodpb",
                   "width": 640
                 },
                 "type": "rawImage"
@@ -145,12 +145,12 @@
                     {
                       "model": {
                         "attributes": [],
-                        "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents."
+                        "text": "Designed by Philippa Craddock, the arrangements were hand-tied into bouquets for the hospice residents."
                       },
                       "type": "fragment"
                     }
                   ],
-                  "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents."
+                  "text": "Designed by Philippa Craddock, the arrangements were hand-tied into bouquets for the hospice residents."
                 },
                 "type": "paragraph"
               },
@@ -176,7 +176,7 @@
                           }
                         ],
                         "isExternal": false,
-                        "locator": "https://www.test.bbc.com/news/articles/c9rpqy7pmypo",
+                        "locator": "https://www.bbc.com/news/articles/c5ll353v7y9o",
                         "text": "placed on the tomb of the unknown warrior"
                       },
                       "type": "urlLink"
@@ -234,8 +234,8 @@
                 "model": {
                   "copyrightHolder": "EPA",
                   "height": 360,
-                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
-                  "originCode": "cpsdevpb",
+                  "locator": "fc73/production/f09ca650-2a02-11e9-8d34-21cc5838130a.jpg",
+                  "originCode": "cpsprodpb",
                   "width": 640
                 },
                 "type": "rawImage"
@@ -309,8 +309,8 @@
                 "model": {
                   "copyrightHolder": "Reuters",
                   "height": 360,
-                  "locator": "43b4/test/61a6f0b0-cca9-11e8-b0bf-f33155223fc4.jpg",
-                  "originCode": "cpsdevpb",
+                  "locator": "f110/production/1629afd0-2a03-11e9-8d34-21cc5838130a.jpg",
+                  "originCode": "cpsprodpb",
                   "width": 640
                 },
                 "type": "rawImage"
@@ -327,12 +327,12 @@
                                 {
                                   "model": {
                                     "attributes": [],
-                                    "text": "Philippa Craddock directed a team to create the wedding displays"
+                                    "text": "Philippa Craddock directed a team to create the wedding displays\n\n"
                                   },
                                   "type": "fragment"
                                 }
                               ],
-                              "text": "Philippa Craddock directed a team to create the wedding displays"
+                              "text": "Philippa Craddock directed a team to create the wedding displays\n\n"
                             },
                             "type": "paragraph"
                           }
@@ -401,12 +401,12 @@
                     {
                       "model": {
                         "attributes": [],
-                        "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\""
+                        "text": "\"There were four of us girls working on it and we earned 49-and-a-half hours overtime doing that.\""
                       },
                       "type": "fragment"
                     }
                   ],
-                  "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\""
+                  "text": "\"There were four of us girls working on it and we earned 49-and-a-half hours overtime doing that.\""
                 },
                 "type": "paragraph"
               }
@@ -419,10 +419,10 @@
             "blocks": [
               {
                 "model": {
-                  "copyrightHolder": "Press Association",
+                  "copyrightHolder": "PA",
                   "height": 360,
-                  "locator": "bcd2/test/8472de60-cca9-11e8-b0bf-f33155223fc4.jpg",
-                  "originCode": "cpsdevpb",
+                  "locator": "51b7/production/3a77a9a0-2a03-11e9-8d34-21cc5838130a.jpg",
+                  "originCode": "cpsprodpb",
                   "width": 640
                 },
                 "type": "rawImage"
@@ -468,12 +468,12 @@
                                 {
                                   "model": {
                                     "attributes": [],
-                                    "text": "The Queen and Prince Philip pose for an official photograph on their wedding day."
+                                    "text": "The Queen and Prince Philip pose for an official photograph on their wedding day"
                                   },
                                   "type": "fragment"
                                 }
                               ],
-                              "text": "The Queen and Prince Philip pose for an official photograph on their wedding day."
+                              "text": "The Queen and Prince Philip pose for an official photograph on their wedding day"
                             },
                             "type": "paragraph"
                           }
@@ -513,27 +513,12 @@
                     {
                       "model": {
                         "attributes": [],
-                        "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers."
+                        "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers. They are beautiful and very special.\""
                       },
                       "type": "fragment"
                     }
                   ],
-                  "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers."
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "\"They are beautiful and very special.\""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "\"They are beautiful and very special.\""
+                  "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers. They are beautiful and very special.\""
                 },
                 "type": "paragraph"
               }
@@ -548,8 +533,8 @@
                 "model": {
                   "copyrightHolder": "EPA",
                   "height": 360,
-                  "locator": "735a/test/a76a6ff0-cca9-11e8-b0bf-f33155223fc4.jpg",
-                  "originCode": "cpsdevpb",
+                  "locator": "c051/production/662acbe0-2a03-11e9-8d34-21cc5838130a.jpg",
+                  "originCode": "cpsprodpb",
                   "width": 640
                 },
                 "type": "rawImage"
@@ -625,12 +610,12 @@
                     {
                       "model": {
                         "attributes": [],
-                        "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them."
+                        "text": "Nigel Harding, chief executive of the hospice, said the flowers were \"simply stunning\"."
                       },
                       "type": "fragment"
                     }
                   ],
-                  "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them."
+                  "text": "Nigel Harding, chief executive of the hospice, said the flowers were \"simply stunning\"."
                 },
                 "type": "paragraph"
               },
@@ -640,12 +625,12 @@
                     {
                       "model": {
                         "attributes": [],
-                        "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\""
+                        "text": "\"Our patients were both surprised and delighted to receive them. A huge thank-you to Philippa Craddock and her team - and of course to the royal bride and groom.\""
                       },
                       "type": "fragment"
                     }
                   ],
-                  "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\""
+                  "text": "\"Our patients were both surprised and delighted to receive them. A huge thank-you to Philippa Craddock and her team - and of course to the royal bride and groom.\""
                 },
                 "type": "paragraph"
               },
@@ -685,108 +670,33 @@
       "urlLink"
     ],
     "createdBy": "News",
-    "firstPublished": 1539188425274,
-    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
+    "firstPublished": 1549452811302,
+    "id": "urn:bbc:ares::article:c8xxl4l3dzeo",
     "language": "en-gb",
-    "lastPublished": 1539188425274,
-    "lastUpdated": 1552558351143,
+    "lastPublished": 1549452811302,
+    "lastUpdated": 1550157526973,
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c85pqyj5m2ko",
-      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
+      "optimoUrn": "urn:bbc:optimo:asset:c8xxl4l3dzeo"
     },
     "options": {},
     "passport": {
       "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
       "language": "en-gb"
     },
-    "tags": {
-      "about": [
-        {
-          "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
-          "thingLabel": "Wedding of Prince Harry and Meghan Markle",
-          "thingSameAs": [],
-          "thingType": [
-            "Event",
-            "Thing"
-          ],
-          "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id"
-        },
-        {
-          "curationList": [
-            {
-              "curationId": "06912d9a-26a9-4474-bdb6-f623d1f6a416",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
-          "thingLabel": "Duchess of Sussex",
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Meghan_Markle"
-          ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
-          "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
-          "topicId": "cg3mq45zq4xt",
-          "topicName": "Duchess of Sussex"
-        },
-        {
-          "curationList": [
-            {
-              "curationId": "2647694",
-              "curationType": "location-stream"
-            }
-          ],
-          "thingId": "dba7dfeb-87d3-4801-80ba-fa8be6c9555e",
-          "thingLabel": "Hackney",
-          "thingSameAs": [
-            "http://sws.geonames.org/2647694/"
-          ],
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
-          "thingUri": "http://www.bbc.co.uk/things/dba7dfeb-87d3-4801-80ba-fa8be6c9555e#id",
-          "topicId": "cmg0810x955t",
-          "topicName": "Hackney"
-        },
-        {
-          "curationList": [
-            {
-              "curationId": "2633842",
-              "curationType": "location-stream"
-            }
-          ],
-          "thingId": "f94940f0-476c-4ec7-b48d-e58120bb1956",
-          "thingLabel": "Windsor",
-          "thingSameAs": [
-            "http://sws.geonames.org/2633842/"
-          ],
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
-          "thingUri": "http://www.bbc.co.uk/things/f94940f0-476c-4ec7-b48d-e58120bb1956#id",
-          "topicId": "cy489180198t",
-          "topicName": "Windsor"
-        }
-      ]
-    },
+    "tags": {},
     "type": "article",
-    "version": "v1.0.4"
+    "version": "v0.4.16"
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Royal wedding flowers given to Hackney hospice"
+      "seoHeadline": "Royal wedding 2018: Flowers given to Hackney hospice"
     },
-    "id": "urn:bbc:ares::article:c85pqyj5m2ko",
+    "id": "urn:bbc:ares::article:c8xxl4l3dzeo",
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c85pqyj5m2ko",
-      "optimoUrn": "urn:bbc:optimo:asset:c85pqyj5m2ko"
+      "optimoUrn": "urn:bbc:optimo:asset:c8xxl4l3dzeo"
     },
     "summary": "",
-    "timestamp": 1539188425274,
+    "timestamp": 1549452811302,
     "type": "cps"
   },
   "relatedContent": {

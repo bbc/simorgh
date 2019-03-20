@@ -152,7 +152,7 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 
 <a
   className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
+  href="/news/articles/cn7769kpk9mo"
   onClick={[Function]}
 >
   This is text for an internal link
@@ -184,7 +184,7 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 
 <a
   className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
+  href="/news/articles/cn7769kpk9mo"
   onClick={[Function]}
 >
   This is text for an internal link

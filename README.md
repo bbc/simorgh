@@ -33,8 +33,8 @@ The application will start on [http://localhost:7080](http://localhost:7080). To
 The route is `/news/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
 Articles 25 & 27 are available on the Production environment as well as locally. These can be used for testing.
-[http://localhost:7080/news/articles/c9rpqy7pmypo](http://localhost:7080/news/articles/c9rpqy7pmypo)
-[http://localhost:7080/news/articles/c85pqyj5m2ko](http://localhost:7080/news/articles/c85pqyj5m2ko).
+[http://localhost:7080/news/articles/cl55zn0w0l4o](http://localhost:7080/news/articles/cl55zn0w0l4o)
+[http://localhost:7080/news/articles/cn7769kpk9mo](http://localhost:7080/news/articles/cn7769kpk9mo).
 
 There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 
@@ -45,7 +45,7 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 ## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build && npm run start`. 
+`npm run build && npm run start`.
 
 We use `npm run build` locally which bundles the application pointing at localhost for data and static assets.
 
