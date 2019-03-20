@@ -35,7 +35,7 @@ const isTenHoursAgo = milliseconds => {
   return now - milliseconds >= 10 * 60 * 60 * 1000;
 };
 
-const updatedTimestamp = (datetime, milliseconds) => (
+const timestampWithPrefixUpdated = (datetime, milliseconds) => (
   <Timestamp datetime={datetime} prefix="Updated">
     {milliseconds}
   </Timestamp>
@@ -43,16 +43,23 @@ const updatedTimestamp = (datetime, milliseconds) => (
 
 const hasBeenUpdated = (updated, published) => updated !== published;
 
-const createSecondTimestamp = updated =>
-  isTenHoursAgo(updated)
-    ? updatedTimestamp(
-        formatDateTime(new Date(updated)),
-        formatTimestamp(new Date(updated)),
-      )
-    : updatedTimestamp(
-        formatDateTime(new Date(updated)),
-        relativeTime(updated),
-      );
+const updatedTimestamp = (updated, published) => {
+  if (!hasBeenUpdated(updated, published)) {
+    return null;
+  }
+
+  if (isTenHoursAgo(updated)) {
+    return timestampWithPrefixUpdated(
+      formatDateTime(new Date(updated)),
+      formatTimestamp(new Date(updated)),
+    );
+  }
+
+  return timestampWithPrefixUpdated(
+    formatDateTime(new Date(updated)),
+    relativeTime(updated),
+  );
+};
 
 const TimestampContainer = ({ updated, published }) => {
   if (
@@ -63,20 +70,13 @@ const TimestampContainer = ({ updated, published }) => {
   }
 
   const publishDate = new Date(published);
-  let secondTimestampComponent;
-
-  if (hasBeenUpdated(updated, published)) {
-    secondTimestampComponent = createSecondTimestamp(updated);
-  } else {
-    secondTimestampComponent = null;
-  }
 
   return (
     <Fragment>
       <Timestamp datetime={formatDateTime(publishDate)}>
         {formatTimestamp(publishDate)}
       </Timestamp>
-      {secondTimestampComponent}
+      {updatedTimestamp(updated, published)}
     </Fragment>
   );
 };
