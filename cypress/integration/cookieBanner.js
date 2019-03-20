@@ -77,4 +77,16 @@ describe('Article Body Tests', () => {
 
     retrieveCookieValue('ckns_policy', '000');
   });
+
+  it("should not override the user's default cookie policy", () => {
+    cy.clearCookies();
+    cy.setCookie('ckns_policy', '101');
+
+    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    retrieveCookieValue('ckns_policy', '101');
+
+    cy.contains('OK').click(); // privacy banner
+    cy.contains('No, take me to settings').click(); // cookie banner
+    retrieveCookieValue('ckns_policy', '101');
+  });
 });
