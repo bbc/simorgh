@@ -1,27 +1,33 @@
 <!-- Please remove all references to Simorgh from this when moving the Timestamp component to Psammead! -->
-# (package name) &middot; (badges)
+
+# `(package name) &middot; (badges)`
 
 ## Description
+
 Displays a timestamp, with suitable semantic markup.
 
 ## When to use this component
+
 For displaying an isolated timestamp, separate from the other content in an article or cell.
 
 ## When not to use this component
+
 When a date or time is to be displayed inline inside a paragraph.
 
 ## Installation
+
 `npm install (package-name)`
 
 ## Props
 
-| Argument   | Type   | Required | Default | Example                  |
-|------------|--------|----------|---------|--------------------------|
+| Argument   | Type                                                                                                               | Required | Default | Example                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ------------------------ |
 | `datetime` | string ([supported formats](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#Valid_datetime_Values)) | Yes      | N/A     | `2006-09-24T05:00-07:00` |
-| `prefix`   | node   | No       | null    | `Last updated `          |
-| `suffix`   | node   | No       | null    | `, over 3 months ago`    |
+| `prefix`   | node                                                                                                               | No       | null    | `Last updated`           |
+| `suffix`   | node                                                                                                               | No       | null    | `, over 3 months ago`    |
 
 ## Usage
+
 ```
 const WrappingContainer = () => (
   <Timestamp
@@ -35,6 +41,7 @@ const WrappingContainer = () => (
 ```
 
 ## Accessibility notes
+
 The usage of the semantic `time` element within this component can result in strange behaviours when using assistive technology such as Voiceover for iOS. Specifically, it results in a "text splitting" behaviour, where any text in the prefix is read out, but the value inside the semantic `time` element require an additional swipe before being read out.
 
 However, as we heavily encourage the use of this semantic element, and want to ensure it's usage is in line with [the W3C examples](https://www.w3.org/TR/html51/textlevel-semantics.html#the-time-element), we feel this compromise is necessary.
