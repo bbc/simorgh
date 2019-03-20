@@ -17,7 +17,7 @@ describe('Document Component', () => {
     link: mockHelmetToComponent(
       <link
         rel="canonical"
-        href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+        href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
       />,
     ),
     meta: mockHelmetToComponent(
@@ -26,6 +26,7 @@ describe('Document Component', () => {
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />,
     ),
+    script: mockHelmetToComponent(<script type="application/ld+json" />),
     title: mockHelmetToComponent(<title>Test title</title>),
   };
   const styleTags = (

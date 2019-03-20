@@ -25,8 +25,10 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should load the AMP framework', () => {
-    // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
-    const ampScript = getElement('head script').eq(1);
+    // .eq(2) gets the amp <script> as:
+    // the first loaded is a Cypress <script>
+    // the second loaded is the Schema.org metadata script
+    const ampScript = getElement('head script').eq(2);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
   });
 
