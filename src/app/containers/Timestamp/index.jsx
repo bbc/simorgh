@@ -6,7 +6,8 @@ import relativeTime from './relativeTimestamp';
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
-const formatDateTime = dateObj => {
+const formatDateTime = milliseconds => {
+  const dateObj = new Date(milliseconds);
   const fullYear = dateObj.getFullYear();
   const monthTwoDigit = dateObj.toLocaleDateString('en-GB', {
     month: '2-digit',
@@ -18,7 +19,8 @@ const formatDateTime = dateObj => {
   return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
 };
 
-const formatTimestamp = dateObj => {
+const formatTimestamp = milliseconds => {
+  const dateObj = new Date(milliseconds);
   const fullYear = dateObj.getFullYear();
   const monthLong = dateObj.toLocaleDateString('en-GB', {
     month: 'long',
@@ -50,13 +52,13 @@ const updatedTimestamp = (updated, published) => {
 
   if (isTenHoursAgo(updated)) {
     return timestampWithPrefixUpdated(
-      formatDateTime(new Date(updated)),
-      formatTimestamp(new Date(updated)),
+      formatDateTime(updated),
+      formatTimestamp(updated),
     );
   }
 
   return timestampWithPrefixUpdated(
-    formatDateTime(new Date(updated)),
+    formatDateTime(updated),
     relativeTime(updated),
   );
 };
