@@ -26,6 +26,7 @@ describe('Document Component', () => {
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />,
     ),
+    script: mockHelmetToComponent(<script type="application/ld+json" />),
     title: mockHelmetToComponent(<title>Test title</title>),
   };
   const styleTags = (
