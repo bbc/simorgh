@@ -45,7 +45,7 @@
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "jest --env=jsdom --coverage --colors",
     "snyk": "snyk test",
-    "spartacus:integrationTest": "npm run build && npm run test && xvfb-run npm run test:e2e:storybook:ci && xvfb-run npm run test:prod:ci && xvfb-run npm run test:lighthouse:ci",
+    "spartacus:integrationTest": "npm run build && npm run test && xvfb-run npm run test:e2e:storybook:ci && xvfb-run npm run test:prod:ci",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/assets-local.json && NODE_ENV=development webpack --env.config='server'"
