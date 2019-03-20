@@ -31,7 +31,7 @@ describe('Timestamp', () => {
     <Timestamp updated={invalidTimestamp} published={invalidTimestamp} />,
   );
 
-  it('should display a published timestamp only when published === updated', () => {
+  it('should display only one timestamp when published === updated', () => {
     const renderedWrapper = render(
       <Timestamp updated={eighthJan} published={eighthJan} />,
     );
