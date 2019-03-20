@@ -26,7 +26,7 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('not.be.visible');
   });
 
-  it('should show privacy banner on reload if cookie banner isnt accepted', () => {
+  it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
     cy.contains('OK').click();
 
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
@@ -35,7 +35,7 @@ describe('Article Body Tests', () => {
     getCookieBanner().should('not.be.visible');
   });
 
-  it('should not show banners once accepted on reload', () => {
+  it('should not show privacy & cookie banners once both accepted, on reload', () => {
     cy.contains('OK').click();
     cy.contains('Yes, I agree').click();
 
@@ -45,7 +45,7 @@ describe('Article Body Tests', () => {
     getCookieBanner().should('not.be.visible');
   });
 
-  it('should not show banners if cookie banner declined on reload', () => {
+  it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
