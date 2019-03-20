@@ -34,15 +34,19 @@ const AmpConsentBannerContainer = ({
 }) => (
   <ServiceContextConsumer>
     {({ translations }) => {
-      const messaging = translations.consentBanner[type];
+      const consentBannerConfig = translations.consentBanner[type];
 
       return (
         <ConsentBanner
           id={promptId}
-          title={messaging.title}
-          text={BannerText(messaging.description)}
-          accept={Accept(messaging.accept, acceptAction)}
-          reject={Reject(messaging.reject, messaging.rejectUrl, rejectAction)}
+          title={consentBannerConfig.title}
+          text={BannerText(consentBannerConfig.description)}
+          accept={Accept(consentBannerConfig.accept, acceptAction)}
+          reject={Reject(
+            consentBannerConfig.reject,
+            consentBannerConfig.rejectUrl,
+            rejectAction,
+          )}
           hidden={hidden}
         />
       );
