@@ -6,30 +6,37 @@ import relativeTime from './relativeTimestamp';
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
-const formatDateTime = milliseconds => {
-  const dateObj = new Date(milliseconds);
-  const fullYear = dateObj.getFullYear();
-  const monthTwoDigit = dateObj.toLocaleDateString('en-GB', {
-    month: '2-digit',
-  });
-  const dayTwoDigit = dateObj.toLocaleDateString('en-GB', {
-    day: '2-digit',
-  });
-
-  return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
+const longNumeric = {
+  locale: 'en-GB',
+  month: '2-digit',
+  day: '2-digit',
+  reverse: true,
+  separator: '-',
 };
 
-const formatTimestamp = milliseconds => {
+const shortAlphaNumeric = {
+  locale: 'en-GB',
+  month: 'long',
+  day: 'numeric',
+  reverse: false,
+  separator: ' ',
+};
+
+const formatUnixTimestamp = (milliseconds, formatType) => {
   const dateObj = new Date(milliseconds);
   const fullYear = dateObj.getFullYear();
-  const monthLong = dateObj.toLocaleDateString('en-GB', {
-    month: 'long',
+  const month = dateObj.toLocaleDateString('en-GB', {
+    month: formatType.month,
   });
-  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
-    day: 'numeric',
+  const day = dateObj.toLocaleDateString('en-GB', {
+    day: formatType.day,
   });
 
-  return `${dayNumeric} ${monthLong} ${fullYear}`;
+  const orderedDate = formatType.reverse
+    ? [day, month, fullYear].reverse()
+    : [day, month, fullYear];
+
+  return orderedDate.join(formatType.separator);
 };
 
 const isTenHoursAgo = milliseconds => {
@@ -50,16 +57,11 @@ const updatedTimestamp = (updated, published) => {
     return null;
   }
 
-  if (isTenHoursAgo(updated)) {
-    return timestampWithPrefixUpdated(
-      formatDateTime(updated),
-      formatTimestamp(updated),
-    );
-  }
-
   return timestampWithPrefixUpdated(
-    formatDateTime(updated),
-    relativeTime(updated),
+    formatUnixTimestamp(updated, longNumeric),
+    isTenHoursAgo(updated)
+      ? formatUnixTimestamp(updated, shortAlphaNumeric)
+      : relativeTime(updated),
   );
 };
 
@@ -73,8 +75,10 @@ const TimestampContainer = ({ updated, published }) => {
 
   return (
     <Fragment>
-      <Timestamp datetime={formatDateTime(new Date(published))}>
-        {formatTimestamp(new Date(published))}
+      <Timestamp
+        datetime={formatUnixTimestamp(new Date(published), longNumeric)}
+      >
+        {formatUnixTimestamp(new Date(published), shortAlphaNumeric)}
       </Timestamp>
       {updatedTimestamp(updated, published)}
     </Fragment>
