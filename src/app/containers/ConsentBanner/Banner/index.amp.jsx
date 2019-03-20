@@ -54,12 +54,11 @@ AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
   acceptAction: shape({ tap: arrayOf(string) }).isRequired,
   rejectAction: shape({ tap: arrayOf(string) }).isRequired,
-  promptId: string,
+  promptId: string.isRequired,
   hidden: bool,
 };
 
 AmpConsentBannerContainer.defaultProps = {
-  promptId: null,
   hidden: null,
 };
 
