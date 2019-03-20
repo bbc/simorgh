@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 
 let AmpContainer;
 let container;
@@ -12,28 +11,28 @@ const Banner = require('./Banner/index.amp');
 
 Banner.mockImplementation(({ type }) => <div>Amp {type} banner</div>);
 
+const expectNodeToContainInlinedJSON = node =>
+  expect(
+    node.querySelectorAll('script[type="application/json"]').length,
+  ).toEqual(1);
+
 describe('Amp Consent Banner Container', () => {
   beforeEach(() => {
     AmpContainer = require('./index.amp').default;
 
     container = document.createElement('div');
     document.body.appendChild(container);
+
+    act(() => {
+      ReactDOM.render(<AmpContainer />, container);
+    });
   });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  shouldMatchSnapshot(
-    'should correctly render AMP consent banner container',
-    <AmpContainer />,
-  );
-
-  it('should render privacy banner when both banners are set to be shown', () => {
-    act(() => {
-      ReactDOM.render(<AmpContainer />, container);
-    });
-
+  it('should two banners with correct amp actions and visibility', () => {
     expect(Banner).toHaveBeenCalledWith(
       {
         acceptAction: { tap: ['cookie.show, privacy.hide'] },
@@ -54,5 +53,17 @@ describe('Amp Consent Banner Container', () => {
       },
       {},
     );
+  });
+
+  it('should render amp-geo element containing inlined JSON', () => {
+    expect(container.querySelectorAll('amp-geo').length).toEqual(1);
+    const ampGeo = container.querySelector('amp-geo');
+    expectNodeToContainInlinedJSON(ampGeo);
+  });
+
+  it('should render amp-consent element containing inlined JSON', () => {
+    expect(container.querySelectorAll('amp-consent').length).toEqual(1);
+    const ampConsent = container.querySelector('amp-consent');
+    expectNodeToContainInlinedJSON(ampConsent);
   });
 });
