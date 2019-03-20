@@ -14,6 +14,13 @@ const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
   assertCookieExpiryDate('ckns_explicit', inOneYear);
   assertCookieExpiryDate('ckns_policy', inOneYear);
+  assertCookieExpiryDate('ckns_privacy', inOneYear);
+};
+
+const assertCookieValues = cookies => {
+  Object.keys(cookies).forEach(cookie => {
+    assertCookieValue(cookie, cookies[cookie]);
+  });
 };
 
 describe('Article Body Tests', () => {
@@ -26,8 +33,10 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
-    assertCookieValue('ckns_privacy', '1');
-    assertCookieValue('ckns_policy', '000');
+    assertCookieValues({
+      ckns_privacy: '1',
+      ckns_policy: '000',
+    });
 
     getPrivacyBannerContainer()
       .contains('OK')
@@ -40,8 +49,11 @@ describe('Article Body Tests', () => {
       .contains('Yes, I agree')
       .click();
 
-    assertCookieValue('ckns_explicit', '1');
-    assertCookieValue('ckns_policy', '111');
+    assertCookieValues({
+      ckns_explicit: '1',
+      ckns_privacy: '1',
+      ckns_policy: '111',
+    });
 
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
@@ -53,8 +65,10 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
-    assertCookieValue('ckns_privacy', '1');
-    assertCookieValue('ckns_policy', '000');
+    assertCookieValues({
+      ckns_privacy: '1',
+      ckns_policy: '000',
+    });
 
     getPrivacyBannerContainer()
       .contains('OK')
@@ -65,8 +79,11 @@ describe('Article Body Tests', () => {
 
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
 
-    assertCookieValue('ckns_explicit', '1');
-    assertCookieValue('ckns_policy', '000');
+    assertCookieValues({
+      ckns_explicit: '1',
+      ckns_privacy: '1',
+      ckns_policy: '000',
+    });
 
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
@@ -74,27 +91,12 @@ describe('Article Body Tests', () => {
     ensureCookieExpiryDates();
   });
 
-  it('should redirect the user once the privacy banner has been rejected', () => {
-    getPrivacyBanner().should('be.visible');
-    getCookieBanner().should('not.be.visible');
-
-    assertCookieValue('ckns_privacy', '1');
-    assertCookieValue('ckns_policy', '000');
-
-    cy.contains("Find out what's changed").click();
-
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
-
-    getCookieBanner().should('be.visible');
-    getPrivacyBanner().should('not.be.visible');
-
-    assertCookieValue('ckns_policy', '000');
-  });
-
   it("should not override the user's default cookie policy", () => {
     cy.clearCookies();
-    cy.setCookie('ckns_policy', '101');
+    cy.setCookie('ckns_policy', 'made_up_value');
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
-    assertCookieValue('ckns_policy', '101');
+    assertCookieValues({
+      ckns_policy: 'made_up_value',
+    });
   });
 });
