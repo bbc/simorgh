@@ -1,4 +1,5 @@
 import config from '../support/config';
+import skipLiveDescribe from '../support/skipLiveDescribe';
 import {
   errorMessage,
   errorPageInlineLink,
@@ -7,7 +8,7 @@ import {
 import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
 
-describe('Article Body Tests', () => {
+skipLiveDescribe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
