@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Consent Banner Container should correctly render amp banner 1`] = `
-<h1>
+<div>
   Amp Cookie banner
-</h1>
+</div>
 `;
 
 exports[`Consent Banner Container should correctly render canonical banner 1`] = `
-<h1>
+<div>
   Canonical Cookie banner
-</h1>
+</div>
 `;
