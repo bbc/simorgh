@@ -59,7 +59,7 @@ const updatedTimestamp = (updated, published) => {
 
   return timestampWithPrefixUpdated(
     formatUnixTimestamp(updated, longNumeric),
-    isTenHoursAgo(updated)
+    isTenHoursAgoOrLess(updated)
       ? formatUnixTimestamp(updated, shortAlphaNumeric)
       : relativeTime(updated),
   );
