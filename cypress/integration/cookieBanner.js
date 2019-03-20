@@ -91,6 +91,15 @@ describe('Article Body Tests', () => {
     ensureCookieExpiryDates();
   });
 
+  it('should show cookie banner (and NOT privacy banner) if user has visited the page before and didn\'t explicitly "accept" cookies', () => {
+    cy.clearCookies();
+    cy.setCookie('ckns_privacy', '1');
+    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+
+    getPrivacyBanner().should('not.be.visible');
+    getCookieBanner().should('be.visible');
+  });
+
   it("should not override the user's default cookie policy", () => {
     cy.clearCookies();
     cy.setCookie('ckns_policy', 'made_up_value');
