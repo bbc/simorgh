@@ -62,7 +62,7 @@ const jsonInlinedScript = data => (
   />
 );
 
-// Style `amp-consent` as child due to inability to set 
+// Style `amp-consent` as child due to inability to set
 // `layout` attribute on styled `amp-consent` component
 const AmpConsentWrapper = styled.div`
   & amp-consent {
