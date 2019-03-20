@@ -10,11 +10,10 @@ export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
 
-export const expectCookieExpiryDateOneYear = cookieName => {
+export const assertCookieExpiryDate = (cookieName, timestamp) => {
   const testBuffer = 10;
-  const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
   cy.getCookie(cookieName).then(c => {
-    expect(c.expiry).to.be.within(inOneYear - testBuffer, inOneYear);
+    expect(c.expiry).to.be.within(timestamp - testBuffer, timestamp);
   });
 };
 

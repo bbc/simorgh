@@ -1,6 +1,6 @@
 import {
   assertCookieValue,
-  expectCookieExpiryDateOneYear,
+  assertCookieExpiryDate,
 } from '../support/metaTestHelper';
 import config from '../support/config';
 
@@ -8,6 +8,12 @@ const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
 
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
+
+const ensureCookieExpiryDates = () => {
+  const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
+  assertCookieExpiryDate('ckns_explicit', inOneYear);
+  assertCookieExpiryDate('ckns_policy', inOneYear);
+};
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -35,8 +41,7 @@ describe('Article Body Tests', () => {
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
 
-    expectCookieExpiryDateOneYear('ckns_explicit');
-    expectCookieExpiryDateOneYear('ckns_policy');
+    ensureCookieExpiryDates();
   });
 
   it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
@@ -49,9 +54,6 @@ describe('Article Body Tests', () => {
     cy.contains('OK').click();
     cy.contains('No, take me to settings').click();
 
-    expectCookieExpiryDateOneYear('ckns_explicit');
-    expectCookieExpiryDateOneYear('ckns_policy');
-
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
 
     assertCookieValue('ckns_explicit', '1');
@@ -59,6 +61,8 @@ describe('Article Body Tests', () => {
 
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
+
+    ensureCookieExpiryDates();
   });
 
   it('should redirect the user once the privacy banner has been rejected', () => {
