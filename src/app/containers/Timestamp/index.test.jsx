@@ -9,7 +9,7 @@ const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
 const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
-const eighthJan = 1546966284472; // 2019-01-08T16:51:24.472Z
+const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
 
 describe('Timestamp', () => {
   describe('with no data', () => {
@@ -33,20 +33,20 @@ describe('Timestamp', () => {
 
   it('should display only one timestamp when published === updated', () => {
     const renderedWrapper = render(
-      <Timestamp updated={eighthJan} published={eighthJan} />,
+      <Timestamp updated={fifthJan} published={fifthJan} />,
     );
-    expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
+    expect(renderedWrapper.get(0).children[0].data).toEqual('5 January 2019');
     expect(renderedWrapper.length).toEqual(1);
   });
 
   it('should display a relative timestamp when updated < 10 hours ago', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = render(
-      <Timestamp updated={sixHoursAgo} published={eighthJan} />,
+      <Timestamp updated={sixHoursAgo} published={fifthJan} />,
     );
 
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
+    expect(renderedWrapper.get(0).children[0].data).toEqual('5 January 2019');
     expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
       '6 hours ago',
@@ -55,11 +55,11 @@ describe('Timestamp', () => {
 
   it('should display an absolute timestamp when updated > 10 hours ago', () => {
     const renderedWrapper = render(
-      <Timestamp updated={eighthMarch} published={eighthJan} />,
+      <Timestamp updated={eighthMarch} published={fifthJan} />,
     );
 
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper.get(0).children[0].data).toEqual('8 January 2019');
+    expect(renderedWrapper.get(0).children[0].data).toEqual('5 January 2019');
     expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
       '8 March 2019',
