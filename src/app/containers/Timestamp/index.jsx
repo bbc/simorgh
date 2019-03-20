@@ -35,37 +35,38 @@ const isTenHoursAgo = milliseconds => {
   return now - milliseconds >= 10 * 60 * 60 * 1000;
 };
 
-const updatedTimestamp = (dateObj, milliseconds) => (
-  <Timestamp datetime={formatDateTime(dateObj)} prefix="Updated">
+const updatedTimestamp = (datetime, milliseconds) => (
+  <Timestamp datetime={datetime} prefix="Updated">
     {milliseconds}
   </Timestamp>
 );
 
 const hasBeenUpdated = (updated, published) => updated !== published;
 
-const createSecondTimestamp = (updated, dateObj) =>
+const createSecondTimestamp = updated =>
   isTenHoursAgo(updated)
-    ? updatedTimestamp(dateObj.updated, formatTimestamp(dateObj.updated))
-    : updatedTimestamp(dateObj.updated, relativeTime(updated));
+    ? updatedTimestamp(
+        formatDateTime(new Date(updated)),
+        formatTimestamp(new Date(updated)),
+      )
+    : updatedTimestamp(
+        formatDateTime(new Date(updated)),
+        relativeTime(updated),
+      );
 
 const TimestampContainer = ({ updated, published }) => {
-  const dateObj = {
-    updated: new Date(updated),
-    published: new Date(published),
-  };
-
   if (
-    !isValidDateTime(dateObj.updated) ||
-    !isValidDateTime(dateObj.published)
+    !isValidDateTime(new Date(updated)) ||
+    !isValidDateTime(new Date(published))
   ) {
     return null;
   }
 
-  const publishDate = dateObj.published;
+  const publishDate = new Date(published);
   let secondTimestampComponent;
 
   if (hasBeenUpdated(updated, published)) {
-    secondTimestampComponent = createSecondTimestamp(updated, dateObj);
+    secondTimestampComponent = createSecondTimestamp(updated);
   } else {
     secondTimestampComponent = null;
   }
