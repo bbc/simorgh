@@ -28,13 +28,37 @@ describe('AMP Tests on a .amp page', () => {
     // .eq(1) gets the amp <script> as the first loaded is a Cypress <script>
     const ampScript = getElement('head script').eq(1);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
+
+    const ampGeoScript = getElement('head script').eq(2);
+    ampGeoScript.should(
+      'have.attr',
+      'src',
+      'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
+    );
+
+    const ampConsentScript = getElement('head script').eq(3);
+    ampConsentScript.should(
+      'have.attr',
+      'src',
+      'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
+    );
   });
 
-  it('should not have any non-amp scripts in the body or the head', () => {
-    getElement('body script').should('not.exist');
+  it('should load the AMP body scripts', () => {
+    const ampGeoScript = getElement('body script').eq(0);
+    ampGeoScript.should('have.attr', 'type', 'application/json');
+
+    const ampConsentScript = getElement('body script').eq(1);
+    ampConsentScript.should('have.attr', 'type', 'application/json');
+  });
+
+  it('should have any correct amp scripts in the body and the head', () => {
+    getElement('body script')
+      .its('length')
+      .should('be', 2); // 1 for amp-geo + 1 for amp-consent
     getElement('head script')
       .its('length')
-      .should('be', 2); // 1 for amp.js + 1 that Cypress injects into the head
+      .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {
