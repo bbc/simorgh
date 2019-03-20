@@ -96,7 +96,5 @@ describe('Article Body Tests', () => {
     cy.setCookie('ckns_policy', '101');
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
     assertCookieValue('ckns_policy', '101');
-    getPrivacyBanner().should('not.be.visible');
-    getCookieBanner().should('not.be.visible');
   });
 });
