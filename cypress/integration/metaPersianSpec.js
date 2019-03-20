@@ -21,7 +21,7 @@ skipLiveDescribe('Persian Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   facebookMeta(
