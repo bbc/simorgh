@@ -19,7 +19,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
       rel="canonical"
     />
     <style
@@ -78,7 +78,7 @@ exports[`Document Component should render correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
       rel="canonical"
     />
     <style

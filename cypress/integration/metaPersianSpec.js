@@ -1,4 +1,5 @@
 import config from '../support/config';
+import skipLiveDescribe from '../support/skipLiveDescribe';
 import {
   checkCanonicalURL,
   facebookMeta,
@@ -9,10 +10,14 @@ import {
   twitterMeta,
 } from '../support/metaTestHelper';
 
-describe('Persian Article Meta Tests', () => {
+skipLiveDescribe('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
+  });
+
+  it('should have the correct lang attribute', () => {
+    cy.get('html').should('have.attr', 'lang', 'fa');
   });
 
   it('should have a nofollow meta tag', () => {
