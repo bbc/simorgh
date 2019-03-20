@@ -6,8 +6,9 @@ import config from '../support/config';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
-
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
+const getPrivacyBannerContainer = () => getPrivacyBanner().parent();
+const getCookieBannerContainer = () => getCookieBanner().parent();
 
 const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
@@ -28,12 +29,16 @@ describe('Article Body Tests', () => {
     assertCookieValue('ckns_privacy', '1');
     assertCookieValue('ckns_policy', '000');
 
-    cy.contains('OK').click();
+    getPrivacyBannerContainer()
+      .contains('OK')
+      .click();
 
     getCookieBanner().should('be.visible');
     getPrivacyBanner().should('not.be.visible');
 
-    cy.contains('Yes, I agree').click();
+    getCookieBannerContainer()
+      .contains('Yes, I agree')
+      .click();
 
     assertCookieValue('ckns_explicit', '1');
     assertCookieValue('ckns_policy', '111');
@@ -51,8 +56,12 @@ describe('Article Body Tests', () => {
     assertCookieValue('ckns_privacy', '1');
     assertCookieValue('ckns_policy', '000');
 
-    cy.contains('OK').click();
-    cy.contains('No, take me to settings').click();
+    getPrivacyBannerContainer()
+      .contains('OK')
+      .click();
+    getCookieBannerContainer()
+      .contains('No, take me to settings')
+      .click();
 
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
 
@@ -85,12 +94,9 @@ describe('Article Body Tests', () => {
   it("should not override the user's default cookie policy", () => {
     cy.clearCookies();
     cy.setCookie('ckns_policy', '101');
-
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
     assertCookieValue('ckns_policy', '101');
-
-    cy.contains('OK').click(); // privacy banner
-    cy.contains('No, take me to settings').click(); // cookie banner
-    assertCookieValue('ckns_policy', '101');
+    getPrivacyBanner().should('not.be.visible');
+    getCookieBanner().should('not.be.visible');
   });
 });
