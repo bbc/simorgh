@@ -5,7 +5,7 @@ const getPrivacyBanner = () =>
 
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
-describe('Article Body Tests', () => {
+describe('Amp Cookie Banner Test', () => {
   // eslint-disable-next-line no-undef
   beforeEach(() => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
