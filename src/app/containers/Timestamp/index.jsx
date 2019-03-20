@@ -37,9 +37,9 @@ const isTenHoursAgo = milliseconds => {
   return now - milliseconds >= 10 * 60 * 60 * 1000;
 };
 
-const timestampWithPrefixUpdated = (datetime, milliseconds) => (
+const timestampWithPrefixUpdated = (datetime, updateTime) => (
   <Timestamp datetime={datetime} prefix="Updated">
-    {milliseconds}
+    {updateTime}
   </Timestamp>
 );
 
@@ -71,12 +71,10 @@ const TimestampContainer = ({ updated, published }) => {
     return null;
   }
 
-  const publishDate = new Date(published);
-
   return (
     <Fragment>
-      <Timestamp datetime={formatDateTime(publishDate)}>
-        {formatTimestamp(publishDate)}
+      <Timestamp datetime={formatDateTime(new Date(published))}>
+        {formatTimestamp(new Date(published))}
       </Timestamp>
       {updatedTimestamp(updated, published)}
     </Fragment>
