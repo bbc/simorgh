@@ -1,5 +1,5 @@
 import {
-  retrieveCookieValue,
+  assertCookieValue,
   expectCookieExpiryDateOneYear,
 } from '../support/metaTestHelper';
 import config from '../support/config';
@@ -19,8 +19,8 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
-    retrieveCookieValue('ckns_privacy', '1');
-    retrieveCookieValue('ckns_policy', '000');
+    assertCookieValue('ckns_privacy', '1');
+    assertCookieValue('ckns_policy', '000');
 
     cy.contains('OK').click();
 
@@ -29,8 +29,8 @@ describe('Article Body Tests', () => {
 
     cy.contains('Yes, I agree').click();
 
-    retrieveCookieValue('ckns_explicit', '1');
-    retrieveCookieValue('ckns_policy', '111');
+    assertCookieValue('ckns_explicit', '1');
+    assertCookieValue('ckns_policy', '111');
 
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
@@ -43,8 +43,8 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
-    retrieveCookieValue('ckns_privacy', '1');
-    retrieveCookieValue('ckns_policy', '000');
+    assertCookieValue('ckns_privacy', '1');
+    assertCookieValue('ckns_policy', '000');
 
     cy.contains('OK').click();
     cy.contains('No, take me to settings').click();
@@ -54,8 +54,8 @@ describe('Article Body Tests', () => {
 
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
 
-    retrieveCookieValue('ckns_explicit', '1');
-    retrieveCookieValue('ckns_policy', '000');
+    assertCookieValue('ckns_explicit', '1');
+    assertCookieValue('ckns_policy', '000');
 
     getCookieBanner().should('not.be.visible');
     getPrivacyBanner().should('not.be.visible');
@@ -65,8 +65,8 @@ describe('Article Body Tests', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
-    retrieveCookieValue('ckns_privacy', '1');
-    retrieveCookieValue('ckns_policy', '000');
+    assertCookieValue('ckns_privacy', '1');
+    assertCookieValue('ckns_policy', '000');
 
     cy.contains("Find out what's changed").click();
 
@@ -75,7 +75,7 @@ describe('Article Body Tests', () => {
     getCookieBanner().should('be.visible');
     getPrivacyBanner().should('not.be.visible');
 
-    retrieveCookieValue('ckns_policy', '000');
+    assertCookieValue('ckns_policy', '000');
   });
 
   it("should not override the user's default cookie policy", () => {
@@ -83,10 +83,10 @@ describe('Article Body Tests', () => {
     cy.setCookie('ckns_policy', '101');
 
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
-    retrieveCookieValue('ckns_policy', '101');
+    assertCookieValue('ckns_policy', '101');
 
     cy.contains('OK').click(); // privacy banner
     cy.contains('No, take me to settings').click(); // cookie banner
-    retrieveCookieValue('ckns_policy', '101');
+    assertCookieValue('ckns_policy', '101');
   });
 });

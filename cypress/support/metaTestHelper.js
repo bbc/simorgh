@@ -6,7 +6,7 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
-export const retrieveCookieValue = (cookieName, value) => {
+export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
 
