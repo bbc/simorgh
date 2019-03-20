@@ -39,7 +39,7 @@ const formatUnixTimestamp = (milliseconds, formatType) => {
   return orderedDate.join(formatType.separator);
 };
 
-const isTenHoursAgo = milliseconds => {
+const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();
   return now - milliseconds >= 10 * 60 * 60 * 1000;
 };
