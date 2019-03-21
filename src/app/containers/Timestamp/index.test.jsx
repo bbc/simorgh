@@ -47,7 +47,7 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper.get(0).children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
+    expect(renderedWrapper.get(1).children[0].data).toEqual('Updated ');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
       '6 hours ago',
     );
@@ -60,7 +60,7 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper.get(0).children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper.get(1).children[0].data).toEqual('Updated');
+    expect(renderedWrapper.get(1).children[0].data).toEqual('Updated ');
     expect(renderedWrapper.get(1).children[1].children[0].data).toEqual(
       '8 March 2019',
     );
