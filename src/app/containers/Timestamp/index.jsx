@@ -50,6 +50,12 @@ const timestampWithPrefixUpdated = (datetime, updateTime) => (
   </Timestamp>
 );
 
+const defaultTimestamp = published => (
+  <Timestamp datetime={formatUnixTimestamp(new Date(published), longNumeric)}>
+    {formatUnixTimestamp(new Date(published), shortAlphaNumeric)}
+  </Timestamp>
+);
+
 const hasBeenUpdated = (updated, published) => updated !== published;
 
 const updatedTimestamp = (updated, published) => {
@@ -75,11 +81,7 @@ const TimestampContainer = ({ updated, published }) => {
 
   return (
     <Fragment>
-      <Timestamp
-        datetime={formatUnixTimestamp(new Date(published), longNumeric)}
-      >
-        {formatUnixTimestamp(new Date(published), shortAlphaNumeric)}
-      </Timestamp>
+      {defaultTimestamp(published)}
       {updatedTimestamp(updated, published)}
     </Fragment>
   );
