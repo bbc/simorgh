@@ -27,7 +27,7 @@ const visitArticle = () => {
   cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
 };
 
-describe('Article Body Tests', () => {
+describe('Canonical Cookie Banner Tests', () => {
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     cy.clearCookies();
     visitArticle();
