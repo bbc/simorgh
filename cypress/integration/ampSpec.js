@@ -31,14 +31,14 @@ describe('AMP Tests on a .amp page', () => {
     const ampScript = getElement('head script').eq(2);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(2);
+    const ampGeoScript = getElement('head script').eq(3);
     ampGeoScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     );
 
-    const ampConsentScript = getElement('head script').eq(3);
+    const ampConsentScript = getElement('head script').eq(4);
     ampConsentScript.should(
       'have.attr',
       'src',
