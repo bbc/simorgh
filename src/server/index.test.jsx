@@ -4,7 +4,7 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import loadInitialData from '../app/routes/loadInitialData';
-import Document from '../app/components/Document';
+import Document from './Document/component';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -50,9 +50,20 @@ describe('Server', () => {
     });
   });
 
+  describe('Manifest json', () => {
+    describe('Services not on allowlist', () => {
+      it('should serve a 404 error for service foobar', async () => {
+        const { statusCode } = await makeRequest(
+          '/foobar/articles/manifest.json',
+        );
+        expect(statusCode).toEqual(404);
+      });
+    });
+  });
+
   describe('Data', () => {
     it('should respond with JSON', async () => {
-      const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
+      const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
       expect(body).toEqual(
         expect.objectContaining({ content: expect.any(Object) }),
       );

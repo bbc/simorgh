@@ -1,98 +1,192 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InlineLinkContainer with link matching routes for SPA should render correctly 1`] = `
+exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
 .c0 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c0:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c0:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 
 <a
-  className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
-  onClick={[Function]}
+  className="c0"
+  href="https://www.example.com/"
 >
-  This is text for an internal link
+  این لینک هست
+  <span
+    className="c1"
+  >
+     ،لینک خارجی
+  </span>
 </a>
 `;
 
-exports[`InlineLinkContainer with link matching routes for SPA should render correctly for TEST environment 1`] = `
+exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
 .c0 {
-  color: #0F556C;
-  padding: 2px;
-  border-bottom: 1px solid #0F556C;
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0:visited {
-  color: #5C5752;
-  border-bottom: 1px solid #5C5752;
+  color: #757575;
+  border-bottom: 1px solid #757575;
 }
 
 .c0:focus {
-  background-color: #0F556C;
-  border-bottom: 1px solid #F5F3F1;
-  color: #F5F3F1;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c0:hover {
-  color: #0F556C;
-  background-color: #C3DEE7;
-  border-bottom: 1px solid #0F556C;
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 
 <a
-  className="-Link c0"
-  href="/news/articles/c85pqyj5m2ko"
-  onClick={[Function]}
+  className="c0"
+  href="https://www.example.com/"
 >
-  This is text for an internal link
+  This is a link
+  <span
+    className="c1"
+  >
+    , external
+  </span>
 </a>
 `;
 
-exports[`InlineLinkContainer with link not matching SPA route should render correctly 1`] = `
-<ForwardRef
+exports[`InlineLinkContainer internal link not matching SPA route should render correctly 1`] = `
+.c0 {
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+<a
+  className="c0"
   href="https://www.bbc.com/news"
 >
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "attributes": Array [
-              "bold",
-            ],
-            "text": "This is bold text for a link",
-          },
-          "type": "fragment",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "fragment": [Function],
-      }
-    }
-  />
-</ForwardRef>
+  <b>
+    This is bold text for a link
+  </b>
+</a>
+`;
+
+exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
+.c0 {
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+<a
+  className="-Link c0"
+  href="/news/articles/cn7769kpk9mo"
+  onClick={[Function]}
+>
+  This is text for an internal link
+</a>
+`;
+
+exports[`InlineLinkContainer link matching routes for SPA should render correctly for TEST environment 1`] = `
+.c0 {
+  color: #3F3F42;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+<a
+  className="-Link c0"
+  href="/news/articles/cn7769kpk9mo"
+  onClick={[Function]}
+>
+  This is text for an internal link
+</a>
 `;

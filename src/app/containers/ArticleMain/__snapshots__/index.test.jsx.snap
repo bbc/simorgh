@@ -71,86 +71,86 @@ exports[`ArticleMain should render a news article correctly 1`] = `
     role="main"
   >
     <ForwardRef>
-      <ForwardRef>
-        <Blocks
-          blocks={
-            Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "Article Headline",
-                                  },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "Article Headline",
-                            },
-                            "type": "paragraph",
-                          },
-                        ],
-                      },
-                      "type": "text",
-                    },
-                  ],
-                },
-                "type": "headline",
-              },
-            ]
-          }
-          componentsToRender={
+      <Blocks
+        blocks={
+          Array [
             Object {
-              "headline": [Function],
-            }
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "attributes": Array [],
+                                  "text": "Article Headline",
+                                },
+                                "type": "fragment",
+                              },
+                            ],
+                            "text": "Article Headline",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ],
+              },
+              "type": "headline",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
           }
-        />
+        }
+      />
+      <ForwardRef>
         <TimestampContainer
           timestamp={1514811600000}
         />
-        <Blocks
-          blocks={
-            Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "A paragraph.",
-                            },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "A paragraph.",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ]
-          }
-          componentsToRender={
-            Object {
-              "image": [Function],
-              "subheadline": [Function],
-              "text": [Function],
-            }
-          }
-        />
       </ForwardRef>
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "attributes": Array [],
+                            "text": "A paragraph.",
+                          },
+                          "type": "fragment",
+                        },
+                      ],
+                      "text": "A paragraph.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "image": [Function],
+            "subheadline": [Function],
+            "text": [Function],
+          }
+        }
+      />
     </ForwardRef>
   </main>
 </React.Fragment>
@@ -164,11 +164,11 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         "created": 1514808060000,
         "createdBy": "",
         "firstPublished": 1514808060000,
-        "id": "urn:bbc:ares::article:cwv2xv848j5o",
+        "id": "urn:bbc:ares::article:cyddjz5058wo",
         "lastPublished": 1514811600000,
         "lastUpdated": 1514815200000,
         "locators": Object {
-          "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+          "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
         },
         "passport": Object {
           "category": "news",
@@ -189,9 +189,9 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
           "promoHeadline": "سرصفحه مقاله برای ارتقاء",
           "seoHeadline": "سرصفحه مقاله",
         },
-        "id": "urn:bbc:ares::article:cwv2xv848j5o",
+        "id": "urn:bbc:ares::article:cyddjz5058wo",
         "locators": Object {
-          "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+          "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
         },
         "summary": "خلاصه مقاله",
         "timestamp": 1514811600000,
@@ -202,86 +202,86 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     role="main"
   >
     <ForwardRef>
-      <ForwardRef>
-        <Blocks
-          blocks={
-            Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "سرصفحه مقاله",
-                                  },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "سرصفحه مقاله",
-                            },
-                            "type": "paragraph",
-                          },
-                        ],
-                      },
-                      "type": "text",
-                    },
-                  ],
-                },
-                "type": "headline",
-              },
-            ]
-          }
-          componentsToRender={
+      <Blocks
+        blocks={
+          Array [
             Object {
-              "headline": [Function],
-            }
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "attributes": Array [],
+                                  "text": "سرصفحه مقاله",
+                                },
+                                "type": "fragment",
+                              },
+                            ],
+                            "text": "سرصفحه مقاله",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ],
+              },
+              "type": "headline",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "headline": [Function],
           }
-        />
+        }
+      />
+      <ForwardRef>
         <TimestampContainer
           timestamp={1514811600000}
         />
-        <Blocks
-          blocks={
-            Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "یک پاراگراف.",
-                            },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "یک پاراگراف.",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ]
-          }
-          componentsToRender={
-            Object {
-              "image": [Function],
-              "subheadline": [Function],
-              "text": [Function],
-            }
-          }
-        />
       </ForwardRef>
+      <Blocks
+        blocks={
+          Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "attributes": Array [],
+                            "text": "یک پاراگراف.",
+                          },
+                          "type": "fragment",
+                        },
+                      ],
+                      "text": "یک پاراگراف.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ]
+        }
+        componentsToRender={
+          Object {
+            "image": [Function],
+            "subheadline": [Function],
+            "text": [Function],
+          }
+        }
+      />
     </ForwardRef>
   </main>
 </React.Fragment>

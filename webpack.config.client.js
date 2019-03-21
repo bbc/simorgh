@@ -35,10 +35,14 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     },
     output: {
       path: resolvePath('build/public'),
-      // need unhashed client bundle when running dev server: https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
+      /**
+       * Need unhashed client bundle when running dev server.
+       * Though we're no longer using Razzle, there is a good explanation here:
+       * https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
+       */
       filename: START_DEV_SERVER
         ? 'static/js/[name].js'
-        : 'static/js/[name].[hash:8].js',
+        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
@@ -80,6 +84,11 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
+      /**
+       * Needed to prevent bundle hashes changing when the order they're imported is changed.
+       * See https://webpack.js.org/guides/caching/#module-identifiers
+       */
+      new webpack.HashedModuleIdsPlugin(),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
        * side replacement, when building the bundle code for the client.

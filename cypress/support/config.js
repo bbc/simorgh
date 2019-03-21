@@ -4,9 +4,10 @@ const config = {
     dataUrl: 'https://www.bbc.com',
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
     assets: {
-      news: 'cxvxrj9yvppo',
-      newsThreeSubheadlines: 'cpzk9lkk2p7o',
-      persian: 'c5ml5n7w4m3o',
+      news: 'c8xxl4l3dzeo',
+      newsThreeSubheadlines: 'c5ll353v7y9o',
+      persian: 'c7eel0lmr4do',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
   test: {
@@ -14,9 +15,10 @@ const config = {
     dataUrl: 'https://www.test.bbc.com',
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
     assets: {
-      news: 'c85pqyj5m2ko',
-      newsThreeSubheadlines: 'c9rpqy7pmypo',
-      persian: 'cwv2xv848j5o',
+      news: 'cn7769kpk9mo',
+      newsThreeSubheadlines: 'cl55zn0w0l4o',
+      persian: 'cyddjz5058wo',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
   local: {
@@ -24,9 +26,10 @@ const config = {
     dataUrl: 'http://localhost:7080',
     assetUrl: 'http://localhost:7080',
     assets: {
-      news: 'c85pqyj5m2ko',
-      newsThreeSubheadlines: 'c9rpqy7pmypo',
-      persian: 'cwv2xv848j5o',
+      news: 'cn7769kpk9mo',
+      newsThreeSubheadlines: 'cl55zn0w0l4o',
+      persian: 'cyddjz5058wo',
+      nonExistent: 'cxvxrj8tvppo',
     },
   },
 };

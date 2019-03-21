@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { bool, shape } from 'prop-types';
+import Helmet from 'react-helmet';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
@@ -8,14 +9,12 @@ import { PlatformContextProvider } from '../../contexts/PlatformContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
+import ConsentBanner from '../ConsentBanner';
 
-const defaultData = {
-  isAmp: false,
-  service: 'news',
-  status: 500,
-};
-
-const ArticleContainer = ({ loading, data = defaultData }) => {
+/*
+  [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
+*/
+const ArticleContainer = ({ loading, data }) => {
   const { isAmp, data: articleData, service, status } = data;
 
   const showLoading = loading;
@@ -27,6 +26,10 @@ const ArticleContainer = ({ loading, data = defaultData }) => {
       <GlobalStyle />
       <ServiceContextProvider service={service}>
         <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+          <Helmet>
+            <link rel="manifest" href={`/${service}/articles/manifest.json`} />
+          </Helmet>
+          <ConsentBanner />
           <HeaderContainer />
           {showLoading && <h1>Loading...</h1>}
           {showArticle && <ArticleMain articleData={articleData} />}
@@ -45,7 +48,11 @@ ArticleContainer.propTypes = {
 
 ArticleContainer.defaultProps = {
   loading: false,
-  data: null,
+  data: {
+    isAmp: false,
+    service: 'news',
+    status: 500,
+  },
 };
 
 export default ArticleContainer;

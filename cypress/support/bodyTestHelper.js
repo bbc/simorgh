@@ -14,11 +14,8 @@ export const shouldContainStyles = (element, css, styling) => {
   });
 };
 
-export const checkElementStyles = (elementString, text, color, fontFamily) => {
-  const el = getElement(elementString);
-  shouldContainText(el, text);
-  shouldContainStyles(el, 'color', color);
-  shouldContainStyles(el, 'font-family', fontFamily);
+export const shouldMatchReturnedData = (data, element) => {
+  getElement(element).should('contain', data);
 };
 
 export const getBlockData = (blockType, win) => {
@@ -37,12 +34,8 @@ export const firstHeadlineDataWindow = () => {
   cy.window().then(win => {
     const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
-    checkElementStyles(
-      'h1',
-      text,
-      'rgb(34, 34, 34)',
-      'ReithSerifNewsMedium, Helvetica, Arial, sans-serif',
-    );
+
+    shouldMatchReturnedData(text, 'h1');
   });
 };
 
@@ -51,12 +44,7 @@ export const firstSubheadlineDataWindow = () => {
     const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
 
-    checkElementStyles(
-      'h2',
-      text,
-      'rgb(64, 64, 64)',
-      'ReithSansNewsRegular, Helvetica, Arial, sans-serif',
-    );
+    shouldMatchReturnedData(text, 'h2');
   });
 };
 
@@ -75,13 +63,8 @@ export const copyrightDataWindow = () => {
     const copyrightData = getBlockData('image', win);
     const { copyrightHolder } = copyrightData.model.blocks[0].model;
     const copyrightLabel = getElement('figure p').eq(0);
-    copyrightLabel.should('contain', copyrightHolder);
-    shouldContainStyles(
-      copyrightLabel,
-      'background-color',
-      'rgba(34, 34, 34, 0.75)',
-    );
-    shouldContainStyles(copyrightLabel, 'color', 'rgb(255, 255, 255)');
+
+    shouldContainText(copyrightLabel, copyrightHolder);
   });
 };
 
@@ -92,28 +75,11 @@ export const checkFooterLinks = (position, url) => {
     .and('contain', url);
 };
 
-export const checkLinkStyling = position => {
-  const link = cy.get('a').eq(position);
-  shouldContainStyles(link, 'color', 'rgb(255, 255, 255)');
-  link.focus();
-  const linkSpan = link.get('span').eq(position);
-  shouldContainStyles(
-    linkSpan,
-    'border-bottom',
-    '2px solid rgb(255, 255, 255)',
-  );
-  link.invoke('mouseover');
-  shouldContainStyles(
-    linkSpan,
-    'border-bottom',
-    '2px solid rgb(255, 255, 255)',
-  );
-};
-
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   getElement(link).click();
   cy.url().should('contain', url);
   const anchorElement = getElement('header a');
+
   shouldContainText(anchorElement, 'BBC News');
 };
 
@@ -122,11 +88,6 @@ export const renderedTitle = title => {
 };
 
 export const placeholderImageLoaded = placeholderImage => {
-  shouldContainStyles(
-    placeholderImage,
-    'background-color',
-    'rgb(236, 234, 231)',
-  );
   shouldContainStyles(
     placeholderImage,
     'background-image',
@@ -147,4 +108,33 @@ export const visibleImageNoCaption = figure => {
 export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
+};
+
+export const errorMessage = service => {
+  getElement('h1 span').should(
+    'contain',
+    `${service.translations.error[404].statusCode}`,
+  );
+  getElement('h1').should(
+    'contain',
+    `${service.translations.error[404].title}`,
+  );
+};
+
+export const errorPageInlineLink = service => {
+  getElement('main p')
+    .eq(1)
+    .within(() => {
+      getElement('a').should(
+        'have.attr',
+        'href',
+        `${service.translations.error[404].callToActionLinkUrl}`,
+      );
+    });
+};
+
+export const errorTitle = service => {
+  renderedTitle(
+    `${service.translations.error[404].title} - ${service.brandName}`,
+  );
 };

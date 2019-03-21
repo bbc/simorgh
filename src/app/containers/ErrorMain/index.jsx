@@ -1,22 +1,63 @@
-import React from 'react';
-import { number } from 'prop-types';
-import { Headline } from '@bbc/psammead-headings';
-import Paragraph from '@bbc/psammead-paragraph';
-import { GhostWrapper, GridItemConstrained } from '../../lib/styledGrid';
+import React, { Fragment } from 'react';
+import { number, string, shape } from 'prop-types';
+import Helmet from 'react-helmet';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import ErrorPageComponent from '../../components/ErrorPage';
+
+/*
+ * MVP Metadata for the error
+ * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
+ */
+const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
+  const { title } = messaging;
+
+  return (
+    <Helmet htmlAttributes={{ lang: locale }}>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="utf-8" />
+      <meta name="robots" content="noindex,nofollow" />
+      <meta name="theme-color" content={themeColor} />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1"
+      />
+      <title>
+        {title} - {brandName}
+      </title>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </Helmet>
+  );
+};
 
 const ErrorMain = ({ status = 500 }) => (
-  <main role="main">
-    <GhostWrapper>
-      <GridItemConstrained>
-        <Headline>Oops: something went wrong!</Headline>
-        <Paragraph>Response code: {status}</Paragraph>
-      </GridItemConstrained>
-    </GhostWrapper>
-  </main>
+  <ServiceContextConsumer>
+    {({ brandName, locale, themeColor, translations }) => {
+      const messaging = translations.error[status] || translations.error[500];
+
+      return (
+        <Fragment>
+          <ErrorMetadata
+            brandName={brandName}
+            locale={locale}
+            messaging={messaging}
+            themeColor={themeColor}
+          />
+          <ErrorPageComponent {...messaging} />
+        </Fragment>
+      );
+    }}
+  </ServiceContextConsumer>
 );
 
 ErrorMain.propTypes = {
   status: number.isRequired,
+};
+
+ErrorMetadata.propTypes = {
+  locale: string.isRequired,
+  messaging: shape({ title: string.isRequired }).isRequired,
+  brandName: string.isRequired,
+  themeColor: string.isRequired,
 };
 
 export default ErrorMain;

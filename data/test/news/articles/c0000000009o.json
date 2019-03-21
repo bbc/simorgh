@@ -139,8 +139,15 @@
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Nulla euismod semper turpis at vulputate",
+                              "text": "Nulla euismod semper ",
                               "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "turpis at vulputate",
+                              "attributes": ["italic"]
                             }
                           }
                         ]

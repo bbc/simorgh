@@ -12,6 +12,21 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noindex,nofollow"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
@@ -115,6 +130,11 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -128,6 +148,21 @@ exports[`Metadata News article should render correctly 1`] = `
     }
   }
 >
+  <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noindex,nofollow"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
   <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
@@ -232,6 +267,11 @@ exports[`Metadata News article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -247,6 +287,21 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noindex,nofollow"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
@@ -256,7 +311,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cwv2xv848j5o.amp"
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
     rel="canonical"
   />
   <meta
@@ -319,7 +374,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cwv2xv848j5o.amp"
+    content="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
     name="og:url"
   />
   <meta
@@ -349,6 +404,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
   />
 </HelmetWrapper>
 `;
@@ -364,6 +424,21 @@ exports[`Metadata Persian article should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noindex,nofollow"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
@@ -373,7 +448,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cwv2xv848j5o"
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
   />
   <meta
@@ -436,7 +511,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cwv2xv848j5o"
+    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
     name="og:url"
   />
   <meta
@@ -467,6 +542,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -480,6 +560,21 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     }
   }
 >
+  <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noindex,nofollow"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
   <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
@@ -587,6 +682,11 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="An article title"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
   />
 </HelmetWrapper>
 `;
