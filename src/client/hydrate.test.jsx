@@ -1,18 +1,20 @@
 import React from 'react';
 import * as reactDom from 'react-dom';
-import { ClientApp } from './app/containers/App';
-import routes from './app/routes';
+import { ClientApp } from '../app/containers/App';
+import routes from '../app/routes';
+import hydrateClient from './hydrate';
 
 jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('./app/containers/App');
+jest.mock('../app/containers/App');
 
-jest.mock('./app/routes', () => ({
+jest.mock('../app/routes', () => ({
   default: [],
 }));
 
+window.crypto = () => {};
 const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
@@ -42,7 +44,7 @@ describe('Client', () => {
       });
 
       it('should be installed', async () => {
-        await import('./client');
+        hydrateClient();
 
         expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
           '/foobar/articles/sw.js',
@@ -56,7 +58,7 @@ describe('Client', () => {
       });
 
       it('should not be installed', async () => {
-        await import('./client');
+        hydrateClient();
 
         expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
       });
@@ -64,7 +66,7 @@ describe('Client', () => {
   });
 
   it('should hydrate client once routes are ready', async () => {
-    await import('./client');
+    hydrateClient();
 
     expect(reactDom.hydrate).toHaveBeenCalledWith(
       <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
