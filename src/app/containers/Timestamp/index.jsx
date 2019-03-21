@@ -45,7 +45,7 @@ const isTenHoursAgoOrLess = milliseconds => {
 };
 
 const timestampWithPrefixUpdated = (datetime, updateTime) => (
-  <Timestamp datetime={datetime} prefix="Updated">
+  <Timestamp datetime={datetime} prefix="Updated ">
     {updateTime}
   </Timestamp>
 );

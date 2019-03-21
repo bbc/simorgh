@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { node, string } from 'prop-types';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_HLF,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 import {
   GEL_BREVIER,
   GEL_FF_REITH_SANS,
@@ -13,7 +16,12 @@ const StyledTimestamp = styled.span`
   color: ${C_CLOUD_DARK};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
-  padding-bottom: ${GEL_SPACING_DBL};
+  &:nth-child(1) {
+    padding-bottom: ${GEL_SPACING_HLF};
+  }
+  &:last-child {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
 `;
 
 const Timestamp = ({ children, datetime, prefix, suffix }) => {
