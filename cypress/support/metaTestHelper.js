@@ -6,6 +6,17 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
+export const assertCookieValue = (cookieName, value) => {
+  cy.getCookie(cookieName).should('have.property', 'value', value);
+};
+
+export const assertCookieExpiryDate = (cookieName, timestamp) => {
+  const testBuffer = 15;
+  cy.getCookie(cookieName).then(c => {
+    expect(c.expiry).to.be.within(timestamp - testBuffer, timestamp);
+  });
+};
+
 export const testContentType = (path, contentType) => {
   cy.request(path).then(({ headers }) => {
     expect(headers).to.have.property('content-type', contentType);
