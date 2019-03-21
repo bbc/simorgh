@@ -79,6 +79,11 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   })
+  .get('/ckns_policy/*', (req, res) => {
+    // Dev route to allow the cookie banner to make the cookie oven request
+    // without throwing an error due to not being on a bbc domain.
+    res.sendStatus(200);
+  })
   .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
