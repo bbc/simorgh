@@ -22,7 +22,7 @@ const FigureContainer = ({
   width,
 }) => (
   <Figure>
-    <ImagePlaceholder ratio={ratio}>
+    <ImagePlaceholder ratio={ratio} maxWidth={width}>
       <PlatformContextConsumer>
         {platform =>
           platform === 'amp' ? (
