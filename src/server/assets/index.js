@@ -34,12 +34,11 @@ const getAssetsArray = () => {
 };
 
 const getAssetDomains = () => {
-  const assetDomains = ['ichef.bbci.co.uk', 'gel.files.bbci.co.uk'];
-
-  const simorghStaticAssetsHost = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_HOST;
-  if (simorghStaticAssetsHost) {
-    assetDomains.push(simorghStaticAssetsHost);
-  }
+  const assetDomains = [
+    'ichef.bbci.co.uk',
+    'gel.files.bbci.co.uk',
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_HOST,
+  ];
 
   return assetDomains;
 };
