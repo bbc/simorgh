@@ -33,4 +33,15 @@ const getAssetsArray = () => {
   return assets;
 };
 
-export default getAssetsArray;
+const getAssetDomains = () => {
+  const assetDomains = ['ichef.bbci.co.uk', 'gel.files.bbci.co.uk'];
+
+  const simorghStaticAssetsHost = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_HOST;
+  if (simorghStaticAssetsHost) {
+    assetDomains.push(simorghStaticAssetsHost);
+  }
+
+  return assetDomains;
+};
+
+export { getAssetsArray, getAssetDomains };
