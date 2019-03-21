@@ -1,9 +1,20 @@
-import 'core-js/es6/set'; // polyfill for >IE11
-import 'core-js/es6/map'; // polyfill for >IE11
+// polyfills for >IE11
+// import polyfillCryptoGetRandomValues from 'polyfill-crypto.getrandomvalues';
+import getRandomValuesPolyfill from 'nanoid/non-secure';
+
+import 'core-js/es6/set';
+import 'core-js/es6/map';
+import 'core-js/es6/symbol';
+
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
+
+window.crypto = { getRandomValues: getRandomValuesPolyfill };
+self.crypto = { getRandomValues: getRandomValuesPolyfill };
+global.crypto = { getRandomValues: getRandomValuesPolyfill };
+crypto = { getRandomValues: getRandomValuesPolyfill };
 
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
