@@ -23,7 +23,7 @@ const assertCookieValues = cookies => {
   });
 };
 
-describe('Article Body Tests', () => {
+describe('Canonical Cookie Banner Tests', () => {
   // eslint-disable-next-line no-undef
   beforeEach(() => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
