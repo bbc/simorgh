@@ -1,5 +1,6 @@
 import hydrateClient from './client/hydrate';
+import cutsTheMustard from './client/cutsTheMustard';
 
-if (window.crypto || window.msCrypto) {
+if (cutsTheMustard) {
   hydrateClient();
 }
