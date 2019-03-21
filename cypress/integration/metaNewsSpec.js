@@ -75,7 +75,7 @@ describe('Article Meta Tests', () => {
 
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
     'BBC News',
     'en_GB',
     'BBC News',
@@ -89,7 +89,7 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'BBC News',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );

@@ -4,7 +4,7 @@ const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   brandName: 'BBC News',
   defaultImage:
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -15,6 +15,8 @@ const news = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   translations: {
     error: {
       404: {
