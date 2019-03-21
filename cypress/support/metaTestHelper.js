@@ -11,7 +11,7 @@ export const assertCookieValue = (cookieName, value) => {
 };
 
 export const assertCookieExpiryDate = (cookieName, timestamp) => {
-  const testBuffer = 15;
+  const testBuffer = 20;
   cy.getCookie(cookieName).then(c => {
     expect(c.expiry).to.be.within(timestamp - testBuffer, timestamp);
   });
