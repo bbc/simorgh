@@ -27,6 +27,9 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       html { color: red; }
     </style>
+    <script
+      type="application/ld+json"
+    />
     <React.Fragment>
       <style
         amp-boilerplate=""
@@ -98,6 +101,9 @@ exports[`Document Component should render correctly 1`] = `
     >
       html { color: red; }
     </style>
+    <script
+      type="application/ld+json"
+    />
   </head>
   <body>
     <div
