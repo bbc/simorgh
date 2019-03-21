@@ -1,26 +1,21 @@
 import React, { Fragment } from 'react';
+import { arrayOf, string } from 'prop-types';
 
-const ResourceHints = () => (
+const prefix = 'https://';
+
+const ResourceHints = ({ assetDomains }) => (
   <Fragment>
-    <link
-      rel="preconnect"
-      href="https://ichef.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://static.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://gel.files.bbci.co.uk"
-      crossOrigin="anonymous"
-    />
-    <link rel="dns-prefetch" href="https://ichef.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://static.bbci.co.uk" />
-    <link rel="dns-prefetch" href="https://gel.files.bbci.co.uk" />
+    {assetDomains.map(domain => (
+      <link rel="preconnect" href={prefix + domain} crossOrigin="anonymous" />
+    ))}
+    {assetDomains.map(domain => (
+      <link rel="dns-prefetch" href={prefix + domain} />
+    ))}
   </Fragment>
 );
+
+ResourceHints.propTypes = {
+  assetDomains: arrayOf(string).isRequired,
+};
 
 export default ResourceHints;
