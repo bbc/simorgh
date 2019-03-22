@@ -4,10 +4,8 @@ import 'core-js/es6/symbol';
 import 'core-js/fn/typed/uint8-array';
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
 
-const cryptoPoly = {
-  getRandomValues,
-};
-
 if (!window.crypto && !window.msCrypto) {
-  window.crypto = cryptoPoly;
+  window.crypto = {
+    getRandomValues,
+  };
 }
