@@ -10,6 +10,7 @@ import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
+import ConsentBanner from '../ConsentBanner';
 
 const logger = nodeLogger(__filename);
 
@@ -36,6 +37,7 @@ const ArticleContainer = ({ loading, error, data }) => {
                 href={`/${service}/articles/manifest.json`}
               />
             </Helmet>
+            <ConsentBanner />
             <HeaderContainer />
             {status === 200 ? (
               <ArticleMain articleData={articleData} />
