@@ -8,10 +8,6 @@ const cryptoPoly = {
   getRandomValues,
 };
 
-if (!window.crypto) {
+if (!window.crypto && !window.msCrypto) {
   window.crypto = cryptoPoly;
-}
-
-if (!window.msCrypto) {
-  window.msCrypto = cryptoPoly;
 }
