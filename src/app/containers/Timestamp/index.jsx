@@ -63,6 +63,7 @@ const updatedTimestamp = (updated, published) => {
     return null;
   }
 
+  // return absolute or relative secondary timestamp depending on <= 10 hours
   return timestampWithPrefixUpdated(
     formatUnixTimestamp(updated, longNumeric),
     isTenHoursAgoOrLess(updated)
