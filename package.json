@@ -130,8 +130,8 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "@bbc/apache2-license-checker": "^1.1.4",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/react": "^4.1.12",
     "amphtml-validator": "^1.0.23",
     "audit-ci": "^1.2.1",
