@@ -66,7 +66,7 @@ const jsonInlinedScript = data => (
 // `layout` attribute on styled `amp-consent` component
 const AmpConsentWrapper = styled.div`
   & amp-consent {
-    position: initial;
+    position: static;
     display: block;
   }
 `;
