@@ -14,7 +14,7 @@ jest.mock('../app/routes', () => ({
   default: [],
 }));
 
-window.crypto = () => {};
+window.crypto = () => {}; // depended on by the cuts-the-mustard check
 const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
