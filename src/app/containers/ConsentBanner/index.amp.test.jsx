@@ -32,7 +32,7 @@ describe('Amp Consent Banner Container', () => {
     jest.clearAllMocks();
   });
 
-  it('should two banners with correct amp actions and visibility', () => {
+  it('should render two banners with correct amp actions and visibility', () => {
     expect(Banner).toHaveBeenCalledWith(
       {
         acceptAction: { tap: ['cookie.show, privacy.hide'] },
@@ -55,13 +55,13 @@ describe('Amp Consent Banner Container', () => {
     );
   });
 
-  it('should render amp-geo element containing inlined JSON', () => {
+  it('should render a single amp-geo element containing inlined JSON', () => {
     expect(container.querySelectorAll('amp-geo').length).toEqual(1);
     const ampGeo = container.querySelector('amp-geo');
     expectNodeToContainInlinedJSON(ampGeo);
   });
 
-  it('should render amp-consent element containing inlined JSON', () => {
+  it('should render a single amp-consent element containing inlined JSON', () => {
     expect(container.querySelectorAll('amp-consent').length).toEqual(1);
     const ampConsent = container.querySelector('amp-consent');
     expectNodeToContainInlinedJSON(ampConsent);
