@@ -20,17 +20,15 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-const getIChefURL = (originCode, locator, width) => {
+const getIChefURL = (originCode, locator) => {
   // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
   const overridableOriginCode = originCode || 'cpsdevpb';
 
-  const ichefImageWidth = width ? Math.floor(width) : DEFAULT_IMAGE_RES;
-
-  return `https://ichef.bbci.co.uk/news/${ichefImageWidth}/${overridableOriginCode}/${locator}`;
+  return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
 };
 
-const getRawImageSrc = (originCode, locator, width) =>
-  originCode !== 'pips' ? getIChefURL(originCode, locator, width) : locator;
+const getRawImageSrc = (originCode, locator) =>
+  originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
@@ -55,7 +53,7 @@ const ImageContainer = ({ blocks }) => {
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
-  const rawImageSrc = getRawImageSrc(originCode, locator, width);
+  const rawImageSrc = getRawImageSrc(originCode, locator);
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
