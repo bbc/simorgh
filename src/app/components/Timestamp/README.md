@@ -1,6 +1,6 @@
 <!-- Please remove all references to Simorgh from this when moving the Timestamp component to Psammead! -->
 
-# `(package name) &middot; (badges)`
+# (package name) &middot; (badges)
 
 ## Description
 
@@ -20,11 +20,12 @@ When a date or time is to be displayed inline inside a paragraph.
 
 ## Props
 
-| Argument   | Type                                                                                                               | Required | Default | Example                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ------------------------ |
+<!-- prettier-ignore -->
+| Argument   | Type   | Required | Default | Example                  |
+|------------|--------|----------|---------|--------------------------|
 | `datetime` | string ([supported formats](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#Valid_datetime_Values)) | Yes      | N/A     | `2006-09-24T05:00-07:00` |
-| `prefix`   | node                                                                                                               | No       | null    | `Last updated`           |
-| `suffix`   | node                                                                                                               | No       | null    | `, over 3 months ago`    |
+| `prefix`   | node   | No       | null    | `Last updated `          |
+| `suffix`   | node   | No       | null    | `, over 3 months ago`    |
 
 ## Usage
 
