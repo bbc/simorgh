@@ -16,9 +16,7 @@ const StyledTimestamp = styled.span`
   color: ${C_CLOUD_DARK};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
-  &:nth-child(1) {
-    padding-bottom: ${GEL_SPACING_HLF};
-  }
+  padding-bottom: ${GEL_SPACING_HLF};
   &:last-child {
     padding-bottom: ${GEL_SPACING_DBL};
   }
