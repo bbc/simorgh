@@ -9,9 +9,6 @@ exports[`Timestamp should render correctly 1`] = `
   color: #757575;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-}
-
-.c0:nth-child(1) {
   padding-bottom: 0.25rem;
 }
 
@@ -46,9 +43,6 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   color: #757575;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-}
-
-.c0:nth-child(1) {
   padding-bottom: 0.25rem;
 }
 
