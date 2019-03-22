@@ -7,6 +7,7 @@ const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
 describe('Amp Cookie Banner Test', () => {
   beforeEach(() => {
+    cy.clearLocalStorage();
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
   });
 
