@@ -1,5 +1,4 @@
 <!-- Please remove all references to Simorgh from this when moving the Timestamp component to Psammead! -->
-
 # (package name) &middot; (badges)
 
 ## Description
