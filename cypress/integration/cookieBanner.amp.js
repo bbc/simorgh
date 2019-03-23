@@ -1,11 +1,12 @@
 import config from '../support/config';
+import EUDescribe from '../support/EUDescribe';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
 
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
-describe('Amp Cookie Banner Test', () => {
+EUDescribe('Amp Cookie Banner Test', () => {
   beforeEach(() => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
   });

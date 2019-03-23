@@ -17,7 +17,7 @@ jobs:
       script:
         - npm run audit:ci
         - npm run build
-        # - xvfb-run npm run test:prod:ci Commented out due to https://github.com/bbc/simorgh/pull/1447
+        - xvfb-run npm run test:prod:travis
         - xvfb-run npm run test:lighthouse:ci
     - stage: deploy
       if: type = push AND branch = latest
