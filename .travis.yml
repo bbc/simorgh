@@ -14,11 +14,11 @@ jobs:
         - xvfb-run npm run test:e2e:storybook:ci
         - npm run audit:ci
     - stage: test
-      install: npm ci
+      install: npm ci --only=prod
       script:
         - npm run build
-        - xvfb-run npm run test:prod:ci
-        - xvfb-run npm run test:lighthouse:ci
+        - xvfb-run -a npm run test:prod:ci
+        - xvfb-run -a npm run test:lighthouse:ci
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
