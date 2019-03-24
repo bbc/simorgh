@@ -12,10 +12,10 @@ jobs:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
         - xvfb-run npm run test:e2e:storybook:ci
+        - npm run audit:ci
     - stage: test
       install: npm ci
       script:
-        - npm run audit:ci
         - npm run build
         - xvfb-run npm run test:prod:ci
         - xvfb-run npm run test:lighthouse:ci
