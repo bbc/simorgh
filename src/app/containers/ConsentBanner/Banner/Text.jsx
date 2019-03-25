@@ -1,13 +1,11 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
 import { RequestContextConsumer } from '../../../contexts/RequestContext';
 import { ConsentBannerText } from '../../../components/ConsentBanner';
 
 const BannerText = ({ uk, international }) => (
   <RequestContextConsumer>
     {({ isUK }) => {
-      console.log(isUK ? 'yes' : 'no');
-
       const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
       const Link =
@@ -24,17 +22,16 @@ const BannerText = ({ uk, international }) => (
   </RequestContextConsumer>
 );
 
-BannerText.propTypes = {
+const messagingProps = {
   first: string.isRequired,
   linkText: string,
   linkUrl: string,
   last: string,
 };
 
-BannerText.defaultProps = {
-  linkText: null,
-  linkUrl: null,
-  last: null,
+BannerText.propTypes = {
+  uk: shape(messagingProps).isRequired,
+  international: shape(messagingProps).isRequired,
 };
 
 export default BannerText;

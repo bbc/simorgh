@@ -160,13 +160,13 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
     <p
       className="c3"
     >
-      We use 
+      We and our partners use technologies, such as 
       <a
         href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
       >
         cookies
       </a>
-       to give you the best online experience. Please let us know if you agree to all of these cookies.
+      , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
     </p>
     <ul
       className="c4"
