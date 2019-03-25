@@ -1,18 +1,28 @@
 import React from 'react';
 import { string } from 'prop-types';
+import { RequestContextConsumer } from '../../../contexts/RequestContext';
 import { ConsentBannerText } from '../../../components/ConsentBanner';
 
-const BannerText = ({ first, linkText, linkUrl, last }) => {
-  const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+const BannerText = ({ uk, international }) => (
+  <RequestContextConsumer>
+    {({ isUK }) => {
+      console.log(isUK ? 'yes' : 'no');
 
-  return (
-    <ConsentBannerText>
-      {first}
-      {Link}
-      {last}
-    </ConsentBannerText>
-  );
-};
+      const { first, linkText, linkUrl, last } = isUK ? uk : international;
+
+      const Link =
+        linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+
+      return (
+        <ConsentBannerText>
+          {first}
+          {Link}
+          {last}
+        </ConsentBannerText>
+      );
+    }}
+  </RequestContextConsumer>
+);
 
 BannerText.propTypes = {
   first: string.isRequired,
