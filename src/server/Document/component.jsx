@@ -43,7 +43,19 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
           </Fragment>
         )}
         {data.isAmp && (
-          <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+          <Fragment>
+            <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
+            <script
+              async
+              custom-element="amp-geo"
+              src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+            />
+            <script
+              async
+              custom-element="amp-consent"
+              src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+            />
+          </Fragment>
         )}
       </head>
       <body>
