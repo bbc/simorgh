@@ -8,7 +8,9 @@ Array [
   <span>
     true
   </span>,
-  <span />,
+  <span>
+    https://foobar.com
+  </span>,
 ]
 `;
 
@@ -20,7 +22,9 @@ Array [
   <span>
     true
   </span>,
-  <span />,
+  <span>
+    https://foobar.com
+  </span>,
 ]
 `;
 
@@ -46,6 +50,8 @@ Array [
   <span>
     true
   </span>,
-  <span />,
+  <span>
+    https://foobar.com
+  </span>,
 ]
 `;

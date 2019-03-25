@@ -5,7 +5,7 @@ import getOriginContext from './getOriginContext';
 jest.mock('./getOriginContext', () => jest.fn());
 getOriginContext.mockImplementation(origin => ({
   isUK: true,
-  origin,
+  origin: origin || 'https://foobar.com',
 }));
 
 const { PlatformContextProvider, PlatformContextConsumer } = require('./index');
