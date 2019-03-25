@@ -31,6 +31,7 @@
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:prod:ci": "npm install --no-save cypress bbc-a11y && run-p --race start cypress && run-p --race start bbcA11y",
+    "test:prod:travis": "CYPRESS_SKIP_EU=true npm run test:prod:ci",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:local_env": "CYPRESS_APP_ENV=local npm run test:e2e",
     "test:e2e:test_env": "CYPRESS_APP_ENV=test npm run cypress",
