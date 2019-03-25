@@ -1,6 +1,11 @@
+import styled from 'styled-components';
 import React from 'react';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
 import BrandContainer from '../Brand';
+
+const Footer = styled.footer`
+  margin-top: 6.75rem; // 54px
+`;
 
 const externalLink = {
   href: 'https://www.bbc.co.uk/help/web/links/',
@@ -43,14 +48,14 @@ const copyrightText = () =>
   `\u00A9 ${currentYear()} BBC. The BBC is not responsible for the content of external sites. `;
 
 const FooterContainer = () => (
-  <footer role="contentinfo">
+  <Footer role="contentinfo">
     <BrandContainer />
     <SitewideLinks
       links={links}
       copyrightText={copyrightText()}
       externalLink={externalLink}
     />
-  </footer>
+  </Footer>
 );
 
 export default FooterContainer;
