@@ -28,7 +28,7 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default and bbcOrigin https://bbc.co.uk 1`] = `
+exports[`RequestContext should have a request object for platform default and bbcOrigin https://www.bbc.co.uk 1`] = `
 Array [
   <span>
     default
@@ -37,7 +37,7 @@ Array [
     true
   </span>,
   <span>
-    https://bbc.co.uk
+    https://www.bbc.co.uk
   </span>,
 ]
 `;
