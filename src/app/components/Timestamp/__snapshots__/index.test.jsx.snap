@@ -7,6 +7,10 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
   color: #757575;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
   padding-bottom: 1rem;
 }
 
@@ -41,6 +45,10 @@ exports[`Timestamp should render Timestamp with a suffix 1`] = `
   color: #757575;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
   padding-bottom: 1rem;
 }
 
@@ -77,6 +85,10 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
   color: #757575;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
   padding-bottom: 1rem;
 }
 
