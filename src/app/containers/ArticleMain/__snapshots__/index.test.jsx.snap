@@ -113,7 +113,8 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       />
       <ForwardRef>
         <TimestampContainer
-          timestamp={1514811600000}
+          published={1514808060000}
+          updated={1514811600000}
         />
       </ForwardRef>
       <Blocks
@@ -244,7 +245,8 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       />
       <ForwardRef>
         <TimestampContainer
-          timestamp={1514811600000}
+          published={1514808060000}
+          updated={1514811600000}
         />
       </ForwardRef>
       <Blocks
