@@ -17,7 +17,7 @@ jobs:
       install: npm ci --only=prod
       script:
         - npm run build
-        - xvfb-run -a npm run test:prod:ci
+        - xvfb-run -a npm run test:prod:travis
         - xvfb-run -a npm run test:lighthouse:ci
     - stage: deploy
       if: type = push AND branch = latest
