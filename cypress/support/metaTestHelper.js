@@ -11,7 +11,7 @@ export const assertCookieValue = (cookieName, value) => {
 };
 
 export const assertCookieExpiryDate = (cookieName, timestamp) => {
-  const testBuffer = 20;
+  const testBuffer = 60;
   cy.getCookie(cookieName).then(c => {
     expect(c.expiry).to.be.within(
       timestamp - testBuffer,
@@ -96,7 +96,7 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
 };
 
 export const checkDataMatchesMetadata = data => {
-  const description = data.promo.summary;
+  const description = data.promo.summary || data.promo.headlines.seoHeadline;
   const title = data.promo.headlines.seoHeadline;
   const { language } = data.metadata.passport;
   const { type } = data.metadata;
