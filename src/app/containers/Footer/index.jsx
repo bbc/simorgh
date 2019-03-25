@@ -4,7 +4,7 @@ import SitewideLinks from '@bbc/psammead-sitewide-links';
 import BrandContainer from '../Brand';
 
 const Footer = styled.footer`
-  margin-top: 7rem; // 56px
+  margin-top: 3.5rem; // 56px
 `;
 
 const externalLink = {
