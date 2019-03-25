@@ -59,6 +59,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -149,13 +150,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
@@ -299,6 +294,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -389,13 +385,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
@@ -539,6 +529,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -629,13 +620,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
@@ -774,6 +759,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -864,13 +850,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
@@ -1009,6 +989,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -1099,13 +1080,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
