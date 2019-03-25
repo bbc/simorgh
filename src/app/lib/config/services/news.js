@@ -23,7 +23,7 @@ const news = {
         statusCode: '404',
         title: 'Page cannot be found',
         message:
-          "Sorry, we're unable to bring you the page you’re looking for. Please try:",
+          "Sorry, we're unable to bring you the page you're looking for. Please try:",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -38,7 +38,7 @@ const news = {
         statusCode: '500',
         title: 'Internal server error',
         message:
-          "Sorry, we’re currently unable to bring you the page you're looking for. Please try:",
+          "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -53,11 +53,20 @@ const news = {
       privacy: {
         title: "We've updated our Privacy and Cookies Policy",
         description: {
-          first:
-            "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-          linkText: null,
-          last: null,
-          linkUrl: null,
+          uk: {
+            first:
+              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
+          international: {
+            first:
+              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
         },
         accept: 'OK',
         reject: "Find out what's changed",
@@ -66,12 +75,22 @@ const news = {
       cookie: {
         title: 'Let us know you agree to cookies',
         description: {
-          first: 'We use ',
-          linkText: 'cookies',
-          last:
-            ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
-          linkUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          uk: {
+            first: 'We use ',
+            linkText: 'cookies',
+            last:
+              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+            linkUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
+          international: {
+            first: 'We and our partners use technologies, such as ',
+            linkText: 'cookies',
+            last:
+              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+            linkUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          },
         },
         accept: 'Yes, I agree',
         reject: 'No, take me to settings',
