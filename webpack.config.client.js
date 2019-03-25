@@ -46,9 +46,9 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
-        : `https://${
-            process.env.SIMORGH_PUBLIC_STATIC_ASSETS_HOST
-          }/include/articles/public/`,
+        : `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${
+            process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
+          }`,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
