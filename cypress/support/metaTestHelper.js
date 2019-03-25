@@ -96,7 +96,7 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
 };
 
 export const checkDataMatchesMetadata = data => {
-  const description = data.promo.summary;
+  const description = data.promo.summary || data.promo.headlines.seoHeadline;
   const title = data.promo.headlines.seoHeadline;
   const { language } = data.metadata.passport;
   const { type } = data.metadata;
