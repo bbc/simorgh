@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConsentBanner should correctly render 1`] = `
+exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
@@ -30,7 +30,7 @@ exports[`ConsentBanner should correctly render 1`] = `
   margin: 0;
 }
 
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #F6A21D;
@@ -40,11 +40,28 @@ exports[`ConsentBanner should correctly render 1`] = `
   list-style-type: none;
 }
 
-.c3 li + li {
+.c4 li + li {
   padding-top: 0.5rem;
 }
 
-.c4 button {
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -56,19 +73,19 @@ exports[`ConsentBanner should correctly render 1`] = `
   cursor: pointer;
 }
 
-.c4 button:focus,
-.c4 button:hover {
+.c5 button:focus,
+.c5 button:hover {
   color: #FFFFFF;
 }
 
-.c4 a {
+.c5 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4 a:focus,
-.c4 a:hover {
+.c5 a:focus,
+.c5 a:hover {
   color: #FFFFFF;
 }
 
@@ -94,6 +111,19 @@ exports[`ConsentBanner should correctly render 1`] = `
 }
 
 @media (min-width:37.5em) {
+  .c4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:37.5em) {
   .c3 {
     font-size: 0.875rem;
   }
@@ -101,13 +131,14 @@ exports[`ConsentBanner should correctly render 1`] = `
 
 @media (min-width:37.5em) {
   .c3 {
-    width: 18%;
-    float: right;
+    margin: 0;
+    float: left;
+    width: 53%;
   }
 }
 
 @media (min-width:37.5em) {
-  .c4 button {
+  .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -116,7 +147,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 <div
   className="c0"
   hidden={null}
-  id="banner-id"
+  id={null}
 >
   <div
     className="c1"
@@ -124,30 +155,40 @@ exports[`ConsentBanner should correctly render 1`] = `
     <h2
       className="c2"
     >
-      We've updated our Privacy and Cookies Policy
+      Let us know you agree to cookies
     </h2>
-    <p>
-      Hello
-    </p>
-    <ul
+    <p
       className="c3"
     >
+      We use 
+      <a
+        href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+      >
+        cookies
+      </a>
+       to give you the best online experience. Please let us know if you agree to all of these cookies.
+    </p>
+    <ul
+      className="c4"
+    >
       <li
-        className="c4"
+        className="c5"
       >
         <button
+          onClick={[Function]}
           type="button"
         >
-          Accept
+          Yes, I agree
         </button>
       </li>
       <li
-        className="c4"
+        className="c5"
       >
         <a
-          href="https://foobar.com"
+          href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+          onClick={[Function]}
         >
-          Reject
+          No, take me to settings
         </a>
       </li>
     </ul>
@@ -155,7 +196,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 </div>
 `;
 
-exports[`ConsentBanner with hidden attribute on wrapper should correctly render 1`] = `
+exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   background-color: #323232;
@@ -185,7 +226,7 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   margin: 0;
 }
 
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #F6A21D;
@@ -195,11 +236,28 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   list-style-type: none;
 }
 
-.c3 li + li {
+.c4 li + li {
   padding-top: 0.5rem;
 }
 
-.c4 button {
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -211,19 +269,19 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   cursor: pointer;
 }
 
-.c4 button:focus,
-.c4 button:hover {
+.c5 button:focus,
+.c5 button:hover {
   color: #FFFFFF;
 }
 
-.c4 a {
+.c5 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4 a:focus,
-.c4 a:hover {
+.c5 a:focus,
+.c5 a:hover {
   color: #FFFFFF;
 }
 
@@ -249,6 +307,19 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 }
 
 @media (min-width:37.5em) {
+  .c4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:37.5em) {
   .c3 {
     font-size: 0.875rem;
   }
@@ -256,13 +327,14 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 
 @media (min-width:37.5em) {
   .c3 {
-    width: 18%;
-    float: right;
+    margin: 0;
+    float: left;
+    width: 53%;
   }
 }
 
 @media (min-width:37.5em) {
-  .c4 button {
+  .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -270,8 +342,8 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 
 <div
   className="c0"
-  hidden={true}
-  id="banner-id"
+  hidden={null}
+  id={null}
 >
   <div
     className="c1"
@@ -281,70 +353,35 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
     >
       We've updated our Privacy and Cookies Policy
     </h2>
-    <p>
-      Hello
-    </p>
-    <ul
+    <p
       className="c3"
     >
+      We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+    </p>
+    <ul
+      className="c4"
+    >
       <li
-        className="c4"
+        className="c5"
       >
         <button
+          onClick={[Function]}
           type="button"
         >
-          Accept
+          OK
         </button>
       </li>
       <li
-        className="c4"
+        className="c5"
       >
         <a
-          href="https://foobar.com"
+          href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          onClick={[Function]}
         >
-          Reject
+          Find out what's changed
         </a>
       </li>
     </ul>
   </div>
 </div>
-`;
-
-exports[`ConsentBannerText should correctly render 1`] = `
-.c0 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 a:focus,
-.c0 a:hover {
-  color: #FFFFFF;
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:37.5em) {
-  .c0 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-<p
-  className="c0"
->
-  We have made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
-</p>
 `;
