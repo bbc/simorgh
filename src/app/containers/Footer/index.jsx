@@ -3,7 +3,7 @@ import React from 'react';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
 import BrandContainer from '../Brand';
 
-// 3.5rem = 56px
+// 3.5rem = 56px = 7 GEL_SPACING's
 const Footer = styled.footer`
   margin-top: 3.5rem;
 `;
