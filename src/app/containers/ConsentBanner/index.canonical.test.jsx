@@ -16,12 +16,12 @@ const privacyOnReject = jest.fn();
 const cookieOnAllow = jest.fn();
 const cookieOnReject = jest.fn();
 
-jest.mock('./Banner', () => jest.fn());
-const Banner = require('./Banner');
+jest.mock('./Banner/index.canonical', () => jest.fn());
+const Banner = require('./Banner/index.canonical');
 
 Banner.mockImplementation(({ type }) => <div>Canonical {type} banner</div>);
 
-describe('Canonical Container', () => {
+describe('Canonical Consent Banner Container', () => {
   beforeEach(() => {
     jest.mock('./CanonicalLogic', () => jest.fn());
     logic = require('./CanonicalLogic');

@@ -1,9 +1,9 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import Banner from '.';
+import Banner from './index.canonical';
 
-describe('Consent Banner Container - Banner', () => {
+describe('Canonical Consent Banner Container - Banner', () => {
   shouldMatchSnapshot(
     'should correctly render privacy banner',
     <ServiceContextProvider service="news">
