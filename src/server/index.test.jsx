@@ -117,10 +117,10 @@ describe('Server', () => {
             <Document
               app="<h1>Mock app</h1>"
               assets={['one.js']}
-              assetDomains={[
-                'ichef.bbci.co.uk',
-                'gel.files.bbci.co.uk',
-                'localhost:7080',
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                'http://localhost:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}

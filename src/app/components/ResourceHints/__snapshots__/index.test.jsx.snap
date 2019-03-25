@@ -4,7 +4,7 @@ exports[`ResourceHints should be correct 1`] = `
 Array [
   <link
     crossOrigin="anonymous"
-    href="https://foo.com"
+    href="http://foo.com"
     rel="preconnect"
   />,
   <link
@@ -13,7 +13,7 @@ Array [
     rel="preconnect"
   />,
   <link
-    href="https://foo.com"
+    href="http://foo.com"
     rel="dns-prefetch"
   />,
   <link

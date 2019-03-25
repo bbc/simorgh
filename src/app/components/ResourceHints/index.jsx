@@ -1,21 +1,19 @@
 import React, { Fragment } from 'react';
 import { arrayOf, string } from 'prop-types';
 
-const prefix = 'https://';
-
-const ResourceHints = ({ assetDomains }) => (
+const ResourceHints = ({ assetOrigins }) => (
   <Fragment>
-    {assetDomains.map(domain => (
-      <link rel="preconnect" href={prefix + domain} crossOrigin="anonymous" />
+    {assetOrigins.map(origin => (
+      <link rel="preconnect" href={origin} crossOrigin="anonymous" />
     ))}
-    {assetDomains.map(domain => (
-      <link rel="dns-prefetch" href={prefix + domain} />
+    {assetOrigins.map(origin => (
+      <link rel="dns-prefetch" href={origin} />
     ))}
   </Fragment>
 );
 
 ResourceHints.propTypes = {
-  assetDomains: arrayOf(string).isRequired,
+  assetOrigins: arrayOf(string).isRequired,
 };
 
 export default ResourceHints;

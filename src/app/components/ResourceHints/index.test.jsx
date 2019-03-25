@@ -4,7 +4,7 @@ import ResourceHints from './index';
 
 describe('ResourceHints', () => {
   const props = {
-    assetDomains: ['foo.com', 'bar.com'],
+    assetOrigins: ['http://foo.com', 'https://bar.com'],
   };
 
   shouldMatchSnapshot('should be correct', <ResourceHints {...props} />);

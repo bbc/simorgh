@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { ServerApp } from '../../app/containers/App';
 
 import { getStyleTag } from '../styles';
-import { getAssetsArray, getAssetDomains } from '../assets';
+import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
 const renderDocument = async (url, data, routes) => {
@@ -19,11 +19,11 @@ const renderDocument = async (url, data, routes) => {
 
   const headHelmet = Helmet.renderStatic();
   const assets = getAssetsArray();
-  const assetDomains = getAssetDomains();
+  const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assets={assets}
-      assetDomains={assetDomains}
+      assetOrigins={assetOrigins}
       app={app}
       data={data}
       styleTags={getStyleTag(sheet, data.isAmp)}
