@@ -28,7 +28,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   return (
     <PlatformContextConsumer>
-      {platform => (
+      {({ platform }) => (
         <ServiceContextConsumer>
           {({
             service,

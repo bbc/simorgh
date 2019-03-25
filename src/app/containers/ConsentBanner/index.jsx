@@ -4,7 +4,7 @@ import Canonical from './index.canonical';
 
 const ConsentBanner = () => (
   <PlatformContextConsumer>
-    {platform => (platform === 'amp' ? null : <Canonical />)}
+    {({ platform }) => (platform === 'amp' ? null : <Canonical />)}
   </PlatformContextConsumer>
 );
 

@@ -7,6 +7,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
     service="news"
   >
     <PlatformContextProvider
+      bbcOrigin={null}
       platform="canonical"
     >
       <HelmetWrapper
@@ -155,6 +156,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
     service="persian"
   >
     <PlatformContextProvider
+      bbcOrigin={null}
       platform="canonical"
     >
       <HelmetWrapper
@@ -280,6 +282,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
     service="news"
   >
     <PlatformContextProvider
+      bbcOrigin={null}
       platform="canonical"
     >
       <HelmetWrapper

@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { PlatformContextProvider, PlatformContextConsumer } from './index';
+import getOriginContext from './getOriginContext';
+
+jest.mock('./getOriginContext', () => jest.fn());
+getOriginContext.mockImplementation(origin => ({
+  isUK: true,
+  origin,
+}));
+
+const { PlatformContextProvider, PlatformContextConsumer } = require('./index');
 
 describe('PlatformContext', () => {
-  const testPlatformStringWithPlatformContext = platformString => {
+  const testPlatformContext = (platformString, bbcOrigin) => {
     shouldMatchSnapshot(
-      `should have a platform string for ${platformString}`,
-      <PlatformContextProvider platform={platformString}>
+      `should have a platform object for platform ${platformString} and bbcOrigin ${bbcOrigin}`,
+      <PlatformContextProvider platform={platformString} bbcOrigin={bbcOrigin}>
         <PlatformContextConsumer>
-          {platform => <span>{platform}</span>}
+          {({ platform, isUK, origin }) => (
+            <Fragment>
+              <span>{platform}</span>
+              <span>{isUK ? 'true' : 'false'}</span>
+              <span>{origin}</span>
+            </Fragment>
+          )}
         </PlatformContextConsumer>
       </PlatformContextProvider>,
     );
   };
 
-  testPlatformStringWithPlatformContext('default');
-  testPlatformStringWithPlatformContext('canonical');
-  testPlatformStringWithPlatformContext('amp');
+  testPlatformContext('default');
+  testPlatformContext('canonical');
+  testPlatformContext('amp');
+  testPlatformContext('default', 'https://bbc.co.uk');
 });

@@ -1,19 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PlatformContext should have a platform string for amp 1`] = `
-<span>
-  amp
-</span>
+exports[`PlatformContext should have a platform object for platform amp and bbcOrigin undefined 1`] = `
+Array [
+  <span>
+    amp
+  </span>,
+  <span>
+    true
+  </span>,
+  <span />,
+]
 `;
 
-exports[`PlatformContext should have a platform string for canonical 1`] = `
-<span>
-  canonical
-</span>
+exports[`PlatformContext should have a platform object for platform canonical and bbcOrigin undefined 1`] = `
+Array [
+  <span>
+    canonical
+  </span>,
+  <span>
+    true
+  </span>,
+  <span />,
+]
 `;
 
-exports[`PlatformContext should have a platform string for default 1`] = `
-<span>
-  default
-</span>
+exports[`PlatformContext should have a platform object for platform default and bbcOrigin https://bbc.co.uk 1`] = `
+Array [
+  <span>
+    default
+  </span>,
+  <span>
+    true
+  </span>,
+  <span>
+    https://bbc.co.uk
+  </span>,
+]
+`;
+
+exports[`PlatformContext should have a platform object for platform default and bbcOrigin undefined 1`] = `
+Array [
+  <span>
+    default
+  </span>,
+  <span>
+    true
+  </span>,
+  <span />,
+]
 `;

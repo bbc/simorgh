@@ -24,7 +24,7 @@ const FigureContainer = ({
   <Figure>
     <ImagePlaceholder ratio={ratio}>
       <PlatformContextConsumer>
-        {platform =>
+        {({ platform }) =>
           platform === 'amp' ? (
             <AmpImg
               alt={alt}
