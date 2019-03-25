@@ -56,10 +56,14 @@ To avoid indexing by search engines during our early development, there is a `no
 This is mainly used for debugging `latest` using the TEST and LIVE environment bundles. Ensure that the bundles exist in the static asset location for the correct environment before starting to debug.
 
 To run TEST bundles on localhost:
-`rm -rf build && npm run build:test && npm run start`
+- In `envConfig/test.env` change the value of a to `LOG_DIR='/var/log/simorgh'`
+- Then run `rm -rf build && npm run build:test && npm run start`
+- Visit a test article: http://localhost:7080/news/articles/cyddjz5058wo
 
 To run LIVE bundles on localhost:
-`rm -rf build && npm run build:live && npm run start`
+- In `envConfig/live.env` change the value of a to `LOG_DIR='/var/log/simorgh'`
+- Then run `rm -rf build && npm run build:live && npm run start`
+- Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
 ## Production build on CI
 
