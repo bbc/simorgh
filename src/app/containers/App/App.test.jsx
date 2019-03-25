@@ -24,7 +24,7 @@ describe('App', () => {
         location={{ pathname: 'pathnameOne' }}
         routes={[]}
         initialData={initialData}
-        bbcOrigin="https://bbc.co.uk"
+        bbcOrigin="https://www.bbc.co.uk"
       />,
     );
     setStateSpy = jest.spyOn(wrapper.instance(), 'setState');
@@ -39,7 +39,7 @@ describe('App', () => {
       data: initialData,
       error: null,
       loading: false,
-      bbcOrigin: 'https://bbc.co.uk',
+      bbcOrigin: 'https://www.bbc.co.uk',
     });
     expect(wrapper).toMatchSnapshot();
   });

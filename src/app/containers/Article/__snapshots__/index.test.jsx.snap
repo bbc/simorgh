@@ -7,7 +7,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
     service="news"
   >
     <RequestContextProvider
-      bbcOrigin="https://bbc.co.uk"
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper
@@ -156,7 +156,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
     service="persian"
   >
     <RequestContextProvider
-      bbcOrigin="https://bbc.co.uk"
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper
@@ -282,7 +282,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
     service="news"
   >
     <RequestContextProvider
-      bbcOrigin="https://bbc.co.uk"
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper

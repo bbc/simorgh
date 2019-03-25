@@ -28,7 +28,7 @@ describe('ArticleContainer', () => {
     status: 451,
   };
 
-  const bbcOrigin = 'https://bbc.co.uk';
+  const bbcOrigin = 'https://www.bbc.co.uk';
 
   describe('Component', () => {
     describe('200 status code', () => {
