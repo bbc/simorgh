@@ -18,13 +18,13 @@ exports[`Consent Banner Text should correctly render banner text 1`] = `
   color: #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     margin: 0;
     float: left;
@@ -57,13 +57,13 @@ exports[`Consent Banner Text should correctly render banner text with a link 1`]
   color: #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     margin: 0;
     float: left;

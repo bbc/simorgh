@@ -14,13 +14,13 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     font-size: 0.8125rem;
   }
@@ -52,13 +52,13 @@ exports[`Timestamp should render Timestamp with a suffix 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     font-size: 0.8125rem;
   }
@@ -92,13 +92,13 @@ exports[`Timestamp should render Timestamp with datetime attribute and text 1`] 
   padding-bottom: 1rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width:20em) and (max-width:37.4375em) {
   .c0 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5em) {
   .c0 {
     font-size: 0.8125rem;
   }
