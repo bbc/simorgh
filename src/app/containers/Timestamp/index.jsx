@@ -12,33 +12,27 @@ const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July',
 
 // 2019-03-22
 const longNumeric = {
-  month: date => leadingZero(date.getMonth() + 1),
   day: date => leadingZero(date.getDate()),
+  month: date => leadingZero(date.getMonth() + 1),
   year: date => date.getFullYear(),
-  reverse: true,
-  separator: '-',
+  format: (d, m, y) => [y, m, d].join('-'),
 };
 
 // 22 March 2019
 const shortAlphaNumeric = {
-  month: date => months[date.getMonth()],
   day: date => date.getDate(),
+  month: date => months[date.getMonth()],
   year: date => date.getFullYear(),
-  reverse: false,
-  separator: ' ',
+  format: (d, m, y) => [d, m, y].join(' '),
 };
 
 const formatUnixTimestamp = (milliseconds, formatType) => {
   const dateObj = new Date(milliseconds);
-  const year = formatType.year(dateObj);
-  const month = formatType.month(dateObj);
   const day = formatType.day(dateObj);
+  const month = formatType.month(dateObj);
+  const year = formatType.year(dateObj);
 
-  const orderedDate = formatType.reverse
-    ? [year, month, day]
-    : [day, month, year];
-
-  return orderedDate.join(formatType.separator);
+  return formatType.format(day, month, year);
 };
 
 const isTenHoursAgoOrLess = milliseconds => {
