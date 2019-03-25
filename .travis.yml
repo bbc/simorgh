@@ -11,14 +11,14 @@ jobs:
       script:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-        - xvfb-run npm run test:e2e:storybook:ci
-    - stage: test
-      install: npm ci
-      script:
+        - xvfb-run -a npm run test:e2e:storybook:ci
         - npm run audit:ci
+    - stage: test
+      install: npm ci --only=prod
+      script:
         - npm run build
-        - xvfb-run npm run test:prod:travis
-        - xvfb-run npm run test:lighthouse:ci
+        - xvfb-run -a npm run test:prod:travis
+        - xvfb-run -a npm run test:lighthouse:ci
     - stage: deploy
       if: type = push AND branch = latest
       before_script: npm install now --no-save
