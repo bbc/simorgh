@@ -50,18 +50,22 @@ describe('getAssetsArray', () => {
     });
   });
 
-  describe('getAssetDomains', () => {
+  describe('getAssetOrigins', () => {
     beforeEach(() => {
       jest.clearAllMocks();
     });
 
-    it('should return the asset domains as an array', async () => {
-      const defaultDomains = ['ichef.bbci.co.uk', 'gel.files.bbci.co.uk'];
-      process.env.SIMORGH_PUBLIC_STATIC_ASSETS_HOST = 'some.statichost.net';
-      const { getAssetDomains } = require('./index.js');
-      expect(getAssetDomains()).toEqual([
-        ...defaultDomains,
-        'some.statichost.net',
+    it('should return the asset origins as an array', async () => {
+      const defaultOrigins = [
+        'https://ichef.bbci.co.uk',
+        'https://gel.files.bbci.co.uk',
+      ];
+      process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
+        'http://some.statichost.net';
+      const { getAssetOrigins } = require('./index.js');
+      expect(getAssetOrigins()).toEqual([
+        ...defaultOrigins,
+        'http://some.statichost.net',
       ]);
     });
   });
