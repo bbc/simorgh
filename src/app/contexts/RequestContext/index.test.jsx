@@ -31,5 +31,5 @@ describe('RequestContext', () => {
   testRequestContext('default');
   testRequestContext('canonical');
   testRequestContext('amp');
-  testRequestContext('default', 'https://bbc.co.uk');
+  testRequestContext('default', 'https://www.bbc.co.uk');
 });
