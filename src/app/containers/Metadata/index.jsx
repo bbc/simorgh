@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
-import { PlatformContextConsumer } from '../../contexts/PlatformContext';
+import { RequestContextConsumer } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
@@ -27,7 +27,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
   return (
-    <PlatformContextConsumer>
+    <RequestContextConsumer>
       {({ platform }) => (
         <ServiceContextConsumer>
           {({
@@ -88,7 +88,7 @@ const MetadataContainer = ({ metadata, promo }) => {
           }}
         </ServiceContextConsumer>
       )}
-    </PlatformContextConsumer>
+    </RequestContextConsumer>
   );
 };
 

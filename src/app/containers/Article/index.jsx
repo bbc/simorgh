@@ -5,7 +5,7 @@ import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
@@ -31,7 +31,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
       <Fragment>
         <GlobalStyle />
         <ServiceContextProvider service={service}>
-          <PlatformContextProvider
+          <RequestContextProvider
             platform={isAmp ? 'amp' : 'canonical'}
             bbcOrigin={bbcOrigin}
           >
@@ -49,7 +49,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
               <ErrorMain status={status} />
             )}
             <FooterContainer />
-          </PlatformContextProvider>
+          </RequestContextProvider>
         </ServiceContextProvider>
       </Fragment>
     );

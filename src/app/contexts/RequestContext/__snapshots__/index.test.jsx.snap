@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PlatformContext should have a platform object for platform amp and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform amp and bbcOrigin undefined 1`] = `
 Array [
   <span>
     amp
@@ -14,7 +14,7 @@ Array [
 ]
 `;
 
-exports[`PlatformContext should have a platform object for platform canonical and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform canonical and bbcOrigin undefined 1`] = `
 Array [
   <span>
     canonical
@@ -28,7 +28,7 @@ Array [
 ]
 `;
 
-exports[`PlatformContext should have a platform object for platform default and bbcOrigin https://bbc.co.uk 1`] = `
+exports[`RequestContext should have a request object for platform default and bbcOrigin https://bbc.co.uk 1`] = `
 Array [
   <span>
     default
@@ -42,7 +42,7 @@ Array [
 ]
 `;
 
-exports[`PlatformContext should have a platform object for platform default and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform default and bbcOrigin undefined 1`] = `
 Array [
   <span>
     default
