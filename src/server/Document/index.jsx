@@ -8,12 +8,18 @@ import { getStyleTag } from '../styles';
 import getAssetsArray from '../assets';
 import DocumentComponent from './component';
 
-const renderDocument = async (url, data, routes) => {
+const renderDocument = async (url, data, routes, bbcOrigin) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
     sheet.collectStyles(
-      <ServerApp location={url} routes={routes} data={data} context={{}} />,
+      <ServerApp
+        location={url}
+        routes={routes}
+        data={data}
+        bbcOrigin={bbcOrigin}
+        context={{}}
+      />,
     ),
   );
 
