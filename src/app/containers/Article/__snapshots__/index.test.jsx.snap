@@ -6,7 +6,8 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
   <ServiceContextProvider
     service="news"
   >
-    <PlatformContextProvider
+    <RequestContextProvider
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper
@@ -143,7 +144,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
         }
       />
       <FooterContainer />
-    </PlatformContextProvider>
+    </RequestContextProvider>
   </ServiceContextProvider>
 </React.Fragment>
 `;
@@ -154,7 +155,8 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
   <ServiceContextProvider
     service="persian"
   >
-    <PlatformContextProvider
+    <RequestContextProvider
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper
@@ -266,12 +268,12 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
         }
       />
       <FooterContainer />
-    </PlatformContextProvider>
+    </RequestContextProvider>
   </ServiceContextProvider>
 </React.Fragment>
 `;
 
-exports[`ArticleContainer Component no data should render correctly 1`] = `null`;
+exports[`ArticleContainer Component no data or bbcOrigin should render correctly 1`] = `null`;
 
 exports[`ArticleContainer Component non-200 status code should render correctly 1`] = `
 <React.Fragment>
@@ -279,7 +281,8 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
   <ServiceContextProvider
     service="news"
   >
-    <PlatformContextProvider
+    <RequestContextProvider
+      bbcOrigin="https://www.bbc.co.uk"
       platform="canonical"
     >
       <HelmetWrapper
@@ -297,7 +300,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
         status={451}
       />
       <FooterContainer />
-    </PlatformContextProvider>
+    </RequestContextProvider>
   </ServiceContextProvider>
 </React.Fragment>
 `;
