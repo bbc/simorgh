@@ -1,4 +1,4 @@
-import preprocess, { checkInputContainsProperties } from './preprocessor';
+import preprocess, { deepClone } from './preprocessor';
 
 const paragraphBlock = {
   type: 'text',
@@ -60,34 +60,6 @@ describe('Preprocessor', () => {
     expect(preprocess(fixtureData)).toEqual(fixtureData);
   });
 
-  it('should have a `checkInputContainsProperties` function that works', () => {
-    const fixtureData = {
-      foo: 'bar',
-      nestedFoo: {
-        meta: 'true',
-        anotherNested: {
-          blocks: [],
-        },
-      },
-    };
-    // convenience function to reduce repetition
-    const propsExist = properties =>
-      checkInputContainsProperties({
-        input: fixtureData,
-        properties,
-      });
-    expect(propsExist(['foo'])).toBe(true);
-    expect(propsExist(['propertyNoExist'])).toBe(false);
-    expect(propsExist(['foo', 'propertyNoExist'])).toBe(false);
-    expect(propsExist(['nestedFoo.meta'])).toBe(true);
-    expect(propsExist(['nestedFoo.sandwich'])).toBe(false);
-    expect(propsExist(['foo', 'nestedFoo.meta'])).toBe(true);
-    expect(propsExist(['nestedFoo.meta', 'nestedFoo.sandwich'])).toBe(false);
-    expect(propsExist(['nestedFoo.sandwich', 'nestedFoo.meta'])).toBe(false);
-    expect(propsExist(['nestedFoo.anotherNested.blocks'])).toBe(true);
-    expect(propsExist(['nestedFoo.anotherNested.sandwich'])).toBe(false);
-  });
-
   it('should put Timestamp block first if no headline', () => {
     const fixtureData = {
       metadata: {
@@ -101,25 +73,22 @@ describe('Preprocessor', () => {
         },
       },
     };
-    const expectedTransform = {
-      ...fixtureData,
-      ...{
-        content: {
-          model: {
-            blocks: [
-              {
-                type: 'timestamp',
-                model: {
-                  published: 1514808060000,
-                  updated: 1514811600000,
-                },
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'timestamp',
+              model: {
+                published: 1514808060000,
+                updated: 1514811600000,
               },
-              paragraphBlock,
-            ],
-          },
+            },
+            paragraphBlock,
+          ],
         },
       },
-    };
+    });
     expect(preprocess(fixtureData)).toEqual(expectedTransform);
   });
 
@@ -136,26 +105,23 @@ describe('Preprocessor', () => {
         },
       },
     };
-    const expectedTransform = {
-      ...fixtureData,
-      ...{
-        content: {
-          model: {
-            blocks: [
-              paragraphBlock,
-              headlineBlock,
-              {
-                type: 'timestamp',
-                model: {
-                  published: 1514808060000,
-                  updated: 1514811600000,
-                },
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            paragraphBlock,
+            headlineBlock,
+            {
+              type: 'timestamp',
+              model: {
+                published: 1514808060000,
+                updated: 1514811600000,
               },
-            ],
-          },
+            },
+          ],
         },
       },
-    };
+    });
     expect(preprocess(fixtureData)).toEqual(expectedTransform);
   });
 });
