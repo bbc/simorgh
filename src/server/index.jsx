@@ -103,14 +103,15 @@ server
       }
     })
   })
-  .get(articleRegexPath, async ({ url }, res) => {
+  .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
       const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
 
       res
         .status(status)
-        .send(await renderDocument(url, data, routes));
+        .send(await renderDocument(url, data, routes, bbcOrigin));
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);
