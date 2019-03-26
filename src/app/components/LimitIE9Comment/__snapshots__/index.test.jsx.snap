@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timestamp should render IE9 limit comment close 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<!-- <![endif]-->",
+    }
+  }
+/>
+`;
+
+exports[`Timestamp should render IE9 limit comment open 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<!--[if !IE]> -->",
+    }
+  }
+/>
+`;

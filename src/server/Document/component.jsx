@@ -4,6 +4,10 @@ import {
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
+import {
+  IE9LimitOpen,
+  IE9LimitClose,
+} from '../../app/components/LimitIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -14,15 +18,21 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !data.isAmp;
-  const scripts = assets.map(asset => (
-    <script
-      crossOrigin="anonymous"
-      key={asset}
-      type="text/javascript"
-      src={asset}
-      defer
-    />
-  ));
+  const scripts = (
+    <Fragment>
+      <IE9LimitOpen />
+      {assets.map(asset => (
+        <script
+          crossOrigin="anonymous"
+          key={asset}
+          type="text/javascript"
+          src={asset}
+          defer
+        />
+      ))}
+      <IE9LimitClose />
+    </Fragment>
+  );
 
   return (
     <html lang="en-GB" {...htmlAttrs}>
