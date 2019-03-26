@@ -1,11 +1,7 @@
-import { testContentType } from '../support/metaTestHelper';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { testContentTypeContains } from '../support/metaTestHelper';
 
-describeForLocalOnly('Service worker', () => {
+describe('Service worker', () => {
   it('should have the content type set to Javascript', () => {
-    testContentType(
-      '/news/articles/sw.js',
-      'application/javascript; charset=UTF-8',
-    );
+    testContentTypeContains('/news/articles/sw.js', 'application/javascript');
   });
 });
