@@ -5,7 +5,7 @@ import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
-import { PlatformContextConsumer } from '../../contexts/PlatformContext';
+import { RequestContextConsumer } from '../../contexts/RequestContext';
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -23,8 +23,8 @@ const FigureContainer = ({
 }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
-      <PlatformContextConsumer>
-        {platform =>
+      <RequestContextConsumer>
+        {({ platform }) =>
           platform === 'amp' ? (
             <AmpImg
               alt={alt}
@@ -38,7 +38,7 @@ const FigureContainer = ({
             <Image alt={alt} src={src} width={width} />
           )
         }
-      </PlatformContextConsumer>
+      </RequestContextConsumer>
       {renderCopyright(copyright)}
     </ImagePlaceholder>
     {renderCaption(captionBlock)}

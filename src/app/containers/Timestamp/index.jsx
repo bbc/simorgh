@@ -7,37 +7,33 @@ import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
+const leadingZero = val => (val < 10 ? `0${val}` : val);
+
+const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]; // eslint-disable-line
+
+// 2019-03-22
 const longNumeric = {
-  locale: 'en-GB',
-  month: '2-digit',
-  day: '2-digit',
-  reverse: true,
-  separator: '-',
+  day: date => leadingZero(date.getDate()),
+  month: date => leadingZero(date.getMonth() + 1),
+  year: date => date.getFullYear(),
+  format: (d, m, y) => [y, m, d].join('-'),
 };
 
+// 22 March 2019
 const shortAlphaNumeric = {
-  locale: 'en-GB',
-  month: 'long',
-  day: 'numeric',
-  reverse: false,
-  separator: ' ',
+  day: date => date.getDate(),
+  month: date => months[date.getMonth()],
+  year: date => date.getFullYear(),
+  format: (d, m, y) => [d, m, y].join(' '),
 };
 
 const formatUnixTimestamp = (milliseconds, formatType) => {
   const dateObj = new Date(milliseconds);
-  const fullYear = dateObj.getFullYear();
-  const month = dateObj.toLocaleDateString('en-GB', {
-    month: formatType.month,
-  });
-  const day = dateObj.toLocaleDateString('en-GB', {
-    day: formatType.day,
-  });
+  const day = formatType.day(dateObj);
+  const month = formatType.month(dateObj);
+  const year = formatType.year(dateObj);
 
-  const orderedDate = formatType.reverse
-    ? [day, month, fullYear].reverse()
-    : [day, month, fullYear];
-
-  return orderedDate.join(formatType.separator);
+  return formatType.format(day, month, year);
 };
 
 const isTenHoursAgoOrLess = milliseconds => {
