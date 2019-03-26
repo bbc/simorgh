@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
+import webLogger from '../src/app/helpers/logger.web';
 
-const Preprocessor = (jsonRaw = {}) => {
+const Preprocessor = (jsonRaw = {}, logger = webLogger) => {
   try {
     // safely get deeply nested JSON values
     const firstPublished = get(['metadata', 'firstPublished'], jsonRaw);
@@ -23,6 +24,7 @@ const Preprocessor = (jsonRaw = {}) => {
     }
   } catch (e) {
     // if our block manipulation fails for whatever reason, fall back to jsonRaw
+    logger.error(`JSON preprocessing failed`);
   }
   return jsonRaw;
 };
