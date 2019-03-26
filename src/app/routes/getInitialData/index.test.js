@@ -1,5 +1,9 @@
 import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
 import baseUrl from './getBaseUrl';
+import {
+  setLocationOrigin,
+  resetWindowLocation,
+} from '../../helpers/tests/setLocationOrigin';
 
 const getBaseUrlMockOrigin = 'https://www.mockSite.com';
 jest.mock('./getBaseUrl', () => jest.fn());
@@ -46,23 +50,10 @@ describe('getInitialData', () => {
     return response;
   };
 
-  const setLocationOrigin = origin => {
-    const windowLocation = JSON.parse(JSON.stringify(window.location));
-    delete window.location;
-    windowLocation.origin = origin;
-    Object.defineProperty(window, 'location', {
-      value: windowLocation,
-    });
-  };
-
   const windowLocation = window.location;
 
   afterEach(() => {
-    // Reset window location
-    Object.defineProperty(window, 'location', {
-      value: windowLocation,
-    });
-
+    resetWindowLocation(windowLocation);
     fetch.resetMocks();
   });
 

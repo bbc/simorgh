@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);
@@ -10,15 +10,15 @@ const ConsentBanner = require('./index').default;
 describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render amp banner',
-    <PlatformContextProvider platform="amp">
+    <RequestContextProvider platform="amp">
       <ConsentBanner />
-    </PlatformContextProvider>,
+    </RequestContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render canonical banner',
-    <PlatformContextProvider platform="canonical">
+    <RequestContextProvider platform="canonical">
       <ConsentBanner />
-    </PlatformContextProvider>,
+    </RequestContextProvider>,
   );
 });

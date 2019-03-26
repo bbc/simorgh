@@ -15,6 +15,6 @@ export const ClientApp = props => (
 
 export const ServerApp = props => (
   <StaticRouter {...props}>
-    <App initialData={props.data} routes={props.routes} />
+    <App initialData={props.data} routes={props.routes} bbcOrigin={props.bbcOrigin} />
   </StaticRouter>
 );
