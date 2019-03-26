@@ -1,5 +1,5 @@
 import config from '../support/config';
-import skipLiveDescribe from '../support/skipLiveDescribe';
+import describeForLocalOnly from '../support/describeForLocalOnly';
 import {
   checkCanonicalURL,
   facebookMeta,
@@ -10,7 +10,7 @@ import {
   twitterMeta,
 } from '../support/metaTestHelper';
 
-skipLiveDescribe('Persian Article Meta Tests', () => {
+describeForLocalOnly('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
