@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Timestamp should render IE9 limit comment close 1`] = `
+exports[`Timestamp should render if not IE9 comment close 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -10,7 +10,7 @@ exports[`Timestamp should render IE9 limit comment close 1`] = `
 />
 `;
 
-exports[`Timestamp should render IE9 limit comment open 1`] = `
+exports[`Timestamp should render if not IE9 comment open 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
