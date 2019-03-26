@@ -2,10 +2,12 @@
 
 const Preprocessor = (jsonRaw = {}) => {
   try {
+    // safely get deeply nested JSON values
+    const firstPublished = get(['metadata', 'firstPublished'], jsonRaw);
+    const lastUpdated = get(['metadata', 'lastUpdated'], jsonRaw);
     const canRenderTimestamp =
-      // safely get deeply nested JSON values
-      get(['metadata', 'firstPublished'], jsonRaw) &&
-      get(['metadata', 'lastUpdated'], jsonRaw) &&
+      firstPublished &&
+      lastUpdated &&
       get(['content', 'model', 'blocks'], jsonRaw);
 
     if (canRenderTimestamp) {
@@ -13,8 +15,8 @@ const Preprocessor = (jsonRaw = {}) => {
       const timestampBlock = {
         type: 'timestamp',
         model: {
-          published: jsonRaw.metadata.firstPublished,
-          updated: jsonRaw.metadata.lastUpdated,
+          published: firstPublished,
+          updated: lastUpdated,
         },
       };
       return insertTimestampBlock(jsonRaw, timestampBlock);
