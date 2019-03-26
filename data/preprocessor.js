@@ -1,7 +1,7 @@
 import nodeLogger from '../src/app/helpers/logger.node';
 import applyTimestampRules from './rules/timestamp';
 
-export default (jsonRaw = {}, rules = [applyTimestampRules]) => {
+const Preprocessor = (jsonRaw = {}, rules = [applyTimestampRules]) => {
   try {
     return rules.reduce(
       (transformedJson, ruleset) => ruleset(transformedJson),
@@ -14,6 +14,8 @@ export default (jsonRaw = {}, rules = [applyTimestampRules]) => {
   }
   return jsonRaw;
 };
+
+export default Preprocessor;
 
 // taken from https://medium.com/javascript-inside/safely-accessing-deeply-nested-values-in-javascript-99bf72a0855a
 export const deepGet = (path, object) =>
