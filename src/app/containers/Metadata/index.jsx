@@ -45,6 +45,7 @@ const MetadataContainer = ({ metadata, promo }) => {
           }) => {
             /* Canonical link generated from servicename and id */
             const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+            const ampLink = `https://www.bbc.com/${service}/articles/${id}.amp`;
 
             return (
               <Fragment>
@@ -63,6 +64,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
+                  ampLink={ampLink}
                   articleAuthor={articleAuthor}
                   articleSection={metadata.passport.genre}
                   brandName={brandName}

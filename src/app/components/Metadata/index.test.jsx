@@ -5,6 +5,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 const metadataSnapshotTest = (
   testDescription,
   isAmp,
+  ampLink,
   articleAuthor,
   articleSection,
   brandName,
@@ -27,6 +28,7 @@ const metadataSnapshotTest = (
   describe(testDescription, () => {
     const metadataProps = {
       isAmp,
+      ampLink,
       articleAuthor,
       articleSection,
       brandName,
@@ -57,6 +59,7 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'News article',
     false,
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     null,
     'BBC News',
@@ -80,10 +83,11 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'News AMP article',
     true,
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     null,
     'BBC News',
-    'https://www.bbc.com/news/articles/c0000000001o.amp',
+    'https://www.bbc.com/news/articles/c0000000001o',
     'https://www.bbc.com/news/image.png',
     'BBC News',
     'This is a description',
@@ -103,6 +107,7 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'Persian article',
     false,
+    'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
     'BBC News فارسی',
     null,
     'BBC News فارسی',
@@ -126,10 +131,11 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'Persian AMP article',
     true,
+    'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
     'BBC News فارسی',
     null,
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
+    'https://www.bbc.com/persian/articles/cyddjz5058wo',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',
@@ -149,6 +155,7 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'articleSection is not null',
     false,
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     'Politics',
     'BBC News',

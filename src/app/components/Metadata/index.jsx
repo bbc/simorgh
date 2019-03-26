@@ -4,6 +4,7 @@ import { arrayOf, bool, string, number } from 'prop-types';
 
 const Metadata = ({
   isAmp,
+  ampLink,
   articleAuthor,
   articleSection,
   brandName,
@@ -44,6 +45,7 @@ const Metadata = ({
         {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
+      <link rel="amphtml" href={ampLink} />
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastPublished} />
       <meta name="article:published_time" content={timeFirstPublished} />
@@ -78,6 +80,7 @@ const Metadata = ({
 
 Metadata.propTypes = {
   isAmp: bool.isRequired,
+  ampLink: string.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,
