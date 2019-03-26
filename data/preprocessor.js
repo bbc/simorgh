@@ -1,25 +1,28 @@
 /* eslint-disable no-use-before-define */
 
 const Preprocessor = (jsonRaw = {}) => {
-  // can only provide
-  const canRenderTimestamp = checkInputContainsProperties({
-    input: jsonRaw,
-    properties: [
-      'metadata.firstPublished',
-      'metadata.lastUpdated',
-      'content.model.blocks',
-    ],
-  });
-  if (canRenderTimestamp) {
-    // construct a new block from the metadata
-    const timestampBlock = {
-      type: 'timestamp',
-      model: {
-        published: jsonRaw.metadata.firstPublished,
-        updated: jsonRaw.metadata.lastUpdated,
-      },
-    };
-    return insertTimestampBlock(jsonRaw, timestampBlock);
+  try {
+    const canRenderTimestamp = checkInputContainsProperties({
+      input: jsonRaw,
+      properties: [
+        'metadata.firstPublished',
+        'metadata.lastUpdated',
+        'content.model.blocks',
+      ],
+    });
+    if (canRenderTimestamp) {
+      // construct a new block from the metadata
+      const timestampBlock = {
+        type: 'timestamp',
+        model: {
+          published: jsonRaw.metadata.firstPublished,
+          updated: jsonRaw.metadata.lastUpdated,
+        },
+      };
+      return insertTimestampBlock(jsonRaw, timestampBlock);
+    }
+  } catch (e) {
+    // if our block manipulation fails for whatever reason, fall back to jsonRaw
   }
   return jsonRaw;
 };
