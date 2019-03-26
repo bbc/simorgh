@@ -3,7 +3,7 @@
 exports[`Timestamp should handle an invalid timestamp 1`] = `null`;
 
 exports[`Timestamp should render correctly 1`] = `
-.c0 {
+.c1 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #757575;
@@ -12,32 +12,81 @@ exports[`Timestamp should render correctly 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c0:last-child {
+.c1:last-child {
   padding-bottom: 1rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c0 {
+  .c1 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c0 {
+  .c1 {
     font-size: 0.8125rem;
   }
 }
 
-<time
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
   className="c0"
-  dateTime="2018-10-19"
 >
-  19 October 2018
-</time>
+  <time
+    className="c1"
+    dateTime="2018-10-19"
+  >
+    19 October 2018
+  </time>
+</div>
 `;
 
 exports[`Timestamp should render without a leading zero on the day 1`] = `
-.c0 {
+.c1 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #757575;
@@ -46,26 +95,75 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c0:last-child {
+.c1:last-child {
   padding-bottom: 1rem;
 }
 
 @media (min-width:20em) and (max-width:37.4375em) {
-  .c0 {
+  .c1 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5em) {
-  .c0 {
+  .c1 {
     font-size: 0.8125rem;
   }
 }
 
-<time
+@media (max-width:25em) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:25em) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63em) and (max-width:80em) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80em) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
   className="c0"
-  dateTime="2018-07-07"
 >
-  7 July 2018
-</time>
+  <time
+    className="c1"
+    dateTime="2018-07-07"
+  >
+    7 July 2018
+  </time>
+</div>
 `;

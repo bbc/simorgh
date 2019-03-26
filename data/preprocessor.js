@@ -6,7 +6,7 @@ const Preprocessor = (jsonRaw = {}) => {
     input: json,
     properties: [
       'metadata.firstPublished',
-      'metadata.lastPublished',
+      'metadata.lastUpdated',
       'content.model.blocks',
     ],
   });
@@ -14,8 +14,8 @@ const Preprocessor = (jsonRaw = {}) => {
     const timestampBlock = {
       type: 'timestamp',
       model: {
-        firstPublished: json.metadata.firstPublished,
-        lastPublished: json.metadata.lastPublished,
+        published: json.metadata.firstPublished,
+        updated: json.metadata.lastUpdated,
       },
     };
     const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
