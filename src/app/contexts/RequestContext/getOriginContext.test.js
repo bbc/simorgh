@@ -1,20 +1,13 @@
-const setLocationOrigin = origin => {
-  const windowLocation = JSON.parse(JSON.stringify(window.location));
-  delete window.location;
-  windowLocation.origin = origin;
-  Object.defineProperty(window, 'location', {
-    value: windowLocation,
-  });
-};
+import {
+  setLocationOrigin,
+  resetWindowLocation,
+} from '../../helpers/tests/setLocationOrigin';
 
 const windowLocation = window.location;
 
 describe('getInitialData', () => {
   afterEach(() => {
-    // Reset window location
-    Object.defineProperty(window, 'location', {
-      value: windowLocation,
-    });
+    resetWindowLocation(windowLocation);
   });
 
   const tests = [
