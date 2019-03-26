@@ -105,13 +105,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
             },
             Object {
               "model": Object {
-                "published": 1514808060000,
-                "updated": 1514815200000,
-              },
-              "type": "timestamp",
-            },
-            Object {
-              "model": Object {
                 "blocks": Array [
                   Object {
                     "model": Object {
@@ -226,13 +219,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
                 ],
               },
               "type": "headline",
-            },
-            Object {
-              "model": Object {
-                "published": 1514808060000,
-                "updated": 1514815200000,
-              },
-              "type": "timestamp",
             },
             Object {
               "model": Object {
