@@ -1,4 +1,4 @@
-import preprocess, { checkPropertiesExist } from './preprocessor';
+import preprocess, { checkInputContainsProperties } from './preprocessor';
 
 const paragraphBlock = {
   type: 'text',
@@ -60,7 +60,7 @@ describe('Preprocessor', () => {
     expect(preprocess(fixtureData)).toEqual(fixtureData);
   });
 
-  it('should have a `checkPropertiesExist` function that works', () => {
+  it('should have a `checkInputContainsProperties` function that works', () => {
     const fixtureData = {
       foo: 'bar',
       nestedFoo: {
@@ -72,7 +72,7 @@ describe('Preprocessor', () => {
     };
     // convenience function to reduce repetition
     const propsExist = properties =>
-      checkPropertiesExist({
+      checkInputContainsProperties({
         input: fixtureData,
         properties,
       });

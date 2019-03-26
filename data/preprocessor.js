@@ -1,48 +1,46 @@
 /* eslint-disable no-use-before-define */
 
 const Preprocessor = (jsonRaw = {}) => {
-  const json = { ...jsonRaw }; // make a copy so we don't corrupt the input
-  const timestampNeeded = checkPropertiesExist({
-    input: json,
+  // can only provide
+  const canRenderTimestamp = checkInputContainsProperties({
+    input: jsonRaw,
     properties: [
       'metadata.firstPublished',
       'metadata.lastUpdated',
       'content.model.blocks',
     ],
   });
-  if (timestampNeeded) {
+  if (canRenderTimestamp) {
+    // construct a new block from the metadata
     const timestampBlock = {
       type: 'timestamp',
       model: {
-        published: json.metadata.firstPublished,
-        updated: json.metadata.lastUpdated,
+        published: jsonRaw.metadata.firstPublished,
+        updated: jsonRaw.metadata.lastUpdated,
       },
     };
-    const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
-      json.content.model.blocks,
-    );
-    if (headlineBlocks.length > 0) {
-      // insert timestamp block immediately after headline
-      json.content.model.blocks = [
-        ...headlineBlocks,
-        timestampBlock,
-        ...mainBlocks,
-      ];
-    } else {
-      // put timestamp block in as the first element
-      json.content.model.blocks.unshift(timestampBlock);
-    }
+    return insertTimestampBlock(jsonRaw, timestampBlock);
   }
-  return json;
+  return jsonRaw;
 };
 
-export const checkPropertiesExist = ({ input, properties }) =>
+export const checkInputContainsProperties = ({ input, properties }) =>
   properties.reduce(
-    (validates, prop) => validates && validate(input, prop),
+    (validates, prop) => validates && inputContainsProperty(input, prop),
     true,
   );
 
-const validate = (input, prop) => {
+const deepClone = originalObj => JSON.parse(JSON.stringify(originalObj));
+
+/**
+ * Checks if Object has property by name.
+ * Properties can be single ('foo.bar') or chained ('foo.bar.baz')
+ * So can run `if (inputContainsProperty(myInput, 'foo.bar.baz))` to check for child property.
+ * Saves having to do `if (foo && foo.bar && foo.bar.baz) `.
+ * @param {Object} input e.g. { foo: { bar: 'baz' } }
+ * @param {String} prop e.g. 'foo.bar'
+ */
+const inputContainsProperty = (input, prop) => {
   const propParts = prop.split('.');
   const isNested = propParts.length > 1;
   const topmostProp = isNested ? propParts[0] : prop;
@@ -53,10 +51,35 @@ const validate = (input, prop) => {
   if (isNested) {
     return (
       topmostPropExists &&
-      validate(input[topmostProp], propParts.slice(1).join('.'))
+      inputContainsProperty(input[topmostProp], propParts.slice(1).join('.'))
     );
   }
   return topmostPropExists;
+};
+
+/**
+ * Where the `timestampBlock` is inserted in the payload is dependent on the
+ * presence or absence of a `headline` block, and other factors.
+ * @param {Object} json
+ * @param {Object} timestampBlock
+ */
+const insertTimestampBlock = (originalJson, timestampBlock) => {
+  const json = deepClone(originalJson); // make a copy so we don't corrupt the input
+  const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
+    json.content.model.blocks,
+  );
+  if (headlineBlocks.length > 0) {
+    // insert timestamp block immediately after headline
+    json.content.model.blocks = [
+      ...headlineBlocks,
+      timestampBlock,
+      ...mainBlocks,
+    ];
+  } else {
+    // put timestamp block in as the first element
+    json.content.model.blocks.unshift(timestampBlock);
+  }
+  return json;
 };
 
 const splitBlocksByHeadline = blocks => {
