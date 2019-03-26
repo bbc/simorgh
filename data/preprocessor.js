@@ -10,7 +10,7 @@ export default (jsonRaw = {}, rules = [applyTimestampRules]) => {
   } catch (e) {
     // if our block manipulation fails for whatever reason, fall back to jsonRaw & log the error
     const logger = nodeLogger(__filename);
-    logger.error(`JSON preprocessing failed`);
+    logger.error(`JSON preprocessing failed: "${e}"`);
   }
   return jsonRaw;
 };

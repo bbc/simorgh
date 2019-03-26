@@ -26,6 +26,8 @@ describe('Preprocessor', () => {
       throw new Error('something went wrong');
     };
     preprocess(fixtureData, [transformerThatErrors]);
-    expect(loggerMock.error).toBeCalledWith('JSON preprocessing failed');
+    expect(loggerMock.error).toBeCalledWith(
+      'JSON preprocessing failed: "Error: something went wrong"',
+    );
   });
 });
