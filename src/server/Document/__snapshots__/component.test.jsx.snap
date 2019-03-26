@@ -122,14 +122,14 @@ exports[`Document Component should render correctly 1`] = `
       }
     />
     <React.Fragment>
-      <IE9LimitOpen />
+      <IfNotIE9Open />
       <script
         crossOrigin="anonymous"
         defer={true}
         src="http://example.com/file.js"
         type="text/javascript"
       />
-      <IE9LimitClose />
+      <IfNotIE9Close />
     </React.Fragment>
   </body>
 </html>
