@@ -19,7 +19,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
       rel="canonical"
     />
     <style
@@ -27,6 +27,9 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       html { color: red; }
     </style>
+    <script
+      type="application/ld+json"
+    />
     <React.Fragment>
       <style
         amp-boilerplate=""
@@ -41,10 +44,22 @@ exports[`Document Component should render AMP version correctly 1`] = `
         </style>
       </noscript>
     </React.Fragment>
-    <script
-      async={true}
-      src="https://cdn.ampproject.org/v0.js"
-    />
+    <React.Fragment>
+      <script
+        async={true}
+        src="https://cdn.ampproject.org/v0.js"
+      />
+      <script
+        async={true}
+        custom-element="amp-geo"
+        src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+      />
+      <script
+        async={true}
+        custom-element="amp-consent"
+        src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+      />
+    </React.Fragment>
   </head>
   <body>
     <div
@@ -78,7 +93,7 @@ exports[`Document Component should render correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c9rpqy7pmypo"
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
       rel="canonical"
     />
     <style
@@ -86,6 +101,9 @@ exports[`Document Component should render correctly 1`] = `
     >
       html { color: red; }
     </style>
+    <script
+      type="application/ld+json"
+    />
   </head>
   <body>
     <div

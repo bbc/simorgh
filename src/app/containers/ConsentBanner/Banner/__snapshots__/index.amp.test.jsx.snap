@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Amp Consent Banner Container - Banner should correctly render cookie banner 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width:25em) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    width: 22%;
+    margin-right: 3.5%;
+    float: left;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+<div
+  className="c0"
+  hidden={true}
+  id="promptId"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Let us know you agree to cookies
+    </h2>
+    <p
+      className="c3"
+    >
+      We use 
+      <a
+        href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+      >
+        cookies
+      </a>
+       to give you the best online experience. Please let us know if you agree to all of these cookies.
+    </p>
+    <ul
+      className="c4"
+    >
+      <li
+        className="c5"
+      >
+        <button
+          on="tap:parentId.accept"
+          type="button"
+        >
+          Yes, I agree
+        </button>
+      </li>
+      <li
+        className="c5"
+      >
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+          on="tap:parentId.reject"
+        >
+          No, take me to settings
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Amp Consent Banner Container - Banner should correctly render privacy banner 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width:25em) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c2 {
+    width: 22%;
+    margin-right: 3.5%;
+    float: left;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+<div
+  className="c0"
+  hidden={true}
+  id="promptId"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      We've updated our Privacy and Cookies Policy
+    </h2>
+    <p
+      className="c3"
+    >
+      We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+    </p>
+    <ul
+      className="c4"
+    >
+      <li
+        className="c5"
+      >
+        <button
+          on="tap:cookieId.show, privacyId.hide"
+          type="button"
+        >
+          OK
+        </button>
+      </li>
+      <li
+        className="c5"
+      >
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          on="tap:cookieId.show, privacyId.hide"
+        >
+          Find out what's changed
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

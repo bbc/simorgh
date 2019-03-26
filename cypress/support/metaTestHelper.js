@@ -6,6 +6,20 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
+export const assertCookieValue = (cookieName, value) => {
+  cy.getCookie(cookieName).should('have.property', 'value', value);
+};
+
+export const assertCookieExpiryDate = (cookieName, timestamp) => {
+  const testBuffer = 60;
+  cy.getCookie(cookieName).then(c => {
+    expect(c.expiry).to.be.within(
+      timestamp - testBuffer,
+      timestamp + testBuffer,
+    );
+  });
+};
+
 export const testContentType = (path, contentType) => {
   cy.request(path).then(({ headers }) => {
     expect(headers).to.have.property('content-type', contentType);
@@ -82,7 +96,7 @@ export const retrieve404BodyResponse = (url, bodyResponse) => {
 };
 
 export const checkDataMatchesMetadata = data => {
-  const description = data.promo.summary;
+  const description = data.promo.summary || data.promo.headlines.seoHeadline;
   const title = data.promo.headlines.seoHeadline;
   const { language } = data.metadata.passport;
   const { type } = data.metadata;

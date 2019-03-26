@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/b7c465069b1aacb64daa/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/b7c465069b1aacb64daa/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 
 Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
 
@@ -33,8 +33,8 @@ The application will start on [http://localhost:7080](http://localhost:7080). To
 The route is `/news/articles/:id`, where `id` is the filename of the static Article data, for example `c0000000001o`.
 
 Articles 25 & 27 are available on the Production environment as well as locally. These can be used for testing.
-[http://localhost:7080/news/articles/c9rpqy7pmypo](http://localhost:7080/news/articles/c9rpqy7pmypo)
-[http://localhost:7080/news/articles/c85pqyj5m2ko](http://localhost:7080/news/articles/c85pqyj5m2ko).
+[http://localhost:7080/news/articles/cl55zn0w0l4o](http://localhost:7080/news/articles/cl55zn0w0l4o)
+[http://localhost:7080/news/articles/cn7769kpk9mo](http://localhost:7080/news/articles/cn7769kpk9mo).
 
 There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 
@@ -45,7 +45,7 @@ To run locally `npm run storybook`, it will then be available at [http://localho
 ## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build && npm run start`. 
+`npm run build && npm run start`.
 
 We use `npm run build` locally which bundles the application pointing at localhost for data and static assets.
 

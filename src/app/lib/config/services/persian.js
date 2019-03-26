@@ -14,6 +14,8 @@ const persian = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   translations: {
     error: {
       404: {
@@ -41,6 +43,36 @@ const persian = {
         callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
         callToActionLast: ' بازدید کنید',
         callToActionLinkUrl: 'https://www.bbc.com/persian',
+      },
+    },
+    consentBanner: {
+      privacy: {
+        title: "We've updated our Privacy and Cookies Policy",
+        description: {
+          first:
+            "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+          linkText: null,
+          last: null,
+          linkUrl: null,
+        },
+        accept: 'OK',
+        reject: "Find out what's changed",
+        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+      },
+      cookie: {
+        title: 'Let us know you agree to cookies',
+        description: {
+          first: 'We use ',
+          linkText: 'cookies',
+          last:
+            ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+          linkUrl:
+            'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        },
+        accept: 'Yes, I agree',
+        reject: 'No, take me to settings',
+        rejectUrl:
+          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
   },

@@ -18,6 +18,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ArticleMain
         articleData={
@@ -165,6 +166,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ArticleMain
         articleData={
@@ -230,11 +232,11 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
               "created": 1514808060000,
               "createdBy": "",
               "firstPublished": 1514808060000,
-              "id": "urn:bbc:ares::article:cwv2xv848j5o",
+              "id": "urn:bbc:ares::article:cyddjz5058wo",
               "lastPublished": 1514811600000,
               "lastUpdated": 1514815200000,
               "locators": Object {
-                "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+                "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
               },
               "passport": Object {
                 "category": "news",
@@ -253,9 +255,9 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
                 "promoHeadline": "سرصفحه مقاله برای ارتقاء",
                 "seoHeadline": "سرصفحه مقاله",
               },
-              "id": "urn:bbc:ares::article:cwv2xv848j5o",
+              "id": "urn:bbc:ares::article:cyddjz5058wo",
               "locators": Object {
-                "optimoUrn": "urn:bbc:optimo:asset:cwv2xv848j5o",
+                "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
               },
               "summary": "خلاصه مقاله",
               "timestamp": 1514811600000,
@@ -289,6 +291,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
           rel="manifest"
         />
       </HelmetWrapper>
+      <ConsentBanner />
       <HeaderContainer />
       <ErrorMain
         status={451}
