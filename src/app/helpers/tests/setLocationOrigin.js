@@ -1,14 +1,22 @@
-export const setLocationOrigin = origin => {
-  const windowLocation = JSON.parse(JSON.stringify(window.location));
-  delete window.location;
-  windowLocation.origin = origin;
-  Object.defineProperty(window, 'location', {
-    value: windowLocation,
+export const setWindowObject = (key, object) => {
+  const windowLocation = typeof window[key] === 'object' ? JSON.parse(JSON.stringify(window[key])): window[key];
+  delete window[key];
+
+  const newValue =
+    object && typeof object === 'object'
+      ? {
+          ...windowLocation,
+          ...object,
+        }
+      : object;
+
+  Object.defineProperty(window, key, {
+    value: newValue,
   });
 };
 
-export const resetWindowLocation = windowLocation => {
-  Object.defineProperty(window, 'location', {
-    value: windowLocation,
+export const resetWindowObject = (key, object) => {
+  Object.defineProperty(window, key, {
+    value: object,
   });
 };

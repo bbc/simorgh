@@ -11,6 +11,7 @@ import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
 import ConsentBanner from '../ConsentBanner';
+import ATI from '../ATI';
 
 const logger = nodeLogger(__filename);
 
@@ -26,7 +27,6 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 
   if (data) {
     const { isAmp, data: articleData, service, status } = data;
-
     return (
       <Fragment>
         <GlobalStyle />
@@ -34,6 +34,8 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
           <RequestContextProvider
             platform={isAmp ? 'amp' : 'canonical'}
             bbcOrigin={bbcOrigin}
+            service={service}
+            articleData={articleData}
           >
             <Helmet>
               <link
@@ -41,6 +43,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
                 href={`/${service}/articles/manifest.json`}
               />
             </Helmet>
+            <ATI articleData={articleData} />
             <ConsentBanner />
             <HeaderContainer />
             {status === 200 ? (
