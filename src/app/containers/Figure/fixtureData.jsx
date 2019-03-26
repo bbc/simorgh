@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
@@ -74,7 +74,7 @@ const serviceContextStubNews = {
 
 const generateFixtureData = ({ caption, copyright, platform }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <PlatformContextProvider platform={platform}>
+    <RequestContextProvider platform={platform}>
       <FigureContainer
         alt={imageAlt}
         captionBlock={caption ? captionBlock : null}
@@ -84,7 +84,7 @@ const generateFixtureData = ({ caption, copyright, platform }) => (
         src={imageSrc}
         width={imageWidth}
       />
-    </PlatformContextProvider>
+    </RequestContextProvider>
   </ServiceContext.Provider>
 );
 
