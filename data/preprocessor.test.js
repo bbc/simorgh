@@ -92,7 +92,7 @@ describe('Preprocessor', () => {
     const fixtureData = {
       metadata: {
         firstPublished: 1514808060000,
-        lastPublished: 1514811600000,
+        lastUpdated: 1514811600000,
         blockTypes: ['text', 'paragraph', 'fragment'],
       },
       content: {
@@ -110,8 +110,8 @@ describe('Preprocessor', () => {
               {
                 type: 'timestamp',
                 model: {
-                  firstPublished: 1514808060000,
-                  lastPublished: 1514811600000,
+                  published: 1514808060000,
+                  updated: 1514811600000,
                 },
               },
               paragraphBlock,
@@ -127,7 +127,7 @@ describe('Preprocessor', () => {
     const fixtureData = {
       metadata: {
         firstPublished: 1514808060000,
-        lastPublished: 1514811600000,
+        lastUpdated: 1514811600000,
         blockTypes: ['headline', 'text', 'paragraph', 'fragment'],
       },
       content: {
@@ -147,8 +147,8 @@ describe('Preprocessor', () => {
               {
                 type: 'timestamp',
                 model: {
-                  firstPublished: 1514808060000,
-                  lastPublished: 1514811600000,
+                  published: 1514808060000,
+                  updated: 1514811600000,
                 },
               },
             ],

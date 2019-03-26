@@ -17,9 +17,4 @@ describe('ArticleMain', () => {
     'should render a persian article correctly',
     <ArticleMain service="persian" articleData={articleDataPersian} />,
   );
-
-  shouldShallowMatchSnapshot(
-    'should render null if no headline block',
-    <ArticleMain service="news" articleData={articleDataNewsNoHeadline} />,
-  );
 });

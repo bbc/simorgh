@@ -103,23 +103,13 @@ exports[`ArticleMain should render a news article correctly 1`] = `
               },
               "type": "headline",
             },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-          }
-        }
-      />
-      <ForwardRef>
-        <TimestampContainer
-          published={1514808060000}
-          updated={1514811600000}
-        />
-      </ForwardRef>
-      <Blocks
-        blocks={
-          Array [
+            Object {
+              "model": Object {
+                "published": 1514808060000,
+                "updated": 1514815200000,
+              },
+              "type": "timestamp",
+            },
             Object {
               "model": Object {
                 "blocks": Array [
@@ -146,9 +136,11 @@ exports[`ArticleMain should render a news article correctly 1`] = `
         }
         componentsToRender={
           Object {
+            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
+            "timestamp": [Function],
           }
         }
       />
@@ -235,23 +227,13 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
               },
               "type": "headline",
             },
-          ]
-        }
-        componentsToRender={
-          Object {
-            "headline": [Function],
-          }
-        }
-      />
-      <ForwardRef>
-        <TimestampContainer
-          published={1514808060000}
-          updated={1514811600000}
-        />
-      </ForwardRef>
-      <Blocks
-        blocks={
-          Array [
+            Object {
+              "model": Object {
+                "published": 1514808060000,
+                "updated": 1514815200000,
+              },
+              "type": "timestamp",
+            },
             Object {
               "model": Object {
                 "blocks": Array [
@@ -278,9 +260,11 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         }
         componentsToRender={
           Object {
+            "headline": [Function],
             "image": [Function],
             "subheadline": [Function],
             "text": [Function],
+            "timestamp": [Function],
           }
         }
       />
@@ -288,5 +272,3 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   </main>
 </React.Fragment>
 `;
-
-exports[`ArticleMain should render null if no headline block 1`] = `null`;
