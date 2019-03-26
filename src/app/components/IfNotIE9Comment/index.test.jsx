@@ -1,12 +1,12 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { IE9LimitOpen, IE9LimitClose } from '.';
+import { IfNotIE9Open, IfNotIE9Close } from '.';
 
 describe('Timestamp', () => {
-  shouldMatchSnapshot('should render IE9 limit comment open', <IE9LimitOpen />);
+  shouldMatchSnapshot('should render IE9 limit comment open', <IfNotIE9Open />);
 
   shouldMatchSnapshot(
     'should render IE9 limit comment close',
-    <IE9LimitClose />,
+    <IfNotIE9Close />,
   );
 });

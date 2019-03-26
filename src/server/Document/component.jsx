@@ -5,9 +5,9 @@ import {
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
 import {
-  IE9LimitOpen,
-  IE9LimitClose,
-} from '../../app/components/LimitIE9Comment';
+  IfNotIE9Open,
+  IfNotIE9Close,
+} from '../../app/components/IfNotIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -20,7 +20,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const scriptsAllowed = !data.isAmp;
   const scripts = (
     <Fragment>
-      <IE9LimitOpen />
+      <IfNotIE9Open />
       {assets.map(asset => (
         <script
           crossOrigin="anonymous"
@@ -30,7 +30,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
           defer
         />
       ))}
-      <IE9LimitClose />
+      <IfNotIE9Close />
     </Fragment>
   );
 
