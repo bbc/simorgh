@@ -31,7 +31,7 @@ const getInitialData = async ({ match }) => {
 
     if (status === 200) {
       data = await response.json();
-      data = preprocess(data, nodeLogger);
+      data = preprocess(data);
     } else if (!upstreamStatusCodesToPropagate.includes(status)) {
       logger.warn(
         `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,

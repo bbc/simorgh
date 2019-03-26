@@ -1,127 +1,31 @@
-import preprocess, { deepClone } from './preprocessor';
+import loggerMock from '../src/app/helpers/tests/loggerMock';
+import preprocess from './preprocessor';
 
-const paragraphBlock = {
-  type: 'text',
-  model: {
-    blocks: [
-      {
-        type: 'paragraph',
-        model: {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          blocks: [
-            {
-              type: 'fragment',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                attributes: [],
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
-
-const headlineBlock = {
-  type: 'headline',
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text:
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
+const fixtureData = { foo: 'bar' };
 
 describe('Preprocessor', () => {
   it('should pass data unchanged if none of the business rules apply', () => {
-    const fixtureData = { foo: 'bar' };
     expect(preprocess(fixtureData)).toEqual(fixtureData);
+    expect(loggerMock.error).not.toBeCalled();
   });
 
-  it('should put Timestamp block first if no headline', () => {
-    const fixtureData = {
-      metadata: {
-        firstPublished: 1514808060000,
-        lastUpdated: 1514811600000,
-        blockTypes: ['text', 'paragraph', 'fragment'],
-      },
-      content: {
-        model: {
-          blocks: [paragraphBlock],
-        },
-      },
+  it('should transform data according to the passed business rules', () => {
+    const expectedOutput = {
+      transformed: true,
     };
-    const expectedTransform = Object.assign(deepClone(fixtureData), {
-      content: {
-        model: {
-          blocks: [
-            {
-              type: 'timestamp',
-              model: {
-                published: 1514808060000,
-                updated: 1514811600000,
-              },
-            },
-            paragraphBlock,
-          ],
-        },
-      },
-    });
-    expect(preprocess(fixtureData)).toEqual(expectedTransform);
+    const customTransformer = jest.fn(() => expectedOutput);
+    expect(preprocess(fixtureData, [customTransformer])).toEqual(
+      expectedOutput,
+    );
+    expect(customTransformer).toBeCalled();
+    expect(loggerMock.error).not.toBeCalled();
   });
 
-  it('should put Timestamp block after Headline if it exists', () => {
-    const fixtureData = {
-      metadata: {
-        firstPublished: 1514808060000,
-        lastUpdated: 1514811600000,
-        blockTypes: ['headline', 'text', 'paragraph', 'fragment'],
-      },
-      content: {
-        model: {
-          blocks: [paragraphBlock, headlineBlock],
-        },
-      },
+  it('should call the logger if unable to preprocess the JSON', () => {
+    const transformerThatErrors = () => {
+      throw new Error('something went wrong');
     };
-    const expectedTransform = Object.assign(deepClone(fixtureData), {
-      content: {
-        model: {
-          blocks: [
-            paragraphBlock,
-            headlineBlock,
-            {
-              type: 'timestamp',
-              model: {
-                published: 1514808060000,
-                updated: 1514811600000,
-              },
-            },
-          ],
-        },
-      },
-    });
-    expect(preprocess(fixtureData)).toEqual(expectedTransform);
+    preprocess(fixtureData, [transformerThatErrors]);
+    expect(loggerMock.error).toBeCalledWith('JSON preprocessing failed');
   });
 });
