@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { deepGet, deepClone } from '../preprocessor';
 
-export default jsonRaw => {
+const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
   const firstPublished = deepGet(['metadata', 'firstPublished'], jsonRaw);
   const lastUpdated = deepGet(['metadata', 'lastUpdated'], jsonRaw);
@@ -24,6 +24,8 @@ export default jsonRaw => {
 
   return jsonRaw;
 };
+
+export default augmentWithTimestamp;
 
 /**
  * Where the `timestampBlock` is inserted in the payload is dependent on the
