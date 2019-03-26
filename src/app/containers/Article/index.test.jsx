@@ -28,26 +28,28 @@ describe('ArticleContainer', () => {
     status: 451,
   };
 
+  const bbcOrigin = 'https://www.bbc.co.uk';
+
   describe('Component', () => {
     describe('200 status code', () => {
       shouldShallowMatchSnapshot(
         'should render correctly for news',
-        <ArticleContainer data={newsProps} />,
+        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
       );
       shouldShallowMatchSnapshot(
         'should render correctly for persian',
-        <ArticleContainer data={persianProps} />,
+        <ArticleContainer data={persianProps} bbcOrigin={bbcOrigin} />,
       );
     });
 
     describe('non-200 status code', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <ArticleContainer data={badData} />,
+        <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
       );
     });
 
-    describe('no data', () => {
+    describe('no data or bbcOrigin', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
         <ArticleContainer />,

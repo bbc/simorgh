@@ -5,7 +5,7 @@ import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
@@ -17,12 +17,13 @@ const logger = nodeLogger(__filename);
 /*
   [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
 */
-const ArticleContainer = ({ loading, error, data }) => {
+const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) {
     logger.error(error);
     return 'Something went wrong :(';
   }
+
   if (data) {
     const { isAmp, data: articleData, service, status } = data;
 
@@ -30,7 +31,10 @@ const ArticleContainer = ({ loading, error, data }) => {
       <Fragment>
         <GlobalStyle />
         <ServiceContextProvider service={service}>
-          <PlatformContextProvider platform={isAmp ? 'amp' : 'canonical'}>
+          <RequestContextProvider
+            platform={isAmp ? 'amp' : 'canonical'}
+            bbcOrigin={bbcOrigin}
+          >
             <Helmet>
               <link
                 rel="manifest"
@@ -45,7 +49,7 @@ const ArticleContainer = ({ loading, error, data }) => {
               <ErrorMain status={status} />
             )}
             <FooterContainer />
-          </PlatformContextProvider>
+          </RequestContextProvider>
         </ServiceContextProvider>
       </Fragment>
     );
@@ -58,12 +62,14 @@ ArticleContainer.propTypes = {
   loading: bool,
   error: string,
   data: shape(articlePropTypes),
+  bbcOrigin: string,
 };
 
 ArticleContainer.defaultProps = {
   loading: false,
   error: null,
   data: null,
+  bbcOrigin: null,
 };
 
 export default ArticleContainer;

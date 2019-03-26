@@ -61,6 +61,7 @@ export class App extends Component {
       data: this.state.data,
       loading: this.state.loading,
       error: this.state.error,
+      bbcOrigin: this.props.bbcOrigin,
     });
   }
 }
