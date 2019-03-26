@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
 import nodeLogger from '../../helpers/logger.node';
 import getBaseUrl from './getBaseUrl';
+import preprocess from '../../../../data/preprocessor';
 
 const logger = nodeLogger(__filename);
 
@@ -30,6 +31,7 @@ const getInitialData = async ({ match }) => {
 
     if (status === 200) {
       data = await response.json();
+      data = preprocess(data);
     } else if (!upstreamStatusCodesToPropagate.includes(status)) {
       logger.warn(
         `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,

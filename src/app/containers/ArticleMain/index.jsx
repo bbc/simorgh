@@ -8,7 +8,6 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../Timestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
-import preprocess from '../../../../data/preprocessor';
 
 const componentsToRender = {
   headline: headings,
@@ -19,8 +18,8 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData }) => {
-  const { metadata, promo } = articleData;
-  const { blocks } = preprocess(articleData).content.model;
+  const { content, metadata, promo } = articleData;
+  const { blocks } = content.model;
   return (
     <Fragment>
       <MetadataContainer metadata={metadata} promo={promo} />
