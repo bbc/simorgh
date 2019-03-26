@@ -5,9 +5,9 @@ import React from 'react';
  */
 
 export const IE9LimitOpen = () => (
-  <div dangerouslySetInnerHTML={{ __html: '<!--[if !IE]> -->' }} /> // eslint-disable-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!--[if !IE]><!-->' }} /> // eslint-disable-line react/no-danger
 );
 
 export const IE9LimitClose = () => (
-  <div dangerouslySetInnerHTML={{ __html: '<!-- <![endif]-->' }} /> // eslint-disable-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!--<![endif]-->' }} /> // eslint-disable-line react/no-danger
 );
