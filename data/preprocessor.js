@@ -2,14 +2,12 @@
 
 const Preprocessor = (jsonRaw = {}) => {
   try {
-    const canRenderTimestamp = checkInputContainsProperties({
-      input: jsonRaw,
-      properties: [
-        'metadata.firstPublished',
-        'metadata.lastUpdated',
-        'content.model.blocks',
-      ],
-    });
+    const canRenderTimestamp =
+      // safely get deeply nested JSON values
+      get(['metadata', 'firstPublished'], jsonRaw) &&
+      get(['metadata', 'lastUpdated'], jsonRaw) &&
+      get(['content', 'model', 'blocks'], jsonRaw);
+
     if (canRenderTimestamp) {
       // construct a new block from the metadata
       const timestampBlock = {
@@ -27,38 +25,9 @@ const Preprocessor = (jsonRaw = {}) => {
   return jsonRaw;
 };
 
-export const checkInputContainsProperties = ({ input, properties }) =>
-  properties.reduce(
-    (validates, prop) => validates && inputContainsProperty(input, prop),
-    true,
-  );
-
-const deepClone = originalObj => JSON.parse(JSON.stringify(originalObj));
-
-/**
- * Checks if Object has property by name.
- * Properties can be single ('foo.bar') or chained ('foo.bar.baz')
- * So can run `if (inputContainsProperty(myInput, 'foo.bar.baz))` to check for child property.
- * Saves having to do `if (foo && foo.bar && foo.bar.baz) `.
- * @param {Object} input e.g. { foo: { bar: 'baz' } }
- * @param {String} prop e.g. 'foo.bar'
- */
-const inputContainsProperty = (input, prop) => {
-  const propParts = prop.split('.');
-  const isNested = propParts.length > 1;
-  const topmostProp = isNested ? propParts[0] : prop;
-  const topmostPropExists = Object.prototype.hasOwnProperty.call(
-    input,
-    topmostProp,
-  );
-  if (isNested) {
-    return (
-      topmostPropExists &&
-      inputContainsProperty(input[topmostProp], propParts.slice(1).join('.'))
-    );
-  }
-  return topmostPropExists;
-};
+// taken from https://medium.com/javascript-inside/safely-accessing-deeply-nested-values-in-javascript-99bf72a0855a
+const get = (path, object) =>
+  path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object);
 
 /**
  * Where the `timestampBlock` is inserted in the payload is dependent on the
@@ -94,5 +63,7 @@ const splitBlocksByHeadline = blocks => {
 
   return { headlineBlocks, mainBlocks };
 };
+
+export const deepClone = originalObj => JSON.parse(JSON.stringify(originalObj));
 
 export default Preprocessor;
