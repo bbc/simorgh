@@ -1,6 +1,6 @@
 const config = {
   live: {
-    baseUrl: 'https://simorgh.api.bbci.co.uk',
+    baseUrl: 'https://www.bbc.com',
     dataUrl: 'https://www.bbc.com',
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
@@ -12,7 +12,7 @@ const config = {
     },
   },
   test: {
-    baseUrl: 'https://simorgh.test.api.bbci.co.uk',
+    baseUrl: 'https://www.test.bbc.com',
     dataUrl: 'https://www.test.bbc.com',
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
