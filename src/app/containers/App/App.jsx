@@ -18,11 +18,13 @@ export class App extends Component {
       loading: false,
       error: null,
       loadInitialDataPromise: null,
-    };  
+    };
   }
 
   async componentDidUpdate({ location: prevLocation }) {
     if (this.props.location.pathname !== prevLocation.pathname) {
+      this.props.onNewRoute(); // reset the timer
+
       const initialData = loadInitialData(
         this.props.location.pathname,
         this.props.routes,

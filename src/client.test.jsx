@@ -2,6 +2,7 @@ import React from 'react';
 import * as reactDom from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
+import { resetInactivityTimer } from './invalidationStrategy';
 
 jest.mock('react-dom');
 
@@ -67,7 +68,11 @@ describe('Client', () => {
     await import('./client');
 
     expect(reactDom.hydrate).toHaveBeenCalledWith(
-      <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
+      <ClientApp
+        routes={routes}
+        data={window.SIMORGH_DATA}
+        onNewRoute={resetInactivityTimer}
+      />,
       mockRootElement,
     );
   });

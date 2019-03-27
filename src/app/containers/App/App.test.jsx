@@ -12,6 +12,7 @@ describe('App', () => {
   let setStateSpy;
   let loadInitialDataSpy;
   const initialData = { data: 'Some initial data' };
+  const onNewRouteCallback = jest.fn();
 
   reactRouterConfig.renderRoutes = jest
     .fn()
@@ -25,6 +26,7 @@ describe('App', () => {
         routes={[]}
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
+        onNewRoute={onNewRouteCallback}
       />,
     );
     setStateSpy = jest.spyOn(wrapper.instance(), 'setState');
@@ -52,6 +54,11 @@ describe('App', () => {
         expect.assertions(2);
         expect(loadInitialDataSpy).not.toHaveBeenCalled();
         expect(setStateSpy).not.toHaveBeenCalled();
+      });
+
+      it('should not trigger `onNewRouteCallback` callback', () => {
+        wrapper.setProps({ location: { pathname: 'pathnameOne' } });
+        expect(onNewRouteCallback).not.toHaveBeenCalled();
       });
     });
 
@@ -107,7 +114,9 @@ describe('App', () => {
 
           await loadInitialData.default;
 
-          expect.assertions(4);
+          expect.assertions(5);
+
+          expect(onNewRouteCallback).toHaveBeenCalled();
 
           expect(loadInitialData.default).toHaveBeenCalledWith(pathname, []);
 
