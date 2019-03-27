@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { node } from 'prop-types';
 
 /*
- * These stop anything within them from loading on IE9 and below.
+ * This stops any children from loading on IE9 and below.
  */
 
 const IfAboveIE9 = ({ children }) => (
