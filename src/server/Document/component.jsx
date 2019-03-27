@@ -4,10 +4,7 @@ import {
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
-import {
-  IfNotIE9Open,
-  IfNotIE9Close,
-} from '../../app/components/IfNotIE9Comment';
+import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, app, data, styleTags, helmet }) => {
@@ -20,17 +17,17 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
   const scriptsAllowed = !data.isAmp;
   const scripts = (
     <Fragment>
-      <IfNotIE9Open />
-      {assets.map(asset => (
-        <script
-          crossOrigin="anonymous"
-          key={asset}
-          type="text/javascript"
-          src={asset}
-          defer
-        />
-      ))}
-      <IfNotIE9Close />
+      <IfAboveIE9>
+        {assets.map(asset => (
+          <script
+            crossOrigin="anonymous"
+            key={asset}
+            type="text/javascript"
+            src={asset}
+            defer
+          />
+        ))}
+      </IfAboveIE9>
     </Fragment>
   );
 
