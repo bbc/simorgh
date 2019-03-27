@@ -17,6 +17,7 @@ describe('deepGet', () => {
   });
 
   it('should return null for missing properties', () => {
+    expect(deepGet(['badKeyName'], fixtureData)).toEqual(null);
     expect(deepGet(['badKeyName', 'baz'], fixtureData)).toEqual(null);
   });
 });
