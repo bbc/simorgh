@@ -113,7 +113,7 @@
     "morgan": "^1.9.1",
     "nanoid": "^2.0.0",
     "path-to-regexp": "^2.4.0",
-    "polyfill-crypto.getrandomvalues": "^1.0.0",
+    "polyfill-crypto.getrandomvalues": "1.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-amphtml": "^3.0.1",
