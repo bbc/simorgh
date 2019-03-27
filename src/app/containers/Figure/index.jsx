@@ -6,6 +6,11 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContextConsumer } from '../../contexts/RequestContext';
+import {
+  GridItemConstrainedLargeNoMargin,
+  GridItemConstrainedMedium,
+  GridItemConstrainedSmall,
+} from '../../lib/styledGrid';
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -20,30 +25,43 @@ const FigureContainer = ({
   src,
   height,
   width,
-}) => (
-  <Figure>
-    <ImagePlaceholder ratio={ratio}>
-      <RequestContextConsumer>
-        {({ platform }) =>
-          platform === 'amp' ? (
-            <AmpImg
-              alt={alt}
-              attribution={copyright || ''}
-              layout="responsive"
-              src={src}
-              height={height}
-              width={width}
-            />
-          ) : (
-            <Image alt={alt} src={src} width={width} />
-          )
-        }
-      </RequestContextConsumer>
-      {renderCopyright(copyright)}
-    </ImagePlaceholder>
-    {renderCaption(captionBlock)}
-  </Figure>
-);
+}) => {
+  let Wrapper = GridItemConstrainedLargeNoMargin;
+
+  if (height === width) {
+    Wrapper = GridItemConstrainedMedium;
+  }
+  if (height > width) {
+    Wrapper = GridItemConstrainedSmall;
+  }
+
+  return (
+    <Figure>
+      <ImagePlaceholder ratio={ratio}>
+        <Wrapper>
+          <RequestContextConsumer>
+            {({ platform }) =>
+              platform === 'amp' ? (
+                <AmpImg
+                  alt={alt}
+                  attribution={copyright || ''}
+                  layout="responsive"
+                  src={src}
+                  height={height}
+                  width={width}
+                />
+              ) : (
+                <Image alt={alt} src={src} width={width} />
+              )
+            }
+          </RequestContextConsumer>
+        </Wrapper>
+        {renderCopyright(copyright)}
+      </ImagePlaceholder>
+      {renderCaption(captionBlock)}
+    </Figure>
+  );
+};
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
