@@ -18,7 +18,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -64,7 +64,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -99,7 +99,7 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   width: 100%;
 }
 
