@@ -3,6 +3,7 @@ const config = {
     baseUrl: 'https://www.bbc.com',
     dataUrl: 'https://www.bbc.com',
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
+    assetOrigin: 'https://news.files.bbci.co.uk',
     assets: {
       news: 'c8xxl4l3dzeo',
       newsThreeSubheadlines: 'c5ll353v7y9o',
@@ -14,6 +15,7 @@ const config = {
     baseUrl: 'https://www.test.bbc.com',
     dataUrl: 'https://www.test.bbc.com',
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
+    assetOrigin: 'https://news.test.files.bbci.co.uk',
     assets: {
       news: 'cn7769kpk9mo',
       newsThreeSubheadlines: 'cl55zn0w0l4o',
@@ -25,6 +27,7 @@ const config = {
     baseUrl: 'http://localhost:7080',
     dataUrl: 'http://localhost:7080',
     assetUrl: 'http://localhost:7080',
+    assetOrigin: 'http://localhost:7080',
     assets: {
       news: 'cn7769kpk9mo',
       newsThreeSubheadlines: 'cl55zn0w0l4o',
