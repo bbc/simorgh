@@ -27,22 +27,22 @@ const group4WrapperMaxWidth = `45.5rem`;
 const group5WrapperMaxWidth = `46.4rem`;
 // (2.95rem * 12) + 11*16px gutters = 742.4 = 46.4 rem
 
-const fiveOfSixColumnsMaxWidthGroup4 = `37.75rem`;
+const starts3spans5of8MaxWidthGroup4 = `37.75rem`;
 /* (group4ColWidth 6.75rem * 5) + (4 * 16px gutters) = 33.75rem + 4rem = 37.75rem */
 
-const tenOfTwelveColumnsMaxWidthGroup5 = `38.5rem`;
+const starts6spans10of20MaxWidthGroup5 = `38.5rem`;
 /* (group5ColWidth 2.95rem * 10) + (9 * 16px gutters) = 29.5rem + 9rem = 38.5rem */
 
-const fourOfSixColumnsMaxWidthGroup4 = `30rem`;
+const starts3spans4of8MaxWidthGroup4 = `30rem`;
 /* (group4ColWidth 6.75rem * 4) + (3 * 16px gutters) = 27rem + 3rem = 30rem */
 
-const eightOfTwelveColumnsMaxWidthGroup5 = `30.6rem`;
+const starts6spans8of20MaxWidthGroup5 = `30.6rem`;
 /* (group5ColWidth 2.95rem * 8) + (7 * 16px gutters) = 23.6rem + 7rem = 30.6rem */
 
-const fiveOfSixColumnsMaxWidthScaleable = `83.33%`;
+const starts1spans5of6MaxWidthScaleable = `83.33%`;
 // (5 / 6) * 100 = 83.3333.. = 83.33%
 
-const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
+const starts1spans4of6MaxWidthScaleable = `66.67%`;
 // (4 / 6) * 100 = 66.6666.. = 66.67%
 
 export const gelGridMargin = css`
@@ -116,15 +116,15 @@ export const layoutGridItemMedium = css`
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 5;
-    max-width: ${fiveOfSixColumnsMaxWidthScaleable};
+    max-width: ${starts1spans5of6MaxWidthScaleable};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 5;
-    max-width: ${fiveOfSixColumnsMaxWidthGroup4};
+    max-width: ${starts3spans5of8MaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 10;
-    max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
+    max-width: ${starts6spans10of20MaxWidthGroup5};
   }
 
   @supports (display: grid) {
@@ -140,19 +140,19 @@ export const layoutGridItemSmall = css`
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
-    max-width: ${fourOfSixColumnsMaxWidthScaleable};
+    max-width: ${starts1spans4of6MaxWidthScaleable};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 5;
-    max-width: ${fiveOfSixColumnsMaxWidthScaleable};
+    max-width: ${starts1spans5of6MaxWidthScaleable};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 4;
-    max-width: ${fourOfSixColumnsMaxWidthGroup4};
+    max-width: ${starts3spans4of8MaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 8;
-    max-width: ${eightOfTwelveColumnsMaxWidthGroup5};
+    max-width: ${starts6spans8of20MaxWidthGroup5};
   }
 
   @supports (display: grid) {
