@@ -37,8 +37,8 @@ const FigureContainer = ({
 
   return (
     <Figure>
-      <ImagePlaceholder ratio={ratio}>
-        <Wrapper>
+      <Wrapper>
+        <ImagePlaceholder ratio={ratio}>
           <RequestContextConsumer>
             {({ platform }) =>
               platform === 'amp' ? (
@@ -55,9 +55,9 @@ const FigureContainer = ({
               )
             }
           </RequestContextConsumer>
-        </Wrapper>
-        {renderCopyright(copyright)}
-      </ImagePlaceholder>
+          {renderCopyright(copyright)}
+        </ImagePlaceholder>
+      </Wrapper>
       {renderCaption(captionBlock)}
     </Figure>
   );
