@@ -14,6 +14,10 @@ if (DOT_ENV_CONFIG.error) {
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
+  const prodPublicPath =
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
@@ -46,7 +50,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
-        : `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/`,
+        : prodPublicPath,
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
