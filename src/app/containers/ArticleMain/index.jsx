@@ -6,7 +6,7 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import Timestamp from '../Timestamp';
+import TimestampContainer from '../Timestamp';
 import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const componentsToRenderHeadline = {
@@ -51,7 +51,10 @@ const ArticleMain = ({ articleData }) => {
               componentsToRender={componentsToRenderHeadline}
             />
             <GridItemConstrainedMedium>
-              <Timestamp timestamp={metadata.lastPublished} />
+              <TimestampContainer
+                updated={metadata.lastPublished}
+                published={metadata.firstPublished}
+              />
             </GridItemConstrainedMedium>
             <Blocks
               blocks={mainBlocks}

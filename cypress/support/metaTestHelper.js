@@ -20,9 +20,9 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
   });
 };
 
-export const testContentType = (path, contentType) => {
+export const testContentTypeContains = (path, contentType) => {
   cy.request(path).then(({ headers }) => {
-    expect(headers).to.have.property('content-type', contentType);
+    expect(headers['content-type']).to.include(contentType);
   });
 };
 

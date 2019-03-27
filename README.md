@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/b7c465069b1aacb64daa/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Greenkeeper badge](https://badges.greenkeeper.io/bbc/simorgh.svg)](https://greenkeeper.io/) [![Maintainability](https://api.codeclimate.com/v1/badges/b7c465069b1aacb64daa/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 
 Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
 
@@ -56,10 +56,14 @@ To avoid indexing by search engines during our early development, there is a `no
 This is mainly used for debugging `latest` using the TEST and LIVE environment bundles. Ensure that the bundles exist in the static asset location for the correct environment before starting to debug.
 
 To run TEST bundles on localhost:
-`rm -rf build && npm run build:test && npm run start`
+- In `envConfig/test.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+- Then run `rm -rf build && npm run build:test && npm run start`
+- Visit a test article: http://localhost:7080/news/articles/cyddjz5058wo
 
 To run LIVE bundles on localhost:
-`rm -rf build && npm run build:live && npm run start`
+- In `envConfig/live.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+- Then run `rm -rf build && npm run build:live && npm run start`
+- Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
 ## Production build on CI
 

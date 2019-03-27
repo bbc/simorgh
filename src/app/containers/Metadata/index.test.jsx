@@ -6,20 +6,20 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
-import { PlatformContextProvider } from '../../contexts/PlatformContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
   const { metadata, promo } = serviceFixtureData;
 
   renderer.create(
     <ServiceContextProvider service={service}>
-      <PlatformContextProvider platform={platform}>
+      <RequestContextProvider platform={platform}>
         <MetadataContainer
           metadata={metadata}
           promo={promo}
           service={service}
         />
-      </PlatformContextProvider>
+      </RequestContextProvider>
     </ServiceContextProvider>,
   );
 
