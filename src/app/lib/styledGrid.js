@@ -6,6 +6,8 @@ import {
   layoutGridItemMedium,
   layoutGridItemLarge,
   layoutGridItemLargeNoMargin,
+  captionGridItemLandscapeSquare,
+  captionGridItemPortrait,
 } from './layoutGrid';
 
 export const GhostWrapper = styled.div`
@@ -27,4 +29,12 @@ export const GridItemConstrainedLarge = styled.div`
 
 export const GridItemConstrainedLargeNoMargin = styled.div`
   ${layoutGridItemLargeNoMargin};
+`;
+
+export const GridItemCaptionPortrait = styled.div`
+  ${captionGridItemPortrait}
+`;
+
+export const GridItemCaptionLandscapeSquare = styled.div`
+  ${captionGridItemLandscapeSquare}
 `;
