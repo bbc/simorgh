@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import React from 'react';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
+import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import BrandContainer from '../Brand';
 
-// 3.5rem = 56px = 7 GEL_SPACING's
 const Footer = styled.footer`
-  margin-top: 3.5rem;
+  padding-top: ${GEL_SPACING_QUAD};
 `;
 
 const externalLink = {
