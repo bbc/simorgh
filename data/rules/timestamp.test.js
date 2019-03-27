@@ -1,5 +1,5 @@
 import applyTimestampRules from './timestamp';
-import { deepClone } from '../preprocessor';
+import deepClone from '../../src/app/helpers/json/deepClone';
 
 const paragraphBlock = {
   type: 'text',
