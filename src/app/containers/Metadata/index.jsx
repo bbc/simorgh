@@ -28,7 +28,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   return (
     <RequestContextConsumer>
-      {({ platform }) => (
+      {({ origin, platform }) => (
         <ServiceContextConsumer>
           {({
             service,
@@ -44,8 +44,8 @@ const MetadataContainer = ({ metadata, promo }) => {
             noBylinesPolicy,
           }) => {
             /* Canonical link generated from servicename and id */
-            const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
-            const ampLink = `https://www.bbc.com/${service}/articles/${id}.amp`;
+            const canonicalLink = `${origin}/${service}/articles/${id}`;
+            const ampLink = `${origin}/${service}/articles/${id}.amp`;
 
             return (
               <Fragment>
