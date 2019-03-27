@@ -1,7 +1,9 @@
 import nodeLogger from '../src/app/helpers/logger.node';
 import applyTimestampRules from './rules/timestamp';
 
-const Preprocessor = (jsonRaw = {}, rules = [applyTimestampRules]) => {
+const defaultRules = [applyTimestampRules];
+
+const Preprocessor = (jsonRaw = {}, rules = defaultRules) => {
   try {
     return rules.reduce(
       (transformedJson, ruleset) => ruleset(transformedJson),
