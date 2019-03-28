@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool, string, shape } from 'prop-types';
+import { bool, node, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
@@ -11,17 +11,53 @@ import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
 import ConsentBanner from '../ConsentBanner';
+import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const logger = nodeLogger(__filename);
 
-/*
-  [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
-*/
+const Container = ({ children, service }) => (
+  <Fragment>
+    <GlobalStyle />
+    <ServiceContextProvider service={service}>
+      <Helmet>
+        <link rel="manifest" href={`/${service}/articles/manifest.json`} />
+      </Helmet>
+      <ConsentBanner />
+      <HeaderContainer />
+      {children}
+    </ServiceContextProvider>
+  </Fragment>
+);
+
+Container.propTypes = {
+  children: node.isRequired,
+  service: string.isRequired,
+};
+
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  if (loading) return 'Loading...'; /* [1] */
+  /*
+    This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
+  */
+
+  if (loading)
+    return (
+      <Container service="news">
+        <main role="main">
+          <GhostWrapper>
+            <GridItemConstrainedMedium />
+          </GhostWrapper>
+        </main>
+      </Container>
+    );
+
   if (error) {
     logger.error(error);
-    return 'Something went wrong :(';
+    return (
+      <Container service="news">
+        <ErrorMain status={500} />
+        <FooterContainer />
+      </Container>
+    );
   }
 
   if (data) {
