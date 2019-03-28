@@ -3,6 +3,9 @@ import nodeLogger from '../../app/helpers/logger.node';
 
 const logger = nodeLogger(__filename);
 
+const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
+const FONTS_ORIGIN = 'https://gel.files.bbci.co.uk';
+
 const getAssetsArray = () => {
   const assets = [];
   const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
@@ -33,4 +36,14 @@ const getAssetsArray = () => {
   return assets;
 };
 
-export default getAssetsArray;
+const getAssetOrigins = () => {
+  const assetOrigins = [
+    IMAGES_ORIGIN,
+    FONTS_ORIGIN,
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  ];
+
+  return assetOrigins;
+};
+
+export { getAssetsArray, getAssetOrigins };
