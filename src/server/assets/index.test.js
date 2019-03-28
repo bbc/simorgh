@@ -16,7 +16,7 @@ describe('getAssetsArray', () => {
   describe('no assets manifest', () => {
     it('should log an error', async () => {
       delete process.env.SIMORGH_ASSETS_MANIFEST_PATH;
-      const getAssetsArray = require('./index.js').default;
+      const { getAssetsArray } = require('./index.js');
       getAssetsArray();
       expect(mockLogError).toHaveBeenCalledWith(
         `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
@@ -32,7 +32,7 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixture.json',
       );
-      const getAssetsArray = require('./index.js').default;
+      const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray()).toEqual(['one.js']);
       expect(mockLogError).not.toHaveBeenCalled();
     });
@@ -44,9 +44,29 @@ describe('getAssetsArray', () => {
         __dirname,
         'fixtureMissingKey.json',
       );
-      const getAssetsArray = require('./index.js').default;
+      const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray()).toEqual(['foo.js']);
       expect(mockLogError).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('getAssetOrigins', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should return the asset origins as an array', async () => {
+      const defaultOrigins = [
+        'https://ichef.bbci.co.uk',
+        'https://gel.files.bbci.co.uk',
+      ];
+      process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
+        'http://some.statichost.net';
+      const { getAssetOrigins } = require('./index.js');
+      expect(getAssetOrigins()).toEqual([
+        ...defaultOrigins,
+        'http://some.statichost.net',
+      ]);
     });
   });
 });
