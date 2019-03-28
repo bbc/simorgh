@@ -94,7 +94,7 @@ if (process.env.APP_ENV === 'local') {
 }
 
 /*
- * Test and Live env routes
+ * Application env routes
  */
 
 server
