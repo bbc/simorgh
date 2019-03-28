@@ -55,5 +55,19 @@ describe('ArticleContainer', () => {
         <ArticleContainer />,
       );
     });
+
+    describe('loading state', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer loading />,
+      );
+    });
+
+    describe('error state', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer error />,
+      );
+    });
   });
 });
