@@ -6,10 +6,8 @@ const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
   const firstPublished = deepGet(['metadata', 'firstPublished'], jsonRaw);
   const lastUpdated = deepGet(['metadata', 'lastUpdated'], jsonRaw);
-  const canRenderTimestamp =
-    firstPublished &&
-    lastUpdated &&
-    deepGet(['content', 'model', 'blocks'], jsonRaw);
+  const hasBlocks = deepGet(['content', 'model', 'blocks'], jsonRaw);
+  const canRenderTimestamp = firstPublished && lastUpdated && hasBlocks;
 
   if (canRenderTimestamp) {
     // construct a new block from the metadata
