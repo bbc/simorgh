@@ -3,5 +3,9 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ResourceHints from './index';
 
 describe('ResourceHints', () => {
-  shouldMatchSnapshot('should be correct', <ResourceHints />);
+  const props = {
+    assetOrigins: ['http://foo.com', 'https://bar.com'],
+  };
+
+  shouldMatchSnapshot('should be correct', <ResourceHints {...props} />);
 });
