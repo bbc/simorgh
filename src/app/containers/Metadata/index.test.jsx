@@ -8,11 +8,11 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
-const Container = (service, origin, platform, data) => {
+const Container = (service, bbcOrigin, platform, data) => {
   const serviceConfig = services[service];
   return (
     <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider origin={origin} platform={platform}>
+      <RequestContextProvider bbcOrigin={bbcOrigin} platform={platform}>
         <MetadataContainer {...data} />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -52,16 +52,15 @@ const metadataProps = (
   type: 'article',
 });
 
-const linkedDataProps = () => ({
-  firstPublished: '2018-10-10T16:20:25.274Z',
-  lastUpdated: '2018-10-10T16:20:25.274Z',
-  logoUrl:
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
+  firstPublished: '2018-01-01T12:01:00.000Z',
+  lastUpdated: '2018-01-01T13:00:00.000Z',
+  logoUrl,
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  optimoId: 'cn7769kpk9mo',
+  optimoId,
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  seoHeadline: 'Royal wedding flowers given to Hackney hospice',
-  service: 'News',
+  seoHeadline,
+  service: createdBy,
   type: 'article',
 });
 
@@ -90,7 +89,14 @@ describe('Metadata Container', () => {
           services.news,
         ),
       );
-      expect(Wrapper.find(LinkedData).props()).toEqual(linkedDataProps);
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'News',
+          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          'c0000000001o',
+          'Article Headline for SEO',
+        ),
+      );
     });
 
     it('should be correct for AMP News & UK origin', () => {
@@ -113,7 +119,14 @@ describe('Metadata Container', () => {
           services.news,
         ),
       );
-      expect(Wrapper.find(LinkedData).props()).toEqual(linkedDataProps);
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'News',
+          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          'c0000000001o',
+          'Article Headline for SEO',
+        ),
+      );
     });
 
     it('should be correct for Persian News & international origin', () => {
@@ -136,7 +149,14 @@ describe('Metadata Container', () => {
           services.persian,
         ),
       );
-      expect(Wrapper.find(LinkedData).props()).toEqual(linkedDataProps);
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'Persian',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          'cyddjz5058wo',
+          'سرصفحه مقاله',
+        ),
+      );
     });
 
     it('should be correct for Persian News & UK origin', () => {
@@ -159,7 +179,14 @@ describe('Metadata Container', () => {
           services.persian,
         ),
       );
-      expect(Wrapper.find(LinkedData).props()).toEqual(linkedDataProps);
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'Persian',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          'cyddjz5058wo',
+          'سرصفحه مقاله',
+        ),
+      );
     });
   });
 });
