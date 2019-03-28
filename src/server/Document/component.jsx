@@ -6,7 +6,7 @@ import {
 import ResourceHints from '../../app/components/ResourceHints';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, app, data, styleTags, helmet }) => {
+const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -29,7 +29,7 @@ const Document = ({ assets, app, data, styleTags, helmet }) => {
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <ResourceHints />
+        <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {links}
         {styleTags}

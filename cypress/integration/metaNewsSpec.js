@@ -53,8 +53,8 @@ describe('Article Meta Tests', () => {
 
   it('should have resource hints', () => {
     const resources = [
+      config.assetOrigin,
       'https://ichef.bbci.co.uk',
-      'https://static.bbci.co.uk',
       'https://gel.files.bbci.co.uk',
     ];
 

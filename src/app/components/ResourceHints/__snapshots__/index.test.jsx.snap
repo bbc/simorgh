@@ -4,29 +4,20 @@ exports[`ResourceHints should be correct 1`] = `
 Array [
   <link
     crossOrigin="anonymous"
-    href="https://ichef.bbci.co.uk"
+    href="http://foo.com"
     rel="preconnect"
   />,
   <link
     crossOrigin="anonymous"
-    href="https://static.bbci.co.uk"
+    href="https://bar.com"
     rel="preconnect"
   />,
   <link
-    crossOrigin="anonymous"
-    href="https://gel.files.bbci.co.uk"
-    rel="preconnect"
-  />,
-  <link
-    href="https://ichef.bbci.co.uk"
+    href="http://foo.com"
     rel="dns-prefetch"
   />,
   <link
-    href="https://static.bbci.co.uk"
-    rel="dns-prefetch"
-  />,
-  <link
-    href="https://gel.files.bbci.co.uk"
+    href="https://bar.com"
     rel="dns-prefetch"
   />,
 ]
