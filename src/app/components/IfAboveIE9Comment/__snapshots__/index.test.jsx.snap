@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timestamp should render if not IE9 comment 1`] = `
+Array [
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<!--[if !IE]><!-->",
+      }
+    }
+  />,
+  <h1>
+    I can not be seen on IE9
+  </h1>,
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<!--<![endif]-->",
+      }
+    }
+  />,
+]
+`;
