@@ -26,7 +26,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           'webpack/hot/only-dev-server',
           './src/client',
         ]
-      : ['./src/client'],
+      : ['./src/poly', './src/client'],
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
