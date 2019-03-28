@@ -6,7 +6,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
     metadata={
       Object {
         "created": 1514808060000,
-        "createdBy": "",
+        "createdBy": "News",
         "firstPublished": 1514808060000,
         "id": "urn:bbc:ares::article:c0000000001o",
         "lastPublished": 1514811600000,
@@ -163,7 +163,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     metadata={
       Object {
         "created": 1514808060000,
-        "createdBy": "",
+        "createdBy": "Persian",
         "firstPublished": 1514808060000,
         "id": "urn:bbc:ares::article:cyddjz5058wo",
         "lastPublished": 1514811600000,
