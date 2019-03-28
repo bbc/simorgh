@@ -8,6 +8,10 @@ import {
   resetInactivityTimer,
 } from './invalidationStrategy';
 
+reloadAfterInactivity({
+  hours: 1,
+});
+
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 
@@ -15,10 +19,6 @@ hydrate(
   <ClientApp data={data} routes={routes} onNewRoute={resetInactivityTimer} />,
   root,
 );
-
-reloadAfterInactivity({
-  hours: 1,
-});
 
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   navigator.serviceWorker.register(`/${data.service}/articles/sw.js`);
