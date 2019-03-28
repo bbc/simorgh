@@ -199,7 +199,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
       <p
         className="c4"
       >
-        Sorry, we're unable to bring you the page you’re looking for. Please try:
+        Sorry, we're unable to bring you the page you're looking for. Please try:
       </p>
       <ul>
         <li
@@ -669,7 +669,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
       <p
         className="c4"
       >
-        Sorry, we’re currently unable to bring you the page you're looking for. Please try:
+        Sorry, we're currently unable to bring you the page you're looking for. Please try:
       </p>
       <ul>
         <li
@@ -1129,7 +1129,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
       <p
         className="c4"
       >
-        Sorry, we’re currently unable to bring you the page you're looking for. Please try:
+        Sorry, we're currently unable to bring you the page you're looking for. Please try:
       </p>
       <ul>
         <li
