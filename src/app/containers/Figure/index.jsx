@@ -10,6 +10,8 @@ import {
   GridItemConstrainedLargeNoMargin,
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
+  GridItemCaptionLandscapeSquare,
+  GridItemCaptionPortrait,
 } from '../../lib/styledGrid';
 
 const renderCopyright = copyright =>
@@ -27,13 +29,17 @@ const FigureContainer = ({
   width,
 }) => {
   let Wrapper = GridItemConstrainedLargeNoMargin;
+  let CaptionWrapper = GridItemCaptionLandscapeSquare;
 
   if (height === width) {
     Wrapper = GridItemConstrainedMedium;
   }
   if (height > width) {
     Wrapper = GridItemConstrainedSmall;
+    CaptionWrapper = GridItemCaptionPortrait;
   }
+
+  Wrapper = GridItemConstrainedSmall;
 
   return (
     <Figure>
@@ -58,7 +64,7 @@ const FigureContainer = ({
           {renderCopyright(copyright)}
         </ImagePlaceholder>
       </Wrapper>
-      {renderCaption(captionBlock)}
+      <CaptionWrapper>{renderCaption(captionBlock)}</CaptionWrapper>
     </Figure>
   );
 };

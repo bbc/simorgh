@@ -2,6 +2,7 @@ import React from 'react';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
+import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
 
 const DEFAULT_IMAGE_RES = 640;
 
@@ -54,15 +55,17 @@ const ImageContainer = ({ blocks }) => {
   // https://github.com/bbc/simorgh/issues/1369
   // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Figure
-      alt={altText}
-      captionBlock={captionBlock}
-      copyright={copyright}
-      height={height}
-      ratio={ratio}
-      src={rawImageSrc}
-      width={width}
-    />
+    <GridItemConstrainedLargeNoMargin>
+      <Figure
+        alt={altText}
+        captionBlock={captionBlock}
+        copyright={copyright}
+        height={height}
+        ratio={ratio}
+        src={rawImageSrc}
+        width={width}
+      />
+    </GridItemConstrainedLargeNoMargin>
   );
 };
 
