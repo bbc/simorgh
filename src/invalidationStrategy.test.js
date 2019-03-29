@@ -109,8 +109,13 @@ describe('reloadAfterInactivity and resetInactivityTimer', () => {
     // now reset what `setTimeout` means again
     window.setTimeout = jest.fn();
 
-    // call the reset, which should `clearInterval` and then hit `setTimeout` again
+    // and mock clearTimeout so we can detect when it's been called
+    window.clearTimeout = jest.fn();
+
+    // call the reset, which should `clearTimeout` and then hit `setTimeout` again
+    expect(window.clearTimeout).not.toHaveBeenCalled();
     resetInactivityTimer();
+    expect(window.clearTimeout).toHaveBeenCalled();
 
     // but this `setTimeout` mock calls the callback _instantly_, so we can check it immediately
     expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 60000);
