@@ -37,7 +37,9 @@ describe('Timestamp', () => {
     const renderedWrapper = renderedTimestamps(
       <Timestamp updated={fifthJan} published={fifthJan} />,
     );
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019 16:51');
+    expect(renderedWrapper[0].children[0].data).toEqual(
+      '5 January 2019, 16:51 UTC',
+    );
     expect(renderedWrapper.length).toEqual(1);
   });
 
@@ -49,7 +51,9 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
 
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019 16:51');
+    expect(renderedWrapper[0].children[0].data).toEqual(
+      '5 January 2019, 16:51 UTC',
+    );
     expect(renderedWrapper[1].children[0].data).toEqual('Updated ');
     expect(renderedWrapper[1].children[1].children[0].data).toEqual(
       '6 hours ago',
@@ -63,10 +67,12 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
 
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019 16:51');
+    expect(renderedWrapper[0].children[0].data).toEqual(
+      '5 January 2019, 16:51 UTC',
+    );
     expect(renderedWrapper[1].children[0].data).toEqual('Updated ');
     expect(renderedWrapper[1].children[1].children[0].data).toEqual(
-      '8 March 2019 1:51',
+      '8 March 2019, 1:51 UTC',
     );
   });
 });

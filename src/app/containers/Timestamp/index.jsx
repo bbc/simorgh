@@ -41,7 +41,7 @@ const shortAlphaNumeric = {
   year: date => date.getFullYear(),
   hour: date => date.getHours(),
   minute: date => leadingZero(date.getMinutes()),
-  format: (d, m, y, hr, min) => `${[d, m, y].join(' ')} ${hr}:${min}`,
+  format: (d, m, y, hr, min) => `${[d, m, y].join(' ')}, ${hr}:${min} UTC`,
 };
 
 const formatUnixTimestamp = (milliseconds, formatType) => {
