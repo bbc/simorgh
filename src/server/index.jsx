@@ -51,12 +51,6 @@ server
   )
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
-  .use(
-    expressStaticGzip(publicDirectory, {
-      enableBrotli: true,
-      orderPreference: ['br'],
-    }),
-  )
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.sendStatus(200);
@@ -67,30 +61,42 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
-  server.get(articleDataRegexPath, async ({ params }, res) => {
-    const { service, id } = params;
+  server
+    .use(
+      expressStaticGzip(publicDirectory, {
+        enableBrotli: true,
+        orderPreference: ['br'],
+      }),
+    )
+    .get(articleDataRegexPath, async ({ params }, res) => {
+      const { service, id } = params;
 
-    const dataFilePath = path.join(
-      dataFolderToRender,
-      service,
-      'articles',
-      `${id}.json`,
-    );
+      const dataFilePath = path.join(
+        dataFolderToRender,
+        service,
+        'articles',
+        `${id}.json`,
+      );
 
-    fs.readFile(dataFilePath, (error, data) => {
-      if (error) {
-        res.sendStatus(404);
-        logger.error(`error reading article json, ${error}`);
+      fs.readFile(dataFilePath, (error, data) => {
+        if (error) {
+          res.sendStatus(404);
+          logger.error(`error reading article json, ${error}`);
+          return null;
+        }
+
+        const articleJSON = JSON.parse(data);
+
+        res.setHeader('Content-Type', 'application/json');
+        res.json(articleJSON);
         return null;
-      }
-
-      const articleJSON = JSON.parse(data);
-
-      res.setHeader('Content-Type', 'application/json');
-      res.json(articleJSON);
-      return null;
+      });
+    })
+    .get('/ckns_policy/*', (req, res) => {
+      // Route to allow the cookie banner to make the cookie oven request
+      // without throwing an error due to not being on a bbc domain.
+      res.sendStatus(200);
     });
-  });
 }
 
 /*
@@ -98,11 +104,6 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
-  .get('/ckns_policy/*', (req, res) => {
-    // Dev route to allow the cookie banner to make the cookie oven request
-    // without throwing an error due to not being on a bbc domain.
-    res.sendStatus(200);
-  })
   .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
