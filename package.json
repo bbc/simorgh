@@ -176,7 +176,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/(src|scripts)/**/*.{js,jsx}",
+      "**/(src|scripts|data)/**/*.{js,jsx}",
       "!**/src/app/helpers/tests/**",
       "!**/*.stories.jsx"
     ],
