@@ -1,30 +1,37 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
+import { RequestContextConsumer } from '../../../contexts/RequestContext';
 import { ConsentBannerText } from '../../../components/ConsentBanner';
 
-const BannerText = ({ first, linkText, linkUrl, last }) => {
-  const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+const BannerText = ({ uk, international }) => (
+  <RequestContextConsumer>
+    {({ isUK }) => {
+      const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
-  return (
-    <ConsentBannerText>
-      {first}
-      {Link}
-      {last}
-    </ConsentBannerText>
-  );
-};
+      const Link =
+        linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
 
-BannerText.propTypes = {
+      return (
+        <ConsentBannerText>
+          {first}
+          {Link}
+          {last}
+        </ConsentBannerText>
+      );
+    }}
+  </RequestContextConsumer>
+);
+
+const messagingProps = {
   first: string.isRequired,
   linkText: string,
   linkUrl: string,
   last: string,
 };
 
-BannerText.defaultProps = {
-  linkText: null,
-  linkUrl: null,
-  last: null,
+BannerText.propTypes = {
+  uk: shape(messagingProps).isRequired,
+  international: shape(messagingProps).isRequired,
 };
 
 export default BannerText;
