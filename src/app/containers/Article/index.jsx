@@ -35,11 +35,7 @@ Container.propTypes = {
 };
 
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  /*
-    This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
-  */
-
-  if (loading)
+  if (loading) {
     return (
       <Container service="news">
         <main role="main">
@@ -49,6 +45,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
         </main>
       </Container>
     );
+  }
 
   if (error) {
     logger.error(error);
@@ -65,28 +62,19 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 
     return (
       <Fragment>
-        <GlobalStyle />
-        <ServiceContextProvider service={service}>
-          <RequestContextProvider
-            platform={isAmp ? 'amp' : 'canonical'}
-            bbcOrigin={bbcOrigin}
-          >
-            <Helmet>
-              <link
-                rel="manifest"
-                href={`/${service}/articles/manifest.json`}
-              />
-            </Helmet>
-            <ConsentBanner />
-            <HeaderContainer />
+        <RequestContextProvider
+          platform={isAmp ? 'amp' : 'canonical'}
+          bbcOrigin={bbcOrigin}
+        >
+          <Container service={service}>
             {status === 200 ? (
               <ArticleMain articleData={articleData} />
             ) : (
               <ErrorMain status={status} />
             )}
             <FooterContainer />
-          </RequestContextProvider>
-        </ServiceContextProvider>
+          </Container>
+        </RequestContextProvider>
       </Fragment>
     );
   }

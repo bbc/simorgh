@@ -2,25 +2,13 @@
 
 exports[`ArticleContainer Component 200 status code should render correctly for news 1`] = `
 <React.Fragment>
-  <GlobalStyleComponent />
-  <ServiceContextProvider
-    service="news"
+  <RequestContextProvider
+    bbcOrigin="https://www.bbc.co.uk"
+    platform="canonical"
   >
-    <RequestContextProvider
-      bbcOrigin="https://www.bbc.co.uk"
-      platform="canonical"
+    <Container
+      service="news"
     >
-      <HelmetWrapper
-        defer={true}
-        encodeSpecialCharacters={true}
-      >
-        <link
-          href="/news/articles/manifest.json"
-          rel="manifest"
-        />
-      </HelmetWrapper>
-      <ConsentBanner />
-      <HeaderContainer />
       <ArticleMain
         articleData={
           Object {
@@ -144,32 +132,20 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
         }
       />
       <FooterContainer />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+    </Container>
+  </RequestContextProvider>
 </React.Fragment>
 `;
 
 exports[`ArticleContainer Component 200 status code should render correctly for persian 1`] = `
 <React.Fragment>
-  <GlobalStyleComponent />
-  <ServiceContextProvider
-    service="persian"
+  <RequestContextProvider
+    bbcOrigin="https://www.bbc.co.uk"
+    platform="canonical"
   >
-    <RequestContextProvider
-      bbcOrigin="https://www.bbc.co.uk"
-      platform="canonical"
+    <Container
+      service="persian"
     >
-      <HelmetWrapper
-        defer={true}
-        encodeSpecialCharacters={true}
-      >
-        <link
-          href="/persian/articles/manifest.json"
-          rel="manifest"
-        />
-      </HelmetWrapper>
-      <ConsentBanner />
-      <HeaderContainer />
       <ArticleMain
         articleData={
           Object {
@@ -268,8 +244,8 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
         }
       />
       <FooterContainer />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+    </Container>
+  </RequestContextProvider>
 </React.Fragment>
 `;
 
@@ -302,30 +278,18 @@ exports[`ArticleContainer Component no data or bbcOrigin should render correctly
 
 exports[`ArticleContainer Component non-200 status code should render correctly 1`] = `
 <React.Fragment>
-  <GlobalStyleComponent />
-  <ServiceContextProvider
-    service="news"
+  <RequestContextProvider
+    bbcOrigin="https://www.bbc.co.uk"
+    platform="canonical"
   >
-    <RequestContextProvider
-      bbcOrigin="https://www.bbc.co.uk"
-      platform="canonical"
+    <Container
+      service="news"
     >
-      <HelmetWrapper
-        defer={true}
-        encodeSpecialCharacters={true}
-      >
-        <link
-          href="/news/articles/manifest.json"
-          rel="manifest"
-        />
-      </HelmetWrapper>
-      <ConsentBanner />
-      <HeaderContainer />
       <ErrorMain
         status={451}
       />
       <FooterContainer />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+    </Container>
+  </RequestContextProvider>
 </React.Fragment>
 `;
