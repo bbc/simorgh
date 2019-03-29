@@ -32,7 +32,7 @@ exports[`Timestamp should render correctly 1`] = `
   className="c0"
   dateTime="2018-10-19"
 >
-  19 October 2018
+  19 October 2018 18:10
 </time>
 `;
 
@@ -66,6 +66,6 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   className="c0"
   dateTime="2018-07-07"
 >
-  7 July 2018
+  7 July 2018 8:07
 </time>
 `;

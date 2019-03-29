@@ -8,13 +8,28 @@ const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-
 
 const leadingZero = val => (val < 10 ? `0${val}` : val);
 
-const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]; // eslint-disable-line
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]; // eslint-disable-line
 
 // 2019-03-22
 const longNumeric = {
   day: date => leadingZero(date.getDate()),
   month: date => leadingZero(date.getMonth() + 1),
   year: date => date.getFullYear(),
+  hour: date => date.getHours(),
+  minute: date => leadingZero(date.getMinutes()),
   format: (d, m, y) => [y, m, d].join('-'),
 };
 
@@ -23,7 +38,9 @@ const shortAlphaNumeric = {
   day: date => date.getDate(),
   month: date => months[date.getMonth()],
   year: date => date.getFullYear(),
-  format: (d, m, y) => [d, m, y].join(' '),
+  hour: date => date.getHours(),
+  minute: date => leadingZero(date.getMinutes()),
+  format: (d, m, y, hr, min) => `${[d, m, y].join(' ')} ${hr}:${min}`,
 };
 
 const formatUnixTimestamp = (milliseconds, formatType) => {
@@ -31,8 +48,10 @@ const formatUnixTimestamp = (milliseconds, formatType) => {
   const day = formatType.day(dateObj);
   const month = formatType.month(dateObj);
   const year = formatType.year(dateObj);
+  const hour = formatType.hour(dateObj);
+  const minute = formatType.minute(dateObj);
 
-  return formatType.format(day, month, year);
+  return formatType.format(day, month, year, hour, minute);
 };
 
 const isTenHoursAgoOrLess = milliseconds => {
