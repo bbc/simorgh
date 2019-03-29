@@ -10,6 +10,8 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  homePageRegexPath,
+  homePageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
@@ -92,6 +94,30 @@ if (process.env.APP_ENV === 'local') {
         return null;
       });
     })
+    .get(homePageDataRegexPath, async ({ params }, res) => {
+      const { service } = params;
+
+      const dataFilePath = path.join(
+        dataFolderToRender,
+        service,
+        'homepage',
+        `${service}.json`,
+      );
+
+      fs.readFile(dataFilePath, (error, data) => {
+        if (error) {
+          res.sendStatus(404);
+          logger.error(`error reading homepage json, ${error}`);
+          return null;
+        }
+
+        const homePageJSON = JSON.parse(data);
+
+        res.setHeader('Content-Type', 'application/json');
+        res.json(homePageJSON);
+        return null;
+      });
+    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
@@ -137,6 +163,36 @@ server
       logger.error(`status: ${status || 500} - ${message}`);
       res.status(500).send(message);
     }
+  })
+  .get(homePageRegexPath, ({ url, params }, res) => {
+    const { service } = params;
+
+    const dataFilePath = path.join(
+      dataFolderToRender,
+      service,
+      'homepage',
+      `${service}.json`,
+    );
+
+    fs.readFile(dataFilePath, async (error, data) => {
+      if (error) {
+        res.sendStatus(404);
+        logger.error(`error reading homepage json, ${error}`);
+        return null;
+      }
+
+      const dataToRender = {
+        isAmp: false,
+        homepageData: JSON.parse(data),
+        service,
+        status: 200,
+      };
+
+      res.status(200).send(await renderDocument(url, dataToRender, routes));
+      return null;
+    });
+
+    return null;
   });
 
 export default server;

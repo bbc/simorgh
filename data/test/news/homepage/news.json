@@ -1,0 +1,3256 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::index:news/front_page/mobile/domestic",
+        "locators": {
+            "assetUri": "/news/front_page",
+            "cpsUrn": "urn:bbc:content:assetUri:news/front_page",
+            "curie": "http://www.bbc.co.uk/asset/b5c53243-a695-e059-e040-850a02846523/mobile/domestic"
+        },
+        "type": "IDX",
+        "createdBy": "news",
+        "language": "en-gb",
+        "lastUpdated": 1553873350212,
+        "firstPublished": 1276179510,
+        "lastPublished": 1553873340,
+        "options": {
+            "allowAdvertising": true
+        },
+        "analyticsLabels": {
+            "counterName": "news.page",
+            "cps_asset_id": "10263779",
+            "cps_asset_type": "idx"
+        },
+        "primaryConceptId": "http://www.bbc.co.uk/things/1e96f838-f3ec-480c-b18a-99eb92f9f923#id",
+        "tags": {},
+        "version": "v1.0.1",
+        "blockTypes": [
+            "responsive-top-stories",
+            "responsive-cluster",
+            "responsive-live-event",
+            "responsive-must-see",
+            "responsive-av-links",
+            "responsive-in-depth",
+            "responsive-sport"
+        ],
+        "title": "Home",
+        "summary": "Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
+    },
+    "content": {
+        "groups": [
+            {
+                "type": "responsive-top-stories",
+                "title": "Top Stories",
+                "maxRelatedLinks": 8,
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "MPs reject May's EU withdrawal agreement"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47752017",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47752017"
+                        },
+                        "summary": "MPs reject Theresa May’s EU withdrawal agreement by 344 votes to 286, throwing the UK’s Brexit plans into more confusion.",
+                        "timestamp": 1553872722,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106230048",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/14823/production/_106230048_theresa_may_hoc_1.jpg",
+                            "path": "/cpsprodpb/14823/production/_106230048_theresa_may_hoc_1.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Theresa May",
+                            "copyrightHolder": "HOC"
+                        },
+                        "imageThumbnail": {
+                            "id": "97176217",
+                            "subType": "index-thumbnail",
+                            "href": "http://c.files.bbci.co.uk/11663/production/_97176217_breaking_news_320.png",
+                            "path": "/cpsprodpb/11663/production/_97176217_breaking_news_320.png",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Breaking News image",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "MPs reject Brexit withdrawal agreement"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-politics-47752095",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-politics-47752095"
+                                },
+                                "summary": "MPs vote by 286 to 344 to reject the government’s withdrawal agreement.",
+                                "timestamp": 1553871280,
+                                "cpsType": "MAP",
+                                "id": "urn:bbc:ares::asset:news/uk-politics-47752095",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Corbyn calls for May to go"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-politics-47752805",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-politics-47752805"
+                                },
+                                "summary": "Labour leader Jeremy Corbyn called for Theresa May to resign and call an election after MPs rejected her EU withdrawal agreement.",
+                                "timestamp": 1553872797,
+                                "cpsType": "MAP",
+                                "id": "urn:bbc:ares::asset:news/uk-politics-47752805",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "The withdrawal agreement - what it all means"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-46237012",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-46237012"
+                                },
+                                "summary": "Chris Morris analyses the key points from the 585-page draft agreement between the UK and the EU.",
+                                "timestamp": 1543173301,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-46237012",
+                                "type": "cps"
+                            }
+                        ],
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47752017",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Debenhams secures £200m lifeline"
+                        },
+                        "locators": {
+                            "assetUri": "/news/business-47745898",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/business-47745898"
+                        },
+                        "summary": "The chain completes a £200m deal to stay afloat, and leaves the door open for a bid from Sports Direct.",
+                        "timestamp": 1553869270,
+                        "byline": {
+                            "name": "By Tom Espiner",
+                            "title": "Business reporter, BBC News",
+                            "persons": [
+                                {
+                                    "name": "Tom Espiner",
+                                    "function": "Business reporter, BBC News"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                                "categoryName": "Interactive"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106225277",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/12DC4/production/_106225277_debenhams_getty.jpg",
+                            "path": "/cpsprodpb/12DC4/production/_106225277_debenhams_getty.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Debenhams store front",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Business",
+                            "uri": "/news/business",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Debenhams advisers 'should be jailed'"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/business-47744335",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/business-47744335"
+                                },
+                                "summary": "Sports Direct's Mike Ashley hits out after Debenhams bondholders clear the way for a refinancing.",
+                                "timestamp": 1553853719,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/business-47744335",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "UK retail sales up but food spending falls"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/business-47650476",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/business-47650476"
+                                },
+                                "summary": "Sales at food stores in February saw the biggest fall since December 2016, official figures show.",
+                                "timestamp": 1553166349,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/business-47650476",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:news/business-47745898",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Breakaway MPs' group to rebrand as Change UK"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47745166",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47745166"
+                        },
+                        "summary": "The Independent Group names Heidi Allen as interim leader and registers for European elections if they happen.",
+                        "timestamp": 1553868373,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106229236",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/F73C/production/_106229236_mediaitem106229234.jpg",
+                            "path": "/cpsprodpb/F73C/production/_106229236_mediaitem106229234.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Heidi Allen",
+                            "copyrightHolder": "PA"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Who are the Independent Group and what do they want?"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-politics-47305860",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-politics-47305860"
+                                },
+                                "summary": "Will they have to face a by-election? Who is their leader? We answer questions about the new group.",
+                                "timestamp": 1551399077,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-politics-47305860",
+                                "type": "cps"
+                            }
+                        ],
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47745166",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Ukraine's elections: Five things to know"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-europe-47441345",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-47441345"
+                        },
+                        "summary": "A look at some of the odder facts about Sunday's presidential elections in Ukraine.",
+                        "timestamp": 1553819994,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p072kz0q",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Ukraine's elections: five things to know",
+                            "synopses": {
+                                "short": "Ukraine's presidential elections: five things to know",
+                                "long": "The seventh presidential elections in Ukraine will take place on Sunday 31 March. \nAmong the candidates are popular comic actor Volodymyr Zelenskiy, current president , \"chocolate king\" Petro Poroshenko, and former prime minister Yulia Tymoshenko.\nHere are five fun facts about the election.",
+                                "medium": "The seventh presidential elections in Ukraine will take place on 31 March."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074wbxs.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Ukraine's presidential elections: five things to know",
+                            "versions": [
+                                {
+                                    "versionId": "p072kz0t",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 67,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "Reuters"
+                        },
+                        "indexImage": {
+                            "id": "106225854",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/B31C/production/_106225854_p074y0s4.jpg",
+                            "path": "/cpsprodpb/B31C/production/_106225854_p074y0s4.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Election rally",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Europe",
+                            "uri": "/news/world/europe",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-europe-47441345",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "First house price fall in England since 2012"
+                        },
+                        "locators": {
+                            "assetUri": "/news/business-47736636",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/business-47736636"
+                        },
+                        "summary": "But the Nationwide says house price rises in the other nations mean the UK average is still growing.",
+                        "timestamp": 1553851773,
+                        "byline": {
+                            "name": "By Kevin Peachey",
+                            "title": "Personal finance reporter",
+                            "persons": [
+                                {
+                                    "name": "Kevin Peachey",
+                                    "function": "Personal finance reporter"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106209290",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/244A/production/_106209290_562lp0ma.jpg",
+                            "path": "/cpsprodpb/244A/production/_106209290_562lp0ma.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "For sale and lettings signs",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Business",
+                            "uri": "/news/business",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Where can I afford to live?"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/business-23234033",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/business-23234033"
+                                },
+                                "summary": "A new BBC housing calculator that helps you find out where in the UK you can afford to live.",
+                                "timestamp": 1548348717,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/business-23234033",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Half of babies born to families renting"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/education-47723672",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/education-47723672"
+                                },
+                                "summary": "Babies are now as likely to be born into rented accommodation as home-owning families.",
+                                "timestamp": 1553734109,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/education-47723672",
+                                "type": "cps"
+                            }
+                        ],
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:news/business-47736636",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Clooney calls for Brunei hotels boycott"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-asia-47744566",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-47744566"
+                        },
+                        "summary": "The actor urges a boycott after the country said homosexuality would soon be punishable by death.",
+                        "timestamp": 1553870742,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106226265",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/DBC6/production/_106226265_gettyimages-970960176.jpg",
+                            "path": "/cpsprodpb/DBC6/production/_106226265_gettyimages-970960176.jpg",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "George Clooney",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Asia",
+                            "uri": "/news/world/asia",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Brunei introduces tough Islamic law"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/world-asia-27216798",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/world-asia-27216798"
+                                },
+                                "summary": "Brunei introduces tough Sharia criminal punishments that will eventually include amputations and death by stoning.",
+                                "timestamp": 1398850791,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/world-asia-27216798",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Brunei profile"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/world-asia-pacific-12990058",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/world-asia-pacific-12990058"
+                                },
+                                "summary": "Provides an overview of Brunei, including key events and facts.",
+                                "timestamp": 1515487266,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/world-asia-pacific-12990058",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:news/world-asia-47744566",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Easter eggs 'being pushed too early'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/health-47735108",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/health-47735108"
+                        },
+                        "summary": "Early sales of calorie-filled treats are fuelling the obesity crisis, a public health body says.",
+                        "timestamp": 1553865365,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106227755",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D9DC/production/_106227755_gettyimages-940148062.jpg",
+                            "path": "/cpsprodpb/D9DC/production/_106227755_gettyimages-940148062.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Chocolate Easter eggs",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Health",
+                            "uri": "/news/health",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/health-47735108",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'Gunman' arrested at St Paul's Cathedral"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-london-47746519",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-47746519"
+                        },
+                        "summary": "Officers believe the man had a firearm in the grounds of the landmark in central London.",
+                        "timestamp": 1553870095,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106227774",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/BA9C/production/_106227774_david.jpg",
+                            "path": "/cpsprodpb/BA9C/production/_106227774_david.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "St Paul's cathedral arrest",
+                            "copyrightHolder": "David Krupski"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "London",
+                            "uri": "/news/england/london",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-london-47746519",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Fans gather for Keith Flint funeral"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-essex-47725069",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-essex-47725069"
+                        },
+                        "summary": "The Prodigy frontman's bandmates urged fans to \"raise the roof\" in memory of the late musician.",
+                        "timestamp": 1553871242,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106223709",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/1626C/production/_106223709_img_8285.jpg",
+                            "path": "/cpsprodpb/1626C/production/_106223709_img_8285.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Keith Flint floral tributes",
+                            "caption": "Fans left floral tributes to Flint outside the church where his funeral will take place, in Bocking",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Essex",
+                            "uri": "/news/england/essex",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Keith Flint funeral and procession",
+                                    "overtyped": "Live: Keith Flint funeral and procession"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/live/uk-england-essex-47739423",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/live/uk-england-essex-47739423"
+                                },
+                                "summary": "Live updates as a procession and funeral take place for The Prodigy singer Keith Flint in Essex.",
+                                "timestamp": 1553794302,
+                                "cpsType": "LIV",
+                                "id": "urn:bbc:ares::asset:news/live/uk-england-essex-47739423",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Mural pays tribute to Prodigy singer"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-england-essex-47615738",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-essex-47615738"
+                                },
+                                "summary": "The painting of Keith Flint was commissioned as a tribute to \"a brilliant Essex frontman\".",
+                                "timestamp": 1552929741,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-england-essex-47615738",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Keith Flint in pictures"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/in-pictures-47441573",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/in-pictures-47441573"
+                                },
+                                "summary": "Pictures of Keith Flint, of The Prodigy, who has died aged 49.",
+                                "timestamp": 1551749374,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/in-pictures-47441573",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:news/uk-england-essex-47725069",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Mum gambled away son's cancer fund"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-leeds-47749077",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-leeds-47749077"
+                        },
+                        "summary": "Stacey Worsley stole more than £100,000 intended for Toby Nye's treatment.",
+                        "timestamp": 1553872242,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106226467",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/12AAE/production/_106226467_worsley2.jpg",
+                            "path": "/cpsprodpb/12AAE/production/_106226467_worsley2.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Stacey Worsley",
+                            "caption": "Nurse Stacey Worsley racked up £140,000 in gambling debts but the judge noted she had not spent any of the money on \"luxuries\" for herself",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Leeds & West Yorkshire",
+                            "uri": "/news/england/leeds_and_west_yorkshire",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Club raises £200k for boy's cancer care"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-england-leeds-42734705",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-leeds-42734705"
+                                },
+                                "summary": "Players and staff from Leeds United donated a day's wages to help raise the money.",
+                                "timestamp": 1516283276,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-england-leeds-42734705",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Footballers give pay to fund boy's care"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-england-leeds-41652398",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-leeds-41652398"
+                                },
+                                "summary": "Toby Nye was diagnosed with a stage four neuroblastoma on his fourth birthday.",
+                                "timestamp": 1508257215,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-england-leeds-41652398",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:news/uk-england-leeds-47749077",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Britain's oldest men celebrate 111 years"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-hampshire-47744752",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-hampshire-47744752"
+                        },
+                        "summary": "Alfred Smith, from Perthshire, and Bob Weighton, from Hampshire, were both born on 29 March 1908.",
+                        "timestamp": 1553856454,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106223064",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/B3D0/production/_106223064_oldest.jpg",
+                            "path": "/cpsprodpb/B3D0/production/_106223064_oldest.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Bob Weighton 2019 (left) and Alf Smith 2018",
+                            "copyrightHolder": "PA / Andrew O'Brien"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Hampshire & Isle of Wight",
+                            "uri": "/news/england/hampshire",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-hampshire-47744752",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Rare tiger cubs make debut at Sydney Zoo"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-asia-47750025",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-47750025"
+                        },
+                        "summary": "The 10-week-old cubs - one male and two females - belong to a critically endangered sub-species.",
+                        "timestamp": 1553864249,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074y8px",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Rare tiger cubs make debut at Sydney Zoo",
+                            "synopses": {
+                                "short": "Meet the rare tiger cubs making their debut at Sydney Zoo",
+                                "long": "Three rare Sumatran tiger cubs are being introduced to the public for the first time at the Taronga Zoo in Sydney. \n\nThe 10-week-old cubs - one male and two females - are part of the critically endangered sub-species, which only has less than 400 wild tigers left on the Indonesian island of Sumatra.\n\nThe little tigers were born to an eight-year-old tiger on 17 January, as part of a regional breeding programme for Sumatran tigers.",
+                                "medium": "The three 10-week-old Sumatran tiger cubs - one male and two females - are critically endangered."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074ydr7.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Meet the rare Sumatran tigers making their public debut",
+                            "versions": [
+                                {
+                                    "versionId": "p074y8q1",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 68,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "Reuters"
+                        },
+                        "indexImage": {
+                            "id": "106227874",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/BB00/production/_106227874_p074ydr7.jpg",
+                            "path": "/cpsprodpb/BB00/production/_106227874_p074ydr7.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Three tiger cubs at Sydney Zoo",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Asia",
+                            "uri": "/news/world/asia",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-asia-47750025",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Pulev suspended after 'unlawful' kiss",
+                            "overtyped": "Boxer's kiss 'unwelcome and unlawful'"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/boxing/47744247",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/boxing/47744247"
+                        },
+                        "summary": "Boxing chiefs in California suspend Bulgarian heavyweight Kubrat Pulev's licence after he \"forcibly\" kisses a female reporter on the lips during an interview.",
+                        "timestamp": 1553860314,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "Story"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106222748",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/14AF2/production/_106222748_kiss3.jpg",
+                            "path": "/cpsprodpb/14AF2/production/_106222748_kiss3.jpg",
+                            "height": 970,
+                            "width": 1887,
+                            "altText": "Kubrat Pulev",
+                            "copyrightHolder": "Jennifer Ravalo"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Boxing",
+                            "uri": "/news/boxing",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/boxing/47744247",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "ITV says aftercare can't be 'forever'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/entertainment-arts-47745881",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-47745881"
+                        },
+                        "summary": "The death of Love Island's Mike Thalassitis sparked a debate about how reality shows care for stars.",
+                        "timestamp": 1553870593,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106225245",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D3EC/production/_106225245_gettyimages-915323310.jpg",
+                            "path": "/cpsprodpb/D3EC/production/_106225245_gettyimages-915323310.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Mike Thalassitis",
+                            "caption": "The death of Mike Thalassitis sparked a massive conversation about reality TV and mental health",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "maximum",
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Entertainment & Arts",
+                            "uri": "/news/entertainment_and_arts",
+                            "type": "simple"
+                        },
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "How do reality TV shows care for their stars?"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/entertainment-arts-47637721",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/entertainment-arts-47637721"
+                                },
+                                "summary": "ITV say they are going to improve their after-care after the death of a Love Island star.",
+                                "timestamp": 1553106988,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/entertainment-arts-47637721",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Love Island stars to be offered therapy"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/entertainment-arts-47633562",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/entertainment-arts-47633562"
+                                },
+                                "summary": "Mike Thalassitis's death prompts ITV to expand the care it gives contestants when they leave the show.",
+                                "timestamp": 1553059102,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/entertainment-arts-47633562",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Love Island's Mike Thalassitis dies aged 26"
+                                },
+                                "locators": {
+                                    "assetUri": "/news/uk-england-essex-47597561",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-essex-47597561"
+                                },
+                                "summary": "The reality TV star and former footballer has been called \"an absolute gent\" who died \"too young\".",
+                                "timestamp": 1552816547,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:news/uk-england-essex-47597561",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:news/entertainment-arts-47745881",
+                        "type": "cps"
+                    }
+                ],
+                "semanticGroupName": "Top Stories"
+            },
+            {
+                "type": "responsive-cluster",
+                "title": " Cluster 1",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Brexit supporters rally outside Parliament"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47751805",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47751805"
+                        },
+                        "summary": "Crowds of Brexit supporters gather in Westminster to protest against the delay to Brexit.",
+                        "timestamp": 1553872089,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106230457",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/1268B/production/_106230457_de38.jpg",
+                            "path": "/cpsprodpb/1268B/production/_106230457_de38.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Leave supporters gathering in Parliament Square",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47751805",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "May: 'A matter of profound regret'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47746313",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47746313"
+                        },
+                        "summary": "Theresa May says the rejection of the EU withdrawal agreement will have \"grave\" implications.",
+                        "timestamp": 1553872433,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074ysdx",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "May: 'A matter of profound regret'",
+                            "synopses": {
+                                "short": "Theresa May: 'A matter of profound regret'",
+                                "long": "Theresa May’s EU withdrawal agreement has been rejected by 344 votes to 286, a majority of 58 - throwing the UK’s Brexit plans into more confusion.\nThe prime minister said it was a \"matter of profound regret that once again this House been unable to support leaving the European Union in an orderly way\".",
+                                "medium": "Theresa May says the rejection of the EU withdrawal agreement will have \"grave\" implications."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074yv22.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Theresa May: The rejection of the EU withdrawal agreement will have \"grave\" implications",
+                            "versions": [
+                                {
+                                    "versionId": "p074ysdz",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 53,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "106230436",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/F7AB/production/_106230436_p074yv22.jpg",
+                            "path": "/cpsprodpb/F7AB/production/_106230436_p074yv22.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Theresa May",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47746313",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "How did my MP vote on withdrawal agreement?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47748806",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47748806"
+                        },
+                        "summary": "Check how your MP voted on the withdrawal agreement, covering the terms of exiting the EU.",
+                        "timestamp": 1553873055,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                                "categoryName": "Interactive"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106185451",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/3C62/production/_106185451_mp_vote_index_976-nc.png",
+                            "path": "/cpsprodpb/3C62/production/_106185451_mp_vote_index_976-nc.png",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "MPs in Parliament",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47748806",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "What Brexit deal did MPs reject?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-47745831",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-47745831"
+                        },
+                        "summary": "MPs voted for a third time on Theresa May's Brexit deal, but only on the withdrawal agreement.",
+                        "timestamp": 1553870936,
+                        "byline": {
+                            "name": "By Tom Edgington",
+                            "title": "BBC Reality Check",
+                            "persons": [
+                                {
+                                    "name": "Tom Edgington",
+                                    "function": "BBC Reality Check"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                                "categoryName": "Fact Check"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106223516",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/F05C/production/_106223516_gettyimages-1061652858.jpg",
+                            "path": "/cpsprodpb/F05C/production/_106223516_gettyimages-1061652858.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Barnier holding the withdrawal agreement",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-politics-47745831",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The twinning project tackling Brexit divisions"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-47746311",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-47746311"
+                        },
+                        "summary": "BBC Breakfast looks at an initiative bringing together voters on both sides of the Brexit debate.",
+                        "timestamp": 1553855274,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074xqvr",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "The twinning project tackling Brexit divisions",
+                            "synopses": {
+                                "short": "More in Common - how voters are bridging the Brexit divide",
+                                "long": "Brexit remains a deeply divisive issue on the day the UK was meant to leave the EU.\nBut two groups from the highest leave voting area, Boston and the highest remain voting area, Lambeth have been visiting each other's home towns to try to build bridges and understand different points of view. \nBBC Breakfast went to see what the participants had gained from the experience.",
+                                "medium": "BBC Breakfast looks at an initiative bringing together voters on both sides of the Brexit debate."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074xtsk.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "The More in Common initiative brings voters on both sides of the Brexit divide together",
+                            "versions": [
+                                {
+                                    "versionId": "p074xqvx",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 177,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "106224500",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/021E/production/_106224500_p074xtsk.jpg",
+                            "path": "/cpsprodpb/021E/production/_106224500_p074xtsk.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "British voters",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-47746311",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'I never want to hear the word Brexit again'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/newsbeat-47734444",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-47734444"
+                        },
+                        "summary": "An artist is recording people's voicemails about Europe in his Brexit phonebox.",
+                        "timestamp": 1553838095,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074w74p",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "'I never want to hear the word Brexit again'",
+                            "synopses": {
+                                "short": "Brexit: People's messages to Europe in Kent phonebox",
+                                "long": "People have been leaving voicemails to the EU in a special Brexit phonebox in Kent.\n\nThe metal box - called +44 Leave A Message for Europe - is an art installation by artist Joe Sweeney.\n\nHe says it will be important in the future to be able to listen back to what people were saying about Brexit at the time.\n\nVideo journalist: Tyler Anderson",
+                                "medium": "An artist is recording people's voicemails about Europe in his Brexit phonebox."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074w7mk.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "'I never want to hear the word Brexit again'",
+                            "versions": [
+                                {
+                                    "versionId": "p074w74v",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 107,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "106224428",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/1420A/production/_106224428_phone976.jpg",
+                            "path": "/cpsprodpb/1420A/production/_106224428_phone976.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Phonebox",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Newsbeat",
+                            "uri": "/news/newsbeat",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/newsbeat-47734444",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Things that didn't last as long as Brexit"
+                        },
+                        "locators": {
+                            "assetUri": "/news/newsbeat-47734673",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-47734673"
+                        },
+                        "summary": "Game of Thrones, space travel, the life span of a hamster. They've all got nothing on Brexit.",
+                        "timestamp": 1553871522,
+                        "byline": {
+                            "name": "By Chris Smith",
+                            "title": "Newsbeat reporter",
+                            "persons": [
+                                {
+                                    "name": "Chris Smith",
+                                    "function": "Newsbeat reporter",
+                                    "thumbnail": "http://news.bbcimg.co.uk/media/images/77598000/jpg/_77598592_chris_s.jpg"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106210465",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/DC51/production/_106210465_gettyimages-158732331.jpg",
+                            "path": "/cpsprodpb/DC51/production/_106210465_gettyimages-158732331.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "A hamster",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Newsbeat",
+                            "uri": "/news/newsbeat",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/newsbeat-47734673",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Brexit parties and special coins put on hold",
+                            "overtyped": "Parties and special coins put on hold"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-47712530",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-47712530"
+                        },
+                        "summary": "From TV schedule changes to cancelled parties, the Brexit delay has also had an impact beyond politics.",
+                        "timestamp": 1553847549,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106222327",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/11A82/production/_106222327_brexitindexpicnew.jpg",
+                            "path": "/cpsprodpb/11A82/production/_106222327_brexitindexpicnew.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Commemorative Brexit coin design and a screenshot of a 'Brexit Independence Day' t-shirt on the Lanark Print Company website",
+                            "copyrightHolder": "HM Treasury/The Lanark Print Co./eBay"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-47712530",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The withdrawal agreement - what it all means"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-46237012",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-46237012"
+                        },
+                        "summary": "Chris Morris analyses the key points from the 585-page draft agreement between the UK and the EU.",
+                        "timestamp": 1543173301,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                                "categoryName": "Fact Check"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "104376848",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/14B83/production/_104376848_mediaitem104376847.jpg",
+                            "path": "/cpsprodpb/14B83/production/_104376848_mediaitem104376847.jpg",
+                            "height": 432,
+                            "width": 768,
+                            "altText": "Brexit protesters",
+                            "copyrightHolder": "AFP"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-46237012",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Brexit: What could happen next?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-politics-46393399",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-politics-46393399"
+                        },
+                        "summary": "UK PM Theresa May has failed three times to get her Brexit deal through Parliament. What happens now?",
+                        "timestamp": 1553872273,
+                        "byline": {
+                            "name": "By Peter Barnes",
+                            "title": "Senior elections and political analyst, BBC News",
+                            "persons": [
+                                {
+                                    "name": "Peter Barnes",
+                                    "function": "Senior elections and political analyst, BBC News",
+                                    "thumbnail": "http://c.files.bbci.co.uk/67AC/production/_89104562_peterbarnes.jpg"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                                "categoryName": "Analysis"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106089271",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/4392/production/_106089271_index_image_brexit.jpg",
+                            "path": "/cpsprodpb/4392/production/_106089271_index_image_brexit.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Brexit promo image shows UK and EU flags with ? in the middle",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "105169190",
+                            "subType": "index-thumbnail",
+                            "href": "http://c.files.bbci.co.uk/23EC/production/_105169190_index_image_brexit.jpg",
+                            "path": "/cpsprodpb/23EC/production/_105169190_index_image_brexit.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Index image shows part of Union Jack and EU flag with date 29 March in the centre",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-politics-46393399",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Brexit latest"
+                },
+                "semanticGroupName": "Cluster 1"
+            },
+            {
+                "type": "responsive-live-event",
+                "title": "Live event 1",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Reaction as Brexit motion defeated"
+                        },
+                        "locators": {
+                            "assetUri": "/news/live/uk-politics-parliaments-47696409",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/live/uk-politics-parliaments-47696409"
+                        },
+                        "summary": "MPs vote by 286 to 344 to reject Theresa May's Brexit withdrawal agreement.",
+                        "timestamp": 1553523762,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "LIV",
+                        "indexImage": {
+                            "id": "106229627",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/11BF4/production/_106229627_maycommonspa.jpg",
+                            "path": "/cpsprodpb/11BF4/production/_106229627_maycommonspa.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Theresa May speaking in Brexit debate",
+                            "copyrightHolder": "PA"
+                        },
+                        "commentary": {
+                            "order": "descending",
+                            "assetUUID": "5599C7E0223AFC4896C04471533E72E1",
+                            "channels": {
+                                "enhancedmobile": "bbc.cps.asset.47696410_EnhancedMobile",
+                                "desktop": "bbc.cps.asset.47696410_HighWeb",
+                                "highweb": "bbc.cps.asset.47696410_HighWeb",
+                                "mobile": "bbc.cps.asset.47696410_EnhancedMobile"
+                            }
+                        },
+                        "isLive": true,
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK Politics",
+                            "uri": "/news/politics",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/live/uk-politics-parliaments-47696409",
+                        "type": "cps"
+                    }
+                ],
+                "semanticGroupName": "Live event 1"
+            },
+            {
+                "type": "responsive-must-see",
+                "title": "Must see - seven stories",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Why China loves Tom Hiddleston's 'creepy' ad"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-asia-china-47743791",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-china-47743791"
+                        },
+                        "summary": "Hiddleston plays the role of a caring partner in an advertisement that has Chinese women hooked.",
+                        "timestamp": 1553854084,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106221440",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/113C/production/_106221440_befunky-collage3.jpg",
+                            "path": "/cpsprodpb/113C/production/_106221440_befunky-collage3.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Screenshot from Weibo",
+                            "caption": "Screenshots from the video show Mr Hiddleston from a very intimate perspective",
+                            "copyrightHolder": "Tom Hiddleston/Weibo"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "China",
+                            "uri": "/news/world/asia/china",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-asia-china-47743791",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Beyonce dedicates Glaad award to gay uncle"
+                        },
+                        "locators": {
+                            "assetUri": "/news/newsbeat-47745901",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-47745901"
+                        },
+                        "summary": "The singer says witnessing her uncle's battle with HIV was one of her \"most painful experiences\".",
+                        "timestamp": 1553853673,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106224426",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/F3EA/production/_106224426_beyconejayz2_976.jpg",
+                            "path": "/cpsprodpb/F3EA/production/_106224426_beyconejayz2_976.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Beyonce and Jay Z",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Newsbeat",
+                            "uri": "/news/newsbeat",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/newsbeat-47745901",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Band killed in crash were 'lovely, lovely men'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/newsbeat-47744670",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-47744670"
+                        },
+                        "summary": "Radio 1 DJ Huw Stephens says Liverpool duo Her's were \"sweet friends\" who made \"sweet music\".",
+                        "timestamp": 1553865261,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074ydqj",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Band killed in crash were 'lovely, lovely men'",
+                            "synopses": {
+                                "short": "Her's: Band killed in crash were 'lovely, lovely men'",
+                                "long": "Radio 1 DJ Huw Stephens has paid tribute to both members of the band Her's - who died in a car crash in the US.\n\nStephen Fitzpatrick, 24, and Audun Laading, 25, died along with their tour manager Trevor Engelbrektson.\n\nThey were travelling to a gig in California.\n\nHuw has told Radio 1 Newsbeat the two \"sweet friends\", who had been backed by BBC Introducing, had a bright future in music ahead of them.",
+                                "medium": "Radio 1 DJ Huw Stephens says Liverpool duo Her's were \"sweet friends\" who made \"sweet music\"."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074ygyf.png",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Band killed in crash were 'lovely, lovely men'",
+                            "versions": [
+                                {
+                                    "versionId": "p074ydql",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 72,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC Introducing"
+                        },
+                        "indexImage": {
+                            "id": "106224392",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/729E/production/_106224392_p074ygng.png",
+                            "path": "/cpsprodpb/729E/production/_106224392_p074ygng.png",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Stephen Fitzpatrick and Audun Laading from the band Her's",
+                            "copyrightHolder": "BBC Introducing"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Newsbeat",
+                            "uri": "/news/newsbeat",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/newsbeat-47744670",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'I grew up here but I'm not British...yet'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-47741393",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-47741393"
+                        },
+                        "summary": "The comic giving a voice to teenagers waiting for British citizenship.",
+                        "timestamp": 1553820378,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074w5th",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "'If you cut me open you’d see the British flag'",
+                            "synopses": {
+                                "short": "'If you cut me open you’d see the British flag'",
+                                "long": "Lizzie, Ijeoma and Zeno have grown up in the UK but are waiting for British citizenship. A comic is helping them talk more openly about life as child migrants.",
+                                "medium": "The comic giving a voice to teenagers waiting for British citizenship."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074w85d.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "'If you cut me open you’d see the British flag'",
+                            "versions": [
+                                {
+                                    "versionId": "p074w5tl",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 178,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ]
+                        },
+                        "indexImage": {
+                            "id": "106218875",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/E219/production/_106218875_comic1024.jpg",
+                            "path": "/cpsprodpb/E219/production/_106218875_comic1024.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Lizzie, Ijeoma and Zeno",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-47741393",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Australia lake turns pink and Insta-famous"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-australia-47742473",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-australia-47742473"
+                        },
+                        "summary": "The spectacular phenomenon, caused by salt levels and algae, draws a crowd of admirers in summer.",
+                        "timestamp": 1553831241,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106220805",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/C672/production/_106220805_97ce8757-a0fa-44a9-9bdd-f54cb6726987.jpg",
+                            "path": "/cpsprodpb/C672/production/_106220805_97ce8757-a0fa-44a9-9bdd-f54cb6726987.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "A group of tourists take a selfie in front of the pink lake at Westgate Park",
+                            "caption": "The result has seen tourists flock to the waters almost every summer since 2013",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Australia",
+                            "uri": "/news/world/australia",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-australia-47742473",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The 'space burger' that fell to Earth!",
+                            "overtyped": "The 'space burger' that fell to Earth"
+                        },
+                        "locators": {
+                            "assetUri": "/newsround/47744431",
+                            "cpsUrn": "urn:bbc:content:assetUri:newsround/47744431"
+                        },
+                        "summary": "The unidentifiable frying object, landed in Colchester United's training ground on Wednesday night.",
+                        "timestamp": 1553864910,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106222623",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/7F6E/production/_106222623_p074xcs9.jpg",
+                            "path": "/cpsprodpb/7F6E/production/_106222623_p074xcs9.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Screengrab from video showing burger in space",
+                            "copyrightHolder": "Tom Stannisland"
+                        },
+                        "imageThumbnail": {
+                            "id": "106222619",
+                            "subType": "index-thumbnail",
+                            "href": "http://c.files.bbci.co.uk/165E6/production/_106222619_69f79a0b-a119-4d1a-ac68-d106d1bf3aa3.jpg",
+                            "path": "/cpsprodpb/165E6/production/_106222619_69f79a0b-a119-4d1a-ac68-d106d1bf3aa3.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Burger in space shown in still taken from YouTube video",
+                            "copyrightHolder": "Tom Stanniland"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "CBBC Newsround",
+                            "uri": "/news/home",
+                            "type": "simple"
+                        },
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:newsround/47744431",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'One last chance' for May's Brexit deal?",
+                            "overtyped": "The Papers: 'One last chance' for May's Brexit deal?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/blogs-the-papers-47742437",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/blogs-the-papers-47742437"
+                        },
+                        "summary": "Dramatic front pages mark the day the UK had been scheduled to leave the EU.",
+                        "timestamp": 1553840191,
+                        "byline": {
+                            "name": "By BBC News",
+                            "title": "Staff",
+                            "persons": [
+                                {
+                                    "name": "BBC News",
+                                    "function": "Staff"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106220066",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/101D2/production/_106220066_index29.jpg",
+                            "path": "/cpsprodpb/101D2/production/_106220066_index29.jpg",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "Composite image featuring the Daily Express and Daily Mail front pages",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "The Papers",
+                            "uri": "/news/blogs/the_papers",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/blogs-the-papers-47742437",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Quiz of the Week: Who's the 'culturally significant' rapper?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/stories-47725057",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/stories-47725057"
+                        },
+                        "summary": "Have you been paying attention to what's been going on over the past seven days?",
+                        "timestamp": 1553821508,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                                "categoryName": "Interactive"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106212394",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/C0A9/production/_106212394_comp_1024-2.jpg",
+                            "path": "/cpsprodpb/C0A9/production/_106212394_comp_1024-2.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Jay-Z, 50 Cent, Kanye West",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "imageThumbnail": {
+                            "id": "106212396",
+                            "subType": "index-thumbnail",
+                            "href": "http://c.files.bbci.co.uk/10EC9/production/_106212396_comp_1024-2.jpg",
+                            "path": "/cpsprodpb/10EC9/production/_106212396_comp_1024-2.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Jay-Z, 50 Cent, Kanye West",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Stories",
+                            "uri": "/news/stories",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/stories-47725057",
+                        "type": "cps"
+                    },
+                    {
+                        "name": "What would Freud make of our obsession with selfies?",
+                        "summary": "If he were alive today, what might Sigmund Freud make of our selfie obsession? Here's psychologist and author Tomas Chamorro-Premuzic.",
+                        "indexImage": {
+                            "id": "106223992",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/74EC/production/_106223992_gettyimages-683736273crop1.jpg",
+                            "path": "/cpsprodpb/74EC/production/_106223992_gettyimages-683736273crop1.jpg",
+                            "height": 1110,
+                            "width": 1973,
+                            "altText": "Woman taking a selfie",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "uri": "https://www.bbc.com/ideas/videos/what-would-sigmund-freud-make-of-selfies/p074jg17",
+                        "contentType": "Video",
+                        "assetTypeCode": "PRO",
+                        "timestamp": 1553597389,
+                        "type": "link"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "First-time cover star at the age of 80"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-oxfordshire-47738543",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-oxfordshire-47738543"
+                        },
+                        "summary": "Retired teacher Beate Howitt has been taken on by top agency after winning a modelling competition.",
+                        "timestamp": 1553821990,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074vnp3",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Discovered as a model aged 80",
+                            "synopses": {
+                                "short": "Discovered as a model aged 80",
+                                "long": null,
+                                "medium": "Retired teacher Beate Howitt has been taken on by top agency after winning a modelling competition."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074vt0q.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Retired teacher Beate Howitt has been taken on by top agency after winning a modelling competition.",
+                            "versions": [
+                                {
+                                    "versionId": "p074vnp8",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 98,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ]
+                        },
+                        "indexImage": {
+                            "id": "106209198",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/15C66/production/_106209198_p074vscb.jpg",
+                            "path": "/cpsprodpb/15C66/production/_106209198_p074vscb.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Retired teacher Beate Howitt has been taken on by top agency after winning a modelling competition.",
+                            "copyrightHolder": "Goldie"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Oxford",
+                            "uri": "/news/england/oxford",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-oxfordshire-47738543",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'We've marched 270 miles for Brexit'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-47738013",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-47738013"
+                        },
+                        "summary": "Brexit supporters on the March to Leave walk are reaching Westminster. We met them during the journey.",
+                        "timestamp": 1553818819,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074vtj8",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "'We've marched 270 miles for Brexit'",
+                            "synopses": {
+                                "short": "The Leavers marching 270 miles to ‘ensure we Brexit’",
+                                "long": "Brexit supporters on the March to Leave campaign are reaching Westminster on Friday.\n\nThe Victoria Derbyshire programme's James Waterhouse met them during the journey, which began in Sunderland two weeks ago, with around 100 individuals on their way.",
+                                "medium": "Brexit supporters on the March to Leave walk are reaching Westminster. We met them during the journey."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074w4k6.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "The Leavers marching 270 miles to ‘ensure we Brexit’",
+                            "versions": [
+                                {
+                                    "versionId": "p074w1n2",
+                                    "types": [
+                                        "Editorial"
+                                    ],
+                                    "duration": 121,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ]
+                        },
+                        "indexImage": {
+                            "id": "106217254",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/B0D7/production/_106217254_p074vv7t.jpg",
+                            "path": "/cpsprodpb/B0D7/production/_106217254_p074vv7t.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Brexit supporters on the March to Leave campaign are reaching Westminster. We met them during the journey.",
+                            "copyrightHolder": "Brexit supporters on the March to Leave campaign a"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-47738013",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'Visionary' Banksy painting back on show"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-bristol-47740993",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-bristol-47740993"
+                        },
+                        "summary": "Devolved Parliament, his biggest known work on canvas, depicts politicians as chimpanzees.",
+                        "timestamp": 1553802658,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074vys4",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "'Visionary' Banksy painting back on show",
+                            "synopses": {
+                                "short": "Banksy: Devolved Parliament back on show at Bristol Museum",
+                                "long": "A Banksy painting is back on display 10 years after the artist's wildly popular exhibition at Bristol Museum.\nDevolved Parliament, his biggest known work on canvas, depicts politicians in the House of Commons as chimpanzees. \nIt will be on display until September as part of the 10th anniversary celebrations of the Banksy vs Bristol Museum exhibition and is on loan from a private collection.\nBut what do visitors think of the painting in the light of recent parliamentary proceedings?",
+                                "medium": "Devolved Parliament, his biggest known work on canvas, depicts politicians as chimpanzees."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074wdlc.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Banksy: Devolved Parliament back on show at Bristol Museum",
+                            "versions": [
+                                {
+                                    "versionId": "p074wdgn",
+                                    "types": [
+                                        "Editorial"
+                                    ],
+                                    "duration": 59,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "106218155",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D78D/production/_106218155_p074w1k4.jpg",
+                            "path": "/cpsprodpb/D78D/production/_106218155_p074w1k4.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Banksy painting",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Bristol",
+                            "uri": "/news/england/bristol",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-bristol-47740993",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Must See"
+                },
+                "semanticGroupName": "Must see"
+            },
+            {
+                "type": "responsive-av-links",
+                "title": "AV stories live",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "BBC News Channel",
+                            "overtyped": "BBC News Channel"
+                        },
+                        "locators": {
+                            "assetUri": "/news/10318089",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/10318089"
+                        },
+                        "summary": "Britain's most-watched news channel, delivering breaking news and analysis all day, every day.",
+                        "timestamp": 1552343595,
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "59970310",
+                            "subType": "index",
+                            "format": "video",
+                            "externalId": "bbc_news24",
+                            "duration": "PT0S",
+                            "caption": "Live: BBC News Channel",
+                            "image": {
+                                "id": "59970310",
+                                "subType": "thumbnail",
+                                "href": "http://c.files.bbci.co.uk/E77A/production/_105985295_globe_2048x1152.png",
+                                "path": "/cpsprodpb/E77A/production/_105985295_globe_2048x1152.png",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "large breaking news image for Splash front",
+                                "copyrightHolder": "BBC"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": true
+                        },
+                        "indexImage": {
+                            "id": "83122356",
+                            "subType": "index",
+                            "href": "http://news.bbcimg.co.uk/media/images/83122000/png/_83122356_globe_2048x1152.png",
+                            "path": "/mcs/media/images/83122000/png/_83122356_globe_2048x1152.png",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "large breaking news image for Splash front",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "82178720",
+                            "subType": "index-thumbnail",
+                            "href": "http://news.bbcimg.co.uk/media/images/82178000/gif/_82178720_640x360-news.gif",
+                            "path": "/mcs/media/images/82178000/gif/_82178720_640x360-news.gif",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "BBC News Channel",
+                            "copyrightHolder": "AFP"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "UK",
+                            "uri": "/news/uk",
+                            "type": "simple"
+                        },
+                        "overtypedSummary": "The latest breaking and developing stories",
+                        "id": "urn:bbc:ares::asset:news/10318089",
+                        "type": "cps"
+                    },
+                    {
+                        "name": "BBC Radio 5 Live",
+                        "summary": "Original news and exclusive interviews",
+                        "uri": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_five_live",
+                        "contentType": "Audio",
+                        "assetTypeCode": "PRO",
+                        "timestamp": 1384872025,
+                        "type": "link"
+                    }
+                ],
+                "strapline": {
+                    "name": "Watch/Listen"
+                },
+                "semanticGroupName": "AV stories live"
+            },
+            {
+                "type": "responsive-in-depth",
+                "title": "Full story (seven stories)",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Seven ways the world is not designed for women"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-us-canada-47725946",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-47725946"
+                        },
+                        "summary": "From military equipment to smartphones - here are a few ways the world seems biased towards men.",
+                        "timestamp": 1553810207,
+                        "byline": {
+                            "name": "By Ritu Prasad",
+                            "title": "BBC News",
+                            "persons": [
+                                {
+                                    "name": "Ritu Prasad",
+                                    "function": "BBC News"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106219377",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/12E4F/production/_106219377_gettyimages-865261646.jpg",
+                            "path": "/cpsprodpb/12E4F/production/_106219377_gettyimages-865261646.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Chief Warrant Officer Four, Rosemary Masters, of Oklahoma Army National Guard, left, listens to the speaker during the 20th Anniversary of Women In Military Service For America Memorial celebration on Saturday, October 21, 2017, at the Arlington National Cemetery in Arlington, VA.",
+                            "caption": "Female officers pictured at the 20th Anniversary of Women in Military Service for America celebration in 2017",
+                            "copyrightHolder": "The Washington Post via Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "US & Canada",
+                            "uri": "/news/world/us_and_canada",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-us-canada-47725946",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'It's like Uber, but for haircuts'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/stories-47711610",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/stories-47711610"
+                        },
+                        "summary": "A start-up in London thinks it can shake up the barbering industry by persuading people to get their hair cut in a van.",
+                        "timestamp": 1553822191,
+                        "byline": {
+                            "name": "By Doug Shaw",
+                            "title": "BBC Stories",
+                            "persons": [
+                                {
+                                    "name": "Dougal Shaw",
+                                    "function": "BBC Stories"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106225127",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/119D8/production/_106225127_img_3792.jpg",
+                            "path": "/cpsprodpb/119D8/production/_106225127_img_3792.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Darren",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Stories",
+                            "uri": "/news/stories",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/stories-47711610",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "How green is your parcel?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/science-environment-47654950",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/science-environment-47654950"
+                        },
+                        "summary": "The Royal Mail is introducing e-trikes but what are other delivery companies doing to cut their emissions?",
+                        "timestamp": 1553822159,
+                        "byline": {
+                            "name": "By Lindsay Brown",
+                            "title": "BBC Newsbeat reporter",
+                            "persons": [
+                                {
+                                    "name": "Lindsay Brown",
+                                    "function": "Newsbeat reporter"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5c79366e872a2d00b2342441",
+                                    "campaignName": "News - Planet"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106186600",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/029C/production/_106186600_medium.jpg",
+                            "path": "/cpsprodpb/029C/production/_106186600_medium.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "How green is your parcel?",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Science & Environment",
+                            "uri": "/news/science_and_environment",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/science-environment-47654950",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Should Google, Amazon and Facebook fear this woman?"
+                        },
+                        "locators": {
+                            "assetUri": "/news/business-47711500",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/business-47711500"
+                        },
+                        "summary": "Some think the US tech giants are far too powerful. What would be the best way to curb their power?",
+                        "timestamp": 1553817617,
+                        "byline": {
+                            "name": "By Chris Baraniuk",
+                            "title": "Technology of Business reporter",
+                            "persons": [
+                                {
+                                    "name": "Chris Baraniuk",
+                                    "function": "Technology reporter"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106213597",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/136AB/production/_106213597_hi044578370.jpg",
+                            "path": "/cpsprodpb/136AB/production/_106213597_hi044578370.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Senator Elizabeth Warren",
+                            "caption": "Presidential hopeful Senator Elizabeth Warren thinks the tech giants have become too powerful",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Business",
+                            "uri": "/news/business",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/business-47711500",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The political novice bucking Europe's populist trend"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-europe-47719370",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-47719370"
+                        },
+                        "summary": "Zuzana Caputova is new to Slovak politics, but she is the front-runner in Saturday's presidential poll.",
+                        "timestamp": 1553821696,
+                        "byline": {
+                            "name": "By Rob Cameron",
+                            "title": "BBC News, Bratislava",
+                            "persons": [
+                                {
+                                    "name": "Rob Cameron",
+                                    "function": "BBC News, Bratislava",
+                                    "thumbnail": "http://news.bbcimg.co.uk/media/images/70728000/jpg/_70728457_70728456.jpg"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106216664",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/B645/production/_106216664_052984646-1.jpg",
+                            "path": "/cpsprodpb/B645/production/_106216664_052984646-1.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Slovakia\"s presidential candidate Zuzana Caputova speaks to media as she arrives to cast her vote during the country\"s presidential elections at a polling station in Pezinok, Slovakia, March 16, 2019",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Europe",
+                            "uri": "/news/world/europe",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-europe-47719370",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Connie Constance: 'British blood ain't all the same'"
+                        },
+                        "locators": {
+                            "assetUri": "/news/entertainment-arts-47704476",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-47704476"
+                        },
+                        "summary": "Rising star considers what it means to be young, dual heritage and British amidst the political 'mud' of 2019.",
+                        "timestamp": 1553822402,
+                        "byline": {
+                            "name": "By Paul Glynn",
+                            "title": "BBC Music",
+                            "persons": [
+                                {
+                                    "name": "Paul Glynn",
+                                    "function": "BBC Music"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106198476",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/107A1/production/_106198476_d0092b4f-72f8-4321-8006-03e81d73a8ea.jpg",
+                            "path": "/cpsprodpb/107A1/production/_106198476_d0092b4f-72f8-4321-8006-03e81d73a8ea.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Connie Constance",
+                            "caption": "Connie Constance's music has been played on BBC Radio 1 and 6 Music",
+                            "copyrightHolder": "Sophie Jones"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Entertainment & Arts",
+                            "uri": "/news/entertainment_and_arts",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/entertainment-arts-47704476",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Fifteen games to go - can Man City win the quadruple?",
+                            "overtyped": "Can Man City win the quadruple?"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/47659915",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/47659915"
+                        },
+                        "summary": "Manchester City are 15 games from an unprecedented quadruple. Who else has come close to winning it and will Pep Guardiola's team achieve it?",
+                        "timestamp": 1553817754,
+                        "byline": {
+                            "name": "By Chris Bevan & Emma Sanders",
+                            "title": "BBC Sport",
+                            "persons": [
+                                {
+                                    "name": "Chris Bevan",
+                                    "function": "BBC Sport"
+                                },
+                                {
+                                    "name": "Emma Sanders",
+                                    "function": "BBC Sport"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106212944",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/AF79/production/_106212944_man_city_cups_image.png",
+                            "path": "/cpsprodpb/AF79/production/_106212944_man_city_cups_image.png",
+                            "height": 900,
+                            "width": 1600,
+                            "altText": "Man City manager Pep Guardiola punches the air in celebration",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/news/football/premier_league/man_city",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/47659915",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Full Story"
+                },
+                "semanticGroupName": "Full story"
+            },
+            {
+                "type": "responsive-sport",
+                "title": "Other site promotion",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Bahrain GP practice text & audio"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/live/formula1/47448873",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/live/formula1/47448873"
+                        },
+                        "summary": "Live text and audio coverage of Bahrain Grand Prix second practice - plus who are F1's nice guys?",
+                        "timestamp": 1553692332,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "LIV",
+                        "indexImage": {
+                            "id": "106230680",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/219B/production/_106230680_sebastianvettel_gettnight.jpg",
+                            "path": "/cpsprodpb/219B/production/_106230680_sebastianvettel_gettnight.jpg",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "Sebastian Vettel",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "commentary": {
+                            "order": "descending",
+                            "assetUUID": "A546B53050574448AD55223796716A42",
+                            "channels": {
+                                "enhancedmobile": "bbc.cps.asset.47619227_EnhancedMobile",
+                                "desktop": "bbc.cps.asset.47619227_HighWeb",
+                                "highweb": "bbc.cps.asset.47619227_HighWeb",
+                                "mobile": "bbc.cps.asset.47619227_EnhancedMobile"
+                            }
+                        },
+                        "isLive": true,
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Formula 1",
+                            "uri": "/news/formula1",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/live/formula1/47448873",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'Man Utd will make top four under Solskjaer'",
+                            "overtyped": "Man Utd will make top four under Solskjaer - Giggs"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/47745371",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/47745371"
+                        },
+                        "summary": "Manchester United will finish in the top four under now-permanent manager Ole Gunnar Solskjaer, says former team-mate and Wales boss Ryan Giggs.",
+                        "timestamp": 1553855701,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106222539",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/16D52/production/_106222539_gettyimages-1133269251.jpg",
+                            "path": "/cpsprodpb/16D52/production/_106222539_gettyimages-1133269251.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Ole Gunnar Solskjaer",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/news/football/premier_league/man_utd",
+                            "type": "simple"
+                        },
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:sport/football/47745371",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Listen: IPL - Sunrisers Hyderabad v Rajasthan Royals - Buttler, Stokes, Archer & Bairstow in action"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/live/cricket/47673192",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/live/cricket/47673192"
+                        },
+                        "summary": "Sunrisers Hyderabad take on Rajasthan Royals in the IPL - listen to BBC Radio 5 Live Sports Extra commentary.",
+                        "timestamp": 1553707459,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "LIV",
+                        "indexImage": {
+                            "id": "106224690",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/25AA/production/_106224690_jos_buttler_getty.jpg",
+                            "path": "/cpsprodpb/25AA/production/_106224690_jos_buttler_getty.jpg",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "Jos Buttler",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "isLive": true,
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Cricket",
+                            "uri": "/news/cricket",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/live/cricket/47673192",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Van Barneveld reverses retirement decision",
+                            "overtyped": "Van Barneveld reverses retirement decision less than 24 hours after announcement"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/darts/47747262",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/darts/47747262"
+                        },
+                        "summary": "Raymond van Barneveld says he will continue playing for the rest of 2019, a day after announcing his immediate retirement.",
+                        "timestamp": 1553863131,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "Story"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5c459e3dbec574000fb655de",
+                                    "campaignName": "Sport - English Regions"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106227445",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D4C8/production/_106227445_barney2.jpg",
+                            "path": "/cpsprodpb/D4C8/production/_106227445_barney2.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Raymond van Barneveld",
+                            "copyrightHolder": "Lawrence Lustig/PDC"
+                        },
+                        "options": {
+                            "isBreakingNews": true,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Darts",
+                            "uri": "/news/darts",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/darts/47747262",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Packed lunches, hand shakes & Ole - Lingard goes back to school"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/av/football/47749765",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/av/football/47749765"
+                        },
+                        "summary": "Manchester United forward Jesse Lingard goes back to his old school to chat packed lunches and forgetting PE kit with BBC Sport's Dion Dublin.",
+                        "timestamp": 1553862943,
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p074xzlq",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Dairylea Dunkers, hand shakes & Ole - Lingard goes back to school",
+                            "synopses": {
+                                "short": "Jesse Lingard meets Dion Dublin back at his old school",
+                                "long": null,
+                                "medium": null
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074y8cz.jpg",
+                            "embedding": true,
+                            "warnings": {},
+                            "advertising": true,
+                            "caption": "Jesse Lingard meets Dion Dublin back at his old school",
+                            "versions": [
+                                {
+                                    "versionId": "p074xzlt",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 203,
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    }
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "106226984",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/BF42/production/_106226984_p074y8cz.jpg",
+                            "path": "/cpsprodpb/BF42/production/_106226984_p074y8cz.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Jesse Lingard goes back to school",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/news/football/premier_league/man_utd",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/av/football/47749765",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Australia focus on 'harmony' as duo return",
+                            "overtyped": "Australia 'focused on harmony' as Smith and Warner return after ball-tampering ban"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/cricket/47744098",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/cricket/47744098"
+                        },
+                        "summary": "The returns of Steve Smith and David Warner after suspension will not disrupt the Australia team, says the country's cricket boss.",
+                        "timestamp": 1553852751,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "Story"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "104398262",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/66B1/production/_104398262_warner_smith_reuters.jpg",
+                            "path": "/cpsprodpb/66B1/production/_104398262_warner_smith_reuters.jpg",
+                            "height": 1152,
+                            "width": 2048,
+                            "altText": "David Warner (left) and Steve Smith",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Cricket",
+                            "uri": "/news/cricket/international/australia",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/cricket/47744098",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "'I couldn't lift my heel off the ground'",
+                            "overtyped": "'I couldn't lift my heel off the ground' - Barclay on comebacks, calf raises & Edinburgh's ambition"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/rugby-union/47726566",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/rugby-union/47726566"
+                        },
+                        "summary": "John Barclay's long and painful road back from injury is over. Now, he wants to help Edinburgh reach the Champions Cup semi-finals.",
+                        "timestamp": 1553849535,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5c459e7fbec574000fb655e1",
+                                    "campaignName": "Sport - Scotland"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "96307355",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D84A/production/_96307355_barclaycolumnpic.png",
+                            "path": "/cpsprodpb/D84A/production/_96307355_barclaycolumnpic.png",
+                            "height": 410,
+                            "width": 728,
+                            "altText": "John Barclay",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Rugby Union",
+                            "uri": "/news/rugby_union/scottish",
+                            "type": "simple"
+                        },
+                        "includeComments": true,
+                        "id": "urn:bbc:ares::asset:sport/rugby-union/47726566",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Sport",
+                    "type": "LINK",
+                    "links": {
+                        "mobile": "http://www.bbc.co.uk/sport/",
+                        "enhancedmobile": "http://www.bbc.co.uk/sport/"
+                    }
+                },
+                "semanticGroupName": "Other site promotion"
+            },
+            {
+                "type": "responsive-cluster",
+                "title": "Cluster 3",
+                "items": [
+                    {
+                        "name": "The murder of an Instagram star",
+                        "summary": "Who killed Iraqi social media blogger Tara Fares?",
+                        "indexImage": {
+                            "id": "106189669",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/179BA/production/_106189669_2super_promo_new_safe_zone.jpg",
+                            "path": "/cpsprodpb/179BA/production/_106189669_2super_promo_new_safe_zone.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Tara Fares",
+                            "copyrightHolder": "BBC"
+                        },
+                        "uri": "https://www.bbc.co.uk/news/resources/idt-sh/tara_fares",
+                        "contentType": "Feature",
+                        "assetTypeCode": "PRO",
+                        "timestamp": 1553611746,
+                        "type": "link"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The amateur sleuth who searched for a body - and found one"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-us-canada-47627701",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-47627701"
+                        },
+                        "summary": "An indigenous mother goes missing in North Dakota. Why did it take a volunteer group to bring her home?",
+                        "timestamp": 1553545074,
+                        "byline": {
+                            "name": "By Jessica Lussenhop",
+                            "title": "BBC News, North Dakota",
+                            "persons": [
+                                {
+                                    "name": "Jessica Lussenhop",
+                                    "function": "BBC News, Washington"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106170049",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/16F37/production/_106170049_lissayellowbird-chasecloseup.jpg",
+                            "path": "/cpsprodpb/16F37/production/_106170049_lissayellowbird-chasecloseup.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Lissa Yellowbird-Chase",
+                            "caption": "Lissa Yellowbird-Chase: \"Don't wait for law enforcement.\"",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "US & Canada",
+                            "uri": "/news/world/us_and_canada",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-us-canada-47627701",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Preventable deaths? The story of Grenfell Tower flat 113"
+                        },
+                        "locators": {
+                            "assetUri": "/news/stories-47669937",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/stories-47669937"
+                        },
+                        "summary": "Firefighters risked their lives to save residents of Grenfell Tower, but could they have rescued more than they did?",
+                        "timestamp": 1553477486,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106151111",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/2B6B/production/_106151111_silhouette_towers_reuters97.jpg",
+                            "path": "/cpsprodpb/2B6B/production/_106151111_silhouette_towers_reuters97.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Grenfell Tower on fire",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Stories",
+                            "uri": "/news/stories",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/stories-47669937",
+                        "type": "cps"
+                    },
+                    {
+                        "name": "The storm over Huawei",
+                        "indexImage": {
+                            "id": "105917379",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/17C5B/production/_105917379_huawei-promo1.jpg",
+                            "path": "/cpsprodpb/17C5B/production/_105917379_huawei-promo1.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Huawei phone",
+                            "copyrightHolder": "Rebecca Hendin"
+                        },
+                        "uri": "https://www.bbc.co.uk/news/resources/idt-sh/Huawei",
+                        "contentType": "Feature",
+                        "assetTypeCode": "PRO",
+                        "timestamp": 1551801224,
+                        "type": "link"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "The lives lost and the world they revealed"
+                        },
+                        "locators": {
+                            "assetUri": "/news/world-asia-47650948",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-47650948"
+                        },
+                        "summary": "From optimistic refugees to a couple deeply in love, Christchurch was meant to be safe for a new start.",
+                        "timestamp": 1553212961,
+                        "byline": {
+                            "name": "By Jay Savage",
+                            "title": "BBC News, Christchurch, New Zealand",
+                            "persons": [
+                                {
+                                    "name": "Jay Savage",
+                                    "function": "BBC News, Christchurch, New Zealand"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "106121961",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/4210/production/_106121961_ansialibava.jpg",
+                            "path": "/cpsprodpb/4210/production/_106121961_ansialibava.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Ansi Alibava",
+                            "copyrightHolder": "Family handout"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Asia",
+                            "uri": "/news/world/asia",
+                            "type": "simple"
+                        },
+                        "id": "urn:bbc:ares::asset:news/world-asia-47650948",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Long Reads"
+                },
+                "semanticGroupName": "Cluster 3"
+            }
+        ]
+    },
+    "promo": null,
+    "relatedContent": {
+        "section": {
+            "subType": "index",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+        },
+        "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+        },
+        "groups": []
+    }
+}

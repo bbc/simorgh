@@ -1,4 +1,5 @@
 import Article from '../containers/Article';
+import HomePage from '../containers/HomePage';
 import getInitialData from './getInitialData';
 import services from '../lib/config/services';
 
@@ -12,6 +13,10 @@ export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idReg
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
+export const homePageRegexPath = `/:service(${serviceRegex})`;
+
+export const homePageDataRegexPath = `${homePageRegexPath}.json`;
+
 export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
 export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
@@ -22,6 +27,11 @@ const routes = [
     exact: true,
     component: Article,
     getInitialData,
+  },
+  {
+    path: homePageRegexPath,
+    exact: true,
+    component: HomePage,
   },
 ];
 
