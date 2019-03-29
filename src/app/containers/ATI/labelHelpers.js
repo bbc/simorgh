@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
-import get from '../../lib/utils/get';
-import onClient from '../../lib/utils/onClient';
+import deepGet from '../../helpers/json/deepGet';
+import onClient from '../../helpers/onClient';
 
 export const getDestination = (isUK, env) => {
   const destinationIDs = {
@@ -18,7 +18,7 @@ export const getDestination = (isUK, env) => {
 };
 
 export const getOptimoUrn = articleData =>
-  get(['metadata', 'locators', 'optimoUrn'], articleData);
+  deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
 
 export const getPageIdentifier = (service, articleData) => {
   const optimoUrn = getOptimoUrn(articleData);
@@ -37,15 +37,15 @@ export const getISODate = unixTimestamp => {
 };
 
 export const getLanguage = articleData =>
-  get(['metadata', 'passport', 'language'], articleData);
+  deepGet(['metadata', 'passport', 'language'], articleData);
 
 export const getPromoHeadline = articleData =>
-  get(['promo', 'headlines', 'seoHeadline'], articleData);
+  deepGet(['promo', 'headlines', 'seoHeadline'], articleData);
 
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
 export const getPublishedTime = (attribute, articleData) => {
-  const publishedTime = get(['metadata', attribute], articleData);
+  const publishedTime = deepGet(['metadata', attribute], articleData);
 
   return publishedTime && isValidDateTime(publishedTime)
     ? getISODate(publishedTime)
@@ -53,7 +53,7 @@ export const getPublishedTime = (attribute, articleData) => {
 };
 
 export const getThingAttributes = (attribute, articleData) => {
-  const things = get(['metadata', 'tags', 'about'], articleData);
+  const things = deepGet(['metadata', 'tags', 'about'], articleData);
 
   if (things) {
     const attributes = [];

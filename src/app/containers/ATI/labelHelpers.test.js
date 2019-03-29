@@ -1,13 +1,13 @@
 import Cookie from 'js-cookie';
-import onClient from '../../lib/utils/onClient';
+import onClient from '../../helpers/onClient';
 import {
-  setWindowObject,
-  resetWindowObject,
-} from '../../helpers/tests/setLocationOrigin';
+  setWindowValue,
+  resetWindowValue,
+} from '../../helpers/tests/setWindowValue';
 
 let isOnClient = true;
 
-jest.mock('../../lib/utils/onClient', () => jest.fn());
+jest.mock('../../helpers/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {
@@ -326,13 +326,13 @@ describe('getScreenInfo', () => {
   const windowScreen = window.screen;
 
   afterEach(() => {
-    resetWindowObject('screen', windowScreen);
+    resetWindowValue('screen', windowScreen);
   });
 
   returnsNullWhenOffClient(getScreenInfo);
 
   it('should concat screen values, joined by "x"', () => {
-    setWindowObject('screen', {
+    setWindowValue('screen', {
       width: 1,
       height: 2,
       colorDepth: 3,
@@ -345,7 +345,7 @@ describe('getScreenInfo', () => {
   });
 
   it('should use 0 to fill unknown values', () => {
-    setWindowObject('screen', {
+    setWindowValue('screen', {
       width: 1,
       height: 2,
       colorDepth: null,
@@ -363,15 +363,15 @@ describe('getBrowserViewPort', () => {
   const windowInnerHeight = window.innerHeight;
 
   afterEach(() => {
-    resetWindowObject('innerWidth', windowInnerWidth);
-    resetWindowObject('innerHeight', windowInnerHeight);
+    resetWindowValue('innerWidth', windowInnerWidth);
+    resetWindowValue('innerHeight', windowInnerHeight);
   });
 
   returnsNullWhenOffClient(getBrowserViewPort);
 
   it('should concat values, joined by "x"', () => {
-    setWindowObject('innerWidth', 1234);
-    setWindowObject('innerHeight', 4321);
+    setWindowValue('innerWidth', 1234);
+    setWindowValue('innerHeight', 4321);
 
     const browserViewPort = getBrowserViewPort();
 
@@ -379,8 +379,8 @@ describe('getBrowserViewPort', () => {
   });
 
   it('should use 0 to fill unknown values', () => {
-    setWindowObject('innerWidth', null);
-    setWindowObject('innerHeight', 4321);
+    setWindowValue('innerWidth', null);
+    setWindowValue('innerHeight', 4321);
 
     const browserViewPort = getBrowserViewPort();
 
@@ -392,14 +392,14 @@ describe('getATITime', () => {
   const windowDate = window.Date;
 
   afterEach(() => {
-    resetWindowObject('Date', windowDate);
+    resetWindowValue('Date', windowDate);
   });
 
   returnsNullWhenOffClient(getATITime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
     const date = new Date(946729425000); // 12:23:45
-    setWindowObject('Date', () => date);
+    setWindowValue('Date', () => date);
 
     const ATITime = getATITime();
 
@@ -411,13 +411,13 @@ describe('getDeviceLanguage', () => {
   const windowNavigator = window.navigator;
 
   afterEach(() => {
-    resetWindowObject('navigator', windowNavigator);
+    resetWindowValue('navigator', windowNavigator);
   });
 
   returnsNullWhenOffClient(getDeviceLanguage);
 
   it('should return navigator language', () => {
-    setWindowObject('navigator', {
+    setWindowValue('navigator', {
       language: 'abc',
     });
 
@@ -427,7 +427,7 @@ describe('getDeviceLanguage', () => {
   });
 
   it('should return null if langage isnt set', () => {
-    setWindowObject('navigator', {
+    setWindowValue('navigator', {
       language: null,
     });
 

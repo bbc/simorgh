@@ -1,5 +1,5 @@
-import get from '../../lib/utils/get';
-import onClient from '../../lib/utils/onClient';
+import get from '../../helpers/json/deepGet';
+import onClient from '../../helpers/onClient';
 
 const getArticleID = articleData => {
   const aresID = get(['metadata', 'id'], articleData);
