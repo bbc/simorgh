@@ -49,10 +49,7 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated ');
-    expect(renderedWrapper[1].children[1].children[0].data).toEqual(
-      '6 hours ago',
-    );
+    expect(renderedWrapper[1].children[0].data).toEqual('Updated 6 hours ago');
   });
 
   it('should display an absolute timestamp when updated > 10 hours ago', () => {
@@ -62,9 +59,6 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated ');
-    expect(renderedWrapper[1].children[1].children[0].data).toEqual(
-      '8 March 2019',
-    );
+    expect(renderedWrapper[1].children[0].data).toEqual('Updated 8 March 2019');
   });
 });

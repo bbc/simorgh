@@ -5,11 +5,24 @@ import relativeTime from './relativeTimestamp';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+const isValidDateTime = dateTime => !isNaN(new Date(dateTime)); // eslint-disable-line no-restricted-globals
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]; // eslint-disable-line
 
 const leadingZero = val => (val < 10 ? `0${val}` : val);
-
-const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]; // eslint-disable-line
 
 // 2019-03-22
 const longNumeric = {
@@ -32,55 +45,39 @@ const formatUnixTimestamp = (milliseconds, formatType) => {
   const day = formatType.day(dateObj);
   const month = formatType.month(dateObj);
   const year = formatType.year(dateObj);
-
   return formatType.format(day, month, year);
 };
 
 const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();
-  return now - milliseconds >= 10 * 60 * 60 * 1000;
+  return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
 
-const timestampWithPrefixUpdated = (datetime, updateTime) => (
-  <Timestamp datetime={datetime} prefix="Updated ">
-    {updateTime}
-  </Timestamp>
-);
-
-const defaultTimestamp = published => (
-  <Timestamp datetime={formatUnixTimestamp(new Date(published), longNumeric)}>
-    {formatUnixTimestamp(new Date(published), shortAlphaNumeric)}
-  </Timestamp>
-);
-
-const hasBeenUpdated = (updated, published) => updated !== published;
-
-const updatedTimestamp = (updated, published) => {
-  if (!hasBeenUpdated(updated, published)) {
-    return null;
+const humanReadable = timestamp => {
+  if (isTenHoursAgoOrLess(timestamp)) {
+    return relativeTime(timestamp);
   }
-
-  // return absolute or relative secondary timestamp depending on <= 10 hours
-  return timestampWithPrefixUpdated(
-    formatUnixTimestamp(updated, longNumeric),
-    isTenHoursAgoOrLess(updated)
-      ? formatUnixTimestamp(updated, shortAlphaNumeric)
-      : relativeTime(updated),
-  );
+  return formatUnixTimestamp(timestamp, shortAlphaNumeric);
 };
 
 const TimestampContainer = ({ updated, published }) => {
-  if (
-    !isValidDateTime(new Date(updated)) ||
-    !isValidDateTime(new Date(published))
-  ) {
+  if (!isValidDateTime(updated) || !isValidDateTime(published)) {
     return null;
   }
 
+  const publishedDatetime = formatUnixTimestamp(published, longNumeric);
+  const updatedDatetime = formatUnixTimestamp(updated, longNumeric);
+
   return (
     <GridItemConstrainedMedium>
-      {defaultTimestamp(published)}
-      {updatedTimestamp(updated, published)}
+      <Timestamp datetime={publishedDatetime}>
+        {humanReadable(published)}
+      </Timestamp>
+      {updated !== published ? (
+        <Timestamp datetime={updatedDatetime}>
+          Updated {humanReadable(updated)}
+        </Timestamp>
+      ) : null}
     </GridItemConstrainedMedium>
   );
 };
