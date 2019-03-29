@@ -3,7 +3,7 @@
 exports[`Figure should render an AMP image with alt text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -41,7 +41,7 @@ exports[`Figure should render an AMP image with alt text 1`] = `
 exports[`Figure should render an AMP image with caption and copyright 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -142,7 +142,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 exports[`Figure should render an AMP image with caption text with inline link 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -223,7 +223,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 exports[`Figure should render an AMP image with copyright text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -281,7 +281,7 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
 exports[`Figure should render an image with alt text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -323,7 +323,7 @@ exports[`Figure should render an image with alt text 1`] = `
 exports[`Figure should render an image with caption and copyright 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -428,7 +428,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 exports[`Figure should render an image with caption text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -513,7 +513,7 @@ exports[`Figure should render an image with caption text 1`] = `
 exports[`Figure should render an image with caption text with inline link 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -598,7 +598,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 exports[`Figure should render an image with copyright text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -660,7 +660,7 @@ exports[`Figure should render an image with copyright text 1`] = `
 exports[`Figure should render can AMP image with aption text 1`] = `
 .c0 {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 }
 

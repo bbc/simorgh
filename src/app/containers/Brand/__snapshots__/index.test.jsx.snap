@@ -19,7 +19,7 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .c1 {
-  max-width: 80em;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -51,19 +51,19 @@ exports[`BrandContainer should render correctly 1`] = `
   fill: #fff;
 }
 
-@media (max-width:25em) {
+@media (max-width:25rem) {
   .c0 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25em) {
+@media (min-width:25rem) {
   .c0 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:62.9375em) {
+@media (min-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
   }
