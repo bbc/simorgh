@@ -14,8 +14,8 @@ const augmentWithTimestamp = jsonRaw => {
     const timestampBlock = {
       type: 'timestamp',
       model: {
-        published: firstPublished,
-        updated: lastPublished,
+        firstPublished,
+        lastPublished,
       },
     };
     return insertTimestampBlock(jsonRaw, timestampBlock);

@@ -76,8 +76,8 @@ describe('Timestamp rules', () => {
             {
               type: 'timestamp',
               model: {
-                published: 1514808060000,
-                updated: 1514811600000,
+                firstPublished: 1514808060000,
+                lastPublished: 1514811600000,
               },
             },
             paragraphBlock,
@@ -110,8 +110,8 @@ describe('Timestamp rules', () => {
             {
               type: 'timestamp',
               model: {
-                published: 1514808060000,
-                updated: 1514811600000,
+                firstPublished: 1514808060000,
+                lastPublished: 1514811600000,
               },
             },
           ],
