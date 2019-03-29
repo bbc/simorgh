@@ -45,6 +45,7 @@ const MetadataContainer = ({ metadata, promo }) => {
           }) => {
             /* Canonical link generated from servicename and id */
             const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+            const canonicalLinkGb = `https://www.bbc.co.uk/${service}/articles/${id}`;
 
             return (
               <Fragment>
@@ -67,6 +68,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   articleSection={metadata.passport.genre}
                   brandName={brandName}
                   canonicalLink={canonicalLink}
+                  canonicalLinkGb={canonicalLinkGb}
                   defaultImage={defaultImage}
                   defaultImageAltText={defaultImageAltText}
                   description={promo.summary || promo.headlines.seoHeadline}

@@ -7,6 +7,9 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+// @TODO test currently fails on News or Persian (whichever comes last), but if you comment one test out the other passes fine.
+// Suspect the JSON is being changed as a side-effect of each test, so we'll need to use deepClone to work with copies of objects.
+// import deepClone from '../../helpers/json/deepClone';
 
 const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
   const { metadata, promo } = serviceFixtureData;
@@ -126,6 +129,21 @@ const articleMetadataBuilder = (
         rel: 'canonical',
         href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
       },
+      {
+        rel: 'alternate',
+        hrefLang: 'x-default',
+        href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
+      },
+      {
+        rel: 'alternate',
+        hrefLang: 'en',
+        href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
+      },
+      {
+        rel: 'alternate',
+        hrefLang: 'en-gb',
+        href: `https://www.bbc.co.uk/${serviceConfig.service}/articles/${id}`,
+      },
       { href: '/favicon.ico', rel: 'shortcut icon', type: 'image/x-icon' },
     ],
     metaTags: metaTagsBuilder(serviceConfig, description, seoTitle, id, things),
@@ -140,25 +158,6 @@ const doesMatch = (result, fixture) => {
 };
 
 describe('Successfully passes data to the Metadata component via React context', () => {
-  it('should pass persian data to the Metadata component', () => {
-    const result = MetadataWithContextAsObject(
-      'persian',
-      articleDataPersian,
-      'canonical',
-    );
-    const expected = articleMetadataBuilder(
-      'persian',
-      'fa',
-      'سرصفحه مقاله',
-      'خلاصه مقاله',
-      'cyddjz5058wo',
-      'سرصفحه مقاله',
-      [],
-    );
-
-    doesMatch(result, expected);
-  });
-
   it('it should pass news data to the Metadata component', () => {
     const result = MetadataWithContextAsObject(
       'news',
@@ -182,6 +181,25 @@ describe('Successfully passes data to the Metadata component via React context',
           content: 'Queen Victoria',
         },
       ],
+    );
+
+    doesMatch(result, expected);
+  });
+
+  it('should pass persian data to the Metadata component', () => {
+    const result = MetadataWithContextAsObject(
+      'persian',
+      articleDataPersian,
+      'canonical',
+    );
+    const expected = articleMetadataBuilder(
+      'persian',
+      'fa',
+      'سرصفحه مقاله',
+      'خلاصه مقاله',
+      'cyddjz5058wo',
+      'سرصفحه مقاله',
+      [],
     );
 
     doesMatch(result, expected);

@@ -39,6 +39,21 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     href="https://www.bbc.com/news/articles/c0000000001o.amp"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
   <meta
     content="BBC News"
     name="article:author"
@@ -175,6 +190,21 @@ exports[`Metadata News article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
   />
   <meta
     content="BBC News"
@@ -314,6 +344,21 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/persian/articles/cyddjz5058wo.amp"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
   <meta
     content="BBC News فارسی"
     name="article:author"
@@ -451,6 +496,21 @@ exports[`Metadata Persian article should render correctly 1`] = `
     href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/persian/articles/cyddjz5058wo"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
   <meta
     content="BBC News فارسی"
     name="article:author"
@@ -587,6 +647,21 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
   />
   <meta
     content="BBC News"

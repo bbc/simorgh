@@ -8,6 +8,7 @@ const Metadata = ({
   articleSection,
   brandName,
   canonicalLink,
+  canonicalLinkGb,
   defaultImage,
   defaultImageAltText,
   description,
@@ -44,6 +45,9 @@ const Metadata = ({
         {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
+      <link rel="alternate" href={canonicalLink} hrefLang="x-default" />
+      <link rel="alternate" href={canonicalLink} hrefLang="en" />
+      <link rel="alternate" href={canonicalLinkGb} hrefLang="en-gb" />
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastPublished} />
       <meta name="article:published_time" content={timeFirstPublished} />
@@ -82,6 +86,7 @@ Metadata.propTypes = {
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
+  canonicalLinkGb: string.isRequired,
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
   description: string.isRequired,
