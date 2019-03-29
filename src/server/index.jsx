@@ -36,54 +36,74 @@ class LoggerStream {
 }
 
 const server = express();
-// prettier-ignore
+
+/*
+ * Default headers, compression, logging, status route
+ */
+
 server
   .disable('x-powered-by')
-  .use(morgan('tiny', {
-    'skip': (req, res) => (res.statusCode === 200),
-    'stream': new LoggerStream()
-  }))
-  .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
-    expressStaticGzip(publicDirectory, {
-      enableBrotli: true,
-      orderPreference: ['br'],
+    morgan('tiny', {
+      skip: (req, res) => res.statusCode === 200,
+      stream: new LoggerStream(),
     }),
   )
+  .use(compression())
+  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(gnuTP())
-  .get(articleDataRegexPath, async ({ params }, res) => {
-    const { service, id } = params;
-
-    const dataFilePath = path.join(
-      dataFolderToRender,
-      service,
-      'articles',
-      `${id}.json`,
-    );
-
-    fs.readFile(dataFilePath, (error, data) => {
-      if (error) {
-        res.sendStatus(404);
-        logger.error(`error reading article json, ${error}`);
-        return null;
-      }
-
-      const articleJSON = JSON.parse(data);
-
-      res.setHeader('Content-Type', 'application/json');
-      res.json(articleJSON);
-      return null;
-    });
-  })
   .get('/status', (req, res) => {
     res.sendStatus(200);
-  })
-  .get('/ckns_policy/*', (req, res) => {
-    // Dev route to allow the cookie banner to make the cookie oven request
-    // without throwing an error due to not being on a bbc domain.
-    res.sendStatus(200);
-  })
+  });
+
+/*
+ * Local env routes - fixture data
+ */
+
+if (process.env.APP_ENV === 'local') {
+  server
+    .use(
+      expressStaticGzip(publicDirectory, {
+        enableBrotli: true,
+        orderPreference: ['br'],
+      }),
+    )
+    .get(articleDataRegexPath, async ({ params }, res) => {
+      const { service, id } = params;
+
+      const dataFilePath = path.join(
+        dataFolderToRender,
+        service,
+        'articles',
+        `${id}.json`,
+      );
+
+      fs.readFile(dataFilePath, (error, data) => {
+        if (error) {
+          res.sendStatus(404);
+          logger.error(`error reading article json, ${error}`);
+          return null;
+        }
+
+        const articleJSON = JSON.parse(data);
+
+        res.setHeader('Content-Type', 'application/json');
+        res.json(articleJSON);
+        return null;
+      });
+    })
+    .get('/ckns_policy/*', (req, res) => {
+      // Route to allow the cookie banner to make the cookie oven request
+      // without throwing an error due to not being on a bbc domain.
+      res.sendStatus(200);
+    });
+}
+
+/*
+ * Application env routes
+ */
+
+server
   .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
@@ -101,7 +121,7 @@ server
         console.log(error); // eslint-disable-line no-console
         res.status(500).send('Unable to find manifest.');
       }
-    })
+    });
   })
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
