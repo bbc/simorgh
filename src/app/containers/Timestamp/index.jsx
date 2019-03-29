@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { number } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
+import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
@@ -96,10 +97,10 @@ const TimestampContainer = ({ updated, published }) => {
   }
 
   return (
-    <Fragment>
+    <GridItemConstrainedMedium>
       {defaultTimestamp(published)}
       {updatedTimestamp(updated, published)}
-    </Fragment>
+    </GridItemConstrainedMedium>
   );
 };
 
