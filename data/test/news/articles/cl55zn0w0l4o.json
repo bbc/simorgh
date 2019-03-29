@@ -793,8 +793,8 @@
     "firstPublished": 1539188371344,
     "id": "urn:bbc:ares::article:cl55zn0w0l4o",
     "language": "en-gb",
-    "lastPublished": 1544541368761,
-    "lastUpdated": 1553207108515,
+    "lastPublished": 1539188371344,
+    "lastUpdated": 1552558371324,
     "locators": {
       "canonicalUrl": "https://www.bbc.com/news/articles/cl55zn0w0l4o",
       "optimoUrn": "urn:bbc:optimo:asset:cl55zn0w0l4o"
@@ -888,7 +888,7 @@
       "optimoUrn": "urn:bbc:optimo:asset:cl55zn0w0l4o"
     },
     "summary": "",
-    "timestamp": 1544541368761,
+    "timestamp": 1539188371344,
     "type": "cps"
   },
   "relatedContent": {
