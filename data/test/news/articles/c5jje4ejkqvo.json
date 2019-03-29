@@ -13,13 +13,13 @@
     ],
     "createdBy": "News",
     "firstPublished": 1553703216863.0,
-    "id": "urn:bbc:ares::article:c0000000025o",
+    "id": "urn:bbc:ares::article:c5jje4ejkqvo",
     "language": "en-gb",
     "lastPublished": 1553703633751.0,
     "lastUpdated": 1553703637912.0,
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000025o",
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
+      "canonicalUrl": "https://www.bbc.com/news/articles/c5jje4ejkqvo",
+      "optimoUrn": "urn:bbc:optimo:asset:c5jje4ejkqvo"
     },
     "options": {},
     "passport": {
@@ -983,10 +983,10 @@
     "headlines": {
       "seoHeadline": "The Germans solving rising rents with people power"
     },
-    "id": "urn:bbc:ares::article:c0000000025o",
+    "id": "urn:bbc:ares::article:c5jje4ejkqvo",
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000025o",
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000025o"
+      "canonicalUrl": "https://www.bbc.com/news/articles/c5jje4ejkqvo",
+      "optimoUrn": "urn:bbc:optimo:asset:c5jje4ejkqvo"
     },
     "summary": "",
     "timestamp": 1553703633751.0,
