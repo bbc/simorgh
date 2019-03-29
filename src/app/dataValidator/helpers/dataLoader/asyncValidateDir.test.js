@@ -33,7 +33,7 @@ describe('asyncValidateDir helper', () => {
   it('should call readScenario for every file in the /data directory', async () => {
     const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
 
-    await expectMethodToBeCalledTimes(53, readScenarioSpy);
+    await expectMethodToBeCalledTimes(49, readScenarioSpy);
   });
 
   it('should call fileToValidate for only the valid json file in the /data directory', async () => {
