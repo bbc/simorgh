@@ -15,70 +15,73 @@ import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const logger = nodeLogger(__filename);
 
-const Container = ({ children, service }) => (
+const ArticleWrapper = ({ bbcOrigin, children, isAmp, service }) => (
   <Fragment>
     <GlobalStyle />
-    <ServiceContextProvider service={service}>
-      <Helmet>
-        <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-      </Helmet>
-      <ConsentBanner />
-      <HeaderContainer />
-      {children}
-    </ServiceContextProvider>
+    <RequestContextProvider
+      platform={isAmp ? 'amp' : 'canonical'}
+      bbcOrigin={bbcOrigin}
+    >
+      <ServiceContextProvider service={service}>
+        <Helmet>
+          <link rel="manifest" href={`/${service}/articles/manifest.json`} />
+        </Helmet>
+        <ConsentBanner />
+        <HeaderContainer />
+        {children}
+      </ServiceContextProvider>
+    </RequestContextProvider>
   </Fragment>
 );
 
-Container.propTypes = {
+ArticleWrapper.propTypes = {
+  bbcOrigin: string.isRequired,
   children: node.isRequired,
+  isAmp: bool.isRequired,
   service: string.isRequired,
 };
 
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  if (loading) {
-    return (
-      <Container service="news">
-        <main role="main">
-          <GhostWrapper>
-            <GridItemConstrainedMedium />
-          </GhostWrapper>
-        </main>
-      </Container>
-    );
-  }
-
-  if (error) {
-    logger.error(error);
-    return (
-      <Container service="news">
-        <ErrorMain status={500} />
-        <FooterContainer />
-      </Container>
-    );
-  }
-
   if (data) {
-    const { isAmp, data: articleData, service, status } = data;
+    const { isAmp, service } = data;
 
-    return (
-      <Fragment>
-        <RequestContextProvider
-          platform={isAmp ? 'amp' : 'canonical'}
-          bbcOrigin={bbcOrigin}
-        >
-          <Container service={service}>
-            {status === 200 ? (
-              <ArticleMain articleData={articleData} />
-            ) : (
-              <ErrorMain status={status} />
-            )}
-            <FooterContainer />
-          </Container>
-        </RequestContextProvider>
-      </Fragment>
-    );
+    if (loading) {
+      return (
+        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+          <main role="main">
+            <GhostWrapper>
+              <GridItemConstrainedMedium />
+            </GhostWrapper>
+          </main>
+        </ArticleWrapper>
+      );
+    }
+
+    if (error) {
+      logger.error(error);
+      return (
+        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+          <ErrorMain status={500} />
+          <FooterContainer />
+        </ArticleWrapper>
+      );
+    }
+
+    const { data: articleData, status } = data;
+
+    if (articleData) {
+      return (
+        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+          {status === 200 ? (
+            <ArticleMain articleData={articleData} />
+          ) : (
+            <ErrorMain status={status} />
+          )}
+          <FooterContainer />
+        </ArticleWrapper>
+      );
+    }
   }
-
   return null;
 };
 
