@@ -56,7 +56,7 @@ const getAtiUrl = ({
     }
   });
 
-  return atiUrl + atiKeyValues.join('&');
+  return atiUrl + atiKeyValues.join('&') + '&Rdt=On';
 };
 
 export default getAtiUrl;
