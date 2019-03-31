@@ -31,11 +31,6 @@ export const getPageIdentifier = (service, articleData) => {
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
 
-export const getISODate = unixTimestamp => {
-  const date = new Date(unixTimestamp);
-  return date.toISOString();
-};
-
 export const getLanguage = articleData =>
   deepGet(['metadata', 'passport', 'language'], articleData);
 
@@ -43,6 +38,11 @@ export const getPromoHeadline = articleData =>
   deepGet(['promo', 'headlines', 'seoHeadline'], articleData);
 
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+
+const getISODate = unixTimestamp => {
+  const date = new Date(unixTimestamp);
+  return date.toISOString();
+};
 
 export const getPublishedTime = (attribute, articleData) => {
   const publishedTime = deepGet(['metadata', attribute], articleData);
