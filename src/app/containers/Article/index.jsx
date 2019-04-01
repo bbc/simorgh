@@ -69,18 +69,16 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 
     const { data: articleData, status } = data;
 
-    if (articleData) {
-      return (
-        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
-          {status === 200 ? (
-            <ArticleMain articleData={articleData} />
-          ) : (
-            <ErrorMain status={status} />
-          )}
-          <FooterContainer />
-        </ArticleWrapper>
-      );
-    }
+    return (
+      <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+        {status === 200 && articleData ? (
+          <ArticleMain articleData={articleData} />
+        ) : (
+          <ErrorMain status={status} />
+        )}
+        <FooterContainer />
+      </ArticleWrapper>
+    );
   }
   return null;
 };
