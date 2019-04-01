@@ -11,8 +11,8 @@ import {
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const humanReadable = ({ timestamp, makeRelative }) =>
-  makeRelative
+const humanReadable = ({ timestamp, shouldMakeRelative }) =>
+  shouldMakeRelative
     ? relativeTime(timestamp)
     : formatUnixTimestamp(timestamp, shortAlphaNumeric);
 
@@ -26,13 +26,13 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
 
   const firstPublishedString = humanReadable({
     timestamp: firstPublished,
-    makeRelative:
+    shouldMakeRelative:
       lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished),
   });
 
   const lastPublishedString = `Updated ${humanReadable({
     timestamp: lastPublished,
-    makeRelative: isTenHoursAgoOrLess(lastPublished),
+    shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
   })}`;
 
   return (
