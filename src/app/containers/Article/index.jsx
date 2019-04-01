@@ -47,7 +47,7 @@ ArticleWrapper.defaultProps = {
 
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
   if (data) {
-    const { isAmp, service } = data;
+    const { data: articleData, isAmp, service, status } = data;
 
     if (loading) {
       return (
@@ -70,8 +70,6 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
         </ArticleWrapper>
       );
     }
-
-    const { data: articleData, status } = data;
 
     return (
       <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
