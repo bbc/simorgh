@@ -7,20 +7,8 @@ import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 // if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 const isValidDateTime = dateTime => !isNaN(new Date(dateTime)); // eslint-disable-line no-restricted-globals
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]; // eslint-disable-line
+// prettier-ignore
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // eslint-disable-line
 
 const leadingZero = val => (val < 10 ? `0${val}` : val);
 
