@@ -5,17 +5,17 @@ import deepGet from '../../helpers/json/deepGet';
 const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
   const firstPublished = deepGet(['metadata', 'firstPublished'], jsonRaw);
-  const lastUpdated = deepGet(['metadata', 'lastUpdated'], jsonRaw);
+  const lastPublished = deepGet(['metadata', 'lastPublished'], jsonRaw);
   const hasBlocks = deepGet(['content', 'model', 'blocks'], jsonRaw);
-  const canRenderTimestamp = firstPublished && lastUpdated && hasBlocks;
+  const canRenderTimestamp = firstPublished && lastPublished && hasBlocks;
 
   if (canRenderTimestamp) {
     // construct a new block from the metadata
     const timestampBlock = {
       type: 'timestamp',
       model: {
-        published: firstPublished,
-        updated: lastUpdated,
+        firstPublished,
+        lastPublished,
       },
     };
     return insertTimestampBlock(jsonRaw, timestampBlock);

@@ -47,47 +47,50 @@ const timestampWithPrefixUpdated = (datetime, updateTime) => (
   </Timestamp>
 );
 
-const defaultTimestamp = published => (
-  <Timestamp datetime={formatUnixTimestamp(new Date(published), longNumeric)}>
-    {formatUnixTimestamp(new Date(published), shortAlphaNumeric)}
+const defaultTimestamp = firstPublished => (
+  <Timestamp
+    datetime={formatUnixTimestamp(new Date(firstPublished), longNumeric)}
+  >
+    {formatUnixTimestamp(new Date(firstPublished), shortAlphaNumeric)}
   </Timestamp>
 );
 
-const hasBeenUpdated = (updated, published) => updated !== published;
+const hasBeenlastPublished = (lastPublished, firstPublished) =>
+  lastPublished !== firstPublished;
 
-const updatedTimestamp = (updated, published) => {
-  if (!hasBeenUpdated(updated, published)) {
+const updatedTimestamp = (lastPublished, firstPublished) => {
+  if (!hasBeenlastPublished(lastPublished, firstPublished)) {
     return null;
   }
 
   // return absolute or relative secondary timestamp depending on <= 10 hours
   return timestampWithPrefixUpdated(
-    formatUnixTimestamp(updated, longNumeric),
-    isTenHoursAgoOrLess(updated)
-      ? formatUnixTimestamp(updated, shortAlphaNumeric)
-      : relativeTime(updated),
+    formatUnixTimestamp(lastPublished, longNumeric),
+    isTenHoursAgoOrLess(lastPublished)
+      ? formatUnixTimestamp(lastPublished, shortAlphaNumeric)
+      : relativeTime(lastPublished),
   );
 };
 
-const TimestampContainer = ({ updated, published }) => {
+const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
-    !isValidDateTime(new Date(updated)) ||
-    !isValidDateTime(new Date(published))
+    !isValidDateTime(new Date(lastPublished)) ||
+    !isValidDateTime(new Date(firstPublished))
   ) {
     return null;
   }
 
   return (
     <GridItemConstrainedMedium>
-      {defaultTimestamp(published)}
-      {updatedTimestamp(updated, published)}
+      {defaultTimestamp(firstPublished)}
+      {updatedTimestamp(lastPublished, firstPublished)}
     </GridItemConstrainedMedium>
   );
 };
 
 TimestampContainer.propTypes = {
-  updated: number.isRequired,
-  published: number.isRequired,
+  firstPublished: number.isRequired,
+  lastPublished: number.isRequired,
 };
 
 export default TimestampContainer;
