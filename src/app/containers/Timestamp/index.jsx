@@ -68,8 +68,6 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
     return null;
   }
 
-  console.log(lastPublished, firstPublished);
-
   const publishedDatetime = formatUnixTimestamp(firstPublished, longNumeric);
   const updatedDatetime = formatUnixTimestamp(lastPublished, longNumeric);
 
