@@ -14,6 +14,7 @@ const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
+// eslint-disable-next-line no-unused-vars
 const makeDatetimeString = timestamp =>
   moment(timestamp)
     .tz('Europe/London')

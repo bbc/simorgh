@@ -5,6 +5,7 @@ import relativeTime from './relativeTimestamp';
 import {
   longNumeric,
   shortAlphaNumeric,
+  // eslint-disable-next-line no-unused-vars
   alphaNumericDatetime,
   isValidDateTime,
   formatUnixTimestamp,
