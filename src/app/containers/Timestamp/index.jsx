@@ -2,15 +2,16 @@ import React from 'react';
 import { number } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
+import {
+  isValidDateTime,
+  leadingZero,
+  formatUnixTimestamp,
+  isTenHoursAgoOrLess,
+} from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
-
-// if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
-const isValidDateTime = dateTime => !isNaN(new Date(dateTime)); // eslint-disable-line no-restricted-globals
 
 // prettier-ignore
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // eslint-disable-line
-
-const leadingZero = val => (val < 10 ? `0${val}` : val);
 
 // 2019-03-22
 const longNumeric = {
@@ -26,19 +27,6 @@ const shortAlphaNumeric = {
   month: date => months[date.getMonth()],
   year: date => date.getFullYear(),
   format: (d, m, y) => [d, m, y].join(' '),
-};
-
-const formatUnixTimestamp = (milliseconds, formatType) => {
-  const dateObj = new Date(milliseconds);
-  const day = formatType.day(dateObj);
-  const month = formatType.month(dateObj);
-  const year = formatType.year(dateObj);
-  return formatType.format(day, month, year);
-};
-
-const isTenHoursAgoOrLess = milliseconds => {
-  const now = Date.now();
-  return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
 
 const humanReadable = timestamp => {
