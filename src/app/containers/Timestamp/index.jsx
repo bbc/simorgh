@@ -4,31 +4,16 @@ import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
   isValidDateTime,
-  leadingZero,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
   isTwentyFourHoursAgoOrLess,
+  shortAlphaNumeric,
+  longNumeric,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 // prettier-ignore
 export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // eslint-disable-line
-
-// 2019-03-22
-const longNumeric = {
-  day: date => leadingZero(date.getDate()),
-  month: date => leadingZero(date.getMonth() + 1),
-  year: date => date.getFullYear(),
-  format: (d, m, y) => [y, m, d].join('-'),
-};
-
-// 22 March 2019
-const shortAlphaNumeric = {
-  day: date => date.getDate(),
-  month: date => months[date.getMonth()],
-  year: date => date.getFullYear(),
-  format: (d, m, y) => [d, m, y].join(' '),
-};
 
 const humanReadable = timestamp => {
   if (isTenHoursAgoOrLess(timestamp)) {
