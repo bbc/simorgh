@@ -9,6 +9,7 @@ import {
   isTwentyFourHoursAgoOrLess,
   shortAlphaNumeric,
   longNumeric,
+  alphaNumericDatetime,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
@@ -21,7 +22,7 @@ const humanReadable = timestamp => {
   }
 
   if (isTwentyFourHoursAgoOrLess(timestamp)) {
-    return formatUnixTimestamp(timestamp, shortAlphaNumeric);
+    return formatUnixTimestamp(timestamp, alphaNumericDatetime);
   }
   return formatUnixTimestamp(timestamp, shortAlphaNumeric);
 };
