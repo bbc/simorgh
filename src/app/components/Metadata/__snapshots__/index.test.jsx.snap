@@ -19,7 +19,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -156,7 +156,7 @@ exports[`Metadata News article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -294,7 +294,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -431,7 +431,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -568,7 +568,7 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta

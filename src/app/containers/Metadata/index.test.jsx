@@ -43,7 +43,7 @@ const metaTagsBuilder = (serviceConfig, description, seoTitle, id, things) => {
       charset: 'utf-8',
     },
     {
-      content: 'noindex,nofollow',
+      content: 'noodp,noydir',
       name: 'robots',
     },
     {
