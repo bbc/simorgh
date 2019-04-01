@@ -26,7 +26,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c4 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -51,7 +51,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -62,7 +62,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding-bottom: 4rem;
 }
 
-@media (min-width:20em) {
+@media (min-width:20rem) {
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -123,14 +123,20 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
@@ -266,7 +272,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c4 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -291,7 +297,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -302,7 +308,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding-bottom: 4rem;
 }
 
-@media (min-width:20em) {
+@media (min-width:20rem) {
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -363,14 +369,20 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
@@ -506,7 +518,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c4 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -531,7 +543,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -542,7 +554,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding-bottom: 4rem;
 }
 
-@media (min-width:20em) {
+@media (min-width:20rem) {
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -603,14 +615,20 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
@@ -741,7 +759,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c4 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -766,7 +784,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -777,7 +795,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding-bottom: 4rem;
 }
 
-@media (min-width:20em) {
+@media (min-width:20rem) {
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -838,14 +856,20 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
@@ -976,7 +1000,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c4 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1001,7 +1025,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -1012,7 +1036,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding-bottom: 4rem;
 }
 
-@media (min-width:20em) {
+@media (min-width:20rem) {
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -1073,14 +1097,20 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
-@media (min-width:20em) and (max-width:37.4375em) {
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 2.75rem;
     line-height: 3rem;

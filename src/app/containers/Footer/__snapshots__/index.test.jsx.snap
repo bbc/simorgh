@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-<footer
+<ForwardRef
   role="contentinfo"
 >
   <BrandContainer />
@@ -46,5 +46,5 @@ exports[`FooterContainer should render correctly 1`] = `
       ]
     }
   />
-</footer>
+</ForwardRef>
 `;
