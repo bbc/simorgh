@@ -29,7 +29,7 @@ const longNumeric = {
   day: date => leadingZero(date.getDate()),
   month: date => leadingZero(date.getMonth() + 1),
   year: date => date.getFullYear(),
-  hour: date => date.getHours(),
+  hour: date => date.getUTCHours(),
   minute: date => leadingZero(date.getMinutes()),
   format: (d, m, y) => [y, m, d].join('-'),
 };
@@ -39,7 +39,7 @@ const shortAlphaNumeric = {
   day: date => date.getDate(),
   month: date => months[date.getMonth()],
   year: date => date.getFullYear(),
-  hour: date => date.getHours(),
+  hour: date => date.getUTCHours(),
   minute: date => leadingZero(date.getMinutes()),
   format: (d, m, y, hr, min) => `${[d, m, y].join(' ')}, ${hr}:${min} UTC`,
 };
