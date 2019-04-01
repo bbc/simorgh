@@ -11,7 +11,7 @@ import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
 import ConsentBanner from '../ConsentBanner';
-import ATI from '../ATI';
+import PageViewAnalytics from '../PageViewAnalytics';
 
 const logger = nodeLogger(__filename);
 
@@ -43,7 +43,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
                 href={`/${service}/articles/manifest.json`}
               />
             </Helmet>
-            <ATI articleData={articleData} />
+            <PageViewAnalytics articleData={articleData} />
             <ConsentBanner />
             <HeaderContainer />
             {status === 200 ? (

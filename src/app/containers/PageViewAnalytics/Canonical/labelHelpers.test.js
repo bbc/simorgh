@@ -1,13 +1,13 @@
 import Cookie from 'js-cookie';
-import onClient from '../../helpers/onClient';
+import onClient from '../../../helpers/onClient';
 import {
   setWindowValue,
   resetWindowValue,
-} from '../../helpers/tests/setWindowValue';
+} from '../../../helpers/tests/setWindowValue';
 
 let isOnClient = true;
 
-jest.mock('../../helpers/onClient', () => jest.fn());
+jest.mock('../../../helpers/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {
@@ -15,7 +15,7 @@ const {
   getPageIdentifier,
   getScreenInfo,
   getBrowserViewPort,
-  getATITime,
+  getCurrentTime,
   getDeviceLanguage,
   getOptimoUrn,
   getAppType,
@@ -388,20 +388,20 @@ describe('getBrowserViewPort', () => {
   });
 });
 
-describe('getATITime', () => {
+describe('getCurrentTime', () => {
   const windowDate = window.Date;
 
   afterEach(() => {
     resetWindowValue('Date', windowDate);
   });
 
-  returnsNullWhenOffClient(getATITime);
+  returnsNullWhenOffClient(getCurrentTime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
     const date = new Date(946729425000); // 12:23:45
     setWindowValue('Date', () => date);
 
-    const ATITime = getATITime();
+    const ATITime = getCurrentTime();
 
     expect(ATITime).toEqual('12x23x45');
   });

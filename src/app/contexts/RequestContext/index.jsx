@@ -29,9 +29,9 @@ export const RequestContextConsumer = ({ children }) => (
 RequestContextProvider.propTypes = {
   children: node.isRequired,
   platform: string.isRequired,
-  bbcOrigin: string,
   service: string.isRequired,
   articleData: shape(articlePropTypes).isRequired,
+  bbcOrigin: string,
 };
 
 RequestContextProvider.defaultProps = {

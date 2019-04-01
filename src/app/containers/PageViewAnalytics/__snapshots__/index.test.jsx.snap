@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page View Analytics Container should render amp page view analytics correctly 1`] = `null`;
+
+exports[`Page View Analytics Container should render canonical page view analytics correctly 1`] = `
+<div>
+  Canonical page view analytics
+</div>
+`;

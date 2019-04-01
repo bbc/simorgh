@@ -6,23 +6,26 @@ const getArticleID = articleData => {
   return aresID ? aresID.split(':').pop() : 'unknown';
 };
 
-const getOriginContext = (bbcOrigin, service, articleData) => {
+const getOrigin = bbcOrigin => {
   let origin = 'https://www.bbc.co.uk';
+
+  if (bbcOrigin) {
+    origin = bbcOrigin;
+  } else if (onClient() && window.location.origin) {
+    origin = window.location.origin; // eslint-disable-line prefer-destructuring
+  }
+
+  return origin;
+};
+
+const getOriginContext = (bbcOrigin, service, articleData) => {
+  const origin = getOrigin(bbcOrigin);
+  let href = `${origin}/${service}/${getArticleID(articleData)}`;
   let isUK = true;
   let referrer = null;
   let env = 'live';
 
-  let href = `${origin}/${service}/${getArticleID(articleData)}`;
-
-  if (bbcOrigin) {
-    origin = bbcOrigin;
-  }
-
   if (onClient()) {
-    if (window.location.origin) {
-      origin = window.location.origin; // eslint-disable-line prefer-destructuring
-    }
-
     if (window.location.href) {
       href = window.location.href; // eslint-disable-line prefer-destructuring
     }

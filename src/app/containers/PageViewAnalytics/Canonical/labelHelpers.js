@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
-import deepGet from '../../helpers/json/deepGet';
-import onClient from '../../helpers/onClient';
+import deepGet from '../../../helpers/json/deepGet';
+import onClient from '../../../helpers/onClient';
 
 export const getDestination = (isUK, env) => {
   const destinationIDs = {
@@ -99,7 +99,7 @@ export const getBrowserViewPort = () => {
   return null;
 };
 
-export const getATITime = () => {
+export const getCurrentTime = () => {
   if (onClient()) {
     const now = new Date();
     const hours = now.getHours();

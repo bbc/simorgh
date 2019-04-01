@@ -5,7 +5,7 @@ const mockAndSet = (func, response) => {
   labelHelpers[func].mockImplementation(() => response);
 };
 
-const getAtiUrl = obj => require('./getAtiUrl').default(obj); // eslint-disable-line global-require
+const getAtiUrl = obj => require('./getPageViewBeaconUrl').default(obj); // eslint-disable-line global-require
 
 const splitUrl = url =>
   url
@@ -20,7 +20,7 @@ const functions = [
   'getPageIdentifier',
   'getScreenInfo',
   'getBrowserViewPort',
-  'getATITime',
+  'getCurrentTime',
   'getDeviceLanguage',
   'getOptimoUrn',
   'getAppType',
@@ -55,13 +55,13 @@ describe('getThingAttributes', () => {
 
     const expectedValues = [
       'https://a1.api.bbc.co.uk/hit.xiti',
-      's=[getDestination]',
-      's2=[64]',
-      'xchapter=[getPageIdentifier]',
-      'r=[getScreenInfo]',
-      're=[getBrowserViewPort]',
-      'hl=[getATITime]',
-      'lng=[getDeviceLanguage]',
+      's=getDestination',
+      's2=64',
+      'p=getPageIdentifier',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
       'x1=[getOptimoUrn]',
       'x7=[article]',
       'x2=[getAppType]',
@@ -93,7 +93,7 @@ describe('getThingAttributes', () => {
 
     const expectedValues = [
       'https://a1.api.bbc.co.uk/hit.xiti',
-      's2=[64]',
+      's2=64',
       'x7=[article]',
     ];
 
