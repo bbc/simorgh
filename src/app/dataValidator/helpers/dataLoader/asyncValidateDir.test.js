@@ -1,4 +1,4 @@
-// global.console.log = jest.fn(); // silence console.log during jest tests
+global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { asyncValidateDir } = require('./asyncValidateDir');
@@ -45,7 +45,7 @@ describe('asyncValidateDir helper', () => {
   it('should call fileToValidate for only the files in /data/prod/news', async () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    await expectMethodToBeCalledTimes(6, fileToValidateSpy, './data/prod/news');
+    await expectMethodToBeCalledTimes(5, fileToValidateSpy, './data/prod/news');
   });
 
   it('should return a promise', () => {
