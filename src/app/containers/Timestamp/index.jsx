@@ -8,9 +8,11 @@ import {
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
   isTwentyFourHoursAgoOrLess,
-  months,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+
+// prettier-ignore
+export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // eslint-disable-line
 
 // 2019-03-22
 const longNumeric = {
