@@ -89,7 +89,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -99,9 +99,15 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -176,7 +182,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -186,9 +192,15 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c2 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c2 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -376,7 +388,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -386,9 +398,15 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c4 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c4 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -467,7 +485,7 @@ exports[`Figure should render an image with caption text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -477,9 +495,15 @@ exports[`Figure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -552,7 +576,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -562,9 +586,15 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -694,7 +724,7 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -704,9 +734,15 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c2 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c2 {
+    padding: 0.5rem 0;
   }
 }
 

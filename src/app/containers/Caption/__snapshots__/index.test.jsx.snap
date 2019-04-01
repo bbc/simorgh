@@ -18,7 +18,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -28,9 +28,15 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c0 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c0 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -64,7 +70,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -74,9 +80,15 @@ exports[`should render caption text with example News offscreen text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c0 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c0 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -99,7 +111,7 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -109,9 +121,15 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c0 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c0 {
+    padding: 0.5rem 0;
   }
 }
 
