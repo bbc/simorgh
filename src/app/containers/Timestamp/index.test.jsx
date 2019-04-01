@@ -74,7 +74,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 8 March 2019');
   });
 
-  it('should display an absolute timestamp when updated > 10 hours ago && < 24 hours ago', () => {
+  it('should display date and time when updated > 10 hours ago && < 24 hours ago', () => {
     const nineteenHoursAgo = timestampGenerator({ hours: 19 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={fifthJan} lastPublished={nineteenHoursAgo} />,
