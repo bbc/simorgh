@@ -11,12 +11,10 @@ import {
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const humanReadable = timestamp => {
-  if (isTenHoursAgoOrLess(timestamp)) {
-    return relativeTime(timestamp);
-  }
-  return formatUnixTimestamp(timestamp, shortAlphaNumeric);
-};
+const humanReadable = ({ timestamp, makeRelative }) =>
+  makeRelative
+    ? relativeTime(timestamp)
+    : formatUnixTimestamp(timestamp, shortAlphaNumeric);
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
@@ -26,17 +24,25 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
     return null;
   }
 
-  const publishedDatetime = formatUnixTimestamp(firstPublished, longNumeric);
-  const updatedDatetime = formatUnixTimestamp(lastPublished, longNumeric);
+  const firstPublishedString = humanReadable({
+    timestamp: firstPublished,
+    makeRelative:
+      lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished),
+  });
+
+  const lastPublishedString = `Updated ${humanReadable({
+    timestamp: lastPublished,
+    makeRelative: isTenHoursAgoOrLess(lastPublished),
+  })}`;
 
   return (
     <GridItemConstrainedMedium>
-      <Timestamp datetime={publishedDatetime}>
-        {humanReadable(firstPublished)}
+      <Timestamp datetime={formatUnixTimestamp(firstPublished, longNumeric)}>
+        {firstPublishedString}
       </Timestamp>
       {lastPublished !== firstPublished ? (
-        <Timestamp datetime={updatedDatetime}>
-          Updated {humanReadable(lastPublished)}
+        <Timestamp datetime={formatUnixTimestamp(lastPublished, longNumeric)}>
+          {lastPublishedString}
         </Timestamp>
       ) : null}
     </GridItemConstrainedMedium>
