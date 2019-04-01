@@ -1,7 +1,6 @@
 import {
   isValidDateTime,
   leadingZero,
-  formatUnixTimestamp,
   isTenHoursAgoOrLess,
 } from './timestampUtilities';
 
@@ -28,29 +27,6 @@ describe('Timestamp utility functions', () => {
     });
     it('should NOT add a leading zero when NOT needed', () => {
       expect(leadingZero(10)).toEqual('10');
-    });
-  });
-
-  describe('formatUnixTimestamp', () => {
-    it('should format timestamp according to given format', () => {
-      const longNumericFormat = {
-        day: date => leadingZero(date.getDate()),
-        month: date => leadingZero(date.getMonth() + 1),
-        year: date => date.getFullYear(),
-        format: (d, m, y) => [y, m, d].join('-'),
-      };
-      const shortAlphaNumericFormat = {
-        day: date => date.getDate(),
-        month: date => date.toLocaleString('en-us', { month: 'long' }),
-        year: date => date.getFullYear(),
-        format: (d, m, y) => [d, m, y].join(' '),
-      };
-      expect(formatUnixTimestamp(timestamp, longNumericFormat)).toEqual(
-        '2018-10-19',
-      );
-      expect(formatUnixTimestamp(timestamp, shortAlphaNumericFormat)).toEqual(
-        '19 October 2018',
-      );
     });
   });
 
