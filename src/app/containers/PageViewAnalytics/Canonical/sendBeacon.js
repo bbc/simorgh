@@ -7,7 +7,7 @@ const logger = nodeLogger(__filename);
 const sendBeacon = async url => {
   if (onClient()) {
     try {
-      await fetch(url);
+      await fetch(url, { credentials: 'include' });
     } catch (e) {
       logger.error(e);
     }

@@ -22,7 +22,9 @@ describe('sendBeacon', () => {
 
     sendBeacon('https://foobar.com');
 
-    expect(fetch).toHaveBeenCalledWith('https://foobar.com');
+    expect(fetch).toHaveBeenCalledWith('https://foobar.com', {
+      credentials: 'include',
+    });
   });
 
   it(`should not fetch when not on client`, () => {
