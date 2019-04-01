@@ -35,10 +35,14 @@ const ArticleWrapper = ({ bbcOrigin, children, isAmp, service }) => (
 );
 
 ArticleWrapper.propTypes = {
-  bbcOrigin: string.isRequired,
+  bbcOrigin: string,
   children: node.isRequired,
   isAmp: bool.isRequired,
   service: string.isRequired,
+};
+
+ArticleWrapper.defaultProps = {
+  bbcOrigin: null,
 };
 
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
