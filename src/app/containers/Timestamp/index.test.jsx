@@ -20,22 +20,25 @@ describe('Timestamp', () => {
   shouldMatchSnapshot(
     'should render without a leading zero on the day',
     <Timestamp
-      updated={noLeadingZeroTimestamp}
-      published={noLeadingZeroTimestamp}
+      firstPublished={noLeadingZeroTimestamp}
+      lastPublished={noLeadingZeroTimestamp}
     />,
   );
   shouldMatchSnapshot(
     'should render correctly',
-    <Timestamp updated={timestamp} published={timestamp} />,
+    <Timestamp lastPublished={timestamp} firstPublished={timestamp} />,
   );
   shouldMatchSnapshot(
     'should handle an invalid timestamp',
-    <Timestamp updated={invalidTimestamp} published={invalidTimestamp} />,
+    <Timestamp
+      firstPublished={invalidTimestamp}
+      lastPublished={invalidTimestamp}
+    />,
   );
 
   it('should display only one timestamp when published === updated', () => {
     const renderedWrapper = renderedTimestamps(
-      <Timestamp updated={fifthJan} published={fifthJan} />,
+      <Timestamp firstPublished={fifthJan} lastPublished={fifthJan} />,
     );
     expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
     expect(renderedWrapper.length).toEqual(1);
@@ -44,7 +47,7 @@ describe('Timestamp', () => {
   it('should display a relative timestamp when updated < 10 hours ago', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = renderedTimestamps(
-      <Timestamp updated={sixHoursAgo} published={fifthJan} />,
+      <Timestamp firstPublished={fifthJan} lastPublished={sixHoursAgo} />,
     );
 
     expect(renderedWrapper.length).toEqual(2);
@@ -57,7 +60,7 @@ describe('Timestamp', () => {
 
   it('should display an absolute timestamp when updated > 10 hours ago', () => {
     const renderedWrapper = renderedTimestamps(
-      <Timestamp updated={eighthMarch} published={fifthJan} />,
+      <Timestamp firstPublished={fifthJan} lastPublished={eighthMarch} />,
     );
 
     expect(renderedWrapper.length).toEqual(2);
