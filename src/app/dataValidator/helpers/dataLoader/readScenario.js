@@ -15,6 +15,8 @@ const ifDirectoryThenValidateNestedFiles = fullFileName => {
 const readScenario = (fileName, dirName) => {
   const fullFileName = `${dirName}/${fileName}`;
 
+  console.log(`Full File Name ${fullFileName}`)
+
   if (fileName !== 'onward-journeys') {
     ifDirectoryThenValidateNestedFiles(fullFileName);
   }

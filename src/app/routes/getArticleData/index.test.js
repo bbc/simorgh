@@ -1,5 +1,5 @@
 import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
-import baseUrl from './getBaseUrl';
+import baseUrl from '../helpers/getBaseUrl';
 import {
   setLocationOrigin,
   resetWindowLocation,

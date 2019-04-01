@@ -13,11 +13,12 @@ const loadInitialData = async (url, routes) => {
 
   const { route, match } = matchedRoutes[0];
 
-  if (!route.getInitialData) {
+  if (!route.data) {
+    console.log('oopsie')
     return {};
   }
 
-  return route.getInitialData({ match });
+  return route.data({ match });
 };
 
 export default loadInitialData;

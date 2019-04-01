@@ -1,14 +1,13 @@
 import 'isomorphic-fetch';
 import nodeLogger from '../../helpers/logger.node';
-import getBaseUrl from './getBaseUrl';
+import getBaseUrl from '../helpers/getBaseUrl';
 
 const logger = nodeLogger(__filename);
 
 const upstreamStatusCodesToPropagate = [200, 404];
 
-const getInitialData = async ({ match }) => {
-  const { id, service, amp } = match.params;
-  const isAmp = !!amp;
+const getIndexData = async ({ match }) => {
+  const { service } = match.params;
   let data;
   let status;
   let baseUrl = process.env.SIMORGH_BASE_URL;
@@ -21,7 +20,7 @@ const getInitialData = async ({ match }) => {
     baseUrl = getBaseUrl(window.location.origin);
   }
 
-  const url = `${baseUrl}/${service}/articles/${id}.json`;
+  const url = `${baseUrl}/${service}/index/front_page.json`;
 
   try {
     const response = await fetch(url);
@@ -42,11 +41,10 @@ const getInitialData = async ({ match }) => {
   }
 
   return {
-    isAmp,
     data,
     service,
     status,
   };
 };
 
-export default getInitialData;
+export default getIndexData;

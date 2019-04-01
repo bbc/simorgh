@@ -1,6 +1,7 @@
 import Article from '../containers/Article';
 import HomePage from '../containers/HomePage';
-import getInitialData from './getInitialData';
+import getArticleData from './getArticleData';
+import getIndexData from './getIndexData';
 import services from '../lib/config/services';
 
 const serviceRegex = Object.keys(services)
@@ -15,7 +16,7 @@ export const articleDataRegexPath = `${articleRegexPath}.json`;
 
 export const homePageRegexPath = `/:service(${serviceRegex})`;
 
-export const homePageDataRegexPath = `${homePageRegexPath}.json`;
+export const homePageDataRegexPath = `/:service(${serviceRegex})/index/front_page.json`;
 
 export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
@@ -26,12 +27,13 @@ const routes = [
     path: articleRegexPath,
     exact: true,
     component: Article,
-    getInitialData,
+    data: getArticleData,
   },
   {
     path: homePageRegexPath,
     exact: true,
     component: HomePage,
+    data: getIndexData,
   },
 ];
 

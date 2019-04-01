@@ -100,8 +100,8 @@ if (process.env.APP_ENV === 'local') {
       const dataFilePath = path.join(
         dataFolderToRender,
         service,
-        'homepage',
-        `${service}.json`,
+        'index',
+        'front_page.json',
       );
 
       fs.readFile(dataFilePath, (error, data) => {
@@ -149,7 +149,7 @@ server
       }
     });
   })
-  .get(articleRegexPath, async ({ url, headers }, res) => {
+  .get(homePageRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
       const { status } = data;
@@ -164,35 +164,20 @@ server
       res.status(500).send(message);
     }
   })
-  .get(homePageRegexPath, ({ url, params }, res) => {
-    const { service } = params;
+  .get(articleRegexPath, async ({ url, headers }, res) => {
+    try {
+      const data = await loadInitialData(url, routes);
+      const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
 
-    const dataFilePath = path.join(
-      dataFolderToRender,
-      service,
-      'homepage',
-      `${service}.json`,
-    );
-
-    fs.readFile(dataFilePath, async (error, data) => {
-      if (error) {
-        res.sendStatus(404);
-        logger.error(`error reading homepage json, ${error}`);
-        return null;
-      }
-
-      const dataToRender = {
-        isAmp: false,
-        homepageData: JSON.parse(data),
-        service,
-        status: 200,
-      };
-
-      res.status(200).send(await renderDocument(url, dataToRender, routes));
-      return null;
-    });
-
-    return null;
+      res
+        .status(status)
+        .send(await renderDocument(url, data, routes, bbcOrigin));
+    } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
+      logger.error(`status: ${status || 500} - ${message}`);
+      res.status(500).send(message);
+    }
   });
 
 export default server;

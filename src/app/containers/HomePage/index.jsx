@@ -22,9 +22,9 @@ const HomePageContainer = ({ loading, error, data, bbcOrigin }) => {
   }
 
   if (data) {
-    const { homepageData, service } = data;
+    const { data: indexData, service } = data;
 
-    const topStoriesGroup = homepageData.content.groups[0].items;
+    const topStoriesGroup = indexData.content.groups[0].items;
 
     return (
       <Fragment>
