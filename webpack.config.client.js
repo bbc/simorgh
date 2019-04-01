@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
@@ -109,6 +110,10 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           );
         },
       ),
+      new webpack.ContextReplacementPlugin(/moment[\\]locale$/, /en/),
+      new MomentTimezoneDataPlugin({
+        matchZones: 'Europe/London',
+      }),
     ],
   };
 

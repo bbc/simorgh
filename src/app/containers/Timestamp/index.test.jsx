@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'enzyme';
+import moment from 'moment-timezone';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import timestampGenerator from './helpers/timestampGenerator';
 import Timestamp from '.';
-import { months, leadingZero } from './timestampUtilities';
 
-const timestamp = 1539969006000; // 19 October 2018
+const defaultTimestamp = 1539969006000; // 19 October 2018
 const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
@@ -14,17 +14,10 @@ const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
-const makeDatetimeString = dateObj => {
-  const day = dateObj.getDate();
-  const month = months[dateObj.getMonth()];
-  const year = dateObj.getFullYear();
-  const hours = leadingZero(dateObj.getHours());
-  const minutes = leadingZero(dateObj.getMinutes());
-  const date = [day, month, year].join(' ');
-  const time = `, ${hours}:${minutes}`;
-
-  return `${date}${time} BST`;
-};
+const makeDatetimeString = timestamp =>
+  moment(timestamp)
+    .tz('Europe/London')
+    .format('D MMMM YYYY, HH:mm z');
 
 describe('Timestamp', () => {
   describe('with no data', () => {
@@ -39,7 +32,10 @@ describe('Timestamp', () => {
   );
   shouldMatchSnapshot(
     'should render correctly',
-    <Timestamp lastPublished={timestamp} firstPublished={timestamp} />,
+    <Timestamp
+      lastPublished={defaultTimestamp}
+      firstPublished={defaultTimestamp}
+    />,
   );
   shouldMatchSnapshot(
     'should handle an invalid timestamp',
@@ -83,7 +79,7 @@ describe('Timestamp', () => {
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={fifthJan} lastPublished={nineteenHoursAgo} />,
     );
-    const dateTimeString = makeDatetimeString(new Date(nineteenHoursAgo));
+    const dateTimeString = makeDatetimeString(nineteenHoursAgo);
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
