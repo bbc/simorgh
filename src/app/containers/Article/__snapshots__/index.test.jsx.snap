@@ -245,4 +245,15 @@ exports[`ArticleContainer Component loading state should render correctly 1`] = 
 
 exports[`ArticleContainer Component no data or bbcOrigin should render correctly 1`] = `null`;
 
-exports[`ArticleContainer Component non-200 status code should render correctly 1`] = `null`;
+exports[`ArticleContainer Component non-200 status code should render correctly 1`] = `
+<ArticleWrapper
+  bbcOrigin="https://www.bbc.co.uk"
+  isAmp={false}
+  service="news"
+>
+  <ErrorMain
+    status={451}
+  />
+  <FooterContainer />
+</ArticleWrapper>
+`;
