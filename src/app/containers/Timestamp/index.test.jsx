@@ -83,6 +83,8 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual(dateTimeString);
+    expect(renderedWrapper[1].children[0].data).toEqual(
+      `Updated ${dateTimeString}`,
+    );
   });
 });
