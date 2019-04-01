@@ -60,22 +60,27 @@ const humanReadable = timestamp => {
   return formatUnixTimestamp(timestamp, shortAlphaNumeric);
 };
 
-const TimestampContainer = ({ updated, published }) => {
-  if (!isValidDateTime(updated) || !isValidDateTime(published)) {
+const TimestampContainer = ({ lastPublished, firstPublished }) => {
+  if (
+    !isValidDateTime(new Date(lastPublished)) ||
+    !isValidDateTime(new Date(firstPublished))
+  ) {
     return null;
   }
 
-  const publishedDatetime = formatUnixTimestamp(published, longNumeric);
-  const updatedDatetime = formatUnixTimestamp(updated, longNumeric);
+  console.log(lastPublished, firstPublished);
+
+  const publishedDatetime = formatUnixTimestamp(firstPublished, longNumeric);
+  const updatedDatetime = formatUnixTimestamp(lastPublished, longNumeric);
 
   return (
     <GridItemConstrainedMedium>
       <Timestamp datetime={publishedDatetime}>
-        {humanReadable(published)}
+        {humanReadable(firstPublished)}
       </Timestamp>
-      {updated !== published ? (
+      {lastPublished !== firstPublished ? (
         <Timestamp datetime={updatedDatetime}>
-          Updated {humanReadable(updated)}
+          Updated {humanReadable(lastPublished)}
         </Timestamp>
       ) : null}
     </GridItemConstrainedMedium>
@@ -83,8 +88,8 @@ const TimestampContainer = ({ updated, published }) => {
 };
 
 TimestampContainer.propTypes = {
-  updated: number.isRequired,
-  published: number.isRequired,
+  firstPublished: number.isRequired,
+  lastPublished: number.isRequired,
 };
 
 export default TimestampContainer;
