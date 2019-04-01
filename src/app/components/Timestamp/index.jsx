@@ -11,7 +11,7 @@ import {
 } from '@bbc/gel-foundations/typography';
 import { C_CLOUD_DARK } from '@bbc/psammead-styles/colours';
 
-const StyledTimestamp = styled.span`
+const StyledTimestamp = styled.time`
   ${GEL_BREVIER};
   color: ${C_CLOUD_DARK};
   display: block;
@@ -23,9 +23,7 @@ const StyledTimestamp = styled.span`
 `;
 
 const Timestamp = ({ children, datetime }) => (
-  <StyledTimestamp as="time" dateTime={datetime}>
-    {children}
-  </StyledTimestamp>
+  <StyledTimestamp dateTime={datetime}>{children}</StyledTimestamp>
 );
 
 Timestamp.propTypes = {
