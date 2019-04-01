@@ -21,11 +21,3 @@ export const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();
   return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
-
-export const isTwentyFourHoursAgoOrLess = milliseconds => {
-  const now = Date.now();
-  return now - milliseconds <= 24 * 60 * 60 * 1000;
-};
-
-// prettier-ignore
-export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // eslint-disable-line
