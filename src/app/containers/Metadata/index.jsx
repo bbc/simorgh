@@ -28,7 +28,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   return (
     <RequestContextConsumer>
-      {({ platform }) => (
+      {({ origin, platform }) => (
         <ServiceContextConsumer>
           {({
             service,
@@ -43,26 +43,25 @@ const MetadataContainer = ({ metadata, promo }) => {
             publishingPrinciples,
             noBylinesPolicy,
           }) => {
-            /* Canonical link generated from servicename and id */
-            const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
+            const canonicalLink = `${origin}/${service}/articles/${id}`;
+            const ampLink = `${origin}/${service}/articles/${id}.amp`;
 
             return (
               <Fragment>
                 <LinkedData
-                  isAmp={platform === 'amp'}
-                  lang={metadata.passport.language}
-                  type={metadata.type}
-                  seoHeadline={promo.headlines.seoHeadline}
                   firstPublished={timeFirstPublished}
                   lastUpdated={timeLastPublished}
-                  optimoId={id}
-                  service={metadata.createdBy}
-                  publishingPrinciples={publishingPrinciples}
-                  noBylinesPolicy={noBylinesPolicy}
                   logoUrl={defaultImage}
+                  noBylinesPolicy={noBylinesPolicy}
+                  optimoId={id}
+                  publishingPrinciples={publishingPrinciples}
+                  seoHeadline={promo.headlines.seoHeadline}
+                  service={metadata.createdBy}
+                  type={metadata.type}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
+                  ampLink={ampLink}
                   articleAuthor={articleAuthor}
                   articleSection={metadata.passport.genre}
                   brandName={brandName}

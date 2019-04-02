@@ -1,6 +1,7 @@
 import config from '../support/config';
 import describeForLocalOnly from '../support/describeForLocalOnly';
 import {
+  checkAmpHTML,
   checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
@@ -21,7 +22,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   facebookMeta(
@@ -44,7 +45,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    `${config.baseUrl}/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -57,9 +58,13 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
     'پهپادی که برایتان قهوه می‌آورد',
   );
 
-  it('should include the canonical URL', () => {
+  it('should include the canonical URL & ampHTML', () => {
+    const currentOrigin = window.location.origin;
     checkCanonicalURL(
-      `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+      `${currentOrigin}/persian/articles/${config.assets.persian}`,
+    );
+    checkAmpHTML(
+      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
     );
   });
 
