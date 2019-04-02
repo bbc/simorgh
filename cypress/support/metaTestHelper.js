@@ -89,6 +89,11 @@ export const checkCanonicalURL = URL => {
   canonical.should('have.attr', 'href', URL);
 };
 
+export const checkAmpHTML = amphtml => {
+  const ampHtml = getElement('head link[rel="amphtml"]');
+  ampHtml.should('have.attr', 'href', amphtml);
+};
+
 export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')
