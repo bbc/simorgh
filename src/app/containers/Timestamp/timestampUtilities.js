@@ -23,11 +23,6 @@ export const isTenHoursAgoOrLess = milliseconds => {
   return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
 
-export const isTwentyFourHoursAgoOrLess = milliseconds => {
-  const now = Date.now();
-  return now - milliseconds <= 24 * 60 * 60 * 1000;
-};
-
 // 2019-03-22
 export const longNumeric = 'YYYY-MM-DD';
 
