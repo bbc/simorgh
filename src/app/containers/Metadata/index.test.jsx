@@ -1,194 +1,192 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import Helmet from 'react-helmet';
+import { mount } from 'enzyme';
 import MetadataContainer from './index';
+import LinkedData from '../../components/LinkedData';
+import Metadata from '../../components/Metadata';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
-const MetadataWithContextAsObject = (service, serviceFixtureData, platform) => {
-  const { metadata, promo } = serviceFixtureData;
-
-  renderer.create(
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider platform={platform}>
-        <MetadataContainer
-          metadata={metadata}
-          promo={promo}
-          service={service}
-        />
+const Container = (service, bbcOrigin, platform, data) => {
+  const serviceConfig = services[service];
+  return (
+    <ServiceContextProvider {...serviceConfig}>
+      <RequestContextProvider bbcOrigin={bbcOrigin} platform={platform}>
+        <MetadataContainer {...data} />
       </RequestContextProvider>
-    </ServiceContextProvider>,
+    </ServiceContextProvider>
   );
-
-  return Helmet.peek();
 };
 
-describe('no data', () => {
-  shouldShallowMatchSnapshot(
-    'should render null',
-    <MetadataContainer metadata={{}} promo={{}} service="" />,
-  );
+const metadataProps = (
+  isAmp,
+  ampLink,
+  canonicalLink,
+  description,
+  lang,
+  metaTags,
+  title,
+  serviceConfig,
+) => ({
+  isAmp,
+  ampLink,
+  articleAuthor: serviceConfig.articleAuthor,
+  articleSection: null,
+  brandName: serviceConfig.brandName,
+  canonicalLink,
+  defaultImage: serviceConfig.defaultImage,
+  defaultImageAltText: serviceConfig.defaultImageAltText,
+  description,
+  facebookAdmin: 100004154058350,
+  facebookAppID: 1609039196070050,
+  lang,
+  locale: serviceConfig.locale,
+  metaTags,
+  themeColor: serviceConfig.themeColor,
+  timeFirstPublished: '2018-01-01T12:01:00.000Z',
+  timeLastPublished: '2018-01-01T13:00:00.000Z',
+  title,
+  twitterCreator: serviceConfig.twitterCreator,
+  twitterSite: serviceConfig.twitterSite,
+  type: 'article',
 });
 
-const metaTagsBuilder = (serviceConfig, description, seoTitle, id, things) => {
-  const metaTags = [
-    {
-      content: 'IE=edge',
-      'http-equiv': 'X-UA-Compatible',
-    },
-    {
-      charset: 'utf-8',
-    },
-    {
-      content: 'noodp,noydir',
-      name: 'robots',
-    },
-    {
-      content: '#B80000',
-      name: 'theme-color',
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1, minimum-scale=1',
-    },
-    {
-      name: 'article:author',
-      content: serviceConfig.articleAuthor,
-    },
-    {
-      name: 'article:modified_time',
-      content: '2018-01-01T13:00:00.000Z',
-    },
-    {
-      name: 'article:published_time',
-      content: '2018-01-01T12:01:00.000Z',
-    },
-    { name: 'description', content: description },
-    { name: 'fb:admins', content: 100004154058350 },
-    { name: 'fb:app_id', content: 1609039196070050 },
-    { name: 'og:description', content: description },
-    {
-      name: 'og:image',
-      content: serviceConfig.defaultImage,
-    },
-    { name: 'og:image:alt', content: serviceConfig.brandName },
-    { name: 'og:locale', content: serviceConfig.locale },
-    { name: 'og:site_name', content: serviceConfig.brandName },
-    { name: 'og:title', content: seoTitle },
-    { name: 'og:type', content: 'article' },
-    {
-      name: 'og:url',
-      content: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:creator', content: serviceConfig.twitterCreator },
-    { name: 'twitter:description', content: description },
-    { name: 'twitter:image:alt', content: serviceConfig.brandName },
-    {
-      name: 'twitter:image:src',
-      content: serviceConfig.defaultImage,
-    },
-    { name: 'twitter:site', content: serviceConfig.twitterSite },
-    { name: 'twitter:title', content: seoTitle },
-  ];
+const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
+  firstPublished: '2018-01-01T12:01:00.000Z',
+  lastUpdated: '2018-01-01T13:00:00.000Z',
+  logoUrl,
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  optimoId,
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  seoHeadline,
+  service: createdBy,
+  type: 'article',
+});
 
-  // if the a thing meta tag needs to be injected, inject it before the tag with the name 'description'
-  if (Array.isArray(things)) {
-    things.forEach(thing => {
-      const index = metaTags.findIndex(
-        metaTag => metaTag.name === 'description',
+const dotComOrigin = 'https://www.bbc.com';
+const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
+
+describe('Metadata Container', () => {
+  describe('LinkedData and Metadata components called with correct props', () => {
+    it('should be correct for Canonical News & international origin', () => {
+      const Wrapper = mount(
+        Container('news', dotComOrigin, 'canonical', articleDataNews),
       );
-      metaTags.splice(index, 0, thing);
+
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          false,
+          'https://www.bbc.com/news/articles/c0000000001o.amp',
+          'https://www.bbc.com/news/articles/c0000000001o',
+          'Article summary.',
+          'en-gb',
+          ['Royal Wedding 2018', 'Queen Victoria'],
+          'Article Headline for SEO',
+          services.news,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'News',
+          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          'c0000000001o',
+          'Article Headline for SEO',
+        ),
+      );
     });
-  }
 
-  return metaTags;
-};
+    it('should be correct for AMP News & UK origin', () => {
+      const Wrapper = mount(
+        Container('news', dotCoDotUKOrigin, 'amp', articleDataNews),
+      );
 
-const articleMetadataBuilder = (
-  serviceName,
-  lang,
-  title,
-  description,
-  id,
-  seoTitle,
-  things,
-) => {
-  const serviceConfig = services[serviceName];
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          true,
+          'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
+          'https://www.bbc.co.uk/news/articles/c0000000001o',
+          'Article summary.',
+          'en-gb',
+          ['Royal Wedding 2018', 'Queen Victoria'],
+          'Article Headline for SEO',
+          services.news,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'News',
+          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          'c0000000001o',
+          'Article Headline for SEO',
+        ),
+      );
+    });
 
-  return {
-    htmlAttributes: { lang },
-    linkTags: [
-      {
-        rel: 'canonical',
-        href: `https://www.bbc.com/${serviceConfig.service}/articles/${id}`,
-      },
-      { href: '/favicon.ico', rel: 'shortcut icon', type: 'image/x-icon' },
-    ],
-    metaTags: metaTagsBuilder(serviceConfig, description, seoTitle, id, things),
-    title: [seoTitle, ' - ', serviceConfig.brandName],
-  };
-};
+    it('should be correct for Persian News & international origin', () => {
+      const Wrapper = mount(
+        Container('persian', dotComOrigin, 'canonical', articleDataPersian),
+      );
 
-const doesMatch = (result, fixture) => {
-  Object.keys(fixture).forEach(key => {
-    expect(result[key]).toEqual(fixture[key]);
-  });
-};
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          false,
+          'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
+          'https://www.bbc.com/persian/articles/cyddjz5058wo',
+          'خلاصه مقاله',
+          'fa',
+          [],
+          'سرصفحه مقاله',
+          services.persian,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'Persian',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          'cyddjz5058wo',
+          'سرصفحه مقاله',
+        ),
+      );
+    });
 
-describe('Successfully passes data to the Metadata component via React context', () => {
-  it('should pass persian data to the Metadata component', () => {
-    const result = MetadataWithContextAsObject(
-      'persian',
-      articleDataPersian,
-      'canonical',
-    );
-    const expected = articleMetadataBuilder(
-      'persian',
-      'fa',
-      'سرصفحه مقاله',
-      'خلاصه مقاله',
-      'cyddjz5058wo',
-      'سرصفحه مقاله',
-      [],
-    );
+    it('should be correct for Persian News & UK origin', () => {
+      const Wrapper = mount(
+        Container('persian', dotCoDotUKOrigin, 'amp', articleDataPersian),
+      );
 
-    doesMatch(result, expected);
-  });
-
-  it('it should pass news data to the Metadata component', () => {
-    const result = MetadataWithContextAsObject(
-      'news',
-      articleDataNews,
-      'canonical',
-    );
-    const expected = articleMetadataBuilder(
-      'news',
-      'en-gb',
-      'Article Headline',
-      'Article summary.',
-      'c0000000001o',
-      'Article Headline for SEO',
-      [
-        {
-          name: 'article:tag',
-          content: 'Royal Wedding 2018',
-        },
-        {
-          name: 'article:tag',
-          content: 'Queen Victoria',
-        },
-      ],
-    );
-
-    doesMatch(result, expected);
-  });
-
-  it('should add amp to HTML attributes when platform is set to AMP', () => {
-    const result = MetadataWithContextAsObject('news', articleDataNews, 'amp');
-    expect(result.htmlAttributes.amp).not.toBe(undefined);
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          true,
+          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo.amp',
+          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
+          'خلاصه مقاله',
+          'fa',
+          [],
+          'سرصفحه مقاله',
+          services.persian,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'Persian',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          'cyddjz5058wo',
+          'سرصفحه مقاله',
+        ),
+      );
+    });
   });
 });
