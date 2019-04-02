@@ -5,18 +5,23 @@ import relativeTime from './relativeTimestamp';
 import {
   longNumeric,
   shortAlphaNumeric,
-  // eslint-disable-next-line no-unused-vars
   alphaNumericDatetime,
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
+  isTwentyFourHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+
+const formatType = timestamp =>
+  isTwentyFourHoursAgoOrLess(timestamp)
+    ? alphaNumericDatetime
+    : shortAlphaNumeric;
 
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
   shouldMakeRelative
     ? relativeTime(timestamp)
-    : formatUnixTimestamp(timestamp, shortAlphaNumeric);
+    : formatUnixTimestamp(timestamp, formatType(timestamp));
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
