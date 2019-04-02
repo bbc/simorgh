@@ -67,7 +67,7 @@ describe('Timestamp', () => {
   });
 
   it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
-    const twentyThreeHoursAgo = timestampGenerator({ hours: 23 });
+    const twentyThreeHoursAgo = timestampGenerator({ hours: 10, seconds: 25 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp
         firstPublished={twentyThreeHoursAgo}

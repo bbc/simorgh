@@ -15,7 +15,7 @@ import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const isToday = timestamp => {
   const today = moment(Date.now());
-  return today.diff(timestamp) <= 0;
+  return today.isSame(timestamp, 'day');
 };
 
 const formatType = timestamp =>
