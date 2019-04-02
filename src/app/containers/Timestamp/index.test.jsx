@@ -140,6 +140,5 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toMatch(
       /Updated [0-9]{1,2} \w+ [0-9]{4}/,
     );
-    expect(renderedWrapper[1].children[0].data).toContain('BST');
   });
 });
