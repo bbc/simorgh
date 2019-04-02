@@ -1,8 +1,9 @@
-import * as labelHelpers from './labelHelpers';
+import * as genericLabelHelpers from '../labelHelpers';
+import * as articleLabelHelpers from '../labelHelpers/article';
 
-const mockAndSet = (func, response) => {
-  labelHelpers[func] = jest.fn();
-  labelHelpers[func].mockImplementation(() => response);
+const mockAndSet = ({ name, source }, response) => {
+  source[name] = jest.fn(); // eslint-disable-line no-param-reassign
+  source[name].mockImplementation(() => response);
 };
 
 const getAtiUrl = obj => require('./getPageViewBeaconUrl').default(obj); // eslint-disable-line global-require
@@ -16,29 +17,29 @@ const splitUrl = url =>
     .split(',');
 
 const functions = [
-  'getDestination',
-  'getPageIdentifier',
-  'getScreenInfo',
-  'getBrowserViewPort',
-  'getCurrentTime',
-  'getDeviceLanguage',
-  'getOptimoUrn',
-  'getAppType',
-  'getLanguage',
-  'getPromoHeadline',
-  'getPublishedTime',
-  'getThingAttributes',
-  'getLocServeCookie',
+  { name: 'getDestination', source: genericLabelHelpers },
+  { name: 'getScreenInfo', source: genericLabelHelpers },
+  { name: 'getBrowserViewPort', source: genericLabelHelpers },
+  { name: 'getCurrentTime', source: genericLabelHelpers },
+  { name: 'getDeviceLanguage', source: genericLabelHelpers },
+  { name: 'getAppType', source: genericLabelHelpers },
+  { name: 'getLocServeCookie', source: genericLabelHelpers },
+  { name: 'getPageIdentifier', source: articleLabelHelpers },
+  { name: 'getOptimoUrn', source: articleLabelHelpers },
+  { name: 'getLanguage', source: articleLabelHelpers },
+  { name: 'getPromoHeadline', source: articleLabelHelpers },
+  { name: 'getPublishedTime', source: articleLabelHelpers },
+  { name: 'getThingAttributes', source: articleLabelHelpers },
 ];
 
 describe('getThingAttributes', () => {
   beforeEach(() => {
-    jest.restoreAllMocks();
+    jest.resetAllMocks();
   });
 
   it('should create url with all required information', () => {
     functions.forEach(func => {
-      mockAndSet(func, func);
+      mockAndSet(func, func.name);
     });
 
     const url = getAtiUrl({

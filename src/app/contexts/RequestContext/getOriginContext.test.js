@@ -10,60 +10,137 @@ describe('getInitialData', () => {
     resetWindowValue('location', windowLocation);
   });
 
+  const inputArticleData = {
+    metadata: {
+      id: 'optimoId',
+    },
+  };
+
   const tests = [
     {
-      bbcOrigin: undefined,
-      origin: undefined,
-      service: undefined,
-      articleData: undefined,
-      href: undefined,
-      referrer: undefined,
-      expected: { isUK: true, origin: 'https://www.bbc.co.uk', env: "live", href: "http://localhost/", referrer: null },
+      input: {
+        bbcOrigin: null,
+        service: 'news',
+        articleData: inputArticleData,
+      },
+      windowValues: {
+        origin: null,
+        href: null,
+        referrer: null,
+      },
+      expected: {
+        isUK: true,
+        origin: 'https://www.bbc.co.uk',
+        env: 'live',
+        href: 'https://www.bbc.co.uk/news/optimoId',
+        referrer: null,
+      },
       assertion: 'should return defaults if no origin can be found',
     },
     {
-      bbcOrigin: 'https://foobar.com',
-      origin: 'https://beepboop.co.uk',
-      service: undefined,
-      articleData: undefined,
-      href: undefined,
-      referrer: undefined,
-      expected: { isUK: false, origin: 'https://foobar.com', env: "live", href: "http://localhost/", referrer: null },
+      input: {
+        bbcOrigin: 'https://foobar.com',
+        service: 'news',
+        articleData: inputArticleData,
+      },
+      windowValues: {
+        origin: null,
+        href: null,
+        referrer: null,
+      },
+      expected: {
+        isUK: false,
+        origin: 'https://foobar.com',
+        env: 'live',
+        href: 'https://foobar.com/news/optimoId',
+        referrer: null,
+      },
       assertion:
         'should return isUK and origin based off of bbcOrigin if provided',
     },
     {
-      bbcOrigin: undefined,
-      origin: 'https://beepboop.com',
-      service: undefined,
-      articleData: undefined,
-      href: undefined,
-      referrer: undefined,
-      expected: { isUK: false, origin: 'https://beepboop.com', env: "live", href: "http://localhost/", referrer: null },
+      input: {
+        bbcOrigin: null,
+        service: 'news',
+        articleData: inputArticleData,
+      },
+      windowValues: {
+        origin: 'https://barfoo.com',
+        href: null,
+        referrer: null,
+      },
+      expected: {
+        isUK: false,
+        origin: 'https://barfoo.com',
+        env: 'live',
+        href: 'https://barfoo.com/news/optimoId',
+        referrer: null,
+      },
       assertion:
         'should return isUK and origin based off of origin if bbcOrigin isnt provided',
     },
     {
-      bbcOrigin: 'https://beepboop.org',
-      origin: 'https://beepboop.org',
-      service: undefined,
-      articleData: undefined,
-      href: undefined,
-      referrer: undefined,
-      expected: { isUK: true, origin: 'https://beepboop.org', env: "live", href: "http://localhost/", referrer: null },
+      input: {
+        bbcOrigin: null,
+        service: 'news',
+        articleData: inputArticleData,
+      },
+      windowValues: {
+        origin: 'https://barfoo.org',
+        href: null,
+        referrer: null,
+      },
+      expected: {
+        isUK: true,
+        origin: 'https://barfoo.org',
+        env: 'live',
+        href: 'https://barfoo.org/news/optimoId',
+        referrer: null,
+      },
+      assertion: 'should return isUK as true if tld isnt .com',
+    },
+
+    {
+      input: {
+        bbcOrigin: null,
+        service: 'news',
+        articleData: inputArticleData,
+      },
+      windowValues: {
+        origin: 'https://barfoo.org',
+        href: null,
+        referrer: null,
+      },
+      expected: {
+        isUK: true,
+        origin: 'https://barfoo.org',
+        env: 'live',
+        href: 'https://barfoo.org/news/optimoId',
+        referrer: null,
+      },
       assertion: 'should return isUK as true if tld isnt .com',
     },
   ];
 
-  tests.forEach(({ bbcOrigin, origin, expected, assertion }) => {
+  tests.forEach(({ input, windowValues, expected, assertion }) => {
     it(assertion, () => {
       setWindowValue('location', {
-        origin,
+        origin: windowValues.origin,
+        href: windowValues.href,
+      });
+
+      Object.defineProperty(window.document, 'referrer', {
+        configurable: true,
+        value: windowValues.referrer,
       });
 
       const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
 
-      expect(getOriginContext(bbcOrigin)).toEqual(expected);
+      const { bbcOrigin, service, articleData } = input;
+
+      expect(getOriginContext(bbcOrigin, service, articleData)).toEqual(
+        expected,
+      );
     });
   });
 });

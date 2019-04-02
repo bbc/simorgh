@@ -1,59 +1,24 @@
 import get from '../../helpers/json/deepGet';
-import onClient from '../../helpers/onClient';
+import getOrigin from './getOriginContext/getOrigin';
+import getEnv from './getOriginContext/getEnv';
+import getHref from './getOriginContext/getHref';
+import getReferer from './getOriginContext/getReferer';
 
 const getArticleID = articleData => {
   const aresID = get(['metadata', 'id'], articleData);
   return aresID ? aresID.split(':').pop() : 'unknown';
 };
 
-const getOrigin = bbcOrigin => {
-  let origin = 'https://www.bbc.co.uk';
-
-  if (bbcOrigin) {
-    origin = bbcOrigin;
-  } else if (onClient() && window.location.origin) {
-    origin = window.location.origin; // eslint-disable-line prefer-destructuring
-  }
-
-  return origin;
-};
-
 const getOriginContext = (bbcOrigin, service, articleData) => {
   const origin = getOrigin(bbcOrigin);
-  let href = `${origin}/${service}/${getArticleID(articleData)}`;
-  let isUK = true;
-  let referrer = null;
-  let env = 'live';
-
-  if (onClient()) {
-    if (window.location.href) {
-      href = window.location.href; // eslint-disable-line prefer-destructuring
-    }
-
-    if (document.referrer) {
-      referrer = document.referrer; // eslint-disable-line prefer-destructuring
-    }
-  }
-
-  if (origin.includes('.stage.')) {
-    env = 'stage';
-  }
-
-  if (origin.includes('.test.')) {
-    env = 'test';
-  }
-
-  if (origin.includes('localhost')) {
-    env = 'local';
-  }
-
-  if (origin.includes('.com')) {
-    isUK = false;
-  }
+  const env = getEnv(origin);
+  const articleId = getArticleID(articleData);
+  const href = getHref(origin, service, articleId);
+  const referrer = getReferer();
 
   return {
     origin,
-    isUK,
+    isUK: origin.includes('.com'),
     env,
     href,
     referrer,

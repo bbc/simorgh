@@ -11,6 +11,15 @@ Array [
   <span>
     https://foobar.com
   </span>,
+  <span>
+    live
+  </span>,
+  <span>
+    https://foobar.com/path
+  </span>,
+  <span>
+    https://foobar.com/otherPath
+  </span>,
 ]
 `;
 
@@ -24,6 +33,15 @@ Array [
   </span>,
   <span>
     https://foobar.com
+  </span>,
+  <span>
+    live
+  </span>,
+  <span>
+    https://foobar.com/path
+  </span>,
+  <span>
+    https://foobar.com/otherPath
   </span>,
 ]
 `;
@@ -39,6 +57,15 @@ Array [
   <span>
     https://www.bbc.co.uk
   </span>,
+  <span>
+    live
+  </span>,
+  <span>
+    https://www.bbc.co.uk/path
+  </span>,
+  <span>
+    https://www.bbc.co.uk/otherPath
+  </span>,
 ]
 `;
 
@@ -52,6 +79,15 @@ Array [
   </span>,
   <span>
     https://foobar.com
+  </span>,
+  <span>
+    live
+  </span>,
+  <span>
+    https://foobar.com/path
+  </span>,
+  <span>
+    https://foobar.com/otherPath
   </span>,
 ]
 `;

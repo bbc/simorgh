@@ -1,18 +1,20 @@
-import {
+const {
   getDestination,
-  getPageIdentifier,
   getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
   getDeviceLanguage,
-  getOptimoUrn,
   getAppType,
+  getLocServeCookie,
+} = require('../labelHelpers');
+const {
+  getPageIdentifier,
+  getOptimoUrn,
   getLanguage,
   getPromoHeadline,
   getPublishedTime,
   getThingAttributes,
-  getLocServeCookie,
-} from './labelHelpers';
+} = require('../labelHelpers/article');
 
 const getPageViewBeaconUrl = ({
   articleData,

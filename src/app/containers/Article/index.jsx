@@ -27,6 +27,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 
   if (data) {
     const { isAmp, data: articleData, service, status } = data;
+
     return (
       <Fragment>
         <GlobalStyle />

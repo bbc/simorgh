@@ -1,5 +1,4 @@
 import Cookie from 'js-cookie';
-import deepGet from '../../../helpers/json/deepGet';
 import onClient from '../../../helpers/onClient';
 
 export const getDestination = (isUK, env) => {
@@ -17,58 +16,8 @@ export const getDestination = (isUK, env) => {
   return destinationIDs[key] || destinationIDs.NEWS_PS;
 };
 
-export const getOptimoUrn = articleData =>
-  deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
-
-export const getPageIdentifier = (service, articleData) => {
-  const optimoUrn = getOptimoUrn(articleData);
-
-  const optimoId = optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
-
-  return `health::${service || 'news'}.articles.${optimoId}.page`;
-};
-
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
-
-export const getLanguage = articleData =>
-  deepGet(['metadata', 'passport', 'language'], articleData);
-
-export const getPromoHeadline = articleData =>
-  deepGet(['promo', 'headlines', 'seoHeadline'], articleData);
-
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
-
-const getISODate = unixTimestamp => {
-  const date = new Date(unixTimestamp);
-  return date.toISOString();
-};
-
-export const getPublishedTime = (attribute, articleData) => {
-  const publishedTime = deepGet(['metadata', attribute], articleData);
-
-  return publishedTime && isValidDateTime(publishedTime)
-    ? getISODate(publishedTime)
-    : null;
-};
-
-export const getThingAttributes = (attribute, articleData) => {
-  const things = deepGet(['metadata', 'tags', 'about'], articleData);
-
-  if (things) {
-    const attributes = [];
-
-    things.forEach(thing => {
-      if (thing[attribute]) {
-        attributes.push(thing[attribute]);
-      }
-    });
-
-    return attributes.join('~') || null;
-  }
-
-  return null;
-};
 
 export const getLocServeCookie = () =>
   onClient() ? Cookie.get('loc_serve') : null;
