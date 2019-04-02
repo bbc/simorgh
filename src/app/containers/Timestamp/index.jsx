@@ -1,6 +1,5 @@
 import React from 'react';
 import { number } from 'prop-types';
-import moment from 'moment-timezone';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
@@ -10,16 +9,14 @@ import {
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
+  isTwentyFourHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const isToday = timestamp => {
-  const today = moment(Date.now());
-  return today.diff(timestamp) <= 0;
-};
-
 const formatType = timestamp =>
-  isToday(timestamp) ? alphaNumericDatetime : shortAlphaNumeric;
+  isTwentyFourHoursAgoOrLess(timestamp)
+    ? alphaNumericDatetime
+    : shortAlphaNumeric;
 
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
   shouldMakeRelative
