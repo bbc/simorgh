@@ -81,7 +81,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper[0].children[0].data).toEqual('4 hours ago');
   });
 
-  it('should render relative time for lastUpdated if < 10 hrs ago, but absolute time for firstUpdated', () => {
+  it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
     const now = Date.now();
     const firstPublishedEightHoursAgo = now - 1000 * 60 * 60 * 8;
     const lastPublishedFourHoursAgo = now - 1000 * 60 * 60 * 4;
@@ -97,7 +97,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
   });
 
-  it('should render absolute time for lastUpdated and for firstUpdated if > 10 hrs ago', () => {
+  it('should render absolute time for lastPublished and for firstPublished if > 10 hrs ago', () => {
     const now = Date.now();
     const firstPublishedTwelveHoursAgo = now - 1000 * 60 * 60 * 12;
     const lastPublishedElevenHoursAgo = now - 1000 * 60 * 60 * 11;
