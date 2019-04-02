@@ -56,15 +56,14 @@ describe('Timestamp', () => {
     expect(renderedWrapper.length).toEqual(1);
   });
 
-  it('should display a relative timestamp when updated < 10 hours ago', () => {
+  it('should display one relative timestamp when published < 10 hours ago', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={fifthJan} lastPublished={sixHoursAgo} />,
+      <Timestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
     );
 
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated 6 hours ago');
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
   });
 
   it('should display an absolute timestamp when updated > 24 hours ago', () => {
