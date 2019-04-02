@@ -10,9 +10,9 @@ const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
 const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
-const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
 
 const shortAlphaNumericRegex = /[0-9]{1,2} \w+ [0-9]{4}/;
+const datetimeRegex = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
@@ -48,7 +48,7 @@ describe('Timestamp', () => {
     />,
   );
 
-  it('should display only one timestamp when published === updated', () => {
+  it('should render only one timestamp when published === updated', () => {
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={fifthJan} lastPublished={fifthJan} />,
     );
@@ -56,7 +56,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper.length).toEqual(1);
   });
 
-  it('should display one relative timestamp when published < 10 hours ago', () => {
+  it('should render one relative timestamp when published < 10 hours ago', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
@@ -66,27 +66,27 @@ describe('Timestamp', () => {
     expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
   });
 
-  it('should display an absolute timestamp when updated > 24 hours ago', () => {
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={fifthJan} lastPublished={eighthMarch} />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated 8 March 2019');
-  });
-
-  it('should render relative time if published < 10 hrs ago', () => {
-    const publishedFourHoursAgo = timestampGenerator({ hours: 4 });
+  it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
+    const twentyThreeHoursAgo = timestampGenerator({ hours: 23 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp
-        firstPublished={publishedFourHoursAgo}
-        lastPublished={publishedFourHoursAgo}
+        firstPublished={twentyThreeHoursAgo}
+        lastPublished={twentyThreeHoursAgo}
       />,
     );
 
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toEqual('4 hours ago');
+    expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+  });
+
+  it('should render one absolute timestamp (without datetime) when published yesterday or before', () => {
+    const oneDayAgo = timestampGenerator({ days: 1 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp firstPublished={oneDayAgo} lastPublished={oneDayAgo} />,
+    );
+
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
   });
 
   it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
@@ -104,7 +104,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
   });
 
-  it('should render absolute time for lastPublished and for firstPublished if > 10 hrs ago', () => {
+  it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
     const firstPublishedTwelveHoursAgo = timestampGenerator({ hours: 12 });
     const lastPublishedElevenHoursAgo = timestampGenerator({ hours: 11 });
     const renderedWrapper = renderedTimestamps(
@@ -115,9 +115,30 @@ describe('Timestamp', () => {
     );
 
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
+    expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
     expect(renderedWrapper[1].children[0].data).toMatch(
       /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
+    );
+    expect(renderedWrapper[1].children[0].data).toContain('BST');
+  });
+
+  it('should render absolute time (without datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
+    const firstPublishedTwelveHoursAgo = timestampGenerator({
+      days: 1,
+      hours: 3,
+    });
+    const lastPublishedElevenHoursAgo = timestampGenerator({ days: 1 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={firstPublishedTwelveHoursAgo}
+        lastPublished={lastPublishedElevenHoursAgo}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(2);
+    expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
+    expect(renderedWrapper[1].children[0].data).toMatch(
+      /Updated [0-9]{1,2} \w+ [0-9]{4}/,
     );
     expect(renderedWrapper[1].children[0].data).toContain('BST');
   });
