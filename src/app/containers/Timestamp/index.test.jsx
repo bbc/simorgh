@@ -13,6 +13,7 @@ const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
 const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
 
 const shortAlphaNumericRegex = /[0-9]{1,2} \w+ [0-9]{4}/;
+// const datetimeRegex = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
@@ -121,7 +122,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
     expect(renderedWrapper[1].children[0].data).toMatch(
-      /Updated [0-9]{1,2} \w+ [0-9]{4}/,
+      /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
     );
   });
 });
