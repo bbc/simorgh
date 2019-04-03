@@ -114,7 +114,7 @@ describe('Timestamp', () => {
     beforeEach(() => {
       // sets time to 2017-05-31T13:00:00.000Z BST
       // or 2017-01-01T13:00:00.000Z GMT
-      // needs to be after 10am at least so the 10 hour logic can be tested
+      // needs to be after 10am at least so the > 10 hour logic can be tested
       const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
       clock = lolex.install({
         shouldAdvanceTime: true,
