@@ -33,7 +33,14 @@ describe('RequestContext', () => {
         articleData={articleData}
       >
         <RequestContextConsumer>
-          {({ platform: platformOutput, isUK, origin, env, href, referrer }) => (
+          {({
+            platform: platformOutput,
+            isUK,
+            origin,
+            env,
+            href,
+            referrer,
+          }) => (
             <Fragment>
               <span>{platformOutput}</span>
               <span>{isUK ? 'true' : 'false'}</span>
