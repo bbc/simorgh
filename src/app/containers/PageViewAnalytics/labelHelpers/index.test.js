@@ -262,14 +262,24 @@ describe('getLocServeCookie', () => {
   // eslint-disable-next-line global-require
   returnsNullWhenOffClient(require('./index').getLocServeCookie);
 
-  it('should return the cookie value', () => {
+  it('should return true if cookie is set', () => {
     const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = 'value';
 
     const locServeCookie = getLocServeCookie();
 
-    expect(locServeCookie).toEqual('value');
+    expect(locServeCookie).toEqual(true);
+  });
+
+  it('should return false if cookie is not set', () => {
+    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+
+    locServeCookieValue = null;
+
+    const locServeCookie = getLocServeCookie();
+
+    expect(locServeCookie).toEqual(false);
   });
 });
 
