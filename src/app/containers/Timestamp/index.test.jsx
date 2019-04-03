@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import lolex from 'lolex';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import timestampGenerator from './helpers/timestampGenerator';
+import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018
@@ -108,12 +108,17 @@ describe('Timestamp', () => {
   describe('time dependent tests', () => {
     // eslint-disable-next-line no-unused-vars
     let clock;
+    const inBritishSummerTime = isBritishSummerTime(Date.now());
+    const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
 
     beforeEach(() => {
       // sets time to 2017-05-31T13:00:00.000Z BST
+      // or 2017-01-01T13:00:00.000Z GMT
+      // needs to be after 10am at least so the 10 hour logic can be tested
+      const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
       clock = lolex.install({
         shouldAdvanceTime: true,
-        now: 1496235600000,
+        now: timestamp,
       });
     });
 
@@ -152,7 +157,7 @@ describe('Timestamp', () => {
       expect(renderedWrapper[1].children[0].data).toMatch(
         /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
       );
-      expect(renderedWrapper[1].children[0].data).toContain('BST');
+      expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
     });
   });
 });
