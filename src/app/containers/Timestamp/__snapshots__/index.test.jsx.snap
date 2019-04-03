@@ -16,6 +16,10 @@ exports[`Timestamp should render correctly 1`] = `
   padding-bottom: 1rem;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
 @media (min-width:20em) and (max-width:37.4375em) {
   .c1 {
     line-height: 1.125rem;
@@ -40,13 +44,7 @@ exports[`Timestamp should render correctly 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
@@ -99,6 +97,10 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   padding-bottom: 1rem;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
 @media (min-width:20em) and (max-width:37.4375em) {
   .c1 {
     line-height: 1.125rem;
@@ -123,13 +125,7 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
