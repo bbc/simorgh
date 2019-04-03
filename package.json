@@ -26,6 +26,7 @@
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:ci": "start-storybook -p 9001 -c .storybook --ci",
+    "storybook:export": "build-storybook -o storybook_dist",
     "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",

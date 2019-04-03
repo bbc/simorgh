@@ -6,3 +6,4 @@ coverage
 reports/*
 !reports/.keep
 log
+storybook_dist
