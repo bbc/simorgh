@@ -22,6 +22,6 @@ describe('getArticleId', () => {
 
     const optimoUrn = getArticleId(badData);
 
-    expect(optimoUrn).toEqual('unknown');
+    expect(optimoUrn).toEqual(null);
   });
 });

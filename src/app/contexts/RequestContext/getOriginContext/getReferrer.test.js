@@ -1,15 +1,13 @@
 import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../../helpers/tests/setWindowValue';
+  setLocationValue,
+  resetLocationValue,
+} from '../../../helpers/tests/setLocationValue';
 
 import getReferrer from './getReferrer';
 
 const setOnClient = onClient => {
   if (onClient) {
-    setWindowValue('location', {
-      origin: null,
-    });
+    setLocationValue('origin', null);
   }
 };
 
@@ -39,8 +37,8 @@ const windowLocation = window.location;
 
 describe('getReferrer', () => {
   afterEach(() => {
-    resetWindowValue('document', windowDocument);
-    resetWindowValue('location', windowLocation);
+    resetLocationValue(windowDocument);
+    resetLocationValue(windowLocation);
   });
 
   tests.forEach(({ input, onClient, expected, assertion }) => {

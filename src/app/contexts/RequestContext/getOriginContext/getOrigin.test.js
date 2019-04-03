@@ -1,7 +1,7 @@
 import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../../helpers/tests/setWindowValue';
+  setLocationValue,
+  resetLocationValue,
+} from '../../../helpers/tests/setLocationValue';
 
 import getOrigin from './getOrigin';
 
@@ -30,12 +30,12 @@ const windowLocation = window.location;
 
 describe('getOrigin', () => {
   afterEach(() => {
-    resetWindowValue('location', windowLocation);
+    resetLocationValue(windowLocation);
   });
 
   tests.forEach(({ bbcOrigin, windowOrigin, expected, assertion }) => {
     it(assertion, () => {
-      setWindowValue('location', {
+      setLocationValue({
         origin: windowOrigin,
       });
 

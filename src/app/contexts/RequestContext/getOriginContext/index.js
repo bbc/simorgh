@@ -11,7 +11,7 @@ const getOriginContext = (bbcOrigin, service, articleData) => {
   const href = getHref(origin, service, articleId);
   const referrer = getReferrer();
 
-  const isUK = origin.includes('.com');
+  const isUK = !origin.includes('.com');
 
   return {
     origin,

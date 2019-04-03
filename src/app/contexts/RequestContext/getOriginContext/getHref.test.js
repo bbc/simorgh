@@ -1,7 +1,7 @@
 import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../../helpers/tests/setWindowValue';
+  setLocationValue,
+  resetLocationValue,
+} from '../../../helpers/tests/setLocationValue';
 
 import getHref from './getHref';
 
@@ -21,8 +21,22 @@ const tests = [
   {
     input: functionInput,
     windowHref: null,
-    expected: 'https://foobar.com/news/1234',
+    expected: 'https://foobar.com/news/articles/1234',
     assertion: 'should constuct href if not availible',
+  },
+  {
+    input: {},
+    windowHref: null,
+    expected: null,
+    assertion:
+      'should return null if href not availible and all inputs are null',
+  },
+  {
+    input: { origin: 'https://foobar.com' },
+    windowHref: null,
+    expected: null,
+    assertion:
+      'should return null if href not availible and some inputs are null',
   },
 ];
 
@@ -30,12 +44,12 @@ const windowLocation = window.location;
 
 describe('getOrigin', () => {
   afterEach(() => {
-    resetWindowValue('location', windowLocation);
+    resetLocationValue(windowLocation);
   });
 
   tests.forEach(({ input, windowHref, expected, assertion }) => {
     it(assertion, () => {
-      setWindowValue('location', {
+      setLocationValue({
         href: windowHref,
       });
 

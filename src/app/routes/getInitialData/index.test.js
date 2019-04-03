@@ -1,9 +1,9 @@
 import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
 import baseUrl from './getBaseUrl';
 import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../helpers/tests/setWindowValue';
+  setLocationValue,
+  resetLocationValue,
+} from '../../helpers/tests/setLocationValue';
 
 const getBaseUrlMockOrigin = 'https://www.mockSite.com';
 jest.mock('./getBaseUrl', () => jest.fn());
@@ -53,7 +53,7 @@ describe('getInitialData', () => {
   const windowLocation = window.location;
 
   afterEach(() => {
-    resetWindowValue('location', windowLocation);
+    resetLocationValue(windowLocation);
     fetch.resetMocks();
   });
 
@@ -94,7 +94,7 @@ describe('getInitialData', () => {
     });
 
     it('should call fetch with an absolute URL using BASE_PATH environment variable when window location origin is undefined', () => {
-      setWindowValue('location', {
+      setLocationValue({
         origin: undefined,
       });
       callGetInitialData();
@@ -104,7 +104,7 @@ describe('getInitialData', () => {
     });
 
     it('should call fetch with an absolute URL using getBaseUrl() value when window location origin is available', () => {
-      setWindowValue('location', {
+      setLocationValue({
         origin: 'https://website.com',
       });
       callGetInitialData();
