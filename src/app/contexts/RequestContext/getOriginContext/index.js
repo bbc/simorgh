@@ -1,15 +1,9 @@
 import getOrigin from './getOrigin';
 import getEnv from './getEnv';
-import getHref from './getHref';
-import getReferrer from './getReferrer';
-import getArticleId from './getArticleId';
 
-const getOriginContext = (bbcOrigin, service, articleData) => {
+const getOriginContext = (bbcOrigin) => {
   const origin = getOrigin(bbcOrigin);
   const env = getEnv(origin);
-  const articleId = getArticleId(articleData);
-  const href = getHref(origin, service, articleId);
-  const referrer = getReferrer();
 
   const isUK = !origin.includes('.com');
 
@@ -17,8 +11,6 @@ const getOriginContext = (bbcOrigin, service, articleData) => {
     origin,
     isUK,
     env,
-    href,
-    referrer,
   };
 };
 

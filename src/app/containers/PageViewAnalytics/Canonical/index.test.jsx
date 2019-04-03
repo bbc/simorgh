@@ -61,15 +61,7 @@ describe('Canonical Consent Banner Container', () => {
     });
 
     expect(container.innerHTML).toBe('');
-    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({
-      articleData: { promo: { id: '1111111' } },
-      env: 'live',
-      href: 'http://localhost/',
-      isUK: true,
-      platform: 'canonical',
-      referrer: null,
-      service: 'news',
-    });
+    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "1111111"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
 
     expect(sendBeacon).toHaveBeenCalledWith('beaconFor1111111');
 
@@ -77,14 +69,6 @@ describe('Canonical Consent Banner Container', () => {
       articleData.promo.id = '2222222';
     });
 
-    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({
-      articleData: { promo: { id: '2222222' } },
-      env: 'live',
-      href: 'http://localhost/',
-      isUK: true,
-      platform: 'canonical',
-      referrer: null,
-      service: 'news',
-    });
+    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "2222222"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
   });
 });

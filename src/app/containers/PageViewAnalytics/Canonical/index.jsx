@@ -9,7 +9,7 @@ import onClient from '../../../helpers/onClient';
 import sendBeacon from './sendBeacon';
 
 const CanonicalPageViewAnalytics = ({ articleData }) => {
-  const { platform, isUK, env, href, referrer } = useContext(RequestContext);
+  const { platform, isUK, env } = useContext(RequestContext);
 
   if (onClient()) {
     const { service } = useContext(ServiceContext);
@@ -23,8 +23,6 @@ const CanonicalPageViewAnalytics = ({ articleData }) => {
         platform,
         isUK,
         env,
-        href,
-        referrer,
       });
 
       sendBeacon(pageViewBeaconUrl);

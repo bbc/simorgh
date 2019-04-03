@@ -62,8 +62,24 @@ export const getCurrentTime = () => {
 };
 
 export const getDeviceLanguage = () => {
-  if (onClient()) {
+  if (onClient() && navigator.language) {
     return navigator.language;
+  }
+
+  return null;
+};
+
+export const getHref = () => {
+  if (onClient() && window.location.href) {
+    return window.location.href;
+  }
+
+  return null;
+};
+
+export const getReferrer = () => {
+  if (onClient() && document.referrer) {
+    return document.referrer;
   }
 
   return null;

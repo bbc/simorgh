@@ -17,6 +17,8 @@ const {
   getCurrentTime,
   getDeviceLanguage,
   getAppType,
+  getHref,
+  getReferrer,
 } = require('./index');
 
 let locServeCookieValue;
@@ -268,5 +270,61 @@ describe('getLocServeCookie', () => {
     const locServeCookie = getLocServeCookie();
 
     expect(locServeCookie).toEqual('value');
+  });
+});
+
+describe('getHref', () => {
+  const windowLocation = window.location;
+
+  afterEach(() => {
+    resetWindowValue('location', windowLocation);
+  });
+
+  returnsNullWhenOffClient(getHref);
+
+  it('should return location href', () => {
+    setWindowValue('location', {
+      href: 'https://href.com',
+    });
+
+    const href = getHref();
+
+    expect(href).toEqual('https://href.com');
+  });
+
+  it('should return null if href isnt set', () => {
+    setWindowValue('location', {
+      href: null,
+    });
+
+    const href = getHref();
+
+    expect(href).toEqual(null);
+  });
+});
+
+describe('getReferrer', () => {
+  returnsNullWhenOffClient(getHref);
+
+  it('should return document referrer', () => {
+    Object.defineProperty(window.document, 'referrer', {
+      configurable: true,
+      value: 'https://referrer.com',
+    });
+
+    const referrer = getReferrer();
+
+    expect(referrer).toEqual('https://referrer.com');
+  });
+
+  it('should return null if referrer isnt set', () => {
+    Object.defineProperty(window.document, 'referrer', {
+      configurable: true,
+      value: null,
+    });
+
+    const referrer = getReferrer();
+
+    expect(referrer).toEqual(null);
   });
 });

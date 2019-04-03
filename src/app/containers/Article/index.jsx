@@ -35,8 +35,6 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
           <RequestContextProvider
             platform={isAmp ? 'amp' : 'canonical'}
             bbcOrigin={bbcOrigin}
-            service={service}
-            articleData={articleData}
           >
             <Helmet>
               <link
