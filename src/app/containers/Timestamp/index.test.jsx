@@ -86,15 +86,15 @@ describe('Timestamp', () => {
   });
 
   it('should render absolute time (without datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
-    const firstPublishedTwelveHoursAgo = timestampGenerator({
+    const firstPublishedMoreThanADayAgo = timestampGenerator({
       days: 1,
       hours: 3,
     });
-    const lastPublishedElevenHoursAgo = timestampGenerator({ days: 1 });
+    const lastPublishedADayAgo = timestampGenerator({ days: 1 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp
-        firstPublished={firstPublishedTwelveHoursAgo}
-        lastPublished={lastPublishedElevenHoursAgo}
+        firstPublished={firstPublishedMoreThanADayAgo}
+        lastPublished={lastPublishedADayAgo}
       />,
     );
 
@@ -108,56 +108,114 @@ describe('Timestamp', () => {
   describe('time dependent tests', () => {
     // eslint-disable-next-line no-unused-vars
     let clock;
-    const inBritishSummerTime = isBritishSummerTime(Date.now());
-    const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
+    describe('tests after 10 am', () => {
+      const inBritishSummerTime = isBritishSummerTime(Date.now());
+      const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
 
-    beforeEach(() => {
-      // sets time to 2017-05-31T13:00:00.000Z BST
-      // or 2017-01-01T13:00:00.000Z GMT
-      // needs to be after 10am at least so the > 10 hour logic can be tested
-      const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
-      clock = lolex.install({
-        shouldAdvanceTime: true,
-        now: timestamp,
+      beforeEach(() => {
+        // sets time to 2017-05-31T13:00:00.000Z BST
+        // or 2017-01-01T13:00:00.000Z GMT
+        // needs to be after 10am at least so the > 10 hour logic can be tested
+        const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+        clock = lolex.install({
+          shouldAdvanceTime: true,
+          now: timestamp,
+        });
+      });
+
+      it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
+        const twentyThreeHoursAgo = timestampGenerator({
+          hours: 10,
+          seconds: 25,
+        });
+        const renderedWrapper = renderedTimestamps(
+          <Timestamp
+            firstPublished={twentyThreeHoursAgo}
+            lastPublished={twentyThreeHoursAgo}
+          />,
+        );
+
+        expect(renderedWrapper.length).toEqual(1);
+        expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+      });
+
+      it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
+        const firstPublishedTwelveHoursAgo = timestampGenerator({
+          hours: 12,
+        });
+        const lastPublishedElevenHoursAgo = timestampGenerator({
+          hours: 11,
+        });
+        const renderedWrapper = renderedTimestamps(
+          <Timestamp
+            firstPublished={firstPublishedTwelveHoursAgo}
+            lastPublished={lastPublishedElevenHoursAgo}
+          />,
+        );
+
+        expect(renderedWrapper.length).toEqual(2);
+        expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+        expect(renderedWrapper[1].children[0].data).toMatch(
+          /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
+        );
+        expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
       });
     });
 
-    it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
-      const twentyThreeHoursAgo = timestampGenerator({
-        hours: 10,
-        seconds: 25,
-      });
-      const renderedWrapper = renderedTimestamps(
-        <Timestamp
-          firstPublished={twentyThreeHoursAgo}
-          lastPublished={twentyThreeHoursAgo}
-        />,
-      );
+    describe('daylight savings time', () => {
+      // beforeEach(() => {
+      //   // sets time to 2017-05-31T13:00:00.000Z BST
+      //   // or 2017-01-01T13:00:00.000Z GMT
+      //   const timestamp = inBritishSummerTime
+      //     ? 1496235600000
+      //     : 1483275600000;
+      //   clock = lolex.install({
+      //     shouldAdvanceTime: true,
+      //     now: timestamp,
+      //   });
+      // });
 
-      expect(renderedWrapper.length).toEqual(1);
-      expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
-    });
+      const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
+        it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
+          clock = lolex.install({
+            shouldAdvanceTime: true,
+            now: dateTime,
+          });
 
-    it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
-      const firstPublishedTwelveHoursAgo = timestampGenerator({
-        hours: 12,
-      });
-      const lastPublishedElevenHoursAgo = timestampGenerator({
-        hours: 11,
-      });
-      const renderedWrapper = renderedTimestamps(
-        <Timestamp
-          firstPublished={firstPublishedTwelveHoursAgo}
-          lastPublished={lastPublishedElevenHoursAgo}
-        />,
-      );
+          const twentyThreeHoursAgo = timestampGenerator({
+            hours: 10,
+            seconds: 25,
+          });
+          const renderedWrapper = renderedTimestamps(
+            <Timestamp
+              firstPublished={twentyThreeHoursAgo}
+              lastPublished={twentyThreeHoursAgo}
+            />,
+          );
 
-      expect(renderedWrapper.length).toEqual(2);
-      expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
-      expect(renderedWrapper[1].children[0].data).toMatch(
-        /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
-      );
-      expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
+          expect(renderedWrapper.length).toEqual(1);
+          expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+
+          clock.uninstall();
+        });
+      };
+
+      const testValues = [
+        {
+          descriptor: 'BST',
+          dateTime: 1496235600000,
+          longName: 'British Summer Time',
+        },
+        {
+          descriptor: 'GMT',
+          dateTime: 1483275600000,
+          longName: 'Greenwich Mean Time',
+        },
+      ];
+
+      for (let i = 0; i < testValues.length; i += 1) {
+        daylightSavingsBehaviour(testValues[i]);
+      }
     });
   });
 });
