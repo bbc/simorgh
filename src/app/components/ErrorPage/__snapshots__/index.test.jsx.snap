@@ -2,7 +2,7 @@
 
 exports[`ErrorMain should correctly render for an error 1`] = `
 .c5 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -59,6 +59,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
 }
 
 .c1 {
+  grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
 
@@ -155,13 +156,7 @@ exports[`ErrorMain should correctly render for an error 1`] = `
   }
 }
 
-@media (max-width:25em) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:37.5em) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
