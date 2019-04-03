@@ -5,7 +5,11 @@ const getHref = (origin, service, optimoId) => {
     return window.location.href;
   }
 
-  return `${origin}/${service}/${optimoId}`;
+  if (origin && service && optimoId) {
+    return `${origin}/${service}/articles/${optimoId}`;
+  }
+
+  return null;
 };
 
 export default getHref;

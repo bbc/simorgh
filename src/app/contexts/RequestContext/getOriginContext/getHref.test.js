@@ -21,8 +21,22 @@ const tests = [
   {
     input: functionInput,
     windowHref: null,
-    expected: 'https://foobar.com/news/1234',
+    expected: 'https://foobar.com/news/articles/1234',
     assertion: 'should constuct href if not availible',
+  },
+  {
+    input: {},
+    windowHref: null,
+    expected: null,
+    assertion:
+      'should return null if href not availible and all inputs are null',
+  },
+  {
+    input: { origin: 'https://foobar.com' },
+    windowHref: null,
+    expected: null,
+    assertion:
+      'should return null if href not availible and some inputs are null',
   },
 ];
 
