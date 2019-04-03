@@ -72,8 +72,8 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should include the canonical URL', () => {
-    const defaultOrigin = 'https://www.bbc.co.uk';
-    checkCanonicalURL(`${defaultOrigin}/news/articles/${config.assets.news}`);
+    const { origin } = window.location;
+    checkCanonicalURL(`${origin}/news/articles/${config.assets.news}`);
   });
 
   it('should not have an AMP attribute on the main article', () => {
