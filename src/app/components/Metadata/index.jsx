@@ -2,8 +2,16 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, string, number } from 'prop-types';
 
+const renderAmpHtml = (ampLink, isAmp) => {
+  if (isAmp) {
+    return null;
+  }
+  return <link rel="amphtml" href={ampLink} />;
+};
+
 const Metadata = ({
   isAmp,
+  ampLink,
   articleAuthor,
   articleSection,
   brandName,
@@ -34,7 +42,7 @@ const Metadata = ({
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
-      <meta name="robots" content="noindex,nofollow" />
+      <meta name="robots" content="noodp,noydir" />
       <meta name="theme-color" content={themeColor} />
       <meta
         name="viewport"
@@ -44,6 +52,7 @@ const Metadata = ({
         {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
+      {renderAmpHtml(ampLink, isAmp)}
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastPublished} />
       <meta name="article:published_time" content={timeFirstPublished} />
@@ -78,6 +87,7 @@ const Metadata = ({
 
 Metadata.propTypes = {
   isAmp: bool.isRequired,
+  ampLink: string.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,

@@ -1,6 +1,6 @@
 import config from '../support/config';
 import { getElement } from '../support/bodyTestHelper';
-import { testResponseCode } from '../support/metaTestHelper';
+import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -69,6 +69,15 @@ describe('AMP Tests on a .amp page', () => {
     figure.within(() => {
       getElement('amp-img').should('be.visible');
     });
+  });
+
+  it('should include the canonical URL', () => {
+    const { origin } = window.location;
+    const canonicalOrigin = origin.includes('localhost')
+      ? 'https://www.bbc.co.uk'
+      : origin;
+
+    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
   });
 
   it('should not have an AMP attribute on the main article', () => {

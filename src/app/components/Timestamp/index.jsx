@@ -11,7 +11,7 @@ import {
 } from '@bbc/gel-foundations/typography';
 import { C_CLOUD_DARK } from '@bbc/psammead-styles/colours';
 
-const StyledTimestamp = styled.span`
+const StyledTimestamp = styled.time`
   ${GEL_BREVIER};
   color: ${C_CLOUD_DARK};
   display: block;
@@ -22,34 +22,13 @@ const StyledTimestamp = styled.span`
   }
 `;
 
-const Timestamp = ({ children, datetime, prefix, suffix }) => {
-  if (prefix || suffix) {
-    return (
-      <StyledTimestamp>
-        {prefix}
-        <time dateTime={datetime}>{children}</time>
-        {suffix}
-      </StyledTimestamp>
-    );
-  }
-
-  return (
-    <StyledTimestamp as="time" dateTime={datetime}>
-      {children}
-    </StyledTimestamp>
-  );
-};
+const Timestamp = ({ children, datetime }) => (
+  <StyledTimestamp dateTime={datetime}>{children}</StyledTimestamp>
+);
 
 Timestamp.propTypes = {
   children: node.isRequired,
   datetime: string.isRequired,
-  prefix: node,
-  suffix: node,
-};
-
-Timestamp.defaultProps = {
-  prefix: null,
-  suffix: null,
 };
 
 export default Timestamp;

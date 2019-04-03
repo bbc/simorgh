@@ -1,6 +1,7 @@
 import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
+  checkAmpHTML,
   checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
@@ -21,7 +22,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -81,7 +82,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `${config.baseUrl}/news/articles/${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
@@ -98,11 +99,15 @@ describe('Article Meta Tests', () => {
     metadataAssertion();
   });
 
-  it('should include the canonical URL', () => {
+  it('should include the canonical URL & ampHTML', () => {
+    const currentOrigin = window.location.origin;
     checkCanonicalURL(
-      `https://www.bbc.com/news/articles/${
+      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+    );
+    checkAmpHTML(
+      `${currentOrigin}/news/articles/${
         config.assets.newsThreeSubheadlines
-      }`,
+      }.amp`,
     );
   });
 

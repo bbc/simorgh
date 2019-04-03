@@ -19,7 +19,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -36,7 +36,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     BBC News
   </title>
   <link
-    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
   />
   <meta
@@ -99,7 +99,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/news/articles/c0000000001o.amp"
+    content="https://www.bbc.com/news/articles/c0000000001o"
     name="og:url"
   />
   <meta
@@ -156,7 +156,7 @@ exports[`Metadata News article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -175,6 +175,10 @@ exports[`Metadata News article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    rel="amphtml"
   />
   <meta
     content="BBC News"
@@ -294,144 +298,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
-    name="robots"
-  />
-  <meta
-    content="#B80000"
-    name="theme-color"
-  />
-  <meta
-    content="width=device-width, initial-scale=1, minimum-scale=1"
-    name="viewport"
-  />
-  <title>
-    پهپادی که برایتان قهوه می‌آورد
-     - 
-    BBC News فارسی
-  </title>
-  <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
-    rel="canonical"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
-  />
-  <meta
-    content="This is a description"
-    name="description"
-  />
-  <meta
-    content={101010}
-    name="fb:admins"
-  />
-  <meta
-    content={202020}
-    name="fb:app_id"
-  />
-  <meta
-    content="This is a description"
-    name="og:description"
-  />
-  <meta
-    content="https://www.bbc.com/persian/image.png"
-    name="og:image"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="og:image:alt"
-  />
-  <meta
-    content="fa"
-    name="og:locale"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="og:site_name"
-  />
-  <meta
-    content="پهپادی که برایتان قهوه می‌آورد"
-    name="og:title"
-  />
-  <meta
-    name="og:type"
-  />
-  <meta
-    content="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
-    name="og:url"
-  />
-  <meta
-    content="summary_large_image"
-    name="twitter:card"
-  />
-  <meta
-    content="@bbcpersian"
-    name="twitter:creator"
-  />
-  <meta
-    content="This is a description"
-    name="twitter:description"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="twitter:image:alt"
-  />
-  <meta
-    content="https://www.bbc.com/persian/image.png"
-    name="twitter:image:src"
-  />
-  <meta
-    content="@bbcpersian"
-    name="twitter:site"
-  />
-  <meta
-    content="پهپادی که برایتان قهوه می‌آورد"
-    name="twitter:title"
-  />
-  <link
-    href="/favicon.ico"
-    rel="shortcut icon"
-    type="image/x-icon"
-  />
-</HelmetWrapper>
-`;
-
-exports[`Metadata Persian article should render correctly 1`] = `
-<HelmetWrapper
-  defer={true}
-  encodeSpecialCharacters={true}
-  htmlAttributes={
-    Object {
-      "lang": "fa",
-    }
-  }
->
-  <meta
-    content="IE=edge"
-    httpEquiv="X-UA-Compatible"
-  />
-  <meta
-    charSet="utf-8"
-  />
-  <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -550,6 +417,147 @@ exports[`Metadata Persian article should render correctly 1`] = `
 </HelmetWrapper>
 `;
 
+exports[`Metadata Persian article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "fa",
+    }
+  }
+>
+  <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noodp,noydir"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    پهپادی که برایتان قهوه می‌آورد
+     - 
+    BBC News فارسی
+  </title>
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
+    rel="amphtml"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:image:alt"
+  />
+  <meta
+    content="fa"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="og:site_name"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/persian/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@bbcpersian"
+    name="twitter:site"
+  />
+  <meta
+    content="پهپادی که برایتان قهوه می‌آورد"
+    name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+</HelmetWrapper>
+`;
+
 exports[`Metadata articleSection is not null should render correctly 1`] = `
 <HelmetWrapper
   defer={true}
@@ -568,7 +576,7 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     charSet="utf-8"
   />
   <meta
-    content="noindex,nofollow"
+    content="noodp,noydir"
     name="robots"
   />
   <meta
@@ -587,6 +595,10 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    rel="amphtml"
   />
   <meta
     content="BBC News"
