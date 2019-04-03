@@ -111,10 +111,9 @@ export const layoutGridItemLarge = css`
 export const layoutGridItemMedium = css`
   ${gelGridMargin}
 
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    grid-column: 1 / span 6;
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  grid-column: 1 / span 6;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
   }
