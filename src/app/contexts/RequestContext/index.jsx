@@ -3,7 +3,7 @@ import { node, string, func, shape } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import getOriginContext from './getOriginContext';
 
-const RequestContext = React.createContext('default');
+export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
