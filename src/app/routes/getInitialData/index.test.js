@@ -1,9 +1,9 @@
 import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
 import baseUrl from './getBaseUrl';
 import {
-  setLocationOrigin,
-  resetWindowLocation,
-} from '../../helpers/tests/setLocationOrigin';
+  setLocationValue,
+  resetLocationValue,
+} from '../../helpers/tests/setLocationValue';
 
 const getBaseUrlMockOrigin = 'https://www.mockSite.com';
 jest.mock('./getBaseUrl', () => jest.fn());
@@ -53,7 +53,7 @@ describe('getInitialData', () => {
   const windowLocation = window.location;
 
   afterEach(() => {
-    resetWindowLocation(windowLocation);
+    resetLocationValue(windowLocation);
     fetch.resetMocks();
   });
 
@@ -94,7 +94,9 @@ describe('getInitialData', () => {
     });
 
     it('should call fetch with an absolute URL using BASE_PATH environment variable when window location origin is undefined', () => {
-      setLocationOrigin(undefined);
+      setLocationValue({
+        origin: undefined,
+      });
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
         `${BASE_PATH}/${defaultServiceParam}/articles/${defaultIdParam}.json`,
@@ -102,7 +104,9 @@ describe('getInitialData', () => {
     });
 
     it('should call fetch with an absolute URL using getBaseUrl() value when window location origin is available', () => {
-      setLocationOrigin('https://website.com');
+      setLocationValue({
+        origin: 'https://website.com',
+      });
       callGetInitialData();
       expect(fetch.mock.calls[0][0]).toEqual(
         `${getBaseUrlMockOrigin}/${defaultServiceParam}/articles/${defaultIdParam}.json`,

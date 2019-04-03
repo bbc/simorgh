@@ -44,7 +44,7 @@ describe('getOriginContext', () => {
     expect(output).toEqual({
       env: 'getEnv',
       href: 'getHref',
-      isUK: false,
+      isUK: true,
       origin: 'getOriginValue',
       referrer: 'getReferrer',
     });
@@ -66,23 +66,23 @@ describe('getOriginContext', () => {
     expect(output).toEqual({
       env: 'getEnv',
       href: 'getHref',
-      isUK: false,
+      isUK: true,
       origin: 'getOriginValue',
       referrer: 'getReferrer',
     });
   });
 
   describe('isUK', () => {
-    it('should return true if origin value includes .com', () => {
-      getOriginValue = 'https://www.bbc.com';
+    it('should return false if origin value does not include .com', () => {
+      getOriginValue = 'https://www.bbc.org';
 
       const output = getOriginContext('bbcOrigin', 'service', 'articleData');
 
       expect(output.isUK).toEqual(true);
     });
 
-    it('should return false if origin value does not include .com', () => {
-      getOriginValue = 'https://www.bbc.org';
+    it('should return true if origin value includes .com', () => {
+      getOriginValue = 'https://www.bbc.com';
 
       const output = getOriginContext('bbcOrigin', 'service', 'articleData');
 

@@ -1,7 +1,7 @@
 import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../../helpers/tests/setWindowValue';
+  setLocationValue,
+  resetLocationValue,
+} from '../../../helpers/tests/setLocationValue';
 
 import getHref from './getHref';
 
@@ -30,12 +30,12 @@ const windowLocation = window.location;
 
 describe('getOrigin', () => {
   afterEach(() => {
-    resetWindowValue('location', windowLocation);
+    resetLocationValue(windowLocation);
   });
 
   tests.forEach(({ input, windowHref, expected, assertion }) => {
     it(assertion, () => {
-      setWindowValue('location', {
+      setLocationValue({
         href: windowHref,
       });
 
