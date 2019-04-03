@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import moment from 'moment-timezone';
+import lolex from 'lolex';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import timestampGenerator from './helpers/timestampGenerator';
 import Timestamp from '.';
@@ -15,12 +15,6 @@ const shortAlphaNumericRegex = /[0-9]{1,2} \w+ [0-9]{4}/;
 const datetimeRegex = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
-
-// eslint-disable-next-line no-unused-vars
-const makeDatetimeString = timestamp =>
-  moment(timestamp)
-    .tz('Europe/London')
-    .format('D MMMM YYYY, HH:mm z');
 
 describe('Timestamp', () => {
   describe('with no data', () => {
@@ -66,19 +60,6 @@ describe('Timestamp', () => {
     expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
   });
 
-  it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
-    const twentyThreeHoursAgo = timestampGenerator({ hours: 10, seconds: 25 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp
-        firstPublished={twentyThreeHoursAgo}
-        lastPublished={twentyThreeHoursAgo}
-      />,
-    );
-
-    expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
-  });
-
   it('should render one absolute timestamp (without datetime) when published yesterday or before', () => {
     const oneDayAgo = timestampGenerator({ days: 1 });
     const renderedWrapper = renderedTimestamps(
@@ -104,24 +85,6 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
   });
 
-  it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
-    const firstPublishedTwelveHoursAgo = timestampGenerator({ hours: 12 });
-    const lastPublishedElevenHoursAgo = timestampGenerator({ hours: 11 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp
-        firstPublished={firstPublishedTwelveHoursAgo}
-        lastPublished={lastPublishedElevenHoursAgo}
-      />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
-    expect(renderedWrapper[1].children[0].data).toMatch(
-      /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
-    );
-    expect(renderedWrapper[1].children[0].data).toContain('BST');
-  });
-
   it('should render absolute time (without datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
     const firstPublishedTwelveHoursAgo = timestampGenerator({
       days: 1,
@@ -140,5 +103,56 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toMatch(
       /Updated [0-9]{1,2} \w+ [0-9]{4}/,
     );
+  });
+
+  describe('time dependent tests', () => {
+    // eslint-disable-next-line no-unused-vars
+    let clock;
+
+    beforeEach(() => {
+      // sets time to 2017-05-31T13:00:00.000Z BST
+      clock = lolex.install({
+        shouldAdvanceTime: true,
+        now: 1496235600000,
+      });
+    });
+
+    it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
+      const twentyThreeHoursAgo = timestampGenerator({
+        hours: 10,
+        seconds: 25,
+      });
+      const renderedWrapper = renderedTimestamps(
+        <Timestamp
+          firstPublished={twentyThreeHoursAgo}
+          lastPublished={twentyThreeHoursAgo}
+        />,
+      );
+
+      expect(renderedWrapper.length).toEqual(1);
+      expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+    });
+
+    it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
+      const firstPublishedTwelveHoursAgo = timestampGenerator({
+        hours: 12,
+      });
+      const lastPublishedElevenHoursAgo = timestampGenerator({
+        hours: 11,
+      });
+      const renderedWrapper = renderedTimestamps(
+        <Timestamp
+          firstPublished={firstPublishedTwelveHoursAgo}
+          lastPublished={lastPublishedElevenHoursAgo}
+        />,
+      );
+
+      expect(renderedWrapper.length).toEqual(2);
+      expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+      expect(renderedWrapper[1].children[0].data).toMatch(
+        /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
+      );
+      expect(renderedWrapper[1].children[0].data).toContain('BST');
+    });
   });
 });
