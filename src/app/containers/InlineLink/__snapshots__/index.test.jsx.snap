@@ -2,7 +2,7 @@
 
 exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
 .c0 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -49,7 +49,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
 .c0 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -96,7 +96,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 exports[`InlineLinkContainer internal link not matching SPA route should render correctly 1`] = `
 .c0 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -129,7 +129,7 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 
 exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
 .c0 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -161,7 +161,7 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 
 exports[`InlineLinkContainer link matching routes for SPA should render correctly for TEST environment 1`] = `
 .c0 {
-  color: #3F3F42;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
