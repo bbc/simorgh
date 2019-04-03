@@ -7,7 +7,5 @@ storiesOf('Timestamp', module)
     <Timestamp datetime="1530947227000">7 July 2018</Timestamp>
   ))
   .add('with "updated" prefix', () => (
-    <Timestamp datetime="1530947227000" prefix="Updated ">
-      7 July 2018
-    </Timestamp>
+    <Timestamp datetime="1530947227000">Updated 7 July 2018</Timestamp>
   ));
