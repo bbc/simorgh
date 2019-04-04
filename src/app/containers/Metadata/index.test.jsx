@@ -28,36 +28,32 @@ const metadataProps = (
   metaTags,
   title,
   serviceConfig,
-) => {
-  const appleTouchIcon = `http://foo.com/${
+) => ({
+  isAmp,
+  ampLink,
+  appleTouchIcon: `https://foo.com/${
     serviceConfig.service
-  }/images/icons/icon-192x192.png`;
-
-  return {
-    isAmp,
-    ampLink,
-    appleTouchIcon,
-    articleAuthor: serviceConfig.articleAuthor,
-    articleSection: null,
-    brandName: serviceConfig.brandName,
-    canonicalLink,
-    defaultImage: serviceConfig.defaultImage,
-    defaultImageAltText: serviceConfig.defaultImageAltText,
-    description,
-    facebookAdmin: 100004154058350,
-    facebookAppID: 1609039196070050,
-    lang,
-    locale: serviceConfig.locale,
-    metaTags,
-    themeColor: serviceConfig.themeColor,
-    timeFirstPublished: '2018-01-01T12:01:00.000Z',
-    timeLastPublished: '2018-01-01T13:00:00.000Z',
-    title,
-    twitterCreator: serviceConfig.twitterCreator,
-    twitterSite: serviceConfig.twitterSite,
-    type: 'article',
-  };
-};
+  }/images/icons/icon-192x192.png`,
+  articleAuthor: serviceConfig.articleAuthor,
+  articleSection: null,
+  brandName: serviceConfig.brandName,
+  canonicalLink,
+  defaultImage: serviceConfig.defaultImage,
+  defaultImageAltText: serviceConfig.defaultImageAltText,
+  description,
+  facebookAdmin: 100004154058350,
+  facebookAppID: 1609039196070050,
+  lang,
+  locale: serviceConfig.locale,
+  metaTags,
+  themeColor: serviceConfig.themeColor,
+  timeFirstPublished: '2018-01-01T12:01:00.000Z',
+  timeLastPublished: '2018-01-01T13:00:00.000Z',
+  title,
+  twitterCreator: serviceConfig.twitterCreator,
+  twitterSite: serviceConfig.twitterSite,
+  type: 'article',
+});
 
 const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
   firstPublished: '2018-01-01T12:01:00.000Z',
@@ -74,7 +70,7 @@ const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = 'http://foo.com';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = 'https://foo.com';
 
 describe('Metadata Container', () => {
   describe('LinkedData and Metadata components called with correct props', () => {
