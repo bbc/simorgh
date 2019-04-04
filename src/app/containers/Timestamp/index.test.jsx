@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'enzyme';
-import lolex from 'lolex';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
@@ -60,16 +59,6 @@ describe('Timestamp', () => {
     expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
   });
 
-  it('should render one absolute timestamp (without datetime) when published yesterday or before', () => {
-    const oneDayAgo = timestampGenerator({ days: 1 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={oneDayAgo} lastPublished={oneDayAgo} />,
-    );
-
-    expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toMatch(dateOnlyRegex);
-  });
-
   it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
     const firstPublishedEightHoursAgo = timestampGenerator({ hours: 8 });
     const lastPublishedFourHoursAgo = timestampGenerator({ hours: 4 });
@@ -106,8 +95,6 @@ describe('Timestamp', () => {
   });
 
   describe('time dependent tests', () => {
-    // eslint-disable-next-line no-unused-vars
-    let clock;
     describe('tests after 10 am', () => {
       const inBritishSummerTime = isBritishSummerTime(Date.now());
       const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
@@ -117,10 +104,7 @@ describe('Timestamp', () => {
         // or 2017-01-01T13:00:00.000Z GMT
         // needs to be after 10am at least so the > 10 hour logic can be tested
         const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
-        clock = lolex.install({
-          shouldAdvanceTime: true,
-          now: timestamp,
-        });
+        Date.now = jest.fn(() => timestamp);
       });
 
       it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
@@ -163,25 +147,9 @@ describe('Timestamp', () => {
     });
 
     describe('daylight savings time', () => {
-      // beforeEach(() => {
-      //   // sets time to 2017-05-31T13:00:00.000Z BST
-      //   // or 2017-01-01T13:00:00.000Z GMT
-      //   const timestamp = inBritishSummerTime
-      //     ? 1496235600000
-      //     : 1483275600000;
-      //   clock = lolex.install({
-      //     shouldAdvanceTime: true,
-      //     now: timestamp,
-      //   });
-      // });
-
       const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
         it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
-          clock = lolex.install({
-            shouldAdvanceTime: true,
-            now: dateTime,
-          });
-
+          Date.now = jest.fn(() => dateTime);
           const twentyThreeHoursAgo = timestampGenerator({
             hours: 10,
             seconds: 25,
@@ -195,8 +163,6 @@ describe('Timestamp', () => {
 
           expect(renderedWrapper.length).toEqual(1);
           expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
-
-          clock.uninstall();
         });
       };
 
