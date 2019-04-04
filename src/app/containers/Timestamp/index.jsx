@@ -5,8 +5,8 @@ import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
   longNumeric,
-  shortAlphaNumeric,
-  alphaNumericDatetime,
+  dateOnly,
+  dateAndTime,
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
@@ -18,8 +18,7 @@ const isToday = timestamp => {
   return today.isSame(timestamp, 'day');
 };
 
-const formatType = timestamp =>
-  isToday(timestamp) ? alphaNumericDatetime : shortAlphaNumeric;
+const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
 
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
   shouldMakeRelative

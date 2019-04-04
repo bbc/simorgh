@@ -27,7 +27,7 @@ export const isTenHoursAgoOrLess = milliseconds => {
 export const longNumeric = 'YYYY-MM-DD';
 
 // 22 March 2019
-export const shortAlphaNumeric = 'D MMMM YYYY';
+export const dateOnly = 'D MMMM YYYY';
 
 // 22 March 2019, 17:05 BST
-export const alphaNumericDatetime = 'D MMMM YYYY, HH:mm z';
+export const dateAndTime = 'D MMMM YYYY, HH:mm z';
