@@ -40,7 +40,7 @@ const returnsNullWhenOffClient = func => {
 };
 
 describe('getDestination', () => {
-  const stuff = [
+  const getDestinationTestScenarios = [
     {
       isUK: true,
       env: 'live',
@@ -97,7 +97,7 @@ describe('getDestination', () => {
     },
   ];
 
-  stuff.forEach(({ isUK, env, expected, summary }) => {
+  getDestinationTestScenarios.forEach(({ isUK, env, expected, summary }) => {
     it(summary, () => {
       const destination = getDestination(isUK, env);
       expect(destination).toEqual(expected);
@@ -106,7 +106,7 @@ describe('getDestination', () => {
 });
 
 describe('getAppType', () => {
-  const stuff = [
+  const getAppTypeScenarios = [
     {
       platform: 'amp',
       expected: 'amp',
@@ -129,7 +129,7 @@ describe('getAppType', () => {
     },
   ];
 
-  stuff.forEach(({ platform, expected, summary }) => {
+  getAppTypeScenarios.forEach(({ platform, expected, summary }) => {
     it(summary, () => {
       const appType = getAppType(platform);
       expect(appType).toEqual(expected);
