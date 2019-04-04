@@ -85,7 +85,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
   });
 
-  it('should render absolute time (without datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
+  it('should render two dates (without time) when published and updated before today', () => {
     const firstPublishedMoreThanADayAgo = timestampGenerator({
       days: 1,
       hours: 3,
