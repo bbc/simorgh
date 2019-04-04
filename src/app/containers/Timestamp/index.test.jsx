@@ -42,7 +42,7 @@ describe('Timestamp', () => {
     />,
   );
 
-  it('should render only one timestamp when published === updated', () => {
+  it('should render one date when published before today and never updated', () => {
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={fifthJan} lastPublished={fifthJan} />,
     );
