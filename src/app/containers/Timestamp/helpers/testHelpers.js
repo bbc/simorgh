@@ -18,4 +18,5 @@ export const timestampGenerator = timeDifference => {
   return timestamp;
 };
 
-export const isBritishSummerTime = timestamp => moment(timestamp).isDST();
+export const isBritishSummerTime = timestamp =>
+  moment.tz(timestamp, 'Europe/London').isDST();
