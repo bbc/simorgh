@@ -50,7 +50,7 @@ describe('Timestamp', () => {
     expect(renderedWrapper.length).toEqual(1);
   });
 
-  it('should render one relative timestamp when published < 10 hours ago', () => {
+  it('should render one relative timestamp when published < 10 hours ago and never updated', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
