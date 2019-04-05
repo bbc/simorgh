@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'enzyme';
-import moment from 'moment-timezone';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
