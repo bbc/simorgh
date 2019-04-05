@@ -20,6 +20,16 @@ const isToday = timestamp => {
 
 const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
 
+const isSecondTimeStampRequired = (firstPublished, lastPublished) => {
+  if (lastPublished !== firstPublished) {
+    return !(
+      moment(lastPublished).isBefore(Date.now, 'day') &&
+      moment(lastPublished).isSame(firstPublished, 'day')
+    );
+  }
+  return false;
+};
+
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
   shouldMakeRelative
     ? relativeTime(timestamp)
@@ -49,7 +59,7 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
       <Timestamp datetime={formatUnixTimestamp(firstPublished, longNumeric)}>
         {firstPublishedString}
       </Timestamp>
-      {lastPublished !== firstPublished ? (
+      {isSecondTimeStampRequired(firstPublished, lastPublished) ? (
         <Timestamp datetime={formatUnixTimestamp(lastPublished, longNumeric)}>
           {lastPublishedString}
         </Timestamp>
