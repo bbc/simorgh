@@ -44,6 +44,7 @@ const MetadataContainer = ({ metadata, promo }) => {
             noBylinesPolicy,
           }) => {
             const canonicalLink = `${origin}/${service}/articles/${id}`;
+            const canonicalLinkGb = `https://www.bbc.co.uk/${service}/articles/${id}`;
             const ampLink = `${origin}/${service}/articles/${id}.amp`;
 
             return (
@@ -66,6 +67,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   articleSection={metadata.passport.genre}
                   brandName={brandName}
                   canonicalLink={canonicalLink}
+                  canonicalLinkGb={canonicalLinkGb}
                   defaultImage={defaultImage}
                   defaultImageAltText={defaultImageAltText}
                   description={promo.summary || promo.headlines.seoHeadline}
