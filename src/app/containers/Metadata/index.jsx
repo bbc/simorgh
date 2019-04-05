@@ -46,6 +46,8 @@ const MetadataContainer = ({ metadata, promo }) => {
             const canonicalLink = `${origin}/${service}/articles/${id}`;
             const ampLink = `${origin}/${service}/articles/${id}.amp`;
             const appleTouchIcon = `${
+              process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+            }${
               process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
             }/${service}/images/icons/icon-192x192.png`;
 
