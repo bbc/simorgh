@@ -163,6 +163,7 @@ describe('Timestamp', () => {
 
           expect(renderedWrapper.length).toEqual(1);
           expect(renderedWrapper[0].children[0].data).toMatch(datetimeRegex);
+          expect(renderedWrapper[0].children[0].data).toContain(descriptor);
         });
       };
 
