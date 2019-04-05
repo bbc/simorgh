@@ -23,7 +23,7 @@ const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
 const isSecondTimeStampRequired = (firstPublished, lastPublished) => {
   if (lastPublished !== firstPublished) {
     return !(
-      moment(lastPublished).isBefore(Date.now, 'day') &&
+      !isToday(lastPublished) &&
       moment(lastPublished).isSame(firstPublished, 'day')
     );
   }
