@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
+import moment from 'moment-timezone';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
@@ -57,6 +58,25 @@ describe('Timestamp', () => {
 
     expect(renderedWrapper.length).toEqual(1);
     expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
+  });
+
+  it('should render one date (without time) when published and updated before today', () => {
+    const firstPublishedMoreThanADayAgo = timestampGenerator({
+      days: 1,
+      hours: 3,
+    });
+
+    const lastPublishedADayAgo = timestampGenerator({ days: 1 });
+
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={firstPublishedMoreThanADayAgo}
+        lastPublished={lastPublishedADayAgo}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toMatch(dateOnlyRegex);
   });
 
   describe('time at test dependent tests', () => {
@@ -124,23 +144,6 @@ describe('Timestamp', () => {
       expect(renderedWrapper[1].children[0].data).toEqual(
         'Updated 4 hours ago',
       );
-    });
-
-    it('should render one date (without time) when published and updated before today', () => {
-      const firstPublishedMoreThanADayAgo = timestampGenerator({
-        days: 1,
-        hours: 3,
-      });
-      const lastPublishedADayAgo = timestampGenerator({ days: 1 });
-      const renderedWrapper = renderedTimestamps(
-        <Timestamp
-          firstPublished={firstPublishedMoreThanADayAgo}
-          lastPublished={lastPublishedADayAgo}
-        />,
-      );
-
-      expect(renderedWrapper.length).toEqual(1);
-      expect(renderedWrapper[0].children[0].data).toMatch(dateOnlyRegex);
     });
   });
 
