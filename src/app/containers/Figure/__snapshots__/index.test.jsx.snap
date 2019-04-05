@@ -86,10 +86,10 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -99,9 +99,15 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -173,10 +179,10 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 .c2 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -186,9 +192,15 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c2 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c2 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -373,10 +385,10 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -386,9 +398,15 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c4 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c4 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -464,10 +482,10 @@ exports[`Figure should render an image with caption text 1`] = `
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -477,9 +495,15 @@ exports[`Figure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -549,10 +573,10 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -562,9 +586,15 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c3 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -691,10 +721,10 @@ exports[`Figure should render can AMP image with aption text 1`] = `
 .c2 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  background-color: #D5D0CD;
-  color: #404040;
+  color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -704,9 +734,15 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:25em) and (max-width:62.9375em) {
   .c2 {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c2 {
+    padding: 0.5rem 0;
   }
 }
 
