@@ -139,9 +139,9 @@ server
       res.status(500).send(message);
     }
   })
-  .get(`/:service(${serviceRegex})\/articles`, (req, res) => {
+  .get(`/:service(${serviceRegex})/articles`, (req, res) => {
     const { service } = req.params;
-    res.redirect(`/${service}`)
+    res.redirect(`/${service}`);
   });
 
 export default server;
