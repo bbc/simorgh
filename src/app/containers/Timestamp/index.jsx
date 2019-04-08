@@ -18,15 +18,19 @@ const isSameDay = (originalDay, comparedDay) =>
 
 const isToday = timestamp => isSameDay(Date.now(), timestamp);
 
+const timestampsWouldBeSame = (lastPublished, firstPublished) =>
+  !isToday(lastPublished) && isSameDay(lastPublished, firstPublished);
+
 const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
 
 const isSecondTimeStampRequired = (firstPublished, lastPublished) => {
-  if (lastPublished !== firstPublished) {
-    return !(
-      !isToday(lastPublished) && isSameDay(lastPublished, firstPublished)
-    );
+  if (
+    lastPublished === firstPublished ||
+    timestampsWouldBeSame(lastPublished, firstPublished)
+  ) {
+    return false;
   }
-  return false;
+  return true;
 };
 
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
