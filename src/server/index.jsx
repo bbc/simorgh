@@ -13,6 +13,7 @@ import routes, {
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
+import serviceRegex from '../app/routes/serviceRegex';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 
@@ -137,6 +138,10 @@ server
       logger.error(`status: ${status || 500} - ${message}`);
       res.status(500).send(message);
     }
+  })
+  .get(`/:service(${serviceRegex})\/articles`, (req, res) => {
+    const { service } = req.params;
+    res.redirect(`/${service}`)
   });
 
 export default server;
