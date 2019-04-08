@@ -13,18 +13,17 @@ import {
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const isToday = timestamp => {
-  const today = moment(Date.now());
-  return today.isSame(timestamp, 'day');
-};
+const isSameDay = (originalDay, comparedDay) =>
+  moment(originalDay).isSame(comparedDay, 'day');
+
+const isToday = timestamp => isSameDay(Date.now(), timestamp);
 
 const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
 
 const isSecondTimeStampRequired = (firstPublished, lastPublished) => {
   if (lastPublished !== firstPublished) {
     return !(
-      !isToday(lastPublished) &&
-      moment(lastPublished).isSame(firstPublished, 'day')
+      !isToday(lastPublished) && isSameDay(lastPublished, firstPublished)
     );
   }
   return false;
