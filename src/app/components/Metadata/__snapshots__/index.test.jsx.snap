@@ -41,12 +41,12 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="en"
+    hrefLang="x-default"
     rel="alternate"
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="x-default"
+    hrefLang="en"
     rel="alternate"
   />
   <link
@@ -193,12 +193,12 @@ exports[`Metadata News article should render correctly 1`] = `
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="en"
+    hrefLang="x-default"
     rel="alternate"
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="x-default"
+    hrefLang="en"
     rel="alternate"
   />
   <link
@@ -348,21 +348,6 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
   />
-  <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
-    hrefLang="en"
-    rel="alternate"
-  />
-  <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
-    hrefLang="x-default"
-    rel="alternate"
-  />
-  <link
-    href="https://www.bbc.co.uk/persian/articles/cyddjz5058wo"
-    hrefLang="en-gb"
-    rel="alternate"
-  />
   <meta
     content="BBC News فارسی"
     name="article:author"
@@ -499,21 +484,6 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
-  />
-  <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
-    hrefLang="en"
-    rel="alternate"
-  />
-  <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
-    hrefLang="x-default"
-    rel="alternate"
-  />
-  <link
-    href="https://www.bbc.co.uk/persian/articles/cyddjz5058wo"
-    hrefLang="en-gb"
-    rel="alternate"
   />
   <link
     href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
@@ -658,12 +628,12 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="en"
+    hrefLang="x-default"
     rel="alternate"
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
-    hrefLang="x-default"
+    hrefLang="en"
     rel="alternate"
   />
   <link

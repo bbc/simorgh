@@ -31,12 +31,25 @@ const metadataProps = (
   serviceConfig,
 ) => ({
   isAmp,
+  alternateLinks: [
+    {
+      href: canonicalLink,
+      hrefLang: 'x-default',
+    },
+    {
+      href: canonicalLink,
+      hrefLang: 'en',
+    },
+    {
+      href: canonicalLinkGb,
+      hrefLang: 'en-gb',
+    },
+  ],
   ampLink,
   articleAuthor: serviceConfig.articleAuthor,
   articleSection: null,
   brandName: serviceConfig.brandName,
   canonicalLink,
-  canonicalLinkGb,
   defaultImage: serviceConfig.defaultImage,
   defaultImageAltText: serviceConfig.defaultImageAltText,
   description,

@@ -62,12 +62,25 @@ const MetadataContainer = ({ metadata, promo }) => {
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
+                  alternateLinks={[
+                    {
+                      href: canonicalLink,
+                      hrefLang: 'x-default',
+                    },
+                    {
+                      href: canonicalLink,
+                      hrefLang: 'en',
+                    },
+                    {
+                      href: canonicalLinkGb,
+                      hrefLang: 'en-gb',
+                    },
+                  ]}
                   ampLink={ampLink}
                   articleAuthor={articleAuthor}
                   articleSection={metadata.passport.genre}
                   brandName={brandName}
                   canonicalLink={canonicalLink}
-                  canonicalLinkGb={canonicalLinkGb}
                   defaultImage={defaultImage}
                   defaultImageAltText={defaultImageAltText}
                   description={promo.summary || promo.headlines.seoHeadline}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, string, number } from 'prop-types';
+import { arrayOf, bool, shape, string, number } from 'prop-types';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -11,12 +11,12 @@ const renderAmpHtml = (ampLink, isAmp) => {
 
 const Metadata = ({
   isAmp,
+  alternateLinks,
   ampLink,
   articleAuthor,
   articleSection,
   brandName,
   canonicalLink,
-  canonicalLinkGb,
   defaultImage,
   defaultImageAltText,
   description,
@@ -53,9 +53,13 @@ const Metadata = ({
         {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
-      <link rel="alternate" href={canonicalLink} hrefLang="en" />
-      <link rel="alternate" href={canonicalLink} hrefLang="x-default" />
-      <link rel="alternate" href={canonicalLinkGb} hrefLang="en-gb" />
+      {alternateLinks.map(alternate => (
+        <link
+          rel="alternate"
+          href={alternate.href}
+          hrefLang={alternate.hrefLang}
+        />
+      ))}
       {renderAmpHtml(ampLink, isAmp)}
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastPublished} />
@@ -91,12 +95,17 @@ const Metadata = ({
 
 Metadata.propTypes = {
   isAmp: bool.isRequired,
+  alternateLinks: arrayOf(
+    shape({
+      href: string.isRequired,
+      hrefLang: string.isRequired,
+    }),
+  ),
   ampLink: string.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
-  canonicalLinkGb: string.isRequired,
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
   description: string.isRequired,
@@ -115,6 +124,7 @@ Metadata.propTypes = {
 };
 
 Metadata.defaultProps = {
+  alternateLinks: [],
   articleSection: null,
 };
 
