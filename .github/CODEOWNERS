@@ -11,3 +11,4 @@
 /scripts/*      @benjaminhobbs @jamesdonoh @pjlee11 @sareh
 package.json    @benjaminhobbs @jamesdonoh @pjlee11 @sareh
 .travis.yml     @benjaminhobbs @jamesdonoh @pjlee11 @sareh
+**/*CODEOWNERS* @benjaminhobbs @jamesdonoh
