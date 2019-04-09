@@ -40,6 +40,20 @@ exports[`ArticleMain should render a news article correctly 1`] = `
               "topicId": "cpwpy79d6dxt",
               "topicName": "Royal Wedding 2018",
             },
+            Object {
+              "curationType": Array [
+                "vivo-stream",
+              ],
+              "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
+              "thingLabel": "Duchess of Sussex",
+              "thingSameAs": Array [],
+              "thingType": Array [
+                "Person",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+              "topicId": "cg3mq45zq4xt",
+              "topicName": "Duchess of Sussex",
+            },
           ],
           "mentions": Array [
             Object {
