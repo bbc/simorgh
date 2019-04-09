@@ -16,6 +16,14 @@ describe('LinkData', () => {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     logoUrl:
       'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
+    about: [
+      {
+        '@type': 'Person',
+        name: 'Duchess of Sussex',
+        alternateName: 'Meghan Markle',
+        sameAs: 'http://dbpedia.org/resource/Meghan_Markle',
+      },
+    ],
   };
 
   shouldShallowMatchSnapshot(
