@@ -64,6 +64,10 @@ const presetThings = {
       thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
       thingLabel: 'Royal Wedding 2018',
       thingType: ['Thing', 'Event'],
+      thingSameAs: [
+        'http://dbpedia.org/resource/Queen_Victoria',
+        'http://rdf.freebase.com/ns/m.0cw10',
+      ],
     },
   ],
   mentions: [
