@@ -28,6 +28,10 @@ exports[`ArticleMain should render a news article correctly 1`] = `
               ],
               "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
               "thingLabel": "Royal Wedding 2018",
+              "thingSameAs": Array [
+                "http://dbpedia.org/resource/Queen_Victoria",
+                "http://rdf.freebase.com/ns/m.0cw10",
+              ],
               "thingType": Array [
                 "Thing",
                 "Event",
