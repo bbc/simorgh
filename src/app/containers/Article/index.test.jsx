@@ -1,59 +1,20 @@
 import React from 'react';
+import ArticleMain from '.';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import ArticleContainer from './index';
-import { articleDataNews, articleDataPersian } from './fixtureData';
+import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 
-// explicitly ignore console.log errors for Article/index:getInitialProps() error logging
-global.console.log = jest.fn();
+// temporary: will be removed with https://github.com/bbc/simorgh/issues/836
+const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
+articleDataNewsNoHeadline.content.model.blocks.shift();
 
-describe('ArticleContainer', () => {
-  const newsProps = {
-    data: articleDataNews,
-    isAmp: false,
-    service: 'news',
-    status: 200,
-  };
+describe('ArticleMain', () => {
+  shouldShallowMatchSnapshot(
+    'should render a news article correctly',
+    <ArticleMain service="news" articleData={articleDataNews} />,
+  );
 
-  const persianProps = {
-    data: articleDataPersian,
-    isAmp: false,
-    service: 'persian',
-    status: 200,
-  };
-
-  const badData = {
-    data: undefined,
-    isAmp: false,
-    service: 'news',
-    status: 451,
-  };
-
-  const bbcOrigin = 'https://www.bbc.co.uk';
-
-  describe('Component', () => {
-    describe('200 status code', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly for news',
-        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
-      );
-      shouldShallowMatchSnapshot(
-        'should render correctly for persian',
-        <ArticleContainer data={persianProps} bbcOrigin={bbcOrigin} />,
-      );
-    });
-
-    describe('non-200 status code', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly',
-        <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
-      );
-    });
-
-    describe('no data or bbcOrigin', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly',
-        <ArticleContainer />,
-      );
-    });
-  });
+  shouldShallowMatchSnapshot(
+    'should render a persian article correctly',
+    <ArticleMain service="persian" articleData={articleDataPersian} />,
+  );
 });

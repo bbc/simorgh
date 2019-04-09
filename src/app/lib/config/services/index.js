@@ -15,6 +15,10 @@ export default {
     service: 'default',
     themeColor: '#000',
   },
-  news,
-  persian,
+  news: { ...news, article: true, manifest: true, sw: true },
+  persian: { ...persian, article: true, manifest: true, sw: true },
+  yoruba: { ...news, frontpage: true, sw: true },
+  igbo: { ...news, frontpage: true, sw: true },
+  pidgin: { ...news, frontpage: true, sw: true },
+  thai: { ...news, frontpage: true, sw: true },
 };

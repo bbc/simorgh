@@ -10,6 +10,8 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  frontpageRegexPath,
+  frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
@@ -92,6 +94,30 @@ if (process.env.APP_ENV === 'local') {
         return null;
       });
     })
+    .get(frontpageDataRegexPath, async ({ params }, res) => {
+      const { service } = params;
+
+      const dataFilePath = path.join(
+        dataFolderToRender,
+        service,
+        'frontpage',
+        `index.json`,
+      );
+
+      fs.readFile(dataFilePath, (error, data) => {
+        if (error) {
+          res.sendStatus(404);
+          logger.error(`error reading article json, ${error}`);
+          return null;
+        }
+
+        const articleJSON = JSON.parse(data);
+
+        res.setHeader('Content-Type', 'application/json');
+        res.json(articleJSON);
+        return null;
+      });
+    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
@@ -124,6 +150,21 @@ server
     });
   })
   .get(articleRegexPath, async ({ url, headers }, res) => {
+    try {
+      const data = await loadInitialData(url, routes);
+      const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
+
+      res
+        .status(status)
+        .send(await renderDocument(url, data, routes, bbcOrigin));
+    } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
+      logger.error(`status: ${status || 500} - ${message}`);
+      res.status(500).send(message);
+    }
+  })
+  .get(frontpageRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
       const { status } = data;
