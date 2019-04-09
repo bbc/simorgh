@@ -69,6 +69,17 @@ const presetThings = {
         'http://rdf.freebase.com/ns/m.0cw10',
       ],
     },
+    {
+      thingUri:
+        'http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id',
+      topicId: 'cg3mq45zq4xt',
+      topicName: 'Duchess of Sussex',
+      curationType: ['vivo-stream'],
+      thingId: '803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+      thingLabel: 'Duchess of Sussex',
+      thingType: ['Person'],
+      thingSameAs: [],
+    },
   ],
   mentions: [
     {
