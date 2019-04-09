@@ -15,6 +15,42 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
+const checkType = types => {
+  if (types.length > 1 && types.includes('Thing')) {
+    return 'Thing';
+  }
+  return types[0];
+};
+
+const checkSameAs = uris => {
+  if (uris.length > 0) {
+    return uris.filter(uri => uri.includes('http://dbpedia.org'));
+  }
+  return uris;
+};
+
+const aboutTagsContent = aboutTags => {
+  const content = [];
+
+  if (aboutTags) {
+    aboutTags.forEach(tag => {
+      const about = {
+        '@type': checkType(tag.thingType),
+        name: tag.thingLabel,
+        alternateName: tag['skos:altLabel'] ? tag['skos:altLabel'] : '',
+      };
+
+      if (tag.thingSameAs.length > 0) {
+        about.sameAs = checkSameAs(tag.thingSameAs);
+      }
+
+      content.push(about);
+    });
+  }
+
+  return content;
+};
+
 const MetadataContainer = ({ metadata, promo }) => {
   const { id: aresArticleId } = metadata;
 
@@ -63,6 +99,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   seoHeadline={promo.headlines.seoHeadline}
                   service={metadata.createdBy}
                   type={metadata.type}
+                  about={aboutTagsContent(metadata.tags.about)}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
