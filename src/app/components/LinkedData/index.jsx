@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { string } from 'prop-types';
+import { isArray } from 'util';
 
 const LinkedData = ({
   type,
@@ -12,6 +13,7 @@ const LinkedData = ({
   logoUrl,
   publishingPrinciples,
   noBylinesPolicy,
+  about,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
@@ -55,6 +57,7 @@ const LinkedData = ({
     image,
     thumbnailUrl: logoUrl,
     author,
+    about,
   };
 
   return (
@@ -75,6 +78,7 @@ LinkedData.propTypes = {
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
+  about: isArray.isRequired,
 };
 
 export default LinkedData;
