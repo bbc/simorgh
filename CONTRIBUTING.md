@@ -86,7 +86,6 @@ To run these on your forked version follow these steps.
 - Log in with your Github account where you've forked this repo to
 - Go to [https://travis-ci.org/YourGithubUsername/simorgh](https://travis-ci.org/YourGithubUsername/simorgh)
 - Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername). You can also change the settings on your repo at will.
-- Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis will look at your fork of Simorgh and run the tests against that.
 - To setup CodeClimate you need to login to the 'quality' option on [https://codeclimate.com/](https://codeclimate.com/) and obtain a code coverage [CC_TEST_REPORTER_ID](https://docs.codeclimate.com/docs/finding-your-test-coverage-token), this then needs to be added as an environment variable in TravisCI (see the TravisCI settings page).
 - Now create a branch and start committing and pushing to it!
 - You should see Travis CI and codecoverage now running against your branch and PRs within your fork. :white_check_mark:
