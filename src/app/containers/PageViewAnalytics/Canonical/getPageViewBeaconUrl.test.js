@@ -1,5 +1,5 @@
-import * as genericLabelHelpers from '../labelHelpers';
-import * as articleLabelHelpers from '../labelHelpers/article';
+import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import * as articleLabelHelpers from '../../../lib/analyticsUtils/article';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign

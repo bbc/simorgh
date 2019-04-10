@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import loggerMock from '../../../helpers/tests/loggerMock';
+import loggerMock from '../../helpers/tests/loggerMock';
 
 let fetchResponse;
 let isOnClient;
@@ -8,8 +8,8 @@ describe('sendBeacon', () => {
   beforeEach(() => {
     isOnClient = true;
     fetch.mockImplementation(() => fetchResponse);
-    jest.mock('../../../helpers/onClient', () => jest.fn());
-    const onClient = require('../../../helpers/onClient');
+    jest.mock('../../helpers/onClient', () => jest.fn());
+    const onClient = require('../../helpers/onClient');
     onClient.mockImplementation(() => isOnClient);
   });
 

@@ -6,7 +6,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import getPageViewBeaconUrl from './getPageViewBeaconUrl';
 import deepGet from '../../../helpers/json/deepGet';
 import onClient from '../../../helpers/onClient';
-import sendBeacon from './sendBeacon';
+import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 
 const CanonicalPageViewAnalytics = ({ articleData }) => {
   const { platform, isUK, env } = useContext(RequestContext);

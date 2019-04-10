@@ -6,7 +6,7 @@ const {
   getDeviceLanguage,
   getAppType,
   getLocServeCookie,
-} = require('../labelHelpers');
+} = require('../../../lib/analyticsUtils');
 const {
   getPageIdentifier,
   getOptimoUrn,
@@ -14,7 +14,7 @@ const {
   getPromoHeadline,
   getPublishedTime,
   getThingAttributes,
-} = require('../labelHelpers/article');
+} = require('../../../lib/analyticsUtils/article');
 
 const getPageViewBeaconUrl = ({
   articleData,

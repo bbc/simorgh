@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../../../helpers/onClient';
+import onClient from '../../helpers/onClient';
 
 export const getDestination = (isUK, env) => {
   const destinationIDs = {

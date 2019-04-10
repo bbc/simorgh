@@ -34,9 +34,9 @@ describe('Canonical Consent Banner Container', () => {
 
   it('should render privacy banner when both banners are set to be shown', () => {
     jest.mock('./getPageViewBeaconUrl', () => jest.fn());
-    jest.mock('./sendBeacon', () => jest.fn());
+    jest.mock('../../../lib/analyticsUtils/sendBeacon', () => jest.fn());
 
-    const sendBeacon = require('./sendBeacon');
+    const sendBeacon = require('../../../lib/analyticsUtils/sendBeacon');
     const getPageViewBeaconUrl = require('./getPageViewBeaconUrl');
 
     getPageViewBeaconUrl.mockImplementation(
