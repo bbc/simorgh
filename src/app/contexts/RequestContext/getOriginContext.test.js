@@ -1,13 +1,13 @@
 import {
-  setLocationOrigin,
-  resetWindowLocation,
-} from '../../helpers/tests/setLocationOrigin';
+  setWindowValue,
+  resetWindowValue,
+} from '../../helpers/tests/setWindowValue';
 
 const windowLocation = window.location;
 
 describe('getInitialData', () => {
   afterEach(() => {
-    resetWindowLocation(windowLocation);
+    resetWindowValue('location', windowLocation);
   });
 
   const tests = [
@@ -41,7 +41,9 @@ describe('getInitialData', () => {
 
   tests.forEach(({ bbcOrigin, location, expected, assertion }) => {
     it(assertion, () => {
-      setLocationOrigin(location);
+      setWindowValue('location', {
+        origin: location,
+      });
 
       const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
 
