@@ -19,7 +19,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
-      <ConsentBanner
+      <PageViewAnalytics
         articleData={
           Object {
             "content": Object {
@@ -290,7 +290,7 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
           rel="manifest"
         />
       </HelmetWrapper>
-      <ConsentBanner
+      <PageViewAnalytics
         articleData={
           Object {
             "content": Object {
@@ -513,7 +513,7 @@ exports[`ArticleContainer Component non-200 status code should render correctly 
           rel="manifest"
         />
       </HelmetWrapper>
-      <ConsentBanner />
+      <PageViewAnalytics />
       <ConsentBanner />
       <HeaderContainer />
       <ErrorMain
