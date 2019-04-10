@@ -19,8 +19,13 @@ export const getDestination = (isUK, env) => {
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
 
-export const getLocServeCookie = () =>
-  onClient() ? Cookie.get('loc_serve') : null;
+export const getLocServeCookie = () => {
+  if (onClient()) {
+    return !!Cookie.get('loc_serve');
+  }
+
+  return null;
+};
 
 export const getScreenInfo = () => {
   if (onClient()) {

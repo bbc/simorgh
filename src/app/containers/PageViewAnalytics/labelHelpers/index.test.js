@@ -40,7 +40,7 @@ const returnsNullWhenOffClient = func => {
 };
 
 describe('getDestination', () => {
-  const stuff = [
+  const getDestinationTestScenarios = [
     {
       isUK: true,
       env: 'live',
@@ -97,7 +97,7 @@ describe('getDestination', () => {
     },
   ];
 
-  stuff.forEach(({ isUK, env, expected, summary }) => {
+  getDestinationTestScenarios.forEach(({ isUK, env, expected, summary }) => {
     it(summary, () => {
       const destination = getDestination(isUK, env);
       expect(destination).toEqual(expected);
@@ -106,7 +106,7 @@ describe('getDestination', () => {
 });
 
 describe('getAppType', () => {
-  const stuff = [
+  const getAppTypeScenarios = [
     {
       platform: 'amp',
       expected: 'amp',
@@ -129,7 +129,7 @@ describe('getAppType', () => {
     },
   ];
 
-  stuff.forEach(({ platform, expected, summary }) => {
+  getAppTypeScenarios.forEach(({ platform, expected, summary }) => {
     it(summary, () => {
       const appType = getAppType(platform);
       expect(appType).toEqual(expected);
@@ -262,14 +262,24 @@ describe('getLocServeCookie', () => {
   // eslint-disable-next-line global-require
   returnsNullWhenOffClient(require('./index').getLocServeCookie);
 
-  it('should return the cookie value', () => {
+  it('should return true if cookie is set', () => {
     const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = 'value';
 
     const locServeCookie = getLocServeCookie();
 
-    expect(locServeCookie).toEqual('value');
+    expect(locServeCookie).toEqual(true);
+  });
+
+  it('should return false if cookie is not set', () => {
+    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+
+    locServeCookieValue = null;
+
+    const locServeCookie = getLocServeCookie();
+
+    expect(locServeCookie).toEqual(false);
   });
 });
 

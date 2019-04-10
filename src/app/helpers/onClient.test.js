@@ -1,21 +1,21 @@
-import { setLocationValue, resetLocationValue } from './tests/setLocationValue';
+import { setWindowValue, resetWindowValue } from './tests/setWindowValue';
 import onClient from './onClient';
 
 const windowLocation = window.location;
 
 describe('onClient', () => {
   beforeEach(() => {
-    resetLocationValue(windowLocation);
+    resetWindowValue('location', windowLocation);
   });
 
   it('returns true when window location is available', () => {
-    setLocationValue(true);
+    setWindowValue('location', true);
 
     expect(onClient()).toBeTruthy();
   });
 
   it('returns false when window location is not', () => {
-    setLocationValue(false);
+    setWindowValue('location', false);
 
     expect(onClient()).not.toBeTruthy();
   });

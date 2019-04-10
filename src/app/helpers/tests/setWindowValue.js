@@ -4,13 +4,14 @@ export const setWindowValue = (key, value) => {
   const windowValue = window[key];
   delete window[key];
 
-  const newValue =
-    value && typeof value === 'object'
-      ? {
-          ...deepClone(windowValue),
-          ...value,
-        }
-      : value;
+  let newValue = value;
+
+  if (value && typeof value === 'object') {
+    newValue = {
+      ...deepClone(windowValue),
+      ...value,
+    };
+  }
 
   Object.defineProperty(window, key, {
     value: newValue,
