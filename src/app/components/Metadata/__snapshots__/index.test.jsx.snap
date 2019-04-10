@@ -150,6 +150,10 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     rel="shortcut icon"
     type="image/x-icon"
   />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -306,6 +310,10 @@ exports[`Metadata News article should render correctly 1`] = `
     rel="shortcut icon"
     type="image/x-icon"
   />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -443,6 +451,10 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -584,6 +596,10 @@ exports[`Metadata Persian article should render correctly 1`] = `
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -744,6 +760,10 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;

@@ -46,6 +46,11 @@ const MetadataContainer = ({ metadata, promo }) => {
             const canonicalLink = `${origin}/${service}/articles/${id}`;
             const canonicalLinkGb = `https://www.bbc.co.uk/${service}/articles/${id}`;
             const ampLink = `${origin}/${service}/articles/${id}.amp`;
+            const appleTouchIcon = `${
+              process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+            }${
+              process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
+            }/${service}/images/icons/icon-192x192.png`;
 
             return (
               <Fragment>
@@ -77,6 +82,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                     },
                   ]}
                   ampLink={ampLink}
+                  appleTouchIcon={appleTouchIcon}
                   articleAuthor={articleAuthor}
                   articleSection={metadata.passport.genre}
                   brandName={brandName}
