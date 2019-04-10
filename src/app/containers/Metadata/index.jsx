@@ -7,6 +7,8 @@ import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
 
+const ENGLISH_SERVICES = ['news'];
+
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
   const { about, mentions } = tags;
@@ -59,7 +61,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
             let alternateLinks = [];
 
-            const alternateLinksDomesticSites = [
+            const alternateLinksEnglishSites = [
               {
                 href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
                 hrefLang: 'x-default',
@@ -74,8 +76,8 @@ const MetadataContainer = ({ metadata, promo }) => {
               },
             ];
 
-            if (service === 'news') {
-              alternateLinks = alternateLinksDomesticSites;
+            if (ENGLISH_SERVICES.includes(service)) {
+              alternateLinks = alternateLinksEnglishSites;
             }
 
             return (

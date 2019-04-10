@@ -59,6 +59,7 @@ const Metadata = ({
           rel="alternate"
           href={alternate.href}
           hrefLang={alternate.hrefLang}
+          key={alternate.hrefLang}
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
