@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
-import { isArray } from 'util';
+import { arrayOf, string, shape } from 'prop-types';
 
 const LinkedData = ({
   type,
@@ -78,7 +77,11 @@ LinkedData.propTypes = {
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
-  about: isArray.isRequired,
+  about: arrayOf(shape({})),
+};
+
+LinkedData.defaultProps = {
+  about: undefined,
 };
 
 export default LinkedData;
