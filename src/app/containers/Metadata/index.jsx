@@ -44,13 +44,39 @@ const MetadataContainer = ({ metadata, promo }) => {
             noBylinesPolicy,
           }) => {
             const canonicalLink = `${origin}/${service}/articles/${id}`;
-            const canonicalLinkGb = `https://www.bbc.co.uk/${service}/articles/${id}`;
+            const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
+            const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
             const ampLink = `${origin}/${service}/articles/${id}.amp`;
+            const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
+            const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
             const appleTouchIcon = `${
               process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
             }${
               process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
             }/${service}/images/icons/icon-192x192.png`;
+
+            const isAmp = platform === 'amp';
+
+            let alternateLinks = [];
+
+            const alternateLinksDomesticSites = [
+              {
+                href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+                hrefLang: 'x-default',
+              },
+              {
+                href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+                hrefLang: 'en',
+              },
+              {
+                href: isAmp ? ampLinkUK : canonicalLinkUK,
+                hrefLang: 'en-gb',
+              },
+            ];
+
+            if (service === 'news') {
+              alternateLinks = alternateLinksDomesticSites;
+            }
 
             return (
               <Fragment>
@@ -66,21 +92,8 @@ const MetadataContainer = ({ metadata, promo }) => {
                   type={metadata.type}
                 />
                 <Metadata
-                  isAmp={platform === 'amp'}
-                  alternateLinks={[
-                    {
-                      href: canonicalLink,
-                      hrefLang: 'x-default',
-                    },
-                    {
-                      href: canonicalLink,
-                      hrefLang: 'en',
-                    },
-                    {
-                      href: canonicalLinkGb,
-                      hrefLang: 'en-gb',
-                    },
-                  ]}
+                  isAmp={isAmp}
+                  alternateLinks={alternateLinks}
                   ampLink={ampLink}
                   appleTouchIcon={appleTouchIcon}
                   articleAuthor={articleAuthor}

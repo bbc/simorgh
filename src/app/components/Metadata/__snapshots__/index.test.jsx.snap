@@ -40,17 +40,17 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     rel="canonical"
   />
   <link
-    href="https://www.bbc.com/news/articles/c0000000001o"
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
     hrefLang="x-default"
     rel="alternate"
   />
   <link
-    href="https://www.bbc.com/news/articles/c0000000001o"
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
     hrefLang="en"
     rel="alternate"
   />
   <link
-    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
     hrefLang="en-gb"
     rel="alternate"
   />

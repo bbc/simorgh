@@ -21,6 +21,7 @@ const Container = (service, bbcOrigin, platform, data) => {
 
 const metadataProps = (
   isAmp,
+  alternateLinks,
   ampLink,
   canonicalLink,
   canonicalLinkGb,
@@ -31,20 +32,7 @@ const metadataProps = (
   serviceConfig,
 ) => ({
   isAmp,
-  alternateLinks: [
-    {
-      href: canonicalLink,
-      hrefLang: 'x-default',
-    },
-    {
-      href: canonicalLink,
-      hrefLang: 'en',
-    },
-    {
-      href: canonicalLinkGb,
-      hrefLang: 'en-gb',
-    },
-  ],
+  alternateLinks,
   ampLink,
   appleTouchIcon: `https://foo.com/static/${
     serviceConfig.service
@@ -101,6 +89,20 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
+          [
+            {
+              href: 'https://www.bbc.com/news/articles/c0000000001o',
+              hrefLang: 'x-default',
+            },
+            {
+              href: 'https://www.bbc.com/news/articles/c0000000001o',
+              hrefLang: 'en',
+            },
+            {
+              href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+              hrefLang: 'en-gb',
+            },
+          ],
           'https://www.bbc.com/news/articles/c0000000001o.amp',
           'https://www.bbc.com/news/articles/c0000000001o',
           'https://www.bbc.co.uk/news/articles/c0000000001o',
@@ -132,6 +134,20 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           true,
+          [
+            {
+              href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
+              hrefLang: 'x-default',
+            },
+            {
+              href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
+              hrefLang: 'en',
+            },
+            {
+              href: 'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
+              hrefLang: 'en-gb',
+            },
+          ],
           'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
           'https://www.bbc.co.uk/news/articles/c0000000001o',
           'https://www.bbc.co.uk/news/articles/c0000000001o',
@@ -163,6 +179,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
+          [],
           'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
           'https://www.bbc.com/persian/articles/cyddjz5058wo',
           'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
@@ -194,6 +211,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           true,
+          [],
           'https://www.bbc.co.uk/persian/articles/cyddjz5058wo.amp',
           'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
           'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',

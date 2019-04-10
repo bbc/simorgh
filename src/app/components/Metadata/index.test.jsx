@@ -107,15 +107,15 @@ describe('Metadata', () => {
     true,
     [
       {
-        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
         hrefLang: 'x-default',
       },
       {
-        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
         hrefLang: 'en',
       },
       {
-        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
         hrefLang: 'en-gb',
       },
     ],
