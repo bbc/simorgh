@@ -12,6 +12,7 @@ const renderAmpHtml = (ampLink, isAmp) => {
 const Metadata = ({
   isAmp,
   ampLink,
+  appleTouchIcon,
   articleAuthor,
   articleSection,
   brandName,
@@ -81,6 +82,7 @@ const Metadata = ({
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href={appleTouchIcon} />
     </Helmet>
   );
 };
@@ -88,6 +90,7 @@ const Metadata = ({
 Metadata.propTypes = {
   isAmp: bool.isRequired,
   ampLink: string.isRequired,
+  appleTouchIcon: string.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,
