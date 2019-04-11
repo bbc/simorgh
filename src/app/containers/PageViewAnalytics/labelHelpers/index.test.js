@@ -214,11 +214,20 @@ describe('getCurrentTime', () => {
 
   it('should return hours, mins and seconds joined by "x"', () => {
     const date = new Date(946729425000); // 12:23:45
+    const currentTimeZoneOffsetInHours = date.getTimezoneOffset() / 60;
+    date.setHours(date.getHours() - currentTimeZoneOffsetInHours);
+
+    const hours = date.getHours();
+    const mins = date.getMinutes();
+    const secs = date.getSeconds();
+
+    const expectedATITime = `${hours}x${mins}x${secs}`;
+
     setWindowValue('Date', () => date);
 
     const ATITime = getCurrentTime();
 
-    expect(ATITime).toEqual('12x23x45');
+    expect(ATITime).toEqual(expectedATITime);
   });
 });
 
