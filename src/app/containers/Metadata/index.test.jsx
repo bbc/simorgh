@@ -24,7 +24,6 @@ const metadataProps = (
   alternateLinks,
   ampLink,
   canonicalLink,
-  canonicalLinkGb,
   description,
   lang,
   metaTags,
