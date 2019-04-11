@@ -13,6 +13,193 @@ const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = blockContainingText('caption', 'This is a caption');
 // The following block is quite a large and ugly thing to keep in this file, but refactoring model/blocks.js to better allow for generating fragmented data is not in scope of the current task.
+const captionBlockWithMultipleParagraphsAndLink = {
+  type: 'caption',
+  model: {
+    blocks: [
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text:
+                  'This is a photo of someone with green hands holding something - now par 2:',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'This is a ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'photo',
+                      attributes: ['bold'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' of ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'someone',
+                      attributes: ['italic'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' with ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'green',
+                      attributes: ['bold', 'italic'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' hands holding ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'urlLink',
+                    model: {
+                      text: 'something',
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'something',
+                            attributes: [],
+                          },
+                        },
+                      ],
+                      locator: 'https://www.bbc.co.uk',
+                      isExternal: false,
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' - now par 2:',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'paragraph',
+              model: {
+                text:
+                  'Here is a second paragraph with italics and bold and bold italics and a hyperlink',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'Here is a second paragraph with ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'italics',
+                      attributes: ['italic'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' and ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'bold',
+                      attributes: ['bold'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' and ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'bold italics',
+                      attributes: ['bold', 'italic'],
+                    },
+                  },
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: ' and a ',
+                      attributes: [],
+                    },
+                  },
+                  {
+                    type: 'urlLink',
+                    model: {
+                      text: 'hyperlink',
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'hyperlink',
+                            attributes: [],
+                          },
+                        },
+                      ],
+                      locator: 'https://www.bbc.co.uk',
+                      isExternal: false,
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'paragraph',
+              model: {
+                text: 'How does it come out?',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'How does it come out?',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 const captionBlockWithLink = {
   type: 'caption',
   model: {
@@ -77,7 +264,7 @@ const generateFixtureData = ({ caption, copyright, platform }) => (
     <RequestContextProvider platform={platform}>
       <FigureContainer
         alt={imageAlt}
-        captionBlock={caption ? captionBlock : null}
+        captionBlock={caption || null}
         copyright={copyright ? copyrightText : null}
         height={imageHeight}
         ratio={imageRatio}
@@ -141,3 +328,16 @@ export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'amp',
 });
+
+export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
+  {
+    caption: captionBlockWithMultipleParagraphsAndLink,
+  },
+);
+
+export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
+  {
+    caption: captionBlockWithMultipleParagraphsAndLink,
+    platform: 'amp',
+  },
+);
