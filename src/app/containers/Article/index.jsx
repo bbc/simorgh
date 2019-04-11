@@ -37,51 +37,62 @@ const ArticleWrapper = ({ bbcOrigin, children, isAmp, service }) => (
 ArticleWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  isAmp: bool.isRequired,
-  service: string.isRequired,
+  isAmp: bool,
+  service: string,
 };
 
 ArticleWrapper.defaultProps = {
-  bbcOrigin: null,
+  bbcOrigin: 'https://www.bbc.co.uk',
+  isAmp: false,
+  service: 'news',
 };
 
 const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  if (data) {
-    const { data: articleData, isAmp, service, status } = data;
+  if (loading) {
+    return (
+      <ArticleWrapper>
+        <main role="main">
+          <GhostWrapper>
+            <GridItemConstrainedMedium />
+          </GhostWrapper>
+        </main>
+      </ArticleWrapper>
+    );
+  }
 
-    if (loading) {
-      return (
-        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
-          <main role="main">
-            <GhostWrapper>
-              <GridItemConstrainedMedium />
-            </GhostWrapper>
-          </main>
-        </ArticleWrapper>
-      );
-    }
-
-    if (error) {
-      logger.error(error);
-      return (
-        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
-          <ErrorMain status={500} />
-          <FooterContainer />
-        </ArticleWrapper>
-      );
-    }
+  if (error) {
+    logger.error(error);
 
     return (
-      <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
-        {status === 200 && articleData ? (
-          <ArticleMain articleData={articleData} />
-        ) : (
-          <ErrorMain status={status} />
-        )}
+      <ArticleWrapper>
+        <ErrorMain status={500} />
         <FooterContainer />
       </ArticleWrapper>
     );
   }
+  if (data) {
+    const { data: articleData, isAmp, service, status } = data;
+    try {
+      return (
+        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+          {status === 200 && articleData ? (
+            <ArticleMain articleData={articleData} />
+          ) : (
+            <ErrorMain status={status} />
+          )}
+          <FooterContainer />
+        </ArticleWrapper>
+      );
+    } catch {
+      return (
+        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+          <ErrorMain status={status} />
+          <FooterContainer />
+        </ArticleWrapper>
+      );
+    }
+  }
+
   return null;
 };
 
