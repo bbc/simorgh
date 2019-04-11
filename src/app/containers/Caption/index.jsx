@@ -41,12 +41,17 @@ const renderCaption = (block, imageCaptionOffscreenText) => (
   </Caption>
 );
 
+const renderMultipleCaptions = (block, imageCaptionOffscreenText) => {
+  const { blocks } = block.model.blocks[0].model.blocks[0].model;
+  const caption = renderCaption(blocks, imageCaptionOffscreenText);
+  return caption;
+};
+
 const CaptionContainer = ({ block }) => (
   <ServiceContext.Consumer>
-    {({ imageCaptionOffscreenText }) => {
-      const { blocks } = block.model.blocks[0].model.blocks[0].model;
-      renderCaption(blocks, imageCaptionOffscreenText);
-    }}
+    {({ imageCaptionOffscreenText }) =>
+      renderMultipleCaptions(block, imageCaptionOffscreenText)
+    }
   </ServiceContext.Consumer>
 );
 
