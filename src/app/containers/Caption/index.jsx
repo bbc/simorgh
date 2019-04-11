@@ -22,18 +22,18 @@ const renderCaption = (block, imageCaptionOffscreenText) => (
   </Caption>
 );
 
-const renderMultipleCaptions = (block, imageCaptionOffscreenText) => {
-  const blocks = [].slice.call(block.model.blocks[0].model.blocks);
-  const captions = blocks.map(blockie =>
-    renderCaption(blockie.model.blocks, imageCaptionOffscreenText),
+const renderMultipleCaptions = (blocks, imageCaptionOffscreenText) =>
+  blocks.map(block =>
+    renderCaption(block.model.blocks, imageCaptionOffscreenText),
   );
-  return captions;
-};
 
 const CaptionContainer = ({ block }) => (
   <ServiceContext.Consumer>
     {({ imageCaptionOffscreenText }) =>
-      renderMultipleCaptions(block, imageCaptionOffscreenText)
+      renderMultipleCaptions(
+        block.model.blocks[0].model.blocks,
+        imageCaptionOffscreenText,
+      )
     }
   </ServiceContext.Consumer>
 );
