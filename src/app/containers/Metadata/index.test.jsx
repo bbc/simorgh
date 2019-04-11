@@ -55,7 +55,13 @@ const metadataProps = (
   type: 'article',
 });
 
-const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
+const linkedDataProps = (
+  createdBy,
+  logoUrl,
+  optimoId,
+  seoHeadline,
+  about = undefined,
+) => ({
   firstPublished: '2018-01-01T12:01:00.000Z',
   lastUpdated: '2018-01-01T13:00:00.000Z',
   logoUrl,
@@ -65,6 +71,7 @@ const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
   seoHeadline,
   service: createdBy,
   type: 'article',
+  about,
 });
 
 const dotComOrigin = 'https://www.bbc.com';
@@ -90,7 +97,7 @@ describe('Metadata Container', () => {
           'https://www.bbc.com/news/articles/c0000000001o',
           'Article summary.',
           'en-gb',
-          ['Royal Wedding 2018', 'Queen Victoria'],
+          ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
           services.news,
         ),
@@ -101,6 +108,19 @@ describe('Metadata Container', () => {
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'c0000000001o',
           'Article Headline for SEO',
+          [
+            {
+              '@type': 'Thing',
+              name: 'Royal Wedding 2018',
+              alternateName: '',
+              sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
+            },
+            {
+              '@type': 'Person',
+              name: 'Duchess of Sussex',
+              alternateName: '',
+            },
+          ],
         ),
       );
     });
@@ -120,7 +140,7 @@ describe('Metadata Container', () => {
           'https://www.bbc.co.uk/news/articles/c0000000001o',
           'Article summary.',
           'en-gb',
-          ['Royal Wedding 2018', 'Queen Victoria'],
+          ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
           services.news,
         ),
@@ -131,6 +151,19 @@ describe('Metadata Container', () => {
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'c0000000001o',
           'Article Headline for SEO',
+          [
+            {
+              '@type': 'Thing',
+              name: 'Royal Wedding 2018',
+              alternateName: '',
+              sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
+            },
+            {
+              '@type': 'Person',
+              name: 'Duchess of Sussex',
+              alternateName: '',
+            },
+          ],
         ),
       );
     });
@@ -139,7 +172,6 @@ describe('Metadata Container', () => {
       const Wrapper = mount(
         Container('persian', dotComOrigin, 'canonical', articleDataPersian),
       );
-
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
         true,
       );
@@ -169,7 +201,6 @@ describe('Metadata Container', () => {
       const Wrapper = mount(
         Container('persian', dotCoDotUKOrigin, 'amp', articleDataPersian),
       );
-
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
         true,
       );

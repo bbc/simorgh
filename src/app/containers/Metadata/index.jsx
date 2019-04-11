@@ -7,6 +7,8 @@ import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
 
+import deepGet from '../../helpers/json/deepGet';
+
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
   const { about, mentions } = tags;
@@ -22,17 +24,12 @@ const checkType = types => {
   return types[0];
 };
 
-const checkSameAs = uris => {
-  if (uris.length > 0) {
-    return uris.filter(uri => uri.includes('http://dbpedia.org'));
-  }
-  return uris;
-};
+const checkSameAs = uris =>
+  uris.filter(uri => uri.includes('http://dbpedia.org'));
 
 const aboutTagsContent = aboutTags => {
-  const content = [];
-
-  if (aboutTags) {
+  if (aboutTags && aboutTags.length > 0) {
+    const content = [];
     aboutTags.forEach(tag => {
       const about = {
         '@type': checkType(tag.thingType),
@@ -46,9 +43,9 @@ const aboutTagsContent = aboutTags => {
 
       content.push(about);
     });
+    return content;
   }
-
-  return content;
+  return undefined;
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
@@ -99,7 +96,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   seoHeadline={promo.headlines.seoHeadline}
                   service={metadata.createdBy}
                   type={metadata.type}
-                  about={aboutTagsContent(metadata.tags.about)}
+                  about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
