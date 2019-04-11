@@ -204,30 +204,19 @@ describe('getBrowserViewPort', () => {
 });
 
 describe('getCurrentTime', () => {
-  const windowDate = window.Date;
-
-  afterEach(() => {
-    resetWindowValue('Date', windowDate);
-  });
-
   returnsNullWhenOffClient(getCurrentTime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
-    const date = new Date(946729425000); // 12:23:45
-    const currentTimeZoneOffsetInHours = date.getTimezoneOffset() / 60;
-    date.setHours(date.getHours() - currentTimeZoneOffsetInHours);
-
-    const hours = date.getHours();
-    const mins = date.getMinutes();
-    const secs = date.getSeconds();
-
-    const expectedATITime = `${hours}x${mins}x${secs}`;
-
-    setWindowValue('Date', () => date);
+    const mockDataObject = {
+      getHours: jest.fn().mockReturnValue('12'),
+      getMinutes: jest.fn().mockReturnValue('23'),
+      getSeconds: jest.fn().mockReturnValue('45'),
+    };
+    Date.now = jest.fn().mockReturnValue(mockDataObject);
 
     const ATITime = getCurrentTime();
 
-    expect(ATITime).toEqual(expectedATITime);
+    expect(ATITime).toEqual('12x23x45');
   });
 });
 

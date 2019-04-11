@@ -55,7 +55,7 @@ export const getBrowserViewPort = () => {
 
 export const getCurrentTime = () => {
   if (onClient()) {
-    const now = new Date();
+    const now = Date.now();
     const hours = now.getHours();
     const mins = now.getMinutes();
     const secs = now.getSeconds();
