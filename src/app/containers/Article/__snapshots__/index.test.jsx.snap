@@ -239,9 +239,34 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
 </ArticleWrapper>
 `;
 
-exports[`ArticleContainer Component error state should render correctly 1`] = `null`;
+exports[`ArticleContainer Component error state should render correctly 1`] = `
+<ArticleWrapper
+  bbcOrigin="https://www.bbc.co.uk"
+  isAmp={false}
+  service="news"
+>
+  <ErrorMain
+    status={500}
+  />
+  <FooterContainer />
+</ArticleWrapper>
+`;
 
-exports[`ArticleContainer Component loading state should render correctly 1`] = `null`;
+exports[`ArticleContainer Component loading state should render correctly 1`] = `
+<ArticleWrapper
+  bbcOrigin="https://www.bbc.co.uk"
+  isAmp={false}
+  service="news"
+>
+  <main
+    role="main"
+  >
+    <ForwardRef>
+      <ForwardRef />
+    </ForwardRef>
+  </main>
+</ArticleWrapper>
+`;
 
 exports[`ArticleContainer Component no data or bbcOrigin should render correctly 1`] = `null`;
 
