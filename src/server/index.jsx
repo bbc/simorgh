@@ -10,6 +10,7 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
@@ -61,6 +62,25 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
+  const sendDataFile = (res, dataFilePath) =>
+    fs.access(dataFilePath, fs.constants.R_OK, accessErr => {
+      if (accessErr) {
+        logger.error(accessErr);
+        res.status(404).send(`404: Could not access data file ${dataFilePath}`);
+      } else {
+        res.sendFile(dataFilePath, {}, sendErr => {
+          if (sendErr) {
+            logger.error(sendErr);
+            res
+              .status(500)
+              .send(
+                `500: Failed to send data file ${dataFilePath}. Error: ${sendErr}`,
+              );
+          }
+        });
+      }
+    });
+
   server
     .use(
       expressStaticGzip(publicDirectory, {
@@ -72,25 +92,27 @@ if (process.env.APP_ENV === 'local') {
       const { service, id } = params;
 
       const dataFilePath = path.join(
+        process.cwd(),
         dataFolderToRender,
         service,
         'articles',
         `${id}.json`,
       );
 
-      fs.readFile(dataFilePath, (error, data) => {
-        if (error) {
-          res.sendStatus(404);
-          logger.error(`error reading article json, ${error}`);
-          return null;
-        }
+      sendDataFile(res, dataFilePath);
+    })
+    .get(frontpageDataRegexPath, async ({ params }, res) => {
+      const { service } = params;
 
-        const articleJSON = JSON.parse(data);
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'frontpage',
+        'index.json',
+      );
 
-        res.setHeader('Content-Type', 'application/json');
-        res.json(articleJSON);
-        return null;
-      });
+      sendDataFile(res, dataFilePath);
     })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request

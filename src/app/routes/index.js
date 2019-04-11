@@ -12,6 +12,10 @@ export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idReg
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
+export const frontpageRegexPath = `/:service(${serviceRegex})`;
+
+export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
+
 export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
 export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
