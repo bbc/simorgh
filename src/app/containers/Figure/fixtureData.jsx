@@ -24,80 +24,30 @@ const captionBlockWithMultipleParagraphsAndLink = {
             {
               type: 'paragraph',
               model: {
-                text:
-                  'This is a photo of someone with green hands holding something - now par 2:',
+                text: 'This is paragraph one of three',
                 blocks: [
                   {
                     type: 'fragment',
                     model: {
-                      text: 'This is a ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'photo',
-                      attributes: ['bold'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' of ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'someone',
-                      attributes: ['italic'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' with ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'green',
-                      attributes: ['bold', 'italic'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' hands holding ',
+                      text: 'This is paragraph one of ',
                       attributes: [],
                     },
                   },
                   {
                     type: 'urlLink',
                     model: {
-                      text: 'something',
+                      text: 'three',
                       blocks: [
                         {
                           type: 'fragment',
                           model: {
-                            text: 'something',
+                            text: 'three',
                             attributes: [],
                           },
                         },
                       ],
                       locator: 'https://www.bbc.co.uk',
                       isExternal: false,
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' - now par 2:',
-                      attributes: [],
                     },
                   },
                 ],
@@ -107,12 +57,12 @@ const captionBlockWithMultipleParagraphsAndLink = {
               type: 'paragraph',
               model: {
                 text:
-                  'Here is a second paragraph with italics and bold and bold italics and a hyperlink',
+                  'This is a second paragraph with italics and bold and bold italics and a hyperlink',
                 blocks: [
                   {
                     type: 'fragment',
                     model: {
-                      text: 'Here is a second paragraph with ',
+                      text: 'This is a second paragraph with ',
                       attributes: [],
                     },
                   },
@@ -181,12 +131,12 @@ const captionBlockWithMultipleParagraphsAndLink = {
             {
               type: 'paragraph',
               model: {
-                text: 'How does it come out?',
+                text: 'A third paragraph',
                 blocks: [
                   {
                     type: 'fragment',
                     model: {
-                      text: 'How does it come out?',
+                      text: 'A third paragraph',
                       attributes: [],
                     },
                   },
