@@ -66,6 +66,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   service={metadata.createdBy}
                   type={metadata.type}
                   about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
+                  canonicalLink={canonicalLink}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}

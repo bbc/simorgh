@@ -13,9 +13,11 @@ const LinkedData = ({
   publishingPrinciples,
   noBylinesPolicy,
   about,
+  canonicalLink,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
+  const webPageType = 'WebPage';
 
   const logo = {
     '@type': imgObject,
@@ -45,6 +47,12 @@ const LinkedData = ({
     noBylinesPolicy,
   };
 
+  const mainEntityOfPage = {
+    '@type': webPageType,
+    '@id': canonicalLink,
+    name: seoHeadline,
+  };
+
   const linkMetadata = {
     '@context': 'http://schema.org',
     '@type': type,
@@ -57,6 +65,7 @@ const LinkedData = ({
     thumbnailUrl: logoUrl,
     author,
     about,
+    mainEntityOfPage,
   };
 
   return (
@@ -85,6 +94,7 @@ LinkedData.propTypes = {
       sameAs: arrayOf(string.isRequired),
     }),
   ),
+  canonicalLink: string.isRequired,
 };
 
 LinkedData.defaultProps = {
