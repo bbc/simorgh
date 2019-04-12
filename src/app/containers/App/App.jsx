@@ -3,7 +3,7 @@
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
-import { Component, useEffect, useRef, useState } from 'react';
+import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 
