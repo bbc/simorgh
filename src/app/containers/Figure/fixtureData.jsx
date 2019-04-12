@@ -33,52 +33,104 @@ const createCaptionBlock = arrayOfBlocks => {
   return captionBlockSkeleton;
 };
 
-const paragraphModelWithInlineLink = {
-  text: 'This is a caption containing an inline link.',
-  blocks: [
-    {
-      type: 'fragment',
-      model: {
-        text: 'This is a caption ',
-        attributes: [],
+const paragraphBlockWithInlineLink = {
+  type: 'paragraph',
+  model: {
+    text: 'This is a caption containing an inline link.',
+    blocks: [
+      {
+        type: 'fragment',
+        model: {
+          text: 'This is a caption ',
+          attributes: [],
+        },
       },
-    },
-    {
-      type: 'urlLink',
-      model: {
-        text: 'containing an inline link',
-        locator: 'https://www.bbc.com',
-        isExternal: false,
-        blocks: [
-          {
-            type: 'fragment',
-            model: {
-              text: 'containing an inline link',
-              attributes: [],
+      {
+        type: 'urlLink',
+        model: {
+          text: 'containing an inline link',
+          locator: 'https://www.bbc.com',
+          isExternal: false,
+          blocks: [
+            {
+              type: 'fragment',
+              model: {
+                text: 'containing an inline link',
+                attributes: [],
+              },
             },
-          },
-        ],
+          ],
+        },
       },
-    },
-    {
-      type: 'fragment',
-      model: {
-        text: '.',
-        attributes: [],
+      {
+        type: 'fragment',
+        model: {
+          text: '.',
+          attributes: [],
+        },
       },
-    },
-  ],
+    ],
+  },
+};
+
+const paragraphBlockWithBoldAndItalics = {
+  type: 'paragraph',
+  model: {
+    text: 'This is a second paragraph with italics and bold and bold italics',
+    blocks: [
+      {
+        type: 'fragment',
+        model: {
+          text: 'This is a second paragraph with ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'italics',
+          attributes: ['italic'],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: ' and ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'bold',
+          attributes: ['bold'],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: ' and ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'bold italics',
+          attributes: ['bold', 'italic'],
+        },
+      },
+    ],
+  },
 };
 
 const captionBlockWithMultipleParagraphsAndLink = createCaptionBlock([
-  { type: 'paragraph', model: paragraphModelWithInlineLink },
-  { type: 'paragraph', model: paragraphModelWithInlineLink },
-  { type: 'paragraph', model: paragraphModelWithInlineLink },
+  paragraphBlockWithInlineLink,
+  paragraphBlockWithBoldAndItalics,
+  paragraphBlockWithInlineLink,
 ]);
 
-const captionBlockWithLink = createCaptionBlock([
-  { type: 'paragraph', model: paragraphModelWithInlineLink },
-]);
+const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
