@@ -1,19 +1,20 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
-import PageWrapper from '../PageWrapper';
+import {
+  GhostWrapper,
+  GridItemConstrainedMedium,
+  Container,
+} from '../../lib/styledGrid';
 
 const WithLoading = Component => {
   return function WithLoadingComponent({ loading, ...props }) {
     if (!loading) return <Component {...props} />;
     return (
-      <PageWrapper>
-        <main role="main">
-          <GhostWrapper>
-            <GridItemConstrainedMedium />
-          </GhostWrapper>
-        </main>
-      </PageWrapper>
+      <main role="main">
+        <GhostWrapper>
+          <GridItemConstrainedMedium />
+        </GhostWrapper>
+      </main>
     );
   };
 };
