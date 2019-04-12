@@ -1,94 +1,34 @@
-import React, { Fragment } from 'react';
-import { bool, node, string, shape } from 'prop-types';
-import Helmet from 'react-helmet';
-import HeaderContainer from '../Header';
+import React from 'react';
+import { string, shape } from 'prop-types';
+import { compose } from 'recompose';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
-import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../helpers/logger.node';
-import ConsentBanner from '../ConsentBanner';
-import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import PageWrapper from '../PageWrapper';
 
-const logger = nodeLogger(__filename);
+import WithError from '../PageWrapper/withError';
+import WithLoading from '../PageWrapper/withLoading';
 
-const ArticleWrapper = ({ bbcOrigin, children, isAmp, service }) => (
-  <Fragment>
-    <GlobalStyle />
-    <RequestContextProvider
-      platform={isAmp ? 'amp' : 'canonical'}
-      bbcOrigin={bbcOrigin}
-    >
-      <ServiceContextProvider service={service}>
-        <Helmet>
-          <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-        </Helmet>
-        <ConsentBanner />
-        <HeaderContainer />
-        {children}
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </Fragment>
-);
-
-ArticleWrapper.propTypes = {
-  bbcOrigin: string,
-  children: node.isRequired,
-  isAmp: bool,
-  service: string,
-};
-
-ArticleWrapper.defaultProps = {
-  bbcOrigin: 'https://www.bbc.co.uk',
-  isAmp: false,
-  service: 'news',
-};
-
-const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  if (loading) {
-    return (
-      <ArticleWrapper>
-        <main role="main">
-          <GhostWrapper>
-            <GridItemConstrainedMedium />
-          </GhostWrapper>
-        </main>
-      </ArticleWrapper>
-    );
-  }
-
-  if (error) {
-    logger.error(error);
-
-    return (
-      <ArticleWrapper>
-        <ErrorMain status={500} />
-        <FooterContainer />
-      </ArticleWrapper>
-    );
-  }
+const ArticleContainer = ({ data, bbcOrigin }) => {
   if (data) {
     const { data: articleData, isAmp, service, status } = data;
     try {
       return (
-        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+        <PageWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
           {status === 200 && articleData ? (
             <ArticleMain articleData={articleData} />
           ) : (
             <ErrorMain status={status} />
           )}
           <FooterContainer />
-        </ArticleWrapper>
+        </PageWrapper>
       );
     } catch {
       return (
-        <ArticleWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
+        <PageWrapper isAmp={isAmp} bbcOrigin={bbcOrigin} service={service}>
           <ErrorMain status={status} />
           <FooterContainer />
-        </ArticleWrapper>
+        </PageWrapper>
       );
     }
   }
@@ -97,17 +37,18 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 };
 
 ArticleContainer.propTypes = {
-  loading: bool,
-  error: string,
   data: shape(articlePropTypes),
   bbcOrigin: string,
 };
 
 ArticleContainer.defaultProps = {
-  loading: false,
-  error: null,
   data: null,
   bbcOrigin: null,
 };
 
-export default ArticleContainer;
+const EnhancedArticleContainer = compose(
+  WithError,
+  WithLoading,
+)(ArticleContainer);
+
+export default EnhancedArticleContainer;

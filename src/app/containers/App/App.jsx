@@ -3,7 +3,7 @@
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
-import { Component } from 'react';
+import { Component, useEffect, useRef, useState } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ export class App extends Component {
       loading: false,
       error: null,
       loadInitialDataPromise: null,
-    };  
+    };
   }
 
   async componentDidUpdate({ location: prevLocation }) {
