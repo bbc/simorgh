@@ -21,7 +21,7 @@ describe('LinkData', () => {
         '@type': 'Person',
         name: 'Duchess of Sussex',
         alternateName: 'Meghan Markle',
-        sameAs: 'http://dbpedia.org/resource/Meghan_Markle',
+        sameAs: ['http://dbpedia.org/resource/Meghan_Markle'],
       },
     ],
   };

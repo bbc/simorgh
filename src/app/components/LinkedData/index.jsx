@@ -77,7 +77,14 @@ LinkedData.propTypes = {
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
-  about: arrayOf(shape({})),
+  about: arrayOf(
+    shape({
+      '@type': string.isRequired,
+      alternateName: string.isRequired,
+      name: string.isRequired,
+      sameAs: arrayOf(string.isRequired),
+    }),
+  ),
 };
 
 LinkedData.defaultProps = {

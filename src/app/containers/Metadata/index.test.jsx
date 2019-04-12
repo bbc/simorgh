@@ -172,6 +172,7 @@ describe('Metadata Container', () => {
       const Wrapper = mount(
         Container('persian', dotComOrigin, 'canonical', articleDataPersian),
       );
+
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
         true,
       );
@@ -201,6 +202,7 @@ describe('Metadata Container', () => {
       const Wrapper = mount(
         Container('persian', dotCoDotUKOrigin, 'amp', articleDataPersian),
       );
+
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
         true,
       );

@@ -6,8 +6,8 @@ import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
-
 import deepGet from '../../helpers/json/deepGet';
+import aboutTagsContent from './linkedDataAbout';
 
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
@@ -15,37 +15,6 @@ const allTags = tags => {
   const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
   const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
   return aboutTags.concat(mentionTags);
-};
-
-const checkType = types => {
-  if (types.length > 1 && types.includes('Thing')) {
-    return 'Thing';
-  }
-  return types[0];
-};
-
-const checkSameAs = uris =>
-  uris.filter(uri => uri.includes('http://dbpedia.org'));
-
-const aboutTagsContent = aboutTags => {
-  if (aboutTags && aboutTags.length > 0) {
-    const content = [];
-    aboutTags.forEach(tag => {
-      const about = {
-        '@type': checkType(tag.thingType),
-        name: tag.thingLabel,
-        alternateName: tag['skos:altLabel'] ? tag['skos:altLabel'] : '',
-      };
-
-      if (tag.thingSameAs.length > 0) {
-        about.sameAs = checkSameAs(tag.thingSameAs);
-      }
-
-      content.push(about);
-    });
-    return content;
-  }
-  return undefined;
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
