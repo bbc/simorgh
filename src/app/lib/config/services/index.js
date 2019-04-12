@@ -5,9 +5,9 @@
 
 import news from './news';
 import persian from './persian';
-import hausa from './hausa';
 import igbo from './igbo';
 import pidgin from './pidgin';
+import thai from './thai';
 import yoruba from './yoruba';
 
 export default {
@@ -21,8 +21,8 @@ export default {
   },
   news,
   persian,
-  hausa,
   igbo,
   pidgin,
+  thai,
   yoruba,
 };
