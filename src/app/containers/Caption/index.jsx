@@ -2,6 +2,7 @@ import React from 'react';
 import { objectOf, any } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
+import deepGet from '../../helpers/json/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
@@ -24,14 +25,17 @@ const renderCaption = (block, imageCaptionOffscreenText) => (
 
 const renderMultipleCaptions = (blocks, imageCaptionOffscreenText) =>
   blocks.map(block =>
-    renderCaption(block.model.blocks, imageCaptionOffscreenText),
+    renderCaption(
+      deepGet(['model', 'blocks'], block),
+      imageCaptionOffscreenText,
+    ),
   );
 
 const CaptionContainer = ({ block }) => (
   <ServiceContext.Consumer>
     {({ imageCaptionOffscreenText }) =>
       renderMultipleCaptions(
-        block.model.blocks[0].model.blocks,
+        deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
         imageCaptionOffscreenText,
       )
     }
