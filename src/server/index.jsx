@@ -65,7 +65,7 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
-  const canAccessFile = async dataFilePath => {
+  const errorWhenAccessingFile = async dataFilePath => {
     try {
       await access(dataFilePath, fs.constants.R_OK);
     } catch (e) {
@@ -75,7 +75,7 @@ if (process.env.APP_ENV === 'local') {
   };
 
   const sendDataFile = async (res, dataFilePath) => {
-    const accessErr = await canAccessFile(dataFilePath);
+    const accessErr = await errorWhenAccessingFile(dataFilePath);
     if (accessErr) {
       logger.error(accessErr);
       res.status(404).send(`404: Could not access data file ${dataFilePath}`);
@@ -83,7 +83,8 @@ if (process.env.APP_ENV === 'local') {
     }
 
     try {
-      await promisify(res.sendFile)(dataFilePath);
+      const sendFile = promisify(res.sendFile).bind(res);
+      await sendFile(dataFilePath, {});
     } catch (sendErr) {
       logger.error(sendErr);
       res
