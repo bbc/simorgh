@@ -12,7 +12,7 @@ export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idReg
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
-export const frontpageRegexPath = `/:service(${serviceRegex})`;
+export const frontpageRegexPath = `/:service(${serviceRegex}):amp(${ampRegex})?`;
 
 export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
 
