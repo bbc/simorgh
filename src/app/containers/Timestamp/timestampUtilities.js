@@ -13,6 +13,7 @@ export const isValidDateTime = dateTime => {
 
 export const leadingZero = val => (val < 10 ? `0${val}` : `${val}`);
 
+// when using this function, we recommend using webpack configuration to only load in the relevant timezone, rather than all of moment-timezone
 export const formatUnixTimestamp = (timestamp, momentString) =>
   moment(timestamp)
     .tz('Europe/London')
@@ -24,10 +25,10 @@ export const isTenHoursAgoOrLess = milliseconds => {
 };
 
 // 2019-03-22
-export const longNumeric = 'YYYY-MM-DD';
+export const formatDateNumeric = 'YYYY-MM-DD';
 
 // 22 March 2019
-export const dateOnly = 'D MMMM YYYY';
+export const formatDate = 'D MMMM YYYY';
 
 // 22 March 2019, 17:05 BST
-export const dateAndTime = 'D MMMM YYYY, HH:mm z';
+export const formatDateAndTime = 'D MMMM YYYY, HH:mm z';

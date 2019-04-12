@@ -31,6 +31,9 @@ const metadataProps = (
 ) => ({
   isAmp,
   ampLink,
+  appleTouchIcon: `https://foo.com/static/${
+    serviceConfig.service
+  }/images/icons/icon-192x192.png`,
   articleAuthor: serviceConfig.articleAuthor,
   articleSection: null,
   brandName: serviceConfig.brandName,
@@ -66,6 +69,9 @@ const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
+
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 
 describe('Metadata Container', () => {
   describe('LinkedData and Metadata components called with correct props', () => {

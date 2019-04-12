@@ -4,9 +4,9 @@ import moment from 'moment-timezone';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
-  longNumeric,
-  dateOnly,
-  dateAndTime,
+  formatDateNumeric,
+  formatDate,
+  formatDateAndTime,
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
@@ -21,7 +21,8 @@ const isToday = timestamp => isSameDay(Date.now(), timestamp);
 const timestampsWouldBeSame = (lastPublished, firstPublished) =>
   !isToday(lastPublished) && isSameDay(lastPublished, firstPublished);
 
-const formatType = timestamp => (isToday(timestamp) ? dateAndTime : dateOnly);
+const formatType = timestamp =>
+  isToday(timestamp) ? formatDateAndTime : formatDate;
 
 const isSecondTimeStampRequired = (firstPublished, lastPublished) => {
   if (
@@ -59,11 +60,15 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <Timestamp datetime={formatUnixTimestamp(firstPublished, longNumeric)}>
+      <Timestamp
+        datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
+      >
         {firstPublishedString}
       </Timestamp>
       {isSecondTimeStampRequired(firstPublished, lastPublished) ? (
-        <Timestamp datetime={formatUnixTimestamp(lastPublished, longNumeric)}>
+        <Timestamp
+          datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
+        >
           {lastPublishedString}
         </Timestamp>
       ) : null}
