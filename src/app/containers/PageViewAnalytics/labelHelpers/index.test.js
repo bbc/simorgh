@@ -207,12 +207,12 @@ describe('getCurrentTime', () => {
   returnsNullWhenOffClient(getCurrentTime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
-    const mockDataObject = {
+    const mockDate = {
       getHours: jest.fn().mockReturnValue('12'),
       getMinutes: jest.fn().mockReturnValue('23'),
       getSeconds: jest.fn().mockReturnValue('45'),
     };
-    Date.now = jest.fn().mockReturnValue(mockDataObject);
+    global.Date = jest.fn(() => mockDate);
 
     const ATITime = getCurrentTime();
 
