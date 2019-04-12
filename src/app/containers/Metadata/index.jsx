@@ -63,6 +63,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   seoHeadline={promo.headlines.seoHeadline}
                   service={metadata.createdBy}
                   type={metadata.type}
+                  canonicalLink={canonicalLink}
                 />
                 <Metadata
                   isAmp={platform === 'amp'}
