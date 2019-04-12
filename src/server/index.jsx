@@ -3,6 +3,7 @@ import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import fs from 'fs';
 import path from 'path';
+import { promisify } from 'util';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -18,6 +19,8 @@ import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 
 const morgan = require('morgan');
+
+const access = promisify(fs.access);
 
 const logger = nodeLogger(__filename);
 
@@ -62,24 +65,34 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath) =>
-    fs.access(dataFilePath, fs.constants.R_OK, accessErr => {
-      if (accessErr) {
-        logger.error(accessErr);
-        res.status(404).send(`404: Could not access data file ${dataFilePath}`);
-      } else {
-        res.sendFile(dataFilePath, {}, sendErr => {
-          if (sendErr) {
-            logger.error(sendErr);
-            res
-              .status(500)
-              .send(
-                `500: Failed to send data file ${dataFilePath}. Error: ${sendErr}`,
-              );
-          }
-        });
-      }
-    });
+  const canAccessFile = async dataFilePath => {
+    try {
+      await access(dataFilePath, fs.constants.R_OK);
+    } catch (e) {
+      return e;
+    }
+    return false;
+  };
+
+  const sendDataFile = async (res, dataFilePath) => {
+    const accessErr = await canAccessFile(dataFilePath);
+    if (accessErr) {
+      logger.error(accessErr);
+      res.status(404).send(`404: Could not access data file ${dataFilePath}`);
+      return;
+    }
+
+    try {
+      await promisify(res.sendFile)(dataFilePath);
+    } catch (sendErr) {
+      logger.error(sendErr);
+      res
+        .status(500)
+        .send(
+          `500: Failed to send data file ${dataFilePath}. Error: ${sendErr}`,
+        );
+    }
+  };
 
   server
     .use(
