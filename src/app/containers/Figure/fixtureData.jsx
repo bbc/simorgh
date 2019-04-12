@@ -12,197 +12,74 @@ const imageSrc =
 const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = blockContainingText('caption', 'This is a caption');
-// The following block is quite a large and ugly thing to keep in this file, but refactoring model/blocks.js to better allow for generating fragmented data is not in scope of the current task.
-const captionBlockWithMultipleParagraphsAndLink = {
-  type: 'caption',
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'This is paragraph one of three',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'This is paragraph one of ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'urlLink',
-                    model: {
-                      text: 'three',
-                      blocks: [
-                        {
-                          type: 'fragment',
-                          model: {
-                            text: 'three',
-                            attributes: [],
-                          },
-                        },
-                      ],
-                      locator: 'https://www.bbc.co.uk',
-                      isExternal: false,
-                    },
-                  },
-                ],
-              },
-            },
-            {
-              type: 'paragraph',
-              model: {
-                text:
-                  'This is a second paragraph with italics and bold and bold italics and a hyperlink',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'This is a second paragraph with ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'italics',
-                      attributes: ['italic'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' and ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'bold',
-                      attributes: ['bold'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' and ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'bold italics',
-                      attributes: ['bold', 'italic'],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: ' and a ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'urlLink',
-                    model: {
-                      text: 'hyperlink',
-                      blocks: [
-                        {
-                          type: 'fragment',
-                          model: {
-                            text: 'hyperlink',
-                            attributes: [],
-                          },
-                        },
-                      ],
-                      locator: 'https://www.bbc.co.uk',
-                      isExternal: false,
-                    },
-                  },
-                ],
-              },
-            },
-            {
-              type: 'paragraph',
-              model: {
-                text: 'A third paragraph',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'A third paragraph',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
+
+const createCaptionBlock = arrayOfBlocks => {
+  const captionBlockSkeleton = {
+    type: 'caption',
+    model: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [],
+          },
         },
-      },
-    ],
-  },
+      ],
+    },
+  };
+  arrayOfBlocks.forEach(block => {
+    captionBlockSkeleton.model.blocks[0].model.blocks.push(block);
+  });
+  return captionBlockSkeleton;
 };
 
-const captionBlockWithLink = {
-  type: 'caption',
-  model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'This is a caption containing an inline link.',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'This is a caption ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'urlLink',
-                    model: {
-                      text: 'containing an inline link',
-                      locator: 'https://www.bbc.com',
-                      isExternal: false,
-                      blocks: [
-                        {
-                          type: 'fragment',
-                          model: {
-                            text: 'containing an inline link',
-                            attributes: [],
-                          },
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: '.',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
+const paragraphModelWithInlineLink = {
+  text: 'This is a caption containing an inline link.',
+  blocks: [
+    {
+      type: 'fragment',
+      model: {
+        text: 'This is a caption ',
+        attributes: [],
       },
-    ],
-  },
+    },
+    {
+      type: 'urlLink',
+      model: {
+        text: 'containing an inline link',
+        locator: 'https://www.bbc.com',
+        isExternal: false,
+        blocks: [
+          {
+            type: 'fragment',
+            model: {
+              text: 'containing an inline link',
+              attributes: [],
+            },
+          },
+        ],
+      },
+    },
+    {
+      type: 'fragment',
+      model: {
+        text: '.',
+        attributes: [],
+      },
+    },
+  ],
 };
+
+const captionBlockWithMultipleParagraphsAndLink = createCaptionBlock([
+  { type: 'paragraph', model: paragraphModelWithInlineLink },
+  { type: 'paragraph', model: paragraphModelWithInlineLink },
+  { type: 'paragraph', model: paragraphModelWithInlineLink },
+]);
+
+const captionBlockWithLink = createCaptionBlock([
+  { type: 'paragraph', model: paragraphModelWithInlineLink },
+]);
+
 const copyrightText = 'Getty Images';
 
 const serviceContextStubNews = {
