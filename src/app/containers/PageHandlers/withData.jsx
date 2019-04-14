@@ -17,7 +17,7 @@ const WithData = Component => ({ data }) => {
     }
   }
 
-  return <ErrorMain status={status} />;
+  return <ErrorMain status={500} />;
 };
 
 WithData.propTypes = {
