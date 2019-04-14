@@ -2,11 +2,9 @@ import React from 'react';
 import { string } from 'prop-types';
 import ErrorMain from '../ErrorMain';
 
-const WithError = Component => {
-  return function WithErrorComponent({ error, ...props }) {
-    if (!error) return <Component {...props} />;
-    return <ErrorMain status={500} />;
-  };
+const WithError = Component => ({ error, ...props }) => {
+  if (!error) return <Component {...props} />;
+  return <ErrorMain status={500} />;
 };
 
 WithError.propTypes = {
