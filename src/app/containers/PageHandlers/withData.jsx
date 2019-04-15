@@ -7,22 +7,20 @@ import nodeLogger from '../../helpers/logger.node';
 const logger = nodeLogger(__filename);
 
 const WithData = Component => ({ data }) => {
-  let status;
-
   if (data) {
-    const { data: articleData } = data;
-    let { status } = data;
+    const { data: articleData, status } = data;
 
     if (status && articleData && status === 200) {
       try {
         return <Component articleData={articleData} />;
       } catch (err) {
         logger.error(err);
+        return <ErrorMain status={status} />;
       }
     }
   }
 
-  return <ErrorMain status={status || 500} />;
+  return <ErrorMain status={500} />;
 };
 
 WithData.propTypes = {
