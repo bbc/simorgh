@@ -115,13 +115,11 @@ describe('Metadata Container', () => {
             {
               '@type': 'Thing',
               name: 'Royal Wedding 2018',
-              alternateName: '',
               sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
             },
             {
               '@type': 'Person',
               name: 'Duchess of Sussex',
-              alternateName: '',
             },
           ],
         ),
@@ -159,13 +157,11 @@ describe('Metadata Container', () => {
             {
               '@type': 'Thing',
               name: 'Royal Wedding 2018',
-              alternateName: '',
               sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
             },
             {
               '@type': 'Person',
               name: 'Duchess of Sussex',
-              alternateName: '',
             },
           ],
         ),

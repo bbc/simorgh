@@ -19,8 +19,11 @@ const aboutTagsContent = aboutTags => {
       const about = {
         '@type': checkType(tag.thingType),
         name: tag.thingLabel,
-        alternateName: tag['skos:altLabel'] ? tag['skos:altLabel'] : '',
       };
+
+      if (tag['skos:altLabel']) {
+        about.alternateName = tag['skos:altLabel'];
+      }
 
       if (tag.thingSameAs && tag.thingSameAs.length > 0) {
         about.sameAs = checkSameAs(tag.thingSameAs);

@@ -61,13 +61,13 @@ describe('linkedDataAbout', () => {
           thingType: ['Event', 'Thing'],
           thingUri:
             'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id',
+          'skos:altLabel': 'Test skos:altLabel',
         },
       ];
       const expected = [
         {
           '@type': 'Thing',
           name: 'Kate Middleton',
-          alternateName: '',
           sameAs: [
             'http://dbpedia.org/resource/Catherine%2C_Duchess_of_Cambridge',
           ],
@@ -75,7 +75,7 @@ describe('linkedDataAbout', () => {
         {
           '@type': 'Thing',
           name: 'Wedding of Prince Harry and Meghan Markle',
-          alternateName: '',
+          alternateName: 'Test skos:altLabel',
         },
       ];
 
