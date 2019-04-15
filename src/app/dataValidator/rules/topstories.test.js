@@ -10,11 +10,11 @@ const data = {
       },
       {
         type: 'other-top-stories',
-        items: [{ name: 'item4' }, { name: 'item5' }, { name: 'item6' }],
+        items: [{ name: 'item2' }, { name: 'item3' }, { name: 'item4' }],
       },
       {
         type: 'secondary-top-story',
-        items: [{ name: 'item7' }, { name: 'item8' }, { name: 'item9' }],
+        items: [{ name: 'item5' }, { name: 'item6' }, { name: 'item7' }],
       },
     ],
   },
@@ -24,16 +24,17 @@ const expected = {
   content: {
     groups: [
       {
-        type: 'top-story',
-        items: [{ name: 'item1' }],
-      },
-      {
-        type: 'other-top-stories',
-        items: [{ name: 'item4' }, { name: 'item5' }, { name: 'item6' }],
-      },
-      {
-        type: 'secondary-top-story',
-        items: [{ name: 'item7' }, { name: 'item8' }, { name: 'item9' }],
+        type: 'top-stories',
+        title: 'Top stories',
+        items: [
+          { name: 'item1' },
+          { name: 'item2' },
+          { name: 'item3' },
+          { name: 'item4' },
+          { name: 'item5' },
+          { name: 'item6' },
+          { name: 'item7' },
+        ],
       },
     ],
   },

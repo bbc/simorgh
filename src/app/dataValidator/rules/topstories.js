@@ -1,3 +1,4 @@
+import deepClone from '../../helpers/json/deepClone';
 import deepGet from '../../helpers/json/deepGet';
 
 const squashKeys = [
@@ -8,14 +9,15 @@ const squashKeys = [
 ];
 
 const squashTopStories = jsonRaw => {
-  let groups = deepGet(['content', 'groups'], jsonRaw);
+  const json = deepClone(jsonRaw); // make a copy so we don't corrupt the input
+  let groups = deepGet(['content', 'groups'], json);
 
   let collectedItems = [];
 
-  /*
-   * Find and delete unwanted groups while collecting items
-   */
   if (groups) {
+    /*
+     * Find and delete unwanted groups while collecting items
+     */
     groups = groups.filter(group => {
       if (squashKeys.indexOf(group.type) > -1) {
         collectedItems = collectedItems.concat(group.items);
@@ -25,22 +27,27 @@ const squashTopStories = jsonRaw => {
 
       return true; // keep the group
     });
+
+    /*
+     * If items were collected, form into a new group and add to start
+     */
+    if (collectedItems.length > 0) {
+      const newGroup = {
+        type: 'top-stories',
+        title: 'Top stories',
+        items: collectedItems,
+      };
+
+      groups.unshift(newGroup);
+
+      /*
+       * Now that we have new collected items, override the original groups with the new ones
+       */
+      json.content.groups = groups;
+    }
   }
 
-  /*
-   * If items were collected, form into a new group and add to start
-   */
-  if (collectedItems.length > 0) {
-    const newGroup = {
-      type: 'top-stories',
-      title: 'Top stories',
-      items: collectedItems,
-    };
-
-    groups.unshift(newGroup);
-  }
-
-  return jsonRaw;
+  return json;
 };
 
 export default squashTopStories;
