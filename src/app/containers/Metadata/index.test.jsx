@@ -57,7 +57,14 @@ const metadataProps = (
   type: 'article',
 });
 
-const linkedDataProps = (createdBy, logoUrl, optimoId, seoHeadline) => ({
+const linkedDataProps = (
+  canonicalLink,
+  createdBy,
+  logoUrl,
+  optimoId,
+  seoHeadline,
+) => ({
+  canonicalLink,
   firstPublished: '2018-01-01T12:01:00.000Z',
   lastUpdated: '2018-01-01T13:00:00.000Z',
   logoUrl,
@@ -113,6 +120,7 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'https://www.bbc.com/news/articles/c0000000001o',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'c0000000001o',
@@ -157,6 +165,7 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'https://www.bbc.co.uk/news/articles/c0000000001o',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'c0000000001o',
@@ -188,6 +197,7 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'https://www.bbc.com/persian/articles/cyddjz5058wo',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'cyddjz5058wo',
@@ -219,6 +229,7 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'cyddjz5058wo',
