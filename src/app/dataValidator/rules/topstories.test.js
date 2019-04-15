@@ -1,47 +1,134 @@
 import applySquashTopstories from './topstories';
-// import data from '../../../../data/prod/thai/frontpage/index.json';
 
-const data = {
-  content: {
-    groups: [
-      {
-        type: 'top-story',
-        items: [{ name: 'item1' }],
-      },
-      {
-        type: 'other-top-stories',
-        items: [{ name: 'item2' }, { name: 'item3' }, { name: 'item4' }],
-      },
-      {
-        type: 'secondary-top-story',
-        items: [{ name: 'item5' }, { name: 'item6' }, { name: 'item7' }],
-      },
-    ],
-  },
-};
+// data with the groups 'top-story' 'secondary-top-story' 'other-top-stories'
+import fixtureDataFormatOne from '../../../../data/prod/thai/frontpage/index.json';
 
-const expected = {
-  content: {
-    groups: [
-      {
-        type: 'top-stories',
-        title: 'Top stories',
-        items: [
-          { name: 'item1' },
-          { name: 'item2' },
-          { name: 'item3' },
-          { name: 'item4' },
-          { name: 'item5' },
-          { name: 'item6' },
-          { name: 'item7' },
+// data with the group 'responsive-top-stories'
+import fixtureDataFormatTwo from '../../../../data/prod/igbo/frontpage/index.json';
+
+describe('Topstories rules', () => {
+  it('should squash known blocks in received order and leave other blocks alone', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            type: 'top-story',
+            items: [{ name: 'item1' }],
+          },
+          {
+            type: 'other-top-stories',
+            items: [{ name: 'item2' }, { name: 'item3' }, { name: 'item4' }],
+          },
+          {
+            type: 'secondary-top-story',
+            items: [{ name: 'item5' }, { name: 'item6' }, { name: 'item7' }],
+          },
+          {
+            type: 'must-see',
+            items: [{ name: 'item8' }, { name: 'item9' }, { name: 'item10' }],
+          },
         ],
       },
-    ],
-  },
-};
+    };
 
-describe('Timestamp rules', () => {
-  it('should put Timestamp block first if no headline', () => {
+    const expected = {
+      content: {
+        groups: [
+          {
+            type: 'top-stories',
+            title: 'Top stories',
+            items: [
+              { name: 'item1' },
+              { name: 'item2' },
+              { name: 'item3' },
+              { name: 'item4' },
+              { name: 'item5' },
+              { name: 'item6' },
+              { name: 'item7' },
+            ],
+          },
+          {
+            type: 'must-see',
+            items: [{ name: 'item8' }, { name: 'item9' }, { name: 'item10' }],
+          },
+        ],
+      },
+    };
+
     expect(applySquashTopstories(data)).toEqual(expected);
+  });
+
+  it('should not manipulate data when no known blocks found', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            type: 'foobar',
+            items: [{ name: 'item1' }, { name: 'item2' }, { name: 'item3' }],
+          },
+          {
+            type: 'barfoo',
+            items: [{ name: 'item4' }, { name: 'item5' }],
+          },
+          {
+            type: 'foobarfoo',
+            items: [{ name: 'item6' }, { name: 'item7' }, { name: 'item8' }],
+          },
+        ],
+      },
+    };
+
+    expect(applySquashTopstories(data)).toEqual(data);
+  });
+
+  it('should find topstories blocks anywhere in data and bring to top', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            type: 'foobar',
+            items: [{ name: 'item1' }, { name: 'item2' }, { name: 'item3' }],
+          },
+          {
+            type: 'barfoo',
+            items: [{ name: 'item4' }, { name: 'item5' }],
+          },
+          {
+            type: 'responsive-top-stories',
+            items: [{ name: 'item6' }, { name: 'item7' }, { name: 'item8' }],
+          },
+        ],
+      },
+    };
+
+    const expected = {
+      content: {
+        groups: [
+          {
+            type: 'top-stories',
+            title: 'Top stories',
+            items: [{ name: 'item6' }, { name: 'item7' }, { name: 'item8' }],
+          },
+          {
+            type: 'foobar',
+            items: [{ name: 'item1' }, { name: 'item2' }, { name: 'item3' }],
+          },
+          {
+            type: 'barfoo',
+            items: [{ name: 'item4' }, { name: 'item5' }],
+          },
+        ],
+      },
+    };
+
+    expect(applySquashTopstories(data)).toEqual(expected);
+  });
+
+  it('should parse top stories groups style one as expected', () => {
+    expect(applySquashTopstories(fixtureDataFormatOne)).toMatchSnapshot();
+  });
+
+  it('should parse top stories groups style two as expected', () => {
+    expect(applySquashTopstories(fixtureDataFormatTwo)).toMatchSnapshot();
   });
 });
