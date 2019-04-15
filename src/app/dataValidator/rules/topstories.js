@@ -11,7 +11,6 @@ const squashKeys = [
 const squashTopStories = jsonRaw => {
   const json = deepClone(jsonRaw); // make a copy so we don't corrupt the input
   let groups = deepGet(['content', 'groups'], json);
-
   let collectedItems = [];
 
   if (groups) {
@@ -19,7 +18,7 @@ const squashTopStories = jsonRaw => {
      * Find and delete unwanted groups while collecting items
      */
     groups = groups.filter(group => {
-      if (squashKeys.indexOf(group.type) > -1) {
+      if (group.type && squashKeys.indexOf(group.type) > -1) {
         collectedItems = collectedItems.concat(group.items);
 
         return false; // delete the group
