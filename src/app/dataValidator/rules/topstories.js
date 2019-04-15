@@ -18,7 +18,7 @@ const squashTopStories = jsonRaw => {
      * Find and delete unwanted groups while collecting items
      */
     groups = groups.filter(group => {
-      if (group.type && squashKeys.indexOf(group.type) > -1) {
+      if (group.type && squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
 
         return false; // delete the group
@@ -28,7 +28,7 @@ const squashTopStories = jsonRaw => {
     });
 
     /*
-     * If items were collected, form into a new group and add to start
+     * If items were collected, form into a new group
      */
     if (collectedItems.length > 0) {
       const newGroup = {
@@ -37,10 +37,13 @@ const squashTopStories = jsonRaw => {
         items: collectedItems,
       };
 
+      /*
+       * Add new group to the start of the groups array
+       */
       groups.unshift(newGroup);
 
       /*
-       * Now that we have new collected items, override the original groups with the new ones
+       * Override the original groups with the new ones
        */
       json.content.groups = groups;
     }
