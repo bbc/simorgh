@@ -1,7 +1,6 @@
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
-import fs from 'fs';
 import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
@@ -10,6 +9,7 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
@@ -61,6 +61,15 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
+  const sendDataFile = (res, dataFilePath, next) => {
+    res.sendFile(dataFilePath, {}, sendErr => {
+      if (sendErr) {
+        logger.error(sendErr);
+        next(sendErr);
+      }
+    });
+  };
+
   server
     .use(
       expressStaticGzip(publicDirectory, {
@@ -68,29 +77,31 @@ if (process.env.APP_ENV === 'local') {
         orderPreference: ['br'],
       }),
     )
-    .get(articleDataRegexPath, async ({ params }, res) => {
+    .get(articleDataRegexPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
       const dataFilePath = path.join(
+        process.cwd(),
         dataFolderToRender,
         service,
         'articles',
         `${id}.json`,
       );
 
-      fs.readFile(dataFilePath, (error, data) => {
-        if (error) {
-          res.sendStatus(404);
-          logger.error(`error reading article json, ${error}`);
-          return null;
-        }
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+      const { service } = params;
 
-        const articleJSON = JSON.parse(data);
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'frontpage',
+        'index.json',
+      );
 
-        res.setHeader('Content-Type', 'application/json');
-        res.json(articleJSON);
-        return null;
-      });
+      sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
