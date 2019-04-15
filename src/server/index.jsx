@@ -1,9 +1,7 @@
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
-import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -19,8 +17,6 @@ import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 
 const morgan = require('morgan');
-
-const access = promisify(fs.access);
 
 const logger = nodeLogger(__filename);
 
@@ -65,34 +61,13 @@ server
  */
 
 if (process.env.APP_ENV === 'local') {
-  const errorWhenAccessingFile = async dataFilePath => {
-    try {
-      await access(dataFilePath, fs.constants.R_OK);
-    } catch (e) {
-      return e;
-    }
-    return false;
-  };
-
-  const sendDataFile = async (res, dataFilePath) => {
-    const accessErr = await errorWhenAccessingFile(dataFilePath);
-    if (accessErr) {
-      logger.error(accessErr);
-      res.status(404).send(`404: Could not access data file ${dataFilePath}`);
-      return;
-    }
-
-    try {
-      const sendFile = promisify(res.sendFile).bind(res);
-      await sendFile(dataFilePath, {});
-    } catch (sendErr) {
-      logger.error(sendErr);
-      res
-        .status(500)
-        .send(
-          `500: Failed to send data file ${dataFilePath}. Error: ${sendErr}`,
-        );
-    }
+  const sendDataFile = (res, dataFilePath, next) => {
+    res.sendFile(dataFilePath, {}, sendErr => {
+      if (sendErr) {
+        logger.error(sendErr);
+        next(sendErr);
+      }
+    });
   };
 
   server
@@ -102,7 +77,7 @@ if (process.env.APP_ENV === 'local') {
         orderPreference: ['br'],
       }),
     )
-    .get(articleDataRegexPath, async ({ params }, res) => {
+    .get(articleDataRegexPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
       const dataFilePath = path.join(
@@ -113,9 +88,9 @@ if (process.env.APP_ENV === 'local') {
         `${id}.json`,
       );
 
-      sendDataFile(res, dataFilePath);
+      sendDataFile(res, dataFilePath, next);
     })
-    .get(frontpageDataRegexPath, async ({ params }, res) => {
+    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
       const { service } = params;
 
       const dataFilePath = path.join(
@@ -126,7 +101,7 @@ if (process.env.APP_ENV === 'local') {
         'index.json',
       );
 
-      sendDataFile(res, dataFilePath);
+      sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
