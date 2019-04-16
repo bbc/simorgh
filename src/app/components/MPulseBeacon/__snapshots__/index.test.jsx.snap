@@ -5,6 +5,13 @@ exports[`MPulseBeacon should return script snippet 1`] = `
   dangerouslySetInnerHTML={
     Object {
       "__html": "
+  window.BOOMR_config = window.BOOMR_config || {};
+  BOOMR_config.autorun = false;
+  BOOMR_config.History = {
+      auto: true,
+      enabled: true
+  };
+
   (function(){
     if (window.BOOMR && window.BOOMR.version) { return; }
     var dom,doc,where,iframe = document.createElement(\\"iframe\\"),win = window;

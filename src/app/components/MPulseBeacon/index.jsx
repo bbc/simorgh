@@ -2,6 +2,13 @@ import React from 'react';
 import { string } from 'prop-types';
 
 const snippet = apiKey => `
+  window.BOOMR_config = window.BOOMR_config || {};
+  BOOMR_config.autorun = false;
+  BOOMR_config.History = {
+      auto: true,
+      enabled: true
+  };
+
   (function(){
     if (window.BOOMR && window.BOOMR.version) { return; }
     var dom,doc,where,iframe = document.createElement("iframe"),win = window;
