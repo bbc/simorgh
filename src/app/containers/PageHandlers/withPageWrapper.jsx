@@ -1,12 +1,14 @@
 import React from 'react';
-import PageWrapper from '../Layouts';
+import PageWrapper from '../../Layouts';
 
-const WithPageWrapper = Component => props => {
-  return (
+const WithPageWrapper = Component => {
+  const PageWrapperContainer = props => (
     <PageWrapper {...props}>
       <Component {...props} />
     </PageWrapper>
   );
+
+  return PageWrapperContainer;
 };
 
 export default WithPageWrapper;

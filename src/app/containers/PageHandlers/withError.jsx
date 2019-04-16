@@ -1,18 +1,26 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, element } from 'prop-types';
 import ErrorMain from '../ErrorMain';
 
-const WithError = Component => ({ error, ...props }) => {
-  if (!error) return <Component {...props} />;
-  return <ErrorMain status={500} />;
+const WithError = Component => {
+  const ErrorContainer = ({ error, ...props }) => {
+    if (!error) return <Component {...props} />;
+    return <ErrorMain status={500} />;
+  };
+
+  ErrorContainer.propTypes = {
+    error: string,
+  };
+
+  ErrorContainer.defaultProps = {
+    error: true,
+  };
+
+  return ErrorContainer;
 };
 
 WithError.propTypes = {
-  error: string,
-};
-
-WithError.defaultProps = {
-  error: true,
+  Component: element,
 };
 
 export default WithError;

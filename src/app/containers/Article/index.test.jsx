@@ -9,6 +9,8 @@ global.console.log = jest.fn();
 describe('ArticleContainer', () => {
   const newsProps = {
     data: articleDataNews,
+    loading: false,
+    error: null,
     isAmp: false,
     service: 'news',
     status: 200,
@@ -28,13 +30,37 @@ describe('ArticleContainer', () => {
     status: 451,
   };
 
+  const loadingProps = {
+    loading: true,
+    error: null,
+    isAmp: false,
+    service: 'news',
+    status: 200,
+  };
+
   const bbcOrigin = 'https://www.bbc.co.uk';
+
+  jest.mock('../PageHandlers/withPageWrapper', () => ({
+    WithPageWrapper: () => Component => props => <Component {...props} />,
+  }));
+
+  jest.mock('../PageHandlers/withLoading', () => ({
+    WithLoading: () => Component => props => <Component {...props} />,
+  }));
+
+  jest.mock('../PageHandlers/withError', () => ({
+    WithError: () => Component => props => <Component {...props} />,
+  }));
+
+  jest.mock('../PageHandlers/withData', () => ({
+    WithData: () => Component => props => <Component {...props} />,
+  }));
 
   describe('Component', () => {
     describe('200 status code', () => {
       shouldShallowMatchSnapshot(
         'should render correctly for news',
-        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
+        <ArticleContainer {...newsProps} bbcOrigin={bbcOrigin} />,
       );
       shouldShallowMatchSnapshot(
         'should render correctly for persian',
@@ -52,14 +78,14 @@ describe('ArticleContainer', () => {
     describe('no data or bbcOrigin', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <ArticleContainer />,
+        <ArticleContainer error />,
       );
     });
 
     describe('loading state', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <ArticleContainer loading />,
+        <ArticleContainer {...loadingProps} />,
       );
     });
 

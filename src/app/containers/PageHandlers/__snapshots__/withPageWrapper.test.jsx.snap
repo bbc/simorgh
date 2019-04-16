@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with pageWarpper should render correctly 1`] = `
+<PageWrapper
+  bbcOrigin="https://www.bbc.co.uk"
+  isAmp={false}
+  service="news"
+>
+  <PageWrapperContainer />
+</PageWrapper>
+`;

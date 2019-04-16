@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withData HOC with missing articleData should return the errorMain component 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
+
+exports[`withData HOC with no data should return the errorMain component 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
+
+exports[`withData HOC with non 200 status should return the errorMain component 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
+
+exports[`withData HOC with valid props should return the passed in component 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
