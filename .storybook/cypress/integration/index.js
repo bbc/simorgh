@@ -3,7 +3,7 @@ describe('Storybook Article', () => {
   before(() => {
     cy.visit('/');
     // uncollapse all stories (first is open by default)
-    cy.get('ul>li>div>ul>li:not(:first-child)').each($story => {
+    cy.get('div[role="menuitem"]').each($story => {
       cy.wrap($story).click();
     });
   });

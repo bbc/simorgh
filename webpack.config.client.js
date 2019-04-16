@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
@@ -109,6 +110,22 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           );
         },
       ),
+      /*
+       * The webpack.ContextReplacementPlugin allows us to load only
+       * the specific locales we require into our code. By using this
+       * plugin we can reference `moment/locale/en.js` in the files
+       * we need it, without importing it in every file or importing
+       * every locale.
+       */
+      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/),
+      /* moment-timezone-data-plugin allows you to specify how much
+       * and what specific timezone data you wish to bundle.
+       * matchZones: (string or array of strings) Only include data
+       * for time zones with names matching this value.
+       */
+      new MomentTimezoneDataPlugin({
+        matchZones: 'Europe/London',
+      }),
     ],
   };
 
