@@ -31,19 +31,6 @@ describe('App', () => {
     loadInitialDataSpy = jest.spyOn(loadInitialData, 'default');
   });
 
-  it('should return rendered routes', () => {
-    expect.assertions(4);
-    expect(loadInitialDataSpy).not.toHaveBeenCalled();
-    expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
-    expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
-      data: initialData,
-      error: null,
-      loading: false,
-      bbcOrigin: 'https://www.bbc.co.uk',
-    });
-    expect(wrapper).toMatchSnapshot();
-  });
-
   describe('componentDidUpdate', () => {
     describe('same location', () => {
       it('should not call set state with new data', () => {

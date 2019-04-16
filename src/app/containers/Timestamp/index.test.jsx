@@ -1,12 +1,8 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { isNull } from '../../helpers/tests/testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
-
-const defaultTimestamp = 1539969006000; // 19 October 2018
-const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
-const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
 const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
 
@@ -19,27 +15,6 @@ describe('Timestamp', () => {
   describe('with no data', () => {
     isNull('should return null', <Timestamp />);
   });
-  shouldMatchSnapshot(
-    'should render without a leading zero on the day',
-    <Timestamp
-      firstPublished={noLeadingZeroTimestamp}
-      lastPublished={noLeadingZeroTimestamp}
-    />,
-  );
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Timestamp
-      lastPublished={defaultTimestamp}
-      firstPublished={defaultTimestamp}
-    />,
-  );
-  shouldMatchSnapshot(
-    'should handle an invalid timestamp',
-    <Timestamp
-      firstPublished={invalidTimestamp}
-      lastPublished={invalidTimestamp}
-    />,
-  );
 
   it('should render one date when published before today and never updated', () => {
     const renderedWrapper = renderedTimestamps(
