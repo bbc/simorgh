@@ -5,6 +5,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 const metadataSnapshotTest = (
   testDescription,
   isAmp,
+  alternateLinks,
   ampLink,
   articleAuthor,
   articleSection,
@@ -29,6 +30,7 @@ const metadataSnapshotTest = (
   describe(testDescription, () => {
     const metadataProps = {
       isAmp,
+      alternateLinks,
       ampLink,
       articleAuthor,
       articleSection,
@@ -61,6 +63,20 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'News article',
     false,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        hrefLang: 'en-gb',
+      },
+    ],
     'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     null,
@@ -86,6 +102,20 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'News AMP article',
     true,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
+        hrefLang: 'en-gb',
+      },
+    ],
     'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     null,
@@ -111,6 +141,7 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'Persian article',
     false,
+    [],
     'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
     'BBC News فارسی',
     null,
@@ -136,6 +167,7 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'Persian AMP article',
     true,
+    [],
     'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
     'BBC News فارسی',
     null,
@@ -161,6 +193,20 @@ describe('Metadata', () => {
   metadataSnapshotTest(
     'articleSection is not null',
     false,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        hrefLang: 'en-gb',
+      },
+    ],
     'https://www.bbc.com/news/articles/c0000000001o.amp',
     'BBC News',
     'Politics',
