@@ -1,61 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { number } from 'prop-types';
-import { C_RHINO } from '@bbc/psammead-styles/colours';
-import { FF_NEWS_SANS_REG } from '@bbc/psammead-styles/fonts';
-import { T_BREVIER } from '../../lib/constants/typography';
-import { GEL_SPACING_DBL } from '../../lib/constants/styles';
+import { node, string } from 'prop-types';
+import {
+  GEL_SPACING_HLF,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_BREVIER,
+  GEL_FF_REITH_SANS,
+} from '@bbc/gel-foundations/typography';
+import { C_CLOUD_DARK } from '@bbc/psammead-styles/colours';
 
-// if the date is invalid return null - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
-
-const formatDateTime = dateObj => {
-  const fullYear = dateObj.getFullYear();
-  const monthTwoDigit = dateObj.toLocaleDateString('en-GB', {
-    month: '2-digit',
-  });
-  const dayTwoDigit = dateObj.toLocaleDateString('en-GB', {
-    day: '2-digit',
-  });
-
-  return `${fullYear}-${monthTwoDigit}-${dayTwoDigit}`;
-};
-
-const formatTimestamp = dateObj => {
-  const fullYear = dateObj.getFullYear();
-  const monthLong = dateObj.toLocaleDateString('en-GB', {
-    month: 'long',
-  });
-  const dayNumeric = dateObj.toLocaleDateString('en-GB', {
-    day: 'numeric',
-  });
-
-  return `${dayNumeric} ${monthLong} ${fullYear}`;
-};
-
-const StyledTimestamp = styled.div`
-  ${T_BREVIER};
-  color: ${C_RHINO};
-  font-family: ${FF_NEWS_SANS_REG};
-  padding-bottom: ${GEL_SPACING_DBL};
+const StyledTimestamp = styled.time`
+  ${GEL_BREVIER};
+  color: ${C_CLOUD_DARK};
+  display: block;
+  font-family: ${GEL_FF_REITH_SANS};
+  padding-bottom: ${GEL_SPACING_HLF};
+  &:last-child {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
 `;
 
-const Timestamp = ({ timestamp }) => {
-  const dateObj = new Date(timestamp);
-
-  if (!isValidDateTime(dateObj)) {
-    return null;
-  }
-
-  return (
-    <StyledTimestamp>
-      <time dateTime={formatDateTime(dateObj)}>{formatTimestamp(dateObj)}</time>
-    </StyledTimestamp>
-  );
-};
+const Timestamp = ({ children, datetime }) => (
+  <StyledTimestamp dateTime={datetime}>{children}</StyledTimestamp>
+);
 
 Timestamp.propTypes = {
-  timestamp: number.isRequired,
+  children: node.isRequired,
+  datetime: string.isRequired,
 };
 
 export default Timestamp;

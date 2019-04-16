@@ -47,7 +47,7 @@ pipeline {
           userRemoteConfigs: [[
             credentialsId: 'github',
             name: "origin/${env.BRANCH_NAME}",
-            url: 'https://github.com/bbc-news/simorgh.git'
+            url: 'https://github.com/bbc/simorgh.git'
           ]]
         ])
         script {
@@ -77,6 +77,7 @@ pipeline {
       steps {
         sh 'make install'
         sh 'make developmentTests'
+        sh 'make installProd'
         sh 'make productionTests'
       }
       post {
@@ -95,7 +96,11 @@ pipeline {
       steps {
         build(
           job: 'simorgh-infrastructure/latest',
-          parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME]],
+          parameters: [
+            [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
+          ],
           propagate: true,
           wait: true
         )

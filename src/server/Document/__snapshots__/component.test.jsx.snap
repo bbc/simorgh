@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document Component should render AMP version correctly 1`] = `
+<html
+  lang="test"
+>
+  <head>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <ResourceHints />
+    <title>
+      Test title
+    </title>
+    <link
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
+      rel="canonical"
+    />
+    <style
+      amp-custom=""
+    >
+      html { color: red; }
+    </style>
+    <script
+      type="application/ld+json"
+    />
+    <React.Fragment>
+      <style
+        amp-boilerplate=""
+      >
+        body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      </style>
+      <noscript>
+        <style
+          amp-boilerplate=""
+        >
+          body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+        </style>
+      </noscript>
+    </React.Fragment>
+    <React.Fragment>
+      <script
+        async={true}
+        src="https://cdn.ampproject.org/v0.js"
+      />
+      <script
+        async={true}
+        custom-element="amp-geo"
+        src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+      />
+      <script
+        async={true}
+        custom-element="amp-consent"
+        src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+      />
+    </React.Fragment>
+  </head>
+  <body>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1>App!</h1>",
+        }
+      }
+      id="root"
+    />
+  </body>
+</html>
+`;
+
+exports[`Document Component should render correctly 1`] = `
+<html
+  lang="test"
+>
+  <head>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <ResourceHints />
+    <title>
+      Test title
+    </title>
+    <link
+      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
+      rel="canonical"
+    />
+    <style
+      data-styled-components="abc"
+    >
+      html { color: red; }
+    </style>
+    <script
+      type="application/ld+json"
+    />
+  </head>
+  <body>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1>App!</h1>",
+        }
+      }
+      id="root"
+    />
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\",\\"isAmp\\":false}",
+        }
+      }
+    />
+    <React.Fragment>
+      <IfAboveIE9>
+        <script
+          crossOrigin="anonymous"
+          defer={true}
+          src="http://example.com/file.js"
+          type="text/javascript"
+        />
+      </IfAboveIE9>
+    </React.Fragment>
+  </body>
+</html>
+`;

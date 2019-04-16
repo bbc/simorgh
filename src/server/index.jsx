@@ -1,123 +1,152 @@
-import React from 'react';
 import express from 'express';
-import { ServerApp, loadInitialData } from 'react-universal-app';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
-import { Helmet } from 'react-helmet';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
-import fs from 'fs';
 import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, { articleRegexPath } from '../app/routes';
-import { getStyleTag } from './styles';
+import loadInitialData from '../app/routes/loadInitialData';
+import routes, {
+  articleRegexPath,
+  articleDataRegexPath,
+  frontpageDataRegexPath,
+  manifestRegexPath,
+  swRegexPath,
+} from '../app/routes';
+import nodeLogger from '../app/helpers/logger.node';
+import renderDocument from './Document';
 
-import Document from '../app/components/Document';
-/*
-  Safely imports the assets manifest file that the 'RAZZLE_ASSETS_MANIFEST' does not exist.
-  Maps through the manifest file and extracts the JavaScript URLs.
-*/
-const assets = [];
-try {
-  const assetManifest = require(process.env.RAZZLE_ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require, global-require
-  const assetsManifestKeys = Object.keys(assetManifest);
+const morgan = require('morgan');
 
-  /*
-    Loops through the asset manifest, extracts the JS URL out of each entry and injects them into the assets array, which is passed to render.
-    Loops backwards as the client bundle is output first, but needs to be last
-  */
-  for (let i = assetsManifestKeys.length - 1; i >= 0; i -= 1) {
-    const key = assetsManifestKeys[i];
-    assets.push(assetManifest[key].js);
-  }
-} catch (error) {
-  /* eslint-disable no-console */
-  console.log(
-    `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
-      process.env.RAZZLE_ASSETS_MANIFEST
-    }`,
-  );
-  /* eslint-enable no-console */
-}
+const logger = nodeLogger(__filename);
 
-const getPublicDirectory = () =>
-  process.env.NODE_ENV === 'production'
-    ? process.env.RAZZLE_PUBLIC_DIR
-    : process.env.RAZZLE_PUBLIC_DIR_DEV;
-
-const publicDirectory = getPublicDirectory();
+const publicDirectory = 'build/public';
 const dataFolderToRender =
   process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
-const articleDataRegexPath = `${articleRegexPath}.json`;
+logger.debug(
+  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
+);
+
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
+class LoggerStream {
+  write(message) {
+    logger.info(message.substring(0, message.lastIndexOf('\n')));
+  }
+}
 
 const server = express();
+
+/*
+ * Default headers, compression, logging, status route
+ */
+
 server
   .disable('x-powered-by')
-  .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(
-    expressStaticGzip(publicDirectory, {
-      enableBrotli: true,
-      orderPreference: ['br'],
+    morgan('tiny', {
+      skip: (req, res) => res.statusCode === 200,
+      stream: new LoggerStream(),
     }),
   )
+  .use(compression())
+  .use(helmet({ frameguard: { action: 'deny' } }))
   .use(gnuTP())
-  .get(articleDataRegexPath, async ({ params }, res) => {
-    const { service, id } = params;
-
-    const dataFilePath = path.join(
-      dataFolderToRender,
-      service,
-      'articles',
-      `${id}.json`,
-    );
-
-    fs.readFile(dataFilePath, (error, data) => {
-      if (error) {
-        res.sendStatus(404);
-        console.log(error); // eslint-disable-line no-console
-        return null;
-      }
-
-      const articleJSON = JSON.parse(data);
-
-      res.setHeader('Content-Type', 'application/json');
-      res.json(articleJSON);
-      return null;
-    });
-  })
   .get('/status', (req, res) => {
     res.sendStatus(200);
+  });
+
+/*
+ * Local env routes - fixture data
+ */
+
+if (process.env.APP_ENV === 'local') {
+  const sendDataFile = (res, dataFilePath, next) => {
+    res.sendFile(dataFilePath, {}, sendErr => {
+      if (sendErr) {
+        logger.error(sendErr);
+        next(sendErr);
+      }
+    });
+  };
+
+  server
+    .use(
+      expressStaticGzip(publicDirectory, {
+        enableBrotli: true,
+        orderPreference: ['br'],
+      }),
+    )
+    .get(articleDataRegexPath, async ({ params }, res, next) => {
+      const { service, id } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'articles',
+        `${id}.json`,
+      );
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+      const { service } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'frontpage',
+        'index.json',
+      );
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get('/ckns_policy/*', (req, res) => {
+      // Route to allow the cookie banner to make the cookie oven request
+      // without throwing an error due to not being on a bbc domain.
+      res.sendStatus(200);
+    });
+}
+
+/*
+ * Application env routes
+ */
+
+server
+  .get(swRegexPath, (req, res) => {
+    const swPath = `${__dirname}/public/sw.js`;
+    res.sendFile(swPath, {}, error => {
+      if (error) {
+        logger.error(error);
+        res.status(500).send('Unable to find service worker.');
+      }
+    });
   })
-  .get('/*', async ({ url }, res) => {
+  .get(manifestRegexPath, async ({ params }, res) => {
+    const { service } = params;
+    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+    res.sendFile(manifestPath, {}, error => {
+      if (error) {
+        console.log(error); // eslint-disable-line no-console
+        res.status(500).send('Unable to find manifest.');
+      }
+    });
+  })
+  .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
-      const sheet = new ServerStyleSheet();
       const data = await loadInitialData(url, routes);
+      const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
 
-      const app = renderToString(
-        sheet.collectStyles(
-          <ServerApp location={url} routes={routes} data={data} context={{}} />,
-        ),
-      );
-
-      const headHelmet = Helmet.renderStatic();
-
-      const doc = renderToStaticMarkup(
-        <Document
-          assets={assets}
-          app={app}
-          data={data}
-          styleTags={getStyleTag(sheet, data.isAmp)}
-          helmet={headHelmet}
-        />,
-      );
-
-      res.send(`<!doctype html>${doc}`);
-    } catch ({ message }) {
-      res.status(404).send(message);
+      res
+        .status(status)
+        .send(await renderDocument(url, data, routes, bbcOrigin));
+    } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
+      logger.error(`status: ${status || 500} - ${message}`);
+      res.status(500).send(message);
     }
   });
 

@@ -1,4 +1,7 @@
 {
-	"video": false,
-	"baseUrl": "http://localhost:7080"
+  "video": false,
+  "chromeWebSecurity": false,
+  "env": {
+    "APP_ENV": "local"
+  }
 }

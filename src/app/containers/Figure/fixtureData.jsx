@@ -1,11 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
+const imageHeight = 360;
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
+const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = blockContainingText('caption', 'This is a caption');
 // The following block is quite a large and ugly thing to keep in this file, but refactoring model/blocks.js to better allow for generating fragmented data is not in scope of the current task.
@@ -34,6 +38,7 @@ const captionBlockWithLink = {
                     model: {
                       text: 'containing an inline link',
                       locator: 'https://www.bbc.com',
+                      isExternal: false,
                       blocks: [
                         {
                           type: 'fragment',
@@ -67,33 +72,72 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = (caption, copyright) => (
+const generateFixtureData = ({ caption, copyright, platform }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <FigureContainer
-      src={imageSrc}
-      alt={imageAlt}
-      ratio={imageRatio}
-      captionBlock={caption}
-      copyright={copyright}
-    />
+    <RequestContextProvider platform={platform}>
+      <FigureContainer
+        alt={imageAlt}
+        captionBlock={caption ? captionBlock : null}
+        copyright={copyright ? copyrightText : null}
+        height={imageHeight}
+        ratio={imageRatio}
+        src={imageSrc}
+        width={imageWidth}
+      />
+    </RequestContextProvider>
   </ServiceContext.Provider>
 );
 
-export const FigureImage = generateFixtureData();
+generateFixtureData.propTypes = {
+  caption: PropTypes.objectOf(PropTypes.any),
+  copyright: PropTypes.string,
+  platform: PropTypes.string,
+};
 
-export const FigureImageWithCaption = generateFixtureData(captionBlock);
+generateFixtureData.defaultProps = {
+  caption: null,
+  copyright: null,
+  platform: 'canonical',
+};
 
-export const FigureImageWithCopyright = generateFixtureData(
-  null,
-  copyrightText,
-);
+export const FigureImage = generateFixtureData({});
 
-export const FigureImageWithCopyrightAndCaption = generateFixtureData(
-  captionBlock,
-  copyrightText,
-);
+export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
-export const FigureImageWithCaptionContainingLink = generateFixtureData(
-  captionBlockWithLink,
-  null,
-);
+export const FigureImageWithCaption = generateFixtureData({
+  caption: captionBlock,
+});
+
+export const FigureAmpImageWithCaption = generateFixtureData({
+  caption: captionBlock,
+  platform: 'amp',
+});
+
+export const FigureImageWithCopyright = generateFixtureData({
+  copyright: copyrightText,
+});
+
+export const FigureAmpImageWithCopyright = generateFixtureData({
+  copyright: copyrightText,
+  platform: 'amp',
+});
+
+export const FigureImageWithCopyrightAndCaption = generateFixtureData({
+  caption: captionBlock,
+  copyright: copyrightText,
+});
+
+export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
+  caption: captionBlock,
+  copyright: copyrightText,
+  platform: 'amp',
+});
+
+export const FigureImageWithCaptionContainingLink = generateFixtureData({
+  caption: captionBlockWithLink,
+});
+
+export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
+  caption: captionBlockWithLink,
+  platform: 'amp',
+});

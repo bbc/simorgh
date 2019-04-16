@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-<footer
+<ForwardRef
   role="contentinfo"
 >
   <BrandContainer />
   <SitewideLinks
-    copyrightText="© 2018 BBC. The BBC is not responsible for the content of external sites. "
+    copyrightText="© 3000 BBC. The BBC is not responsible for the content of external sites. "
     externalLink={
       Object {
         "href": "https://www.bbc.co.uk/help/web/links/",
@@ -46,5 +46,5 @@ exports[`FooterContainer should render correctly 1`] = `
       ]
     }
   />
-</footer>
+</ForwardRef>
 `;

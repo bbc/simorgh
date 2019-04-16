@@ -10,19 +10,24 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const inlineLinkBlock = (locator, blocks) => ({
+const inlineLinkBlock = (locator, blocks, isExternal) => ({
   type: 'urlLink',
   model: {
     locator,
     blocks,
+    isExternal,
   },
 });
 
-const inlineLink = inlineLinkBlock('/bbc-test', [
-  fragmentBlock('Some text'),
-  fragmentBlock(' for the ', ['bold']),
-  fragmentBlock(' link!', ['italic']),
-]);
+const inlineLink = inlineLinkBlock(
+  '/bbc-test',
+  [
+    fragmentBlock('Some text'),
+    fragmentBlock(' for the ', ['bold']),
+    fragmentBlock(' link!', ['italic']),
+  ],
+  false,
+);
 
 const blocks = [fragmentBlock('This is some text.', ['bold']), inlineLink];
 

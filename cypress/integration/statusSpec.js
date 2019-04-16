@@ -1,7 +1,7 @@
-import { testNonHTMLResponseCode } from '../support/metaTestHelper';
+import { testContentTypeContains } from '../support/metaTestHelper';
 
-describe('Simorgh Status', () => {
-  it('should return 200', () => {
-    testNonHTMLResponseCode('/status', 200);
+describe('Service worker', () => {
+  it('should have the content type set to Javascript', () => {
+    testContentTypeContains('/news/articles/sw.js', 'application/javascript');
   });
 });

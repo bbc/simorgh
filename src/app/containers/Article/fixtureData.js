@@ -2,6 +2,7 @@ import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
 const articleDataBuilder = (
   id,
+  createdBy,
   passportLanguage,
   home,
   headlineText,
@@ -17,11 +18,11 @@ const articleDataBuilder = (
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
     type: 'article',
-    createdBy: '',
+    createdBy,
     created: 1514808060000,
     firstPublished: 1514808060000,
     lastPublished: 1514811600000,
-    lastUpdated: 1514811600000,
+    lastUpdated: 1514815200000,
     passport: {
       language: passportLanguage,
       home,
@@ -83,6 +84,7 @@ const emptyThings = {
 
 export const articleDataNews = articleDataBuilder(
   'c0000000001o',
+  'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
   'Article Headline',
@@ -94,7 +96,8 @@ export const articleDataNews = articleDataBuilder(
 );
 
 export const articleDataPersian = articleDataBuilder(
-  'cwv2xv848j5o',
+  'cyddjz5058wo',
+  'Persian',
   'fa',
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',
   'سرصفحه مقاله',

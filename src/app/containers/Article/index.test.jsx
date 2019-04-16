@@ -7,35 +7,49 @@ import { articleDataNews, articleDataPersian } from './fixtureData';
 global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
-  const newsData = { data: articleDataNews, isAmp: false, service: 'news' };
+  const newsProps = {
+    data: articleDataNews,
+    isAmp: false,
+    service: 'news',
+    status: 200,
+  };
 
-  // temporary: will be removed with https://github.com/BBC-News/simorgh/issues/836
-  const newsDataNoHeadline = JSON.parse(JSON.stringify(newsData));
-  newsDataNoHeadline.data.content.model.blocks.shift();
-
-  const persianData = {
+  const persianProps = {
     data: articleDataPersian,
     isAmp: false,
     service: 'persian',
+    status: 200,
   };
 
+  const badData = {
+    data: undefined,
+    isAmp: false,
+    service: 'news',
+    status: 451,
+  };
+
+  const bbcOrigin = 'https://www.bbc.co.uk';
+
   describe('Component', () => {
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <ArticleContainer data={newsData} />,
-    );
+    describe('200 status code', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly for news',
+        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
+      );
+      shouldShallowMatchSnapshot(
+        'should render correctly for persian',
+        <ArticleContainer data={persianProps} bbcOrigin={bbcOrigin} />,
+      );
+    });
 
-    shouldShallowMatchSnapshot(
-      'should render Persian article correctly',
-      <ArticleContainer data={persianData} />,
-    );
+    describe('non-200 status code', () => {
+      shouldShallowMatchSnapshot(
+        'should render correctly',
+        <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
+      );
+    });
 
-    shouldShallowMatchSnapshot(
-      'should render null if no headline block',
-      <ArticleContainer data={newsDataNoHeadline} />,
-    );
-
-    describe('no data', () => {
+    describe('no data or bbcOrigin', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
         <ArticleContainer />,

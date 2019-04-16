@@ -12,141 +12,54 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   }
 >
   <meta
-    content="width=device-width, initial-scale=1, minimum-scale=1"
-    name="viewport"
-  />
-  <title>
-    An article title
-     – 
-    BBC News
-  </title>
-  <link
-    href="https://www.bbc.com/news/articles/c0000000001o.amp"
-    rel="canonical"
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
   />
   <meta
-    content="BBC News"
-    name="article:author"
+    charSet="utf-8"
   />
   <meta
-    content={1514811600000}
-    name="article:modified_time"
+    content="noodp,noydir"
+    name="robots"
   />
   <meta
-    content={1514811600000}
-    name="article:published_time"
+    content="#B80000"
+    name="theme-color"
   />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
-  />
-  <meta
-    content="This is a description"
-    name="description"
-  />
-  <meta
-    content={101010}
-    name="fb:admins"
-  />
-  <meta
-    content={202020}
-    name="fb:app_id"
-  />
-  <meta
-    content="This is a description"
-    name="og:description"
-  />
-  <meta
-    content="https://www.bbc.com/news/image.png"
-    name="og:image"
-  />
-  <meta
-    content="BBC News"
-    name="og:image:alt"
-  />
-  <meta
-    content="en_GB"
-    name="og:locale"
-  />
-  <meta
-    content="BBC News"
-    name="og:site_name"
-  />
-  <meta
-    content="An article title"
-    name="og:title"
-  />
-  <meta
-    name="og:type"
-  />
-  <meta
-    content="https://www.bbc.com/news/articles/c0000000001o.amp"
-    name="og:url"
-  />
-  <meta
-    content="summary_large_image"
-    name="twitter:card"
-  />
-  <meta
-    content="@BBCNews"
-    name="twitter:creator"
-  />
-  <meta
-    content="This is a description"
-    name="twitter:description"
-  />
-  <meta
-    content="BBC News"
-    name="twitter:image:alt"
-  />
-  <meta
-    content="https://www.bbc.com/news/image.png"
-    name="twitter:image:src"
-  />
-  <meta
-    content="@BBCNews"
-    name="twitter:site"
-  />
-  <meta
-    content="An article title"
-    name="twitter:title"
-  />
-</HelmetWrapper>
-`;
-
-exports[`Metadata News article should render correctly 1`] = `
-<HelmetWrapper
-  defer={true}
-  encodeSpecialCharacters={true}
-  htmlAttributes={
-    Object {
-      "lang": "en-GB",
-    }
-  }
->
   <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
   <title>
     An article title
-     – 
+     - 
     BBC News
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
   <meta
     content="BBC News"
     name="article:author"
   />
   <meta
-    content={1514811600000}
+    content={1539188371344}
     name="article:modified_time"
   />
   <meta
@@ -232,6 +145,175 @@ exports[`Metadata News article should render correctly 1`] = `
     content="An article title"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Metadata News article should render correctly 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en-GB",
+    }
+  }
+>
+  <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noodp,noydir"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+    name="viewport"
+  />
+  <title>
+    An article title
+     - 
+    BBC News
+  </title>
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    rel="amphtml"
+  />
+  <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
+    content="This is a description"
+    name="description"
+  />
+  <meta
+    content={101010}
+    name="fb:admins"
+  />
+  <meta
+    content={202020}
+    name="fb:app_id"
+  />
+  <meta
+    content="This is a description"
+    name="og:description"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="og:image"
+  />
+  <meta
+    content="BBC News"
+    name="og:image:alt"
+  />
+  <meta
+    content="en_GB"
+    name="og:locale"
+  />
+  <meta
+    content="BBC News"
+    name="og:site_name"
+  />
+  <meta
+    content="An article title"
+    name="og:title"
+  />
+  <meta
+    name="og:type"
+  />
+  <meta
+    content="https://www.bbc.com/news/articles/c0000000001o"
+    name="og:url"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:creator"
+  />
+  <meta
+    content="This is a description"
+    name="twitter:description"
+  />
+  <meta
+    content="BBC News"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="https://www.bbc.com/news/image.png"
+    name="twitter:image:src"
+  />
+  <meta
+    content="@BBCNews"
+    name="twitter:site"
+  />
+  <meta
+    content="An article title"
+    name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -247,16 +329,31 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noodp,noydir"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
   <title>
     پهپادی که برایتان قهوه می‌آورد
-     – 
+     - 
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cwv2xv848j5o.amp"
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
   />
   <meta
@@ -264,7 +361,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1514811600000}
+    content={1539188371344}
     name="article:modified_time"
   />
   <meta
@@ -319,7 +416,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cwv2xv848j5o.amp"
+    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
     name="og:url"
   />
   <meta
@@ -349,6 +446,15 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -364,24 +470,43 @@ exports[`Metadata Persian article should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noodp,noydir"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
   <title>
     پهپادی که برایتان قهوه می‌آورد
-     – 
+     - 
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cwv2xv848j5o"
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
+    rel="amphtml"
   />
   <meta
     content="BBC News فارسی"
     name="article:author"
   />
   <meta
-    content={1514811600000}
+    content={1539188371344}
     name="article:modified_time"
   />
   <meta
@@ -436,7 +561,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cwv2xv848j5o"
+    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
     name="og:url"
   />
   <meta
@@ -467,6 +592,15 @@ exports[`Metadata Persian article should render correctly 1`] = `
     content="پهپادی که برایتان قهوه می‌آورد"
     name="twitter:title"
   />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
+  />
 </HelmetWrapper>
 `;
 
@@ -481,24 +615,58 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   }
 >
   <meta
+    content="IE=edge"
+    httpEquiv="X-UA-Compatible"
+  />
+  <meta
+    charSet="utf-8"
+  />
+  <meta
+    content="noodp,noydir"
+    name="robots"
+  />
+  <meta
+    content="#B80000"
+    name="theme-color"
+  />
+  <meta
     content="width=device-width, initial-scale=1, minimum-scale=1"
     name="viewport"
   />
   <title>
     An article title
-     – 
+     - 
     BBC News
   </title>
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    rel="amphtml"
+  />
   <meta
     content="BBC News"
     name="article:author"
   />
   <meta
-    content={1514811600000}
+    content={1539188371344}
     name="article:modified_time"
   />
   <meta
@@ -587,6 +755,15 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content="An article title"
     name="twitter:title"
+  />
+  <link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+  <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;

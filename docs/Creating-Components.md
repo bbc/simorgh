@@ -12,7 +12,7 @@ Add your component in `src/app/components/[Component Name]/`. You will need:
 
 Work locally within these first two files - the Storybook pattern library will be updated automatically with hot module reloading - to create the component front-end you need.
 
-NB: we try to build "AMP-first", but this is difficult in practice because we are unable to inject the AMP dependency into Storybook. For now, check the AMP output manually in Part 2 of the process. Simorgh currently only supports one 'view' of components; components which require a different implementation for AMP must wait for the outcome of our [AMP/canonical component investigation](https://github.com/BBC-News/simorgh/issues/884).
+NB: we try to build "AMP-first", but this is difficult in practice because we are unable to inject the AMP dependency into Storybook. For now, check the AMP output manually in Part 2 of the process. Simorgh currently only supports one 'view' of components; components which require a different implementation for AMP must wait for the outcome of our [AMP/canonical component investigation](https://github.com/bbc/simorgh/issues/884).
 
 Once you're happy with how your component looks (in all its variants), work on your index.test.jsx file to take snapshots of them. If the structure of the component changes in the future, the unit test suite will fail.
 
@@ -132,7 +132,7 @@ This feels like duplication of the schema - and it kind of is - but is currently
 ### Testing
 Before merge, if your new component requires integration testing it should be covered in the end-to-end (E2E) tests.
 
-The test team is responsible for writing integration tests - [which live in Simorgh](https://github.com/BBC-News/simorgh/tree/latest/cypress) - covering your component's functionality.
+The test team is responsible for writing integration tests - [which live in Simorgh](https://github.com/bbc/simorgh/tree/latest/cypress) - covering your component's functionality.
 
 ### Publishing
 By now, you should have all the automatic PR checks passing, 2 manual code reviews approved, and all the UX/accessibility/test QA completed.

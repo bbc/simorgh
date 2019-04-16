@@ -1,5 +1,5 @@
 import React from 'react';
-import Brand from '../../components/Brand';
+import Brand from '@bbc/psammead-brand';
 import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => (

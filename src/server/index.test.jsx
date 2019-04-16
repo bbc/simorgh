@@ -2,9 +2,14 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
-import { loadInitialData } from 'react-universal-app';
-import Document from '../app/components/Document';
-import server from './index';
+import dotenv from 'dotenv';
+import loadInitialData from '../app/routes/loadInitialData';
+import Document from './Document/component';
+
+// mimic the logic in `src/index.js` which imports the `server/index.jsx`
+dotenv.config({ path: './envConfig/local.env' });
+
+const server = require('./index').default;
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
@@ -14,18 +19,6 @@ const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   expect(headerKeys).toContain(headerKey);
   expect(headerValues[indexOfXFrame]).toEqual(expectedHeaderValue);
 };
-
-jest.mock(
-  process.env.RAZZLE_ASSETS_MANIFEST,
-  () => ({
-    one: {
-      js: 'one.js',
-    },
-  }),
-  {
-    virtual: true,
-  },
-);
 
 jest.mock('react-dom/server', () => ({
   renderToString: jest.fn().mockImplementation(() => '<h1>Mock app</h1>'),
@@ -40,10 +33,7 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('react-universal-app', () => ({
-  loadInitialData: jest.fn(),
-  ServerApp: jest.fn().mockImplementation(() => <h1>Mock app</h1>),
-}));
+jest.mock('../app/routes/loadInitialData');
 
 styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
@@ -60,85 +50,149 @@ describe('Server', () => {
     });
   });
 
-  describe('Data', () => {
-    it('should respond with JSON', async () => {
-      const { body } = await makeRequest('/news/articles/c85pqyj5m2ko.json');
-      expect(body).toEqual(
-        expect.objectContaining({ content: expect.any(Object) }),
-      );
-    });
-
-    describe('with non-existent data', () => {
-      it('should respond with a 404', async () => {
+  describe('Manifest json', () => {
+    describe('Services not on allowlist', () => {
+      it('should serve a 404 error for service foobar', async () => {
         const { statusCode } = await makeRequest(
-          '/news/articles/cERROR00025o.json',
+          '/foobar/articles/manifest.json',
         );
         expect(statusCode).toEqual(404);
       });
     });
   });
 
-  describe('/*', () => {
-    describe('Successful render', () => {
-      beforeEach(() => {
-        loadInitialData.mockImplementationOnce(() =>
-          Promise.resolve({ some: 'data' }),
+  describe('Data', () => {
+    describe('for articles', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
         );
       });
 
-      it('should respond with rendered data', async () => {
-        const { text } = await makeRequest('/some/route');
-
-        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-          <h1>Mock app</h1>,
-        );
-
-        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-          <Document
-            app="<h1>Mock app</h1>"
-            assets={['one.js']}
-            data={{ some: 'data' }}
-            helmet={{ head: 'tags' }}
-            styleTags={<style />}
-          />,
-        );
-
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/cERROR00025o.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
       });
     });
 
-    describe('Error', () => {
+    describe('for front pages', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/igbo.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest('/ERROR.json');
+          expect(statusCode).toEqual(404);
+        });
+      });
+    });
+  });
+
+  describe('/{service}/articles/{optimoID}', () => {
+    const successDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(successDataResponse),
+          );
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={['one.js']}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                'http://localhost:7080',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+
+      describe('404 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(notFoundDataResponse),
+          );
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(
+            '/news/articles/c0000000001o',
+          );
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('Unknown error within universal-react-app or its dependencies', () => {
       beforeEach(() => {
         loadInitialData.mockImplementationOnce(() =>
           Promise.reject(Error('Error!')),
         );
       });
 
-      it('should respond with a 404', async () => {
-        const { status, text } = await makeRequest('/');
-        expect(status).toEqual(404);
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(
+          '/news/articles/c0000000001o',
+        );
+        expect(status).toEqual(500);
         expect(text).toEqual('Error!');
       });
     });
   });
 
-  describe('no assets manifest', () => {
-    it('should console log an error', async () => {
-      jest.resetModules();
-      jest.mock(process.env.RAZZLE_ASSETS_MANIFEST, () => null, {
-        virtual: true,
-      });
-      global.console.log = jest.fn();
+  describe('/someInvalidPath', () => {
+    it('should respond 404', async () => {
+      const { status } = await makeRequest('/blah');
 
-      await import('./index');
-
-      expect(global.console.log).toHaveBeenCalledWith(
-        `Error parsing assets manifest. RAZZLE_ASSETS_MANIFEST = ${
-          process.env.RAZZLE_ASSETS_MANIFEST
-        }`,
-      );
+      expect(status).toBe(404);
     });
   });
 });

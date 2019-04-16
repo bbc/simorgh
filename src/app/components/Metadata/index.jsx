@@ -1,9 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, string, number } from 'prop-types';
+import { arrayOf, bool, shape, string, number } from 'prop-types';
+
+const renderAmpHtml = (ampLink, isAmp) => {
+  if (isAmp) {
+    return null;
+  }
+  return <link rel="amphtml" href={ampLink} />;
+};
 
 const Metadata = ({
   isAmp,
+  alternateLinks,
+  ampLink,
+  appleTouchIcon,
   articleAuthor,
   articleSection,
   brandName,
@@ -16,8 +26,9 @@ const Metadata = ({
   lang,
   locale,
   metaTags,
+  themeColor,
   timeFirstPublished,
-  timeLastUpdated,
+  timeLastPublished,
   title,
   twitterCreator,
   twitterSite,
@@ -31,16 +42,29 @@ const Metadata = ({
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="utf-8" />
+      <meta name="robots" content="noodp,noydir" />
+      <meta name="theme-color" content={themeColor} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>
-        {title} &#8211; {brandName}
+        {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
+      {alternateLinks.map(alternate => (
+        <link
+          rel="alternate"
+          href={alternate.href}
+          hrefLang={alternate.hrefLang}
+          key={alternate.hrefLang}
+        />
+      ))}
+      {renderAmpHtml(ampLink, isAmp)}
       <meta name="article:author" content={articleAuthor} />
-      <meta name="article:modified_time" content={timeLastUpdated} />
+      <meta name="article:modified_time" content={timeLastPublished} />
       <meta name="article:published_time" content={timeFirstPublished} />
       {articleSection ? (
         <meta name="article:section" content={articleSection} />
@@ -66,12 +90,22 @@ const Metadata = ({
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href={appleTouchIcon} />
     </Helmet>
   );
 };
 
 Metadata.propTypes = {
   isAmp: bool.isRequired,
+  alternateLinks: arrayOf(
+    shape({
+      href: string.isRequired,
+      hrefLang: string.isRequired,
+    }),
+  ),
+  ampLink: string.isRequired,
+  appleTouchIcon: string.isRequired,
   articleAuthor: string.isRequired,
   articleSection: string,
   brandName: string.isRequired,
@@ -84,8 +118,9 @@ Metadata.propTypes = {
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
+  themeColor: string.isRequired,
   timeFirstPublished: string.isRequired,
-  timeLastUpdated: string.isRequired,
+  timeLastPublished: string.isRequired,
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
@@ -93,6 +128,7 @@ Metadata.propTypes = {
 };
 
 Metadata.defaultProps = {
+  alternateLinks: [],
   articleSection: null,
 };
 

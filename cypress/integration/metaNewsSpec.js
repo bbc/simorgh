@@ -1,6 +1,11 @@
+import config from '../support/config';
 import { getElement, getSecondElement } from '../support/bodyTestHelper';
 import {
+  checkAmpHTML,
+  checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
@@ -9,12 +14,15 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/news/articles/c9rpqy7pmypo');
+    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+  });
+
+  it('should have the correct lang attribute', () => {
+    cy.get('html').should('have.attr', 'lang', 'en-gb');
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -41,13 +49,13 @@ describe('Article Meta Tests', () => {
     cy.get('script')
       .last()
       .should('have.attr', 'src')
-      .and('match', /(\/static\/js\/client-\w+\.\w+\.js)/g);
+      .and('match', /(\/static\/js\/main-\w+\.\w+\.js)/g);
   });
 
   it('should have resource hints', () => {
     const resources = [
+      config.assetOrigin,
       'https://ichef.bbci.co.uk',
-      'https://static.bbci.co.uk',
       'https://gel.files.bbci.co.uk',
     ];
 
@@ -66,21 +74,15 @@ describe('Article Meta Tests', () => {
     'https://www.facebook.com/bbcnews',
   );
 
-  // it('should have description meta data', () => {
-  //   metaDataDescription(
-  //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-  //   );
-  // });
-
   openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
     'BBC News',
     'en_GB',
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    'https://www.bbc.com/news/articles/c9rpqy7pmypo',
+    `${config.baseUrl}/news/articles/${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
@@ -88,8 +90,35 @@ describe('Article Meta Tests', () => {
     '@BBCNews',
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'BBC News',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
     '@BBCNews',
     "Meghan's bouquet laid on tomb of unknown warrior",
   );
+
+  it('should include metadata that matches the JSON data', () => {
+    metadataAssertion();
+  });
+
+  it('should include the canonical URL & ampHTML', () => {
+    const currentOrigin = window.location.origin;
+    checkCanonicalURL(
+      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+    );
+    checkAmpHTML(
+      `${currentOrigin}/news/articles/${
+        config.assets.newsThreeSubheadlines
+      }.amp`,
+    );
+  });
+
+  it('should include metadata in the head on AMP pages', () => {
+    metadataAssertionAMP(
+      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+    );
+  });
+
+  it('should include mainEntityOfPage in the LinkedData', () => {
+    const script = cy.get('script[type="application/ld+json"]');
+    script.should('contain', 'mainEntityOfPage');
+  });
 });

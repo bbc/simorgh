@@ -1,19 +1,28 @@
+import config from '../support/config';
+import describeForLocalOnly from '../support/describeForLocalOnly';
 import {
+  checkAmpHTML,
+  checkCanonicalURL,
   facebookMeta,
+  metadataAssertion,
+  metadataAssertionAMP,
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
 } from '../support/metaTestHelper';
 
-describe('Persian Article Meta Tests', () => {
+describeForLocalOnly('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    // Only 'c9rpqy7pmypo' & 'c85pqyj5m2ko' are available within the PROD enviroment
-    cy.visit('/persian/articles/cwv2xv848j5o');
+    cy.visit(`/persian/articles/${config.assets.persian}`);
+  });
+
+  it('should have the correct lang attribute', () => {
+    cy.get('html').should('have.attr', 'lang', 'fa');
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noindex,nofollow');
+    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   facebookMeta(
@@ -36,7 +45,7 @@ describe('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    'https://www.bbc.com/persian/articles/cwv2xv848j5o',
+    `${config.baseUrl}/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -48,4 +57,22 @@ describe('Persian Article Meta Tests', () => {
     '@bbcpersian',
     'پهپادی که برایتان قهوه می‌آورد',
   );
+
+  it('should include the canonical URL & ampHTML', () => {
+    const currentOrigin = window.location.origin;
+    checkCanonicalURL(
+      `${currentOrigin}/persian/articles/${config.assets.persian}`,
+    );
+    checkAmpHTML(
+      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
+    );
+  });
+
+  it('should include metadata that matches the JSON data', () => {
+    metadataAssertion();
+  });
+
+  it('should include metadata in the head on AMP pages', () => {
+    metadataAssertionAMP(`/persian/articles/${config.assets.persian}.amp`);
+  });
 });

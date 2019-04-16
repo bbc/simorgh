@@ -1,7 +1,7 @@
 const pageWidths = [320, 400, 600, 1008, 1280];
 const urls = [
-  'http://localhost:7080/news/articles/c9rpqy7pmypo',
-  'http://localhost:7080/news/articles/c85pqyj5m2ko',
+  'http://localhost:7080/news/articles/cl55zn0w0l4o',
+  'http://localhost:7080/news/articles/cn7769kpk9mo',
 ];
 
 urls.forEach(url =>
