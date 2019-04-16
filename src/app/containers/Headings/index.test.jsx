@@ -110,7 +110,7 @@ describe('Headings', () => {
 
     it('should render subheadline', () => {
       const data = {
-        blocks: blocksSingleFragment('Plain headline', []),
+        blocks: blocksSingleFragment('Plain subheadline', []),
         type: 'subheadline',
       };
       const renderedWrapper = render(HeadingsContainer(data));
