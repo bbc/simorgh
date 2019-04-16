@@ -116,4 +116,9 @@ describe('Article Meta Tests', () => {
       `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
+
+  it('should include mainEntityOfPage in the LinkedData', () => {
+    const script = cy.get('script[type="application/ld+json"]');
+    script.should('contain', 'mainEntityOfPage');
+  });
 });
