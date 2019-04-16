@@ -127,7 +127,7 @@ describe('Topstories rules', () => {
      * 1) The top stories content is in 3 groups, 'top-story' 'secondary-top-story' 'other-top-stories'
      * 2) The top stories content is in 1 group, 'responsive-top-stories'
      *
-     * This function should be able to handle both, putting their items into a single consistent group.
+     * This preprocessor rule should be able to handle both, putting their items into a single consistent group.
      */
 
     // Structure 1
