@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
+} from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
 import { articleDataNews, articleDataPersian } from './fixtureData';
 
@@ -30,31 +33,7 @@ describe('ArticleContainer', () => {
     status: 451,
   };
 
-  const loadingProps = {
-    loading: true,
-    error: null,
-    isAmp: false,
-    service: 'news',
-    status: 200,
-  };
-
   const bbcOrigin = 'https://www.bbc.co.uk';
-
-  jest.mock('../PageHandlers/withPageWrapper', () => ({
-    WithPageWrapper: () => Component => props => <Component {...props} />,
-  }));
-
-  jest.mock('../PageHandlers/withLoading', () => ({
-    WithLoading: () => Component => props => <Component {...props} />,
-  }));
-
-  jest.mock('../PageHandlers/withError', () => ({
-    WithError: () => Component => props => <Component {...props} />,
-  }));
-
-  jest.mock('../PageHandlers/withData', () => ({
-    WithData: () => Component => props => <Component {...props} />,
-  }));
 
   describe('Component', () => {
     describe('200 status code', () => {
@@ -69,28 +48,28 @@ describe('ArticleContainer', () => {
     });
 
     describe('non-200 status code', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should render correctly',
         <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
       );
     });
 
     describe('no data or bbcOrigin', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should render correctly',
-        <ArticleContainer error />,
+        <ArticleContainer error="error" />,
       );
     });
 
     describe('loading state', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should render correctly',
-        <ArticleContainer {...loadingProps} />,
+        <ArticleContainer loading />,
       );
     });
 
     describe('error state', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should render correctly',
         <ArticleContainer error />,
       );
