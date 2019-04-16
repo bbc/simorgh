@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import timestampGenerator from './helpers/timestampGenerator';
+import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
 
-const timestamp = 1539969006000; // 19 October 2018
+const defaultTimestamp = 1539969006000; // 19 October 2018
 const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
 const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
-const eighthMarch = 1552009884472; // 2019-03-08T01:51:24.472Z
 
-const shortAlphaNumericRegex = /[0-9]{1,2} \w+ [0-9]{4}/;
+const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
+const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
@@ -28,7 +28,10 @@ describe('Timestamp', () => {
   );
   shouldMatchSnapshot(
     'should render correctly',
-    <Timestamp lastPublished={timestamp} firstPublished={timestamp} />,
+    <Timestamp
+      lastPublished={defaultTimestamp}
+      firstPublished={defaultTimestamp}
+    />,
   );
   shouldMatchSnapshot(
     'should handle an invalid timestamp',
@@ -38,7 +41,7 @@ describe('Timestamp', () => {
     />,
   );
 
-  it('should display only one timestamp when published === updated', () => {
+  it('should render one date when published before today and never updated', () => {
     const renderedWrapper = renderedTimestamps(
       <Timestamp firstPublished={fifthJan} lastPublished={fifthJan} />,
     );
@@ -46,38 +49,14 @@ describe('Timestamp', () => {
     expect(renderedWrapper.length).toEqual(1);
   });
 
-  it('should display a relative timestamp when updated < 10 hours ago', () => {
+  it('should render one relative timestamp when published < 10 hours ago and never updated', () => {
     const sixHoursAgo = timestampGenerator({ hours: 6 });
     const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={fifthJan} lastPublished={sixHoursAgo} />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated 6 hours ago');
-  });
-
-  it('should display an absolute timestamp when updated > 10 hours ago', () => {
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={fifthJan} lastPublished={eighthMarch} />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated 8 March 2019');
-  });
-
-  it('should render relative time if published < 10 hrs ago', () => {
-    const publishedFourHoursAgo = timestampGenerator({ hours: 4 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp
-        firstPublished={publishedFourHoursAgo}
-        lastPublished={publishedFourHoursAgo}
-      />,
+      <Timestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
     );
 
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toEqual('4 hours ago');
+    expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
   });
 
   it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
@@ -91,24 +70,119 @@ describe('Timestamp', () => {
     );
 
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
+    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
     expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
   });
 
-  it('should render absolute time for lastPublished and for firstPublished if > 10 hrs ago', () => {
-    const firstPublishedTwelveHoursAgo = timestampGenerator({ hours: 12 });
-    const lastPublishedElevenHoursAgo = timestampGenerator({ hours: 11 });
+  it('should render two dates (without time) when published and updated before today', () => {
+    const firstPublishedMoreThanADayAgo = timestampGenerator({
+      days: 1,
+      hours: 3,
+    });
+    const lastPublishedADayAgo = timestampGenerator({ days: 1 });
     const renderedWrapper = renderedTimestamps(
       <Timestamp
-        firstPublished={firstPublishedTwelveHoursAgo}
-        lastPublished={lastPublishedElevenHoursAgo}
+        firstPublished={firstPublishedMoreThanADayAgo}
+        lastPublished={lastPublishedADayAgo}
       />,
     );
 
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(shortAlphaNumericRegex);
+    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
     expect(renderedWrapper[1].children[0].data).toMatch(
       /Updated [0-9]{1,2} \w+ [0-9]{4}/,
     );
+  });
+
+  describe('time dependent tests', () => {
+    describe('tests after 10 am', () => {
+      const inBritishSummerTime = isBritishSummerTime(Date.now());
+      const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
+
+      beforeEach(() => {
+        // sets time to 2017-05-31T13:00:00.000Z BST
+        // or 2017-01-01T13:00:00.000Z GMT
+        // needs to be after 10am at least so the > 10 hour logic can be tested
+        const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+        Date.now = jest.fn(() => timestamp);
+      });
+
+      it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
+        const twentyThreeHoursAgo = timestampGenerator({
+          hours: 10,
+          seconds: 25,
+        });
+        const renderedWrapper = renderedTimestamps(
+          <Timestamp
+            firstPublished={twentyThreeHoursAgo}
+            lastPublished={twentyThreeHoursAgo}
+          />,
+        );
+
+        expect(renderedWrapper.length).toEqual(1);
+        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+      });
+
+      it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
+        const firstPublishedTwelveHoursAgo = timestampGenerator({
+          hours: 12,
+        });
+        const lastPublishedElevenHoursAgo = timestampGenerator({
+          hours: 11,
+        });
+        const renderedWrapper = renderedTimestamps(
+          <Timestamp
+            firstPublished={firstPublishedTwelveHoursAgo}
+            lastPublished={lastPublishedElevenHoursAgo}
+          />,
+        );
+
+        expect(renderedWrapper.length).toEqual(2);
+        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+        expect(renderedWrapper[1].children[0].data).toMatch(
+          /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
+        );
+        expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
+      });
+    });
+
+    describe('daylight savings time', () => {
+      const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
+        it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
+          Date.now = jest.fn(() => dateTime);
+          const twentyThreeHoursAgo = timestampGenerator({
+            hours: 10,
+            seconds: 25,
+          });
+          const renderedWrapper = renderedTimestamps(
+            <Timestamp
+              firstPublished={twentyThreeHoursAgo}
+              lastPublished={twentyThreeHoursAgo}
+            />,
+          );
+
+          expect(renderedWrapper.length).toEqual(1);
+          expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+          expect(renderedWrapper[0].children[0].data).toContain(descriptor);
+        });
+      };
+
+      const testValues = [
+        {
+          descriptor: 'BST',
+          dateTime: 1496235600000,
+          longName: 'British Summer Time',
+        },
+        {
+          descriptor: 'GMT',
+          dateTime: 1483275600000,
+          longName: 'Greenwich Mean Time',
+        },
+      ];
+
+      for (let i = 0; i < testValues.length; i += 1) {
+        daylightSavingsBehaviour(testValues[i]);
+      }
+    });
   });
 });
