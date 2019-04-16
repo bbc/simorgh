@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Paragraph from '@bbc/psammead-paragraph';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import { paragraphModelPropTypes } from '../../models/propTypes/paragraph';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const componentsToRender = { fragment, urlLink: InlineLink };
 
-const ParagraphContainer = ({ blocks }) => (
-  <GridItemConstrainedMedium>
-    <ServiceContextConsumer>
-      {({ script }) => (
-        <Paragraph script={script}>
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </Paragraph>
-      )}
-    </ServiceContextConsumer>
-  </GridItemConstrainedMedium>
-);
+const ParagraphContainer = ({ blocks }) => {
+  const { script } = useContext(ServiceContext);
+
+  return (
+    <GridItemConstrainedMedium>
+      <Paragraph script={script}>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </Paragraph>
+    </GridItemConstrainedMedium>
+  );
+};
 
 ParagraphContainer.propTypes = paragraphModelPropTypes;
 
