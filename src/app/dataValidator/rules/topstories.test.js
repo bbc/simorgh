@@ -1,9 +1,5 @@
 import applySquashTopstories from './topstories';
-
-// data with the groups 'top-story' 'secondary-top-story' 'other-top-stories'
 import fixtureDataFormatOne from '../../../../data/prod/thai/frontpage/index.json';
-
-// data with the group 'responsive-top-stories'
 import fixtureDataFormatTwo from '../../../../data/prod/igbo/frontpage/index.json';
 
 describe('Topstories rules', () => {
@@ -124,11 +120,24 @@ describe('Topstories rules', () => {
     expect(applySquashTopstories(data)).toEqual(expected);
   });
 
-  it('should parse top stories groups style one as expected', () => {
-    expect(applySquashTopstories(fixtureDataFormatOne)).toMatchSnapshot();
-  });
+  describe('handle multiple expected data formats', () => {
+    /*
+     * The data received for the top stories comes structured in 1 of 2 ways, depending on the service.
+     *
+     * 1) The top stories content is in 3 groups, 'top-story' 'secondary-top-story' 'other-top-stories'
+     * 2) The top stories content is in 1 group, 'responsive-top-stories'
+     *
+     * This function should be able to handle both, putting their items into a single consistent group.
+     */
 
-  it('should parse top stories groups style two as expected', () => {
-    expect(applySquashTopstories(fixtureDataFormatTwo)).toMatchSnapshot();
+    // Structure 1
+    it('should parse top stories groups style 1 as expected', () => {
+      expect(applySquashTopstories(fixtureDataFormatOne)).toMatchSnapshot();
+    });
+
+    // Structure 2
+    it('should parse top stories groups style 2 as expected', () => {
+      expect(applySquashTopstories(fixtureDataFormatTwo)).toMatchSnapshot();
+    });
   });
 });

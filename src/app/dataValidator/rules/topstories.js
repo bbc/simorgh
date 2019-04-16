@@ -31,7 +31,7 @@ const squashTopStories = jsonRaw => {
      * If items were collected, form into a new group
      */
     if (collectedItems.length > 0) {
-      const newGroup = {
+      const newTopStoriesGroup = {
         type: 'top-stories',
         title: 'Top stories',
         items: collectedItems,
@@ -40,7 +40,7 @@ const squashTopStories = jsonRaw => {
       /*
        * Add new group to the start of the groups array
        */
-      groups.unshift(newGroup);
+      groups.unshift(newTopStoriesGroup);
 
       /*
        * Override the original groups with the new ones

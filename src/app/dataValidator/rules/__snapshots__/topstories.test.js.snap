@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Topstories rules should parse top stories groups style one as expected 1`] = `
+exports[`Topstories rules handle multiple expected data formats should parse top stories groups style 1 as expected 1`] = `
 Object {
   "content": Object {
     "groups": Array [
@@ -9536,7 +9536,7 @@ Object {
 }
 `;
 
-exports[`Topstories rules should parse top stories groups style two as expected 1`] = `
+exports[`Topstories rules handle multiple expected data formats should parse top stories groups style 2 as expected 1`] = `
 Object {
   "content": Object {
     "groups": Array [
