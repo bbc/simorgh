@@ -2,6 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '../../models/propTypes';
+import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
@@ -38,7 +39,13 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <Heading text={text}>{renderText()}</Heading>
+      <ServiceContextConsumer>
+        {({ script }) => (
+          <Heading script={script} text={text}>
+            {renderText()}
+          </Heading>
+        )}
+      </ServiceContextConsumer>
     </GridConstrain>
   );
 };
