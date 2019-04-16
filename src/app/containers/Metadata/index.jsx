@@ -9,6 +9,8 @@ import promoPropTypes from '../../models/propTypes/promo';
 import deepGet from '../../helpers/json/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
+const ENGLISH_SERVICES = ['news'];
+
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
   const { about, mentions } = tags;
@@ -46,12 +48,39 @@ const MetadataContainer = ({ metadata, promo }) => {
             noBylinesPolicy,
           }) => {
             const canonicalLink = `${origin}/${service}/articles/${id}`;
+            const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
+            const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
             const ampLink = `${origin}/${service}/articles/${id}.amp`;
+            const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
+            const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
             const appleTouchIcon = `${
               process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
             }${
               process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
             }/${service}/images/icons/icon-192x192.png`;
+
+            const isAmp = platform === 'amp';
+
+            let alternateLinks = [];
+
+            const alternateLinksEnglishSites = [
+              {
+                href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+                hrefLang: 'x-default',
+              },
+              {
+                href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+                hrefLang: 'en',
+              },
+              {
+                href: isAmp ? ampLinkUK : canonicalLinkUK,
+                hrefLang: 'en-gb',
+              },
+            ];
+
+            if (ENGLISH_SERVICES.includes(service)) {
+              alternateLinks = alternateLinksEnglishSites;
+            }
 
             return (
               <Fragment>
@@ -69,7 +98,8 @@ const MetadataContainer = ({ metadata, promo }) => {
                   canonicalLink={canonicalLink}
                 />
                 <Metadata
-                  isAmp={platform === 'amp'}
+                  isAmp={isAmp}
+                  alternateLinks={alternateLinks}
                   ampLink={ampLink}
                   appleTouchIcon={appleTouchIcon}
                   articleAuthor={articleAuthor}

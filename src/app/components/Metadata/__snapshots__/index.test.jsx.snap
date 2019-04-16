@@ -39,6 +39,21 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
   />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
   <meta
     content="BBC News"
     name="article:author"
@@ -179,6 +194,21 @@ exports[`Metadata News article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o.amp"
@@ -611,6 +641,21 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
   />
   <link
     href="https://www.bbc.com/news/articles/c0000000001o.amp"
