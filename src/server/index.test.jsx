@@ -62,19 +62,37 @@ describe('Server', () => {
   });
 
   describe('Data', () => {
-    it('should respond with JSON', async () => {
-      const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
-      expect(body).toEqual(
-        expect.objectContaining({ content: expect.any(Object) }),
-      );
+    describe('for articles', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/cERROR00025o.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
+      });
     });
 
-    describe('with non-existent data', () => {
-      it('should respond with a 404', async () => {
-        const { statusCode } = await makeRequest(
-          '/news/articles/cERROR00025o.json',
+    describe('for front pages', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/igbo.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
         );
-        expect(statusCode).toEqual(404);
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest('/ERROR.json');
+          expect(statusCode).toEqual(404);
+        });
       });
     });
   });

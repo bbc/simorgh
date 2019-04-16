@@ -1,20 +1,30 @@
 import React from 'react';
 import { number } from 'prop-types';
+import moment from 'moment-timezone';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
-  longNumeric,
-  shortAlphaNumeric,
+  formatDateNumeric,
+  formatDate,
+  formatDateAndTime,
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
+const isToday = timestamp => {
+  const today = moment(Date.now());
+  return today.isSame(timestamp, 'day');
+};
+
+const formatType = timestamp =>
+  isToday(timestamp) ? formatDateAndTime : formatDate;
+
 const humanReadable = ({ timestamp, shouldMakeRelative }) =>
   shouldMakeRelative
     ? relativeTime(timestamp)
-    : formatUnixTimestamp(timestamp, shortAlphaNumeric);
+    : formatUnixTimestamp(timestamp, formatType(timestamp));
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
@@ -37,11 +47,15 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <Timestamp datetime={formatUnixTimestamp(firstPublished, longNumeric)}>
+      <Timestamp
+        datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
+      >
         {firstPublishedString}
       </Timestamp>
       {lastPublished !== firstPublished ? (
-        <Timestamp datetime={formatUnixTimestamp(lastPublished, longNumeric)}>
+        <Timestamp
+          datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
+        >
           {lastPublishedString}
         </Timestamp>
       ) : null}
