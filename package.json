@@ -123,7 +123,6 @@
     "react-helmet": "^5.2.0",
     "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.3.1",
-    "recompose": "^0.30.0",
     "speculate": "^1.7.4",
     "styled-components": "^4.1.3",
     "styled-normalize": "^8.0.3",
