@@ -1,5 +1,7 @@
 import React from 'react';
 import Video from '../../components/Video';
+import Caption from '../Caption';
+
 import {
   videoPropTypes,
   emptyBlockArrayDefaultProps,
@@ -27,18 +29,28 @@ const VideoContainer = ({ blocks }) => {
     return null;
   }
 
+  const captionBlock = filterForBlockType(blocks, 'caption');
+
+  // if (!captionBlock) {
+  //   return null;
+  // }
+
   const { locator: imageLocator } = rawImage.model;
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
 
   return (
-    <Video
-      videoLocator={videoLocator}
-      duration={duration}
-      rawImageSrc={rawImageSrc}
-      versionID={versionID}
-      imageLocator={imageLocator}
-      kind={kind}
-    />
+    <React.Fragment>
+      {/* <Video
+        videoLocator={videoLocator}
+        duration={duration}
+        rawImageSrc={rawImageSrc}
+        versionID={versionID}
+        imageLocator={imageLocator}
+        kind={kind}
+      />
+      {captionBlock ? <Caption caption={captionBlock} /> : null} */}
+      hi
+    </React.Fragment>
   );
 };
 
