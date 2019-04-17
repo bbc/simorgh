@@ -104,6 +104,7 @@ exports[`Document Component should render correctly 1`] = `
     <script
       type="application/ld+json"
     />
+    <MPulseBeaconContainer />
   </head>
   <body>
     <div
