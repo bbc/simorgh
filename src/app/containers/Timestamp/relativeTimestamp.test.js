@@ -1,5 +1,5 @@
 import relativeTimestamp from './relativeTimestamp';
-import timestampGenerator from './helpers/timestampGenerator';
+import { timestampGenerator } from './helpers/testHelpers';
 
 const relativeBehaviour = (description, input, expectedOutput) => {
   it(description, () => {
