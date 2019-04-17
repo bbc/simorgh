@@ -61,7 +61,7 @@ module.exports = (shell = {}) => {
         },
       ],
     },
-    // This is to override bundle performance test. @TODO explain better
+    // if bundled files exceed set limits, then error will be thrown
     performance: {
       maxAssetSize: 245760, // 240kb - individual bundles
       maxEntrypointSize: 506880, // 495kb - total bundles
