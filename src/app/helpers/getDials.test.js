@@ -11,7 +11,7 @@ describe('getDials', () => {
     process.env.COSMOS_DIALS_PATH = dialsPath;
   });
 
-  it('returns the dials object', () => {
+  it('should return the dials object', () => {
     const dials = {
       key: 'value',
     };
@@ -19,5 +19,19 @@ describe('getDials', () => {
 
     expect(getDials()).toEqual(dials);
     expect(fs.readFileSync).toHaveBeenCalledWith(dialsPath);
+  });
+
+  it('should transform string boolean values in dials object', () => {
+    const dials = {
+      trueDial: 'true',
+      falseDial: 'false',
+    };
+    fs.readFileSync.mockReturnValue(createJsonBuffer(dials));
+
+    const expected = {
+      trueDial: true,
+      falseDial: false,
+    };
+    expect(getDials()).toEqual(expected);
   });
 });
