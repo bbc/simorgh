@@ -62,12 +62,11 @@ module.exports = (shell = {}) => {
       ],
     },
     // This is to override bundle performance test. @TODO explain better
-    performance: IS_CI
-      ? {
-          maxAssetSize: 245760, // 240kb - individual bundles
-          maxEntrypointSize: 491520, // 480kb - total bundles
-        }
-      : undefined,
+    performance: {
+      maxAssetSize: 245760, // 240kb - individual bundles
+      maxEntrypointSize: 506880, // 495kb - total bundles
+      hints: 'error',
+    },
   };
 
   const mergeIntoBaseConfig = app => {
