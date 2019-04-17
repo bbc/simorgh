@@ -73,4 +73,68 @@ describe('Video', () => {
 
     isNull('should be null', <VideoContainer {...data} />);
   });
+
+  describe('with data and a caption', () => {
+    const data = {
+      blocks: [
+        {
+          type: 'rawVideo',
+          model: {
+            locator: 'urn:bbc:pips:pid:p064nsyw',
+            versionID: 'p064nsz3',
+            kind: 'clip',
+            duration: '299',
+          },
+        },
+        {
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                type: 'rawImage',
+                model: {
+                  locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'caption',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text:
+                          'Former embroider Pauline Clayton described the gift as "lovely"',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text:
+                                'Former embroider Pauline Clayton described the gift as "lovely"',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+    shouldShallowMatchSnapshot(
+      'should render the video and caption',
+      <VideoContainer {...data} />,
+    );
+  });
 });
