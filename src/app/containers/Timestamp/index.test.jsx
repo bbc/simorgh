@@ -92,11 +92,48 @@ describe('Timestamp', () => {
     />,
   );
 
-  it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {});
+  it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {
+    const threeHoursAgo = timestampGenerator({ hours: 3 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={threeHoursAgo}
+        lastPublished={threeHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toEqual('3 hours ago');
+  });
 
-  it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished', () => {});
+  it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished', () => {
+    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+    Date.now = jest.fn(() => timestamp);
+    const elevenHoursAgo = timestampGenerator({
+      hours: 11,
+    });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={elevenHoursAgo}
+        lastPublished={elevenHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+  });
 
-  it('should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished', () => {});
+  it('should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished', () => {
+    const twentyFourHoursAgo = timestampGenerator({
+      hours: 24,
+      seconds: 1,
+    });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={twentyFourHoursAgo}
+        lastPublished={twentyFourHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
+  });
 
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {});
 
