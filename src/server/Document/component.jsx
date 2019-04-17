@@ -4,8 +4,8 @@ import {
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
-import MPulseBeacon from '../../app/components/MPulseBeacon';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
+import MPulseBeacon from '../../app/containers/MPulseBeacon';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
@@ -31,7 +31,6 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
       </IfAboveIE9>
     </Fragment>
   );
-  const mPulseApiKey = process.env.MPULSE_API_KEY;
 
   return (
     <html lang="en-GB" {...htmlAttrs}>
@@ -43,9 +42,7 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
         {links}
         {styleTags}
         {headScript}
-        {scriptsAllowed && mPulseApiKey && (
-          <MPulseBeacon apiKey={mPulseApiKey} />
-        )}
+        {scriptsAllowed && <MPulseBeacon />}
         {data.isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
