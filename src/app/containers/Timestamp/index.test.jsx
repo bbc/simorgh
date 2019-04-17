@@ -120,7 +120,7 @@ describe('Timestamp', () => {
     );
 
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
+    expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
   });
 
   it('should render one timestamp with date & time when firstPublished > 10 hours ago && today', () => {
