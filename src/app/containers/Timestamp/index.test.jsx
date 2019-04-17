@@ -16,6 +16,56 @@ const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
 describe('Timestamp', () => {
+  const inBritishSummerTime = isBritishSummerTime(Date.now());
+  const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
+
+  describe('daylight savings time', () => {
+    let originalDate;
+
+    beforeEach(() => {
+      originalDate = Date.now;
+    });
+
+    afterEach(() => {
+      Date.now = originalDate;
+    });
+
+    const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
+      it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
+        Date.now = jest.fn(() => dateTime);
+        const twentyThreeHoursAgo = timestampGenerator({
+          hours: 10,
+          seconds: 25,
+        });
+        const renderedWrapper = renderedTimestamps(
+          <Timestamp
+            firstPublished={twentyThreeHoursAgo}
+            lastPublished={twentyThreeHoursAgo}
+          />,
+        );
+        expect(renderedWrapper.length).toEqual(1);
+        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+        expect(renderedWrapper[0].children[0].data).toContain(descriptor);
+      });
+    };
+
+    const testValues = [
+      {
+        descriptor: 'BST',
+        dateTime: 1496235600000,
+        longName: 'British Summer Time',
+      },
+      {
+        descriptor: 'GMT',
+        dateTime: 1483275600000,
+        longName: 'Greenwich Mean Time',
+      },
+    ];
+
+    for (let i = 0; i < testValues.length; i += 1) {
+      daylightSavingsBehaviour(testValues[i]);
+    }
+  });
   describe('with no data', () => {
     isNull('should return null', <Timestamp />);
   });
@@ -40,6 +90,14 @@ describe('Timestamp', () => {
       lastPublished={invalidTimestamp}
     />,
   );
+
+  // should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished
+  // should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished
+  // should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished
+  // should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago
+  // should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago
+  // should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished beforeToday but not same day as firstPublished
+  // should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished today and > 10 hrs ago
 
   it('should render one date when published before today and never updated', () => {
     const renderedWrapper = renderedTimestamps(
@@ -96,9 +154,6 @@ describe('Timestamp', () => {
 
   describe('time dependent tests', () => {
     describe('tests after 10 am', () => {
-      const inBritishSummerTime = isBritishSummerTime(Date.now());
-      const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
-
       beforeEach(() => {
         // sets time to 2017-05-31T13:00:00.000Z BST
         // or 2017-01-01T13:00:00.000Z GMT
@@ -144,45 +199,6 @@ describe('Timestamp', () => {
         );
         expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
       });
-    });
-
-    describe('daylight savings time', () => {
-      const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
-        it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
-          Date.now = jest.fn(() => dateTime);
-          const twentyThreeHoursAgo = timestampGenerator({
-            hours: 10,
-            seconds: 25,
-          });
-          const renderedWrapper = renderedTimestamps(
-            <Timestamp
-              firstPublished={twentyThreeHoursAgo}
-              lastPublished={twentyThreeHoursAgo}
-            />,
-          );
-
-          expect(renderedWrapper.length).toEqual(1);
-          expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-          expect(renderedWrapper[0].children[0].data).toContain(descriptor);
-        });
-      };
-
-      const testValues = [
-        {
-          descriptor: 'BST',
-          dateTime: 1496235600000,
-          longName: 'British Summer Time',
-        },
-        {
-          descriptor: 'GMT',
-          dateTime: 1483275600000,
-          longName: 'Greenwich Mean Time',
-        },
-      ];
-
-      for (let i = 0; i < testValues.length; i += 1) {
-        daylightSavingsBehaviour(testValues[i]);
-      }
     });
   });
 });
