@@ -217,6 +217,7 @@ describe('getCurrentTime', () => {
     const ATITime = getCurrentTime();
 
     expect(ATITime).toEqual('12x23x45');
+    global.Date.mockReset();
   });
 });
 
