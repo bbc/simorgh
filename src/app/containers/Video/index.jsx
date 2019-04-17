@@ -1,4 +1,5 @@
 import React from 'react';
+import Figure from '@bbc/psammead-figure';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 
@@ -35,7 +36,7 @@ const VideoContainer = ({ blocks }) => {
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
 
   return (
-    <React.Fragment>
+    <Figure>
       <Video
         videoLocator={videoLocator}
         duration={duration}
@@ -45,7 +46,7 @@ const VideoContainer = ({ blocks }) => {
         kind={kind}
       />
       {captionBlock ? <Caption block={captionBlock} video /> : null}
-    </React.Fragment>
+    </Figure>
   );
 };
 

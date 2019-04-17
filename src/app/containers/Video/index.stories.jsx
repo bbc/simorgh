@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import {
   VideoWithCaption,
   VideoWithoutCaption,
