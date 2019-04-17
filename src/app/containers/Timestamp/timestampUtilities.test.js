@@ -1,8 +1,8 @@
 import {
   isValidDateTime,
   leadingZero,
-  formatUnixTimestamp,
   isTenHoursAgoOrLess,
+  formatUnixTimestamp,
 } from './timestampUtilities';
 
 const timestamp = 1539969006000; // 19 October 2018
@@ -31,29 +31,6 @@ describe('Timestamp utility functions', () => {
     });
   });
 
-  describe('formatUnixTimestamp', () => {
-    it('should format timestamp according to given format', () => {
-      const longNumericFormat = {
-        day: date => leadingZero(date.getDate()),
-        month: date => leadingZero(date.getMonth() + 1),
-        year: date => date.getFullYear(),
-        format: (d, m, y) => [y, m, d].join('-'),
-      };
-      const shortAlphaNumericFormat = {
-        day: date => date.getDate(),
-        month: date => date.toLocaleString('en-us', { month: 'long' }),
-        year: date => date.getFullYear(),
-        format: (d, m, y) => [d, m, y].join(' '),
-      };
-      expect(formatUnixTimestamp(timestamp, longNumericFormat)).toEqual(
-        '2018-10-19',
-      );
-      expect(formatUnixTimestamp(timestamp, shortAlphaNumericFormat)).toEqual(
-        '19 October 2018',
-      );
-    });
-  });
-
   describe('isTenHoursAgoOrLess', () => {
     it('should return true if 10 hours ago or less', () => {
       const currentTime = Date.now();
@@ -69,6 +46,40 @@ describe('Timestamp utility functions', () => {
       const tenHoursAgo = currentTime - 60 * 60 * 1000 * 10;
       const tenHoursAgoAndOneSecond = tenHoursAgo - 1000;
       expect(isTenHoursAgoOrLess(tenHoursAgoAndOneSecond)).toEqual(false);
+    });
+  });
+
+  describe('formatUnixTimestamp', () => {
+    it('should return BST for a BST timestamp', () => {
+      // 31 May 2017 BST
+      const BSTTimestamp = 1496235600000;
+      const result = formatUnixTimestamp(BSTTimestamp, 'D MMMM YYYY, HH:mm z');
+      expect(result).toContain('BST');
+    });
+
+    it('should return GMT for a GMT timestamp', () => {
+      // 1 January 2017 GMT
+      const GMTTimestamp = 1483275600000;
+      const result = formatUnixTimestamp(GMTTimestamp, 'D MMMM YYYY, HH:mm z');
+      expect(result).toContain('GMT');
+    });
+
+    it('should return date and time in expected format', () => {
+      const GMTTimestamp = 1483275600000;
+      const result = formatUnixTimestamp(GMTTimestamp, 'D MMMM YYYY, HH:mm z');
+      expect(result).toEqual('1 January 2017, 13:00 GMT');
+    });
+
+    it('should return short date in expected format', () => {
+      const GMTTimestamp = 1483275600000;
+      const result = formatUnixTimestamp(GMTTimestamp, 'YYYY-MM-DD');
+      expect(result).toEqual('2017-01-01');
+    });
+
+    it('should return long date in expected format', () => {
+      const GMTTimestamp = 1483275600000;
+      const result = formatUnixTimestamp(GMTTimestamp, 'D MMMM YYYY');
+      expect(result).toEqual('1 January 2017');
     });
   });
 });
