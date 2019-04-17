@@ -31,16 +31,12 @@ const VideoContainer = ({ blocks }) => {
 
   const captionBlock = filterForBlockType(blocks, 'caption');
 
-  // if (!captionBlock) {
-  //   return null;
-  // }
-
   const { locator: imageLocator } = rawImage.model;
   const rawImageSrc = `https://ichef.bbci.co.uk/news/640${imageLocator}`;
 
   return (
     <React.Fragment>
-      {/* <Video
+      <Video
         videoLocator={videoLocator}
         duration={duration}
         rawImageSrc={rawImageSrc}
@@ -48,8 +44,7 @@ const VideoContainer = ({ blocks }) => {
         imageLocator={imageLocator}
         kind={kind}
       />
-      {captionBlock ? <Caption caption={captionBlock} /> : null} */}
-      hi
+      {captionBlock ? <Caption block={captionBlock} video /> : null}
     </React.Fragment>
   );
 };

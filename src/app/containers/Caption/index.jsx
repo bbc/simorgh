@@ -1,5 +1,5 @@
 import React from 'react';
-import { objectOf, any } from 'prop-types';
+import { objectOf, any, bool } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -15,13 +15,28 @@ const renderText = block => {
   return <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />;
 };
 
-const CaptionContainer = ({ block }) => (
+const renderVisuallyHiddenText = (imageCaption, video, videoCaption) => {
+  let rendered = null;
+  if (video) {
+    rendered = <VisuallyHiddenText>{videoCaption}</VisuallyHiddenText>;
+  }
+
+  if (!video && imageCaption) {
+    rendered = <VisuallyHiddenText>{imageCaption}</VisuallyHiddenText>;
+  }
+
+  return rendered;
+};
+
+const CaptionContainer = ({ block, video }) => (
   <ServiceContext.Consumer>
-    {({ imageCaptionOffscreenText }) => (
+    {({ imageCaptionOffscreenText, videoCaptionOffscreenText }) => (
       <Caption>
-        {imageCaptionOffscreenText ? (
-          <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
-        ) : null}
+        {renderVisuallyHiddenText(
+          imageCaptionOffscreenText,
+          video,
+          videoCaptionOffscreenText,
+        )}
         {renderText(block)}
       </Caption>
     )}
@@ -30,6 +45,11 @@ const CaptionContainer = ({ block }) => (
 
 CaptionContainer.propTypes = {
   block: objectOf(any).isRequired,
+  video: bool,
+};
+
+CaptionContainer.defaultProps = {
+  video: false,
 };
 
 export default CaptionContainer;
