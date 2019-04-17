@@ -4,10 +4,10 @@ import compose from '../../helpers/compose';
 import articlePropTypes from '../../models/propTypes/article';
 import ArticleMain from '../ArticleMain';
 
-import WithError from '../PageHandlers/withError';
-import WithLoading from '../PageHandlers/withLoading';
-import WithPageWrapper from '../PageHandlers/withPageWrapper';
-import WithData from '../PageHandlers/withData';
+import withError from '../PageHandlers/withError';
+import withLoading from '../PageHandlers/withLoading';
+import withPageWrapper from '../PageHandlers/withPageWrapper';
+import withData from '../PageHandlers/withData';
 
 const ArticleContainer = ({ articleData }) => (
   <ArticleMain articleData={articleData} />
@@ -22,10 +22,10 @@ ArticleContainer.defaultProps = {
 };
 
 const EnhancedArticleContainer = compose(
-  WithPageWrapper,
-  WithLoading,
-  WithError,
-  WithData,
+  withPageWrapper,
+  withLoading,
+  withError,
+  withData,
 )(ArticleContainer);
 
 export default EnhancedArticleContainer;
