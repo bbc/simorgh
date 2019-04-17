@@ -18,7 +18,7 @@ const squashTopStories = jsonRaw => {
      * Find and delete unwanted groups while collecting items
      */
     groups = groups.filter(group => {
-      if (group.type && squashKeys.includes(group.type)) {
+      if (squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
 
         return false; // delete the group
