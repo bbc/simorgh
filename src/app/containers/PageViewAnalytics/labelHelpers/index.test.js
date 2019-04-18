@@ -204,6 +204,12 @@ describe('getBrowserViewPort', () => {
 });
 
 describe('getCurrentTime', () => {
+  const originalDate = global.Date;
+
+  afterEach(() => {
+    global.Date = originalDate;
+  });
+
   returnsNullWhenOffClient(getCurrentTime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
@@ -217,7 +223,6 @@ describe('getCurrentTime', () => {
     const ATITime = getCurrentTime();
 
     expect(ATITime).toEqual('12x23x45');
-    global.Date.mockReset();
   });
 });
 
