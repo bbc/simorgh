@@ -53,6 +53,8 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -125,6 +127,20 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
@@ -278,6 +294,8 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -350,6 +368,20 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
@@ -503,6 +535,8 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -575,6 +609,20 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
@@ -723,6 +771,8 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -795,6 +845,20 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
@@ -943,6 +1007,8 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2rem;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -1015,6 +1081,20 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
