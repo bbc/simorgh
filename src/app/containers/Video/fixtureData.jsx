@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { singleTextBlock } from '../../models/blocks';
 
 const videoBlock = [
   {
@@ -20,60 +21,16 @@ const videoBlock = [
         {
           model: {
             blocks: [
-              {
-                model: {
-                  blocks: [
-                    {
-                      model: {
-                        blocks: [
-                          {
-                            model: {
-                              attributes: [],
-                              text:
-                                'The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich',
-                            },
-                            type: 'fragment',
-                          },
-                        ],
-                        text:
-                          'The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich',
-                      },
-                      type: 'paragraph',
-                    },
-                  ],
-                },
-                type: 'text',
-              },
+              singleTextBlock(
+                'The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich',
+              ),
             ],
           },
           type: 'caption',
         },
         {
           model: {
-            blocks: [
-              {
-                model: {
-                  blocks: [
-                    {
-                      model: {
-                        blocks: [
-                          {
-                            model: {
-                              attributes: [],
-                              text: 'group of residents',
-                            },
-                            type: 'fragment',
-                          },
-                        ],
-                        text: 'group of residents',
-                      },
-                      type: 'paragraph',
-                    },
-                  ],
-                },
-                type: 'text',
-              },
-            ],
+            blocks: [singleTextBlock('group of residents')],
           },
           type: 'altText',
         },
@@ -95,30 +52,9 @@ const videoBlock = [
     type: 'altText',
     model: {
       blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text:
-                    'This video shows Marks and Spencer CEO talking about the announcement earlier this morning',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text:
-                          'This video shows Marks and Spencer CEO talking about the announcement earlier this morning',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
+        singleTextBlock(
+          'This video shows Marks and Spencer CEO talking about the announcement earlier this morning',
+        ),
       ],
     },
   },
@@ -129,30 +65,9 @@ videoBlockWithCaption.push({
   type: 'caption',
   model: {
     blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text:
-                  'Former embroider Pauline Clayton described the gift as "lovely"',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text:
-                        'Former embroider Pauline Clayton described the gift as "lovely"',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
+      singleTextBlock(
+        'Former embroider Pauline Clayton described the gift as "lovely"',
+      ),
     ],
   },
 });
