@@ -14,10 +14,16 @@ describe('Topstories rules', () => {
           {
             type: 'other-top-stories',
             items: [{ name: 'item2' }, { name: 'item3' }, { name: 'item4' }],
+            strapline: {
+              name: 'First availible strapline',
+            },
           },
           {
             type: 'secondary-top-story',
             items: [{ name: 'item5' }, { name: 'item6' }, { name: 'item7' }],
+            strapline: {
+              name: 'Second availible strapline',
+            },
           },
           {
             type: 'must-see',
@@ -42,6 +48,9 @@ describe('Topstories rules', () => {
               { name: 'item6' },
               { name: 'item7' },
             ],
+            strapline: {
+              name: 'First availible strapline',
+            },
           },
           {
             type: 'must-see',
@@ -92,6 +101,9 @@ describe('Topstories rules', () => {
           {
             type: 'responsive-top-stories',
             items: [{ name: 'item6' }, { name: 'item7' }, { name: 'item8' }],
+            strapline: {
+              name: 'Top Stories Name',
+            },
           },
         ],
       },
@@ -104,6 +116,9 @@ describe('Topstories rules', () => {
             type: 'top-stories',
             title: 'Top stories',
             items: [{ name: 'item6' }, { name: 'item7' }, { name: 'item8' }],
+            strapline: {
+              name: 'Top Stories Name',
+            },
           },
           {
             type: 'foobar',
@@ -112,6 +127,57 @@ describe('Topstories rules', () => {
           {
             type: 'barfoo',
             items: [{ name: 'item4' }, { name: 'item5' }],
+          },
+        ],
+      },
+    };
+
+    expect(applySquashTopstories(data)).toEqual(expected);
+  });
+
+  it('should not add strapline to output if not found', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            type: 'top-story',
+            items: [{ name: 'item1' }],
+          },
+          {
+            type: 'other-top-stories',
+            items: [{ name: 'item2' }, { name: 'item3' }, { name: 'item4' }],
+          },
+          {
+            type: 'secondary-top-story',
+            items: [{ name: 'item5' }, { name: 'item6' }, { name: 'item7' }],
+          },
+          {
+            type: 'must-see',
+            items: [{ name: 'item8' }, { name: 'item9' }, { name: 'item10' }],
+          },
+        ],
+      },
+    };
+
+    const expected = {
+      content: {
+        groups: [
+          {
+            type: 'top-stories',
+            title: 'Top stories',
+            items: [
+              { name: 'item1' },
+              { name: 'item2' },
+              { name: 'item3' },
+              { name: 'item4' },
+              { name: 'item5' },
+              { name: 'item6' },
+              { name: 'item7' },
+            ],
+          },
+          {
+            type: 'must-see',
+            items: [{ name: 'item8' }, { name: 'item9' }, { name: 'item10' }],
           },
         ],
       },

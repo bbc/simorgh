@@ -9806,6 +9806,9 @@ Object {
             "type": "cps",
           },
         ],
+        "strapline": Object {
+          "name": "Isi akụkọ",
+        },
         "title": "Top stories",
         "type": "top-stories",
       },

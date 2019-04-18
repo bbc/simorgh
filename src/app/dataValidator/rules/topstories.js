@@ -1,4 +1,3 @@
-import deepClone from '../../helpers/json/deepClone';
 import deepGet from '../../helpers/json/deepGet';
 
 const squashKeys = [
@@ -9,9 +8,10 @@ const squashKeys = [
 ];
 
 const squashTopStories = jsonRaw => {
-  const json = deepClone(jsonRaw); // make a copy so we don't corrupt the input
+  const json = jsonRaw;
   let groups = deepGet(['content', 'groups'], json);
   let collectedItems = [];
+  let collectedStrapline;
 
   if (groups) {
     /*
@@ -20,6 +20,13 @@ const squashTopStories = jsonRaw => {
     groups = groups.filter(group => {
       if (squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
+
+        const foundStapline = deepGet(['strapline', 'name'], group);
+
+        // collect the first found strapline name
+        if (!collectedStrapline && foundStapline) {
+          collectedStrapline = foundStapline;
+        }
 
         return false; // delete the group
       }
@@ -36,6 +43,12 @@ const squashTopStories = jsonRaw => {
         title: 'Top stories',
         items: collectedItems,
       };
+
+      if (collectedStrapline) {
+        newTopStoriesGroup.strapline = {
+          name: collectedStrapline,
+        };
+      }
 
       /*
        * Add new group to the start of the groups array
