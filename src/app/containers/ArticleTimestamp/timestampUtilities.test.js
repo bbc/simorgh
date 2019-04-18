@@ -1,4 +1,8 @@
-import { isValidDateTime, isTenHoursAgoOrLess, relativeTime } from './timestampUtilities';
+import {
+  isValidDateTime,
+  isTenHoursAgoOrLess,
+  relativeTime,
+} from './timestampUtilities';
 import { timestampGenerator } from '../Timestamp/helpers/testHelpers';
 
 const timestamp = 1539969006000; // 19 October 2018
@@ -46,8 +50,8 @@ describe('ArticleTimestamp Utility functions', () => {
 
 describe('relativeTime', () => {
   it('returns a string which ends in ago', () => {
-    const timestamp = timestampGenerator({ minutes: 1 });
-    const result = relativeTime(timestamp);
+    const testTimestamp = timestampGenerator({ minutes: 1 });
+    const result = relativeTime(testTimestamp);
     expect(typeof result).toEqual('string');
     expect(result.split(' ').pop()).toEqual('ago');
   });

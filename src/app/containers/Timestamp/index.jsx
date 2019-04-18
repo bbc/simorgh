@@ -1,7 +1,8 @@
+/* eslint-disable prefer-template, react/no-unused-prop-types */
 import React from 'react';
 import { number, string } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
-import { formatUnixTimestamp } from './timestampUtilities';
+import formatUnixTimestamp from './timestampUtilities';
 
 const TimestampContainer = ({
   timestamp,
@@ -11,22 +12,21 @@ const TimestampContainer = ({
   prefix,
   suffix,
   timezone,
-}) => {
-  return (
-    <Timestamp datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}>
-      { prefix ? prefix + ' ' : null }
-      {
-        time ? time : formatUnixTimestamp(timestamp, format, timezone)
-      }
-      { suffix ? ' ' + suffix : null }
-    </Timestamp>
-  );
-};
+}) => (
+  <Timestamp
+    datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
+  >
+    {prefix ? prefix + ' ' : null}
+    {time === null ? formatUnixTimestamp(timestamp, format, timezone) : time}
+    {suffix ? ' ' + suffix : null}
+  </Timestamp>
+);
 
 TimestampContainer.propTypes = {
   timestamp: number.isRequired,
   dateTimeFormat: string.isRequired,
   format: string.isRequired,
+  time: number,
   timezone: string,
   local: string,
   prefix: string,
@@ -36,6 +36,7 @@ TimestampContainer.propTypes = {
 TimestampContainer.defaultProps = {
   local: 'en-GB',
   timezone: 'Europe/London',
+  time: null,
   prefix: null,
   suffix: null,
 };

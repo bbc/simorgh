@@ -2,10 +2,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import ArticleTimestamp from '.';
 import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { timestampGenerator, isBritishSummerTime } from '../Timestamp/helpers/testHelpers';
+import {
+  timestampGenerator,
+  isBritishSummerTime,
+} from '../Timestamp/helpers/testHelpers';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018
-const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 
 const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
@@ -44,17 +46,20 @@ describe('ArticleTimestamp', () => {
       expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
       expect(renderedWrapper.length).toEqual(1);
     });
-  
+
     it('should render one relative timestamp when published < 10 hours ago and never updated', () => {
       const sixHoursAgo = timestampGenerator({ hours: 6 });
       const renderedWrapper = renderedTimestamps(
-        <ArticleTimestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
+        <ArticleTimestamp
+          firstPublished={sixHoursAgo}
+          lastPublished={sixHoursAgo}
+        />,
       );
-  
+
       expect(renderedWrapper.length).toEqual(1);
       expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
     });
-  
+
     it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
       const firstPublishedEightHoursAgo = timestampGenerator({ hours: 8 });
       const lastPublishedFourHoursAgo = timestampGenerator({ hours: 4 });
@@ -64,12 +69,14 @@ describe('ArticleTimestamp', () => {
           lastPublished={lastPublishedFourHoursAgo}
         />,
       );
-  
+
       expect(renderedWrapper.length).toEqual(2);
       expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
-      expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
+      expect(renderedWrapper[1].children[0].data).toEqual(
+        'Updated 4 hours ago',
+      );
     });
-  
+
     it('should render two dates (without time) when published and updated before today', () => {
       const firstPublishedMoreThanADayAgo = timestampGenerator({
         days: 1,
@@ -82,7 +89,7 @@ describe('ArticleTimestamp', () => {
           lastPublished={lastPublishedADayAgo}
         />,
       );
-  
+
       expect(renderedWrapper.length).toEqual(2);
       expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
       expect(renderedWrapper[1].children[0].data).toMatch(

@@ -1,6 +1,6 @@
 import { formatDate, formatDateAndTime } from './timeFormats';
 
-export const isTenHoursAgoOrLess = (milliseconds) => {
+export const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();
   return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
@@ -57,4 +57,3 @@ export const isToday = timestamp => {
 
 export const formatType = timestamp =>
   isToday(timestamp) ? formatDateAndTime : formatDate;
-
