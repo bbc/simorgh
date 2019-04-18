@@ -1,5 +1,5 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { number, string, boolean } from 'prop-types';
 import moment from 'moment-timezone';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
@@ -7,65 +7,70 @@ import {
   formatDateNumeric,
   formatDate,
   formatDateAndTime,
-  isValidDateTime,
   formatUnixTimestamp,
-  isTenHoursAgoOrLess,
 } from './timestampUtilities';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
+// -- Fix date not showing if isRelevant is true
+
+// 1. Move this into articles
 const isToday = timestamp => {
   const today = moment(Date.now());
   return today.isSame(timestamp, 'day');
 };
 
+// 2. Move this into articles
 const formatType = timestamp =>
   isToday(timestamp) ? formatDateAndTime : formatDate;
 
-const humanReadable = ({ timestamp, shouldMakeRelative }) =>
-  shouldMakeRelative
-    ? relativeTime(timestamp)
-    : formatUnixTimestamp(timestamp, formatType(timestamp));
 
-const TimestampContainer = ({ lastPublished, firstPublished }) => {
-  if (
-    !isValidDateTime(new Date(lastPublished)) ||
-    !isValidDateTime(new Date(firstPublished))
-  ) {
-    return null;
-  }
+const TimestampContainer = ({ timestamp, prefix, isRelative, dateTimeFormat, suffix }) => {
 
-  const firstPublishedString = humanReadable({
-    timestamp: firstPublished,
-    shouldMakeRelative:
-      lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished),
-  });
-
-  const lastPublishedString = `Updated ${humanReadable({
-    timestamp: lastPublished,
-    shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
-  })}`;
-
+  console.log('LOG', relativeTime(timestamp));
   return (
-    <GridItemConstrainedMedium>
-      <Timestamp
-        datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
-      >
-        {firstPublishedString}
-      </Timestamp>
-      {lastPublished !== firstPublished ? (
-        <Timestamp
-          datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
-        >
-          {lastPublishedString}
-        </Timestamp>
-      ) : null}
-    </GridItemConstrainedMedium>
+    <Timestamp datetime={formatUnixTimestamp(timestamp, formatDateNumeric)}>
+      { prefix ? prefix : null }
+      {
+        isRelative ?
+          relativeTime(timestamp)
+          :
+          formatUnixTimestamp(timestamp, formatType(timestamp))
+      }
+      { suffix ? suffix : null }
+    </Timestamp>
   );
 };
 
 TimestampContainer.propTypes = {
-  firstPublished: number.isRequired,
-  lastPublished: number.isRequired,
+  timestamp: number,
+  dateTimeFormat: string,
+  isRelative: boolean,
+  locale: string,
+  timezone: string,
+  prefix: string,
+  suffix: string,
+};
+
+TimestampContainer.defaultProps = { // should the below be required?
+  locale: string,
+  timezone: string,
+  prefix: null,
+  suffix: null,
 };
 
 export default TimestampContainer;
+
+{/* <TimestampContainer -- props that are handling them
+  timestamp="112121212121" -- timestamp
+  dateTimeFormat="YYYY-MM-DD" -- dateTimeFormat
+  format="D MMMM YYYY, HH:mm z" -- dateTimeFormat
+  isRelative={false} -- isRelative
+  local="en-GB" -- locale
+  timezone="Europe/London"
+  prefix="Updated"
+  suffix={null}
+/> */}
+
+// RETURN
+{/* <time datetime="2019-02-07">
+Updated 7 February 2019 12:34 BST
+</time> */}

@@ -25,6 +25,8 @@ const relativeTime = receivedTimestamp => {
   const isMoreThanTenHoursAgo = timeDifferenceMinutes > 10 * 60;
 
   if (isInFuture || isMoreThanTenHoursAgo) {
+    console.log('fut', isInFuture);
+    console.log('more', isMoreThanTenHoursAgo);
     return null;
   }
 
