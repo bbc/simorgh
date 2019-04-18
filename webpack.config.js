@@ -61,12 +61,15 @@ module.exports = (shell = {}) => {
         },
       ],
     },
-    // if bundled files exceed set limits, then error will be thrown
-    performance: {
-      maxAssetSize: 245760, // 240kb - individual bundles
-      maxEntrypointSize: 506880, // 495kb - total bundles
-      hints: 'error',
-    },
+
+    // This is to override bundle performance test. @TODO explain better
+    performance: !START_DEV_SERVER
+      ? {
+          maxAssetSize: 245760, // 240kb - individual bundles
+          maxEntrypointSize: 491520, // 480kb - total bundles
+          hints: 'error',
+        }
+      : undefined,
   };
 
   const mergeIntoBaseConfig = app => {
