@@ -1,23 +1,18 @@
 import React from 'react';
-import Timestamp from '../Timestamp';
+import { number } from 'prop-types';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
-
-// Pull out utility functions to a module of their own
-const isTenHoursAgoOrLess = (milliseconds) => {
-  const now = Date.now();
-  return now - milliseconds <= 10 * 60 * 60 * 1000;
-};
-
-const isValidDateTime = (timestamp) => {
-  // eslint-disable-next-line no-restricted-globals
-  if (isNaN(timestamp) || timestamp === null) {
-    return false;
-  }
-  return !isNaN(new Date(timestamp)); // eslint-disable-line no-restricted-globals
-}
+import Timestamp from '../Timestamp';
+import { formatDateNumeric } from './timeFormats';
+import {
+  isValidDateTime,
+  isTenHoursAgoOrLess,
+  relativeTime,
+  formatType,
+} from './timestampUtilities';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const isRelative = lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished);
+  const isRelative = lastPublished === firstPublished 
+    && isTenHoursAgoOrLess(firstPublished);
 
   if (!isValidDateTime(new Date(firstPublished)) || !isValidDateTime(new Date(lastPublished)))
   {
@@ -28,21 +23,31 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     <GridItemConstrainedMedium>
       <Timestamp
         timestamp={firstPublished}
-        dateTimeFormat='D MMMM YYYY' // - make this be used by TimestampContainer
-        isRelative={isRelative}
+        dateTimeFormat={formatDateNumeric}
+        format={formatType(firstPublished)}
+        time={ isRelative ? relativeTime(firstPublished) : null }
       />
       {
         firstPublished !== lastPublished ? (
           <Timestamp
             timestamp={lastPublished}
-            dateTimeFormat='D MMMM YYYY' // - make this be used by TimestampContainer
-            isRelative={isTenHoursAgoOrLess(lastPublished)}
-            prefix='Updated' // add space after prefix
+            dateTimeFormat={formatDateNumeric}
+            format={formatType(lastPublished)}
+            time={
+              isTenHoursAgoOrLess(lastPublished) ?
+                relativeTime(lastPublished) : null
+            }
+            prefix='Updated'
           />
         ) : null
       }
     </GridItemConstrainedMedium>
   );
+}
+
+ArticleTimestamp.propTypes = {
+  firstPublished: number.isRequired,
+  lastPublished: number.isRequired,
 }
 
 export default ArticleTimestamp;

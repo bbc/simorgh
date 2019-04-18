@@ -4,21 +4,27 @@ import Timestamp from '.';
 
 storiesOf('TimestampContainer', module)
   .add('default', () => (
-    <Timestamp timestamp={1530947227000} isRelative={true} prefix='blas' />
-  ))
-  .add('with "Updated" prefix', () => (
     <Timestamp
-      firstPublished={1530947227000}
-      lastPublished={1552666749637}
+      timestamp={1530947227000}
+      dateTimeFormat='YYYY-MM-DD'
+      format='D MMMM YYYY'
+    />
+  ))
+  .add('with prefix', () => (
+    <Timestamp
+      timestamp={1552666749637}
+      dateTimeFormat='YYYY-MM-DD'
+      format='D MMMM YYYY, HH:mm z'
       prefix='Updated'
     />
   ))
   .add('with prefix and suffix', () => (
     <Timestamp
-      firstPublished={1530947227000}
-      lastPublished={1552666749637}
+      timestamp={1530947227000}
+      dateTimeFormat='YYYY-MM-DD'
+      format='D MMMM YYYY, HH:mm z'
+      prefix='This'
       suffix='is date of last update'
-      prefix='--->'
     />
   ));
 
