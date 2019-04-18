@@ -119,54 +119,6 @@ const videoBlock = [
             ],
           },
         },
-        {
-          type: 'image',
-          model: {
-            blocks: [
-              {
-                type: 'rawImage',
-                model: {
-                  width: 1024,
-                  height: 576,
-                  locator: '5BD5/production/_101690532_2.jpg',
-                  originCode: 'cpsprodpb',
-                  copyrightHolder: 'NASA',
-                },
-              },
-              {
-                type: 'altText',
-                model: {
-                  blocks: [
-                    {
-                      type: 'text',
-                      model: {
-                        blocks: [
-                          {
-                            type: 'paragraph',
-                            model: {
-                              text:
-                                'Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.',
-                              blocks: [
-                                {
-                                  type: 'fragment',
-                                  model: {
-                                    text:
-                                      'Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.',
-                                    attributes: [],
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
       ],
     },
   },

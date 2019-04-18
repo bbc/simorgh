@@ -10,6 +10,12 @@ import {
   imageBlock,
 } from '../../models/blocks';
 import VideoContainer from './index';
+import {
+  VideoWithCaption,
+  VideoWithoutCaption,
+  VideoAmpWithCaption,
+  VideoAmpWithoutCaption,
+} from './fixtureData';
 
 describe('Video', () => {
   const rVB = rawVideoBlock(
@@ -75,66 +81,24 @@ describe('Video', () => {
   });
 
   describe('with data and a caption', () => {
-    const data = {
-      blocks: [
-        {
-          type: 'rawVideo',
-          model: {
-            locator: 'urn:bbc:pips:pid:p064nsyw',
-            versionID: 'p064nsz3',
-            kind: 'clip',
-            duration: '299',
-          },
-        },
-        {
-          type: 'image',
-          model: {
-            blocks: [
-              {
-                type: 'rawImage',
-                model: {
-                  locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
-                },
-              },
-            ],
-          },
-        },
-        {
-          type: 'caption',
-          model: {
-            blocks: [
-              {
-                type: 'text',
-                model: {
-                  blocks: [
-                    {
-                      type: 'paragraph',
-                      model: {
-                        text:
-                          'Former embroider Pauline Clayton described the gift as "lovely"',
-                        blocks: [
-                          {
-                            type: 'fragment',
-                            model: {
-                              text:
-                                'Former embroider Pauline Clayton described the gift as "lovely"',
-                              attributes: [],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    };
     shouldShallowMatchSnapshot(
       'should render the video and caption',
-      <VideoContainer {...data} />,
+      VideoWithCaption,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render the video without a caption',
+      VideoWithoutCaption,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render the amp video with a caption',
+      VideoAmpWithCaption,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render the amp video without a caption',
+      VideoAmpWithoutCaption,
     );
   });
 });
