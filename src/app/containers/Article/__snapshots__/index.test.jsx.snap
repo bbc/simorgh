@@ -363,8 +363,6 @@ exports[`ArticleContainer Component 200 status code should render correctly for 
       "status": 200,
     }
   }
-  isAmp={false}
-  service="news"
 >
   <LoadingContainer
     bbcOrigin="https://www.bbc.co.uk"

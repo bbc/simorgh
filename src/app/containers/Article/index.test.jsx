@@ -57,21 +57,21 @@ describe('ArticleContainer', () => {
     describe('no data or bbcOrigin', () => {
       shouldMatchSnapshot(
         'should render correctly',
-        <ArticleContainer error="error" />,
+        <ArticleContainer data={newsProps} error="error" />,
       );
     });
 
     describe('loading state', () => {
       shouldMatchSnapshot(
         'should render correctly',
-        <ArticleContainer loading />,
+        <ArticleContainer data={newsProps} loading />,
       );
     });
 
     describe('error state', () => {
       shouldMatchSnapshot(
         'should render correctly',
-        <ArticleContainer error />,
+        <ArticleContainer data={newsProps} error />,
       );
     });
   });

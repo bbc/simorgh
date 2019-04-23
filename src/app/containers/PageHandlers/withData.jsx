@@ -7,13 +7,13 @@ import nodeLogger from '../../helpers/logger.node';
 const logger = nodeLogger(__filename);
 
 const WithData = Component => {
-  const DataContainer = ({ data }) => {
+  const DataContainer = ({ data, ...props }) => {
     if (data) {
-      const { data: articleData, status } = data;
+      const { status } = data;
 
-      if (status && articleData && status === 200) {
+      if (status && data.data && status === 200) {
         try {
-          return <Component articleData={articleData} />;
+          return <Component assetData={data.data} {...props} />;
         } catch (err) {
           logger.error(err);
           return <ErrorMain status={status} />;
