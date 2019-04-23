@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, string, number } from 'prop-types';
+import { arrayOf, bool, shape, string, number } from 'prop-types';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -11,6 +11,7 @@ const renderAmpHtml = (ampLink, isAmp) => {
 
 const Metadata = ({
   isAmp,
+  alternateLinks,
   ampLink,
   appleTouchIcon,
   articleAuthor,
@@ -53,6 +54,14 @@ const Metadata = ({
         {title} - {brandName}
       </title>
       <link rel="canonical" href={canonicalLink} />
+      {alternateLinks.map(alternate => (
+        <link
+          rel="alternate"
+          href={alternate.href}
+          hrefLang={alternate.hrefLang}
+          key={alternate.hrefLang}
+        />
+      ))}
       {renderAmpHtml(ampLink, isAmp)}
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:modified_time" content={timeLastPublished} />
@@ -89,6 +98,12 @@ const Metadata = ({
 
 Metadata.propTypes = {
   isAmp: bool.isRequired,
+  alternateLinks: arrayOf(
+    shape({
+      href: string.isRequired,
+      hrefLang: string.isRequired,
+    }),
+  ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
   articleAuthor: string.isRequired,
@@ -113,6 +128,7 @@ Metadata.propTypes = {
 };
 
 Metadata.defaultProps = {
+  alternateLinks: [],
   articleSection: null,
 };
 

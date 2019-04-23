@@ -1,0 +1,4947 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:igbo/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/igbo/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/front_page",
+      "curie": "http://www.bbc.co.uk/asset/617cd7da-67ef-b8b9-e050-17ac8045f31c/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "igbo-v6",
+    "language": "ig",
+    "lastUpdated": 1554997668537,
+    "firstPublished": 1514896826,
+    "lastPublished": 1554997660,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "igbo.page",
+      "cps_asset_id": "42516282",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.1",
+    "blockTypes": [
+      "responsive-top-stories",
+      "responsive-cluster",
+      "responsive-must-see",
+      "responsive-inspire",
+      "responsive-in-depth",
+      "useful-links",
+      "special-reports"
+    ],
+    "title": "Ogbako",
+    "summary": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "responsive-top-stories",
+        "title": "Top Stories",
+        "maxRelatedLinks": 3,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Ọrụ 7 ị ga-ebidonwu na be gị ga-eme gị 'ide ji ego'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47888514",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47888514"
+            },
+            "summary": "Ka ọtụtụ ndị mmadụ na-achọ ọrụ bekee, ka ndị ọzọ na-achọ ọrụaka ha ga-eji na-akpata ego na Naịjirịa.",
+            "timestamp": 1554989460,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106412830",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0EED/production/_106412830_home.jpg",
+              "path": "/cpsprodpb/0EED/production/_106412830_home.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ezinaụlọ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "'Ejirila m ịkpa isi zụpụta onwe m na mahadum'"
+                },
+                "locators": {
+                  "assetUri": "/igbo/afirika-46556465",
+                  "cpsUrn": "urn:bbc:content:assetUri:/igbo/afirika-46556465"
+                },
+                "summary": "Ịkpa isi ahapụla ịbụ aka ọrụ ụmụnwaanyị naanị kemgbe ụmụnwoke batara n'akaọrụ ahụ gwunyesịa ike.",
+                "timestamp": 1544708687,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:igbo/afirika-46556465",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "NYSC Allowance: Gịnị ka ị ga-ejinwu N19,800 mee?"
+                },
+                "locators": {
+                  "assetUri": "/igbo/afirika-46100150",
+                  "cpsUrn": "urn:bbc:content:assetUri:/igbo/afirika-46100150"
+                },
+                "summary": "Dịka ndị 'NYSC allowance' na-ewu na soshal midia, BBC Igbo chọrọ igosipụta ihe ndị ị ga-ejinwu ya mee.",
+                "timestamp": 1541478833,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:igbo/afirika-46100150",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Akaọrụ ise ị nwere ike iji N10,000 bido"
+                },
+                "locators": {
+                  "assetUri": "/igbo/afirika-45176267",
+                  "cpsUrn": "urn:bbc:content:assetUri:/igbo/afirika-45176267"
+                },
+                "summary": "Dịka gọọmentị Naịjirịa na-enye ndị mmadụ N10,000 iji bido azumaka, ndị mmadụ chọrọ ịma ihe ha ga-eji ego ahụ mee.",
+                "timestamp": 1534226629,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:igbo/afirika-45176267",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:igbo/afirika-47888514",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "BBC Nkeji"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-42986440",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440"
+            },
+            "summary": "Akụkọ ga-amasị gị ịkọ taa niile.",
+            "timestamp": 1554969780,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p0764ryq",
+              "subType": "clip",
+              "format": "audio",
+              "title": "BBC Nkeji",
+              "synopses": {
+                "short": "Akụkọ ga-amasị gị ịkọ taa niile",
+                "long": null,
+                "medium": "Akụkọ ga-amasị gị ịkọ taa niile."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0764s1m.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Akụkọ ga-amasị gị ịkọ taa niile",
+              "versions": [
+                {
+                  "versionId": "p0764rys",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 59,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableUntil": 1555051035
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106408274",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B8B0/production/_106408274_p0764s1m.jpg",
+              "path": "/cpsprodpb/B8B0/production/_106408274_p0764s1m.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-42986440",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "\"Gbuoro onye ị hụrụ n'anya ehi 10 ma ị chọọ\""
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47893485",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47893485"
+            },
+            "summary": "Onye nọ n'ọrụ akwamozu a ma dịka Apams ekwuola na mmadụ ọbụla nwere ikike ịkwa onye nke ha ka ọ si masị ha.",
+            "timestamp": 1554992918,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106412851",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3DCD/production/_106412851_apams11.jpg",
+              "path": "/cpsprodpb/3DCD/production/_106412851_apams11.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị na-akwa ozu",
+              "copyrightHolder": "APAMSLIMITED"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47893485",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ndịagha ewerela ọnọdụ ọchịchị na Sudan"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47858758",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47858758"
+            },
+            "summary": "Ndị mmadụ na-ebe akwa, na-eme mmemme, na enwe aṅụrị...etu ndị Sudan si nabata iwepu Onyeisiala Bashir n'ike.",
+            "timestamp": 1554975035,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106412846",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FD35/production/_106412846_ropiters.jpg",
+              "path": "/cpsprodpb/FD35/production/_106412846_ropiters.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị na-eme ngagharịwe na Khartoum dị na Sudan",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47858758",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Isi akụkọ"
+        },
+        "semanticGroupName": "Top Stories"
+      },
+      {
+        "type": "responsive-cluster",
+        "title": "Cluster 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Nigeria election 2019: Ndigbo agbakpuru n'ochendo hapụ ka mmiri maa okeọkpa?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47815763",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47815763"
+            },
+            "summary": "Mmeri Nyesom Wike meriri na Rivas na-atọpịasị ụfọdụ Ndigbo isi mere ụfọdụ ji ajụ ma Apga na PDP ọ bụzị ọkụkọ udu mmiri?",
+            "timestamp": 1554396736,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106299729",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16A7F/production/_106299729_pdpapc-apga.jpg",
+              "path": "/cpsprodpb/16A7F/production/_106299729_pdpapc-apga.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Njirimara PDP,APC nakwa APGA",
+              "copyrightHolder": "Uche Akolisa"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47815763",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ụmụ Igbo ebiela Abike Dabiri ka ọkwụrụ maka okwu ndị gara ohi na Dubai"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47789836",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47789836"
+            },
+            "summary": "Abike Dabiri-Erewa agọọla n'ihe okwu okwuru banyere ụmụ Naijiria gara ohi na mba Dubai abụghị okwu gbasara agbụrụ.",
+            "timestamp": 1554374597,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106295272",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6A7B/production/_106295272_abikedabiri-twitter.jpg",
+              "path": "/cpsprodpb/6A7B/production/_106295272_abikedabiri-twitter.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Abike Dabiri-Erewa",
+              "copyrightHolder": "@abikedabiri"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47789836",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Wike awụọla onye Amaechi na-akwado n'ala"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47779523",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47779523"
+            },
+            "summary": "Ụlọọrụ Inec nke Rivas Steeti akpọpụtala gọvanọ Nyesom Wike dịka onye meriri na ntuliaka ọkwa gọvanọ na steeti ahụ.",
+            "timestamp": 1554293444,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106291002",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4E33/production/_106291002_54523925_1656313514512833_6236562740249362432_n.jpg",
+              "path": "/cpsprodpb/4E33/production/_106291002_54523925_1656313514512833_6236562740249362432_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Nyesom Wike, gọvanọ Rivers Steeti",
+              "caption": "Mmeri a ga-enye Gọvanọ Wike ohere ịchị nke ugboro abụọ na Rivas Steeti",
+              "copyrightHolder": "Nyesom Wike"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47779523",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "INEC eforola ntutu taa n'isi Rochas Okorocha"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47744001",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47744001"
+            },
+            "summary": "Ngalaba na-ahụ maka ntuliaka na Naịjirịa bụ Inec agbaala isi akwara n'ihe gbasara asambodo Rochas Okorocha.",
+            "timestamp": 1553885177,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106233511",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2D0D/production/_106233511_rochasmean.jpg",
+              "path": "/cpsprodpb/2D0D/production/_106233511_rochasmean.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rochas Okorocha",
+              "copyrightHolder": "Facebook/Rochas"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47744001",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Asambodo aghọọla Adeleke ahịa"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47783738",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47783738"
+            },
+            "summary": "Otu ụlọikpe nọ n'Abuja akagbuola ọnọdụ Adeleke dịka onye zọrọ ọchịchị n'okpuru PDP maka asambodo.",
+            "timestamp": 1554235968,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106140626",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F48C/production/_106140626_ademolaadeleke--ademolaadeleke1.jpg",
+              "path": "/cpsprodpb/F48C/production/_106140626_ademolaadeleke--ademolaadeleke1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ademola Adeleke",
+              "caption": "Ademola Adeleke zọọ ọkwa gọvanọ Osun steeti n'aha PDP n'afọ 2018",
+              "copyrightHolder": "@IsiakaAdeleke1"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47783738",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe mere anyị ji gbajọ Rochas Okorocha - APC"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47708408",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47708408"
+            },
+            "summary": "Pati APC ekwuola ihe mere ha nweghị ike ịnyere Rochas Okorocha aka ịnweta asambodo mmeri ya.",
+            "timestamp": 1553710580,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99719215",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C85B/production/_99719215_rochasokorocha.jpg",
+              "path": "/cpsprodpb/C85B/production/_99719215_rochasokorocha.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rochas Okorocha",
+              "caption": "Rochas Okorocha nọ n'agba nke abụọ dịka Gọvanọ Imo steeti",
+              "copyrightHolder": "Rochas Okorocha Facebook"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47708408",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Senate President: Onye Igbo o nwere ike ịbụ onyeisi Sịnetị?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47610129",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47610129"
+            },
+            "summary": "Ajụjụ dị Ndigbo n'ọnụ ugbua bụ ma nwa afọ Igbo o nwere ike ịbụ onyeisi ndị ụlọomeiwu ukwu n'agba?",
+            "timestamp": 1552925007,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106075929",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16B1D/production/_106075929_orjiokoro.jpg",
+              "path": "/cpsprodpb/16B1D/production/_106075929_orjiokoro.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rochas, Uwajimogu, Orji Kalu",
+              "caption": "Rochas, Uwajimogu, Orji Kalu",
+              "copyrightHolder": "Facebook/Rochas/Uwajimodu/Orji Kalu"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47610129",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O nweghi ihe na-esere Oshiomhole na Amaechi - APC"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47759638",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47759638"
+            },
+            "summary": "Otu APC ekwuola na o nweghị nsogbu dị n'etiti Adams Oshiomhole na Rotimi Amaechi.",
+            "timestamp": 1554188505,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106238795",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E987/production/_106238795_amaechioshiomhole.jpg",
+              "path": "/cpsprodpb/E987/production/_106238795_amaechioshiomhole.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rotimi Amaechi na Adams Oshiomhole",
+              "caption": "Adams Oshiomhole agọnahụla Amaechi n'okwu nkwekọrịta APC na AAC",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47759638",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Emeka Ihedioha na Ifeanyi Ugwuanyi anatala Certificate of Return n'aka Inec"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47716529",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47716529"
+            },
+            "summary": "Inec malitere inye ndị ritere mmeri na ntuliaka nke 2019 na Enugwu nakwa Imo steete asambodo ga-egosi na ha meriri.",
+            "timestamp": 1553694444,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106188133",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/81A4/production/_106188133_ihediohacertificateofreturn.jpg",
+              "path": "/cpsprodpb/81A4/production/_106188133_ihediohacertificateofreturn.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ihedioha natara asambodo mmeri n'aka Inec n'Imo",
+              "copyrightHolder": "Ihedioha/Twitter"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47716529",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ifeanyi Ubah ọ baala APC n'ezie?"
+            },
+            "locators": {
+              "assetUri": "/igbo/47705954",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47705954"
+            },
+            "summary": "Ihe ole maọbụ ole ị kwesiri ịma maka Ifeanyi Ubah",
+            "timestamp": 1553605119,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106180959",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/176A4/production/_106180959_ifeanyiubah.jpg",
+              "path": "/cpsprodpb/176A4/production/_106180959_ifeanyiubah.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ifeanyi Uba",
+              "caption": "Ifeanyi Uba",
+              "copyrightHolder": "Ifeanyi Ubah/twitter"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47705954",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Oyetola ka ga-anọkwa n'ọkwa ruo mgbe Ụlọikpe kpebiri - Agbakoba"
+            },
+            "locators": {
+              "assetUri": "/igbo/47705955",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47705955"
+            },
+            "summary": "Ihe Ọkaiwu Olisa Agbakoba kwuru maka mmeri Ademola Adeleke na mpụtara ụlọikpe.",
+            "timestamp": 1553676570,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102641450",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1526/production/_102641450_senator2.jpg",
+              "path": "/cpsprodpb/1526/production/_102641450_senator2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Adeleke gosiri na obi adighị ya etu esi nara ya mmeri ya",
+              "caption": "Adeleke gosiri na obi adighị ya etu esi nara ya mmeri ya",
+              "copyrightHolder": "Twitter/@IsiakaAdeleke1"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47705955",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Osun Election: Ụlọikpe enyela Adeleke mmeri"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47664851",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47664851"
+            },
+            "summary": "Ụlọikpe enyela mmeri na mgbagha Ademola Adeleke nke PDP na-agbagha mpụtara ntuliaka Osun steeti.",
+            "timestamp": 1553251379,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106141805",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C67E/production/_106141805_ademolaadeleke--isiakaadeleke1.jpg",
+              "path": "/cpsprodpb/C67E/production/_106141805_ademolaadeleke--isiakaadeleke1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Gboyega Oyetola na Ademola Adeleke zọkọra ọkwa gọvanọ Osun n'afọ 2018",
+              "caption": "Ademola Adeleke zọrọ ọkwa gọvanọ Osun n'afọ 2018",
+              "copyrightHolder": "@Gboyegaoyetola/@IsiakaAdeleke1"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47664851",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Oshiomhole: 'Inclusive govenment' gbakwa ọkụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/47690664",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47690664"
+            },
+            "summary": "Iwu nke ụlọikpe nyere egbochiela Inec ịkesa asambodo ntuliaka ọkwa Gọvanọ e mere na Zamfara.",
+            "timestamp": 1553627899,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105671490",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/24C9/production/_105671490_inecadtr.jpg",
+              "path": "/cpsprodpb/24C9/production/_105671490_inecadtr.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Onyeisi Inec",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47690664",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ndị ụlọomeiwu Imo steeti a ga-enye ọchịchị Ihedioha nkwalite?"
+            },
+            "locators": {
+              "assetUri": "/igbo/47696864",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47696864"
+            },
+            "summary": "Ndị Imo na-ekwu etu inwe ndị nnọchịteanya otu pati dị iche iche n'ụlọomeiwu Imo steeti ga-esi emetụta ọchịchị Emeka Ihedioha.",
+            "timestamp": 1553538626,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074kch0",
+              "subType": "clip",
+              "format": "video",
+              "title": "Emeka Ihedioha: Ndị ụlọomeiwu Imo steeti a họpụtara  ọhụrụ aga-enye ọchịchị ya nkwalite?",
+              "synopses": {
+                "short": "Emeka Ihedioha: Ndị ụlọomeiwu Imo steeti a họpụtara  ọhụrụ aga-enye ọchịchị ya nkwalite?",
+                "long": "Dịka okwe sị nwe gba maka ndị ahọpụtara ị ga ụlọmeiwu Imo steeti nke bụ na PDP nwere mmadụ iri na atọ, \n AA nwetara mmadụ  asatọ,ebe APGA nwetara mmadụ isii, ajụjụ bụ o ga-emetụta nkwkọrịta ịkwalite ọchịchị Ihedioha.\nỤfọdụ ndị sara BBC Igbo ajụjụ ahụ kwuru na ọ gaghị ebute nsogbu ọbụla, ebe ụfọdụ sị na ọ ga-enye nsogbu.",
+                "medium": "Ndị mmadụ na-ekwu etu inwe ndị nnọchịteanya otu pati dị iche iche n'ụlọomeiwu Imo steeti ga-esi emetụta nkwekọrịta n'ọchịchị Emeka Ihedioha."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074kgdj.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Ndị ụlọomeiwu Imo steeti a họpụtara ọhụrụ aga-enye Emeka Ihedioha aka n'ịkwalite ọchịchị steeti?",
+              "versions": [
+                {
+                  "versionId": "p074kch2",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 79,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "106175852",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6501/production/_106175852_p074kgdj.jpg",
+              "path": "/cpsprodpb/6501/production/_106175852_p074kgdj.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị mmadụ na-ekwu etu inwe ndị nnọchịteanya otu pati dị iche iche n'ụlọomeiwu Imo steeti ga-esi emetụta nkwekọrịta n'ọchịchị Emeka Ihedioha.",
+              "copyrightHolder": "Dịka okwe sị nwe gba maka ndị ahọpụtara ị ga ụlọme"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47696864",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Inec akpọpụtala Ganduje dịka onye meriri na ntụliaka gọvanọ Kano"
+            },
+            "locators": {
+              "assetUri": "/igbo/live/afirika-47678135",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/live/afirika-47678135"
+            },
+            "summary": "Akụkọ ihe na-eme na 'Alaigbo na gburu gburu Naijiria ebe a na-eme ntuliaka mmeju nke afọ 2019.",
+            "timestamp": 1553326938,
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "106162451",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3C42/production/_106162451_ganduje.jpg",
+              "path": "/cpsprodpb/3C42/production/_106162451_ganduje.jpg",
+              "height": 552,
+              "width": 981,
+              "altText": "Ganduje",
+              "copyrightHolder": "Kano Twitter"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "7F224B1E4C5F884290BAFF501EF9EEEC",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.47678136_EnhancedMobile",
+                "desktop": "bbc.cps.asset.47678136_HighWeb",
+                "highweb": "bbc.cps.asset.47678136_HighWeb",
+                "mobile": "bbc.cps.asset.47678136_EnhancedMobile"
+              }
+            },
+            "isLive": true,
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/live/afirika-47678135",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe Ipob, Ahamba kwuru maka mmeri Adeleke n'ụlọikpe"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47649990",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47649990"
+            },
+            "summary": "Ihe ndị ọnụ na-erụ n'okwu kwuru maka mmeri Adeleke meriri na ụlọikpe maka ntuliaka gọvanọ ndị Osun steeti.",
+            "timestamp": 1553403593,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "103767726",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F538/production/_103767726_mikeahamba-copy-2.jpg",
+              "path": "/cpsprodpb/F538/production/_103767726_mikeahamba-copy-2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndọrọndọrọ ọchịchị",
+              "caption": "Mike Ahamba (SAN) bụ ndị mbụ sị APC gafee PDP mgbe chị ka bụ ụtụtụ",
+              "copyrightHolder": "Mike Ahamba/facebook"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47649990",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Ntuliaka 2019"
+        },
+        "semanticGroupName": "Cluster 2"
+      },
+      {
+        "type": "responsive-cluster",
+        "title": "Cluster 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "A nwụchiela Julian Assange na London"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47890943",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47890943"
+            },
+            "summary": "Akụkọ na-eru anyị ntị ugbua na-akọwa na ndị uweojii na London anwụchiela Julian Assange na London.",
+            "timestamp": 1554977582,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106409995",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EA56/production/_106409995_assange_file_pic_reuters.jpg",
+              "path": "/cpsprodpb/EA56/production/_106409995_assange_file_pic_reuters.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Julian Assange",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47890943",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Agaghị akwazị ozu karịa otu ụbọchị n'Anambra - Ndị ụlọomeiwu"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47877200",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47877200"
+            },
+            "summary": "Ndị ụlọomeiwu emeela iwu ka a kwụsị imefu oke ego n'emume akwamozu onye nwụrụ anwụ na Steeti ahụ.",
+            "timestamp": 1554915213,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106401198",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15C16/production/_106401198_p06lhy50.jpg",
+              "path": "/cpsprodpb/15C16/production/_106401198_p06lhy50.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Emume akwamozu",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47877200",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Nwaanyị dị ime ji nwapem gbalahụ ọnwụ n'ọkụ gbara n'ọdọụgbọelu Sam Mbakwe'"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47888197",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47888197"
+            },
+            "summary": "Ụfọdụ ụmụ mmadụ ahụshiele anya n'Owere, Imo steeti, ebe ọkụ gbara ahịa ha n'ọdọụgbọelu Sam Mbakwe.",
+            "timestamp": 1554922817,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07639dd",
+              "subType": "clip",
+              "format": "video",
+              "title": "Nwaanyị dị ime ji nwapem gbalahụ ọnwụ n'ọkụ gbara n'ọdọụgbọelu Sam Mbakwe",
+              "synopses": {
+                "short": "Sam Mbakwe Airport: Nwaanyị dị ime ji nwapem gbalahụ ọnwụ ka ọkụ na-agba",
+                "long": "Ndị ọkụ gbara ihe ha n'ọdọụgbọelu Sam Mbakwe nke dị n'Owere akọwaala ka ụbọchị dị ha.\nHa kwuru na ha ahụshiela anya kemgbe ego ha wụnyere n'ọhịa ka ọkụ a gbachara.\nKa ọ dị ugbua, ụgbọelu amalitela ifebata ma fepụ n'ọdọụgbọelu Owere dịka ọnụ na-ekwuchitere ndị uweojii Orlando Ikeokwu siri kwuo.\nCheta na ọkụ gbara n'ọdọụgbọelu a n'ehihie ụbọchị asatọ nke ọnwa Epreelụ 2019, mana ndị ọrụ gbatagbata n'odoụgbọelu mechara menyụọ ya bụ ọkụ.",
+                "medium": "Ụfọdụ ụmụ mmadụ ahụshiele anya n'Owere, Imo steeti, ebe ọkụ gbara ahịa ha n'ọdọụgbọelu Sam Mbakwe."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0763l77.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Sam Mbakwe Airport: Nwaanyị dị ime ji nwapem gbalahụ ọnwụ ka ọkụ na-agba",
+              "versions": [
+                {
+                  "versionId": "p07639dg",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 98,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106403668",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15266/production/_106403668_sammbakweairportfire.jpg",
+              "path": "/cpsprodpb/15266/production/_106403668_sammbakweairportfire.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Sam Mbakwe Airport",
+              "caption": "Ndị nọ mgbe Sam Mbakwe Airport gbara ọkụ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47888197",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Ọkụ gbara n'ọdọụgbọelu Owerri akwụsịghị njem ọbụla'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47858755",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47858755"
+            },
+            "summary": "N'agbanyeghị na ọkụ gbara n'ọdọụgbọelu dị na Owerri ụnyahụ, ndị mmadụ na-eme njem ha ebe ahụ na-enweghị nsogbu ọ bụla.",
+            "timestamp": 1554734250,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106349585",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E4E2/production/_106349585_owerriairportfire.jpg",
+              "path": "/cpsprodpb/E4E2/production/_106349585_owerriairportfire.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ọdọụgbọelu Owere ka ọ na-agba ọkụ",
+              "caption": "Ọdọụgbọelu Owere ka ọ na-agba ọkụ",
+              "copyrightHolder": "Daniel Nwachukwu"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47858755",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ọgbaghara dị n'etiti ndị na-achị ehi na Anam akwụsịla - Kọmishọna mgbasa ozi"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47864371",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47864371"
+            },
+            "summary": "Kọmishọna na-ahụ maka mgbasa ozi na Anambra steeti ekwuola na ọgbaghara dị n'etiti ndị na-achị ehi na ndị na-akọ ugbo akwụsịla na Anam.",
+            "timestamp": 1554805163,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106358210",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0505/production/_106358210_bankrobberyinondo.jpg",
+              "path": "/cpsprodpb/0505/production/_106358210_bankrobberyinondo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ọhi ụlọakụ n'Ondo",
+              "copyrightHolder": "The Nationoline"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47864371",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Nlaghachị Buhari n'ọchịchị ọ ga-akwụsị oke ogbugbu na Naịjiria?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47871376",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47871376"
+            },
+            "summary": "Dịka a na-ahụ akụkọ gbasara oke ogbugbu na Naịjirịa, ụfọdụ ụmụ Naịjirịa ọnụ na-eru n'okwu ekwuola na ha echeghị na nlọghachị onyeisiala Muhammadu Buhari nwereike ikwụsị oke ogbugbu a.",
+            "timestamp": 1554899987,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "104154047",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1213D/production/_104154047_buhariinisiagu.jpg",
+              "path": "/cpsprodpb/1213D/production/_104154047_buhariinisiagu.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Muhammadu Buhari",
+              "copyrightHolder": "Twitter/APC Nigeria"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47871376",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Gịnị ka ndị ọrụ nchekwa na-eme maka ọgbaghara na Naịjirịa?"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47857520",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47857520"
+            },
+            "summary": "Ndị ogbuaraọbara anapụla ọtụtụ mmadụ ndụ n'ike na mpaghara Naịjirịa dị iche iche, gịnị ka a na-eme maka ya?",
+            "timestamp": 1554883282,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106362308",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/139C6/production/_106362308_oku-aba2.jpg",
+              "path": "/cpsprodpb/139C6/production/_106362308_oku-aba2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ọkụ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47857520",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Femi Otedola ekwetala ịkwụ ụgwọ ụlọọgwụ ruru $50,000 maka Christian Chukwu"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47844014",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47844014"
+            },
+            "summary": "Akajiakụ bụ Femi Otedola ekwetela ikwụrụ Christian Chukwu na-arịa nnukwu ọrịa ụgwọ ụlọọgwụ ya.",
+            "timestamp": 1554812717,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106361870",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1E88/production/_106361870_otedolaandchukwu.jpg",
+              "path": "/cpsprodpb/1E88/production/_106361870_otedolaandchukwu.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Otedola /Chukwu",
+              "caption": "Chukwu bụbụ onye nchịkọta otu Super Eagles",
+              "copyrightHolder": "@realFemiOtedola"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47844014",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Ndị Abịa na-eru uju maka ntuliaka e mere'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47857513",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47857513"
+            },
+            "summary": "Kasie Uko bụ onye nnyemaka Alex Otti asaaala Ifeanyi Umere nke PDP okwu ọgwara onyeisi ya.",
+            "timestamp": 1554790185,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106349338",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/145C2/production/_106349338_p06sx2yw.jpg",
+              "path": "/cpsprodpb/145C2/production/_106349338_p06sx2yw.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Alex Otti nke APGA",
+              "caption": "Alex Otti nke APGA",
+              "copyrightHolder": "Alex Otti"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47857513",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "WrestleMania 35: Ihe ise ị maghị maka Kofi, dike WWE ọhụrụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47844013",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47844013"
+            },
+            "summary": "Nwaamadị a abụrụla onye isi oji nke abụọ tụrụ ugo ka oka ibe na WWE ma bụkwara ọka ibe isi oji nke anọ n'ụwa dum.",
+            "timestamp": 1554706505,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106346293",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9960/production/_106346293_gettyimages-131076584-2.jpg",
+              "path": "/cpsprodpb/9960/production/_106346293_gettyimages-131076584-2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Kofi Kingston",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47844013",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Anyị ka na-eme nnyocha banyere ndị e gburu n'Anambara - Ndị uweojii"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47853690",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47853690"
+            },
+            "summary": "Ndị uweojii na steeti Anambara ekwuola na ha ka na-eme nnyocha banyere mmadụ isii e gburu n'okpuru ọchịchị Anambara West.",
+            "timestamp": 1554724768,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99564086",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/109CE/production/_99564086_fulani4.jpg",
+              "path": "/cpsprodpb/109CE/production/_99564086_fulani4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Onye ọchi ehi bu egbe",
+              "caption": "Onwere ndị Fulani na-achị ehi bu egbe ukwu agagharị",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47853690",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Arsenal anarala ọgwụgwọ nsọ n'aka Everton"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47846811",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47846811"
+            },
+            "summary": "Ọ bụ otu ọkpụ goolu Everton gbanyere na neeti Arsenal ka ha jiri gwọọ ha ara n'ehihie ụbọchị ụka.",
+            "timestamp": 1554650150,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106337694",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C209/production/_106337694_oziil.jpg",
+              "path": "/cpsprodpb/C209/production/_106337694_oziil.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Mesut Ozil",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47846811",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Buhari amachiela ngwuputa olaedo na Zamfara"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47846810",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47846810"
+            },
+            "summary": "Akụkọ na-eru anyị ntị ugbua na -ekwu na onyeisiala Naịjirịa amachiela nwgupu ala niile na Zamfara steeti.",
+            "timestamp": 1554646345,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106337690",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/25C9/production/_106337690_goldmine.jpg",
+              "path": "/cpsprodpb/25C9/production/_106337690_goldmine.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị na-egwu ala ịchọta olaedo",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47846810",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "A mụnyela ọkụ ncheta na Rwanda taa"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47845910",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47845910"
+            },
+            "summary": "Onyeisiala Rwanda bụ Paul Kagame ekwuola na mba ahụ abụrụla \"otu ezinaụlọ ọzọ\" dịka a na-echeta ndị nwụrụ.",
+            "timestamp": 1554660348,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106339188",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15881/production/_106339188_p075s6nr.jpg",
+              "path": "/cpsprodpb/15881/production/_106339188_p075s6nr.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rwanda president lights flame with others",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47845910",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee ihe mere nwaanyị a jiri gba di ya ọkụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47844012",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47844012"
+            },
+            "summary": "Ihe bụ afọ iri atọ Kiranjit mụnyere dị ya ọkụ ebe ọ dina na-ararụ makana ọ na emegbụ ya ma were 'iron' tee ya n'ihu.",
+            "timestamp": 1554645639,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106335452",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/636D/production/_106335452_bbc.jpg",
+              "path": "/cpsprodpb/636D/production/_106335452_bbc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Kiranjit Ahluwalia",
+              "copyrightHolder": "MARTIN EBERLEN"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47844012",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ewetere m nde dollar 10 n'ụlọ akụ iji mara ma m enwere ego n'ezie - Dangote"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47844011",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47844011"
+            },
+            "summary": "Aliko Dangote si na-ọbu mgbe ya hụrụ ego n'anya ka ya kwenyere na ya bu ide ego.",
+            "timestamp": 1554630821,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "100457905",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C71F/production/_100457905_afpdangote1.jpg",
+              "path": "/cpsprodpb/C71F/production/_100457905_afpdangote1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Aliko Dangote",
+              "caption": "Aliko Dangote bụ onye nwe Dangote Cement na ụlọọrụ ndị ọzọ dị iche ichedịka ndị ọgaranya ndị ọzọ na-eme",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47844011",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Jesus agbatala Man City ọsọ enyemaka"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47844010",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47844010"
+            },
+            "summary": "Ụmụ Gaurdiola gbara ka ndị ume adịghị mana goolu Gabriel Jesus nyere ha mmeri ikikiri eze.",
+            "timestamp": 1554623134,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106334965",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DE6F/production/_106334965_gabrieljesusafp.jpg",
+              "path": "/cpsprodpb/DE6F/production/_106334965_gabrieljesusafp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Gabriel Jesus",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47844010",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ndị Igbo jiri biri asaala Junaid Mohammed banyere ọkwa onyeisiala 2023"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47837724",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47837724"
+            },
+            "summary": "Ndị ọnụ na-eru n'okwu n'ala Igbo asaala Junaid Mohammed okwu ya sị Ndida Naijiria agaghị eji imi site ọkwa onyeisiala n'afọ 2023.",
+            "timestamp": 1554543753,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102315095",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E6AB/production/_102315095_chief.jpg",
+              "path": "/cpsprodpb/E6AB/production/_102315095_chief.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị eze",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47837724",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Boko Haram gbazi aka na Naịjirịa - Buhari"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47837723",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47837723"
+            },
+            "summary": "Onyeisiala Naịjirịa bụ Muhammadu Buhari ekwuola na onweghi ebe ọbụla Boko Haram kpachiri ugbua na Naịjirịa.",
+            "timestamp": 1554570975,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106331130",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0C29/production/_106331130_5d1578cd-6299-4202-9f92-a10853cecacb.jpg",
+              "path": "/cpsprodpb/0C29/production/_106331130_5d1578cd-6299-4202-9f92-a10853cecacb.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "Onyeisiala Muhammadu Buhari",
+              "copyrightHolder": "Muhammadu Buhari"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47837723",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ibite ego abụghị ihe ọjọọ, kama... - Ọkachamara"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47830557",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47830557"
+            },
+            "summary": "Onye ọkachamara n'okwu gbasara akụnaụba a kọwaala na onweghi ihe dị njọ n'ibite ego, kama na ọ bụ ihe e jii ya mee.",
+            "timestamp": 1554489236,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99872682",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6FD3/production/_99872682_nairanews.jpg",
+              "path": "/cpsprodpb/6FD3/production/_99872682_nairanews.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Naira",
+              "caption": "EFCC kwuru na Umar chọ nde naira ịrị",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47830557",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Anyị ga-enyocha ozu ụmụakwụkwọ e chere nwụrụ maka ọgwụ ike'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47824831",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47824831"
+            },
+            "summary": "Ndị uweojii n'Imo steeti ekwuola na-aha ga-enyocha ihe gburu ụmụakwụkwọ atọ n'Imo steeti.",
+            "timestamp": 1554468058,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106325896",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/110DC/production/_106325896_gettyimages-521791324-1.jpg",
+              "path": "/cpsprodpb/110DC/production/_106325896_gettyimages-521791324-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ụmụakwụkwọ mahadum",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47824831",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ọkaipke Walter Onnoghen awụsala ọwa n'ọrụ ya"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47103477",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47103477"
+            },
+            "summary": "Onnoghen bụbu ọkaịkpe kachasị na Naịjirịa agaghị agbaala arụkwaghịm n'ọrụ ya.",
+            "timestamp": 1554479192,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105158122",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/56A9/production/_105158122_onnogehnnationaljudicialc.jpg",
+              "path": "/cpsprodpb/56A9/production/_105158122_onnogehnnationaljudicialc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Walter Onnogehn",
+              "copyrightHolder": "National Judicial Council"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47103477",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Trevor Noah ejirila ịtụbata pizza maa ndị Naijiria njakịrị"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47824829",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47824829"
+            },
+            "summary": "Obi adịghị ụmụ Naijiria mma maka njakịrị ọkpaọchị Trevor Noah nke South-Africa mara ha maka ịtụbata pizza sị mba Briten.",
+            "timestamp": 1554453160,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102647495",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E852/production/_102647495_gettyimages-545692006.jpg",
+              "path": "/cpsprodpb/E852/production/_102647495_gettyimages-545692006.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Trevor Noah",
+              "caption": "Obi adịghị ụmụ Naijiria mma maka njakịrị ọkpaọchị Trevor Noah mara ha maka ịtụbata pizza sị mba Briten",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47824829",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ahọpụtala onyeisi ụlọakụ mba ụwa niile ọhụrụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47824828",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47824828"
+            },
+            "summary": "Ụlọakụ mba ụwa niile ezipula ozi ịkwu onye ga-anọchị anya onyeisi ochie ha dịka ọ rituru n'ọkwa n'ọnwa Febụwarị.",
+            "timestamp": 1554481073,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106323738",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14714/production/_106323738_worldbank.jpg",
+              "path": "/cpsprodpb/14714/production/_106323738_worldbank.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "David Malpass",
+              "copyrightHolder": "@WorldBank/Twitter"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47824828",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Ise uhie ma ọ bụ igbu ichi bụ ọdịwaragboo n' Igbo '"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47821099",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47821099"
+            },
+            "summary": "Ndị ọkachamara n'ihe banyere omenala Igbo akọwala na ise uhie bụ 'Tattoo' na bekee bụ otu n'ime ihe eji mara ndị Igbo.",
+            "timestamp": 1554400834,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075k4f2",
+              "subType": "clip",
+              "format": "video",
+              "title": "Ise Uhie bụ omenala ndị Igbo",
+              "synopses": {
+                "short": "Tattoo: Uhie bụ omenala ndị Igbo",
+                "long": null,
+                "medium": "Ndị ọkachamara n'ihe banyere omenala Igbo akọwala na ise uhie bụ 'Tattoo' na bekee bụ otu n'ime ihe eji mara ndị Igbo."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075k56z.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Tattoo: Uhie bụ omenala ndị Igbo",
+              "versions": [
+                {
+                  "versionId": "p075k4f8",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 164,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "Ezenka na Ọzọ Mcginger"
+            },
+            "indexImage": {
+              "id": "106308017",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/115A8/production/_106308017_p075k56z.jpg",
+              "path": "/cpsprodpb/115A8/production/_106308017_p075k56z.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ezenka na Ọzọ Mcginger",
+              "copyrightHolder": "Ezenka na Ọzọ Mcginger"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47821099",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ọgbaghara sochiri echichi Igwe Aguleri ọhụrụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47789830",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47789830"
+            },
+            "summary": "Ọgbaghara so echichi e chiri Michael Chinenye Idigo dịka Igwe Aguleri n'Anambara steeti nsonso a.",
+            "timestamp": 1554355759,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075ggmr",
+              "subType": "clip",
+              "format": "video",
+              "title": "Ọgbaghara sochiri echichi Igwe Aguleri ọhụrụ",
+              "synopses": {
+                "short": "Ọgbaghara sochiri echichi Igwe Aguleri ọhụrụ",
+                "long": "Dịka a kwachara ozu Eze Christopher Nwabunnwanne Idigo nke Anọ n'Aguleri nwụrụ anwụ, e Dr Michael Chinenye Idigo.\nMana ọchịchị ya na-apụta ụka dịka ndị ọ bụ ọrụ ha ịkpọpụta onye ga-abụ eze n'Aguleri kwuru na ọ bụghị onye ha họpụtara ka e chiri. \nha boro ụ Gọvanọ  Anambara steeti bụ Willie Obiano ebubo manyere ndị Aguleri eze ọhụrụ ahụ n'olu.\nMana ọnụ na-ekwuru Obiano bụ James Eze kwuru na aka Gọvanọ adịghị na nhọpụta Eze Aguleri ọhụrụ.\nO kwuru na naanị ihe gọvanọ mere bụ ninye ndị obodo họpụtara asambodo njirimara.",
+                "medium": "Ọgbaghara so echichi e chiri Michael Chinenye Idigo Igwe Aguleri ọhụrụ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075ghpn.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Ọgbaghara sochiri echichi Igwe Aguleri ọhụrụ",
+              "versions": [
+                {
+                  "versionId": "p075ggmt",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 76,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106295265",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DBC3/production/_106295265_p075gh0p.jpg",
+              "path": "/cpsprodpb/DBC3/production/_106295265_p075gh0p.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Igwe Aguleri ọhụrụ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47789830",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Anyị ga-enwe mmejupụta ntụliaka ọzọ na Rivas - INEC"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47783746",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47783746"
+            },
+            "summary": "Ụlọọrụ INEC ekwupụtala na a ga-enwe mmejupụta ntụliaka ọzọ n'ụfọdụ ebe n'ụbọchị Satọde 13 Epurel, 2019 maka ọkwa gọvanọ nke steeti Rivas.",
+            "timestamp": 1554409727,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "100239802",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/519D/production/_100239802_inecnewest.jpg",
+              "path": "/cpsprodpb/519D/production/_100239802_inecnewest.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ntuliaka",
+              "caption": "INEC na-ekwe nkwa na ha ga-eme ka ntuliaka nke 2019 ga n'ụzọ ziri ezi",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47783746",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Anyị ejidela ndị gburu Fada Clement n'Enugwu - Ndị uweojii"
+            },
+            "locators": {
+              "assetUri": "/igbo/47819928",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47819928"
+            },
+            "summary": "Ndị uweojii na steeti Enugwu e kwuola na ha anwụchiela mmadụ abụọ bụ ndị ha na-enyo enyo n'aka ha dị n'ogbugbu e gburu ụkọchukwu n'Enugwu.",
+            "timestamp": 1554395003,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106143190",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/23AE/production/_106143190_umunwaanyinafada.jpg",
+              "path": "/cpsprodpb/23AE/production/_106143190_umunwaanyinafada.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ụmụnwaanyị/Fada Clement",
+              "caption": "Ụmụnwaanyị tọgbọrọ n'ihu ụlọụka na-eru uju",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47819928",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Gịnị ka ndị ntọ na-achọ n'ahụ ndị Fada?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47708405",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47708405"
+            },
+            "summary": "Ndị uweojii nọ na Kaduna ekwuola na ha na-achọ Fada ụka Katọlịk ndị ntọ tọrọ n'elekere asatọ ụtụtụ Monde mkpụrụ ụbọchị iri abụọ na ise nke ọnwa Machii.",
+            "timestamp": 1553618685,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106188628",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14300/production/_106188628_fathershekwolo.jpg",
+              "path": "/cpsprodpb/14300/production/_106188628_fathershekwolo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Father Shekwolo",
+              "copyrightHolder": "@CBCN "
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47708405",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Kọwaara m isi akụkọ"
+        },
+        "semanticGroupName": "Cluster 1"
+      },
+      {
+        "type": "responsive-must-see",
+        "title": "Section 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Barca akpọgidela Man U n'obe Old Trafford"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47887564",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47887564"
+            },
+            "summary": "Barcelona ji otu ọkpụ goolu Manchester nyere onwe ha merie dịka ha zutere n'asọmpi Champions League.",
+            "timestamp": 1554933167,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106403176",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1063A/production/_106403176_gettyimages-1136197303-594x594.jpg",
+              "path": "/cpsprodpb/1063A/production/_106403176_gettyimages-1136197303-594x594.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Barcelona na Messi",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47887564",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Tottenham apịawaala Manchester City azụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47877198",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47877198"
+            },
+            "summary": "Son riterela goolu abụọ n'asọmpị nke abụọ Spurs agbara n'ama egwuregwu ọhụrụ ha ka Liverpool gwara Porto na ha ka na-alụkwa ha.",
+            "timestamp": 1554874963,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106373900",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/03A9/production/_106373900_son_pa.jpg",
+              "path": "/cpsprodpb/03A9/production/_106373900_son_pa.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Son Heung-Min",
+              "copyrightHolder": "PA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47877198",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Kedụ ndị obi ha ko n'elu ugbua?"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47871373",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47871373"
+            },
+            "summary": "Liverpool na Porto ga-ama aka ebe Man City na Tottenham ga-akwata ya n'abali ọnwa Aprelu itoolu n'asọmpị Champions League.",
+            "timestamp": 1554821342,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106365304",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9DA4/production/_106365304_matchprediction2.jpg",
+              "path": "/cpsprodpb/9DA4/production/_106365304_matchprediction2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Salah na Kane",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47871373",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Egwuregwu (akụkọ ndị ọzọ) ",
+          "type": "LINK",
+          "links": {
+            "highweb": "https://www.bbc.com/igbo/egwuregwu",
+            "desktop": "https://www.bbc.com/igbo/egwuregwu",
+            "mobile": "https://www.bbc.com/igbo/egwuregwu",
+            "enhancedmobile": "https://www.bbc.com/igbo/egwuregwu"
+          }
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "responsive-inspire",
+        "title": "Section 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47858756",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47858756"
+            },
+            "summary": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala",
+            "timestamp": 1554737893,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075vl1k",
+              "subType": "clip",
+              "format": "video",
+              "title": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala",
+              "synopses": {
+                "short": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala",
+                "long": "Alex Nwa-Ephraim Nwaiwu bụ nwa afọ Igbo na-arụ ụgbọala nke o kwuru maka ụzọ ọjọọ dị n'ala Naijiria.",
+                "medium": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075w3jb.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Lee Alex Nwa-Ephraim Akwaiwu nwa afọ Igbo na-arụ ụgbọala",
+              "versions": [
+                {
+                  "versionId": "p075vl1n",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106349582",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6FB2/production/_106349582_p075vw62.jpg",
+              "path": "/cpsprodpb/6FB2/production/_106349582_p075vw62.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Lee Nwa afọ Igbo na-akpụ ụgbọala",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47858756",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Egwu ka m ji eri' - Dibịa bekee na-ete egwu"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47871371",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47871371"
+            },
+            "summary": "Dọkịnta Nnaemeka Nweke a makụọla ịgba egwu agbanyeghi na ọ gụrụ akwụkwọ dịka Dibia bekee na Mahadum.",
+            "timestamp": 1554818668,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075ywf8",
+              "subType": "clip",
+              "format": "video",
+              "title": "'Egwu ka m ji eri' - Dọkinta ahụike na-ete egwu",
+              "synopses": {
+                "short": "Dance: Ọ na-afụfụ n'ahụ mana ọ na-enye m ọṅụ - Dr Onye mme mme",
+                "long": "\"Ndụ a anyị na-ebi pere mpe, mana ọ bụ egwu ka m ji aka\"\nNwafọ Igbo bụ Nnaemeka Nweke kwuru nke a iji kọwa ịhe mere o ji tikwasa ịgba egwu na ọrụ dọkịnta bekee ọ na-arụ. \nO kwukwara na ọ naghị agba ya na nkịtị makana ndị mmadụ na-akwụ ya ezigbo ụgwọ ka ọ gba egwu na mmemme ha.",
+                "medium": "Dọkịnta Nnaemeka Nweke a makụọla ịgba egwu agbanyeghi na ọ gụrụ akwụkwọ dịka Dibia bekee na Mahadum."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075z1fl.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Dance: Ọ na-afụfụ n'ahụ mana ọ na-enye m ọṅụ - Dr Onye mme mme",
+              "versions": [
+                {
+                  "versionId": "p075ywfb",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 109,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106361874",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BAC8/production/_106361874_p075z1fl.jpg",
+              "path": "/cpsprodpb/BAC8/production/_106361874_p075z1fl.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Onye mmemme",
+              "caption": "Nna Doctor Onye mme mme kpọpụrụ yaMba Amrịka n'afọ 1998",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47871371",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Obi dị m ụtọ na m na-eme ihe nwoke na-eme- Nwaanyị na-ete ụlọ uhie"
+            },
+            "locators": {
+              "assetUri": "/igbo/47815761",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47815761"
+            },
+            "summary": "Joy Ugochi Eze bụ nwaanyị si na ite ụlọ uhie enweta ego o iji elekọta onwe ya na ezinaụlọ ya anya.",
+            "timestamp": 1554376909,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075hflw",
+              "subType": "clip",
+              "format": "video",
+              "title": "Obi dị m ụtọ na m na-eme ihe nwoke na-eme- Nwaanyị na-ete ụlọ uhie",
+              "synopses": {
+                "short": "Obi dị m ụtọ na m na-eme ihe nwoke na-eme - Nwaanyị na-ete ụlọ uhie",
+                "long": "Joy Ugochi Eze  bụ nwaanyị na-ete ụlọ uhie.\n\nỌ kọrọ BBC  ka o siri bido ọrụ a oge ọ nọ na  mahadum\n\nKirie akụkọ ya n' uju:",
+                "medium": "Joy Ugochi Eze bụ nwaanyị si na ite ụlọ uhie enweta ego o iji elekọta onwe ya na ezinaụlọ ya anya."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075hrpg.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Obi dị m ụtọ na m na-eme ihe nwoke na-eme- Nwaanyị na-ete ụlọ uhie",
+              "versions": [
+                {
+                  "versionId": "p075hfly",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 117,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106299726",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F54F/production/_106299726_p075hrpg.jpg",
+              "path": "/cpsprodpb/F54F/production/_106299726_p075hrpg.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Nwanyị na-ete ụhịe n'ụlọ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47815761",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe mere m ji jiri ụbọ Bekee akwalite egwu ifo Igbo"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47764464",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47764464"
+            },
+            "summary": "Chinyere Amaka Ifechukwu kọwara BBC Igbo ihe mere ojiri tinye uche n'ịgụ egwu ifo nakwa iji ụbọ Bekee kwado ya.",
+            "timestamp": 1554033452,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p0752nyk",
+              "subType": "clip",
+              "format": "video",
+              "title": "Ihe mere m ji jiri ụbọ Bekee akwalite egwu ifo Igbo -",
+              "synopses": {
+                "short": "Eji m ụbọ Bekee m akwalite egwu ifo na omenala Igbo -",
+                "long": "Egwu Chinyere Ifechukwu na-eju isi ozi, ọkachasị etu osi erotere mmadụ egwu ifo a na-agụ na nwata.\nMana ihe kachasị mee ka egwu ya pụọ iche bu ngwa egwu oji akwalite ya.\nỌ sị na uche ya bụ na o dị mkpa ị hu na omenala Igbo bụ ihe digidere.\nGee ya nti n'elu:",
+                "medium": "Chinyere Amaka Ifechukwu kọwara  BBC Igbo ihe mere ojiri tinye uche n'ịgụ egwu ifo nakwa iji ụbọ Bekee kwado ya."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07533f4.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Egwu Chinyere Amaka Ifechukwu",
+              "versions": [
+                {
+                  "versionId": "p07533c3",
+                  "types": [
+                    "Editorial"
+                  ],
+                  "duration": 173,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106243951",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3E3E/production/_106243951_p07531tf.jpg",
+              "path": "/cpsprodpb/3E3E/production/_106243951_p07531tf.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Chinyere Ifechukwu",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47764464",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee agha ụfọdụ Igbo lụrụ oge gboo"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47758304",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47758304"
+            },
+            "summary": "Leekwa agha Ndịgbo lụrụ oge ochie.",
+            "timestamp": 1553938485,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p0751032",
+              "subType": "clip",
+              "format": "video",
+              "title": "Lee agha ụfọdụ Igbo lụrụ oge gboo",
+              "synopses": {
+                "short": "Ancient wars: Lee agha Igbo kpara ike na ya oge ochie",
+                "long": "Igbo nwere ọtụtụ akụkọ dị omimi anaghị echefu echefu mere na Ndigbo bụ ndị puru iche.\n\nN'ime ihe nkiri a, anyị na-echeta agha dị ukwu  Igbo lụrụ mgbe gboo.\n\nHa lụrụ agha a tụpụ ndị Briten jikọtara ala Naịjirịa nke ndị Bekee kpọrọ Colonialism.   \n\nIgbo busoro ndị Briten na ala ndị ọzọ agha n'ihi na ha chọrọ ịnapụrụ ha ikike ịchị onwe ha.\n\nChọpụta etu agha siri gaa n'ime ihe nkiri anyị.Ihe nkiri na-egosi agha Igbo na ndị agbataobi lụgara oge ochie na ka agha ndị siri metụta ha:",
+                "medium": "Leekwa agha Ndịgbo lụrụ oge ochie."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07512b0.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Ancient wars: Lee ụfọdụ agha Igbo gbara ike na ya",
+              "versions": [
+                {
+                  "versionId": "p0751034",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 135,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106237086",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/109E9/production/_106237086_p0751242.jpg",
+              "path": "/cpsprodpb/109E9/production/_106237086_p0751242.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Agha Igbo lụrụ oge gboo",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47758304",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee ihe asaa ndị 'celebrity' meburu tupu ha achakee"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47732784",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47732784"
+            },
+            "summary": "Lee ihe Jay Jay Okocha, Bobmanuel, Buchi, Frank Edward, Victor Osuagwu na Rude Boy mere tupu chineke agbakwute ha.",
+            "timestamp": 1553795476,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106213742",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/609B/production/_106213742_jayfrankandbob.jpg",
+              "path": "/cpsprodpb/609B/production/_106213742_jayfrankandbob.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndí ama ama na Naíjiría",
+              "caption": "Ndí ama ama na Naíjiría",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47732784",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Ịchụ nta bụ ọrụ ndị kara obi'"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47730116",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47730116"
+            },
+            "summary": "Soro ndị ọchụnta n'Ezeagwu na nkịta ha ka ha sị gbaba n'ọhịa ị chọ anụmanụ nta",
+            "timestamp": 1553759721,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074t1sf",
+              "subType": "clip",
+              "format": "video",
+              "title": "Ịchụnta n'ala Igbo",
+              "synopses": {
+                "short": "Hunting: Ka esi achụta anụ ana ata n'ala Igbo",
+                "long": "Ị chụ nta bụ omenala Igbo dịwara gboo. Ndị Igbo na-achụ nta iji nwete anụ ha ji eri ihe n'ụlọ nakwa nke ha na-ere n'ahịa. Onye ọbụla toputara okorobia n'Igbo were ike ịchụ nta. Dinta maara ọhịa na ụzọ niile maka na ha na-eso ụzọ ndị ahụ achụ nta mgbe niile. Ha na-ejikwa egbe, nma na nkita achụ nta. Soro anyị ka ihụ ka ndị Dinta a sị gaa nke tata n'Olo, Ezeagu, Enugwu steeti.",
+                "medium": "Hunting: Ka esi achụta anụ ana ata n'ala Igbo"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074t4kj.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Lee ka e si achụ nta n'ala Igbo.",
+              "versions": [
+                {
+                  "versionId": "p074t1sj",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 103,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "106206670",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1DEC/production/_106206670_p074t4kj.jpg",
+              "path": "/cpsprodpb/1DEC/production/_106206670_p074t4kj.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Akụkọ Igbo",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47730116",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'Anyị achọghị ka Igbo fuo'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47728762",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47728762"
+            },
+            "summary": "Ụlọ malitere ichekwa omenala nakwa akụkọ ndị Igbo welitere isi na Naịjirịa akọwala ihe na-akpalite mmụọ ha.",
+            "timestamp": 1553802524,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074w9cw",
+              "subType": "clip",
+              "format": "video",
+              "title": "Anyị achọghị ka Igbo fuo",
+              "synopses": {
+                "short": "Centre for Memories: Anyị achọghị ka Igbo fuo",
+                "long": "N'ụlọ ahụ dị n'Enugwu steeti, ị nwereike ịchọpụta akụkọ gbasara ụfọdụ ndị Igbo a ma ama.\nHa nwekwara foto nakwa nka na ụzụ Igbo ebiputara tupu ndị ọcha atụọ ụkwụ n'ala Igbo.\nLee ihe BBC Igbo chọpụtara mgbe ha gara ebe ahụ.",
+                "medium": "Ụlọ malitere ịchekwa omenala nakwa akụkọ ndị Igbo welitere isi na Naịjirịa akọwala ihe na-akpalite mmụọ ha."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074wdpm.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Centre for Memories: Anyị achọghị ka Igbo fuo",
+              "versions": [
+                {
+                  "versionId": "p074w9cy",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 103,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106218698",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15E51/production/_106218698_p074wdpm.jpg",
+              "path": "/cpsprodpb/15E51/production/_106218698_p074wdpm.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "BBC Memories",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47728762",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee nwata kachasị ma ihe n’ụwa niile"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47728758",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47728758"
+            },
+            "summary": "Jeremiah Addo dị afọ abụọ na-eme ihe ọtụtụ okenye a gaghị emenwu.",
+            "timestamp": 1553725529,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074sfm1",
+              "subType": "clip",
+              "format": "video",
+              "title": "Lee nwata kachasị ma ihe n’ụwa niile",
+              "synopses": {
+                "short": "Lee nwata dị afọ abụọ kachasị ma ihe n’ụwa niile",
+                "medium": "Jeremiah Addo dị afọ abụọ na-eme ihe ọtụtụ okenye a gaghị emenwu.",
+                "long": "Nwata a malitere ọmụmụ ihe mgbe ọ dị otu afọ na ọnwa anọ\nNne na nna ya nwere olileanya na ọ ga-abu nnukwu mmadụ n'ọdịnihu.\nLee ụfọdụ ihe ịtụ anya ọ na-eme n'ime onyonyo a."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074sg6f.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Lee nwata dị afọ abụọ kachasị ma ihe n’ụwa niile",
+              "versions": [
+                {
+                  "versionId": "p074sfm3",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 166,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "106200715",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C9F4/production/_106200715_p074sg6f.jpg",
+              "path": "/cpsprodpb/C9F4/production/_106200715_p074sg6f.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Jeremiah Addo",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47728758",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ụkọchukwu ndị 'na-eti eti' n'ọwụwa-anyanwụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47616017",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47616017"
+            },
+            "summary": "Ebe e ji ibu amụma na ime ihe iribeama mara ụfọdụ ndị ụkọchukwu, e ji ịgbasa aka mara ụfọdụ ndị ọzọ.",
+            "timestamp": 1553065079,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106089233",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8212/production/_106089233_untitledcollage.jpg",
+              "path": "/cpsprodpb/8212/production/_106089233_untitledcollage.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Intercessor Jehovah na Odumejeje",
+              "copyrightHolder": "Facebook/Intercessor/Odumeje"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47616017",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Gịnị bụ 'Umbrella' n'asụsụ Igbo?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47684158",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47684158"
+            },
+            "summary": "Dịka udu mmiri na-abịa nso, BBC Igbo gara ịjụpụta ndị mmadụ ihe ha na-akpọ 'Umbrella' n'Igbo.",
+            "timestamp": 1553420069,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
+                "categoryName": "Ask the Audience"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074g649",
+              "subType": "clip",
+              "format": "video",
+              "title": "Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+              "synopses": {
+                "short": "Igbo Language: Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+                "long": "Ụfọdụ mkpụrụokwu asụsụ Igbo na-efu nwayọ nwayọ.\nYa mere BBC Igbo ji ajụ ndị mmadụ ihe a na-akpọ ụfọdụ ihe n'Igbo.\nLee ihe ha kwuru gbasara nke Bekee kpọrọ 'Umbrella'.",
+                "medium": "Dịka udu mmiri na-abịa nso, BBC Igbo gara ịjụpụta ndị mmadụ ihe ha na-akpọ 'Umbrella' n'Igbo."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074g753.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Igbo Language: Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+              "versions": [
+                {
+                  "versionId": "p074g64f",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 50,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "106158082",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6DB5/production/_106158082_p074g753.jpg",
+              "path": "/cpsprodpb/6DB5/production/_106158082_p074g753.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "Nche mmiri",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47684158",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe ị maghị maka nwoke Customs jụrụ ịnara akaazụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47609098",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47609098"
+            },
+            "summary": "Bashir Abubakar bụ nwoke onye Kọstọms onyeisi ha bụ Hameed Ali buliri elu maka agwa ọma ya.",
+            "timestamp": 1552927246,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106065458",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14DD0/production/_106065458_nigcusom.jpg",
+              "path": "/cpsprodpb/14DD0/production/_106065458_nigcusom.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị ọrụ Customs",
+              "copyrightHolder": "Nigeria Customs Service/Facebook"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47609098",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "M ga-edozi ihe mebiri emebi n'Imo steeti - Emeka Ihedioha"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47521146",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47521146"
+            },
+            "summary": "Dịka ngalaba Inec kpọpụtachara aha ya dịka onye ga-abụ gọvanọ n'Imo steeti, Emeka Ihedioha ekwela ndị Imo nkwa.",
+            "timestamp": 1552372535,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105987006",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EAAE/production/_105987006_ihediohasmile.jpg",
+              "path": "/cpsprodpb/EAAE/production/_105987006_ihediohasmile.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ihedioha",
+              "copyrightHolder": "Facebook/Ihedioha"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47521146",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee ka omenka si jiri nka gbannwe ndụ ya"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47405180",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47405180"
+            },
+            "summary": "Kevin Hart ekwela nkwa ịzụ eserese nwa amadị Naijiria sere iji kwalite ya.",
+            "timestamp": 1551363100,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105841816",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F176/production/_105841816_kevinhart.jpg",
+              "path": "/cpsprodpb/F176/production/_105841816_kevinhart.jpg",
+              "height": 541,
+              "width": 962,
+              "altText": "Kevin Hart",
+              "caption": "Kevin Hart ekwela nkwa ịzụ eserese Eli Waduba nke Naijiria iji kwalite ya.",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47405180",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ị ma ego ole Dangote na-erite n'ime otu ụbọchị?"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47392132",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47392132"
+            },
+            "summary": "Ego Dangote jiri ihe karịrị ijeri dọla ise rịa elu n'ime sọsọ otu ụbọchị.",
+            "timestamp": 1551379706,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105846024",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A450/production/_105846024_dangssuga.jpg",
+              "path": "/cpsprodpb/A450/production/_105846024_dangssuga.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Aliko Dangote, ógaranya n'Afríka",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47392132",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Egwu ncheta ụbọchị ọmụmụ gị"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47326237",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47326237"
+            },
+            "summary": "Lee ka ụfọdụ sị gụọ egwu ncheta ụbọchị ọmụmụ n'asụsụ Igbo.",
+            "timestamp": 1550783015,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p071m50n",
+              "subType": "clip",
+              "format": "video",
+              "title": "Egwu ncheta ụbọchị ọmụmụ gị",
+              "synopses": {
+                "short": "Egwu ncheta ụbọchị ọmụmụ gị",
+                "medium": "Egwu ncheta ụbọchị ọmụmụ gị",
+                "long": "Lee ndị mmadụ dịka ha nwalere ịgụ egwu ncheta ụbọchị ọmụmụ  n'Igbo:"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p071m571.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Egwu ncheta ụbọchị ọmụmụ gị",
+              "versions": [
+                {
+                  "versionId": "p071m50q",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 42,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "105743363",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8DEE/production/_105743363_p071m571.jpg",
+              "path": "/cpsprodpb/8DEE/production/_105743363_p071m571.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Egwu ncheta ụbọchị ọmụmụ gị",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47326237",
+            "type": "cps"
+          },
+          {
+            "name": "International Mother Language day: Ị ma asụ asụsụ Igbo nke ọma, nwale ule a?",
+            "summary": "Nwaa aka gị n'ajụjụ ndị a gbasara ndị Igbo iji mara ma i ruru ogo iti aka n'obi sị 'abụ m onye Igbo'.",
+            "indexImage": {
+              "id": "105732175",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DF23/production/_105732175_feature-igbo.jpg",
+              "path": "/cpsprodpb/DF23/production/_105732175_feature-igbo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Asụsụ igbo",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/igbo/resources/idt-35255fec-76e9-4a1e-893b-cd08e79c0619",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1550739538,
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "'Agaghị m agwa di m ego ole m na-akpata'"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47295366",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47295366"
+            },
+            "summary": "Ọtụtụ oge ka ego na-ese okwu n'alụmdinanwunye, mana ịmata ego ole onye na-akpata ọ dị mkpa?",
+            "timestamp": 1550662121,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p071f7ls",
+              "subType": "clip",
+              "format": "video",
+              "title": "'Agaghị m agwa di m ego ole m na-akpata'",
+              "synopses": {
+                "short": "Marriage: Ị ga-agwa di maọbụ nwunye gị ego ole ị na-akpata?",
+                "long": "Ọtụtụ oge ka ego na-ebute esemokwu n'alụmdinanwunye, mana ịmata ego ole onye na-akpata ọ dị mkpa? \nBBC Igbo jụrụ ndị mmadụ ma ha a ga-ekwupute ihe ha na-akpata, lee ihe ha zara n'ihe nkiri a.",
+                "medium": "Ọtụtụ oge ka ego na-ebute esemokwu n'alụmdinanwunye, mana ịmata ego ole onye na-akpata ọ dị mkpa?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p071fp8q.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Marriage: Ị ga-agwa di maọbụ nwunye gị ego ole ị na-akpata?",
+              "versions": [
+                {
+                  "versionId": "p071f7lw",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 76,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "105718225",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CC39/production/_105718225_p071fj5j.jpg",
+              "path": "/cpsprodpb/CC39/production/_105718225_p071fj5j.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Paul Chukwu na nwunye ya",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47295366",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Mịchaa ya ọnụ, gosi ya ịhụnanya taa na-emefughi oke ego"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47222784",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47222784"
+            },
+            "summary": "Ọbụghị naanị ndị nwere ego na-enweta onwe ha n'ụbọchị \"Valentines\" bụ ụbọchị a mapụtara maka igosi ịhụnanya.",
+            "timestamp": 1550148489,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105646569",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17934/production/_105646569_vals.jpg",
+              "path": "/cpsprodpb/17934/production/_105646569_vals.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ihe e ji egosi ịhụnanya",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47222784",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Akụkọ Mike Ejeagha - Aghara m ihe egwu m gbaa ọsọ agha"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47158577",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47158577"
+            },
+            "summary": "Otiegwu Mike Ejeagha kọrọ BBC Igbo etu ya siri bido gụwa egwu n'Enugwu ọtụtụ afọ gara aga.",
+            "timestamp": 1549539300,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p0706p8h",
+              "subType": "clip",
+              "format": "video",
+              "title": "Mike Ejeagha: Aghara m ihe egwu m gbaa ọsọ Agha",
+              "synopses": {
+                "short": "Mike Ejeagha: Aghara m ihe egwu m gbaa ọsọ Agha",
+                "long": "Mike Ejeagha bụ otiegwu Igbo ama ama n’ihi egwu akụkọ iho ya.\n\nEgwu e jiri mara ya  nke wuru ewu  n'afọ  70s na 80s gụnyere  ‘Ụwa mgbede ka mma’, ‘Ọfọ ma onye ji ya,’  ‘Gwọgwọgwọ Ngwọ’, ‘Nwaanyị mma aghara egwu jịta laa.’\n\nNa mkparịtaụka ya na BBC Igbo nwere, Ejeagha kọrọ akụkọ etu ya sị hapụ ọrụ ịkpụ isi, banye iti egwu.",
+                "medium": null
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0706rcs.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Mike Ejeagha: Aghara m ihe egwu m gbaa ọsọ Agha",
+              "versions": [
+                {
+                  "versionId": "p0706p8k",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 177,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "105548548",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14A68/production/_105548548_img_20181226_145646_4.jpg",
+              "path": "/cpsprodpb/14A68/production/_105548548_img_20181226_145646_4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Mike Ejeagha",
+              "caption": "Akụkọ na egwu Mike Ejeagha",
+              "copyrightHolder": "Mike Ejeagha"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47158577",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Kpalite mmụọ m"
+        },
+        "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "responsive-in-depth",
+        "title": "Section 4",
+        "items": [
+          {
+            "headlines": {
+              "headline": "End SARS: Ihe anyị jiri mee ngagharịwe - Otu SIAF"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47774734",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47774734"
+            },
+            "summary": "Ụmụ Naijiria agbakala banyere mkpagbu ha na-agabiga n'aka otu pụrụiche n'ime ndị uweojii bụ SARS.",
+            "timestamp": 1554475709,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106319800",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/037B/production/_106319800_sarssss.jpg",
+              "path": "/cpsprodpb/037B/production/_106319800_sarssss.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị na-eme ngagharịwe na Legọs maka okwu SARS",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47774734",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Lee ihe omimi ị maghị maka ọjị"
+            },
+            "locators": {
+              "assetUri": "/igbo/media-47789833",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/media-47789833"
+            },
+            "summary": "Oji bụ ihe dị omimi ma nwee ugwu n'ala Igbo.",
+            "timestamp": 1554360408,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p075gmq0",
+              "subType": "clip",
+              "format": "video",
+              "title": "Lee ihe omimi ị maghị maka ọjị",
+              "synopses": {
+                "short": "Lee ihe ị maghị maka ọjị",
+                "long": "Oji bụ ihe dị omimi ma nwee ugwu n'ala Igbo.\nLee nkọwa ụdị ọjị dịiche iche na ihe ọ pụtara.",
+                "medium": "Oji bụ ihe dị omimi ma nwee ugwu n'ala Igbo"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p075gn0n.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Lee ihe omimi ị maghị maka ọjị",
+              "versions": [
+                {
+                  "versionId": "p075gmq2",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 194,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "106295268",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/150F3/production/_106295268_p075gn0n.jpg",
+              "path": "/cpsprodpb/150F3/production/_106295268_p075gn0n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Iwa oji",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Media",
+              "uri": "/igbo/media",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-47789833",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Onye ọbụla gburu Fada Clement Ugwu bụ onye abụrụ ọnụ - Ụmụnwaanyi"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47625273",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47625273"
+            },
+            "summary": "Ụmụnwaanyị St Marks Katọlik Parish Obunofia Ndịụnọ jị nnukwu iru uju na ịkwa akwa na ekwuputa na obi agbawaala ha maka ọnwụ fada parish ha bụ Clement Ugwu.",
+            "timestamp": 1553192695,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106143188",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15846/production/_106143188_umunwaanyinafada.jpg",
+              "path": "/cpsprodpb/15846/production/_106143188_umunwaanyinafada.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Ụmụnwaanyị/Fada Clement",
+              "caption": "Ụmụnwaanyị tọgbọrọ n'ihu ụlọụka na-eeu uju",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47625273",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ọ bụ igbu isi ka eji aba Ikpirikpe ọgụ Ohafia"
+            },
+            "locators": {
+              "assetUri": "/igbo/47744002",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47744002"
+            },
+            "summary": "Ikperikpe ọgụ bụ egwu onye ọ kara obi na-agba n'Ohafia, Abia steeti",
+            "timestamp": 1553841019,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p074x78q",
+              "subType": "clip",
+              "format": "video",
+              "title": "Ị ma ihe ịba egwu Ikperikpe ọgụ ndị Ohafia na-eri?",
+              "synopses": {
+                "short": "War Dance: Ị ma ihe ịba egwu Ikperikpe ọgụ ndị Ohafia na-eri?",
+                "long": "A mara ndị Ohafia dị n'Abia steeti dịka ndị bụ dịka ọgụ nke ha n'egosi n'egwu agha ha a kpọrọ, 'ikperuiikpe ọgụ.\nLee akụkọ so egwu ahụ bụ egwu onye ọ kara obi n'ihe onyonyo a:",
+                "medium": "Ikperikpe ọgụ bụ egwu onye ọ kara obi na-agba n'Ohafia, Abia steeti"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074x7gx.jpg",
+              "embedding": true,
+              "warnings": {},
+              "advertising": true,
+              "caption": "Ị ma ihe ịba egwu Ikperikpe ọgụ ndị Ohafia na-erị?",
+              "versions": [
+                {
+                  "versionId": "p074x78v",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 102,
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  }
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "106223585",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E4A4/production/_106223585_img_0522-1.jpg",
+              "path": "/cpsprodpb/E4A4/production/_106223585_img_0522-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ikperikpe ọgụ",
+              "caption": "Onye na-egbughi isi ma ọ bụ gbaa nnụnụ agaghị elu ikoro egwu ikperikpe ọgụ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47744002",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ọgba nwaanyị nọ na nsọ anaghị aba"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-43112044",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-43112044"
+            },
+            "summary": "Njem n'Ọgba Ezeagụ na Ọgbaada mmịrị ya bụ ebe anaghị akwa ikọ maọbụ ebe nwaanyị nọ na nsọ ịba.",
+            "timestamp": 1553833319,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "100097097",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/134E7/production/_100097097_ogbaenugu.jpg",
+              "path": "/cpsprodpb/134E7/production/_100097097_ogbaenugu.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "N'Ọgba na Ọgbaada Enugwu, mmịrị anaghị ata ata",
+              "copyrightHolder": "BBC Igbo"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-43112044",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Pizza, nghụeze na ihe ndị ọzọ Naijiria na-esi mba ofesi atụbata"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47730118",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47730118"
+            },
+            "summary": "Mịnịsta na-ahụ maka orugbo bụ Audu Ogbeh atụọla arịrị ego Naijiria na-emefu na ịtụbata ụfọdụ ihe na etu ihe ndị sị akpagbu ọrụugbo.",
+            "timestamp": 1553782884,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106222436",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F7BE/production/_106222436_ridiculousimports.jpg",
+              "path": "/cpsprodpb/F7BE/production/_106222436_ridiculousimports.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ụmụ ihe ndị Naijiria na-atụbata",
+              "caption": "Ụmụ mpịampịam ihe NAijiria na-atụbata",
+              "copyrightHolder": "BBC/Getty"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47730118",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe iri dị mkpa Nnamdi Kanu kwuru n'ozi ọhụrụ ya"
+            },
+            "locators": {
+              "assetUri": "/igbo/47744006",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/47744006"
+            },
+            "summary": "Onye ndu otu Ipob bụ Nnamdi Kanu ekwuola na mkpebi ọkaiwu Binta Nyako nyere n'isi ya bụ nke megidere ikpemkwụmọtọ.",
+            "timestamp": 1553849682,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106222440",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1146/production/_106222440_nnamdikanu-gettyimages-688684352-2.jpg",
+              "path": "/cpsprodpb/1146/production/_106222440_nnamdikanu-gettyimages-688684352-2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Nnamdi",
+              "copyrightHolder": "Getty Image"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Ogbako",
+              "uri": "/igbo/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/47744006",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Talcum Powder: Ite nwa ọhụrụ maọbụ onwe gị nzu bekee nwere ike inye gị 'cancer' - Ndị ọkachamara"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47664243",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47664243"
+            },
+            "summary": "Ndị ọkachamara n'okwu ahụike kọwara na nzu bekee ụfọdụ nwere ike ibute ọrịa kansa..",
+            "timestamp": 1553276550,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106142638",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/146A8/production/_106142638_talcumpowder-3-getty.jpg",
+              "path": "/cpsprodpb/146A8/production/_106142638_talcumpowder-3-getty.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Felicia",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47664243",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ihe i kwesiri ịma maka ọgwụ eji egbu ahịhịa n'ugbo"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47637297",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47637297"
+            },
+            "summary": "Lee ihe iji ọgwụ gbuo ahịa n'ugbo na-etute.",
+            "timestamp": 1553094344,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106105131",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/335E/production/_106105131_farmers2.jpg",
+              "path": "/cpsprodpb/335E/production/_106105131_farmers2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndí ọrụugbo",
+              "caption": "Ndí ọrụugbo",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47637297",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Kuziere m"
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Ikpọtụrụ BBC Igbo"
+            },
+            "locators": {
+              "assetUri": "/igbo/institutional-43090448",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/institutional-43090448"
+            },
+            "summary": "Ikpọtụrụ BBC Igbo.",
+            "timestamp": 1518973954,
+            "cpsType": "STY",
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Institutional",
+              "uri": "/igbo/institutional",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/institutional-43090448",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Useful links"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Chelsea ewerela imi West Ham kpọọ anwụrụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47857518",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47857518"
+            },
+            "summary": "Chelsea ezuola West Ham ike n'ahụ na Stamford Bridge.",
+            "timestamp": 1554758391,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106354499",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/18475/production/_106354499_hazard.jpg",
+              "path": "/cpsprodpb/18475/production/_106354499_hazard.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Edem Hazard",
+              "caption": "Edem Hazard nyere goolu abụọ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Afịrịka",
+              "uri": "/igbo/afirika",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47857518",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Chelsea etiela epele n'isi Brighton"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47807772",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47807772"
+            },
+            "summary": "Ndị Chelsea, Man City na Tottenham emeriela Brighton, Cardiff na Crystal Palace n'asọmpi premiere ha gbara taa.",
+            "timestamp": 1554327050,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106292648",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14A95/production/_106292648_gettyimages-898734994-594x594.jpg",
+              "path": "/cpsprodpb/14A95/production/_106292648_gettyimages-898734994-594x594.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Chelsea na Brighton",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47807772",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ahmed Musa egosila ihe o ji bụrụ 'agụ' na NFF Awards 2019"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47774739",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47774739"
+            },
+            "summary": "Ahmed Musa nwetakwara nzere nwoke kachasị agba bọọlụ, ebe Onome Ebi nwetara nke nwaanyị, na 'NFF Awards'.",
+            "timestamp": 1554152322,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106263953",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8C60/production/_106263953_ahmedmusa.jpg",
+              "path": "/cpsprodpb/8C60/production/_106263953_ahmedmusa.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ahmed Musa",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47774739",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Chi ndị Man U azọọla ha n'aka ndị Watford"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47761740",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47761740"
+            },
+            "summary": "Otu bọọlụ Manchester United jiri ọkpụ goolu abụọ asatara otu merie otu Watford mgbe ha kwatara ya taa.",
+            "timestamp": 1553967650,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106240422",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5784/production/_106240422_gettyimages-1139301388.jpg",
+              "path": "/cpsprodpb/5784/production/_106240422_gettyimages-1139301388.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ndị otu Man U",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47761740",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Naịjirịa anyụnyela Libya mmamiri n'anya"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47696863",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47696863"
+            },
+            "summary": "Ụmụ ntorobia Naijiria erubeghị afọ 23 agbaala ndị Libya kondo anọ a gbaghaghị agbagha.",
+            "timestamp": 1553537225,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106167143",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8580/production/_106167143_dreamteam.jpg",
+              "path": "/cpsprodpb/8580/production/_106167143_dreamteam.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Otu egwu bọọlụ ndị nọ n'okpuru afọ iri abụọ na atọ.",
+              "copyrightHolder": "@thenff"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47696863",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "C Ronaldo adọriela Atletico, Mancity akwọpịala Schalke ka agbụsị"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47532371",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47532371"
+            },
+            "summary": "Ka ndị Schalke bịara n'ọgbọ egwuregwu Etihad, ha amaghị na a ga-eli ha na ndụ tupu nkeji 90 na-agwụ.",
+            "timestamp": 1552461292,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105993512",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5423/production/_105993512_cronaldo.jpg",
+              "path": "/cpsprodpb/5423/production/_105993512_cronaldo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "C Ronaldo",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47532371",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Brendan Rogers na Kolo Toure anarala ọchịchị Leicester City"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47384000",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47384000"
+            },
+            "summary": "Akụkọ gbasara Leicester City kpọtara onye nchịkọta ọhụrụ, mmeri Muhammadu Buhari na ndị ọzọ dị n'akụkọ a.",
+            "timestamp": 1551262773,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105820906",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EDE6/production/_105820906_brendanrogers.jpg",
+              "path": "/cpsprodpb/EDE6/production/_105820906_brendanrogers.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Brendan Rogers",
+              "copyrightHolder": "Leicester City"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47384000",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Kamaru Usman nwaafọ Naịjirịa tụrụ ugo n'egwuregwu mgba UFC"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47432170",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47432170"
+            },
+            "summary": "Kamaru Usman bụ onye isi oji mgbụ tụrụ ugo ka ọkacha gbaa n'egwureugwu mgba UFC.",
+            "timestamp": 1551614498,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105872070",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1B73/production/_105872070_17487ed3-2161-426d-b029-2facae3507ee.jpg",
+              "path": "/cpsprodpb/1B73/production/_105872070_17487ed3-2161-426d-b029-2facae3507ee.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Usman mgbe ọnatara ugo",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47432170",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Achụọla onye nchịkọta ndị Leicester City ọsọ ụkwụ eru ala"
+            },
+            "locators": {
+              "assetUri": "/igbo/afirika-47341643",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47341643"
+            },
+            "summary": "Akụkọ gbasara ntuliaka ọkwa onyeisiala mba Sịnịgal, etu ntuliaka nke Naịjirịa si aga na ihe ndị ọzọ dị n'ime akụkọ a.",
+            "timestamp": 1550997656,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105770343",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8603/production/_105770343_claudepuel1.jpg",
+              "path": "/cpsprodpb/8603/production/_105770343_claudepuel1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Claude Puel",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/afirika-47341643",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Man United vs Liverpool: Ha agbọghị ụja, ha ataghị arụ"
+            },
+            "locators": {
+              "assetUri": "/igbo/egwuregwu-47341645",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/egwuregwu-47341645"
+            },
+            "summary": "Manchester United na Liverpool zutere na Premier League ịma mbe abụọ nke bụ oke.",
+            "timestamp": 1551019925,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105772721",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/31B7/production/_105772721_salah1.jpg",
+              "path": "/cpsprodpb/31B7/production/_105772721_salah1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Pogba na Salah",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "Egwuregwu",
+              "uri": "/igbo/egwuregwu",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:igbo/egwuregwu-47341645",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Special reports 2"
+      }
+    ]
+  },
+  "promo": null,
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Ogbako",
+      "uri": "/igbo/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Ìgbò",
+      "uri": "/igbo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
