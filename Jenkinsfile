@@ -137,8 +137,8 @@ pipeline {
             // Testing
             sh 'make installProd'
             sh 'make productionTests'
-            // Producing the 'binary'
-            sh "./scripts/package.sh"
+            // Moving files necessary for production to `pack` directory.
+            sh "./scripts/jenkinsProductionFiles.sh"
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName

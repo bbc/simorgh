@@ -1,9 +1,5 @@
 #!/bin/bash
-# package.sh by Andrzej Pogonowski
-# What is this?: This is the script that packages all the necessary files for deployment
-# Why does this exists?: Apparently jenkins agents dump core and memory information into the directory
-# each of these files is 40MB, adding node_modules and the build folder the resulting zip file is 40MB
-# This bash script solves the problem by creating a folder and copying only the required folders 
+# jenkinsProductionFiles.sh by Andrzej Pogonowski
 
 # Steps
 # 1. Removes all of the build and dependency directories (build, pack, node_modules)
@@ -23,7 +19,6 @@ cp -rf ./cypress ./pack/cypress
 cp -rf ./.storybook ./pack/.storybook
 cp -rf ./envConfig ./pack/envConfig
 cp -rf ./public ./pack/public
-cp -rf ./data ./pack/data
 
 # Copy the needed files in the root directory
 cp package.json ./pack
