@@ -22,6 +22,15 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
 }
 
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 @media (min-width:37.5em) {
   .c0 {
     font-size: 0.875rem;
@@ -40,6 +49,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   }
 }
 
+@media (min-width:20rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <figcaption
   className="c0"
 >
@@ -48,7 +64,11 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   >
      ، عنوان تصویر
   </span>
-  Some caption text...
+  <p
+    className="c2"
+  >
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
@@ -74,6 +94,15 @@ exports[`should render caption text with example News offscreen text 1`] = `
   width: 100%;
 }
 
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 @media (min-width:37.5em) {
   .c0 {
     font-size: 0.875rem;
@@ -92,6 +121,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
   }
 }
 
+@media (min-width:20rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <figcaption
   className="c0"
 >
@@ -100,7 +136,11 @@ exports[`should render caption text with example News offscreen text 1`] = `
   >
     Image caption, 
   </span>
-  Some caption text...
+  <p
+    className="c2"
+  >
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
@@ -115,6 +155,15 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   width: 100%;
 }
 
+.c1 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 @media (min-width:37.5em) {
   .c0 {
     font-size: 0.875rem;
@@ -133,9 +182,20 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   }
 }
 
+@media (min-width:20rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <figcaption
   className="c0"
 >
-  Some caption text...
+  <p
+    className="c1"
+  >
+    Some caption text...
+  </p>
 </figcaption>
 `;
