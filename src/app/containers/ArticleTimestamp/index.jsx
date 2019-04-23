@@ -3,23 +3,10 @@ import { number } from 'prop-types';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 import Timestamp from '../Timestamp';
 import { formatDateNumeric } from './timeFormats';
-import {
-  isValidDateTime,
-  isTenHoursAgoOrLess,
-  relativeTime,
-  formatType,
-} from './timestampUtilities';
+import { isRelative, formatType } from './helpers'; 
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const isRelative =
-    lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished);
-
-  if (
-    !isValidDateTime(new Date(firstPublished)) ||
-    !isValidDateTime(new Date(lastPublished))
-  ) {
-    return null;
-  }
+  const makeRelative = isRelative(firstPublished, lastPublished);
 
   return (
     <GridItemConstrainedMedium>
@@ -27,18 +14,14 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
         timestamp={firstPublished}
         dateTimeFormat={formatDateNumeric}
         format={formatType(firstPublished)}
-        time={isRelative ? relativeTime(firstPublished) : null}
+        isRelative={makeRelative}
       />
       {firstPublished !== lastPublished ? (
         <Timestamp
           timestamp={lastPublished}
           dateTimeFormat={formatDateNumeric}
           format={formatType(lastPublished)}
-          time={
-            isTenHoursAgoOrLess(lastPublished)
-              ? relativeTime(lastPublished)
-              : null
-          }
+          isRelative={makeRelative}
           prefix="Updated"
         />
       ) : null}

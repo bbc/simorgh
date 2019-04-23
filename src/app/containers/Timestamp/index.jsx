@@ -1,32 +1,42 @@
-/* eslint-disable prefer-template, react/no-unused-prop-types */
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
-import { number, string } from 'prop-types';
+import { number, string, bool } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
-import formatUnixTimestamp from './timestampUtilities';
+import relativeTime from './relativeTimestamp';
+import {
+  isValidDateTime,
+  formatUnixTimestamp,
+} from './timestampUtilities';
 
 const TimestampContainer = ({
   timestamp,
   dateTimeFormat,
   format,
-  time,
+  isRelative,
   prefix,
   suffix,
   timezone,
-}) => (
-  <Timestamp
-    datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
-  >
-    {prefix ? prefix + ' ' : null}
-    {time === null ? formatUnixTimestamp(timestamp, format, timezone) : time}
-    {suffix ? ' ' + suffix : null}
-  </Timestamp>
-);
+}) => {
+  if (!isValidDateTime(new Date(timestamp))) {
+    return null;
+  }
+  return (
+    <Timestamp
+      datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
+    >
+      {prefix ? `${prefix} ` : null}
+      {isRelative ?
+        relativeTime(timestamp) : formatUnixTimestamp(timestamp, format, timezone)}
+      {suffix ? ` ${suffix}` : null}
+    </Timestamp>
+  );
+};
 
 TimestampContainer.propTypes = {
   timestamp: number.isRequired,
   dateTimeFormat: string.isRequired,
   format: string.isRequired,
-  time: number,
+  isRelative: bool.isRequired,
   timezone: string,
   local: string,
   prefix: string,
@@ -36,7 +46,6 @@ TimestampContainer.propTypes = {
 TimestampContainer.defaultProps = {
   local: 'en-GB',
   timezone: 'Europe/London',
-  time: null,
   prefix: null,
   suffix: null,
 };

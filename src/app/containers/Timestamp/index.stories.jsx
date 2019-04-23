@@ -8,6 +8,7 @@ storiesOf('TimestampContainer', module)
       timestamp={1530947227000}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY"
+      isRelative={false}
     />
   ))
   .add('with prefix', () => (
@@ -15,6 +16,7 @@ storiesOf('TimestampContainer', module)
       timestamp={1552666749637}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY, HH:mm z"
+      isRelative={true}
       prefix="Updated"
     />
   ))
@@ -23,6 +25,7 @@ storiesOf('TimestampContainer', module)
       timestamp={1530947227000}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY, HH:mm z"
+      isRelative={false}
       prefix="This"
       suffix="is date of last update"
     />
