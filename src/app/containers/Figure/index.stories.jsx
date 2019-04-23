@@ -10,6 +10,8 @@ import {
   FigureAmpImageWithCopyrightAndCaption,
   FigureImageWithCaptionContainingLink,
   FigureAmpImageWithCaptionContainingLink,
+  FigureImageWithCaptionContainingMultipleParagraphsAndLink,
+  FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
 } from './fixtureData';
 import AmpDecorator from '../../helpers/storybook/ampDecorator';
 
@@ -24,6 +26,10 @@ storiesOf('Figure', module)
   .add(
     'with a caption containing an inline link',
     () => FigureImageWithCaptionContainingLink,
+  )
+  .add(
+    'with a caption with multiple paragraphs with a link',
+    () => FigureImageWithCaptionContainingMultipleParagraphsAndLink,
   );
 
 storiesOf('Figure - AMP', module)
@@ -38,4 +44,8 @@ storiesOf('Figure - AMP', module)
   .add(
     'with a caption containing an inline link',
     () => FigureAmpImageWithCaptionContainingLink,
+  )
+  .add(
+    'with a caption with multiple paragraphs with a link',
+    () => FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   );
