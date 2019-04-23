@@ -200,6 +200,6 @@ describe('Timestamp', () => {
     Date.now = originalDate;
     expect(renderedWrapper.length).toEqual(2);
     expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toMatch(regexDate);
+    expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDate);
   });
 });

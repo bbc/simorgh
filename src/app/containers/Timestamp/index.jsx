@@ -13,10 +13,12 @@ import {
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const isToday = timestamp => {
-  const today = moment(Date.now());
-  return today.isSame(timestamp, 'day');
+const isSameDay = (dayToCompare, timestamp) => {
+  const day = moment(dayToCompare);
+  return day.isSame(timestamp, 'day');
 };
+
+const isToday = timestamp => isSameDay(Date.now(), timestamp);
 
 const formatType = timestamp =>
   isToday(timestamp) ? formatDateAndTime : formatDate;
