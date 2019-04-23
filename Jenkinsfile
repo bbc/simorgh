@@ -100,7 +100,7 @@ pipeline {
           }
           post {
             always {
-              archiveArtifacts archive: 'simorgh.zip', fingerprint: true
+              archiveArtifacts artifacts: 'simorgh.zip', fingerprint: true
             }
           }
         }    
