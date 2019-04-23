@@ -6,27 +6,29 @@ import { blockContainingText } from '../../models/blocks';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
+  videoCaptionOffscreenText: 'Video caption, ',
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
+  videoCaptionOffscreenText: ' ، عنوان ویدئو',
 };
 
 const block = blockContainingText('caption', 'Some caption text...');
 
-const CaptionWithContext = contextStub => (
+const CaptionWithContext = (contextStub, type) => (
   <ServiceContext.Provider value={contextStub}>
-    <Caption block={block} />
+    <Caption block={block} type={type} />
   </ServiceContext.Provider>
 );
 
 shouldMatchSnapshot(
   'should render caption text with example News offscreen text',
-  CaptionWithContext(newsServiceContextStub),
+  CaptionWithContext(newsServiceContextStub, 'image'),
 );
 
 shouldMatchSnapshot(
   'should render caption text with example Farsi offscreen text',
-  CaptionWithContext(persianServiceContextStub),
+  CaptionWithContext(persianServiceContextStub, 'image'),
 );
 
 shouldMatchSnapshot(

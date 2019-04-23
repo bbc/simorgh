@@ -1,5 +1,5 @@
 import React from 'react';
-import { objectOf, any, bool } from 'prop-types';
+import { objectOf, any, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import deepGet from '../../helpers/json/deepGet';
@@ -9,6 +9,18 @@ import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
+
+const chooseOffscreenText = (mediaType, videoCaption, imageCaption) => {
+  let offscreenText = '';
+  if (mediaType === 'video') {
+    offscreenText = videoCaption;
+  } else if (mediaType === 'image') {
+    offscreenText = imageCaption;
+  } else {
+    offscreenText = false;
+  }
+  return offscreenText;
+};
 
 const renderText = textBlocks => (
   <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />
@@ -23,34 +35,36 @@ const renderCaption = (block, captionOffscreenText) => (
   </Caption>
 );
 
-const renderMultipleCaptions = (blocks, captionOffscreenText) =>
-  blocks.map(block =>
-    renderCaption(deepGet(['model', 'blocks'], block), captionOffscreenText),
+const renderMultipleCaptions = (blocks, type) => {
+  const {
+    videoCaptionOffscreenText,
+    imageCaptionOffscreenText,
+  } = React.useContext(ServiceContext);
+
+  const offscreenText = chooseOffscreenText(
+    type,
+    videoCaptionOffscreenText,
+    imageCaptionOffscreenText,
   );
 
-const CaptionContainer = ({ block, video }) => (
-  <ServiceContext.Consumer>
-    {video
-      ? ({ videoCaptionOffscreenText }) =>
-          renderMultipleCaptions(
-            deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
-            videoCaptionOffscreenText,
-          )
-      : ({ imageCaptionOffscreenText }) =>
-          renderMultipleCaptions(
-            deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
-            imageCaptionOffscreenText,
-          )}
-  </ServiceContext.Consumer>
-);
+  return blocks.map(block =>
+    renderCaption(deepGet(['model', 'blocks'], block), offscreenText),
+  );
+};
+
+const CaptionContainer = ({ block, type }) =>
+  renderMultipleCaptions(
+    deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
+    type,
+  );
 
 CaptionContainer.propTypes = {
   block: objectOf(any).isRequired,
-  video: bool,
+  type: string,
 };
 
 CaptionContainer.defaultProps = {
-  video: false,
+  type: '',
 };
 
 export default CaptionContainer;

@@ -8,6 +8,7 @@ const news = {
   defaultImageAltText: 'BBC News',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
+  videoCaptionOffscreenText: 'Video caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
   service: 'news',

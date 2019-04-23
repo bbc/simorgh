@@ -7,11 +7,11 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../helpers/storybook/ampDecorator';
 
-storiesOf('Video', module)
+storiesOf('Video Container', module)
   .add('with a caption', () => VideoWithCaption)
   .add('without a caption', () => VideoWithoutCaption);
 
-storiesOf('Video - AMP', module)
+storiesOf('Video Container - AMP', module)
   .addDecorator(AmpDecorator)
   .add('with a caption', () => VideoAmpWithCaption)
   .add('without a caption', () => VideoAmpWithoutCaption);
