@@ -7,11 +7,13 @@ import deepGet from '../../helpers/json/deepGet';
 
 const logger = nodeLogger(__filename);
 
+// checks for data and status keys, setting default status if not found
 const constructRenderObject = data => ({
   status: deepGet(['status'], data) ? data.status : 500,
   assetData: deepGet(['data'], data),
 });
 
+// checks for assetData and 200 status
 const shouldRender = data => {
   let hasDataAnd200Status = false;
   const { status, assetData } = constructRenderObject(data);

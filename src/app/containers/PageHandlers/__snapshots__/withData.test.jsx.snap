@@ -6,7 +6,7 @@ exports[`withData HOC with missing articleData should return the errorMain compo
 />
 `;
 
-exports[`withData HOC with no data should return the errorMain component 1`] = `
+exports[`withData HOC with no data should return the errorMain component and 500 status 1`] = `
 <ErrorMain
   status={500}
 />

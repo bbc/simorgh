@@ -11,7 +11,7 @@ describe('withData HOC', () => {
     data: null,
   };
 
-  const noArticleData = {
+  const noAssetData = {
     data: {
       status: 200,
     },
@@ -19,21 +19,21 @@ describe('withData HOC', () => {
 
   const non200StatusProps = {
     data: {
-      articleData: articleDataNews,
+      assetData: articleDataNews,
       status: 157,
     },
   };
 
   const validProps = {
     data: {
-      articleData: articleDataNews,
+      assetData: articleDataNews,
       status: 200,
     },
   };
 
   describe('with no data', () => {
     shouldShallowMatchSnapshot(
-      `should return the errorMain component`,
+      `should return the errorMain component and 500 status`,
       <WithDataHOC {...noDataProps} />,
     );
   });
@@ -41,7 +41,7 @@ describe('withData HOC', () => {
   describe('with missing articleData', () => {
     shouldShallowMatchSnapshot(
       `should return the errorMain component`,
-      <WithDataHOC {...noArticleData} />,
+      <WithDataHOC {...noAssetData} />,
     );
   });
 
