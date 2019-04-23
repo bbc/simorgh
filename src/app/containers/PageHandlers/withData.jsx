@@ -3,20 +3,19 @@ import { shape, element } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
+import deepGet from '../../helpers/json/deepGet';
 
 const logger = nodeLogger(__filename);
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
+    const status = deepGet(['status'], data) ? data.status : 500;
     if (data) {
-      const { status } = data;
-
-      if (status && data.data && status === 200) {
+      if (data.data && status === 200) {
         try {
           return <Component assetData={data.data} {...props} />;
         } catch (err) {
           logger.error(err);
-          return <ErrorMain status={status} />;
         }
       }
     }
@@ -26,10 +25,10 @@ const WithData = Component => {
     };
 
     DataContainer.defaultProps = {
-      data: null,
+      data: shape,
     };
 
-    return <ErrorMain status={500} />;
+    return <ErrorMain status={status} />;
   };
 
   return DataContainer;
