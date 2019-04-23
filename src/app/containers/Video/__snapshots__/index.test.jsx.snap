@@ -13,120 +13,122 @@ exports[`Video with data and a caption should render the amp video with a captio
   <VideoContainer
     blocks={
       Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "copyrightHolder": "@twitterhandle",
-                  "height": 549,
-                  "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 976,
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "copyrightHolder": "@twitterhandle",
+                    "height": 549,
+                    "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
+                    "originCode": "cpsdevpb",
+                    "width": 976,
+                  },
+                  "type": "rawImage",
                 },
-                "type": "rawImage",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "blocks": Array [
+                                  Object {
+                                    "model": Object {
+                                      "attributes": Array [],
+                                      "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                                    },
+                                    "type": "fragment",
                                   },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                                ],
+                                "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                              },
+                              "type": "paragraph",
                             },
-                            "type": "paragraph",
-                          },
-                        ],
+                          ],
+                        },
+                        "type": "text",
                       },
-                      "type": "text",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "caption",
                 },
-                "type": "caption",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "group of residents",
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "blocks": Array [
+                                  Object {
+                                    "model": Object {
+                                      "attributes": Array [],
+                                      "text": "group of residents",
+                                    },
+                                    "type": "fragment",
                                   },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "group of residents",
+                                ],
+                                "text": "group of residents",
+                              },
+                              "type": "paragraph",
                             },
-                            "type": "paragraph",
-                          },
-                        ],
+                          ],
+                        },
+                        "type": "text",
                       },
-                      "type": "text",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "altText",
                 },
-                "type": "altText",
-              },
-            ],
+              ],
+            },
+            "type": "image",
           },
-          "type": "image",
-        },
-        Object {
-          "model": Object {
-            "allowOffsiteEmbedding": false,
-            "duration": "PT2H34M25S",
-            "guidance": null,
-            "isLive": false,
-            "locator": "urn:bbc:pips:pid:p064nsyw",
+          Object {
+            "model": Object {
+              "allowOffsiteEmbedding": false,
+              "duration": "PT2H34M25S",
+              "guidance": null,
+              "isLive": false,
+              "locator": "urn:bbc:pips:pid:p064nsyw",
+            },
+            "type": "rawVideo",
           },
-          "type": "rawVideo",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "attributes": Array [],
+                                "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              },
+                              "type": "fragment",
                             },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                          ],
+                          "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                        },
+                        "type": "paragraph",
                       },
-                      "type": "paragraph",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "text",
                 },
-                "type": "text",
-              },
-            ],
+              ],
+            },
+            "type": "altText",
           },
-          "type": "altText",
-        },
+        ],
         Object {
           "model": Object {
             "blocks": Array [
@@ -308,120 +310,122 @@ exports[`Video with data and a caption should render the video and caption 1`] =
   <VideoContainer
     blocks={
       Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "copyrightHolder": "@twitterhandle",
-                  "height": 549,
-                  "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 976,
+        Array [
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "copyrightHolder": "@twitterhandle",
+                    "height": 549,
+                    "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
+                    "originCode": "cpsdevpb",
+                    "width": 976,
+                  },
+                  "type": "rawImage",
                 },
-                "type": "rawImage",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "blocks": Array [
+                                  Object {
+                                    "model": Object {
+                                      "attributes": Array [],
+                                      "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                                    },
+                                    "type": "fragment",
                                   },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                                ],
+                                "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                              },
+                              "type": "paragraph",
                             },
-                            "type": "paragraph",
-                          },
-                        ],
+                          ],
+                        },
+                        "type": "text",
                       },
-                      "type": "text",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "caption",
                 },
-                "type": "caption",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "group of residents",
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "blocks": Array [
+                                  Object {
+                                    "model": Object {
+                                      "attributes": Array [],
+                                      "text": "group of residents",
+                                    },
+                                    "type": "fragment",
                                   },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "group of residents",
+                                ],
+                                "text": "group of residents",
+                              },
+                              "type": "paragraph",
                             },
-                            "type": "paragraph",
-                          },
-                        ],
+                          ],
+                        },
+                        "type": "text",
                       },
-                      "type": "text",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "altText",
                 },
-                "type": "altText",
-              },
-            ],
+              ],
+            },
+            "type": "image",
           },
-          "type": "image",
-        },
-        Object {
-          "model": Object {
-            "allowOffsiteEmbedding": false,
-            "duration": "PT2H34M25S",
-            "guidance": null,
-            "isLive": false,
-            "locator": "urn:bbc:pips:pid:p064nsyw",
+          Object {
+            "model": Object {
+              "allowOffsiteEmbedding": false,
+              "duration": "PT2H34M25S",
+              "guidance": null,
+              "isLive": false,
+              "locator": "urn:bbc:pips:pid:p064nsyw",
+            },
+            "type": "rawVideo",
           },
-          "type": "rawVideo",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "attributes": Array [],
+                                "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                              },
+                              "type": "fragment",
                             },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                          ],
+                          "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
+                        },
+                        "type": "paragraph",
                       },
-                      "type": "paragraph",
-                    },
-                  ],
+                    ],
+                  },
+                  "type": "text",
                 },
-                "type": "text",
-              },
-            ],
+              ],
+            },
+            "type": "altText",
           },
-          "type": "altText",
-        },
+        ],
         Object {
           "model": Object {
             "blocks": Array [

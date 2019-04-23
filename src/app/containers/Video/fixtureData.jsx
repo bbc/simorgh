@@ -59,9 +59,7 @@ const videoBlock = [
     },
   },
 ];
-
-const videoBlockWithCaption = [...videoBlock];
-videoBlockWithCaption.push({
+const captionBlock = {
   type: 'caption',
   model: {
     blocks: [
@@ -70,7 +68,7 @@ videoBlockWithCaption.push({
       ),
     ],
   },
-});
+};
 
 const generateFixtureData = ({ platform, blocks }) => (
   <RequestContextProvider platform={platform}>
@@ -90,7 +88,7 @@ generateFixtureData.defaultProps = {
 
 export const VideoWithoutCaption = generateFixtureData({ blocks: videoBlock });
 export const VideoWithCaption = generateFixtureData({
-  blocks: videoBlockWithCaption,
+  blocks: [videoBlock, captionBlock],
 });
 export const VideoAmpWithoutCaption = generateFixtureData({
   platform: 'amp',
@@ -98,5 +96,5 @@ export const VideoAmpWithoutCaption = generateFixtureData({
 });
 export const VideoAmpWithCaption = generateFixtureData({
   platform: 'amp',
-  blocks: videoBlockWithCaption,
+  blocks: [videoBlock, captionBlock],
 });
