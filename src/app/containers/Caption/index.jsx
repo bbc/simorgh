@@ -2,7 +2,6 @@ import React from 'react';
 import { objectOf, any, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
-import nanoid from 'nanoid';
 import deepGet from '../../helpers/json/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -12,14 +11,14 @@ import InlineLink from '../InlineLink';
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
 const chooseOffscreenText = (mediaType, videoCaption, imageCaption) => {
-  let offscreenText = '';
+  let offscreenText = 'Caption, ';
   if (mediaType === 'video') {
     offscreenText = videoCaption;
-  } else if (mediaType === 'image') {
-    offscreenText = imageCaption;
-  } else {
-    offscreenText = false;
   }
+  if (mediaType === 'image') {
+    offscreenText = imageCaption;
+  }
+
   return offscreenText;
 };
 
@@ -27,8 +26,8 @@ const renderText = textBlocks => (
   <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />
 );
 
-const renderCaption = (block, captionOffscreenText, key) => (
-  <Caption key={key}>
+const renderCaption = (block, captionOffscreenText) => (
+  <Caption key={deepGet(['model', 'text'], block)}>
     {captionOffscreenText ? (
       <VisuallyHiddenText>{captionOffscreenText}</VisuallyHiddenText>
     ) : null}
@@ -49,7 +48,7 @@ const renderMultipleCaptions = (blocks, type) => {
   );
 
   return blocks.map(block =>
-    renderCaption(deepGet(['model', 'blocks'], block), offscreenText, nanoid()),
+    renderCaption(deepGet(['model', 'blocks'], block), offscreenText),
   );
 };
 
