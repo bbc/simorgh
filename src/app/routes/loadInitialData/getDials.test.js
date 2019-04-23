@@ -34,4 +34,14 @@ describe('getDials', () => {
     };
     expect(getDials()).toEqual(expected);
   });
+
+  describe('env has no dials path', () => {
+    beforeEach(() => {
+      delete process.env.COSMOS_DIALS_PATH;
+    });
+
+    it('should return an empty object', () => {
+      expect(getDials()).toEqual({});
+    });
+  });
 });

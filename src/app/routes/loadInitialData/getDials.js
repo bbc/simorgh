@@ -14,6 +14,10 @@ const transformDial = value => {
 const getDials = () => {
   const dialsPath = process.env.COSMOS_DIALS_PATH;
 
+  if (!dialsPath) {
+    return {};
+  }
+
   const buffer = fs.readFileSync(dialsPath);
   const dials = JSON.parse(buffer);
 
