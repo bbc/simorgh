@@ -2,12 +2,12 @@ import React from 'react';
 import { objectOf, any, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
+import nanoid from 'nanoid';
 import deepGet from '../../helpers/json/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import nanoid from 'nanoid';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
