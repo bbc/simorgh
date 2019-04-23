@@ -63,7 +63,7 @@ pipeline {
         }
       }
     }
-    stage ('Run application tests') {
+    stage ('Build, Test & Package') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
@@ -82,7 +82,7 @@ pipeline {
           }
         }
 
-        stage('Test Production') {
+        stage('Test Production and Zip Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -91,8 +91,17 @@ pipeline {
             }
           }
           steps {
+            // Testing
             sh 'make installProd'
             sh 'make productionTests'
+            // Producing the 'binary'
+            sh "rm -rf node_modules"
+            sh "zip -r simorgh.zip ."
+          }
+          post {
+            always {
+              archiveArtifacts simorgh-binary: 'simorgh.zip', fingerprint: true
+            }
           }
         }    
       }
