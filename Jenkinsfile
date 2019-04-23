@@ -64,7 +64,7 @@ pipeline {
         }
       }
     }
-    stage ('Build, Test') {
+    stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
@@ -83,7 +83,7 @@ pipeline {
           }
         }
 
-        stage('Test Production and Zip Production') {
+        stage('Test Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -95,11 +95,6 @@ pipeline {
             // Testing
             sh 'make installProd'
             sh 'make productionTests'
-            // Producing the 'binary'
-            sh "./scripts/package.sh"
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
           }
         }    
       }
@@ -148,11 +143,6 @@ pipeline {
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
           }
-          post {
-            always {
-              archiveArtifacts artifacts: 'simorgh.zip', fingerprint: true
-            }
-          }
         }    
       }
       post {
@@ -167,8 +157,13 @@ pipeline {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
+      options {
+        // Do not perform the SCM step
+        skipDefaultCheckout true
+      }
       agent any
       steps {
+        unstash 'simorgh'
         build(
           job: 'simorgh-infrastructure/latest',
           parameters: [
