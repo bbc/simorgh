@@ -5,6 +5,7 @@ def nodeImageVersion = "0.0.5"
 def nodeImage = "${dockerRegistry}/bbc-news/node-8-lts:${nodeImageVersion}"
 def nodeName
 def stageName = ""
+def packageName = 'simorgh.zip'
 def getCommitInfo = {
   infraGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${GIT_COMMIT}").trim()
   appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
@@ -96,8 +97,9 @@ pipeline {
             sh 'make productionTests'
             // Producing the 'binary'
             sh "./scripts/package.sh"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: 'simorgh.zip'
-            stash name: 'simorgh', includes: 'simorgh.zip'
+            sh "rm -f ${packageName}"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+            stash name: 'simorgh', includes: packageName
           }
         }    
       }
@@ -142,8 +144,9 @@ pipeline {
             sh 'make productionTests'
             // Producing the 'binary'
             sh "./scripts/package.sh"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: 'simorgh.zip'
-            stash name: 'simorgh', includes: 'simorgh.zip'
+            sh "rm -f ${packageName}"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+            stash name: 'simorgh', includes: packageName
           }
           post {
             always {
