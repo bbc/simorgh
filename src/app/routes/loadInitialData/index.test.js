@@ -4,9 +4,12 @@
  */
 import * as reactRouterConfig from 'react-router-config';
 import loadInitialData from '.';
+import getDials from './getDials';
+
+jest.mock('./getDials');
 
 describe('loadInitialData', () => {
-  const data = 'Some data!';
+  const data = { data: 'Some data!' };
   const match = { match: true };
 
   describe('no matched route', () => {
@@ -36,12 +39,16 @@ describe('loadInitialData', () => {
   });
 
   describe('getInitialData function on route', () => {
-    it('should call getInitialData with passed ctx and return value', async () => {
+    it('should call getInitialData with passed ctx, inject dials and return value', async () => {
       const route = {
         getInitialData: jest
           .fn()
           .mockImplementation(() => Promise.resolve(data)),
       };
+      const dials = { dial: 'value' };
+      const expectedObject = { ...data, dials };
+
+      getDials.mockReturnValue(dials);
 
       reactRouterConfig.matchRoutes = jest
         .fn()
@@ -51,7 +58,8 @@ describe('loadInitialData', () => {
 
       expect(route.getInitialData).toHaveBeenCalledTimes(1);
       expect(route.getInitialData).toHaveBeenCalledWith({ match });
-      expect(initialData).toEqual(data);
+      expect(getDials).toHaveBeenCalledTimes(1);
+      expect(initialData).toEqual(expectedObject);
     });
 
     describe('error on getInitialData call', () => {

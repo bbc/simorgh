@@ -3,6 +3,7 @@
  * https://github.com/jtart/react-universal-app
  */
 import { matchRoutes } from 'react-router-config';
+import getDials from './getDials';
 
 const loadInitialData = async (url, routes) => {
   const matchedRoutes = matchRoutes(routes, url);
@@ -17,7 +18,10 @@ const loadInitialData = async (url, routes) => {
     return {};
   }
 
-  return route.getInitialData({ match });
+  const data = await route.getInitialData({ match });
+
+  data.dials = getDials();
+  return data;
 };
 
 export default loadInitialData;
