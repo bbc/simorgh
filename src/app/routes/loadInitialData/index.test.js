@@ -43,7 +43,7 @@ describe('loadInitialData', () => {
       const route = {
         getInitialData: jest
           .fn()
-          .mockImplementation(() => Promise.resolve(data)),
+          .mockImplementation(() => Promise.resolve({ ...data })),
       };
       const dials = { dial: 'value' };
       const expectedObject = { ...data, dials };
