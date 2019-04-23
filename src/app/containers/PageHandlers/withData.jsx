@@ -7,15 +7,24 @@ import deepGet from '../../helpers/json/deepGet';
 
 const logger = nodeLogger(__filename);
 
-const shouldRender = data => ({
+const constructRenderObject = data => ({
   status: deepGet(['status'], data) ? data.status : 500,
   assetData: deepGet(['data'], data),
 });
 
+const shouldRender = data => {
+  let hasDataAnd200Status = false;
+  const { status, assetData } = constructRenderObject(data);
+
+  if (assetData && status === 200) hasDataAnd200Status = true;
+
+  return { hasDataAnd200Status, status, assetData };
+};
+
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
-    const { status, assetData } = shouldRender(data);
-    if (assetData && status === 200) {
+    const { hasDataAnd200Status, status, assetData } = shouldRender(data);
+    if (hasDataAnd200Status) {
       try {
         return <Component assetData={assetData} {...props} />;
       } catch (err) {
