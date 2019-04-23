@@ -95,11 +95,8 @@ pipeline {
             sh 'make installProd'
             sh 'make productionTests'
             // Producing the 'binary'
-            sh "rm -rf node_modules"
-            sh "rm -rf build" 
-            sh "ls -la ${pwd()}"
-            zip archive: true, dir: '.', glob: '', zipFile: 'simorgh.zip'
-            sh "ls -la ${pwd()}"
+            sh "./scripts/package.sh"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: 'simorgh.zip'
           }
           post {
             always {
