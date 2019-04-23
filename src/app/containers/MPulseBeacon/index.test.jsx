@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import TestRenderer from 'react-test-renderer';
 import { isNull } from '../../helpers/tests/testHelpers';
 import MPulseBeaconContainer from './index';
 import MPulseBeacon from '../../components/MPulseBeacon';
@@ -14,9 +14,13 @@ describe('MPulseBeacon', () => {
     });
 
     it('should render a beacon component with the api key', () => {
-      const wrapper = shallow(<MPulseBeaconContainer />);
-      expect(wrapper.find(MPulseBeacon)).toHaveLength(1);
-      expect(wrapper.find(MPulseBeacon).prop('apiKey')).toEqual(apiKey);
+      const testRenderer = TestRenderer.create(<MPulseBeaconContainer />);
+      const testInstance = testRenderer.root;
+
+      expect(testInstance.findAllByType(MPulseBeacon)).toHaveLength(1);
+      expect(testInstance.findByType(MPulseBeacon).props.apiKey).toEqual(
+        apiKey,
+      );
     });
   });
 
