@@ -74,11 +74,34 @@ pipeline {
           args '-u root -v /etc/pki:/certs'
         }
       }
-      steps {
-        sh 'make install'
-        sh 'make developmentTests'
-        sh 'make installProd'
-        sh 'make productionTests'
+      parallel {
+        stage('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make developmentTests'
+          }
+        }
+
+        stage('Test Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make installProd'
+            sh 'make productionTests'
+          }
+        }    
       }
       post {
         always {
