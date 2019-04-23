@@ -100,7 +100,7 @@ pipeline {
           }
           post {
             always {
-              archiveArtifacts simorgh-binary: 'simorgh.zip', fingerprint: true
+              archiveArtifacts simorgh: 'simorgh.zip', fingerprint: true
             }
           }
         }    
