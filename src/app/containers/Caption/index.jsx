@@ -7,6 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
+import nanoid from 'nanoid';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
@@ -26,8 +27,8 @@ const renderText = textBlocks => (
   <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />
 );
 
-const renderCaption = (block, captionOffscreenText) => (
-  <Caption>
+const renderCaption = (block, captionOffscreenText, key) => (
+  <Caption key={key}>
     {captionOffscreenText ? (
       <VisuallyHiddenText>{captionOffscreenText}</VisuallyHiddenText>
     ) : null}
@@ -48,7 +49,7 @@ const renderMultipleCaptions = (blocks, type) => {
   );
 
   return blocks.map(block =>
-    renderCaption(deepGet(['model', 'blocks'], block), offscreenText),
+    renderCaption(deepGet(['model', 'blocks'], block), offscreenText, nanoid()),
   );
 };
 
