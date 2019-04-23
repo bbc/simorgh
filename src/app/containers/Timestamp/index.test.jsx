@@ -153,7 +153,7 @@ describe('Timestamp', () => {
     originalDate = Date.now;
     Date.now = jest.fn(() => timestamp);
     const twelveHoursAgo = timestampGenerator({
-      hours: 11,
+      hours: 12,
     });
     const elevenHoursAgo = timestampGenerator({
       hours: 11,
