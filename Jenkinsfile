@@ -63,7 +63,7 @@ pipeline {
         }
       }
     }
-    stage ('Build, Test & Package') {
+    stage ('Build, Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
@@ -97,6 +97,53 @@ pipeline {
             // Producing the 'binary'
             sh "./scripts/package.sh"
             zip archive: true, dir: 'pack/', glob: '', zipFile: 'simorgh.zip'
+            stash name: 'simorgh', includes: 'simorgh.zip'
+          }
+        }    
+      }
+      post {
+        always {
+          script {
+            stageName = env.STAGE_NAME
+          }
+        }
+      }
+    }
+    stage ('Build, Test & Package') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      parallel {
+        stage('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make developmentTests'
+          }
+        }
+
+        stage('Test Production and Zip Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            // Testing
+            sh 'make installProd'
+            sh 'make productionTests'
+            // Producing the 'binary'
+            sh "./scripts/package.sh"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: 'simorgh.zip'
+            stash name: 'simorgh', includes: 'simorgh.zip'
           }
           post {
             always {
