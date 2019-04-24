@@ -19,14 +19,14 @@ describe('withData HOC', () => {
 
   const non200StatusProps = {
     data: {
-      assetData: articleDataNews,
+      data: articleDataNews,
       status: 157,
     },
   };
 
   const validProps = {
     data: {
-      assetData: articleDataNews,
+      data: articleDataNews,
       status: 200,
     },
   };
