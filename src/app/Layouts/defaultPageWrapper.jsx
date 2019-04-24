@@ -32,13 +32,11 @@ const PageWrapper = ({ bbcOrigin, children, data }) => {
 };
 
 PageWrapper.propTypes = {
-  bbcOrigin: string,
+  bbcOrigin: string.isRequired,
   children: node.isRequired,
   data: shape.isRequired,
 };
 
-PageWrapper.defaultProps = {
-  bbcOrigin: 'https://www.bbc.co.uk',
-};
+PageWrapper.defaultProps = {};
 
 export default PageWrapper;
