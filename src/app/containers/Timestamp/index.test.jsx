@@ -12,6 +12,9 @@ const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
+const firstChild = wrapper => wrapper[0].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].data;
+
 describe('Timestamp', () => {
   let originalDate;
   const inBritishSummerTime = isBritishSummerTime(Date.now());
@@ -38,8 +41,8 @@ describe('Timestamp', () => {
           />,
         );
         expect(renderedWrapper.length).toEqual(1);
-        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-        expect(renderedWrapper[0].children[0].data).toContain(descriptor);
+        expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+        expect(firstChild(renderedWrapper)).toContain(descriptor);
       });
     };
 
@@ -73,7 +76,7 @@ describe('Timestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toEqual('3 hours ago');
+    expect(firstChild(renderedWrapper)).toEqual('3 hours ago');
   });
 
   it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished', () => {
@@ -89,7 +92,7 @@ describe('Timestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
   });
 
   it('should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished', () => {
@@ -104,7 +107,7 @@ describe('Timestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
@@ -116,8 +119,8 @@ describe('Timestamp', () => {
       <Timestamp firstPublished={fiveHoursAgo} lastPublished={threeHoursAgo} />,
     );
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-    expect(renderedWrapper[1].children[0].data).toMatch('3 hours ago');
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch('3 hours ago');
   });
 
   it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
@@ -136,8 +139,8 @@ describe('Timestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-    expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDatetime);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished beforeToday but not same day as firstPublished', () => {
@@ -149,8 +152,8 @@ describe('Timestamp', () => {
       <Timestamp firstPublished={threeDaysAgo} lastPublished={twoDaysAgo} />,
     );
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDate);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished today and > 10 hrs ago', () => {
@@ -167,7 +170,7 @@ describe('Timestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
     expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDate);
   });
 });
