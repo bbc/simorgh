@@ -171,6 +171,6 @@ describe('Timestamp', () => {
     );
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 });
