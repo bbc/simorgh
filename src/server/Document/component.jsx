@@ -6,6 +6,7 @@ import {
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
+import { DialContextProvider } from '../../app/contexts/DialContext';
 
 /* eslint-disable react/prop-types */
 const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
@@ -16,6 +17,7 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !data.isAmp;
+  const { dials } = data;
   const scripts = (
     <Fragment>
       <IfAboveIE9>
@@ -42,7 +44,11 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
         {links}
         {styleTags}
         {headScript}
-        {scriptsAllowed && <MPulseBeacon />}
+        {scriptsAllowed && (
+          <DialContextProvider dials={dials}>
+            <MPulseBeacon />
+          </DialContextProvider>
+        )}
         {data.isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
