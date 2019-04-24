@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Timestamp should add prefix and suffix 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20em) and (max-width:37.4375em) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.8125rem;
+  }
+}
+
+<time
+  className="c0"
+  dateTime="2018-10-19"
+>
+  It was 
+  186 days ago
+   that this was last updated
+</time>
+`;
+
 exports[`Timestamp should handle invalid date 1`] = `null`;
 
 exports[`Timestamp should render correctly 1`] = `

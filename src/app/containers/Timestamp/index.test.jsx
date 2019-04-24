@@ -17,6 +17,7 @@ describe('Timestamp', () => {
       timestamp={noLeadingZeroTimestamp}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY"
+      isRelative={false}
     />,
   );
 
@@ -26,6 +27,7 @@ describe('Timestamp', () => {
       timestamp={defaultTimestamp}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY"
+      isRelative={false}
     />,
   );
 
@@ -35,6 +37,19 @@ describe('Timestamp', () => {
       timestamp={invalidData}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY"
+      isRelative
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'should add prefix and suffix',
+    <Timestamp
+      timestamp={defaultTimestamp}
+      dateTimeFormat="YYYY-MM-DD"
+      format="D MMMM YYYY"
+      isRelative
+      prefix="It was"
+      suffix="that this was last updated"
     />,
   );
 });
