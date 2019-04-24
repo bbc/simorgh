@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render } from 'enzyme';
 import Caption from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -40,10 +40,28 @@ shouldMatchSnapshot(
 describe('with offscreen text', () => {
   it('should render the default offscreen text', () => {
     const renderedWrapper = render(
-      <figcaption>
-        <span>blah</span>
-      </figcaption>,
+      <ServiceContext.Provider value={newsServiceContextStub}>
+        <Caption block={block} />
+      </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').html()).toBe('<span>Caption, </span>');
+    expect(renderedWrapper.find('span').html()).toBe('Caption, ');
+  });
+
+  it('should render the video offscreen text', () => {
+    const renderedWrapper = render(
+      <ServiceContext.Provider value={newsServiceContextStub}>
+        <Caption block={block} type="video" />
+      </ServiceContext.Provider>,
+    );
+    expect(renderedWrapper.find('span').html()).toBe('Video caption, ');
+  });
+
+  it('should render the image offscreen text', () => {
+    const renderedWrapper = render(
+      <ServiceContext.Provider value={newsServiceContextStub}>
+        <Caption block={block} type="image" />
+      </ServiceContext.Provider>,
+    );
+    expect(renderedWrapper.find('span').html()).toBe('Image caption, ');
   });
 });
