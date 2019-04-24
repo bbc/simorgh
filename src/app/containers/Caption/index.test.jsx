@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom';
 import Caption from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -35,3 +36,14 @@ shouldMatchSnapshot(
   'should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext',
   CaptionWithContext({ imageCaptionOffscreenText: undefined }),
 );
+
+describe('with offscreen text', () => {
+  it('should render the default offscreen text', () => {
+    const renderedWrapper = render(
+      <figcaption>
+        <span>blah</span>
+      </figcaption>,
+    );
+    expect(renderedWrapper.find('span').html()).toBe('<span>Caption, </span>');
+  });
+});
