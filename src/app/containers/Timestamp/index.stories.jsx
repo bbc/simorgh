@@ -16,7 +16,7 @@ storiesOf('TimestampContainer', module)
       timestamp={1552666749637}
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY, HH:mm z"
-      isRelative={true}
+      isRelative
       prefix="Updated"
     />
   ))

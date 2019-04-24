@@ -8,7 +8,7 @@ import {
 } from '../Timestamp/helpers/testHelpers';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018
-const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
+const invalidTimestamp = 8640000000000001;
 
 const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
 
@@ -31,7 +31,12 @@ describe('ArticleTimestamp', () => {
   );
 
   shouldMatchSnapshot(
-    'should handle an invalid timestamp',
+    'should handle incomplete data',
+    <ArticleTimestamp firstPublished={defaultTimestamp} lastPublished={null} />,
+  );
+
+  shouldMatchSnapshot(
+    'should not return values for invalid timestamps',
     <ArticleTimestamp
       firstPublished={invalidTimestamp}
       lastPublished={invalidTimestamp}

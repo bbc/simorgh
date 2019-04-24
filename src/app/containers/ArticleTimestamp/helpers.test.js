@@ -1,6 +1,5 @@
 import { isTenHoursAgoOrLess } from './helpers';
 
-
 describe('ArticleTimestamp helper functions', () => {
   describe('isTenHoursAgoOrLess', () => {
     it('should return true if 10 hours ago or less', () => {

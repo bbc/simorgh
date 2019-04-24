@@ -59,9 +59,9 @@ describe('relativeTime', () => {
   );
 
   relativeBehaviour(
-    'returns null when greater than 10 hours ago',
+    'returns days when greater than 24 hours ago',
     timestampGenerator({ hours: 94 }),
-    null,
+    '3 days ago',
   );
 
   relativeBehaviour(

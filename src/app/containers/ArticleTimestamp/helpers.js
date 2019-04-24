@@ -5,12 +5,11 @@ export const isTenHoursAgoOrLess = milliseconds => {
   return now - milliseconds <= 10 * 60 * 60 * 1000;
 };
 
-export const isRelative = (lastPublished, firstPublished) => {
-  if (lastPublished === firstPublished) {
-    return isTenHoursAgoOrLess(firstPublished);
-  }
+export const isFirstRelative = (lastPublished, firstPublished) =>
+  lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished);
+
+export const isLastRelative = lastPublished =>
   isTenHoursAgoOrLess(lastPublished);
-};
 
 export const isToday = timestamp => {
   const today = new Date(Date.now());

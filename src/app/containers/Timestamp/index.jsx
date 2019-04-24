@@ -3,10 +3,7 @@ import React from 'react';
 import { number, string, bool } from 'prop-types';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
-import {
-  isValidDateTime,
-  formatUnixTimestamp,
-} from './timestampUtilities';
+import { isValidDateTime, formatUnixTimestamp } from './timestampUtilities';
 
 const TimestampContainer = ({
   timestamp,
@@ -25,8 +22,9 @@ const TimestampContainer = ({
       datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
     >
       {prefix ? `${prefix} ` : null}
-      {isRelative ?
-        relativeTime(timestamp) : formatUnixTimestamp(timestamp, format, timezone)}
+      {isRelative
+        ? relativeTime(timestamp)
+        : formatUnixTimestamp(timestamp, format, timezone)}
       {suffix ? ` ${suffix}` : null}
     </Timestamp>
   );
