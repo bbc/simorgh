@@ -204,17 +204,21 @@ describe('getBrowserViewPort', () => {
 });
 
 describe('getCurrentTime', () => {
-  const windowDate = window.Date;
+  const originalDate = global.Date;
 
   afterEach(() => {
-    resetWindowValue('Date', windowDate);
+    global.Date = originalDate;
   });
 
   returnsNullWhenOffClient(getCurrentTime);
 
   it('should return hours, mins and seconds joined by "x"', () => {
-    const date = new Date(946729425000); // 12:23:45
-    setWindowValue('Date', () => date);
+    const mockDate = {
+      getHours: jest.fn().mockReturnValue('12'),
+      getMinutes: jest.fn().mockReturnValue('23'),
+      getSeconds: jest.fn().mockReturnValue('45'),
+    };
+    global.Date = jest.fn(() => mockDate);
 
     const ATITime = getCurrentTime();
 
