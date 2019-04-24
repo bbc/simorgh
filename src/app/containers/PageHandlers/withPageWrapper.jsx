@@ -20,6 +20,7 @@ const WithPageWrapper = Component => {
     data: null,
     bbcOrigin: null,
   };
+
   return PageWrapperContainer;
 };
 
