@@ -42,7 +42,7 @@ const WithData = Component => {
   };
 
   DataContainer.defaultProps = {
-    data: shape,
+    data: null,
   };
 
   return DataContainer;
