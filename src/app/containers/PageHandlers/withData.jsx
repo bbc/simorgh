@@ -34,15 +34,15 @@ const WithData = Component => {
       }
     }
 
-    DataContainer.propTypes = {
-      data: shape(articlePropTypes),
-    };
-
-    DataContainer.defaultProps = {
-      data: shape,
-    };
-
     return <ErrorMain status={status} />;
+  };
+
+  DataContainer.propTypes = {
+    data: shape(articlePropTypes),
+  };
+
+  DataContainer.defaultProps = {
+    data: shape,
   };
 
   return DataContainer;
