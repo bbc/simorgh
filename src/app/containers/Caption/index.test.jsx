@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'enzyme';
 import Caption from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -98,3 +99,16 @@ shouldMatchSnapshot(
   'should render caption with mutiple paragraphs',
   CaptionWithContext(captionBlock3Paragraphs, newsServiceContextStub),
 );
+
+it('should render figcaption with multiple paragraphs', () => {
+  const renderedWrapper = render(
+    CaptionWithContext(captionBlock3Paragraphs, newsServiceContextStub),
+  );
+  expect(renderedWrapper.find('figcaption p').length).toBe(3);
+  expect(
+    renderedWrapper
+      .find('figcaption p')
+      .first()
+      .html(),
+  ).toBe('This is paragraph 1');
+});
