@@ -199,3 +199,85 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   </p>
 </figcaption>
 `;
+
+exports[`should render caption with mutiple paragraphs 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #757575;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+}
+
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:25em) and (max-width:62.9375em) {
+  .c0 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:63em) {
+  .c0 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<figcaption
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    Image caption, 
+  </span>
+  <p
+    className="c2"
+  >
+    This is paragraph 1
+  </p>
+  <p
+    className="c2"
+  >
+    This is paragraph 2
+  </p>
+  <p
+    className="c2"
+  >
+    Paragraph 3
+  </p>
+</figcaption>
+`;
