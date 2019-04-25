@@ -11,7 +11,7 @@ const newsServiceContextStub = {
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
-  videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  videoCaptionOffscreenText: ' ، عنوان تصویر',
 };
 
 const block = blockContainingText('caption', 'Some caption text...');
@@ -63,5 +63,23 @@ describe('with offscreen text', () => {
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').html()).toBe('Image caption, ');
+  });
+
+  it('should render the persian image offscreen text', () => {
+    const renderedWrapper = render(
+      <ServiceContext.Provider value={persianServiceContextStub}>
+        <Caption block={block} type="image" />
+      </ServiceContext.Provider>,
+    );
+    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
+  });
+
+  it('should render the persian video offscreen text', () => {
+    const renderedWrapper = render(
+      <ServiceContext.Provider value={persianServiceContextStub}>
+        <Caption block={block} type="image" />
+      </ServiceContext.Provider>,
+    );
+    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
   });
 });
