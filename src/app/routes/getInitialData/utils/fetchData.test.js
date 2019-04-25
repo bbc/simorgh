@@ -58,6 +58,21 @@ describe('fetchData', () => {
         status: 200,
       });
     });
+
+    it('should pass preprocessorRules', async () => {
+      const preprocessorRules = [() => {}];
+
+      const response = await callfetchData({ preprocessorRules });
+
+      expect(preprocess).toHaveBeenCalledWith(response.data, preprocessorRules);
+
+      expect(response).toEqual({
+        data: {
+          data: '12345',
+        },
+        status: 200,
+      });
+    });
   });
 
   describe('Rejected fetch', () => {
