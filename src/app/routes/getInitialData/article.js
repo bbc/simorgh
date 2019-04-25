@@ -1,6 +1,6 @@
 import onClient from '../../helpers/onClient';
-import getBaseUrl from './getBaseUrl';
-import fetchData from './fetchData';
+import getBaseUrl from './utils/getBaseUrl';
+import fetchData from './utils/fetchData';
 
 const getInitialData = async ({ match }) => {
   const { id, service, amp } = match.params;

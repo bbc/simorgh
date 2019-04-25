@@ -1,15 +1,15 @@
 import loggerMock from '../../helpers/tests/loggerMock'; // Must be imported before getInitialData
-import baseUrl from './getBaseUrl';
+import baseUrl from './utils/getBaseUrl';
 import {
   setWindowValue,
   resetWindowValue,
 } from '../../helpers/tests/setWindowValue';
 
 const getBaseUrlMockOrigin = 'https://www.mockSite.com';
-jest.mock('./getBaseUrl', () => jest.fn());
+jest.mock('./utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
-const getInitialData = require('./index').default;
+const getInitialData = require('./article').default;
 
 describe('getInitialData', () => {
   const defaultIdParam = 'c0000000001o';
