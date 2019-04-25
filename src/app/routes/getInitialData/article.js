@@ -2,7 +2,7 @@ import onClient from '../../helpers/onClient';
 import getBaseUrl from './utils/getBaseUrl';
 import fetchData from './utils/fetchData';
 
-const getInitialData = async ({ match }) => {
+const getArticleInitialData = async ({ match }) => {
   const { id, service, amp } = match.params;
   const isAmp = !!amp;
 
@@ -12,7 +12,7 @@ const getInitialData = async ({ match }) => {
 
   const url = `${baseUrl}/${service}/articles/${id}.json`;
 
-  const { data, status } = await fetchData({ url, preprocessorRules: [] });
+  const { data, status } = await fetchData({ url });
 
   return {
     isAmp,
@@ -22,4 +22,4 @@ const getInitialData = async ({ match }) => {
   };
 };
 
-export default getInitialData;
+export default getArticleInitialData;
