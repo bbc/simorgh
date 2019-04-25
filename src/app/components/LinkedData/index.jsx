@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
+import { arrayOf, string, shape } from 'prop-types';
 
 const LinkedData = ({
   type,
@@ -12,6 +12,7 @@ const LinkedData = ({
   logoUrl,
   publishingPrinciples,
   noBylinesPolicy,
+  about,
   canonicalLink,
 }) => {
   const imgObject = 'ImageObject';
@@ -63,6 +64,7 @@ const LinkedData = ({
     image,
     thumbnailUrl: logoUrl,
     author,
+    about,
     mainEntityOfPage,
   };
 
@@ -84,7 +86,19 @@ LinkedData.propTypes = {
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
+  about: arrayOf(
+    shape({
+      '@type': string.isRequired,
+      alternateName: string.isRequired,
+      name: string.isRequired,
+      sameAs: arrayOf(string.isRequired),
+    }),
+  ),
   canonicalLink: string.isRequired,
+};
+
+LinkedData.defaultProps = {
+  about: undefined,
 };
 
 export default LinkedData;
