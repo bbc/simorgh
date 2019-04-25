@@ -6,6 +6,8 @@ import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
+import deepGet from '../../helpers/json/deepGet';
+import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
 
@@ -92,6 +94,7 @@ const MetadataContainer = ({ metadata, promo }) => {
                   seoHeadline={promo.headlines.seoHeadline}
                   service={metadata.createdBy}
                   type={metadata.type}
+                  about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
                   canonicalLink={canonicalLink}
                 />
                 <Metadata
