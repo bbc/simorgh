@@ -1,11 +1,11 @@
-import { igbo as svg } from '@bbc/psammead-assets/svgs';
+import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const igbo = {
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
-  svg,
+  brandSVG,
 };
 
 export default igbo;

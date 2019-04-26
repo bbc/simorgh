@@ -4,7 +4,9 @@ import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => (
   <ServiceContextConsumer>
-    {({ brandName, svg }) => <Brand brandName={brandName} svg={svg} />}
+    {({ brandName, brandSVG }) => (
+      <Brand brandName={brandName} svg={brandSVG} />
+    )}
   </ServiceContextConsumer>
 );
 

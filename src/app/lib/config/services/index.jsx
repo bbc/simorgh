@@ -18,7 +18,7 @@ export default {
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
     themeColor: '#000',
-    svg: {
+    brandSVG: {
       group: (
         <g fillRule="evenodd">
           <path d="M84.32" />

@@ -1,11 +1,11 @@
-import { yoruba as svg } from '@bbc/psammead-assets/svgs';
+import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const yoruba = {
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
-  svg,
+  brandSVG,
 };
 
 export default yoruba;

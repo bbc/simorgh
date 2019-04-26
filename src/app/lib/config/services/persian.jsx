@@ -1,5 +1,5 @@
-import React from 'react';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const persian = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -96,7 +96,7 @@ const persian = {
       },
     },
   },
-  svg: { group: <g />, viewbox: { height: 24, width: 167.95 }, ratio: 6.9979 },
+  brandSVG,
 };
 
 export default persian;
