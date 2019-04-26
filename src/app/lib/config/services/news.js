@@ -1,4 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as svg } from '@bbc/psammead-assets/svgs';
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -99,6 +100,7 @@ const news = {
       },
     },
   },
+  svg,
 };
 
 export default news;
