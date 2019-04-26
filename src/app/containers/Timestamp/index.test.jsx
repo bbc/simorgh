@@ -143,7 +143,7 @@ describe('Timestamp', () => {
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
   });
 
-  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished beforeToday but not same day as firstPublished', () => {
+  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished before today, but not same day as firstPublished', () => {
     const threeDaysAgo = timestampGenerator({
       days: 3,
     });
