@@ -66,7 +66,7 @@ module.exports = (shell = {}) => {
     performance: !START_DEV_SERVER
       ? {
           maxAssetSize: 245760, // 240kb - individual bundles
-          maxEntrypointSize: 491520, // 480kb - total bundles
+          maxEntrypointSize: 494592, // 483kb - total bundles
           hints: 'error',
         }
       : undefined,
