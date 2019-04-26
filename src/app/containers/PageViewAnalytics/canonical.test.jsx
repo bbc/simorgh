@@ -3,8 +3,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 // import sendBeacon from './sendBeacon';
 
 const ContextWrap = props => (
@@ -33,17 +33,17 @@ describe('Canonical Consent Banner Container', () => {
   });
 
   it('should render privacy banner when both banners are set to be shown', () => {
-    jest.mock('./getPageViewBeaconUrl', () => jest.fn());
+    jest.mock('./atiPageViewUrl', () => jest.fn());
     jest.mock('../../../lib/analyticsUtils/sendBeacon', () => jest.fn());
 
     const sendBeacon = require('../../../lib/analyticsUtils/sendBeacon');
-    const getPageViewBeaconUrl = require('./getPageViewBeaconUrl');
+    const atiPageViewUrl = require('./atiUrl');
 
-    getPageViewBeaconUrl.mockImplementation(
+    atiPageViewUrl.mockImplementation(
       ({ articleData }) => `beaconFor${articleData.promo.id}`,
     );
 
-    const CanonicalPageViewAnalytics = require('./index').default;
+    const CanonicalPageViewAnalytics = require('./canonical').default;
 
     const articleData = {
       promo: {
@@ -61,7 +61,7 @@ describe('Canonical Consent Banner Container', () => {
     });
 
     expect(container.innerHTML).toBe('');
-    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "1111111"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
+    expect(atiPageViewUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "1111111"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
 
     expect(sendBeacon).toHaveBeenCalledWith('beaconFor1111111');
 
@@ -69,6 +69,6 @@ describe('Canonical Consent Banner Container', () => {
       articleData.promo.id = '2222222';
     });
 
-    expect(getPageViewBeaconUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "2222222"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
+    expect(atiPageViewUrl).toHaveBeenCalledWith({"articleData": {"promo": {"id": "2222222"}}, "env": "live", "isUK": true, "platform": "canonical", "service": "news"});
   });
 });

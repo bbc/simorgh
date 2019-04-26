@@ -3,11 +3,13 @@ import deepGet from '../../helpers/json/deepGet';
 export const getOptimoUrn = articleData =>
   deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
 
-export const getPageIdentifier = (service, articleData) => {
+export const getOptimoId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);
+  return optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
+};
 
-  const optimoId = optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
-
+export const getPageIdentifier = (service, articleData) => {
+  const optimoId = getOptimoId(articleData);
   return `health::${service || 'news'}.articles.${optimoId}.page`;
 };
 
@@ -24,11 +26,11 @@ const getISODate = unixTimestamp => {
   return date.toISOString();
 };
 
-export const getPublishedTime = (attribute, articleData) => {
-  const publishedTime = deepGet(['metadata', attribute], articleData);
+export const getPublishedDatetime = (attribute, articleData) => {
+  const publishedDatetime = deepGet(['metadata', attribute], articleData);
 
-  return publishedTime && isValidDateTime(publishedTime)
-    ? getISODate(publishedTime)
+  return publishedDatetime && isValidDateTime(publishedDatetime)
+    ? getISODate(publishedDatetime)
     : null;
 };
 

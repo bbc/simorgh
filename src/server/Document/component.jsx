@@ -62,6 +62,11 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
               custom-element="amp-consent"
               src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
             />
+            <script
+              async
+              custom-element="amp-analytics"
+              src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+            />
           </Fragment>
         )}
       </head>

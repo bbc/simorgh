@@ -1,10 +1,17 @@
 import React from 'react';
 import { RequestContextConsumer } from '../../contexts/RequestContext';
-import Canonical from './Canonical';
+import CanonicalPageViewAnalytics from './canonical';
+import AmpPageViewAnalytics from './amp';
 
 const PageViewAnalytics = props => (
   <RequestContextConsumer>
-    {({ platform }) => (platform === 'amp' ? null : <Canonical {...props} />)}
+    {({ platform }) =>
+      platform === 'amp' ? (
+        <AmpPageViewAnalytics {...props} />
+      ) : (
+        <CanonicalPageViewAnalytics {...props} />
+      )
+    }
   </RequestContextConsumer>
 );
 

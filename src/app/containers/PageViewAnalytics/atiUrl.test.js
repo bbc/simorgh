@@ -1,12 +1,12 @@
-import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import * as articleLabelHelpers from '../../../lib/analyticsUtils/article';
+import * as genericLabelHelpers from '../../lib/analyticsUtils';
+import * as articleLabelHelpers from '../../lib/analyticsUtils/article';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };
 
-const getAtiUrl = obj => require('./getPageViewBeaconUrl').default(obj); // eslint-disable-line global-require
+const atiPageViewUrl = obj => require('./atiUrl').default(obj); // eslint-disable-line global-require
 
 const splitUrl = url =>
   url
@@ -17,7 +17,7 @@ const splitUrl = url =>
     .split(',');
 
 const functions = [
-  { name: 'getDestination', source: genericLabelHelpers },
+  { name: 'getDestinationCode', source: genericLabelHelpers },
   { name: 'getScreenInfo', source: genericLabelHelpers },
   { name: 'getBrowserViewPort', source: genericLabelHelpers },
   { name: 'getCurrentTime', source: genericLabelHelpers },
@@ -28,7 +28,7 @@ const functions = [
   { name: 'getOptimoUrn', source: articleLabelHelpers },
   { name: 'getLanguage', source: articleLabelHelpers },
   { name: 'getPromoHeadline', source: articleLabelHelpers },
-  { name: 'getPublishedTime', source: articleLabelHelpers },
+  { name: 'getPublishedDatetime', source: articleLabelHelpers },
   { name: 'getThingAttributes', source: articleLabelHelpers },
 ];
 
@@ -42,7 +42,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, func.name);
     });
 
-    const url = getAtiUrl({
+    const url = atiPageViewUrl({
       articleData: 'articleData',
       service: 'service',
       platform: 'platform',
@@ -56,7 +56,7 @@ describe('getThingAttributes', () => {
 
     const expectedValues = [
       'https://a1.api.bbc.co.uk/hit.xiti',
-      's=getDestination',
+      's=getDestinationCode',
       's2=64',
       'p=getPageIdentifier',
       'r=getScreenInfo',
@@ -71,8 +71,8 @@ describe('getThingAttributes', () => {
       'x5=[href]',
       'x6=[referer]',
       'x9=[getPromoHeadline]',
-      'x11=[getPublishedTime]',
-      'x12=[getPublishedTime]',
+      'x11=[getPublishedDatetime]',
+      'x12=[getPublishedDatetime]',
       'x13=[getThingAttributes]',
       'x14=[getThingAttributes]',
       'x18=[getLocServeCookie]',
@@ -88,7 +88,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const url = getAtiUrl({});
+    const url = atiPageViewUrl({});
 
     const urlArray = splitUrl(url);
 

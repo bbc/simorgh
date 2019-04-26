@@ -3,7 +3,7 @@ const {
   getOptimoUrn,
   getLanguage,
   getPromoHeadline,
-  getPublishedTime,
+  getPublishedDatetime,
   getThingAttributes,
 } = require('./article');
 
@@ -11,7 +11,7 @@ describe('getPageIdentifier', () => {
   const goodData = {
     metadata: {
       locators: {
-        optimoUrn: 'prefix:desiredValue',
+        optimoUrn: 'prefix1:prefix2:prefix3:desiredValue',
       },
     },
   };
@@ -19,7 +19,7 @@ describe('getPageIdentifier', () => {
   const badData = {
     metadata: {
       locators: {
-        unknownUrn: 'prefix:missedValue',
+        unknownUrn: 'prefix1:prefix2:prefix3:missedValue',
       },
     },
   };
@@ -133,7 +133,7 @@ describe('getPromoHeadline', () => {
   });
 });
 
-describe('getPublishedTime', () => {
+describe('getPublishedDatetime', () => {
   const data = {
     metadata: {
       firstPublished: 946688461000,
@@ -142,19 +142,19 @@ describe('getPublishedTime', () => {
   };
 
   it('should find value in good data', () => {
-    const publishedTime = getPublishedTime('firstPublished', data);
+    const publishedTime = getPublishedDatetime('firstPublished', data);
 
     expect(publishedTime).toEqual('2000-01-01T01:01:01.000Z');
   });
 
   it('should return null if type not found', () => {
-    const publishedTime = getPublishedTime('foobar', data);
+    const publishedTime = getPublishedDatetime('foobar', data);
 
     expect(publishedTime).toEqual(null);
   });
 
   it('should return null if timestamp is invalid', () => {
-    const publishedTime = getPublishedTime('invalidDate', data);
+    const publishedTime = getPublishedDatetime('invalidDate', data);
 
     expect(publishedTime).toEqual(null);
   });

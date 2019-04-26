@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Page View Analytics Container should render amp page view analytics correctly 1`] = `null`;
-
-exports[`Page View Analytics Container should render canonical page view analytics correctly 1`] = `
-<div>
-  Canonical page view analytics
-</div>
+exports[`Page View Analytics Container should render amp page view analytics correctly 1`] = `
+<amp-analytics>
+  <script
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://a1.api.bbc.co.uk/hit.xiti?\\",\\"pageview\\":\\"s=598286&s2=64&p=health::default.articles.unknown.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x7=[article]&x2=[amp]&x3=[default]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}",
+      }
+    }
+    type="application/json"
+  />
+</amp-analytics>
 `;
+
+exports[`Page View Analytics Container should render canonical page view analytics correctly 1`] = `null`;
