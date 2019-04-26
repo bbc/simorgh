@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { objectOf, any } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
@@ -14,8 +14,8 @@ const renderText = textBlocks => (
   <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />
 );
 
-const renderCaption = (block, imageCaptionOffscreenText) => (
-  <Caption>
+const renderCaption = (block, imageCaptionOffscreenText, script) => (
+  <Caption script={script}>
     {imageCaptionOffscreenText ? (
       <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
     ) : null}
@@ -23,24 +23,24 @@ const renderCaption = (block, imageCaptionOffscreenText) => (
   </Caption>
 );
 
-const renderMultipleCaptions = (blocks, imageCaptionOffscreenText) =>
+const renderMultipleCaptions = (blocks, imageCaptionOffscreenText, script) =>
   blocks.map(block =>
     renderCaption(
       deepGet(['model', 'blocks'], block),
       imageCaptionOffscreenText,
+      script,
     ),
   );
 
-const CaptionContainer = ({ block }) => (
-  <ServiceContext.Consumer>
-    {({ imageCaptionOffscreenText }) =>
-      renderMultipleCaptions(
-        deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
-        imageCaptionOffscreenText,
-      )
-    }
-  </ServiceContext.Consumer>
-);
+const CaptionContainer = ({ block }) => {
+  const { script, imageCaptionOffscreenText } = useContext(ServiceContext);
+
+  return renderMultipleCaptions(
+    deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
+    imageCaptionOffscreenText,
+    script,
+  );
+};
 
 CaptionContainer.propTypes = {
   block: objectOf(any).isRequired,
