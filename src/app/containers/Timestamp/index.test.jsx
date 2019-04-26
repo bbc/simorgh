@@ -30,14 +30,14 @@ describe('Timestamp', () => {
     const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
         Date.now = jest.fn(() => dateTime);
-        const twentyThreeHoursAgo = timestampGenerator({
+        const moreThanTenHoursAgo = timestampGenerator({
           hours: 10,
           seconds: 25,
         });
         const renderedWrapper = renderedTimestamps(
           <Timestamp
-            firstPublished={twentyThreeHoursAgo}
-            lastPublished={twentyThreeHoursAgo}
+            firstPublished={moreThanTenHoursAgo}
+            lastPublished={moreThanTenHoursAgo}
           />,
         );
         expect(renderedWrapper.length).toEqual(1);
