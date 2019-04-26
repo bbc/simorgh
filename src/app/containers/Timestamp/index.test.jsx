@@ -95,7 +95,7 @@ describe('Timestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
   });
 
-  it('should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished', () => {
+  it('should render one timestamp with date when firstPublished before today and lastUpdated === firstPublished', () => {
     const twentyFourHoursAgo = timestampGenerator({
       hours: 24,
       seconds: 1,
