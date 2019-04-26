@@ -1,3 +1,4 @@
+import React from 'react';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 
 const persian = {
@@ -95,6 +96,7 @@ const persian = {
       },
     },
   },
+  svg: { group: <g />, viewbox: { height: 24, width: 167.95 }, ratio: 6.9979 },
 };
 
 export default persian;
