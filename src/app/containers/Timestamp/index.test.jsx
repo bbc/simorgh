@@ -95,7 +95,7 @@ describe('Timestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
   });
 
-  it('should render one timestamp with date when firstPublished before today and and lastUpdated === firstPublished', () => {
+  it('should render one timestamp with date when firstPublished before today and lastUpdated === firstPublished', () => {
     const twentyFourHoursAgo = timestampGenerator({
       hours: 24,
       seconds: 1,
@@ -143,7 +143,7 @@ describe('Timestamp', () => {
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
   });
 
-  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished beforeToday but not same day as firstPublished', () => {
+  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished before today, but not same day as firstPublished', () => {
     const threeDaysAgo = timestampGenerator({
       days: 3,
     });
@@ -171,6 +171,6 @@ describe('Timestamp', () => {
     );
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toMatch(regexUpdatedDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 });
