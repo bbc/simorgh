@@ -1,4 +1,4 @@
-import loggerMock from '../helpers/tests/loggerMock';
+import loggerMock from '../../helpers/tests/loggerMock';
 import preprocess from './preprocessor';
 
 const fixtureData = { foo: 'bar' };

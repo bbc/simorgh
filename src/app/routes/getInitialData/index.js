@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 import nodeLogger from '../../helpers/logger.node';
 import getBaseUrl from './getBaseUrl';
-import preprocess from '../../dataValidator/preprocessor';
+import preprocess from '../../lib/utilities/preprocessor';
 
 const logger = nodeLogger(__filename);
 
