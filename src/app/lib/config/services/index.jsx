@@ -2,7 +2,6 @@
   This file includes data for the Service Context
   It will be used by the ServiceContext Component
 */
-import React from 'react';
 import news from './news';
 import persian from './persian';
 import igbo from './igbo';
@@ -18,15 +17,6 @@ export default {
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
     themeColor: '#000',
-    brandSVG: {
-      group: (
-        <g fillRule="evenodd">
-          <path d="M84.32" />
-        </g>
-      ),
-      viewbox: { height: 24, width: 167.95 },
-      ratio: 6.9979,
-    },
   },
   news,
   persian,
