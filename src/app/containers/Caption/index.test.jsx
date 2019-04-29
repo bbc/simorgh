@@ -1,15 +1,18 @@
 import React from 'react';
 import { render } from 'enzyme';
-import Caption from '.';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import CaptionContainer from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { blockContainingText } from '../../models/blocks';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
+  script: latin,
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
+  script: arabic,
 };
 
 const captionBlock = blockContainingText('caption', 'Some caption text...');
@@ -76,7 +79,7 @@ const captionBlock3Paragraphs = {
 
 const CaptionWithContext = (block, contextStub) => (
   <ServiceContext.Provider value={contextStub}>
-    <Caption block={block} />
+    <CaptionContainer block={block} />
   </ServiceContext.Provider>
 );
 
@@ -92,7 +95,10 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext',
-  CaptionWithContext(captionBlock, { imageCaptionOffscreenText: undefined }),
+  CaptionWithContext(captionBlock, {
+    imageCaptionOffscreenText: undefined,
+    script: latin,
+  }),
 );
 
 shouldMatchSnapshot(

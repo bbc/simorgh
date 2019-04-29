@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { objectOf, any } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
@@ -17,8 +17,8 @@ const renderParagraphs = paragraphBlock => (
   </Paragraph>
 );
 
-const renderCaption = (paragraphBlocks, imageCaptionOffscreenText) => (
-  <Caption>
+const renderCaption = (paragraphBlocks, imageCaptionOffscreenText, script) => (
+  <Caption script={script}>
     {imageCaptionOffscreenText ? (
       <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
     ) : null}
@@ -29,18 +29,13 @@ const renderCaption = (paragraphBlocks, imageCaptionOffscreenText) => (
 );
 
 const CaptionContainer = ({ block }) => {
+  const { script, imageCaptionOffscreenText } = useContext(ServiceContext);
   const paragraphBlocks = deepGet(
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
   );
 
-  return (
-    <ServiceContext.Consumer>
-      {({ imageCaptionOffscreenText }) =>
-        renderCaption(paragraphBlocks, imageCaptionOffscreenText)
-      }
-    </ServiceContext.Consumer>
-  );
+  return renderCaption(paragraphBlocks, imageCaptionOffscreenText, script);
 };
 
 CaptionContainer.propTypes = {
