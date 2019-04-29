@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, number, objectOf, any } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
-import { RequestContextConsumer } from '../../contexts/RequestContext';
+import { RequestContext } from '../../contexts/RequestContext';
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -20,30 +20,29 @@ const FigureContainer = ({
   src,
   height,
   width,
-}) => (
-  <Figure>
-    <ImagePlaceholder ratio={ratio}>
-      <RequestContextConsumer>
-        {({ platform }) =>
-          platform === 'amp' ? (
-            <AmpImg
-              alt={alt}
-              attribution={copyright || ''}
-              layout="responsive"
-              src={src}
-              height={height}
-              width={width}
-            />
-          ) : (
-            <Image alt={alt} src={src} width={width} />
-          )
-        }
-      </RequestContextConsumer>
-      {renderCopyright(copyright)}
-    </ImagePlaceholder>
-    {renderCaption(captionBlock)}
-  </Figure>
-);
+}) => {
+  const { platform } = useContext(RequestContext);
+  return (
+    <Figure>
+      <ImagePlaceholder ratio={ratio}>
+        {platform === 'amp' ? (
+          <AmpImg
+            alt={alt}
+            attribution={copyright || ''}
+            layout="responsive"
+            src={src}
+            height={height}
+            width={width}
+          />
+        ) : (
+          <Image alt={alt} src={src} width={width} />
+        )}
+        {renderCopyright(copyright)}
+      </ImagePlaceholder>
+      {renderCaption(captionBlock)}
+    </Figure>
+  );
+};
 
 FigureContainer.propTypes = {
   alt: string.isRequired,
