@@ -11,6 +11,10 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const VideoContainer = ({ blocks }) => {
   const captionBlock = filterForBlockType(blocks, 'caption');
+  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  if (!aresMediaBlock) {
+    return null;
+  }
 
   return (
     <Figure>

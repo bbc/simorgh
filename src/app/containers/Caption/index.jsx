@@ -8,11 +8,18 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
+import arabic from '../../lib/config/services/persian';
+import news from '../../lib/config/services/news';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
-const chooseOffscreenText = (mediaType, videoCaption, imageCaption) => {
-  let offscreenText = 'Caption, ';
+const chooseOffscreenText = (
+  mediaType,
+  videoCaption,
+  imageCaption,
+  defaultText,
+) => {
+  let offscreenText = defaultText;
   if (mediaType === 'video') {
     offscreenText = videoCaption;
   }
@@ -50,6 +57,9 @@ const CaptionContainer = ({ block, type }) => {
     type,
     videoCaptionOffscreenText,
     imageCaptionOffscreenText,
+    script === 'arabic'
+      ? arabic.defaultCaptionOffscreenText
+      : news.defaultCaptionOffscreenText,
   );
   const paragraphBlocks = deepGet(
     ['model', 'blocks', 0, 'model', 'blocks'],

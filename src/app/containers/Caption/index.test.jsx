@@ -151,7 +151,7 @@ describe('with offscreen text', () => {
         <CaptionContainer block={captionBlock} type="image" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان ویدئو');
+    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
   });
 
   it('should render figcaption with multiple paragraphs', () => {

@@ -253,41 +253,6 @@ exports[`Video with data and a caption should render the video without a caption
 </Context.Provider>
 `;
 
-exports[`Video with data but no image should only render the video 1`] = `
-<ForwardRef>
-  <Video
-    duration={299}
-    imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
-    kind="clip"
-    rawImageSrc="raw image source"
-    versionID="p064nsz3"
-    videoLocator="urn:bbc:pips:pid:p064nsyw"
-  />
-</ForwardRef>
-`;
+exports[`Video with no aresMedia should only render the video 1`] = `null`;
 
-exports[`Video with data should render the important props in divs 1`] = `
-<ForwardRef>
-  <Video
-    duration={299}
-    imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
-    kind="clip"
-    rawImageSrc="raw image source"
-    versionID="p064nsz3"
-    videoLocator="urn:bbc:pips:pid:p064nsyw"
-  />
-</ForwardRef>
-`;
-
-exports[`Video with no data should not render anything 1`] = `
-<ForwardRef>
-  <Video
-    duration={299}
-    imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
-    kind="clip"
-    rawImageSrc="raw image source"
-    versionID="p064nsz3"
-    videoLocator="urn:bbc:pips:pid:p064nsyw"
-  />
-</ForwardRef>
-`;
+exports[`Video with no data should not render anything 1`] = `null`;
