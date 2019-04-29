@@ -2,72 +2,87 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import { singleTextBlock } from '../../models/blocks';
+import { singleTextBlock, blockArrayModel } from '../../models/blocks';
 
-const videoBlock = [
-  {
-    model: {
-      blocks: [
-        {
-          model: {
-            copyrightHolder: '@twitterhandle',
-            height: 549,
-            locator: 'e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg',
-            originCode: 'cpsdevpb',
-            width: 976,
+const aresMediaBlock = {
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01k6msm',
+        model: {
+          advertising: true,
+          caption: null,
+          embedding: true,
+          format: 'audio_video',
+          id: 'p01k6msm',
+          image: null,
+          imageCopyright: 'BBC',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+          subType: 'clip',
+          syndication: {
+            destinations: [],
           },
-          type: 'rawImage',
-        },
-        {
-          model: {
-            blocks: [
-              singleTextBlock(
-                'The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich',
-              ),
-            ],
+          synopses: {
+            short:
+              'They may be tiny, but us humans could learn a thing or two from ants.',
           },
-          type: 'caption',
+          title: 'Five things ants can teach us about management',
+          versions: [
+            {
+              availableTerritories: {
+                nonUk: true,
+                uk: true,
+              },
+              availableUntil: null,
+              duration: 191,
+              types: ['Original'],
+              versionId: 'p01k6msp',
+              warnings: {
+                long: 'Contains strong language and adult humour.',
+                short: 'Contains strong language and adult humour.',
+              },
+            },
+          ],
         },
-        {
-          model: {
-            blocks: [singleTextBlock('group of residents')],
-          },
-          type: 'altText',
+        type: 'aresMediaMetadata',
+      },
+      {
+        model: {
+          blocks: [
+            {
+              model: {
+                copyrightHolder: 'BBC',
+                height: 1080,
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+                originCode: null,
+                width: 1920,
+              },
+              type: 'rawImage',
+            },
+            {
+              model: {
+                blocks: [singleTextBlock('Ants')],
+              },
+              type: 'altText',
+            },
+          ],
         },
-      ],
-    },
-    type: 'image',
+        type: 'image',
+      },
+    ],
   },
-  {
-    type: 'rawVideo',
-    model: {
-      guidance: null,
-      isLive: false,
-      duration: 'PT2H34M25S',
-      allowOffsiteEmbedding: false,
-      locator: 'urn:bbc:pips:pid:p064nsyw',
-    },
-  },
-  {
-    type: 'altText',
-    model: {
-      blocks: [
-        singleTextBlock(
-          'This video shows Marks and Spencer CEO talking about the announcement earlier this morning',
-        ),
-      ],
-    },
-  },
-];
+  type: 'aresMedia',
+};
+
 const captionBlock = {
-  type: 'caption',
   model: {
     blocks: [
       singleTextBlock(
-        'Former embroider Pauline Clayton described the gift as "lovely"',
+        'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
       ),
     ],
   },
+  type: 'caption',
 };
 
 const generateFixtureData = ({ platform, blocks }) => (
@@ -86,15 +101,10 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoWithoutCaption = generateFixtureData({ blocks: videoBlock });
-export const VideoWithCaption = generateFixtureData({
-  blocks: [videoBlock, captionBlock],
-});
-export const VideoAmpWithoutCaption = generateFixtureData({
-  platform: 'amp',
-  blocks: videoBlock,
-});
-export const VideoAmpWithCaption = generateFixtureData({
-  platform: 'amp',
-  blocks: [videoBlock, captionBlock],
-});
+export const VideoWithCaption = generateFixtureData(
+  blockArrayModel([aresMediaBlock, captionBlock]),
+);
+
+export const VideoWithoutCaption = generateFixtureData(
+  blockArrayModel([aresMediaBlock]),
+);

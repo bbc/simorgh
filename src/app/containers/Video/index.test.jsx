@@ -1,21 +1,12 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import {
   blockArrayModel,
   rawVideoModel,
   rawVideoBlock,
-  imageBlock,
 } from '../../models/blocks';
 import VideoContainer from './index';
-import {
-  VideoWithCaption,
-  VideoWithoutCaption,
-  VideoAmpWithCaption,
-  VideoAmpWithoutCaption,
-} from './fixtureData';
+import { VideoWithCaption, VideoWithoutCaption } from './fixtureData';
 
 describe('Video', () => {
   const rVB = rawVideoBlock(
@@ -72,14 +63,6 @@ describe('Video', () => {
     );
   });
 
-  describe('with data but no raw image', () => {
-    const rIB = null;
-    const img = imageBlock(rIB);
-    const data = blockArrayModel([rVB, img]);
-
-    isNull('should be null', <VideoContainer {...data} />);
-  });
-
   describe('with data and a caption', () => {
     shouldShallowMatchSnapshot(
       'should render the video and caption',
@@ -89,16 +72,6 @@ describe('Video', () => {
     shouldShallowMatchSnapshot(
       'should render the video without a caption',
       VideoWithoutCaption,
-    );
-
-    shouldShallowMatchSnapshot(
-      'should render the amp video with a caption',
-      VideoAmpWithCaption,
-    );
-
-    shouldShallowMatchSnapshot(
-      'should render the amp video without a caption',
-      VideoAmpWithoutCaption,
     );
   });
 });

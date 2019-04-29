@@ -1,302 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video with data and a caption should render the amp video with a caption 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "isUK": true,
-      "origin": "http://localhost",
-      "platform": "amp",
-    }
-  }
->
-  <VideoContainer
-    blocks={
-      Array [
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "copyrightHolder": "@twitterhandle",
-                    "height": 549,
-                    "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                    "originCode": "cpsdevpb",
-                    "width": 976,
-                  },
-                  "type": "rawImage",
-                },
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "blocks": Array [
-                                  Object {
-                                    "model": Object {
-                                      "attributes": Array [],
-                                      "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                                    },
-                                    "type": "fragment",
-                                  },
-                                ],
-                                "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                              },
-                              "type": "paragraph",
-                            },
-                          ],
-                        },
-                        "type": "text",
-                      },
-                    ],
-                  },
-                  "type": "caption",
-                },
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "blocks": Array [
-                                  Object {
-                                    "model": Object {
-                                      "attributes": Array [],
-                                      "text": "group of residents",
-                                    },
-                                    "type": "fragment",
-                                  },
-                                ],
-                                "text": "group of residents",
-                              },
-                              "type": "paragraph",
-                            },
-                          ],
-                        },
-                        "type": "text",
-                      },
-                    ],
-                  },
-                  "type": "altText",
-                },
-              ],
-            },
-            "type": "image",
-          },
-          Object {
-            "model": Object {
-              "allowOffsiteEmbedding": false,
-              "duration": "PT2H34M25S",
-              "guidance": null,
-              "isLive": false,
-              "locator": "urn:bbc:pips:pid:p064nsyw",
-            },
-            "type": "rawVideo",
-          },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "attributes": Array [],
-                                "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                              },
-                              "type": "fragment",
-                            },
-                          ],
-                          "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                        },
-                        "type": "paragraph",
-                      },
-                    ],
-                  },
-                  "type": "text",
-                },
-              ],
-            },
-            "type": "altText",
-          },
-        ],
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
-                            },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ],
-          },
-          "type": "caption",
-        },
-      ]
-    }
-  />
-</Context.Provider>
-`;
-
-exports[`Video with data and a caption should render the amp video without a caption 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "isUK": true,
-      "origin": "http://localhost",
-      "platform": "amp",
-    }
-  }
->
-  <VideoContainer
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "copyrightHolder": "@twitterhandle",
-                  "height": 549,
-                  "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 976,
-                },
-                "type": "rawImage",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                                  },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                            },
-                            "type": "paragraph",
-                          },
-                        ],
-                      },
-                      "type": "text",
-                    },
-                  ],
-                },
-                "type": "caption",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "group of residents",
-                                  },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "group of residents",
-                            },
-                            "type": "paragraph",
-                          },
-                        ],
-                      },
-                      "type": "text",
-                    },
-                  ],
-                },
-                "type": "altText",
-              },
-            ],
-          },
-          "type": "image",
-        },
-        Object {
-          "model": Object {
-            "allowOffsiteEmbedding": false,
-            "duration": "PT2H34M25S",
-            "guidance": null,
-            "isLive": false,
-            "locator": "urn:bbc:pips:pid:p064nsyw",
-          },
-          "type": "rawVideo",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                            },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ],
-          },
-          "type": "altText",
-        },
-      ]
-    }
-  />
-</Context.Provider>
-`;
-
 exports[`Video with data and a caption should render the video and caption 1`] = `
 <Context.Provider
   value={
@@ -310,122 +13,99 @@ exports[`Video with data and a caption should render the video and caption 1`] =
   <VideoContainer
     blocks={
       Array [
-        Array [
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "copyrightHolder": "@twitterhandle",
-                    "height": 549,
-                    "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                    "originCode": "cpsdevpb",
-                    "width": 976,
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "blockId": "urn:bbc:ares::clip:p01k6msm",
+                "model": Object {
+                  "advertising": true,
+                  "caption": null,
+                  "embedding": true,
+                  "format": "audio_video",
+                  "id": "p01k6msm",
+                  "image": null,
+                  "imageCopyright": "BBC",
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                  "subType": "clip",
+                  "syndication": Object {
+                    "destinations": Array [],
                   },
-                  "type": "rawImage",
+                  "synopses": Object {
+                    "short": "They may be tiny, but us humans could learn a thing or two from ants.",
+                  },
+                  "title": "Five things ants can teach us about management",
+                  "versions": Array [
+                    Object {
+                      "availableTerritories": Object {
+                        "nonUk": true,
+                        "uk": true,
+                      },
+                      "availableUntil": null,
+                      "duration": 191,
+                      "types": Array [
+                        "Original",
+                      ],
+                      "versionId": "p01k6msp",
+                      "warnings": Object {
+                        "long": "Contains strong language and adult humour.",
+                        "short": "Contains strong language and adult humour.",
+                      },
+                    },
+                  ],
                 },
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "blocks": Array [
-                                  Object {
-                                    "model": Object {
-                                      "attributes": Array [],
-                                      "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                                    },
-                                    "type": "fragment",
+                "type": "aresMediaMetadata",
+              },
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "copyrightHolder": "BBC",
+                        "height": 1080,
+                        "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "originCode": null,
+                        "width": 1920,
+                      },
+                      "type": "rawImage",
+                    },
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "blocks": Array [
+                                Object {
+                                  "model": Object {
+                                    "blocks": Array [
+                                      Object {
+                                        "model": Object {
+                                          "attributes": Array [],
+                                          "text": "Ants",
+                                        },
+                                        "type": "fragment",
+                                      },
+                                    ],
+                                    "text": "Ants",
                                   },
-                                ],
-                                "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
-                              },
-                              "type": "paragraph",
+                                  "type": "paragraph",
+                                },
+                              ],
                             },
-                          ],
-                        },
-                        "type": "text",
+                            "type": "text",
+                          },
+                        ],
                       },
-                    ],
-                  },
-                  "type": "caption",
+                      "type": "altText",
+                    },
+                  ],
                 },
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "blocks": Array [
-                                  Object {
-                                    "model": Object {
-                                      "attributes": Array [],
-                                      "text": "group of residents",
-                                    },
-                                    "type": "fragment",
-                                  },
-                                ],
-                                "text": "group of residents",
-                              },
-                              "type": "paragraph",
-                            },
-                          ],
-                        },
-                        "type": "text",
-                      },
-                    ],
-                  },
-                  "type": "altText",
-                },
-              ],
-            },
-            "type": "image",
+                "type": "image",
+              },
+            ],
           },
-          Object {
-            "model": Object {
-              "allowOffsiteEmbedding": false,
-              "duration": "PT2H34M25S",
-              "guidance": null,
-              "isLive": false,
-              "locator": "urn:bbc:pips:pid:p064nsyw",
-            },
-            "type": "rawVideo",
-          },
-          Object {
-            "model": Object {
-              "blocks": Array [
-                Object {
-                  "model": Object {
-                    "blocks": Array [
-                      Object {
-                        "model": Object {
-                          "blocks": Array [
-                            Object {
-                              "model": Object {
-                                "attributes": Array [],
-                                "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                              },
-                              "type": "fragment",
-                            },
-                          ],
-                          "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                        },
-                        "type": "paragraph",
-                      },
-                    ],
-                  },
-                  "type": "text",
-                },
-              ],
-            },
-            "type": "altText",
-          },
-        ],
+          "type": "aresMedia",
+        },
         Object {
           "model": Object {
             "blocks": Array [
@@ -438,12 +118,12 @@ exports[`Video with data and a caption should render the video and caption 1`] =
                           Object {
                             "model": Object {
                               "attributes": Array [],
-                              "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
+                              "text": "p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)",
                             },
                             "type": "fragment",
                           },
                         ],
-                        "text": "Former embroider Pauline Clayton described the gift as \\"lovely\\"",
+                        "text": "p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)",
                       },
                       "type": "paragraph",
                     },
@@ -478,18 +158,58 @@ exports[`Video with data and a caption should render the video without a caption
           "model": Object {
             "blocks": Array [
               Object {
+                "blockId": "urn:bbc:ares::clip:p01k6msm",
                 "model": Object {
-                  "copyrightHolder": "@twitterhandle",
-                  "height": 549,
-                  "locator": "e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 976,
+                  "advertising": true,
+                  "caption": null,
+                  "embedding": true,
+                  "format": "audio_video",
+                  "id": "p01k6msm",
+                  "image": null,
+                  "imageCopyright": "BBC",
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                  "subType": "clip",
+                  "syndication": Object {
+                    "destinations": Array [],
+                  },
+                  "synopses": Object {
+                    "short": "They may be tiny, but us humans could learn a thing or two from ants.",
+                  },
+                  "title": "Five things ants can teach us about management",
+                  "versions": Array [
+                    Object {
+                      "availableTerritories": Object {
+                        "nonUk": true,
+                        "uk": true,
+                      },
+                      "availableUntil": null,
+                      "duration": 191,
+                      "types": Array [
+                        "Original",
+                      ],
+                      "versionId": "p01k6msp",
+                      "warnings": Object {
+                        "long": "Contains strong language and adult humour.",
+                        "short": "Contains strong language and adult humour.",
+                      },
+                    },
+                  ],
                 },
-                "type": "rawImage",
+                "type": "aresMediaMetadata",
               },
               Object {
                 "model": Object {
                   "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "copyrightHolder": "BBC",
+                        "height": 1080,
+                        "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "originCode": null,
+                        "width": 1920,
+                      },
+                      "type": "rawImage",
+                    },
                     Object {
                       "model": Object {
                         "blocks": Array [
@@ -498,95 +218,34 @@ exports[`Video with data and a caption should render the video without a caption
                               "blocks": Array [
                                 Object {
                                   "model": Object {
-                                    "attributes": Array [],
-                                    "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
+                                    "blocks": Array [
+                                      Object {
+                                        "model": Object {
+                                          "attributes": Array [],
+                                          "text": "Ants",
+                                        },
+                                        "type": "fragment",
+                                      },
+                                    ],
+                                    "text": "Ants",
                                   },
-                                  "type": "fragment",
+                                  "type": "paragraph",
                                 },
                               ],
-                              "text": "The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich",
                             },
-                            "type": "paragraph",
+                            "type": "text",
                           },
                         ],
                       },
-                      "type": "text",
+                      "type": "altText",
                     },
                   ],
                 },
-                "type": "caption",
-              },
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "blocks": Array [
-                                Object {
-                                  "model": Object {
-                                    "attributes": Array [],
-                                    "text": "group of residents",
-                                  },
-                                  "type": "fragment",
-                                },
-                              ],
-                              "text": "group of residents",
-                            },
-                            "type": "paragraph",
-                          },
-                        ],
-                      },
-                      "type": "text",
-                    },
-                  ],
-                },
-                "type": "altText",
+                "type": "image",
               },
             ],
           },
-          "type": "image",
-        },
-        Object {
-          "model": Object {
-            "allowOffsiteEmbedding": false,
-            "duration": "PT2H34M25S",
-            "guidance": null,
-            "isLive": false,
-            "locator": "urn:bbc:pips:pid:p064nsyw",
-          },
-          "type": "rawVideo",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "blocks": Array [
-                    Object {
-                      "model": Object {
-                        "blocks": Array [
-                          Object {
-                            "model": Object {
-                              "attributes": Array [],
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                            },
-                            "type": "fragment",
-                          },
-                        ],
-                        "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                },
-                "type": "text",
-              },
-            ],
-          },
-          "type": "altText",
+          "type": "aresMedia",
         },
       ]
     }
@@ -594,19 +253,41 @@ exports[`Video with data and a caption should render the video without a caption
 </Context.Provider>
 `;
 
-exports[`Video with data but no image should only render the video 1`] = `null`;
-
-exports[`Video with data should render the important props in divs 1`] = `
+exports[`Video with data but no image should only render the video 1`] = `
 <ForwardRef>
   <Video
-    duration="299"
+    duration={299}
     imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
     kind="clip"
-    rawImageSrc="https://ichef.bbci.co.uk/news/640/cpsprodpb/5BD5/production/_101690532_2.jpg"
+    rawImageSrc="raw image source"
     versionID="p064nsz3"
     videoLocator="urn:bbc:pips:pid:p064nsyw"
   />
 </ForwardRef>
 `;
 
-exports[`Video with no data should not render anything 1`] = `null`;
+exports[`Video with data should render the important props in divs 1`] = `
+<ForwardRef>
+  <Video
+    duration={299}
+    imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
+    kind="clip"
+    rawImageSrc="raw image source"
+    versionID="p064nsz3"
+    videoLocator="urn:bbc:pips:pid:p064nsyw"
+  />
+</ForwardRef>
+`;
+
+exports[`Video with no data should not render anything 1`] = `
+<ForwardRef>
+  <Video
+    duration={299}
+    imageLocator="/cpsprodpb/5BD5/production/_101690532_2.jpg"
+    kind="clip"
+    rawImageSrc="raw image source"
+    versionID="p064nsz3"
+    videoLocator="urn:bbc:pips:pid:p064nsyw"
+  />
+</ForwardRef>
+`;
