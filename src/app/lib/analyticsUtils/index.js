@@ -13,8 +13,7 @@ export const getDestination = (isUK, env) => {
   console.log('env', env);
   const destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
 
-  // const key = env === 'live' || !env ? destination : `${destination}_TEST`;
-  const key = `${destination}_TEST`;
+  const key = env === 'live' || !env ? destination : `${destination}_TEST`;
   return destinationIDs[key] || destinationIDs.NEWS_PS;
 };
 
