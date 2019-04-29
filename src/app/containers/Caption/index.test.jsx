@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'enzyme';
-import Caption from '.';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import CaptionContainer from '.';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { blockContainingText } from '../../models/blocks';
@@ -12,13 +13,14 @@ const newsServiceContextStub = {
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان تصویر',
+  script: arabic,
 };
 
 const block = blockContainingText('caption', 'Some caption text...');
 
 const CaptionWithContext = (contextStub, type) => (
   <ServiceContext.Provider value={contextStub}>
-    <Caption block={block} type={type} />
+    <CaptionContainer block={block} type={type} />
   </ServiceContext.Provider>
 );
 
@@ -34,14 +36,14 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext',
-  CaptionWithContext({ imageCaptionOffscreenText: undefined }),
+  CaptionWithContext({ imageCaptionOffscreenText: undefined, script: latin }),
 );
 
 describe('with offscreen text', () => {
   it('should render the default offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
-        <Caption block={block} />
+        <CaptionContainer block={block} />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').html()).toBe('Caption, ');
@@ -50,7 +52,7 @@ describe('with offscreen text', () => {
   it('should render the video offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
-        <Caption block={block} type="video" />
+        <CaptionContainer block={block} type="video" />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').html()).toBe('Video caption, ');
@@ -59,7 +61,7 @@ describe('with offscreen text', () => {
   it('should render the image offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
-        <Caption block={block} type="image" />
+        <CaptionContainer block={block} type="image" />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').html()).toBe('Image caption, ');
@@ -68,7 +70,7 @@ describe('with offscreen text', () => {
   it('should render the persian image offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={persianServiceContextStub}>
-        <Caption block={block} type="image" />
+        <CaptionContainer block={block} type="image" />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
@@ -77,7 +79,7 @@ describe('with offscreen text', () => {
   it('should render the persian video offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={persianServiceContextStub}>
-        <Caption block={block} type="image" />
+        <CaptionContainer block={block} type="image" />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');

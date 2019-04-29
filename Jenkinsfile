@@ -5,6 +5,7 @@ def nodeImageVersion = "0.0.5"
 def nodeImage = "${dockerRegistry}/bbc-news/node-8-lts:${nodeImageVersion}"
 def nodeName
 def stageName = ""
+def packageName = 'simorgh.zip'
 def getCommitInfo = {
   infraGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${GIT_COMMIT}").trim()
   appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
@@ -63,22 +64,86 @@ pipeline {
         }
       }
     }
-    stage ('Run application tests') {
+    stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
-      agent {
-        docker {
-          image "${nodeImage}"
-          label nodeName
-          args '-u root -v /etc/pki:/certs'
+      parallel {
+        stage('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make developmentTests'
+          }
+        }
+
+        stage('Test Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            // Testing
+            sh 'make installProd'
+            sh 'make productionTests'
+          }
+        }    
+      }
+      post {
+        always {
+          script {
+            stageName = env.STAGE_NAME
+          }
         }
       }
-      steps {
-        sh 'make install'
-        sh 'make developmentTests'
-        sh 'make installProd'
-        sh 'make productionTests'
+    }
+    stage ('Build, Test & Package') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      parallel {
+        stage('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make developmentTests'
+          }
+        }
+
+        stage('Test Production and Zip Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              label nodeName
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            // Testing
+            sh 'make installProd'
+            sh 'make productionTests'
+            // Moving files necessary for production to `pack` directory.
+            sh "./scripts/jenkinsProductionFiles.sh"
+            sh "rm -f ${packageName}"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+            stash name: 'simorgh', includes: packageName
+          }
+        }    
       }
       post {
         always {
@@ -92,8 +157,13 @@ pipeline {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
+      options {
+        // Do not perform the SCM step
+        skipDefaultCheckout true
+      }
       agent any
       steps {
+        unstash 'simorgh'
         build(
           job: 'simorgh-infrastructure/latest',
           parameters: [
