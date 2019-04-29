@@ -15,10 +15,9 @@ const constructRenderObject = data => ({
 
 // checks for assetData and 200 status
 const shouldRender = data => {
-  let hasDataAnd200Status = false;
   const { status, assetData } = constructRenderObject(data);
 
-  if (assetData && status === 200) hasDataAnd200Status = true;
+  const hasDataAnd200Status = assetData && status === 200;
 
   return { hasDataAnd200Status, status, assetData };
 };
