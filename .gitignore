@@ -6,3 +6,5 @@ coverage
 reports/*
 !reports/.keep
 log
+cypress/screenshots
+pack

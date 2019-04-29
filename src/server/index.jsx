@@ -1,7 +1,6 @@
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
-import fs from 'fs';
 import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
@@ -10,6 +9,7 @@ import loadInitialData from '../app/routes/loadInitialData';
 import routes, {
   articleRegexPath,
   articleDataRegexPath,
+  frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes';
@@ -60,42 +60,55 @@ server
  * Local env routes - fixture data
  */
 
-server
-  .use(
-    expressStaticGzip(publicDirectory, {
-      enableBrotli: true,
-      orderPreference: ['br'],
-    }),
-  )
-  .get(articleDataRegexPath, async ({ params }, res) => {
-    const { service, id } = params;
-
-    const dataFilePath = path.join(
-      dataFolderToRender,
-      service,
-      'articles',
-      `${id}.json`,
-    );
-
-    fs.readFile(dataFilePath, (error, data) => {
-      if (error) {
-        res.sendStatus(404);
-        logger.error(`error reading article json, ${error}`);
-        return null;
+if (process.env.APP_ENV === 'local') {
+  const sendDataFile = (res, dataFilePath, next) => {
+    res.sendFile(dataFilePath, {}, sendErr => {
+      if (sendErr) {
+        logger.error(sendErr);
+        next(sendErr);
       }
-
-      const articleJSON = JSON.parse(data);
-
-      res.setHeader('Content-Type', 'application/json');
-      res.json(articleJSON);
-      return null;
     });
-  })
-  .get('/ckns_policy/*', (req, res) => {
-    // Route to allow the cookie banner to make the cookie oven request
-    // without throwing an error due to not being on a bbc domain.
-    res.sendStatus(200);
-  });
+  };
+
+  server
+    .use(
+      expressStaticGzip(publicDirectory, {
+        enableBrotli: true,
+        orderPreference: ['br'],
+      }),
+    )
+    .get(articleDataRegexPath, async ({ params }, res, next) => {
+      const { service, id } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'articles',
+        `${id}.json`,
+      );
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+      const { service } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        dataFolderToRender,
+        service,
+        'frontpage',
+        'index.json',
+      );
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get('/ckns_policy/*', (req, res) => {
+      // Route to allow the cookie banner to make the cookie oven request
+      // without throwing an error due to not being on a bbc domain.
+      res.sendStatus(200);
+    });
+}
 
 /*
  * Application env routes

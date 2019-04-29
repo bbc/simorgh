@@ -1,5 +1,8 @@
-const timestampGenerator = timeDifference => {
+import moment from 'moment-timezone';
+
+export const timestampGenerator = timeDifference => {
   const magnitudes = {
+    days: 24 * 60 * 60 * 1000,
     hours: 60 * 60 * 1000,
     minutes: 60 * 1000,
     seconds: 1000,
@@ -15,4 +18,5 @@ const timestampGenerator = timeDifference => {
   return timestamp;
 };
 
-export default timestampGenerator;
+export const isBritishSummerTime = timestamp =>
+  moment.tz(timestamp, 'Europe/London').isDST();

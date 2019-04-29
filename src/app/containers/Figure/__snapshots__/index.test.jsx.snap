@@ -84,8 +84,6 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -93,19 +91,13 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c3 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c3 {
     padding: 0.5rem 0;
   }
@@ -177,8 +169,6 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 }
 
 .c2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -186,19 +176,35 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 0.875rem;
-  }
+.c4 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-@media (min-width:25em) and (max-width:62.9375em) {
+.c4:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c4:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c4:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c2 {
     padding: 0.5rem 0;
   }
@@ -227,7 +233,14 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
     >
       Image caption, 
     </span>
-    This is a caption
+    This is a caption 
+    <a
+      className="c4"
+      href="https://www.bbc.com"
+    >
+      containing an inline link
+    </a>
+    .
   </figcaption>
 </figure>
 `;
@@ -383,8 +396,6 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 .c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -392,19 +403,13 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c4 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c4 {
     padding: 0.5rem 0;
   }
@@ -480,8 +485,6 @@ exports[`Figure should render an image with caption text 1`] = `
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -489,19 +492,13 @@ exports[`Figure should render an image with caption text 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c3 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c3 {
     padding: 0.5rem 0;
   }
@@ -571,8 +568,6 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -580,19 +575,35 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c3 {
-    font-size: 0.875rem;
-  }
+.c5 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-@media (min-width:25em) and (max-width:62.9375em) {
+.c5:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c5:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c5:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c3 {
     padding: 0.5rem 0;
   }
@@ -620,7 +631,14 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
     >
       Image caption, 
     </span>
-    This is a caption
+    This is a caption 
+    <a
+      className="c5"
+      href="https://www.bbc.com"
+    >
+      containing an inline link
+    </a>
+    .
   </figcaption>
 </figure>
 `;
@@ -719,8 +737,6 @@ exports[`Figure should render can AMP image with aption text 1`] = `
 }
 
 .c2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -728,19 +744,13 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c2 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c2 {
     padding: 0.5rem 0;
   }

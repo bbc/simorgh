@@ -1,20 +1,43 @@
 import React from 'react';
 import { number } from 'prop-types';
+import moment from 'moment-timezone';
 import Timestamp from '../../components/Timestamp';
 import relativeTime from './relativeTimestamp';
 import {
-  longNumeric,
-  shortAlphaNumeric,
+  formatDateNumeric,
+  formatDate,
+  formatDateAndTime,
   isValidDateTime,
   formatUnixTimestamp,
   isTenHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
-const humanReadable = ({ timestamp, shouldMakeRelative }) =>
+const isSameDay = (dayToCompare, timestamp) => {
+  const day = moment(dayToCompare);
+  return day.isSame(timestamp, 'day');
+};
+
+const isToday = timestamp => isSameDay(Date.now(), timestamp);
+
+const formatType = timestamps => {
+  if (isToday(timestamps[0])) {
+    if (timestamps.length > 1 && !isSameDay(timestamps[1], timestamps[0])) {
+      return formatDate;
+    }
+    return formatDateAndTime;
+  }
+  return formatDate;
+};
+
+const humanReadable = ({
+  timestamp,
+  comparisonTimestamps,
+  shouldMakeRelative,
+}) =>
   shouldMakeRelative
     ? relativeTime(timestamp)
-    : formatUnixTimestamp(timestamp, shortAlphaNumeric);
+    : formatUnixTimestamp(timestamp, formatType(comparisonTimestamps));
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
@@ -26,22 +49,28 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
 
   const firstPublishedString = humanReadable({
     timestamp: firstPublished,
+    comparisonTimestamps: [firstPublished],
     shouldMakeRelative:
       lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished),
   });
 
   const lastPublishedString = `Updated ${humanReadable({
     timestamp: lastPublished,
+    comparisonTimestamps: [lastPublished, firstPublished],
     shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
   })}`;
 
   return (
     <GridItemConstrainedMedium>
-      <Timestamp datetime={formatUnixTimestamp(firstPublished, longNumeric)}>
+      <Timestamp
+        datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
+      >
         {firstPublishedString}
       </Timestamp>
       {lastPublished !== firstPublished ? (
-        <Timestamp datetime={formatUnixTimestamp(lastPublished, longNumeric)}>
+        <Timestamp
+          datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
+        >
           {lastPublishedString}
         </Timestamp>
       ) : null}
