@@ -32,9 +32,13 @@ const PageWrapper = ({ bbcOrigin, children, data }) => {
 };
 
 PageWrapper.propTypes = {
-  bbcOrigin: string.isRequired,
+  bbcOrigin: string,
   children: node.isRequired,
   data: shape.isRequired,
+};
+
+PageWrapper.defaultProps = {
+  bbcOrigin: null,
 };
 
 PageWrapper.defaultProps = {};
