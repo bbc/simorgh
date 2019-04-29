@@ -1,7 +1,7 @@
 import loggerMock from '../../../helpers/tests/loggerMock'; // Must be imported before getInitialData
-import preprocess from '../../../dataValidator/preprocessor';
+import preprocess from '../../../lib/utilities/preprocessor';
 
-jest.mock('../../../dataValidator/preprocessor', () => jest.fn());
+jest.mock('../../../lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./fetchData').default;
