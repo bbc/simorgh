@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BrandContainer should render correctly 1`] = `
-.c6 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
 .c0 {
   background-color: #B80000;
   height: 5rem;
@@ -21,31 +10,6 @@ exports[`BrandContainer should render correctly 1`] = `
 .c1 {
   max-width: 80rem;
   margin: 0 auto;
-}
-
-.c3 {
-  padding-top: 0.5rem;
-  display: inline-block;
-}
-
-.c4 {
-  display: block;
-  padding-bottom: 1.5rem;
-}
-
-.c2:hover .c4,
-.c2:focus .c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c5 {
-  display: block;
-  height: 1.5rem;
-  width: 10.50rem;
-  margin-top: 1.25rem;
-  fill: #fff;
 }
 
 @media (max-width:25rem) {
@@ -66,47 +30,11 @@ exports[`BrandContainer should render correctly 1`] = `
   }
 }
 
-@media screen and (-ms-high-contrast:active),print {
-  .c5 {
-    fill: windowText;
-  }
-}
-
 <div
   className="c0"
 >
   <div
     className="c1"
-  >
-    <a
-      className="c2 c3"
-      href="https://www.bbc.co.uk/news"
-    >
-      <span
-        className="c4"
-      >
-        <svg
-          aria-hidden="true"
-          className="c5"
-          focusable="false"
-          viewBox="0 0 167.95 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fillRule="evenodd"
-          >
-            <path
-              d="M84.32"
-            />
-          </g>
-        </svg>
-        <span
-          className="c6"
-        >
-          Default Brand Name
-        </span>
-      </span>
-    </a>
-  </div>
+  />
 </div>
 `;
