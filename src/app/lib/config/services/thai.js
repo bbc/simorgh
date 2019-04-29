@@ -1,4 +1,5 @@
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
+import { thai as thaiScript } from '@bbc/gel-foundations/scripts';
 
 const thai = {
   brandName: 'BBC News บีบีซีไทย',
@@ -6,6 +7,7 @@ const thai = {
   service: 'thai',
   serviceName: 'Thai',
   brandSVG,
+  script: thaiScript,
 };
 
 export default thai;

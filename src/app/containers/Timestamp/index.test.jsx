@@ -1,188 +1,176 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { isNull, shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { isNull } from '../../helpers/tests/testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './helpers/testHelpers';
 import Timestamp from '.';
 
-const defaultTimestamp = 1539969006000; // 19 October 2018
-const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
-const invalidTimestamp = 8640000000000001; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
-
-const fifthJan = 1546707084472; // 2019-01-05T16:51:24.472Z
-
-const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
+const regexDate = /^[0-9]{1,2} \w+ [0-9]{4}$/;
 const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
+
+const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
+const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
+const firstChild = wrapper => wrapper[0].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].data;
+
 describe('Timestamp', () => {
-  describe('with no data', () => {
-    isNull('should return null', <Timestamp />);
-  });
-  shouldMatchSnapshot(
-    'should render without a leading zero on the day',
-    <Timestamp
-      firstPublished={noLeadingZeroTimestamp}
-      lastPublished={noLeadingZeroTimestamp}
-    />,
-  );
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Timestamp
-      lastPublished={defaultTimestamp}
-      firstPublished={defaultTimestamp}
-    />,
-  );
-  shouldMatchSnapshot(
-    'should handle an invalid timestamp',
-    <Timestamp
-      firstPublished={invalidTimestamp}
-      lastPublished={invalidTimestamp}
-    />,
-  );
-
-  it('should render one date when published before today and never updated', () => {
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={fifthJan} lastPublished={fifthJan} />,
-    );
-    expect(renderedWrapper[0].children[0].data).toEqual('5 January 2019');
-    expect(renderedWrapper.length).toEqual(1);
+  let originalDate;
+  const inBritishSummerTime = isBritishSummerTime(Date.now());
+  beforeEach(() => {
+    originalDate = Date.now;
   });
 
-  it('should render one relative timestamp when published < 10 hours ago and never updated', () => {
-    const sixHoursAgo = timestampGenerator({ hours: 6 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp firstPublished={sixHoursAgo} lastPublished={sixHoursAgo} />,
-    );
-
-    expect(renderedWrapper.length).toEqual(1);
-    expect(renderedWrapper[0].children[0].data).toEqual('6 hours ago');
+  afterEach(() => {
+    Date.now = originalDate;
   });
 
-  it('should render relative time for lastPublished if < 10 hrs ago, but absolute time for firstPublished', () => {
-    const firstPublishedEightHoursAgo = timestampGenerator({ hours: 8 });
-    const lastPublishedFourHoursAgo = timestampGenerator({ hours: 4 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp
-        firstPublished={firstPublishedEightHoursAgo}
-        lastPublished={lastPublishedFourHoursAgo}
-      />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toEqual('Updated 4 hours ago');
-  });
-
-  it('should render two dates (without time) when published and updated before today', () => {
-    const firstPublishedMoreThanADayAgo = timestampGenerator({
-      days: 1,
-      hours: 3,
-    });
-    const lastPublishedADayAgo = timestampGenerator({ days: 1 });
-    const renderedWrapper = renderedTimestamps(
-      <Timestamp
-        firstPublished={firstPublishedMoreThanADayAgo}
-        lastPublished={lastPublishedADayAgo}
-      />,
-    );
-
-    expect(renderedWrapper.length).toEqual(2);
-    expect(renderedWrapper[0].children[0].data).toMatch(regexDate);
-    expect(renderedWrapper[1].children[0].data).toMatch(
-      /Updated [0-9]{1,2} \w+ [0-9]{4}/,
-    );
-  });
-
-  describe('time dependent tests', () => {
-    describe('tests after 10 am', () => {
-      const inBritishSummerTime = isBritishSummerTime(Date.now());
-      const timeZoneString = inBritishSummerTime ? 'BST' : 'GMT';
-
-      beforeEach(() => {
-        // sets time to 2017-05-31T13:00:00.000Z BST
-        // or 2017-01-01T13:00:00.000Z GMT
-        // needs to be after 10am at least so the > 10 hour logic can be tested
-        const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
-        Date.now = jest.fn(() => timestamp);
-      });
-
-      it('should render one absolute timestamp (with datetime) when published > 10 hours ago && today', () => {
-        const twentyThreeHoursAgo = timestampGenerator({
+  describe('daylight savings time', () => {
+    const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
+      it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
+        Date.now = jest.fn(() => dateTime);
+        const moreThanTenHoursAgo = timestampGenerator({
           hours: 10,
           seconds: 25,
         });
         const renderedWrapper = renderedTimestamps(
           <Timestamp
-            firstPublished={twentyThreeHoursAgo}
-            lastPublished={twentyThreeHoursAgo}
+            firstPublished={moreThanTenHoursAgo}
+            lastPublished={moreThanTenHoursAgo}
           />,
         );
-
         expect(renderedWrapper.length).toEqual(1);
-        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+        expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+        expect(firstChild(renderedWrapper)).toContain(descriptor);
       });
+    };
 
-      it('should render absolute time (with datetime) for lastPublished and for firstPublished if published today > 10 hrs ago', () => {
-        const firstPublishedTwelveHoursAgo = timestampGenerator({
-          hours: 12,
-        });
-        const lastPublishedElevenHoursAgo = timestampGenerator({
-          hours: 11,
-        });
-        const renderedWrapper = renderedTimestamps(
-          <Timestamp
-            firstPublished={firstPublishedTwelveHoursAgo}
-            lastPublished={lastPublishedElevenHoursAgo}
-          />,
-        );
+    const testValues = [
+      {
+        descriptor: 'BST',
+        dateTime: 1496235600000,
+        longName: 'British Summer Time',
+      },
+      {
+        descriptor: 'GMT',
+        dateTime: 1483275600000,
+        longName: 'Greenwich Mean Time',
+      },
+    ];
 
-        expect(renderedWrapper.length).toEqual(2);
-        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-        expect(renderedWrapper[1].children[0].data).toMatch(
-          /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/,
-        );
-        expect(renderedWrapper[1].children[0].data).toContain(timeZoneString);
-      });
+    for (let i = 0; i < testValues.length; i += 1) {
+      daylightSavingsBehaviour(testValues[i]);
+    }
+  });
+  describe('with no data', () => {
+    isNull('should return null', <Timestamp />);
+  });
+
+  it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {
+    const threeHoursAgo = timestampGenerator({ hours: 3 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={threeHoursAgo}
+        lastPublished={threeHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toEqual('3 hours ago');
+  });
+
+  it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished', () => {
+    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+    Date.now = jest.fn(() => timestamp);
+    const elevenHoursAgo = timestampGenerator({
+      hours: 11,
     });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={elevenHoursAgo}
+        lastPublished={elevenHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+  });
 
-    describe('daylight savings time', () => {
-      const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
-        it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
-          Date.now = jest.fn(() => dateTime);
-          const twentyThreeHoursAgo = timestampGenerator({
-            hours: 10,
-            seconds: 25,
-          });
-          const renderedWrapper = renderedTimestamps(
-            <Timestamp
-              firstPublished={twentyThreeHoursAgo}
-              lastPublished={twentyThreeHoursAgo}
-            />,
-          );
-
-          expect(renderedWrapper.length).toEqual(1);
-          expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
-          expect(renderedWrapper[0].children[0].data).toContain(descriptor);
-        });
-      };
-
-      const testValues = [
-        {
-          descriptor: 'BST',
-          dateTime: 1496235600000,
-          longName: 'British Summer Time',
-        },
-        {
-          descriptor: 'GMT',
-          dateTime: 1483275600000,
-          longName: 'Greenwich Mean Time',
-        },
-      ];
-
-      for (let i = 0; i < testValues.length; i += 1) {
-        daylightSavingsBehaviour(testValues[i]);
-      }
+  it('should render one timestamp with date when firstPublished before today and lastUpdated === firstPublished', () => {
+    const twentyFourHoursAgo = timestampGenerator({
+      hours: 24,
+      seconds: 1,
     });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={twentyFourHoursAgo}
+        lastPublished={twentyFourHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
+    const fiveHoursAgo = timestampGenerator({
+      hours: 5,
+    });
+    const threeHoursAgo = timestampGenerator({ hours: 3 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp firstPublished={fiveHoursAgo} lastPublished={threeHoursAgo} />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch('3 hours ago');
+  });
+
+  it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
+    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+    Date.now = jest.fn(() => timestamp);
+    const twelveHoursAgo = timestampGenerator({
+      hours: 12,
+    });
+    const elevenHoursAgo = timestampGenerator({
+      hours: 11,
+    });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={twelveHoursAgo}
+        lastPublished={elevenHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
+  });
+
+  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished before today, but not same day as firstPublished', () => {
+    const threeDaysAgo = timestampGenerator({
+      days: 3,
+    });
+    const twoDaysAgo = timestampGenerator({ days: 2 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp firstPublished={threeDaysAgo} lastPublished={twoDaysAgo} />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
+  });
+
+  it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished today and > 10 hrs ago', () => {
+    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
+    Date.now = jest.fn(() => timestamp);
+    const threeDaysAgo = timestampGenerator({
+      days: 3,
+    });
+    const elevenHoursAgo = timestampGenerator({ hours: 11 });
+    const renderedWrapper = renderedTimestamps(
+      <Timestamp
+        firstPublished={threeDaysAgo}
+        lastPublished={elevenHoursAgo}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 });
