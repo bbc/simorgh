@@ -9,7 +9,7 @@ const logger = nodeLogger(__filename);
 
 // checks for data and status keys, setting default status if not found
 const constructRenderObject = data => ({
-  status: deepGet(['status'], data) ? data.status : 500,
+  status: deepGet(['status'], data) || 500,
   assetData: deepGet(['data'], data),
 });
 
