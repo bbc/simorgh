@@ -1,22 +1,9 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  shouldMatchSnapshot,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
-import { articleDataNews, articleDataPersian } from './fixtureData';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
-
-const newsProps = {
-  data: articleDataNews,
-  loading: false,
-  error: null,
-  isAmp: false,
-  service: 'news',
-  status: 200,
-};
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
