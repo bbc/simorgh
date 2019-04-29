@@ -1,7 +1,7 @@
 import React from 'react';
 import { number } from 'prop-types';
 import moment from 'moment-timezone';
-import Timestamp from '../../components/Timestamp';
+import Timestamp from '@bbc/psammead-timestamp';
 import relativeTime from './relativeTimestamp';
 import {
   formatDateNumeric,
