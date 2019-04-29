@@ -11,8 +11,8 @@ import InlineLink from '../InlineLink';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
-const renderParagraphs = paragraphBlock => (
-  <Paragraph>
+const renderParagraph = paragraphBlock => (
+  <Paragraph key={deepGet([0, 'model', 'text'], paragraphBlock)}>
     <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
   </Paragraph>
 );
@@ -22,9 +22,10 @@ const renderCaption = (paragraphBlocks, imageCaptionOffscreenText, script) => (
     {imageCaptionOffscreenText ? (
       <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
     ) : null}
-    {paragraphBlocks.map(block =>
-      renderParagraphs(deepGet(['model', 'blocks'], block)),
-    )}
+    {paragraphBlocks.map(block => {
+      const paragraphBlock = deepGet(['model', 'blocks'], block);
+      return renderParagraph(paragraphBlock);
+    })}
   </Caption>
 );
 
