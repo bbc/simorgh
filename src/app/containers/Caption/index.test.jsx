@@ -9,6 +9,7 @@ import { blockContainingText } from '../../models/blocks';
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
+  script: latin,
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',

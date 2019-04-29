@@ -54,7 +54,7 @@ const renderMultipleCaptions = (blocks, type, script) => {
 
 const CaptionContainer = ({ block, type }) => {
   const { script } = useContext(ServiceContext);
-  renderMultipleCaptions(
+  return renderMultipleCaptions(
     deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
     type,
     script,
