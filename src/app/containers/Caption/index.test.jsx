@@ -13,7 +13,7 @@ const newsServiceContextStub = {
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
-  videoCaptionOffscreenText: ' ، عنوان تصویر',
+  videoCaptionOffscreenText: ' ، عنوان ویدئو',
   script: arabic,
 };
 
@@ -151,7 +151,7 @@ describe('with offscreen text', () => {
         <CaptionContainer block={captionBlock} type="image" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
+    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان ویدئو');
   });
 
   it('should render figcaption with multiple paragraphs', () => {
