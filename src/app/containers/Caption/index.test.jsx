@@ -9,11 +9,13 @@ import { blockContainingText } from '../../models/blocks';
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
+  defaultCaptionOffscreenText: 'Caption, ',
   script: latin,
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  defaultCaptionOffscreenText: ' ، عنوان',
   script: arabic,
 };
 
@@ -93,14 +95,6 @@ shouldMatchSnapshot(
 shouldMatchSnapshot(
   'should render caption text with example Farsi offscreen text',
   CaptionWithContext(captionBlock, persianServiceContextStub),
-);
-
-shouldMatchSnapshot(
-  'should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext',
-  CaptionWithContext(captionBlock, {
-    imageCaptionOffscreenText: undefined,
-    script: latin,
-  }),
 );
 
 shouldMatchSnapshot(

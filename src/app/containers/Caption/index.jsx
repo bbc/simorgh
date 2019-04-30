@@ -19,15 +19,14 @@ const chooseOffscreenText = (
   imageCaption,
   defaultText,
 ) => {
-  let offscreenText = defaultText;
-  if (mediaType === 'video') {
-    offscreenText = videoCaption;
+  switch (mediaType) {
+    case 'video':
+      return videoCaption;
+    case 'image':
+      return imageCaption;
+    default:
+      return defaultText;
   }
-  if (mediaType === 'image') {
-    offscreenText = imageCaption;
-  }
-
-  return offscreenText;
 };
 const renderParagraph = paragraphBlock => (
   <Paragraph key={deepGet([0, 'model', 'text'], paragraphBlock)}>
@@ -52,15 +51,15 @@ const CaptionContainer = ({ block, type }) => {
     script,
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
+    defaultCaptionOffscreenText,
   } = useContext(ServiceContext);
   const offscreenText = chooseOffscreenText(
     type,
     videoCaptionOffscreenText,
     imageCaptionOffscreenText,
-    script === 'arabic'
-      ? arabic.defaultCaptionOffscreenText
-      : news.defaultCaptionOffscreenText,
+    defaultCaptionOffscreenText,
   );
+
   const paragraphBlocks = deepGet(
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
