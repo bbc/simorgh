@@ -12,6 +12,38 @@ def getCommitInfo = {
   appGitCommitAuthor = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git --no-pager show -s --format='%an' ${appGitCommit}").trim()
   appGitCommitMessage = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git log -1 --pretty=%B").trim()
 }
+def buildBranchName() {
+  def branchName = "*/${env.BRANCH_NAME}"
+  if (env.CHANGE_ID) {
+    branchName = "FETCH_HEAD"
+  }
+  return branchName
+}
+def buildRemoteConfig() {
+  def remoteConfig = [
+    credentialsId: 'github',
+    url: 'https://github.com/bbc/simorgh.git'
+  ]
+  if (env.CHANGE_ID) {
+    remoteConfig.put('refspec', "+refs/pull/${env.CHANGE_ID}/head:refs/remotes/origin/PR-${env.CHANGE_ID}")
+  } else {
+    remoteConfig.put('name', "origin/${env.BRANCH_NAME}")
+  }
+  return remoteConfig
+}
+def scmCheckoutConfig() {
+  [
+    $class: 'GitSCM',
+    branches: [[name: "${buildBranchName()}"]],
+    doGenerateSubmoduleConfigurations: false,
+    extensions: [[
+      $class: 'RelativeTargetDirectory',
+      relativeTargetDir: "${env.APP_DIRECTORY}"
+    ]],
+    submoduleCfg: [],
+    userRemoteConfigs: [buildRemoteConfig()]
+  ]
+}
 
 pipeline {
   agent any
@@ -36,21 +68,7 @@ pipeline {
       }
       steps {
         sh "rm -rf ${env.APP_DIRECTORY}"
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: "*/${env.BRANCH_NAME}"]],
-          doGenerateSubmoduleConfigurations: false,
-          extensions: [[
-            $class: 'RelativeTargetDirectory',
-            relativeTargetDir: "${env.APP_DIRECTORY}"
-          ]],
-          submoduleCfg: [],
-          userRemoteConfigs: [[
-            credentialsId: 'github',
-            name: "origin/${env.BRANCH_NAME}",
-            url: 'https://github.com/bbc/simorgh.git'
-          ]]
-        ])
+        checkout(scmCheckoutConfig())
         script {
           getCommitInfo()
           nodeName = "${env.node_name}".toString()
