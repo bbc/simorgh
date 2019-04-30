@@ -8,8 +8,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import arabic from '../../lib/config/services/persian';
-import news from '../../lib/config/services/news';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
