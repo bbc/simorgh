@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number } from 'prop-types';
 import moment from 'moment-timezone';
-import Timestamp from '../../components/Timestamp';
+import Timestamp from '@bbc/psammead-timestamp';
 import relativeTime from './relativeTimestamp';
 import {
   formatDateNumeric,
@@ -12,6 +12,7 @@ import {
   isTenHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const isSameDay = (dayToCompare, timestamp) => {
   const day = moment(dayToCompare);
@@ -60,16 +61,20 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
     shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
   })}`;
 
+  const { script } = useContext(ServiceContext);
+
   return (
     <GridItemConstrainedMedium>
       <Timestamp
         datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
+        script={script}
       >
         {firstPublishedString}
       </Timestamp>
       {lastPublished !== firstPublished ? (
         <Timestamp
           datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
+          script={script}
         >
           {lastPublishedString}
         </Timestamp>
