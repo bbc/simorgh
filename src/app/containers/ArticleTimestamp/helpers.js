@@ -1,4 +1,5 @@
 import { formatDate, formatDateAndTime } from './timeFormats';
+import moment from 'moment-timezone'; // Can you remove this?
 
 export const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();
@@ -11,13 +12,19 @@ export const isFirstRelative = (lastPublished, firstPublished) =>
 export const isLastRelative = lastPublished =>
   isTenHoursAgoOrLess(lastPublished);
 
-export const isToday = timestamp => {
-  const today = new Date(Date.now());
-  const timestampDay = new Date(timestamp);
-  const todayDate = `${today.getDay()}/${today.getMonth()}/${today.getFullYear()}`;
-  const timestampDate = `${timestampDay.getDay()}/${timestampDay.getMonth()}/${timestampDay.getFullYear()}`;
-  return todayDate === timestampDate;
+export const isSameDay = (dayToCompare, timestamp) => {
+  const day = moment(dayToCompare);
+  return day.isSame(timestamp, 'day');
 };
 
-export const formatType = timestamp =>
-  isToday(timestamp) ? formatDateAndTime : formatDate;
+export const isToday = timestamp => isSameDay(Date.now(), timestamp);
+
+export const formatType = timestamps => {
+  if (isToday(timestamps[0])) {
+    if (timestamps.length > 1 && !isSameDay(timestamps[1], timestamps[0])) {
+      return formatDate;
+    }
+    return formatDateAndTime;
+  }
+  return formatDate;
+};

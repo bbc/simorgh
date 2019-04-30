@@ -13,8 +13,6 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 }
 
 .c0 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -22,19 +20,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
   }
@@ -65,8 +57,6 @@ exports[`should render caption text with example News offscreen text 1`] = `
 }
 
 .c0 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -74,19 +64,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
   }
@@ -106,8 +90,6 @@ exports[`should render caption text with example News offscreen text 1`] = `
 
 exports[`should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext 1`] = `
 .c0 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
@@ -115,19 +97,13 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   width: 100%;
 }
 
-@media (min-width:37.5em) {
-  .c0 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:25em) and (max-width:62.9375em) {
+@media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0.5rem 1rem;
   }
 }
 
-@media (min-width:63em) {
+@media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
   }
