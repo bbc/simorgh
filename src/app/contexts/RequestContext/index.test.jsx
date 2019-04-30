@@ -10,7 +10,7 @@ getOriginContext.mockImplementation(origin => ({
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
-const renderWithContext = (node, { platformString, bbcOrigin }) => (
+const renderWithContextProvider = (node, { platformString, bbcOrigin }) => (
   <RequestContextProvider platform={platformString} bbcOrigin={bbcOrigin}>
     {node}
   </RequestContextProvider>
@@ -31,7 +31,7 @@ describe('RequestContext', () => {
   const testRequestContext = (platformString, bbcOrigin) => {
     shouldMatchSnapshot(
       `should have a request object for platform ${platformString} and bbcOrigin ${bbcOrigin}`,
-      renderWithContext(<Component />, {
+      renderWithContextProvider(<Component />, {
         platformString,
         bbcOrigin,
       }),
