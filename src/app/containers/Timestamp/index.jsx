@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number } from 'prop-types';
 import moment from 'moment-timezone';
-import Timestamp from '../../components/Timestamp';
+import Timestamp from '@bbc/psammead-timestamp';
 import relativeTime from './relativeTimestamp';
 import {
   formatDateNumeric,
@@ -12,19 +12,33 @@ import {
   isTenHoursAgoOrLess,
 } from './timestampUtilities';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-const isToday = timestamp => {
-  const today = moment(Date.now());
-  return today.isSame(timestamp, 'day');
+const isSameDay = (dayToCompare, timestamp) => {
+  const day = moment(dayToCompare);
+  return day.isSame(timestamp, 'day');
 };
 
-const formatType = timestamp =>
-  isToday(timestamp) ? formatDateAndTime : formatDate;
+const isToday = timestamp => isSameDay(Date.now(), timestamp);
 
-const humanReadable = ({ timestamp, shouldMakeRelative }) =>
+const formatType = timestamps => {
+  if (isToday(timestamps[0])) {
+    if (timestamps.length > 1 && !isSameDay(timestamps[1], timestamps[0])) {
+      return formatDate;
+    }
+    return formatDateAndTime;
+  }
+  return formatDate;
+};
+
+const humanReadable = ({
+  timestamp,
+  comparisonTimestamps,
+  shouldMakeRelative,
+}) =>
   shouldMakeRelative
     ? relativeTime(timestamp)
-    : formatUnixTimestamp(timestamp, formatType(timestamp));
+    : formatUnixTimestamp(timestamp, formatType(comparisonTimestamps));
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
   if (
@@ -36,25 +50,31 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
 
   const firstPublishedString = humanReadable({
     timestamp: firstPublished,
+    comparisonTimestamps: [firstPublished],
     shouldMakeRelative:
       lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished),
   });
 
   const lastPublishedString = `Updated ${humanReadable({
     timestamp: lastPublished,
+    comparisonTimestamps: [lastPublished, firstPublished],
     shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
   })}`;
+
+  const { script } = useContext(ServiceContext);
 
   return (
     <GridItemConstrainedMedium>
       <Timestamp
         datetime={formatUnixTimestamp(firstPublished, formatDateNumeric)}
+        script={script}
       >
         {firstPublishedString}
       </Timestamp>
       {lastPublished !== firstPublished ? (
         <Timestamp
           datetime={formatUnixTimestamp(lastPublished, formatDateNumeric)}
+          script={script}
         >
           {lastPublishedString}
         </Timestamp>
