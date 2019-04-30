@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { ServiceContextProvider, ServiceContextConsumer } from './index';
+import { ServiceContextProvider, ServiceContext } from './index';
 
 describe('ServiceContext', () => {
   const testBrandNameWithServiceContext = service => {
+    const Component = () => {
+      const { brandName } = useContext(ServiceContext);
+
+      return <span>{brandName}</span>;
+    };
+
     shouldMatchSnapshot(
       `should have a brand name for ${service}`,
       <ServiceContextProvider service={service}>
-        <ServiceContextConsumer>
-          {props => <span>{props.brandName}</span>}
-        </ServiceContextConsumer>
+        <Component />
       </ServiceContextProvider>,
     );
   };
