@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { number, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import ErrorPageComponent from '../../components/ErrorPage';
 
 /*
@@ -29,25 +29,24 @@ const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
   );
 };
 
-const ErrorMain = ({ status }) => (
-  <ServiceContextConsumer>
-    {({ brandName, locale, themeColor, translations }) => {
-      const messaging = translations.error[status] || translations.error[500];
+const ErrorMain = ({ status }) => {
+  const { script, brandName, locale, themeColor, translations } = useContext(
+    ServiceContext,
+  );
+  const messaging = translations.error[status] || translations.error[500];
 
-      return (
-        <Fragment>
-          <ErrorMetadata
-            brandName={brandName}
-            locale={locale}
-            messaging={messaging}
-            themeColor={themeColor}
-          />
-          <ErrorPageComponent {...messaging} />
-        </Fragment>
-      );
-    }}
-  </ServiceContextConsumer>
-);
+  return (
+    <Fragment>
+      <ErrorMetadata
+        brandName={brandName}
+        locale={locale}
+        messaging={messaging}
+        themeColor={themeColor}
+      />
+      <ErrorPageComponent {...messaging} script={script} />
+    </Fragment>
+  );
+};
 
 ErrorMain.propTypes = {
   status: number.isRequired,
