@@ -28,7 +28,7 @@ exports[`Timestamp should add prefix and suffix 1`] = `
 
 <time
   className="c0"
-  dateTime="2018-10-19"
+  dateTime="2018-10-20"
 >
   It was 
   192 days ago

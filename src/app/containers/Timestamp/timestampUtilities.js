@@ -1,6 +1,8 @@
 import moment from 'moment-timezone';
 import relativeTime from './relativeTimestamp';
 
+const defaultFormat = 'D MMMM YYYY, HH:mm z';
+
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 export const isValidDateTime = dateTime => {
   // eslint-disable-next-line no-restricted-globals
@@ -20,8 +22,8 @@ export const showRelativeTime = (timestamp, isRelative, format, timezone) => {
   if (isRelative) {
     return relativeTime(timestamp);
   }
-  if (!isRelative && format) {
+  if (format) {
     return formatUnixTimestamp(timestamp, format, timezone);
   }
-  return formatUnixTimestamp(timestamp, 'D MMMM YYYY, HH:mm z', timezone);
+  return formatUnixTimestamp(timestamp, defaultFormat, timezone);
 };
