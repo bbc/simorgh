@@ -30,7 +30,7 @@ const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
 };
 
 const ErrorMain = ({ status }) => {
-  const { brandName, locale, themeColor, translations } = useContext(
+  const { script, brandName, locale, themeColor, translations } = useContext(
     ServiceContext,
   );
   const messaging = translations.error[status] || translations.error[500];
@@ -43,7 +43,7 @@ const ErrorMain = ({ status }) => {
         messaging={messaging}
         themeColor={themeColor}
       />
-      <ErrorPageComponent {...messaging} />
+      <ErrorPageComponent {...messaging} script={script} />
     </Fragment>
   );
 };
