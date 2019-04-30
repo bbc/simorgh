@@ -19,9 +19,13 @@ export const isSameDay = (dayToCompare, timestamp) => {
 
 export const isToday = timestamp => isSameDay(Date.now(), timestamp);
 
-export const formatType = timestamps => {
-  if (isToday(timestamps[0])) {
-    if (timestamps.length > 1 && !isSameDay(timestamps[1], timestamps[0])) {
+export const formatType = ({ lastPublished = null, firstPublished }) => {
+  if (isToday(lastPublished) || isToday(firstPublished)) {
+    if (
+      lastPublished &&
+      firstPublished &&
+      !isSameDay(lastPublished, firstPublished)
+    ) {
       return formatDate;
     }
     return formatDateAndTime;

@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+import relativeTime from './relativeTimestamp';
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 export const isValidDateTime = dateTime => {
@@ -14,3 +15,13 @@ export const formatUnixTimestamp = (timestamp, momentString, timezone) =>
   moment(timestamp)
     .tz(timezone)
     .format(momentString);
+
+export const showRelativeTime = (timestamp, isRelative, format, timezone) => {
+  if (isRelative) {
+    return relativeTime(timestamp);
+  }
+  if (!isRelative && format) {
+    return formatUnixTimestamp(timestamp, format, timezone);
+  }
+  return formatUnixTimestamp(timestamp, 'D MMMM YYYY, HH:mm z', timezone);
+};

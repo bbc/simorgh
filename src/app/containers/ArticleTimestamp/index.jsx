@@ -16,14 +16,14 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
       <Timestamp
         timestamp={firstPublished}
         dateTimeFormat={formatDateNumeric}
-        format={formatType([firstPublished])}
+        format={formatType({ firstPublished })}
         isRelative={isFirstRelative(firstPublished, lastPublished)}
       />
       {firstPublished !== lastPublished ? (
         <Timestamp
           timestamp={lastPublished}
           dateTimeFormat={formatDateNumeric}
-          format={formatType([lastPublished, firstPublished])}
+          format={formatType({ lastPublished, firstPublished })}
           isRelative={isLastRelative(lastPublished)}
           prefix="Updated"
         />
