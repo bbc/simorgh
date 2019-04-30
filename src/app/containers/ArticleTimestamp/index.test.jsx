@@ -72,6 +72,16 @@ describe('ArticleTimestamp', () => {
     isNull('should return null', <ArticleTimestamp />);
   });
 
+  describe('with invalid data', () => {
+    isNull(
+      'should return null',
+      <ArticleTimestamp
+        firstPublished="8640000000000001"
+        lastPublished={8640000000000001}
+      />,
+    );
+  });
+
   it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {
     const threeHoursAgo = timestampGenerator({ hours: 3 });
     const renderedWrapper = renderedTimestamps(

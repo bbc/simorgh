@@ -2,11 +2,12 @@ import React from 'react';
 import { number } from 'prop-types';
 import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 import Timestamp from '../Timestamp';
+import { isValidDateTime } from '../Timestamp/timestampUtilities';
 import { formatDateNumeric } from './timeFormats';
 import { isFirstRelative, isLastRelative, formatType } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  if (!firstPublished || !lastPublished) {
+  if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
   }
 
