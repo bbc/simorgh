@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-const BrandContainer = () => (
-  <ServiceContextConsumer>
-    {({ brandName, brandSVG }) => (
-      <Brand brandName={brandName} svg={brandSVG} />
-    )}
-  </ServiceContextConsumer>
-);
+const BrandContainer = () => {
+  const { brandName, brandSVG } = useContext(ServiceContext);
+
+  return <Brand brandName={brandName} svg={brandSVG} />;
+};
 
 export default BrandContainer;
