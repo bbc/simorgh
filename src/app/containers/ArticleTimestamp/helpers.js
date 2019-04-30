@@ -1,5 +1,5 @@
-import { formatDate, formatDateAndTime } from './timeFormats';
 import moment from 'moment-timezone'; // Can you remove this?
+import { formatDate, formatDateAndTime } from './timeFormats';
 
 export const isTenHoursAgoOrLess = milliseconds => {
   const now = Date.now();

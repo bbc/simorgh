@@ -24,11 +24,11 @@ describe('ArticleTimestamp', () => {
   beforeEach(() => {
     originalDate = Date.now;
   });
-  
+
   afterEach(() => {
     Date.now = originalDate;
   });
-  
+
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
@@ -43,13 +43,13 @@ describe('ArticleTimestamp', () => {
             lastPublished={moreThanTenHoursAgo}
           />,
         );
-  
+
         expect(renderedWrapper.length).toEqual(1);
         expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
         expect(renderedWrapper[0].children[0].data).toContain(descriptor);
       });
     };
-  
+
     const testValues = [
       {
         descriptor: 'BST',
@@ -62,7 +62,7 @@ describe('ArticleTimestamp', () => {
         longName: 'Greenwich Mean Time',
       },
     ];
-  
+
     for (let i = 0; i < testValues.length; i += 1) {
       daylightSavingsBehaviour(testValues[i]);
     }
@@ -121,7 +121,10 @@ describe('ArticleTimestamp', () => {
     });
     const threeHoursAgo = timestampGenerator({ hours: 3 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp firstPublished={fiveHoursAgo} lastPublished={threeHoursAgo} />,
+      <ArticleTimestamp
+        firstPublished={fiveHoursAgo}
+        lastPublished={threeHoursAgo}
+      />,
     );
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
@@ -154,7 +157,10 @@ describe('ArticleTimestamp', () => {
     });
     const twoDaysAgo = timestampGenerator({ days: 2 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp firstPublished={threeDaysAgo} lastPublished={twoDaysAgo} />,
+      <ArticleTimestamp
+        firstPublished={threeDaysAgo}
+        lastPublished={twoDaysAgo}
+      />,
     );
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);

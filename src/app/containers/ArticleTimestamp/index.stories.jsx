@@ -21,10 +21,7 @@ storiesOf('ArticleTimestamp', module)
     />
   ))
   .add('firstPublished === lastPublished', () => (
-    <ArticleTimestamp
-      firstPublished={Date.now()}
-      lastPublished={Date.now()}
-    />
+    <ArticleTimestamp firstPublished={Date.now()} lastPublished={Date.now()} />
   ))
   .add('firstPublished date & time, lastPublished relative', () => (
     <ArticleTimestamp
