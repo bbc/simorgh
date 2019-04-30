@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number, string, bool } from 'prop-types';
-import Timestamp from '../../components/Timestamp';
+import Timestamp from '@bbc/psammead-timestamp';
 import {
   isValidDateTime,
   formatUnixTimestamp,
   showRelativeTime,
 } from './timestampUtilities';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const TimestampContainer = ({
   timestamp,
@@ -19,9 +20,13 @@ const TimestampContainer = ({
   if (!isValidDateTime(new Date(timestamp))) {
     return null;
   }
+
+  const { script } = useContext(ServiceContext);
+
   return (
     <Timestamp
       datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
+      script={script}
     >
       {prefix ? `${prefix} ` : null}
       {showRelativeTime(timestamp, isRelative, format, timezone)}
