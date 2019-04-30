@@ -5,8 +5,6 @@ import Timestamp from '../Timestamp';
 import { formatDateNumeric } from './timeFormats';
 import { isFirstRelative, isLastRelative, formatType } from './helpers';
 
-// how should I deal with comparisonTimestamp?
-
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   if (!firstPublished || !lastPublished) {
     return null;
