@@ -6,9 +6,9 @@ import React from 'react';
 import Loadable from 'react-loadable';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const createLoadable = serviceImport =>
+const createLoadable = loader =>
   Loadable({
-    loader: serviceImport,
+    loader,
     loading: () => null,
     render(loaded, { children }) {
       return (
