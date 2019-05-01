@@ -116,7 +116,7 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h2 containing correct text',
         <HeadingsContainer {...data} />,
       );
     });
