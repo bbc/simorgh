@@ -104,7 +104,7 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 containing correct text',
         HeadingsContainerWithContext(data),
       );
     });
