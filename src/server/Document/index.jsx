@@ -2,6 +2,7 @@ import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import getMatchedRoutes from '../../app/routes/getMatchedRoutes';
 import { ServerApp } from '../../app/containers/App';
 
 import { getStyleTag } from '../styles';
@@ -24,7 +25,18 @@ const renderDocument = async (url, data, routes, bbcOrigin) => {
   );
 
   const headHelmet = Helmet.renderStatic();
-  const assets = getAssetsArray();
+  let assets = getAssetsArray();
+
+  const { match } = getMatchedRoutes(routes, url);
+  const { service } = match.params;
+
+  assets = assets.filter(
+    asset =>
+      asset.includes('main') ||
+      asset.includes('vendor') ||
+      asset.includes(service),
+  );
+
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent

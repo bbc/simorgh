@@ -3,13 +3,6 @@
   It will be used by the ServiceContext Component
 */
 
-import news from './news';
-import persian from './persian';
-import igbo from './igbo';
-import pidgin from './pidgin';
-import thai from './thai';
-import yoruba from './yoruba';
-
 export default {
   default: {
     brandName: 'Default Brand Name',
@@ -19,10 +12,10 @@ export default {
     service: 'default',
     themeColor: '#000',
   },
-  news,
-  persian,
-  igbo,
-  pidgin,
-  thai,
-  yoruba,
+  news: () => import(/* webpackChunkName: 'news' */ `./news.js`),
+  persian: () => import(/* webpackChunkName: 'persian' */ `./persian.js`),
+  igbo: () => import(/* webpackChunkName: 'igbo' */ `./igbo.js`),
+  pidgin: () => import(/* webpackChunkName: 'pidgin' */ `./thai.js`),
+  thai: () => import(/* webpackChunkName: 'thai' */ `./thai.js`),
+  yoruba: () => import(/* webpackChunkName: 'yoruba' */ `./yoruba.js`),
 };

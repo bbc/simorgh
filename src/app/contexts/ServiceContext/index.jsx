@@ -6,7 +6,7 @@ import services from '../../lib/config/services';
 export const ServiceContext = React.createContext(services.default);
 
 export const ServiceContextProvider = ({ children, service }) => (
-  <ServiceContext.Provider value={services[service]}>
+  <ServiceContext.Provider value={services[service]()}>
     {children}
   </ServiceContext.Provider>
 );

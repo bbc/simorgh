@@ -52,6 +52,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
         : prodPublicPath,
+      chunkFilename: 'static/js/[name].[chunkhash:8].js',
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
