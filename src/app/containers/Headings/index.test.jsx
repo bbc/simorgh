@@ -123,7 +123,7 @@ describe('Headings', () => {
   });
 
   describe('with rich text', () => {
-    describe('should render headline with italic text', () => {
+    describe('headline with italic text', () => {
       const data = {
         blocks: blocksSingleFragment('All is italic', ['italic']),
         type: 'headline',
