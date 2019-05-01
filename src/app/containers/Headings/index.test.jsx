@@ -97,7 +97,7 @@ describe('Headings', () => {
   template('with subheadline data', 'This is a subheadline', 'subheadline');
 
   describe('with plain text', () => {
-    describe('should render headline', () => {
+    describe('headline', () => {
       const data = {
         blocks: blocksSingleFragment('Plain headline', []),
         type: 'headline',
