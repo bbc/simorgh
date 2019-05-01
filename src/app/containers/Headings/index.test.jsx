@@ -172,7 +172,7 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 with <b><i> tags',
         <HeadingsContainer {...data} />,
       );
     });
