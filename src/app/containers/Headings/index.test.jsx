@@ -135,7 +135,7 @@ describe('Headings', () => {
       );
     });
 
-    describe('should render headline with bold text', () => {
+    describe('headline with bold text', () => {
       const data = {
         blocks: blocksSingleFragment('All is bold', ['bold']),
         type: 'headline',
