@@ -6,6 +6,7 @@
 import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
+import { matchRoutes } from 'react-router-config';
 
 import loadInitialData from '../../routes/loadInitialData';
 
@@ -13,12 +14,19 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
+    const { match } = this.getRouteProps(
+      this.props.routes,
+      this.props.location.pathname,
+    );
+
     this.state = {
       data: this.props.initialData,
+      service: match.params.service,
+      isAmp: !!match.params.amp,
       loading: false,
       error: null,
       loadInitialDataPromise: null,
-    };  
+    };
   }
 
   async componentDidUpdate({ location: prevLocation }) {
@@ -28,8 +36,15 @@ export class App extends Component {
         this.props.routes,
       );
 
+      const match = this.getRouteProps(
+        this.props.routes,
+        this.props.location.pathname,
+      );
+
       this.setState({
         data: null,
+        service: match.params.service,
+        isAmp: match.params.amp,
         loading: true,
         error: null,
         loadInitialDataPromise: initialData,
@@ -41,6 +56,8 @@ export class App extends Component {
         const data = await this.state.loadInitialDataPromise;
         this.setState({
           data,
+          service: match.params.service,
+          isAmp: match.params.amp,
           loading: false,
           error: null,
           loadInitialDataPromise: null,
@@ -48,6 +65,8 @@ export class App extends Component {
       } catch (error) {
         this.setState({
           data: null,
+          service: match.params.service,
+          isAmp: match.params.amp,
           loading: false,
           error,
           loadInitialDataPromise: null,
@@ -56,9 +75,21 @@ export class App extends Component {
     }
   }
 
+  getRouteProps(routes, url) {
+    const matchedRoutes = matchRoutes(routes, url);
+
+    if (matchedRoutes.length <= 0) {
+      throw new Error(`No route was found for ${url}.`);
+    }
+
+    return matchedRoutes[0];
+  }
+
   render() {
     return renderRoutes(this.props.routes, {
       data: this.state.data,
+      service: this.state.service,
+      isAmp: this.state.isAmp,
       loading: this.state.loading,
       error: this.state.error,
       bbcOrigin: this.props.bbcOrigin,

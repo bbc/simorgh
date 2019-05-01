@@ -3,8 +3,7 @@ import getBaseUrl from './utils/getBaseUrl';
 import fetchData from './utils/fetchData';
 
 const getArticleInitialData = async ({ match }) => {
-  const { id, service, amp } = match.params;
-  const isAmp = !!amp;
+  const { id, service } = match.params;
 
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
@@ -12,12 +11,10 @@ const getArticleInitialData = async ({ match }) => {
 
   const url = `${baseUrl}/${service}/articles/${id}.json`;
 
-  const { data, status } = await fetchData({ url });
+  const { pageData, status } = await fetchData({ url });
 
   return {
-    isAmp,
-    data,
-    service,
+    pageData,
     status,
   };
 };
