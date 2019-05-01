@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
@@ -26,6 +27,11 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        */
       __dirname: false,
     },
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
   };
 
   if (START_DEV_SERVER) {

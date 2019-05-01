@@ -74,7 +74,6 @@
   "dependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
@@ -122,6 +121,7 @@
     "react-amphtml": "^3.0.1",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
+    "react-loadable": "^5.5.0",
     "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.3.1",
     "speculate": "^1.7.4",
@@ -134,6 +134,7 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/react": "^4.1.12",

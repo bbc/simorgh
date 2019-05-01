@@ -4,13 +4,15 @@ import Helmet from 'react-helmet';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+// import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../helpers/logger.node';
 import ConsentBanner from '../ConsentBanner';
+
+import config from '../../lib/config/services';
 
 const logger = nodeLogger(__filename);
 
@@ -26,6 +28,8 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
 
   if (data) {
     const { isAmp, data: articleData, service, status } = data;
+
+    const ServiceContextProvider = config[service];
 
     return (
       <Fragment>

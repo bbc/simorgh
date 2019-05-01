@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
@@ -52,6 +53,8 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
         : prodPublicPath,
+
+      chunkFilename: 'static/js/[name].[chunkhash:8].js',
     },
     optimization: {
       // specify min/max file sizes for each JS chunk for optimal performance
@@ -125,6 +128,10 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
        */
       new MomentTimezoneDataPlugin({
         matchZones: 'Europe/London',
+      }),
+
+      new ReactLoadablePlugin({
+        filename: resolvePath('build/react-loadable.json'),
       }),
     ],
   };
