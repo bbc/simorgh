@@ -27,7 +27,7 @@ const renderDocument = async (url, data, routes, bbcOrigin) => {
   const headHelmet = Helmet.renderStatic();
   let assets = getAssetsArray();
 
-  const { match } = getMatchedRoutes(routes, url);
+  const { match } = getMatchedRoutes(url, routes);
   const { service } = match.params;
 
   assets = assets.filter(
