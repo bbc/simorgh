@@ -94,3 +94,10 @@ To run these on your forked version follow these steps.
 ### Merging a Pull Request
 
 There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
+
+### Note: Adding files to the root of simorgh
+As part of our deployment & pipeline work, we have created a handy script to copy only the production files to a separate directory. The script `/script/jenkinsProductionFiles.sh` will delete node_modules, create a `pack` directory and copy all relevant configuration files and the necessary directories. Adding files to the `/src` or `/cypress` directory will not be an issue, when the code is deployed.
+
+If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`. 
+
+_This script is temporary and will most likely be refactored later on_

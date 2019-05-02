@@ -1,4 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { arabic } from '@bbc/gel-foundations/scripts';
 
 const persian = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -7,6 +8,8 @@ const persian = {
   defaultImageAltText: 'BBC News فارسی',
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
+  videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  defaultCaptionOffscreenText: ' ، عنوان',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',
   service: 'persian',
@@ -16,6 +19,7 @@ const persian = {
   twitterSite: '@bbcpersian',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  script: arabic,
   translations: {
     error: {
       404: {
