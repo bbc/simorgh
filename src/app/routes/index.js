@@ -1,5 +1,5 @@
 import Article from '../containers/Article';
-import getInitialData from './getInitialData';
+import getArticleInitialData from './getInitialData/article';
 import services from '../lib/config/services';
 
 const serviceRegex = Object.keys(services)
@@ -25,7 +25,7 @@ const routes = [
     path: articleRegexPath,
     exact: true,
     component: Article,
-    getInitialData,
+    getInitialData: getArticleInitialData,
   },
 ];
 

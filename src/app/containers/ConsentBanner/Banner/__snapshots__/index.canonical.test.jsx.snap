@@ -8,7 +8,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 }
 
 .c1 {
-  max-width: 80em;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -89,20 +89,20 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
   color: #FFFFFF;
 }
 
-@media (min-width:25em) {
+@media (min-width:25rem) {
   .c0 {
     padding: 1rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     width: 22%;
     margin-right: 3.5%;
@@ -110,26 +110,26 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c4 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c4 {
     width: 18%;
     float: right;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c3 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c3 {
     margin: 0;
     float: left;
@@ -137,7 +137,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -204,7 +204,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 }
 
 .c1 {
-  max-width: 80em;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -285,20 +285,20 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
   color: #FFFFFF;
 }
 
-@media (min-width:25em) {
+@media (min-width:25rem) {
   .c0 {
     padding: 1rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c2 {
     width: 22%;
     margin-right: 3.5%;
@@ -306,26 +306,26 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c4 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c4 {
     width: 18%;
     float: right;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c3 {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c3 {
     margin: 0;
     float: left;
@@ -333,7 +333,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
   }
 }
 
-@media (min-width:37.5em) {
+@media (min-width:37.5rem) {
   .c5 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
