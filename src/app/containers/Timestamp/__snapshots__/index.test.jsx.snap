@@ -28,11 +28,11 @@ exports[`Timestamp should add prefix and suffix 1`] = `
 
 <time
   className="c0"
-  dateTime="2018-10-20"
+  dateTime="2018-10-19"
 >
-  It was 
-  192 days ago
-   that this was last updated
+  Prefix here  
+  19 October 2018
+    suffix here
 </time>
 `;
 
