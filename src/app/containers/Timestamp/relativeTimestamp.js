@@ -2,7 +2,10 @@ const constructTimestamp = timeDiffMins => {
   let timeDiff;
   let unit;
 
-  if (timeDiffMins >= 60) {
+  if (timeDiffMins >= 1440) {
+    timeDiff = parseInt(timeDiffMins / 1440, 10);
+    unit = timeDiff > 1 ? 'days' : 'day';
+  } else if (timeDiffMins >= 60) {
     timeDiff = parseInt(timeDiffMins / 60, 10);
     unit = timeDiff > 1 ? 'hours' : 'hour';
   } else {
@@ -22,9 +25,8 @@ const relativeTime = receivedTimestamp => {
   );
 
   const isInFuture = timeDifferenceMilliseconds < 0;
-  const isMoreThanTenHoursAgo = timeDifferenceMinutes > 10 * 60;
 
-  if (isInFuture || isMoreThanTenHoursAgo) {
+  if (isInFuture) {
     return null;
   }
 
