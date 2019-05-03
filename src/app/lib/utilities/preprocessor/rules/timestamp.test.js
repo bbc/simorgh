@@ -24,6 +24,29 @@ const paragraphBlock = {
   },
 };
 
+const imageBlock = {
+  type: 'image',
+  model: {
+    blocks: [
+      {
+        type: 'image',
+        model: {
+          text: 'some image URL',
+          blocks: [
+            {
+              type: 'fragment',
+              model: {
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                attributes: [],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 const headlineBlock = {
   type: 'headline',
   model: {
@@ -98,6 +121,39 @@ describe('Timestamp rules', () => {
       content: {
         model: {
           blocks: [paragraphBlock, headlineBlock],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            paragraphBlock,
+            headlineBlock,
+            {
+              type: 'timestamp',
+              model: {
+                firstPublished: 1514808060000,
+                lastPublished: 1514811600000,
+              },
+            },
+          ],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
+
+  it('should put Timestamp block after image, if it and headline exists', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'image'],
+      },
+      content: {
+        model: {
+          blocks: [paragraphBlock, headlineBlock, imageBlock],
         },
       },
     };
