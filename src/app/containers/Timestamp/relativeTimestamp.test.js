@@ -1,17 +1,17 @@
-import relativeTimestamp from './relativeTimestamp';
+import relativeTime from './relativeTimestamp';
 import { timestampGenerator } from './helpers/testHelpers';
 
 const relativeBehaviour = (description, input, expectedOutput) => {
   it(description, () => {
-    const result = relativeTimestamp(input);
+    const result = relativeTime(input);
     expect(result).toEqual(expectedOutput);
   });
 };
 
-describe('relativeTimestamp', () => {
+describe('relativeTime', () => {
   it('returns a string which ends in ago', () => {
-    const timestamp = timestampGenerator({ minutes: 1 });
-    const result = relativeTimestamp(timestamp);
+    const testTimestamp = timestampGenerator({ minutes: 1 });
+    const result = relativeTime(testTimestamp);
     expect(typeof result).toEqual('string');
     expect(result.split(' ').pop()).toEqual('ago');
   });
@@ -59,9 +59,9 @@ describe('relativeTimestamp', () => {
   );
 
   relativeBehaviour(
-    'returns null when greater than 10 hours ago',
+    'returns days when greater than 24 hours ago',
     timestampGenerator({ hours: 94 }),
-    null,
+    '3 days ago',
   );
 
   relativeBehaviour(
