@@ -1,4 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 
 const persian = {
@@ -99,6 +100,7 @@ const persian = {
       },
     },
   },
+  brandSVG,
 };
 
 export default persian;
