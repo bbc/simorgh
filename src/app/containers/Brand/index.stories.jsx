@@ -7,7 +7,7 @@ import services from '../../lib/config/services';
 const stories = storiesOf('Brand', module);
 
 Object.keys(services)
-  .filter(service => service != 'default')
+  .filter(service => service !== 'default')
   .forEach(service => {
     stories.add(service, () => (
       <ServiceContextProvider service={service}>
