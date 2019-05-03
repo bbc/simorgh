@@ -41,8 +41,8 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
     // insert timestamp block immediately after headline
     json.content.model.blocks = [
       ...headlineBlocks,
-      timestampBlock,
       ...mainBlocks,
+      timestampBlock,
     ];
   } else {
     // put timestamp block in as the first element
