@@ -148,7 +148,7 @@ exports[`StoryPromo Container should render correctly 1`] = `
         className="c3"
       >
         <img
-          alt="ในหลวง ร 10"
+          alt="Image Alt text"
           className="c4"
           height={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"

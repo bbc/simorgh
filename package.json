@@ -165,6 +165,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.0",
     "react-test-renderer": "^16.7.0",
+    "react-testing-library": "^7.0.0",
     "snyk": "^1.129.0",
     "start-server-webpack-plugin": "^2.2.5",
     "stylelint": "^9.7.1",
