@@ -5,35 +5,30 @@ import StoryPromoComponent, {
   Headline,
   Summary,
 } from '@bbc/psammead-story-promo';
+import { storyItem } from '../../models/propTypes/storyItem';
 import deepGet from '../../helpers/json/deepGet';
-import Figure from '../Figure';
+import StoryPromoFigure from './Figure';
 import Timestamp from '../Timestamp';
 
 const StoryPromo = ({ item }) => {
   const headline = deepGet(['headlines', 'headline'], item);
   const summary = deepGet(['summary'], item);
-  const timestamp = deepGet(['timestamp'], item) * 1000;
-  const imageSrc = deepGet(['indexImage', 'path'], item);
-  const imageAltText = deepGet(['indexImage', 'altText'], item);
-  const imageHeight = deepGet(['indexImage', 'height'], item);
-  const imageWidth = deepGet(['indexImage', 'width'], item);
-  const imageRatio = (imageHeight / imageWidth) * 100;
+  const timestamp = deepGet(['timestamp'], item);
+  const imageValues = deepGet(['indexImage'], item);
 
-  const Image = (
-    <Figure
-      alt={imageAltText}
-      ratio={imageRatio}
-      src={`https://ichef.bbci.co.uk/news/660${imageSrc}`}
-      height={imageHeight}
-      width={imageWidth}
-    />
-  );
+  const Image = imageValues && <StoryPromoFigure {...imageValues} />;
 
   const Info = (
     <Fragment>
-      <Headline script={latin}>{headline}</Headline>
-      <Summary script={latin}>{summary}</Summary>
-      <Timestamp firstPublished={timestamp} lastPublished={timestamp} />
+      {headline && <Headline script={latin}>{headline}</Headline>}
+      {summary && <Summary script={latin}>{summary}</Summary>}
+      {timestamp && (
+        <Timestamp
+          timestamp={timestamp * 1000}
+          dateTimeFormat="YYYY-MM-DD"
+          format="D MMMM YYYY"
+        />
+      )}
     </Fragment>
   );
 
@@ -41,7 +36,7 @@ const StoryPromo = ({ item }) => {
 };
 
 StoryPromo.propTypes = {
-  item: shape.isRequired,
+  item: shape(storyItem).isRequired,
 };
 
 export default StoryPromo;
