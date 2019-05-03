@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import deepClone from '../../helpers/json/deepClone';
 import StoryPromo from '.';
 
-let item = {
+let item;
+const compleateItem = {
   headlines: {
     headline: 'A headline',
   },
@@ -18,23 +20,14 @@ let item = {
 };
 
 describe('StoryPromo Container', () => {
-  shouldMatchSnapshot('should render correctly', <StoryPromo item={item} />);
+  shouldMatchSnapshot(
+    'should render correctly',
+    <StoryPromo item={compleateItem} />,
+  );
 
   describe('assertion tests', () => {
     beforeEach(() => {
-      item = {
-        headlines: {
-          headline: 'A headline',
-        },
-        summary: 'Summary text',
-        timestamp: 1556795033,
-        indexImage: {
-          path: '/cpsprodpb/0A06/production/image.jpg',
-          height: 1152,
-          width: 2048,
-          altText: 'Image Alt text',
-        },
-      };
+      item = deepClone(compleateItem);
     });
 
     it('should correctly include expected elements', () => {
