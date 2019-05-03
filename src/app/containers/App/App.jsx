@@ -6,7 +6,7 @@
 import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
-import { matchRoutes } from 'react-router-config';
+import getRouteProps from './RouteMatch';
 
 import loadInitialData from '../../routes/loadInitialData';
 
@@ -14,15 +14,15 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
-    const { match } = this.getRouteProps(
+    const { service, isAmp } = getRouteProps(
       this.props.routes,
       this.props.location.pathname,
     );
 
     this.state = {
       data: this.props.initialData,
-      service: match.params.service,
-      isAmp: !!match.params.amp,
+      service: service,
+      isAmp: isAmp,
       loading: false,
       error: null,
       loadInitialDataPromise: null,
@@ -30,21 +30,21 @@ export class App extends Component {
   }
 
   async componentDidUpdate({ location: prevLocation }) {
+    const { service, isAmp } = getRouteProps(
+      this.props.routes,
+      this.props.location.pathname,
+    );
+
     if (this.props.location.pathname !== prevLocation.pathname) {
       const initialData = loadInitialData(
         this.props.location.pathname,
         this.props.routes,
       );
 
-      const match = this.getRouteProps(
-        this.props.routes,
-        this.props.location.pathname,
-      );
-
       this.setState({
         data: null,
-        service: match.params.service,
-        isAmp: match.params.amp,
+        service: service,
+        isAmp: isAmp,
         loading: true,
         error: null,
         loadInitialDataPromise: initialData,
@@ -56,33 +56,24 @@ export class App extends Component {
         const data = await this.state.loadInitialDataPromise;
         this.setState({
           data,
-          service: match.params.service,
-          isAmp: match.params.amp,
+          service: service,
+          isAmp: isAmp,
           loading: false,
           error: null,
           loadInitialDataPromise: null,
         });
       } catch (error) {
+        console.log('error caught');
         this.setState({
           data: null,
-          service: match.params.service,
-          isAmp: match.params.amp,
+          service: service,
+          isAmp: isAmp,
           loading: false,
           error,
           loadInitialDataPromise: null,
         });
       }
     }
-  }
-
-  getRouteProps(routes, url) {
-    const matchedRoutes = matchRoutes(routes, url);
-
-    if (matchedRoutes.length <= 0) {
-      throw new Error(`No route was found for ${url}.`);
-    }
-
-    return matchedRoutes[0];
   }
 
   render() {
