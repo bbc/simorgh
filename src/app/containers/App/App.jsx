@@ -63,7 +63,6 @@ export class App extends Component {
           loadInitialDataPromise: null,
         });
       } catch (error) {
-        console.log('error caught');
         this.setState({
           data: null,
           service: service,

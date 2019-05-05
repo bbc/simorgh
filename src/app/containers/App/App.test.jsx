@@ -12,6 +12,7 @@ describe('App', () => {
   let setStateSpy;
   let loadInitialDataSpy;
   const initialData = { pageData: 'Some initial data' };
+  const error = 'Error!';
   const match = { params: { service: 'news', amp: false } };
 
   const route = {
@@ -24,7 +25,7 @@ describe('App', () => {
     .fn()
     .mockReturnValue(<h1>{initialData.pageData}</h1>);
 
-  const getRouteProps = jest.fn().mockReturnValue(match);
+  // const getRouteProps = jest.fn().mockReturnValue(match);
 
   beforeAll(() => {
     // eslint-disable-next-line no-undef
@@ -67,50 +68,43 @@ describe('App', () => {
     });
 
     describe('different location', () => {
-      // describe('rejected loadInitialData', () => {
-      //   it('should set state to the error', async () => {
-      //     const error = 'Error!';
+      afterEach(() => {
+        // clear `loadInitialData.default` mocks
+        jest.clearAllMocks();
+      });
+      describe('rejected loadInitialData', () => {
+        it('should set state to the error', async () => {
+          loadInitialData.default = jest
+            .fn()
+            .mockImplementation(() => Promise.reject(error));
 
-      //     loadInitialData.default = jest
-      //       .fn()
-      //       .mockImplementation(() => Promise.reject(error));
+          wrapper.setProps({ location: { pathname: 'pathnameThree' } });
 
-      //     wrapper.setProps({ location: { pathname: 'pathnameThree' } });
+          await loadInitialData.default;
 
-      //     await loadInitialData.default;
+          expect.assertions(2);
 
-      //     expect.assertions(3);
+          // start data fetch and set loading to true
+          expect(setStateSpy).toHaveBeenNthCalledWith(1, {
+            data: null,
+            service: 'news',
+            isAmp: false,
+            error: null,
+            loadInitialDataPromise: expect.any(Promise),
+            loading: true,
+          });
 
-      //     // set state to loading when fetching data
-      //     expect(setStateSpy).toHaveBeenNthCalledWith(1, {
-      //       data: null,
-      //       service: 'news',
-      //       isAmp: false,
-      //       error: null,
-      //       loadInitialDataPromise: expect.any(Promise),
-      //       loading: true,
-      //     });
-
-      //     // data is no longer loading but the promise rejected so we set the error state
-      //     expect(setStateSpy).toHaveBeenNthCalledWith(2, {
-      //       data: null,
-      //       isAmp: false,
-      //       error,
-      //       loadInitialDataPromise: null,
-      //       loading: false,
-      //       service: 'news',
-      //     });
-
-      //     expect(setStateSpy).toHaveBeenNthCalledWith(3, {
-      //       data: null,
-      //       isAmp: false,
-      //       error,
-      //       loadInitialDataPromise: null,
-      //       loading: false,
-      //       service: 'news',
-      //     });
-      //   });
-      // });
+          // data fetch promise rejected, set data to null, loading to false and set error
+          expect(setStateSpy).toHaveBeenNthCalledWith(2, {
+            data: null,
+            isAmp: false,
+            error,
+            loadInitialDataPromise: null,
+            loading: false,
+            service: 'news',
+          });
+        });
+      });
 
       describe('successful fetch of route, match, and initial props', () => {
         it('should call set state with new data', async () => {
@@ -125,11 +119,11 @@ describe('App', () => {
 
           await loadInitialData.default;
 
-          expect.assertions(4);
+          expect.assertions(3);
 
           expect(loadInitialData.default).toHaveBeenCalledWith(pathname, []);
 
-          // why is state being called 3 times?
+          // start data fetch and set loading to true
           expect(setStateSpy).toHaveBeenNthCalledWith(1, {
             data: null,
             error: null,
@@ -139,15 +133,7 @@ describe('App', () => {
             service: 'news',
           });
 
-          expect(setStateSpy).toHaveBeenNthCalledWith(2, {
-            data,
-            error: null,
-            isAmp: false,
-            loading: false,
-            loadInitialDataPromise: null,
-            service: 'news',
-          });
-
+          // data fetch promise resolved, set data to fetched data and loading to false
           expect(setStateSpy).toHaveBeenNthCalledWith(2, {
             data,
             error: null,

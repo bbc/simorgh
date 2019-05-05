@@ -39,9 +39,10 @@ describe('Document Component', () => {
       <DocumentComponent
         assets={assets}
         app={'<h1>App!</h1>'}
-        data={{ ...data, isAmp }}
+        data={{ ...data }}
         helmet={helmet}
         styleTags={isAmp ? styleTagsAmp : styleTags}
+        isAmp={isAmp}
       />,
     );
 
