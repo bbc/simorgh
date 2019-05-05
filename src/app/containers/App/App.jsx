@@ -6,7 +6,7 @@
 import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
-import getRouteProps from './RouteMatch';
+import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 import loadInitialData from '../../routes/loadInitialData';
 

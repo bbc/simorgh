@@ -15,7 +15,7 @@ import routes, {
 } from '../app/routes';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '../app/containers/App/RouteMatch';
+import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 
 const morgan = require('morgan');
 
