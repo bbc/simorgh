@@ -1,4 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const news = {
@@ -103,6 +104,7 @@ const news = {
       },
     },
   },
+  brandSVG,
 };
 
 export default news;
