@@ -78,7 +78,106 @@ const headlineBlock = {
   },
 };
 
+const aresMediaBlock = {
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      {
+        type: 'video',
+        model: {
+          blocks: [
+            {
+              type: 'video',
+              model: {
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text:
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 describe('Timestamp rules', () => {
+  it('should put Timestamp block after headline and image, if headline exists with image immedeately after it', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'image'],
+      },
+      content: {
+        model: {
+          blocks: [paragraphBlock, headlineBlock, imageBlock],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            paragraphBlock,
+            headlineBlock,
+            imageBlock,
+            {
+              type: 'timestamp',
+              model: {
+                firstPublished: 1514808060000,
+                lastPublished: 1514811600000,
+              },
+            },
+          ],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
+
+  it('should put Timestamp block after headline and type aresMedia, if headline exists with type aresMedia immedeately after it', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'aresMedia'],
+      },
+      content: {
+        model: {
+          blocks: [paragraphBlock, headlineBlock, aresMediaBlock],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            paragraphBlock,
+            headlineBlock,
+            aresMediaBlock,
+            {
+              type: 'timestamp',
+              model: {
+                firstPublished: 1514808060000,
+                lastPublished: 1514811600000,
+              },
+            },
+          ],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
+
   it('should put Timestamp block first if no headline', () => {
     const fixtureData = {
       metadata: {
@@ -111,16 +210,16 @@ describe('Timestamp rules', () => {
     expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
   });
 
-  it('should put Timestamp block after Headline if it exists', () => {
+  it('should put Timestamp block after Headline if headline exists, with no image or aresMedia immediately after it', () => {
     const fixtureData = {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
-        blockTypes: ['headline', 'text', 'paragraph', 'fragment'],
+        blockTypes: ['headline', 'text', 'fragment', 'paragraph'],
       },
       content: {
         model: {
-          blocks: [paragraphBlock, headlineBlock],
+          blocks: [headlineBlock, paragraphBlock],
         },
       },
     };
@@ -128,7 +227,6 @@ describe('Timestamp rules', () => {
       content: {
         model: {
           blocks: [
-            paragraphBlock,
             headlineBlock,
             {
               type: 'timestamp',
@@ -137,39 +235,7 @@ describe('Timestamp rules', () => {
                 lastPublished: 1514811600000,
               },
             },
-          ],
-        },
-      },
-    });
-    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
-  });
-
-  it('should put Timestamp block after image, if it and headline exists', () => {
-    const fixtureData = {
-      metadata: {
-        firstPublished: 1514808060000,
-        lastPublished: 1514811600000,
-        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'image'],
-      },
-      content: {
-        model: {
-          blocks: [paragraphBlock, headlineBlock, imageBlock],
-        },
-      },
-    };
-    const expectedTransform = Object.assign(deepClone(fixtureData), {
-      content: {
-        model: {
-          blocks: [
             paragraphBlock,
-            headlineBlock,
-            {
-              type: 'timestamp',
-              model: {
-                firstPublished: 1514808060000,
-                lastPublished: 1514811600000,
-              },
-            },
           ],
         },
       },

@@ -39,7 +39,11 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
   );
 
   if (headlineBlocks.length > 0) {
-    if (mainBlocks[0].type === 'image' || mainBlocks[0].type === 'aresMedia') {
+    const imageOrAresMediaFirst =
+      mainBlocks.length > 0 &&
+      (mainBlocks[0].type === 'image' || mainBlocks[0].type === 'aresMedia');
+
+    if (imageOrAresMediaFirst) {
       json.content.model.blocks = [
         ...headlineBlocks,
         mainBlocks[0],
