@@ -16,6 +16,7 @@ export const leadingZero = val => (val < 10 ? `0${val}` : `${val}`);
 // when using this function, we recommend using webpack configuration to only load in the relevant timezone, rather than all of moment-timezone
 export const formatUnixTimestamp = (timestamp, momentString) =>
   moment(timestamp)
+    .locale('es')
     .tz('Europe/London')
     .format(momentString);
 

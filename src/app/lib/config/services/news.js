@@ -1,5 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
+import 'moment/locale/es.js';
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
