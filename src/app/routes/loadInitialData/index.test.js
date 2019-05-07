@@ -10,7 +10,6 @@ describe('loadInitialData', () => {
   const match = { match: true };
 
   afterEach(() => {
-    // clear `getRouteProps.default` mocks
     jest.clearAllMocks();
   });
 
