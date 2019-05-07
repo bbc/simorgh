@@ -55,7 +55,7 @@ describe('StoryPromo Container', () => {
       );
     });
 
-    it('should render imgwith src & alt when platform is canonical', () => {
+    it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
         <RequestContextProvider platform="canonical">
           <StoryPromo item={item} />

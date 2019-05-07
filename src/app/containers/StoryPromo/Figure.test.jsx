@@ -28,15 +28,15 @@ describe('StoryPromo Figure Container', () => {
     <StoryPromoFigure path="/foobar.png" height={120} width={340} />,
   );
 
-  describe('ssss', () => {
-    it('should image when no platform provided', () => {
+  describe('Story Promo Figure', () => {
+    it('should render img when no platform provided', () => {
       const { container } = render(<StoryPromoFigure {...imageProps} />);
 
       expect(container.getElementsByTagName('img').length).toEqual(1);
       expect(container.getElementsByTagName('amp-img').length).toEqual(0);
     });
 
-    it('should img tag with src, alt & width attribute when platform is canonical', () => {
+    it('should render img tag with src, alt & width attribute when platform is canonical', () => {
       const { container } = render(
         <RequestContextProvider platform="canonical">
           <StoryPromoFigure {...imageProps} />
@@ -55,7 +55,7 @@ describe('StoryPromo Figure Container', () => {
       expect(image.getAttribute('width')).toEqual(imageProps.width.toString());
     });
 
-    it('should img tag with src, alt & width attribute when platform is canonical', () => {
+    it('should render amp-img tag with src, alt & width attribute when platform is amp', () => {
       const { container } = render(
         <RequestContextProvider platform="amp">
           <StoryPromoFigure {...imageProps} />
