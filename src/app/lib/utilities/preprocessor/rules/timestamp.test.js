@@ -41,7 +41,7 @@ const imageBlock = {
       {
         type: 'caption',
         model: {
-          blocks: [paragraphBlock]
+          blocks: [paragraphBlock],
         },
       },
       {
@@ -81,10 +81,18 @@ const aresMediaBlock = {
           synopses: {},
           title: 'Lorem ipsum dolor sit amet',
           versions: [],
-        }
+        },
       },
       imageBlock,
     ],
+  },
+};
+
+const generatedTimestampBlock = {
+  type: 'timestamp',
+  model: {
+    firstPublished: 1514808060000,
+    lastPublished: 1514811600000,
   },
 };
 
@@ -109,13 +117,7 @@ describe('Timestamp rules', () => {
             paragraphBlock,
             headlineBlock,
             imageBlock,
-            {
-              type: 'timestamp',
-              model: {
-                firstPublished: 1514808060000,
-                lastPublished: 1514811600000,
-              },
-            },
+            generatedTimestampBlock,
           ],
         },
       },
@@ -143,13 +145,7 @@ describe('Timestamp rules', () => {
             paragraphBlock,
             headlineBlock,
             aresMediaBlock,
-            {
-              type: 'timestamp',
-              model: {
-                firstPublished: 1514808060000,
-                lastPublished: 1514811600000,
-              },
-            },
+            generatedTimestampBlock,
           ],
         },
       },
@@ -174,13 +170,7 @@ describe('Timestamp rules', () => {
       content: {
         model: {
           blocks: [
-            {
-              type: 'timestamp',
-              model: {
-                firstPublished: 1514808060000,
-                lastPublished: 1514811600000,
-              },
-            },
+            generatedTimestampBlock,
             paragraphBlock,
           ],
         },
@@ -207,13 +197,7 @@ describe('Timestamp rules', () => {
         model: {
           blocks: [
             headlineBlock,
-            {
-              type: 'timestamp',
-              model: {
-                firstPublished: 1514808060000,
-                lastPublished: 1514811600000,
-              },
-            },
+            generatedTimestampBlock,
             paragraphBlock,
           ],
         },
