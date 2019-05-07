@@ -1,3 +1,4 @@
+import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
@@ -5,6 +6,7 @@ const igbo = {
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
+  brandSVG,
   script: latin,
 };
 
