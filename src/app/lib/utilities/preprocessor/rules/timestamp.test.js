@@ -29,18 +29,25 @@ const imageBlock = {
   model: {
     blocks: [
       {
-        type: 'image',
+        type: 'rawImage',
         model: {
-          text: 'some image URL',
-          blocks: [
-            {
-              type: 'fragment',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                attributes: [],
-              },
-            },
-          ],
+          copyrightHolder: 'TEST-HOLDER',
+          height: 360,
+          locator: 'test-image.jpg',
+          originCode: null,
+          width: 640,
+        },
+      },
+      {
+        type: 'caption',
+        model: {
+          blocks: [paragraphBlock]
+        },
+      },
+      {
+        type: 'altText',
+        model: {
+          blocks: [paragraphBlock],
         },
       },
     ],
@@ -50,31 +57,7 @@ const imageBlock = {
 const headlineBlock = {
   type: 'headline',
   model: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text:
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
-    ],
+    blocks: [paragraphBlock],
   },
 };
 
@@ -83,34 +66,30 @@ const aresMediaBlock = {
   model: {
     blocks: [
       {
-        type: 'video',
+        type: 'aresMediaMetadata',
+        blockId: 'test:block:id',
         model: {
-          blocks: [
-            {
-              type: 'video',
-              model: {
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text:
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
+          advertising: false,
+          caption: null,
+          embedding: false,
+          format: 'audio_video',
+          id: 'test-id',
+          image: null,
+          imageCopyright: 'BBC TEST',
+          imageUrl: 'test-image.jpg',
+          subType: 'clip',
+          synopses: {},
+          title: 'Lorem ipsum dolor sit amet',
+          versions: [],
+        }
       },
+      imageBlock,
     ],
   },
 };
 
 describe('Timestamp rules', () => {
-  it('should put Timestamp block after headline and image, if headline exists with image immedeately after it', () => {
+  it('should put Timestamp block after headline and image, if headline exists with image immediately after it', () => {
     const fixtureData = {
       metadata: {
         firstPublished: 1514808060000,
@@ -144,7 +123,7 @@ describe('Timestamp rules', () => {
     expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
   });
 
-  it('should put Timestamp block after headline and type aresMedia, if headline exists with type aresMedia immedeately after it', () => {
+  it('should put Timestamp block after headline and type aresMedia, if headline exists with type aresMedia immediately after it', () => {
     const fixtureData = {
       metadata: {
         firstPublished: 1514808060000,
