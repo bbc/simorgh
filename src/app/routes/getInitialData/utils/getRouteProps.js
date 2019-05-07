@@ -7,11 +7,11 @@ const getRouteProps = (routes, url) => {
     throw new Error(`No route was found for ${url}.`);
   }
 
-  const { match } = matchedRoutes[0];
+  const { route, match } = matchedRoutes[0];
   const { amp, service } = match.params;
   const isAmp = amp ? true : false; // eslint-disable-line no-unneeded-ternary
 
-  return { isAmp, service };
+  return { isAmp, service, route, match };
 };
 
 export default getRouteProps;
