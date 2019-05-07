@@ -73,4 +73,3 @@ const splitBlocksByHeadline = blocks => {
 const imageOrAresMediaFirst = blocks =>
   blocks.length > 0 &&
   (blocks[0].type === 'image' || blocks[0].type === 'aresMedia');
-

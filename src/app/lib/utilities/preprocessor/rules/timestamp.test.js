@@ -169,10 +169,7 @@ describe('Timestamp rules', () => {
     const expectedTransform = Object.assign(deepClone(fixtureData), {
       content: {
         model: {
-          blocks: [
-            generatedTimestampBlock,
-            paragraphBlock,
-          ],
+          blocks: [generatedTimestampBlock, paragraphBlock],
         },
       },
     });
@@ -195,11 +192,7 @@ describe('Timestamp rules', () => {
     const expectedTransform = Object.assign(deepClone(fixtureData), {
       content: {
         model: {
-          blocks: [
-            headlineBlock,
-            generatedTimestampBlock,
-            paragraphBlock,
-          ],
+          blocks: [headlineBlock, generatedTimestampBlock, paragraphBlock],
         },
       },
     });
