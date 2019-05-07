@@ -40,6 +40,21 @@ export const videoPropTypes = {
   ).isRequired,
 };
 
+const videoMetadata = {
+  video: shape({
+    '@list': arrayOf(
+      shape({
+        '@type': string,
+        description: string,
+        duration: string,
+        name: string,
+        thumbnailUrl: string,
+        uploadDate: string,
+      }),
+    ),
+  }),
+};
+
 export const videoComponentPropTypes = {
   duration: string,
   imageLocator: string,
@@ -47,6 +62,7 @@ export const videoComponentPropTypes = {
   rawImageSrc: string,
   versionID: string,
   videoLocator: string,
+  metadata: shape(videoMetadata),
 };
 
 const baseDefaultPropTypes = {

@@ -2,6 +2,7 @@ import React from 'react';
 import Figure from '@bbc/psammead-figure';
 import Video from '../../components/Video';
 import Caption from '../Caption';
+import videoMetadata from './videoMetadata';
 
 import {
   videoPropTypes,
@@ -18,7 +19,7 @@ const VideoContainer = ({ blocks }) => {
 
   return (
     <Figure>
-      <Video />
+      <Video metadata={videoMetadata(aresMediaBlock)}/>
       {captionBlock ? <Caption block={captionBlock} video /> : null}
     </Figure>
   );
