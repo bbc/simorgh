@@ -112,6 +112,12 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c5 {
+    display: none;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c6 {
     line-height: 1.125rem;
@@ -280,6 +286,12 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   .c6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c6 {
+    display: none;
   }
 }
 
