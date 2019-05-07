@@ -102,7 +102,6 @@ describe('Timestamp rules', () => {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
-        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'image'],
       },
       content: {
         model: {
@@ -130,7 +129,6 @@ describe('Timestamp rules', () => {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
-        blockTypes: ['headline', 'text', 'paragraph', 'fragment', 'aresMedia'],
       },
       content: {
         model: {
@@ -158,7 +156,6 @@ describe('Timestamp rules', () => {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
-        blockTypes: ['text', 'paragraph', 'fragment'],
       },
       content: {
         model: {
@@ -181,7 +178,6 @@ describe('Timestamp rules', () => {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
-        blockTypes: ['headline', 'text', 'fragment', 'paragraph'],
       },
       content: {
         model: {
