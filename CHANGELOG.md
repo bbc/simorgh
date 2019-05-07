@@ -1,4 +1,4 @@
-# Psammead Changelog
+# Simorgh Changelog
 
 <!-- prettier-ignore -->
 | Version | Description |
