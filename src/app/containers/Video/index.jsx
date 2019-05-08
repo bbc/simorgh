@@ -19,7 +19,7 @@ const VideoContainer = ({ blocks }) => {
 
   return (
     <Figure>
-      <Video metadata={videoMetadata(aresMediaBlock)}/>
+      <Video metadata={videoMetadata(aresMediaBlock)} />
       {captionBlock ? <Caption block={captionBlock} video /> : null}
     </Figure>
   );

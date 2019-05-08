@@ -11,8 +11,7 @@ const Video = ({
   kind,
   metadata,
 }) => {
-  console.log('inside video component', metadata);
-  const HTMLContent = // use better variable name
+  const HTMLContent = (
     <div>
       <div>
         video locator:
@@ -39,14 +38,11 @@ const Video = ({
         {kind}
       </div>
     </div>
+  );
 
   return (
     <Helmet>
-      {
-        <script type="application/ld+json">
-          {JSON.stringify(metadata)}
-        </script>
-      }
+      {<script type="application/ld+json">{JSON.stringify(metadata)}</script>}
     </Helmet>,
     HTMLContent
   );
@@ -61,20 +57,20 @@ Video.defaultProps = {
   rawImageSrc: 'raw image source',
   versionID: 'p064nsz3',
   videoLocator: 'urn:bbc:pips:pid:p064nsyw',
-  metadataq: {
-    'video': {
+  metadata: {
+    video: {
       '@list': [
         {
           '@type': 'VideoObject',
-          'description': 'Default video description',
-          'duration': 299,
-          'name': 'Default vido name',
-          'thumbnailUrl': 'https:///cpsprodpb/5BD5/production/_101690532_2.jpg',
-          'uploadDate': '2018-09-05T14:35:42+01:00',
-        }
+          description: 'Default video description',
+          duration: 299,
+          name: 'Default vido name',
+          thumbnailUrl: 'https:///cpsprodpb/5BD5/production/_101690532_2.jpg',
+          uploadDate: '2018-09-05T14:35:42+01:00',
+        },
       ],
-    }
-  }
+    },
+  },
 };
 
 export default Video;
