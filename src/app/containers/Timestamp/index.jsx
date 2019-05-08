@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { number, string, bool } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp';
+import momentConfig from './momentConfig';
 import {
   isValidDateTime,
   formatUnixTimestamp,
@@ -15,21 +16,22 @@ const TimestampContainer = ({
   isRelative,
   prefix,
   suffix,
-  timezone,
 }) => {
   if (!isValidDateTime(new Date(timestamp))) {
     return null;
   }
 
-  const { script } = useContext(ServiceContext);
+  const { script, moment } = useContext(ServiceContext);
+
+  momentConfig(moment);
 
   return (
     <Timestamp
-      datetime={formatUnixTimestamp(timestamp, dateTimeFormat, timezone)}
+      datetime={formatUnixTimestamp(timestamp, dateTimeFormat)}
       script={script}
     >
       {prefix ? `${prefix} ` : null}
-      {showRelativeTime(timestamp, isRelative, format, timezone)}
+      {showRelativeTime(timestamp, isRelative, format)}
       {suffix ? ` ${suffix}` : null}
     </Timestamp>
   );
@@ -40,7 +42,6 @@ TimestampContainer.propTypes = {
   dateTimeFormat: string.isRequired,
   isRelative: bool,
   format: string,
-  timezone: string,
   prefix: string,
   suffix: string,
 };
@@ -48,7 +49,6 @@ TimestampContainer.propTypes = {
 TimestampContainer.defaultProps = {
   isRelative: false,
   format: null,
-  timezone: 'Europe/London',
   prefix: null,
   suffix: null,
 };

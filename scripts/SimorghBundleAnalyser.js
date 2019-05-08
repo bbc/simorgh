@@ -38,6 +38,7 @@ class SimorghBundleAnalyser {
     compiler.hooks.done.tap('Hello World Plugin', stats => {
       const files = getFileSizes(stats.compilation.assets);
       const services = getServices();
+      console.log('\n\n\n');
 
       services.forEach(service => {
         let totalSize = 0;
@@ -45,7 +46,7 @@ class SimorghBundleAnalyser {
         Object.keys(files).forEach(filename => {
           if (
             filename.includes('main') ||
-            filename.includes('vendor') ||  
+            filename.includes('vendor') ||
             filename.includes(service)
           ) {
             totalSize += files[filename];
@@ -55,9 +56,10 @@ class SimorghBundleAnalyser {
         console.log(
           service,
           bytesToKb(totalSize),
-          bytesToKb(totalSize - 496000),
+          `: ${bytesToKb(totalSize - 496000)} increase`,
         );
       });
+      console.log('\n\n\n');
     });
   }
 }

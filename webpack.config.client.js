@@ -136,12 +136,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         filename: resolvePath('build/react-loadable.json'),
       }),
 
-      // new SimorghBundleAnalyser(),
-
-      // new webpack.NormalModuleReplacementPlugin(
-      //   /MomentTimezone/,
-      //   'applePie',
-      // ),
+      new SimorghBundleAnalyser(),
     ],
   };
 

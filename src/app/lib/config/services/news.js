@@ -1,9 +1,9 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import 'moment/locale/es';
+import 'moment/locale/en-gb';
 // Timezone value provided at build time
-const timezone = Moment_Timezone_America_Los_Angeles; //eslint-disable-line
+const timezone = Moment_Timezone_Europe_London; //eslint-disable-line
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -27,7 +27,7 @@ const news = {
   script: latin,
   moment: {
     timezone,
-    locale: 'es',
+    locale: 'en-gb',
   },
   translations: {
     error: {

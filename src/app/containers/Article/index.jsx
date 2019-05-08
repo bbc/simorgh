@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import HeaderContainer from '../Header';
 import FooterContainer from '../Footer';
 import articlePropTypes from '../../models/propTypes/article';
-// import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
@@ -34,7 +33,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
     return (
       <Fragment>
         <GlobalStyle />
-        <ServiceContextProvider service={service}>
+        <ServiceContextProvider>
           <RequestContextProvider
             platform={isAmp ? 'amp' : 'canonical'}
             bbcOrigin={bbcOrigin}

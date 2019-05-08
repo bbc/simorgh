@@ -1,6 +1,9 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
+import 'moment/locale/fa';
+// Timezone value provided at build time
+const timezone = Moment_Timezone_Asia_Tehran; //eslint-disable-line
 
 const persian = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -21,6 +24,10 @@ const persian = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
+  moment: {
+    timezone,
+    locale: 'fa',
+  },
   translations: {
     error: {
       404: {
