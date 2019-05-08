@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Figure from '@bbc/psammead-figure';
 import Video from '../../components/Video';
 import Caption from '../Caption';
@@ -18,10 +19,21 @@ const VideoContainer = ({ blocks }) => {
   }
 
   return (
-    <Figure>
-      <Video metadata={videoMetadata(aresMediaBlock)} />
-      {captionBlock ? <Caption block={captionBlock} video /> : null}
-    </Figure>
+    (
+      <Helmet>
+        {
+          <script type="application/ld+json">
+            {JSON.stringify(videoMetadata(aresMediaBlock))}
+          </script>
+        }
+      </Helmet>
+    ),
+    (
+      <Figure>
+        <Video />
+        {captionBlock ? <Caption block={captionBlock} video /> : null}
+      </Figure>
+    )
   );
 };
 
