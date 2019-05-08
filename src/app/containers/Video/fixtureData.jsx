@@ -4,7 +4,7 @@ import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { singleTextBlock, blockArrayModel } from '../../models/blocks';
 
-const aresMediaBlock = {
+export const aresMediaBlock = {
   model: {
     blocks: [
       {
