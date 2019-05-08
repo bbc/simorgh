@@ -25,8 +25,6 @@ describe('App', () => {
     .fn()
     .mockReturnValue(<h1>{initialData.pageData}</h1>);
 
-  // const getRouteProps = jest.fn().mockReturnValue(match);
-
   beforeAll(() => {
     // eslint-disable-next-line no-undef
     wrapper = shallow(

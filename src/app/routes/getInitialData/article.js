@@ -11,12 +11,7 @@ const getArticleInitialData = async ({ match }) => {
 
   const url = `${baseUrl}/${service}/articles/${id}.json`;
 
-  const { pageData, status } = await fetchData({ url });
-
-  return {
-    pageData,
-    status,
-  };
+  return fetchData({ url });
 };
 
 export default getArticleInitialData;
