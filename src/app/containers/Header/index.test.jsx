@@ -1,13 +1,23 @@
 import React from 'react';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import HeaderContainer from './index';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+
+const newsServiceContextStub = {
+  brandName: 'BBC News',
+  brandSVG,
+};
+
+const HeaderContainerWithContext = context => (
+  <ServiceContext.Provider value={context}>
+    <HeaderContainer />
+  </ServiceContext.Provider>
+);
 
 describe(`Header`, () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <ServiceContextProvider service="default">
-      <HeaderContainer />
-    </ServiceContextProvider>,
+    HeaderContainerWithContext(newsServiceContextStub),
   );
 });

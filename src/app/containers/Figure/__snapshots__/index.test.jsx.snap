@@ -91,6 +91,13 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   width: 100%;
 }
 
+.c5 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem;
@@ -132,7 +139,11 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
     >
       Image caption, 
     </span>
-    This is a caption
+    <p
+      className="c5"
+    >
+      This is a caption
+    </p>
   </figcaption>
 </figure>
 `;
@@ -177,23 +188,30 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 }
 
 .c4 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4:visited {
+.c5:visited {
   color: #757575;
   border-bottom: 1px solid #757575;
 }
 
-.c4:focus {
+.c5:focus {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
 
-.c4:hover {
+.c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
@@ -233,14 +251,18 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
     >
       Image caption, 
     </span>
-    This is a caption 
-    <a
+    <p
       className="c4"
-      href="https://www.bbc.com"
     >
-      containing an inline link
-    </a>
-    .
+      This is a caption 
+      <a
+        className="c5"
+        href="https://www.bbc.com"
+      >
+        containing an inline link
+      </a>
+      .
+    </p>
   </figcaption>
 </figure>
 `;
@@ -403,6 +425,13 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
+.c6 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0.5rem 1rem;
@@ -443,7 +472,11 @@ exports[`Figure should render an image with caption and copyright 1`] = `
     >
       Image caption, 
     </span>
-    This is a caption
+    <p
+      className="c6"
+    >
+      This is a caption
+    </p>
   </figcaption>
 </figure>
 `;
@@ -492,6 +525,13 @@ exports[`Figure should render an image with caption text 1`] = `
   width: 100%;
 }
 
+.c5 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem;
@@ -526,7 +566,11 @@ exports[`Figure should render an image with caption text 1`] = `
     >
       Image caption, 
     </span>
-    This is a caption
+    <p
+      className="c5"
+    >
+      This is a caption
+    </p>
   </figcaption>
 </figure>
 `;
@@ -576,23 +620,30 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 .c5 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #757575;
   border-bottom: 1px solid #757575;
 }
 
-.c5:focus {
+.c6:focus {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
 
-.c5:hover {
+.c6:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
@@ -631,14 +682,18 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
     >
       Image caption, 
     </span>
-    This is a caption 
-    <a
+    <p
       className="c5"
-      href="https://www.bbc.com"
     >
-      containing an inline link
-    </a>
-    .
+      This is a caption 
+      <a
+        className="c6"
+        href="https://www.bbc.com"
+      >
+        containing an inline link
+      </a>
+      .
+    </p>
   </figcaption>
 </figure>
 `;
@@ -744,6 +799,13 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   width: 100%;
 }
 
+.c4 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0.5rem 1rem;
@@ -779,7 +841,11 @@ exports[`Figure should render can AMP image with aption text 1`] = `
     >
       Image caption, 
     </span>
-    This is a caption
+    <p
+      className="c4"
+    >
+      This is a caption
+    </p>
   </figcaption>
 </figure>
 `;

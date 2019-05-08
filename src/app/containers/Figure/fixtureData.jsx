@@ -138,7 +138,7 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = ({ caption, copyright, platform }) => (
+const generateFixtureData = ({ caption, copyright, platform, type }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider platform={platform}>
       <FigureContainer
@@ -149,6 +149,7 @@ const generateFixtureData = ({ caption, copyright, platform }) => (
         ratio={imageRatio}
         src={imageSrc}
         width={imageWidth}
+        type={type}
       />
     </RequestContextProvider>
   </ServiceContext.Provider>
@@ -158,12 +159,14 @@ generateFixtureData.propTypes = {
   caption: PropTypes.objectOf(PropTypes.any),
   copyright: PropTypes.string,
   platform: PropTypes.string,
+  type: PropTypes.string,
 };
 
 generateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
   platform: 'canonical',
+  type: '',
 };
 
 export const FigureImage = generateFixtureData({});
@@ -172,11 +175,13 @@ export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
 export const FigureImageWithCaption = generateFixtureData({
   caption: captionBlock,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaption = generateFixtureData({
   caption: captionBlock,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCopyright = generateFixtureData({
@@ -191,26 +196,31 @@ export const FigureAmpImageWithCopyright = generateFixtureData({
 export const FigureImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
   {
     caption: captionBlockWithMultipleParagraphsAndLink,
+    type: 'image',
   },
 );
 
@@ -218,5 +228,6 @@ export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = gene
   {
     caption: captionBlockWithMultipleParagraphsAndLink,
     platform: 'amp',
+    type: 'image',
   },
 );
