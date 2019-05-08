@@ -80,7 +80,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.3.4",
     "@bbc/gel-foundations": "1.2.0",
-    "@bbc/psammead-assets": "^0.1.8",
+    "@bbc/psammead-assets": "^0.1.9",
     "@bbc/psammead-brand": "^1.0.1",
     "@bbc/psammead-caption": "^1.0.1",
     "@bbc/psammead-copyright": "^0.3.4",
