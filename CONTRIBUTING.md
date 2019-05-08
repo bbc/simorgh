@@ -56,7 +56,7 @@ If you have a breaking change in a commit, prefix the commit message with `BREAK
 
 ### Versioning and Changelog
 
-All changes to simorgh require a package version bump, following [semver](https://semver.org/) as close as possible. Changes must also be noted in our [CHANGELOG.md](https://github.com/bbc/simorgh/blob/latest/CHANGELOG.md) and include a high level description of what the change is, with the package and pull request numbers. 
+All changes to simorgh require a package version bump, following [semver](https://semver.org/) as close as possible. Changes should also be noted in our [CHANGELOG.md](https://github.com/bbc/simorgh/blob/latest/CHANGELOG.md) and include a high level description of what the change is, with the package and pull request numbers. 
 
 ### Naming conventions
 
