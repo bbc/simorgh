@@ -41,6 +41,11 @@ const humanReadable = ({
     : formatUnixTimestamp(timestamp, formatType(comparisonTimestamps));
 
 const TimestampContainer = ({ lastPublished, firstPublished }) => {
+  const { script, timezone } = useContext(ServiceContext);
+
+  moment.tz.add(timezone);
+  moment.tz.setDefault(timezone.split('|')[0]);
+
   if (
     !isValidDateTime(new Date(lastPublished)) ||
     !isValidDateTime(new Date(firstPublished))
@@ -60,8 +65,6 @@ const TimestampContainer = ({ lastPublished, firstPublished }) => {
     comparisonTimestamps: [lastPublished, firstPublished],
     shouldMakeRelative: isTenHoursAgoOrLess(lastPublished),
   })}`;
-
-  const { script } = useContext(ServiceContext);
 
   return (
     <GridItemConstrainedMedium>

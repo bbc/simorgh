@@ -2,9 +2,23 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+const webpack = require('webpack');
+const rawTimezones = require('moment-timezone/data/packed/latest.json');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+
+const convertTimezones = timezones => {
+  const { zones } = timezones;
+  const defined = {};
+
+  zones.forEach(zone => {
+    const name = zone.split('|')[0].replace('/', '_');
+    defined[`Moment_Timezone_${name}`] = JSON.stringify(zone);
+  });
+
+  return defined;
+};
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
@@ -32,7 +46,9 @@ module.exports = (shell = {}) => {
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
-    resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    resolve: {
+      extensions: ['.js', '.jsx'],
+    }, // resolves `import '../Foo'` to `../Foo/index.jsx`
     devServer: {
       stats,
     },
@@ -42,6 +58,11 @@ module.exports = (shell = {}) => {
       __filename: true,
       __dirname: true,
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        ...convertTimezones(rawTimezones),
+      }),
+    ],
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS

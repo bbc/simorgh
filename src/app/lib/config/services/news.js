@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/es.js';
+const timezone = Moment_Timezone_America_Los_Angeles; //eslint-disable-line
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -20,6 +21,7 @@ const news = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
+  timezone,
   translations: {
     error: {
       404: {

@@ -92,6 +92,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       ]),
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+        // MomentTimezone_Europe_London: getTimezone('Europe/London'),
       }),
       /**
        * Needed to prevent bundle hashes changing when the order they're imported is changed.
@@ -135,7 +136,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         filename: resolvePath('build/react-loadable.json'),
       }),
 
-      new SimorghBundleAnalyser(),
+      // new SimorghBundleAnalyser(),
+
+      // new webpack.NormalModuleReplacementPlugin(
+      //   /MomentTimezone/,
+      //   'applePie',
+      // ),
     ],
   };
 
