@@ -38,7 +38,24 @@ class SimorghBundleAnalyser {
     compiler.hooks.done.tap('Hello World Plugin', stats => {
       const files = getFileSizes(stats.compilation.assets);
       const services = getServices();
-      console.log('\n\n\n');
+
+      let coreSize = 0;
+
+      console.log('\n\n');
+
+      Object.keys(files).forEach(filename => {
+        if (filename.includes('main') || filename.includes('vendor')) {
+          coreSize += files[filename];
+        }
+      });
+
+      console.log(
+        'Core Bundles',
+        bytesToKb(coreSize),
+        `: ${bytesToKb(coreSize - 496000)} increase`,
+      );
+
+      console.log('\n');
 
       services.forEach(service => {
         let totalSize = 0;
