@@ -34,7 +34,7 @@ describe('Document Component', () => {
   );
   const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
-  const shallowDocument = ({ isAmp }) =>
+  const shallowDocument = ({ service, isAmp }) =>
     shallowRender(
       <DocumentComponent
         assets={assets}
@@ -42,15 +42,18 @@ describe('Document Component', () => {
         data={{ ...data }}
         helmet={helmet}
         styleTags={isAmp ? styleTagsAmp : styleTags}
+        service={service}
         isAmp={isAmp}
       />,
     );
 
   it('should render correctly', () => {
-    expect(shallowDocument({ isAmp: false })).toMatchSnapshot();
+    expect(
+      shallowDocument({ service: 'news', isAmp: false }),
+    ).toMatchSnapshot();
   });
 
   it('should render AMP version correctly', () => {
-    expect(shallowDocument({ isAmp: true })).toMatchSnapshot();
+    expect(shallowDocument({ service: 'news', isAmp: true })).toMatchSnapshot();
   });
 });
