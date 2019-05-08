@@ -42,7 +42,6 @@ const createSrcset = (originCode, locator) => {
     );
 
     imgSet = urls.join(', ');
-    console.log(imgSet);
   } else {
     imgSet = null;
   }
