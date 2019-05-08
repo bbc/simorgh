@@ -22,6 +22,7 @@ const FigureContainer = ({
   height,
   width,
   type,
+  srcset,
 }) => (
   <Figure>
     <ImagePlaceholder ratio={ratio}>
@@ -35,9 +36,10 @@ const FigureContainer = ({
               src={src}
               height={height}
               width={width}
+              srcset={srcset}
             />
           ) : (
-            <Image alt={alt} src={src} width={width} />
+            <Image alt={alt} src={src} width={width} srcset={srcset} />
           )
         }
       </RequestContextConsumer>
@@ -56,6 +58,7 @@ FigureContainer.propTypes = {
   height: number,
   width: number.isRequired,
   type: string,
+  srcset: string,
 };
 
 FigureContainer.defaultProps = {
@@ -63,6 +66,7 @@ FigureContainer.defaultProps = {
   captionBlock: null,
   height: null,
   type: '',
+  srcset: null,
 };
 
 export default FigureContainer;

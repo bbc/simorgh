@@ -30,6 +30,26 @@ const getIChefURL = (originCode, locator) => {
 const getRawImageSrc = (originCode, locator) =>
   originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
 
+const createSrcset = (originCode, locator) => {
+  let imgSet = '';
+  const resolutions = [240, 320, 480, 624, 800];
+  if (originCode !== 'pips') {
+    const overridableOriginCode = originCode || 'cpsdevpb';
+
+    const urls = resolutions.map(
+      resolution =>
+        `https://ichef.bbci.co.uk/news/${resolution}/${overridableOriginCode}/${locator} ${resolution}w`,
+    );
+
+    imgSet = urls.join(', ');
+    console.log(imgSet);
+  } else {
+    imgSet = null;
+  }
+
+  return imgSet;
+};
+
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
     return null;
@@ -54,6 +74,7 @@ const ImageContainer = ({ blocks }) => {
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
+  const srcSet = createSrcset(originCode, locator);
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
@@ -77,6 +98,7 @@ const ImageContainer = ({ blocks }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
+        srcset={srcSet}
       />
     </Wrapper>
   );
