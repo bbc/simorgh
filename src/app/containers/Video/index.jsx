@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Figure from '@bbc/psammead-figure';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 
@@ -13,7 +12,6 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 const VideoContainer = ({ blocks }) => {
   const captionBlock = filterForBlockType(blocks, 'caption');
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-  const { script } = useContext(ServiceContext);
   if (!aresMediaBlock) {
     return null;
   }
@@ -21,9 +19,7 @@ const VideoContainer = ({ blocks }) => {
   return (
     <Figure>
       <Video />
-      {captionBlock ? (
-        <Caption block={captionBlock} script={script} video />
-      ) : null}
+      {captionBlock ? <Caption block={captionBlock} video /> : null}
     </Figure>
   );
 };
