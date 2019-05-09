@@ -23,6 +23,8 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 }
 
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
@@ -52,6 +54,20 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 @media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.375rem;
+    line-height: 2.125rem;
   }
 }
 
@@ -94,6 +110,8 @@ exports[`should render caption text with example News offscreen text 1`] = `
 }
 
 .c2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
@@ -123,6 +141,20 @@ exports[`should render caption text with example News offscreen text 1`] = `
 @media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -165,6 +197,8 @@ exports[`should render caption with mutiple paragraphs 1`] = `
 }
 
 .c2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
@@ -194,6 +228,20 @@ exports[`should render caption with mutiple paragraphs 1`] = `
 @media (min-width:63rem) {
   .c0 {
     padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
