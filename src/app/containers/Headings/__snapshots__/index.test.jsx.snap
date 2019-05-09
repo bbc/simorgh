@@ -144,7 +144,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
 </div>
 `;
 
-exports[`Headings with plain text should render subheadline should render h2 containing correct text 1`] = `
+exports[`Headings with plain text subheadline should render h2 containing correct text 1`] = `
 .c1 {
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
