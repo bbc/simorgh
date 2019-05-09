@@ -19,7 +19,7 @@ const VideoContainer = ({ blocks }) => {
   }
 
   return (
-    (
+    <>
       <Helmet>
         {
           <script type="application/ld+json">
@@ -27,13 +27,11 @@ const VideoContainer = ({ blocks }) => {
           </script>
         }
       </Helmet>
-    ),
-    (
       <Figure>
         <Video />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
-    )
+    </>
   );
 };
 

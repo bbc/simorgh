@@ -3,29 +3,30 @@ import deepGet from '../../helpers/json/deepGet';
 const videoObject = 'VideoObject';
 
 const videoMetadata = blocks => {
-  const data = deepGet(['model', 'blocks'], blocks);
+  const aresMediaBlocks = deepGet(['model', 'blocks'], blocks);
   const listContent = [];
+  const metadata = {
+    video: {
+      '@list': listContent,
+    },
+  };
 
-  if (data && data.length > 0) {
-    data.forEach(element => {
-      if (element.type === 'aresMediaMetadata') {
-        listContent.push({
-          '@type': videoObject,
-          name: deepGet(['model', 'title'], element),
-          description: deepGet(['model', 'synopses', 'short'], element),
-          duration: deepGet(['model', 'versions', [0], 'duration'], element),
-          thumbnailUrl: `https://${deepGet(['model', 'imageUrl'], element)}`,
-        });
-      }
-    });
-
-    return {
-      video: {
-        '@list': listContent,
-      },
-    };
+  if (!aresMediaBlocks || aresMediaBlocks.length < 1) {
+    return undefined;
   }
-  return undefined;
+  aresMediaBlocks.forEach(block => {
+    if (block.type !== 'aresMediaMetadata') {
+      return null;
+    }
+    return listContent.push({
+      '@type': videoObject,
+      name: deepGet(['model', 'title'], block),
+      description: deepGet(['model', 'synopses', 'short'], block),
+      duration: deepGet(['model', 'versions', [0], 'duration'], block),
+      thumbnailUrl: `https://${deepGet(['model', 'imageUrl'], block)}`,
+    });
+  });
+  return listContent.length > 0 ? metadata : undefined;
 };
 
 export default videoMetadata;
