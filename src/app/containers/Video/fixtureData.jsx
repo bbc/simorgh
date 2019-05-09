@@ -106,7 +106,7 @@ export const noAresMediaMetadata = {
                   },
                   {
                     model: {
-                      blocks: '[singleTextBlock(Ants)]',
+                      blocks: [singleTextBlock('Ants')],
                     },
                     type: 'altText',
                   },
@@ -219,7 +219,7 @@ export const multipleAresMetadata = {
             },
             {
               model: {
-                blocks: '[singleTextBlock(Ants)]',
+                blocks: [singleTextBlock('Ants')],
               },
               type: 'altText',
             },
