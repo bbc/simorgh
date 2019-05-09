@@ -109,7 +109,7 @@ describe('Headings', () => {
       );
     });
 
-    describe('should render subheadline', () => {
+    describe('subheadline', () => {
       const data = {
         blocks: blocksSingleFragment('Plain subheadline', []),
         type: 'subheadline',
