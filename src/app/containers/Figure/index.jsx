@@ -10,7 +10,8 @@ import { RequestContext } from '../../contexts/RequestContext';
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
 
-const renderCaption = block => (block ? <Caption block={block} /> : null);
+const renderCaption = (block, type) =>
+  block ? <Caption block={block} type={type} /> : null;
 
 const FigureContainer = ({
   alt,
@@ -20,6 +21,7 @@ const FigureContainer = ({
   src,
   height,
   width,
+  type,
 }) => {
   const { platform } = useContext(RequestContext);
   return (
@@ -39,7 +41,7 @@ const FigureContainer = ({
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
-      {renderCaption(captionBlock)}
+      {renderCaption(captionBlock, type)}
     </Figure>
   );
 };
@@ -52,12 +54,14 @@ FigureContainer.propTypes = {
   src: string.isRequired,
   height: number,
   width: number.isRequired,
+  type: string,
 };
 
 FigureContainer.defaultProps = {
   copyright: null,
   captionBlock: null,
   height: null,
+  type: '',
 };
 
 export default FigureContainer;

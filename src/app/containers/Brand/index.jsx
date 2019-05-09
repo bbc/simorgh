@@ -3,8 +3,9 @@ import Brand from '@bbc/psammead-brand';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => {
-  const { brandName } = useContext(ServiceContext);
-  return <Brand brandName={brandName} />;
+  const { brandName, brandSVG } = useContext(ServiceContext);
+
+  return <Brand brandName={brandName} svg={brandSVG} />;
 };
 
 export default BrandContainer;
