@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timestamp should add prefix and suffix 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.8125rem;
+  }
+}
+
+<time
+  className="c0"
+  dateTime="2018-10-19"
+>
+  Prefix here  
+  19 October 2018
+    suffix here
+</time>
+`;
+
+exports[`Timestamp should handle invalid date 1`] = `null`;
+
+exports[`Timestamp should render correctly 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.8125rem;
+  }
+}
+
+<time
+  className="c0"
+  dateTime="2018-10-19"
+>
+  19 October 2018
+</time>
+`;
+
+exports[`Timestamp should render without a leading zero on the day 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #757575;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 0.25rem;
+}
+
+.c0:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.8125rem;
+  }
+}
+
+<time
+  className="c0"
+  dateTime="2018-07-07"
+>
+  7 July 2018
+</time>
+`;
