@@ -8,24 +8,30 @@ global.console.log = jest.fn();
 
 describe('ArticleContainer', () => {
   const newsProps = {
-    data: articleDataNews,
+    data: {
+      pageData: articleDataNews,
+      status: 200,
+    },
     isAmp: false,
     service: 'news',
-    status: 200,
   };
 
   const persianProps = {
-    data: articleDataPersian,
+    data: {
+      pageData: articleDataPersian,
+      status: 200,
+    },
     isAmp: false,
     service: 'persian',
-    status: 200,
   };
 
   const badData = {
-    data: undefined,
+    data: {
+      pageData: undefined,
+      status: 451,
+    },
     isAmp: false,
     service: 'news',
-    status: 451,
   };
 
   const bbcOrigin = 'https://www.bbc.co.uk';
@@ -34,18 +40,18 @@ describe('ArticleContainer', () => {
     describe('200 status code', () => {
       shouldShallowMatchSnapshot(
         'should render correctly for news',
-        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
+        <ArticleContainer {...newsProps} bbcOrigin={bbcOrigin} />,
       );
       shouldShallowMatchSnapshot(
         'should render correctly for persian',
-        <ArticleContainer data={persianProps} bbcOrigin={bbcOrigin} />,
+        <ArticleContainer {...persianProps} bbcOrigin={bbcOrigin} />,
       );
     });
 
     describe('non-200 status code', () => {
       shouldShallowMatchSnapshot(
         'should render correctly',
-        <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
+        <ArticleContainer {...badData} bbcOrigin={bbcOrigin} />,
       );
     });
 
