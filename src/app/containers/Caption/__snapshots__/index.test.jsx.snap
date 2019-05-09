@@ -18,8 +18,16 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 .c2 {
@@ -47,13 +55,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -105,8 +113,16 @@ exports[`should render caption text with example News offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 .c2 {
@@ -134,13 +150,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -192,8 +208,16 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 .c2 {
@@ -221,13 +245,13 @@ exports[`should render caption with mutiple paragraphs 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 

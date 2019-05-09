@@ -87,8 +87,16 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c3 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c3 i {
+  font-style: normal;
 }
 
 .c5 {
@@ -100,13 +108,13 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c3 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -183,8 +191,16 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c2 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c2 i {
+  font-style: normal;
 }
 
 .c4 {
@@ -218,13 +234,13 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c2 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -421,8 +437,16 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c4 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c4 i {
+  font-style: normal;
 }
 
 .c6 {
@@ -434,13 +458,13 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c4 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c4 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -521,8 +545,16 @@ exports[`Figure should render an image with caption text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c3 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c3 i {
+  font-style: normal;
 }
 
 .c5 {
@@ -534,13 +566,13 @@ exports[`Figure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c3 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -615,8 +647,16 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c3 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c3 i {
+  font-style: normal;
 }
 
 .c5 {
@@ -650,13 +690,13 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c3 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -795,8 +835,16 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c2 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c2 i {
+  font-style: normal;
 }
 
 .c4 {
@@ -808,13 +856,13 @@ exports[`Figure should render can AMP image with aption text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c2 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
