@@ -20,7 +20,7 @@ export const shouldMatchReturnedData = (data, element) => {
 
 export const getBlockData = (blockType, win) => {
   let blockData;
-  const { blocks } = win.SIMORGH_DATA.data.content.model;
+  const { blocks } = win.SIMORGH_DATA.pageData.content.model;
 
   blocks.forEach(block => {
     if (!blockData && block.type === blockType) {
