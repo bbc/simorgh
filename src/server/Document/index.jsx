@@ -8,7 +8,7 @@ import { getStyleTag } from '../styles';
 import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
-const renderDocument = async (url, data, routes, bbcOrigin) => {
+const renderDocument = async (url, data, routes, bbcOrigin, service, isAmp) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
@@ -19,6 +19,8 @@ const renderDocument = async (url, data, routes, bbcOrigin) => {
         data={data}
         bbcOrigin={bbcOrigin}
         context={{}}
+        service={service}
+        isAmp={isAmp}
       />,
     ),
   );
@@ -32,8 +34,10 @@ const renderDocument = async (url, data, routes, bbcOrigin) => {
       assetOrigins={assetOrigins}
       app={app}
       data={data}
-      styleTags={getStyleTag(sheet, data.isAmp)}
+      styleTags={getStyleTag(sheet, isAmp)}
       helmet={headHelmet}
+      service={service}
+      isAmp={isAmp}
     />,
   );
 
