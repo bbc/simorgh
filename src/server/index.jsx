@@ -12,7 +12,7 @@ import routes, {
   frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
-} from '../app/routes';
+} from '../app/routes/regex';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 
