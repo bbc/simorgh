@@ -1,14 +1,14 @@
 import { blocksWithTypes } from '../general';
 import { headlineBlockPropTypes } from '../headline';
 import { textBlockPropTypes } from '../text';
-import timestampBlockPropTypes from '../timestamp';
 import { imageBlockPropTypes } from '../image';
+import timestampBlockPropTypes from '../timestamp';
 
 const mainContentPropTypes = blocksWithTypes([
   headlineBlockPropTypes,
-  timestampBlockPropTypes,
   textBlockPropTypes,
   imageBlockPropTypes,
+  timestampBlockPropTypes,
 ]);
 
 export default mainContentPropTypes;
