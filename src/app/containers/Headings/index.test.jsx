@@ -97,14 +97,14 @@ describe('Headings', () => {
   template('with subheadline data', 'This is a subheadline', 'subheadline');
 
   describe('with plain text', () => {
-    describe('should render headline', () => {
+    describe('headline', () => {
       const data = {
         blocks: blocksSingleFragment('Plain headline', []),
         type: 'headline',
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 containing correct text',
         HeadingsContainerWithContext(data),
       );
     });
@@ -116,33 +116,33 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h2 containing correct text',
         <HeadingsContainer {...data} />,
       );
     });
   });
 
   describe('with rich text', () => {
-    describe('should render headline with italic text', () => {
+    describe('headline with italic text', () => {
       const data = {
         blocks: blocksSingleFragment('All is italic', ['italic']),
         type: 'headline',
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 with <i> tag',
         <HeadingsContainer {...data} />,
       );
     });
 
-    describe('should render headline with bold text', () => {
+    describe('headline with bold text', () => {
       const data = {
         blocks: blocksSingleFragment('All is bold', ['bold']),
         type: 'headline',
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 with <b> tag',
         <HeadingsContainer {...data} />,
       );
     });
@@ -157,7 +157,7 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 with <i><b> tags',
         <HeadingsContainer {...data} />,
       );
     });
@@ -172,7 +172,7 @@ describe('Headings', () => {
       };
 
       shouldMatchSnapshot(
-        'should render correctly',
+        'should render h1 with <b><i> tags',
         <HeadingsContainer {...data} />,
       );
     });
