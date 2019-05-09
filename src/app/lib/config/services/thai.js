@@ -1,9 +1,9 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import { thai as thaiScript } from '@bbc/gel-foundations/scripts';
-import 'moment/locale/en-gb';
+import 'moment/locale/th';
 // Timezone value provided at build time
-const timezone = Moment_Timezone_Europe_London; //eslint-disable-line
+const timezone = Moment_Timezone_Asia_Bangkok; //eslint-disable-line
 
 const thai = {
   brandName: 'BBC News บีบีซีไทย',
@@ -15,7 +15,7 @@ const thai = {
   script: thaiScript,
   moment: {
     timezone,
-    locale: 'en-gb',
+    locale: 'th',
   },
 };
 
