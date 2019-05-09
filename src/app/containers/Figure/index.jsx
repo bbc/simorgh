@@ -10,7 +10,7 @@ import { RequestContextConsumer } from '../../contexts/RequestContext';
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
 
-const renderCaption = (block, script, type) =>
+const renderCaption = (block, type) =>
   block ? <Caption block={block} type={type} /> : null;
 
 const FigureContainer = ({
