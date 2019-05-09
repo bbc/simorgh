@@ -1,4 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 
 const persian = {
@@ -8,6 +9,8 @@ const persian = {
   defaultImageAltText: 'BBC News فارسی',
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
+  videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  defaultCaptionOffscreenText: ' ، عنوان',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',
   service: 'persian',
@@ -97,6 +100,7 @@ const persian = {
       },
     },
   },
+  brandSVG,
 };
 
 export default persian;

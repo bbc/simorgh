@@ -22,6 +22,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
 }
 
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
     font-size: 1.125rem;
@@ -54,9 +61,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   <span
     className="c1"
   >
-     ، عنوان تصویر
+     ، عنوان
   </span>
-  Some caption text...
+  <p
+    className="c2"
+  >
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
@@ -80,6 +91,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
   font-style: italic;
   padding: 0.5rem 0.5rem;
   width: 100%;
+}
+
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -114,13 +132,28 @@ exports[`should render caption text with example News offscreen text 1`] = `
   <span
     className="c1"
   >
-    Image caption, 
+    Caption, 
   </span>
-  Some caption text...
+  <p
+    className="c2"
+  >
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
-exports[`should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext 1`] = `
+exports[`should render caption with mutiple paragraphs 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -129,6 +162,13 @@ exports[`should render caption text with no VisuallyHiddenText component when no
   font-style: italic;
   padding: 0.5rem 0.5rem;
   width: 100%;
+}
+
+.c2 {
+  color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -160,6 +200,25 @@ exports[`should render caption text with no VisuallyHiddenText component when no
 <figcaption
   className="c0"
 >
-  Some caption text...
+  <span
+    className="c1"
+  >
+    Caption, 
+  </span>
+  <p
+    className="c2"
+  >
+    This is paragraph 1
+  </p>
+  <p
+    className="c2"
+  >
+    This is paragraph 2
+  </p>
+  <p
+    className="c2"
+  >
+    Paragraph 3
+  </p>
 </figcaption>
 `;

@@ -11,38 +11,38 @@ import {
 const babyBlue = '#54d1ff';
 
 // eslint-disable-next-line react/prop-types
-const GridItem = ({ children }) => (
-  <div style={{ height: '100%', overtflow: 'auto', backgroundColor: babyBlue }}>
-    {children}
-  </div>
+const ColouredDiv = ({ colour, children }) => (
+  <div style={{ backgroundColor: colour }}>{children}</div>
 );
 
 storiesOf('Grid Examples', module)
   .add('GridItemConstrainedSmall', () => (
     <GhostWrapper>
       <GridItemConstrainedSmall>
-        <GridItem>GridItemConstrainedSmall</GridItem>
+        <ColouredDiv colour={babyBlue}>GridItemConstrainedSmall</ColouredDiv>
       </GridItemConstrainedSmall>
     </GhostWrapper>
   ))
   .add('GridItemConstrainedMedium', () => (
     <GhostWrapper>
       <GridItemConstrainedMedium>
-        <GridItem>GridItemConstrainedMedium</GridItem>
+        <ColouredDiv colour={babyBlue}>GridItemConstrainedMedium</ColouredDiv>
       </GridItemConstrainedMedium>
     </GhostWrapper>
   ))
   .add('GridItemConstrainedLarge', () => (
     <GhostWrapper>
       <GridItemConstrainedLarge>
-        <GridItem>GridItemConstrainedLarge</GridItem>
+        <ColouredDiv colour={babyBlue}>GridItemConstrainedLarge</ColouredDiv>
       </GridItemConstrainedLarge>
     </GhostWrapper>
   ))
   .add('GridItemConstrainedLargeNoMargin', () => (
     <GhostWrapper>
       <GridItemConstrainedLargeNoMargin>
-        <GridItem>GridItemConstrainedLargeNoMargin</GridItem>
+        <ColouredDiv colour={babyBlue}>
+          GridItemConstrainedLargeNoMargin
+        </ColouredDiv>
       </GridItemConstrainedLargeNoMargin>
     </GhostWrapper>
   ));
