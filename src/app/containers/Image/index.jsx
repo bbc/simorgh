@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { filterForBlockType } from '../../helpers/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
@@ -34,6 +35,8 @@ const ImageContainer = ({ blocks }) => {
   if (!blocks) {
     return null;
   }
+
+  const { script } = useContext(ServiceContext);
 
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
@@ -76,6 +79,7 @@ const ImageContainer = ({ blocks }) => {
         height={height}
         ratio={ratio}
         src={rawImageSrc}
+        script={script}
         width={width}
       />
     </Wrapper>

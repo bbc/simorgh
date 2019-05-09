@@ -26,8 +26,11 @@ const chooseOffscreenText = (
       return defaultText;
   }
 };
-const renderParagraph = paragraphBlock => (
-  <Paragraph key={deepGet([0, 'model', 'text'], paragraphBlock)}>
+const renderParagraph = (paragraphBlock, script) => (
+  <Paragraph
+    script={script}
+    key={deepGet([0, 'model', 'text'], paragraphBlock)}
+  >
     <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
   </Paragraph>
 );
@@ -39,7 +42,7 @@ const renderCaption = (paragraphBlocks, offscreenText, script) => (
     ) : null}
     {paragraphBlocks.map(block => {
       const paragraphBlock = deepGet(['model', 'blocks'], block);
-      return renderParagraph(paragraphBlock);
+      return renderParagraph(paragraphBlock, script);
     })}
   </Caption>
 );

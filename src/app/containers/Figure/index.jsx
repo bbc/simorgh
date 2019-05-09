@@ -1,8 +1,9 @@
 import React from 'react';
-import { string, number, objectOf, any } from 'prop-types';
+import { string, number, objectOf, shape, any } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContextConsumer } from '../../contexts/RequestContext';
@@ -10,8 +11,8 @@ import { RequestContextConsumer } from '../../contexts/RequestContext';
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
 
-const renderCaption = (block, type) =>
-  block ? <Caption block={block} type={type} /> : null;
+const renderCaption = (block, script, type) =>
+  block ? <Caption script={script} block={block} type={type} /> : null;
 
 const FigureContainer = ({
   alt,
@@ -21,6 +22,7 @@ const FigureContainer = ({
   src,
   height,
   width,
+  script,
   type,
 }) => (
   <Figure>
@@ -43,7 +45,7 @@ const FigureContainer = ({
       </RequestContextConsumer>
       {renderCopyright(copyright)}
     </ImagePlaceholder>
-    {renderCaption(captionBlock, type)}
+    {renderCaption(captionBlock, script, type)}
   </Figure>
 );
 
@@ -55,6 +57,7 @@ FigureContainer.propTypes = {
   src: string.isRequired,
   height: number,
   width: number.isRequired,
+  script: shape(scriptPropType).isRequired,
   type: string,
 };
 
