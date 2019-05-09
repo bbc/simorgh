@@ -17,7 +17,14 @@ const logger = nodeLogger(__filename);
 /*
   [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
 */
-const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
+const ArticleContainer = ({
+  loading,
+  error,
+  data,
+  bbcOrigin,
+  isAmp,
+  service,
+}) => {
   if (loading) return 'Loading...'; /* [1] */
   if (error) {
     logger.error(error);
@@ -25,7 +32,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
   }
 
   if (data) {
-    const { isAmp, data: articleData, service, status } = data;
+    const { pageData, status } = data;
 
     return (
       <Fragment>
@@ -44,7 +51,7 @@ const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
             <ConsentBanner />
             <HeaderContainer />
             {status === 200 ? (
-              <ArticleMain articleData={articleData} />
+              <ArticleMain articleData={pageData} />
             ) : (
               <ErrorMain status={status} />
             )}
@@ -63,6 +70,8 @@ ArticleContainer.propTypes = {
   error: string,
   data: shape(articlePropTypes),
   bbcOrigin: string,
+  isAmp: bool.isRequired,
+  service: string.isRequired,
 };
 
 ArticleContainer.defaultProps = {
