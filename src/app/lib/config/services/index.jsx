@@ -38,7 +38,7 @@ export default {
     import(/* webpackChunkName: 'igbo' */ `./igbo.js`),
   ),
   pidgin: createLoadable(() =>
-    import(/* webpackChunkName: 'pidgin' */ `./thai.js`),
+    import(/* webpackChunkName: 'pidgin' */ `./pidgin.js`),
   ),
   thai: createLoadable(() =>
     import(/* webpackChunkName: 'thai' */ `./thai.js`),
