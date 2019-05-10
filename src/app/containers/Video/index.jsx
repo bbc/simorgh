@@ -18,7 +18,7 @@ const VideoContainer = ({ blocks }) => {
 
   return (
     <Figure>
-      <Video />
+      <Video {...aresMediaBlock} />
       {captionBlock ? <Caption block={captionBlock} video /> : null}
     </Figure>
   );

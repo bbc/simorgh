@@ -1,51 +1,38 @@
 import React from 'react';
-import { videoComponentPropTypes } from '../../models/propTypes';
+import { shape } from 'prop-types';
+import deepGet from '../../helpers/json/deepGet';
 
-const Video = ({
-  videoLocator,
-  duration,
-  rawImageSrc,
-  versionID,
-  imageLocator,
-  kind,
-}) => (
-  <div>
-    <div>
-      video locator:
-      {videoLocator}
-    </div>
-    <div>
-      duration:
-      {duration}
-    </div>
-    <div>
-      raw Image Src:
-      {rawImageSrc}
-    </div>
-    <div>
-      versionID:
-      {versionID}
-    </div>
-    <div>
-      imageLocator:
-      {imageLocator}
-    </div>
-    <div>
-      kind:
-      {kind}
-    </div>
-  </div>
-);
+const Video = ({ model }) => {
+  const nestedModel = deepGet(['blocks', 0, 'model'], model);
+  const kind = deepGet(['subType'], nestedModel);
+  const title = deepGet(['title'], nestedModel);
+  const version = deepGet(['versions', 0], nestedModel);
+  const vpid = deepGet(['versionId'], version);
+  const duration = deepGet(['duration'], version);
+  const holdingImageUrl = deepGet(
+    ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
+    model,
+  );
+  const items = {
+    versionId: vpid,
+    kind,
+    duration,
+  };
 
-Video.propTypes = videoComponentPropTypes;
+  return (
+    <div>
+      <div>video pid: {vpid}</div>
+      <div>kind: {kind}</div>
+      <div>title: {title}</div>
+      <div>holdingImageURL: {holdingImageUrl}</div>
+      <div>uiLocale: </div>
+      <div>items: {JSON.stringify(items, null, 4)}</div>
+    </div>
+  );
+};
 
-Video.defaultProps = {
-  duration: 299,
-  imageLocator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
-  kind: 'clip',
-  rawImageSrc: 'raw image source',
-  versionID: 'p064nsz3',
-  videoLocator: 'urn:bbc:pips:pid:p064nsyw',
+Video.propTypes = {
+  model: shape().isRequired,
 };
 
 export default Video;
