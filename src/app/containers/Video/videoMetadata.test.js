@@ -28,12 +28,12 @@ describe('videoMetadata', () => {
 
   it('handles aresMediaMetadata type not being present', () => {
     const metadata = videoMetadata(noAresMediaMetadata);
-    expect(metadata).toEqual(undefined);
+    expect(metadata).toEqual(null);
   });
 
   it('handles empty input', () => {
     const metadata = videoMetadata([]);
-    expect(metadata).toEqual(undefined);
+    expect(metadata).toEqual(null);
   });
 
   it('handles multiple aresMediaMetadata types being present.', () => {

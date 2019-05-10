@@ -12,21 +12,24 @@ const videoMetadata = blocks => {
   };
 
   if (!aresMediaBlocks || aresMediaBlocks.length < 1) {
-    return undefined;
+    return null;
   }
-  aresMediaBlocks.forEach(block => {
-    if (block.type !== 'aresMediaMetadata') {
-      return null;
-    }
-    return listContent.push({
+
+  const aresMetaDataBlocks = aresMediaBlocks.filter(
+    block => block.type === 'aresMediaMetadata',
+  );
+
+  aresMetaDataBlocks.forEach(block =>
+    listContent.push({
       '@type': videoObject,
       name: deepGet(['model', 'title'], block),
       description: deepGet(['model', 'synopses', 'short'], block),
       duration: deepGet(['model', 'versions', [0], 'duration'], block),
       thumbnailUrl: `https://${deepGet(['model', 'imageUrl'], block)}`,
-    });
-  });
-  return listContent.length > 0 ? metadata : undefined;
+    }),
+  );
+
+  return listContent.length > 0 ? metadata : null;
 };
 
 export default videoMetadata;
