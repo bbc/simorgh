@@ -2,7 +2,7 @@
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
-import * as reactRouterConfig from 'react-router-config';
+import * as getRouteProps from '../getInitialData/utils/getRouteProps';
 import loadInitialData from '.';
 import getDials from './getDials';
 
@@ -12,28 +12,17 @@ describe('loadInitialData', () => {
   const data = { data: 'Some data!' };
   const match = { match: true };
 
-  describe('no matched route', () => {
-    it('should return an empty object', async () => {
-      reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([]);
-
-      try {
-        await loadInitialData('url', []);
-      } catch (error) {
-        expect(error).toMatchSnapshot();
-      }
-    });
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   describe('no getInitialData function on route', () => {
     it('should return an empty object', async () => {
-      reactRouterConfig.matchRoutes = jest
+      getRouteProps.default = jest
         .fn()
-        .mockReturnValue([
-          { route: { route: 'data' }, match: { match: true } },
-        ]);
+        .mockImplementation(() => ({ route: 'data', match }));
 
       const initialData = await loadInitialData('url', ['url']);
-
       expect(initialData).toEqual({});
     });
   });
@@ -50,9 +39,7 @@ describe('loadInitialData', () => {
 
       getDials.mockReturnValue(dials);
 
-      reactRouterConfig.matchRoutes = jest
-        .fn()
-        .mockReturnValue([{ route, match }]);
+      getRouteProps.default = jest.fn().mockReturnValue({ route, match });
 
       const initialData = await loadInitialData('url', ['url']);
 
@@ -70,17 +57,12 @@ describe('loadInitialData', () => {
             .fn()
             .mockImplementation(() => Promise.reject(error)),
         };
-
-        reactRouterConfig.matchRoutes = jest
-          .fn()
-          .mockReturnValue([{ route, match }]);
-
+        getRouteProps.default = jest.fn().mockReturnValue({ route, match });
         try {
           await loadInitialData(route, {});
         } catch (err) {
           expect(err).toEqual(error);
         }
-
         expect(route.getInitialData).toHaveBeenCalledTimes(1);
       });
     });

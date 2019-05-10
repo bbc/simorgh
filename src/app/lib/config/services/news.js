@@ -1,4 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { latin } from '@bbc/gel-foundations/scripts';
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -8,6 +10,8 @@ const news = {
   defaultImageAltText: 'BBC News',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
+  videoCaptionOffscreenText: 'Video caption, ',
+  defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
   service: 'news',
@@ -17,6 +21,7 @@ const news = {
   twitterSite: '@BBCNews',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  script: latin,
   translations: {
     error: {
       404: {
@@ -99,6 +104,7 @@ const news = {
       },
     },
   },
+  brandSVG,
 };
 
 export default news;

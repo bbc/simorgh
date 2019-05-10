@@ -12,77 +12,144 @@ const imageSrc =
 const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = blockContainingText('caption', 'This is a caption');
-// The following block is quite a large and ugly thing to keep in this file, but refactoring model/blocks.js to better allow for generating fragmented data is not in scope of the current task.
-const captionBlockWithLink = {
-  type: 'caption',
+
+const createCaptionBlock = arrayOfBlocks => {
+  const captionBlockSkeleton = {
+    type: 'caption',
+    model: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [],
+          },
+        },
+      ],
+    },
+  };
+  arrayOfBlocks.forEach(block => {
+    captionBlockSkeleton.model.blocks[0].model.blocks.push(block);
+  });
+  return captionBlockSkeleton;
+};
+
+const paragraphBlockWithInlineLink = {
+  type: 'paragraph',
   model: {
+    text: 'This is a caption containing an inline link.',
     blocks: [
       {
-        type: 'text',
+        type: 'fragment',
         model: {
+          text: 'This is a caption ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'urlLink',
+        model: {
+          text: 'containing an inline link',
+          locator: 'https://www.bbc.com',
+          isExternal: false,
           blocks: [
             {
-              type: 'paragraph',
+              type: 'fragment',
               model: {
-                text: 'This is a caption containing an inline link.',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: 'This is a caption ',
-                      attributes: [],
-                    },
-                  },
-                  {
-                    type: 'urlLink',
-                    model: {
-                      text: 'containing an inline link',
-                      locator: 'https://www.bbc.com',
-                      isExternal: false,
-                      blocks: [
-                        {
-                          type: 'fragment',
-                          model: {
-                            text: 'containing an inline link',
-                            attributes: [],
-                          },
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: '.',
-                      attributes: [],
-                    },
-                  },
-                ],
+                text: 'containing an inline link',
+                attributes: [],
               },
             },
           ],
         },
       },
+      {
+        type: 'fragment',
+        model: {
+          text: '.',
+          attributes: [],
+        },
+      },
     ],
   },
 };
+
+const paragraphBlockWithBoldAndItalics = {
+  type: 'paragraph',
+  model: {
+    text: 'This is a second paragraph with italics and bold and bold italics',
+    blocks: [
+      {
+        type: 'fragment',
+        model: {
+          text: 'This is a second paragraph with ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'italics',
+          attributes: ['italic'],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: ' and ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'bold',
+          attributes: ['bold'],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: ' and ',
+          attributes: [],
+        },
+      },
+      {
+        type: 'fragment',
+        model: {
+          text: 'bold italics',
+          attributes: ['bold', 'italic'],
+        },
+      },
+    ],
+  },
+};
+
+const captionBlockWithMultipleParagraphsAndLink = createCaptionBlock([
+  paragraphBlockWithInlineLink,
+  paragraphBlockWithBoldAndItalics,
+  paragraphBlockWithInlineLink,
+]);
+
+const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
+
 const copyrightText = 'Getty Images';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = ({ caption, copyright, platform }) => (
+const generateFixtureData = ({ caption, copyright, platform, type }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider platform={platform}>
       <FigureContainer
         alt={imageAlt}
-        captionBlock={caption ? captionBlock : null}
+        captionBlock={caption || null}
         copyright={copyright ? copyrightText : null}
         height={imageHeight}
         ratio={imageRatio}
         src={imageSrc}
         width={imageWidth}
+        type={type}
       />
     </RequestContextProvider>
   </ServiceContext.Provider>
@@ -92,12 +159,14 @@ generateFixtureData.propTypes = {
   caption: PropTypes.objectOf(PropTypes.any),
   copyright: PropTypes.string,
   platform: PropTypes.string,
+  type: PropTypes.string,
 };
 
 generateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
   platform: 'canonical',
+  type: '',
 };
 
 export const FigureImage = generateFixtureData({});
@@ -106,11 +175,13 @@ export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
 export const FigureImageWithCaption = generateFixtureData({
   caption: captionBlock,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaption = generateFixtureData({
   caption: captionBlock,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCopyright = generateFixtureData({
@@ -125,19 +196,38 @@ export const FigureAmpImageWithCopyright = generateFixtureData({
 export const FigureImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'amp',
+  type: 'image',
 });
+
+export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
+  {
+    caption: captionBlockWithMultipleParagraphsAndLink,
+    type: 'image',
+  },
+);
+
+export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
+  {
+    caption: captionBlockWithMultipleParagraphsAndLink,
+    platform: 'amp',
+    type: 'image',
+  },
+);
