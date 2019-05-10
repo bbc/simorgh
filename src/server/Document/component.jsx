@@ -8,14 +8,28 @@ import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
+const Document = ({
+  assets,
+  assetOrigins,
+  app,
+  data,
+  styleTags,
+  helmet,
+  service,
+  isAmp,
+}) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const serialisedData = JSON.stringify(data);
-  const scriptsAllowed = !data.isAmp;
+  const clientDataObj = {
+    ...data,
+    service,
+    isAmp,
+  };
+  const serialisedData = JSON.stringify(clientDataObj);
+  const scriptsAllowed = !isAmp;
   const scripts = (
     <Fragment>
       <IfAboveIE9>
@@ -43,7 +57,7 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
         {styleTags}
         {headScript}
         {scriptsAllowed && <MPulseBeacon />}
-        {data.isAmp && (
+        {isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
@@ -51,7 +65,7 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
             </noscript>
           </Fragment>
         )}
-        {data.isAmp && (
+        {isAmp && (
           <Fragment>
             <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
             <script
