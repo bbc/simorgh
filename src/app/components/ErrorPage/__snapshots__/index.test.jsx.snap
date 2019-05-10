@@ -60,7 +60,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -308,7 +308,7 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }

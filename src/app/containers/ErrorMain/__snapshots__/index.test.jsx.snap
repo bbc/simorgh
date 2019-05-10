@@ -60,7 +60,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -313,7 +313,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -566,7 +566,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -814,7 +814,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -1062,7 +1062,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 .c1 {
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
