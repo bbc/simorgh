@@ -127,10 +127,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={yellow}>span 10/12</ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan="11">
-          <ColouredDiv colour={green}>span 10/12</ColouredDiv>
+          <ColouredDiv colour={green}>span 11/12</ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan="12">
-          <ColouredDiv colour={blue}>span 10/12</ColouredDiv>
+          <ColouredDiv colour={blue}>span 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLarge>
     </GhostWrapper>
@@ -169,10 +169,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={yellow}>span 10/12</ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan="11">
-          <ColouredDiv colour={green}>span 10/12</ColouredDiv>
+          <ColouredDiv colour={green}>span 11/12</ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan="12">
-          <ColouredDiv colour={blue}>span 10/12</ColouredDiv>
+          <ColouredDiv colour={blue}>span 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
     </GhostWrapper>
