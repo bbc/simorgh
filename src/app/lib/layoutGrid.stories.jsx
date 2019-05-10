@@ -175,7 +175,7 @@ storiesOf('Grid Examples', module)
       </GridItemConstrainedLargeNoMargin>
     </GhostWrapper>
   ))
-  .add('York Runte', () => (
+  .add('Example of multi-breakpoint span', () => (
     <GhostWrapper>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '12' }}>
