@@ -20,11 +20,9 @@ const blue = '#cceeff';
 const indigo = '#ccccff';
 const violet = '#ccaaee';
 
-/* eslint-disable react/prop-types */
 const ColouredDiv = styled.div`
   background-color: ${props => props.colour};
 `;
-/* eslint-enable react/prop-types */
 
 storiesOf('Grid Examples', module)
   .add('GridItemConstrainedSmall', () => (
