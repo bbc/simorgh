@@ -183,58 +183,77 @@ export const layoutGridItem = css`
   grid-column: 1 / -1;
 `;
 
-const maximumOrSpecified = (specified, maximum) =>
+// if the specified grid span is wider than the maximum width the grid will expand
+// with an extra grid-gap, so we need this to prevent that from happening
+const specifiedOrMaximum = (specified, maximum) =>
   specified > maximum ? maximum : specified;
 
 export const nestedGridItemSmallCss = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 6)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group1 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 4)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 5)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 4)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 8)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group5 || props.gridSpan.default, 8)};
   }
 `;
 
 export const nestedGridItemMediumCss = css`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 5)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 5)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 5)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 10)};
+      ${props =>
+        specifiedOrMaximum(
+          props.gridSpan.group5 || props.gridSpan.default,
+          10,
+        )};
   }
 `;
 
 export const nestedGridItemLargeCss = css`
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 6)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 6)};
+      ${props =>
+        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: ${props => props.gridColumnStart} / span
-      ${props => maximumOrSpecified(props.gridSpan, 12)};
+      ${props =>
+        specifiedOrMaximum(
+          props.gridSpan.group5 || props.gridSpan.default,
+          12,
+        )};
   }
 `;
