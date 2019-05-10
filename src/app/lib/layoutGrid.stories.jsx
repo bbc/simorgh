@@ -10,7 +10,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from '../../lib/styledGrid';
+} from './styledGrid';
 
 const red = '#ffaacc';
 const orange = '#ffddcc';
