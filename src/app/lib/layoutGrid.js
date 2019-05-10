@@ -4,6 +4,7 @@ import {
   GEL_GUTTER_BELOW_600PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_GUTTER_ABOVE_600PX,
+  GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -47,7 +48,7 @@ const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
 
 const nestedGrid = css`
   display: grid;
-  grid-column-gap: 16px;
+  grid-column-gap: ${GEL_SPACING_DBL};
 `;
 
 export const gelGridMargin = css`
