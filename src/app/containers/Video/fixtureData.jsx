@@ -85,6 +85,66 @@ const captionBlock = {
   type: 'caption',
 };
 
+const portraitVideoBlock = {
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01m7hmc',
+        type: 'aresMediaMetadata',
+        model: {
+          id: 'p01m7hmc',
+          subType: 'clip',
+          format: 'audio_video',
+          title: 'Test vertical video',
+          synopses: {
+            short: 'This is a really plain green test vertical video',
+          },
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+          imageCopyright: null,
+          embedding: true,
+          advertising: true,
+          caption: null,
+          versions: [
+            {
+              versionId: 'p01m7hmf',
+              types: ['Portrait'],
+              duration: 11,
+              warnings: {},
+              availableTerritories: {
+                uk: true,
+                nonUk: true,
+              },
+              availableUntil: null,
+            },
+          ],
+          image: null,
+          syndication: {
+            destinations: [],
+          },
+        },
+      },
+      {
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              type: 'rawImage',
+              model: {
+                width: null,
+                height: null,
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+                originCode: null,
+                copyrightHolder: null,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  type: 'aresMedia',
+};
+
 const generateFixtureData = ({ platform, blocks }) => (
   <RequestContextProvider platform={platform}>
     <VideoContainer blocks={blocks} />
@@ -107,4 +167,8 @@ export const VideoWithCaption = generateFixtureData(
 
 export const VideoWithoutCaption = generateFixtureData(
   blockArrayModel([aresMediaBlock]),
+);
+
+export const VideoPortrait = generateFixtureData(
+  blockArrayModel([portraitVideoBlock]),
 );
