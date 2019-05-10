@@ -113,7 +113,6 @@ export const layoutGridItemLargeNoMargin = css`
 `;
 
 export const layoutGridItemLarge = css`
-  ${nestedGrid}
   ${layoutGridItemLargeNoMargin}
   ${gelGridMargin}
 `;
