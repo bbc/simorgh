@@ -145,6 +145,232 @@ const portraitVideoBlock = {
   type: 'aresMedia',
 };
 
+const ukGuidanceBlock = {
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01kdbns',
+        type: 'aresMediaMetadata',
+        model: {
+          id: 'p01kdbns',
+          subType: 'clip',
+          format: 'audio_video',
+          title: 'How Germans remember the World Wars',
+          synopses: {
+            short: 'Remembrance Day: How Germans remember the World Wars',
+            long:
+              "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+            medium:
+              "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+          },
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg',
+          imageCopyright: 'BBC',
+          embedding: true,
+          advertising: true,
+          caption: 'How do Germans remember the World Wars?',
+          versions: [
+            {
+              versionId: 'p01kdbnv',
+              types: ['Original'],
+              duration: 162,
+              warnings: {
+                short: 'Contains some strong language.',
+                long: 'Contains some strong language.',
+              },
+              availableTerritories: {
+                uk: true,
+                nonUk: false,
+              },
+              availableUntil: null,
+            },
+          ],
+          image: null,
+          syndication: {
+            destinations: [],
+          },
+        },
+      },
+      {
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              type: 'rawImage',
+              model: {
+                width: 1920,
+                height: 1080,
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg',
+                originCode: null,
+                copyrightHolder: 'BBC',
+              },
+            },
+            {
+              type: 'altText',
+              model: {
+                blocks: [
+                  {
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'paragraph',
+                          model: {
+                            text: 'Description of picture (ALT TEXT)',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'Description of picture (ALT TEXT)',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  type: 'aresMedia',
+};
+
+const nonUkBlock = {
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01kdbpz',
+        type: 'aresMediaMetadata',
+        model: {
+          id: 'p01kdbpz',
+          subType: 'clip',
+          format: 'audio_video',
+          title: "'I lost my leg to type 2 diabetes' (NON UK)",
+          synopses: {
+            short: "Diabetes type 2: 'I blame myself for the loss of my leg'",
+            long:
+              'Every week 170 people in the UK lose a limb because of diabetes. \nAround four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. \nDiabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital.\nAnd a further 12 million people could be at risk of getting type 2 diabetes in the future.\nStephen Richardson has told the BBC he blames himself for the loss of his limb.',
+            medium:
+              'Stephen Richardson admits he ignored advice about diet and exercise.',
+          },
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg',
+          imageCopyright: 'BBC',
+          embedding: true,
+          advertising: true,
+          caption:
+            'Stephen Richardson had to have his leg amputated because of type 2 diabetes',
+          versions: [
+            {
+              versionId: 'p01kdbq2',
+              types: ['Original'],
+              duration: 122,
+              warnings: {},
+              availableTerritories: {
+                uk: false,
+                nonUk: true,
+              },
+              availableUntil: null,
+            },
+          ],
+          image: null,
+          syndication: {
+            destinations: [],
+          },
+        },
+      },
+      {
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              type: 'rawImage',
+              model: {
+                width: null,
+                height: null,
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg',
+                originCode: null,
+                copyrightHolder: 'BBC',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
+const globalGuidanceAudioBlock = {
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01m7d07',
+        type: 'aresMediaMetadata',
+        model: {
+          id: 'p01m7d07',
+          subType: 'clip',
+          format: 'audio',
+          title: 'Birmingham checkout',
+          synopses: {
+            short: 'Some audio from a supermarket checkout in Birmingham',
+          },
+          imageUrl:
+            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+          imageCopyright: null,
+          embedding: false,
+          advertising: false,
+          caption: null,
+          versions: [
+            {
+              versionId: 'p01m7d09',
+              types: ['Original'],
+              duration: 127,
+              warnings: {
+                short: 'Contains some strong language.',
+                long: 'Contains some strong language.',
+              },
+              availableTerritories: {
+                uk: true,
+                nonUk: true,
+              },
+              availableUntil: null,
+            },
+          ],
+          image: null,
+          syndication: {
+            destinations: [],
+          },
+        },
+      },
+      {
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              type: 'rawImage',
+              model: {
+                width: null,
+                height: null,
+                locator:
+                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+                originCode: null,
+                copyrightHolder: null,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 const generateFixtureData = ({ platform, blocks }) => (
   <RequestContextProvider platform={platform}>
     <VideoContainer blocks={blocks} />
@@ -171,4 +397,14 @@ export const VideoWithoutCaption = generateFixtureData(
 
 export const VideoPortrait = generateFixtureData(
   blockArrayModel([portraitVideoBlock]),
+);
+
+export const VideoWithGuidanceUk = generateFixtureData(
+  blockArrayModel([ukGuidanceBlock]),
+);
+
+export const VideoNonUk = generateFixtureData(blockArrayModel([nonUkBlock]));
+
+export const AudioGlobalGuidance = generateFixtureData(
+  blockArrayModel([globalGuidanceAudioBlock]),
 );
