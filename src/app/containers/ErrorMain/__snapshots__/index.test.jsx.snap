@@ -59,6 +59,8 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c1 {
+  display: grid;
+  grid-column-gap: 16px;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -167,6 +169,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -174,6 +177,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   .c1 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -181,6 +185,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   .c1 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
@@ -307,6 +312,8 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c1 {
+  display: grid;
+  grid-column-gap: 16px;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -415,6 +422,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -422,6 +430,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c1 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -429,6 +438,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c1 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
@@ -555,6 +565,8 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c1 {
+  display: grid;
+  grid-column-gap: 16px;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -663,6 +675,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -670,6 +683,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   .c1 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -677,6 +691,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   .c1 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
@@ -798,6 +813,8 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c1 {
+  display: grid;
+  grid-column-gap: 16px;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -906,6 +923,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -913,6 +931,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c1 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -920,6 +939,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c1 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
@@ -1041,6 +1061,8 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c1 {
+  display: grid;
+  grid-column-gap: 16px;
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
 }
@@ -1149,6 +1171,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -1156,6 +1179,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   .c1 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -1163,6 +1187,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   .c1 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
