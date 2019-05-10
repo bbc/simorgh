@@ -14,19 +14,18 @@ import { filterForBlockType } from '../../helpers/blockHandlers';
 const VideoContainer = ({ blocks }) => {
   const captionBlock = filterForBlockType(blocks, 'caption');
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const metadata = videoMetadata(aresMediaBlock);
   if (!aresMediaBlock) {
     return null;
   }
 
   return (
     <>
-      <Helmet>
-        {
-          <script type="application/ld+json">
-            {JSON.stringify(videoMetadata(aresMediaBlock))}
-          </script>
-        }
-      </Helmet>
+      {metadata ? (
+        <Helmet>
+          {<script type="application/ld+json">{metadata}</script>}
+        </Helmet>
+      ) : null}
       <Figure>
         <Video />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
