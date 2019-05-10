@@ -2,7 +2,7 @@ import React from 'react';
 import { node, string, func } from 'prop-types';
 import getOriginContext from './getOriginContext';
 
-const RequestContext = React.createContext('default');
+export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({ children, platform, bbcOrigin }) => {
   const value = {
