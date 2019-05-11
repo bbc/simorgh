@@ -6,6 +6,7 @@
 import { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
+import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 import loadInitialData from '../../routes/loadInitialData';
 
@@ -13,8 +14,15 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
+    const { service, isAmp } = getRouteProps(
+      this.props.routes,
+      this.props.location.pathname,
+    );
+
     this.state = {
       data: this.props.initialData,
+      service: service,
+      isAmp: isAmp,
       loading: false,
       error: null,
       loadInitialDataPromise: null,
@@ -22,6 +30,11 @@ export class App extends Component {
   }
 
   async componentDidUpdate({ location: prevLocation }) {
+    const { service, isAmp } = getRouteProps(
+      this.props.routes,
+      this.props.location.pathname,
+    );
+
     if (this.props.location.pathname !== prevLocation.pathname) {
       const initialData = loadInitialData(
         this.props.location.pathname,
@@ -30,6 +43,8 @@ export class App extends Component {
 
       this.setState({
         data: null,
+        service: service,
+        isAmp: isAmp,
         loading: true,
         error: null,
         loadInitialDataPromise: initialData,
@@ -41,6 +56,8 @@ export class App extends Component {
         const data = await this.state.loadInitialDataPromise;
         this.setState({
           data,
+          service: service,
+          isAmp: isAmp,
           loading: false,
           error: null,
           loadInitialDataPromise: null,
@@ -48,6 +65,8 @@ export class App extends Component {
       } catch (error) {
         this.setState({
           data: null,
+          service: service,
+          isAmp: isAmp,
           loading: false,
           error,
           loadInitialDataPromise: null,
@@ -59,6 +78,8 @@ export class App extends Component {
   render() {
     return renderRoutes(this.props.routes, {
       data: this.state.data,
+      service: this.state.service,
+      isAmp: this.state.isAmp,
       loading: this.state.loading,
       error: this.state.error,
       bbcOrigin: this.props.bbcOrigin,

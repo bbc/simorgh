@@ -9,16 +9,16 @@ import withError from '../PageHandlers/withError';
 import withLoading from '../PageHandlers/withLoading';
 import withData from '../PageHandlers/withData';
 
-const ArticleContainer = ({ assetData }) => (
-  <ArticleMain articleData={assetData} />
+const ArticleContainer = ({ pageData }) => (
+  <ArticleMain articleData={pageData} />
 );
 
 ArticleContainer.propTypes = {
-  assetData: shape(articlePropTypes),
+  pageData: shape(articlePropTypes),
 };
 
 ArticleContainer.defaultProps = {
-  assetData: null,
+  pageData: null,
 };
 
 const EnhancedArticleContainer = compose(
