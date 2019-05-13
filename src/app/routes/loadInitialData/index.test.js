@@ -4,9 +4,6 @@
  */
 import * as getRouteProps from '../getInitialData/utils/getRouteProps';
 import loadInitialData from '.';
-import getDials from './getDials';
-
-jest.mock('./getDials');
 
 describe('loadInitialData', () => {
   const data = { data: 'Some data!' };
@@ -34,10 +31,8 @@ describe('loadInitialData', () => {
           .fn()
           .mockImplementation(() => Promise.resolve({ ...data })),
       };
-      const dials = { dial: 'value' };
-      const expectedObject = { ...data, dials };
 
-      getDials.mockReturnValue(dials);
+      const expectedObject = { ...data };
 
       getRouteProps.default = jest.fn().mockReturnValue({ route, match });
 
@@ -45,7 +40,6 @@ describe('loadInitialData', () => {
 
       expect(route.getInitialData).toHaveBeenCalledTimes(1);
       expect(route.getInitialData).toHaveBeenCalledWith({ match });
-      expect(getDials).toHaveBeenCalledTimes(1);
       expect(initialData).toEqual(expectedObject);
     });
 

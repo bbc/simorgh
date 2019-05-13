@@ -104,7 +104,13 @@ exports[`Document Component should render correctly 1`] = `
     <script
       type="application/ld+json"
     />
-    <DialContextProvider>
+    <DialContextProvider
+      dials={
+        Object {
+          "dial": true,
+        }
+      }
+    >
       <MPulseBeaconContainer />
     </DialContextProvider>
   </head>

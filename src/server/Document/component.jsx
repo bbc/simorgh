@@ -18,6 +18,7 @@ const Document = ({
   helmet,
   service,
   isAmp,
+  dials,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -31,7 +32,6 @@ const Document = ({
   };
   const serialisedData = JSON.stringify(clientDataObj);
   const scriptsAllowed = !isAmp;
-  const { dials } = data;
   const scripts = (
     <Fragment>
       <IfAboveIE9>

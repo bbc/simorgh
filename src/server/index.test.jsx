@@ -5,6 +5,9 @@ import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import loadInitialData from '../app/routes/loadInitialData';
 import Document from './Document/component';
+import getDials from './getDials';
+
+jest.mock('./getDials');
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -121,6 +124,9 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
+          const dials = { dial: 'value' };
+          getDials.mockReturnValue(dials);
+
           const { text, status } = await makeRequest(
             '/news/articles/c0000000001o',
           );
@@ -145,6 +151,7 @@ describe('Server', () => {
               isAmp={false}
               service="news"
               styleTags={<style />}
+              dials={dials}
             />,
           );
 

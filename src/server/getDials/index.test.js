@@ -1,5 +1,5 @@
 import fs from 'fs';
-import getDials from './getDials';
+import getDials from '.';
 
 jest.mock('fs');
 
