@@ -39,8 +39,6 @@ class LoggerStream {
 
 const server = express();
 
-console.log(routes, articleRegexPath);
-
 /*
  * Default headers, compression, logging, status route
  */
