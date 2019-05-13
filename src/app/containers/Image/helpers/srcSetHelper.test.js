@@ -10,6 +10,12 @@ describe('create srcset', () => {
       summary:
         'should return a srcset with test in originCode and testland in location',
     },
+    {
+      originCode: 'pips',
+      location: 'testland',
+      expected: null,
+      summary: 'should return null with pips originCode',
+    },
   ];
 
   srcsetScenarios.forEach(({ originCode, location, expected, summary }) => {
