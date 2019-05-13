@@ -4,6 +4,7 @@ import {
   articleDataRegexPath,
   frontpageRegexPath,
   frontpageDataRegexPath,
+  swRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -93,5 +94,19 @@ describe('frontpageDataRegexPath', () => {
 
   it.each(invalidRoutes)('should not match invalid route %s', route => {
     expect(matchRoute(route, frontpageDataRegexPath)).toBe(false);
+  });
+});
+
+describe('swRegexPath', () => {
+  const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
+
+  it.each(validRoutes)('should match valid route %s', route => {
+    expect(matchRoute(route, swRegexPath)).toBe(true);
+  });
+
+  const invalidRoutes = ['/news/sw.js', '/persian/articles/sw'];
+
+  it.each(invalidRoutes)('should not match invalid route %s', route => {
+    expect(matchRoute(route, swRegexPath)).toBe(false);
   });
 });
