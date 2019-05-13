@@ -125,7 +125,7 @@ describe('Server', () => {
 
         it('should respond with rendered data', async () => {
           const dials = { dial: 'value' };
-          getDials.mockReturnValue(dials);
+          getDials.mockResolvedValue(dials);
 
           const { text, status } = await makeRequest(
             '/news/articles/c0000000001o',

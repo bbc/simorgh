@@ -139,7 +139,7 @@ server
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
-      const dials = getDials();
+      const dials = await getDials();
       const { status } = data;
       const { service, isAmp } = getRouteProps(routes, url);
       const bbcOrigin = headers['bbc-origin'];

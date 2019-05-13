@@ -4,35 +4,38 @@ import getDials from '.';
 jest.mock('fs');
 
 const createJsonBuffer = obj => Buffer.from(JSON.stringify(obj));
+const mockFs = (err, data) =>
+  fs.readFile.mockImplementation((file, cb) => cb(err, createJsonBuffer(data)));
 
 describe('getDials', () => {
   const dialsPath = 'dials';
+
   beforeEach(() => {
     process.env.COSMOS_DIALS_PATH = dialsPath;
   });
 
-  it('should return the dials object', () => {
+  it('should return the dials object', async () => {
     const dials = {
       key: 'value',
     };
-    fs.readFileSync.mockReturnValue(createJsonBuffer(dials));
+    mockFs(null, dials);
 
-    expect(getDials()).toEqual(dials);
-    expect(fs.readFileSync).toHaveBeenCalledWith(dialsPath);
+    expect(getDials()).resolves.toEqual(dials);
+    expect(fs.readFile).toHaveBeenCalledWith(dialsPath, expect.any(Function));
   });
 
-  it('should transform string boolean values in dials object', () => {
+  it('should transform string boolean values in dials object', async () => {
     const dials = {
       trueDial: 'true',
       falseDial: 'false',
     };
-    fs.readFileSync.mockReturnValue(createJsonBuffer(dials));
+    mockFs(null, dials);
 
     const expected = {
       trueDial: true,
       falseDial: false,
     };
-    expect(getDials()).toEqual(expected);
+    expect(getDials()).resolves.toEqual(expected);
   });
 
   describe('env has no dials path', () => {
@@ -40,8 +43,8 @@ describe('getDials', () => {
       delete process.env.COSMOS_DIALS_PATH;
     });
 
-    it('should return an empty object', () => {
-      expect(getDials()).toEqual({});
+    it('should return an empty object', async () => {
+      expect(getDials()).resolves.toEqual({});
     });
   });
 });

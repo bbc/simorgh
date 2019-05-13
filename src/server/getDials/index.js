@@ -11,22 +11,28 @@ const transformDial = value => {
   }
 };
 
-const getDials = () => {
-  const dialsPath = process.env.COSMOS_DIALS_PATH;
+const getDials = () =>
+  new Promise((resolve, reject) => {
+    const dialsPath = process.env.COSMOS_DIALS_PATH;
 
-  if (!dialsPath) {
-    return {};
-  }
+    if (!dialsPath) {
+      resolve({});
+    }
 
-  const buffer = fs.readFileSync(dialsPath);
-  const dials = JSON.parse(buffer);
+    return fs.readFile(dialsPath, (err, data) => {
+      if (err) {
+        reject(err);
+      }
 
-  Object.keys(dials).forEach(dial => {
-    const value = dials[dial];
-    dials[dial] = transformDial(value);
+      const dials = JSON.parse(data);
+
+      Object.keys(dials).forEach(dial => {
+        const value = dials[dial];
+        dials[dial] = transformDial(value);
+      });
+
+      resolve(dials);
+    });
   });
-
-  return dials;
-};
 
 export default getDials;
