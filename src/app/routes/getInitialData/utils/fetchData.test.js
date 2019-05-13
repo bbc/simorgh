@@ -7,7 +7,7 @@ preprocess.mockImplementation(data => data);
 const fetchData = require('./fetchData').default;
 
 describe('fetchData', () => {
-  const mockSuccessfulResponse = { data: '12345' };
+  const mockSuccessfulResponse = { pageData: '12345' };
 
   const mockFetchSuccess = () =>
     fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
@@ -49,11 +49,11 @@ describe('fetchData', () => {
     it('should return an empty object', async () => {
       const response = await callfetchData({});
 
-      expect(preprocess).toHaveBeenCalledWith(response.data, undefined);
+      expect(preprocess).toHaveBeenCalledWith(response.pageData, undefined);
 
       expect(response).toEqual({
-        data: {
-          data: '12345',
+        pageData: {
+          pageData: '12345',
         },
         status: 200,
       });
@@ -64,11 +64,14 @@ describe('fetchData', () => {
 
       const response = await callfetchData({ preprocessorRules });
 
-      expect(preprocess).toHaveBeenCalledWith(response.data, preprocessorRules);
+      expect(preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        preprocessorRules,
+      );
 
       expect(response).toEqual({
-        data: {
-          data: '12345',
+        pageData: {
+          pageData: '12345',
         },
         status: 200,
       });
