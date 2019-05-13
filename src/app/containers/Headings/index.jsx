@@ -21,6 +21,16 @@ const GridConstraints = {
   subheadline: GridItemConstrainedMedium,
 };
 
+const regexPunctuationSymbols = /[^a-z0-9\s-]/gi;
+const regexSpaces = /\s+/g;
+
+const createId = (type, text) => {
+  if (type === 'subheadline') {
+    return text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-')
+  }
+  return undefined;
+};
+
 const HeadingsContainer = ({ blocks, type }) => {
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
@@ -41,7 +51,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     <GridConstrain>
       <ServiceContextConsumer>
         {({ script }) => (
-          <Heading script={script} text={text}>
+          <Heading script={script} id={createId(type, text)}>
             {renderText()}
           </Heading>
         )}
