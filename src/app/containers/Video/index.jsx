@@ -23,7 +23,11 @@ const VideoContainer = ({ blocks }) => {
     <>
       {metadata ? (
         <Helmet>
-          {<script type="application/ld+json">{metadata}</script>}
+          {
+            <script type="application/ld+json">
+              {JSON.stringify(metadata)}
+            </script>
+          }
         </Helmet>
       ) : null}
       <Figure>
