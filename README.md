@@ -110,12 +110,7 @@ We also have a [Cypress](https://www.cypress.io/) project which runs a different
 
 ### Lighthouse Best Practice tests
 
-We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. For running the tests locally we need two terminals running:
-
-1. [Start the production server](https://github.com/bbc/simorgh#production-build)
-2. `npm run lighthouse` runs our Lighthouse tests.
-
-Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
+We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.  
 
 ### To-do
 
