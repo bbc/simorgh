@@ -1,6 +1,6 @@
 import { singleTextBlock } from '../../../models/blocks';
 
-export const aresMediaBlock = {
+export const videoClipGlobalGuidanceBlock = {
   model: {
     blocks: [
       {
@@ -81,7 +81,7 @@ export const captionBlock = {
   type: 'caption',
 };
 
-export const videoPortraitBlock = {
+export const videoClipGlobalPortraitBlock = {
   model: {
     blocks: [
       {
@@ -141,7 +141,7 @@ export const videoPortraitBlock = {
   type: 'aresMedia',
 };
 
-export const videoUkGuidanceBlock = {
+export const videoClipUkGuidanceBlock = {
   model: {
     blocks: [
       {
@@ -237,7 +237,7 @@ export const videoUkGuidanceBlock = {
   type: 'aresMedia',
 };
 
-export const videoNonUkBlock = {
+export const videoClipNonUkBlock = {
   type: 'aresMedia',
   model: {
     blocks: [
@@ -302,7 +302,7 @@ export const videoNonUkBlock = {
   },
 };
 
-export const audioGlobalGuidanceBlock = {
+export const audioClipGlobalGuidanceBlock = {
   type: 'aresMedia',
   model: {
     blocks: [
@@ -367,7 +367,7 @@ export const audioGlobalGuidanceBlock = {
   },
 };
 
-export const audioUkOnlyBlock = {
+export const audioClipUkOnlyBlock = {
   type: 'aresMedia',
   model: {
     blocks: [
@@ -430,7 +430,7 @@ export const audioUkOnlyBlock = {
   },
 };
 
-export const audioNonUkNoGuidanceBlock = {
+export const audioClipNonUkBlock = {
   type: 'aresMedia',
   model: {
     blocks: [
@@ -493,7 +493,7 @@ export const audioNonUkNoGuidanceBlock = {
   },
 };
 
-export const audioEpGlobalNoGuidanceBlock = {
+export const audioEpisodeGlobalBlock = {
   type: 'aresMedia',
   model: {
     blocks: [

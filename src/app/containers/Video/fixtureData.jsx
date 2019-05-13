@@ -4,15 +4,15 @@ import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockArrayModel } from '../../models/blocks';
 import {
-  aresMediaBlock,
   captionBlock,
-  videoPortraitBlock,
-  videoUkGuidanceBlock,
-  videoNonUkBlock,
-  audioGlobalGuidanceBlock,
-  audioUkOnlyBlock,
-  audioNonUkNoGuidanceBlock,
-  audioEpGlobalNoGuidanceBlock,
+  videoClipGlobalGuidanceBlock,
+  videoClipGlobalPortraitBlock,
+  videoClipUkGuidanceBlock,
+  videoClipNonUkBlock,
+  audioClipGlobalGuidanceBlock,
+  audioClipNonUkBlock,
+  audioClipUkOnlyBlock,
+  audioEpisodeGlobalBlock,
 } from './helpers/fixtures';
 
 const generateFixtureData = ({ platform, blocks }) => (
@@ -31,38 +31,38 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoWithCaption = generateFixtureData(
-  blockArrayModel([aresMediaBlock, captionBlock]),
+export const VideoClipGlobalWithCaption = generateFixtureData(
+  blockArrayModel([videoClipGlobalGuidanceBlock, captionBlock]),
 );
 
-export const VideoWithoutCaption = generateFixtureData(
-  blockArrayModel([aresMediaBlock]),
+export const VideoClipGlobalWithoutCaption = generateFixtureData(
+  blockArrayModel([videoClipGlobalGuidanceBlock]),
 );
 
-export const VideoPortrait = generateFixtureData(
-  blockArrayModel([videoPortraitBlock]),
+export const VideoClipGlobalPortrait = generateFixtureData(
+  blockArrayModel([videoClipGlobalPortraitBlock]),
 );
 
-export const VideoWithGuidanceUk = generateFixtureData(
-  blockArrayModel([videoUkGuidanceBlock]),
+export const VideoClipUkWithGuidance = generateFixtureData(
+  blockArrayModel([videoClipUkGuidanceBlock]),
 );
 
-export const VideoNonUk = generateFixtureData(
-  blockArrayModel([videoNonUkBlock]),
+export const VideoClipNonUk = generateFixtureData(
+  blockArrayModel([videoClipNonUkBlock]),
 );
 
-export const AudioGlobalGuidance = generateFixtureData(
-  blockArrayModel([audioGlobalGuidanceBlock]),
+export const AudioClipGlobalGuidance = generateFixtureData(
+  blockArrayModel([audioClipGlobalGuidanceBlock]),
 );
 
-export const AudioUkNoGuidance = generateFixtureData(
-  blockArrayModel([audioUkOnlyBlock]),
+export const AudioClipUk = generateFixtureData(
+  blockArrayModel([audioClipUkOnlyBlock]),
 );
 
-export const AudioNonUkNoGuidance = generateFixtureData(
-  blockArrayModel([audioNonUkNoGuidanceBlock]),
+export const AudioClipNonUk = generateFixtureData(
+  blockArrayModel([audioClipNonUkBlock]),
 );
 
 export const AudioEpisodeGlobal = generateFixtureData(
-  blockArrayModel([audioEpGlobalNoGuidanceBlock]),
+  blockArrayModel([audioEpisodeGlobalBlock]),
 );

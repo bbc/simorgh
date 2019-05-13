@@ -1,36 +1,54 @@
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import {
-  AudioGlobalGuidance,
-  VideoWithCaption,
-  VideoWithoutCaption,
-  VideoPortrait,
-  VideoWithGuidanceUk,
-  VideoNonUk,
-  AudioUkNoGuidance,
-  AudioNonUkNoGuidance,
+  AudioClipGlobalGuidance,
+  AudioClipNonUk,
+  AudioClipUk,
   AudioEpisodeGlobal,
+  VideoClipNonUk,
+  VideoClipGlobalPortrait,
+  VideoClipGlobalWithCaption,
+  VideoClipUkWithGuidance,
+  VideoClipGlobalWithoutCaption,
 } from './fixtureData';
 import AmpDecorator from '../../helpers/storybook/ampDecorator';
 
 storiesOf('Video Container', module)
-  .add('[video] with caption', () => VideoWithCaption)
-  .add('[video] without a caption', () => VideoWithoutCaption)
-  .add('[video] portrait', () => VideoPortrait)
-  .add('[video] UK with guidance', () => VideoWithGuidanceUk)
-  .add('[video] non-UK', () => VideoNonUk)
-  .add('[audio] global with guidance', () => AudioGlobalGuidance)
-  .add('[audio] UK without guidance', () => AudioUkNoGuidance)
-  .add('[audio] non-UK without guidance', () => AudioNonUkNoGuidance)
-  .add('[audio] episode, global', () => AudioEpisodeGlobal);
+  .add(
+    'video, clip, with guidance, with caption',
+    () => VideoClipGlobalWithCaption,
+  )
+  .add(
+    'video, clip, with guidance, without caption',
+    () => VideoClipGlobalWithoutCaption,
+  )
+  .add('video, clip, UK, with guidance', () => VideoClipUkWithGuidance)
+  .add('video, clip, non-UK, without guidance', () => VideoClipNonUk)
+  .add(
+    'video, clip, global, without guidance, portrait',
+    () => VideoClipGlobalPortrait,
+  )
+  .add('audio, clip, global, with guidance', () => AudioClipGlobalGuidance)
+  .add('audio, clip, UK, without guidance', () => AudioClipUk)
+  .add('audio, clip, non-UK, without guidance', () => AudioClipNonUk)
+  .add('audio, episode, global, without guidance', () => AudioEpisodeGlobal);
 
 storiesOf('Video Container - AMP', module)
   .addDecorator(AmpDecorator)
-  .add('[video] with caption', () => VideoWithCaption)
-  .add('[video] without a caption', () => VideoWithoutCaption)
-  .add('[video] portrait', () => VideoPortrait)
-  .add('[video] UK with guidance', () => VideoWithGuidanceUk)
-  .add('[video] non-UK', () => VideoNonUk)
-  .add('[audio] global with guidance', () => AudioGlobalGuidance)
-  .add('[audio] UK without guidance', () => AudioUkNoGuidance)
-  .add('[audio] non-UK without guidance', () => AudioNonUkNoGuidance)
-  .add('[audio] episode, global', () => AudioEpisodeGlobal);
+  .add(
+    'video, clip, with guidance, with caption',
+    () => VideoClipGlobalWithCaption,
+  )
+  .add(
+    'video, clip, with guidance, without caption',
+    () => VideoClipGlobalWithoutCaption,
+  )
+  .add('video, clip, UK, with guidance', () => VideoClipUkWithGuidance)
+  .add('video, clip, non-UK, without guidance', () => VideoClipNonUk)
+  .add(
+    'video, clip, global, without guidance, portrait',
+    () => VideoClipGlobalPortrait,
+  )
+  .add('audio, clip, global, with guidance', () => AudioClipGlobalGuidance)
+  .add('audio, clip, UK, without guidance', () => AudioClipUk)
+  .add('audio, clip, non-UK, without guidance', () => AudioClipNonUk)
+  .add('audio, episode, global, without guidance', () => AudioEpisodeGlobal);
