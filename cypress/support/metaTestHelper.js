@@ -6,6 +6,12 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
+export const mozartFallbackStatus = path => {
+  cy.request(path).then(({ headers }) => {
+    expect(headers['X-Mozart-Fallback-Cache']).should('not.exist');
+  });
+};
+
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
