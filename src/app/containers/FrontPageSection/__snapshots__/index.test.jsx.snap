@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrontPageSection Container should render correctly for canonical 1`] = `
+<section>
+  <StoryPromoUl>
+    <StoryPromoLi>
+      <StoryPromo
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 1 headline",
+            },
+            "indexImage": Object {
+              "altText": "Image Alt text 1",
+              "copyrightHolder": "Image provider 1",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image.jpg",
+              "width": 2048,
+            },
+            "summary": "Summary text 1",
+            "timestamp": 1557738768,
+          }
+        }
+      />
+    </StoryPromoLi>
+    <StoryPromoLi>
+      <StoryPromo
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 2 headline",
+            },
+            "indexImage": Object {
+              "altText": "Image Alt text 2",
+              "copyrightHolder": "Image provider 2",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image.jpg",
+              "width": 2048,
+            },
+            "summary": "Summary text 2",
+            "timestamp": 1557738768,
+          }
+        }
+      />
+    </StoryPromoLi>
+  </StoryPromoUl>
+</section>
+`;
