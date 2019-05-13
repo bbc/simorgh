@@ -1,5 +1,5 @@
 import { matchPath } from 'react-router-dom';
-import { articleRegexPath } from './index';
+import { articleRegexPath, articleDataRegexPath } from './index';
 
 jest.mock('../../lib/config/services', () => ({
   news: {},
@@ -39,5 +39,26 @@ describe('articleRegexPath', () => {
 
   it.each(invalidRoutes)('should not match invalid route %s', route => {
     expect(matchRoute(route, articleRegexPath)).toBe(false);
+  });
+});
+
+describe('articleDataRegexPath', () => {
+  const validRoutes = [
+    '/news/articles/c5jje4ejkqvo.json',
+    '/persian/articles/c7eel0lmr4do.json',
+  ];
+
+  it.each(validRoutes)('should match valid route %s', route => {
+    expect(matchRoute(route, articleDataRegexPath)).toBe(true);
+  });
+
+  const invalidRoutes = [
+    '/news/articles/c5jje4ejkqvo',
+    '/persian/articles/c7eel0lmr4do',
+    '/iplayer/articles/c7eel0lmr4do.json',
+  ];
+
+  it.each(invalidRoutes)('should not match invalid route %s', route => {
+    expect(matchRoute(route, articleDataRegexPath)).toBe(false);
   });
 });
