@@ -43,8 +43,10 @@ describe('getDials', () => {
       delete process.env.COSMOS_DIALS_PATH;
     });
 
-    it('should return an empty object', async () => {
-      expect(getDials()).resolves.toEqual({});
+    it('should throw an error', async () => {
+      expect(getDials()).resolves.toThrow(
+        new Error('Dials filepath undefined'),
+      );
     });
   });
 });

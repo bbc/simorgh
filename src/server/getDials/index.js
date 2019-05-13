@@ -16,7 +16,7 @@ const getDials = () =>
     const dialsPath = process.env.COSMOS_DIALS_PATH;
 
     if (!dialsPath) {
-      resolve({});
+      reject(new Error('Dials filepath undefined'));
     }
 
     return fs.readFile(dialsPath, (err, data) => {
