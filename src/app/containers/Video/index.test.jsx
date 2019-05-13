@@ -45,4 +45,44 @@ describe('Video', () => {
       VideoClipGlobalWithoutCaption,
     );
   });
+
+  describe('with data', () => {
+    const dataBlock = {
+      type: 'aresMedia',
+      model: {
+        blocks: [
+          {
+            model: {
+              id: 'foo',
+              subType: 'clip',
+              title: 'Hello World!',
+              versions: [
+                {
+                  versionId: 'bar',
+                  duration: 100,
+                },
+              ],
+            },
+          },
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    locator: 'https://foo/bar/baz.png',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+    const data = blockArrayModel([dataBlock]);
+
+    shouldShallowMatchSnapshot(
+      'should return a valid VideoContainer',
+      <VideoContainer {...data} />,
+    );
+  });
 });
