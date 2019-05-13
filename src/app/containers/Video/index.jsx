@@ -28,11 +28,13 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
-  const items = {
-    versionID,
-    kind,
-    duration,
-  };
+  const items = [
+    {
+      versionID,
+      kind,
+      duration,
+    },
+  ];
 
   return (
     <Figure>

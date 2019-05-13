@@ -44,11 +44,13 @@ export const videoComponentPropTypes = {
   pid: string.isRequired,
   kind: string.isRequired,
   title: string.isRequired,
-  items: shape({
-    versionID: string.isRequired,
-    kind: string.isRequired,
-    duration: number.isRequired,
-  }).isRequired,
+  items: arrayOf(
+    shape({
+      versionID: string.isRequired,
+      kind: string.isRequired,
+      duration: number.isRequired,
+    }),
+  ).isRequired,
   holdingImageUrl: string.isRequired,
 };
 
