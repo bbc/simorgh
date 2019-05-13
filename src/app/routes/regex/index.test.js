@@ -3,6 +3,7 @@ import {
   articleRegexPath,
   articleDataRegexPath,
   frontpageRegexPath,
+  frontpageDataRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -78,5 +79,19 @@ describe('frontpageRegexPath', () => {
 
   it.each(invalidRoutes)('should not match invalid route %s', route => {
     expect(matchRoute(route, frontpageRegexPath)).toBe(false);
+  });
+});
+
+describe('frontpageDataRegexPath', () => {
+  const validRoutes = ['/news.json', '/persian.json'];
+
+  it.each(validRoutes)('should match valid route %s', route => {
+    expect(matchRoute(route, frontpageDataRegexPath)).toBe(true);
+  });
+
+  const invalidRoutes = ['/news/data.json', '/iplayer.json'];
+
+  it.each(invalidRoutes)('should not match invalid route %s', route => {
+    expect(matchRoute(route, frontpageDataRegexPath)).toBe(false);
   });
 });
