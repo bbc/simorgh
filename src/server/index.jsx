@@ -139,10 +139,16 @@ server
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
-      const dials = await getDials();
       const { status } = data;
       const { service, isAmp } = getRouteProps(routes, url);
       const bbcOrigin = headers['bbc-origin'];
+
+      let dials = {};
+      try {
+        dials = await getDials();
+      } catch ({ message }) {
+        logger.error(`Error fetching Cosmos dials: ${message}`);
+      }
 
       res
         .status(status)

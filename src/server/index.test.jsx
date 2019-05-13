@@ -159,6 +159,13 @@ describe('Server', () => {
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
         });
+
+        it('should respond successfully even if dials fetch fails', async () => {
+          getDials.mockRejectedValue(new Error('Fetch fail'));
+
+          const { status } = await makeRequest('/news/articles/c0000000001o');
+          expect(status).toBe(200);
+        });
       });
 
       describe('404 status code', () => {
