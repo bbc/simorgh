@@ -6,7 +6,8 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import loadInitialData from '../app/routes/loadInitialData';
-import routes, {
+import routes from '../app/routes';
+import {
   articleRegexPath,
   articleDataRegexPath,
   frontpageDataRegexPath,
@@ -37,6 +38,8 @@ class LoggerStream {
 }
 
 const server = express();
+
+console.log(routes, articleRegexPath);
 
 /*
  * Default headers, compression, logging, status route
