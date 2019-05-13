@@ -6,7 +6,7 @@ import * as getRouteProps from '../getInitialData/utils/getRouteProps';
 import loadInitialData from '.';
 
 describe('loadInitialData', () => {
-  const data = { data: 'Some data!' };
+  const data = 'Some data!';
   const match = { match: true };
 
   afterEach(() => {
@@ -25,14 +25,12 @@ describe('loadInitialData', () => {
   });
 
   describe('getInitialData function on route', () => {
-    it('should call getInitialData with passed ctx, inject dials and return value', async () => {
+    it('should call getInitialData with passed ctx and return value', async () => {
       const route = {
         getInitialData: jest
           .fn()
-          .mockImplementation(() => Promise.resolve({ ...data })),
+          .mockImplementation(() => Promise.resolve(data)),
       };
-
-      const expectedObject = { ...data };
 
       getRouteProps.default = jest.fn().mockReturnValue({ route, match });
 
@@ -40,7 +38,7 @@ describe('loadInitialData', () => {
 
       expect(route.getInitialData).toHaveBeenCalledTimes(1);
       expect(route.getInitialData).toHaveBeenCalledWith({ match });
-      expect(initialData).toEqual(expectedObject);
+      expect(initialData).toEqual(data);
     });
 
     describe('error on getInitialData call', () => {
