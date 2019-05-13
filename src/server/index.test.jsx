@@ -142,6 +142,8 @@ describe('Server', () => {
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
+              isAmp={false}
+              service="news"
               styleTags={<style />}
             />,
           );
