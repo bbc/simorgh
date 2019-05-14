@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "0.0.5"
-def nodeImage = "${dockerRegistry}/bbc-news/node-8-lts:${nodeImageVersion}"
+def nodeImageVersion = "0.0.1"
+def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 def nodeName
 def stageName = ""
 def packageName = 'simorgh.zip'
