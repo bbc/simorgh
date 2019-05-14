@@ -11,13 +11,13 @@ const StoryPromoFigure = ({
   width,
   copyrightHolder,
 }) => {
+  const { platform } = useContext(RequestContext);
   if (!path || !altText || !width || !height) {
     return null;
   }
 
   const ratio = ((height / width) * 100).toFixed(4);
   const src = `https://ichef.bbci.co.uk/news/660${path}`;
-  const { platform } = useContext(RequestContext);
 
   return (
     <ImagePlaceholder ratio={ratio}>
