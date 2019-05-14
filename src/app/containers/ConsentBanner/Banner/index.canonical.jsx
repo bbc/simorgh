@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { func, string } from 'prop-types';
-import { ServiceContextConsumer } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import { ConsentBanner } from '../../../components/ConsentBanner';
 import BannerText from './Text';
 
@@ -16,26 +16,22 @@ const Reject = (message, href, onClick) => (
   </a>
 );
 
-const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => (
-  <ServiceContextConsumer>
-    {({ translations }) => {
-      const consentBannerConfig = translations.consentBanner[type];
-
-      return (
-        <ConsentBanner
-          title={consentBannerConfig.title}
-          text={BannerText(consentBannerConfig.description)}
-          accept={Accept(consentBannerConfig.accept, onAccept)}
-          reject={Reject(
-            consentBannerConfig.reject,
-            consentBannerConfig.rejectUrl,
-            onReject,
-          )}
-        />
-      );
-    }}
-  </ServiceContextConsumer>
-);
+const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
+  const { translations } = useContext(ServiceContext);
+  const consentBannerConfig = translations.consentBanner[type];
+  return (
+    <ConsentBanner
+      title={consentBannerConfig.title}
+      text={BannerText(consentBannerConfig.description)}
+      accept={Accept(consentBannerConfig.accept, onAccept)}
+      reject={Reject(
+        consentBannerConfig.reject,
+        consentBannerConfig.rejectUrl,
+        onReject,
+      )}
+    />
+  );
+};
 
 CanonicalConsentBannerContainer.propTypes = {
   type: string.isRequired,
