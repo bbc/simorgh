@@ -23,6 +23,18 @@ const matchRoute = (route, regex) => {
   return match ? match.isExact : false;
 };
 
+const shouldMatchValidRoutes = (routes, regex) => {
+  it.each(routes)('should match valid route %s', route => {
+    expect(matchRoute(route, regex)).toBe(true);
+  });
+};
+
+const shouldNotMatchInvalidRoutes = (routes, regex) => {
+  it.each(routes)('should not match invalid route %s', route => {
+    expect(matchRoute(route, regex)).toBe(false);
+  });
+};
+
 describe('articleRegexPath', () => {
   const validRoutes = [
     '/news/articles/c5jje4ejkqvo',
@@ -30,10 +42,7 @@ describe('articleRegexPath', () => {
     '/persian/articles/c7eel0lmr4do',
     '/news/articles/c7eel0lmr4do.amp',
   ];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, articleRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, articleRegexPath);
 
   const invalidRoutes = [
     '/iplayer/articles/c5jje4ejkqvo',
@@ -43,10 +52,7 @@ describe('articleRegexPath', () => {
     '/news/articles/c5jje4ejkqv',
     '/news/articles/',
   ];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, articleRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleRegexPath);
 });
 
 describe('articleDataRegexPath', () => {
@@ -54,62 +60,38 @@ describe('articleDataRegexPath', () => {
     '/news/articles/c5jje4ejkqvo.json',
     '/persian/articles/c7eel0lmr4do.json',
   ];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, articleDataRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, articleDataRegexPath);
 
   const invalidRoutes = [
     '/news/articles/c5jje4ejkqvo',
     '/persian/articles/c7eel0lmr4do',
     '/iplayer/articles/c7eel0lmr4do.json',
   ];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, articleDataRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleDataRegexPath);
 });
 
 describe('frontpageRegexPath', () => {
   const validRoutes = ['/news', '/persian', '/news.amp', '/persian.amp'];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, frontpageRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, frontpageRegexPath);
 
   const invalidRoutes = ['/news/home', '/persian/c5jje4ejkqvo.amp', '/iplayer'];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, frontpageRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageRegexPath);
 });
 
 describe('frontpageDataRegexPath', () => {
   const validRoutes = ['/news.json', '/persian.json'];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, frontpageDataRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, frontpageDataRegexPath);
 
   const invalidRoutes = ['/news/data.json', '/iplayer.json'];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, frontpageDataRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageDataRegexPath);
 });
 
 describe('swRegexPath', () => {
   const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, swRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, swRegexPath);
 
   const invalidRoutes = ['/news/sw.js', '/persian/articles/sw'];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, swRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, swRegexPath);
 });
 
 describe('manifestRegexPath', () => {
@@ -117,14 +99,8 @@ describe('manifestRegexPath', () => {
     '/news/articles/manifest.json',
     '/persian/articles/manifest.json',
   ];
-
-  it.each(validRoutes)('should match valid route %s', route => {
-    expect(matchRoute(route, manifestRegexPath)).toBe(true);
-  });
+  shouldMatchValidRoutes(validRoutes, manifestRegexPath);
 
   const invalidRoutes = ['/news/manifest.json', '/persian/articles/manifest'];
-
-  it.each(invalidRoutes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, manifestRegexPath)).toBe(false);
-  });
+  shouldNotMatchInvalidRoutes(invalidRoutes, manifestRegexPath);
 });
