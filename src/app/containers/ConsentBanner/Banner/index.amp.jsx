@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import * as AmpHelpers from 'react-amphtml/helpers';
-import { ServiceContextConsumer } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import { ConsentBanner } from '../../../components/ConsentBanner';
 import BannerText from './Text';
 
@@ -31,28 +31,25 @@ const AmpConsentBannerContainer = ({
   rejectAction,
   promptId,
   hidden,
-}) => (
-  <ServiceContextConsumer>
-    {({ translations }) => {
-      const consentBannerConfig = translations.consentBanner[type];
+}) => {
+  const { translations } = useContext(ServiceContext);
+  const consentBannerConfig = translations.consentBanner[type];
 
-      return (
-        <ConsentBanner
-          id={promptId}
-          title={consentBannerConfig.title}
-          text={BannerText(consentBannerConfig.description)}
-          accept={Accept(consentBannerConfig.accept, acceptAction)}
-          reject={Reject(
-            consentBannerConfig.reject,
-            consentBannerConfig.rejectUrl,
-            rejectAction,
-          )}
-          hidden={hidden}
-        />
-      );
-    }}
-  </ServiceContextConsumer>
-);
+  return (
+    <ConsentBanner
+      id={promptId}
+      title={consentBannerConfig.title}
+      text={BannerText(consentBannerConfig.description)}
+      accept={Accept(consentBannerConfig.accept, acceptAction)}
+      reject={Reject(
+        consentBannerConfig.reject,
+        consentBannerConfig.rejectUrl,
+        rejectAction,
+      )}
+      hidden={hidden}
+    />
+  );
+};
 
 AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
