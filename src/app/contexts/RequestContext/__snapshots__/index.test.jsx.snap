@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RequestContext should have a request object for platform amp and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform amp, bbcOrigin undefined, statsDestination 598286 & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     amp
@@ -11,10 +11,16 @@ Array [
   <span>
     https://foobar.com
   </span>,
+  <span>
+    598286
+  </span>,
+  <span>
+    persian.articles.c0000000000o.page
+  </span>,
 ]
 `;
 
-exports[`RequestContext should have a request object for platform canonical and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform canonical, bbcOrigin undefined, statsDestination 598286 & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     canonical
@@ -25,10 +31,16 @@ Array [
   <span>
     https://foobar.com
   </span>,
+  <span>
+    598286
+  </span>,
+  <span>
+    persian.articles.c0000000000o.page
+  </span>,
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default and bbcOrigin https://www.bbc.co.uk 1`] = `
+exports[`RequestContext should have a request object for platform default, bbcOrigin https://www.bbc.co.uk, statsDestination 598286 & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     default
@@ -39,10 +51,16 @@ Array [
   <span>
     https://www.bbc.co.uk
   </span>,
+  <span>
+    598286
+  </span>,
+  <span>
+    persian.articles.c0000000000o.page
+  </span>,
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default and bbcOrigin undefined 1`] = `
+exports[`RequestContext should have a request object for platform default, bbcOrigin undefined, statsDestination 598286 & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     default
@@ -52,6 +70,12 @@ Array [
   </span>,
   <span>
     https://foobar.com
+  </span>,
+  <span>
+    598286
+  </span>,
+  <span>
+    persian.articles.c0000000000o.page
   </span>,
 ]
 `;
