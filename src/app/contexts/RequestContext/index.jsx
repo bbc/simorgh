@@ -6,13 +6,19 @@ import getStatsPageIdentifier from './getStatsPageIdentifier';
 
 export const RequestContext = React.createContext('default');
 
-export const RequestContextProvider = ({ children, platform, bbcOrigin }) => {
+export const RequestContextProvider = ({
+  id,
+  children,
+  platform,
+  bbcOrigin,
+}) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = process.env.APP_ENV;
   const pageType = 'article'; // should get value from page path
   const service = 'news'; // should get value from page path
 
   const value = {
+    id,
     isUK,
     origin,
     platform,
@@ -27,6 +33,7 @@ export const RequestContextProvider = ({ children, platform, bbcOrigin }) => {
 
 RequestContextProvider.propTypes = {
   children: node.isRequired,
+  id: string.isRequired,
   platform: string.isRequired,
   bbcOrigin: string,
 };

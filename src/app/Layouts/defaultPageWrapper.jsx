@@ -8,10 +8,21 @@ import { RequestContextProvider } from '../contexts/RequestContext';
 import GlobalStyle from '../lib/globalStyles';
 import ConsentBanner from '../containers/ConsentBanner';
 
-const PageWrapper = ({ bbcOrigin, children, service, isAmp }) => (
+const PageWrapper = ({
+  bbcOrigin,
+  children,
+  id,
+  service,
+  statsDestination,
+  statsPageIdentifier,
+  isAmp,
+}) => (
   <Fragment>
     <GlobalStyle />
     <RequestContextProvider
+      id={id}
+      statsDestination={statsDestination}
+      statsPageIdentifier={statsPageIdentifier}
       platform={isAmp ? 'amp' : 'canonical'}
       bbcOrigin={bbcOrigin}
     >
@@ -31,8 +42,11 @@ const PageWrapper = ({ bbcOrigin, children, service, isAmp }) => (
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  service: string.isRequired,
+  id: string.isRequired,
   isAmp: bool.isRequired,
+  service: string.isRequired,
+  statsDestination: string.isRequired,
+  statsPageIdentifier: string.isRequired,
 };
 
 PageWrapper.defaultProps = {
