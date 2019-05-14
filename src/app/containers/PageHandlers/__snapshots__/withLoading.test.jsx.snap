@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withLoading HOC and no loading prop should return the passed in component 1`] = `<Component />`;
+
+exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
+<main
+  role="main"
+>
+  <ForwardRef>
+    <ForwardRef />
+  </ForwardRef>
+</main>
+`;
