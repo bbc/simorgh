@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string, func } from 'prop-types';
+import { node, string } from 'prop-types';
 import getOriginContext from './getOriginContext';
 
 export const RequestContext = React.createContext('default');
@@ -15,10 +15,6 @@ export const RequestContextProvider = ({ children, platform, bbcOrigin }) => {
   );
 };
 
-export const RequestContextConsumer = ({ children }) => (
-  <RequestContext.Consumer>{children}</RequestContext.Consumer>
-);
-
 RequestContextProvider.propTypes = {
   children: node.isRequired,
   platform: string.isRequired,
@@ -27,8 +23,4 @@ RequestContextProvider.propTypes = {
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
-};
-
-RequestContextConsumer.propTypes = {
-  children: func.isRequired,
 };
