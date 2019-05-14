@@ -8,7 +8,7 @@ export const testResponseCode = (path, responseCode) => {
 
 export const mozartFallbackStatus = path => {
   cy.request(path).then(({ headers }) => {
-    expect(headers['X-Mozart-Fallback-Cache']).should('not.exist');
+    expect(headers['X-Mozart-Fallback-Cache']).to.not.have.value('1');
   });
 };
 

@@ -12,6 +12,6 @@ describe('Service worker', () => {
 
 describe('Mozart status', () => {
   it('should not contain the response header X-Mfa set to 1', () => {
-    mozartFallbackStatus(`/news/articles/${config.assets.news}`, 1);
+    mozartFallbackStatus(`/news/articles/${config.assets.news}`);
   });
 });
