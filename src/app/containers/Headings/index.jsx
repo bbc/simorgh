@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '../../models/propTypes';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
@@ -22,6 +22,7 @@ const GridConstraints = {
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
+  const { script } = useContext(ServiceContext);
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
 
@@ -39,13 +40,9 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <ServiceContextConsumer>
-        {({ script }) => (
-          <Heading script={script} text={text}>
-            {renderText()}
-          </Heading>
-        )}
-      </ServiceContextConsumer>
+      <Heading script={script} text={text}>
+        {renderText()}
+      </Heading>
     </GridConstrain>
   );
 };
