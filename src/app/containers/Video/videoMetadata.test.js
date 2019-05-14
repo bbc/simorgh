@@ -1,13 +1,13 @@
 import videoMetadata from './videoMetadata';
 import {
-  aresMediaBlock,
   noAresMediaMetadata,
   multipleAresMetadata,
+  videoClipGlobalGuidanceBlock,
 } from './helpers/fixtures';
 
 describe('videoMetadata', () => {
   it('returns correct video metadata', () => {
-    const metadata = videoMetadata(aresMediaBlock);
+    const metadata = videoMetadata(videoClipGlobalGuidanceBlock);
     const output = {
       video: {
         '@list': [
