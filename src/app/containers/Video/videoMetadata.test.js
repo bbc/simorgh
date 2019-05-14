@@ -3,7 +3,7 @@ import {
   aresMediaBlock,
   noAresMediaMetadata,
   multipleAresMetadata,
-} from './fixtureData';
+} from './helpers/fixtures';
 
 describe('videoMetadata', () => {
   it('returns correct video metadata', () => {
