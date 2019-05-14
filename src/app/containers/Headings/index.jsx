@@ -6,6 +6,7 @@ import { ServiceContextConsumer } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
+import createId from './helpers';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -19,16 +20,6 @@ const Headings = {
 const GridConstraints = {
   headline: GridItemConstrainedLarge,
   subheadline: GridItemConstrainedMedium,
-};
-
-const regexPunctuationSymbols = /[^a-z0-9\s-]/gi;
-const regexSpaces = /\s+/g;
-
-const createId = (type, text) => {
-  if (type === 'subheadline') {
-    return text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-')
-  }
-  return undefined;
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
@@ -47,11 +38,13 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
+  const subHeadingId = createId(type, text);
+
   return (
     <GridConstrain>
       <ServiceContextConsumer>
         {({ script }) => (
-          <Heading script={script} id={createId(type, text)}>
+          <Heading script={script} id={subHeadingId ? subHeadingId : undefined}>
             {renderText()}
           </Heading>
         )}
