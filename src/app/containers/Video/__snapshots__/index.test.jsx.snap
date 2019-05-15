@@ -4,12 +4,12 @@ exports[`Video with data and a caption should render the video and caption 1`] =
 <Context.Provider
   value={
     Object {
-      "id": undefined,
-      "isUK": undefined,
-      "origin": undefined,
+      "id": "c0000000000o",
+      "isUK": true,
+      "origin": "https://www.test.bbc.co.uk",
       "platform": undefined,
-      "statsDestination": undefined,
-      "statsPageIdentifier": undefined,
+      "statsDestination": "NEWS_PS_TEST",
+      "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
   }
 >
@@ -148,12 +148,12 @@ exports[`Video with data and a caption should render the video without a caption
 <Context.Provider
   value={
     Object {
-      "id": undefined,
-      "isUK": undefined,
-      "origin": undefined,
+      "id": "c0000000000o",
+      "isUK": true,
+      "origin": "https://www.test.bbc.co.uk",
       "platform": undefined,
-      "statsDestination": undefined,
-      "statsPageIdentifier": undefined,
+      "statsDestination": "NEWS_PS_TEST",
+      "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
   }
 >
