@@ -42,7 +42,6 @@
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:unit": "jest --env=jsdom --coverage --colors",
-    "testy": "jest --env=jsdom --colors",
     "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
