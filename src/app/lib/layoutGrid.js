@@ -189,7 +189,7 @@ const specifiedOrMaximum = (specified, maximum) =>
   specified > maximum ? maximum : specified;
 
 export const nestedGridItemSmallCss = css`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
         specifiedOrMaximum(props.gridSpan.group1 || props.gridSpan.default, 6)};
