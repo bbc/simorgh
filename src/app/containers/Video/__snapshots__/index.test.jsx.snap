@@ -254,23 +254,25 @@ exports[`Video with data and a caption should render the video without a caption
 `;
 
 exports[`Video with data should return a valid VideoContainer 1`] = `
-<ForwardRef>
-  <Video
-    holdingImageUrl="https://foo/bar/baz.png"
-    items={
-      Array [
-        Object {
-          "duration": 100,
-          "kind": "clip",
-          "versionID": "bar",
-        },
-      ]
-    }
-    kind="clip"
-    pid="foo"
-    title="Hello World!"
-  />
-</ForwardRef>
+<React.Fragment>
+  <ForwardRef>
+    <Video
+      holdingImageUrl="https://foo/bar/baz.png"
+      items={
+        Array [
+          Object {
+            "duration": 100,
+            "kind": "clip",
+            "versionID": "bar",
+          },
+        ]
+      }
+      kind="clip"
+      pid="foo"
+      title="Hello World!"
+    />
+  </ForwardRef>
+</React.Fragment>
 `;
 
 exports[`Video with no aresMedia should only render the video 1`] = `null`;
