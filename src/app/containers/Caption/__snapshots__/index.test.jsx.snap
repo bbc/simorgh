@@ -30,15 +30,6 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   font-style: normal;
 }
 
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
     font-size: 1.125rem;
@@ -65,20 +56,6 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.375rem;
-    line-height: 2.125rem;
-  }
-}
-
 <figcaption
   className="c0"
 >
@@ -87,9 +64,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   >
      ، عنوان
   </span>
-  <p
-    className="c2"
-  >
+  <p>
     Some caption text...
   </p>
 </figcaption>
@@ -125,15 +100,6 @@ exports[`should render caption text with example News offscreen text 1`] = `
   font-style: normal;
 }
 
-.c2 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
     font-size: 0.9375rem;
@@ -160,20 +126,6 @@ exports[`should render caption text with example News offscreen text 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
 <figcaption
   className="c0"
 >
@@ -182,9 +134,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   >
     Caption, 
   </span>
-  <p
-    className="c2"
-  >
+  <p>
     Some caption text...
   </p>
 </figcaption>
@@ -220,15 +170,6 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   font-style: normal;
 }
 
-.c2 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
     font-size: 0.9375rem;
@@ -255,20 +196,6 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
 <figcaption
   className="c0"
 >
@@ -277,19 +204,13 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   >
     Caption, 
   </span>
-  <p
-    className="c2"
-  >
+  <p>
     This is paragraph 1
   </p>
-  <p
-    className="c2"
-  >
+  <p>
     This is paragraph 2
   </p>
-  <p
-    className="c2"
-  >
+  <p>
     Paragraph 3
   </p>
 </figcaption>

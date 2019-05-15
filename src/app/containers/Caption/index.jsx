@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { objectOf, any, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
-import Paragraph from '@bbc/psammead-paragraph';
 import deepGet from '../../helpers/json/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -26,13 +25,10 @@ const chooseOffscreenText = (
       return defaultText;
   }
 };
-const renderParagraph = (paragraphBlock, script) => (
-  <Paragraph
-    script={script}
-    key={deepGet([0, 'model', 'text'], paragraphBlock)}
-  >
+const renderParagraph = paragraphBlock => (
+  <p key={deepGet([0, 'model', 'text'], paragraphBlock)}>
     <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
-  </Paragraph>
+  </p>
 );
 
 const renderCaption = (paragraphBlocks, offscreenText, script) => (
@@ -42,7 +38,7 @@ const renderCaption = (paragraphBlocks, offscreenText, script) => (
     ) : null}
     {paragraphBlocks.map(block => {
       const paragraphBlock = deepGet(['model', 'blocks'], block);
-      return renderParagraph(paragraphBlock, script);
+      return renderParagraph(paragraphBlock);
     })}
   </Caption>
 );
