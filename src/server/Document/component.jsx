@@ -14,7 +14,6 @@ const Document = ({
   data,
   styleTags,
   helmet,
-  service,
   isAmp,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -22,12 +21,7 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const clientDataObj = {
-    ...data,
-    service,
-    isAmp,
-  };
-  const serialisedData = JSON.stringify(clientDataObj);
+  const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scripts = (
     <Fragment>
