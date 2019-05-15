@@ -238,7 +238,7 @@ export const nestedGridItemMediumCss = css`
 `;
 
 export const nestedGridItemLargeCss = css`
-  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 6)};
