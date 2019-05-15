@@ -140,7 +140,7 @@ By now, you should have all the automatic PR checks passing, 2 manual code revie
 NB, the automatic checks are:
 
 * CodeClimate (diff coverage, total coverage, code quality)
-* Travis (runs the tests, [updates the storybook](https://simorghstorybook.now.sh/))
+* Travis (runs the tests, [updates the storybook](https://bbc.github.io/simorgh/))
 * Jenkins CI* (`bbc-news-simorgh` job - runs the tests).
 
 \* Currently we run tests on Jenkins with a view to moving away from Travis, so tests are currently run twice. We hope to simplify things soon.
