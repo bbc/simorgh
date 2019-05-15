@@ -100,6 +100,26 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 - `6 + 2 of 0px` - is based on having a 0px column either side of UX grid so we can use CSS grid-gaps as the UX margin while allowing a grid item to be able to go "full bleed".
 - `6 + 2 of 8px` - between 400px and 599px we have an 8px column either side of the UX grid so that the grid-gap (8px) and additional column (8px) combined meet the 16px UX margin.
 
+### Nested grid usage
+
+As of [#1680](https://github.com/bbc/simorgh/pull/1680) `GridItem`s now also have their own internal grid which maps to the external grid they occupy.
+
+<img width="1280" alt="A screenshot of nested grid items" src="https://user-images.githubusercontent.com/19362408/57520118-cdc09000-7314-11e9-8657-d5d798c0b018.png"> 
+In this screenshot the external grid is a very pale blue and the internal grid of the `GridItemLarge` is red.
+
+This grid allows us to specify how much of the main content an item should take up without having to make a custom `GridItem` for each one.
+
+To take advantage of this nested grid you can use the `NestedGridItem` that corresponds to the `GridItem` size you are using as a container. For example `NestedGridItemSmall` with `GridItemSmall` or `NestedGridItemLarge` with `GridItemLarge`.
+
+`NestedGridItems` must have a `gridColumnStart` and `gridSpan` specified. `gridColumnStart` will usually be `1` (the first column of the main article content). `gridSpan` however may change across breakpoints and therefore can be specified as follows:
+
+| grid item               | nested grid item                           | all breakpoints specified                                                                                      | some breakpoints specified                                                                |
+| :---------------------- | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| `gridItemSmall`         | `nestedGridItemSmall`                      | `<nestedGridItemSmall gridColumnStart="1" gridSpan={ group1: 5, group2: 3, group3: 3, group4: 3, group5: 7 }>` | `<nestedGridItemSmall gridColumnStart="1" gridSpan={ default: 3, group1: 5, group5: 7 }>` |
+| `gridItemMedium`        | `nestedGridItemMedium gridColumnStart="1"` | `<nestedGridItemMedium gridColumnStart="1" gridSpan={ group3: 3, group4: 3, group5: 7 }>`                      | `<nestedGridItemMedium gridColumnStart="1" gridSpan={ default: 3, group5: 7 }>`           |  |
+| `gridItemLarge`         | `nestedGridItemLarge gridColumnStart="1"`  | `<nestedGridItemLarge gridColumnStart="1" gridSpan={ group3: 5, group4: 5, group5: 10 }>`                      | `<nestedGridItemLarge gridColumnStart="1" gridSpan={ default: 5, group5: 10 }>`           |
+| `gridItemLargeNoMargin` | `nestedGridItemLarge gridColumnStart="1"`  | `<nestedGridItemLarge gridColumnStart="1" gridSpan={ group3: 5, group4: 5, group5: 10 }>`                      | `<nestedGridItemLarge gridColumnStart="1" gridSpan={ default: 5, group5: 10 }>`           |
+
 ## TL;DR
 
 - We work to a UX grid
