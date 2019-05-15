@@ -88,7 +88,7 @@ LinkedData.propTypes = {
   about: arrayOf(
     shape({
       '@type': string.isRequired,
-      alternateName: string.isRequired,
+      alternateName: string,
       name: string.isRequired,
       sameAs: arrayOf(string.isRequired),
     }),
