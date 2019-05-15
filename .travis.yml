@@ -18,7 +18,6 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
-        - xvfb-run -a npm run test:lighthouse:ci
 notifications:
   email: false
   slack:

@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
 
@@ -14,7 +14,11 @@ We have a continuous deployment pipeline which automatically deploys all changes
 
 ## Installation
 
-Install Node 8. [https://nodejs.org/en/](https://nodejs.org/en/)
+Install Node 10. [https://nodejs.org/en/](https://nodejs.org/en/). We currently use v10.15.3 and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.
+
+```
+nvm use
+```
 Update to use the latest npm `npm i -g npm`
 
 ```
@@ -39,6 +43,8 @@ Articles 25 & 27 are available on the Production environment as well as locally.
 There is also an AMP route at `/news/articles/:id.amp` with the article being AMP-compatible. [https://www.ampproject.org](https://www.ampproject.org)
 
 ### Storybook (UI Development Environment/Style Guide)
+
+We use Storybook for developing components in isolation from the Simorgh Application. You can access this at [https://bbc.github.io/simorgh/](https://bbc.github.io/simorgh/)
 
 To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
@@ -108,12 +114,7 @@ We also have a [Cypress](https://www.cypress.io/) project which runs a different
 
 ### Lighthouse Best Practice tests
 
-We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. For running the tests locally we need two terminals running:
-
-1. [Start the production server](https://github.com/bbc/simorgh#production-build)
-2. `npm run lighthouse` runs our Lighthouse tests.
-
-Lighthouse will output html reports to the `reports` folder. It will also open a HTML report in your browser allowing an individual to clearly see the best practice score of the page along with the audits that were run against it.
+We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.  
 
 ### To-do
 
