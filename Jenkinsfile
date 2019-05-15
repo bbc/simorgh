@@ -98,21 +98,7 @@ pipeline {
             sh 'make installProd'
             sh 'make productionTests'
           }
-        }
-        stage('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }    
+        }  
       }
       post {
         always {
