@@ -179,14 +179,18 @@ storiesOf('Grid Examples', module)
     <GhostWrapper>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '12' }}>
-          <ColouredDiv colour={blue}>Spanning 12 columns - e.g. and image</ColouredDiv>
+          <ColouredDiv colour={blue}>
+            Spanning 12 columns - e.g. and image
+          </ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge
           gridColumnStart="1"
           gridSpan={{ group3: '5', group4: '5', group5: '10' }}
         >
           <ColouredDiv colour={red}>
-            Spanning 5 columns at groups <=4 & 10 columns at group 5 - e.g. a caption 
+            {
+              'Spanning 5 columns at groups <= 4 & 10 columns at group 5 - e.g. a caption'
+            }
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>

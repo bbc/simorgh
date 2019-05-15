@@ -91,6 +91,11 @@ exports[`Headings with plain text headline should render h1 containing correct t
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -114,18 +119,21 @@ exports[`Headings with plain text headline should render h1 containing correct t
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -162,6 +170,8 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 }
 
 .c0 {
+  display: grid;
+  grid-column-gap: 1rem;
   grid-column: 1 / span 6;
 }
 
@@ -187,6 +197,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -194,6 +205,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -201,6 +213,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   .c0 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
+    grid-template-columns: repeat(10,1fr);
   }
 }
 
@@ -232,6 +245,11 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     padding: 2.5rem 0;
@@ -241,18 +259,21 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -290,6 +311,11 @@ exports[`Headings with rich text headline with italic text should render h1 with
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     padding: 2.5rem 0;
@@ -299,18 +325,21 @@ exports[`Headings with rich text headline with italic text should render h1 with
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -348,6 +377,11 @@ exports[`Headings with rich text should render headline with bold & italic text 
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     padding: 2.5rem 0;
@@ -357,18 +391,21 @@ exports[`Headings with rich text should render headline with bold & italic text 
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -408,6 +445,11 @@ exports[`Headings with rich text should render headline with italic & bold text 
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     padding: 2.5rem 0;
@@ -417,18 +459,21 @@ exports[`Headings with rich text should render headline with italic & bold text 
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -468,6 +513,11 @@ exports[`Headings with rich text with different attributes should render headlin
   font-weight: 500;
 }
 
+.c0 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     padding: 2.5rem 0;
@@ -477,18 +527,21 @@ exports[`Headings with rich text with different attributes should render headlin
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
     grid-column: 6 / span 12;
+    grid-template-columns: repeat(12,1fr);
   }
 }
 
