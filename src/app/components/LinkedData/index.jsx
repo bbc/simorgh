@@ -3,12 +3,11 @@ import Helmet from 'react-helmet';
 import { arrayOf, string, shape } from 'prop-types';
 
 const LinkedData = ({
+  brandName,
   type,
   seoHeadline,
   firstPublished,
   lastUpdated,
-  optimoId,
-  service,
   logoUrl,
   publishingPrinciples,
   noBylinesPolicy,
@@ -35,14 +34,14 @@ const LinkedData = ({
 
   const publisher = {
     '@type': newsMediaOrg,
-    name: service,
+    name: brandName,
     publishingPrinciples,
     logo,
   };
 
   const author = {
     '@type': newsMediaOrg,
-    name: service,
+    name: brandName,
     logo,
     noBylinesPolicy,
   };
@@ -56,7 +55,7 @@ const LinkedData = ({
   const linkMetadata = {
     '@context': 'http://schema.org',
     '@type': type,
-    url: `https://www.bbc.com/${service}/articles/${optimoId}`,
+    url: canonicalLink,
     publisher,
     datePublished: firstPublished,
     dateModified: lastUpdated,
@@ -77,12 +76,12 @@ const LinkedData = ({
 };
 
 LinkedData.propTypes = {
+  brandName: string.isRequired,
+  canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
   firstPublished: string.isRequired,
   lastUpdated: string.isRequired,
-  optimoId: string.isRequired,
-  service: string.isRequired,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
@@ -94,7 +93,6 @@ LinkedData.propTypes = {
       sameAs: arrayOf(string.isRequired),
     }),
   ),
-  canonicalLink: string.isRequired,
 };
 
 LinkedData.defaultProps = {
