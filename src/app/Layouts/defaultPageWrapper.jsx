@@ -7,37 +7,47 @@ import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import GlobalStyle from '../lib/globalStyles';
 import ConsentBanner from '../containers/ConsentBanner';
+import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
+import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 
-const PageWrapper = ({
-  bbcOrigin,
-  children,
-  id,
-  service,
-  statsDestination,
-  statsPageIdentifier,
-  isAmp,
-}) => (
-  <Fragment>
-    <GlobalStyle />
-    <RequestContextProvider
-      id={id}
-      statsDestination={statsDestination}
-      statsPageIdentifier={statsPageIdentifier}
-      platform={isAmp ? 'amp' : 'canonical'}
-      bbcOrigin={bbcOrigin}
-    >
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
+  const env = process.env.APP_ENV;
+  console.log(
+    getStatsDestination({ isUK: false, env, service }),
+    getStatsPageIdentifier({ pageType: 'article', service, id }),
+    env,
+  );
+  return (
+    <Fragment>
+      <GlobalStyle />
       <ServiceContextProvider service={service}>
-        <Helmet>
-          <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-        </Helmet>
-        <ConsentBanner />
-        <HeaderContainer />
-        {children}
-        <FooterContainer />
+        <RequestContextProvider
+          id={id}
+          statsDestination={getStatsDestination({
+            isUK: false,
+            env,
+            service,
+          })}
+          statsPageIdentifier={getStatsPageIdentifier({
+            pageType: 'article',
+            service,
+            id,
+          })}
+          platform={isAmp ? 'amp' : 'canonical'}
+          bbcOrigin={bbcOrigin}
+        >
+          <Helmet>
+            <link rel="manifest" href={`/${service}/articles/manifest.json`} />
+          </Helmet>
+          <ConsentBanner />
+          <HeaderContainer />
+          {children}
+          <FooterContainer />
+        </RequestContextProvider>
       </ServiceContextProvider>
-    </RequestContextProvider>
-  </Fragment>
-);
+    </Fragment>
+  );
+};
 
 PageWrapper.propTypes = {
   bbcOrigin: string,
@@ -45,8 +55,6 @@ PageWrapper.propTypes = {
   id: string.isRequired,
   isAmp: bool.isRequired,
   service: string.isRequired,
-  statsDestination: string.isRequired,
-  statsPageIdentifier: string.isRequired,
 };
 
 PageWrapper.defaultProps = {

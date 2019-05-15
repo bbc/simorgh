@@ -1,8 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import getOriginContext from './getOriginContext';
-import getStatsPageIdentifier from './getStatsPageIdentifier';
-import getStatsDestination from './getStatsDestination';
 
 jest.mock('./getOriginContext', () => jest.fn());
 getOriginContext.mockImplementation(origin => ({
@@ -10,18 +8,18 @@ getOriginContext.mockImplementation(origin => ({
   origin: origin || 'https://foobar.com',
 }));
 
-jest.mock('./getStatsDestination', () => jest.fn());
-getStatsDestination.mockImplementation(() => '598286');
-
-jest.mock('./getStatsPageIdentifier', () => jest.fn());
-getStatsPageIdentifier.mockImplementation(
-  () => 'persian.articles.c0000000000o.page',
-);
-
 const { RequestContextProvider, RequestContext } = require('./index');
 
-const renderWithContextProvider = (node, { platformString, bbcOrigin }) => (
-  <RequestContextProvider platform={platformString} bbcOrigin={bbcOrigin}>
+const renderWithContextProvider = (
+  node,
+  { platformString, bbcOrigin, statsDestination, statsPageIdentifier },
+) => (
+  <RequestContextProvider
+    platform={platformString}
+    bbcOrigin={bbcOrigin}
+    statsDestination={statsDestination}
+    statsPageIdentifier={statsPageIdentifier}
+  >
     {node}
   </RequestContextProvider>
 );
@@ -57,6 +55,8 @@ describe('RequestContext', () => {
       renderWithContextProvider(<Component />, {
         platformString,
         bbcOrigin,
+        statsDestination,
+        statsPageIdentifier,
       }),
     );
   };

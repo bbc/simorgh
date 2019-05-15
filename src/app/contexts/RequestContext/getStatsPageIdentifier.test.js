@@ -5,13 +5,15 @@ describe('getStatsPageIdentifier', () => {
     {
       service: 'news',
       pageType: 'article',
+      id: 'c0000000000o',
       expected: 'news.articles.c0000000000o.page',
       summary: 'should return for News Article',
     },
     {
       service: 'persian',
       pageType: 'article',
-      expected: 'persian.articles.c0000000000o.page',
+      id: 'c0000000001o',
+      expected: 'persian.articles.c0000000001o.page',
       summary: 'should return for WS Article',
     },
     {
@@ -34,9 +36,13 @@ describe('getStatsPageIdentifier', () => {
     },
   ];
 
-  testScenarios.forEach(({ service, pageType, expected, summary }) => {
+  testScenarios.forEach(({ service, pageType, id, expected, summary }) => {
     it(summary, () => {
-      const statsPageIdentifier = getStatsPageIdentifier(service, pageType);
+      const statsPageIdentifier = getStatsPageIdentifier({
+        service,
+        pageType,
+        id,
+      });
       expect(statsPageIdentifier).toEqual(expected);
     });
   });

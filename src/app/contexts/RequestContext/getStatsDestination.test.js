@@ -132,7 +132,7 @@ describe('getStatsDestination', () => {
 
   testScenarios.forEach(({ isUK, env, service, expected, summary }) => {
     it(summary, () => {
-      const statsDestination = getStatsDestination(isUK, env, service);
+      const statsDestination = getStatsDestination({ isUK, env, service });
       expect(statsDestination).toEqual(expected);
     });
   });

@@ -1,4 +1,4 @@
-const getStatsDestination = (isUK, env = 'test', service) => {
+const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
   let destination = '';
 
   const destinationIDs = {

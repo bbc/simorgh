@@ -1,7 +1,6 @@
-const getStatsPageIdentifier = (service, pageType) => {
+const getStatsPageIdentifier = ({ pageType, service, id }) => {
   if (pageType === 'article') {
-    const optimoId = `c0000000000o`;
-    return `${service}.articles.${optimoId}.page`;
+    return `${service}.articles.${id}.page`;
   }
   if (pageType === 'frontpage') {
     return `${service}.page`; // front pages

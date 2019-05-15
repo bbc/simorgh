@@ -4,9 +4,12 @@ exports[`Video with data and a caption should render the video and caption 1`] =
 <Context.Provider
   value={
     Object {
+      "id": undefined,
       "isUK": true,
       "origin": "http://localhost",
       "platform": undefined,
+      "statsDestination": undefined,
+      "statsPageIdentifier": undefined,
     }
   }
 >
@@ -145,9 +148,12 @@ exports[`Video with data and a caption should render the video without a caption
 <Context.Provider
   value={
     Object {
+      "id": undefined,
       "isUK": true,
       "origin": "http://localhost",
       "platform": undefined,
+      "statsDestination": undefined,
+      "statsPageIdentifier": undefined,
     }
   }
 >

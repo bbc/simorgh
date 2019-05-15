@@ -1,8 +1,6 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, number, string } from 'prop-types';
 import getOriginContext from './getOriginContext';
-import getStatsDestination from './getStatsDestination';
-import getStatsPageIdentifier from './getStatsPageIdentifier';
 
 export const RequestContext = React.createContext('default');
 
@@ -11,19 +9,18 @@ export const RequestContextProvider = ({
   children,
   platform,
   bbcOrigin,
+  statsDestination,
+  statsPageIdentifier,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
-  const env = process.env.APP_ENV;
-  const pageType = 'article'; // should get value from page path
-  const service = 'news'; // should get value from page path
 
   const value = {
     id,
     isUK,
     origin,
     platform,
-    statsDestination: getStatsDestination(isUK, env, service),
-    statsPageIdentifier: getStatsPageIdentifier(service, pageType),
+    statsDestination,
+    statsPageIdentifier,
   };
 
   return (
@@ -36,6 +33,8 @@ RequestContextProvider.propTypes = {
   id: string.isRequired,
   platform: string.isRequired,
   bbcOrigin: string,
+  statsDestination: number.isRequired,
+  statsPageIdentifier: string.isRequired,
 };
 
 RequestContextProvider.defaultProps = {
