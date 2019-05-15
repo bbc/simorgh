@@ -5,8 +5,8 @@ exports[`Video with data and a caption should render the video and caption 1`] =
   value={
     Object {
       "id": undefined,
-      "isUK": true,
-      "origin": "http://localhost",
+      "isUK": undefined,
+      "origin": undefined,
       "platform": undefined,
       "statsDestination": undefined,
       "statsPageIdentifier": undefined,
@@ -149,8 +149,8 @@ exports[`Video with data and a caption should render the video without a caption
   value={
     Object {
       "id": undefined,
-      "isUK": true,
-      "origin": "http://localhost",
+      "isUK": undefined,
+      "origin": undefined,
       "platform": undefined,
       "statsDestination": undefined,
       "statsPageIdentifier": undefined,

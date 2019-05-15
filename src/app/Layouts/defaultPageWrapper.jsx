@@ -9,20 +9,27 @@ import GlobalStyle from '../lib/globalStyles';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
+import getOriginContext from '../contexts/RequestContext/getOriginContext';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
+  const { isUK, origin } = getOriginContext(bbcOrigin);
+
   console.log(
-    getStatsDestination({ isUK: false, env, service }),
+    getStatsDestination({ isUK, env, service }),
     getStatsPageIdentifier({ pageType: 'article', service, id }),
     env,
   );
+
   return (
     <Fragment>
       <GlobalStyle />
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           id={id}
+          isUK={isUK}
+          origin={origin}
+          platform={isAmp ? 'amp' : 'canonical'}
           statsDestination={getStatsDestination({
             isUK: false,
             env,
@@ -33,8 +40,6 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
             service,
             id,
           })}
-          platform={isAmp ? 'amp' : 'canonical'}
-          bbcOrigin={bbcOrigin}
         >
           <Helmet>
             <link rel="manifest" href={`/${service}/articles/manifest.json`} />

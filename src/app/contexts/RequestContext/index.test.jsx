@@ -1,12 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import getOriginContext from './getOriginContext';
-
-jest.mock('./getOriginContext', () => jest.fn());
-getOriginContext.mockImplementation(origin => ({
-  isUK: true,
-  origin: origin || 'https://foobar.com',
-}));
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -48,30 +41,48 @@ describe('RequestContext', () => {
     platformString,
     statsDestination,
     statsPageIdentifier,
-    bbcOrigin,
+    isUK,
+    origin,
   ) => {
     shouldMatchSnapshot(
-      `should have a request object for platform ${platformString}, bbcOrigin ${bbcOrigin}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
+      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
       renderWithContextProvider(<Component />, {
+        isUK,
+        origin,
         platformString,
-        bbcOrigin,
         statsDestination,
         statsPageIdentifier,
       }),
     );
   };
 
-  testRequestContext('default', '598286', 'persian.articles.c0000000000o.page');
+  testRequestContext(
+    'default',
+    '598286',
+    'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
+  );
   testRequestContext(
     'canonical',
     '598286',
     'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
   );
-  testRequestContext('amp', '598286', 'persian.articles.c0000000000o.page');
+  testRequestContext(
+    'amp',
+    '598286',
+    'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
+  );
   testRequestContext(
     'default',
     '598286',
     'persian.articles.c0000000000o.page',
     'https://www.bbc.co.uk',
+    false,
+    'https://www.bbc.com',
   );
 });

@@ -1,19 +1,17 @@
 import React from 'react';
-import { node, number, string } from 'prop-types';
-import getOriginContext from './getOriginContext';
+import { bool, node, number, string } from 'prop-types';
 
 export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
-  id,
   children,
+  id,
+  isUK,
+  origin,
   platform,
-  bbcOrigin,
   statsDestination,
   statsPageIdentifier,
 }) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
-
   const value = {
     id,
     isUK,
@@ -32,11 +30,8 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string.isRequired,
   platform: string.isRequired,
-  bbcOrigin: string,
+  isUK: bool.isRequired,
+  origin: string.isRequired,
   statsDestination: number.isRequired,
   statsPageIdentifier: string.isRequired,
-};
-
-RequestContextProvider.defaultProps = {
-  bbcOrigin: null,
 };
