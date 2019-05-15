@@ -58,28 +58,28 @@ describe('RequestContext', () => {
 
   testRequestContext(
     'default',
-    '598286',
+    'NEWS_PS_TEST',
     'persian.articles.c0000000000o.page',
     false,
     'https://www.bbc.com',
   );
   testRequestContext(
     'canonical',
-    '598286',
+    'NEWS_PS_TEST',
     'persian.articles.c0000000000o.page',
     false,
     'https://www.bbc.com',
   );
   testRequestContext(
     'amp',
-    '598286',
+    'NEWS_PS_TEST',
     'persian.articles.c0000000000o.page',
     false,
     'https://www.bbc.com',
   );
   testRequestContext(
     'default',
-    '598286',
+    'NEWS_PS_TEST',
     'persian.articles.c0000000000o.page',
     'https://www.bbc.co.uk',
     false,

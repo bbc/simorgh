@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, number, string } from 'prop-types';
+import { bool, node, string } from 'prop-types';
 
 export const RequestContext = React.createContext('default');
 
@@ -32,6 +32,6 @@ RequestContextProvider.propTypes = {
   platform: string.isRequired,
   isUK: bool.isRequired,
   origin: string.isRequired,
-  statsDestination: number.isRequired,
+  statsDestination: string.isRequired,
   statsPageIdentifier: string.isRequired,
 };
