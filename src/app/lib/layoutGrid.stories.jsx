@@ -186,7 +186,7 @@ storiesOf('Grid Examples', module)
           gridSpan={{ group3: '5', group4: '5', group5: '10' }}
         >
           <ColouredDiv colour={red}>
-            York Runte is keen on the shared ownership model.
+            Spanning 5 columns at groups <=4 & 10 columns at group 5 - e.g. a caption 
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
