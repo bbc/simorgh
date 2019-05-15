@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Copyright from '@bbc/psammead-copyright';
-import { ServiceContextConsumer } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-const CopyrightContainer = ({ children }) => (
-  <Copyright>
-    <ServiceContextConsumer>
-      {({ imageCopyrightOffscreenText }) =>
-        imageCopyrightOffscreenText ? (
-          <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
-        ) : null
-      }
-    </ServiceContextConsumer>
-    {children}
-  </Copyright>
-);
+const CopyrightContainer = ({ children }) => {
+  const { imageCopyrightOffscreenText } = useContext(ServiceContext);
+
+  return (
+    <Copyright>
+      {imageCopyrightOffscreenText ? (
+        <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
+      ) : null}
+      {children}
+    </Copyright>
+  );
+};
 
 CopyrightContainer.propTypes = {
   children: string.isRequired,

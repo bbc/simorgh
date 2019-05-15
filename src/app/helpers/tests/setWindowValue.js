@@ -15,11 +15,13 @@ export const setWindowValue = (key, value) => {
 
   Object.defineProperty(window, key, {
     value: newValue,
+    writable: true,
   });
 };
 
 export const resetWindowValue = (key, value) => {
   Object.defineProperty(window, key, {
     value,
+    writable: true,
   });
 };
