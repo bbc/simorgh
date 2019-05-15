@@ -15,12 +15,6 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
   const { isUK, origin } = getOriginContext(bbcOrigin);
 
-  console.log(
-    getStatsDestination({ isUK, env, service }),
-    getStatsPageIdentifier({ pageType: 'article', service, id }),
-    env,
-  );
-
   return (
     <Fragment>
       <GlobalStyle />
@@ -31,7 +25,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
           origin={origin}
           platform={isAmp ? 'amp' : 'canonical'}
           statsDestination={getStatsDestination({
-            isUK: false,
+            isUK,
             env,
             service,
           })}

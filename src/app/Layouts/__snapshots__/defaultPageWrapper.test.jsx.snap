@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defaultPageWrapper should render with children 1`] = `
+<React.Fragment>
+  <GlobalStyleComponent />
+  <ServiceContextProvider
+    service="news"
+  >
+    <RequestContextProvider
+      id="c0000000000o"
+      isUK={true}
+      origin="https://www.bbc.com"
+      platform="amp"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o.page"
+    >
+      <HelmetWrapper
+        defer={true}
+        encodeSpecialCharacters={true}
+      >
+        <link
+          href="/news/articles/manifest.json"
+          rel="manifest"
+        />
+      </HelmetWrapper>
+      <ConsentBanner />
+      <HeaderContainer />
+      <h2>
+        Child element
+      </h2>
+      <FooterContainer />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+</React.Fragment>
+`;
