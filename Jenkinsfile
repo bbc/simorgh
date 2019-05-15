@@ -6,6 +6,8 @@ def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 def nodeName
 def stageName = ""
 def packageName = 'simorgh.zip'
+def storybookDist = 'storybook.zip'
+
 def getCommitInfo = {
   infraGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${GIT_COMMIT}").trim()
   appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
@@ -96,6 +98,20 @@ pipeline {
             sh 'make installProd'
             sh 'make productionTests'
           }
+        }
+        stage('Build storybook dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
+          }
         }    
       }
       post {
@@ -142,6 +158,20 @@ pipeline {
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
+          }
+        }
+        stage('Build storybook dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
           }
         }    
       }
