@@ -179,7 +179,7 @@ storiesOf('Grid Examples', module)
     <GhostWrapper>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '12' }}>
-          <ColouredDiv colour={blue}>AN IMAGE OF YORK RUNTE</ColouredDiv>
+          <ColouredDiv colour={blue}>Spanning 12 columns - e.g. and image</ColouredDiv>
         </NestedGridItemLarge>
         <NestedGridItemLarge
           gridColumnStart="1"
