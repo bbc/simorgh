@@ -8,13 +8,6 @@ def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 
-def getCommitInfo = {
-  infraGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${GIT_COMMIT}").trim()
-  appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
-  appGitCommitAuthor = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-  appGitCommitMessage = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git log -1 --pretty=%B").trim()
-}
-
 def runDevelopmentTests(){
   sh 'make install'
   sh 'make developmentTests'
@@ -36,45 +29,6 @@ pipeline {
     CI = true
   }
   stages {
-    stage('Checkout application repo') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
-      agent {
-        docker {
-          image "${nodeImage}"
-          args '-u root -v /etc/pki:/certs'
-        }
-      }
-      steps {
-        sh "rm -rf ${env.APP_DIRECTORY}"
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: "*/${env.BRANCH_NAME}"]],
-          doGenerateSubmoduleConfigurations: false,
-          extensions: [[
-            $class: 'RelativeTargetDirectory',
-            relativeTargetDir: "${env.APP_DIRECTORY}"
-          ]],
-          submoduleCfg: [],
-          userRemoteConfigs: [[
-            credentialsId: 'github',
-            name: "origin/${env.BRANCH_NAME}",
-            url: 'https://github.com/bbc/simorgh.git'
-          ]]
-        ])
-        script {
-          getCommitInfo()
-        }
-      }
-      post {
-        always {
-          script {
-            stageName = env.STAGE_NAME
-          }
-        }
-      }
-    }
     stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
