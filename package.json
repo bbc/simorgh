@@ -136,7 +136,6 @@
     "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/react": "^4.1.12",
     "amphtml-validator": "^1.0.23",
-    "audit-ci": "^1.2.1",
     "babel-eslint": "^10.0.0",
     "bbc-a11y": "^2.3.0",
     "chalk": "^2.4.1",
