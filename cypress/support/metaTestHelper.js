@@ -8,7 +8,7 @@ export const testResponseCode = (path, responseCode) => {
 
 export const mozartFallbackStatus = path => {
   cy.request(path).then(({ headers }) => {
-    expect(headers['X-Mfa']).to.not.have.value('1');
+    expect(headers).not.to.have.property('x-mfa');
   });
 };
 
