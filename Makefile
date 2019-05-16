@@ -17,3 +17,6 @@ developmentTests:
 
 productionTests:
 	cd ${APP_DIRECTORY}; npm run build; xvfb-run npm run test:prod:ci;
+
+buildStorybook:
+	cd ${APP_DIRECTORY}; npm run build:storybook
