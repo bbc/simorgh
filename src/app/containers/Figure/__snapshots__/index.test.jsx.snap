@@ -91,6 +91,11 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   width: 100%;
 }
 
+.c3 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 .c3 > p:last-child {
   padding-bottom: 0;
 }
@@ -184,6 +189,11 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c2 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c2 > p:last-child {
@@ -423,6 +433,11 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
+.c4 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 .c4 > p:last-child {
   padding-bottom: 0;
 }
@@ -522,6 +537,11 @@ exports[`Figure should render an image with caption text 1`] = `
   width: 100%;
 }
 
+.c3 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 .c3 > p:last-child {
   padding-bottom: 0;
 }
@@ -613,6 +633,11 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c3 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c3 > p:last-child {
@@ -792,6 +817,11 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c2 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c2 > p:last-child {
