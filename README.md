@@ -64,7 +64,7 @@ This is mainly used for debugging `latest` using the TEST and LIVE environment b
 To run TEST bundles on localhost:
 - In `envConfig/test.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && npm run build:test && npm run start`
-- Visit a test article: http://localhost:7080/news/articles/c5ll353v7y9o
+- Visit a test article: http://localhost:7080/news/articles/cn7769kpk9mo
 
 To run LIVE bundles on localhost:
 - In `envConfig/live.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
