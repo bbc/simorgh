@@ -58,22 +58,21 @@ const metadataProps = (
 });
 
 const linkedDataProps = (
+  brandName,
   canonicalLink,
   createdBy,
   logoUrl,
-  optimoId,
   seoHeadline,
   about = undefined,
 ) => ({
+  brandName,
   canonicalLink,
   firstPublished: '2018-01-01T12:01:00.000Z',
   lastUpdated: '2018-01-01T13:00:00.000Z',
   logoUrl,
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  optimoId,
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   seoHeadline,
-  service: createdBy,
   type: 'article',
   about,
 });
@@ -122,10 +121,10 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'BBC News',
           'https://www.bbc.com/news/articles/c0000000001o',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-          'c0000000001o',
           'Article Headline for SEO',
           [
             {
@@ -178,10 +177,10 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'BBC News',
           'https://www.bbc.co.uk/news/articles/c0000000001o',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-          'c0000000001o',
           'Article Headline for SEO',
           [
             {
@@ -221,10 +220,10 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'BBC News فارسی',
           'https://www.bbc.com/persian/articles/cyddjz5058wo',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-          'cyddjz5058wo',
           'سرصفحه مقاله',
         ),
       );
@@ -253,10 +252,10 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
+          'BBC News فارسی',
           'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-          'cyddjz5058wo',
           'سرصفحه مقاله',
         ),
       );
