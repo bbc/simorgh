@@ -67,26 +67,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H2O",
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H²O",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H",
-                              "attributes": []
-                            }
-                          },
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "2",
-                              "attributes": ["subscript"]
-                            }
-                          },
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "O",
+                              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit H²0",
                               "attributes": []
                             }
                           }
@@ -294,10 +280,10 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p067gq6h",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
               {
                 "type": "caption",
                 "model": {
@@ -328,29 +314,29 @@
                 }
               },
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p067gq6h",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Mark and Isla Royal Wedding",
-                  "synopses" : {
-                    "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
-                    "medium" : null,
-                    "long" : null
+                "type": "aresMedia",
+                "model": {
+                  "id": "p067gq6h",
+                  "subType": "clip",
+                  "format": "audio_video",
+                  "title": "Mark and Isla Royal Wedding",
+                  "synopses": {
+                    "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                    "medium": null,
+                    "long": null
                   },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [ 
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                  "embedding": true,
+                  "warnings": {},
+                  "advertising": false,
+                  "versions": [
                     {
                       "versionId": "p067gq6k",
-                      "types": [ "Original" ],
+                      "types": ["Original"],
                       "duration": 94,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": false
                       }
                     }
                   ]
