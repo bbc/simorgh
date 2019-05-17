@@ -1,4 +1,5 @@
-const regexPunctuationSymbols = /[^a-z0-9\s-]/gi;
+// eslint-disable-next-line no-useless-escape
+const regexPunctuationSymbols = /[\[\]\.,\/#?¿!$'"%^&*;:{}=\\-_`~()؟؛٬«»！，。？、@#￥……（）：；《）《》“”〔〕’|]/gi;
 const regexSpaces = /\s+/g;
 
 const createId = (type, text) => {
