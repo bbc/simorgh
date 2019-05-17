@@ -6,7 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
-import sanitisedSubheadlineCreator from './helpers';
+import sanitiseString from './helpers';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -39,7 +39,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
-  const subHeadingId = sanitisedSubheadlineCreator(type, text);
+  const subHeadingId = sanitiseString(type, text);
 
   return (
     <GridConstrain>
