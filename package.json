@@ -8,6 +8,7 @@
     "bbcA11y": "bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
+    "build:storybook": "build-storybook -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
