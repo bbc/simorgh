@@ -4,7 +4,7 @@ import HeadingsContainer from '.';
 import deepGet from '../../helpers/json/deepGet';
 import articleData from '../../../../data/test/news/articles/c0000000007o.json';
 
-const articleBlocks = deepGet(['content', 'model', 'blocks'],articleData);
+const articleBlocks = deepGet(['content', 'model', 'blocks'], articleData);
 
 storiesOf('Heading Container')
   .add('default heading', () => (
