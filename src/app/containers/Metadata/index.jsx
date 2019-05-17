@@ -80,17 +80,16 @@ const MetadataContainer = ({ metadata, promo }) => {
   return (
     <Fragment>
       <LinkedData
+        brandName={brandName}
+        canonicalLink={canonicalLink}
         firstPublished={timeFirstPublished}
         lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
-        optimoId={id}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={promo.headlines.seoHeadline}
-        service={metadata.createdBy}
         type={metadata.type}
         about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
-        canonicalLink={canonicalLink}
       />
       <Metadata
         isAmp={isAmp}
