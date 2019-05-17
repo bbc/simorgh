@@ -1,8 +1,8 @@
-import createId from './helpers';
+import sanitisedSubheadlineCreator from './helpers';
 
 describe('Headings sanitisation helper', () => {
   it('should return null for headline', () => {
-    const result = createId(
+    const result = sanitisedSubheadlineCreator(
       'headline',
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
     );
@@ -10,17 +10,23 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should return an id for subheadline', () => {
-    const result = createId('subheadline', "Queen Victoria's myrtle");
+    const result = sanitisedSubheadlineCreator(
+      'subheadline',
+      "Queen Victoria's myrtle",
+    );
     expect(result).toBe('Queen-Victorias-myrtle');
   });
 
   it('should return an id for a persian subheadline', () => {
-    const result = createId('subheadline', 'پهپادی که برایتان قهوه می‌آورد');
+    const result = sanitisedSubheadlineCreator(
+      'subheadline',
+      'پهپادی که برایتان قهوه می‌آورد',
+    );
     expect(result).toBe('پهپادی-که-برایتان-قهوه-می‌آورد');
   });
 
   it('should remove latin script punctuation', () => {
-    const result = createId(
+    const result = sanitisedSubheadlineCreator(
       'subheadline',
       '[.,/#?¿!$%^&*hello;:{world}=-_`~()«»]',
     );
@@ -28,7 +34,7 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should remove asian script punctuation', () => {
-    const result = createId(
+    const result = sanitisedSubheadlineCreator(
       'subheadline',
       '[’！，。？、~@#￥%……&*（hello）：；《）《》“world”〔〕-]|',
     );
@@ -36,7 +42,10 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should remove persian punctuation', () => {
-    const result = createId('subheadline', '[hello؟؛٬world]');
+    const result = sanitisedSubheadlineCreator(
+      'subheadline',
+      '[hello؟؛٬world]',
+    );
     expect(result).toBe('helloworld');
   });
 });

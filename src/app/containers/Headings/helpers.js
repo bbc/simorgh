@@ -2,11 +2,11 @@
 const regexPunctuationSymbols = /[\[\]\.,\/#?¿!$'"%^&*;:{}=\-_`~()؟؛٬«»！，。？、@#￥……（）：；《）《》“”〔〕’|]/gi;
 const regexSpaces = /\s+/g;
 
-const createId = (type, text) => {
+const sanitisedSubheadlineCreator = (type, text) => {
   if (text && type === 'subheadline') {
     return text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-');
   }
   return null;
 };
 
-export default createId;
+export default sanitisedSubheadlineCreator;
