@@ -3,6 +3,7 @@ import { string, number, objectOf, any } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import LazyLoad from 'react-lazyload';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -37,7 +38,9 @@ const FigureContainer = ({
             width={width}
           />
         ) : (
-          <Image alt={alt} src={src} width={width} />
+          <LazyLoad offset={250} once>
+            <Image alt={alt} src={src} width={width} />
+          </LazyLoad>
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
