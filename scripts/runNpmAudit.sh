@@ -10,8 +10,9 @@ do
         # npm audit returned succesfully, exiting
         exit 0
     else
+        echo $EXIT_CODE
         echo 'NPM audit failed, retrying...'
     fi
 done
 
-exit 0
+exit 1
