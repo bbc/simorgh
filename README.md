@@ -2,7 +2,13 @@
 
 [![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one. We consider this an apt metaphor for all articles of the BBC in one solution, a clear reference to the international nature of our teams but also to the articles themselves working for international users from the outset. It is also a unique name which is practical and, more superfically, the bird is very pretty.
+Named Simorgh after the Persian mythological bird. The Simorgh is the amalgam of many birds (and in some accounts other animals) into one.
+
+Whilst Simorgh was originally created within the BBC to enable all articles to be published via a single technical solution, its use case is now expanding to include a wider range of content types.
+
+Happily, a metaphor which seemed apt for offering all BBC articles in one solution is perhaps now even more appropriate as the application evolves to support more content types. It’s also a clear reference to the international nature of our teams, but also to the desire to ensure articles (and everything which has followed) works for users in all languages the BBC supports.
+
+It is also a unique name which is practical and, more superficially, the bird is very pretty.
 
 ## Overview
 
