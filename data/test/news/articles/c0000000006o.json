@@ -89,26 +89,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Phasellus at elit eget ante e=mc2 malesuada tempus",
+                        "text": "Phasellus at elit eget ante e=mc² malesuada tempus",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Phasellus at elit eget ante e=mc",
-                              "attributes": []
-                            }
-                          },
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "2",
-                              "attributes": ["superscript"]
-                            }
-                          },
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": " malesuada tempus",
+                              "text": "Phasellus at elit eget ante e=mc²  malesuada tempus",
                               "attributes": []
                             }
                           }
