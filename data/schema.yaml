@@ -332,7 +332,6 @@ components:
           $ref: '#/components/schemas/blocks'
 
     aresMediaMetadata:
-      type: object
       required:
         - model
         - type
@@ -408,6 +407,10 @@ components:
                   example: 'p01jvmg7'
                 warnings:
                   type: object
+      type:
+        enum:
+          - aresMediaMetadata
+        type: object
 
     caption:
       type: object
