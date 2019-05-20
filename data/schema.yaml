@@ -384,6 +384,10 @@ components:
             title:
               type: string
               example: "Dramatic capsize in America's Cup yacht"
+            type:
+              enum:
+                - aresMediaMetadata
+              type: string
             versions:
               type: array
               items:
