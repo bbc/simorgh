@@ -291,6 +291,8 @@ components:
       items:
         oneOf:
           - $ref: '#/components/schemas/altText'
+          - $ref: '#/components/schemas/aresMedia'
+          - $ref: '#/components/schemas/aresMediaMetadata'
           - $ref: '#/components/schemas/caption'
           - $ref: '#/components/schemas/fragment'
           - $ref: '#/components/schemas/headline'
@@ -301,8 +303,7 @@ components:
           - $ref: '#/components/schemas/text'
           - $ref: '#/components/schemas/urlLink'
           - $ref: '#/components/schemas/video'
-          - $ref: '#/components/schemas/aresMedia'
-          - $ref: '#/components/schemas/aresMediaMetadata'
+
       minItems: 2
 
     altText:
