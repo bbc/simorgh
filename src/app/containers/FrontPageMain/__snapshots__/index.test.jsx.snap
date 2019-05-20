@@ -1,24 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageMain should render a news article correctly 1`] = `
-<React.Fragment>
-  <main
-    role="main"
-  >
-    <ForwardRef>
-      <h1 />
-    </ForwardRef>
-  </main>
-</React.Fragment>
-`;
-
 exports[`FrontPageMain should render a persian article correctly 1`] = `
 <React.Fragment>
   <main
     role="main"
   >
     <ForwardRef>
-      <h1 />
+      <h1>
+        Make Sudan restore constitutional order - Nigeria
+      </h1>
     </ForwardRef>
   </main>
 </React.Fragment>
