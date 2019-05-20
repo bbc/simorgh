@@ -9,6 +9,7 @@ do
     if [ $EXIT_CODE -eq 0 ]
     then
         # npm audit returned succesfully, exiting
+        echo 'NPM audit passed. Exiting with code 0'
         exit 0
     else
         echo $EXIT_CODE
