@@ -5,6 +5,7 @@ describe('create srcset', () => {
     {
       originCode: 'test',
       location: 'testland',
+      width: 1024,
       expected:
         'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/800/test/testland 800w',
       summary:
@@ -18,10 +19,12 @@ describe('create srcset', () => {
     },
   ];
 
-  srcsetScenarios.forEach(({ originCode, location, expected, summary }) => {
-    it(summary, () => {
-      const srcset = createSrcset(originCode, location);
-      expect(srcset).toEqual(expected);
-    });
-  });
+  srcsetScenarios.forEach(
+    ({ originCode, location, width, expected, summary }) => {
+      it(summary, () => {
+        const srcset = createSrcset(originCode, location, width);
+        expect(srcset).toEqual(expected);
+      });
+    },
+  );
 });

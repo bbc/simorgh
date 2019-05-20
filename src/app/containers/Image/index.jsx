@@ -55,7 +55,7 @@ const ImageContainer = ({ blocks }) => {
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
-  const srcSet = createSrcset(originCode, locator);
+  const srcSet = createSrcset(originCode, locator, width);
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
