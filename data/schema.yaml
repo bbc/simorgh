@@ -368,7 +368,7 @@ components:
               type: object
               properties:
                 destinations:
-                type: array
+                  type: array
             synopses:
               type: object
               properties:
@@ -386,28 +386,29 @@ components:
               example: "Dramatic capsize in America's Cup yacht"
             versions:
               type: array
-              items: object
-              properties:
-                availableTerritories:
-                  type: object
-                  properties:
-                    nonUk:
-                      type: boolean
-                      example: true
-                    uk:
-                      type: boolean
-                      example: true
-                duration:
-                  type: number
-                  example: 191
-                types:
-                  type: array
-                  example: ['Original']
-                versionId:
-                  type: string
-                  example: 'p01jvmg7'
-                warnings:
-                  type: object
+              items:
+                type: object
+                properties:
+                  availableTerritories:
+                    type: object
+                    properties:
+                      nonUk:
+                        type: boolean
+                        example: true
+                      uk:
+                        type: boolean
+                        example: true
+                  duration:
+                    type: number
+                    example: 191
+                  types:
+                    type: array
+                    example: ['Original']
+                  versionId:
+                    type: string
+                    example: 'p01jvmg7'
+                  warnings:
+                    type: object
 
     caption:
       type: object
