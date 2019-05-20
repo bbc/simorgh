@@ -8,10 +8,12 @@ import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
 
+const LAZYLOAD_OFFSET = 250;
+
 const renderImage = (imageToRender, lazyload) =>
   lazyload ? (
     <Fragment>
-      <LazyLoad offset={250} once>
+      <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
 

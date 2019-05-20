@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { any, bool, string, objectOf } from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -149,8 +149,8 @@ const generateFixtureData = ({
     <RequestContextProvider platform={platform}>
       <FigureContainer
         alt={imageAlt}
-        captionBlock={caption || null}
-        copyright={copyright ? copyrightText : null}
+        captionBlock={caption}
+        copyright={copyright}
         height={imageHeight}
         ratio={imageRatio}
         src={imageSrc}
@@ -163,11 +163,11 @@ const generateFixtureData = ({
 );
 
 generateFixtureData.propTypes = {
-  caption: PropTypes.objectOf(PropTypes.any),
-  copyright: PropTypes.string,
-  lazyload: PropTypes.bool,
-  platform: PropTypes.string,
-  type: PropTypes.string,
+  caption: objectOf(any),
+  copyright: string,
+  lazyload: bool,
+  platform: string,
+  type: string,
 };
 
 generateFixtureData.defaultProps = {
