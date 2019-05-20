@@ -8,3 +8,4 @@ reports/*
 log
 cypress/screenshots
 pack
+storybook_dist
