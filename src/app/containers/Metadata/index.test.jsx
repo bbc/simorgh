@@ -8,11 +8,18 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
-const Container = (service, bbcOrigin, platform, data) => {
+const Container = (service, bbcOrigin, platform, data, id) => {
   const serviceConfig = services[service];
   return (
     <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider bbcOrigin={bbcOrigin} platform={platform}>
+      <RequestContextProvider
+        platform={platform}
+        id={id}
+        isUK
+        origin={bbcOrigin}
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier={`${service}.articles.${id}.page`}
+      >
         <MetadataContainer {...data} />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -87,7 +94,13 @@ describe('Metadata Container', () => {
   describe('LinkedData and Metadata components called with correct props', () => {
     it('should be correct for Canonical News & international origin', () => {
       const Wrapper = mount(
-        Container('news', dotComOrigin, 'canonical', articleDataNews),
+        Container(
+          'news',
+          dotComOrigin,
+          'canonical',
+          articleDataNews,
+          'c0000000001o',
+        ),
       );
 
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
@@ -143,7 +156,13 @@ describe('Metadata Container', () => {
 
     it('should be correct for AMP News & UK origin', () => {
       const Wrapper = mount(
-        Container('news', dotCoDotUKOrigin, 'amp', articleDataNews),
+        Container(
+          'news',
+          dotCoDotUKOrigin,
+          'amp',
+          articleDataNews,
+          'c0000000001o',
+        ),
       );
 
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
@@ -199,7 +218,13 @@ describe('Metadata Container', () => {
 
     it('should be correct for Persian News & international origin', () => {
       const Wrapper = mount(
-        Container('persian', dotComOrigin, 'canonical', articleDataPersian),
+        Container(
+          'persian',
+          dotComOrigin,
+          'canonical',
+          articleDataPersian,
+          'cyddjz5058wo',
+        ),
       );
 
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
@@ -231,7 +256,13 @@ describe('Metadata Container', () => {
 
     it('should be correct for Persian News & UK origin', () => {
       const Wrapper = mount(
-        Container('persian', dotCoDotUKOrigin, 'amp', articleDataPersian),
+        Container(
+          'persian',
+          dotCoDotUKOrigin,
+          'amp',
+          articleDataPersian,
+          'cyddjz5058wo',
+        ),
       );
 
       expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
