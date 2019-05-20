@@ -8,18 +8,17 @@ import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
 
-const renderImage = (alt, lazyload, src, width) =>
+const renderImage = (imageToRender, lazyload) =>
   lazyload ? (
     <Fragment>
       <LazyLoad offset={250} once>
-        <Image alt={alt} src={src} width={width} />
+        {imageToRender}
       </LazyLoad>
-      <noscript>
-        <Image alt={alt} src={src} />
-      </noscript>
+
+      <noscript>{imageToRender}</noscript>
     </Fragment>
   ) : (
-    <Image alt={alt} src={src} />
+    imageToRender
   );
 
 const renderCopyright = copyright =>
@@ -40,6 +39,8 @@ const FigureContainer = ({
   type,
 }) => {
   const { platform } = useContext(RequestContext);
+  const imageToRender = <Image alt={alt} src={src} width={width} />;
+
   return (
     <Figure>
       <ImagePlaceholder ratio={ratio}>
@@ -53,7 +54,7 @@ const FigureContainer = ({
             width={width}
           />
         ) : (
-          renderImage(alt, lazyload, src, width)
+          renderImage(imageToRender, lazyload)
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
