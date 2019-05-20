@@ -16,5 +16,5 @@ do
     fi
 done
 
-echo "npm audit failed 5 times, this usually highlights a genuine audit failure - please investigate"
+echo "npm audit failed 20 times, this usually highlights a genuine audit failure - please investigate"
 exit 1
