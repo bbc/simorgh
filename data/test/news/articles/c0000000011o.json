@@ -274,6 +274,7 @@
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
                         "locator": "https://www.test.bbc.com/news/articles/c0000000004o",
+                        "isExternal": false,
                         "blocks": [
                           {
                             "type": "fragment",
@@ -319,6 +320,7 @@
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
                         "locator": "https://www.test.bbc.com/news/articles/c0000000004o",
+                        "isExternal": false,
                         "blocks": [
                           {
                             "type": "fragment",
@@ -379,6 +381,7 @@
                       "model": {
                         "text": "Morbi lacinia leo sed tellus faucibus",
                         "locator": "https://www.test.bbc.com/news/articles/c0000000004o",
+                        "isExternal": false,
                         "blocks": [
                           {
                             "type": "fragment",
