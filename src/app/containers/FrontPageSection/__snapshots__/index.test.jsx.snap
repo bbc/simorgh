@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPageSection Container should render correctly for canonical 1`] = `
-<section>
+<section
+  aria-labelledby="top-stories"
+  role="region"
+>
+  <h2
+    id="top-stories"
+  >
+    Top Stories
+  </h2>
   <StoryPromoUl>
     <StoryPromoLi>
       <StoryPromo

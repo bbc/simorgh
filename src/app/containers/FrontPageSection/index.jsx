@@ -1,17 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { shape } from 'prop-types';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
+import { sanitise } from './helpers';
 
 const FrontPageSection = ({ group }) => {
-  // TODO remove this eslint disable when SectionDivider is brought in
-  // eslint-disable-next-line no-unused-vars
-  const { script } = useContext(ServiceContext);
+  // TODO uncomment this when there is a SectionLabel available from Psammead
+  // const { script } = useContext(ServiceContext);
+  const sectionLabelId = sanitise(group.title);
   return (
-    <section>
-      {/* <SectionDivider script={script}>{group.strapline.name}</SectionDivider> */}
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <section role="region" aria-labelledby={sectionLabelId}>
+      {/* TODO remove this faux SectionLabel once the real one is available from Psammead */}
+      <h2 id={sectionLabelId}>{group.title}</h2>
+      {/* TODO uncomment this when there is a SectionLabel available from Psammead */}
+      {/* <SectionLabel script={script} labelId={sectionLabelId}>
+            {group.strapline.name}
+          </SectionLabel> */}
       <StoryPromoUl>
         {group.items.map(item => (
           <StoryPromoLi key={item.id}>
