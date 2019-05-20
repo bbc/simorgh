@@ -1,21 +1,13 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
-import {
-  blockArrayModel,
-  rawVideoModel,
-  rawVideoBlock,
-  imageBlock,
-} from '../../models/blocks';
+import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { blockArrayModel, singleTextBlock } from '../../models/blocks';
 import VideoContainer from './index';
+import {
+  VideoClipGlobalWithCaption,
+  VideoClipGlobalWithoutCaption,
+} from './fixtureData';
 
 describe('Video', () => {
-  const rVB = rawVideoBlock(
-    rawVideoModel('urn:bbc:pips:pid:p064nsyw', 'p064nsz3', 'clip', '299'),
-  );
-
   describe('with no data', () => {
     shouldShallowMatchSnapshot(
       'should not render anything',
@@ -23,42 +15,18 @@ describe('Video', () => {
     );
   });
 
-  describe('with data', () => {
-    const videoData = {
-      blocks: [
-        {
-          type: 'rawVideo',
-          model: {
-            locator: 'urn:bbc:pips:pid:p064nsyw',
-            versionID: 'p064nsz3',
-            kind: 'clip',
-            duration: '299',
-          },
-        },
-        {
-          type: 'image',
-          model: {
-            blocks: [
-              {
-                type: 'rawImage',
-                model: {
-                  locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
-                },
-              },
-            ],
-          },
-        },
-      ],
+  describe('with no aresMedia', () => {
+    const captionBlock = {
+      model: {
+        blocks: [
+          singleTextBlock(
+            'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
+          ),
+        ],
+      },
+      type: 'caption',
     };
-
-    shouldShallowMatchSnapshot(
-      'should render the important props in divs',
-      <VideoContainer {...videoData} />,
-    );
-  });
-
-  describe('with data but no image', () => {
-    const data = blockArrayModel([rVB, null]);
+    const data = blockArrayModel([captionBlock]);
 
     shouldShallowMatchSnapshot(
       'should only render the video',
@@ -66,11 +34,55 @@ describe('Video', () => {
     );
   });
 
-  describe('with data but no raw image', () => {
-    const rIB = null;
-    const img = imageBlock(rIB);
-    const data = blockArrayModel([rVB, img]);
+  describe('with data and a caption', () => {
+    shouldShallowMatchSnapshot(
+      'should render the video and caption',
+      VideoClipGlobalWithCaption,
+    );
 
-    isNull('should be null', <VideoContainer {...data} />);
+    shouldShallowMatchSnapshot(
+      'should render the video without a caption',
+      VideoClipGlobalWithoutCaption,
+    );
+  });
+
+  describe('with data', () => {
+    const dataBlock = {
+      type: 'aresMedia',
+      model: {
+        blocks: [
+          {
+            model: {
+              id: 'foo',
+              subType: 'clip',
+              title: 'Hello World!',
+              versions: [
+                {
+                  versionId: 'bar',
+                  duration: 100,
+                },
+              ],
+            },
+          },
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    locator: 'https://foo/bar/baz.png',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+    const data = blockArrayModel([dataBlock]);
+
+    shouldShallowMatchSnapshot(
+      'should return a valid VideoContainer',
+      <VideoContainer {...data} />,
+    );
   });
 });

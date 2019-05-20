@@ -1,14 +1,11 @@
-# These owners will be the default owners for everything in the repo.
-*  @benjaminhobbs @dr3 @hindsc52 @jamesdonoh @pjlee11 @sareh
-
-
 # Order is important. The last matching pattern has the most precedence.
 # Protected files
-**/*webpack*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh
-/src/server/*   @benjaminhobbs @jamesdonoh @pjlee11 @sareh   
-/src/client.js  @benjaminhobbs @jamesdonoh @pjlee11 @sareh
-/envConfig/*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh
-/scripts/*      @benjaminhobbs @jamesdonoh @pjlee11 @sareh
-package.json    @benjaminhobbs @jamesdonoh @pjlee11 @sareh
-.travis.yml     @benjaminhobbs @jamesdonoh @pjlee11 @sareh
+**/*webpack*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+/src/server/*   @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+/src/client.js  @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+/envConfig/*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+/scripts/*      @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+package.json    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+.travis.yml     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
+Jenkinsfile     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52
 **/*CODEOWNERS* @benjaminhobbs @jamesdonoh

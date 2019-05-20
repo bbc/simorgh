@@ -1,3 +1,4 @@
+import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import { thai as thaiScript } from '@bbc/gel-foundations/scripts';
 
 const thai = {
@@ -5,6 +6,7 @@ const thai = {
   locale: 'th',
   service: 'thai',
   serviceName: 'Thai',
+  brandSVG,
   script: thaiScript,
 };
 

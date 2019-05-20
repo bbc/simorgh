@@ -1,57 +1,61 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import ArticleContainer from './index';
-import { articleDataNews, articleDataPersian } from './fixtureData';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
+jest.mock('../PageHandlers/withPageWrapper', () => Component => {
+  const PageWrapperContainer = props => (
+    <div id="PageWrapperContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return PageWrapperContainer;
+});
+
+jest.mock('../PageHandlers/withLoading', () => Component => {
+  const LoadingContainer = props => (
+    <div id="LoadingContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return LoadingContainer;
+});
+
+jest.mock('../PageHandlers/withError', () => Component => {
+  const ErrorContainer = props => (
+    <div id="ErrorContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return ErrorContainer;
+});
+
+jest.mock('../PageHandlers/withData', () => Component => {
+  const DataContainer = props => (
+    <div id="DataContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return DataContainer;
+});
+
+jest.mock('../ArticleMain', () => {
+  const ArticleMain = () => <div>ArticleMain</div>;
+
+  return ArticleMain;
+});
+
 describe('ArticleContainer', () => {
-  const newsProps = {
-    data: articleDataNews,
-    isAmp: false,
-    service: 'news',
-    status: 200,
-  };
-
-  const persianProps = {
-    data: articleDataPersian,
-    isAmp: false,
-    service: 'persian',
-    status: 200,
-  };
-
-  const badData = {
-    data: undefined,
-    isAmp: false,
-    service: 'news',
-    status: 451,
-  };
-
-  const bbcOrigin = 'https://www.bbc.co.uk';
-
   describe('Component', () => {
-    describe('200 status code', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly for news',
-        <ArticleContainer data={newsProps} bbcOrigin={bbcOrigin} />,
-      );
-      shouldShallowMatchSnapshot(
-        'should render correctly for persian',
-        <ArticleContainer data={persianProps} bbcOrigin={bbcOrigin} />,
-      );
-    });
-
-    describe('non-200 status code', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly',
-        <ArticleContainer data={badData} bbcOrigin={bbcOrigin} />,
-      );
-    });
-
-    describe('no data or bbcOrigin', () => {
-      shouldShallowMatchSnapshot(
-        'should render correctly',
+    describe('Composing the Article Container using the page handlers', () => {
+      shouldMatchSnapshot(
+        'should compose articleContainer with the Page Handler in the correct order',
         <ArticleContainer />,
       );
     });
