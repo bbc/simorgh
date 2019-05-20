@@ -1,26 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import { RequestContextConsumer } from '../../../contexts/RequestContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { ConsentBannerText } from '../../../components/ConsentBanner';
 
-const BannerText = ({ uk, international }) => (
-  <RequestContextConsumer>
-    {({ isUK }) => {
-      const { first, linkText, linkUrl, last } = isUK ? uk : international;
+const BannerText = ({ uk, international }) => {
+  const { isUK } = useContext(RequestContext);
 
-      const Link =
-        linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+  const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
-      return (
-        <ConsentBannerText>
-          {first}
-          {Link}
-          {last}
-        </ConsentBannerText>
-      );
-    }}
-  </RequestContextConsumer>
-);
+  const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+
+  return (
+    <ConsentBannerText>
+      {first}
+      {Link}
+      {last}
+    </ConsentBannerText>
+  );
+};
 
 const messagingProps = {
   first: string.isRequired,

@@ -61,11 +61,13 @@ module.exports = (shell = {}) => {
         },
       ],
     },
+
     // This is to override bundle performance test. @TODO explain better
-    performance: IS_CI
+    performance: !START_DEV_SERVER
       ? {
           maxAssetSize: 245760, // 240kb - individual bundles
-          maxEntrypointSize: 491520, // 480kb - total bundles
+          maxEntrypointSize: 630784, // 616kb - total bundles
+          hints: 'error',
         }
       : undefined,
   };
