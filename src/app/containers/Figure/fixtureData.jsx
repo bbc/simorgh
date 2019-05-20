@@ -138,7 +138,13 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = ({ caption, copyright, platform, type }) => (
+const generateFixtureData = ({
+  caption,
+  copyright,
+  lazyload,
+  platform,
+  type,
+}) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider platform={platform}>
       <FigureContainer
@@ -150,6 +156,7 @@ const generateFixtureData = ({ caption, copyright, platform, type }) => (
         src={imageSrc}
         width={imageWidth}
         type={type}
+        lazyload={lazyload}
       />
     </RequestContextProvider>
   </ServiceContext.Provider>
@@ -158,6 +165,7 @@ const generateFixtureData = ({ caption, copyright, platform, type }) => (
 generateFixtureData.propTypes = {
   caption: PropTypes.objectOf(PropTypes.any),
   copyright: PropTypes.string,
+  lazyload: PropTypes.bool,
   platform: PropTypes.string,
   type: PropTypes.string,
 };
@@ -165,11 +173,14 @@ generateFixtureData.propTypes = {
 generateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
+  lazyload: false,
   platform: 'canonical',
   type: '',
 };
 
 export const FigureImage = generateFixtureData({});
+
+export const FigureLazyLoadImage = generateFixtureData({ lazyload: true });
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
