@@ -1,15 +1,16 @@
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import React from 'react';
 import HeadingsContainer from '.';
-import deepGet from '../../helpers/json/deepGet';
-import articleData from '../../../../data/test/news/articles/c0000000007o.json';
+import blocksSingleFragment from './testHelpers';
 
-const articleBlocks = deepGet(['content', 'model', 'blocks'], articleData);
+const headline = blocksSingleFragment('This is a headline.', []);
+
+const subheadline = blocksSingleFragment('This is a subheadline.', []);
 
 storiesOf('Heading Container')
   .add('default heading', () => (
-    <HeadingsContainer blocks={articleBlocks} type="headline" />
+    <HeadingsContainer blocks={headline} type="headline" />
   ))
   .add('default subheading', () => (
-    <HeadingsContainer blocks={articleBlocks} type="subheadline" />
+    <HeadingsContainer blocks={subheadline} type="subheadline" />
   ));

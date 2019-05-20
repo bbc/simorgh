@@ -4,37 +4,13 @@ import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (
   <ServiceContext.Provider value={{ script: latin }}>
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );
-
-const blocksSingleFragment = (text, attributes = []) => [
-  {
-    type: 'text',
-    model: {
-      blocks: [
-        {
-          type: 'paragraph',
-          model: {
-            text,
-            blocks: [
-              {
-                type: 'fragment',
-                model: {
-                  text,
-                  attributes,
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-];
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
