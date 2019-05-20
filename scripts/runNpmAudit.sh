@@ -15,7 +15,6 @@ for i in {1..20}
             echo $EXIT_CODE
             echo 'NPM audit failed, retrying...'
         fi
-        echo $i
     done
 
 echo "npm audit failed 20 times, this usually highlights a genuine audit failure - please investigate"
