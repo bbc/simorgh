@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Running npm audit"
 
-for i in {1..5}
+for i in {1..20}
 do
     npm audit
     EXIT_CODE=$?
