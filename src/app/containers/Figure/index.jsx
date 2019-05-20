@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { string, number, objectOf, any } from 'prop-types';
+import React, { useContext, Fragment } from 'react';
+import { string, number, objectOf, any, bool } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -7,6 +7,20 @@ import LazyLoad from 'react-lazyload';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
+
+const renderImage = (alt, lazyload, src, width) =>
+  lazyload ? (
+    <Fragment>
+      <LazyLoad offset={250} once>
+        <Image alt={alt} src={src} width={width} />
+      </LazyLoad>
+      <noscript>
+        <Image alt={alt} src={src} />
+      </noscript>
+    </Fragment>
+  ) : (
+    <Image alt={alt} src={src} />
+  );
 
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
@@ -18,6 +32,7 @@ const FigureContainer = ({
   alt,
   copyright,
   captionBlock,
+  lazyload,
   ratio,
   src,
   height,
@@ -38,9 +53,7 @@ const FigureContainer = ({
             width={width}
           />
         ) : (
-          <LazyLoad offset={250} once>
-            <Image alt={alt} src={src} width={width} />
-          </LazyLoad>
+          renderImage(alt, lazyload, src, width)
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
@@ -53,17 +66,19 @@ FigureContainer.propTypes = {
   alt: string.isRequired,
   captionBlock: objectOf(any),
   copyright: string,
+  height: number,
+  lazyload: bool,
   ratio: number.isRequired,
   src: string.isRequired,
-  height: number,
-  width: number.isRequired,
   type: string,
+  width: number.isRequired,
 };
 
 FigureContainer.defaultProps = {
   copyright: null,
   captionBlock: null,
   height: null,
+  lazyload: false,
   type: '',
 };
 
