@@ -396,8 +396,6 @@ components:
                     uk:
                       type: boolean
                       example: true
-                availableUntil:
-                  type: null
                 duration:
                   type: number
                   example: 191
