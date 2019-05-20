@@ -45,8 +45,9 @@ let realUseContext;
 let mockedUseContext;
 beforeEach(() => {
   realUseContext = React.useContext;
-  // eslint-disable-next-line no-multi-assign
-  mockedUseContext = React.useContext = jest.fn();
+
+  React.useContext = jest.fn();
+  mockedUseContext = React.useContext;
 });
 afterEach(() => {
   React.useContext = realUseContext;
