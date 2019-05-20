@@ -43,7 +43,7 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <Heading script={script} id={subHeadingId || undefined}>
+      <Heading script={script} id={subHeadingId}>
         {renderText()}
       </Heading>
     </GridConstrain>
