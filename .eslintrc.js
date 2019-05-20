@@ -21,7 +21,6 @@ module.exports = {
   plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks'],
   rules: {
     'react/jsx-one-expression-per-line': 'off',
-    'import/no-cycle': 'off',
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

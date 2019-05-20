@@ -35,7 +35,7 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 <p
   className="c0"
 >
-  Just some text
+  Just some international text
 </p>
 `;
 
@@ -113,13 +113,13 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 <p
   className="c0"
 >
-  Some text 
+  Some international text
   <a
-    href="https://www.bbc.co.uk"
+    href="https://www.bbc.com"
   >
-    with a link
+    with an international link
   </a>
-   followed by text.
+   followed by international text.
 </p>
 `;
 
