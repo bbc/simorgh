@@ -1,21 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '../../../helpers/onClient';
 
-export const getDestination = (isUK, env) => {
-  const destinationIDs = {
-    NEWS_PS: 598285,
-    NEWS_GNL: 598287,
-    NEWS_PS_TEST: 598286,
-    NEWS_GNL_TEST: 598288,
-  };
-
-  const destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
-
-  const key = !env || env === 'live' ? destination : `${destination}_TEST`;
-
-  return destinationIDs[key] || destinationIDs.NEWS_PS;
-};
-
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
 

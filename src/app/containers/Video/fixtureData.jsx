@@ -16,7 +16,14 @@ import {
 } from './helpers/fixtures';
 
 const generateFixtureData = ({ platform, blocks }) => (
-  <RequestContextProvider platform={platform}>
+  <RequestContextProvider
+    id="c0000000000o"
+    isUK
+    origin="https://www.test.bbc.co.uk"
+    platform={platform}
+    statsDestination="NEWS_PS_TEST"
+    statsPageIdentifier="news.articles.c0000000000o.page"
+  >
     <VideoContainer blocks={blocks} />
   </RequestContextProvider>
 );
