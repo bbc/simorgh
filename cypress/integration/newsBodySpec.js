@@ -47,7 +47,7 @@ describe('Article Body Tests', () => {
     visibleImageNoCaption(getElement('figure').eq(0));
   });
 
-  it('should have a visible image with a caption', () => {
+  it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
     let thirdFigure;
 
     thirdFigure = getElement('figure').eq(2);
