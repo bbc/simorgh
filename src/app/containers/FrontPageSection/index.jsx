@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { shape } from 'prop-types';
+import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
-import { sanitise } from './helpers';
+// TODO uncomment the below when bbc/simorgh#1701 is merged; then delete the import below that.
+// import idSanitiser from '../../lib/utilities/idSanitiser';
+import { sanitise as idSanitiser } from './helpers';
 
 const FrontPageSection = ({ group }) => {
-  // TODO uncomment this when there is a SectionLabel available from Psammead
-  // const { script } = useContext(ServiceContext);
-  const sectionLabelId = sanitise(group.title);
+  const { script } = useContext(ServiceContext);
+  const sectionLabelId = idSanitiser(group.title);
   return (
+    // jsx-a11y considers `role="region"` on a <section> to be redundant.
+    // (<section> tags *should* default to `role="region"`)
+    // While this may be true in a perfect world, we set it in order to get
+    // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      {/* TODO remove this faux SectionLabel once the real one is available from Psammead */}
-      <h2 id={sectionLabelId}>{group.title}</h2>
-      {/* TODO uncomment this when there is a SectionLabel available from Psammead */}
-      {/* <SectionLabel script={script} labelId={sectionLabelId}>
-            {group.strapline.name}
-          </SectionLabel> */}
+      <SectionLabel script={script} labelId={sectionLabelId}>
+        {group.strapline.name}
+      </SectionLabel>
       <StoryPromoUl>
         {group.items.map(item => (
           <StoryPromoLi key={item.id}>
