@@ -303,7 +303,6 @@ components:
           - $ref: '#/components/schemas/text'
           - $ref: '#/components/schemas/urlLink'
           - $ref: '#/components/schemas/video'
-
       minItems: 2
 
     altText:
