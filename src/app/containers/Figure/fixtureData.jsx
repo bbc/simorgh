@@ -140,7 +140,14 @@ const serviceContextStubNews = {
 
 const generateFixtureData = ({ caption, copyright, platform, type }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <RequestContextProvider platform={platform}>
+    <RequestContextProvider
+      platform={platform}
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <FigureContainer
         alt={imageAlt}
         captionBlock={caption || null}
@@ -169,12 +176,13 @@ generateFixtureData.defaultProps = {
   type: '',
 };
 
-export const FigureImage = generateFixtureData({});
+export const FigureImage = generateFixtureData({ platform: 'canonical' });
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
 export const FigureImageWithCaption = generateFixtureData({
   caption: captionBlock,
+  platform: 'canonical',
   type: 'image',
 });
 
@@ -186,6 +194,7 @@ export const FigureAmpImageWithCaption = generateFixtureData({
 
 export const FigureImageWithCopyright = generateFixtureData({
   copyright: copyrightText,
+  platform: 'canonical',
 });
 
 export const FigureAmpImageWithCopyright = generateFixtureData({
@@ -196,6 +205,7 @@ export const FigureAmpImageWithCopyright = generateFixtureData({
 export const FigureImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
+  platform: 'canonical',
   type: 'image',
 });
 
@@ -208,6 +218,7 @@ export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
 
 export const FigureImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
+  platform: 'canonical',
   type: 'image',
 });
 
@@ -220,6 +231,7 @@ export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
 export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
   {
     caption: captionBlockWithMultipleParagraphsAndLink,
+    platform: 'canonical',
     type: 'image',
   },
 );
