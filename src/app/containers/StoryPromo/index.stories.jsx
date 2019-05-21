@@ -9,7 +9,14 @@ import AmpDecorator from '../../helpers/storybook/ampDecorator';
 
 const getStoryPromo = platform => (
   <ServiceContextProvider service="news">
-    <RequestContextProvider platform={platform}>
+    <RequestContextProvider
+      platform={platform}
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <StoryPromoConatiner
         item={deepGet(['content', 'groups', '0', 'items', '0'], fixture)}
       />
