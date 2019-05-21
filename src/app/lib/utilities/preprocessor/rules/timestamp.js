@@ -37,13 +37,22 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
   const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
     json.content.model.blocks,
   );
+
   if (headlineBlocks.length > 0) {
-    // insert timestamp block immediately after headline
-    json.content.model.blocks = [
-      ...headlineBlocks,
-      timestampBlock,
-      ...mainBlocks,
-    ];
+    if (imageOrAresMediaFirst(mainBlocks)) {
+      json.content.model.blocks = [
+        ...headlineBlocks,
+        mainBlocks[0],
+        timestampBlock,
+        ...mainBlocks.slice(1),
+      ];
+    } else {
+      json.content.model.blocks = [
+        ...headlineBlocks,
+        timestampBlock,
+        ...mainBlocks,
+      ];
+    }
   } else {
     // put timestamp block in as the first element
     json.content.model.blocks.unshift(timestampBlock);
@@ -60,3 +69,7 @@ const splitBlocksByHeadline = blocks => {
 
   return { headlineBlocks, mainBlocks };
 };
+
+const imageOrAresMediaFirst = blocks =>
+  blocks.length > 0 &&
+  (blocks[0].type === 'image' || blocks[0].type === 'aresMedia');
