@@ -1,13 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video with data and a caption should render the video and caption 1`] = `
+exports[`Video with data amp - should render the video without a caption 1`] = `
 <Context.Provider
   value={
     Object {
       "id": "c0000000000o",
       "isUK": true,
       "origin": "https://www.test.bbc.co.uk",
-      "platform": undefined,
+      "platform": "amp",
+      "statsDestination": "NEWS_PS_TEST",
+      "statsPageIdentifier": "news.articles.c0000000000o.page",
+    }
+  }
+>
+  <VideoContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "blockId": "urn:bbc:ares::clip:p01k6msm",
+                "model": Object {
+                  "advertising": true,
+                  "caption": null,
+                  "embedding": true,
+                  "format": "audio_video",
+                  "id": "p01k6msm",
+                  "image": null,
+                  "imageCopyright": "BBC",
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                  "subType": "clip",
+                  "syndication": Object {
+                    "destinations": Array [],
+                  },
+                  "synopses": Object {
+                    "short": "They may be tiny, but us humans could learn a thing or two from ants.",
+                  },
+                  "title": "Five things ants can teach us about management",
+                  "versions": Array [
+                    Object {
+                      "availableTerritories": Object {
+                        "nonUk": true,
+                        "uk": true,
+                      },
+                      "availableUntil": null,
+                      "duration": 191,
+                      "types": Array [
+                        "Original",
+                      ],
+                      "versionId": "p01k6msp",
+                      "warnings": Object {
+                        "long": "Contains strong language and adult humour.",
+                        "short": "Contains strong language and adult humour.",
+                      },
+                    },
+                  ],
+                },
+                "type": "aresMediaMetadata",
+              },
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "copyrightHolder": "BBC",
+                        "height": 1080,
+                        "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "originCode": null,
+                        "width": 1920,
+                      },
+                      "type": "rawImage",
+                    },
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "blocks": Array [
+                                Object {
+                                  "model": Object {
+                                    "blocks": Array [
+                                      Object {
+                                        "model": Object {
+                                          "attributes": Array [],
+                                          "text": "Ants",
+                                        },
+                                        "type": "fragment",
+                                      },
+                                    ],
+                                    "text": "Ants",
+                                  },
+                                  "type": "paragraph",
+                                },
+                              ],
+                            },
+                            "type": "text",
+                          },
+                        ],
+                      },
+                      "type": "altText",
+                    },
+                  ],
+                },
+                "type": "image",
+              },
+            ],
+          },
+          "type": "aresMedia",
+        },
+      ]
+    }
+  />
+</Context.Provider>
+`;
+
+exports[`Video with data and a caption amp - should render the video and caption 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "id": "c0000000000o",
+      "isUK": true,
+      "origin": "https://www.test.bbc.co.uk",
+      "platform": "amp",
       "statsDestination": "NEWS_PS_TEST",
       "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
@@ -144,14 +259,158 @@ exports[`Video with data and a caption should render the video and caption 1`] =
 </Context.Provider>
 `;
 
-exports[`Video with data and a caption should render the video without a caption 1`] = `
+exports[`Video with data and a caption canonical - should render the video and caption 1`] = `
 <Context.Provider
   value={
     Object {
       "id": "c0000000000o",
       "isUK": true,
       "origin": "https://www.test.bbc.co.uk",
-      "platform": undefined,
+      "platform": "canonical",
+      "statsDestination": "NEWS_PS_TEST",
+      "statsPageIdentifier": "news.articles.c0000000000o.page",
+    }
+  }
+>
+  <VideoContainer
+    blocks={
+      Array [
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "blockId": "urn:bbc:ares::clip:p01k6msm",
+                "model": Object {
+                  "advertising": true,
+                  "caption": null,
+                  "embedding": true,
+                  "format": "audio_video",
+                  "id": "p01k6msm",
+                  "image": null,
+                  "imageCopyright": "BBC",
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                  "subType": "clip",
+                  "syndication": Object {
+                    "destinations": Array [],
+                  },
+                  "synopses": Object {
+                    "short": "They may be tiny, but us humans could learn a thing or two from ants.",
+                  },
+                  "title": "Five things ants can teach us about management",
+                  "versions": Array [
+                    Object {
+                      "availableTerritories": Object {
+                        "nonUk": true,
+                        "uk": true,
+                      },
+                      "availableUntil": null,
+                      "duration": 191,
+                      "types": Array [
+                        "Original",
+                      ],
+                      "versionId": "p01k6msp",
+                      "warnings": Object {
+                        "long": "Contains strong language and adult humour.",
+                        "short": "Contains strong language and adult humour.",
+                      },
+                    },
+                  ],
+                },
+                "type": "aresMediaMetadata",
+              },
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "copyrightHolder": "BBC",
+                        "height": 1080,
+                        "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "originCode": null,
+                        "width": 1920,
+                      },
+                      "type": "rawImage",
+                    },
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "blocks": Array [
+                                Object {
+                                  "model": Object {
+                                    "blocks": Array [
+                                      Object {
+                                        "model": Object {
+                                          "attributes": Array [],
+                                          "text": "Ants",
+                                        },
+                                        "type": "fragment",
+                                      },
+                                    ],
+                                    "text": "Ants",
+                                  },
+                                  "type": "paragraph",
+                                },
+                              ],
+                            },
+                            "type": "text",
+                          },
+                        ],
+                      },
+                      "type": "altText",
+                    },
+                  ],
+                },
+                "type": "image",
+              },
+            ],
+          },
+          "type": "aresMedia",
+        },
+        Object {
+          "model": Object {
+            "blocks": Array [
+              Object {
+                "model": Object {
+                  "blocks": Array [
+                    Object {
+                      "model": Object {
+                        "blocks": Array [
+                          Object {
+                            "model": Object {
+                              "attributes": Array [],
+                              "text": "p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)",
+                            },
+                            "type": "fragment",
+                          },
+                        ],
+                        "text": "p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)",
+                      },
+                      "type": "paragraph",
+                    },
+                  ],
+                },
+                "type": "text",
+              },
+            ],
+          },
+          "type": "caption",
+        },
+      ]
+    }
+  />
+</Context.Provider>
+`;
+
+exports[`Video with data canonical - should render the video without a caption 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "id": "c0000000000o",
+      "isUK": true,
+      "origin": "https://www.test.bbc.co.uk",
+      "platform": "canonical",
       "statsDestination": "NEWS_PS_TEST",
       "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
@@ -258,29 +517,3 @@ exports[`Video with data and a caption should render the video without a caption
   />
 </Context.Provider>
 `;
-
-exports[`Video with data should return a valid VideoContainer 1`] = `
-<React.Fragment>
-  <ForwardRef>
-    <Video
-      holdingImageUrl="https://foo/bar/baz.png"
-      items={
-        Array [
-          Object {
-            "duration": 100,
-            "kind": "clip",
-            "versionID": "bar",
-          },
-        ]
-      }
-      kind="clip"
-      pid="foo"
-      title="Hello World!"
-    />
-  </ForwardRef>
-</React.Fragment>
-`;
-
-exports[`Video with no aresMedia should only render the video 1`] = `null`;
-
-exports[`Video with no data should not render anything 1`] = `null`;

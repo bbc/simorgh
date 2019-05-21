@@ -52,6 +52,11 @@ export const videoComponentPropTypes = {
     }),
   ).isRequired,
   holdingImageUrl: string.isRequired,
+  statsAppName: string.isRequired,
+  statsAppType: string.isRequired,
+  statsCountername: string.isRequired,
+  statsDestination: string.isRequired,
+  uiLocale: string.isRequired,
 };
 
 const baseDefaultPropTypes = {
