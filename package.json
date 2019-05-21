@@ -4,7 +4,6 @@
   "description": "Simorgh",
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/cl55zn0w0l4o.amp && amphtml-validator http://localhost:7080/news/articles/cl55zn0w0l4o.amp",
-    "audit:ci": "audit-ci --low",
     "bbcA11y": "bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
@@ -137,7 +136,6 @@
     "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/react": "^4.1.12",
     "amphtml-validator": "^1.0.23",
-    "audit-ci": "^1.2.1",
     "babel-eslint": "^10.0.0",
     "bbc-a11y": "^2.3.0",
     "chalk": "^2.4.1",
