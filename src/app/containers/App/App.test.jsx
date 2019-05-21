@@ -5,18 +5,16 @@
 import React from 'react';
 import * as reactRouterConfig from 'react-router-config';
 import { App } from './App';
-import * as loadInitialData from '../../routes/loadInitialData';
 
 describe('App', () => {
   let wrapper;
   let setStateSpy;
-  let loadInitialDataSpy;
   const initialData = { pageData: 'Some initial data' };
   const error = 'Error!';
   const match = { params: { service: 'news', amp: false } };
 
   const route = {
-    getInitialData: jest.fn().mockImplementation(() => Promise.reject(error)),
+    getInitialData: jest.fn(),
   };
 
   reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([{ route, match }]);
@@ -36,12 +34,11 @@ describe('App', () => {
       />,
     );
     setStateSpy = jest.spyOn(wrapper.instance(), 'setState');
-    loadInitialDataSpy = jest.spyOn(loadInitialData, 'default');
   });
 
   it('should return rendered routes', () => {
     expect.assertions(4);
-    expect(loadInitialDataSpy).not.toHaveBeenCalled();
+    expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       data: initialData,
@@ -60,25 +57,23 @@ describe('App', () => {
         wrapper.setProps({ location: { pathname: 'pathnameOne' } });
 
         expect.assertions(2);
-        expect(loadInitialDataSpy).not.toHaveBeenCalled();
+        expect(route.getInitialData).not.toHaveBeenCalled();
         expect(setStateSpy).not.toHaveBeenCalled();
       });
     });
 
     describe('different location', () => {
       afterEach(() => {
-        // clear `loadInitialData.default` mocks
+        // clear `route.getInitialData` mocks
         jest.clearAllMocks();
       });
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
-          loadInitialData.default = jest
-            .fn()
-            .mockImplementation(() => Promise.reject(error));
+          route.getInitialData.mockImplementation(() => Promise.reject(error));
 
           wrapper.setProps({ location: { pathname: 'pathnameThree' } });
 
-          await loadInitialData.default;
+          await route.getInitialData;
 
           expect.assertions(2);
 
@@ -109,17 +104,15 @@ describe('App', () => {
           const pathname = 'pathnameFour';
           const data = 'Really cool data';
 
-          loadInitialData.default = jest
-            .fn()
-            .mockImplementation(async () => data);
+          route.getInitialData.mockImplementation(async () => data);
 
           wrapper.setProps({ location: { pathname } });
 
-          await loadInitialData.default;
+          await route.getInitialData;
 
           expect.assertions(3);
 
-          expect(loadInitialData.default).toHaveBeenCalledWith(pathname, []);
+          expect(route.getInitialData).toHaveBeenCalledWith({ match });
 
           // start data fetch and set loading to true
           expect(setStateSpy).toHaveBeenNthCalledWith(1, {

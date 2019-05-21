@@ -8,8 +8,6 @@ import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
-import loadInitialData from '../../routes/loadInitialData';
-
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -30,16 +28,13 @@ export class App extends Component {
   }
 
   async componentDidUpdate({ location: prevLocation }) {
-    const { service, isAmp } = getRouteProps(
+    const { service, isAmp, route, match } = getRouteProps(
       this.props.routes,
       this.props.location.pathname,
     );
 
     if (this.props.location.pathname !== prevLocation.pathname) {
-      const initialData = loadInitialData(
-        this.props.location.pathname,
-        this.props.routes,
-      );
+      const initialData = route.getInitialData({ match });
 
       this.setState({
         data: null,
