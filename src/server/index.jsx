@@ -137,7 +137,7 @@ server
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const { service, isAmp, route, match } = getRouteProps(routes, url);
-      const data = await route.getInitialData({ match });
+      const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 

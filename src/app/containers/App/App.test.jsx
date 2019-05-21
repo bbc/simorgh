@@ -112,7 +112,7 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith({ match });
+          expect(route.getInitialData).toHaveBeenCalledWith(match.params);
 
           // start data fetch and set loading to true
           expect(setStateSpy).toHaveBeenNthCalledWith(1, {

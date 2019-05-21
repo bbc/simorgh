@@ -34,7 +34,7 @@ export class App extends Component {
     );
 
     if (this.props.location.pathname !== prevLocation.pathname) {
-      const initialData = route.getInitialData({ match });
+      const initialData = route.getInitialData(match.params);
 
       this.setState({
         data: null,
