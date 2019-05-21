@@ -107,6 +107,13 @@ pipeline {
             }
           }
           steps {
+            script {
+              def storyBookZipExists = fileExists "${storybookDist}"
+              if (storyBookZipExists) {
+                rm "${storybookDist}"
+              }
+            }
+
             sh 'make install'
             sh 'make buildStorybook'
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
@@ -144,6 +151,11 @@ pipeline {
           wait: true
         )
       }
+    }
+  }
+  post {
+    always {
+      cleanWs()
     }
   }
 }
