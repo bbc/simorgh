@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageMain should render a persian article correctly 1`] = `
+exports[`FrontPageMain should render a pidgin article correctly 1`] = `
 <React.Fragment>
   <main
     role="main"
