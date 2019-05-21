@@ -7,7 +7,7 @@ exports[`Video with data and a caption should render the video and caption 1`] =
       "id": "c0000000000o",
       "isUK": true,
       "origin": "https://www.test.bbc.co.uk",
-      "platform": undefined,
+      "platform": "canonical",
       "statsDestination": "NEWS_PS_TEST",
       "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
@@ -151,7 +151,7 @@ exports[`Video with data and a caption should render the video without a caption
       "id": "c0000000000o",
       "isUK": true,
       "origin": "https://www.test.bbc.co.uk",
-      "platform": undefined,
+      "platform": "canonical",
       "statsDestination": "NEWS_PS_TEST",
       "statsPageIdentifier": "news.articles.c0000000000o.page",
     }
