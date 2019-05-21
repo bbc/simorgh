@@ -48,19 +48,25 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
-    const lazyLoad = getElement('figure')
-      .eq(2)
-      .within(() => {
-        getElement('div').eq(1);
+    let thirdFigure;
 
-        lazyLoad.should('have.class', 'lazyload-placeholder');
-      });
+    thirdFigure = getElement('figure').eq(2);
 
-    cy.scrollTo('bottom', { duration: 500 });
+    thirdFigure.within(() => {
+      const lazyLoadPlaceholder = getElement('div div');
+      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
 
-    const thirdFigure = getElement('figure').eq(2);
+      const noscriptImg = getElement('noscript');
+      noscriptImg.contains('<img ');
+
+      cy.scrollTo('bottom', { duration: 200 });
+
+      const ImageContainer = getElement('div div');
+      ImageContainer.should('not.have.class', 'lazyload-placeholder');
+    });
+
+    thirdFigure = getElement('figure').eq(2);
     visibleImageWithCaption(thirdFigure);
-    lazyLoad.should('not.have.class', 'lazyload-placeholder');
   });
 
   it('should have an image copyright label with styling', () => {
