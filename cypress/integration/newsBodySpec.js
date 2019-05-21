@@ -48,8 +48,19 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
-    cy.scrollTo('bottom', { duration: 100 });
-    visibleImageWithCaption(getElement('figure').eq(2));
+    const lazyLoad = getElement('figure')
+      .eq(2)
+      .within(() => {
+        getElement('div').eq(1);
+
+        lazyLoad.should('have.class', 'lazyload-placeholder');
+      });
+
+    cy.scrollTo('bottom', { duration: 500 });
+
+    const thirdFigure = getElement('figure').eq(2);
+    visibleImageWithCaption(thirdFigure);
+    lazyLoad.should('not.have.class', 'lazyload-placeholder');
   });
 
   it('should have an image copyright label with styling', () => {
