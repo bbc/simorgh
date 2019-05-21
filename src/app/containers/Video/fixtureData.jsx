@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import { blockArrayModel } from '../../models/blocks';
 import {
   captionBlock,
   videoClipGlobalGuidanceBlock,
@@ -38,38 +37,47 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoClipGlobalWithCaption = generateFixtureData(
-  blockArrayModel([videoClipGlobalGuidanceBlock, captionBlock]),
-);
+export const VideoClipGlobalWithCaption = generateFixtureData({
+  platform: 'canonical',
+  blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+});
 
-export const VideoClipGlobalWithoutCaption = generateFixtureData(
-  blockArrayModel([videoClipGlobalGuidanceBlock]),
-);
+export const VideoClipGlobalWithoutCaption = generateFixtureData({
+  platform: 'canonical',
+  blocks: [videoClipGlobalGuidanceBlock],
+});
 
-export const VideoClipGlobalPortrait = generateFixtureData(
-  blockArrayModel([videoClipGlobalPortraitBlock]),
-);
+export const VideoClipGlobalPortrait = generateFixtureData({
+  platform: 'canonical',
+  blocks: [videoClipGlobalPortraitBlock],
+});
 
-export const VideoClipUkWithGuidance = generateFixtureData(
-  blockArrayModel([videoClipUkGuidanceBlock]),
-);
+export const VideoClipUkWithGuidance = generateFixtureData({
+  platform: 'canonical',
+  blocks: [videoClipUkGuidanceBlock],
+});
 
-export const VideoClipNonUk = generateFixtureData(
-  blockArrayModel([videoClipNonUkBlock]),
-);
+export const VideoClipNonUk = generateFixtureData({
+  platform: 'canonical',
+  blocks: [videoClipNonUkBlock],
+});
 
-export const AudioClipGlobalGuidance = generateFixtureData(
-  blockArrayModel([audioClipGlobalGuidanceBlock]),
-);
+export const AudioClipGlobalGuidance = generateFixtureData({
+  platform: 'canonical',
+  blocks: [audioClipGlobalGuidanceBlock],
+});
 
-export const AudioClipUk = generateFixtureData(
-  blockArrayModel([audioClipUkOnlyBlock]),
-);
+export const AudioClipUk = generateFixtureData({
+  platform: 'canonical',
+  blocks: [audioClipUkOnlyBlock],
+});
 
-export const AudioClipNonUk = generateFixtureData(
-  blockArrayModel([audioClipNonUkBlock]),
-);
+export const AudioClipNonUk = generateFixtureData({
+  platform: 'canonical',
+  blocks: [audioClipNonUkBlock],
+});
 
-export const AudioEpisodeGlobal = generateFixtureData(
-  blockArrayModel([audioEpisodeGlobalBlock]),
-);
+export const AudioEpisodeGlobal = generateFixtureData({
+  platform: 'canonical',
+  blocks: [audioEpisodeGlobalBlock],
+});
