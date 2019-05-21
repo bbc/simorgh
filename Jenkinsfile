@@ -68,7 +68,7 @@ pipeline {
     }
     stage ('Build, Test & Package') {
       when {
-        expression { env.BRANCH_NAME != 'latest' }
+        expression { env.BRANCH_NAME == 'latest' }
       }
       parallel {
         stage('Test Development') {
@@ -107,13 +107,6 @@ pipeline {
             }
           }
           steps {
-            // script {
-            //   def storyBookZipExists = fileExists "${storybookDist}"
-            //   if (storyBookZipExists) {
-            //     rm "${storybookDist}"
-            //   }
-            // }
-
             sh 'make install'
             sh 'make buildStorybook'
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
