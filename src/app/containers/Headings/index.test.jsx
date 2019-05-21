@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'enzyme';
 import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -11,6 +12,8 @@ const HeadingsContainerWithContext = data => (
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );
+
+const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
@@ -83,6 +86,11 @@ describe('Headings', () => {
         'should render h1 containing correct text',
         HeadingsContainerWithContext(data),
       );
+
+      it('should not have an id', () => {
+        const headlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(headlineHeading)).toBe(undefined);
+      });
     });
 
     describe('subheadline', () => {
@@ -95,6 +103,11 @@ describe('Headings', () => {
         'should render h2 containing correct text',
         <HeadingsContainer {...data} />,
       );
+
+      it('should have an id of sanitised text', () => {
+        const subheadlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
+      });
     });
   });
 
