@@ -1,8 +1,15 @@
-import sanitiseString from './helpers';
+import idSanitiser from '../../lib/utilities/idSanitiser';
+
+const sanitiseSubheadline = (type, text) => {
+  if (text && type === 'subheadline') {
+    return idSanitiser(text);
+  }
+  return null;
+};
 
 describe('Headings sanitisation helper', () => {
   it('should return null for headline', () => {
-    const result = sanitiseString(
+    const result = sanitiseSubheadline(
       'headline',
       'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
     );
@@ -10,12 +17,15 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should return an id for subheadline', () => {
-    const result = sanitiseString('subheadline', "Queen Victoria's myrtle");
+    const result = sanitiseSubheadline(
+      'subheadline',
+      "Queen Victoria's myrtle",
+    );
     expect(result).toBe('Queen-Victorias-myrtle');
   });
 
   it('should return an id for a persian subheadline', () => {
-    const result = sanitiseString(
+    const result = sanitiseSubheadline(
       'subheadline',
       'پهپادی که برایتان قهوه می‌آورد',
     );
@@ -23,7 +33,7 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should remove latin script punctuation', () => {
-    const result = sanitiseString(
+    const result = sanitiseSubheadline(
       'subheadline',
       '[.,/#?¿!$%^&*hello;:{world}=-_`~()«»]',
     );
@@ -31,7 +41,7 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should remove asian script punctuation', () => {
-    const result = sanitiseString(
+    const result = sanitiseSubheadline(
       'subheadline',
       '[’！，。？、~@#￥%……&*（hello）：；《）《》“world”〔〕-]|',
     );
@@ -39,7 +49,7 @@ describe('Headings sanitisation helper', () => {
   });
 
   it('should remove persian punctuation', () => {
-    const result = sanitiseString('subheadline', '[hello؟؛٬world]');
+    const result = sanitiseSubheadline('subheadline', '[hello؟؛٬world]');
     expect(result).toBe('helloworld');
   });
 });
