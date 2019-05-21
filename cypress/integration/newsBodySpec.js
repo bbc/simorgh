@@ -48,6 +48,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
+    cy.scrollTo('bottom', { duration: 100 });
     visibleImageWithCaption(getElement('figure').eq(2));
   });
 
