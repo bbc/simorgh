@@ -14,7 +14,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
-    const { service, isAmp } = getRouteProps(
+    const { service, isAmp, id } = getRouteProps(
       this.props.routes,
       this.props.location.pathname,
     );
@@ -22,6 +22,7 @@ export class App extends Component {
     this.state = {
       data: this.props.initialData,
       service: service,
+      id: id,
       isAmp: isAmp,
       loading: false,
       error: null,
@@ -30,7 +31,7 @@ export class App extends Component {
   }
 
   async componentDidUpdate({ location: prevLocation }) {
-    const { service, isAmp } = getRouteProps(
+    const { service, isAmp, id } = getRouteProps(
       this.props.routes,
       this.props.location.pathname,
     );
@@ -44,6 +45,7 @@ export class App extends Component {
       this.setState({
         data: null,
         service: service,
+        id: id,
         isAmp: isAmp,
         loading: true,
         error: null,
@@ -57,6 +59,7 @@ export class App extends Component {
         this.setState({
           data,
           service: service,
+          id: id,
           isAmp: isAmp,
           loading: false,
           error: null,
@@ -66,6 +69,7 @@ export class App extends Component {
         this.setState({
           data: null,
           service: service,
+          id: id,
           isAmp: isAmp,
           loading: false,
           error,
@@ -79,6 +83,7 @@ export class App extends Component {
     return renderRoutes(this.props.routes, {
       data: this.state.data,
       service: this.state.service,
+      id: this.state.id,
       isAmp: this.state.isAmp,
       loading: this.state.loading,
       error: this.state.error,
