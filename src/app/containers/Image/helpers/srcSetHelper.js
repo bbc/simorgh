@@ -13,6 +13,16 @@ const createSrcset = (originCode, locator, originalImageWidth) => {
       `https://ichef.bbci.co.uk/news/${resolution}/${originCode}/${locator} ${resolution}w`,
   );
 
+  if (
+    requiredResolutions.length < resolutions.length &&
+    originalImageWidth < resolutions[resolutions.length - 1] &&
+    !requiredResolutions.includes(originalImageWidth)
+  ) {
+    urls.push(
+      `https://ichef.bbci.co.uk/news/${originalImageWidth}/${originCode}/${locator} ${originalImageWidth}w`,
+    );
+  }
+
   return urls.join(', ');
 };
 
