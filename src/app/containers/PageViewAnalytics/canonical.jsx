@@ -27,9 +27,9 @@ const {
 
 const CanonicalPageViewAnalytics = ({ articleData }) => {
   const { platform, isUK, env } = useContext(RequestContext);
+  const { service } = useContext(ServiceContext);
 
   if (onClient()) {
-    const { service } = useContext(ServiceContext);
     const optimoId = deepGet(['promo', 'id'], articleData);
 
     // Only send page beacon when optimoId changes
@@ -59,7 +59,7 @@ const CanonicalPageViewAnalytics = ({ articleData }) => {
         });
 
       sendBeacon(pageViewBeaconUrl);
-    }, [optimoId]);
+    }, [articleData, env, isUK, optimoId, platform, service]);
   }
 
   return null;
