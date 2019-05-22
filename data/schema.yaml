@@ -324,6 +324,7 @@ components:
     aresMedia:
       type: object
       required:
+        - blocks
         - model
         - type
       properties:
@@ -618,6 +619,8 @@ components:
             blocks:
               $ref: '#/components/schemas/blocks'
           type: object
+          required:
+            - blocks
         type:
           enum:
             - video
