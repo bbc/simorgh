@@ -1,16 +1,18 @@
 import React from 'react';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { shouldShallowMatchSnapshot } from '../helpers/tests/testHelpers';
-import getOriginContext from '../contexts/RequestContext/getOriginContext';
+import getEnv from '../contexts/RequestContext/getEnv';
+import getOrigin from '../contexts/RequestContext/getOrigin';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 
-jest.mock('../contexts/RequestContext/getOriginContext', () => jest.fn());
+jest.mock('../contexts/RequestContext/getOrigin', () => jest.fn());
 
-getOriginContext.mockImplementation(origin => ({
-  isUK: true,
-  origin,
-}));
+getOrigin.mockImplementation(() => 'https://www.bbc.co.uk');
+
+jest.mock('../contexts/RequestContext/getEnv', () => jest.fn());
+
+getEnv.mockImplementation(() => 'live');
 
 jest.mock('../contexts/RequestContext/getStatsDestination', () => jest.fn());
 
@@ -24,8 +26,9 @@ getStatsPageIdentifier.mockImplementation(
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
-    bbcOrigin: 'https://www.bbc.com',
+    bbcOrigin: 'https://www.bbc.co.uk',
     children: <h2>Child element</h2>,
+    env: 'live',
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,

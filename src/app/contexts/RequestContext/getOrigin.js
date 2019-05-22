@@ -1,4 +1,4 @@
-import onClient from '../../../helpers/onClient';
+import onClient from '../../helpers/onClient';
 
 const getOrigin = bbcOrigin => {
   if (bbcOrigin) {

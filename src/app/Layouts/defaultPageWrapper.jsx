@@ -9,17 +9,20 @@ import GlobalStyle from '../lib/globalStyles';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
-import getOriginContext from '../contexts/RequestContext/getOriginContext';
+import getOrigin from '../contexts/RequestContext/getOrigin';
+import getEnv from '../contexts/RequestContext/getEnv';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
-  const env = process.env.APP_ENV;
-  const { isUK, origin } = getOriginContext(bbcOrigin);
+  const origin = getOrigin(bbcOrigin);
+  const isUK = !origin.includes('.com');
+  const env = getEnv(origin);
 
   return (
     <Fragment>
       <GlobalStyle />
       <ServiceContextProvider service={service}>
         <RequestContextProvider
+          env={env}
           id={id}
           isUK={isUK}
           origin={origin}

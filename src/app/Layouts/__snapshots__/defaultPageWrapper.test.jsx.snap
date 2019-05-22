@@ -7,9 +7,10 @@ exports[`defaultPageWrapper should render with children 1`] = `
     service="news"
   >
     <RequestContextProvider
+      env="live"
       id="c0000000000o"
       isUK={true}
-      origin="https://www.bbc.com"
+      origin="https://www.bbc.co.uk"
       platform="amp"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"

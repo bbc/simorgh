@@ -5,7 +5,7 @@ exports[`Page View Analytics Container should render amp page view analytics cor
   <script
     dangerouslySetInnerHTML={
       Object {
-        "__html": "{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://a1.api.bbc.co.uk/hit.xiti?\\",\\"pageview\\":\\"s=598286&s2=64&p=health::default.articles.unknown.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x7=[article]&x2=[amp]&x3=[default]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}",
+        "__html": "{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://a1.api.bbc.co.uk/hit.xiti?\\",\\"pageview\\":\\"s=598285&s2=64&p=health::default.articles.unknown.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x7=[article]&x2=[amp]&x3=[default]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}",
       }
     }
     type="application/json"
