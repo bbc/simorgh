@@ -342,6 +342,9 @@ components:
             advertising:
               type: boolean
               example: true
+            availableUntil:
+              type: number
+              example: 1558511776575
             duration:
               type: number
               example: 43
