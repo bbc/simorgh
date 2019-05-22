@@ -4,7 +4,6 @@ import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import {
   captionBlock,
-  noAresMediaMetadata,
   videoClipGlobalGuidanceBlock,
   videoClipGlobalPortraitBlock,
   videoClipUkGuidanceBlock,
@@ -43,12 +42,6 @@ export const NoData = ({ platform }) =>
 
 export const NoAresMedia = ({ platform }) =>
   generateFixtureData({ platform, blocks: [captionBlock] });
-
-export const NoAresMediaMetadata = ({ platform }) =>
-  generateFixtureData({
-    platform,
-    blocks: [noAresMediaMetadata, captionBlock],
-  });
 
 export const VideoClipGlobalWithCaption = ({ platform }) =>
   generateFixtureData({
