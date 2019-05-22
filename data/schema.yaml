@@ -338,6 +338,16 @@ components:
       properties:
         model:
           type: object
+          required:
+            - advertising
+            - embedding
+            - id
+            - imageUrl
+            - title
+            - subType
+            - synopses
+            - versions
+            - warnings
           properties:
             advertising:
               type: boolean
