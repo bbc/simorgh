@@ -5,9 +5,7 @@ import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
-// TODO uncomment the below when bbc/simorgh#1701 is merged; then delete the import below that.
-// import idSanitiser from '../../lib/utilities/idSanitiser';
-import { sanitise as idSanitiser } from './helpers';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const FrontPageSection = ({ bar, group }) => {
   const ctx = useContext(ServiceContext);

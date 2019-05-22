@@ -2,13 +2,13 @@
 
 exports[`FrontPageSection Container snapshots should render correctly for canonical 1`] = `
 <section
-  aria-labelledby="top-stories"
+  aria-labelledby="Top-Stories"
   role="region"
 >
   <SectionLabel
     bar={true}
     dir="ltr"
-    labelId="top-stories"
+    labelId="Top-Stories"
     script={
       Object {
         "atlas": Object {
@@ -705,13 +705,13 @@ exports[`FrontPageSection Container snapshots should render null when there is n
 
 exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
 <section
-  aria-labelledby="top-stories"
+  aria-labelledby="Top-Stories"
   role="region"
 >
   <SectionLabel
     bar={false}
     dir="ltr"
-    labelId="top-stories"
+    labelId="Top-Stories"
     script={
       Object {
         "atlas": Object {
