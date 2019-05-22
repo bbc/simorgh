@@ -328,7 +328,6 @@ components:
         - type
         - blocks
       properties:
-        type: object
         blocks:
           $ref: '#/components/schemas/blocks'
 
