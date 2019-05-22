@@ -1,4 +1,3 @@
-// import { testUtilityPackages } from '@bbc/psammead-test-helpers';
 import * as layoutGridExports from './layoutGrid';
 
 const expectedLayoutGridExports = {
