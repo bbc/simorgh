@@ -24,14 +24,28 @@ const completeItem = {
 describe('StoryPromo Container', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContextProvider platform="canonical">
+    <RequestContextProvider
+      platform="canonical"
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <StoryPromo item={completeItem} />
     </RequestContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContextProvider platform="amp">
+    <RequestContextProvider
+      platform="amp"
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <StoryPromo item={completeItem} />
     </RequestContextProvider>,
   );
@@ -57,7 +71,14 @@ describe('StoryPromo Container', () => {
 
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
-        <RequestContextProvider platform="canonical">
+        <RequestContextProvider
+          platform="canonical"
+          isUK
+          origin="https://www.bbc.co.uk"
+          id="c0000000000o"
+          statsDestination="NEWS_PS_TEST"
+          statsPageIdentifier="news.articles.c0000000000o"
+        >
           <StoryPromo item={item} />
         </RequestContextProvider>,
       );
@@ -74,7 +95,14 @@ describe('StoryPromo Container', () => {
 
     it('should render amp-img with src & alt when platform is amp', () => {
       const { container } = render(
-        <RequestContextProvider platform="amp">
+        <RequestContextProvider
+          platform="amp"
+          isUK
+          origin="https://www.bbc.co.uk"
+          id="c0000000000o"
+          statsDestination="NEWS_PS_TEST"
+          statsPageIdentifier="news.articles.c0000000000o"
+        >
           <StoryPromo item={item} />
         </RequestContextProvider>,
       );
