@@ -85,30 +85,30 @@
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "type": "aresMedia",
+                "type": "aresMediaMetadata",
                 "model": {
-                  "id": "p067gq6h",
-                  "subType": "clip",
+                  "advertising": false,
+                  "embedding": true,
                   "format": "audio_video",
+                  "id": "p067gq6h",
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
                   "title": "Mark and Isla Royal Wedding",
+                  "subType": "clip",
                   "synopses": {
                     "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
                     "medium": null,
                     "long": null
                   },
-                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                  "embedding": true,
-                  "warnings": {},
-                  "advertising": false,
                   "versions": [
                     {
-                      "versionId": "p067gq6k",
-                      "types": ["Original"],
-                      "duration": 94,
                       "availableTerritories": {
                         "uk": true,
                         "nonUk": false
-                      }
+                      },
+                      "duration": 94,
+                      "types": ["Original"],
+                      "versionId": "p067gq6k",
+                      "warnings": {}
                     }
                   ]
                 }
