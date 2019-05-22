@@ -6,6 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -19,6 +20,13 @@ const Headings = {
 const GridConstraints = {
   headline: GridItemConstrainedLarge,
   subheadline: GridItemConstrainedMedium,
+};
+
+const sanitiseSubheadline = (type, text) => {
+  if (text && type === 'subheadline') {
+    return idSanitiser(text);
+  }
+  return null;
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
@@ -38,9 +46,11 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
+  const subHeadingId = sanitiseSubheadline(type, text);
+
   return (
     <GridConstrain>
-      <Heading script={script} text={text}>
+      <Heading script={script} id={subHeadingId}>
         {renderText()}
       </Heading>
     </GridConstrain>
