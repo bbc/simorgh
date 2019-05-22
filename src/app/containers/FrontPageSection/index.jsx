@@ -6,10 +6,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import idSanitiser from '../../lib/utilities/idSanitiser';
+import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageSection = ({ bar, group }) => {
-  const ctx = useContext(ServiceContext);
-  const { script } = ctx;
+  const { script } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
   // The current implementation of SectionLabel *requires* a strapline to be
@@ -18,7 +18,7 @@ const FrontPageSection = ({ bar, group }) => {
   // *and especially* the screen reader UX.
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
-  if (!(group.strapline && group.strapline.name)) {
+  if (!deepGet(['strapline', 'name'], group)) {
     return null;
   }
 
