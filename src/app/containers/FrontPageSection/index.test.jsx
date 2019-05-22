@@ -119,27 +119,36 @@ describe('FrontPageSection Container', () => {
   });
 
   describe('assertions', () => {
-    beforeAll(() => {
+    let container;
+    beforeEach(() => {
       useContext.mockImplementation(React.useContext);
+      ({ container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} />
+        </ServiceContextProvider>,
+      ));
     });
 
-    afterAll(() => {
+    afterEach(() => {
       useContext.mockReset();
     });
 
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
-      const { container } = render(
-        <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
-        </ServiceContextProvider>,
-      );
-
       expect(container.getElementsByTagName('section')).toHaveLength(1);
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
 
       expect(container.getElementsByTagName('li')).toHaveLength(2);
       expect(container.getElementsByTagName('h3')).toHaveLength(2);
+    });
+
+    it('section should have aria-labelledby attribute referring to the id of the label element', () => {
+      const section = container.getElementsByTagName('section')[0];
+      const label = container.getElementsByTagName('h2')[0];
+
+      expect(section.getAttribute('aria-labelledby')).toBeDefined();
+      expect(label.id).toBeDefined();
+      expect(section.getAttribute('aria-labelledby')).toEqual(label.id);
     });
   });
 });
