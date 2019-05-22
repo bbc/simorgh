@@ -83,11 +83,15 @@ export const layoutGridWrapper = css`
     grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-template-columns: 1fr repeat(8, minmax(0, ${group4ColWidth})) 1fr;
+    grid-template-columns:
+      1fr repeat(8, minmax(0, ${group4ColWidth}))
+      1fr;
     max-width: ${group4WrapperMaxWidth};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: 1fr repeat(20, minmax(0, ${group5ColWidth})) 1fr;
+    grid-template-columns:
+      1fr repeat(20, minmax(0, ${group5ColWidth}))
+      1fr;
     max-width: ${group5WrapperMaxWidth};
   }
 
@@ -99,18 +103,14 @@ export const layoutGridWrapper = css`
 `;
 
 export const layoutGridItemLargeNoMargin = css`
-  ${nestedGrid}
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
-    grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 6;
-    grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 12;
-    grid-template-columns: repeat(12, 1fr);
   }
 `;
 
@@ -120,7 +120,6 @@ export const layoutGridItemLarge = css`
 `;
 
 export const layoutGridItemMedium = css`
-  ${nestedGrid}
   ${gelGridMargin}
 
   grid-column: 1 / span 6;
@@ -128,17 +127,14 @@ export const layoutGridItemMedium = css`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    grid-template-columns: repeat(5, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthGroup4};
-    grid-template-columns: repeat(5, 1fr);
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 10;
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
-    grid-template-columns: repeat(10, 1fr);
   }
 
   @supports (display: grid) {
@@ -147,32 +143,26 @@ export const layoutGridItemMedium = css`
 `;
 
 export const layoutGridItemSmall = css`
-  ${nestedGrid}
   ${gelGridMargin}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
-    grid-template-columns: repeat(6, 1fr);
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
     max-width: ${fourOfSixColumnsMaxWidthScaleable};
-    grid-template-columns: repeat(4, 1fr);
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    grid-template-columns: repeat(5, 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 4;
     max-width: ${fourOfSixColumnsMaxWidthGroup4};
-    grid-template-columns: repeat(4, 1fr);
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column: 6 / span 8;
     max-width: ${eightOfTwelveColumnsMaxWidthGroup5};
-    grid-template-columns: repeat(8, 1fr);
   }
 
   @supports (display: grid) {
@@ -256,5 +246,60 @@ export const nestedGridItemLargeCss = css`
           props.gridSpan.group5 || props.gridSpan.default,
           12,
         )};
+  }
+`;
+
+export const gridContainerLargeCss = css`
+  ${nestedGrid}
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+`;
+
+export const gridContainerMediumCss = css`
+  ${nestedGrid}
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  @supports (display: grid) {
+    max-width: initial;
+  }
+`;
+
+export const gridContainerSmallCss = css`
+  ${nestedGrid}
+
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @supports (display: grid) {
+    max-width: initial;
   }
 `;

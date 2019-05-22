@@ -11,6 +11,9 @@ const expectedLayoutGridExports = {
   nestedGridItemSmallCss: 'object',
   nestedGridItemMediumCss: 'object',
   nestedGridItemLargeCss: 'object',
+  gridContainerLargeCss: 'object',
+  gridContainerMediumCss: 'object',
+  gridContainerSmallCss: 'object',
 };
 
 const errorIfMissingKey = (keys, object, message) => {
