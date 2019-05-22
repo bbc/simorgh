@@ -209,6 +209,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 >
   <h2
     className="c1"
+    id="Plain-subheadline"
     tabIndex="-1"
   >
     Plain subheadline
@@ -596,6 +597,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 >
   <h2
     className="c1"
+    id="This-is-a-subheadline"
     tabIndex="-1"
   >
     This is a subheadline
