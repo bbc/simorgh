@@ -97,6 +97,26 @@ describe('Server', () => {
     });
   });
 
+  describe('Temporary frontpage routes', () => {
+    const expectedRoutes = [
+      { path: '/igbo', service: 'igbo' },
+      { path: '/igbo/beta', service: 'igbo' },
+      { path: '/pidgin', service: 'pidgin' },
+      { path: '/pidgin/beta', service: 'pidgin' },
+      { path: '/yoruba', service: 'yoruba' },
+      { path: '/yoruba/beta', service: 'yoruba' },
+    ];
+
+    expectedRoutes.forEach(({ path, service }) => {
+      it('should respond with text', async () => {
+        const { text } = await makeRequest(path);
+        expect(text).toEqual(
+          `Welcome to the temporary ${service} homepage simorgh route`,
+        );
+      });
+    });
+  });
+
   describe('/{service}/articles/{optimoID}', () => {
     const successDataResponse = {
       isAmp: false,
