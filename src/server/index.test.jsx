@@ -105,6 +105,12 @@ describe('Server', () => {
       { path: '/pidgin/beta', service: 'pidgin' },
       { path: '/yoruba', service: 'yoruba' },
       { path: '/yoruba/beta', service: 'yoruba' },
+      { path: '/igbo.amp', service: 'igbo' },
+      { path: '/igbo/beta.amp', service: 'igbo' },
+      { path: '/pidgin.amp', service: 'pidgin' },
+      { path: '/pidgin/beta.amp', service: 'pidgin' },
+      { path: '/yoruba.amp', service: 'yoruba' },
+      { path: '/yoruba/beta.amp', service: 'yoruba' },
     ];
 
     expectedRoutes.forEach(({ path, service }) => {
