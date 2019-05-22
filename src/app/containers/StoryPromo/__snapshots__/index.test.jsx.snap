@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StoryPromo Container should render correctly for amp 1`] = `
-.c0 {
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  grid-column-gap: 0.5rem;
-}
-
 .c1 {
-  grid-column: 1 / span 2;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 33.33%;
 }
 
 .c3 {
-  grid-column: 3 / span 4;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.5rem;
+  max-width: 66.67%;
 }
 
 .c4 {
@@ -60,27 +59,46 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (min-width:37.5rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: repeat(12,1fr);
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 1 / span 4;
+    max-width: 33.33%;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+    max-width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
   .c3 {
-    grid-column: 5 / span 8;
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -173,18 +191,17 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render correctly for canonical 1`] = `
-.c0 {
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  grid-column-gap: 0.5rem;
-}
-
 .c1 {
-  grid-column: 1 / span 2;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 33.33%;
 }
 
 .c4 {
-  grid-column: 3 / span 4;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.5rem;
+  max-width: 66.67%;
 }
 
 .c5 {
@@ -237,27 +254,46 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (min-width:37.5rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: repeat(12,1fr);
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 1 / span 4;
+    max-width: 33.33%;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+    max-width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
   .c4 {
-    grid-column: 5 / span 8;
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
