@@ -66,14 +66,13 @@ describe('App', () => {
     });
 
     describe('different location', () => {
-      afterEach(() => {
-        // clear `route.getInitialData` mocks
+      beforeEach(() => {
+        // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
         jest.clearAllMocks();
       });
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => Promise.reject(error));
-          reactRouterConfig.renderRoutes.mockClear();
 
           act(() => {
             wrapper.setProps({ location: { pathname: 'pathnameThree' } });
@@ -117,8 +116,7 @@ describe('App', () => {
           const pathname = 'pathnameFour';
           const data = 'Really cool data';
 
-          route.getInitialData.mockImplementation(async () => data);
-          reactRouterConfig.renderRoutes.mockClear();
+          route.getInitialData.mockImplementation(() => Promise.resolve(data));
 
           wrapper.setProps({ location: { pathname } });
 
