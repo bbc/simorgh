@@ -138,9 +138,16 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = ({ caption, copyright, platform }) => (
+const generateFixtureData = ({ caption, copyright, platform, type }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
-    <RequestContextProvider platform={platform}>
+    <RequestContextProvider
+      platform={platform}
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <FigureContainer
         alt={imageAlt}
         captionBlock={caption || null}
@@ -149,6 +156,7 @@ const generateFixtureData = ({ caption, copyright, platform }) => (
         ratio={imageRatio}
         src={imageSrc}
         width={imageWidth}
+        type={type}
       />
     </RequestContextProvider>
   </ServiceContext.Provider>
@@ -158,29 +166,35 @@ generateFixtureData.propTypes = {
   caption: PropTypes.objectOf(PropTypes.any),
   copyright: PropTypes.string,
   platform: PropTypes.string,
+  type: PropTypes.string,
 };
 
 generateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
   platform: 'canonical',
+  type: '',
 };
 
-export const FigureImage = generateFixtureData({});
+export const FigureImage = generateFixtureData({ platform: 'canonical' });
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
 export const FigureImageWithCaption = generateFixtureData({
   caption: captionBlock,
+  platform: 'canonical',
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaption = generateFixtureData({
   caption: captionBlock,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCopyright = generateFixtureData({
   copyright: copyrightText,
+  platform: 'canonical',
 });
 
 export const FigureAmpImageWithCopyright = generateFixtureData({
@@ -191,26 +205,34 @@ export const FigureAmpImageWithCopyright = generateFixtureData({
 export const FigureImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
+  platform: 'canonical',
+  type: 'image',
 });
 
 export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
   caption: captionBlock,
   copyright: copyrightText,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
+  platform: 'canonical',
+  type: 'image',
 });
 
 export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'amp',
+  type: 'image',
 });
 
 export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
   {
     caption: captionBlockWithMultipleParagraphsAndLink,
+    platform: 'canonical',
+    type: 'image',
   },
 );
 
@@ -218,5 +240,6 @@ export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = gene
   {
     caption: captionBlockWithMultipleParagraphsAndLink,
     platform: 'amp',
+    type: 'image',
   },
 );

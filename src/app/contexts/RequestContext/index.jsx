@@ -1,20 +1,24 @@
 import React from 'react';
-import { node, string, func, shape } from 'prop-types';
-import articlePropTypes from '../../models/propTypes/article';
-import getOriginContext from './getOriginContext';
+import { bool, node, string } from 'prop-types';
 
 export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
+  id,
+  isUK,
+  origin,
   platform,
-  bbcOrigin,
-  service,
-  articleData,
+  statsDestination,
+  statsPageIdentifier,
 }) => {
   const value = {
+    id,
+    isUK,
+    origin,
     platform,
-    ...getOriginContext(bbcOrigin, service, articleData),
+    statsDestination,
+    statsPageIdentifier,
   };
 
   return (
@@ -22,22 +26,12 @@ export const RequestContextProvider = ({
   );
 };
 
-export const RequestContextConsumer = ({ children }) => (
-  <RequestContext.Consumer>{children}</RequestContext.Consumer>
-);
-
 RequestContextProvider.propTypes = {
   children: node.isRequired,
+  id: string.isRequired,
   platform: string.isRequired,
-  service: string.isRequired,
-  articleData: shape(articlePropTypes).isRequired,
-  bbcOrigin: string,
-};
-
-RequestContextProvider.defaultProps = {
-  bbcOrigin: null,
-};
-
-RequestContextConsumer.propTypes = {
-  children: func.isRequired,
+  isUK: bool.isRequired,
+  origin: string.isRequired,
+  statsDestination: string.isRequired,
+  statsPageIdentifier: string.isRequired,
 };

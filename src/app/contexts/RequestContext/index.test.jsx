@@ -1,71 +1,88 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import getOriginContext from './getOriginContext';
 
-jest.mock('./getOriginContext', () => jest.fn());
-getOriginContext.mockImplementation(originValue => {
-  const origin = originValue || 'https://foobar.com';
+const { RequestContextProvider, RequestContext } = require('./index');
 
-  return {
-    isUK: true,
+const renderWithContextProvider = (
+  node,
+  { platformString, bbcOrigin, statsDestination, statsPageIdentifier },
+) => (
+  <RequestContextProvider
+    platform={platformString}
+    bbcOrigin={bbcOrigin}
+    statsDestination={statsDestination}
+    statsPageIdentifier={statsPageIdentifier}
+  >
+    {node}
+  </RequestContextProvider>
+);
+
+const Component = () => {
+  const {
+    platform,
+    isUK,
     origin,
-    env: 'live',
-    href: `${origin}/path`,
-    referrer: `${origin}/otherPath`,
-  };
-});
-
-const { RequestContextProvider, RequestContextConsumer } = require('./index');
+    statsDestination,
+    statsPageIdentifier,
+  } = useContext(RequestContext);
+  return (
+    <Fragment>
+      <span>{platform}</span>
+      <span>{isUK ? 'true' : 'false'}</span>
+      <span>{origin}</span>
+      <span>{statsDestination}</span>
+      <span>{statsPageIdentifier}</span>
+    </Fragment>
+  );
+};
 
 describe('RequestContext', () => {
-  const testRequestContext = ({
-    platform,
-    bbcOrigin,
-    service,
-    articleData,
-  }) => {
+  const testRequestContext = (
+    platformString,
+    statsDestination,
+    statsPageIdentifier,
+    isUK,
+    origin,
+  ) => {
     shouldMatchSnapshot(
-      `should have a request object for platform ${platform} and bbcOrigin ${bbcOrigin}`,
-      <RequestContextProvider
-        platform={platform}
-        bbcOrigin={bbcOrigin}
-        service={service}
-        articleData={articleData}
-      >
-        <RequestContextConsumer>
-          {({
-            platform: platformOutput,
-            isUK,
-            origin,
-            env,
-            href,
-            referrer,
-          }) => (
-            <Fragment>
-              <span>{platformOutput}</span>
-              <span>{isUK ? 'true' : 'false'}</span>
-              <span>{origin}</span>
-              <span>{env}</span>
-              <span>{href}</span>
-              <span>{referrer}</span>
-            </Fragment>
-          )}
-        </RequestContextConsumer>
-      </RequestContextProvider>,
+      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
+      renderWithContextProvider(<Component />, {
+        isUK,
+        origin,
+        platformString,
+        statsDestination,
+        statsPageIdentifier,
+      }),
     );
   };
 
-  testRequestContext({ platform: 'default', service: 'news', articleData: {} });
-  testRequestContext({
-    platform: 'canonical',
-    service: 'news',
-    articleData: {},
-  });
-  testRequestContext({ platform: 'amp', service: 'news', articleData: {} });
-  testRequestContext({
-    platform: 'default',
-    service: 'news',
-    articleData: {},
-    bbcOrigin: 'https://www.bbc.co.uk',
-  });
+  testRequestContext(
+    'default',
+    'NEWS_PS_TEST',
+    'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
+  );
+  testRequestContext(
+    'canonical',
+    'NEWS_PS_TEST',
+    'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
+  );
+  testRequestContext(
+    'amp',
+    'NEWS_PS_TEST',
+    'persian.articles.c0000000000o.page',
+    false,
+    'https://www.bbc.com',
+  );
+  testRequestContext(
+    'default',
+    'NEWS_PS_TEST',
+    'persian.articles.c0000000000o.page',
+    'https://www.bbc.co.uk',
+    false,
+    'https://www.bbc.com',
+  );
 });

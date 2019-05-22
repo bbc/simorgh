@@ -18,8 +18,21 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -38,13 +51,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -54,9 +67,11 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   <span
     className="c1"
   >
-     ، عنوان تصویر
+     ، عنوان
   </span>
-  Some caption text...
+  <p>
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
@@ -78,8 +93,21 @@ exports[`should render caption text with example News offscreen text 1`] = `
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -98,13 +126,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
@@ -114,21 +142,47 @@ exports[`should render caption text with example News offscreen text 1`] = `
   <span
     className="c1"
   >
-    Image caption, 
+    Caption, 
   </span>
-  Some caption text...
+  <p>
+    Some caption text...
+  </p>
 </figcaption>
 `;
 
-exports[`should render caption text with no VisuallyHiddenText component when no imageCaptionOffscreenText is defined in ServiceContext 1`] = `
+exports[`should render caption with mutiple paragraphs 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #757575;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: italic;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -147,19 +201,32 @@ exports[`should render caption text with no VisuallyHiddenText component when no
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
   .c0 {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
   }
 }
 
 <figcaption
   className="c0"
 >
-  Some caption text...
+  <span
+    className="c1"
+  >
+    Caption, 
+  </span>
+  <p>
+    This is paragraph 1
+  </p>
+  <p>
+    This is paragraph 2
+  </p>
+  <p>
+    Paragraph 3
+  </p>
 </figcaption>
 `;

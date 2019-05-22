@@ -6,15 +6,17 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import loadInitialData from '../app/routes/loadInitialData';
-import routes, {
+import routes from '../app/routes';
+import {
   articleRegexPath,
   articleDataRegexPath,
   frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
-} from '../app/routes';
+} from '../app/routes/regex';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
+import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 
 const morgan = require('morgan');
 
@@ -138,11 +140,14 @@ server
     try {
       const data = await loadInitialData(url, routes);
       const { status } = data;
+      const { service, isAmp } = getRouteProps(routes, url);
       const bbcOrigin = headers['bbc-origin'];
 
       res
         .status(status)
-        .send(await renderDocument(url, data, routes, bbcOrigin));
+        .send(
+          await renderDocument(url, data, routes, bbcOrigin, service, isAmp),
+        );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);

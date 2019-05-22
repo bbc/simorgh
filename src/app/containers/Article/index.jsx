@@ -1,77 +1,31 @@
-import React, { Fragment } from 'react';
-import { bool, string, shape } from 'prop-types';
-import Helmet from 'react-helmet';
-import HeaderContainer from '../Header';
-import FooterContainer from '../Footer';
+import React from 'react';
+import { shape } from 'prop-types';
+import compose from '../../helpers/compose';
 import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import GlobalStyle from '../../lib/globalStyles';
 import ArticleMain from '../ArticleMain';
-import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../helpers/logger.node';
-import ConsentBanner from '../ConsentBanner';
-import PageViewAnalytics from '../PageViewAnalytics';
 
-const logger = nodeLogger(__filename);
+import withPageWrapper from '../PageHandlers/withPageWrapper';
+import withError from '../PageHandlers/withError';
+import withLoading from '../PageHandlers/withLoading';
+import withData from '../PageHandlers/withData';
 
-/*
-  [1] This handles async data fetching, and a 'loading state', which we should look to handle more intelligently.
-*/
-const ArticleContainer = ({ loading, error, data, bbcOrigin }) => {
-  if (loading) return 'Loading...'; /* [1] */
-  if (error) {
-    logger.error(error);
-    return 'Something went wrong :(';
-  }
-
-  if (data) {
-    const { isAmp, data: articleData, service, status } = data;
-
-    return (
-      <Fragment>
-        <GlobalStyle />
-        <ServiceContextProvider service={service}>
-          <RequestContextProvider
-            platform={isAmp ? 'amp' : 'canonical'}
-            bbcOrigin={bbcOrigin}
-          >
-            <Helmet>
-              <link
-                rel="manifest"
-                href={`/${service}/articles/manifest.json`}
-              />
-            </Helmet>
-            <PageViewAnalytics articleData={articleData} />
-            <ConsentBanner />
-            <HeaderContainer />
-            {status === 200 ? (
-              <ArticleMain articleData={articleData} />
-            ) : (
-              <ErrorMain status={status} />
-            )}
-            <FooterContainer />
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </Fragment>
-    );
-  }
-
-  return null;
-};
+const ArticleContainer = ({ pageData }) => (
+  <ArticleMain articleData={pageData} />
+);
 
 ArticleContainer.propTypes = {
-  loading: bool,
-  error: string,
-  data: shape(articlePropTypes),
-  bbcOrigin: string,
+  pageData: shape(articlePropTypes),
 };
 
 ArticleContainer.defaultProps = {
-  loading: false,
-  error: null,
-  data: null,
-  bbcOrigin: null,
+  pageData: null,
 };
 
-export default ArticleContainer;
+const EnhancedArticleContainer = compose(
+  withPageWrapper,
+  withLoading,
+  withError,
+  withData,
+)(ArticleContainer);
+
+export default EnhancedArticleContainer;

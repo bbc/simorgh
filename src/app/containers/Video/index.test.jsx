@@ -1,76 +1,119 @@
-import React from 'react';
 import {
   shouldShallowMatchSnapshot,
   isNull,
 } from '../../helpers/tests/testHelpers';
 import {
-  blockArrayModel,
-  rawVideoModel,
-  rawVideoBlock,
-  imageBlock,
-} from '../../models/blocks';
-import VideoContainer from './index';
+  NoData,
+  NoAresMedia,
+  VideoClipGlobalWithCaption,
+  VideoClipGlobalWithoutCaption,
+  VideoClipGlobalPortrait,
+  VideoClipUkWithGuidance,
+  VideoClipNonUk,
+  AudioClipGlobalGuidance,
+  AudioClipUk,
+  AudioClipNonUk,
+  AudioEpisodeGlobal,
+} from './fixtureData';
 
-describe('Video', () => {
-  const rVB = rawVideoBlock(
-    rawVideoModel('urn:bbc:pips:pid:p064nsyw', 'p064nsz3', 'clip', '299'),
-  );
-
+describe('AudioVideo', () => {
   describe('with no data', () => {
+    isNull('canonical - should render null', NoData({ platform: 'canonical' }));
+    isNull('amp - should render null', NoData({ platform: 'amp' }));
+  });
+
+  describe('with no aresMedia block', () => {
+    isNull(
+      'canonical - should render null',
+      NoAresMedia({ platform: 'canonical' }),
+    );
+    isNull('amp - should render null', NoAresMedia({ platform: 'amp' }));
+  });
+
+  describe('with Video data', () => {
     shouldShallowMatchSnapshot(
-      'should not render anything',
-      <VideoContainer />,
+      'canonical - should render the video without a caption',
+      VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipGlobalWithoutCaption({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render portrait video with global visibility',
+      VideoClipGlobalPortrait({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render portrait video with global visibility',
+      VideoClipGlobalPortrait({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render the video without a caption',
+      VideoClipUkWithGuidance({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipUkWithGuidance({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render the video without a caption',
+      VideoClipNonUk({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipNonUk({ platform: 'amp' }),
     );
   });
 
-  describe('with data', () => {
-    const videoData = {
-      blocks: [
-        {
-          type: 'rawVideo',
-          model: {
-            locator: 'urn:bbc:pips:pid:p064nsyw',
-            versionID: 'p064nsz3',
-            kind: 'clip',
-            duration: '299',
-          },
-        },
-        {
-          type: 'image',
-          model: {
-            blocks: [
-              {
-                type: 'rawImage',
-                model: {
-                  locator: '/cpsprodpb/5BD5/production/_101690532_2.jpg',
-                },
-              },
-            ],
-          },
-        },
-      ],
-    };
-
+  describe('with Video data and a caption', () => {
     shouldShallowMatchSnapshot(
-      'should render the important props in divs',
-      <VideoContainer {...videoData} />,
+      'canonical - should render the video and caption',
+      VideoClipGlobalWithCaption({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video and caption',
+      VideoClipGlobalWithCaption({ platform: 'amp' }),
     );
   });
 
-  describe('with data but no image', () => {
-    const data = blockArrayModel([rVB, null]);
+  describe('with Audio data', () => {
+    shouldShallowMatchSnapshot(
+      'canonical - should render audio clip global with guidance',
+      AudioClipGlobalGuidance({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip global with guidance',
+      AudioClipGlobalGuidance({ platform: 'amp' }),
+    );
 
     shouldShallowMatchSnapshot(
-      'should only render the video',
-      <VideoContainer {...data} />,
+      'canonical - should render audio clip UK only',
+      AudioClipUk({ platform: 'canonical' }),
     );
-  });
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip UK only',
+      AudioClipUk({ platform: 'amp' }),
+    );
 
-  describe('with data but no raw image', () => {
-    const rIB = null;
-    const img = imageBlock(rIB);
-    const data = blockArrayModel([rVB, img]);
+    shouldShallowMatchSnapshot(
+      'canonical - should render audio clip non-UK only',
+      AudioClipNonUk({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip non-UK only',
+      AudioClipNonUk({ platform: 'amp' }),
+    );
 
-    isNull('should be null', <VideoContainer {...data} />);
+    shouldShallowMatchSnapshot(
+      'canonical - should render audio episode global',
+      AudioEpisodeGlobal({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio episode global',
+      AudioEpisodeGlobal({ platform: 'amp' }),
+    );
   });
 });

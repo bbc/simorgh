@@ -11,7 +11,6 @@ jest.mock('../../helpers/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {
-  getDestination,
   getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
@@ -38,72 +37,6 @@ const returnsNullWhenOffClient = func => {
     });
   });
 };
-
-describe('getDestination', () => {
-  const getDestinationTestScenarios = [
-    {
-      isUK: true,
-      env: 'live',
-      expected: 598285,
-      summary: 'should return for live uk',
-    },
-    {
-      isUK: false,
-      env: 'live',
-      expected: 598287,
-      summary: 'should return for live international',
-    },
-    {
-      isUK: true,
-      env: 'test',
-      expected: 598286,
-      summary: 'should return for test uk',
-    },
-    {
-      isUK: false,
-      env: 'test',
-      expected: 598288,
-      summary: 'should return for test international',
-    },
-    {
-      isUK: true,
-      env: 'foobar',
-      expected: 598286,
-      summary: 'should return for test uk when env unknown',
-    },
-    {
-      isUK: true,
-      env: null,
-      expected: 598285,
-      summary: 'should return for test uk when env null',
-    },
-    {
-      isUK: true,
-      env: undefined,
-      expected: 598285,
-      summary: 'should return for test uk when env undefined',
-    },
-    {
-      isUK: null,
-      env: 'live',
-      expected: 598285,
-      summary: 'should return for live uk when isUK is null',
-    },
-    {
-      isUK: undefined,
-      env: 'live',
-      expected: 598285,
-      summary: 'should return for live uk when isUK is undefined',
-    },
-  ];
-
-  getDestinationTestScenarios.forEach(({ isUK, env, expected, summary }) => {
-    it(summary, () => {
-      const destination = getDestination(isUK, env);
-      expect(destination).toEqual(expected);
-    });
-  });
-});
 
 describe('getAppType', () => {
   const getAppTypeScenarios = [

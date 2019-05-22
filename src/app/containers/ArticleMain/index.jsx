@@ -6,7 +6,7 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import timestamp from '../Timestamp';
+import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
 
 const componentsToRender = {

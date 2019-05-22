@@ -13,7 +13,7 @@ jest.mock('../../helpers/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {
-  data: 'foo',
+  pageData: 'foo',
   status: 123,
 };
 jest.mock('./utils/fetchData', () => jest.fn());
@@ -49,9 +49,7 @@ describe('getArticleInitialData', () => {
     });
 
     expect(response).toEqual({
-      data: 'foo',
-      isAmp: false,
-      service: 'news',
+      pageData: 'foo',
       status: 123,
     });
   });
@@ -69,9 +67,7 @@ describe('getArticleInitialData', () => {
       });
 
       expect(response).toEqual({
-        data: 'foo',
-        isAmp: true,
-        service: 'news',
+        pageData: 'foo',
         status: 123,
       });
     });
@@ -90,9 +86,7 @@ describe('getArticleInitialData', () => {
       });
 
       expect(response).toEqual({
-        data: 'foo',
-        isAmp: false,
-        service: 'news',
+        pageData: 'foo',
         status: 123,
       });
     });

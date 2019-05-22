@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { objectOf, any } from 'prop-types';
+import { objectOf, any, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import deepGet from '../../helpers/json/deepGet';
@@ -10,40 +10,68 @@ import InlineLink from '../InlineLink';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
-const renderText = textBlocks => (
-  <Blocks blocks={textBlocks} componentsToRender={componentsToRender} />
+const chooseOffscreenText = (
+  mediaType,
+  videoCaption,
+  imageCaption,
+  defaultText,
+) => {
+  switch (mediaType) {
+    case 'video':
+      return videoCaption;
+    case 'image':
+      return imageCaption;
+    default:
+      return defaultText;
+  }
+};
+const renderParagraph = paragraphBlock => (
+  <p key={deepGet([0, 'model', 'text'], paragraphBlock)}>
+    <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
+  </p>
 );
 
-const renderCaption = (block, imageCaptionOffscreenText, script) => (
+const renderCaption = (paragraphBlocks, offscreenText, script) => (
   <Caption script={script}>
-    {imageCaptionOffscreenText ? (
-      <VisuallyHiddenText>{imageCaptionOffscreenText}</VisuallyHiddenText>
+    {offscreenText ? (
+      <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
     ) : null}
-    {renderText(block)}
+    {paragraphBlocks.map(block => {
+      const paragraphBlock = deepGet(['model', 'blocks'], block);
+      return renderParagraph(paragraphBlock);
+    })}
   </Caption>
 );
 
-const renderMultipleCaptions = (blocks, imageCaptionOffscreenText, script) =>
-  blocks.map(block =>
-    renderCaption(
-      deepGet(['model', 'blocks'], block),
-      imageCaptionOffscreenText,
-      script,
-    ),
-  );
-
-const CaptionContainer = ({ block }) => {
-  const { script, imageCaptionOffscreenText } = useContext(ServiceContext);
-
-  return renderMultipleCaptions(
-    deepGet(['model', 'blocks', 0, 'model', 'blocks'], block),
-    imageCaptionOffscreenText,
+const CaptionContainer = ({ block, type }) => {
+  const {
     script,
+    imageCaptionOffscreenText,
+    videoCaptionOffscreenText,
+    defaultCaptionOffscreenText,
+  } = useContext(ServiceContext);
+  const offscreenText = chooseOffscreenText(
+    type,
+    videoCaptionOffscreenText,
+    imageCaptionOffscreenText,
+    defaultCaptionOffscreenText,
   );
+
+  const paragraphBlocks = deepGet(
+    ['model', 'blocks', 0, 'model', 'blocks'],
+    block,
+  );
+
+  return renderCaption(paragraphBlocks, offscreenText, script);
 };
 
 CaptionContainer.propTypes = {
   block: objectOf(any).isRequired,
+  type: string,
+};
+
+CaptionContainer.defaultProps = {
+  type: '',
 };
 
 export default CaptionContainer;
