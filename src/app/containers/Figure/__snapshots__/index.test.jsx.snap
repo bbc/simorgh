@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Figure should render a lazyloaded image when lazyload set to true 1`] = `
+exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] = `
 .c0 {
   margin: 0;
   padding-bottom: 1.5rem;

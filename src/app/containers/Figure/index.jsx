@@ -10,8 +10,8 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-const renderImage = (imageToRender, lazyload) =>
-  lazyload ? (
+const renderImage = (imageToRender, lazyLoad) =>
+  lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
@@ -33,7 +33,7 @@ const FigureContainer = ({
   alt,
   copyright,
   captionBlock,
-  lazyload,
+  lazyLoad,
   ratio,
   src,
   height,
@@ -56,7 +56,7 @@ const FigureContainer = ({
             width={width}
           />
         ) : (
-          renderImage(imageToRender, lazyload)
+          renderImage(imageToRender, lazyLoad)
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
@@ -70,7 +70,7 @@ FigureContainer.propTypes = {
   captionBlock: objectOf(any),
   copyright: string,
   height: number,
-  lazyload: bool,
+  lazyLoad: bool,
   ratio: number.isRequired,
   src: string.isRequired,
   type: string,
@@ -81,7 +81,7 @@ FigureContainer.defaultProps = {
   copyright: null,
   captionBlock: null,
   height: null,
-  lazyload: false,
+  lazyLoad: false,
   type: '',
 };
 

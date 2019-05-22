@@ -16,7 +16,7 @@ import {
 } from './fixtureData';
 
 describe('Figure', () => {
-  it('should load lazyload component when lazyload prop is set to true', () => {
+  it('should load lazyload component when lazyLoad prop is set to true', () => {
     const wrapper = mount(FigureLazyLoadImage).find(LazyLoad);
     const {
       offset,
@@ -37,7 +37,7 @@ describe('Figure', () => {
   });
 
   shouldMatchSnapshot(
-    'should render a lazyloaded image when lazyload set to true',
+    'should render a lazyloaded image when lazyLoad set to true',
     FigureLazyLoadImage,
   );
 
