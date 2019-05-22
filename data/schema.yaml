@@ -324,12 +324,16 @@ components:
     aresMedia:
       type: object
       required:
-        - blocks
         - model
         - type
       properties:
-        blocks:
-          $ref: '#/components/schemas/blocks'
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+          required:
+            - blocks
 
     aresMediaMetadata:
       type: object
