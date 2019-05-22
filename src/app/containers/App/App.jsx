@@ -4,11 +4,12 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
-  const { service, isAmp } = getRouteProps(routes, location.pathname);
+  const { service, isAmp, id } = getRouteProps(routes, location.pathname);
 
   const [state, setState] = useState({
     data: initialData,
     service,
+    id,
     isAmp,
     loading: false,
     error: null,
@@ -23,6 +24,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       // Only update on subsequent page renders
       const {
         service: newService,
+        id: newId,
         isAmp: newIsAmp,
         route,
         match,
@@ -31,6 +33,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       setState({
         data: null,
         service: newService,
+        id: newId,
         isAmp: newIsAmp,
         loading: true,
         error: null,

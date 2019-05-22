@@ -28,7 +28,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
   facebookMeta(
     '100004154058350',
     '1609039196070050',
-    'https://www.facebook.com/bbcnews',
+    'https://www.facebook.com/bbcpersian',
   );
 
   // it('should have description meta data', () => {

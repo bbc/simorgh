@@ -5,13 +5,14 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes, {
+import routes from '../app/routes';
+import {
   articleRegexPath,
   articleDataRegexPath,
   frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
-} from '../app/routes';
+} from '../app/routes/regex';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
