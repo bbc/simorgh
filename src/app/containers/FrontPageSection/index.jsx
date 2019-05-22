@@ -12,9 +12,20 @@ import { sanitise as idSanitiser } from './helpers';
 const FrontPageSection = ({ group }) => {
   const { script } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
+
+  // The current implementation of SectionLabel *requires* a strapline to be
+  // present in order to render. It is currently *not possible* to render a
+  // section that does not have a strapline without breaking both the visual
+  // *and especially* the screen reader UX.
+  // If this group does not have a strapline; do not render!
+  // This may change in the future, if a way to avoid breaking UX is found.
+  if (!(group.strapline && group.strapline.name)) {
+    return null;
+  }
+
   return (
     // jsx-a11y considers `role="region"` on a <section> to be redundant.
-    // (<section> tags *should* default to `role="region"`)
+    // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles

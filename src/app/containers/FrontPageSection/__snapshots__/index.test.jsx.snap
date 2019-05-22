@@ -5,11 +5,13 @@ exports[`FrontPageSection Container should render correctly for canonical 1`] = 
   aria-labelledby="top-stories"
   role="region"
 >
-  <h2
-    id="top-stories"
+  <SectionLabel
+    bar={true}
+    dir="ltr"
+    labelId="top-stories"
   >
     Top Stories
-  </h2>
+  </SectionLabel>
   <StoryPromoUl>
     <StoryPromoLi>
       <StoryPromo
@@ -54,3 +56,5 @@ exports[`FrontPageSection Container should render correctly for canonical 1`] = 
   </StoryPromoUl>
 </section>
 `;
+
+exports[`FrontPageSection Container should render null when there is no strapline 1`] = `null`;
