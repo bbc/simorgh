@@ -82,75 +82,68 @@
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p067gq6h"
-          },
-          "blocks": [
-            {
-              "type": "aresMedia",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "aresMediaMetadata",
-                    "model": {
-                      "advertising": false,
-                      "embedding": true,
-                      "format": "audio_video",
-                      "id": "p067gq6h",
-                      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                      "title": "Mark and Isla Royal Wedding",
-                      "subType": "clip",
-                      "synopses": {
-                        "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
-                        "medium": null,
-                        "long": null
+            "locator": "urn:bbc:pips:pid:p067gq6h",
+            "blocks": [
+              {
+                "type": "aresMediaMetadata",
+                "model": {
+                  "advertising": false,
+                  "embedding": true,
+                  "format": "audio_video",
+                  "id": "p067gq6h",
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                  "title": "Mark and Isla Royal Wedding",
+                  "subType": "clip",
+                  "synopses": {
+                    "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                    "medium": null,
+                    "long": null
+                  },
+                  "versions": [
+                    {
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": false
                       },
-                      "versions": [
-                        {
-                          "availableTerritories": {
-                            "uk": true,
-                            "nonUk": false
-                          },
-                          "duration": 94,
-                          "types": ["Original"],
-                          "versionId": "p067gq6k",
-                          "warnings": {}
-                        }
-                      ]
+                      "duration": 94,
+                      "types": ["Original"],
+                      "versionId": "p067gq6k",
+                      "warnings": {}
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "caption",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                            "blocks": [
-                              {
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                                  "attributes": []
+                  ]
+                }
+              },
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
+                                    "attributes": []
+                                  }
                                 }
-                              }
-                            ]
+                              ]
+                            }
                           }
-                        }
-                      ]
+                        ]
+                      }
                     }
-                  }
-                ]
+                  ]
+                }
               }
-            }
-          ]
+            ]
+          }
         },
         {
           "type": "text",
