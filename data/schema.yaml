@@ -347,7 +347,6 @@ components:
             - subType
             - synopses
             - versions
-            - warnings
           properties:
             advertising:
               type: boolean
