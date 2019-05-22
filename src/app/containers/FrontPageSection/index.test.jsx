@@ -83,6 +83,15 @@ const hasNoStrapline = {
   ],
 };
 
+const hasNoItems = {
+  type: 'responsive-top-stories',
+  title: 'Top Stories',
+  items: [],
+  strapline: {
+    name: 'Top Stories',
+  },
+};
+
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
@@ -111,22 +120,11 @@ describe('FrontPageSection Container', () => {
       'should render without a bar',
       <FrontPageSection group={group} bar={false} />,
     );
-
-    shouldShallowMatchSnapshot(
-      'should render null when there is no strapline',
-      <FrontPageSection group={hasNoStrapline} />,
-    );
   });
 
   describe('assertions', () => {
-    let container;
     beforeEach(() => {
       useContext.mockImplementation(React.useContext);
-      ({ container } = render(
-        <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
-        </ServiceContextProvider>,
-      ));
     });
 
     afterEach(() => {
@@ -134,6 +132,11 @@ describe('FrontPageSection Container', () => {
     });
 
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} />
+        </ServiceContextProvider>,
+      );
       expect(container.getElementsByTagName('section')).toHaveLength(1);
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
@@ -143,12 +146,41 @@ describe('FrontPageSection Container', () => {
     });
 
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} />
+        </ServiceContextProvider>,
+      );
       const section = container.getElementsByTagName('section')[0];
       const label = container.getElementsByTagName('h2')[0];
 
       expect(section.getAttribute('aria-labelledby')).toBeDefined();
       expect(label.id).toBeDefined();
       expect(section.getAttribute('aria-labelledby')).toEqual(label.id);
+    });
+
+    it('should render null when there are no items', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasNoItems} />
+        </ServiceContextProvider>,
+      );
+
+      // container is a <div> which would contain the rendered elements...
+      // IF THERE WERE ANY!
+      expect(container.children).toHaveLength(0);
+    });
+
+    it('should render null when there is no strapline', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasNoStrapline} />
+        </ServiceContextProvider>,
+      );
+
+      // container is a <div> which would contain the rendered elements...
+      // IF THERE WERE ANY!
+      expect(container.children).toHaveLength(0);
     });
   });
 });

@@ -12,13 +12,17 @@ const FrontPageSection = ({ bar, group }) => {
   const { script } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
+  const strapline = deepGet(['strapline', 'name'], group);
+  const items = deepGet(['items'], group);
+
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
   // section that does not have a strapline without breaking both the visual
   // *and especially* the screen reader UX.
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
-  if (!deepGet(['strapline', 'name'], group)) {
+  // Also, don't render a section without any items.
+  if (!(strapline && items) || items.length === 0) {
     return null;
   }
 
@@ -33,7 +37,7 @@ const FrontPageSection = ({ bar, group }) => {
         {group.strapline.name}
       </SectionLabel>
       <StoryPromoUl>
-        {group.items.map(item => (
+        {items.map(item => (
           <StoryPromoLi key={item.id}>
             <StoryPromo item={item} script={script} />
           </StoryPromoLi>

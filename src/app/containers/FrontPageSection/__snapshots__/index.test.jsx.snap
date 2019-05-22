@@ -701,8 +701,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render null when there is no strapline 1`] = `null`;
-
 exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
 <section
   aria-labelledby="Top-Stories"
