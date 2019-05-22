@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape } from 'prop-types';
+import { bool, shape } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -9,8 +9,9 @@ import groupShape from '../../models/propTypes/frontPageGroup';
 // import idSanitiser from '../../lib/utilities/idSanitiser';
 import { sanitise as idSanitiser } from './helpers';
 
-const FrontPageSection = ({ group }) => {
-  const { script } = useContext(ServiceContext);
+const FrontPageSection = ({ bar, group }) => {
+  const ctx = useContext(ServiceContext);
+  const { script } = ctx;
   const sectionLabelId = idSanitiser(group.title);
 
   // The current implementation of SectionLabel *requires* a strapline to be
@@ -30,13 +31,13 @@ const FrontPageSection = ({ group }) => {
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel script={script} labelId={sectionLabelId}>
+      <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
         {group.strapline.name}
       </SectionLabel>
       <StoryPromoUl>
         {group.items.map(item => (
           <StoryPromoLi key={item.id}>
-            <StoryPromo item={item} />
+            <StoryPromo item={item} script={script} />
           </StoryPromoLi>
         ))}
       </StoryPromoUl>
@@ -44,7 +45,12 @@ const FrontPageSection = ({ group }) => {
   );
 };
 
+FrontPageSection.defaultProps = {
+  bar: true,
+};
+
 FrontPageSection.propTypes = {
+  bar: bool,
   group: shape(groupShape).isRequired,
 };
 

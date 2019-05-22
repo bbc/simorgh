@@ -1,7 +1,10 @@
-import React from 'react';
+import { render } from 'react-testing-library';
 import newsConfig from '../../lib/config/services/news';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import FrontPageSection from '.';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+
+const React = jest.requireActual('react');
 
 const group = {
   type: 'responsive-top-stories',
@@ -20,6 +23,7 @@ const group = {
         altText: 'Image Alt text 1',
         copyrightHolder: 'Image provider 1',
       },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000001',
     },
     {
       headlines: {
@@ -34,6 +38,7 @@ const group = {
         altText: 'Image Alt text 2',
         copyrightHolder: 'Image provider 2',
       },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000002',
     },
   ],
   strapline: {
@@ -58,6 +63,7 @@ const hasNoStrapline = {
         altText: 'Image Alt text 1',
         copyrightHolder: 'Image provider 1',
       },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000003',
     },
     {
       headlines: {
@@ -72,36 +78,68 @@ const hasNoStrapline = {
         altText: 'Image Alt text 2',
         copyrightHolder: 'Image provider 2',
       },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000004',
     },
   ],
 };
 
+jest.mock('react', () => {
+  const original = jest.requireActual('react');
+  return {
+    ...original,
+    useContext: jest.fn(),
+  };
+});
+const { useContext } = jest.requireMock('react');
+
 describe('FrontPageSection Container', () => {
-  // The following awfulness is a work around for an inability to use context
-  // with the shallow renderer. Sorry.
-  // https://stackoverflow.com/a/55013256
-  let realUseContext;
-  let mockedUseContext;
+  describe('snapshots', () => {
+    beforeEach(() => {
+      useContext.mockReturnValue(newsConfig);
+    });
 
-  beforeEach(() => {
-    realUseContext = React.useContext;
+    afterEach(() => {
+      useContext.mockReset();
+    });
 
-    React.useContext = jest.fn();
-    mockedUseContext = React.useContext;
-    mockedUseContext.mockReturnValue(newsConfig);
+    shouldShallowMatchSnapshot(
+      'should render correctly for canonical',
+      <FrontPageSection group={group} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render without a bar',
+      <FrontPageSection group={group} bar={false} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render null when there is no strapline',
+      <FrontPageSection group={hasNoStrapline} />,
+    );
   });
 
-  afterEach(() => {
-    React.useContext = realUseContext;
+  describe('assertions', () => {
+    beforeAll(() => {
+      useContext.mockImplementation(React.useContext);
+    });
+
+    afterAll(() => {
+      useContext.mockReset();
+    });
+
+    it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} />
+        </ServiceContextProvider>,
+      );
+
+      expect(container.getElementsByTagName('section')).toHaveLength(1);
+      expect(container.getElementsByTagName('h2')).toHaveLength(1);
+      expect(container.getElementsByTagName('ul')).toHaveLength(1);
+
+      expect(container.getElementsByTagName('li')).toHaveLength(2);
+      expect(container.getElementsByTagName('h3')).toHaveLength(2);
+    });
   });
-
-  shouldShallowMatchSnapshot(
-    'should render correctly for canonical',
-    <FrontPageSection group={group} />,
-  );
-
-  shouldShallowMatchSnapshot(
-    'should render null when there is no strapline',
-    <FrontPageSection group={hasNoStrapline} />,
-  );
 });
