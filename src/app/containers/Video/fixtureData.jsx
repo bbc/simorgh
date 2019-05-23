@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import { blockArrayModel } from '../../models/blocks';
 import {
   captionBlock,
   videoClipGlobalGuidanceBlock,
@@ -38,38 +37,62 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoClipGlobalWithCaption = generateFixtureData(
-  blockArrayModel([videoClipGlobalGuidanceBlock, captionBlock]),
-);
+export const NoData = ({ platform }) =>
+  generateFixtureData({ platform, blocks: null });
 
-export const VideoClipGlobalWithoutCaption = generateFixtureData(
-  blockArrayModel([videoClipGlobalGuidanceBlock]),
-);
+export const NoAresMedia = ({ platform }) =>
+  generateFixtureData({ platform, blocks: [captionBlock] });
 
-export const VideoClipGlobalPortrait = generateFixtureData(
-  blockArrayModel([videoClipGlobalPortraitBlock]),
-);
+export const VideoClipGlobalWithCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+  });
 
-export const VideoClipUkWithGuidance = generateFixtureData(
-  blockArrayModel([videoClipUkGuidanceBlock]),
-);
+export const VideoClipGlobalWithoutCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock],
+  });
 
-export const VideoClipNonUk = generateFixtureData(
-  blockArrayModel([videoClipNonUkBlock]),
-);
+export const VideoClipGlobalPortrait = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalPortraitBlock],
+  });
 
-export const AudioClipGlobalGuidance = generateFixtureData(
-  blockArrayModel([audioClipGlobalGuidanceBlock]),
-);
+export const VideoClipUkWithGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipUkGuidanceBlock],
+  });
 
-export const AudioClipUk = generateFixtureData(
-  blockArrayModel([audioClipUkOnlyBlock]),
-);
+export const VideoClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipNonUkBlock],
+  });
 
-export const AudioClipNonUk = generateFixtureData(
-  blockArrayModel([audioClipNonUkBlock]),
-);
+export const AudioClipGlobalGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipGlobalGuidanceBlock],
+  });
 
-export const AudioEpisodeGlobal = generateFixtureData(
-  blockArrayModel([audioEpisodeGlobalBlock]),
-);
+export const AudioClipUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipUkOnlyBlock],
+  });
+
+export const AudioClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipNonUkBlock],
+  });
+
+export const AudioEpisodeGlobal = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioEpisodeGlobalBlock],
+  });
