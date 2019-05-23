@@ -2,91 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import { singleTextBlock, blockArrayModel } from '../../models/blocks';
-
-const aresMediaBlock = {
-  model: {
-    blocks: [
-      {
-        blockId: 'urn:bbc:ares::clip:p01k6msm',
-        model: {
-          advertising: true,
-          caption: null,
-          embedding: true,
-          format: 'audio_video',
-          id: 'p01k6msm',
-          image: null,
-          imageCopyright: 'BBC',
-          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-          subType: 'clip',
-          syndication: {
-            destinations: [],
-          },
-          synopses: {
-            short:
-              'They may be tiny, but us humans could learn a thing or two from ants.',
-          },
-          title: 'Five things ants can teach us about management',
-          versions: [
-            {
-              availableTerritories: {
-                nonUk: true,
-                uk: true,
-              },
-              availableUntil: null,
-              duration: 191,
-              types: ['Original'],
-              versionId: 'p01k6msp',
-              warnings: {
-                long: 'Contains strong language and adult humour.',
-                short: 'Contains strong language and adult humour.',
-              },
-            },
-          ],
-        },
-        type: 'aresMediaMetadata',
-      },
-      {
-        model: {
-          blocks: [
-            {
-              model: {
-                copyrightHolder: 'BBC',
-                height: 1080,
-                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-                originCode: null,
-                width: 1920,
-              },
-              type: 'rawImage',
-            },
-            {
-              model: {
-                blocks: [singleTextBlock('Ants')],
-              },
-              type: 'altText',
-            },
-          ],
-        },
-        type: 'image',
-      },
-    ],
-  },
-  type: 'aresMedia',
-};
-
-const captionBlock = {
-  model: {
-    blocks: [
-      singleTextBlock(
-        'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
-      ),
-    ],
-  },
-  type: 'caption',
-};
+import {
+  captionBlock,
+  videoClipGlobalGuidanceBlock,
+  videoClipGlobalPortraitBlock,
+  videoClipUkGuidanceBlock,
+  videoClipNonUkBlock,
+  audioClipGlobalGuidanceBlock,
+  audioClipNonUkBlock,
+  audioClipUkOnlyBlock,
+  audioEpisodeGlobalBlock,
+} from './helpers/fixtures';
 
 const generateFixtureData = ({ platform, blocks }) => (
-  <RequestContextProvider platform={platform}>
+  <RequestContextProvider
+    id="c0000000000o"
+    isUK
+    origin="https://www.test.bbc.co.uk"
+    platform={platform}
+    statsDestination="NEWS_PS_TEST"
+    statsPageIdentifier="news.articles.c0000000000o.page"
+  >
     <VideoContainer blocks={blocks} />
   </RequestContextProvider>
 );
@@ -101,10 +37,62 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoWithCaption = generateFixtureData(
-  blockArrayModel([aresMediaBlock, captionBlock]),
-);
+export const NoData = ({ platform }) =>
+  generateFixtureData({ platform, blocks: null });
 
-export const VideoWithoutCaption = generateFixtureData(
-  blockArrayModel([aresMediaBlock]),
-);
+export const NoAresMedia = ({ platform }) =>
+  generateFixtureData({ platform, blocks: [captionBlock] });
+
+export const VideoClipGlobalWithCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+  });
+
+export const VideoClipGlobalWithoutCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock],
+  });
+
+export const VideoClipGlobalPortrait = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalPortraitBlock],
+  });
+
+export const VideoClipUkWithGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipUkGuidanceBlock],
+  });
+
+export const VideoClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipNonUkBlock],
+  });
+
+export const AudioClipGlobalGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipGlobalGuidanceBlock],
+  });
+
+export const AudioClipUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipUkOnlyBlock],
+  });
+
+export const AudioClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipNonUkBlock],
+  });
+
+export const AudioEpisodeGlobal = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioEpisodeGlobalBlock],
+  });

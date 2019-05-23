@@ -6,13 +6,14 @@ import path from 'path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import loadInitialData from '../app/routes/loadInitialData';
-import routes, {
+import routes from '../app/routes';
+import {
   articleRegexPath,
   articleDataRegexPath,
   frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
-} from '../app/routes';
+} from '../app/routes/regex';
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
@@ -135,6 +136,18 @@ server
       }
     });
   })
+  .get(
+    '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
+    ({ params }, res) => {
+      // This is a temporary route to unblock route setup in Mozart.
+      // Simply returns a 200 response which can we route to until
+      // it's set up properly in simorgh.
+      const { service } = params;
+      res
+        .status(200)
+        .send(`Welcome to the temporary ${service} homepage simorgh route`);
+    },
+  )
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
