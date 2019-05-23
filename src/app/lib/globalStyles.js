@@ -41,27 +41,27 @@ export default GlobalStyle;
     font-family: ReithSansNewsLight;
     font-style: normal;
     font-weight: 300;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff') format('woff');
+    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Lt.woff') format('woff');
   }
   @font-face {
     font-display: optional;
     font-family: ReithSerifNewsLight;
     font-style: normal;
     font-weight: 300;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Lt.woff') format('woff');
+    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Lt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Lt.woff') format('woff');
   }
   @font-face {
     font-display: optional;
     font-family: ReithSerifNewsRegular;
     font-style: normal;
     font-weight: 400;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Rg.woff') format('woff');
+    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Rg.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Rg.woff') format('woff');
   }
   @font-face {
     font-display: optional;
     font-family: ReithSerifNewsBold;
     font-style: normal;
     font-weight: 700;
-    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Bd.woff') format('woff');
+    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Bd.woff') format('woff');
   }
 End of unused fonts */
