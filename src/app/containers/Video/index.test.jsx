@@ -1,88 +1,119 @@
-import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { blockArrayModel, singleTextBlock } from '../../models/blocks';
-import VideoContainer from './index';
 import {
+  shouldShallowMatchSnapshot,
+  isNull,
+} from '../../helpers/tests/testHelpers';
+import {
+  NoData,
+  NoAresMedia,
   VideoClipGlobalWithCaption,
   VideoClipGlobalWithoutCaption,
+  VideoClipGlobalPortrait,
+  VideoClipUkWithGuidance,
+  VideoClipNonUk,
+  AudioClipGlobalGuidance,
+  AudioClipUk,
+  AudioClipNonUk,
+  AudioEpisodeGlobal,
 } from './fixtureData';
 
-describe('Video', () => {
+describe('AudioVideo', () => {
   describe('with no data', () => {
+    isNull('canonical - should render null', NoData({ platform: 'canonical' }));
+    isNull('amp - should render null', NoData({ platform: 'amp' }));
+  });
+
+  describe('with no aresMedia block', () => {
+    isNull(
+      'canonical - should render null',
+      NoAresMedia({ platform: 'canonical' }),
+    );
+    isNull('amp - should render null', NoAresMedia({ platform: 'amp' }));
+  });
+
+  describe('with Video data', () => {
     shouldShallowMatchSnapshot(
-      'should not render anything',
-      <VideoContainer />,
+      'canonical - should render the video without a caption',
+      VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipGlobalWithoutCaption({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render portrait video with global visibility',
+      VideoClipGlobalPortrait({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render portrait video with global visibility',
+      VideoClipGlobalPortrait({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render the video without a caption',
+      VideoClipUkWithGuidance({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipUkWithGuidance({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render the video without a caption',
+      VideoClipNonUk({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video without a caption',
+      VideoClipNonUk({ platform: 'amp' }),
     );
   });
 
-  describe('with no aresMedia', () => {
-    const captionBlock = {
-      model: {
-        blocks: [
-          singleTextBlock(
-            'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
-          ),
-        ],
-      },
-      type: 'caption',
-    };
-    const data = blockArrayModel([captionBlock]);
-
+  describe('with Video data and a caption', () => {
     shouldShallowMatchSnapshot(
-      'should only render the video',
-      <VideoContainer {...data} />,
+      'canonical - should render the video and caption',
+      VideoClipGlobalWithCaption({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render the video and caption',
+      VideoClipGlobalWithCaption({ platform: 'amp' }),
     );
   });
 
-  describe('with data and a caption', () => {
+  describe('with Audio data', () => {
     shouldShallowMatchSnapshot(
-      'should render the video and caption',
-      VideoClipGlobalWithCaption,
+      'canonical - should render audio clip global with guidance',
+      AudioClipGlobalGuidance({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip global with guidance',
+      AudioClipGlobalGuidance({ platform: 'amp' }),
     );
 
     shouldShallowMatchSnapshot(
-      'should render the video without a caption',
-      VideoClipGlobalWithoutCaption,
+      'canonical - should render audio clip UK only',
+      AudioClipUk({ platform: 'canonical' }),
     );
-  });
-
-  describe('with data', () => {
-    const dataBlock = {
-      type: 'aresMedia',
-      model: {
-        blocks: [
-          {
-            model: {
-              id: 'foo',
-              subType: 'clip',
-              title: 'Hello World!',
-              versions: [
-                {
-                  versionId: 'bar',
-                  duration: 100,
-                },
-              ],
-            },
-          },
-          {
-            model: {
-              blocks: [
-                {
-                  model: {
-                    locator: 'https://foo/bar/baz.png',
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    };
-    const data = blockArrayModel([dataBlock]);
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip UK only',
+      AudioClipUk({ platform: 'amp' }),
+    );
 
     shouldShallowMatchSnapshot(
-      'should return a valid VideoContainer',
-      <VideoContainer {...data} />,
+      'canonical - should render audio clip non-UK only',
+      AudioClipNonUk({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio clip non-UK only',
+      AudioClipNonUk({ platform: 'amp' }),
+    );
+
+    shouldShallowMatchSnapshot(
+      'canonical - should render audio episode global',
+      AudioEpisodeGlobal({ platform: 'canonical' }),
+    );
+    shouldShallowMatchSnapshot(
+      'amp - should render audio episode global',
+      AudioEpisodeGlobal({ platform: 'amp' }),
     );
   });
 });
