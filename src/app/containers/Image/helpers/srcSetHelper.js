@@ -14,7 +14,6 @@ const createSrcset = (originCode, locator, originalImageWidth) => {
   );
 
   if (
-    requiredResolutions.length < resolutions.length &&
     originalImageWidth < resolutions[resolutions.length - 1] &&
     !requiredResolutions.includes(originalImageWidth)
   ) {
