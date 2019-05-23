@@ -16,6 +16,11 @@ describe('Video', () => {
         },
       ],
       holdingImageUrl: 'https://foo/bar/baz.png',
+      statsAppName: 'news',
+      statsAppType: 'responsive',
+      statsCountername: 'news.articles.c0000000000o.page',
+      statsDestination: 'NEWS_PS_TEST',
+      uiLocale: 'en-GB',
     };
 
     shouldShallowMatchSnapshot(
