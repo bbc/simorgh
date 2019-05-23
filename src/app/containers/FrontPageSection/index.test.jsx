@@ -144,12 +144,12 @@ describe('FrontPageSection Container', () => {
     });
 
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
-      const { container, debug } = render(
+      const { container } = render(
         <ServiceContextProvider service="igbo">
           <FrontPageSection group={group} />
         </ServiceContextProvider>,
       );
-      debug();
+
       expect(container.getElementsByTagName('section')).toHaveLength(1);
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
