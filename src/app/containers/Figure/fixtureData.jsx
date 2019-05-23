@@ -187,7 +187,10 @@ generateFixtureData.defaultProps = {
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
 
-export const FigureLazyLoadImage = generateFixtureData({ lazyLoad: true });
+export const FigureLazyLoadImage = generateFixtureData({
+  platform: 'canonical',
+  lazyLoad: true,
+});
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 

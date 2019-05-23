@@ -16,7 +16,6 @@ const renderImage = (imageToRender, lazyLoad) =>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
-
       <noscript>{imageToRender}</noscript>
     </Fragment>
   ) : (
