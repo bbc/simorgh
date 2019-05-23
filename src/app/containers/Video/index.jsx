@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Figure from '@bbc/psammead-figure';
+import Iframe from 'react-iframe';
 import deepGet from '../../helpers/json/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
@@ -63,18 +64,26 @@ const VideoContainer = ({ blocks }) => {
         </Helmet>
       ) : null}
       <Figure>
-        <Video
-          pid={pid}
-          kind={kind}
-          title={title}
-          items={items}
-          holdingImageUrl={holdingImageUrl}
-          statsAppName="news"
-          statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
-          statsCountername={statsPageIdentifier}
-          statsDestination={statsDestination}
-          uiLocale="en-GB"
-        />
+        {platform === 'canonical' ? (
+          <Video
+            pid={pid}
+            kind={kind}
+            title={title}
+            items={items}
+            holdingImageUrl={holdingImageUrl}
+            statsAppName="news"
+            statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
+            statsCountername={statsPageIdentifier}
+            statsDestination={statsDestination}
+            uiLocale="en-GB"
+          />
+        ) : (
+          <Iframe
+            url="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?amp=1"
+            width="450px"
+            height="450px"
+          />
+        )}
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
     </>

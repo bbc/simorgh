@@ -120,6 +120,7 @@
     "react-amphtml": "^3.0.1",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
+    "react-iframe": "^1.8.0",
     "react-router-config": "^5.0.0",
     "react-router-dom": "^4.3.1",
     "speculate": "^1.7.4",
