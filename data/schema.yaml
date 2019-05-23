@@ -406,13 +406,13 @@ components:
               type: string
             versions:
               type: array
-              required:
-                - versionId
-                - types
-                - duration
-                - availableTerritories
               items:
                 type: object
+                required:
+                  - versionId
+                  - types
+                  - duration
+                  - availableTerritories
                 properties:
                   availableTerritories:
                     type: object
