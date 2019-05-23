@@ -1,7 +1,6 @@
 import deepGet from '../../../../helpers/json/deepGet';
 
-/* eslint-disable import/prefer-default-export */
-export const filterEmptyGroupItems = jsonRaw => {
+const filterEmptyGroupItems = jsonRaw => {
   const json = jsonRaw;
   let groups = deepGet(['content', 'groups'], json);
   if (!groups) {
@@ -16,3 +15,5 @@ export const filterEmptyGroupItems = jsonRaw => {
   json.content.groups = groups;
   return json;
 };
+
+export default filterEmptyGroupItems;

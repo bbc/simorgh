@@ -1,4 +1,4 @@
-import { filterEmptyGroupItems } from './groups';
+import filterEmptyGroupItems from './filterEmptyGroupItems';
 
 describe('Group rules', () => {
   it('should filter out empty items', () => {
