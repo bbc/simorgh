@@ -8,7 +8,9 @@ export const filterEmptyGroupItems = jsonRaw => {
     return jsonRaw;
   }
 
-  groups = groups.filter(group => group.items.length > 0);
+  groups = groups.filter(
+    group => Array.isArray(group.items) && group.items.length > 0,
+  );
 
   // Override the original groups with the new ones
   json.content.groups = groups;

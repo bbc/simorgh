@@ -9,10 +9,10 @@ describe('Group rules', () => {
             type: 'top-story',
             items: [{ name: 'item1' }],
           },
-          {
-            type: 'must-see',
-            items: [],
-          },
+          { type: 'must-see', items: [] },
+          { type: 'must-see', items: null },
+          { type: 'must-see', items: 'dummy string' },
+          { type: 'must-see', items: {} },
         ],
       },
     };
