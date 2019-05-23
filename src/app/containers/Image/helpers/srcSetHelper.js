@@ -1,5 +1,6 @@
 const createSrcset = (originCode, locator, originalImageWidth) => {
   const resolutions = [240, 320, 480, 624, 800];
+  const ichefUrl = 'https://ichef.bbci.co.uk/news';
   if (originCode === 'pips') {
     return null;
   }
@@ -10,7 +11,7 @@ const createSrcset = (originCode, locator, originalImageWidth) => {
 
   const urls = requiredResolutions.map(
     resolution =>
-      `https://ichef.bbci.co.uk/news/${resolution}/${originCode}/${locator} ${resolution}w`,
+      `${ichefUrl}/${resolution}/${originCode}/${locator} ${resolution}w`,
   );
 
   if (
@@ -18,7 +19,7 @@ const createSrcset = (originCode, locator, originalImageWidth) => {
     !requiredResolutions.includes(originalImageWidth)
   ) {
     urls.push(
-      `https://ichef.bbci.co.uk/news/${originalImageWidth}/${originCode}/${locator} ${originalImageWidth}w`,
+      `${ichefUrl}/${originalImageWidth}/${originCode}/${locator} ${originalImageWidth}w`,
     );
   }
 
