@@ -9,16 +9,14 @@ const filterUnknownCpsTypes = data => {
     return data;
   }
 
-  const newGroups =
-    groups &&
-    groups.map(g => {
-      const ng = g;
-      const newItems =
-        g.items &&
-        g.items.filter(i => i.cpsType && filterTargets.includes(i.cpsType));
-      ng.items = newItems;
-      return ng;
-    });
+  const newGroups = groups.map(g => {
+    const ng = g;
+    const newItems =
+      g.items &&
+      g.items.filter(i => i.cpsType && filterTargets.includes(i.cpsType));
+    ng.items = newItems;
+    return ng;
+  });
 
   const newData = data;
   newData.content.groups = newGroups;
