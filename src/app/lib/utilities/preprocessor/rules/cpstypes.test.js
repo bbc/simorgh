@@ -186,6 +186,28 @@ describe('cpsTypes rules', () => {
     expect(applyFilterCpsTypes(data)).toEqual(expected);
   });
 
+  it('should no-op when no groups', () => {
+    const data = {
+      content: {},
+    };
+
+    expect(applyFilterCpsTypes(data)).toEqual(data);
+  });
+
+  it('should no-op when no items', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            items: [],
+          },
+        ],
+      },
+    };
+
+    expect(applyFilterCpsTypes(data)).toEqual(data);
+  });
+
   it('should handle "real" data', () => {
     expect(applyFilterCpsTypes(igboFixtureData)).toMatchSnapshot();
   });
