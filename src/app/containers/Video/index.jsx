@@ -11,14 +11,26 @@ import {
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 import { filterForBlockType } from '../../helpers/blockHandlers';
+import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
-  const captionBlock = filterForBlockType(blocks, 'caption');
+  const { platform, statsDestination, statsPageIdentifier } = React.useContext(
+    RequestContext,
+  );
+
+  if (!blocks) {
+    return null;
+  }
+
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-  const metadata = videoMetadata(aresMediaBlock);
+
   if (!aresMediaBlock) {
     return null;
   }
+
+  const metadata = videoMetadata(aresMediaBlock);
+
+  const captionBlock = filterForBlockType(blocks, 'caption');
 
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind = deepGet(['subType'], nestedModel);
@@ -57,6 +69,11 @@ const VideoContainer = ({ blocks }) => {
           title={title}
           items={items}
           holdingImageUrl={holdingImageUrl}
+          statsAppName="news"
+          statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
+          statsCountername={statsPageIdentifier}
+          statsDestination={statsDestination}
+          uiLocale="en-GB"
         />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
