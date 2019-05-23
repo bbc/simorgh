@@ -10,6 +10,9 @@ const completeItem = {
   headlines: {
     headline: 'A headline',
   },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
   summary: 'Summary text',
   timestamp: 1556795033,
   indexImage: {

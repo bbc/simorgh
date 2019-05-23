@@ -14,16 +14,15 @@ import Timestamp from '../Timestamp';
 const StoryPromo = ({ item }) => {
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
-
-  if (!headline || !url) {
-    return null;
-  }
-
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
   const imageValues = deepGet(['indexImage'], item);
 
   const Image = imageValues && <StoryPromoFigure {...imageValues} />;
+
+  if (!headline || !url) {
+    return null;
+  }
 
   const Info = (
     <Fragment>
