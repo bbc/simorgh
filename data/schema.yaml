@@ -406,6 +406,11 @@ components:
               type: string
             versions:
               type: array
+              required:
+                - versionId
+                - types
+                - duration
+                - availableTerritories
               items:
                 type: object
                 properties:
