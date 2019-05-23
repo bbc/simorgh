@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import StoryPromoComponent, {
   Headline,
   Summary,
+  Link,
 } from '@bbc/psammead-story-promo';
 import { storyItem } from '../../models/propTypes/storyItem';
 import deepGet from '../../helpers/json/deepGet';
@@ -12,6 +13,7 @@ import Timestamp from '../Timestamp';
 
 const StoryPromo = ({ item }) => {
   const headline = deepGet(['headlines', 'headline'], item);
+  const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
   const imageValues = deepGet(['indexImage'], item);
@@ -20,7 +22,11 @@ const StoryPromo = ({ item }) => {
 
   const Info = (
     <Fragment>
-      {headline && <Headline script={latin}>{headline}</Headline>}
+      {headline && (
+        <Headline script={latin}>
+          <Link href={url}>{headline}</Link>
+        </Headline>
+      )}
       {summary && <Summary script={latin}>{summary}</Summary>}
       {timestamp && (
         <Timestamp

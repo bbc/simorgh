@@ -88,7 +88,7 @@
     "@bbc/psammead-inline-link": "^0.3.4",
     "@bbc/psammead-paragraph": "^1.0.2",
     "@bbc/psammead-sitewide-links": "^0.3.3",
-    "@bbc/psammead-story-promo": "^0.1.2",
+    "@bbc/psammead-story-promo": "^0.2.0-alpha.3",
     "@bbc/psammead-styles": "^0.3.2",
     "@bbc/psammead-timestamp": "^0.1.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.10",
