@@ -9,13 +9,16 @@ const filterUnknownCpsTypes = data => {
     return data;
   }
 
-  const newGroups = groups.map(g => {
-    const ng = g;
+  const newGroups = groups.map(group => {
+    // avoid eslint complaints about 'no-param-reassign'
+    const newGroup = group;
     const newItems =
-      g.items &&
-      g.items.filter(i => i.cpsType && whitelist.includes(i.cpsType));
-    ng.items = newItems;
-    return ng;
+      group.items &&
+      group.items.filter(
+        item => item.cpsType && whitelist.includes(item.cpsType),
+      );
+    newGroup.items = newItems;
+    return newGroup;
   });
 
   const newData = data;
