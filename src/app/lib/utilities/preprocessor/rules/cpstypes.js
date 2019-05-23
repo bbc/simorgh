@@ -1,6 +1,6 @@
 import deepGet from '../../../../helpers/json/deepGet';
 
-const filterTargets = ['STY', 'MAP'];
+const whitelist = ['STY', 'MAP'];
 
 const filterUnknownCpsTypes = data => {
   const groups = deepGet(['content', 'groups'], data);
@@ -13,7 +13,7 @@ const filterUnknownCpsTypes = data => {
     const ng = g;
     const newItems =
       g.items &&
-      g.items.filter(i => i.cpsType && filterTargets.includes(i.cpsType));
+      g.items.filter(i => i.cpsType && whitelist.includes(i.cpsType));
     ng.items = newItems;
     return ng;
   });
