@@ -429,6 +429,16 @@ components:
                     example: 'p01jvmg7'
                   warnings:
                     type: object
+                    properties:
+                      long:
+                        type: string
+                        example: 'Contains some strong language.'
+                      medium:
+                        type: string
+                        example: 'Contains some strong language.'
+                      short:
+                        type: string
+                        example: 'Contains some strong language.'
 
     caption:
       type: object
