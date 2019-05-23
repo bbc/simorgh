@@ -102,12 +102,10 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 ### Nested grid usage
 
-As of [#1680](https://github.com/bbc/simorgh/pull/1680) `GridItem`s now also have their own internal grid which maps to the external grid they occupy.
+As of [#1680](https://github.com/bbc/simorgh/pull/1680) there are a new set of containers called `NestedGridItem`s. They occupy the same part of the grid as the corresponding `GridItemConstrained` but have an internal grid which maps to it.
 
 <img width="1280" alt="A screenshot of nested grid items" src="https://user-images.githubusercontent.com/19362408/57520118-cdc09000-7314-11e9-8657-d5d798c0b018.png"> 
-In this screenshot the external grid is a very pale blue and the internal grid of the `GridItemLarge` is red.
-
-This grid allows us to specify how much of the main content an item should take up without having to make a custom `GridItem` for each one.
+In this screenshot the external grid is a very pale blue and the internal grid of the `NestedGridItemLarge` is red.
 
 To take advantage of this nested grid you can use the `NestedGridItem` that corresponds to the `GridItem` size you are using as a container. For example `NestedGridItemSmall` with `GridItemSmall` or `NestedGridItemLarge` with `GridItemLarge`.
 
