@@ -12,12 +12,13 @@ const filterUnknownCpsTypes = data => {
   const newGroups = groups.map(group => {
     // avoid eslint complaints about 'no-param-reassign'
     const newGroup = group;
-    const newItems =
-      group.items &&
-      group.items.filter(
+
+    if (Array.isArray(group.items)) {
+      newGroup.items = group.items.filter(
         item => item.cpsType && whitelist.includes(item.cpsType),
       );
-    newGroup.items = newItems;
+    }
+
     return newGroup;
   });
 

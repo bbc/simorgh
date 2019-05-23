@@ -208,6 +208,20 @@ describe('cpsTypes rules', () => {
     expect(applyFilterCpsTypes(data)).toEqual(data);
   });
 
+  it('should no-op when items is not an array', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            items: 42,
+          },
+        ],
+      },
+    };
+
+    expect(applyFilterCpsTypes(data)).toEqual(data);
+  });
+
   it('should handle "real" data', () => {
     expect(applyFilterCpsTypes(igboFixtureData)).toMatchSnapshot();
   });
