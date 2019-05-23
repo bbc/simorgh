@@ -1,9 +1,11 @@
 import React from 'react';
+import { render } from 'enzyme';
 import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
 import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (
   <ServiceContext.Provider value={{ script: latin }}>
@@ -11,30 +13,7 @@ const HeadingsContainerWithContext = data => (
   </ServiceContext.Provider>
 );
 
-const blocksSingleFragment = (text, attributes = []) => [
-  {
-    type: 'text',
-    model: {
-      blocks: [
-        {
-          type: 'paragraph',
-          model: {
-            text,
-            blocks: [
-              {
-                type: 'fragment',
-                model: {
-                  text,
-                  attributes,
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-];
+const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
@@ -107,6 +86,11 @@ describe('Headings', () => {
         'should render h1 containing correct text',
         HeadingsContainerWithContext(data),
       );
+
+      it('should not have an id', () => {
+        const headlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(headlineHeading)).toBe(undefined);
+      });
     });
 
     describe('subheadline', () => {
@@ -119,6 +103,11 @@ describe('Headings', () => {
         'should render h2 containing correct text',
         <HeadingsContainer {...data} />,
       );
+
+      it('should have an id of sanitised text', () => {
+        const subheadlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
+      });
     });
   });
 
