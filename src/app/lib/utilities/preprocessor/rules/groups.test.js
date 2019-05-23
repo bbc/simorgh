@@ -1,4 +1,4 @@
-import { filterEmptyItems } from './groups';
+import { filterEmptyGroupItems } from './groups';
 
 describe('Group rules', () => {
   it('should filter out empty items', () => {
@@ -27,6 +27,6 @@ describe('Group rules', () => {
       },
     };
 
-    expect(filterEmptyItems(data)).toEqual(expected);
+    expect(filterEmptyGroupItems(data)).toEqual(expected);
   });
 });
