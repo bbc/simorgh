@@ -38,7 +38,14 @@ describe('StoryPromo Figure Container', () => {
 
     it('should render img tag with src, alt & width attribute when platform is canonical', () => {
       const { container } = render(
-        <RequestContextProvider platform="canonical">
+        <RequestContextProvider
+          platform="canonical"
+          isUK
+          origin="https://www.bbc.co.uk"
+          id="c0000000000o"
+          statsDestination="NEWS_PS_TEST"
+          statsPageIdentifier="news.articles.c0000000000o"
+        >
           <StoryPromoFigure {...imageProps} />
         </RequestContextProvider>,
       );
