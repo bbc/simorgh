@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-testing-library';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import deepClone from '../../helpers/json/deepClone';
 import StoryPromo from '.';
 
@@ -27,30 +28,34 @@ const completeItem = {
 describe('StoryPromo Container', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContextProvider
-      platform="canonical"
-      isUK
-      origin="https://www.bbc.co.uk"
-      id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
-    >
-      <StoryPromo item={completeItem} />
-    </RequestContextProvider>,
+    <ServiceContextProvider service="igbo">
+      <RequestContextProvider
+        platform="canonical"
+        isUK
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <StoryPromo item={completeItem} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContextProvider
-      platform="amp"
-      isUK
-      origin="https://www.bbc.co.uk"
-      id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
-    >
-      <StoryPromo item={completeItem} />
-    </RequestContextProvider>,
+    <ServiceContextProvider service="igbo">
+      <RequestContextProvider
+        platform="amp"
+        isUK
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <StoryPromo item={completeItem} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
   );
 
   describe('assertion tests', () => {

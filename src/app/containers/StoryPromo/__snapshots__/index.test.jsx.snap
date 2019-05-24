@@ -19,6 +19,8 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 }
 
 .c4 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -27,6 +29,8 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 }
 
 .c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -127,6 +131,34 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (max-width:37.4375rem) {
   .c6 {
     display: none;
@@ -212,6 +244,8 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 }
 
 .c5 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -220,6 +254,8 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 }
 
 .c7 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
@@ -322,6 +358,34 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
     max-width: initial;
     padding: initial;
     grid-column: 3 / span 4;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
