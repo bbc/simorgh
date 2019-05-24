@@ -18,6 +18,9 @@
     "chrome-devtools-frontend@*": {
       "reason": "Custom license, manually verified; https://github.com/ChromeDevTools/devtools-frontend/blob/master/LICENSE"
     },
+    "create-react-context@*": {
+      "reason": "Licensed under MIT; https://github.com/jamiebuilds/create-react-context/blob/master/LICENSE"
+    },
     "css-select@*": {
       "reason": "Licensed under BSD-2 clause 'simplified'; https://github.com/fb55/css-select/blob/master/LICENSE"
     },
