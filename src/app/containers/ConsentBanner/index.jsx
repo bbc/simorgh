@@ -1,12 +1,11 @@
-import React from 'react';
-import { RequestContextConsumer } from '../../contexts/RequestContext';
+import React, { useContext } from 'react';
+import { RequestContext } from '../../contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const ConsentBanner = () => (
-  <RequestContextConsumer>
-    {({ platform }) => (platform === 'amp' ? <Amp /> : <Canonical />)}
-  </RequestContextConsumer>
-);
+const ConsentBanner = () => {
+  const { platform } = useContext(RequestContext);
+  return platform === 'amp' ? <Amp /> : <Canonical />;
+};
 
 export default ConsentBanner;
