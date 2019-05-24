@@ -60,10 +60,21 @@ const VideoContainer = ({ blocks }) => {
               {JSON.stringify(metadata)}
             </script>
           }
+          <script
+            type="text/javascript"
+            src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+          />
+          <script type="text/javascript">
+            {`bbcRequireMap = {
+                    "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
+                }
+                require({ paths: bbcRequireMap, waitSeconds: 30 });`}
+          </script>
         </Helmet>
       ) : null}
       <Figure>
         <Video
+          id="mediaPlayer"
           pid={pid}
           kind={kind}
           title={title}
@@ -76,6 +87,25 @@ const VideoContainer = ({ blocks }) => {
           uiLocale="en-GB"
         />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
+        <script type="text/javascript">
+          {`require(['bump-4'],function (bump) {
+                console.log("HELLO WORLD 🌎");
+                var settings = {
+                    product: 'news',
+                    responsive: true,
+                    counterName: 'smp.demopage.player.page',
+                    playlistObject: {
+                              "title": ${title},
+                              "holdingImageURL": ${holdingImageUrl},
+                              "items": ${items}
+                    },
+                    statsObject: { clipPID: ${pid} }
+                }
+                var mediaPlayer = bump.player(document.getElementById('mediaPlayer'),settings);
+                mediaPlayer.load();
+            });
+            `}
+        </script>
       </Figure>
     </>
   );
