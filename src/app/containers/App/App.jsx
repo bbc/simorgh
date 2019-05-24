@@ -24,7 +24,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       // Only update on subsequent page renders
       const {
         service: nextService,
-        id: newId,
+        id: nextId,
         isAmp: newIsAmp,
         route,
         match,
