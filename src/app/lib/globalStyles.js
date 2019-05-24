@@ -1,14 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
-import {
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SANS_ITALIC,
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-} from '@bbc/psammead-styles/fonts';
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -21,14 +13,12 @@ const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
-  ${F_REITH_SERIF_MEDIUM}
-  ${F_REITH_SERIF_MEDIUM_ITALIC}
-  ${F_REITH_SANS_REGULAR}
-  ${F_REITH_SANS_ITALIC}
-  ${F_REITH_SANS_BOLD}
-  ${F_REITH_SANS_BOLD_ITALIC}
-`;
+  ${({ fonts }) =>
+    fonts.reduce((acc, font) => {
+      const fontStyles = acc + font;
+      return fontStyles;
+    }, '')}
+  `;
 
 export default GlobalStyle;
 

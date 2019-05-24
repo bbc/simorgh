@@ -7,7 +7,8 @@ const yoruba = {
   service: 'yoruba',
   serviceName: 'Yoruba',
   brandSVG,
-  latin,
+  script: latin,
+  fonts: [],
 };
 
 export default yoruba;

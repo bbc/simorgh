@@ -10,14 +10,16 @@ import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
+import services from '../lib/config/services';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
   const { isUK, origin } = getOriginContext(bbcOrigin);
+  const { fonts } = services[service];
 
   return (
     <Fragment>
-      <GlobalStyle />
+      <GlobalStyle fonts={fonts} />
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           id={id}

@@ -8,6 +8,7 @@ const pidgin = {
   serviceName: 'Pidgin',
   brandSVG,
   script: latin,
+  fonts: [],
 };
 
 export default pidgin;
