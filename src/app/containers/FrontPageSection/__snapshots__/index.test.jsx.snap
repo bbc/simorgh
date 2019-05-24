@@ -242,6 +242,9 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
               "path": "/cpsprodpb/0A06/production/image.jpg",
               "width": 2048,
             },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
             "summary": "Summary text 1",
             "timestamp": 1557738768,
           }
@@ -476,6 +479,9 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
               "height": 1152,
               "path": "/cpsprodpb/0A06/production/image.jpg",
               "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
             },
             "summary": "Summary text 2",
             "timestamp": 1557738768,
@@ -943,6 +949,9 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
               "path": "/cpsprodpb/0A06/production/image.jpg",
               "width": 2048,
             },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
             "summary": "Summary text 1",
             "timestamp": 1557738768,
           }
@@ -1177,6 +1186,9 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
               "height": 1152,
               "path": "/cpsprodpb/0A06/production/image.jpg",
               "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
             },
             "summary": "Summary text 2",
             "timestamp": 1557738768,
