@@ -1,17 +1,18 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { shape } from 'prop-types';
-import { latin } from '@bbc/gel-foundations/scripts';
 import StoryPromoComponent, {
   Headline,
   Summary,
   Link,
 } from '@bbc/psammead-story-promo';
 import { storyItem } from '../../models/propTypes/storyItem';
-import deepGet from '../../helpers/json/deepGet';
 import StoryPromoFigure from './Figure';
 import Timestamp from '../Timestamp';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import deepGet from '../../helpers/json/deepGet';
 
 const StoryPromo = ({ item }) => {
+  const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -27,11 +28,11 @@ const StoryPromo = ({ item }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={latin}>
+        <Headline script={script}>
           <Link href={url}>{headline}</Link>
         </Headline>
       )}
-      {summary && <Summary script={latin}>{summary}</Summary>}
+      {summary && <Summary script={script}>{summary}</Summary>}
       {timestamp && (
         <Timestamp
           timestamp={timestamp * 1000}
