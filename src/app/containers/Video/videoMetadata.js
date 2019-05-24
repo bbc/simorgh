@@ -26,6 +26,7 @@ const videoMetadata = blocks => {
       description: deepGet(['model', 'synopses', 'short'], block),
       duration: deepGet(['model', 'versions', [0], 'duration'], block),
       thumbnailUrl: `https://${deepGet(['model', 'imageUrl'], block)}`,
+      uploadDate: deepGet(['model', 'versions', [0], 'availableUntil'], block),
     }),
   );
 
