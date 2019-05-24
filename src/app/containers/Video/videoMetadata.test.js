@@ -19,6 +19,7 @@ describe('videoMetadata', () => {
             duration: 191,
             thumbnailUrl:
               'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            uploadDate: null,
           },
         ],
       },
@@ -49,6 +50,7 @@ describe('videoMetadata', () => {
             duration: 191,
             thumbnailUrl:
               'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            uploadDate: null,
           },
           {
             '@type': 'VideoObject',
@@ -58,6 +60,7 @@ describe('videoMetadata', () => {
             duration: 191,
             thumbnailUrl:
               'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            uploadDate: null,
           },
         ],
       },
