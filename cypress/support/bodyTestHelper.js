@@ -18,9 +18,8 @@ export const shouldMatchReturnedData = (data, element) => {
   getElement(element).should('contain', data);
 };
 
-export const getBlockData = (blockType, win) => {
+export const getBlockByType = (blocks, blockType) => {
   let blockData;
-  const { blocks } = win.SIMORGH_DATA.pageData.content.model;
 
   blocks.forEach(block => {
     if (!blockData && block.type === blockType) {
@@ -28,6 +27,12 @@ export const getBlockData = (blockType, win) => {
     }
   });
   return blockData;
+};
+
+export const getBlockData = (blockType, win) => {
+  const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+  return getBlockByType(blocks, blockType);
 };
 
 export const firstHeadlineDataWindow = () => {
@@ -61,7 +66,11 @@ export const firstParagraphDataWindow = () => {
 export const copyrightDataWindow = () => {
   cy.window().then(win => {
     const copyrightData = getBlockData('image', win);
-    const { copyrightHolder } = copyrightData.model.blocks[0].model;
+    const rawImageblock = getBlockByType(
+      copyrightData.model.blocks,
+      'rawImage',
+    );
+    const { copyrightHolder } = rawImageblock.model;
     const copyrightLabel = getElement('figure p').eq(0);
 
     shouldContainText(copyrightLabel, copyrightHolder);
