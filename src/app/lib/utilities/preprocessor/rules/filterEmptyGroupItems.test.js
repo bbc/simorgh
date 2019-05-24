@@ -31,4 +31,11 @@ describe('Group rules', () => {
 
     expect(filterEmptyGroupItems(data)).toEqual(expected);
   });
+
+  it('should handle missing groups', () => {
+    const data = {
+      content: {},
+    };
+    expect(filterEmptyGroupItems(data)).toEqual(data);
+  });
 });
