@@ -32,9 +32,9 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
 
       setState({
         data: null,
-        service: newService,
-        id: newId,
-        isAmp: newIsAmp,
+        service: nextService,
+        id: nextId,
+        isAmp: nextIsAmp,
         loading: true,
         error: null,
       });
