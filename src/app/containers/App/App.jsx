@@ -25,7 +25,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       const {
         service: nextService,
         id: nextId,
-        isAmp: newIsAmp,
+        isAmp: nextIsAmp,
         route,
         match,
       } = getRouteProps(routes, location.pathname);
