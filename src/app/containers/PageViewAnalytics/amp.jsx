@@ -3,16 +3,18 @@ import { shape } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import { atiBaseUrl, atiPageViewParams } from './atiUrl';
+import { atiPageViewParams } from './atiUrl';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import {
-  getPageIdentifier,
-  getOptimoUrn,
+// import atiQueryParamsAmpArticle from './article/amp';
+
+const {
   getLanguage,
+  getOptimoUrn,
+  getPageIdentifier,
   getPromoHeadline,
   getPublishedDatetime,
   getThingAttributes,
-} from '../../lib/analyticsUtils/article';
+} = require('../../lib/analyticsUtils/article');
 
 const JsonInlinedScript = data => (
   <script
@@ -23,49 +25,32 @@ const JsonInlinedScript = data => (
 );
 
 const AmpPageViewAnalytics = ({ articleData }) => {
-  const { platform, isUK, env } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
-
-  const atiPageViewUrlAmp = atiPageViewParams({
-    browserViewport: `\${availableScreenWidth}x\${availableScreenHeight}`,
-    contentType: 'article',
-    currentTime: `\${timestamp}`,
-    deviceLanguage: `\${browserLanguage}`,
-    href: `\${sourceUrl}`,
-    language: getLanguage(articleData),
-    ldpThingIds: getThingAttributes('thingId', articleData),
-    ldpThingLabels: getThingAttributes('thingLabel', articleData),
-    optimoUrn: getOptimoUrn(articleData),
-    pageIdentifier: getPageIdentifier(service, articleData),
-    pageTitle: getPromoHeadline(articleData),
-    referrer: `\${documentReferrer}`,
-    screenResolution: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-    timePublished: getPublishedDatetime('firstPublished', articleData),
-    timeUpdated: getPublishedDatetime('lastPublished', articleData),
-    service,
-    platform,
-    isUK,
-    env,
-  });
-
-  // cypress test - ati url is sending article id
-  // x1=[cn7769kpk9mo]
+  const { platform, isUK } = useContext(RequestContext);
 
   return (
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          baseUrl: atiBaseUrl,
-          pageviewParams: atiPageViewUrlAmp,
-          env,
-          isUK,
-          articleData,
+          pageviewParams: atiPageViewParams({
+            contentType: 'article',
+            language: getLanguage(articleData),
+            ldpThingIds: getThingAttributes('thingId', articleData),
+            ldpThingLabels: getThingAttributes('thingLabel', articleData),
+            optimoUrn: getOptimoUrn(articleData),
+            pageIdentifier: getPageIdentifier(service, articleData),
+            pageTitle: getPromoHeadline(articleData),
+            timePublished: getPublishedDatetime('firstPublished', articleData),
+            timeUpdated: getPublishedDatetime('lastPublished', articleData),
+            isUK,
+            platform,
+            service,
+          }),
         }),
       )}
     </amp-analytics>
   );
 };
-
 AmpPageViewAnalytics.propTypes = {
   articleData: shape(articlePropTypes).isRequired,
 };

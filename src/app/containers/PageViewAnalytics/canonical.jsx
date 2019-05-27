@@ -4,17 +4,9 @@ import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { atiBaseUrl, atiPageViewParams } from './atiUrl';
-import deepGet from '../../helpers/json/deepGet';
 import onClient from '../../helpers/onClient';
 import sendBeacon from '../../lib/analyticsUtils/sendBeacon';
-import {
-  getBrowserViewPort,
-  getCurrentTime,
-  getDeviceLanguage,
-  getHref,
-  getReferrer,
-  getScreenInfo,
-} from '../../lib/analyticsUtils';
+import { getHref } from '../../lib/analyticsUtils';
 
 const {
   getLanguage,
@@ -26,40 +18,37 @@ const {
 } = require('../../lib/analyticsUtils/article');
 
 const CanonicalPageViewAnalytics = ({ articleData }) => {
-  const { platform, isUK, env } = useContext(RequestContext);
+  const { platform, isUK } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
   if (onClient()) {
-    const optimoId = deepGet(['promo', 'id'], articleData);
+    const href = getHref('canonical');
 
-    // Only send page beacon when optimoId changes
+    // Only send page beacon when page href changes
+    // This is since when moving to front page
+    // will need to call need to call atiPageViewParams with front page values
+    // TODO: need to move use of hook outside of conditional statement.
+    // eslint-disable-next-line  react-hooks/rules-of-hooks
     useEffect(() => {
       const pageViewBeaconUrl =
         atiBaseUrl +
         atiPageViewParams({
-          browserViewport: getBrowserViewPort(),
           contentType: 'article',
-          currentTime: getCurrentTime(),
-          deviceLanguage: getDeviceLanguage(),
-          href: getHref(),
           language: getLanguage(articleData),
           ldpThingIds: getThingAttributes('thingId', articleData),
           ldpThingLabels: getThingAttributes('thingLabel', articleData),
           optimoUrn: getOptimoUrn(articleData),
           pageIdentifier: getPageIdentifier(service, articleData),
           pageTitle: getPromoHeadline(articleData),
-          referrer: getReferrer(),
-          screenResolution: getScreenInfo(),
           timePublished: getPublishedDatetime('firstPublished', articleData),
           timeUpdated: getPublishedDatetime('lastPublished', articleData),
-          env,
           isUK,
           platform,
           service,
         });
 
       sendBeacon(pageViewBeaconUrl);
-    }, [articleData, env, isUK, optimoId, platform, service]);
+    }, [articleData, href, isUK, platform, service]);
   }
 
   return null;

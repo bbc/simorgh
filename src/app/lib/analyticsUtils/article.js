@@ -10,7 +10,7 @@ export const getOptimoId = articleData => {
 
 export const getPageIdentifier = (service, articleData) => {
   const optimoId = getOptimoId(articleData);
-  return `health::${service || 'news'}.articles.${optimoId}.page`;
+  return `${service}.articles.${optimoId}.page`;
 };
 
 export const getLanguage = articleData =>

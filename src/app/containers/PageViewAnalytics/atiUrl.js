@@ -1,7 +1,13 @@
 import {
   getDestination,
   getAppType,
-  getLocServeCookie,
+  getScreenInfo,
+  getBrowserViewPort,
+  getCurrentTime,
+  getDeviceLanguage,
+  getHref,
+  getReferrer,
+  isLocServeCookieSet,
 } from '../../lib/analyticsUtils';
 
 export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
@@ -12,12 +18,7 @@ export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
  */
 
 export const atiPageViewParams = ({
-  browserViewport,
   contentType,
-  currentTime,
-  deviceLanguage,
-  env,
-  href,
   isUK,
   language,
   ldpThingIds,
@@ -26,8 +27,6 @@ export const atiPageViewParams = ({
   pageIdentifier,
   pageTitle,
   platform,
-  referrer,
-  screenResolution,
   service,
   timePublished,
   timeUpdated,
@@ -36,7 +35,7 @@ export const atiPageViewParams = ({
     {
       key: 's',
       description: 'destination',
-      value: getDestination(isUK, env),
+      value: getDestination(isUK),
       wrap: false,
     },
     { key: 's2', description: 'producer', value: '64', wrap: false },
@@ -49,33 +48,25 @@ export const atiPageViewParams = ({
     {
       key: 'r',
       description: 'screen resolution & colour depth',
-      value: screenResolution,
-      // platform === 'amp'
-      // ? `boo` // `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`
-      // : screenResolution,
+      value: getScreenInfo(platform),
       wrap: false,
     },
     {
       key: 're',
       description: 'browser/viewport resolution',
-      value: browserViewport,
-      // platform === 'amp'
-      //   ? `\${availableScreenWidth}x\${availableScreenHeight}`
-      //   : browserViewport,
+      value: getBrowserViewPort(platform),
       wrap: false,
     },
     {
       key: 'hl',
       description: 'time',
-      value: currentTime,
-      // platform === 'amp' ? `\${timestamp}` : currentTime,
+      value: getCurrentTime(platform),
       wrap: false,
     },
     {
       key: 'lng',
       description: 'device language',
-      value: deviceLanguage,
-      // platform === 'amp' ? `\${browserLanguage}` : deviceLanguage,
+      value: getDeviceLanguage(platform),
       wrap: false,
     },
     { key: 'x1', description: 'content id', value: optimoUrn, wrap: true },
@@ -91,13 +82,13 @@ export const atiPageViewParams = ({
     {
       key: 'x5',
       description: 'url',
-      value: href, // platform === 'amp' ? `\${sourceUrl}` : href,
+      value: getHref(platform),
       wrap: true,
     },
     {
       key: 'x6',
       description: 'referer url',
-      value: referrer, // platform === 'amp' ? `\${documentReferrer}` : referrer,
+      value: getReferrer(platform),
       wrap: true,
     },
     { key: 'x9', description: 'page title', value: pageTitle, wrap: true },
@@ -127,8 +118,8 @@ export const atiPageViewParams = ({
     },
     {
       key: 'x18',
-      description: 'locserve cookie value',
-      value: getLocServeCookie(),
+      description: 'boolean - if locserve cookie value is defined',
+      value: isLocServeCookieSet(),
       wrap: true,
     },
   ];

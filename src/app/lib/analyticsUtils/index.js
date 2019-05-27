@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
 import onClient from '../../helpers/onClient';
 
-export const getDestination = (isUK, env) => {
+export const getDestination = isUK => {
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_GNL: 598287,
@@ -9,18 +9,22 @@ export const getDestination = (isUK, env) => {
     NEWS_GNL_TEST: 598288,
   };
 
-  console.log('isUK', isUK);
-  console.log('env', env);
   const destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
 
-  const key = env === 'live' || !env ? destination : `${destination}_TEST`;
+  const key =
+    process.env.APP_ENV === 'live' ? destination : `${destination}_TEST`;
+
   return destinationIDs[key] || destinationIDs.NEWS_PS;
 };
 
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
 
-export const getLocServeCookie = () => {
+export const isLocServeCookieSet = platform => {
+  if (platform === 'amp') {
+    return false;
+  }
+
   if (onClient()) {
     return !!Cookie.get('loc_serve');
   }
@@ -28,7 +32,11 @@ export const getLocServeCookie = () => {
   return null;
 };
 
-export const getScreenInfo = () => {
+export const getScreenInfo = platform => {
+  if (platform === 'amp') {
+    return `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`;
+  }
+
   if (onClient()) {
     const { width, height, colorDepth, pixelDepth } = window.screen;
     const orderArray = [
@@ -44,7 +52,20 @@ export const getScreenInfo = () => {
   return null;
 };
 
-export const getBrowserViewPort = () => {
+// language: getLanguage(articleData),
+// ldpThingIds: getThingAttributes('thingId', articleData),
+// ldpThingLabels: getThingAttributes('thingLabel', articleData),
+// optimoUrn: getOptimoUrn(articleData),
+// pageIdentifier: getPageIdentifier(service, articleData),
+// pageTitle: getPromoHeadline(articleData),
+// timePublished: getPublishedDatetime('firstPublished', articleData),
+// timeUpdated: getPublishedDatetime('lastPublished', articleData),
+
+export const getBrowserViewPort = platform => {
+  if (platform === 'amp') {
+    return `\${availableScreenWidth}x\${availableScreenHeight}`;
+  }
+
   if (onClient()) {
     const { innerWidth, innerHeight } = window;
 
@@ -54,7 +75,11 @@ export const getBrowserViewPort = () => {
   return null;
 };
 
-export const getCurrentTime = () => {
+export const getCurrentTime = platform => {
+  if (platform === 'amp') {
+    return `\${timestamp}`;
+  }
+
   if (onClient()) {
     const now = new Date();
     const hours = now.getHours();
@@ -67,7 +92,12 @@ export const getCurrentTime = () => {
   return null;
 };
 
-export const getDeviceLanguage = () => {
+export const getDeviceLanguage = platform => {
+  if (platform === 'amp') {
+    // Using browserlanguage since AMP doesn't have access to device language
+    return `\${browserLanguage}`;
+  }
+
   if (onClient() && navigator.language) {
     return navigator.language;
   }
@@ -75,7 +105,11 @@ export const getDeviceLanguage = () => {
   return null;
 };
 
-export const getHref = () => {
+export const getHref = platform => {
+  if (platform === 'amp') {
+    return `\${sourceUrl}`;
+  }
+
   if (onClient() && window.location.href) {
     return window.location.href;
   }
@@ -83,7 +117,11 @@ export const getHref = () => {
   return null;
 };
 
-export const getReferrer = () => {
+export const getReferrer = platform => {
+  if (platform === 'amp') {
+    return `\${documentReferrer}`;
+  }
+
   if (onClient() && document.referrer) {
     return document.referrer;
   }
