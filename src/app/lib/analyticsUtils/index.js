@@ -52,15 +52,6 @@ export const getScreenInfo = platform => {
   return null;
 };
 
-// language: getLanguage(articleData),
-// ldpThingIds: getThingAttributes('thingId', articleData),
-// ldpThingLabels: getThingAttributes('thingLabel', articleData),
-// optimoUrn: getOptimoUrn(articleData),
-// pageIdentifier: getPageIdentifier(service, articleData),
-// pageTitle: getPromoHeadline(articleData),
-// timePublished: getPublishedDatetime('firstPublished', articleData),
-// timeUpdated: getPublishedDatetime('lastPublished', articleData),
-
 export const getBrowserViewPort = platform => {
   if (platform === 'amp') {
     return `\${availableScreenWidth}x\${availableScreenHeight}`;

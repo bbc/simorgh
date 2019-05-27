@@ -27,19 +27,19 @@ describe('getPageIdentifier', () => {
   it('should construct page identifier', () => {
     const optimoUrn = getPageIdentifier('service', goodData);
 
-    expect(optimoUrn).toEqual('health::service.articles.desiredValue.page');
+    expect(optimoUrn).toEqual('service.articles.desiredValue.page');
   });
 
   it('should use "unknown" if optimo id is unknown', () => {
     const optimoUrn = getPageIdentifier('service', badData);
 
-    expect(optimoUrn).toEqual('health::service.articles.unknown.page');
+    expect(optimoUrn).toEqual('service.articles.unknown.page');
   });
 
   it('should use null if service is null', () => {
     const optimoUrn = getPageIdentifier(null, goodData);
 
-    expect(optimoUrn).toEqual('health::news.articles.desiredValue.page');
+    expect(optimoUrn).toEqual('null.articles.desiredValue.page');
   });
 });
 

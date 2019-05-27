@@ -11,6 +11,7 @@ jest.mock('../../helpers/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {
+  getDestination,
   getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
@@ -37,6 +38,82 @@ const returnsNullWhenOffClient = func => {
     });
   });
 };
+
+const originalAppEnv = process.env.APP_ENV;
+
+describe('getDestination', () => {
+  beforeEach(() => {
+    delete process.env.APP_ENV;
+  });
+  afterEach(() => {
+    process.env.APP_ENV = originalAppEnv;
+  });
+
+  const getDestinationTestScenarios = [
+    {
+      isUK: true,
+      env: 'live',
+      expected: 598285,
+      summary: 'should return for live uk',
+    },
+    {
+      isUK: false,
+      env: 'live',
+      expected: 598287,
+      summary: 'should return for live international',
+    },
+    {
+      isUK: true,
+      env: 'test',
+      expected: 598286,
+      summary: 'should return for test uk',
+    },
+    {
+      isUK: false,
+      env: 'test',
+      expected: 598288,
+      summary: 'should return for test international',
+    },
+    {
+      isUK: true,
+      env: 'foobar',
+      expected: 598286,
+      summary: 'should return for test uk when env unknown',
+    },
+    {
+      isUK: true,
+      env: null,
+      expected: 598286,
+      summary: 'should return for test uk when env null',
+    },
+    {
+      isUK: true,
+      env: undefined,
+      expected: 598286,
+      summary: 'should return for test uk when env undefined',
+    },
+    {
+      isUK: null,
+      env: 'live',
+      expected: 598285,
+      summary: 'should return for live uk when isUK is null',
+    },
+    {
+      isUK: undefined,
+      env: 'live',
+      expected: 598285,
+      summary: 'should return for live uk when isUK is undefined',
+    },
+  ];
+
+  getDestinationTestScenarios.forEach(({ isUK, env, expected, summary }) => {
+    it(summary, () => {
+      process.env.APP_ENV = env;
+      const destination = getDestination(isUK);
+      expect(destination).toEqual(expected);
+    });
+  });
+});
 
 describe('getAppType', () => {
   const getAppTypeScenarios = [
@@ -189,7 +266,7 @@ describe('getDeviceLanguage', () => {
   });
 });
 
-describe('getLocServeCookie', () => {
+describe('isLocServeCookieSet', () => {
   beforeEach(() => {
     jest.mock('js-cookie', () => jest.fn());
     Cookie.get = jest.fn();
@@ -197,24 +274,24 @@ describe('getLocServeCookie', () => {
   });
 
   // eslint-disable-next-line global-require
-  returnsNullWhenOffClient(require('./index').getLocServeCookie);
+  returnsNullWhenOffClient(require('./index').isLocServeCookieSet);
 
   it('should return true if cookie is set', () => {
-    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+    const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = 'value';
 
-    const locServeCookie = getLocServeCookie();
+    const locServeCookie = isLocServeCookieSet();
 
     expect(locServeCookie).toEqual(true);
   });
 
   it('should return false if cookie is not set', () => {
-    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+    const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = null;
 
-    const locServeCookie = getLocServeCookie();
+    const locServeCookie = isLocServeCookieSet();
 
     expect(locServeCookie).toEqual(false);
   });

@@ -10,8 +10,26 @@ describe('ATI Base Url', () => {
 });
 
 describe('ATI PageViewParams', () => {
-  it('should construct query params', () => {
-    expect(atiPageViewParams({})).toBe('s=598285&s2=64&x2=[responsive]');
+  it('should generate default query params for amp page', () => {
+    expect(atiPageViewParams({ platform: 'amp' })).toBe(
+      's=598286&s2=64&r=${screenWidth}x${screenHeight}x${screenColorDepth}&re=${availableScreenWidth}x${availableScreenHeight}&hl=${timestamp}&lng=${browserLanguage}&x2=[amp]&x5=[${sourceUrl}]&x6=[${documentReferrer}]', // eslint-disable-line no-template-curly-in-string
+    );
+  });
+  it('should generate values for canonical', () => {
+    expect(atiPageViewParams({ platform: 'canonical' })).toBe(
+      's=598286&s2=64&r=0x0x24x24&re=1024x768&hl=20x39x8&lng=en-US&x2=[responsive]&x5=[http://localhost/]',
+    );
+  });
+
+  it('should add query params for amp article page type', () => {
+    expect(atiPageViewParams({ platform: 'amp' })).toBe(
+      's=598286&s2=64&r=${screenWidth}x${screenHeight}x${screenColorDepth}&re=${availableScreenWidth}x${availableScreenHeight}&hl=${timestamp}&lng=${browserLanguage}&x2=[amp]&x5=[${sourceUrl}]&x6=[${documentReferrer}]', // eslint-disable-line no-template-curly-in-string
+    );
+  });
+  it('should add query params for canonical article page type', () => {
+    expect(atiPageViewParams({ platform: 'canonical' })).toBe(
+      's=598286&s2=64&r=0x0x24x24&re=1024x768&hl=20x39x8&lng=en-US&x2=[responsive]&x5=[http://localhost/]',
+    );
   });
 });
 
@@ -19,8 +37,6 @@ const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };
-
-// const { atiPageViewParams } = require('./atiUrl'); // eslint-disable-line global-require
 
 const splitUrl = url =>
   url
