@@ -14,10 +14,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   ${({ fonts }) =>
-    fonts.reduce((acc, font) => {
-      const fontStyles = acc + font;
-      return fontStyles;
-    }, '')}
+    fonts.reduce((fontStyles, fontStyle) => fontStyles + fontStyle, '')}
   `;
 
 export default GlobalStyle;
