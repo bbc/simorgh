@@ -1,20 +1,25 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
-import { articleDataPropTypes } from '../../models/propTypes/article';
-import deepGet from '../../helpers/json/deepGet';
+import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import FrontPageSection from '../FrontPageSection';
+import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
+import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
+import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const content = deepGet(['content', 'groups'], frontPageData);
+  let pageData = filterEmptyGroupItems(frontPageData);
+  pageData = applySquashTopstories(pageData);
+
+  const groups = deepGet(['content', 'groups'], pageData);
 
   return (
     <Fragment>
       <main role="main">
         <GhostWrapper>
           <GridItemConstrainedLarge>
-            {content.map(group => (
-              <FrontPageSection key={group.type} group={group} />
+            {groups.map(group => (
+              <FrontPageSection key={group.title} group={group} />
             ))}
           </GridItemConstrainedLarge>
         </GhostWrapper>
@@ -24,7 +29,7 @@ const FrontPageMain = ({ frontPageData }) => {
 };
 
 FrontPageMain.propTypes = {
-  frontPageData: shape(articleDataPropTypes).isRequired,
+  frontPageData: shape(frontPageDataPropTypes).isRequired,
 };
 
 export default FrontPageMain;
