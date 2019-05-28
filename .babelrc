@@ -19,7 +19,8 @@
           ]
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
-        "useBuiltIns": "usage"
+        "useBuiltIns": "usage",
+        "corejs": "2"
       }
     ],
     "@babel/preset-react" // transform JSX to JS
