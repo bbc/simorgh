@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-testing-library';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import deepClone from '../../helpers/json/deepClone';
 import StoryPromo from '.';
 
@@ -9,6 +10,9 @@ let item;
 const completeItem = {
   headlines: {
     headline: 'A headline',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
   },
   summary: 'Summary text',
   timestamp: 1556795033,
@@ -24,30 +28,34 @@ const completeItem = {
 describe('StoryPromo Container', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContextProvider
-      platform="canonical"
-      isUK
-      origin="https://www.bbc.co.uk"
-      id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
-    >
-      <StoryPromo item={completeItem} />
-    </RequestContextProvider>,
+    <ServiceContextProvider service="igbo">
+      <RequestContextProvider
+        platform="canonical"
+        isUK
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <StoryPromo item={completeItem} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContextProvider
-      platform="amp"
-      isUK
-      origin="https://www.bbc.co.uk"
-      id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
-    >
-      <StoryPromo item={completeItem} />
-    </RequestContextProvider>,
+    <ServiceContextProvider service="igbo">
+      <RequestContextProvider
+        platform="amp"
+        isUK
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <StoryPromo item={completeItem} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
   );
 
   describe('assertion tests', () => {
@@ -55,10 +63,10 @@ describe('StoryPromo Container', () => {
       item = deepClone(completeItem);
     });
 
-    it('should render h3, time, p, img', () => {
+    it('should render h3, a, p, time', () => {
       const { container } = render(<StoryPromo item={item} />);
 
-      expect(container.getElementsByTagName('h3')[0].innerHTML).toEqual(
+      expect(container.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         item.headlines.headline,
       );
       expect(container.getElementsByTagName('p')[0].innerHTML).toEqual(
