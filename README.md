@@ -77,6 +77,13 @@ To run LIVE bundles on localhost:
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
+## Changing request location
+
+Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
+
+- UK version: [http://localhost.bbc.co.uk:7080](http://localhost.bbc.co.uk:7080)
+- International version: [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080)
+
 ## Production build on CI
 
 On deployment `npm run build:ci` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
@@ -120,7 +127,7 @@ We also have a [Cypress](https://www.cypress.io/) project which runs a different
 
 ### Lighthouse Best Practice tests
 
-We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.  
+We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.
 
 ### To-do
 
