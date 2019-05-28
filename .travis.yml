@@ -17,6 +17,11 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+    -stage: test
+      install: npm ci--only=prod
+      script:
+        - npm run build
+        - xvfb-run -a npm run test:lighthouse:ci
 notifications:
   email: false
   slack:
