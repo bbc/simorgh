@@ -10,6 +10,7 @@ import routes from '../app/routes';
 import {
   articleRegexPath,
   articleDataRegexPath,
+  frontpageRegexPath,
   frontpageDataRegexPath,
   manifestRegexPath,
   swRegexPath,
@@ -116,6 +117,23 @@ if (process.env.APP_ENV === 'local') {
  * Application env routes
  */
 
+const pageRequest = async ({ url, headers }, res) => {
+  try {
+    const data = await loadInitialData(url, routes);
+    const { status } = data;
+    const { service, isAmp } = getRouteProps(routes, url);
+    const bbcOrigin = headers['bbc-origin'];
+
+    res
+      .status(status)
+      .send(await renderDocument(url, data, routes, bbcOrigin, service, isAmp));
+  } catch ({ message, status }) {
+    // Return an internal server error for any uncaught errors
+    logger.error(`status: ${status || 500} - ${message}`);
+    res.status(500).send(message);
+  }
+};
+
 server
   .get(swRegexPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
@@ -136,35 +154,7 @@ server
       }
     });
   })
-  .get(
-    '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
-    ({ params }, res) => {
-      // This is a temporary route to unblock route setup in Mozart.
-      // Simply returns a 200 response which can we route to until
-      // it's set up properly in simorgh.
-      const { service } = params;
-      res
-        .status(200)
-        .send(`Welcome to the temporary ${service} homepage simorgh route`);
-    },
-  )
-  .get(articleRegexPath, async ({ url, headers }, res) => {
-    try {
-      const data = await loadInitialData(url, routes);
-      const { status } = data;
-      const { service, isAmp } = getRouteProps(routes, url);
-      const bbcOrigin = headers['bbc-origin'];
-
-      res
-        .status(status)
-        .send(
-          await renderDocument(url, data, routes, bbcOrigin, service, isAmp),
-        );
-    } catch ({ message, status }) {
-      // Return an internal server error for any uncaught errors
-      logger.error(`status: ${status || 500} - ${message}`);
-      res.status(500).send(message);
-    }
-  });
+  .get(articleRegexPath, pageRequest)
+  .get(frontpageRegexPath, pageRequest);
 
 export default server;
