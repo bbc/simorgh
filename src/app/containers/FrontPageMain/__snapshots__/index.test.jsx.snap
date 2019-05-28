@@ -280,11 +280,13 @@ exports[`FrontPageMain should render a pidgin article correctly 1`] = `
                   "type": "cps",
                 },
               ],
+              "maxRelatedLinks": 3,
+              "semanticGroupName": "Top Stories",
               "strapline": Object {
                 "name": "Top tori",
               },
-              "title": "Top stories",
-              "type": "top-stories",
+              "title": "Top Stories",
+              "type": "responsive-top-stories",
             }
           }
         />
