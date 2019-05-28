@@ -4,15 +4,16 @@ import articlePropTypes from '../../models/propTypes/article';
 import PageWrapper from '../../Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {
-  const PageWrapperContainer = props => (
-    <PageWrapper {...props}>
-      <Component {...props} />
+  const PageWrapperContainer = ({ data, bbcOrigin, service }) => (
+    <PageWrapper data={data} bbcOrigin={bbcOrigin} service={service}>
+      <Component data={data} bbcOrigin={bbcOrigin} service={service} />
     </PageWrapper>
   );
 
   PageWrapperContainer.propTypes = {
     data: shape(articlePropTypes),
     bbcOrigin: string,
+    service: string.isRequired,
   };
 
   PageWrapperContainer.defaultProps = {
