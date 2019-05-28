@@ -79,7 +79,11 @@ const ImageContainer = ({ blocks }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
+<<<<<<< HEAD
         srcset={srcSet}
+=======
+        lazyLoad
+>>>>>>> latest
       />
     </Wrapper>
   );
