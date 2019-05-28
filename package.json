@@ -20,6 +20,7 @@
     "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "killStorybook": "(lsof -t -i:9001 | xargs kill)",
+    "lighthouse": "lighthouse http://localhost:7080/news/articles/cl55zn0w0l4o --output json",
     "postshrinkwrap": "if test -z $CI; then \n npm run force-package-lock-https \n fi; \n git update-index --assume-unchanged .env",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
