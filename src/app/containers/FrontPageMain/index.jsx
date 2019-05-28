@@ -3,15 +3,10 @@ import { shape } from 'prop-types';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import FrontPageSection from '../FrontPageSection';
-import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
-  let pageData = filterEmptyGroupItems(frontPageData);
-  pageData = applySquashTopstories(pageData);
-
-  const groups = deepGet(['content', 'groups'], pageData);
+  const groups = deepGet(['content', 'groups'], frontPageData);
 
   return (
     <Fragment>
