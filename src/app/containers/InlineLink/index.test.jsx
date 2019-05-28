@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import InlineLinkContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -12,18 +13,33 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const testInternalInlineLink = (description, locator, blocks, isExternal) => {
+const testInternalInlineLink = (
+  description,
+  locator,
+  blocks,
+  isExternal,
+  platform = 'canonical',
+) => {
   shouldMatchSnapshot(
     description,
     /*
       for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
     */
     <StaticRouter>
-      <InlineLinkContainer
-        locator={locator}
-        blocks={blocks}
-        isExternal={isExternal}
-      />
+      <RequestContextProvider
+        isUk
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        platform={platform}
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <InlineLinkContainer
+          locator={locator}
+          blocks={blocks}
+          isExternal={isExternal}
+        />
+      </RequestContextProvider>
     </StaticRouter>,
   );
 };
@@ -42,6 +58,14 @@ describe('InlineLinkContainer', () => {
       'https://www.test.bbc.com/news/articles/cn7769kpk9mo',
       [fragmentBlock('This is text for an internal link')],
       false,
+    );
+
+    testInternalInlineLink(
+      'should render amp link if current platform is amp',
+      'https://www.bbc.com/news/articles/cn7769kpk9mo',
+      [fragmentBlock('This is text for an internal link')],
+      false,
+      'amp',
     );
   });
 

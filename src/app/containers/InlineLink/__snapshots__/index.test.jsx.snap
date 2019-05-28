@@ -127,6 +127,38 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 </a>
 `;
 
+exports[`InlineLinkContainer link matching routes for SPA should render amp link if current platform is amp 1`] = `
+.c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+<a
+  className="-Link c0"
+  href="/news/articles/cn7769kpk9mo.amp"
+  onClick={[Function]}
+>
+  This is text for an internal link
+</a>
+`;
+
 exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
 .c0 {
   color: #222222;
