@@ -19,7 +19,7 @@ const config = {
     assets: {
       news: 'cn7769kpk9mo',
       newsThreeSubheadlines: 'cl55zn0w0l4o',
-      persian: 'cyddjz5058wo',
+      persian: 'c4vlle3q337o',
       nonExistent: 'cxvxrj8tvppo',
     },
   },
@@ -31,7 +31,7 @@ const config = {
     assets: {
       news: 'cn7769kpk9mo',
       newsThreeSubheadlines: 'cl55zn0w0l4o',
-      persian: 'cyddjz5058wo',
+      persian: 'c4vlle3q337o',
       nonExistent: 'cxvxrj8tvppo',
     },
   },
