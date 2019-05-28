@@ -4,6 +4,7 @@ import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
@@ -15,6 +16,8 @@ const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   const { externalLinkText } = useContext(ServiceContext);
+  const { platform } = useContext(RequestContext);
+
   const regexp = pathToRegexp(articleRegexPath, [], {
     start: false,
     end: false,
@@ -24,7 +27,12 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   // if URL matches a valid route, use a react-router link
   if (result) {
     // the path is the first item in the array
-    const path = result[0];
+    let path = result[0];
+
+    if (platform === 'amp') {
+      path += '.amp';
+    }
+
     return (
       <InternalInlineLink to={path}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
