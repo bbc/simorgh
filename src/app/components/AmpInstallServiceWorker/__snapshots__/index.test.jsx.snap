@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsentBanner should correctly render 1`] = `
+<amp-install-serviceworker
+  layout="nodisplay"
+  src="https://foobar.com/news/articles/sw.js"
+/>
+`;
