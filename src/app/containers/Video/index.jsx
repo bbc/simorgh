@@ -89,7 +89,6 @@ const VideoContainer = ({ blocks }) => {
         {captionBlock ? <Caption block={captionBlock} video /> : null}
         <script type="text/javascript">
           {`require(['bump-4'],function (bump) {
-                console.log("HELLO WORLD 🌎");
                 var settings = {
                     product: 'news',
                     responsive: true,
