@@ -254,10 +254,10 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p064nsyw",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064nsyw",
+            "blocks": [
               {
                 "type": "caption",
                 "model": {
@@ -288,29 +288,36 @@
                 }
               },
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p064nsyw",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Plastic - The Story So Far",
-                  "synopses" : {
-                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p064nsz3",
-                      "types" : [ "Original" ],
-                      "duration" : 299,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p064nsyw",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Plastic - The Story So Far",
+                        "synopses": {
+                          "short": "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                        "embedding": true,
+                        "warnings": {},
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p064nsz3",
+                            "types": ["Original"],
+                            "duration": 299,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -325,9 +332,9 @@
             "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "type" : "caption",
-                "model" : {
-                  "blocks" : [
+                "type": "caption",
+                "model": {
+                  "blocks": [
                     {
                       "type": "text",
                       "model": {
@@ -354,30 +361,37 @@
                 }
               },
               {
-                "blockId" : "urn:bbc:ares::clip:p064nsyw",
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p064nsyw",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Plastic - The Story So Far",
-                  "synopses" : {
-                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "blockId": "urn:bbc:ares::clip:p064nsyw",
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p064nsz3",
-                      "types" : [ "Original" ],
-                      "duration" : 299,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p064nsyw",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Plastic - The Story So Far",
+                        "synopses": {
+                          "short": "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                        "embedding": true,
+                        "warnings": {},
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p064nsz3",
+                            "types": ["Original"],
+                            "duration": 299,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
