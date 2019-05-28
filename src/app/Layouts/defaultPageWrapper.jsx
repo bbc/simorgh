@@ -3,9 +3,9 @@ import { node, string, bool } from 'prop-types';
 import Helmet from 'react-helmet';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
-import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import GlobalStyle from '../lib/globalStyles';
+import config from '../lib/config/services';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
@@ -15,10 +15,12 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
   const { isUK, origin } = getOriginContext(bbcOrigin);
 
+  const ServiceContextProvider = config[service];
+
   return (
     <Fragment>
       <GlobalStyle />
-      <ServiceContextProvider service={service}>
+      <ServiceContextProvider>
         <RequestContextProvider
           id={id}
           isUK={isUK}

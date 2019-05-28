@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
@@ -117,7 +118,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
        * we need it, without importing it in every file or importing
        * every locale.
        */
-      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/),
+      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /abcdefg/),
       /* moment-timezone-data-plugin allows you to specify how much
        * and what specific timezone data you wish to bundle.
        * matchZones: (string or array of strings) Only include data
@@ -125,6 +126,10 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
        */
       new MomentTimezoneDataPlugin({
         matchZones: 'Europe/London',
+      }),
+
+      new ReactLoadablePlugin({
+        filename: resolvePath('build/react-loadable.json'),
       }),
     ],
   };

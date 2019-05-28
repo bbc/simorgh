@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
@@ -26,11 +27,15 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        */
       __dirname: false,
     },
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
   };
 
   if (START_DEV_SERVER) {
     const StartServerPlugin = require('start-server-webpack-plugin');
-    const webpack = require('webpack');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new StartServerPlugin('server.js'), // only start the server if we've run `npm run dev`
