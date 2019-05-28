@@ -9,19 +9,17 @@ const createSrcset = (originCode, locator, originalImageWidth) => {
     resolution => resolution <= originalImageWidth,
   );
 
-  const urls = requiredResolutions.map(
-    resolution =>
-      `${ichefUrl}/${resolution}/${originCode}/${locator} ${resolution}w`,
-  );
-
   if (
     originalImageWidth < resolutions[resolutions.length - 1] &&
     !requiredResolutions.includes(originalImageWidth)
   ) {
-    urls.push(
-      `${ichefUrl}/${originalImageWidth}/${originCode}/${locator} ${originalImageWidth}w`,
-    );
+    requiredResolutions.push(originalImageWidth);
   }
+
+  const urls = requiredResolutions.map(
+    resolution =>
+      `${ichefUrl}/${resolution}/${originCode}/${locator} ${resolution}w`,
+  );
 
   return urls.join(', ');
 };
