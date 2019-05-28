@@ -24,11 +24,11 @@ const metadataPropTypes = {
   options: shape({
     allowAdvertising: boolean,
   }),
-  analyticsLabels: {
+  analyticsLabels: shape({
     counterName: string.isRequired,
     cps_asset_id: string.isRequired,
     cps_asset_type: string.isRequired,
-  },
+  }),
   tags: objectOf(any),
   version: string.isRequired,
   blockTypes: arrayOf(string),
