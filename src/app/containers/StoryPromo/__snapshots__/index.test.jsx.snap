@@ -62,6 +62,10 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   text-decoration: underline;
 }
 
+.c5:visited {
+  color: #6E6E73;
+}
+
 .c2 {
   position: relative;
   height: 0;
@@ -285,6 +289,10 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 .c6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c6:visited {
+  color: #6E6E73;
 }
 
 .c3 {
