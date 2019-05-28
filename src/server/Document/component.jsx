@@ -76,6 +76,11 @@ const Document = ({
               custom-element="amp-consent"
               src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
             />
+            <script
+              async
+              custom-element="amp-install-serviceworker"
+              src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
+            />
           </Fragment>
         )}
       </head>

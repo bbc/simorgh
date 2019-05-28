@@ -29,6 +29,9 @@ exports[`defaultPageWrapper should render with children 1`] = `
         Child element
       </h2>
       <FooterContainer />
+      <AmpInstallServiceWorker
+        service="news"
+      />
     </RequestContextProvider>
   </ServiceContextProvider>
 </React.Fragment>

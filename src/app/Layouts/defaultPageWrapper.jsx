@@ -6,6 +6,7 @@ import FooterContainer from '../containers/Footer';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import GlobalStyle from '../lib/globalStyles';
+import AmpInstallServiceWorker from '../components/AmpInstallServiceWorker';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
@@ -42,6 +43,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
           <HeaderContainer />
           {children}
           <FooterContainer />
+          {isAmp && <AmpInstallServiceWorker service={service} />}
         </RequestContextProvider>
       </ServiceContextProvider>
     </Fragment>

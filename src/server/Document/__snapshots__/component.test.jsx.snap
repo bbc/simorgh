@@ -59,6 +59,11 @@ exports[`Document Component should render AMP version correctly 1`] = `
         custom-element="amp-consent"
         src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
       />
+      <script
+        async={true}
+        custom-element="amp-install-serviceworker"
+        src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
+      />
     </React.Fragment>
   </head>
   <body>
