@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { node, string } from 'prop-types';
 import services from '../../lib/config/services';
 
@@ -10,12 +10,10 @@ export const ServiceContextProvider = ({ children, service }) => {
   const { fonts } = services[service];
 
   return (
-    <Fragment>
+    <ServiceContext.Provider value={services[service]}>
       <GlobalStyle fonts={fonts} />
-      <ServiceContext.Provider value={services[service]}>
-        {children}
-      </ServiceContext.Provider>
-    </Fragment>
+      {children}
+    </ServiceContext.Provider>
   );
 };
 
