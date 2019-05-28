@@ -115,34 +115,41 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p054n8j6",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p054n8j6",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p054n8j6",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "How America solves racism",
-                  "synopses" : {
-                    "short" : "Racism in the US: Is there a single step that can bring equality?",
-                    "medium" : "Seeking steps to end racism in the US",
-                    "long" : "Aleem Maqbool has been travelling the US for years reporting on race. He examines paths to healing that have come up in his reporting."
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p05cmbxc.jpg",
-                  "embedding" : false,
-                  "warnings" : {},
-                  "advertising" : true,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p054n8j9",
-                      "types" : [ "Original" ],
-                      "duration" : 923,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : true
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p054n8j6",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "How America solves racism",
+                        "synopses": {
+                          "short": "Racism in the US: Is there a single step that can bring equality?",
+                          "medium": "Seeking steps to end racism in the US",
+                          "long": "Aleem Maqbool has been travelling the US for years reporting on race. He examines paths to healing that have come up in his reporting."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05cmbxc.jpg",
+                        "embedding": false,
+                        "warnings": {},
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p054n8j9",
+                            "types": ["Original"],
+                            "duration": 923,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
