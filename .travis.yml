@@ -19,6 +19,8 @@ jobs:
         - xvfb-run -a npm run test:prod:travis
     - stage: test
       install: npm ci --only=prod
+      addons: 
+        chrome: stable
       script:
         - npm run build
         - xvfb-run -a npm run test:lighthouse:ci
