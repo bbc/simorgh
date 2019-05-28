@@ -7,7 +7,7 @@ const yoruba = {
   service: 'yoruba',
   serviceName: 'Yoruba',
   brandSVG,
-  latin,
+  script: latin,
   translations: {
     error: {
       404: {
