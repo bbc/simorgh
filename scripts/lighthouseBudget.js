@@ -4,13 +4,11 @@ const fs = require('fs');
 const getCategoryScores = data => {
   const { categories } = data;
 
-  const result = {
+  return {
     ally: categories.accessibility.score * 100,
     bestPractises: categories['best-practices'].score * 100,
     seo: categories.seo.score * 100,
   };
-
-  return result;
 };
 
 const isAboveThreshold = (scoreValue, budgetValue) => {
@@ -45,9 +43,22 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
 const readReport = path => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
+  console.log(rawdata);
   const result = JSON.parse(rawdata);
 
   return result;
+};
+
+const exitResult = isPassing => {
+  process.on('exit', code => console.log(`Exiting with code ${code}`));
+
+  if (!isPassing) {
+    console.log('Lighthouse tests failed. See log table for details');
+    process.exit(1);
+  }
+
+  console.log('All tests passed!');
+  process.exit(0);
 };
 
 // START OF SCRIPT
@@ -58,9 +69,9 @@ const budget = {
   seo: 90,
 };
 
-const run = () => {
-  const testableProperties = ['ally', 'bestPractises', 'seo'];
+const testableProperties = ['ally', 'bestPractises', 'seo'];
 
+const run = () => {
   const report = readReport('simorgh.report.json');
   const extractedCategories = getCategoryScores(report);
 
@@ -70,15 +81,7 @@ const run = () => {
     budget,
   );
 
-  process.on('exit', code => console.log(`Exiting with code ${code}`));
-
-  if (!result) {
-    console.log('Lighthouse tests failed. See log table for details');
-    process.exit(1);
-  }
-
-  console.log('All tests passed!');
-  process.exit(0);
+  exitResult(result);
 };
 
 module.exports = {
@@ -88,6 +91,7 @@ module.exports = {
   compareToBudget,
   readReport,
   run,
+  exitResult,
 };
 
 // Script run

@@ -5,6 +5,7 @@ const {
   isAboveThreshold,
   compareToBudget,
   readReport,
+  exitResult,
 } = require('./lighthouseBudget');
 
 jest.mock('fs');
@@ -93,23 +94,26 @@ describe('isAboveThreshold', () => {
   });
 });
 
+const budgetTest = (title, scores, expectedResult) => {
+  test(title, () => {
+    const result = compareToBudget(testCategories, scores, testBudget);
+
+    expect(result).toEqual(expectedResult);
+  });
+};
+
 describe('compareToBudget', () => {
-  test('Returns true if all values are above a threshold', () => {
-    const correctResult = resultMock(100, 80, 20);
-    const result = compareToBudget(testCategories, correctResult, testBudget);
-
-    expect(result).toEqual(true);
-  });
-  test('Returns false if one or more values are wrong', () => {
-    const incorrectresult = resultMock(90, 80, 20);
-    const result = compareToBudget(testCategories, incorrectresult, testBudget);
-
-    expect(result).toEqual(false);
-  });
+  budgetTest(
+    'Returns true if all values are above a threshold',
+    resultMock(100, 80, 20),
+    true,
+  );
+  budgetTest(
+    'Returns false if one or more values are wrong',
+    resultMock(90, 80, 20),
+    false,
+  );
   test('The function prints the result to console.table', () => {
-    const result = isAboveThreshold(10, 100);
-
-    expect(result).toEqual(false);
     expect(global.console.table).toBeCalled();
   });
 });
@@ -119,4 +123,14 @@ test('readReport reads a file and parses it to Json', () => {
 
   expect(fs.readFileSync).toBeCalled();
   expect(global.JSON.parse).toBeCalled();
+});
+
+test('exitResult', () => {
+  const mockExit = jest
+    .spyOn(process, 'exit')
+    .mockImplementation(number => number);
+
+  exitResult(false);
+
+  expect(mockExit).toBeCalled();
 });
