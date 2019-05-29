@@ -36,13 +36,17 @@ const FrontPageSection = ({ bar, group }) => {
       <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
         {group.strapline.name}
       </SectionLabel>
-      <StoryPromoUl>
-        {items.map(item => (
-          <StoryPromoLi key={item.id}>
-            <StoryPromo item={item} script={script} />
-          </StoryPromoLi>
-        ))}
-      </StoryPromoUl>
+      {items.length > 1 ? (
+        <StoryPromoUl>
+          {items.map(item => (
+            <StoryPromoLi key={item.id}>
+              <StoryPromo item={item} script={script} />
+            </StoryPromoLi>
+          ))}
+        </StoryPromoUl>
+      ) : (
+        items.length === 1 && <StoryPromo item={items[0]} script={script} />
+      )}
     </section>
   );
 };
