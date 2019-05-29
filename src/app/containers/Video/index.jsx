@@ -79,12 +79,11 @@ const VideoContainer = ({ blocks }) => {
           }
           <script type="text/javascript">
             {`
-              var mediaPlayerLoaded = false;
-              function mediaPlayerSetup() {
+              function mediaPlayerSetup(container) {
                   require(['bump-4'], (bump) => {
-                    var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), ${JSON.stringify(
-                      mediaPlayerSettings,
-                    )});
+                    var mediaPlayer = bump.player(
+                      container,
+                      ${JSON.stringify(mediaPlayerSettings)});
                     mediaPlayer.load();
                   });
               }
@@ -97,7 +96,6 @@ const VideoContainer = ({ blocks }) => {
                         "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
                     };
                   require({ paths: bbcRequireMap, waitSeconds: 30 });
-                  mediaPlayerSetup();
               }
             `}
           </script>
