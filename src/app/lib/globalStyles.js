@@ -13,9 +13,7 @@ const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  ${({ fonts }) =>
-    fonts.reduce((fontStyles, fontStyle) => fontStyles + fontStyle, '')}
-  `;
+`;
 
 export default GlobalStyle;
 
