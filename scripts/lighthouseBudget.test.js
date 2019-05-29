@@ -19,6 +19,12 @@ global.JSON = {
   parse: jest.fn(),
 };
 
+const resultMock = (ally, bestPractises, seo) => ({
+  ally,
+  bestPractises,
+  seo,
+});
+
 const data = {
   categories: {
     performance: {
@@ -89,25 +95,20 @@ describe('isAboveThreshold', () => {
 
 describe('compareToBudget', () => {
   test('Returns true if all values are above a threshold', () => {
-    const correctResult = {
-      ally: 100,
-      bestPractises: 80,
-      seo: 20,
-    };
+    const correctResult = resultMock(100, 80, 20);
     const result = compareToBudget(testCategories, correctResult, testBudget);
+
     expect(result).toEqual(true);
   });
   test('Returns false if one or more values are wrong', () => {
-    const incorrectresult = {
-      ally: 99,
-      bestPractises: 80,
-      seo: 20,
-    };
+    const incorrectresult = resultMock(90, 80, 20);
     const result = compareToBudget(testCategories, incorrectresult, testBudget);
+
     expect(result).toEqual(false);
   });
   test('The function prints the result to console.table', () => {
     const result = isAboveThreshold(10, 100);
+
     expect(result).toEqual(false);
     expect(global.console.table).toBeCalled();
   });
