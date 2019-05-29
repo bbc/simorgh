@@ -13,7 +13,6 @@ const WithPageWrapper = Component => {
   PageWrapperContainer.propTypes = {
     data: shape(articlePropTypes),
     bbcOrigin: string,
-    service: string.isRequired,
   };
 
   PageWrapperContainer.defaultProps = {

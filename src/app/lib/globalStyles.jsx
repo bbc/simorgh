@@ -19,7 +19,7 @@ const GlobalStyleComponent = createGlobalStyle`
       box-sizing: inherit;
     }
 
-    ${({ fonts }) => createFontStyles(fonts)}
+    ${({ fonts }) => fonts && createFontStyles(fonts)}
   `;
 
 const GlobalStyle = () => {
