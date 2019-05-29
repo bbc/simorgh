@@ -1,4 +1,4 @@
-import createSrcset from './srcSetHelper';
+import createSrcset from './srcSet';
 
 describe('create srcset', () => {
   const srcsetScenarios = [
