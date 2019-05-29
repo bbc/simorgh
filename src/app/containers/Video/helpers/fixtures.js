@@ -82,7 +82,7 @@ export const multipleAresMetadata = {
               duration: 191,
               types: ['Original'],
               versionId: 'p01k6msp',
-              availableFrom: null,
+              availableFrom: 1540218932,
               warnings: {
                 long: 'Contains strong language and adult humour.',
                 short: 'Contains strong language and adult humour.',
@@ -122,7 +122,7 @@ export const multipleAresMetadata = {
               duration: 191,
               types: ['Original'],
               versionId: 'p01k6msp',
-              availableFrom: null,
+              availableFrom: 1540218932,
               warnings: {
                 long: 'Contains common text.',
                 short: 'Contains common text.',
