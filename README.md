@@ -81,8 +81,8 @@ To run LIVE bundles on localhost:
 
 Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
 
-- UK version: [http://localhost.bbc.co.uk:7080](http://localhost.bbc.co.uk:7080)
-- International version: [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080)
+- UK version: [http://localhost.bbc.co.uk:7080/news/articles/c0000000001o](http://localhost.bbc.co.uk:7080/news/articles/c0000000001o)
+- International version: [http://localhost.bbc.com:7080/news/articles/c0000000001o](http://localhost.bbc.com:7080/news/articles/c0000000001o)
 
 ## Production build on CI
 
