@@ -1,19 +1,30 @@
 /* eslint-disable no-unused-expressions */
+import { useContext } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
+import { ServiceContext } from '../contexts/ServiceContext';
 
-const GlobalStyle = createGlobalStyle`
-  ${styledNormalize}
+const createFontStyles = fonts =>
+  fonts.reduce((fontStyles, fontStyle) => fontStyles + fontStyle, '');
 
-  /* Box Sizing https://bit.ly/1A91I0J */
-  html {
-    box-sizing: border-box;
-    font-size: 100%;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-`;
+const GlobalStyle = () => {
+  const { fonts } = useContext(ServiceContext);
+  const fontStyles = createFontStyles(fonts);
+
+  return createGlobalStyle`
+    ${styledNormalize}
+
+    /* Box Sizing https://bit.ly/1A91I0J */
+    html {
+      box-sizing: border-box;
+      font-size: 100%;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    ${fontStyles}
+  `;
+};
 
 export default GlobalStyle;
 
