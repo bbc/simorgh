@@ -2,6 +2,7 @@ import React from 'react';
 import { videoComponentPropTypes } from '../../models/propTypes';
 
 const Video = ({
+  id,
   pid,
   kind,
   title,
@@ -13,7 +14,7 @@ const Video = ({
   statsDestination,
   uiLocale,
 }) => (
-  <div>
+  <div id={id}>
     <div>video pid: {pid}</div>
     <div>kind: {kind}</div>
     <div>title: {title}</div>
