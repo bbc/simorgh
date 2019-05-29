@@ -190,6 +190,93 @@ describe('Server', () => {
     });
   });
 
+  describe('/{service}', () => {
+    const successDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp: false,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(successDataResponse),
+          );
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest('/igbo');
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={['one.js']}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                'http://localhost:7080',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={false}
+              service="igbo"
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+
+      describe('404 status code', () => {
+        beforeEach(() => {
+          loadInitialData.mockImplementationOnce(() =>
+            Promise.resolve(notFoundDataResponse),
+          );
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest('/igbo');
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('Unknown error within universal-react-app or its dependencies', () => {
+      beforeEach(() => {
+        loadInitialData.mockImplementationOnce(() =>
+          Promise.reject(Error('Error!')),
+        );
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest('/igbo');
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+
   describe('/someInvalidPath', () => {
     it('should respond 404', async () => {
       const { status } = await makeRequest('/blah');
