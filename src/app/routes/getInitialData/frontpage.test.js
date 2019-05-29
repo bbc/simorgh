@@ -72,7 +72,7 @@ describe('getFrontpageInitialData', () => {
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.getBaseUrl.com/news.json',
-     	preprocessorRules,
+        preprocessorRules,
       });
 
       expect(response).toEqual({
