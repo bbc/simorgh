@@ -28,6 +28,9 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
       __dirname: false,
     },
     plugins: [
+      /**
+       * Limit chunks to 1 to avoid unnecessary service bundle splitting
+       */
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 1,
       }),

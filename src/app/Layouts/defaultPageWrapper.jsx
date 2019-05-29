@@ -17,26 +17,9 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
 
   const ServiceContextProvider = config[service];
 
-  const Stuff = [];
-
-  // //////////////////////////////////////////
-
-  const breakEverything = false; // MAKE SIMORGH REQUEST ALL BUNDLES
-
-  // //////////////////////////////////////////
-
-  if (breakEverything) {
-    Object.keys(config)
-      .filter(serviceName => serviceName !== 'default')
-      .forEach(serviceName => Stuff.push(config[serviceName]));
-  }
-
   return (
     <Fragment>
       <GlobalStyle />
-      {Stuff.map(Thing => (
-        <Thing />
-      ))}
       <ServiceContextProvider>
         <RequestContextProvider
           id={id}
