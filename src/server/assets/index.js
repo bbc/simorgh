@@ -6,7 +6,7 @@ const logger = nodeLogger(__filename);
 const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGIN = 'https://gel.files.bbci.co.uk';
 
-const getAssetsArray = () => {
+const getAssetsArray = service => {
   const assets = [];
   const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
   try {
@@ -33,6 +33,14 @@ const getAssetsArray = () => {
       }`,
     );
   }
+
+  assets = assets.filter(
+    asset =>
+      asset.includes('main') ||
+      asset.includes('vendor') ||
+      asset.includes(service),
+  );
+
   return assets;
 };
 

@@ -25,15 +25,7 @@ const renderDocument = async (url, data, routes, bbcOrigin, service, isAmp) => {
     ),
   );
 
-  let assets = getAssetsArray();
-
-  assets = assets.filter(
-    asset =>
-      asset.includes('main') ||
-      asset.includes('vendor') ||
-      asset.includes(service),
-  );
-
+  let assets = getAssetsArray(service);
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
