@@ -148,6 +148,17 @@ server
         .send(`Welcome to the temporary ${service} homepage simorgh route`);
     },
   )
+  .get('/:service(news)/explore:amp(.amp)?', ({ params }, res) => {
+    // This is also a temporary route to unblock route setup in Mozart.
+    // Simple 200 response which can be routed to.
+    const { amp, service } = params;
+    const variant = amp ? 'amp' : 'canonical';
+    res
+      .status(200)
+      .send(
+        `Welcome to the ${variant} variant of the temporary ${service} explore page route on Simorgh.`,
+      );
+  })
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
       const data = await loadInitialData(url, routes);
