@@ -45,7 +45,7 @@ const FrontPageSection = ({ bar, group }) => {
           ))}
         </StoryPromoUl>
       ) : (
-        items.length === 1 && <StoryPromo item={items[0]} script={script} />
+        <StoryPromo item={items[0]} script={script} />
       )}
     </section>
   );
