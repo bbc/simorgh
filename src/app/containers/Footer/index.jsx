@@ -11,7 +11,7 @@ const Footer = styled.footer`
 
 const currentYear = () => new Date().getFullYear();
 const getCopyrightText = text =>
-  `\u00A9 ${currentYear()} ${text}`;
+  `\u00A9 ${currentYear()} ${text} `;
 
 const FooterContainer = () => {
   const { footer } = useContext(ServiceContext);
