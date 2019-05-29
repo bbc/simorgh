@@ -16,7 +16,6 @@ describe('globalStyles', () => {
       (cssRules, cssRule) => cssRules + cssRule.cssText,
       '',
     );
-    console.log('fontellow', styles);
     expect(styles).toMatchSnapshot();
     expect(true).toBe(true);
   });
