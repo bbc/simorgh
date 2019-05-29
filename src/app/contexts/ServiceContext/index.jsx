@@ -8,7 +8,11 @@ import createLoadableContext from '../utils/createLoadableContext';
 export const ServiceContext = React.createContext(defaultService);
 
 export const ServiceContextProvider = ({ children, service }) => {
-  const dynamicService = services[service] || null;
+  const dynamicService = services[service];
+
+  if (!dynamicService) {
+  	return null;
+  }
 
   const LoadableServiceContextProvider = createLoadableContext(
     ServiceContext,
