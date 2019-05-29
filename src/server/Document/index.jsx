@@ -25,7 +25,7 @@ const renderDocument = async (url, data, routes, bbcOrigin, service, isAmp) => {
     ),
   );
 
-  let assets = getAssetsArray(service);
+  const assets = getAssetsArray(service);
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
