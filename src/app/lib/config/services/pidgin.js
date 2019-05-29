@@ -101,31 +101,23 @@ const pidgin = {
         text: 'Why you can trust the BBC',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'How dem dey take use am',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
-        href: 'https://www.bbc.com/privacy/',
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
         text: 'Privacy Policy',
       },
       {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/pidgin/institutional-42188215',
+        text: 'Call BBC',
       },
     ],
-    copyrightText: 'BBC. The BBC is not responsible for the content of external sites.',
+    copyrightText: 'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
 };
 

@@ -101,31 +101,23 @@ const igbo = {
         text: 'Why you can trust the BBC',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.co.uk/usingthebbc/terms',
+        text: 'Usoro Ojiji',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Iwu Nzuzo',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Kuki',
       },
       {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/igbo/institutional-43090448',
+        text: 'Kpọtụrụ BBC',
       },
     ],
-    copyrightText: 'BBC. The BBC is not responsible for the content of external sites.',
+    copyrightText: 'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
 };
 
