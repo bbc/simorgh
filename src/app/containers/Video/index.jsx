@@ -51,6 +51,23 @@ const VideoContainer = ({ blocks }) => {
     },
   ];
 
+  // prettier-ignore
+  const mediaPlayerSettings = {
+    product: 'news',
+    responsive: true,
+    statsObject: { clipPID: pid },
+    playlistObject: {
+      title,
+      holdingImageURL: holdingImageUrl,
+      items: [
+        {
+          versionID,
+          duration
+        }
+      ]
+    }
+  };
+
   return (
     <>
       {metadata ? (
@@ -60,16 +77,35 @@ const VideoContainer = ({ blocks }) => {
               {JSON.stringify(metadata)}
             </script>
           }
+          <script type="text/javascript">
+            {`
+              var mediaPlayerLoaded = false;
+              function mediaPlayerSetup() {
+                  require(['bump-4'], (bump) => {
+                    var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), ${JSON.stringify(
+                      mediaPlayerSettings,
+                    )});
+                    mediaPlayer.load();
+                  });
+              }
+            `}
+          </script>
+          <script type="text/javascript">
+            {`
+              function initialiseBump() {
+                  bbcRequireMap = {
+                        "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
+                    };
+                  require({ paths: bbcRequireMap, waitSeconds: 30 });
+                  mediaPlayerSetup();
+              }
+            `}
+          </script>
           <script
+            onLoad="initialiseBump()"
             type="text/javascript"
             src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
           />
-          <script type="text/javascript">
-            {`bbcRequireMap = {
-                    "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
-                }
-                require({ paths: bbcRequireMap, waitSeconds: 30 });`}
-          </script>
         </Helmet>
       ) : null}
       <Figure>
@@ -87,24 +123,6 @@ const VideoContainer = ({ blocks }) => {
           uiLocale="en-GB"
         />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
-        <script type="text/javascript">
-          {`require(['bump-4'],function (bump) {
-                var settings = {
-                    product: 'news',
-                    responsive: true,
-                    counterName: 'smp.demopage.player.page',
-                    playlistObject: {
-                              "title": ${title},
-                              "holdingImageURL": ${holdingImageUrl},
-                              "items": ${items}
-                    },
-                    statsObject: { clipPID: ${pid} }
-                }
-                var mediaPlayer = bump.player(document.getElementById('mediaPlayer'),settings);
-                mediaPlayer.load();
-            });
-            `}
-        </script>
       </Figure>
     </>
   );
