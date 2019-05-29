@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import compose from '../../helpers/compose';
-import articlePropTypes from '../../models/propTypes/article';
+import frontPagePropTypes from '../../models/propTypes/frontPage';
 import FrontPageMain from '../FrontPageMain';
 
 import withPageWrapper from '../PageHandlers/withPageWrapper';
@@ -14,7 +14,7 @@ const FrontPageContainer = ({ pageData }) => (
 );
 
 FrontPageContainer.propTypes = {
-  pageData: shape(articlePropTypes),
+  pageData: shape(frontPagePropTypes),
 };
 
 FrontPageContainer.defaultProps = {
