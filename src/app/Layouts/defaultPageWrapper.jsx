@@ -10,17 +10,15 @@ import getStatsDestination from '../contexts/RequestContext/getStatsDestination'
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import GlobalStyle from '../lib/globalStyles';
-import services from '../lib/config/services';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
   const { isUK, origin } = getOriginContext(bbcOrigin);
-  const { fonts } = services[service];
 
   return (
     <Fragment>
       <ServiceContextProvider service={service}>
-        <GlobalStyle fonts={fonts} />
+        <GlobalStyle />
         <RequestContextProvider
           id={id}
           isUK={isUK}
