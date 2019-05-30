@@ -47,8 +47,26 @@ describe('Article Body Tests', () => {
     visibleImageNoCaption(getElement('figure').eq(0));
   });
 
-  it('should have a visible image with a caption', () => {
-    visibleImageWithCaption(getElement('figure').eq(2));
+  it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
+    let thirdFigure;
+
+    thirdFigure = getElement('figure').eq(2);
+
+    thirdFigure.within(() => {
+      const lazyLoadPlaceholder = getElement('div div');
+      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
+
+      const noscriptImg = getElement('noscript');
+      noscriptImg.contains('<img ');
+
+      cy.scrollTo('bottom', { duration: 200 });
+
+      const ImageContainer = getElement('div div');
+      ImageContainer.should('not.have.class', 'lazyload-placeholder');
+    });
+
+    thirdFigure = getElement('figure').eq(2);
+    visibleImageWithCaption(thirdFigure);
   });
 
   it('should have an image copyright label with styling', () => {
