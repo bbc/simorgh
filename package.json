@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/cl55zn0w0l4o.amp && amphtml-validator http://localhost:7080/news/articles/cl55zn0w0l4o.amp",
-    "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cl55zn0w0l4o && bbc-a11y",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp",
+    "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build:storybook": "build-storybook -c .storybook -o storybook_dist",
