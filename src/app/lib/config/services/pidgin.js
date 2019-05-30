@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 const pidgin = {
   brandName: 'BBC News Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+  defaultImageAltText: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
