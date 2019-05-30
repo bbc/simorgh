@@ -1,52 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Video with data should render the video with valid props 1`] = `
-<div>
-  <div>
-    video pid: 
-    p00a0a0m
-  </div>
-  <div>
-    kind: 
-    episode
-  </div>
-  <div>
-    title: 
-    Hello World
-  </div>
-  <div>
-    holdingImageURL: 
-    https://foo/bar/baz.png
-  </div>
-  <div>
-    items: 
-    [
+<ForwardRef>
+  <ForwardRef>
+    <div>
+      video pid: 
+      p00a0a0m
+    </div>
+    <div>
+      kind: 
+      episode
+    </div>
+    <div>
+      title: 
+      Hello World
+    </div>
+    <div>
+      holdingImageURL: 
+      https://foo/bar/baz.png
+    </div>
+    <div>
+      items: 
+      [
     {
         "versionID": "p00a0a0v",
         "kind": "episode",
         "duration": 100
     }
 ]
-  </div>
-  <div>
-    statsAppName: 
-    news
-  </div>
-  <div>
-    statsAppType: 
-    responsive
-  </div>
-  <div>
-    statsCountername: 
-    news.articles.c0000000000o.page
-  </div>
-  <div>
-    statsDestination: 
-    NEWS_PS_TEST
-  </div>
-  <div>
-    uiLocale: 
-    en-GB
-  </div>
-</div>
+    </div>
+    <div>
+      statsAppName: 
+      news
+    </div>
+    <div>
+      statsAppType: 
+      responsive
+    </div>
+    <div>
+      statsCountername: 
+      news.articles.c0000000000o.page
+    </div>
+    <div>
+      statsDestination: 
+      NEWS_PS_TEST
+    </div>
+    <div>
+      uiLocale: 
+      en-GB
+    </div>
+  </ForwardRef>
+</ForwardRef>
 `;
