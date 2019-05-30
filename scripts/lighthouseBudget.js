@@ -30,10 +30,10 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
   const logArray = [];
   // eslint-disable-next-line consistent-return
   categories.forEach(prop => {
-    const test = isAboveThreshold(scoreResult[prop], scoreBudget[prop]);
-    const b = logRow(prop, scoreResult[prop], scoreBudget[prop], test);
-    logArray.push(b);
-    if (!test) result = false;
+    const isPassing = isAboveThreshold(scoreResult[prop], scoreBudget[prop]);
+    const passLog = logRow(prop, scoreResult[prop], scoreBudget[prop], test);
+    logArray.push(passLog);
+    if (!isPassing) result = false;
   });
 
   console.table(logArray);
