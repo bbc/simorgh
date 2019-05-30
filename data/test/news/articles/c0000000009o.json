@@ -87,41 +87,132 @@
     "model": {
       "blocks": [
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p064nsyw",
-            "blocks" : [
+          "model": {
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p064nsyw",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Plastic - The Story So Far",
-                  "synopses" : {
-                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p064nsz3",
-                      "types" : [ "Original" ],
-                      "duration" : 299,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
-                      }
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "They may be tiny, but us humans could learn a thing or two from ants."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "model": {
+                        "advertising": true,
+                        "caption": null,
+                        "embedding": true,
+                        "format": "audio_video",
+                        "id": "p01k6msm",
+                        "image": null,
+                        "imageCopyright": "BBC",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "title": "Five things ants can teach us about management",
+                        "versions": [
+                          {
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "availableUntil": null,
+                            "duration": 191,
+                            "types": ["Original"],
+                            "versionId": "p01k6msp",
+                            "warnings": {
+                              "long": "Contains strong language and adult humour.",
+                              "short": "Contains strong language and adult humour."
+                            }
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "copyrightHolder": "BBC",
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                              "originCode": null,
+                              "width": 1920
+                            },
+                            "type": "rawImage"
+                          },
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "model": {
+                                                "attributes": [],
+                                                "text": "Ants"
+                                              },
+                                              "type": "fragment"
+                                            }
+                                          ],
+                                          "text": "Ants"
+                                        },
+                                        "type": "paragraph"
+                                      }
+                                    ]
+                                  },
+                                  "type": "text"
+                                }
+                              ]
+                            },
+                            "type": "altText"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
               }
-            ]
-          }
+            ],
+            "locator": "urn:bbc:pips:pid:p01k6msm"
+          },
+          "type": "video"
         },
         {
           "type": "headline",
@@ -189,97 +280,132 @@
           }
         },
         {
-          "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "type": "rawVideo",
-                "model": {
-                  "guidance": null,
-                  "isLive": false,
-                  "duration": "PT2H34M25S",
-                  "allowOffsiteEmbedding": false,
-                  "locator": "urn:bbc:pips:pid:p064nsyw"
-                }
-              },
-              {
-                "type": "altText",
                 "model": {
                   "blocks": [
                     {
-                      "type": "text",
                       "model": {
                         "blocks": [
                           {
-                            "type": "paragraph",
                             "model": {
-                              "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
                               "blocks": [
                                 {
-                                  "type": "fragment",
                                   "model": {
-                                    "text": "This video shows Marks and Spencer CEO talking about the announcement earlier this morning",
-                                    "attributes": []
-                                  }
+                                    "attributes": [],
+                                    "text": "They may be tiny, but us humans could learn a thing or two from ants."
+                                  },
+                                  "type": "fragment"
                                 }
-                              ]
-                            }
+                              ],
+                              "text": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "type": "paragraph"
                           }
                         ]
-                      }
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "caption"
               },
               {
-                "type": "image",
                 "model": {
                   "blocks": [
                     {
-                      "type": "rawImage",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
                       "model": {
-                        "width": 1024,
-                        "height": 576,
-                        "locator": "5BD5/production/_101690532_2.jpg",
-                        "originCode": "cpsprodpb",
-                        "copyrightHolder": "NASA"
-                      }
+                        "advertising": true,
+                        "caption": null,
+                        "embedding": true,
+                        "format": "audio_video",
+                        "id": "p01k6msm",
+                        "image": null,
+                        "imageCopyright": "BBC",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "title": "Five things ants can teach us about management",
+                        "versions": [
+                          {
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "availableUntil": null,
+                            "duration": 191,
+                            "types": ["Original"],
+                            "versionId": "p01k6msp",
+                            "warnings": {
+                              "long": "Contains strong language and adult humour.",
+                              "short": "Contains strong language and adult humour."
+                            }
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
                     },
                     {
-                      "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "type": "text",
+                            "model": {
+                              "copyrightHolder": "BBC",
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                              "originCode": null,
+                              "width": 1920
+                            },
+                            "type": "rawImage"
+                          },
+                          {
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "paragraph",
                                   "model": {
-                                    "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
                                     "blocks": [
                                       {
-                                        "type": "fragment",
                                         "model": {
-                                          "text": "Cras accumsan rhoncus ipsum, et consequat ex commodo pulvinar.",
-                                          "attributes": []
-                                        }
+                                          "blocks": [
+                                            {
+                                              "model": {
+                                                "attributes": [],
+                                                "text": "Ants"
+                                              },
+                                              "type": "fragment"
+                                            }
+                                          ],
+                                          "text": "Ants"
+                                        },
+                                        "type": "paragraph"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "type": "text"
                                 }
                               ]
-                            }
+                            },
+                            "type": "altText"
                           }
                         ]
-                      }
+                      },
+                      "type": "image"
                     }
                   ]
-                }
+                },
+                "type": "aresMedia"
               }
-            ]
-          }
+            ],
+            "locator": "urn:bbc:pips:pid:p01k6msm"
+          },
+          "type": "video"
         },
         {
           "type": "subheadline",

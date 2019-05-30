@@ -77,6 +77,7 @@ const ImageContainer = ({ blocks }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
+        lazyLoad
       />
     </Wrapper>
   );

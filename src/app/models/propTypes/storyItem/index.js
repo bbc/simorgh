@@ -10,6 +10,9 @@ export const storyItemImage = {
 export const storyItem = {
   headlines: shape({
     headline: string.isRequired,
+  }),
+  locators: shape({
+    assetUri: string.isRequired,
   }).isRequired,
   summary: string.isRequired,
   timestamp: number.isRequired,
