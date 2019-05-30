@@ -107,6 +107,7 @@ pipeline {
             }
           }
           steps {
+            sh "rm -f storybook.zip"
             sh 'make install'
             sh 'make buildStorybook'
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
@@ -144,6 +145,11 @@ pipeline {
           wait: true
         )
       }
+    }
+  }
+  post {
+    always {
+      cleanWs()
     }
   }
 }

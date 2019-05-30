@@ -37,47 +37,62 @@ generateFixtureData.defaultProps = {
   blocks: '',
 };
 
-export const VideoClipGlobalWithCaption = generateFixtureData({
-  platform: 'canonical',
-  blocks: [videoClipGlobalGuidanceBlock, captionBlock],
-});
+export const NoData = ({ platform }) =>
+  generateFixtureData({ platform, blocks: null });
 
-export const VideoClipGlobalWithoutCaption = generateFixtureData({
-  platform: 'canonical',
-  blocks: [videoClipGlobalGuidanceBlock],
-});
+export const NoAresMedia = ({ platform }) =>
+  generateFixtureData({ platform, blocks: [captionBlock] });
 
-export const VideoClipGlobalPortrait = generateFixtureData({
-  platform: 'canonical',
-  blocks: [videoClipGlobalPortraitBlock],
-});
+export const VideoClipGlobalWithCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+  });
 
-export const VideoClipUkWithGuidance = generateFixtureData({
-  platform: 'canonical',
-  blocks: [videoClipUkGuidanceBlock],
-});
+export const VideoClipGlobalWithoutCaption = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalGuidanceBlock],
+  });
 
-export const VideoClipNonUk = generateFixtureData({
-  platform: 'canonical',
-  blocks: [videoClipNonUkBlock],
-});
+export const VideoClipGlobalPortrait = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipGlobalPortraitBlock],
+  });
 
-export const AudioClipGlobalGuidance = generateFixtureData({
-  platform: 'canonical',
-  blocks: [audioClipGlobalGuidanceBlock],
-});
+export const VideoClipUkWithGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipUkGuidanceBlock],
+  });
 
-export const AudioClipUk = generateFixtureData({
-  platform: 'canonical',
-  blocks: [audioClipUkOnlyBlock],
-});
+export const VideoClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [videoClipNonUkBlock],
+  });
 
-export const AudioClipNonUk = generateFixtureData({
-  platform: 'canonical',
-  blocks: [audioClipNonUkBlock],
-});
+export const AudioClipGlobalGuidance = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipGlobalGuidanceBlock],
+  });
 
-export const AudioEpisodeGlobal = generateFixtureData({
-  platform: 'canonical',
-  blocks: [audioEpisodeGlobalBlock],
-});
+export const AudioClipUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipUkOnlyBlock],
+  });
+
+export const AudioClipNonUk = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioClipNonUkBlock],
+  });
+
+export const AudioEpisodeGlobal = ({ platform }) =>
+  generateFixtureData({
+    platform,
+    blocks: [audioEpisodeGlobalBlock],
+  });

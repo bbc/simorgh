@@ -28,5 +28,25 @@ exports[`Video with data should render the video with valid props 1`] = `
     }
 ]
   </div>
+  <div>
+    statsAppName: 
+    news
+  </div>
+  <div>
+    statsAppType: 
+    responsive
+  </div>
+  <div>
+    statsCountername: 
+    news.articles.c0000000000o.page
+  </div>
+  <div>
+    statsDestination: 
+    NEWS_PS_TEST
+  </div>
+  <div>
+    uiLocale: 
+    en-GB
+  </div>
 </div>
 `;
