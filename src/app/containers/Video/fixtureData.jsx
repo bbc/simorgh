@@ -23,6 +23,7 @@ const generateFixtureData = ({ platform, blocks }) => (
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
+    <div>Dont forget to navigate to local.bbc.co.uk</div>
     <VideoContainer blocks={blocks} />
   </RequestContextProvider>
 );
