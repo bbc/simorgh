@@ -5,7 +5,6 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import loadInitialData from '../app/routes/loadInitialData';
 import routes from '../app/routes';
 import {
   articleRegexPath,
@@ -150,9 +149,9 @@ server
   )
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
-      const data = await loadInitialData(url, routes);
+      const { service, isAmp, route, match } = getRouteProps(routes, url);
+      const data = await route.getInitialData(match.params);
       const { status } = data;
-      const { service, isAmp } = getRouteProps(routes, url);
       const bbcOrigin = headers['bbc-origin'];
 
       res
