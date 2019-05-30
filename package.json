@@ -206,7 +206,8 @@
     "prune": false,
     "requires": [
       "td-agent",
-      "cloudteam-td-agent-setup"
+      "cloudteam-td-agent-setup",
+      "dial-agent"
     ]
   }
 }

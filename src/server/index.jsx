@@ -16,6 +16,7 @@ import {
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getDials from './getDials';
 
 const morgan = require('morgan');
 
@@ -154,10 +155,25 @@ server
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
+      let dials = {};
+      try {
+        dials = await getDials();
+      } catch ({ message }) {
+        logger.error(`Error fetching Cosmos dials: ${message}`);
+      }
+
       res
         .status(status)
         .send(
-          await renderDocument(url, data, routes, bbcOrigin, service, isAmp),
+          await renderDocument(
+            url,
+            data,
+            routes,
+            bbcOrigin,
+            service,
+            isAmp,
+            dials,
+          ),
         );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
