@@ -14,6 +14,9 @@ const group = {
       headlines: {
         headline: 'Top Story 1 headline',
       },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
       summary: 'Summary text 1',
       timestamp: 1557738768,
       indexImage: {
@@ -28,6 +31,9 @@ const group = {
     {
       headlines: {
         headline: 'Top Story 2 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
       },
       summary: 'Summary text 2',
       timestamp: 1557738768,
@@ -54,6 +60,9 @@ const hasNoStrapline = {
       headlines: {
         headline: "Nothing rendered because we didn't set a strapline",
       },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
       summary: 'Oops',
       timestamp: 1557738768,
       indexImage: {
@@ -68,6 +77,9 @@ const hasNoStrapline = {
     {
       headlines: {
         headline: 'Top Story 2 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
       },
       summary: 'Summary text 2',
       timestamp: 1557738768,
@@ -137,6 +149,7 @@ describe('FrontPageSection Container', () => {
           <FrontPageSection group={group} />
         </ServiceContextProvider>,
       );
+
       expect(container.getElementsByTagName('section')).toHaveLength(1);
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);

@@ -159,9 +159,9 @@
             "locator": "urn:bbc:pips:pid:p064nsyw",
             "blocks": [
               {
-                "type" : "caption",
-                "model" : {
-                  "blocks" : [
+                "type": "caption",
+                "model": {
+                  "blocks": [
                     {
                       "type": "text",
                       "model": {
@@ -188,29 +188,36 @@
                 }
               },
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p064nsyw",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Plastic - The Story So Far",
-                  "synopses" : {
-                    "short" : "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p064nsz3",
-                      "types" : [ "Original" ],
-                      "duration" : 299,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p064nsyw",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Plastic - The Story So Far",
+                        "synopses": {
+                          "short": "Lucy Siegle looks at The One Show's plastic journey and looks at what to do next...",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p064ntrz.jpg",
+                        "embedding": true,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p064nsz3",
+                            "types": ["Original"],
+                            "duration": 299,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            },
+                            "warnings": {}
+                          }
+                        ]
                       }
                     }
                   ]
@@ -283,32 +290,39 @@
                 }
               },
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p068lkw4",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Highlights: Peru 2-0 Scotland",
-                  "synopses" : {
-                    "short" : "Highlights: Peru 2-0 Scotland",
-                    "long" : "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give World Cup-bound Peru a low-key victory in Lima.",
-                    "medium" : "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima."
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p068lkx0.jpg",
-                  "imageCopyright" : "SNS",
-                  "embedding" : false,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p068lkw6",
-                      "types" : [ "Original" ],
-                      "duration" : 256,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
-                      },
-                      "availableUntil" : 1528257204
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p068lkw4",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Highlights: Peru 2-0 Scotland",
+                        "synopses": {
+                          "short": "Highlights: Peru 2-0 Scotland",
+                          "long": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give World Cup-bound Peru a low-key victory in Lima.",
+                          "medium": "Scotland's lose the first of two summer friendlies as goals from Christian Cueva and Jefferson Farfan give Peru a low-key victory in Lima."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p068lkx0.jpg",
+                        "imageCopyright": "SNS",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p068lkw6",
+                            "types": ["Original"],
+                            "duration": 256,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            },
+                            "availableUntil": 1528257204,
+                            "warnings": {}
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -351,29 +365,36 @@
                 }
               },
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p068hxjb",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "How the Skripals were saved",
-                  "synopses" : {
-                    "short" : "How the Skripals were saved",
-                    "long" : "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal.",
-                    "medium" : "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal."
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p01tlf61.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : true,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p068hxjd",
-                      "types" : [ "Portrait" ],
-                      "duration" : 138,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : true
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p068hxjb",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "How the Skripals were saved",
+                        "synopses": {
+                          "short": "How the Skripals were saved",
+                          "long": "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal.",
+                          "medium": "Hospital staff speak about treating poisoned Russians Sergei and Yulia Skripal."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p01tlf61.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p068hxjd",
+                            "types": ["Portrait"],
+                            "duration": 138,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "warnings": {}
+                          }
+                        ]
                       }
                     }
                   ]
@@ -383,35 +404,42 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p01hsgv6",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01hsgv6",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p01hsgv6",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Gemma short headline",
-                  "synopses" : {
-                    "short" : "Gemma SEO",
-                    "long" : "Two paragraphs go here",
-                    "medium" : "Gemma summary"
-                  },
-                  "imageUrl" : "ichef.test.bbci.co.uk/images/ic/$recipe/p01hxr1j.jpg",
-                  "imageCopyright" : "BBC",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : true,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p01hsgv8",
-                      "types" : [ "Original" ],
-                      "duration" : 14,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01hsgv6",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Gemma short headline",
+                        "synopses": {
+                          "short": "Gemma SEO",
+                          "long": "Two paragraphs go here",
+                          "medium": "Gemma summary"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hxr1j.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01hsgv8",
+                            "types": ["Original"],
+                            "duration": 14,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            },
+                            "warnings": {}
+                          }
+                        ]
                       }
                     }
                   ]
@@ -421,36 +449,43 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p064gl4v",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p064gl4v",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p064gl4v",
-                  "subType" : "episode",
-                  "format" : "audio_video",
-                  "title" : "Turning Off Porn",
-                  "synopses" : {
-                    "short" : "New laws will require users to prove their age with ID. But will they make a difference?",
-                    "medium" : "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.",
-                    "long" : "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.\n\n\n\nMany people don’t realise that a major change is imminent in the way pornography is consumed.  There's confusion as to how the law will be enforced, and concerns that sensitive personal information may not be protected. \n\n\n\nNick finds out how widely people will be affected, and visits porn shoots to speak to actors and producers, and meet those who have had their lives made, and ruined by porn."
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p065f0c3.jpg",
-                  "embedding" : false,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p064glg6",
-                      "types" : [ "Original" ],
-                      "duration" : 1135,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
-                      },
-                      "availableUntil" : 1556341200
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p064gl4v",
+                        "subType": "episode",
+                        "format": "audio_video",
+                        "title": "Turning Off Porn",
+                        "synopses": {
+                          "short": "New laws will require users to prove their age with ID. But will they make a difference?",
+                          "medium": "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.",
+                          "long": "New laws will require users to prove their age with ID. But will they protect children, and will your privacy be protected? Nick Rotherham investigates.\n\n\n\nMany people don’t realise that a major change is imminent in the way pornography is consumed.  There's confusion as to how the law will be enforced, and concerns that sensitive personal information may not be protected. \n\n\n\nNick finds out how widely people will be affected, and visits porn shoots to speak to actors and producers, and meet those who have had their lives made, and ruined by porn."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p065f0c3.jpg",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p064glg6",
+                            "types": ["Original"],
+                            "duration": 1135,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            },
+                            "warnings": {},
+                            "availableUntil": 1556341200
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
