@@ -86,7 +86,7 @@ describe('Server', () => {
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
+        const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
         expect(body).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );

@@ -353,7 +353,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    href="https://www.bbc.com/persian/articles/c4vlle3q337o"
     rel="canonical"
   />
   <meta
@@ -416,7 +416,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    content="https://www.bbc.com/persian/articles/c4vlle3q337o"
     name="og:url"
   />
   <meta
@@ -494,11 +494,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    href="https://www.bbc.com/persian/articles/c4vlle3q337o"
     rel="canonical"
   />
   <link
-    href="https://www.bbc.com/persian/articles/cyddjz5058wo.amp"
+    href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
     rel="amphtml"
   />
   <meta
@@ -561,7 +561,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/cyddjz5058wo"
+    content="https://www.bbc.com/persian/articles/c4vlle3q337o"
     name="og:url"
   />
   <meta
