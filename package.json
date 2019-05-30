@@ -39,7 +39,7 @@
     "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
     "test:e2e:storybook:ci": "run-p --race storybook:ci cypress:storybook",
     "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
-    "test:lighthouse": "lighthouse http://localhost:7080/news/articles/cl55zn0w0l4o --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh && node scripts/lighthouseBudget.js run",
+    "test:lighthouse": "lighthouse http://localhost:7080/news/articles/c6v11qzyv8po --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh && node scripts/lighthouseBudget.js run",
     "test:lighthouse:ci": "npm install --no-save lighthouse@latest npm-run-all@latest && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
