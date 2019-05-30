@@ -94,9 +94,7 @@ const VideoContainer = ({ blocks }) => {
             {`
               function initialiseRequires() {
                   requiredScripts = {
-                    "bump-4":"//emp.bbci.co.uk/emp/bump-4/bump-4",
-                    "jquery-1":"//static.test.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2",
-                    "jquery-1.9":"//static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1",
+                    "bump-4":"//emp.bbci.co.uk/emp/bump-4/bump-4"
                     };
                   require({ paths: requiredScripts, waitSeconds: 30 });
                   mediaPlayerSetup();
