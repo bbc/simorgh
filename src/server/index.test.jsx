@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import loadInitialData from '../app/routes/loadInitialData';
+import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
 import getDials from './getDials';
 
@@ -36,7 +36,29 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('../app/routes/loadInitialData');
+jest.mock('../app/routes/getInitialData/utils/getRouteProps');
+
+const mockRouteProps = (
+  id,
+  service,
+  isAmp,
+  dataResponse,
+  responseType = 'resolve',
+) => {
+  const getInitialData =
+    responseType === 'reject'
+      ? jest.fn().mockRejectedValueOnce(dataResponse)
+      : jest.fn().mockResolvedValueOnce(dataResponse);
+
+  getRouteProps.mockReturnValue({
+    isAmp,
+    service,
+    route: { getInitialData },
+    match: {
+      params: { id, service },
+    },
+  });
+};
 
 styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
@@ -67,7 +89,7 @@ describe('Server', () => {
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/news/articles/cn7769kpk9mo.json');
+        const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
         expect(body).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
@@ -143,10 +165,12 @@ describe('Server', () => {
 
     describe('Successful render', () => {
       describe('200 status code', () => {
+        const id = 'c0000000001o';
+        const service = 'news';
+        const isAmp = false;
+
         beforeEach(() => {
-          loadInitialData.mockImplementationOnce(() =>
-            Promise.resolve(successDataResponse),
-          );
+          mockRouteProps(id, service, isAmp, successDataResponse);
         });
 
         it('should respond with rendered data', async () => {
@@ -154,7 +178,7 @@ describe('Server', () => {
           getDials.mockResolvedValue(dials);
 
           const { text, status } = await makeRequest(
-            '/news/articles/c0000000001o',
+            `/${service}/articles/${id}`,
           );
 
           expect(status).toBe(200);
@@ -174,8 +198,8 @@ describe('Server', () => {
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
-              isAmp={false}
-              service="news"
+              isAmp={isAmp}
+              service={service}
               styleTags={<style />}
               dials={dials}
             />,
@@ -195,15 +219,16 @@ describe('Server', () => {
       });
 
       describe('404 status code', () => {
+        const id = 'c0000000001o';
+        const service = 'news';
+
         beforeEach(() => {
-          loadInitialData.mockImplementationOnce(() =>
-            Promise.resolve(notFoundDataResponse),
-          );
+          mockRouteProps(id, service, false, notFoundDataResponse);
         });
 
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(
-            '/news/articles/c0000000001o',
+            `/${service}/articles/${id}`,
           );
           expect(status).toBe(404);
           expect(text).toEqual(
@@ -214,15 +239,16 @@ describe('Server', () => {
     });
 
     describe('Unknown error within universal-react-app or its dependencies', () => {
+      const id = 'c0000000001o';
+      const service = 'news';
+
       beforeEach(() => {
-        loadInitialData.mockImplementationOnce(() =>
-          Promise.reject(Error('Error!')),
-        );
+        mockRouteProps(id, service, false, Error('Error!'), 'reject');
       });
 
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(
-          '/news/articles/c0000000001o',
+          `/${service}/articles/${id}`,
         );
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
