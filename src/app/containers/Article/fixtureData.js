@@ -111,7 +111,7 @@ export const articleDataNews = articleDataBuilder(
 );
 
 export const articleDataPersian = articleDataBuilder(
-  'cyddjz5058wo',
+  'c4vlle3q337o',
   'Persian',
   'fa',
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',
