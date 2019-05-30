@@ -62,7 +62,8 @@ const VideoContainer = ({ blocks }) => {
       items: [
         {
           versionID,
-          duration
+          duration,
+          kind
         }
       ]
     }
@@ -91,21 +92,19 @@ const VideoContainer = ({ blocks }) => {
           </script>
           <script type="text/javascript">
             {`
-              function initialiseBump() {
-                  bbcRequireMap = {
-                        "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
+              function initialiseRequires() {
+                  requiredScripts = {
+                    "bump-4":"//emp.bbci.co.uk/emp/bump-4/bump-4",
+                    "jquery-1":"//static.test.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2",
+                    "jquery-1.9":"//static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1",
                     };
-                  require({ paths: bbcRequireMap, waitSeconds: 30 });
+                  require({ paths: requiredScripts, waitSeconds: 30 });
                   mediaPlayerSetup();
               }
             `}
           </script>
           <script
-            type="text/javascript"
-            src="https://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1"
-          />
-          <script
-            onLoad="initialiseBump()"
+            onLoad="initialiseRequires()"
             type="text/javascript"
             src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
           />
