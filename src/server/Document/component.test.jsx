@@ -5,6 +5,7 @@ import DocumentComponent from './component';
 describe('Document Component', () => {
   const assets = ['http://example.com/file.js'];
   const data = { test: 'data' };
+  const dials = { dial: true };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
@@ -17,7 +18,7 @@ describe('Document Component', () => {
     link: mockHelmetToComponent(
       <link
         rel="canonical"
-        href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
+        href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       />,
     ),
     meta: mockHelmetToComponent(
@@ -44,6 +45,7 @@ describe('Document Component', () => {
         styleTags={isAmp ? styleTagsAmp : styleTags}
         service={service}
         isAmp={isAmp}
+        dials={dials}
       />,
     );
 
