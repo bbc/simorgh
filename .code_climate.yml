@@ -31,26 +31,28 @@ checks:
     config:
       threshold: # language-specific defaults. an override will affect all languages.
 exclude_patterns:
-- "cypress/{integration,support}/*.js"
 - "src/*.test.*"
+
+- "cypress/{integration,support}/*.js"
+- "src/server/*.test.*"
+
+- "src/**/**/*.test.*"
+
+- "src/app/**/**/*.test.jsx"
+
 - "src/app/{components,containers,contexts}/**/*.test.*"
+- "src/app/{dataValidator}/**/*.test.*"
+- "src/app/helpers/{json}/*.test.*"
+- "src/app/lib/**/*.test.*"
+- "src/app/routes/**/*.test.*"
+
 - "src/app/{containers}/ConsentBanner/**/*.test.*"
 - "src/app/{containers}/PageViewAnalytics/**/*.test.*"
 - "src/app/{dataValidator}/{helpers,utilities}/**/*.test.*"
-- "src/app/{dataValidator}/**/*.test.*"
-- "src/app/helpers/*.test.*"
-- "src/app/helpers/{json}/*.test.*"
 - "src/app/helpers/{storybook}/**/*.test.*"
-- "src/app/Layouts/*.test.*"
-- "src/app/lib/*.test.*"
-- "src/app/lib/**/*.test.*"
 - "src/app/lib/**/**/*.test.*"
-- "src/app/lib/**/**/**/*.test.*"
-- "src/app/models/*.test.*"
 - "src/app/models/**/**/*.test.*"
-- "src/app/routes/*.test.*"
-- "src/app/routes/**/*.test.*"
 - "src/app/routes/**/**/*.test.*"
-- "src/server/*.test.*"
-- "src/server/{assets,Document}/*.test.*"
+
+- "src/app/lib/**/**/**/*.test.*"
 
