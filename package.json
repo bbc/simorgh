@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/cl55zn0w0l4o.amp && amphtml-validator http://localhost:7080/news/articles/cl55zn0w0l4o.amp",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp",
     "bbcA11y": "bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
@@ -206,7 +206,8 @@
     "prune": false,
     "requires": [
       "td-agent",
-      "cloudteam-td-agent-setup"
+      "cloudteam-td-agent-setup",
+      "dial-agent"
     ]
   }
 }
