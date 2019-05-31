@@ -5,7 +5,6 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import loadInitialData from '../app/routes/loadInitialData';
 import routes from '../app/routes';
 import {
   articleRegexPath,
@@ -17,6 +16,7 @@ import {
 import nodeLogger from '../app/helpers/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getDials from './getDials';
 
 const morgan = require('morgan');
 
@@ -150,15 +150,30 @@ server
   )
   .get(articleRegexPath, async ({ url, headers }, res) => {
     try {
-      const data = await loadInitialData(url, routes);
+      const { service, isAmp, route, match } = getRouteProps(routes, url);
+      const data = await route.getInitialData(match.params);
       const { status } = data;
-      const { service, isAmp } = getRouteProps(routes, url);
       const bbcOrigin = headers['bbc-origin'];
+
+      let dials = {};
+      try {
+        dials = await getDials();
+      } catch ({ message }) {
+        logger.error(`Error fetching Cosmos dials: ${message}`);
+      }
 
       res
         .status(status)
         .send(
-          await renderDocument(url, data, routes, bbcOrigin, service, isAmp),
+          await renderDocument(
+            url,
+            data,
+            routes,
+            bbcOrigin,
+            service,
+            isAmp,
+            dials,
+          ),
         );
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors

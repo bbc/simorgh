@@ -23,19 +23,13 @@ const getArticleInitialData = require('./article').default;
 
 const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';
-const defaultAmpParam = '';
 let defaultContext;
 
 describe('getArticleInitialData', () => {
   beforeEach(() => {
     defaultContext = {
-      match: {
-        params: {
-          id: defaultIdParam,
-          service: defaultServiceParam,
-          amp: defaultAmpParam,
-        },
-      },
+      id: defaultIdParam,
+      service: defaultServiceParam,
     };
 
     jest.clearAllMocks();
@@ -51,25 +45,6 @@ describe('getArticleInitialData', () => {
     expect(response).toEqual({
       pageData: 'foo',
       status: 123,
-    });
-  });
-
-  describe('When on amp', () => {
-    beforeEach(() => {
-      defaultContext.match.params.amp = true;
-    });
-
-    it('returns isAmp as true', async () => {
-      const response = await getArticleInitialData(defaultContext);
-
-      expect(fetchData).toHaveBeenCalledWith({
-        url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
-      });
-
-      expect(response).toEqual({
-        pageData: 'foo',
-        status: 123,
-      });
     });
   });
 
