@@ -40,6 +40,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
                   "title": "Birmingham Checkout 2",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": true,
@@ -123,6 +124,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
                   "title": "Birmingham checkout",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -209,6 +211,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
                   "title": "Birmingham Checkout 3",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": false,
@@ -292,6 +295,7 @@ exports[`AudioVideo with Audio data amp - should render audio episode global 1`]
                   "title": "Test audio episode for articles, worldwide",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": false,
@@ -375,6 +379,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
                   "title": "Birmingham Checkout 2",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": true,
@@ -458,6 +463,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
                   "title": "Birmingham checkout",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -544,6 +550,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
                   "title": "Birmingham Checkout 3",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": false,
@@ -627,6 +634,7 @@ exports[`AudioVideo with Audio data canonical - should render audio episode glob
                   "title": "Test audio episode for articles, worldwide",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": false,
@@ -710,6 +718,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
                   "title": "Test vertical video",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -793,6 +802,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                   "title": "Five things ants can teach us about management",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -910,6 +920,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                   "title": "How Germans remember the World Wars",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": true,
@@ -1031,6 +1042,7 @@ Stephen Richardson has told the BBC he blames himself for the loss of his limb."
                   "title": "'I lost my leg to type 2 diabetes' (NON UK)",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": false,
@@ -1114,6 +1126,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
                   "title": "Five things ants can teach us about management",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -1258,6 +1271,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
                   "title": "Five things ants can teach us about management",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -1402,6 +1416,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
                   "title": "Test vertical video",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -1485,6 +1500,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                   "title": "Five things ants can teach us about management",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": true,
@@ -1602,6 +1618,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                   "title": "How Germans remember the World Wars",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": false,
                         "uk": true,
@@ -1723,6 +1740,7 @@ Stephen Richardson has told the BBC he blames himself for the loss of his limb."
                   "title": "'I lost my leg to type 2 diabetes' (NON UK)",
                   "versions": Array [
                     Object {
+                      "availableFrom": null,
                       "availableTerritories": Object {
                         "nonUk": true,
                         "uk": false,
