@@ -1,12 +1,12 @@
 {
-  "generated": "2019-05-31T09:20:18.13Z",
-  "lastRecordTimeStamp": "2019-05-31T09:10:00Z",
-  "firstRecordTimeStamp": "2019-05-31T07:10:00Z",
+  "generated": "2019-05-31T09:35:17.736Z",
+  "lastRecordTimeStamp": "2019-05-31T09:25:00Z",
+  "firstRecordTimeStamp": "2019-05-31T07:25:00Z",
   "totalRecords": 100,
   "records": [
     {
       "id": "50c8d6e0-3699-d948-ba3b-ad4e6492bd2d",
-      "count": 498,
+      "count": 507,
       "urn": "urn:bbc:curie:asset:50c8d6e0-3699-d948-ba3b-ad4e6492bd2d",
       "promo": {
         "headlines": {
@@ -62,7 +62,7 @@
     },
     {
       "id": "47f3c482-a572-1c49-aab8-d77e1f779de7",
-      "count": 246,
+      "count": 240,
       "urn": "urn:bbc:curie:asset:47f3c482-a572-1c49-aab8-d77e1f779de7",
       "promo": {
         "headlines": {
@@ -107,7 +107,7 @@
     },
     {
       "id": "b0cbeec4-75f0-de40-9343-0caf819bfa22",
-      "count": 76,
+      "count": 75,
       "urn": "urn:bbc:curie:asset:b0cbeec4-75f0-de40-9343-0caf819bfa22",
       "promo": {
         "headlines": {
@@ -148,7 +148,7 @@
     },
     {
       "id": "d55f86c1-468d-3f48-b16c-a2a30f243d60",
-      "count": 45,
+      "count": 52,
       "urn": "urn:bbc:curie:asset:d55f86c1-468d-3f48-b16c-a2a30f243d60",
       "promo": {
         "headlines": {
@@ -208,7 +208,7 @@
     },
     {
       "id": "c5d969fb-bd0e-174d-8ffc-8fe4b9b31dc4",
-      "count": 40,
+      "count": 37,
       "urn": "urn:bbc:curie:asset:c5d969fb-bd0e-174d-8ffc-8fe4b9b31dc4",
       "promo": {
         "headlines": {
@@ -290,8 +290,92 @@
       }
     },
     {
+      "id": "577a20af-06af-b846-a216-5b2b067c5236",
+      "count": 24,
+      "urn": "urn:bbc:curie:asset:577a20af-06af-b846-a216-5b2b067c5236",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Public Holidays wey go happun for 2019",
+          "headline": "2019 Public Holidays wey go happun for Nigeria"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-46729879",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46729879",
+          "curie": "http://www.bbc.co.uk/asset/577a20af-06af-b846-a216-5b2b067c5236"
+        },
+        "summary": "Take dis opportunity to plan your year and know which day be holiday and election day for Nigeria.",
+        "timestamp": 1558434642016,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "Keep me on trend"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105049642",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6076/production/_105049642_gettyimages-615134664.jpg",
+          "path": "/cpsprodpb/6076/production/_105049642_gettyimages-615134664.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Nigeria woman dey cook for customers",
+          "caption": "Dis woman dey cook for customers wey come for Felabration festival and dem dey do around Nigeria independence day period",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-46729879"
+      }
+    },
+    {
+      "id": "4aa99cb6-e4d7-2040-9017-c2e2e17a0620",
+      "count": 24,
+      "urn": "urn:bbc:curie:asset:4aa99cb6-e4d7-2040-9017-c2e2e17a0620",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Court grant Naira Marley bail afta 10 days for prison",
+          "headline": "Naira Marley: Court don grant di musician N2million naira bail"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48464531",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48464531",
+          "curie": "http://www.bbc.co.uk/asset/4aa99cb6-e4d7-2040-9017-c2e2e17a0620"
+        },
+        "summary": "Nigerian musician Azeez Fashola bin dey prison afta di Economic and Financial Crimes Commission gbab am on top accuse of internet fraud.",
+        "timestamp": 1559225288971,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107161766",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1049C/production/_107161766_60458083_2336697983019345_1125672827626717184_n.jpg",
+          "path": "/cpsprodpb/1049C/production/_107161766_60458083_2336697983019345_1125672827626717184_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Naira Marley on May 20 for court",
+          "caption": "Naira Marley on May 20 for court",
+          "copyrightHolder": "Economic and Financial Crimes Commission"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48464531"
+      }
+    },
+    {
       "id": "02aab03c-3471-5f4c-af00-4c2868654aa5",
-      "count": 23,
+      "count": 22,
       "urn": "urn:bbc:curie:asset:02aab03c-3471-5f4c-af00-4c2868654aa5",
       "promo": {
         "headlines": {
@@ -354,92 +438,8 @@
       }
     },
     {
-      "id": "577a20af-06af-b846-a216-5b2b067c5236",
-      "count": 22,
-      "urn": "urn:bbc:curie:asset:577a20af-06af-b846-a216-5b2b067c5236",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Public Holidays wey go happun for 2019",
-          "headline": "2019 Public Holidays wey go happun for Nigeria"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-46729879",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46729879",
-          "curie": "http://www.bbc.co.uk/asset/577a20af-06af-b846-a216-5b2b067c5236"
-        },
-        "summary": "Take dis opportunity to plan your year and know which day be holiday and election day for Nigeria.",
-        "timestamp": 1558434642016,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "Keep me on trend"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "105049642",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/6076/production/_105049642_gettyimages-615134664.jpg",
-          "path": "/cpsprodpb/6076/production/_105049642_gettyimages-615134664.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Nigeria woman dey cook for customers",
-          "caption": "Dis woman dey cook for customers wey come for Felabration festival and dem dey do around Nigeria independence day period",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-46729879"
-      }
-    },
-    {
-      "id": "4aa99cb6-e4d7-2040-9017-c2e2e17a0620",
-      "count": 21,
-      "urn": "urn:bbc:curie:asset:4aa99cb6-e4d7-2040-9017-c2e2e17a0620",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Court grant Naira Marley bail afta 10 days for prison",
-          "headline": "Naira Marley: Court don grant di musician N2million naira bail"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48464531",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48464531",
-          "curie": "http://www.bbc.co.uk/asset/4aa99cb6-e4d7-2040-9017-c2e2e17a0620"
-        },
-        "summary": "Nigerian musician Azeez Fashola bin dey prison afta di Economic and Financial Crimes Commission gbab am on top accuse of internet fraud.",
-        "timestamp": 1559225288971,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107161766",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/1049C/production/_107161766_60458083_2336697983019345_1125672827626717184_n.jpg",
-          "path": "/cpsprodpb/1049C/production/_107161766_60458083_2336697983019345_1125672827626717184_n.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Naira Marley on May 20 for court",
-          "caption": "Naira Marley on May 20 for court",
-          "copyrightHolder": "Economic and Financial Crimes Commission"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48464531"
-      }
-    },
-    {
       "id": "b610eb2d-fe6b-fd4f-93c9-74fbf7d778e0",
-      "count": 15,
+      "count": 20,
       "urn": "urn:bbc:curie:asset:b610eb2d-fe6b-fd4f-93c9-74fbf7d778e0",
       "promo": {
         "headlines": {
@@ -480,7 +480,7 @@
     },
     {
       "id": "17bc1fb0-6413-ed49-8201-f8fd8489255c",
-      "count": 15,
+      "count": 14,
       "urn": "urn:bbc:curie:asset:17bc1fb0-6413-ed49-8201-f8fd8489255c",
       "promo": {
         "headlines": {
@@ -528,44 +528,54 @@
       }
     },
     {
-      "id": "edcc2ec2-a524-474c-b847-15aecf2029ab",
+      "id": "87a8908c-67ec-cc40-8da6-da4afd45dc48",
       "count": 13,
-      "urn": "urn:bbc:curie:asset:edcc2ec2-a524-474c-b847-15aecf2029ab",
+      "urn": "urn:bbc:curie:asset:87a8908c-67ec-cc40-8da6-da4afd45dc48",
       "promo": {
         "headlines": {
-          "shortHeadline": "How poo-poo trap woman for window",
-          "headline": "Woman wan troway poo-poo, come trap for window"
+          "shortHeadline": "Emeka Ihedioha don win Imo Govnorship election",
+          "headline": "Emeka Ihedioha: INEC don declare PDP candidate winner of Imo Govnorship election"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-41171196",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-41171196",
-          "curie": "http://www.bbc.co.uk/asset/edcc2ec2-a524-474c-b847-15aecf2029ab"
+          "assetUri": "/pidgin/tori-47506748",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47506748",
+          "curie": "http://www.bbc.co.uk/asset/87a8908c-67ec-cc40-8da6-da4afd45dc48"
         },
-        "summary": "British guy, Liam Smith, meet woman wey im wan friend, but di very first waka dem do together come end with fire service, over poo-poo matter.",
-        "timestamp": 1558434354094,
+        "summary": "Nigeria election office INEC don declare PDP candidate Emeka Ihedioha winner of Govnorship elections for Imo State, south-eastern part of di kontri.",
+        "timestamp": 1552413469403,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
             "categoryName": "News"
-          }
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
         },
         "indexImage": {
-          "id": "97694083",
+          "id": "105983902",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/94A1/production/_97694083_tg.jpg",
-          "path": "/cpsprodpb/94A1/production/_97694083_tg.jpg",
+          "href": "http://c.files.bbci.co.uk/51CA/production/_105983902_53386226_2067299409974312_7979997511676854272_n.jpg",
+          "path": "/cpsprodpb/51CA/production/_105983902_53386226_2067299409974312_7979997511676854272_n.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Woman wey poo-poo trap for window",
-          "caption": "This woman no dey smile",
-          "copyrightHolder": "Liam Smith"
+          "altText": "Imo State, Elections",
+          "caption": "Emeka Ihedioha don win Imo Govnorship election",
+          "copyrightHolder": "BBC"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-41171196"
+        "id": "urn:bbc:ares::asset:pidgin/tori-47506748"
       }
     },
     {
       "id": "4346f6ca-fc39-2045-b97c-29ccf78ad9f1",
-      "count": 13,
+      "count": 12,
       "urn": "urn:bbc:curie:asset:4346f6ca-fc39-2045-b97c-29ccf78ad9f1",
       "promo": {
         "headlines": {
@@ -608,48 +618,6 @@
           "copyrightHolder": "VINCENT AMALVY"
         },
         "id": "urn:bbc:ares::asset:pidgin/sport-43215067"
-      }
-    },
-    {
-      "id": "f1ceb7cc-9233-1241-810e-72fc78cc2f87",
-      "count": 11,
-      "urn": "urn:bbc:curie:asset:f1ceb7cc-9233-1241-810e-72fc78cc2f87",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Ambode no show, Wike go build bridge plus oda tins from govnors inauguration",
-          "headline": "May 29 2019 in Nigeria: Ambode no show, Wike go build bridge plus oda tins from govnors inauguration"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48450882",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48450882",
-          "curie": "http://www.bbc.co.uk/asset/f1ceb7cc-9233-1241-810e-72fc78cc2f87"
-        },
-        "summary": "29 govnors across Nigeria take oath of office to begin new four years tenure on Wednesday.",
-        "timestamp": 1559203238970,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107158166",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/10289/production/_107158166_e95d54e0-7da9-4496-816b-b9196a66a1fa.jpg",
-          "path": "/cpsprodpb/10289/production/_107158166_e95d54e0-7da9-4496-816b-b9196a66a1fa.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Govnor Nyesom Wike with im wife and daughter",
-          "caption": "Rivers state govnor Nyesom Wike and im wife and daughter on inauguration day",
-          "copyrightHolder": "Rivers State Government"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48450882"
       }
     },
     {
@@ -702,21 +670,21 @@
       }
     },
     {
-      "id": "87a8908c-67ec-cc40-8da6-da4afd45dc48",
+      "id": "f1ceb7cc-9233-1241-810e-72fc78cc2f87",
       "count": 10,
-      "urn": "urn:bbc:curie:asset:87a8908c-67ec-cc40-8da6-da4afd45dc48",
+      "urn": "urn:bbc:curie:asset:f1ceb7cc-9233-1241-810e-72fc78cc2f87",
       "promo": {
         "headlines": {
-          "shortHeadline": "Emeka Ihedioha don win Imo Govnorship election",
-          "headline": "Emeka Ihedioha: INEC don declare PDP candidate winner of Imo Govnorship election"
+          "shortHeadline": "Ambode no show, Wike go build bridge plus oda tins from govnors inauguration",
+          "headline": "May 29 2019 in Nigeria: Ambode no show, Wike go build bridge plus oda tins from govnors inauguration"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-47506748",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47506748",
-          "curie": "http://www.bbc.co.uk/asset/87a8908c-67ec-cc40-8da6-da4afd45dc48"
+          "assetUri": "/pidgin/tori-48450882",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48450882",
+          "curie": "http://www.bbc.co.uk/asset/f1ceb7cc-9233-1241-810e-72fc78cc2f87"
         },
-        "summary": "Nigeria election office INEC don declare PDP candidate Emeka Ihedioha winner of Govnorship elections for Imo State, south-eastern part of di kontri.",
-        "timestamp": 1552413469403,
+        "summary": "29 govnors across Nigeria take oath of office to begin new four years tenure on Wednesday.",
+        "timestamp": 1559203238970,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -724,32 +692,64 @@
           },
           "campaigns": [
             {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            },
-            {
               "campaignId": "5a988e4739461b000e9dabfc",
               "campaignName": "WS - Update me"
             }
           ]
         },
         "indexImage": {
-          "id": "105983902",
+          "id": "107158166",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/51CA/production/_105983902_53386226_2067299409974312_7979997511676854272_n.jpg",
-          "path": "/cpsprodpb/51CA/production/_105983902_53386226_2067299409974312_7979997511676854272_n.jpg",
+          "href": "http://c.files.bbci.co.uk/10289/production/_107158166_e95d54e0-7da9-4496-816b-b9196a66a1fa.jpg",
+          "path": "/cpsprodpb/10289/production/_107158166_e95d54e0-7da9-4496-816b-b9196a66a1fa.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Imo State, Elections",
-          "caption": "Emeka Ihedioha don win Imo Govnorship election",
-          "copyrightHolder": "BBC"
+          "altText": "Govnor Nyesom Wike with im wife and daughter",
+          "caption": "Rivers state govnor Nyesom Wike and im wife and daughter on inauguration day",
+          "copyrightHolder": "Rivers State Government"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-47506748"
+        "id": "urn:bbc:ares::asset:pidgin/tori-48450882"
+      }
+    },
+    {
+      "id": "edcc2ec2-a524-474c-b847-15aecf2029ab",
+      "count": 9,
+      "urn": "urn:bbc:curie:asset:edcc2ec2-a524-474c-b847-15aecf2029ab",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "How poo-poo trap woman for window",
+          "headline": "Woman wan troway poo-poo, come trap for window"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-41171196",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-41171196",
+          "curie": "http://www.bbc.co.uk/asset/edcc2ec2-a524-474c-b847-15aecf2029ab"
+        },
+        "summary": "British guy, Liam Smith, meet woman wey im wan friend, but di very first waka dem do together come end with fire service, over poo-poo matter.",
+        "timestamp": 1558434354094,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "indexImage": {
+          "id": "97694083",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/94A1/production/_97694083_tg.jpg",
+          "path": "/cpsprodpb/94A1/production/_97694083_tg.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Woman wey poo-poo trap for window",
+          "caption": "This woman no dey smile",
+          "copyrightHolder": "Liam Smith"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-41171196"
       }
     },
     {
       "id": "6e5c4165-d5a2-db4b-b93b-5a1055e1194f",
-      "count": 9,
+      "count": 8,
       "urn": "urn:bbc:curie:asset:6e5c4165-d5a2-db4b-b93b-5a1055e1194f",
       "promo": {
         "headlines": {
@@ -790,84 +790,6 @@
           "copyrightHolder": "EFCC"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-48437542"
-      }
-    },
-    {
-      "id": "3570f183-4652-104f-94d1-393867ab20d9",
-      "count": 9,
-      "urn": "urn:bbc:curie:asset:3570f183-4652-104f-94d1-393867ab20d9",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Tiger nut drink fit wake up your sex drive - Nutritionist",
-          "headline": "Tiger nut drink fit wake up your sex drive - Nutritionist"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-42945173",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-42945173",
-          "curie": "http://www.bbc.co.uk/asset/3570f183-4652-104f-94d1-393867ab20d9"
-        },
-        "summary": "Dis tiger nut drink dey common and cheap to buy. Nutritionist say person wey take am, come reduce sugar and dey take more fruits and vegetable and do more exercise, say e go help.",
-        "timestamp": 1558435704688,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          }
-        },
-        "indexImage": {
-          "id": "99889388",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/1594E/production/_99889388_img-20180201-wa0006.jpg",
-          "path": "/cpsprodpb/1594E/production/_99889388_img-20180201-wa0006.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Tiger nuts",
-          "caption": "Nutritionist Julaina Osakue say if person fit reduce for sugar, e go help make di person body dey strong well well.",
-          "copyrightHolder": "Juliana Osakue"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-42945173"
-      }
-    },
-    {
-      "id": "f33dad04-4755-ed45-92f4-34d5a799a7c4",
-      "count": 8,
-      "urn": "urn:bbc:curie:asset:f33dad04-4755-ed45-92f4-34d5a799a7c4",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Eyes wey see Adewura last moment",
-          "headline": "Adewura Bello: Na inside dis open manhole na im she meet her untimely death - Eyewitness"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48420428",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48420428",
-          "curie": "http://www.bbc.co.uk/asset/f33dad04-4755-ed45-92f4-34d5a799a7c4"
-        },
-        "summary": "Before she die, Adewura na accounting graduate from University of Lagos.",
-        "timestamp": 1559073260427,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107137004",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/9C89/production/_107137004_adewuracollage.jpg",
-          "path": "/cpsprodpb/9C89/production/_107137004_adewuracollage.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Adewura Bello",
-          "caption": "Pipo wey see wen e happun say na for dis man hole she fall inside",
-          "copyrightHolder": "BBC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48420428"
       }
     },
     {
@@ -958,6 +880,167 @@
       }
     },
     {
+      "id": "3570f183-4652-104f-94d1-393867ab20d9",
+      "count": 8,
+      "urn": "urn:bbc:curie:asset:3570f183-4652-104f-94d1-393867ab20d9",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Tiger nut drink fit wake up your sex drive - Nutritionist",
+          "headline": "Tiger nut drink fit wake up your sex drive - Nutritionist"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-42945173",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-42945173",
+          "curie": "http://www.bbc.co.uk/asset/3570f183-4652-104f-94d1-393867ab20d9"
+        },
+        "summary": "Dis tiger nut drink dey common and cheap to buy. Nutritionist say person wey take am, come reduce sugar and dey take more fruits and vegetable and do more exercise, say e go help.",
+        "timestamp": 1558435704688,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "indexImage": {
+          "id": "99889388",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1594E/production/_99889388_img-20180201-wa0006.jpg",
+          "path": "/cpsprodpb/1594E/production/_99889388_img-20180201-wa0006.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Tiger nuts",
+          "caption": "Nutritionist Julaina Osakue say if person fit reduce for sugar, e go help make di person body dey strong well well.",
+          "copyrightHolder": "Juliana Osakue"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-42945173"
+      }
+    },
+    {
+      "id": "f33dad04-4755-ed45-92f4-34d5a799a7c4",
+      "count": 7,
+      "urn": "urn:bbc:curie:asset:f33dad04-4755-ed45-92f4-34d5a799a7c4",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Eyes wey see Adewura last moment",
+          "headline": "Adewura Bello: Na inside dis open manhole na im she meet her untimely death - Eyewitness"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48420428",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48420428",
+          "curie": "http://www.bbc.co.uk/asset/f33dad04-4755-ed45-92f4-34d5a799a7c4"
+        },
+        "summary": "Before she die, Adewura na accounting graduate from University of Lagos.",
+        "timestamp": 1559073260427,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107137004",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9C89/production/_107137004_adewuracollage.jpg",
+          "path": "/cpsprodpb/9C89/production/_107137004_adewuracollage.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Adewura Bello",
+          "caption": "Pipo wey see wen e happun say na for dis man hole she fall inside",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48420428"
+      }
+    },
+    {
+      "id": "b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d",
+      "count": 7,
+      "urn": "urn:bbc:curie:asset:b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "South Africa president Ramaphosa appoint women as half of im cabinet",
+          "headline": "South Africa president Cyril Ramaphosa make history as im appoint women as half of im cabinet"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48464532",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48464532",
+          "curie": "http://www.bbc.co.uk/asset/b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d"
+        },
+        "summary": "For the first time for di kontri history, half of all di ministers inside South Africa cabinet na women.",
+        "timestamp": 1559244338484,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107163465",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DC74/production/_107163465_ramaphosa.jpg",
+          "path": "/cpsprodpb/DC74/production/_107163465_ramaphosa.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Nkosazana Dlamini Zuma is congratulated by South Africa\"s President Cyril Ramaphosa after being sworn in as South Africa\"s Minister of Cooperative Governance and Traditional Affairs in Pretoria, South Africa, May 30, 2019",
+          "copyrightHolder": "Reuters"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48464532"
+      }
+    },
+    {
+      "id": "a5b80f0d-6e7d-1546-b543-bc900d7abc56",
+      "count": 7,
+      "urn": "urn:bbc:curie:asset:a5b80f0d-6e7d-1546-b543-bc900d7abc56",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Court send Naira Marley to stay for prison",
+          "headline": "Naira Marley dey go stay for prison afta e appear for court, plead not guilty to EFCC charges"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48313716",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48313716",
+          "curie": "http://www.bbc.co.uk/asset/a5b80f0d-6e7d-1546-b543-bc900d7abc56"
+        },
+        "summary": "Naira Marley appear for court on Monday to ansa accuse of fraud and money laundering wey Nigeria Corruption police, EFCC bring against am.",
+        "timestamp": 1558356224505,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107030367",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12A0F/production/_107030367_d7adlnew0aayzx2.jpg",
+          "path": "/cpsprodpb/12A0F/production/_107030367_d7adlnew0aayzx2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Naira Marley dey go stay for prison afta e appear for court, plead not guilty to EFCC charges",
+          "caption": "Court send Naira Marley to stay for prison until May 30",
+          "copyrightHolder": "EFCC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48313716"
+      }
+    },
+    {
       "id": "678f47db-b1d1-1942-a6ed-aa39c53c0366",
       "count": 7,
       "urn": "urn:bbc:curie:asset:678f47db-b1d1-1942-a6ed-aa39c53c0366",
@@ -996,6 +1079,94 @@
           "copyrightHolder": "PDP"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-47654477"
+      }
+    },
+    {
+      "id": "cb1c8d83-5444-e543-ab66-40cd81052afc",
+      "count": 6,
+      "urn": "urn:bbc:curie:asset:cb1c8d83-5444-e543-ab66-40cd81052afc",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Wetin you suppose know about di 'Acting Chief Justice of Nigeria'",
+          "headline": "Ibrahim Tanko Mohammed: Wetin you suppose know about di 'Acting Chief Justice of Nigeria'"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-47005321",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47005321",
+          "curie": "http://www.bbc.co.uk/asset/cb1c8d83-5444-e543-ab66-40cd81052afc"
+        },
+        "summary": "Justice Ibrahim Tanko Mohammed take ova office as Acting Chief Justice of di kontri on top di Onnoghen trial.",
+        "timestamp": 1548444887988,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105348174",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B850/production/_105348174_d9c31511-4a47-4294-b848-4a9544631b1a.jpg",
+          "path": "/cpsprodpb/B850/production/_105348174_d9c31511-4a47-4294-b848-4a9544631b1a.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Acting CJN Ibrahim Tanko Mohammed",
+          "copyrightHolder": "Twitter/@NGRPresident"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-47005321"
+      }
+    },
+    {
+      "id": "923b167f-00f2-244c-9c97-7e9432deec12",
+      "count": 6,
+      "urn": "urn:bbc:curie:asset:923b167f-00f2-244c-9c97-7e9432deec12",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Ghana: See as dis girls conquer autism",
+          "headline": "Ghana: See as dis girls conquer autism"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-41973417",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-41973417",
+          "curie": "http://www.bbc.co.uk/asset/923b167f-00f2-244c-9c97-7e9432deec12"
+        },
+        "summary": "Three teenage Ghana girls wey get autism dey try achieve dia dream to be models on top challenges wey dem get.",
+        "timestamp": 1550535631326,
+        "byline": {
+          "name": "Onyinye Chime",
+          "title": "Broadcast Journalist, BBC Pidgin",
+          "persons": [
+            {
+              "name": "Onyinye Chime",
+              "function": "Broadcast Journalist, BBC News Pidgin",
+              "thumbnail": "http://c.files.bbci.co.uk/635F/production/_99693452_onyinyepic.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          }
+        },
+        "indexImage": {
+          "id": "99728716",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F156/production/_99728716_p05vxpgp.jpg",
+          "path": "/cpsprodpb/F156/production/_99728716_p05vxpgp.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Yacoba, Nana and Maame",
+          "caption": "Autism dey change how those wey get am dey take communicate and experience life.",
+          "copyrightHolder": "Xpressions"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-41973417"
       }
     },
     {
@@ -1044,6 +1215,47 @@
       }
     },
     {
+      "id": "78a3f1a1-82bf-da47-aa1a-9b356ef78e87",
+      "count": 6,
+      "urn": "urn:bbc:curie:asset:78a3f1a1-82bf-da47-aa1a-9b356ef78e87",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "'Dem shave her hair, wear her makeup come force her to dey sex men'",
+          "headline": "'Prostitute' orangutan: Dem shave her hair, wear her makeup come force her to dey sex men"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-46388767",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46388767",
+          "curie": "http://www.bbc.co.uk/asset/78a3f1a1-82bf-da47-aa1a-9b356ef78e87"
+        },
+        "summary": "Dem bin rescue di ape Pony inside one hotel wey dem dey use am as 'sex slave' tie for Kareng Pangi, Central Kalimantan, Indonesia.",
+        "timestamp": 1558435388684,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "Divert me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "104543026",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F252/production/_104543026_mediaitem104543025.jpg",
+          "path": "/cpsprodpb/F252/production/_104543026_mediaitem104543025.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Pony",
+          "copyrightHolder": "BOSF"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-46388767"
+      }
+    },
+    {
       "id": "75e4eeda-785f-f143-affb-d23cb7880319",
       "count": 6,
       "urn": "urn:bbc:curie:asset:75e4eeda-785f-f143-affb-d23cb7880319",
@@ -1089,235 +1301,8 @@
       }
     },
     {
-      "id": "b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d",
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "South Africa president Ramaphosa appoint women as half of im cabinet",
-          "headline": "South Africa president Cyril Ramaphosa make history as im appoint women as half of im cabinet"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48464532",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48464532",
-          "curie": "http://www.bbc.co.uk/asset/b558c50a-3bda-dc47-bbfd-3f0fb2b8f39d"
-        },
-        "summary": "For the first time for di kontri history, half of all di ministers inside South Africa cabinet na women.",
-        "timestamp": 1559244338484,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107163465",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/DC74/production/_107163465_ramaphosa.jpg",
-          "path": "/cpsprodpb/DC74/production/_107163465_ramaphosa.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Nkosazana Dlamini Zuma is congratulated by South Africa\"s President Cyril Ramaphosa after being sworn in as South Africa\"s Minister of Cooperative Governance and Traditional Affairs in Pretoria, South Africa, May 30, 2019",
-          "copyrightHolder": "Reuters"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48464532"
-      }
-    },
-    {
-      "id": "a5b80f0d-6e7d-1546-b543-bc900d7abc56",
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:a5b80f0d-6e7d-1546-b543-bc900d7abc56",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Court send Naira Marley to stay for prison",
-          "headline": "Naira Marley dey go stay for prison afta e appear for court, plead not guilty to EFCC charges"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48313716",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48313716",
-          "curie": "http://www.bbc.co.uk/asset/a5b80f0d-6e7d-1546-b543-bc900d7abc56"
-        },
-        "summary": "Naira Marley appear for court on Monday to ansa accuse of fraud and money laundering wey Nigeria Corruption police, EFCC bring against am.",
-        "timestamp": 1558356224505,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107030367",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/12A0F/production/_107030367_d7adlnew0aayzx2.jpg",
-          "path": "/cpsprodpb/12A0F/production/_107030367_d7adlnew0aayzx2.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Naira Marley dey go stay for prison afta e appear for court, plead not guilty to EFCC charges",
-          "caption": "Court send Naira Marley to stay for prison until May 30",
-          "copyrightHolder": "EFCC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48313716"
-      }
-    },
-    {
-      "id": "78a3f1a1-82bf-da47-aa1a-9b356ef78e87",
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:78a3f1a1-82bf-da47-aa1a-9b356ef78e87",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "'Dem shave her hair, wear her makeup come force her to dey sex men'",
-          "headline": "'Prostitute' orangutan: Dem shave her hair, wear her makeup come force her to dey sex men"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-46388767",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46388767",
-          "curie": "http://www.bbc.co.uk/asset/78a3f1a1-82bf-da47-aa1a-9b356ef78e87"
-        },
-        "summary": "Dem bin rescue di ape Pony inside one hotel wey dem dey use am as 'sex slave' tie for Kareng Pangi, Central Kalimantan, Indonesia.",
-        "timestamp": 1558435388684,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3139461b000e9dabf9",
-              "campaignName": "Divert me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "104543026",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/F252/production/_104543026_mediaitem104543025.jpg",
-          "path": "/cpsprodpb/F252/production/_104543026_mediaitem104543025.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Pony",
-          "copyrightHolder": "BOSF"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-46388767"
-      }
-    },
-    {
-      "id": "c688c2d5-586e-274b-9638-8929425cd16a",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:c688c2d5-586e-274b-9638-8929425cd16a",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Naira Marley, Zlatan Ibile and odas still dey awa hand for yahoo-yahoo - EFCC",
-          "headline": "Naira Marley, Zlatan Ibile and odas still dey awa hand for yahoo-yahoo - EFCC"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48225313",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48225313",
-          "curie": "http://www.bbc.co.uk/asset/c688c2d5-586e-274b-9638-8929425cd16a"
-        },
-        "summary": "Nigeria corruption police say musician Naira Marley neva free from dia hand afta dem gbab am and odas for yahoo yahoo operation.",
-        "timestamp": 1557499885041,
-        "byline": {
-          "name": "Princess Igho Williams",
-          "title": "Broadcast Journalist, BBC News Pidgin",
-          "persons": [
-            {
-              "name": "Princess Igho Williams",
-              "function": "Broadcast Journalist, BBC News Pidgin",
-              "thumbnail": "http://c.files.bbci.co.uk/B262/production/_100666654_princessbylinethumbnail.jpg"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            },
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "106907876",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/1091E/production/_106907876_img_0774.jpg",
-          "path": "/cpsprodpb/1091E/production/_106907876_img_0774.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Naira Marley et al",
-          "copyrightHolder": "EFCC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48225313"
-      }
-    },
-    {
-      "id": "923b167f-00f2-244c-9c97-7e9432deec12",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:923b167f-00f2-244c-9c97-7e9432deec12",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Ghana: See as dis girls conquer autism",
-          "headline": "Ghana: See as dis girls conquer autism"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-41973417",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-41973417",
-          "curie": "http://www.bbc.co.uk/asset/923b167f-00f2-244c-9c97-7e9432deec12"
-        },
-        "summary": "Three teenage Ghana girls wey get autism dey try achieve dia dream to be models on top challenges wey dem get.",
-        "timestamp": 1550535631326,
-        "byline": {
-          "name": "Onyinye Chime",
-          "title": "Broadcast Journalist, BBC Pidgin",
-          "persons": [
-            {
-              "name": "Onyinye Chime",
-              "function": "Broadcast Journalist, BBC News Pidgin",
-              "thumbnail": "http://c.files.bbci.co.uk/635F/production/_99693452_onyinyepic.jpg"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          }
-        },
-        "indexImage": {
-          "id": "99728716",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/F156/production/_99728716_p05vxpgp.jpg",
-          "path": "/cpsprodpb/F156/production/_99728716_p05vxpgp.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Yacoba, Nana and Maame",
-          "caption": "Autism dey change how those wey get am dey take communicate and experience life.",
-          "copyrightHolder": "Xpressions"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-41973417"
-      }
-    },
-    {
       "id": "6e664a32-6a22-0445-9a87-f5888f7d79d9",
-      "count": 4,
+      "count": 5,
       "urn": "urn:bbc:curie:asset:6e664a32-6a22-0445-9a87-f5888f7d79d9",
       "promo": {
         "headlines": {
@@ -1381,21 +1366,155 @@
       }
     },
     {
-      "id": "61b7ccbc-05c3-5a46-8bca-29b203ce69b5",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:61b7ccbc-05c3-5a46-8bca-29b203ce69b5",
+      "id": "4ae232d4-edd2-fd4b-9de7-8321610d9ba2",
+      "count": 5,
+      "urn": "urn:bbc:curie:asset:4ae232d4-edd2-fd4b-9de7-8321610d9ba2",
       "promo": {
         "headlines": {
-          "shortHeadline": "Theresa May cry tears wen she resign",
-          "headline": "Theresa May resigns: British Prime Minister cry tears wen she decide to step down on June 7"
+          "shortHeadline": "How boys di helep girls during menstrual period",
+          "headline": "World Menstrual Hygiene Day: How boys di helep girls for Cameroon school during dia menstrual period"
         },
         "locators": {
-          "assetUri": "/pidgin/world-48393150",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48393150",
-          "curie": "http://www.bbc.co.uk/asset/61b7ccbc-05c3-5a46-8bca-29b203ce69b5"
+          "assetUri": "/pidgin/tori-47087515",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47087515",
+          "curie": "http://www.bbc.co.uk/asset/4ae232d4-edd2-fd4b-9de7-8321610d9ba2"
         },
-        "summary": "British Prime Minister Theresa May announce on Friday say she dey resign her post.",
-        "timestamp": 1558711449714,
+        "summary": "Horizon Femmes don train 72 young leaders dem for tok for odas about menstrual hygiene and also train di mates dem.",
+        "timestamp": 1559036526164,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105430360",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/189F/production/_105430360_img_4769.jpg",
+          "path": "/cpsprodpb/189F/production/_105430360_img_4769.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Menstrual Hygiene for girls",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-47087515"
+      }
+    },
+    {
+      "id": "ff6dc389-a974-0540-b90e-887b1938d6e9",
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:ff6dc389-a974-0540-b90e-887b1938d6e9",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "National Council of State don approve 27,000 naira minimum wage",
+          "headline": "Minimum wage: National Council of State approve 27,000 naira package"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-46958337",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46958337",
+          "curie": "http://www.bbc.co.uk/asset/ff6dc389-a974-0540-b90e-887b1938d6e9"
+        },
+        "summary": "Nigeria Labour unions dey demand 30,000 away from di 18,000 Naira wey dem don don dey collect for more than 10 years.",
+        "timestamp": 1548165512279,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105296222",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/56FD/production/_105296222_whatsappimage2019-01-22at12.20.45.jpg",
+          "path": "/cpsprodpb/56FD/production/_105296222_whatsappimage2019-01-22at12.20.45.jpg",
+          "height": 540,
+          "width": 960,
+          "altText": "Tuesday council of state meeting for Abuja",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-46958337"
+      }
+    },
+    {
+      "id": "ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5",
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Game of Thrones star 'Jon Snow' dey battle stress, personal issues afta di show end",
+          "headline": "Game of thrones Jon Snow dey battle 'personal issues' afta di show end"
+        },
+        "locators": {
+          "assetUri": "/pidgin/world-48450864",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48450864",
+          "curie": "http://www.bbc.co.uk/asset/ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5"
+        },
+        "summary": "Di Game of Thrones star bin don tok about di stress of ending di work ontop di hit show.",
+        "timestamp": 1559149519935,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107145435",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D0CE/production/_107145435_gettyimages-1134765998.jpg",
+          "path": "/cpsprodpb/D0CE/production/_107145435_gettyimages-1134765998.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Kit Harrington",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/world-48450864"
+      }
+    },
+    {
+      "id": "c688c2d5-586e-274b-9638-8929425cd16a",
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:c688c2d5-586e-274b-9638-8929425cd16a",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Naira Marley, Zlatan Ibile and odas still dey awa hand for yahoo-yahoo - EFCC",
+          "headline": "Naira Marley, Zlatan Ibile and odas still dey awa hand for yahoo-yahoo - EFCC"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48225313",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48225313",
+          "curie": "http://www.bbc.co.uk/asset/c688c2d5-586e-274b-9638-8929425cd16a"
+        },
+        "summary": "Nigeria corruption police say musician Naira Marley neva free from dia hand afta dem gbab am and odas for yahoo yahoo operation.",
+        "timestamp": 1557499885041,
+        "byline": {
+          "name": "Princess Igho Williams",
+          "title": "Broadcast Journalist, BBC News Pidgin",
+          "persons": [
+            {
+              "name": "Princess Igho Williams",
+              "function": "Broadcast Journalist, BBC News Pidgin",
+              "thumbnail": "http://c.files.bbci.co.uk/B262/production/_100666654_princessbylinethumbnail.jpg"
+            }
+          ]
+        },
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1413,16 +1532,128 @@
           ]
         },
         "indexImage": {
-          "id": "107093523",
+          "id": "106907876",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/7F1B/production/_107093523_gettyimages-1145817520.jpg",
-          "path": "/cpsprodpb/7F1B/production/_107093523_gettyimages-1145817520.jpg",
+          "href": "http://c.files.bbci.co.uk/1091E/production/_106907876_img_0774.jpg",
+          "path": "/cpsprodpb/1091E/production/_106907876_img_0774.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Theresa May",
-          "copyrightHolder": "Leon Neal"
+          "altText": "Naira Marley et al",
+          "copyrightHolder": "EFCC"
         },
-        "id": "urn:bbc:ares::asset:pidgin/world-48393150"
+        "id": "urn:bbc:ares::asset:pidgin/tori-48225313"
+      }
+    },
+    {
+      "id": "9de5cb6c-68e5-274d-8950-217ee629e3dc",
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:9de5cb6c-68e5-274d-8950-217ee629e3dc",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Why Ghana University give scholarship to Nigeria top JAMB scorer",
+          "headline": "Ekene Franklin: Why Ghana University give scholarship to Nigeria top JAMB scorer"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48425642",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48425642",
+          "curie": "http://www.bbc.co.uk/asset/9de5cb6c-68e5-274d-8950-217ee629e3dc"
+        },
+        "summary": "JAMB bin announce say 15 year-old Ekene wey score highest for di 2019 UTME bin choose University of Lagos for Nigeria but di University fit no give am admission because of im age.",
+        "timestamp": 1559065936982,
+        "byline": {
+          "name": "Ogechi Obidiebube",
+          "title": "BBC News Pidgin, Lagos",
+          "persons": [
+            {
+              "name": "Ogechi Obidiebube",
+              "function": "BBC News Pidgin, Lagos",
+              "thumbnail": "http://c.files.bbci.co.uk/5D50/production/_100288832_bbc.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107138608",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13B2B/production/_107138608_p05xvswp.jpg",
+          "path": "/cpsprodpb/13B2B/production/_107138608_p05xvswp.jpg",
+          "height": 405,
+          "width": 720,
+          "altText": "Pesin wey dey write inside book",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48425642"
+      }
+    },
+    {
+      "id": "65279c33-7d3a-c045-8786-a4f64dec61f6",
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:65279c33-7d3a-c045-8786-a4f64dec61f6",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Women fit gain from Pan-African free trade",
+          "headline": "African Continental Free Trade Area: How woman dem fit gain plenti from free business for Africa - Vera Songwe"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48456990",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48456990",
+          "curie": "http://www.bbc.co.uk/asset/65279c33-7d3a-c045-8786-a4f64dec61f6"
+        },
+        "summary": "Africa free trade agreement don legally start since midnight breaking Thursday.",
+        "timestamp": 1559214718254,
+        "byline": {
+          "name": "Leocadia Bongben",
+          "title": "BBC News Pidgin, Cameroon",
+          "persons": [
+            {
+              "name": "Leocadia Bongben",
+              "function": "BBC News Pidgin, Cameroon",
+              "thumbnail": "http://c.files.bbci.co.uk/EB4A/production/_100043206_bongbenleocadiajisi.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107161762",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/685C/production/_107161762_cameroonianverasongwe.jpg",
+          "path": "/cpsprodpb/685C/production/_107161762_cameroonianverasongwe.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Vera Songwe",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48456990"
       }
     },
     {
@@ -1471,83 +1702,6 @@
       }
     },
     {
-      "id": "324e3b95-8fee-b64a-b19d-1e0b1364b1a1",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:324e3b95-8fee-b64a-b19d-1e0b1364b1a1",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Why police arrest America blue film actress wey get case against Donald Trump",
-          "headline": "Stormy Daniels: Why police arrest America blue film actress wey get case against Donald Trump"
-        },
-        "locators": {
-          "assetUri": "/pidgin/world-44810985",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-44810985",
-          "curie": "http://www.bbc.co.uk/asset/324e3b95-8fee-b64a-b19d-1e0b1364b1a1"
-        },
-        "summary": "Her lawyer tweet say wetin she do for dia na 'di same act wey she don do for pass 100 strip clubs all ova di kontri.'",
-        "timestamp": 1558434965998,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          }
-        },
-        "indexImage": {
-          "id": "102500314",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/A154/production/_102500314_gettyimages-929942946.jpg",
-          "path": "/cpsprodpb/A154/production/_102500314_gettyimages-929942946.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Stormy Daniels",
-          "caption": "Stormy Daniels don go pass 100 venues for di kontri to strip",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/world-44810985"
-      }
-    },
-    {
-      "id": "2827e89b-c713-4942-8bd9-829f4d88dc54",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:2827e89b-c713-4942-8bd9-829f4d88dc54",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "List of APC Govnorship candidates for 2019 Election",
-          "headline": "2019 Election: Confam list of APC Govnorship candidates"
-        },
-        "locators": {
-          "assetUri": "/pidgin/media-45764196",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-45764196",
-          "curie": "http://www.bbc.co.uk/asset/2827e89b-c713-4942-8bd9-829f4d88dc54"
-        },
-        "summary": "APC National Working Committee party release di list on Friday to beat di October 7 deadline wey INEC set for party primaries.",
-        "timestamp": 1558435219456,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "103731763",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/8F69/production/_103731763_bbc.jpg",
-          "path": "/cpsprodpb/8F69/production/_103731763_bbc.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Man wey wear eyeglass with APC logo.",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/media-45764196"
-      }
-    },
-    {
       "id": "24fa8d0a-fa60-9845-9ffa-ae92fdf1e138",
       "count": 4,
       "urn": "urn:bbc:curie:asset:24fa8d0a-fa60-9845-9ffa-ae92fdf1e138",
@@ -1590,41 +1744,6 @@
       }
     },
     {
-      "id": "1bd2364a-c112-cf4d-9555-9fc606ad3a0a",
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:1bd2364a-c112-cf4d-9555-9fc606ad3a0a",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "'Homosexual accuse wey Nigeria police take arrest my broda na big fat lie'",
-          "headline": "Lagos 57 gay suspects: 'Homosexual accuse wey Nigeria police take arrest my broda na big fat lie'"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-45334270",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-45334270",
-          "curie": "http://www.bbc.co.uk/asset/1bd2364a-c112-cf4d-9555-9fc606ad3a0a"
-        },
-        "summary": "Nigeria police bin arrest 57 boys for Lagos, say dem be homosexuals, but di tori don begin change as police no wan charge dem to court.",
-        "timestamp": 1558435205467,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          }
-        },
-        "indexImage": {
-          "id": "103205789",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/181BE/production/_103205789_hi018434557.jpg",
-          "path": "/cpsprodpb/181BE/production/_103205789_hi018434557.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Homosexuals",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-45334270"
-      }
-    },
-    {
       "id": "191fc1a1-4c9f-0a4b-bde2-efcffaec9095",
       "count": 4,
       "urn": "urn:bbc:curie:asset:191fc1a1-4c9f-0a4b-bde2-efcffaec9095",
@@ -1663,88 +1782,6 @@
           "copyrightHolder": "Betty Apiafi/George Thompson Sekibo"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-47789948"
-      }
-    },
-    {
-      "id": "ff6dc389-a974-0540-b90e-887b1938d6e9",
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:ff6dc389-a974-0540-b90e-887b1938d6e9",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "National Council of State don approve 27,000 naira minimum wage",
-          "headline": "Minimum wage: National Council of State approve 27,000 naira package"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-46958337",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46958337",
-          "curie": "http://www.bbc.co.uk/asset/ff6dc389-a974-0540-b90e-887b1938d6e9"
-        },
-        "summary": "Nigeria Labour unions dey demand 30,000 away from di 18,000 Naira wey dem don don dey collect for more than 10 years.",
-        "timestamp": 1548165512279,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "105296222",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/56FD/production/_105296222_whatsappimage2019-01-22at12.20.45.jpg",
-          "path": "/cpsprodpb/56FD/production/_105296222_whatsappimage2019-01-22at12.20.45.jpg",
-          "height": 540,
-          "width": 960,
-          "altText": "Tuesday council of state meeting for Abuja",
-          "copyrightHolder": "BBC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-46958337"
-      }
-    },
-    {
-      "id": "ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5",
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Game of Thrones star 'Jon Snow' dey battle stress, personal issues afta di show end",
-          "headline": "Game of thrones Jon Snow dey battle 'personal issues' afta di show end"
-        },
-        "locators": {
-          "assetUri": "/pidgin/world-48450864",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48450864",
-          "curie": "http://www.bbc.co.uk/asset/ec8ea5d4-75fe-ad43-b5e5-ed5c2c7afac5"
-        },
-        "summary": "Di Game of Thrones star bin don tok about di stress of ending di work ontop di hit show.",
-        "timestamp": 1559149519935,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107145435",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/D0CE/production/_107145435_gettyimages-1134765998.jpg",
-          "path": "/cpsprodpb/D0CE/production/_107145435_gettyimages-1134765998.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Kit Harrington",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/world-48450864"
       }
     },
     {
@@ -1801,21 +1838,21 @@
       }
     },
     {
-      "id": "c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce",
+      "id": "c674ca75-1add-df4f-ac0b-afbcc28bcdd3",
       "count": 3,
-      "urn": "urn:bbc:curie:asset:c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce",
+      "urn": "urn:bbc:curie:asset:c674ca75-1add-df4f-ac0b-afbcc28bcdd3",
       "promo": {
         "headlines": {
-          "shortHeadline": "Kano goment change plan for new emirs",
-          "headline": "Sanusi Lamido Sanusi: Kano goment don change plan for new emirs staff of office afta court order land."
+          "shortHeadline": "Akwaeke Emezi ‘Freshwater’ don hama",
+          "headline": "Akwaeke Emezi: American network wan adapt ‘Freshwater’ novel to Hollywood TV series"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-48225469",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48225469",
-          "curie": "http://www.bbc.co.uk/asset/c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce"
+          "assetUri": "/pidgin/tori-48378400",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48378400",
+          "curie": "http://www.bbc.co.uk/asset/c674ca75-1add-df4f-ac0b-afbcc28bcdd3"
         },
-        "summary": "Kano goment don change plan for new emirs staff of office afta court order land.",
-        "timestamp": 1557585864826,
+        "summary": "Di author go serve as writer for di show as well as executive producer",
+        "timestamp": 1558614104595,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1823,8 +1860,8 @@
           },
           "campaigns": [
             {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
             },
             {
               "campaignId": "5a988e3e39461b000e9dabfb",
@@ -1837,17 +1874,17 @@
           ]
         },
         "indexImage": {
-          "id": "106905150",
+          "id": "107075654",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/141E/production/_106905150_d6h0jdhxkaarwlx.jpg",
-          "path": "/cpsprodpb/141E/production/_106905150_d6h0jdhxkaarwlx.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Kano State Govnor Abdullahi Ganduje and Emir of Kano Muhammad Sanusi II",
-          "caption": "Dis na wen di Kano State Govnor Abdullahi Ganduje and Emir of Kano Muhammad Sanusi II bin dey jolly before-before.",
-          "copyrightHolder": "BBC"
+          "href": "http://c.files.bbci.co.uk/B259/production/_107075654_d7nxk3oxyaeybpd.jpg",
+          "path": "/cpsprodpb/B259/production/_107075654_d7nxk3oxyaeybpd.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Akwaeke Emezi and Tamara P. Carter",
+          "caption": "Portraits of Akwaeke Emezi and Tamara P. Carter by Texas Isaiah",
+          "copyrightHolder": "Twitter/@azemezi"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48225469"
+        "id": "urn:bbc:ares::asset:pidgin/tori-48378400"
       }
     },
     {
@@ -2003,58 +2040,6 @@
       }
     },
     {
-      "id": "9de5cb6c-68e5-274d-8950-217ee629e3dc",
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:9de5cb6c-68e5-274d-8950-217ee629e3dc",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Why Ghana University give scholarship to Nigeria top JAMB scorer",
-          "headline": "Ekene Franklin: Why Ghana University give scholarship to Nigeria top JAMB scorer"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48425642",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48425642",
-          "curie": "http://www.bbc.co.uk/asset/9de5cb6c-68e5-274d-8950-217ee629e3dc"
-        },
-        "summary": "JAMB bin announce say 15 year-old Ekene wey score highest for di 2019 UTME bin choose University of Lagos for Nigeria but di University fit no give am admission because of im age.",
-        "timestamp": 1559065936982,
-        "byline": {
-          "name": "Ogechi Obidiebube",
-          "title": "BBC News Pidgin, Lagos",
-          "persons": [
-            {
-              "name": "Ogechi Obidiebube",
-              "function": "BBC News Pidgin, Lagos",
-              "thumbnail": "http://c.files.bbci.co.uk/5D50/production/_100288832_bbc.jpg"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107138608",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/13B2B/production/_107138608_p05xvswp.jpg",
-          "path": "/cpsprodpb/13B2B/production/_107138608_p05xvswp.jpg",
-          "height": 405,
-          "width": 720,
-          "altText": "Pesin wey dey write inside book",
-          "copyrightHolder": "BBC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48425642"
-      }
-    },
-    {
       "id": "6c37d8a5-5c95-1f47-b6d4-d94a195c70a8",
       "count": 3,
       "urn": "urn:bbc:curie:asset:6c37d8a5-5c95-1f47-b6d4-d94a195c70a8",
@@ -2096,42 +2081,27 @@
       }
     },
     {
-      "id": "65279c33-7d3a-c045-8786-a4f64dec61f6",
+      "id": "61b7ccbc-05c3-5a46-8bca-29b203ce69b5",
       "count": 3,
-      "urn": "urn:bbc:curie:asset:65279c33-7d3a-c045-8786-a4f64dec61f6",
+      "urn": "urn:bbc:curie:asset:61b7ccbc-05c3-5a46-8bca-29b203ce69b5",
       "promo": {
         "headlines": {
-          "shortHeadline": "Women fit gain from Pan-African free trade",
-          "headline": "African Continental Free Trade Area: How woman dem fit gain plenti from free business for Africa - Vera Songwe"
+          "shortHeadline": "Theresa May cry tears wen she resign",
+          "headline": "Theresa May resigns: British Prime Minister cry tears wen she decide to step down on June 7"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-48456990",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48456990",
-          "curie": "http://www.bbc.co.uk/asset/65279c33-7d3a-c045-8786-a4f64dec61f6"
+          "assetUri": "/pidgin/world-48393150",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48393150",
+          "curie": "http://www.bbc.co.uk/asset/61b7ccbc-05c3-5a46-8bca-29b203ce69b5"
         },
-        "summary": "Africa free trade agreement don legally start since midnight breaking Thursday.",
-        "timestamp": 1559214718254,
-        "byline": {
-          "name": "Leocadia Bongben",
-          "title": "BBC News Pidgin, Cameroon",
-          "persons": [
-            {
-              "name": "Leocadia Bongben",
-              "function": "BBC News Pidgin, Cameroon",
-              "thumbnail": "http://c.files.bbci.co.uk/EB4A/production/_100043206_bongbenleocadiajisi.jpg"
-            }
-          ]
-        },
+        "summary": "British Prime Minister Theresa May announce on Friday say she dey resign her post.",
+        "timestamp": 1558711449714,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
             "categoryName": "News"
           },
           "campaigns": [
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            },
             {
               "campaignId": "5a988e3e39461b000e9dabfb",
               "campaignName": "WS - Keep me on trend"
@@ -2143,57 +2113,16 @@
           ]
         },
         "indexImage": {
-          "id": "107161762",
+          "id": "107093523",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/685C/production/_107161762_cameroonianverasongwe.jpg",
-          "path": "/cpsprodpb/685C/production/_107161762_cameroonianverasongwe.jpg",
+          "href": "http://c.files.bbci.co.uk/7F1B/production/_107093523_gettyimages-1145817520.jpg",
+          "path": "/cpsprodpb/7F1B/production/_107093523_gettyimages-1145817520.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Vera Songwe",
-          "copyrightHolder": "BBC"
+          "altText": "Theresa May",
+          "copyrightHolder": "Leon Neal"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48456990"
-      }
-    },
-    {
-      "id": "4ae232d4-edd2-fd4b-9de7-8321610d9ba2",
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:4ae232d4-edd2-fd4b-9de7-8321610d9ba2",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "How boys di helep girls during menstrual period",
-          "headline": "World Menstrual Hygiene Day: How boys di helep girls for Cameroon school during dia menstrual period"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-47087515",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47087515",
-          "curie": "http://www.bbc.co.uk/asset/4ae232d4-edd2-fd4b-9de7-8321610d9ba2"
-        },
-        "summary": "Horizon Femmes don train 72 young leaders dem for tok for odas about menstrual hygiene and also train di mates dem.",
-        "timestamp": 1559036526164,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "105430360",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/189F/production/_105430360_img_4769.jpg",
-          "path": "/cpsprodpb/189F/production/_105430360_img_4769.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Menstrual Hygiene for girls",
-          "copyrightHolder": "BBC"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-47087515"
+        "id": "urn:bbc:ares::asset:pidgin/world-48393150"
       }
     },
     {
@@ -2239,6 +2168,83 @@
           "copyrightHolder": "Twitter/@HQNigerianArmy"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-48123293"
+      }
+    },
+    {
+      "id": "324e3b95-8fee-b64a-b19d-1e0b1364b1a1",
+      "count": 3,
+      "urn": "urn:bbc:curie:asset:324e3b95-8fee-b64a-b19d-1e0b1364b1a1",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Why police arrest America blue film actress wey get case against Donald Trump",
+          "headline": "Stormy Daniels: Why police arrest America blue film actress wey get case against Donald Trump"
+        },
+        "locators": {
+          "assetUri": "/pidgin/world-44810985",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-44810985",
+          "curie": "http://www.bbc.co.uk/asset/324e3b95-8fee-b64a-b19d-1e0b1364b1a1"
+        },
+        "summary": "Her lawyer tweet say wetin she do for dia na 'di same act wey she don do for pass 100 strip clubs all ova di kontri.'",
+        "timestamp": 1558434965998,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "indexImage": {
+          "id": "102500314",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A154/production/_102500314_gettyimages-929942946.jpg",
+          "path": "/cpsprodpb/A154/production/_102500314_gettyimages-929942946.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Stormy Daniels",
+          "caption": "Stormy Daniels don go pass 100 venues for di kontri to strip",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/world-44810985"
+      }
+    },
+    {
+      "id": "2827e89b-c713-4942-8bd9-829f4d88dc54",
+      "count": 3,
+      "urn": "urn:bbc:curie:asset:2827e89b-c713-4942-8bd9-829f4d88dc54",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "List of APC Govnorship candidates for 2019 Election",
+          "headline": "2019 Election: Confam list of APC Govnorship candidates"
+        },
+        "locators": {
+          "assetUri": "/pidgin/media-45764196",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-45764196",
+          "curie": "http://www.bbc.co.uk/asset/2827e89b-c713-4942-8bd9-829f4d88dc54"
+        },
+        "summary": "APC National Working Committee party release di list on Friday to beat di October 7 deadline wey INEC set for party primaries.",
+        "timestamp": 1558435219456,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "103731763",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8F69/production/_103731763_bbc.jpg",
+          "path": "/cpsprodpb/8F69/production/_103731763_bbc.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Man wey wear eyeglass with APC logo.",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/media-45764196"
       }
     },
     {
@@ -2293,6 +2299,168 @@
           "copyrightHolder": "Getty Images"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-44991156"
+      }
+    },
+    {
+      "id": "1bd2364a-c112-cf4d-9555-9fc606ad3a0a",
+      "count": 3,
+      "urn": "urn:bbc:curie:asset:1bd2364a-c112-cf4d-9555-9fc606ad3a0a",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "'Homosexual accuse wey Nigeria police take arrest my broda na big fat lie'",
+          "headline": "Lagos 57 gay suspects: 'Homosexual accuse wey Nigeria police take arrest my broda na big fat lie'"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-45334270",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-45334270",
+          "curie": "http://www.bbc.co.uk/asset/1bd2364a-c112-cf4d-9555-9fc606ad3a0a"
+        },
+        "summary": "Nigeria police bin arrest 57 boys for Lagos, say dem be homosexuals, but di tori don begin change as police no wan charge dem to court.",
+        "timestamp": 1558435205467,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "indexImage": {
+          "id": "103205789",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/181BE/production/_103205789_hi018434557.jpg",
+          "path": "/cpsprodpb/181BE/production/_103205789_hi018434557.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Homosexuals",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-45334270"
+      }
+    },
+    {
+      "id": "1a516f43-9a95-804f-bfec-0a984e688366",
+      "count": 3,
+      "urn": "urn:bbc:curie:asset:1a516f43-9a95-804f-bfec-0a984e688366",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Yemi Osinbajo helicopter crash: Video wey show wen di accident happun",
+          "headline": "Yemi Osinbajo helicopter crash: Video wey show wen di accident happun"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-47104787",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47104787",
+          "curie": "http://www.bbc.co.uk/asset/1a516f43-9a95-804f-bfec-0a984e688366"
+        },
+        "summary": "Nigeria Vice President bin dey go Kogi State, North-Central Nigeria before im helicopter crash for Kabba.",
+        "timestamp": 1558434670715,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105455665",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DD4F/production/_105455665_osinbajochopper.jpg",
+          "path": "/cpsprodpb/DD4F/production/_105455665_osinbajochopper.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Di Helicopter afta di crash",
+          "caption": "The Helicopter afta e crash land",
+          "copyrightHolder": "Twitter/@akandeoj"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-47104787"
+      }
+    },
+    {
+      "id": "fb3ff306-d65e-1348-8b78-551c91a8b31c",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:fb3ff306-d65e-1348-8b78-551c91a8b31c",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Facebook cypto 'secret' you fit no sabi",
+          "headline": "Facebook: Top secret you fit no know about 'Globalcoin' crypto-currency"
+        },
+        "locators": {
+          "assetUri": "/pidgin/world-48410175",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48410175",
+          "curie": "http://www.bbc.co.uk/asset/fb3ff306-d65e-1348-8b78-551c91a8b31c"
+        },
+        "summary": "Tori be say Facebook dey finalise plans to launch dia own own crypto-currency next year.",
+        "timestamp": 1558812609726,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "107110942",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6145/production/_107110942_gettyimages-1140163646.jpg",
+          "path": "/cpsprodpb/6145/production/_107110942_gettyimages-1140163646.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Bitcoin",
+          "copyrightHolder": "Chesnot"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/world-48410175"
+      }
+    },
+    {
+      "id": "e98f7c21-d9ce-3046-8e1f-73c8417d8c74",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:e98f7c21-d9ce-3046-8e1f-73c8417d8c74",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Pawpaw leaf and oda local medicine wey fit treat malaria",
+          "headline": "World Malaria Day 2018: Pawpaw leaf and oda local medicine wey fit treat di sickness"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-43895948",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-43895948",
+          "curie": "http://www.bbc.co.uk/asset/e98f7c21-d9ce-3046-8e1f-73c8417d8c74"
+        },
+        "summary": "Former president for di Pharmaceutical Society of Nigeria, Olumide Akintayo don mention four of dis herbs.",
+        "timestamp": 1550093737439,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          }
+        },
+        "indexImage": {
+          "id": "101043919",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1671E/production/_101043919_whatsappimage2018-04-25at6.27.28pm.jpg",
+          "path": "/cpsprodpb/1671E/production/_101043919_whatsappimage2018-04-25at6.27.28pm.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Bitter leaf",
+          "caption": "E no bad for soup sef",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-43895948"
       }
     },
     {
@@ -2430,21 +2598,21 @@
       }
     },
     {
-      "id": "cb1c8d83-5444-e543-ab66-40cd81052afc",
+      "id": "c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce",
       "count": 2,
-      "urn": "urn:bbc:curie:asset:cb1c8d83-5444-e543-ab66-40cd81052afc",
+      "urn": "urn:bbc:curie:asset:c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce",
       "promo": {
         "headlines": {
-          "shortHeadline": "Wetin you suppose know about di 'Acting Chief Justice of Nigeria'",
-          "headline": "Ibrahim Tanko Mohammed: Wetin you suppose know about di 'Acting Chief Justice of Nigeria'"
+          "shortHeadline": "Kano goment change plan for new emirs",
+          "headline": "Sanusi Lamido Sanusi: Kano goment don change plan for new emirs staff of office afta court order land."
         },
         "locators": {
-          "assetUri": "/pidgin/tori-47005321",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47005321",
-          "curie": "http://www.bbc.co.uk/asset/cb1c8d83-5444-e543-ab66-40cd81052afc"
+          "assetUri": "/pidgin/tori-48225469",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48225469",
+          "curie": "http://www.bbc.co.uk/asset/c5e99ca7-a04d-3f4a-822f-d7aca7bed1ce"
         },
-        "summary": "Justice Ibrahim Tanko Mohammed take ova office as Acting Chief Justice of di kontri on top di Onnoghen trial.",
-        "timestamp": 1548444887988,
+        "summary": "Kano goment don change plan for new emirs staff of office afta court order land.",
+        "timestamp": 1557585864826,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2454,20 +2622,29 @@
             {
               "campaignId": "5a988e3739461b000e9dabfa",
               "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
             }
           ]
         },
         "indexImage": {
-          "id": "105348174",
+          "id": "106905150",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/B850/production/_105348174_d9c31511-4a47-4294-b848-4a9544631b1a.jpg",
-          "path": "/cpsprodpb/B850/production/_105348174_d9c31511-4a47-4294-b848-4a9544631b1a.jpg",
+          "href": "http://c.files.bbci.co.uk/141E/production/_106905150_d6h0jdhxkaarwlx.jpg",
+          "path": "/cpsprodpb/141E/production/_106905150_d6h0jdhxkaarwlx.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Acting CJN Ibrahim Tanko Mohammed",
-          "copyrightHolder": "Twitter/@NGRPresident"
+          "altText": "Kano State Govnor Abdullahi Ganduje and Emir of Kano Muhammad Sanusi II",
+          "caption": "Dis na wen di Kano State Govnor Abdullahi Ganduje and Emir of Kano Muhammad Sanusi II bin dey jolly before-before.",
+          "copyrightHolder": "BBC"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-47005321"
+        "id": "urn:bbc:ares::asset:pidgin/tori-48225469"
       }
     },
     {
@@ -2766,41 +2943,6 @@
           "copyrightHolder": "Ademola adeleke/twitter"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-48325988"
-      }
-    },
-    {
-      "id": "a04fa1fe-176c-e744-b792-106a73a6fd8d",
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:a04fa1fe-176c-e744-b792-106a73a6fd8d",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Vampire rumour don cause riot for Mozambique",
-          "headline": "Mozambique: Vampire rumour don cause riot"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-41697796",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-41697796",
-          "curie": "http://www.bbc.co.uk/asset/a04fa1fe-176c-e744-b792-106a73a6fd8d"
-        },
-        "summary": "Rumour of vampire and sucking of blood don land ground for Mozambique.",
-        "timestamp": 1551647139028,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          }
-        },
-        "indexImage": {
-          "id": "98407102",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/4ECA/production/_98407102_bbc.jpg",
-          "path": "/cpsprodpb/4ECA/production/_98407102_bbc.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Map of where Gile dey for Mozambique.",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-41697796"
       }
     },
     {
@@ -3246,6 +3388,51 @@
       }
     },
     {
+      "id": "7901c1bb-8e2d-4c41-a084-3f1192b2655a",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:7901c1bb-8e2d-4c41-a084-3f1192b2655a",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Fintiri win Adamawa Govnorship election",
+          "headline": "Adamawa election result: PDP Ahmadu Fintiri win current Govnor Jibrilla Bindow of APC"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-47730326",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47730326",
+          "curie": "http://www.bbc.co.uk/asset/7901c1bb-8e2d-4c41-a084-3f1192b2655a"
+        },
+        "summary": "Opposition PDP Ahmadu Fintiri win current Govnor Jibrilla Bindow of APC.",
+        "timestamp": 1553849475961,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "106142739",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E1C/production/_106142739_mediaitem106142738.jpg",
+          "path": "/cpsprodpb/16E1C/production/_106142739_mediaitem106142738.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ahmed Fintiri",
+          "copyrightHolder": "FINTIRI CAMPAIGN ORG"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-47730326"
+      }
+    },
+    {
       "id": "78960570-2ad6-d74b-9f76-a4eb5e909928",
       "count": 2,
       "urn": "urn:bbc:curie:asset:78960570-2ad6-d74b-9f76-a4eb5e909928",
@@ -3328,6 +3515,133 @@
       }
     },
     {
+      "id": "68a4f533-ea94-e84d-bb78-2374fb8d0993",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:68a4f533-ea94-e84d-bb78-2374fb8d0993",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "\"We no dey target Emir Sanusi of Kano\"",
+          "headline": "Emir of Kano: \"We no dey target Emir Sanusi Lamido\" - Assembly Leader"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-48211793",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48211793",
+          "curie": "http://www.bbc.co.uk/asset/68a4f533-ea94-e84d-bb78-2374fb8d0993"
+        },
+        "summary": "Dis new emirates wey go dey for Gaya, Rano, Bichi and Karaye go share equal rank wit di Emir of Kano.",
+        "timestamp": 1557399771098,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "106852569",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1790D/production/_106852569_emirate2.jpg",
+          "path": "/cpsprodpb/1790D/production/_106852569_emirate2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Emir Muhammadu Sanusi II",
+          "caption": "Emir of Kano, Muhammadu Sanusi II",
+          "copyrightHolder": "BBC"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-48211793"
+      }
+    },
+    {
+      "id": "665be133-f3bc-4642-a11a-9c1f3d26478f",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:665be133-f3bc-4642-a11a-9c1f3d26478f",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ASUU strike: When e go end?",
+          "headline": "ASUU strike: Why Nigerian university students no dey quick graduate"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-46801468",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-46801468",
+          "curie": "http://www.bbc.co.uk/asset/665be133-f3bc-4642-a11a-9c1f3d26478f"
+        },
+        "summary": "Tok-tok to end ASUU Strike neva get head as di future of hundreds of thousands of students don get k-leg.",
+        "timestamp": 1547052646305,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "Keep me on trend"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "105118596",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10FCD/production/_105118596__104528992_universities-e1489050426905.jpg",
+          "path": "/cpsprodpb/10FCD/production/_105118596__104528992_universities-e1489050426905.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Some Universities and Polytechnics for Nigeria",
+          "copyrightHolder": "Nigerian Schools"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-46801468"
+      }
+    },
+    {
+      "id": "62f5299f-546f-2547-9e7f-f169c807e62b",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:62f5299f-546f-2547-9e7f-f169c807e62b",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Nigeria no regret fight apartheid inside South Africa - Buhari",
+          "headline": "Nigeria no regret fight apartheid inside South Africa - Buhari"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-42920428",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-42920428",
+          "curie": "http://www.bbc.co.uk/asset/62f5299f-546f-2547-9e7f-f169c807e62b"
+        },
+        "summary": "Buhari tell Lulu Mnguni, di South African High Commissioner to Nigeria wey dey leave office say Nigeria sacrifice well-well to ensure say every citizen get full rights.",
+        "timestamp": 1559269223532,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          }
+        },
+        "indexImage": {
+          "id": "99863839",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E8C/production/_99863839_capture2.jpg",
+          "path": "/cpsprodpb/16E8C/production/_99863839_capture2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Nigeria change ogbonge oil company BP name to AP on top di fight against apartheid.",
+          "caption": "Nigeria change ogbonge oil company BP name to AP on top di fight against apartheid",
+          "copyrightHolder": "Twitter - @BashirAhmaad"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-42920428"
+      }
+    },
+    {
       "id": "5f12b564-3d4f-3d46-b400-ab187e091369",
       "count": 2,
       "urn": "urn:bbc:curie:asset:5f12b564-3d4f-3d46-b400-ab187e091369",
@@ -3363,21 +3677,21 @@
       }
     },
     {
-      "id": "4d0df7e3-cdd7-6747-af77-989a12b6cbed",
+      "id": "5d99eba7-10e9-aa42-b398-b1d05473db81",
       "count": 2,
-      "urn": "urn:bbc:curie:asset:4d0df7e3-cdd7-6747-af77-989a12b6cbed",
+      "urn": "urn:bbc:curie:asset:5d99eba7-10e9-aa42-b398-b1d05473db81",
       "promo": {
         "headlines": {
-          "shortHeadline": "Senator Adeleke don get bail ontop certificate forgery case",
-          "headline": "Senator Adeleke don get bail ontop certificate forgery case"
+          "shortHeadline": "Zlatan and odas don free but we still hold Naira Marley - EFCC",
+          "headline": "Naira Marley still dey our hand but we don release Zlatan and odas - EFCC"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-48188137",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48188137",
-          "curie": "http://www.bbc.co.uk/asset/4d0df7e3-cdd7-6747-af77-989a12b6cbed"
+          "assetUri": "/pidgin/tori-48278357",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48278357",
+          "curie": "http://www.bbc.co.uk/asset/5d99eba7-10e9-aa42-b398-b1d05473db81"
         },
-        "summary": "Di 'dancing senator' bin appear for court on Tuesday wia Nigeria Police drag am go, but judge grant am bail of N2m.",
-        "timestamp": 1557244220457,
+        "summary": "Di mata of popular Nigeria Musician Naira Marley don tie strong wrapper as di EFCC tok say dem get ogbonge evidence against am.",
+        "timestamp": 1557912660664,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3385,8 +3699,8 @@
           },
           "campaigns": [
             {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
             },
             {
               "campaignId": "5a988e3e39461b000e9dabfb",
@@ -3399,16 +3713,17 @@
           ]
         },
         "indexImage": {
-          "id": "106813548",
+          "id": "106907878",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/14A33/production/_106813548_d56d2-sw4ae-n5n.jpg",
-          "path": "/cpsprodpb/14A33/production/_106813548_d56d2-sw4ae-n5n.jpg",
+          "href": "http://c.files.bbci.co.uk/1573E/production/_106907878_img_0774.jpg",
+          "path": "/cpsprodpb/1573E/production/_106907878_img_0774.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Ademola Adeleke",
-          "copyrightHolder": "PDP"
+          "altText": "Naira Marley et al",
+          "caption": "Zlatan Ibile wey wear red and Naira Marley wey dey third from left, na rising musicians for Nigeria",
+          "copyrightHolder": "EFCC"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48188137"
+        "id": "urn:bbc:ares::asset:pidgin/tori-48278357"
       }
     },
     {
@@ -3458,6 +3773,52 @@
           "copyrightHolder": "Instagram/lilkeshofficial and baddosneh"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-46644471"
+      }
+    },
+    {
+      "id": "28af4279-f0f9-e749-888e-721f495a87c4",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:28af4279-f0f9-e749-888e-721f495a87c4",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "AFCON 2019: Gyan, Ayew brodas no make Ghana 23 man squad for qualifier",
+          "headline": "AFCON 2019: Ghana don release 23 man squad list but dia ogbonge players dey miss"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-45218896",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-45218896",
+          "curie": "http://www.bbc.co.uk/asset/28af4279-f0f9-e749-888e-721f495a87c4"
+        },
+        "summary": "Ghana don release full list of 23 players wey go play Kenya to qualify for AFCON 2019, but plenti of dia ogbonge players no make di list.",
+        "timestamp": 1551223641595,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "103049858",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14F86/production/_103049858_gettyimages-107401353.jpg",
+          "path": "/cpsprodpb/14F86/production/_103049858_gettyimages-107401353.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Ghana fans",
+          "caption": "Ghana win Ethiopia",
+          "copyrightHolder": "Getty Images"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-45218896"
       }
     },
     {
@@ -3539,21 +3900,21 @@
       }
     },
     {
-      "id": "1a516f43-9a95-804f-bfec-0a984e688366",
+      "id": "1a9679fc-db4b-2149-a0b1-179d552f6e7f",
       "count": 2,
-      "urn": "urn:bbc:curie:asset:1a516f43-9a95-804f-bfec-0a984e688366",
+      "urn": "urn:bbc:curie:asset:1a9679fc-db4b-2149-a0b1-179d552f6e7f",
       "promo": {
         "headlines": {
-          "shortHeadline": "Yemi Osinbajo helicopter crash: Video wey show wen di accident happun",
-          "headline": "Yemi Osinbajo helicopter crash: Video wey show wen di accident happun"
+          "shortHeadline": "INEC don obey court for Bauchi election",
+          "headline": "Bauchi election results 2019: INEC don obey court to stop declaration of Bauchi Govnorship Election winner"
         },
         "locators": {
-          "assetUri": "/pidgin/tori-47104787",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47104787",
-          "curie": "http://www.bbc.co.uk/asset/1a516f43-9a95-804f-bfec-0a984e688366"
+          "assetUri": "/pidgin/tori-47626939",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47626939",
+          "curie": "http://www.bbc.co.uk/asset/1a9679fc-db4b-2149-a0b1-179d552f6e7f"
         },
-        "summary": "Nigeria Vice President bin dey go Kogi State, North-Central Nigeria before im helicopter crash for Kabba.",
-        "timestamp": 1558434670715,
+        "summary": "Justice Inyang Ekwo issue di order on Tuesday ontop one ex parte application from two plaintiffs.",
+        "timestamp": 1553196102413,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3561,27 +3922,63 @@
           },
           "campaigns": [
             {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            },
-            {
               "campaignId": "5a988e4739461b000e9dabfc",
               "campaignName": "WS - Update me"
             }
           ]
         },
         "indexImage": {
-          "id": "105455665",
+          "id": "106086700",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/DD4F/production/_105455665_osinbajochopper.jpg",
-          "path": "/cpsprodpb/DD4F/production/_105455665_osinbajochopper.jpg",
+          "href": "http://c.files.bbci.co.uk/0300/production/_106086700_inec.jpg",
+          "path": "/cpsprodpb/0300/production/_106086700_inec.jpg",
+          "height": 402,
+          "width": 714,
+          "altText": "INEC",
+          "copyrightHolder": "Situation Room"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/tori-47626939"
+      }
+    },
+    {
+      "id": "08ebe35b-e579-2745-a7f1-eea26e392eb8",
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:08ebe35b-e579-2745-a7f1-eea26e392eb8",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Ambazonia lose 21 fighters, two army die for fresh gun battle",
+          "headline": "Ambazonia lose 21 fighters, two army die for fresh gun battle"
+        },
+        "locators": {
+          "assetUri": "/pidgin/tori-45319282",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-45319282",
+          "curie": "http://www.bbc.co.uk/asset/08ebe35b-e579-2745-a7f1-eea26e392eb8"
+        },
+        "summary": "Dozens of pipo die dis weekend afta Ambazonia fighters open fire wit Cameroon soldiers for Wum.",
+        "timestamp": 1558435197308,
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
+          ]
+        },
+        "indexImage": {
+          "id": "102948296",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10EA4/production/_102948296_gettyimages-463652474.jpg",
+          "path": "/cpsprodpb/10EA4/production/_102948296_gettyimages-463652474.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Di Helicopter afta di crash",
-          "caption": "The Helicopter afta e crash land",
-          "copyrightHolder": "Twitter/@akandeoj"
+          "altText": "Cameroon army",
+          "copyrightHolder": "Getty Images"
         },
-        "id": "urn:bbc:ares::asset:pidgin/tori-47104787"
+        "id": "urn:bbc:ares::asset:pidgin/tori-45319282"
       }
     },
     {
@@ -3617,93 +4014,6 @@
           "copyrightHolder": "YAKUTIAMEDIA.RU"
         },
         "id": "urn:bbc:ares::asset:pidgin/world-43417123"
-      }
-    },
-    {
-      "id": "fc4b844b-9be2-654e-9c7d-116d31d86733",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:fc4b844b-9be2-654e-9c7d-116d31d86733",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Police go pay family N100 million damages",
-          "headline": "Police Brutality: Court don order police to pay family N100 million damages for Owunari Douglas death"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48421889",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48421889",
-          "curie": "http://www.bbc.co.uk/asset/fc4b844b-9be2-654e-9c7d-116d31d86733"
-        },
-        "summary": "Di compensation na for di death of one Owunari Douglas wey some police officers kill last year for Port Harcourt.",
-        "timestamp": 1559046844155,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107137001",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/2759/production/_107137001_gettyimages-1129861582-1.jpg",
-          "path": "/cpsprodpb/2759/production/_107137001_gettyimages-1129861582-1.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "A policeman stretched his arms to stop protesters advancing to a barricade in Port Harcourt, Rivers State, on March 11, 2019.",
-          "caption": "Police man wey dey try stop protesters for Port Harcourt",
-          "copyrightHolder": "PIUS UTOMI EKPEI"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48421889"
-      }
-    },
-    {
-      "id": "fb3ff306-d65e-1348-8b78-551c91a8b31c",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:fb3ff306-d65e-1348-8b78-551c91a8b31c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Facebook cypto 'secret' you fit no sabi",
-          "headline": "Facebook: Top secret you fit no know about 'Globalcoin' crypto-currency"
-        },
-        "locators": {
-          "assetUri": "/pidgin/world-48410175",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-48410175",
-          "curie": "http://www.bbc.co.uk/asset/fb3ff306-d65e-1348-8b78-551c91a8b31c"
-        },
-        "summary": "Tori be say Facebook dey finalise plans to launch dia own own crypto-currency next year.",
-        "timestamp": 1558812609726,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            },
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107110942",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/6145/production/_107110942_gettyimages-1140163646.jpg",
-          "path": "/cpsprodpb/6145/production/_107110942_gettyimages-1140163646.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Bitcoin",
-          "copyrightHolder": "Chesnot"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/world-48410175"
       }
     },
     {
@@ -3749,88 +4059,6 @@
       }
     },
     {
-      "id": "f0d1ac26-5fba-6f42-b6d3-2e78aebddd0c",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:f0d1ac26-5fba-6f42-b6d3-2e78aebddd0c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Head of Nigeria Presidential Election Tribunal don step down",
-          "headline": "Justice Zainab Bulkachuwa don comot as head of Nigeria Presidential Election Tribunal"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48373041",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48373041",
-          "curie": "http://www.bbc.co.uk/asset/f0d1ac26-5fba-6f42-b6d3-2e78aebddd0c"
-        },
-        "summary": "Di judge step down afta PDP and dia candidate, Atiku Abubakar write petition say she be wife of one APC member, Adamu Bulkachuwa.",
-        "timestamp": 1558589210886,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107070456",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/FF7F/production/_107070456_zainabcoa.jpg",
-          "path": "/cpsprodpb/FF7F/production/_107070456_zainabcoa.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Zainab",
-          "copyrightHolder": "Court of Appeal"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48373041"
-      }
-    },
-    {
-      "id": "e11abf6f-6c6e-2140-a182-654e138b6d57",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:e11abf6f-6c6e-2140-a182-654e138b6d57",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Double disappointment for Messi",
-          "headline": "Barcelona vs Valencia: Messi chop double disappointment for 2018/2019 football season"
-        },
-        "locators": {
-          "assetUri": "/pidgin/sport-48384029",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-48384029",
-          "curie": "http://www.bbc.co.uk/asset/e11abf6f-6c6e-2140-a182-654e138b6d57"
-        },
-        "summary": "Barcelona lose dia bid for di Copa Del Rey.",
-        "timestamp": 1558861149303,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107106043",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/850C/production/_107106043_faa40baa-698c-4040-ac48-d236bd61fcc9.jpg",
-          "path": "/cpsprodpb/850C/production/_107106043_faa40baa-698c-4040-ac48-d236bd61fcc9.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Lionel Messi dey para",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/sport-48384029"
-      }
-    },
-    {
       "id": "d9ccd7f6-df83-d646-8c41-7f0f1c5baead",
       "count": 1,
       "urn": "urn:bbc:curie:asset:d9ccd7f6-df83-d646-8c41-7f0f1c5baead",
@@ -3869,56 +4097,6 @@
           "copyrightHolder": "Icon Sports Wire"
         },
         "id": "urn:bbc:ares::asset:pidgin/sport-48400451"
-      }
-    },
-    {
-      "id": "c7334a45-7804-8240-b975-c4e8f27d4de2",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:c7334a45-7804-8240-b975-c4e8f27d4de2",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Cameroon National Day make sense?",
-          "headline": "Cameroon National Day no get value wit Anglophone crisis - Prof. Fanso Verkijika"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48339519",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48339519",
-          "curie": "http://www.bbc.co.uk/asset/c7334a45-7804-8240-b975-c4e8f27d4de2"
-        },
-        "summary": "For May 20, 1972, kontri pipo for vote for unitary state, den federal state from 1961 wen British/French Cameroon stop.",
-        "timestamp": 1558368802201,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            },
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            },
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107032565",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/DCCB/production/_107032565_44751457_245680622970387_3128624065837793280_n.jpg",
-          "path": "/cpsprodpb/DCCB/production/_107032565_44751457_245680622970387_3128624065837793280_n.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Cameroon President Paul Biya don rule since 6 November 1982.",
-          "caption": "Cameroon President Paul Biya don rule since 6 November 1982 and for some years di Anglophone regions dey complain say dem no dey see beta and dem wan break away to form anoda kontri dem call Ambazonia.",
-          "copyrightHolder": "Paul Biya"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48339519"
       }
     },
     {
@@ -3964,48 +4142,6 @@
           "copyrightHolder": "BBC"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-48443914"
-      }
-    },
-    {
-      "id": "b749a306-b12c-a542-ac69-9f376c9fc912",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:b749a306-b12c-a542-ac69-9f376c9fc912",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "EFCC dey worry say yahoo-yahoo dey increase for south east Nigeria",
-          "headline": "EFCC dey worry say yahoo-yahoo dey increase for south east Nigeria"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48319647",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48319647",
-          "curie": "http://www.bbc.co.uk/asset/b749a306-b12c-a542-ac69-9f376c9fc912"
-        },
-        "summary": "EFCC zonal head of di commission want make parents kontinu to chook eye inside wetin dia pikin dey do for internet, as di case of yahoo-yahoo for di region don dey pass be careful.",
-        "timestamp": 1558167981641,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "106349019",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/163D6/production/_106349019_gettyimages-1072225652.jpg",
-          "path": "/cpsprodpb/163D6/production/_106349019_gettyimages-1072225652.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Hackers dey always try get personal information to thief moni from pipo",
-          "caption": "Hackers dey always try get personal information to thief moni from pipo",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48319647"
       }
     },
     {
@@ -4268,62 +4404,6 @@
       }
     },
     {
-      "id": "229b500e-7b1e-ff4a-9b6d-44b1ad261fbf",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:229b500e-7b1e-ff4a-9b6d-44b1ad261fbf",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Patoranking name new album after im daughter",
-          "headline": "Patoranking name new album after im daughter"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48362572",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48362572",
-          "curie": "http://www.bbc.co.uk/asset/229b500e-7b1e-ff4a-9b6d-44b1ad261fbf"
-        },
-        "summary": "Di album wey go comot for May 24 go feature artists like Davido, Busiswa and Dadju.",
-        "timestamp": 1558520101896,
-        "byline": {
-          "name": "Princess Irede Abumere",
-          "title": "BBC News Africa, Lagos",
-          "persons": [
-            {
-              "name": "Princess Irede Abumere",
-              "function": "BBC News Africa, Lagos",
-              "thumbnail": "http://c.files.bbci.co.uk/13FE7/production/_107059818_me.jpg"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3139461b000e9dabf9",
-              "campaignName": "WS - Divert me"
-            },
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107058020",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/0825/production/_107058020_58468675_381801632419494_9174332355655204042_n.jpg",
-          "path": "/cpsprodpb/0825/production/_107058020_58468675_381801632419494_9174332355655204042_n.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Patoranking",
-          "copyrightHolder": "Instagram/@patorankingfire"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48362572"
-      }
-    },
-    {
       "id": "208f6506-29a5-a041-ace3-f8939005c870",
       "count": 1,
       "urn": "urn:bbc:curie:asset:208f6506-29a5-a041-ace3-f8939005c870",
@@ -4377,47 +4457,6 @@
           "copyrightHolder": "Kano Prison"
         },
         "id": "urn:bbc:ares::asset:pidgin/tori-48421888"
-      }
-    },
-    {
-      "id": "06c5c5f6-1596-c44c-ae72-780189d431ca",
-      "count": 1,
-      "urn": "urn:bbc:curie:asset:06c5c5f6-1596-c44c-ae72-780189d431ca",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "INEC don withdraw 25 certificates of return, award am to oda pipo",
-          "headline": "INEC don withdraw 25 certificates of return, award am to oda pipo"
-        },
-        "locators": {
-          "assetUri": "/pidgin/tori-48340972",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48340972",
-          "curie": "http://www.bbc.co.uk/asset/06c5c5f6-1596-c44c-ae72-780189d431ca"
-        },
-        "summary": "Di election bodi say dem withdraw 20 of di 25 certificates from APC members and two from PDP members.",
-        "timestamp": 1558379461688,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ]
-        },
-        "indexImage": {
-          "id": "107034669",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/17983/production/_107034669_bbc.jpg",
-          "path": "/cpsprodpb/17983/production/_107034669_bbc.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Stickers for ballot papers.",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/tori-48340972"
       }
     }
   ]
