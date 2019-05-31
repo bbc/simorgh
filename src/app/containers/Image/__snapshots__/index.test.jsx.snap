@@ -11,6 +11,7 @@ exports[`Image with data should render an image with alt text 1`] = `
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>
@@ -57,6 +58,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>
@@ -73,6 +75,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>
@@ -89,6 +92,7 @@ exports[`Image with data should render an image with other originCode - this wou
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>
@@ -105,6 +109,7 @@ exports[`Image with data should render an image with the default originCode \`cp
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>
@@ -121,6 +126,7 @@ exports[`Image with data should render an image with the default originCode \`cp
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsdevpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     type=""
+    useFigure={true}
     width={640}
   />
 </ForwardRef>

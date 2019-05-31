@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { string, number, objectOf, any, bool } from 'prop-types';
+import { string, number, objectOf, any, bool, oneOf } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -28,22 +28,21 @@ const renderCopyright = copyright =>
 const renderCaption = (block, type) =>
   block ? <Caption block={block} type={type} /> : null;
 
-const FigureContainer = ({
-  alt,
-  copyright,
-  captionBlock,
-  lazyLoad,
-  ratio,
-  src,
+const ImageComponent = ({
+  platform,
   height,
   width,
+  src,
+  alt,
+  copyright,
+  ratio,
+  lazyLoad,
+  captionBlock,
   type,
 }) => {
-  const { platform } = useContext(RequestContext);
   const imageToRender = <Image alt={alt} src={src} width={width} />;
-
   return (
-    <Figure>
+    <Fragment>
       <ImagePlaceholder ratio={ratio}>
         {platform === 'amp' ? (
           <AmpImg
@@ -60,11 +59,11 @@ const FigureContainer = ({
         {renderCopyright(copyright)}
       </ImagePlaceholder>
       {renderCaption(captionBlock, type)}
-    </Figure>
+    </Fragment>
   );
 };
 
-FigureContainer.propTypes = {
+const figurePropTypes = {
   alt: string.isRequired,
   captionBlock: objectOf(any),
   copyright: string,
@@ -76,12 +75,42 @@ FigureContainer.propTypes = {
   width: number.isRequired,
 };
 
-FigureContainer.defaultProps = {
+const defaultProps = {
   copyright: null,
   captionBlock: null,
   height: null,
   lazyLoad: false,
   type: '',
+};
+
+ImageComponent.propTypes = {
+  ...figurePropTypes,
+  platform: oneOf(['amp', 'canonical']).isRequired,
+};
+
+ImageComponent.defaultProps = { ...defaultProps };
+
+const FigureContainer = props => {
+  const { platform } = useContext(RequestContext);
+  const { useFigure } = props;
+
+  return useFigure ? (
+    <Figure>
+      <ImageComponent {...props} platform={platform} />
+    </Figure>
+  ) : (
+    <ImageComponent {...props} platform={platform} />
+  );
+};
+
+FigureContainer.propTypes = {
+  ...figurePropTypes,
+  useFigure: bool,
+};
+
+FigureContainer.defaultProps = {
+  ...defaultProps,
+  useFigure: true,
 };
 
 export default FigureContainer;

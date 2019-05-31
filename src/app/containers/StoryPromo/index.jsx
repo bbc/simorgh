@@ -24,6 +24,7 @@ const renderImage = imageValues => {
       ratio={ratio}
       src={src}
       {...imageValues}
+      useFigure={false}
     />
   );
 };
