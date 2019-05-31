@@ -380,6 +380,105 @@
                                 {
                                   "model": {
                                     "attributes": [],
+                                    "text": "Some caption text that contains a much more common use of "
+                                  },
+                                  "type": "fragment"
+                                },
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "attributes": [],
+                                          "text": "inline link"
+                                        },
+                                        "type": "fragment"
+                                      }
+                                    ],
+                                    "isExternal": false,
+                                    "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                                    "text": "inline"
+                                  },
+                                  "type": "urlLink"
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " that has some text following the link to see how the link renders compared to the line above and below. And a bit more text so that the line wraps underneath the link.",
+                                    "attributes": []
+                                  }
+                                }
+                              ],
+                              "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text. And a bit more text so that the line wraps underneath the link."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Royal wedding"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Royal wedding"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
                                     "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text. "
                                   },
                                   "type": "fragment"
@@ -389,7 +488,7 @@
                                     "blocks": [
                                       {
                                         "model": {
-                                          "attributes": ["italic"],
+                                          "attributes": [],
                                           "text": "An inline link to show how the styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
                                         },
                                         "type": "fragment"
@@ -405,7 +504,7 @@
                                   "type": "fragment",
                                   "model": {
                                     "text": " that has some text following the link to see how the link renders compared to the line above and below.",
-                                    "attributes": ["italic"]
+                                    "attributes": []
                                   }
                                 }
                               ],
