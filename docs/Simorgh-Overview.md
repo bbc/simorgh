@@ -3,7 +3,7 @@
 Simorgh consists mainly of two repositories:
 
 1. Simorgh https://github.com/bbc/simorgh/ - This is the repo that holds the core react application, the express server, Routes and the React containers.
-2. Psammead https://github.com/bbc/psammead - Psammead is the Front end component library for Simorgh, this is a mono repo consisting of a number of packages focussed on the application frontend. Each package in published to NPM and available under the `@bbc/psammead-*` namespace and are installed and used inside of the Simorgh container.
+2. Psammead https://github.com/bbc/psammead - Psammead is the Front end component library for Simorgh, this is a mono repo consisting of a number of packages focussed on the application frontend. Each package is published to NPM and available under the `@bbc/psammead-*` namespace and are installed and used inside of the Simorgh container.
 
 ## What is Simorgh
 
