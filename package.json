@@ -12,7 +12,7 @@
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
-    "cypress:storybook": "sleep 10 && cypress run --project ./.storybook/.",
+    "cypress:storybook": "wait-on -t 20000 http://localhost:9001 && cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dataValidate": "node src/app/dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
