@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
-import services from '../support/worldServices'
+import services from '../support/worldServices';
 
-Object.keys(services).map(function(index, key) {
-  const serviceObject = services[index]
+// eslint-disable-next-line array-callback-return
+Object.keys(services).map(function(index) {
+  const serviceObject = services[index];
   const service = index;
-  
-  describe('frontpage tests for ' + service, function() {
+
+  describe(`frontpage tests for ${service}`, function() {
     before(function() {
       cy.visit(serviceObject.url);
     });
@@ -24,7 +25,7 @@ Object.keys(services).map(function(index, key) {
       });
     });
 
-    context('should render the page at 600', () => {
+    context('should render the page at 600', function() {
       before(() => {
         cy.viewport(600, 1024);
       });
