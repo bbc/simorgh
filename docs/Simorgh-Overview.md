@@ -68,7 +68,7 @@ If loading is set to the Loading components is returned instead rendering a visu
 
 The error HOC checks the error prop passed in, if error is set to null the Article or FrontPage container is simply returned.
 
-If error is set to true the Error component is is returned, giving the user a visual indication of the error e.g. a 500 error page.
+If error is set to true the Error component is returned, giving the user a visual indication of the error e.g. a 500 error page.
 
 ### withData
 
