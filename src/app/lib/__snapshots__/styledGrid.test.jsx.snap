@@ -1,0 +1,1834 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & span 1 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          1/4 or 1/5 or 1/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & span 8 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 8;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          4/4 or 5/5 or 8/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & span columns depending on breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          Spanning a various number of columns depending on breakpoint
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at column 1 & span 1 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          1/4 or 1/5 or 1/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at column 1 & span 8 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          4/4 or 5/5 or 8/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at column 1 & span columns depending on breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          Spanning a various number of columns depending on breakpoint
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & span 1 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          1/4 or 1/5 or 1/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & span 8 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 8;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          4/4 or 5/5 or 8/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & span columns depending on breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(10,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          Spanning a various number of columns depending on breakpoint
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & span 1 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    grid-column: 1 / span 4;
+    max-width: 66.67%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 4;
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 8;
+    max-width: 30.6rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width:25rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          1/4 or 1/5 or 1/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & span 8 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    grid-column: 1 / span 4;
+    max-width: 66.67%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 4;
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 8;
+    max-width: 30.6rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (max-width:25rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          4/4 or 5/5 or 8/8
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & span columns depending on breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+}
+
+.c2 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    grid-column: 1 / span 4;
+    max-width: 66.67%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 4;
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 8;
+    max-width: 30.6rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c3 {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (max-width:25rem) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div>
+          Spanning a various number of columns depending on breakpoint
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

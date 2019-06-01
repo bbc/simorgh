@@ -87,27 +87,34 @@
               {
                 "type": "aresMedia",
                 "model": {
-                  "id": "p067gq6h",
-                  "subType": "clip",
-                  "format": "audio_video",
-                  "title": "Mark and Isla Royal Wedding",
-                  "synopses": {
-                    "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
-                    "medium": null,
-                    "long": null
-                  },
-                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                  "embedding": true,
-                  "warnings": {},
-                  "advertising": false,
-                  "versions": [
+                  "blocks": [
                     {
-                      "versionId": "p067gq6k",
-                      "types": ["Original"],
-                      "duration": 94,
-                      "availableTerritories": {
-                        "uk": true,
-                        "nonUk": false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p067gq6h",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Mark and Isla Royal Wedding",
+                        "synopses": {
+                          "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                        "embedding": true,
+                        "warnings": {},
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p067gq6k",
+                            "types": ["Original"],
+                            "duration": 94,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            }
+                          }
+                        ]
                       }
                     }
                   ]

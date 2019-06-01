@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::article:cyddjz5058wo",
+    "id": "urn:bbc:ares::article:c4vlle3q337o",
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo"
+      "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o"
     },
     "type": "article",
     "createdBy": "",
@@ -33,7 +33,10 @@
           "thingUri": "http://www.bbc.co.uk/things/c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1#id",
           "thingId": "c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1",
           "thingLabel": " پهپاد",
-          "thingType": ["Thing", "Theme"],
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
           "thingSameAs": []
         }
       ],
@@ -429,13 +432,13 @@
     }
   },
   "promo": {
-    "id": "urn:bbc:ares::article:cyddjz5058wo",
+    "id": "urn:bbc:ares::article:c4vlle3q337o",
     "headlines": {
       "seoHeadline": "پهپادی که برایتان قهوه می‌آورد",
       "promoHeadline": "پهپادی که برایتان قهوه می‌آورد"
     },
     "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo"
+      "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o"
     },
     "summary": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
     "timestamp": 1535122662000
