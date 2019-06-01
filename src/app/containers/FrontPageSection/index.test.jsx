@@ -160,6 +160,11 @@ describe('FrontPageSection Container', () => {
       'should render without a bar',
       <FrontPageSection group={group} bar={false} />,
     );
+
+    shouldShallowMatchSnapshot(
+      'should render with only one item',
+      <FrontPageSection group={hasOneItem} />,
+    );
   });
 
   describe('assertions', () => {
