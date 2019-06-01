@@ -9,7 +9,7 @@ Simorgh consists mainly of two repositories:
 
 Simorgh is a universal/isomorphic JS Single page application, written with Node, express and React. Currently Simorgh is designed to render news articles from the BBC's new CMS; optimo. It is also used to render front pages for our WorldService sites.
 
-Being universal JavaScript a Simorgh page renders on both the server and the client. A users initial page load will be a server side render, for optimal performance and compatibility with devices not using JS. Onward journeys (Clicking on inline Links to another page rendered by Simorgh) will then render client side, using the JS bundles downloaded during the original server side render. In this case a User is now only making a network request to fetch the JSON data and the page is rendered on the users device.
+Being universal JavaScript, a Simorgh page renders on both the server and the client. A users initial page load will be a server side render, for optimal performance and compatibility with devices not using JS. Onward journeys (clicking on inline Links to another page rendered by Simorgh) will then render client side, using the JS bundles downloaded during the original server side render. In this case a user is now only making a network request to fetch the JSON data and the page is rendered on the users device.
 
 ## A High Level User Journey
 
