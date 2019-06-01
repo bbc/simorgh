@@ -39,7 +39,7 @@ The routes container is rendered again, this time loading is set to false so the
 
 ## Rendering a Page
 
-The JSON payload for an article consists of a number of Blocks. Each block an object which represents an element on the page, this could be a Heading, an Image, a Paragraph etc. each of these blocks has a block type and a block type will match up to a specific container in Simorgh e.g. blockType: image will match to the Image container.
+The JSON payload for an article consists of a number of Blocks. Each block is an object which represents an element on the page, this could be a Heading, an Image, a Paragraph etc. Each of these blocks has a block type and a block type will match up to a specific container in Simorgh e.g. blockType: image will match to the Image container.
 
 The ArticleMain container will iterate over each JSON block, match it against its corresponding react container and pass the data via props. These containers are where the logic for rendering each block type sits. It is at this point where we use the installed frontend components from the Psammead component library. For example the Image container will import the Figure container, and Figure will import and use the psammead-image and the psammead-image-placeholder components. An image on an article will generally have a caption, so the Figure container will import the caption container which may include more frontend components from Psammead to render a caption on top of the image.
 
