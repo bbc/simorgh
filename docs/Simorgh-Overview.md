@@ -29,7 +29,7 @@ Now that the raw HTML has been downloaded the Client.JS file kicks in and hydrat
 
 Now that the SPA is bootstrapped on the users device, onward journeys to further Simorgh pages are captured by react-router and rendered on entirely on the client.
 
-Clicking on an onward Journey triggers the `useEffect` hook in the main App container as the url path has changed. This effect uses `getRouteProps` again to match the new path against a react-router route, gaining access to the; service and isAmp props, the react container to render and the `getInitialData` function.
+Clicking on an onward journey triggers the `useEffect` hook in the main App container as the URL path has changed. This effect uses `getRouteProps` again to match the new path against a react-router route, gaining access to the; service and isAmp props, the react container to render and the `getInitialData` function.
 
 The local state is now updated setting `loading` to `true` and `data` to `null`. This update to state triggers the App container to re-render passing the state values as props to the main container, in this case either ArticlesContainer or FrontPageContainer. These containers compose a set of higher order components (HOC) and each one handles the values from a given props. Currently the loading prop is set to `true` so the `withLoading` HOC will return the loading component showing a visual loading state to the user.
 
