@@ -17,7 +17,7 @@ Being universal JavaScript a Simorgh page renders on both the server and the cli
 
 A request to a BBC article (https://www.bbc.co.uk/news/articles/clldg965yzjo) is passed on to the Simorgh application from Mozart.
 
-The request matches a route in our express server using a regex match (`articleRegexPath` || `frontPageRegexPath`) if the url matches the pre-defined regex pattern for an article or a front page we fetch some params off of the route using the `getRouteProps` function. This returns service, isAmp, route and match. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
+The request matches a route in our express server using a regex match (`articleRegexPath` || `frontPageRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
 
 Once data is returned we pull the status code and pass all of this data as props to our main document using `renderDocument`.
 
