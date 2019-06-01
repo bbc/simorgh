@@ -224,7 +224,7 @@ describe('FrontPageSection Container', () => {
       expect(container.children).toHaveLength(0);
     });
 
-    it('should not render the ul and li when only one item', () => {
+    it('should not render the story promo inside a list when only one item exists', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
           <FrontPageSection group={hasOneItem} />
