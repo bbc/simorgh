@@ -39,34 +39,41 @@
     "model": {
       "blocks": [
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p060njgk",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p060njgk",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p060njgk",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Mark and Isla",
-                  "synopses" : {
-                    "short" : "Mark and Isla are back, with some very helpful tips about Mother's Day.",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p060nk8l.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p060njgr",
-                      "types" : [ "Original" ],
-                      "duration" : 91,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p060njgk",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Mark and Isla",
+                        "synopses": {
+                          "short": "Mark and Isla are back, with some very helpful tips about Mother's Day.",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060nk8l.jpg",
+                        "embedding": true,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p060njgr",
+                            "types": ["Original"],
+                            "duration": 91,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            },
+                            "warnings": {}
+                          }
+                        ]
                       }
                     }
                   ]
@@ -314,17 +321,100 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:b08qm073",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:b08qm073",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "statusCode" : 410,
-                  "id" : "urn:bbc:ares::clip:b08qm073",
-                  "statusMessage" : "Asset could not be found. Perhaps it was withdrawn."
-                }
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "model": {
+                        "advertising": true,
+                        "caption": null,
+                        "embedding": true,
+                        "format": "audio_video",
+                        "id": "p01k6msm",
+                        "image": null,
+                        "imageCopyright": "BBC",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "title": "Five things ants can teach us about management",
+                        "versions": [
+                          {
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "availableUntil": null,
+                            "duration": 191,
+                            "types": ["Original"],
+                            "versionId": "p01k6msp",
+                            "warnings": {
+                              "long": "Contains strong language and adult humour.",
+                              "short": "Contains strong language and adult humour."
+                            }
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "copyrightHolder": "BBC",
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                              "originCode": null,
+                              "width": 1920
+                            },
+                            "type": "rawImage"
+                          },
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "model": {
+                                                "attributes": [],
+                                                "text": "Ants"
+                                              },
+                                              "type": "fragment"
+                                            }
+                                          ],
+                                          "text": "Ants"
+                                        },
+                                        "type": "paragraph"
+                                      }
+                                    ]
+                                  },
+                                  "type": "text"
+                                }
+                              ]
+                            },
+                            "type": "altText"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
               }
             ]
           }
@@ -581,34 +671,41 @@
           }
         },
         {
-          "type" : "video",
-          "model" : {
-            "locator" : "urn:bbc:pips:pid:p06702pc",
-            "blocks" : [
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p06702pc",
+            "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p06702pc",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Winning performance: Netta (Israel) performs 'Toy'",
-                  "synopses" : {
-                    "short" : "Written by Doron Medalie, Stav Beger.",
-                    "long" : null,
-                    "medium" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p06704bb.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p06702pf",
-                      "types" : [ "Original" ],
-                      "duration" : 127,
-                      "availableTerritories" : {
-                        "uk" : false,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p06702pc",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Winning performance: Netta (Israel) performs 'Toy'",
+                        "synopses": {
+                          "short": "Written by Doron Medalie, Stav Beger.",
+                          "long": null,
+                          "medium": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06704bb.jpg",
+                        "embedding": true,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p06702pf",
+                            "types": ["Original"],
+                            "duration": 127,
+                            "availableTerritories": {
+                              "uk": false,
+                              "nonUk": false
+                            },
+                            "warnings": {}
+                          }
+                        ]
                       }
                     }
                   ]

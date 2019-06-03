@@ -1,20 +1,22 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
-import { articleDataPropTypes } from '../../models/propTypes/article';
+import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
+import FrontPageSection from '../FrontPageSection';
 import deepGet from '../../helpers/json/deepGet';
-import { GhostWrapper } from '../../lib/styledGrid';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const title = deepGet(
-    ['content', 'groups', 0, 'items', 0, 'headlines', 'headline'],
-    frontPageData,
-  );
+  const groups = deepGet(['content', 'groups'], frontPageData);
 
   return (
     <Fragment>
       <main role="main">
         <GhostWrapper>
-          <h1>{title}</h1>
+          <GridItemConstrainedLarge>
+            {groups.map(group => (
+              <FrontPageSection key={group.title} group={group} />
+            ))}
+          </GridItemConstrainedLarge>
         </GhostWrapper>
       </main>
     </Fragment>
@@ -22,7 +24,7 @@ const FrontPageMain = ({ frontPageData }) => {
 };
 
 FrontPageMain.propTypes = {
-  frontPageData: shape(articleDataPropTypes).isRequired,
+  frontPageData: shape(frontPageDataPropTypes).isRequired,
 };
 
 export default FrontPageMain;

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/cl55zn0w0l4o.amp && amphtml-validator http://localhost:7080/news/articles/cl55zn0w0l4o.amp",
-    "bbcA11y": "bbc-a11y",
+    "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp",
+    "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build:storybook": "build-storybook -c .storybook -o storybook_dist",
@@ -29,7 +29,7 @@
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
-    "test:prod:ci": "npm install --no-save cypress@3.1.5 bbc-a11y@2.2.6 npm-run-all@4.1.5 && run-p --race start cypress && run-p --race start bbcA11y",
+    "test:prod:ci": "npm install --no-save cypress@3.1.5 bbc-a11y@^2.3.0 npm-run-all@4.1.5 && run-p --race start cypress && run-p --race start bbcA11y",
     "test:prod:travis": "CYPRESS_SKIP_EU=true npm run test:prod:ci",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:local_env": "CYPRESS_APP_ENV=local npm run test:e2e",
@@ -51,7 +51,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && npm run snyk && apache2-license-checker"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && apache2-license-checker"
     }
   },
   "repository": {
@@ -87,11 +87,14 @@
     "@bbc/psammead-image-placeholder": "^0.1.8",
     "@bbc/psammead-inline-link": "^0.3.4",
     "@bbc/psammead-paragraph": "^1.0.2",
+    "@bbc/psammead-section-label": "^0.1.0-alpha.0",
     "@bbc/psammead-sitewide-links": "^0.3.3",
-    "@bbc/psammead-story-promo": "^0.1.2",
+    "@bbc/psammead-story-promo": "^0.2.0-alpha.4",
+    "@bbc/psammead-story-promo-list": "^0.1.0-alpha.2",
     "@bbc/psammead-styles": "^0.3.2",
     "@bbc/psammead-timestamp": "^0.1.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.10",
+    "@storybook/theming": "^5.0.11",
     "assets-webpack-plugin": "^3.9.8",
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
@@ -116,10 +119,11 @@
     "path-to-regexp": "^2.4.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0",
+    "react": "^16.8.6",
     "react-amphtml": "^3.0.1",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-lazyload": "^2.5.0",
     "react-router-config": "^5.0.0",
     "react-router-dom": "^4.3.1",
     "speculate": "^1.7.4",
@@ -134,7 +138,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@bbc/apache2-license-checker": "^1.1.4",
-    "@storybook/react": "^4.1.12",
+    "@storybook/react": "^5.0.11",
     "amphtml-validator": "^1.0.23",
     "babel-eslint": "^10.0.0",
     "bbc-a11y": "^2.3.0",
@@ -159,7 +163,7 @@
     "jest-styled-components": "^6.3.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.0",
-    "react-test-renderer": "^16.7.0",
+    "react-test-renderer": "^16.8.6",
     "react-testing-library": "^7.0.0",
     "snyk": "^1.129.0",
     "start-server-webpack-plugin": "^2.2.5",
@@ -202,7 +206,8 @@
     "prune": false,
     "requires": [
       "td-agent",
-      "cloudteam-td-agent-setup"
+      "cloudteam-td-agent-setup",
+      "dial-agent"
     ]
   }
 }
