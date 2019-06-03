@@ -6,6 +6,8 @@ const yoruba = {
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
+  defaultImageAltText: 'BBC News Yorùbá',
   brandSVG,
   script: latin,
   translations: {
