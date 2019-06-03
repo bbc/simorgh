@@ -425,13 +425,23 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
     <div
       className="c2"
     >
-      <img
-        alt="Image Alt text"
-        className="c3"
-        height={null}
-        src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-        width={2048}
+      <div
+        className="lazyload-placeholder"
+        style={
+          Object {
+            "height": undefined,
+          }
+        }
       />
+      <noscript>
+        <img
+          alt="Image Alt text"
+          className="c3"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          width={2048}
+        />
+      </noscript>
     </div>
   </div>
   <div

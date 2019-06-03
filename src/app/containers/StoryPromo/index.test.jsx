@@ -87,7 +87,7 @@ describe('StoryPromo Container', () => {
           statsDestination="NEWS_PS_TEST"
           statsPageIdentifier="news.articles.c0000000000o"
         >
-          <StoryPromo item={item} />
+          <StoryPromo item={item} lazyLoadImage={false} />
         </RequestContextProvider>,
       );
 

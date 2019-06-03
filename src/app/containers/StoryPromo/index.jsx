@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
+import { shape, bool } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
@@ -11,7 +11,7 @@ import Timestamp from '../Timestamp';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../helpers/json/deepGet';
 
-const renderImage = imageValues => {
+const renderImage = (imageValues, lazyLoad) => {
   if (!imageValues) {
     return null;
   }
@@ -25,11 +25,12 @@ const renderImage = imageValues => {
       src={src}
       {...imageValues}
       useFigure={false}
+      lazyLoad={lazyLoad}
     />
   );
 };
 
-const StoryPromo = ({ item }) => {
+const StoryPromo = ({ item, lazyLoadImage }) => {
   const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
@@ -37,7 +38,7 @@ const StoryPromo = ({ item }) => {
   const timestamp = deepGet(['timestamp'], item);
   const imageValues = deepGet(['indexImage'], item);
 
-  const Image = renderImage(imageValues);
+  const Image = renderImage(imageValues, lazyLoadImage);
 
   if (!headline || !url) {
     return null;
@@ -66,6 +67,11 @@ const StoryPromo = ({ item }) => {
 
 StoryPromo.propTypes = {
   item: shape(storyItem).isRequired,
+  lazyLoadImage: bool,
+};
+
+StoryPromo.defaultProps = {
+  lazyLoadImage: true,
 };
 
 export default StoryPromo;
