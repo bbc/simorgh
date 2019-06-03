@@ -59,18 +59,6 @@ describe('Client', () => {
           '/foobar/articles/sw.js',
         );
       });
-
-      describe('service not found', () => {
-        beforeEach(() => {
-          getRouteProps.mockReturnValue({ service: undefined });
-        });
-
-        it('should not be installed', async () => {
-          await import('./client');
-
-          expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
-        });
-      });
     });
 
     describe('on dev environment', () => {

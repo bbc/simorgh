@@ -13,11 +13,7 @@ const { service } = getRouteProps(routes, url);
 
 hydrate(<ClientApp data={data} routes={routes} />, root);
 
-if (
-  process.env.NODE_ENV === 'production' &&
-  'serviceWorker' in navigator &&
-  service
-) {
+if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   navigator.serviceWorker.register(`/${service}/articles/sw.js`);
 }
 
