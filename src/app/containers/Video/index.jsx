@@ -72,7 +72,7 @@ const VideoContainer = ({ blocks }) => {
             items={items}
             holdingImageUrl={holdingImageUrl}
             statsAppName="news"
-            statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
+            statsAppType="responsive"
             statsCountername={statsPageIdentifier}
             statsDestination={statsDestination}
             uiLocale="en-GB"
