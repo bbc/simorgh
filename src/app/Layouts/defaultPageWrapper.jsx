@@ -51,13 +51,14 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  id: string.isRequired,
+  id: string,
   isAmp: bool.isRequired,
   service: string.isRequired,
 };
 
 PageWrapper.defaultProps = {
   bbcOrigin: null,
+  id: null,
 };
 
 PageWrapper.defaultProps = {};
