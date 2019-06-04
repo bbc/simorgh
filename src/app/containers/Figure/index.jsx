@@ -38,9 +38,12 @@ const FigureContainer = ({
   height,
   width,
   type,
+  srcset,
 }) => {
   const { platform } = useContext(RequestContext);
-  const imageToRender = <Image alt={alt} src={src} width={width} />;
+  const imageToRender = (
+    <Image alt={alt} src={src} width={width} srcset={srcset} />
+  );
 
   return (
     <Figure>
@@ -73,6 +76,7 @@ FigureContainer.propTypes = {
   ratio: number.isRequired,
   src: string.isRequired,
   type: string,
+  srcset: string,
   width: number.isRequired,
 };
 
@@ -82,6 +86,7 @@ FigureContainer.defaultProps = {
   height: null,
   lazyLoad: false,
   type: '',
+  srcset: null,
 };
 
 export default FigureContainer;
