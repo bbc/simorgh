@@ -48,12 +48,12 @@ Article pages are served at routes of the format  `/news/articles/:id` where id 
 These two News articles are available on the Test environment of our CMS, as well as locally, so are often used for testing:
 
 - [http://localhost:7080/news/articles/c6v11qzyv8po](http://localhost:7080/news/articles/c6v11qzyv8po)
-- [http://localhost:7080/news/articles/c0g992jmmkko](http://localhost:7080/news/articles/c0g992jmmkko).
+- [http://localhost:7080/persian/articles/c4vlle3q337o](http://localhost:7080/persian/articles/c4vlle3q337o).
 
 We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https://www.ampproject.org](https://www.ampproject.org) 
 
 - [http://localhost:7080/news/articles/c6v11qzyv8po.amp](http://localhost:7080/news/articles/c6v11qzyv8po.amp)
-- [http://localhost:7080/news/articles/c0g992jmmkko.amp](http://localhost:7080/news/articles/c0g992jmmkko.amp).
+- [http://localhost:7080/persian/articles/c4vlle3q337o.amp](http://localhost:7080/persian/articles/c4vlle3q337o.amp).
 
 World Service front pages are served in the format `/:service` where `service` represents a World Service site:
 
