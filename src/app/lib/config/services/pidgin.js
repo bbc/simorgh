@@ -10,6 +10,7 @@ const pidgin = {
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {

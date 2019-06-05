@@ -10,6 +10,7 @@ const igbo = {
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {

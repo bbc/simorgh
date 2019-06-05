@@ -10,6 +10,7 @@ const yoruba = {
   defaultImageAltText: 'BBC News Yorùbá',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {
