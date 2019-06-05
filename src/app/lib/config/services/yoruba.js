@@ -97,7 +97,7 @@ const yoruba = {
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
         text: 'Why you can trust the BBC',
       },
       {

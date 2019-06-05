@@ -97,7 +97,7 @@ const igbo = {
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/igbo/institutional-48529074',
         text: 'Why you can trust the BBC',
       },
       {
