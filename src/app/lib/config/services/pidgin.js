@@ -8,6 +8,7 @@ const pidgin = {
   serviceName: 'Pidgin',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {
