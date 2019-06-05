@@ -18,6 +18,7 @@ export default {
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
     themeColor: '#000',
+    fonts: [],
   },
   news,
   persian,
