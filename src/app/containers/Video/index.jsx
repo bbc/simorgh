@@ -67,7 +67,7 @@ const VideoContainer = ({ blocks }) => {
     statsObject: { clipPID: pid },
     playlistObject: {
       title,
-      holdingImageURL: holdingImageUrl,
+      holdingImageURL: `https://${holdingImageUrl}`,
       items: [
         {
           versionID,
