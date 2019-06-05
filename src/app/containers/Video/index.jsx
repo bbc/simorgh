@@ -81,8 +81,6 @@ const VideoContainer = ({ blocks }) => {
     }
   };
 
-  console.log(versionID, env, kind, title);
-
   return (
     <>
       {metadata ? (
