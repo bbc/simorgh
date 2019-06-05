@@ -33,7 +33,11 @@ const VideoContainer = ({ blocks }) => {
   const captionBlock = filterForBlockType(blocks, 'caption');
 
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
-  const kind = deepGet(['subType'], nestedModel);
+  const kind =
+    deepGet(['model', 'blocks', 0, 'model', 'format'], aresMediaBlock) ===
+    'audio_video'
+      ? 'programme'
+      : 'audio';
   const pid = deepGet(['id'], nestedModel);
   const title = deepGet(['title'], nestedModel);
   const version = deepGet(['versions', 0], nestedModel);
@@ -78,6 +82,11 @@ const VideoContainer = ({ blocks }) => {
     },
     mediator: {
       host: mediatorURL[env]
+    },
+    ui: {
+      cta: {
+        mode: "duration"
+      }
     }
   };
 
