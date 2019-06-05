@@ -117,7 +117,8 @@ const yoruba = {
         text: 'Kàn sí BBC',
       },
     ],
-    copyrightText: 'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
+    copyrightText:
+      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
 };
 

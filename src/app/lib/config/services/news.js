@@ -140,7 +140,8 @@ const news = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC. The BBC is not responsible for the content of external sites.',
+    copyrightText:
+      'BBC. The BBC is not responsible for the content of external sites.',
   },
 };
 

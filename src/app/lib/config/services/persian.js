@@ -120,7 +120,8 @@ const persian = {
         text: 'سیاست حفظ حریم خصوصی',
       },
       {
-        href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+        href:
+          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
         text: 'Cookies',
       },
       {
@@ -140,7 +141,8 @@ const persian = {
         text: 'Get Personalised Newsletters',
       },
     ],
-    copyrightText: 'BBC. بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
+    copyrightText:
+      'BBC. بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
 };
 
