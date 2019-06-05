@@ -51,6 +51,15 @@ const VideoContainer = ({ blocks }) => {
     },
   ];
 
+  const env = process.env.APP_ENV
+    ? process.env.APP_ENV
+    : process.env.STORYBOOK_APP_ENV;
+  const mediatorURL = {
+    test: 'open.test.bbc.co.uk',
+    live: 'open.bbc.co.uk',
+    local: 'open.test.bbc.co.uk',
+  };
+
   // prettier-ignore
   const mediaPlayerSettings = {
     product: 'news',
@@ -63,11 +72,16 @@ const VideoContainer = ({ blocks }) => {
         {
           versionID,
           duration,
-          kind
+          kind,
         }
       ]
+    },
+    mediator: {
+      host: mediatorURL[env]
     }
   };
+
+  console.log(versionID, env, kind, title);
 
   return (
     <>
@@ -94,7 +108,7 @@ const VideoContainer = ({ blocks }) => {
             {`
               function initialiseRequires() {
                   requiredScripts = {
-                    "bump-4":"//emp.bbci.co.uk/emp/bump-4/bump-4"
+                    "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
                     };
                   require({ paths: requiredScripts, waitSeconds: 30 });
                   mediaPlayerSetup();
