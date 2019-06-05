@@ -148,6 +148,22 @@ describe('Server', () => {
     });
   });
 
+  describe('Temporary explore page routes', () => {
+    const expectedRoutes = [
+      { path: '/news/explore', service: 'news', variant: 'canonical' },
+      { path: '/news/explore.amp', service: 'news', variant: 'amp' },
+    ];
+
+    expectedRoutes.forEach(({ path, service, variant }) => {
+      it('should respond with text', async () => {
+        const { text } = await makeRequest(path);
+        expect(text).toEqual(
+          `Welcome to the ${variant} variant of the temporary ${service} explore page route on Simorgh.`,
+        );
+      });
+    });
+  });
+
   describe('/{service}/articles/{optimoID}', () => {
     const successDataResponse = {
       isAmp: false,
