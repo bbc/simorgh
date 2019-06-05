@@ -8,6 +8,7 @@ const igbo = {
   serviceName: 'Igbo',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {
