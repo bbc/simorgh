@@ -28,10 +28,14 @@ export const RequestContextProvider = ({
 
 RequestContextProvider.propTypes = {
   children: node.isRequired,
-  id: string.isRequired,
+  id: string,
   platform: string.isRequired,
   isUK: bool.isRequired,
   origin: string.isRequired,
   statsDestination: string.isRequired,
   statsPageIdentifier: string.isRequired,
+};
+
+RequestContextProvider.defaultProps = {
+  id: null,
 };
