@@ -6,6 +6,8 @@ const igbo = {
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+  defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
   fonts: [],
