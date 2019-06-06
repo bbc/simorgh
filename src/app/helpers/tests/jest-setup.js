@@ -2,7 +2,7 @@ import Enzyme, { shallow, mount } from 'enzyme'; // eslint-disable-line import/n
 import Adapter from 'enzyme-adapter-react-16'; // eslint-disable-line import/no-extraneous-dependencies
 import fetch from 'jest-fetch-mock'; // eslint-disable-line import/no-extraneous-dependencies
 import path from 'path';
-import './serviceContextMock';
+import './createLoadableContextMock';
 
 Enzyme.configure({ adapter: new Adapter() });
 

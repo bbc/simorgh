@@ -12,6 +12,6 @@ describe('with pageWarpper', () => {
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,
-    <PageWrapperHOC data={dataProps} />,
+    <PageWrapperHOC {...dataProps} />,
   );
 });

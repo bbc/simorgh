@@ -3,7 +3,7 @@
 exports[`defaultPageWrapper should render with children 1`] = `
 <React.Fragment>
   <GlobalStyleComponent />
-  <mockConstructor
+  <ServiceContextProvider
     service="news"
   >
     <RequestContextProvider
@@ -30,6 +30,6 @@ exports[`defaultPageWrapper should render with children 1`] = `
       </h2>
       <FooterContainer />
     </RequestContextProvider>
-  </mockConstructor>
+  </ServiceContextProvider>
 </React.Fragment>
 `;

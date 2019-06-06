@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServiceContext should have a brand name for default 1`] = `
-<span>
-  Default Brand Name
-</span>
-`;
+exports[`ServiceContext should have a brand name for default 1`] = `null`;
 
 exports[`ServiceContext should have a brand name for news 1`] = `
 <span>
