@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ServiceContextComponent from '../../contexts/ServiceContext';
-import { syncServices } from '../../lib/config/services';
+import services from '../../lib/config/services/sync';
 
 jest.mock('../../contexts/ServiceContext');
 ServiceContextComponent.ServiceContextProvider = jest.fn();
@@ -9,7 +9,7 @@ ServiceContextComponent.ServiceContextProvider.mockImplementation(
     const { ServiceContext } = ServiceContextComponent;
 
     return (
-      <ServiceContext.Provider value={syncServices[service || 'default']}>
+      <ServiceContext.Provider value={services[service || 'default']}>
         {children}
       </ServiceContext.Provider>
     );

@@ -5,7 +5,7 @@ import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import { syncServices } from '../../lib/config/services/index';
+import services from '../../lib/config/services/sync';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const Container = (service, bbcOrigin, platform, data, id) => (
@@ -126,7 +126,7 @@ describe('Metadata Container', () => {
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
-          syncServices.news,
+          services.news,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -188,7 +188,7 @@ describe('Metadata Container', () => {
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
-          syncServices.news,
+          services.news,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -237,7 +237,7 @@ describe('Metadata Container', () => {
           'fa',
           [],
           'سرصفحه مقاله',
-          syncServices.persian,
+          services.persian,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -275,7 +275,7 @@ describe('Metadata Container', () => {
           'fa',
           [],
           'سرصفحه مقاله',
-          syncServices.persian,
+          services.persian,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
