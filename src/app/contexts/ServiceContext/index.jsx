@@ -9,8 +9,12 @@ export const ServiceContext = React.createContext(defaultService);
 
 /*
 *
-* It's important to note that this requires that you declare all of your loadable
-* components when modules are initialized rather than when your app is being rendered.
+* It's important that we declare all the loadableContexts when modules
+* are initialized rather than when the app is being rendered.
+*
+* This is why an object of loadableContexts is created on initialisation,
+* rather than dynamically creating them on demand.
+*
 * https://github.com/jamiebuilds/react-loadable#loadablepreloadall
 * 
 */
