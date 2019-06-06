@@ -25,7 +25,11 @@ const ArticleMain = ({ articleData }) => {
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostWrapper>
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <Blocks
+            id={metadata.id}
+            blocks={blocks}
+            componentsToRender={componentsToRender}
+          />
         </GhostWrapper>
       </main>
     </Fragment>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
-import nanoid from 'nanoid';
 
-const Blocks = ({ blocks, componentsToRender }) =>
+const Blocks = ({ blocks, id, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, model } = block;
+    const key = `${id}-${index}`;
 
     if (!componentsToRender || !type) {
       return null;
@@ -20,7 +20,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        key={nanoid()}
+        key={key}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}
