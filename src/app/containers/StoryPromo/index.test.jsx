@@ -25,20 +25,21 @@ const completeItem = {
   },
 };
 
-const WrappedStoryPromo = ({ platform, ...props}) => (
+// eslint-disable-next-line react/prop-types
+const WrappedStoryPromo = ({ platform, ...props }) => (
   <ServiceContextProvider service="igbo">
-      <RequestContextProvider
-        platform={platform || "canonical"}
-        isUK
-        origin="https://www.bbc.co.uk"
-        id="c0000000000o"
-        statsDestination="NEWS_PS_TEST"
-        statsPageIdentifier="news.articles.c0000000000o"
-      >
-        <StoryPromo {...props} />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-)
+    <RequestContextProvider
+      platform={platform || 'canonical'}
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
+      <StoryPromo {...props} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 describe('StoryPromo Container', () => {
   shouldMatchSnapshot(
