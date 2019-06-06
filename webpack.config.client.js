@@ -113,7 +113,10 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       /*
        * Exclude all moment locales so they can be included within service bundles
        */
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      }),
       /* moment-timezone-data-plugin allows you to specify how much
        * and what specific timezone data you wish to bundle.
        * matchZones: (string or array of strings) Only include data
