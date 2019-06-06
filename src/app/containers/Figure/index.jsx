@@ -39,8 +39,11 @@ const ImageComponent = ({
   lazyLoad,
   captionBlock,
   type,
+  srcset,
 }) => {
+  const { platform } = useContext(RequestContext);
   const imageToRender = <Image alt={alt} src={src} width={width} />;
+        
   return (
     <Fragment>
       <ImagePlaceholder ratio={ratio}>
@@ -72,6 +75,7 @@ const figurePropTypes = {
   ratio: number.isRequired,
   src: string.isRequired,
   type: string,
+  srcset: string,
   width: number.isRequired,
 };
 
@@ -81,6 +85,7 @@ const defaultProps = {
   height: null,
   lazyLoad: false,
   type: '',
+  srcset: null,
 };
 
 ImageComponent.propTypes = {
