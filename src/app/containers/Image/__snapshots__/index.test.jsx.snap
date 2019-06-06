@@ -7,7 +7,7 @@ exports[`Image with data should render an image with alt text 1`] = `
     captionBlock={null}
     copyright={null}
     height={420}
-    lazyLoad={true}
+    lazyLoad={false}
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
@@ -54,7 +54,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     }
     copyright={null}
     height={420}
-    lazyLoad={true}
+    lazyLoad={false}
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
@@ -71,7 +71,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
     captionBlock={null}
     copyright="Getty images"
     height={420}
-    lazyLoad={true}
+    lazyLoad={false}
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
@@ -88,7 +88,7 @@ exports[`Image with data should render an image with other originCode - this wou
     captionBlock={null}
     copyright="Getty images"
     height={420}
-    lazyLoad={true}
+    lazyLoad={false}
     ratio={65.625}
     src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"

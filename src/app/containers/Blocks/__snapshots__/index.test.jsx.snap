@@ -29,6 +29,7 @@ Array [
         },
       ]
     }
+    index={0}
     type="headline"
   />,
   <subheadline
@@ -58,6 +59,7 @@ Array [
         },
       ]
     }
+    index={1}
     type="subheadline"
     typeOfPreviousBlock="headline"
   />,
@@ -81,6 +83,7 @@ Array [
         },
       ]
     }
+    index={2}
     type="text"
     typeOfPreviousBlock="subheadline"
   />,
@@ -116,6 +119,7 @@ Array [
         },
       ]
     }
+    index={0}
     type="headline"
   />,
   <subheadline
@@ -145,6 +149,7 @@ Array [
         },
       ]
     }
+    index={1}
     type="subheadline"
     typeOfPreviousBlock="headline"
   />,
@@ -168,6 +173,7 @@ Array [
         },
       ]
     }
+    index={2}
     type="text"
     typeOfPreviousBlock="subheadline"
   />,
