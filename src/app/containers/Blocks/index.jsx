@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  objectOf,
-  arrayOf,
-  func,
-  shape,
-  string,
-  number,
-  any,
-} from 'prop-types';
+import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 import nanoid from 'nanoid';
 
 const Blocks = ({ blocks, componentsToRender }) =>
@@ -40,7 +32,6 @@ const Blocks = ({ blocks, componentsToRender }) =>
 Blocks.propTypes = {
   blocks: arrayOf(
     shape({
-      index: number.isRequired,
       type: string.isRequired,
       model: objectOf(any).isRequired,
     }),
