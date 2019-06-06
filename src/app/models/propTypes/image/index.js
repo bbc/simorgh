@@ -43,7 +43,7 @@ const blockProps = [
 ];
 
 export const imageModelPropTypes = {
-  blocks: arrayOfSpecificBlocks(blockProps),
+  blocks: arrayOfSpecificBlocks(blockProps, { index: number }),
 };
 
 export const imageBlockPropTypes = blockOfTypesAndModel(
