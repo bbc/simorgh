@@ -94,7 +94,6 @@
     "@bbc/psammead-story-promo": "^0.2.0-alpha.4",
     "@bbc/psammead-story-promo-list": "^0.1.0-alpha.2",
     "@bbc/psammead-styles": "^0.3.2",
-    "@bbc/psammead-timestamp": "^0.1.0",
     "@bbc/psammead-timestamp-container": "^1.0.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.10",
     "@storybook/theming": "^5.0.11",
