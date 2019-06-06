@@ -7,8 +7,9 @@ ServiceContextComponent.ServiceContextProvider = jest.fn();
 ServiceContextComponent.ServiceContextProvider.mockImplementation(
   ({ service, children }) => {
     const { ServiceContext } = ServiceContextComponent;
+
     return (
-      <ServiceContext.Provider value={syncServices[service].default}>
+      <ServiceContext.Provider value={syncServices[service || 'default']}>
         {children}
       </ServiceContext.Provider>
     );

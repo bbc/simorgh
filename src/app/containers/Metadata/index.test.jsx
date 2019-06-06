@@ -5,26 +5,23 @@ import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import services from '../../lib/config/services/index';
+import { syncServices } from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
-const Container = (service, bbcOrigin, platform, data, id) => {
-  const serviceConfig = services[service];
-  return (
-    <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider
-        platform={platform}
-        id={id}
-        isUK
-        origin={bbcOrigin}
-        statsDestination="NEWS_PS_TEST"
-        statsPageIdentifier={`${service}.articles.${id}.page`}
-      >
-        <MetadataContainer {...data} />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+const Container = (service, bbcOrigin, platform, data, id) => (
+  <ServiceContextProvider service={service}>
+    <RequestContextProvider
+      platform={platform}
+      id={id}
+      isUK
+      origin={bbcOrigin}
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier={`${service}.articles.${id}.page`}
+    >
+      <MetadataContainer {...data} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 const metadataProps = (
   isAmp,
@@ -129,7 +126,7 @@ describe('Metadata Container', () => {
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
-          services.news,
+          syncServices.news,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -191,7 +188,7 @@ describe('Metadata Container', () => {
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
-          services.news,
+          syncServices.news,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -240,7 +237,7 @@ describe('Metadata Container', () => {
           'fa',
           [],
           'سرصفحه مقاله',
-          services.persian,
+          syncServices.persian,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -278,7 +275,7 @@ describe('Metadata Container', () => {
           'fa',
           [],
           'سرصفحه مقاله',
-          services.persian,
+          syncServices.persian,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(

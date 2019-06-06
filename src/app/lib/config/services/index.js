@@ -1,11 +1,12 @@
 /* eslint-disable global-require */
 export const syncServices = {
-  news: require('./news.js'),
-  persian: require('./persian.js'),
-  igbo: require('./igbo.js'),
-  pidgin: require('./pidgin.js'),
-  thai: require('./thai.js'),
-  yoruba: require('./yoruba.js'),
+  default: require('./default.js').default,
+  news: require('./news.js').default,
+  persian: require('./persian.js').default,
+  igbo: require('./igbo.js').default,
+  pidgin: require('./pidgin.js').default,
+  thai: require('./thai.js').default,
+  yoruba: require('./yoruba.js').default,
 };
 
 const dynamicServices = {
