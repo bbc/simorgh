@@ -8,7 +8,8 @@ import FrontPageSection from '../FrontPageSection';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const { brandName, home } = useContext(ServiceContext);
+  const { brandName, translations } = useContext(ServiceContext);
+  const { home } = translations;
 
   const groups = deepGet(['content', 'groups'], frontPageData);
 
