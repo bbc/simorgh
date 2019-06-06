@@ -8,19 +8,19 @@ import createLoadableContext from '../utils/createLoadableContext';
 export const ServiceContext = React.createContext(defaultService);
 
 /*
-*
-* It's important that we declare all the loadableContexts when modules
-* are initialized rather than when the app is being rendered.
-*
-* This is why an object of loadableContexts is created on initialisation,
-* rather than dynamically creating them on demand.
-*
-* https://github.com/jamiebuilds/react-loadable#loadablepreloadall
-* 
-*/
+ *
+ * It's important that we declare all the loadableContexts when modules
+ * are initialized rather than when the app is being rendered.
+ *
+ * This is why an object of loadableContexts is created on initialisation,
+ * rather than dynamically creating them on demand.
+ *
+ * https://github.com/jamiebuilds/react-loadable#loadablepreloadall
+ *
+ */
 const loadableContexts = {};
 
-Object.keys(services).map(service => {
+Object.keys(services).forEach(service => {
   loadableContexts[service] = createLoadableContext(
     ServiceContext,
     services[service],

@@ -112,7 +112,6 @@
     "helmet": "^3.14.0",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.0",
-    "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "moment-timezone-data-webpack-plugin": "^1.0.3",
     "morgan": "^1.9.1",

@@ -11,9 +11,6 @@ const pidgin = {
   themeColor: `${C_POSTBOX}`,
   brandSVG,
   script: latin,
-  moment: {
-    locale: 'en-gb',
-  },
   translations: {
     error: {
       404: {

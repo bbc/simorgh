@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import moment from 'moment-timezone';
 import { number, string, bool } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp';
 import {
@@ -18,15 +17,8 @@ const TimestampContainer = ({
   suffix,
   timezone,
 }) => {
-  const { script, moment: momentConfig } = useContext(ServiceContext);
-  const { locale } = momentConfig;
-
   if (!isValidDateTime(new Date(timestamp))) {
     return null;
-  }
-
-  if (locale) {
-    moment.locale(locale);
   }
 
   return (

@@ -106,9 +106,6 @@ const news = {
     },
   },
   brandSVG,
-  moment: {
-    locale: 'en-gb',
-  },
 };
 
 export default news;
