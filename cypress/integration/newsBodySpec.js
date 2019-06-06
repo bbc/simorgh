@@ -43,8 +43,11 @@ describe('Article Body Tests', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
-  it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(0));
+  it('should have a visible image without a caption, and also not be lazyloaded', () => {
+    const firstFigure = getElement('figure').eq(0);
+
+    visibleImageNoCaption(firstFigure);
+    firstFigure.within(() => getElement('noscript').should('not.exist'));
   });
 
   it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
