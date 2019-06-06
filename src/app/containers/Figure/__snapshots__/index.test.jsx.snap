@@ -186,7 +186,11 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
       className="c2"
       role="text"
     >
-      Getty Images
+      <span
+        lang="en-gb"
+      >
+        Getty Images
+      </span>
     </p>
   </div>
   <figcaption
@@ -379,7 +383,11 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
       className="c2"
       role="text"
     >
-      Getty Images
+      <span
+        lang="en-gb"
+      >
+        Getty Images
+      </span>
     </p>
   </div>
 </figure>
@@ -527,7 +535,11 @@ exports[`Figure should render an image with caption and copyright 1`] = `
       className="c3"
       role="text"
     >
-      Getty Images
+      <span
+        lang="en-gb"
+      >
+        Getty Images
+      </span>
     </p>
   </div>
   <figcaption
@@ -826,7 +838,11 @@ exports[`Figure should render an image with copyright text 1`] = `
       className="c3"
       role="text"
     >
-      Getty Images
+      <span
+        lang="en-gb"
+      >
+        Getty Images
+      </span>
     </p>
   </div>
 </figure>
