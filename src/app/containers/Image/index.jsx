@@ -11,6 +11,7 @@ import createSrcset from './helpers/srcSet';
 import getIChefURL from './helpers/ichefUrl';
 
 const DEFAULT_IMAGE_RES = 640;
+const LAZYLOAD_FROM_BLOCK = 3;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -27,7 +28,7 @@ const getRawImageSrc = (originCode, locator) =>
     ? getIChefURL(originCode, locator, DEFAULT_IMAGE_RES)
     : locator;
 
-const ImageContainer = ({ blocks }) => {
+const ImageContainer = ({ blocks, index }) => {
   if (!blocks) {
     return null;
   }
@@ -52,6 +53,7 @@ const ImageContainer = ({ blocks }) => {
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
   const srcSet = createSrcset(originCode, locator, width);
+  const lazyLoad = index > LAZYLOAD_FROM_BLOCK;
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
@@ -76,7 +78,7 @@ const ImageContainer = ({ blocks }) => {
         src={rawImageSrc}
         width={width}
         srcset={srcSet}
-        lazyLoad
+        lazyLoad={lazyLoad}
       />
     </Wrapper>
   );
