@@ -5,6 +5,16 @@ exports[`FrontPageMain should render a pidgin article correctly 1`] = `
   <main
     role="main"
   >
+    <ForwardRef
+      as="h1"
+    >
+      <span
+        lang="en"
+      >
+        Default Brand Name
+      </span>
+       - 
+    </ForwardRef>
     <ForwardRef>
       <ForwardRef>
         <FrontPageSection
