@@ -1,16 +1,23 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { shape } from 'prop-types';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
+  const { brandName, home } = useContext(ServiceContext);
+
   const groups = deepGet(['content', 'groups'], frontPageData);
 
   return (
     <Fragment>
       <main role="main">
+        <VisuallyHiddenText as="h1">
+          <span lang="en">{brandName}</span> - {home}
+        </VisuallyHiddenText>
         <GhostWrapper>
           <GridItemConstrainedLarge>
             {groups.map(group => (
