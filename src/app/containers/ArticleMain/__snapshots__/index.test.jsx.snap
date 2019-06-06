@@ -154,6 +154,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
             "timestamp": [Function],
           }
         }
+        id="urn:bbc:ares::article:c0000000001o"
       />
     </ForwardRef>
   </main>
@@ -271,6 +272,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
             "timestamp": [Function],
           }
         }
+        id="urn:bbc:ares::article:c4vlle3q337o"
       />
     </ForwardRef>
   </main>
