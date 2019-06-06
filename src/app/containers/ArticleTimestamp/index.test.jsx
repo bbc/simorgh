@@ -2,10 +2,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import ArticleTimestamp from '.';
 import { isNull } from '../../helpers/tests/testHelpers';
-import {
-  timestampGenerator,
-  isBritishSummerTime,
-} from '../Timestamp/helpers/testHelpers';
+import { timestampGenerator, isBritishSummerTime } from './testHelpers';
 
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
 const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;

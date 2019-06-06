@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import ArticleTimestamp from '.';
-import { timestampGenerator } from '../Timestamp/helpers/testHelpers';
+import { timestampGenerator } from './testHelpers';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });
