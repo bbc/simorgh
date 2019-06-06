@@ -17,6 +17,7 @@ const TimestampContainer = ({
   suffix,
   timezone,
 }) => {
+  const { script } = useContext(ServiceContext);
   if (!isValidDateTime(new Date(timestamp))) {
     return null;
   }
