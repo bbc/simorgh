@@ -6,13 +6,13 @@ const igbo = {
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
-  home: 'Akụkọ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
   fonts: [],
   translations: {
+    home: 'Akụkọ',
     error: {
       404: {
         statusCode: '404',
