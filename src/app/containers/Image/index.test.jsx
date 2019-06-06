@@ -78,6 +78,11 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
+    shouldShallowMatchSnapshot(
+      'should render a lazyload container instead of an image',
+      <ImageContainer index={4} {...data} />,
+    );
+
     const dataWithNonBbcCopyright = blockArrayModel([
       rawImageBlockWithNonBbcCopyright,
       blockContainingText(
