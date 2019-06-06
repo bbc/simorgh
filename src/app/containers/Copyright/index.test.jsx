@@ -23,8 +23,5 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render Copyright with persian service context',
-  CopyrightWithContext(
-    'توصیف چیزی که اتفاق می افتد',
-    persianServiceContextStub,
-  ),
+  CopyrightWithContext('Getty Images', persianServiceContextStub),
 );
