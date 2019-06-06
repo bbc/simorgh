@@ -41,9 +41,10 @@ const ImageComponent = ({
   type,
   srcset,
 }) => {
-  const { platform } = useContext(RequestContext);
-  const imageToRender = <Image alt={alt} src={src} width={width} />;
-        
+  const imageToRender = (
+    <Image alt={alt} src={src} width={width} srcset={srcset} />
+  );
+
   return (
     <Fragment>
       <ImagePlaceholder ratio={ratio}>
