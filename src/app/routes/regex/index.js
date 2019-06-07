@@ -1,7 +1,6 @@
 import services from '../../lib/config/services/async';
 
-const serviceRegex = Object.keys(services)
-  .join('|');
+const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 
