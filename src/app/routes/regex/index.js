@@ -1,7 +1,6 @@
-import services from '../../lib/config/services';
+import services from '../../lib/config/services/async';
 
 const serviceRegex = Object.keys(services)
-  .filter(serviceName => serviceName !== 'default')
   .join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
