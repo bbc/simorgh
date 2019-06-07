@@ -1,39 +1,31 @@
+/* eslint no-param-reassign: 0 */
 import nanoid from 'nanoid';
-import deepGet from '../../../../helpers/json/deepGet';
+import deepClone from '../../../../helpers/json/deepClone';
 
-let mapBlocks;
-const getBlocks = content => deepGet(['model', 'blocks'], content);
-
-const recursivelyAddIds = block => {
-  const newBlock = { ...block, id: nanoid() };
-  const nestedBlocks = getBlocks(newBlock);
-
-  if (nestedBlocks) {
-    return {
-      ...newBlock,
-      model: {
-        ...newBlock.model,
-        blocks: mapBlocks(nestedBlocks),
-      },
-    };
+// Given a "model" add an id to every block
+const addIdsToModel = model => {
+  if (!model || !model.blocks) {
+    return model;
   }
-  return newBlock;
+
+  const newModel = deepClone(model);
+
+  newModel.blocks.forEach(block => {
+    block.id = nanoid();
+    // Recurse if the block has a nested model
+    if (block.model) {
+      block.model = addIdsToModel(block.model);
+    }
+  });
+
+  return newModel;
 };
 
-mapBlocks = blocks => blocks.map(recursivelyAddIds);
-
-export default jsonRaw => {
-  const blocks = getBlocks(jsonRaw.content);
-  const blocksWithIds = mapBlocks(blocks);
-
-  return {
-    ...jsonRaw,
-    content: {
-      ...jsonRaw.content,
-      model: {
-        ...jsonRaw.content.model,
-        blocks: blocksWithIds,
-      },
-    },
-  };
+// Given an artcle data structure, this preprocessor adds a unique ID to every "block"
+const addIds = article => {
+  const articleWithIds = deepClone(article);
+  articleWithIds.content.model = addIdsToModel(articleWithIds.content.model);
+  return articleWithIds;
 };
+
+export default addIds;
