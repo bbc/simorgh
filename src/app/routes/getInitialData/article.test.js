@@ -2,6 +2,13 @@ import baseUrl from './utils/getBaseUrl';
 import onClient from '../../helpers/onClient';
 import fetchData from './utils/fetchData';
 
+const mockAddIdsToBlocks = jest.fn();
+
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  () => mockAddIdsToBlocks,
+);
+
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
@@ -40,6 +47,7 @@ describe('getArticleInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
+      preprocessorRules: [mockAddIdsToBlocks],
     });
 
     expect(response).toEqual({
@@ -58,6 +66,7 @@ describe('getArticleInitialData', () => {
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
+        preprocessorRules: [mockAddIdsToBlocks],
       });
 
       expect(response).toEqual({
