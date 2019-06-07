@@ -11,6 +11,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   fonts: [],
+  links: 'https://www.bbc.com/pidgin',
   translations: {
     error: {
       404: {

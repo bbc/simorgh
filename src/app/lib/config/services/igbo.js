@@ -11,6 +11,7 @@ const igbo = {
   brandSVG,
   script: latin,
   fonts: [],
+  link: 'https://www.bbc.com/igbo',
   translations: {
     error: {
       404: {
