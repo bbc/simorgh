@@ -9,6 +9,7 @@ const igbo = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
+  svgRatio: brandSVG.ratio,
   script: latin,
   fonts: [],
   link: 'https://www.bbc.com/igbo',

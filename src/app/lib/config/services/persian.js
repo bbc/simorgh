@@ -101,6 +101,7 @@ const persian = {
     },
   },
   brandSVG,
+  svgRatio: brandSVG.ratio,
   fonts: [],
 };
 

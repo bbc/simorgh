@@ -7,6 +7,7 @@ const thai = {
   service: 'thai',
   serviceName: 'Thai',
   brandSVG,
+  svgRatio: brandSVG.ratio,
   script: thaiScript,
   fonts: [],
 };
