@@ -37,12 +37,8 @@ let defaultContext;
 describe('getFrontpageInitialData', () => {
   beforeEach(() => {
     defaultContext = {
-      match: {
-        params: {
-          service: defaultServiceParam,
-          amp: defaultAmpParam,
-        },
-      },
+      service: defaultServiceParam,
+      amp: defaultAmpParam,
     };
 
     jest.clearAllMocks();
@@ -64,7 +60,7 @@ describe('getFrontpageInitialData', () => {
 
   describe('When on amp', () => {
     beforeEach(() => {
-      defaultContext.match.params.amp = true;
+      defaultContext.amp = true;
     });
 
     it('returns isAmp as true', async () => {

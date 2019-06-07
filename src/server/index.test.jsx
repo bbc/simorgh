@@ -38,13 +38,7 @@ jest.mock('react-helmet', () => ({
 
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
-const mockRouteProps = (
-  id,
-  service,
-  isAmp,
-  dataResponse,
-  responseType = 'resolve',
-) => {
+const mockRouteProps = ({ id, service, isAmp, dataResponse, responseType }) => {
   const getInitialData =
     responseType === 'reject'
       ? jest.fn().mockRejectedValueOnce(dataResponse)
@@ -144,7 +138,12 @@ describe('Server', () => {
         const isAmp = false;
 
         beforeEach(() => {
-          mockRouteProps(id, service, isAmp, successDataResponse);
+          mockRouteProps({
+            id,
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
         });
 
         it('should respond with rendered data', async () => {
@@ -197,7 +196,12 @@ describe('Server', () => {
         const service = 'news';
 
         beforeEach(() => {
-          mockRouteProps(id, service, false, notFoundDataResponse);
+          mockRouteProps({
+            id,
+            service,
+            isAmp: false,
+            dataResponse: notFoundDataResponse,
+          });
         });
 
         it('should respond with a rendered 404', async () => {
@@ -217,7 +221,13 @@ describe('Server', () => {
       const service = 'news';
 
       beforeEach(() => {
-        mockRouteProps(id, service, false, Error('Error!'), 'reject');
+        mockRouteProps({
+          id,
+          service,
+          isAmp: false,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
       });
 
       it('should respond with a 500', async () => {
@@ -247,14 +257,22 @@ describe('Server', () => {
 
     describe('Successful render', () => {
       describe('200 status code', () => {
+        const service = 'igbo';
+        const isAmp = false;
+
         beforeEach(() => {
-          loadInitialData.mockImplementationOnce(() =>
-            Promise.resolve(successDataResponse),
-          );
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
         });
 
         it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest('/igbo');
+          const dials = { dial: 'value' };
+          getDials.mockResolvedValue(dials);
+
+          const { text, status } = await makeRequest(`/${service}`);
 
           expect(status).toBe(200);
 
@@ -273,9 +291,10 @@ describe('Server', () => {
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
-              isAmp={false}
-              service="igbo"
+              isAmp={isAmp}
+              service={service}
               styleTags={<style />}
+              dials={dials}
             />,
           );
 
@@ -283,17 +302,28 @@ describe('Server', () => {
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
         });
+
+        it('should respond successfully even if dials fetch fails', async () => {
+          getDials.mockRejectedValue(new Error('Fetch fail'));
+
+          const { status } = await makeRequest('/news/articles/c0000000001o');
+          expect(status).toBe(200);
+        });
       });
 
       describe('404 status code', () => {
+        const service = 'igbo';
+
         beforeEach(() => {
-          loadInitialData.mockImplementationOnce(() =>
-            Promise.resolve(notFoundDataResponse),
-          );
+          mockRouteProps({
+            service,
+            isAmp: false,
+            dataResponse: notFoundDataResponse,
+          });
         });
 
         it('should respond with a rendered 404', async () => {
-          const { status, text } = await makeRequest('/igbo');
+          const { status, text } = await makeRequest(`/${service}`);
           expect(status).toBe(404);
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
@@ -303,25 +333,22 @@ describe('Server', () => {
     });
 
     describe('Unknown error within universal-react-app or its dependencies', () => {
+      const service = 'igbo';
+
       beforeEach(() => {
-        loadInitialData.mockImplementationOnce(() =>
-          Promise.reject(Error('Error!')),
-        );
+        mockRouteProps({
+          service,
+          isAmp: false,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
       });
 
       it('should respond with a 500', async () => {
-        const { status, text } = await makeRequest('/igbo');
+        const { status, text } = await makeRequest(`/${service}`);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
       });
-    });
-  });
-
-  describe('/someInvalidPath', () => {
-    it('should respond 404', async () => {
-      const { status } = await makeRequest('/blah');
-
-      expect(status).toBe(404);
     });
   });
 });
