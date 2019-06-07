@@ -9,14 +9,16 @@ const BrandContainer = () => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 
-  return <Brand
-    brandName={brandName}
-    svgHeight={svgMaxHeight}
-    minWidth={minWidth}
-    maxWidth={maxWidth}
-    svg={brandSVG}
-    url={link}
-  />;
+  return (
+    <Brand
+      brandName={brandName}
+      svgHeight={svgMaxHeight}
+      minWidth={minWidth}
+      maxWidth={maxWidth}
+      svg={brandSVG}
+      url={link}
+    />
+  );
 };
 
 export default BrandContainer;

@@ -4,29 +4,14 @@ exports[`with pageWarpper should render correctly 1`] = `
 Array [
   .c0 {
   background-color: #B80000;
-  height: 5rem;
+  height: 3.5rem;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-@media (max-width:25rem) {
+@media (min-width:37.5rem) {
   .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c0 {
+    height: 5rem;
     padding: 0 1rem;
   }
 }
@@ -36,27 +21,19 @@ Array [
   >
     <div
       className="c0"
-    >
-      <div
-        className="c1"
-      />
-    </div>
+    />
   </header>,
   <h1>
     Holla
   </h1>,
   .c1 {
   background-color: #B80000;
-  height: 5rem;
+  height: 3.5rem;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
-.c2 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c8 {
+.c7 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -65,7 +42,7 @@ Array [
   display: block;
 }
 
-.c11 {
+.c10 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -74,13 +51,13 @@ Array [
   display: inline;
 }
 
-.c7:hover .c9,
-.c7:focus .c9 {
+.c6:hover .c8,
+.c6:focus .c8 {
   padding-bottom: 2px;
   border-bottom: 2px solid #FFFFFF;
 }
 
-.c5 {
+.c4 {
   border-bottom: 1px solid #3F3F42;
   display: grid;
   grid-auto-flow: column;
@@ -89,30 +66,30 @@ Array [
   padding: 0 0 0.5rem;
 }
 
-.c5 > li:first-child {
+.c4 > li:first-child {
   border-bottom: 1px solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;
 }
 
-.c6 {
+.c5 {
   min-width: 50%;
 }
 
-.c3 {
+.c2 {
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
 }
 
-.c4 {
+.c3 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c10 {
+.c9 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
@@ -122,26 +99,15 @@ Array [
   padding-top: 2rem;
 }
 
-@media (max-width:25rem) {
+@media (min-width:37.5rem) {
   .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c1 {
+    height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,auto);
@@ -149,7 +115,7 @@ Array [
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c4 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,auto);
@@ -157,7 +123,7 @@ Array [
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c4 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,auto);
@@ -165,7 +131,7 @@ Array [
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c4 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,auto);
@@ -173,37 +139,37 @@ Array [
 }
 
 @supports not (display:grid) {
-  .c5 > li:first-child {
+  .c4 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c6 {
+  .c5 {
     display: inline-block;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 0.8125rem;
   }
 }
@@ -214,121 +180,117 @@ Array [
   >
     <div
       className="c1"
-    >
-      <div
-        className="c2"
-      />
-    </div>
+    />
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <ul
-          className="c5"
+          className="c4"
           role="list"
         >
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/news/help-41670342"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Why you can trust the BBC
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/terms"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Terms of Use
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 About the BBC
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/privacy/"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Privacy Policy
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Cookies
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/accessibility/"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Accessibility Help
               </span>
             </a>
           </li>
           <li
-            className="c6"
+            className="c5"
             role="listitem"
           >
             <a
-              className="c7 c8"
+              className="c6 c7"
               href="https://www.bbc.com/contact/"
             >
               <span
-                className="c9"
+                className="c8"
               >
                 Contact the BBC
               </span>
@@ -336,15 +298,15 @@ Array [
           </li>
         </ul>
         <p
-          className="c10"
+          className="c9"
         >
           © 2019 BBC. The BBC is not responsible for the content of external sites. 
           <a
-            className="c7 c11"
+            className="c6 c10"
             href="https://www.bbc.co.uk/help/web/links/"
           >
             <span
-              className="c9"
+              className="c8"
             >
               Read about our approach to external linking.
             </span>
