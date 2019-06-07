@@ -32,12 +32,8 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
 };
 
 StoryPromoImage.propTypes = {
-  lazyLoad: bool,
+  lazyLoad: bool.isRequired,
   imageValues: storyItem.indexImage.isRequired,
-};
-
-StoryPromoImage.defaultProps = {
-  lazyLoad: false,
 };
 
 const StoryPromo = ({ item, lazyLoadImage }) => {
