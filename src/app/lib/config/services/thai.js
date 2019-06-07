@@ -8,6 +8,7 @@ const thai = {
   serviceName: 'Thai',
   brandSVG,
   script: thaiScript,
+  fonts: [],
 };
 
 export default thai;
