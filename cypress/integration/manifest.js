@@ -8,9 +8,9 @@ const testManifest200s = service => {
 };
 
 describe('Manifest.json files', () => {
-  ['news', 'persian'].forEach(testManifest200s);
+  ['news'].forEach(testManifest200s);
 });
 
 describeForLocalOnly('Local Env - Manifest.json files', () => {
-  ['igbo', 'pidgin', 'yoruba'].forEach(testManifest200s);
+  ['persian', 'igbo', 'pidgin', 'yoruba'].forEach(testManifest200s);
 });
