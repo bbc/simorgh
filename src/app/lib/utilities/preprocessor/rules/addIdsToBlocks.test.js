@@ -41,7 +41,6 @@ const expected = {
           curationType: ['vivo-stream'],
         },
       ],
-      mentions: null,
     },
     version: 'v0.3.2',
     blockTypes: [
