@@ -9,7 +9,6 @@ const pidgin = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
-  svgRatio: brandSVG.ratio,
   script: latin,
   fonts: [],
   links: 'https://www.bbc.com/pidgin',

@@ -3,9 +3,10 @@ import Brand from '@bbc/psammead-brand';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => {
-  const { brandName, brandSVG, link, svgRatio } = useContext(ServiceContext);
+  const { brandName, brandSVG, link } = useContext(ServiceContext);
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
+  const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 

@@ -25,8 +25,8 @@ exports[`BrandContainer should render correctly 1`] = `
   padding-top: 1rem;
   padding-bottom: 0.75rem;
   width: 100%;
-  max-width: NaNrem;
-  min-width: NaNrem;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
 }
 
 .c3:hover .c1,

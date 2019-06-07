@@ -107,7 +107,6 @@ const news = {
     },
   },
   brandSVG,
-  svgRatio: brandSVG.ratio,
   fonts: [
     fonts.F_REITH_SERIF_MEDIUM,
     fonts.F_REITH_SERIF_MEDIUM_ITALIC,
