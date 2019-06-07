@@ -1,356 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageMain should render a igbo frontpage correctly 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "brandName": "BBC News Ìgbò",
-      "brandSVG": Object {
-        "group": <g
-          fillRule="evenodd"
-        >
-          <path
-            d="M72.463 15.62l-.371.226c-1.794 1.098-3.745 1.687-5.517 1.686-3.793-.014-6.291-2.267-6.301-5.548.005-3.207 2.612-5.58 6.205-5.59 1.83.002 3.487.476 5.456 1.557l.362.2V5.222l-.154-.06c-2.221-.88-3.942-1.27-5.64-1.27-2.626 0-4.904.868-6.528 2.344-1.623 1.475-2.588 3.558-2.587 5.95.001 1.667.688 3.62 2.157 5.17 1.465 1.55 3.72 2.681 6.816 2.68h.01c2.567 0 4.347-.575 5.956-1.368l.136-.067V15.62zM53.9 22.88h23.164V1.03H53.9v21.85zM44.869 15.517c.007-1.986-1.312-3.494-3.423-4.074.57-.292 1.02-.649 1.35-1.084.442-.583.652-1.298.65-2.13a3.805 3.805 0 0 0-1.262-2.849c-.864-.78-2.173-1.287-3.96-1.287h-4.94V19.83h5.796c2.067 0 3.519-.56 4.454-1.393a3.89 3.89 0 0 0 1.335-2.92zm-17.66 7.363h23.164V1.03H27.208v21.85z"
-            fill="#FFF"
-          />
-          <path
-            d="M41.986 15.203c-.002.52-.161 1.043-.626 1.451-.463.41-1.264.72-2.591.72h-2.672v-4.296h2.553c1.192 0 2.036.241 2.565.62.528.38.767.88.771 1.505M39.822 10.06c.497-.36.737-.868.74-1.63-.002-.524-.15-.972-.527-1.306-.376-.335-1.017-.573-2.048-.573h-1.89v4.07h1.297c1.123.001 1.928-.2 2.428-.56M18.178 15.517c.007-1.986-1.314-3.494-3.423-4.074.569-.292 1.019-.649 1.35-1.084.442-.583.652-1.298.65-2.13a3.806 3.806 0 0 0-1.262-2.849c-.862-.78-2.172-1.287-3.96-1.287h-4.94V19.83h5.796c2.068 0 3.519-.56 4.452-1.393a3.888 3.888 0 0 0 1.337-2.92zM.518 22.88H23.68V1.03H.518v21.85z"
-            fill="#FFF"
-          />
-          <path
-            d="M13.13 10.06c.497-.36.738-.868.742-1.63-.002-.524-.151-.972-.527-1.306-.378-.335-1.017-.573-2.05-.573H9.407v4.07h1.296c1.122.001 1.927-.2 2.427-.56M14.525 13.697c-.53-.378-1.376-.619-2.565-.619H9.407v4.295h2.67c1.328 0 2.129-.31 2.593-.719.463-.408.623-.93.626-1.45-.006-.627-.243-1.126-.771-1.507M101.323 4.09h2.141v15.785h-1.938L90.998 7.718v12.157h-2.12V4.09h1.826l10.62 12.26V4.09M107.528 4.09h8.928v2.011h-6.673v4.814h6.446v2.023h-6.446v4.903h6.886v2.011h-9.141V4.09M140.516 4.09h2.248l-6.367 15.852h-.495l-5.149-12.835-5.202 12.835h-.484L118.72 4.09h2.271l4.34 10.881 4.369-10.88h2.13l4.39 10.88 4.296-10.88M148.873 13.261l-1.714-1.043c-1.075-.658-1.839-1.305-2.294-1.942-.454-.636-.681-1.369-.681-2.197 0-1.244.43-2.253 1.29-3.028.86-.776 1.978-1.164 3.353-1.164 1.316 0 2.522.37 3.62 1.11v2.565c-1.135-1.094-2.357-1.642-3.665-1.642-.736 0-1.34.171-1.815.513-.472.341-.71.778-.71 1.311 0 .472.175.915.524 1.328.348.413.91.846 1.682 1.3l1.722 1.021c1.92 1.15 2.881 2.614 2.881 4.391 0 1.266-.423 2.294-1.268 3.085-.845.791-1.944 1.186-3.297 1.186-1.556 0-2.972-.479-4.25-1.438v-2.869c1.218 1.546 2.627 2.318 4.227 2.318.707 0 1.295-.196 1.765-.59.469-.394.704-.888.704-1.48 0-.962-.692-1.873-2.074-2.735"
-            fill="#FFF"
-          />
-          <path
-            d="M168.499.754v22.594"
-            stroke="#FFF"
-            strokeWidth="2"
-          />
-          <path
-            d="M184.342 17.625h1.516V7.01h-1.516zM194.694 12.398h3.555v4.498c-1.304.567-2.598.851-3.882.851-1.754 0-3.154-.514-4.203-1.539-1.048-1.026-1.572-2.29-1.572-3.795 0-1.586.543-2.905 1.63-3.959 1.085-1.054 2.447-1.58 4.085-1.58.596 0 1.163.064 1.697.193.536.13 1.214.366 2.033.711v1.55c-1.264-.735-2.516-1.102-3.76-1.102-1.158 0-2.132.395-2.927 1.186-.793.79-1.19 1.76-1.19 2.91 0 1.205.397 2.19 1.19 2.955.795.765 1.815 1.147 3.063 1.147.607 0 1.332-.139 2.176-.418l.144-.045v-2.21h-2.04v-1.353M204.274 12.907h-1.417v3.366h1.494c.828 0 1.39-.065 1.686-.194.295-.13.534-.33.712-.604.18-.274.27-.568.27-.882 0-.323-.095-.62-.285-.888a1.686 1.686 0 0 0-.807-.6c-.348-.133-.9-.198-1.653-.198zm-.113-4.544h-1.304v3.191h1.008c.81 0 1.384-.154 1.725-.464.341-.308.51-.709.51-1.2 0-1.018-.646-1.527-1.939-1.527zm.766 9.262h-3.586V7.01h2.774c.874 0 1.557.118 2.048.353.49.236.864.56 1.121.973.257.413.387.891.387 1.433 0 1.043-.539 1.79-1.615 2.241.773.147 1.389.466 1.846.957.458.492.686 1.08.686 1.763a2.59 2.59 0 0 1-.417 1.451c-.278.426-.686.773-1.224 1.041-.538.27-1.212.403-2.02.403zM216.115 8.302c-1.212 0-2.207.38-2.988 1.14-.78.76-1.17 1.73-1.17 2.91 0 1.145.391 2.097 1.174 2.857.783.76 1.762 1.14 2.938 1.14 1.182 0 2.167-.388 2.958-1.163.79-.775 1.186-1.74 1.186-2.895 0-1.124-.396-2.07-1.186-2.838-.79-.767-1.761-1.15-2.912-1.15zm-.06-1.444c1.636 0 2.997.52 4.086 1.558 1.088 1.038 1.632 2.34 1.632 3.905 0 1.566-.549 2.861-1.647 3.887-1.098 1.025-2.483 1.54-4.154 1.54-1.598 0-2.926-.515-3.989-1.54-1.063-1.026-1.595-2.31-1.595-3.856 0-1.586.536-2.898 1.606-3.936 1.07-1.039 2.423-1.558 4.06-1.558zM184.725 3.278l1.046 2.28h-.849l-1.743-2.28h1.546"
-            fill="#FFF"
-          />
-          <path
-            d="M184.725 3.278l1.046 2.28h-.849l-1.743-2.28z"
-            stroke="#FFF"
-            strokeWidth=".335"
-          />
-          <path
-            d="M215.827 3.278l1.046 2.28h-.85l-1.742-2.28h1.546"
-            fill="#FFF"
-          />
-          <path
-            d="M215.827 3.278l1.046 2.28h-.85l-1.742-2.28z"
-            stroke="#FFF"
-            strokeWidth=".335"
-          />
-        </g>,
-        "ratio": 9.25,
-        "viewbox": Object {
-          "height": 24,
-          "width": 222,
-        },
-      },
-      "defaultImage": "https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png",
-      "defaultImageAltText": "BBC News Ìgbò",
-      "fonts": Array [],
-      "locale": "ig",
-      "script": Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
-        "bodyCopy": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-        },
-        "brevier": Object {
-          "groupA": Object {
-            "fontSize": "14",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "13",
-            "lineHeight": "16",
-          },
-        },
-        "canon": Object {
-          "groupA": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-          "groupB": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupD": Object {
-            "fontSize": "44",
-            "lineHeight": "48",
-          },
-        },
-        "doublePica": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupD": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
-          },
-        },
-        "greatPrimer": Object {
-          "groupA": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupB": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-        },
-        "longPrimer": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupB": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-        },
-        "minion": Object {
-          "groupA": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupD": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-        },
-        "paragon": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "22",
-            "lineHeight": "26",
-          },
-          "groupD": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-        },
-        "pica": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
-        "trafalgar": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-          "groupD": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-        },
-      },
-      "service": "igbo",
-      "serviceName": "Igbo",
-      "translations": Object {
-        "consentBanner": Object {
-          "cookie": Object {
-            "accept": "Yes, I agree",
-            "description": Object {
-              "international": Object {
-                "first": "We and our partners use technologies, such as ",
-                "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-              "uk": Object {
-                "first": "We use ",
-                "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-            },
-            "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-            "title": "Let us know you agree to cookies",
-          },
-          "privacy": Object {
-            "accept": "OK",
-            "description": Object {
-              "international": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-              "uk": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-            },
-            "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
-            "title": "We've updated our Privacy and Cookies Policy",
-          },
-        },
-        "error": Object {
-          "404": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Double checking the url",
-              "Hitting the refresh button in your browser",
-              "Searching for this page using the BBC search bar",
-            ],
-            "statusCode": "404",
-            "title": "Page cannot be found",
-          },
-          "500": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Hitting the refresh button in your browser",
-              "Coming back again later",
-            ],
-            "statusCode": "500",
-            "title": "Internal server error",
-          },
-        },
-        "home": "Akụkọ",
-      },
-    }
-  }
->
-  <FrontPageMain
-    frontPageData={
-      Object {
-        "content": Object {
-          "groups": Array [
+exports[`FrontPageMain Igbo snapshots should render an igbo frontpage correctly 1`] = `
+<React.Fragment>
+  <main
+    role="main"
+  >
+    <ForwardRef
+      as="h1"
+    >
+      <span
+        lang="en"
+      >
+        BBC News Ìgbò
+      </span>
+       - 
+      Akụkọ
+    </ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -624,7 +294,12 @@ exports[`FrontPageMain should render a igbo frontpage correctly 1`] = `
               },
               "title": "Top Stories",
               "type": "responsive-top-stories",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -1413,7 +1088,12 @@ exports[`FrontPageMain should render a igbo frontpage correctly 1`] = `
               },
               "title": "Cluster 1",
               "type": "responsive-cluster",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -2872,7 +2552,12 @@ O kwuru na naanị ihe gọvanọ mere bụ ninye ndị obodo họpụtara asamb
               },
               "title": "Cluster 2",
               "type": "responsive-cluster",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -3027,7 +2712,12 @@ O kwuru na naanị ihe gọvanọ mere bụ ninye ndị obodo họpụtara asamb
               },
               "title": "Section 2",
               "type": "responsive-must-see",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -4294,7 +3984,12 @@ Na mkparịtaụka ya na BBC Igbo nwere, Ejeagha kọrọ akụkọ etu ya sị 
               },
               "title": "Section 3",
               "type": "responsive-inspire",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -4780,7 +4475,12 @@ Lee akụkọ so egwu ahụ bụ egwu onye ọ kara obi n'ihe onyonyo a:",
               },
               "title": "Section 4",
               "type": "responsive-in-depth",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -4811,7 +4511,12 @@ Lee akụkọ so egwu ahụ bụ egwu onye ọ kara obi n'ihe onyonyo a:",
               "semanticGroupName": "Useful links",
               "title": "Useful links",
               "type": "useful-links",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -5279,399 +4984,36 @@ Lee akụkọ so egwu ahụ bụ egwu onye ọ kara obi n'ihe onyonyo a:",
               "semanticGroupName": "Special reports 2",
               "title": "Special reports 2",
               "type": "special-reports",
-            },
-          ],
-        },
-        "metadata": Object {
-          "analyticsLabels": Object {
-            "counterName": "igbo.page",
-            "cps_asset_id": "42516282",
-            "cps_asset_type": "idx",
-          },
-          "blockTypes": Array [
-            "responsive-top-stories",
-            "responsive-cluster",
-            "responsive-must-see",
-            "responsive-inspire",
-            "responsive-in-depth",
-            "useful-links",
-            "special-reports",
-          ],
-          "createdBy": "igbo-v6",
-          "firstPublished": 1514896826,
-          "id": "urn:bbc:ares::index:igbo/front_page/desktop/domestic",
-          "language": "ig",
-          "lastPublished": 1554997660,
-          "lastUpdated": 1554997668537,
-          "locators": Object {
-            "assetUri": "/igbo/front_page",
-            "cpsUrn": "urn:bbc:content:assetUri:igbo/front_page",
-            "curie": "http://www.bbc.co.uk/asset/617cd7da-67ef-b8b9-e050-17ac8045f31c/desktop/domestic",
-          },
-          "options": Object {
-            "allowAdvertising": true,
-          },
-          "summary": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
-          "tags": Object {},
-          "title": "Ogbako",
-          "type": "IDX",
-          "version": "v1.0.1",
-        },
-        "promo": null,
-        "relatedContent": Object {
-          "groups": Array [],
-          "section": Object {
-            "name": "Ogbako",
-            "subType": "index",
-            "type": "simple",
-            "uri": "/igbo/front_page",
-          },
-          "site": Object {
-            "name": "BBC News Ìgbò",
-            "subType": "site",
-            "type": "simple",
-            "uri": "/igbo",
-          },
-        },
-      }
-    }
-  />
-</Context.Provider>
+            }
+          }
+        />
+      </ForwardRef>
+    </ForwardRef>
+  </main>
+</React.Fragment>
 `;
 
-exports[`FrontPageMain should render a pidgin frontpage correctly 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "brandName": "BBC News Pidgin",
-      "brandSVG": Object {
-        "group": <g
-          fillRule="evenodd"
-        >
-          <path
-            d="M72.126 15.01l-.372.227c-1.798 1.098-3.754 1.687-5.53 1.686-3.802-.014-6.306-2.267-6.316-5.548.005-3.207 2.62-5.581 6.22-5.59 1.834.002 3.495.476 5.47 1.557l.362.2v-2.93l-.155-.06c-2.226-.88-3.95-1.27-5.653-1.27-2.632 0-4.916.869-6.543 2.345-1.627 1.475-2.593 3.558-2.592 5.95 0 1.667.688 3.62 2.161 5.17 1.468 1.55 3.73 2.68 6.832 2.679h.01c2.573 0 4.357-.574 5.97-1.367l.136-.067V15.01zM53.52 22.27h23.22V.42h-23.22v21.85zM44.467 14.908c.007-1.986-1.315-3.494-3.43-4.074.57-.292 1.021-.65 1.353-1.084.442-.583.653-1.298.651-2.13a3.798 3.798 0 0 0-1.265-2.85c-.865-.78-2.178-1.286-3.97-1.286h-4.95V19.22h5.81c2.071 0 3.526-.561 4.463-1.393a3.885 3.885 0 0 0 1.338-2.92zM26.765 22.27h23.22V.42h-23.22v21.85z"
-            fill="#FFFFFE"
-          />
-          <path
-            d="M41.578 14.594c-.002.52-.162 1.043-.627 1.45-.465.41-1.268.72-2.598.72h-2.678v-4.295h2.56c1.193 0 2.04.24 2.57.619.53.38.77.88.773 1.506M39.408 9.45c.5-.36.74-.867.743-1.63-.003-.523-.152-.971-.529-1.305-.377-.335-1.019-.573-2.053-.573h-1.894v4.07h1.3c1.125 0 1.932-.2 2.433-.561M17.714 14.908c.007-1.986-1.317-3.494-3.43-4.074.57-.292 1.02-.65 1.351-1.084.444-.583.654-1.298.653-2.13a3.802 3.802 0 0 0-1.266-2.85c-.864-.78-2.177-1.286-3.969-1.286h-4.95V19.22h5.808c2.073 0 3.527-.561 4.463-1.393.937-.83 1.341-1.917 1.34-2.92zM.012 22.27H23.23V.42H.012v21.85z"
-            fill="#FFFFFE"
-          />
-          <path
-            d="M12.654 9.45c.498-.36.74-.867.744-1.63-.002-.523-.152-.971-.529-1.305-.378-.335-1.019-.573-2.054-.573H8.922v4.07h1.3c1.124 0 1.931-.2 2.432-.561M14.052 13.088c-.532-.378-1.379-.62-2.57-.62h-2.56v4.296H11.6c1.33 0 2.132-.31 2.598-.72.464-.407.624-.93.627-1.45-.006-.626-.244-1.125-.773-1.506M101.054 3.48h2.146v15.786h-1.943L90.704 7.109v12.157H88.58V3.48h1.831l10.644 12.26V3.48M107.273 3.48h8.95v2.012h-6.69v4.814h6.462v2.023h-6.462v4.903h6.903v2.01h-9.163V3.482M140.338 3.48h2.254l-6.382 15.853h-.496l-5.16-12.835-5.216 12.835h-.485L118.491 3.48h2.277l4.35 10.88 4.38-10.88h2.135l4.4 10.88 4.305-10.88M148.715 12.652l-1.718-1.043c-1.077-.658-1.843-1.305-2.299-1.942-.455-.636-.683-1.37-.683-2.197 0-1.244.431-2.253 1.293-3.028.863-.776 1.983-1.164 3.361-1.164 1.32 0 2.528.37 3.628 1.11v2.565c-1.137-1.094-2.362-1.642-3.673-1.642-.738 0-1.344.17-1.819.513-.474.34-.712.778-.712 1.31 0 .473.175.916.525 1.329.35.413.912.846 1.686 1.3l1.726 1.02c1.925 1.15 2.888 2.615 2.888 4.392 0 1.266-.424 2.294-1.27 3.085-.848.79-1.95 1.186-3.306 1.186-1.559 0-2.979-.48-4.26-1.438v-2.87c1.221 1.547 2.633 2.319 4.237 2.319.71 0 1.298-.196 1.77-.59.47-.394.705-.888.705-1.481 0-.961-.694-1.872-2.079-2.734M188.281 7.772h-1.566v3.308h1.657c.616 0 1.09-.145 1.423-.435.333-.29.5-.705.5-1.245 0-1.085-.67-1.628-2.014-1.628zm-3.088 9.242V6.426h3.354c1.01 0 1.813.272 2.414.817.6.545.9 1.276.9 2.194 0 .616-.154 1.16-.462 1.635a2.627 2.627 0 0 1-1.263 1.033c-.536.215-1.302.322-2.3.322h-1.12v4.587h-1.523zM194.006 17.013h1.513V6.44h-1.513zM202.195 7.788h-1.89v7.863h1.936c.757 0 1.345-.051 1.764-.155a4.097 4.097 0 0 0 1.048-.394c.28-.158.536-.354.768-.586.746-.757 1.12-1.713 1.12-2.87 0-1.133-.384-2.06-1.15-2.776a3.665 3.665 0 0 0-.973-.658 4.073 4.073 0 0 0-1.04-.341c-.329-.056-.856-.083-1.583-.083zm-3.405 9.21V6.44h3.564c1.44 0 2.577.216 3.413.648a4.876 4.876 0 0 1 1.998 1.903c.496.838.743 1.75.743 2.74a5.175 5.175 0 0 1-1.575 3.73 5.098 5.098 0 0 1-1.793 1.144 5.38 5.38 0 0 1-1.097.314c-.334.053-.969.079-1.908.079h-3.345zM216.808 11.807h3.55v4.48c-1.302.565-2.593.848-3.875.848-1.75 0-3.15-.511-4.197-1.533-1.047-1.022-1.57-2.282-1.57-3.78 0-1.58.542-2.894 1.627-3.943 1.085-1.05 2.445-1.574 4.08-1.574.594 0 1.16.064 1.695.192.534.129 1.211.365 2.027.708v1.544c-1.26-.731-2.51-1.098-3.754-1.098-1.155 0-2.128.394-2.92 1.18-.792.788-1.189 1.754-1.189 2.9 0 1.2.397 2.182 1.19 2.944.791.762 1.81 1.143 3.056 1.143.606 0 1.33-.14 2.172-.417l.145-.045v-2.202h-2.037v-1.347M223.51 17.013h1.512V6.44h-1.513zM236.667 6.44h1.437v10.574h-1.3l-7.07-8.143v8.143h-1.423V6.44h1.227l7.13 8.213V6.44"
-            fill="#FFFFFE"
-          />
-          <path
-            d="M168.387.145v22.594"
-            stroke="#FFFFFE"
-            strokeWidth="2"
-          />
-        </g>,
-        "ratio": 10.3913,
-        "viewbox": Object {
-          "height": 24,
-          "width": 247,
-        },
-      },
-      "defaultImage": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "defaultImageAltText": "BBC News Pidgin",
-      "fonts": Array [],
-      "locale": "pcm",
-      "script": Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
-        "bodyCopy": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-        },
-        "brevier": Object {
-          "groupA": Object {
-            "fontSize": "14",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "13",
-            "lineHeight": "16",
-          },
-        },
-        "canon": Object {
-          "groupA": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-          "groupB": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupD": Object {
-            "fontSize": "44",
-            "lineHeight": "48",
-          },
-        },
-        "doublePica": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupD": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
-          },
-        },
-        "greatPrimer": Object {
-          "groupA": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupB": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-        },
-        "longPrimer": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupB": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-        },
-        "minion": Object {
-          "groupA": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupD": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-        },
-        "paragon": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "22",
-            "lineHeight": "26",
-          },
-          "groupD": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-        },
-        "pica": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
-        "trafalgar": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-          "groupD": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-        },
-      },
-      "service": "pidgin",
-      "serviceName": "Pidgin",
-      "translations": Object {
-        "consentBanner": Object {
-          "cookie": Object {
-            "accept": "Yes, I agree",
-            "description": Object {
-              "international": Object {
-                "first": "We and our partners use technologies, such as ",
-                "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-              "uk": Object {
-                "first": "We use ",
-                "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-            },
-            "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-            "title": "Let us know you agree to cookies",
-          },
-          "privacy": Object {
-            "accept": "OK",
-            "description": Object {
-              "international": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-              "uk": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-            },
-            "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
-            "title": "We've updated our Privacy and Cookies Policy",
-          },
-        },
-        "error": Object {
-          "404": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Double checking the url",
-              "Hitting the refresh button in your browser",
-              "Searching for this page using the BBC search bar",
-            ],
-            "statusCode": "404",
-            "title": "Page cannot be found",
-          },
-          "500": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Hitting the refresh button in your browser",
-              "Coming back again later",
-            ],
-            "statusCode": "500",
-            "title": "Internal server error",
-          },
-        },
-        "home": "Home",
-      },
-    }
-  }
->
-  <FrontPageMain
-    frontPageData={
-      Object {
-        "content": Object {
-          "groups": Array [
+exports[`FrontPageMain Pidgin snapshot should render a pidgin frontpage correctly 1`] = `
+<React.Fragment>
+  <main
+    role="main"
+  >
+    <ForwardRef
+      as="h1"
+    >
+      <span
+        lang="en"
+      >
+        BBC News Pidgin
+      </span>
+       - 
+      Home
+    </ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -5949,7 +5291,12 @@ exports[`FrontPageMain should render a pidgin frontpage correctly 1`] = `
               },
               "title": "Top Stories",
               "type": "responsive-top-stories",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -6148,7 +5495,12 @@ exports[`FrontPageMain should render a pidgin frontpage correctly 1`] = `
               },
               "title": "Cluster 1",
               "type": "responsive-cluster",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -6346,7 +5698,12 @@ Girl pikin dem for FIFA e grassroot project display how deh don di play football
               },
               "title": "Section 1",
               "type": "responsive-must-see",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -6714,7 +6071,12 @@ Dem also tok say di meat dey help sick pipo and e dey good for sex.",
               },
               "title": "Section 2",
               "type": "responsive-inspire",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -7324,7 +6686,12 @@ Dem also tok say di meat dey help sick pipo and e dey good for sex.",
               },
               "title": "Section 3",
               "type": "responsive-in-depth",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -9993,7 +9360,12 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               },
               "title": "Special reports 2",
               "type": "special-reports",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -10076,421 +9448,36 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               },
               "title": "Frequency info",
               "type": "featured-site-top-stories",
-            },
-          ],
-        },
-        "metadata": Object {
-          "analyticsLabels": Object {
-            "counterName": "pidgin.page",
-            "cps_asset_id": "40423314",
-            "cps_asset_type": "idx",
-          },
-          "blockTypes": Array [
-            "responsive-top-stories",
-            "responsive-cluster",
-            "responsive-must-see",
-            "responsive-inspire",
-            "responsive-in-depth",
-            "special-reports",
-            "featured-site-top-stories",
-          ],
-          "createdBy": "pidgin-v6",
-          "firstPublished": 1499440608,
-          "id": "urn:bbc:ares::index:pidgin/front_page/desktop/domestic",
-          "language": "pcm",
-          "lastPublished": 1554996854,
-          "lastUpdated": 1554996862718,
-          "locators": Object {
-            "assetUri": "/pidgin/front_page",
-            "cpsUrn": "urn:bbc:content:assetUri:pidgin/front_page",
-            "curie": "http://www.bbc.co.uk/asset/52f3c7b1-83ed-2338-e050-17ac8045cd94/desktop/domestic",
-          },
-          "options": Object {
-            "allowAdvertising": true,
-          },
-          "summary": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
-          "tags": Object {},
-          "title": "Domot",
-          "type": "IDX",
-          "version": "v1.0.1",
-        },
-        "promo": null,
-        "relatedContent": Object {
-          "groups": Array [],
-          "section": Object {
-            "name": "Domot",
-            "subType": "index",
-            "type": "simple",
-            "uri": "/pidgin/front_page",
-          },
-          "site": Object {
-            "name": "BBC Pidgin",
-            "subType": "site",
-            "type": "simple",
-            "uri": "/pidgin",
-          },
-        },
-      }
-    }
-  />
-</Context.Provider>
+            }
+          }
+        />
+      </ForwardRef>
+    </ForwardRef>
+  </main>
+</React.Fragment>
 `;
 
-exports[`FrontPageMain should render a yoruba frontpage correctly 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "brandName": "BBC News Yorùbá",
-      "brandSVG": Object {
-        "group": <g
-          fillRule="evenodd"
-        >
-          <path
-            d="M73.102 15.678l-.372.227c-1.798 1.098-3.754 1.687-5.53 1.686-3.802-.014-6.306-2.267-6.316-5.548.005-3.207 2.62-5.581 6.22-5.59 1.834.002 3.495.476 5.47 1.557l.362.2V5.281l-.155-.06c-2.226-.88-3.95-1.271-5.653-1.27-2.632-.001-4.916.868-6.543 2.344-1.627 1.475-2.594 3.558-2.593 5.95.001 1.667.69 3.62 2.162 5.17 1.468 1.55 3.73 2.681 6.832 2.679h.01c2.573 0 4.357-.574 5.97-1.367l.136-.067v-2.982zm-18.607 7.261h23.22V1.089h-23.22v21.85zM45.443 15.576c.007-1.986-1.315-3.494-3.43-4.074.57-.292 1.021-.649 1.353-1.084.442-.583.653-1.298.651-2.13a3.801 3.801 0 0 0-1.265-2.849c-.866-.78-2.178-1.287-3.97-1.287h-4.95v15.737h5.81c2.071 0 3.526-.561 4.463-1.393a3.885 3.885 0 0 0 1.338-2.92zm-17.702 7.363h23.22V1.089H27.74v21.85z"
-            fill="#FFF"
-          />
-          <path
-            d="M42.554 15.262c-.002.52-.162 1.043-.628 1.451-.464.409-1.267.719-2.597.719h-2.678v-4.295h2.56c1.193 0 2.04.241 2.57.619.53.381.77.88.773 1.506M40.384 10.119c.5-.361.74-.868.743-1.63-.003-.524-.152-.972-.529-1.306-.377-.335-1.019-.573-2.053-.573h-1.894v4.07h1.3c1.125.001 1.932-.2 2.433-.561M18.69 15.576c.007-1.986-1.317-3.494-3.43-4.074.57-.292 1.02-.649 1.351-1.084.444-.583.654-1.298.653-2.13a3.802 3.802 0 0 0-1.266-2.849c-.864-.78-2.177-1.287-3.969-1.287H7.08v15.737h5.808c2.073 0 3.527-.561 4.463-1.393.937-.83 1.341-1.917 1.34-2.92zM.988 22.939h23.218V1.089H.988v21.85z"
-            fill="#FFF"
-          />
-          <path
-            d="M13.63 10.119c.498-.361.74-.868.744-1.63-.002-.524-.152-.972-.529-1.306-.378-.335-1.019-.573-2.054-.573H9.898v4.07h1.3c1.124.001 1.931-.2 2.432-.561M15.028 13.756c-.532-.378-1.379-.619-2.57-.619h-2.56v4.295h2.677c1.331 0 2.133-.31 2.6-.719.463-.408.623-.931.626-1.451-.006-.626-.244-1.125-.773-1.506M102.03 4.149h2.146v15.785h-1.943L91.68 7.777v12.157h-2.125V4.149h1.831l10.644 12.26V4.149M108.25 4.149h8.948V6.16h-6.689v4.814h6.462v2.023h-6.462V17.9h6.903v2.011h-9.163V4.149M141.314 4.149h2.254l-6.382 15.852h-.496l-5.16-12.835-5.216 12.835h-.485l-6.362-15.852h2.277l4.35 10.881 4.38-10.881h2.135l4.4 10.881 4.305-10.881M149.691 13.32l-1.718-1.043c-1.077-.658-1.843-1.305-2.299-1.942-.455-.636-.683-1.369-.683-2.197 0-1.244.431-2.253 1.293-3.028.863-.776 1.983-1.164 3.361-1.164 1.32 0 2.528.37 3.628 1.11v2.565c-1.137-1.094-2.362-1.642-3.673-1.642-.738 0-1.344.171-1.819.513-.474.341-.712.778-.712 1.311 0 .472.175.915.525 1.328.35.413.912.846 1.686 1.3l1.726 1.021c1.925 1.15 2.888 2.614 2.888 4.391 0 1.266-.424 2.294-1.27 3.085-.848.791-1.95 1.186-3.306 1.186-1.559 0-2.979-.479-4.26-1.438v-2.869c1.221 1.546 2.633 2.318 4.237 2.318.71 0 1.298-.196 1.77-.59.47-.394.705-.888.705-1.481 0-.961-.694-1.872-2.079-2.734"
-            fill="#FFF"
-          />
-          <path
-            d="M169.363.813v22.594"
-            fill="#DD8C8D"
-          />
-          <path
-            d="M169.363.813v22.594"
-            stroke="#FFF"
-            strokeWidth="2"
-          />
-          <path
-            d="M192.587 7.111h1.838l-3.905 4.98v5.593h-1.552v-5.593l-3.905-4.98h1.827l2.83 3.645 2.867-3.645M200.74 8.398c-1.21 0-2.206.378-2.984 1.135-.779.757-1.169 1.723-1.169 2.899 0 1.14.391 2.088 1.172 2.845.781.757 1.76 1.136 2.935 1.136 1.178 0 2.163-.386 2.952-1.159.79-.771 1.183-1.733 1.183-2.883 0-1.12-.394-2.062-1.183-2.827-.789-.764-1.758-1.146-2.907-1.146zm-.062-1.439c1.634 0 2.994.518 4.08 1.552 1.087 1.034 1.631 2.331 1.631 3.89 0 1.559-.549 2.85-1.646 3.871-1.096 1.022-2.479 1.533-4.148 1.533-1.594 0-2.92-.511-3.982-1.533-1.062-1.021-1.592-2.301-1.592-3.84 0-1.58.534-2.887 1.603-3.921 1.07-1.034 2.42-1.552 4.054-1.552zM211.097 8.398h-.454v3.337h.575c.767 0 1.293-.065 1.578-.196.285-.132.507-.33.666-.595.16-.264.238-.566.238-.904 0-.333-.087-.634-.264-.904a1.421 1.421 0 0 0-.746-.572c-.32-.111-.852-.166-1.593-.166zm-1.968 9.286V7.111h2.65c1.07 0 1.918.265 2.545.795.63.53.943 1.246.943 2.149 0 .616-.153 1.148-.462 1.597-.308.449-.749.784-1.324 1.007.338.222.67.525.992.908.322.383.776 1.052 1.361 2.006.37.6.664 1.051.886 1.354l.561.757h-1.802l-.46-.697a1.569 1.569 0 0 0-.092-.128l-.295-.417-.469-.772-.505-.826a8.213 8.213 0 0 0-.86-1.036 3.305 3.305 0 0 0-.704-.556c-.21-.113-.562-.17-1.058-.17h-.393v4.602h-1.514zM226.306 7.111h1.521v6.002c0 .812-.059 1.425-.177 1.839a3.965 3.965 0 0 1-.439 1.033 3.32 3.32 0 0 1-.639.738c-.838.721-1.933 1.082-3.286 1.082-1.377 0-2.482-.358-3.314-1.075a3.421 3.421 0 0 1-.64-.745 3.856 3.856 0 0 1-.43-1.01c-.115-.399-.17-1.025-.17-1.877V7.111h1.52v6.002c0 .994.114 1.685.34 2.073.228.389.573.701 1.037.935.464.235 1.012.352 1.643.352.897 0 1.63-.234 2.194-.704.298-.252.513-.55.644-.893.131-.343.196-.931.196-1.763V7.111M233.87 12.984h-1.415v3.353h1.491c.828 0 1.388-.065 1.684-.193a1.6 1.6 0 0 0 .711-.602c.18-.272.27-.565.27-.877 0-.324-.096-.619-.285-.886a1.676 1.676 0 0 0-.806-.598c-.348-.131-.898-.197-1.65-.197zm-.114-4.526h-1.3v3.179h1.005c.808 0 1.382-.154 1.722-.462.341-.307.511-.706.511-1.196 0-1.014-.646-1.521-1.938-1.521zm.765 9.226h-3.579V7.111h2.77c.872 0 1.553.117 2.042.352.49.235.863.557 1.121.969.257.411.386.886.386 1.426 0 1.04-.538 1.784-1.612 2.233.771.146 1.385.464 1.842.953.458.49.685 1.076.685 1.756 0 .54-.139 1.022-.416 1.446-.277.424-.685.77-1.222 1.037-.538.267-1.21.401-2.017.401zM246.127 13.204l-1.706-3.83-1.582 3.83h3.288zm-2.224-6.154h1.064l4.74 10.634h-1.549l-1.409-3.133h-4.51l-1.322 3.133h-1.555l4.541-10.634zM222.797 3.304l1.047 2.277h-.85l-1.745-2.277h1.548"
-            fill="#FFF"
-          />
-          <path
-            d="M222.797 3.304l1.047 2.277h-.85l-1.745-2.277z"
-            stroke="#FFF"
-            strokeWidth=".335"
-          />
-          <path
-            d="M246.203 3.304l-1.714 2.277h-.85l1.024-2.277h1.54"
-            fill="#FFF"
-          />
-          <path
-            d="M246.203 3.304l-1.714 2.277h-.85l1.024-2.277z"
-            stroke="#FFF"
-            strokeWidth=".335"
-          />
-        </g>,
-        "ratio": 10.4167,
-        "viewbox": Object {
-          "height": 24,
-          "width": 250,
-        },
-      },
-      "defaultImage": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
-      "defaultImageAltText": "BBC News Yorùbá",
-      "fonts": Array [],
-      "locale": "yo",
-      "script": Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
-        "bodyCopy": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-        },
-        "brevier": Object {
-          "groupA": Object {
-            "fontSize": "14",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "13",
-            "lineHeight": "16",
-          },
-        },
-        "canon": Object {
-          "groupA": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-          "groupB": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupD": Object {
-            "fontSize": "44",
-            "lineHeight": "48",
-          },
-        },
-        "doublePica": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupD": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
-          },
-        },
-        "greatPrimer": Object {
-          "groupA": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupB": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-        },
-        "longPrimer": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupB": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-        },
-        "minion": Object {
-          "groupA": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupD": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-        },
-        "paragon": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "22",
-            "lineHeight": "26",
-          },
-          "groupD": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-        },
-        "pica": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
-        "trafalgar": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-          "groupD": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-        },
-      },
-      "service": "yoruba",
-      "serviceName": "Yoruba",
-      "translations": Object {
-        "consentBanner": Object {
-          "cookie": Object {
-            "accept": "Yes, I agree",
-            "description": Object {
-              "international": Object {
-                "first": "We and our partners use technologies, such as ",
-                "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-              "uk": Object {
-                "first": "We use ",
-                "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
-                "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
-              },
-            },
-            "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-            "title": "Let us know you agree to cookies",
-          },
-          "privacy": Object {
-            "accept": "OK",
-            "description": Object {
-              "international": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-              "uk": Object {
-                "first": "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-                "last": null,
-                "linkText": null,
-                "linkUrl": null,
-              },
-            },
-            "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
-            "title": "We've updated our Privacy and Cookies Policy",
-          },
-        },
-        "error": Object {
-          "404": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Double checking the url",
-              "Hitting the refresh button in your browser",
-              "Searching for this page using the BBC search bar",
-            ],
-            "statusCode": "404",
-            "title": "Page cannot be found",
-          },
-          "500": Object {
-            "callToActionFirst": "Alternatively, please visit the ",
-            "callToActionLast": "",
-            "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
-            "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
-            "solutions": Array [
-              "Hitting the refresh button in your browser",
-              "Coming back again later",
-            ],
-            "statusCode": "500",
-            "title": "Internal server error",
-          },
-        },
-        "home": "Ìròyìn",
-      },
-    }
-  }
->
-  <FrontPageMain
-    frontPageData={
-      Object {
-        "content": Object {
-          "groups": Array [
+exports[`FrontPageMain Yoruba snapshot should render a yoruba frontpage correctly 1`] = `
+<React.Fragment>
+  <main
+    role="main"
+  >
+    <ForwardRef
+      as="h1"
+    >
+      <span
+        lang="en"
+      >
+        BBC News Yorùbá
+      </span>
+       - 
+      Ìròyìn
+    </ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -10757,7 +9744,12 @@ exports[`FrontPageMain should render a yoruba frontpage correctly 1`] = `
               },
               "title": "Top Stories",
               "type": "responsive-top-stories",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -10938,7 +9930,12 @@ BBC Yoruba ba ọga agba ile iṣ JAMB, Ọjọgbọn Ishiaq Oloyede sọ̀rọ�
               },
               "title": "Cluster 2",
               "type": "responsive-cluster",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -11168,7 +10165,12 @@ BBC Yoruba ba ọga agba ile iṣ JAMB, Ọjọgbọn Ishiaq Oloyede sọ̀rọ�
               },
               "title": "Cluster 1",
               "type": "responsive-cluster",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -11376,7 +10378,12 @@ BBC Yoruba ba ọga agba ile iṣ JAMB, Ọjọgbọn Ishiaq Oloyede sọ̀rọ�
               },
               "title": "Section 1",
               "type": "responsive-must-see",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -11706,7 +10713,12 @@ Nibo ni nkan de duro lati dena iru iṣẹlẹ bẹ ẹ lọjọ iwaju?
               },
               "title": "Section 2",
               "type": "responsive-inspire",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -13973,7 +12985,12 @@ Afojusun rẹ ni lati jẹ iwuri fun ọpọlọpọ obinrin si i, lati maa gba 
               },
               "title": "Section 3",
               "type": "responsive-in-depth",
-            },
+            }
+          }
+        />
+        <FrontPageSection
+          bar={true}
+          group={
             Object {
               "items": Array [
                 Object {
@@ -14004,61 +13021,11 @@ Afojusun rẹ ni lati jẹ iwuri fun ọpọlọpọ obinrin si i, lati maa gba 
               "semanticGroupName": "Useful links",
               "title": "Useful links",
               "type": "useful-links",
-            },
-          ],
-        },
-        "metadata": Object {
-          "analyticsLabels": Object {
-            "counterName": "yoruba.page",
-            "cps_asset_id": "42516984",
-            "cps_asset_type": "idx",
-          },
-          "blockTypes": Array [
-            "responsive-top-stories",
-            "responsive-cluster",
-            "responsive-must-see",
-            "responsive-inspire",
-            "responsive-in-depth",
-            "useful-links",
-          ],
-          "createdBy": "yoruba-v6",
-          "firstPublished": 1514909384,
-          "id": "urn:bbc:ares::index:yoruba/front_page/desktop/domestic",
-          "language": "yo",
-          "lastPublished": 1554997345,
-          "lastUpdated": 1554997353459,
-          "locators": Object {
-            "assetUri": "/yoruba/front_page",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/front_page",
-            "curie": "http://www.bbc.co.uk/asset/617d8ee6-fb1e-db3c-e050-17ac8045d230/desktop/domestic",
-          },
-          "options": Object {
-            "allowAdvertising": true,
-          },
-          "summary": "Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́",
-          "tags": Object {},
-          "title": "Àbáwọlé",
-          "type": "IDX",
-          "version": "v1.0.1",
-        },
-        "promo": null,
-        "relatedContent": Object {
-          "groups": Array [],
-          "section": Object {
-            "name": "Àbáwọlé",
-            "subType": "index",
-            "type": "simple",
-            "uri": "/yoruba/front_page",
-          },
-          "site": Object {
-            "name": "BBC News Yorùbá",
-            "subType": "site",
-            "type": "simple",
-            "uri": "/yoruba",
-          },
-        },
-      }
-    }
-  />
-</Context.Provider>
+            }
+          }
+        />
+      </ForwardRef>
+    </ForwardRef>
+  </main>
+</React.Fragment>
 `;
