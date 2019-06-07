@@ -25,17 +25,12 @@ Object.keys(services).map(function(index) {
       xservice.data.forEach(section => {
         describe(`${section.h2} tests`, function() {
           it(`should have ${section.stories.length} stories`, function() {
-            console.log(section.stories.length);
-            console.log(section.h2);
-            console.log(section.sectionSelector);
             cy.get(section.sectionSelector)
               .find('h3')
               .should('have.lengthOf', section.stories.length);
           });
 
           it('should show the correct section heading', function() {
-            console.log(section.h2Selector);
-            console.log(section.h2);
             cy.get(section.h2Selector).should('have.text', section.h2);
           });
 
@@ -45,7 +40,7 @@ Object.keys(services).map(function(index) {
 
           it('should have the correct headings', function() {
             cy.get(section.sectionSelector).within(() => {
-              cy.get('.StoryPromoWrapper-sc-1dvfmi3-0').each(($el, idx) => {
+              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
                 promoElement($el, 'h3').should(
                   'have.text',
                   section.stories[idx].headline,
@@ -56,18 +51,17 @@ Object.keys(services).map(function(index) {
 
           it('should have the correct summaries', function() {
             cy.get(section.sectionSelector).within(() => {
-              cy.get('.StoryPromoWrapper-sc-1dvfmi3-0').each(($el, idx) => {
-                promoElement($el, 'p').should(
-                  'have.text',
-                  section.stories[idx].summary,
-                );
+              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
+                promoElement($el, 'p')
+                  .should('be.visible')
+                  .should('have.text', section.stories[idx].summary);
               });
             });
           });
 
           it('should have the correct article timestamps', function() {
             cy.get(section.sectionSelector).within(() => {
-              cy.get('.StoryPromoWrapper-sc-1dvfmi3-0').each(($el, idx) => {
+              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
                 promoElement($el, 'time').should(
                   'have.text',
                   section.stories[idx].timestamp,

@@ -548,26 +548,26 @@ export default {
           {
             headline: 'Make Sudan restore constitutional order - Nigeria',
             summary:
-              'We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.',
+              'Sudan military say dem don seize power, arrest di President afta nearly 30 years wey im dey office.',
             timestamp: '11 April 2019',
           },
           {
             headline: 'BBC Pidgin Minute',
             summary:
-              'Sudan military say dem don seize power, arrest di President afta nearly 30 years wey im dey office.',
+              'All di local and world tori wey you suppose know in 60 seconds!',
             timestamp: '11 April 2019',
           },
           {
             headline:
               'Assange arrest na dark moment for press freedom - Snowden',
             summary:
-              'All di local and world tori wey you suppose know in 60 seconds!',
+              'Im bin take refuge for Ecuador embassy for London since 2012 to avoid im arrest to Sweden over sexual assault accuse.',
             timestamp: '11 April 2019',
           },
           {
             headline: 'UN dey beg goment to help 10,000 Nigerians',
             summary:
-              'Im bin take refuge for Ecuador embassy for London since 2012 to avoid im arrest to Sweden over sexual assault accuse.',
+              'United Nations humanitarian coordinator for Nigeria don call goment for Nigeria to assist pipo wey dey suffer inside Borno state',
             timestamp: '11 April 2019',
           },
         ],
@@ -581,26 +581,26 @@ export default {
             headline:
               'Rivers Election Result: Supplementary Elections go hold for State Assembly Seats for 4 local goment',
             summary:
-              'United Nations humanitarian coordinator for Nigeria don call goment for Nigeria to assist pipo wey dey suffer inside Borno state',
+              'Elections no happun for some areas sake of katakata and some areas wey e happun INEC declare am inconclusive.',
             timestamp: '5 April 2019',
           },
           {
             headline: 'Nyesom Wike don win second term',
             summary:
-              'Elections no happun for some areas sake of katakata and some areas wey e happun INEC declare am inconclusive.',
+              'Nigeria election bodi INEC conclude announcement of results for dia collation centre and declare Gov. declare Wike re-elected on Wednesday evening.',
             timestamp: '3 April 2019',
           },
           {
             headline:
               'Rivers be like soft work for Wike as PDP dey clear AAC wit votes wey pass 500k',
             summary:
-              'Nigeria election bodi INEC conclude announcement of results for dia collation centre and declare Gov. declare Wike re-elected on Wednesday evening.',
+              'INEC don kontinu to announce more Rivers State govnorship election result from di 23 local goment areas and di PDP candidate dey lead.',
             timestamp: '3 April 2019',
           },
           {
             headline: 'PDP clear all Rivers Senatorial seats',
             summary:
-              'INEC don kontinu to announce more Rivers State govnorship election result from di 23 local goment areas and di PDP candidate dey lead.',
+              'INEC don announce say PDP candidates na dem win all di seats for Rivers State National Assembly elections.',
             timestamp: '2 April 2019',
           },
         ],
@@ -614,19 +614,18 @@ export default {
             headline:
               'Wetin Ashley Young do wey Man United fans dey bad mouth am?',
             summary:
-              'INEC don announce say PDP candidates na dem win all di seats for Rivers State National Assembly elections.',
+              'Di Red Devils fans no happy wit dia captain performance and dem want make di coach drop am.',
             timestamp: '11 April 2019',
           },
           {
             headline: 'How Manchester United fit take win Barca',
             summary:
-              'Di Red Devils fans no happy wit dia captain performance and dem want make di coach drop am.',
+              'Di Red Devils of England go jam red hot Barcelona on Wednesday wey dey make some of dia fans mind dey cut.',
             timestamp: '10 April 2019',
           },
           {
             headline: "France 2019 FIFA Women's World Cup visit Cameroon",
-            summary:
-              'Di Red Devils of England go jam red hot Barcelona on Wednesday wey dey make some of dia fans mind dey cut.',
+            summary: 'Cameroonians glad for see, pose wit cup for woman dem.',
             timestamp: '10 April 2019',
           },
         ],
@@ -658,6 +657,387 @@ export default {
             summary:
               'Dis food be one of di ogbonge delicacy wey pipo for Akwa Ibom dey enjoy.',
             timestamp: '8April 2019',
+          },
+        ],
+      },
+      {
+        h2: 'Informate me',
+        h2Selector: '#Section-2',
+        sectionSelector: '#root > main > div > div > section:nth-child(5)',
+        stories: [
+          {
+            headline: 'Camera go catch you if you do wuru-wuru - JAMB',
+            summary:
+              'Meet Gift David, barber for Lagos Nigeria wey say na she be di ""baddest"" for di city.',
+            timestamp: '11 April 2019',
+          },
+          {
+            headline: 'Miners say dem no get hand for Zamfara State katakata',
+            summary:
+              'Di 2019 Unified Tertiary Matriculation Examination for candidates wey wan enter university for Nigeria dey begin today.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline:
+              'Scientist don discover big black hole wey be 3 million times di size of Earth',
+            summary:
+              'Di miners follow BBC tok afta federal goment ban all mining activities for di state wia killi killi dey worry.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'Why fuel scarcity red for Port Harcourt',
+            summary:
+              'Astronomers don take di first ever image of one black hole, wey dey located for one far far galaxy.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'Fadeyi violence: How e happun - Police',
+            summary:
+              'Fuel lines don begin show for Port Harcourt di Rivers State capital but IPMAN dey wonder why.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline:
+              'Anambra State legislators bring law to make expensive burial offence',
+            summary:
+              'Police tok-tok pesin Elkana Bala say kasala burst between two factions of cult groups dem from Fadeyi and Alakara area for Lagos',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'NPP, NDC say dem go disband party-vigilante groups',
+            summary:
+              'Di law also say nobodi go deposit deadi bodi for mortuary pass two months from di time wey di pesin die.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'Wetin concern Drake as Tottenham Hotspur win Man City?',
+            summary:
+              'Dis be de first time di two leading political parties dem agree together since Nana Akufo-Addo give directive sey make de two parties work together on dis matter.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline:
+              'Doctor find four bees wey balance well dey live inside woman eye',
+            summary:
+              "Fans believe say di musician get 'curse for body' na im make Aguero miss penalty for di first half.",
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'Buhari don return to Nigeria',
+            summary:
+              'Di small sweat bees wey fly enter di woman eye bin dey drink her tears to survive.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: 'Lagos state Fire Service oga don regain im freedom',
+            summary:
+              'President Muhammadu Buhari comot Nigeria since April 4, 2019 Nigeria and since den, di kontri don record different kili-kili for different part of di kontri.',
+            timestamp: '10 April 2019',
+          },
+          {
+            headline: "Public university bill be 'dangerous' - Ghana academics",
+            summary:
+              'Na on Saturday Kidnappers gbab Rasaki Musibau for Lagos state, South West Nigeria.',
+            timestamp: '9 April 2019',
+          },
+        ],
+      },
+      {
+        h2: 'Special Reports 2',
+        h2Selector: '#Special-reports-2',
+        sectionSelector: '#root > main > div > div > section:nth-child(6)',
+        stories: [
+          {
+            headline:
+              'PDP candidate Bala Muhammed dey lead wit 6376 votes for Bauchi state',
+            summary:
+              'Critics say Ghana constitution saf dey protect tertiary institutions from government interference, so dis move by government be wrong',
+            timestamp: '24 March 2019',
+          },
+          {
+            headline: 'INEC declare Ganduje winner of Kano govnorship election',
+            summary:
+              'Afta collation of results for Bauchi state, North East Nigeria, di ruling All Progressive Congress candidate dey back.',
+            timestamp: '24 March 2019',
+          },
+          {
+            headline: 'PDP dey ask INEC to cancel Kano rerun',
+            summary:
+              'Small drama bin happun for di collation centre before dem announce di winner as some party agents and observers condemn di election process say wuru-wuru full inside.',
+            timestamp: '23 March 2019',
+          },
+          {
+            headline: "'I ready to jam APC for appeal court'",
+            summary:
+              'PDP chairmo for Kano Engr Rabiu Bichi tok say e dey necessary for INEC to cancel Saturday rerun.',
+            timestamp: '22 March 2019',
+          },
+          {
+            headline: 'Kano elections get k-leg, reports of katakata everywia',
+            summary:
+              'Osun Govnorship Election Tribunal on Friday declare PDP candidate Senator Ademola Adeleke winner.',
+            timestamp: '23 March 2019',
+          },
+          {
+            headline:
+              'Why e hard for Rivers to do election wey no dey get k-leg?',
+            summary:
+              'Areas for Kano State wey INEC don plan supplementary elections for never begin, and e no look like say e go happun at all because of kasala.',
+            timestamp: '15 March 2019',
+          },
+          {
+            headline: 'INEC new date for Rivers State elections',
+            summary:
+              'Political sabi pipo tell us wetin dem feel say be di reason why e be like say elections for Rivers State must find way to get palava inside.',
+            timestamp: '1 March 2019',
+          },
+          {
+            headline: "'Atiku no dey destine to be President' - Oshiomohle",
+            summary:
+              'Nigeria election office don set new date to conduct supplementary elections for all di place dem cancel 23 February vote.',
+            timestamp: '28 February 2019',
+          },
+          {
+            headline:
+              'Why court remove Dumo Lulu-Briggs name from Rivers Govnorship race',
+            summary:
+              'APC National Chairman Adams Oshiomohle na im dey address tori pipo for Abuja to reply Atiku accuse.',
+            timestamp: '28 February 2019',
+          },
+          {
+            headline: 'Buhari don hail Senagal President wey win second term',
+            summary:
+              'Court on Thursday order INEC for Rivers State to replace di Accord Party Govnorship candidate name.',
+            timestamp: '28 February 2019',
+          },
+          {
+            headline: '24 clubs wan chakara Cameroon football',
+            summary:
+              'Latest result from Nigeria Presidential Elections wey Independent National Electoral Commission announce dey inside hia for correct table.',
+            timestamp: '19 February 2019',
+          },
+          {
+            headline: 'America too don hail President Buhari re-election',
+            summary:
+              'Opposition candidates don reject di results but dem say to carry di mata go court no go get any head.',
+            timestamp: '1 February 2019',
+          },
+          {
+            headline:
+              'INEC say Rivers State elections for some areas go happun again',
+            summary:
+              "Fifa chuk mop say make Cameroon clubs pay players' salary.",
+            timestamp: '28 February 2019',
+          },
+          {
+            headline: 'Nigerian bankers no dey smile dis Friday',
+            summary:
+              'Di join body ontop election mata for Nigeria, Independent Electoral Commission, declare Muhammadu Buhari winner of di 2019 presidential election on Wednesday.',
+            timestamp: '22 February 2019',
+          },
+          {
+            headline: "'Vote for goment of your choice' - Buhari",
+            summary:
+              'INEC say dem go reschedule election for areas wey dia national assembly results dey inconclusive for Rivers State.',
+            timestamp: '22 February 2019',
+          },
+          {
+            headline: 'Who e pay pass as dem postpone Nigeria election?',
+            summary:
+              'One banker dey wonder weda goment go add bankers join di list of essential service workers wey no dey ever follow odas go public holiday.',
+            timestamp: '20 February 2019',
+          },
+          {
+            headline:
+              '"Make JAMB begin organise elections" - How social media para ontop INEC decision',
+            summary:
+              'President Muhammadu Buhari on Friday morning beg Nigerians to to go out and vote for Saturday elections.',
+            timestamp: '16 February 2019',
+          },
+          {
+            headline:
+              'Exclusive: Why I no want pipo to vote on February 16 - Nnamdi Kanu',
+            summary:
+              'Di two main parties for Nigeria election don accuse each oda say di oda pesin dey try rig di election and get hand for di postponement.',
+            timestamp: '16 February 2019',
+          },
+          {
+            headline: 'Elections postponement: PDP, APC don condemn INEC',
+            summary:
+              'Nigerians wake up on Saturday morning to hear say election bodi don postpone voting by one week.',
+            timestamp: '13 February 2019',
+          },
+          {
+            headline:
+              'Pishures from our reporters from some parts of Nigeria wey dey cover di elections',
+            summary:
+              'Di leader of di Indigenous People of Biafra, Nnamdi Kanu, tell BBC say im want make Nigeria goment know say im dem dey serious wit di call for Biafra.',
+            timestamp: '16 February 2019',
+          },
+          {
+            headline: "'I shame say I never vote all my life'",
+            summary:
+              'As INEC shift Presidential election go February 23 and Governorship election go March 9, di APC and PDP don come out to condemn di move.',
+            timestamp: '11 February 2019',
+          },
+          {
+            headline: 'Vice Presidential Debate five takeaways',
+            summary:
+              'You don follow di news, campaigns and you don decide on your candidate - dis na how you go fit vote on Saturday.',
+            timestamp: '8 February 2019',
+          },
+          {
+            headline: 'How candidates go use employ Delta pipo',
+            summary:
+              'BBC get reporters for all di 36 states and Abuja to cover and report how di 2019 elections go take waka for Nigeria.',
+            timestamp: '7 February 2019',
+          },
+          {
+            headline: "'Deh jealous ma pikin troway e epilepsy'",
+            summary:
+              'Meet 66 year old Kano man wey never vote all im life, im tell BBC how come say at im age im neva touch ballot paper',
+            timestamp: '12 February 2019',
+          },
+          {
+            headline:
+              'I go publish my salary, allawee and allocation if I win - Banky W',
+            summary:
+              'Youth unemployment na serious mata wey dey worry pipo for Delta State, southern Nigeria.',
+            timestamp: '5 February 2019',
+          },
+          {
+            headline: 'How #BBCGovDebate waka for Delta State',
+            summary:
+              'Villagers for Ntui for Centre region for Cameroon believe say deh fit troway, fainting sickness for some man.',
+            timestamp: '7 February 2019',
+          },
+          {
+            headline: "'How we go do health sector from May 2019'",
+            summary:
+              'Candidates ansa kweshion about dia policies and how dem wan take move Delta State forward.',
+            timestamp: '8 February 2019',
+          },
+          {
+            headline: 'Oby Ezekwesili wan start anoda movement to fix Nigeria',
+            summary:
+              'Employment generation, sports development and how to tackle insecurity na im be di focus for candidates.',
+            timestamp: '4 February 2019',
+          },
+          {
+            headline:
+              '#BBCGovDebate: Kweshions from social media to candidates',
+            summary:
+              "ThePeoplesDebate' wey happun on Thursday chook mouth on top how to improve Nigeria health sectors.",
+            timestamp: '31 January 2019',
+          },
+          {
+            headline: 'Di ‘godfathers’ wey dey run things for Nigeria election',
+            summary:
+              'The Peoples Debate na collabo wey BBC, TVC, BudgiT, One, EnoughIsEnough and Transition Monitoring Group join bodi organise.',
+            timestamp: '4 February 2019',
+          },
+          {
+            headline:
+              '#BBCGovDebate: Wetin candidates tok for Security, Employment mata',
+            summary:
+              'Di former presidential candidate wey withdraw from race to lead Nigeria, explain her reason for press conference on Monday.',
+            timestamp: '31 January 2019',
+          },
+          {
+            headline:
+              'EXCLUSIVE: ""Atiku beta pass Buhari two times"" #BBCNigeria2019',
+            summary:
+              'Many pipo wan know wia dia Govnor, Nyesom Wike chuk head.',
+            timestamp: '22 January 2019',
+          },
+          {
+            headline:
+              "'Football team go tanda evri stadium for Delta state like e dey for abroad'",
+            summary:
+              'Dis na tori about men wey no dey run for office, but go dey background dey determine who go win and lose election.',
+            timestamp: '8 February 2019',
+          },
+          {
+            headline:
+              'Click hia to watch di Vice Presidential Debate LiVE #BBCNigeria2019',
+            summary:
+              'Four governorship candidate don reveal wetin dem say dem go do for di state if dem become govnor.',
+            timestamp: '7 February 2019',
+          },
+          {
+            headline:
+              'Day 17: Blind pipo go fit vote during Nigeria 2019 Elections? #BBCNigeria2019',
+            summary:
+              'Former president Olusegun Obasanjo don explain give BBC why im dey support Atiku Abubakar ahead of February general elections.',
+            timestamp: '30 January 2019',
+          },
+          {
+            headline:
+              'Day 19: Funny tins wey politicians dey do for election period #BBCNigeria2019',
+            summary:
+              'Governorship candidates for Delta state, South-South Nigeria, tok dia plans and policies for di BBC Governorship debate wey happun for Asaba on Thursday.',
+            timestamp: '28 January 2019',
+          },
+          {
+            headline:
+              'Day 20: Wetin zoning mean for Nigerian politics #BBCNigeria2019',
+            summary:
+              'If you wan watch di Vice Presidential Debate as e happun, just click hia.',
+            timestamp: '27 January 2019',
+          },
+          {
+            headline:
+              'Day 22: E mata who win di Nigeria 2019 elections? #BBCNigeria2019',
+            summary:
+              'Blind pipo follow inside more than di 84 million registered voters for 16 February general election.',
+            timestamp: '25 January 2019',
+          },
+          {
+            headline:
+              "Day 23: 'Who be Obasanjo to say Atiku beta pass Buhari?' #BBCNigeria2019",
+            summary:
+              'No be new tin again for Nigerians to begin see some of di politicians wey wan contest dey do strange and funny tins.',
+            timestamp: '24 January 2019',
+          },
+          {
+            headline: 'Day 25: 2019 Election Word Dictionary #BBCNigeria2019',
+            summary:
+              'Political sabi pipo say zoning dey important to make sure say one region no go dey produce all di presidential candidates.',
+            timestamp: '22 January 2019',
+          },
+          {
+            headline:
+              "Day 27: 'As Commander-in-chief my special force go comot confidence from terrorist hand' #BBCNigeria2019",
+            summary:
+              'Nigeria elections dey always be about di kain pipo wey dey contest, and no be about issues; dis election go be di same?',
+            timestamp: '20 January 2019',
+          },
+          {
+            headline:
+              'Day 28: How many Political parties you sabi? #BBCNigeria2019',
+            summary:
+              'Di tok -tok pesin for Nigeria president Muhammadu Buhari Campaign organisation, Festus Keyamo dey react to wetin former presido Olusegun Obasanjo tok say Atiku Abubakar beta pass Buhari two times.',
+            timestamp: '19 January 2019',
+          },
+          {
+            headline:
+              'Day 29: All you suppose sabi about Atiku Abubakar #BBCNigeria2019',
+            summary:
+              'As February and March 2019 elction don dey near, you go dey hia some key word; dis na simple guide make you know di meaning.',
+            timestamp: '18 January 2019',
+          },
+          {
+            headline:
+              'Day 30: All you suppose sabi about Muhammadu Buhari #BBCNigeria2019',
+            summary:
+              'Obiageli Ezekwesili dey contest di seat of president for Nigeria 2019 elections, she bin don hold two ogbonge position for di kontri as minister of Education and Solid minerals.',
+            timestamp: '17 January 2019',
+          },
+          {
+            headline:
+              '#BBCGovDebate I don get candidate for mind now wey I go vote for - Akwa Ibom resident',
+            summary: 'Dis na quiz to test how many political parties you sabi.',
+            timestamp: '18 January 2019',
           },
         ],
       },
