@@ -8,7 +8,7 @@ import {
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${config.assets.news}`);
   });
   it('should render the BBC News branding', () => {
     const newsBrandingLink = getElement('footer a').eq(0);

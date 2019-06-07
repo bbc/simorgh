@@ -5,19 +5,19 @@ import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.news}.amp`);
+    cy.visit(`/news/articles/${config.specialAssets.news}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
+      testResponseCode(`/news/articles/${config.specialAssets.news}.amp`, 200);
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`/news/articles/${config.assets.news}.cake`, 404);
-    testResponseCode(`/news/lol/${config.assets.news}.amp`, 404);
-    testResponseCode(`/cake/articles/${config.assets.news}.amp`, 404);
+    testResponseCode(`/news/articles/${config.specialAssets.news}.cake`, 404);
+    testResponseCode(`/news/lol/${config.specialAssets.news}.amp`, 404);
+    testResponseCode(`/cake/articles/${config.specialAssets.news}.amp`, 404);
   });
 
   it('should have AMP attribute', () => {
@@ -76,12 +76,15 @@ describe('AMP Tests on a .amp page', () => {
     const canonicalOrigin = origin.includes('localhost')
       ? 'https://www.bbc.co.uk'
       : origin;
-
-    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
+    checkCanonicalURL(
+      `${canonicalOrigin}
+      /news/articles/
+      ${config.specialAssets.news}`,
+    );
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit(`/news/articles/${config.assets.news}`);
+    cy.visit(`/news/articles/${config.specialAssets.news}`);
     getElement('html').should('not.have.attr', 'amp');
   });
 });

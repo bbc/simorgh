@@ -29,9 +29,11 @@ const config = {
     assetUrl: 'http://localhost:7080',
     assetOrigin: 'http://localhost:7080',
     assets: {
-      news: 'c0g992jmmkko',
-      newsThreeSubheadlines: 'c6v11qzyv8po',
+      news: 'c6v11qzyv8po',
       persian: 'c4vlle3q337o',
+    },
+    specialAssets: {
+      news: 'c0g992jmmkko',
       nonExistent: 'cxvxrj8tvppo',
     },
   },

@@ -14,7 +14,7 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${config.assets.news}`);
   });
 
   it('should have the correct lang attribute', () => {
@@ -82,7 +82,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `${config.baseUrl}/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `${config.baseUrl}/news/articles/${config.assets.news}`,
   );
 
   twitterMeta(
@@ -101,9 +101,7 @@ describe('Article Meta Tests', () => {
 
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
-    checkCanonicalURL(
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
-    );
+    checkCanonicalURL(`${currentOrigin}/news/articles/${config.assets.news}`);
     checkAmpHTML(
       `${currentOrigin}/news/articles/${
         config.assets.newsThreeSubheadlines
@@ -112,9 +110,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    metadataAssertionAMP(
-      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
-    );
+    metadataAssertionAMP(`/news/articles/${config.assets.news}.amp`);
   });
 
   it('should include mainEntityOfPage in the LinkedData', () => {

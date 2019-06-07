@@ -10,22 +10,22 @@ import news from '../../src/app/lib/config/services/news';
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/news/articles/${config.specialAssets.nonExistent}`, {
       failOnStatusCode: false,
     });
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/news/articles/${config.assets.nonExistent}`, 404);
+    testResponseCode(`/news/articles/${config.specialAssets.nonExistent}`, 404);
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/news/articles/${config.specialAssets.nonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(news);
 
-    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/news/articles/${config.specialAssets.nonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(news);
