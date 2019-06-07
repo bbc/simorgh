@@ -10,11 +10,10 @@ import React from 'react';
  * a normal sync component.
  *
  */
-
 jest.mock(
   '../../contexts/utils/createLoadableContext',
   () => (Context, dynamicConfig) => {
-    const syncServices = require('../../lib/config/services/sync');
+    const syncServices = require('../../lib/config/services');
 
     return (
       { children }, // eslint-disable-line react/prop-types

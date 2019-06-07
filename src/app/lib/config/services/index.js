@@ -1,10 +1,21 @@
-const dynamicServices = {
-  news: () => import(/* webpackChunkName: 'news' */ './news.js'),
-  persian: () => import(/* webpackChunkName: 'persian' */ './persian.js'),
-  igbo: () => import(/* webpackChunkName: 'igbo' */ './igbo.js'),
-  pidgin: () => import(/* webpackChunkName: 'pidgin' */ './pidgin.js'),
-  thai: () => import(/* webpackChunkName: 'thai' */ './thai.js'),
-  yoruba: () => import(/* webpackChunkName: 'yoruba' */ './yoruba.js'),
-};
+/*
+  This file includes data for the Service Context
+  It will be used by the ServiceContext Component
+*/
+import news from './news';
+import persian from './persian';
+import igbo from './igbo';
+import pidgin from './pidgin';
+import thai from './thai';
+import yoruba from './yoruba';
+import defaultConfig from './default';
 
-export default dynamicServices;
+export default {
+  default: defaultConfig,
+  news,
+  persian,
+  igbo,
+  pidgin,
+  thai,
+  yoruba,
+};

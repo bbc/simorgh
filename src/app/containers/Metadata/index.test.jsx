@@ -5,7 +5,7 @@ import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import services from '../../lib/config/services/sync';
+import services from '../../lib/config/services';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const Container = (service, bbcOrigin, platform, data, id) => (
