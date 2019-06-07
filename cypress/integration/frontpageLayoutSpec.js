@@ -7,8 +7,7 @@ import services from '../test-data/worldServices';
 import extendedServices from '../test-data/worldServicesFpData';
 
 deepExtend(services, extendedServices);
-// eslint-disable-next-line array-callback-return
-Object.keys(services).map(function(index) {
+Object.keys(services).forEach(function(index) {
   const xservice = services[index];
   const service = index;
 
@@ -20,6 +19,12 @@ Object.keys(services).map(function(index) {
     context('should render the page at 1008', function() {
       before(() => {
         cy.viewport(1008, 768);
+      });
+
+      describe('header tests', function() {
+        it('should have a header', function() {
+          cy.get('header').should('have.lengthOf', 1);
+        });
       });
 
       xservice.data.forEach(section => {
