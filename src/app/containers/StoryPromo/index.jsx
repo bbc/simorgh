@@ -26,6 +26,7 @@ const renderImage = (imageValues, lazyLoad) => {
       {...imageValues}
       useFigure={false}
       lazyLoad={lazyLoad}
+      copyright={imageValues.copyrightHolder}
     />
   );
 };
@@ -36,9 +37,6 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
-  const imageValues = deepGet(['indexImage'], item);
-
-  const Image = renderImage(imageValues, lazyLoadImage);
 
   if (!headline || !url) {
     return null;
@@ -62,7 +60,14 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
     </Fragment>
   );
 
-  return <StoryPromoComponent image={Image} info={Info} />;
+  const imageValues = deepGet(['indexImage'], item);
+
+  return (
+    <StoryPromoComponent
+      image={renderImage(imageValues, lazyLoadImage)}
+      info={Info}
+    />
+  );
 };
 
 StoryPromo.propTypes = {
