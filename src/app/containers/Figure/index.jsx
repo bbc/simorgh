@@ -11,12 +11,12 @@ import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
-const FADE_IN_DURATION = 700; // number of miillisecconds to  apply the fade-in effect
+const FADE_IN_DURATION = 200; // number of miillisecconds to  apply the fade-in effect
 
 const transitionStyles = {
-  entering: { opacity: 0.2 },
+  entering: { opacity: 0 },
   entered: { opacity: 1 },
-  exiting: { opacity: 0.2 },
+  exiting: { opacity: 0 },
   exited: { opacity: 0 },
 };
 
