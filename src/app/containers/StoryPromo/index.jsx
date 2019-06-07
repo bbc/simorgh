@@ -11,7 +11,7 @@ import Timestamp from '../Timestamp';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../helpers/json/deepGet';
 
-const renderImage = (imageValues, lazyLoad) => {
+const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
   }
@@ -29,6 +29,15 @@ const renderImage = (imageValues, lazyLoad) => {
       copyright={imageValues.copyrightHolder}
     />
   );
+};
+
+StoryPromoImage.propTypes = {
+  lazyLoad: bool,
+  imageValues: storyItem.indexImage.isRequired,
+};
+
+StoryPromoImage.defaultProps = {
+  lazyLoad: false,
 };
 
 const StoryPromo = ({ item, lazyLoadImage }) => {
@@ -61,13 +70,11 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
   );
 
   const imageValues = deepGet(['indexImage'], item);
-
-  return (
-    <StoryPromoComponent
-      image={renderImage(imageValues, lazyLoadImage)}
-      info={Info}
-    />
+  const Image = (
+    <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
+
+  return <StoryPromoComponent image={Image} info={Info} />;
 };
 
 StoryPromo.propTypes = {
