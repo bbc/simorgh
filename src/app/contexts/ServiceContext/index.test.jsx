@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { ServiceContextProvider, ServiceContext } from './index';
+import services from '../../lib/config/services/async';
+
+let createLoadableContext;
 
 const renderWithContextProvider = (node, service) => (
   <ServiceContextProvider service={service}>{node}</ServiceContextProvider>
@@ -20,7 +23,7 @@ describe('ServiceContext', () => {
     );
   };
 
-  testBrandNameWithServiceContext('news');
-  testBrandNameWithServiceContext('persian');
-  testBrandNameWithServiceContext('default');
+  Object.keys(services).forEach(service =>
+    testBrandNameWithServiceContext(service),
+  );
 });

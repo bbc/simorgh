@@ -27,7 +27,7 @@ import config from '../support/config';
           return null;
         });
 
-        // filter out all regexes that have a match in src array
+        // filter out all regexes that have a match in srcs array
         expectedMatches = expectedMatches.filter(regex => {
           const matches = srcs.filter(src => src.match(regex));
           return matches.length === 0;
