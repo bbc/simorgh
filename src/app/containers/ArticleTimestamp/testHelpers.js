@@ -8,29 +8,27 @@ const magnitudes = {
   milliseconds: 1,
 };
 
-const subtractTimeDifference = (timestamp, timeDifference) => {
+const applyTimeDifference = (timestamp, timeDifference, isAdding) => {
   let acc = timestamp;
 
   const keyNames = Object.keys(timeDifference);
 
   keyNames.forEach(diff => {
-    acc -= timeDifference[diff] * magnitudes[diff];
+    if (isAdding) {
+      acc += timeDifference[diff] * magnitudes[diff];
+    } else {
+      acc -= timeDifference[diff] * magnitudes[diff];
+    }
   });
 
   return acc;
 };
 
-const addTimeDifference = (timestamp, timeDifference) => {
-  let acc = timestamp;
+const subtractTimeDifference = (timestamp, timeDifference) =>
+  applyTimeDifference(timestamp, timeDifference, false);
 
-  const keyNames = Object.keys(timeDifference);
-
-  keyNames.forEach(diff => {
-    acc += timeDifference[diff] * magnitudes[diff];
-  });
-
-  return acc;
-};
+const addTimeDifference = (timestamp, timeDifference) =>
+  applyTimeDifference(timestamp, timeDifference, true);
 
 export const timestampGenerator = timeDifference =>
   subtractTimeDifference(Date.now(), timeDifference);
