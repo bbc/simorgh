@@ -22,7 +22,7 @@ const transitionStyles = {
 
 const ImageWrapper = styled.div`
   transition: ${() => `opacity ${FADE_IN_DURATION}ms ease-in-out`};
-  opacity: ${props => props.opacity || 0};
+  opacity: ${props => props.opacity || 1};
 `;
 
 const renderImage = (imageToRender, lazyLoad, fadeIn, setFadeIn) =>
