@@ -47,7 +47,6 @@ module.exports = (shell = {}) => {
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
         {
           test: /\.(js|jsx|mjs)$/,
-          include: /src/,
           use: [
             {
               loader: 'babel-loader',
