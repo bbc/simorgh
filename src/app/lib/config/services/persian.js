@@ -52,7 +52,7 @@ const persian = {
     },
     consentBanner: {
       privacy: {
-        title: "ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم",
+        title: 'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم',
         description: {
           uk: {
             first:
@@ -70,7 +70,7 @@ const persian = {
           },
         },
         accept: 'تایید',
-        reject: "ببنید چه تغییراتی ایجاد شده است",
+        reject: 'ببنید چه تغییراتی ایجاد شده است',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
@@ -85,7 +85,8 @@ const persian = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: ' ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند',
+            first:
+              ' ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند',
             linkText: 'کوکی‌ها',
             last:
               'یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید ',
