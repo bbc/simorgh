@@ -7,8 +7,16 @@ import LazyLoad from 'react-lazyload';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
+import {
+  NestedGridItemLarge,
+  NestedGridItemMedium,
+  NestedGridItemSmall,
+} from '../../lib/styledGrid';
+// import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
+
+// const rawImageBlock = filterForBlockType(blocks, 'rawImage');
 
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
@@ -45,25 +53,39 @@ const FigureContainer = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
 
+  let Wrapper = NestedGridItemLarge;
+
+  if (height === width) {
+    Wrapper = NestedGridItemMedium;
+  }
+  if (height > width) {
+    Wrapper = NestedGridItemSmall;
+  }
+
   return (
-    <Figure>
-      <ImagePlaceholder ratio={ratio}>
-        {platform === 'amp' ? (
-          <AmpImg
-            alt={alt}
-            attribution={copyright || ''}
-            layout="responsive"
-            src={src}
-            height={height}
-            width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad)
-        )}
-        {renderCopyright(copyright)}
-      </ImagePlaceholder>
-      {renderCaption(captionBlock, type)}
-    </Figure>
+    <Wrapper
+      gridColumnStart={1}
+      gridSpan={{ group3: '5', group4: '5', group5: '10' }}
+    >
+      <Figure>
+        <ImagePlaceholder ratio={ratio}>
+          {platform === 'amp' ? (
+            <AmpImg
+              alt={alt}
+              attribution={copyright || ''}
+              layout="responsive"
+              src={src}
+              height={height}
+              width={width}
+            />
+          ) : (
+            renderImage(imageToRender, lazyLoad)
+          )}
+          {renderCopyright(copyright)}
+        </ImagePlaceholder>
+        {renderCaption(captionBlock, type)}
+      </Figure>
+    </Wrapper>
   );
 };
 
