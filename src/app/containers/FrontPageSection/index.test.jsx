@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import newsConfig from '../../lib/config/services/news';
 import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import FrontPageSection from '.';
