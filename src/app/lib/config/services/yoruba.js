@@ -3,10 +3,10 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const yoruba = {
   brandName: 'BBC News Yorùbá',
-  brandNameOffscreen: 'BBC News, Yorùbá',
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
+  serviceLocalizedName: 'Yorùbá',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
   defaultImageAltText: 'BBC News Yorùbá',
   brandSVG,

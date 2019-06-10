@@ -4,7 +4,7 @@ import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
 import frontPageDataIgbo from '../../../../data/prod/igbo/frontpage';
 
 const igboConfig = {
-  brandNameOffscreen: 'BBC News, Ìgbò',
+  serviceLocalizedName: 'Ìgbò',
   translations: {
     home: 'Akụkọ',
   },

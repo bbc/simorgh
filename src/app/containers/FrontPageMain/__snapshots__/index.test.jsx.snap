@@ -8,13 +8,17 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
     <ForwardRef
       as="h1"
     >
-      <span
-        lang="en"
-      >
-        BBC News, Ìgbò
-      </span>
-       - 
-      Akụkọ
+      <React.Fragment>
+        <span
+          lang="en"
+        >
+          BBC News
+        </span>
+        , 
+        Ìgbò
+         - 
+        Akụkọ
+      </React.Fragment>
     </ForwardRef>
     <ForwardRef>
       <ForwardRef>
