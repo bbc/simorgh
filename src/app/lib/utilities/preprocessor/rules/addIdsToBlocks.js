@@ -1,4 +1,4 @@
-import nanoid from 'nanoid';
+import uuid from 'uuid';
 import deepGet from '../../../../helpers/json/deepGet';
 import compose from '../../../../helpers/compose';
 
@@ -9,7 +9,7 @@ const getJsonContent = jsonRaw => deepGet(['content'], jsonRaw);
 const getBlocks = content => deepGet(['model', 'blocks'], content);
 
 const addIdsToBlock = block => {
-  const blockWithId = { ...block, id: nanoid() };
+  const blockWithId = { ...block, id: uuid() };
   const nestedBlocks = getBlocks(blockWithId);
 
   return nestedBlocks
