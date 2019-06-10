@@ -5,6 +5,7 @@ import deepGet from '../../helpers/json/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
+import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
 
 import {
   videoPropTypes,
@@ -91,7 +92,7 @@ const VideoContainer = ({ blocks }) => {
   };
 
   return (
-    <>
+    <GridItemConstrainedLargeNoMargin>
       {metadata ? (
         <Helmet>
           {
@@ -104,7 +105,7 @@ const VideoContainer = ({ blocks }) => {
               function mediaPlayerSetup(container) {
                   require(['bump-4'], (bump) => {
                     var mediaPlayer = bump.player(
-                      document.getElementById('mediaPlayer'),
+                      document.getElementById('mediaPlayer${pid}'),
                       ${JSON.stringify(mediaPlayerSettings)});
                     mediaPlayer.load();
                   });
@@ -145,7 +146,7 @@ const VideoContainer = ({ blocks }) => {
         />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
-    </>
+    </GridItemConstrainedLargeNoMargin>
   );
 };
 
