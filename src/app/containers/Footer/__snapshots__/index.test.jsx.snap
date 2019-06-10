@@ -17,30 +17,37 @@ exports[`FooterContainer should render correctly 1`] = `
       Array [
         Object {
           "href": "https://www.bbc.com/news/help-41670342",
+          "id": "trust",
           "text": "Why you can trust the BBC",
         },
         Object {
           "href": "https://www.bbc.com/terms",
+          "id": "terms",
           "text": "Terms of Use",
         },
         Object {
           "href": "https://www.bbc.co.uk/aboutthebbc/",
+          "id": "about",
           "text": "About the BBC",
         },
         Object {
           "href": "https://www.bbc.com/privacy/",
+          "id": "privacy",
           "text": "Privacy Policy",
         },
         Object {
           "href": "https://www.bbc.com/usingthebbc/cookies/",
+          "id": "cookies",
           "text": "Cookies",
         },
         Object {
           "href": "https://www.bbc.com/accessibility/",
+          "id": "a11y",
           "text": "Accessibility Help",
         },
         Object {
           "href": "https://www.bbc.com/contact/",
+          "id": "contact",
           "text": "Contact the BBC",
         },
       ]
