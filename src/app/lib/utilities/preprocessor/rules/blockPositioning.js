@@ -31,7 +31,7 @@ const insertBlockPositioning = (
 };
 
 /**
- * This preprocessor rule inserts a `pos` property to each block object,
+ * This preprocessor rule inserts a `position` property to each block object,
  * denoting its ordinal position in an array.
  * @param {Object} obj
  */
