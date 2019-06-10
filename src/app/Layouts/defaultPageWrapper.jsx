@@ -5,11 +5,11 @@ import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
-import GlobalStyle from '../lib/globalStyles';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
+import GlobalStyle from '../lib/globalStyles';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const env = process.env.APP_ENV;
@@ -17,8 +17,8 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
 
   return (
     <Fragment>
-      <GlobalStyle />
       <ServiceContextProvider service={service}>
+        <GlobalStyle />
         <RequestContextProvider
           id={id}
           isUK={isUK}
@@ -51,13 +51,14 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  id: string.isRequired,
+  id: string,
   isAmp: bool.isRequired,
   service: string.isRequired,
 };
 
 PageWrapper.defaultProps = {
   bbcOrigin: null,
+  id: null,
 };
 
 PageWrapper.defaultProps = {};

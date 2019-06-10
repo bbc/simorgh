@@ -19,9 +19,7 @@ describe('getAssetsArray', () => {
       const { getAssetsArray } = require('./index.js');
       getAssetsArray();
       expect(mockLogError).toHaveBeenCalledWith(
-        `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${
-          process.env.SIMORGH_ASSETS_MANIFEST_PATH
-        }`,
+        `Error parsing assets manifest. SIMORGH_ASSETS_MANIFEST_PATH = ${process.env.SIMORGH_ASSETS_MANIFEST_PATH}`,
       );
     });
   });

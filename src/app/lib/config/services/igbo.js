@@ -9,8 +9,11 @@ const igbo = {
   service: 'igbo',
   serviceName: 'Igbo',
   themeColor: `${C_POSTBOX}`,
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+  defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {

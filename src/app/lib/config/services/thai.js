@@ -11,6 +11,7 @@ const thai = {
   themeColor: `${C_POSTBOX}`,
   brandSVG,
   script: thaiScript,
+  fonts: [],
 };
 
 export default thai;

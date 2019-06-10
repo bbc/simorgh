@@ -8,7 +8,15 @@ import { getStyleTag } from '../styles';
 import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
-const renderDocument = async (url, data, routes, bbcOrigin, service, isAmp) => {
+const renderDocument = async (
+  url,
+  data,
+  routes,
+  bbcOrigin,
+  service,
+  isAmp,
+  dials,
+) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
@@ -38,6 +46,7 @@ const renderDocument = async (url, data, routes, bbcOrigin, service, isAmp) => {
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
+      dials={dials}
     />,
   );
 

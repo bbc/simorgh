@@ -97,9 +97,7 @@ describe('Article Meta Tests', () => {
       `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
     );
     checkAmpHTML(
-      `${currentOrigin}/news/articles/${
-        config.assets.newsThreeSubheadlines
-      }.amp`,
+      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
 

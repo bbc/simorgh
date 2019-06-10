@@ -37,9 +37,7 @@ const metadataProps = (
   isAmp,
   alternateLinks,
   ampLink,
-  appleTouchIcon: `https://foo.com/static/${
-    serviceConfig.service
-  }/images/icons/icon-192x192.png`,
+  appleTouchIcon: `https://foo.com/static/${serviceConfig.service}/images/icons/icon-192x192.png`,
   articleAuthor: serviceConfig.articleAuthor,
   articleSection: null,
   brandName: serviceConfig.brandName,
@@ -220,7 +218,7 @@ describe('Metadata Container', () => {
           dotComOrigin,
           'canonical',
           articleDataPersian,
-          'cyddjz5058wo',
+          'c4vlle3q337o',
         ),
       );
 
@@ -231,8 +229,8 @@ describe('Metadata Container', () => {
         metadataProps(
           false,
           [],
-          'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
-          'https://www.bbc.com/persian/articles/cyddjz5058wo',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
           'fa',
           [],
@@ -243,7 +241,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
-          'https://www.bbc.com/persian/articles/cyddjz5058wo',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
@@ -258,7 +256,7 @@ describe('Metadata Container', () => {
           dotCoDotUKOrigin,
           'amp',
           articleDataPersian,
-          'cyddjz5058wo',
+          'c4vlle3q337o',
         ),
       );
 
@@ -269,8 +267,8 @@ describe('Metadata Container', () => {
         metadataProps(
           true,
           [],
-          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo.amp',
-          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
+          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
+          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
           'fa',
           [],
@@ -281,7 +279,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
-          'https://www.bbc.co.uk/persian/articles/cyddjz5058wo',
+          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',

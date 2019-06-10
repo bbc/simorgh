@@ -28,9 +28,7 @@ const getAssetsArray = service => {
     }
   } catch (error) {
     logger.error(
-      `Error parsing assets manifest. ${assetsManifestEnv} = ${
-        process.env[assetsManifestEnv]
-      }`,
+      `Error parsing assets manifest. ${assetsManifestEnv} = ${process.env[assetsManifestEnv]}`,
     );
   }
 

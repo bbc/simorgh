@@ -102,6 +102,7 @@ const persian = {
     },
   },
   brandSVG,
+  fonts: [],
 };
 
 export default persian;
