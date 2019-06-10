@@ -12,6 +12,10 @@ import yoruba from './yoruba';
 export default {
   default: {
     brandName: 'Default Brand Name',
+    brandUrl: 'https://www.bbc.com',
+    brandMinWidth: 240,
+    brandMaxWidth: 380,
+    brandSvgHeight: 24,
     externalLinkText: ', default external link suffix',
     imageCaptionOffscreenText: 'Default image caption prefix, ',
     videoCaptionOffscreenText: 'Default video caption prefix, ',

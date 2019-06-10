@@ -5,6 +5,10 @@ import { arabic } from '@bbc/gel-foundations/scripts';
 const persian = {
   articleAuthor: 'https://www.facebook.com/bbcpersian',
   brandName: 'BBC News فارسی',
+  brandUrl: 'https://www.bbc.com/persian',
+  brandMinWidth: 240,
+  brandMaxWidth: 380,
+  brandSvgHeight: 24,
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
   externalLinkText: ' ،لینک خارجی',

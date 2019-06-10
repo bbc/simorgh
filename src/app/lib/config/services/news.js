@@ -6,6 +6,10 @@ import * as fonts from '@bbc/psammead-styles/fonts';
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   brandName: 'BBC News',
+  brandUrl: 'https://www.bbc.co.uk/news',
+  brandMinWidth: 240,
+  brandMaxWidth: 380,
+  brandSvgHeight: 24,
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',

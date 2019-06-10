@@ -3,6 +3,10 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const pidgin = {
   brandName: 'BBC News Pidgin',
+  brandUrl: 'https://www.bbc.com/pidgin',
+  brandMinWidth: 240,
+  brandMaxWidth: 380,
+  brandSvgHeight: 24,
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',

@@ -3,6 +3,10 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
   brandName: 'BBC News Ìgbò',
+  brandUrl: 'https://www.bbc.com/igbo',
+  brandMinWidth: 240,
+  brandMaxWidth: 380,
+  brandSvgHeight: 24,
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
