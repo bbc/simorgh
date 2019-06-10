@@ -6,6 +6,7 @@ import {
   getCurrentTime,
   getDeviceLanguage,
   getHref,
+  getProducer,
   getReferrer,
   isLocServeCookieSet,
 } from '../../lib/analyticsUtils';
@@ -38,7 +39,12 @@ export const atiPageViewParams = ({
       value: getDestination(isUK),
       wrap: false,
     },
-    { key: 's2', description: 'producer', value: '64', wrap: false },
+    {
+      key: 's2',
+      description: 'producer',
+      value: getProducer(service),
+      wrap: false,
+    },
     {
       key: 'p',
       description: 'page identifier',
