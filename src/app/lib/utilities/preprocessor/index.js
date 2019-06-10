@@ -3,9 +3,10 @@ import applyTimestampRules from './rules/timestamp';
 
 const Preprocessor = (jsonRaw = {}, rules = []) => {
   const defaultRules = [applyTimestampRules];
+  const uniqueRulesSet = new Set([...defaultRules, ...rules]);
 
   try {
-    return [...defaultRules, ...rules].reduce(
+    return Array.from(uniqueRulesSet).reduce(
       (transformedJson, ruleset) => ruleset(transformedJson),
       jsonRaw,
     );
