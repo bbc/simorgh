@@ -8,7 +8,7 @@ import FrontPageSection from '../FrontPageSection';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const { brandName, translations } = useContext(ServiceContext);
+  const { brandNameOffscreen, translations } = useContext(ServiceContext);
   const { home } = translations;
 
   const groups = deepGet(['content', 'groups'], frontPageData);
@@ -17,7 +17,7 @@ const FrontPageMain = ({ frontPageData }) => {
     <Fragment>
       <main role="main">
         <VisuallyHiddenText as="h1">
-          <span lang="en">{brandName}</span> - {home}
+          <span lang="en">{brandNameOffscreen}</span> - {home}
         </VisuallyHiddenText>
         <GhostWrapper>
           <GridItemConstrainedLarge>
