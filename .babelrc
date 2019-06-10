@@ -7,7 +7,7 @@
           "browsers": [
             "chrome >= 53",
             "firefox >= 45.0",
-            "ie >= 11",
+            "ie >= 10",
             "edge >= 37",
             "safari >= 9",
             "opera >= 40",
@@ -19,7 +19,7 @@
           ]
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
-        "useBuiltIns": "entry",
+        "useBuiltIns": "usage",
         "corejs": "2"
       }
     ],
