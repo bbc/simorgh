@@ -18,7 +18,7 @@ const {
 } = require('../../lib/analyticsUtils/article');
 
 const CanonicalPageViewAnalytics = ({ articleData }) => {
-  const { platform, isUK } = useContext(RequestContext);
+  const { platform, isUK, statsDestination } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
   if (onClient()) {
@@ -45,10 +45,11 @@ const CanonicalPageViewAnalytics = ({ articleData }) => {
           isUK,
           platform,
           service,
+          statsDestination,
         });
 
       sendBeacon(pageViewBeaconUrl);
-    }, [articleData, href, isUK, platform, service]);
+    }, [articleData, href, isUK, platform, service, statsDestination]);
   }
 
   return null;

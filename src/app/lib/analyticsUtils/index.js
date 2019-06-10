@@ -20,14 +20,11 @@ export const getDestination = statsDestination => {
     NEWS_GNL: 598287,
     NEWS_PS_TEST: 598286,
     NEWS_GNL_TEST: 598288,
+    WS_NEWS_LANGUAGES: 598342,
+    WS_NEWS_LANGUAGES_TEST: 598343,
   };
 
-  const destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
-
-  const key =
-    process.env.APP_ENV === 'live' ? destination : `${destination}_TEST`;
-
-  return destinationIDs[key] || destinationIDs.NEWS_PS;
+  return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
 export const getAppType = platform =>
@@ -147,4 +144,4 @@ export const getReferrer = platform => {
 };
 
 export const sanitise = initialString =>
-  initialString ? initialString.replace(/\s/g, '+') : null;
+  initialString ? initialString.trim().replace(/\s/g, '+') : null;

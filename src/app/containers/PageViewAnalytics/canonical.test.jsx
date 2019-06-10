@@ -11,8 +11,9 @@ const ContextWrap = props => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       platform="canonical"
-      bbcOrigin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       service="news"
+      statsDestination="NEWS_PS_TEST"
       articleData={{}}
     >
       {props.children}

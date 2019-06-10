@@ -40,80 +40,58 @@ const returnsNullWhenOffClient = func => {
   });
 };
 
-const originalAppEnv = process.env.APP_ENV;
-
 describe('getDestination', () => {
-  beforeEach(() => {
-    delete process.env.APP_ENV;
-  });
-  afterEach(() => {
-    process.env.APP_ENV = originalAppEnv;
-  });
-
   const getDestinationTestScenarios = [
     {
-      isUK: true,
-      env: 'live',
+      statsDestination: 'NEWS_PS',
       expected: 598285,
-      summary: 'should return for live uk',
+      summary: 'should return for live uk for News',
     },
     {
-      isUK: false,
-      env: 'live',
+      statsDestination: 'NEWS_GNL',
       expected: 598287,
-      summary: 'should return for live international',
+      summary: 'should return for live international for News',
     },
     {
-      isUK: true,
-      env: 'test',
+      statsDestination: 'NEWS_PS_TEST',
       expected: 598286,
-      summary: 'should return for test uk',
+      summary: 'should return for test uk for News',
     },
     {
-      isUK: false,
-      env: 'test',
+      statsDestination: 'NEWS_GNL_TEST',
       expected: 598288,
-      summary: 'should return for test international',
+      summary: 'should return for test international for News',
     },
     {
-      isUK: true,
-      env: 'foobar',
-      expected: 598286,
-      summary: 'should return for test uk when env unknown',
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      expected: 598342,
+      summary: 'should return for live WS',
     },
     {
-      isUK: true,
-      env: null,
-      expected: 598286,
-      summary: 'should return for test uk when env null',
+      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+      expected: 598343,
+      summary: 'should return for test WS',
     },
     {
-      isUK: true,
-      env: undefined,
-      expected: 598286,
-      summary: 'should return for test uk when env undefined',
-    },
-    {
-      isUK: null,
-      env: 'live',
+      statsDestination: undefined,
       expected: 598285,
-      summary: 'should return for live uk when isUK is null',
+      summary: 'should return for live uk statsDestination is undefined',
     },
     {
-      isUK: undefined,
-      env: 'live',
+      statsDestination: null,
       expected: 598285,
-      summary: 'should return for live uk when isUK is undefined',
+      summary: 'should return for live uk statsDestination is null',
     },
   ];
 
-  getDestinationTestScenarios.forEach(({ isUK, env, expected, summary }) => {
-    it(summary, () => {
-      process.env.APP_ENV = env;
-      const destination = getDestination(isUK);
-      expect(destination).toEqual(expected);
-    });
-  });
+  getDestinationTestScenarios.forEach(
+    ({ statsDestination, expected, summary }) => {
+      it(summary, () => {
+        const destination = getDestination(statsDestination);
+        expect(destination).toEqual(expected);
+      });
+    },
+  );
 });
 
 describe('getAppType', () => {

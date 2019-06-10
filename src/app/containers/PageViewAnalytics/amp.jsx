@@ -26,7 +26,7 @@ const JsonInlinedScript = data => (
 
 const AmpPageViewAnalytics = ({ articleData }) => {
   const { service } = useContext(ServiceContext);
-  const { platform, isUK } = useContext(RequestContext);
+  const { platform, isUK, statsDestination } = useContext(RequestContext);
 
   return (
     <amp-analytics>
@@ -45,6 +45,7 @@ const AmpPageViewAnalytics = ({ articleData }) => {
             isUK,
             platform,
             service,
+            statsDestination,
           }),
         }),
       )}

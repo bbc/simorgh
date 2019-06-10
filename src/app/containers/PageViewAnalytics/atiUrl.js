@@ -22,7 +22,6 @@ export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
 
 export const atiPageViewParams = ({
   contentType,
-  isUK,
   language,
   ldpThingIds,
   ldpThingLabels,
@@ -31,6 +30,7 @@ export const atiPageViewParams = ({
   pageTitle,
   platform,
   service,
+  statsDestination,
   timePublished,
   timeUpdated,
 }) => {
@@ -38,7 +38,7 @@ export const atiPageViewParams = ({
     {
       key: 's',
       description: 'destination',
-      value: getDestination(isUK),
+      value: getDestination(statsDestination),
       wrap: false,
     },
     {
