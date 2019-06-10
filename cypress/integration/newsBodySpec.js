@@ -62,7 +62,7 @@ describe('Article Body Tests', () => {
       const noscriptImg = getElement('noscript');
       noscriptImg.contains('<img ');
 
-      cy.scrollTo('bottom', { duration: 500 });
+      cy.scrollTo('bottom', { duration: 1000 });
 
       const ImageContainer = getElement('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
