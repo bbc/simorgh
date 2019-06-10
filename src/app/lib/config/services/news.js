@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import * as fonts from '@bbc/psammead-styles/fonts';
 
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -105,6 +106,14 @@ const news = {
     },
   },
   brandSVG,
+  fonts: [
+    fonts.F_REITH_SERIF_MEDIUM,
+    fonts.F_REITH_SERIF_MEDIUM_ITALIC,
+    fonts.F_REITH_SANS_REGULAR,
+    fonts.F_REITH_SANS_ITALIC,
+    fonts.F_REITH_SANS_BOLD,
+    fonts.F_REITH_SANS_BOLD_ITALIC,
+  ],
 };
 
 export default news;

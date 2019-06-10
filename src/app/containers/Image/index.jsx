@@ -7,6 +7,8 @@ import {
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
 } from '../../lib/styledGrid';
+import createSrcset from './helpers/srcSet';
+import getIChefURL from './helpers/ichefUrl';
 
 const DEFAULT_IMAGE_RES = 640;
 
@@ -20,15 +22,10 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-const getIChefURL = (originCode, locator) => {
-  // temp code - default to 'cpsdevpb' until Optimo complete work to supply non-empty originCode
-  const overridableOriginCode = originCode || 'cpsdevpb';
-
-  return `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}/${overridableOriginCode}/${locator}`;
-};
-
 const getRawImageSrc = (originCode, locator) =>
-  originCode !== 'pips' ? getIChefURL(originCode, locator) : locator;
+  originCode !== 'pips'
+    ? getIChefURL(originCode, locator, DEFAULT_IMAGE_RES)
+    : locator;
 
 const ImageContainer = ({ blocks }) => {
   if (!blocks) {
@@ -54,6 +51,7 @@ const ImageContainer = ({ blocks }) => {
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
+  const srcSet = createSrcset(originCode, locator, width);
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
@@ -77,6 +75,7 @@ const ImageContainer = ({ blocks }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
+        srcset={srcSet}
         lazyLoad
       />
     </Wrapper>
