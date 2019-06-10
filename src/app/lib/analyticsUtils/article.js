@@ -42,7 +42,7 @@ export const getThingAttributes = (attribute, articleData) => {
 
     things.forEach(thing => {
       if (thing[attribute]) {
-        attributes.push(thing[attribute]);
+        attributes.push(thing[attribute].replace(/\s/g, '+'));
       }
     });
 

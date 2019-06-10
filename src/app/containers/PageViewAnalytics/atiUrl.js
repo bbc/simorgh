@@ -1,4 +1,5 @@
 import {
+  getAppName,
   getDestination,
   getAppType,
   getScreenInfo,
@@ -9,6 +10,7 @@ import {
   getProducer,
   getReferrer,
   isLocServeCookieSet,
+  sanitise,
 } from '../../lib/analyticsUtils';
 
 export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
@@ -83,7 +85,12 @@ export const atiPageViewParams = ({
       value: getAppType(platform),
       wrap: true,
     },
-    { key: 'x3', description: 'app name', value: service, wrap: true },
+    {
+      key: 'x3',
+      description: 'app name',
+      value: getAppName(service),
+      wrap: true,
+    },
     { key: 'x4', description: 'language', value: language, wrap: true },
     {
       key: 'x5',
@@ -97,7 +104,12 @@ export const atiPageViewParams = ({
       value: getReferrer(platform),
       wrap: true,
     },
-    { key: 'x9', description: 'page title', value: pageTitle, wrap: true },
+    {
+      key: 'x9',
+      description: 'page title',
+      value: sanitise(pageTitle),
+      wrap: true,
+    },
     {
       key: 'x11',
       description: 'publication time',

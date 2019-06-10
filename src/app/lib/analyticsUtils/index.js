@@ -1,7 +1,20 @@
 import Cookie from 'js-cookie';
 import onClient from '../../helpers/onClient';
 
-export const getDestination = isUK => {
+export const getAppName = service => {
+  const appName = {
+    igbo: 'news-igbo',
+    news: 'news',
+    persian: 'news-persian',
+    pidgin: 'news-pidgin',
+    thai: 'news-thai',
+    yoruba: 'news-yoruba',
+  };
+
+  return appName[service];
+};
+
+export const getDestination = statsDestination => {
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_GNL: 598287,
@@ -132,3 +145,6 @@ export const getReferrer = platform => {
 
   return null;
 };
+
+export const sanitise = initialString =>
+  initialString ? initialString.replace(/\s/g, '+') : null;

@@ -19,6 +19,7 @@ const {
   getAppType,
   getHref,
   getReferrer,
+  sanitise,
 } = require('./index');
 
 let locServeCookieValue;
@@ -350,5 +351,11 @@ describe('getReferrer', () => {
     const referrer = getReferrer();
 
     expect(referrer).toEqual(null);
+  });
+});
+
+describe('sanitise', () => {
+  it('should replace all spaces with a + character', () => {
+    expect(sanitise('hi hello there')).toEqual('hi+hello+there');
   });
 });

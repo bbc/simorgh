@@ -164,15 +164,15 @@ describe('getThingAttributes', () => {
   const data = {
     metadata: {
       tags: {
-        about: [{ thingId: 'foo' }, { thingId: 'bar' }],
+        about: [{ thingId: 'foo bar' }, { thingId: 'baz' }],
       },
     },
   };
 
-  it('should find value in good data', () => {
+  it('should return thing names in good data', () => {
     const thingAttributes = getThingAttributes('thingId', data);
 
-    expect(thingAttributes).toEqual('foo~bar');
+    expect(thingAttributes).toEqual('foo+bar~baz');
   });
 
   it('should return null if type not found', () => {
