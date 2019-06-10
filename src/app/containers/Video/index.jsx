@@ -100,34 +100,6 @@ const VideoContainer = ({ blocks }) => {
               {JSON.stringify(metadata)}
             </script>
           }
-          <script type="text/javascript">
-            {`
-              function mediaPlayerSetup(container) {
-                  require(['bump-4'], (bump) => {
-                    var mediaPlayer = bump.player(
-                      document.getElementById('mediaPlayer${pid}'),
-                      ${JSON.stringify(mediaPlayerSettings)});
-                    mediaPlayer.load();
-                  });
-              }
-            `}
-          </script>
-          <script type="text/javascript">
-            {`
-              function initialiseRequires() {
-                  requiredScripts = {
-                    "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
-                    };
-                  require({ paths: requiredScripts, waitSeconds: 30 });
-                  mediaPlayerSetup();
-              }
-            `}
-          </script>
-          <script
-            onLoad="initialiseRequires()"
-            type="text/javascript"
-            src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
-          />
         </Helmet>
       ) : null}
       <Figure>
@@ -143,6 +115,7 @@ const VideoContainer = ({ blocks }) => {
           statsCountername={statsPageIdentifier}
           statsDestination={statsDestination}
           uiLocale="en-GB"
+          mediaPlayerSettings={mediaPlayerSettings}
         />
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
