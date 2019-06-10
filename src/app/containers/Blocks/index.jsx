@@ -4,7 +4,7 @@ import nanoid from 'nanoid';
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
-    const { type, model } = block;
+    const { type, model, position } = block;
 
     if (!componentsToRender || !type) {
       return null;
@@ -20,8 +20,8 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        index={index}
         key={nanoid()}
+        position={position}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}

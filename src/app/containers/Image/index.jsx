@@ -28,7 +28,7 @@ const getRawImageSrc = (originCode, locator) =>
     ? getIChefURL(originCode, locator, DEFAULT_IMAGE_RES)
     : locator;
 
-const ImageContainer = ({ blocks, index }) => {
+const ImageContainer = ({ blocks, position }) => {
   if (!blocks) {
     return null;
   }
@@ -53,7 +53,7 @@ const ImageContainer = ({ blocks, index }) => {
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
   const srcSet = createSrcset(originCode, locator, width);
-  const lazyLoad = index > LAZYLOAD_FROM_BLOCK;
+  const lazyLoad = position[0] > LAZYLOAD_FROM_BLOCK;
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
@@ -87,7 +87,7 @@ const ImageContainer = ({ blocks, index }) => {
 ImageContainer.propTypes = imageModelPropTypes;
 
 ImageContainer.defaultProps = {
-  index: 0,
+  position: [0],
 };
 
 export default ImageContainer;

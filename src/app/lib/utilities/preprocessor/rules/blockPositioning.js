@@ -20,7 +20,7 @@ const insertBlockPositioning = (
     let incrementPositionAtLevel = positionAtLevel;
     return model[key].map((childObj, index) => {
       const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
-      const newChildObj = Object.assign(childObj, { pos: newPosition });
+      const newChildObj = Object.assign(childObj, { position: newPosition });
 
       amendedJson[key][index] = newChildObj;
       return insertBlockPositioning(newChildObj, newPosition);
