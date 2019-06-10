@@ -235,8 +235,14 @@ Array [
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c8 {
+@media (max-width:14.9375rem) {
+  .c5 {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c5 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,auto);
