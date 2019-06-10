@@ -33,23 +33,27 @@ const addTimeDifference = (timestamp, timeDifference) =>
 export const timestampGenerator = timeDifference =>
   subtractTimeDifference(Date.now(), timeDifference);
 
-export const multipleSameDayTimestampsGenerator = ({ intervals, date }) => {
+export const sameDayTimestampsGenerator = ({ intervals, date }) => {
   /**
-   * This function accepts an array of intervals that represent the time
-   * difference between specific moments in the past and Date.now(), and
-   * returns an array of timestamps for those moments.
+   * This function's `intervals` argument is an array of objects that represent
+   * the time difference between several "past" moments and one "present"
+   * moment. It returns an array of timestamps that fit the intervals, starting
+   * at 12am local time so that as long as the intervals are all < 24 hours all
+   * of the timestamps are the same day according to your machine's timezone.
    *
-   * The earliest one is set to 12:00am local time so that as long as all
-   * intervals are less than 24 hours the timestamps returned will all be on
-   * the same day, according to the machine's timezone.
+   * For example,
+   * sameDayTimestampsGenerator({
+   *   intervals: [{ hours: 23 }, { minutes: 30 }]
+   * })
+   * will return three timestamps for the following times: 00:00, 22:30, 23:00
    *
-   * Note, the first interval provided must be the largest. If a date is not
-   * provided it will use the current date.
+   * Note the intervals should be provided in descending order. If a date is
+   * not provided it will use the current date.
    */
 
   if (!intervals || !Array.isArray(intervals)) {
     throw new Error(
-      'Invalid intervals argument passed to multipleSameDayTimestampsGenerator',
+      'Invalid intervals argument passed to sameDayTimestampsGenerator',
     );
   }
 
