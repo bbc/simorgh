@@ -36,7 +36,7 @@ exports[`should render Copyright with news service context 1`] = `
     Image source, 
   </span>
   <span
-    lang="en_GB"
+    lang="en-GB"
   >
      
     This is some copyright text
@@ -80,7 +80,7 @@ exports[`should render Copyright with persian service context 1`] = `
      ، منبع تصویر
   </span>
   <span
-    lang="en_GB"
+    lang="en-GB"
   >
      
     Getty Images
