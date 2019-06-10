@@ -19,7 +19,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
     <style
@@ -98,7 +98,7 @@ exports[`Document Component should render correctly 1`] = `
       Test title
     </title>
     <link
-      href="https://www.bbc.com/news/articles/cl55zn0w0l4o"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
     <style
@@ -109,6 +109,15 @@ exports[`Document Component should render correctly 1`] = `
     <script
       type="application/ld+json"
     />
+    <DialContextProvider
+      dials={
+        Object {
+          "dial": true,
+        }
+      }
+    >
+      <MPulseBeaconContainer />
+    </DialContextProvider>
   </head>
   <body>
     <div

@@ -1,14 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StoryPromo Container should render correctly for amp 1`] = `
-.c0 {
-  position: relative;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
   max-width: 33.33%;
+  position: relative;
 }
 
 .c3 {
@@ -62,6 +59,10 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   text-decoration: underline;
 }
 
+.c5:visited {
+  color: #6E6E73;
+}
+
 .c2 {
   position: relative;
   height: 0;
@@ -86,6 +87,12 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 
 .c7:last-child {
   padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    position: relative;
+  }
 }
 
 @supports (display:grid) {
@@ -226,14 +233,11 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render correctly for canonical 1`] = `
-.c0 {
-  position: relative;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
   max-width: 33.33%;
+  position: relative;
 }
 
 .c4 {
@@ -287,6 +291,10 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   text-decoration: underline;
 }
 
+.c6:visited {
+  color: #6E6E73;
+}
+
 .c3 {
   display: block;
   width: 100%;
@@ -316,6 +324,12 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 
 .c8:last-child {
   padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    position: relative;
+  }
 }
 
 @supports (display:grid) {

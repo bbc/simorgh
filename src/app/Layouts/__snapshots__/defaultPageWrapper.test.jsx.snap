@@ -2,10 +2,10 @@
 
 exports[`defaultPageWrapper should render with children 1`] = `
 <React.Fragment>
-  <GlobalStyleComponent />
   <ServiceContextProvider
     service="news"
   >
+    <GlobalStyle />
     <RequestContextProvider
       env="live"
       id="c0000000000o"
