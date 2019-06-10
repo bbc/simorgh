@@ -10,34 +10,39 @@ const insertBlockPositioning = (
     return null;
   }
 
-  const newObj = model;
+  const amendedJson = model;
 
   Object.keys(model).forEach(key => {
     if (key !== 'blocks') {
       return null;
     }
 
-    let incPositionAtLevel = positionAtLevel;
+    let incrementPositionAtLevel = positionAtLevel;
     return model[key].map((childObj, index) => {
-      const newPosition = [...positionArr, (incPositionAtLevel += 1)];
+      const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
       const newChildObj = Object.assign(childObj, { pos: newPosition });
 
-      newObj[key][index] = newChildObj;
+      amendedJson[key][index] = newChildObj;
       return insertBlockPositioning(newChildObj, newPosition);
     });
   });
 
-  return newObj;
+  return amendedJson;
 };
 
+/**
+ * This preprocessor rule inserts a `pos` property to each block object,
+ * denoting its ordinal position in an array.
+ * @param {Object} obj
+ */
 const applyBlockPositioning = obj => {
-  const objCopy = deepClone(obj);
+  const json = deepClone(obj);
   const content = deepGet(['content'], obj);
   const withBlockPositioning = insertBlockPositioning(content);
 
-  objCopy.content.model = withBlockPositioning;
+  json.content.model = withBlockPositioning;
 
-  return objCopy;
+  return json;
 };
 
 export default applyBlockPositioning;
