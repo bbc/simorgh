@@ -2,12 +2,20 @@ import baseUrl from './utils/getBaseUrl';
 import onClient from '../../helpers/onClient';
 import fetchData from './utils/fetchData';
 
+const mockApplyTimestampRules = jest.fn();
 const mockAddIdsToBlocks = jest.fn();
+
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/timestamp',
+  () => mockApplyTimestampRules,
+);
 
 jest.mock(
   '../../lib/utilities/preprocessor/rules/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
+
+const preprocessorRules = [mockApplyTimestampRules, mockAddIdsToBlocks];
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
@@ -47,7 +55,7 @@ describe('getArticleInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
-      preprocessorRules: [mockAddIdsToBlocks],
+      preprocessorRules,
     });
 
     expect(response).toEqual({
@@ -66,7 +74,7 @@ describe('getArticleInitialData', () => {
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
-        preprocessorRules: [mockAddIdsToBlocks],
+        preprocessorRules,
       });
 
       expect(response).toEqual({
