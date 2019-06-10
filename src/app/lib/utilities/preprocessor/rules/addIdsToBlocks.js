@@ -1,39 +1,48 @@
 import nanoid from 'nanoid';
 import deepGet from '../../../../helpers/json/deepGet';
+import compose from '../../../../helpers/compose';
 
-let mapBlocks;
+let mapIdsToBlocks;
+
+const getJsonContent = jsonRaw => deepGet(['content'], jsonRaw);
+
 const getBlocks = content => deepGet(['model', 'blocks'], content);
 
-const recursivelyAddIds = block => {
-  const newBlock = { ...block, id: nanoid() };
-  const nestedBlocks = getBlocks(newBlock);
+const addIdsToBlock = block => {
+  const blockWithId = { ...block, id: nanoid() };
+  const nestedBlocks = getBlocks(blockWithId);
 
-  if (nestedBlocks) {
-    return {
-      ...newBlock,
-      model: {
-        ...newBlock.model,
-        blocks: mapBlocks(nestedBlocks),
-      },
-    };
-  }
-  return newBlock;
+  return nestedBlocks
+    ? {
+        ...blockWithId,
+        model: {
+          ...blockWithId.model,
+          blocks: mapIdsToBlocks(nestedBlocks),
+        },
+      }
+    : blockWithId;
 };
 
-mapBlocks = blocks => blocks.map(recursivelyAddIds);
+mapIdsToBlocks = blocks => blocks.map(addIdsToBlock);
+
+const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
+  ...jsonRaw,
+  content: {
+    ...jsonRaw.content,
+    model: {
+      ...jsonRaw.content.model,
+      blocks: blocksWithIds,
+    },
+  },
+});
 
 export default jsonRaw => {
-  const blocks = getBlocks(jsonRaw.content);
-  const blocksWithIds = mapBlocks(blocks);
+  const addIdsToBlocks = compose(
+    mergeJsonRawWithBlocks,
+    mapIdsToBlocks,
+    getBlocks,
+    getJsonContent,
+  )(jsonRaw);
 
-  return {
-    ...jsonRaw,
-    content: {
-      ...jsonRaw.content,
-      model: {
-        ...jsonRaw.content.model,
-        blocks: blocksWithIds,
-      },
-    },
-  };
+  return addIdsToBlocks(jsonRaw);
 };
