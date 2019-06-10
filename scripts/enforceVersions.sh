@@ -7,6 +7,8 @@ if [[ $(pwd) =~ .+simorgh ]]; then
     echo "\nOh no! You're not using our version of node, please move to $desired_node_version in order to reduce bundling inconsistency"
     tput setaf 3
     echo "This can be done by running 'nvm install $desired_node_version && nvm use $desired_node_version'\n "
+    tput setaf 5
+    echo "If you are certain you are using the correct node version, do not use --no-verify. Husky does not reliably source the node version from .nvmrc or your path, try npm rebuild, rm -rf node_modules, npm install. If this still doesn't work dive through your terminal path and remove node_modules from every parent directory then rerun the preceding three commands. NB It's unclear which of these helps, if you find out please open a PR to update this message. \n "
     tput sgr0
     exit 1
   fi
