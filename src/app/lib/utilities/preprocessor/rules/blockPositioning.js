@@ -6,7 +6,7 @@ const insertBlockPositioning = (
   positionArr = [],
   positionAtLevel = 0,
 ) => {
-  if (typeof model !== 'object') {
+  if (!model || typeof model !== 'object') {
     return null;
   }
 
@@ -38,9 +38,12 @@ const insertBlockPositioning = (
 const applyBlockPositioning = obj => {
   const json = deepClone(obj);
   const content = deepGet(['content'], obj);
-  const withBlockPositioning = insertBlockPositioning(content);
 
-  json.content.model = withBlockPositioning;
+  if (content && content.model) {
+    const withBlockPositioning = insertBlockPositioning(content);
+
+    json.content.model = withBlockPositioning;
+  }
 
   return json;
 };
