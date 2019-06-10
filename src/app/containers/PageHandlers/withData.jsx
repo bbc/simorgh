@@ -57,9 +57,11 @@ const WithData = Component => {
       }
     }
 
-    const statusCode = hasDataAnd200Status && !hasValidLocale ? 404 : status;
+    if (hasDataAnd200Status && !hasValidLocale) {
+      return <ErrorMain status={404} />;
+    }
 
-    return <ErrorMain status={statusCode} />;
+    return <ErrorMain status={status} />;
   };
 
   DataContainer.propTypes = {
