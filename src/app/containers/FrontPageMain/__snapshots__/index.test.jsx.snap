@@ -5,8 +5,8 @@ exports[`FrontPageMain should render a pidgin article correctly 1`] = `
   <main
     role="main"
   >
-    <ForwardRef>
-      <ForwardRef>
+    <ForwardRef(GhostWrapper)>
+      <ForwardRef(GridItemConstrainedLarge)>
         <FrontPageSection
           bar={true}
           group={
@@ -4447,8 +4447,8 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
             }
           }
         />
-      </ForwardRef>
-    </ForwardRef>
+      </ForwardRef(GridItemConstrainedLarge)>
+    </ForwardRef(GhostWrapper)>
   </main>
 </React.Fragment>
 `;
