@@ -27,9 +27,27 @@ const nestedBlocks = {
   },
 };
 
+const contentNoModel = {
+  content: standardObject,
+};
+
+const contentNoBlocks = {
+  content: {
+    model: standardObject,
+  },
+};
+
 describe('Block positioning rules', () => {
   it('does not add block positioning to a standard object', () => {
     expect(applyBlockPositioning(standardObject)).toEqual(standardObject);
+  });
+
+  it('does not add block positioning to object with no model property', () => {
+    expect(applyBlockPositioning(contentNoModel)).toEqual(contentNoModel);
+  });
+
+  it('does not add block positioning to object with no blocks', () => {
+    expect(applyBlockPositioning(contentNoBlocks)).toEqual(contentNoBlocks);
   });
 
   it('adds block position to a single block', () => {
