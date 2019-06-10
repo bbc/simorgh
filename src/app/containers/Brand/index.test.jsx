@@ -9,6 +9,11 @@ const newsServiceContextStub = {
   brandSVG,
 };
 
+const igboServiceContextStub = {
+  brandName: 'BBC News Ìgbò',
+  brandSVG,
+};
+
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
     <BrandContainer />
@@ -19,5 +24,12 @@ describe(`BrandContainer`, () => {
   shouldMatchSnapshot(
     'should render correctly',
     BrandContainerWithContext(newsServiceContextStub),
+  );
+});
+
+describe(`BrandContainer with Igbo context`, () => {
+  shouldMatchSnapshot(
+    'should render correctly',
+    BrandContainerWithContext(igboServiceContextStub),
   );
 });
