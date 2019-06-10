@@ -55,6 +55,7 @@ module.exports = (shell = {}) => {
                 babelrc: true,
                 cacheDirectory: true,
                 presets: [],
+                plugins: ['@babel/plugin-transform-arrow-functions'],
               },
             },
           ],

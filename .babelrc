@@ -19,19 +19,14 @@
           ]
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
-        "useBuiltIns": "usage",
+        "useBuiltIns": "entry",
         "corejs": "2"
       }
     ],
     "@babel/preset-react" // transform JSX to JS
   ],
   "plugins": [
-    [
-      "@babel/plugin-transform-arrow-functions",
-      {
-        "spec": true
-      }
-    ], // allows arrow functions
+    "@babel/plugin-transform-arrow-functions", // allows arrow functions
     "@babel/plugin-transform-modules-commonjs", // allows module.exports at the helpers/logger.*.js
     "@babel/plugin-proposal-object-rest-spread", // allows ...spread notation
     "@babel/plugin-syntax-dynamic-import", // allows `await import()` syntax
