@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
 
 const news = {
+  lang: 'en_GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
   brandName: 'BBC News',
   defaultImage:
