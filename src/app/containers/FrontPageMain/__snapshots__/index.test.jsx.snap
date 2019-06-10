@@ -10,7 +10,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
     >
       <React.Fragment>
         <span
-          lang="en"
+          lang="en-gb"
         >
           BBC News
         </span>
