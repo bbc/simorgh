@@ -18,7 +18,7 @@ exports[`Image with data should render a lazyload container instead of an image 
 `;
 
 exports[`Image with data should render an image with alt text 1`] = `
-<ForwardRef>
+<ForwardRef(GridItemConstrainedLargeNoMargin)>
   <FigureContainer
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
@@ -31,11 +31,11 @@ exports[`Image with data should render an image with alt text 1`] = `
     type=""
     width={640}
   />
-</ForwardRef>
+</ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-<ForwardRef>
+<ForwardRef(GridItemConstrainedLargeNoMargin)>
   <FigureContainer
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={
@@ -78,11 +78,11 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     type=""
     width={640}
   />
-</ForwardRef>
+</ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-<ForwardRef>
+<ForwardRef(GridItemConstrainedLargeNoMargin)>
   <FigureContainer
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
@@ -95,11 +95,11 @@ exports[`Image with data should render an image with alt text and offscreen copy
     type=""
     width={640}
   />
-</ForwardRef>
+</ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
-<ForwardRef>
+<ForwardRef(GridItemConstrainedLargeNoMargin)>
   <FigureContainer
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
@@ -112,5 +112,5 @@ exports[`Image with data should render an image with other originCode - this wou
     type=""
     width={640}
   />
-</ForwardRef>
+</ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
