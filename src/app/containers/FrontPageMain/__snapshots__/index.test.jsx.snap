@@ -5,7 +5,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
   <main
     role="main"
   >
-    <ForwardRef
+    <ForwardRef(VisuallyHiddenText)
       as="h1"
     >
       <React.Fragment>
@@ -19,9 +19,9 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
          - 
         Akụkọ
       </React.Fragment>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef>
+    </ForwardRef(VisuallyHiddenText)>
+    <ForwardRef(GhostWrapper)>
+      <ForwardRef(GridItemConstrainedLarge)>
         <FrontPageSection
           bar={true}
           group={
@@ -4991,8 +4991,8 @@ Lee akụkọ so egwu ahụ bụ egwu onye ọ kara obi n'ihe onyonyo a:",
             }
           }
         />
-      </ForwardRef>
-    </ForwardRef>
+      </ForwardRef(GridItemConstrainedLarge)>
+    </ForwardRef(GhostWrapper)>
   </main>
 </React.Fragment>
 `;
