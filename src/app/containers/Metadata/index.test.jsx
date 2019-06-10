@@ -40,9 +40,7 @@ const metadataProps = (
   isAmp,
   alternateLinks,
   ampLink,
-  appleTouchIcon: `https://foo.com/static/${
-    serviceConfig.service
-  }/images/icons/icon-192x192.png`,
+  appleTouchIcon: `https://foo.com/static/${serviceConfig.service}/images/icons/icon-192x192.png`,
   articleAuthor: serviceConfig.articleAuthor,
   articleSection: null,
   brandName: serviceConfig.brandName,
