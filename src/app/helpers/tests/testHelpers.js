@@ -1,6 +1,6 @@
-import renderer from 'react-test-renderer'; // eslint-disable-line import/no-extraneous-dependencies
-import 'jest-styled-components'; // eslint-disable-line import/no-extraneous-dependencies
-import ShallowRenderer from 'react-test-renderer/shallow'; // eslint-disable-line import/no-extraneous-dependencies
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 export const shouldMatchSnapshot = (title, component) => {
   it(title, () => {
