@@ -4,6 +4,8 @@ import services from '../../lib/config/services/async';
 import defaultService from '../../lib/config/services/default';
 import createLoadableContext from '../utils/createLoadableContext';
 
+console.log('RARRR', defaultService);
+
 /* Create ServiceContext using the default service */
 export const ServiceContext = React.createContext(defaultService);
 
