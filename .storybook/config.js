@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { create } from '@storybook/theming'; // eslint-disable-line import/no-extraneous-dependencies
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { create } from '@storybook/theming';
 import GlobalStyle from '../src/app/lib/globalStyles';
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
