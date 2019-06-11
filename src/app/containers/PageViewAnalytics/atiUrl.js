@@ -78,7 +78,6 @@ export const atiPageViewParams = ({
       wrap: false,
     },
     { key: 'x1', description: 'content id', value: optimoUrn, wrap: true },
-    { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
       key: 'x2',
       description: 'app type',
@@ -104,6 +103,7 @@ export const atiPageViewParams = ({
       value: getReferrer(platform),
       wrap: true,
     },
+    { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
       key: 'x9',
       description: 'page title',
