@@ -49,3 +49,14 @@ export const getThingAttributes = (attribute, articleData) => {
 
   return null;
 };
+
+export const getArticleHomeService = articleData => {
+  const homeServiceUrl = deepGet(['metadata', 'passport', 'home'], articleData);
+  return articleData && homeServiceUrl
+    ? homeServiceUrl
+        .split('/')
+        .slice(-1)
+        .pop()
+        .toLowerCase()
+    : null;
+};

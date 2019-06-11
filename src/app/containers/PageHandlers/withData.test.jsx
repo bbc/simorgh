@@ -94,7 +94,7 @@ describe('withData HOC', () => {
       WithDataHOCWithContext(validNewsProps),
     );
 
-    describe('but different language other than service locale', () => {
+    describe('but different home service other than locale service', () => {
       shouldMatchSnapshot(
         `should return the errorMain component`,
         WithDataHOCWithContext(validPersianProps),

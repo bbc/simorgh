@@ -5,6 +5,7 @@ const {
   getPromoHeadline,
   getPublishedTime,
   getThingAttributes,
+  getArticleHomeService,
 } = require('./article');
 
 describe('getPageIdentifier', () => {
@@ -185,5 +186,39 @@ describe('getThingAttributes', () => {
     const thingAttributes = getThingAttributes('fooBar', {});
 
     expect(thingAttributes).toEqual(null);
+  });
+});
+
+describe('getArticleHomeService', () => {
+  const data = {
+    metadata: {
+      passport: {
+        home: 'http://www.bbc.co.uk/ontologies/passport/home/News',
+      },
+    },
+  };
+
+  const invalidData = {
+    metadata: {
+      passport: {},
+    },
+  };
+
+  it('should return valid service in good data', () => {
+    const homeService = getArticleHomeService(data);
+
+    expect(homeService).toEqual('news');
+  });
+
+  it('should return null if data is null or empty', () => {
+    const homeService = getArticleHomeService({});
+
+    expect(homeService).toEqual(null);
+  });
+
+  it('should return null if home is not in data', () => {
+    const homeService = getArticleHomeService(invalidData);
+
+    expect(homeService).toEqual(null);
   });
 });
