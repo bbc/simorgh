@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { shape } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -20,39 +20,49 @@ const {
 const CanonicalPageViewAnalytics = ({ articleData }) => {
   const { platform, isUK, statsDestination } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
+  const href = getHref('canonical');
+  const pageViewBeaconUrl =
+    atiBaseUrl +
+    atiPageViewParams({
+      contentType: 'article',
+      language: getLanguage(articleData),
+      ldpThingIds: getThingAttributes('thingId', articleData),
+      ldpThingLabels: getThingAttributes('thingLabel', articleData),
+      optimoUrn: getOptimoUrn(articleData),
+      pageIdentifier: getPageIdentifier(service, articleData),
+      pageTitle: getPromoHeadline(articleData),
+      timePublished: getPublishedDatetime('firstPublished', articleData),
+      timeUpdated: getPublishedDatetime('lastPublished', articleData),
+      isUK,
+      platform,
+      service,
+      statsDestination,
+    });
 
   if (onClient()) {
-    const href = getHref('canonical');
-
     // Only send page beacon when page href changes
     // This is since when moving to front page
     // will need to call need to call atiPageViewParams with front page values
     // TODO: need to move use of hook outside of conditional statement.
     // eslint-disable-next-line  react-hooks/rules-of-hooks
     useEffect(() => {
-      const pageViewBeaconUrl =
-        atiBaseUrl +
-        atiPageViewParams({
-          contentType: 'article',
-          language: getLanguage(articleData),
-          ldpThingIds: getThingAttributes('thingId', articleData),
-          ldpThingLabels: getThingAttributes('thingLabel', articleData),
-          optimoUrn: getOptimoUrn(articleData),
-          pageIdentifier: getPageIdentifier(service, articleData),
-          pageTitle: getPromoHeadline(articleData),
-          timePublished: getPublishedDatetime('firstPublished', articleData),
-          timeUpdated: getPublishedDatetime('lastPublished', articleData),
-          isUK,
-          platform,
-          service,
-          statsDestination,
-        });
-
       sendBeacon(pageViewBeaconUrl);
-    }, [articleData, href, isUK, platform, service, statsDestination]);
+    }, [
+      articleData,
+      href,
+      isUK,
+      pageViewBeaconUrl,
+      platform,
+      service,
+      statsDestination,
+    ]);
   }
 
-  return null;
+  return (
+    <noscript>
+      <img height="1px" width="1px" alt="" src={pageViewBeaconUrl} />
+    </noscript>
+  );
 };
 
 CanonicalPageViewAnalytics.propTypes = {

@@ -13,4 +13,13 @@ exports[`Page View Analytics Container should render amp page view analytics cor
 </amp-analytics>
 `;
 
-exports[`Page View Analytics Container should render canonical page view analytics correctly 1`] = `null`;
+exports[`Page View Analytics Container should render canonical page view analytics correctly 1`] = `
+<noscript>
+  <img
+    alt=""
+    height="1px"
+    src="https://a1.api.bbc.co.uk/hit.xiti?s=598287&s2=64&p=news.articles.unknown.page&r=0x0x24x24&re=1024x768&hl=12x58x10&lng=en-US&x7=[article]&x2=[responsive]&x3=[news]&x5=[http://localhost/]"
+    width="1px"
+  />
+</noscript>
+`;
