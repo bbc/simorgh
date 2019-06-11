@@ -8,14 +8,16 @@ import FrontPageSection from '../FrontPageSection';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const { serviceLocalizedName, translations } = useContext(ServiceContext);
+  const { product, serviceLocalizedName, translations } = useContext(
+    ServiceContext,
+  );
   const { home } = translations;
 
   const groups = deepGet(['content', 'groups'], frontPageData);
 
   const offScreenText = (
     <Fragment>
-      <span lang="en-GB">BBC News</span>, {serviceLocalizedName} - {home}
+      <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
     </Fragment>
   );
 

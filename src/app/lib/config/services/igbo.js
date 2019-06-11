@@ -2,6 +2,7 @@ import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
+  product: 'BBC News',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   service: 'igbo',
