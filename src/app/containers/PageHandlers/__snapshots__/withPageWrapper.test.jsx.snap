@@ -72,7 +72,7 @@ Array [
     >
       <a
         className="c1 c2"
-        href="https://bbc.com/news"
+        href="https://www.bbc.com/news"
       >
         <svg
           aria-hidden="true"
@@ -318,7 +318,7 @@ Array [
     >
       <a
         className="c2 c3"
-        href="https://bbc.com/news"
+        href="https://www.bbc.com/news"
       >
         <svg
           aria-hidden="true"
