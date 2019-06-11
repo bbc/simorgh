@@ -78,6 +78,7 @@ if (process.env.APP_ENV === 'local') {
       expressStaticGzip(publicDirectory, {
         enableBrotli: true,
         orderPreference: ['br'],
+        redirect: false,
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {

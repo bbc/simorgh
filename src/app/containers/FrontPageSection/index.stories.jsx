@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPageSection from '.';
 
@@ -10,7 +10,13 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
-    <RequestContextProvider platform={platform}>
+    <RequestContextProvider
+      platform={platform}
+      isUK={false}
+      origin={`https://www.bbc.com/${platform}`}
+      statsDestination="WS_NEWS_LANGUAGES_TEST"
+      statsPageIdentifier={`${service}.page`}
+    >
       <FrontPageSection group={data} />
     </RequestContextProvider>
   </ServiceContextProvider>
