@@ -68,7 +68,7 @@ const VideoContainer = ({ blocks }) => {
       ],
     },
     mediator: {
-      host: mediatorURL[env],
+      host: mediatorURL(env),
     },
   };
 
