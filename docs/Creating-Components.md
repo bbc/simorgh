@@ -34,7 +34,7 @@ export default Blockquote;
 ### index.stories.jsx
 ```js
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import Blockquote from './index';
 
 storiesOf('Blockquote', module).add('default - quote only', () => <Blockquote>To be or not to be, that is the question</Blockquote>);
