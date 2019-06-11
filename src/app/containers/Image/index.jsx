@@ -9,6 +9,7 @@ import {
 } from '../../lib/styledGrid';
 import createSrcset from './helpers/srcSet';
 import getIChefURL from './helpers/ichefUrl';
+import hasPageAnchor from '../../helpers/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 3;
@@ -27,6 +28,9 @@ const getRawImageSrc = (originCode, locator) =>
   originCode !== 'pips'
     ? getIChefURL(originCode, locator, DEFAULT_IMAGE_RES)
     : locator;
+
+const shouldLazyLoad = position =>
+  hasPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
 const ImageContainer = ({ blocks, position }) => {
   if (!blocks) {
@@ -53,7 +57,7 @@ const ImageContainer = ({ blocks, position }) => {
   const ratio = (height / width) * 100;
   const rawImageSrc = getRawImageSrc(originCode, locator);
   const srcSet = createSrcset(originCode, locator, width);
-  const lazyLoad = position[0] > LAZYLOAD_FROM_BLOCK;
+  const lazyLoad = shouldLazyLoad(position);
 
   let Wrapper = GridItemConstrainedLargeNoMargin;
 
