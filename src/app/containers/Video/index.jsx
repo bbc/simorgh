@@ -52,7 +52,6 @@ const VideoContainer = ({ blocks }) => {
 
   const env = process.env.APP_ENV;
 
-  // prettier-ignore
   const mediaPlayerSettings = {
     product: 'news',
     responsive: true,
@@ -65,17 +64,12 @@ const VideoContainer = ({ blocks }) => {
           versionID,
           duration,
           kind,
-        }
-      ]
+        },
+      ],
     },
     mediator: {
-      host: mediatorURL[env]
+      host: mediatorURL[env],
     },
-    ui: {
-      cta: {
-        mode: "duration"
-      }
-    }
   };
 
   return (
