@@ -198,7 +198,7 @@ exports[`withData HOC with non 200 status should return the errorMain component 
 </main>
 `;
 
-exports[`withData HOC with valid props but different language other than service locale should return the errorMain component 1`] = `
+exports[`withData HOC with valid props but different home service other than locale service should return the errorMain component 1`] = `
 .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
