@@ -6,6 +6,8 @@ import deepExtend from 'deep-extend';
 import services from '../test-data/worldServices';
 import extendedServices from '../test-data/worldServicesFpData';
 
+import { el } from '../support';
+
 deepExtend(services, extendedServices);
 Object.keys(services).forEach(function(index) {
   const xservice = services[index];
@@ -21,9 +23,97 @@ Object.keys(services).forEach(function(index) {
         cy.viewport(1008, 768);
       });
 
+      describe('cookie banner', function() {
+        it('should have a visible cookie banner', function() {
+          cy.get(el.cookieBanner)
+            .is()
+            .inside('body', { left: '0px', right: '0px', top: '0px' });
+        });
+
+        it('should have a functional cookie banner', function() {
+          cy.get(el.cookieBanner).within(() => {
+            cy.get('a')
+              .should('have.length.of', 1)
+              .should(
+                'have.attr',
+                'href',
+                'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+              );
+            cy.get('button')
+              .should('have.attr', 'type', 'button')
+              .click();
+          });
+
+          cy.get(el.cookieBanner).within(() => {
+            cy.get('a')
+              .should('have.length.of', 2)
+              .should(
+                'have.attr',
+                'href',
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              )
+              .last()
+              .should(
+                'have.attr',
+                'href',
+                'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              );
+
+            cy.get('button')
+              .should('have.attr', 'type', 'button')
+              .click();
+          });
+        });
+      });
+
       describe('header tests', function() {
-        it('should have a header', function() {
-          cy.get('header').should('have.lengthOf', 1);
+        it('should have a visible banner', function() {
+          cy.get(el.header)
+            .should('have.lengthOf', 1)
+            .should('have.attr', 'role', 'banner')
+            .is()
+            .inside('body', { left: '0px', right: '0px', top: '0px' })
+            .find('a')
+            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
+            .find('svg')
+            .should('be.visible');
+        });
+      });
+
+      describe('section tests', function() {
+        it('should be labelled by a visible section label', function() {
+          cy.get(el.section)
+            .should('have.length.of.at.least', 1)
+            .should('be.visible')
+            .should('have.attr', 'role', 'region')
+            .each($section => {
+              cy.wrap($section).within(() => {
+                // asserting that the heading id === the section aria-labelledby
+                cy.get('h2[class^="Title"]')
+                  .should('have.lengthOf', 1)
+                  .should('have.id', $section.attr('aria-labelledby'));
+              });
+            });
+        });
+
+        it('should contain at least one story promo', function() {
+          cy.get(el.section).within(() => {
+            cy.get('h3')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible');
+          });
+        });
+      });
+
+      describe('footer tests', function() {
+        it('should have a visible footer', function() {
+          cy.get('footer')
+            .should('have.length', 1)
+            .should('have.attr', 'role', 'contentinfo')
+            .find('a')
+            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
+            .find('svg')
+            .should('be.visible');
         });
       });
 
