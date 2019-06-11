@@ -19,6 +19,14 @@ const allTags = tags => {
   return aboutTags.concat(mentionTags);
 };
 
+const getTitle = promo =>
+  promo.subType === 'IDX' ? promo.name : promo.headlines.seoHeadline;
+
+const getDescription = (metadata, promo) =>
+  promo.headlines
+    ? promo.summary || promo.headlines.seoHeadline
+    : metadata.summary;
+
 const MetadataContainer = ({ metadata, promo }) => {
   const { origin, platform } = useContext(RequestContext);
   const {
@@ -87,7 +95,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
-        seoHeadline={promo.headlines.seoHeadline}
+        seoHeadline={getTitle(promo)}
         type={metadata.type}
         about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
       />
@@ -97,21 +105,21 @@ const MetadataContainer = ({ metadata, promo }) => {
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
         articleAuthor={articleAuthor}
-        articleSection={metadata.passport.genre}
+        articleSection={metadata.passport ? metadata.passport.genre : null}
         brandName={brandName}
         canonicalLink={canonicalLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
-        description={promo.summary || promo.headlines.seoHeadline}
+        description={getDescription(metadata, promo)}
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
-        lang={metadata.passport.language}
+        lang={metadata.language}
         locale={locale}
         metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
         timeFirstPublished={timeFirstPublished}
         timeLastPublished={timeLastPublished}
-        title={promo.headlines.seoHeadline}
+        title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={metadata.type}
