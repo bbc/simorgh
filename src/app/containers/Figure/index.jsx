@@ -65,7 +65,7 @@ const FigureContainer = ({
   return (
     <Wrapper
       gridColumnStart={1}
-      gridSpan={{ group3: '5', group4: '5', group5: '10' }}
+      gridSpan={{ group3: '10', group4: '5', group5: '10' }}
     >
       <Figure>
         <ImagePlaceholder ratio={ratio}>
