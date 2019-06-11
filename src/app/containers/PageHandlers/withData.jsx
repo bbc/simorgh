@@ -30,7 +30,7 @@ const shouldRender = data => {
   return {
     hasDataAnd200Status,
     isValidHome,
-    status,
+    status: hasDataAnd200Status && !isValidHome ? 404 : status,
     pageData,
   };
 };
@@ -48,9 +48,7 @@ const WithData = Component => {
       }
     }
 
-    const statusCode = hasDataAnd200Status && !isValidHome ? 404 : status;
-
-    return <ErrorMain status={statusCode} />;
+    return <ErrorMain status={status} />;
   };
 
   DataContainer.propTypes = {
