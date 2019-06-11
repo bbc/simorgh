@@ -14,9 +14,9 @@ const FrontPageMain = ({ frontPageData }) => {
   const groups = deepGet(['content', 'groups'], frontPageData);
 
   const offScreenText = (
-    <>
+    <Fragment>
       <span lang="en-gb">BBC News</span>, {serviceLocalizedName} - {home}
-    </>
+    </Fragment>
   );
 
   return (
