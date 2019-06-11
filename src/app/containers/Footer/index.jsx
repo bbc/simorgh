@@ -17,37 +17,30 @@ const links = [
   {
     href: 'https://www.bbc.com/news/help-41670342',
     text: 'Why you can trust the BBC',
-    id: 'trust',
   },
   {
     href: 'https://www.bbc.com/terms',
     text: 'Terms of Use',
-    id: 'terms',
   },
   {
     href: 'https://www.bbc.co.uk/aboutthebbc/',
     text: 'About the BBC',
-    id: 'about',
   },
   {
     href: 'https://www.bbc.com/privacy/',
     text: 'Privacy Policy',
-    id: 'privacy',
   },
   {
     href: 'https://www.bbc.com/usingthebbc/cookies/',
     text: 'Cookies',
-    id: 'cookies',
   },
   {
     href: 'https://www.bbc.com/accessibility/',
     text: 'Accessibility Help',
-    id: 'a11y',
   },
   {
     href: 'https://www.bbc.com/contact/',
     text: 'Contact the BBC',
-    id: 'contact',
   },
 ];
 
