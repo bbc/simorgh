@@ -1,43 +1,15 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import { shape } from 'prop-types';
 import articlePropTypes from '../../../models/propTypes/article';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { RequestContext } from '../../../contexts/RequestContext';
-import { atiBaseUrl, atiPageViewParams } from '../atiUrl';
+import { atiBaseUrl } from '../atiUrl';
 import onClient from '../../../helpers/onClient';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { getHref } from '../../../lib/analyticsUtils';
-
-const {
-  getLanguage,
-  getOptimoUrn,
-  getPageIdentifier,
-  getPromoHeadline,
-  getPublishedDatetime,
-  getThingAttributes,
-} = require('../../../lib/analyticsUtils/article');
+import ArticleAtiParams from '../ArticleAtiParams';
 
 const CanonicalATIAnalytics = ({ articleData }) => {
-  const { platform, isUK, statsDestination } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
   const href = getHref('canonical');
-  const pageViewBeaconUrl =
-    atiBaseUrl +
-    atiPageViewParams({
-      contentType: 'article',
-      language: getLanguage(articleData),
-      ldpThingIds: getThingAttributes('thingId', articleData),
-      ldpThingLabels: getThingAttributes('thingLabel', articleData),
-      optimoUrn: getOptimoUrn(articleData),
-      pageIdentifier: getPageIdentifier(service, articleData),
-      pageTitle: getPromoHeadline(articleData),
-      timePublished: getPublishedDatetime('firstPublished', articleData),
-      timeUpdated: getPublishedDatetime('lastPublished', articleData),
-      isUK,
-      platform,
-      service,
-      statsDestination,
-    });
+  const pageViewBeaconUrl = atiBaseUrl + ArticleAtiParams(articleData);
 
   if (onClient()) {
     // Only send page beacon when page href changes
@@ -47,15 +19,7 @@ const CanonicalATIAnalytics = ({ articleData }) => {
     // eslint-disable-next-line  react-hooks/rules-of-hooks
     useEffect(() => {
       sendBeacon(pageViewBeaconUrl);
-    }, [
-      articleData,
-      href,
-      isUK,
-      pageViewBeaconUrl,
-      platform,
-      service,
-      statsDestination,
-    ]);
+    }, [href, pageViewBeaconUrl]);
   }
 
   return (

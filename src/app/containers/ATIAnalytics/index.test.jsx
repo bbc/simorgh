@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const ATIAnalytics = require('./index').default;
 
-describe('Page View Analytics Container', () => {
+xdescribe('Page View Analytics Container', () => {
   shouldMatchSnapshot(
     'should render amp page view analytics correctly',
     <RequestContextProvider
