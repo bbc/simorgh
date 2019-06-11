@@ -69,7 +69,7 @@ describe('StoryPromo Container', () => {
       expect(container.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         item.headlines.headline,
       );
-      expect(container.getElementsByTagName('p')[1].innerHTML).toEqual(
+      expect(container.getElementsByTagName('p')[0].innerHTML).toEqual(
         item.summary,
       );
       expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
@@ -137,19 +137,7 @@ describe('StoryPromo Container', () => {
       });
     });
 
-    describe('With copyright and no summary provided', () => {
-      beforeEach(() => {
-        delete item.summary;
-      });
-
-      it('should include only 1 paragraph element', () => {
-        const { container } = render(<StoryPromo item={item} />);
-
-        expect(container.getElementsByTagName('p').length).toEqual(1);
-      });
-    });
-
-    describe('With no copyright and no summary provided', () => {
+    describe('With no summary provided', () => {
       beforeEach(() => {
         delete item.summary;
         delete item.indexImage.copyrightHolder;

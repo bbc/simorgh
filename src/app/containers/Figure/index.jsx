@@ -40,6 +40,7 @@ const ImageComponent = ({
   captionBlock,
   type,
   srcset,
+  showCopyright,
 }) => {
   const imageToRender = (
     <Image alt={alt} src={src} width={width} srcset={srcset} />
@@ -60,7 +61,7 @@ const ImageComponent = ({
         ) : (
           renderImage(imageToRender, lazyLoad)
         )}
-        {renderCopyright(copyright)}
+        {showCopyright && renderCopyright(copyright)}
       </ImagePlaceholder>
       {renderCaption(captionBlock, type)}
     </Fragment>
@@ -78,6 +79,7 @@ const figurePropTypes = {
   type: string,
   srcset: string,
   width: number.isRequired,
+  showCopyright: bool,
 };
 
 const defaultProps = {
@@ -87,6 +89,7 @@ const defaultProps = {
   lazyLoad: false,
   type: '',
   srcset: null,
+  showCopyright: false,
 };
 
 ImageComponent.propTypes = {
