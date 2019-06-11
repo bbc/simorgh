@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react';
 import { shape } from 'prop-types';
-import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import { atiBaseUrl, atiPageViewParams } from './atiUrl';
-import onClient from '../../helpers/onClient';
-import sendBeacon from '../../lib/analyticsUtils/sendBeacon';
-import { getHref } from '../../lib/analyticsUtils';
+import articlePropTypes from '../../../models/propTypes/article';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
+import { atiBaseUrl, atiPageViewParams } from '../atiUrl';
+import onClient from '../../../helpers/onClient';
+import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import { getHref } from '../../../lib/analyticsUtils';
 
 const {
   getLanguage,
@@ -15,9 +15,9 @@ const {
   getPromoHeadline,
   getPublishedDatetime,
   getThingAttributes,
-} = require('../../lib/analyticsUtils/article');
+} = require('../../../lib/analyticsUtils/article');
 
-const CanonicalPageViewAnalytics = ({ articleData }) => {
+const CanonicalATIAnalytics = ({ articleData }) => {
   const { platform, isUK, statsDestination } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
   const href = getHref('canonical');
@@ -65,8 +65,8 @@ const CanonicalPageViewAnalytics = ({ articleData }) => {
   );
 };
 
-CanonicalPageViewAnalytics.propTypes = {
+CanonicalATIAnalytics.propTypes = {
   articleData: shape(articlePropTypes).isRequired,
 };
 
-export default CanonicalPageViewAnalytics;
+export default CanonicalATIAnalytics;

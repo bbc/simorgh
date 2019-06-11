@@ -2,7 +2,7 @@
 
 exports[`ArticleMain should render a news article correctly 1`] = `
 <React.Fragment>
-  <PageViewAnalytics
+  <ATIAnalytics
     articleData={
       Object {
         "content": Object {
@@ -302,7 +302,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <React.Fragment>
-  <PageViewAnalytics
+  <ATIAnalytics
     articleData={
       Object {
         "content": Object {

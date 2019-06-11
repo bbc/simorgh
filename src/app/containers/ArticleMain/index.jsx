@@ -8,7 +8,7 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
-import PageViewAnalytics from '../PageViewAnalytics';
+import ATIAnalytics from '../ATIAnalytics';
 
 const componentsToRender = {
   headline: headings,
@@ -23,7 +23,7 @@ const ArticleMain = ({ articleData }) => {
   const { blocks } = content.model;
   return (
     <Fragment>
-      <PageViewAnalytics articleData={articleData} />
+      <ATIAnalytics articleData={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostWrapper>

@@ -3,9 +3,7 @@ import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-jest.mock('./Canonical', () => () => <div>Canonical page view analytics</div>);
-
-const PageViewAnalytics = require('./index').default;
+const ATIAnalytics = require('./index').default;
 
 describe('Page View Analytics Container', () => {
   shouldMatchSnapshot(
@@ -17,7 +15,7 @@ describe('Page View Analytics Container', () => {
       statsDestination="NEWS_GNL"
     >
       <ServiceContextProvider service="news">
-        <PageViewAnalytics />
+        <ATIAnalytics />
       </ServiceContextProvider>
     </RequestContextProvider>,
   );
@@ -31,7 +29,7 @@ describe('Page View Analytics Container', () => {
       statsDestination="NEWS_GNL"
     >
       <ServiceContextProvider service="news">
-        <PageViewAnalytics />
+        <ATIAnalytics />
       </ServiceContextProvider>
     </RequestContextProvider>,
   );

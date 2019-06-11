@@ -3,8 +3,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { RequestContextProvider } from '../../../contexts/RequestContext';
 // import sendBeacon from './sendBeacon';
 
 const ContextWrap = props => (
@@ -38,13 +38,13 @@ xdescribe('Canonical Consent Banner Container', () => {
     jest.mock('../../../lib/analyticsUtils/sendBeacon', () => jest.fn());
 
     const sendBeacon = require('../../../lib/analyticsUtils/sendBeacon');
-    const atiPageViewParams = require('./atiUrl');
+    const atiPageViewParams = require('../atiUrl');
 
     atiPageViewParams.mockImplementation(
       ({ articleData }) => `beaconFor${articleData.promo.id}`,
     );
 
-    const CanonicalPageViewAnalytics = require('./canonical').default;
+    const CanonicalATIAnalytics = require('./ind').default;
 
     const articleData = {
       promo: {
@@ -55,7 +55,7 @@ xdescribe('Canonical Consent Banner Container', () => {
     act(() => {
       ReactDOM.render(
         <ContextWrap>
-          <CanonicalPageViewAnalytics articleData={articleData} />
+          <CanonicalATIAnalytics articleData={articleData} />
         </ContextWrap>,
         container,
       );

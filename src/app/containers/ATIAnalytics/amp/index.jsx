@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import { shape } from 'prop-types';
-import articlePropTypes from '../../models/propTypes/article';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import { atiPageViewParams } from './atiUrl';
+import articlePropTypes from '../../../models/propTypes/article';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
+import { atiPageViewParams } from '../atiUrl';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-// import atiQueryParamsAmpArticle from './article/amp';
 
 const {
   getLanguage,
@@ -14,7 +13,7 @@ const {
   getPromoHeadline,
   getPublishedDatetime,
   getThingAttributes,
-} = require('../../lib/analyticsUtils/article');
+} = require('../../../lib/analyticsUtils/article');
 
 const JsonInlinedScript = data => (
   <script
@@ -24,7 +23,7 @@ const JsonInlinedScript = data => (
   />
 );
 
-const AmpPageViewAnalytics = ({ articleData }) => {
+const AmpATIAnalytics = ({ articleData }) => {
   const { service } = useContext(ServiceContext);
   const { platform, isUK, statsDestination } = useContext(RequestContext);
 
@@ -52,8 +51,8 @@ const AmpPageViewAnalytics = ({ articleData }) => {
     </amp-analytics>
   );
 };
-AmpPageViewAnalytics.propTypes = {
+AmpATIAnalytics.propTypes = {
   articleData: shape(articlePropTypes).isRequired,
 };
 
-export default AmpPageViewAnalytics;
+export default AmpATIAnalytics;
