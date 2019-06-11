@@ -13,12 +13,11 @@ const logger = nodeLogger(__filename);
 const constructRenderObject = data => ({
   status: deepGet(['status'], data) || 500,
   pageData: deepGet(['pageData'], data),
-  type: deepGet(['pageData', 'metadata', 'type'], data),
 });
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = data => {
-  const { status, pageData, type } = constructRenderObject(data);
+  const { status, pageData } = constructRenderObject(data);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { service } = useContext(ServiceContext);
 
@@ -32,21 +31,16 @@ const shouldRender = data => {
     isValidHome,
     status: hasDataAnd200Status && !isValidHome ? 404 : status,
     pageData,
-    type,
   };
 };
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
-    const {
-      hasDataAnd200Status,
-      isValidHome,
-      status,
-      pageData,
-      type,
-    } = shouldRender(data);
+    const { hasDataAnd200Status, isValidHome, status, pageData } = shouldRender(
+      data,
+    );
 
-    if ((hasDataAnd200Status && isValidHome) || type === 'IDX') {
+    if (hasDataAnd200Status && isValidHome) {
       try {
         return <Component pageData={pageData} {...props} />;
       } catch (err) {
