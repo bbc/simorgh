@@ -20,17 +20,21 @@ const shouldRender = data => {
   const { status, pageData } = constructRenderObject(data);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { service } = useContext(ServiceContext);
+  let statusCode = status;
+  let isValidHome;
 
   const hasDataAnd200Status = pageData && status === 200;
 
-  const passportHome = pageData && getPassportHome(pageData);
-
-  const isValidHome = pageData && passportHome === service;
+  if (hasDataAnd200Status) {
+    const passportHome = pageData && getPassportHome(pageData);
+    isValidHome = passportHome ? passportHome === service : true;
+    statusCode = passportHome && !isValidHome ? 404 : status;
+  }
 
   return {
     hasDataAnd200Status,
     isValidHome,
-    status: hasDataAnd200Status && !isValidHome ? 404 : status,
+    status: statusCode,
     pageData,
   };
 };
