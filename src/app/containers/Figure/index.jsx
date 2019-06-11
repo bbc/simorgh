@@ -12,11 +12,8 @@ import {
   NestedGridItemMedium,
   NestedGridItemSmall,
 } from '../../lib/styledGrid';
-// import { filterForBlockType } from '../../helpers/blockHandlers';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
-
-// const rawImageBlock = filterForBlockType(blocks, 'rawImage');
 
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
@@ -65,7 +62,7 @@ const FigureContainer = ({
   return (
     <Wrapper
       gridColumnStart={1}
-      gridSpan={{ group3: '10', group4: '5', group5: '10' }}
+      gridSpan={{ group3: '10', group4: '10', group5: '10' }}
     >
       <Figure>
         <ImagePlaceholder ratio={ratio}>
@@ -83,7 +80,12 @@ const FigureContainer = ({
           )}
           {renderCopyright(copyright)}
         </ImagePlaceholder>
-        {renderCaption(captionBlock, type)}
+        <Wrapper
+          gridColumnStart={1}
+          gridSpan={{ group3: '10', group4: '5', group5: '12' }}
+        >
+          {renderCaption(captionBlock, type)}
+        </Wrapper>
       </Figure>
     </Wrapper>
   );
