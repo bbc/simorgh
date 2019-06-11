@@ -1,14 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StoryPromo Container should render correctly for amp 1`] = `
-.c0 {
-  position: relative;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
   max-width: 33.33%;
+  position: relative;
 }
 
 .c4 {
@@ -104,6 +101,12 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 
 .c8:last-child {
   padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    position: relative;
+  }
 }
 
 @supports (display:grid) {
@@ -250,14 +253,11 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render correctly for canonical 1`] = `
-.c0 {
-  position: relative;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
   max-width: 33.33%;
+  position: relative;
 }
 
 .c5 {
@@ -358,6 +358,12 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 
 .c9:last-child {
   padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    position: relative;
+  }
 }
 
 @supports (display:grid) {
