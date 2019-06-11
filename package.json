@@ -23,7 +23,7 @@
     "postshrinkwrap": "if test -z $CI; then \n npm run force-package-lock-https \n fi; \n git update-index --assume-unchanged .env",
     "speculate": "speculate",
     "start": "NODE_ENV=production node build/server.js",
-    "storybook": "STORYBOOK_APP_ENV='local' start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:ci": "start-storybook -p 9001 -c .storybook --ci",
     "test": "npm run test:lint && npm run dataValidate && npm run test:unit && npm run test:ampValidate:ci",
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",

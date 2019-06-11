@@ -6,6 +6,7 @@ import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
 import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
+import mediatorURL from './mediatorUrls';
 
 import {
   videoPropTypes,
@@ -48,22 +49,8 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
-  const items = [
-    {
-      versionID,
-      kind,
-      duration,
-    },
-  ];
 
-  const env = process.env.APP_ENV
-    ? process.env.APP_ENV
-    : process.env.STORYBOOK_APP_ENV;
-  const mediatorURL = {
-    test: 'open.test.bbc.co.uk',
-    live: 'open.bbc.co.uk',
-    local: 'open.test.bbc.co.uk',
-  };
+  const env = process.env.APP_ENV;
 
   // prettier-ignore
   const mediaPlayerSettings = {
@@ -106,10 +93,7 @@ const VideoContainer = ({ blocks }) => {
         <Video
           id="mediaPlayer"
           pid={pid}
-          kind={kind}
           title={title}
-          items={items}
-          holdingImageUrl={holdingImageUrl}
           statsAppName="news"
           statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
           statsCountername={statsPageIdentifier}

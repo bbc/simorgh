@@ -11,10 +11,8 @@ const MediaPlayerContainer = styled.div`
 const Video = ({
   id,
   pid,
-  kind,
   title,
   items,
-  holdingImageUrl,
   statsAppName,
   statsAppType,
   statsCountername,
@@ -53,18 +51,13 @@ const Video = ({
         src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
       />
     </Helmet>
-    <MediaPlayerContainer id={`${id}${pid}`}>
-      <div>video pid: {pid}</div>
-      <div>kind: {kind}</div>
-      <div>title: {title}</div>
-      <div>holdingImageURL: {holdingImageUrl}</div>
-      <div>items: {JSON.stringify(items, null, 4)}</div>
-      <div>statsAppName: {statsAppName}</div>
-      <div>statsAppType: {statsAppType}</div>
-      <div>statsCountername: {statsCountername}</div>
-      <div>statsDestination: {statsDestination}</div>
-      <div>uiLocale: {uiLocale}</div>
-    </MediaPlayerContainer>
+    <MediaPlayerContainer id={`${id}${pid}`} />
+    <div>title: {title}</div>
+    <div>statsAppName: {statsAppName}</div>
+    <div>statsAppType: {statsAppType}</div>
+    <div>statsCountername: {statsCountername}</div>
+    <div>statsDestination: {statsDestination}</div>
+    <div>uiLocale: {uiLocale}</div>
   </>
 );
 
