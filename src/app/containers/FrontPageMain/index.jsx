@@ -3,13 +3,16 @@ import { shape } from 'prop-types';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import FrontPageSection from '../FrontPageSection';
+import MetadataContainer from '../Metadata';
 import deepGet from '../../helpers/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
   const groups = deepGet(['content', 'groups'], frontPageData);
+  const { metadata, promo } = frontPageData;
 
   return (
     <Fragment>
+      <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostWrapper>
           <GridItemConstrainedLarge>
