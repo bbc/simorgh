@@ -9,7 +9,7 @@ const metadataPropTypes = {
   lastPublished: number.isRequired,
   lastUpdated: number.isRequired,
   locators: shape({
-    optimoUrn: string.isRequired,
+    optimoUrn: string,
   }),
   passport: shape({
     language: string.isRequired,
