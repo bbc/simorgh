@@ -12,7 +12,6 @@ const Video = ({
   id,
   pid,
   title,
-  items,
   statsAppName,
   statsAppType,
   statsCountername,
