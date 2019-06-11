@@ -15,7 +15,7 @@ const FrontPageMain = ({ frontPageData }) => {
 
   const offScreenText = (
     <Fragment>
-      <span lang="en-gb">BBC News</span>, {serviceLocalizedName} - {home}
+      <span lang="en-GB">BBC News</span>, {serviceLocalizedName} - {home}
     </Fragment>
   );
 
