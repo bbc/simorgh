@@ -9,6 +9,41 @@ const renderAmpHtml = (ampLink, isAmp) => {
   return <link rel="amphtml" href={ampLink} />;
 };
 
+const getAuthor = articleAuthor => (
+  <meta name="article:author" content={articleAuthor} />
+);
+
+const getModifiedTime = timeLastPublished => (
+  <meta name="article:modified_time" content={timeLastPublished} />
+);
+
+const getPublishedTime = timeFirstPublished => (
+  <meta name="article:published_time" content={timeFirstPublished} />
+);
+
+const getArticleSection = articleSection =>
+  articleSection ? (
+    <meta name="article:section" content={articleSection} />
+  ) : null;
+
+const getMetaTags = metaTags => {
+  metaTags.map(tag => <meta name="article:tag" content={tag} key={tag} />);
+};
+
+const getArticleMeta = (
+  articleAuthor,
+  timeLastPublished,
+  timeFirstPublished,
+  articleSection,
+  metaTags,
+) => {
+  getAuthor(articleAuthor);
+  getModifiedTime(timeLastPublished);
+  getPublishedTime(timeFirstPublished);
+  getArticleSection(articleSection);
+  getMetaTags(metaTags);
+};
+
 const Metadata = ({
   isAmp,
   alternateLinks,
@@ -63,15 +98,15 @@ const Metadata = ({
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
-      <meta name="article:author" content={articleAuthor} />
-      <meta name="article:modified_time" content={timeLastPublished} />
-      <meta name="article:published_time" content={timeFirstPublished} />
-      {articleSection ? (
-        <meta name="article:section" content={articleSection} />
-      ) : null}
-      {metaTags.map(tag => (
-        <meta name="article:tag" content={tag} key={tag} />
-      ))}
+      {type === 'article'
+        ? getArticleMeta(
+            articleAuthor,
+            timeLastPublished,
+            timeFirstPublished,
+            articleSection,
+            metaTags,
+          )
+        : null}
       <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
@@ -106,7 +141,7 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: string.isRequired,
+  articleAuthor: string,
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
@@ -119,8 +154,8 @@ Metadata.propTypes = {
   locale: string.isRequired,
   metaTags: arrayOf(string).isRequired,
   themeColor: string.isRequired,
-  timeFirstPublished: string.isRequired,
-  timeLastPublished: string.isRequired,
+  timeFirstPublished: string,
+  timeLastPublished: string,
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
@@ -130,6 +165,9 @@ Metadata.propTypes = {
 Metadata.defaultProps = {
   alternateLinks: [],
   articleSection: null,
+  articleAuthor: null,
+  timeFirstPublished: null,
+  timeLastPublished: null,
 };
 
 export default Metadata;
