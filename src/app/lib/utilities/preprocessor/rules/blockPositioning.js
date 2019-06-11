@@ -4,20 +4,18 @@ import deepClone from '../../../../helpers/json/deepClone';
 const insertBlockPositioning = (
   { model },
   positionArr = [],
-  positionAtLevel = 0,
 ) => {
   if (!model || typeof model !== 'object') {
     return null;
   }
 
   const amendedJson = model;
-
+  let incrementPositionAtLevel = 0;
   Object.keys(model).forEach(key => {
     if (key !== 'blocks') {
       return null;
     }
 
-    let incrementPositionAtLevel = positionAtLevel;
     return model[key].map((childObj, index) => {
       const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
       const newChildObj = Object.assign(childObj, { position: newPosition });
