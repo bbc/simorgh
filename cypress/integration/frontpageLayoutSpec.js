@@ -78,6 +78,13 @@ Object.keys(services).forEach(function(index) {
             .find('svg')
             .should('be.visible');
         });
+
+        // TODO uncomment me after simorgh#1869
+        // it('should have an invisible top-level header', function() {
+        //   cy.get('h1')
+        //     .should('have.length', 1)
+        //     .should('not.be.visible');
+        // });
       });
 
       describe('section tests', function() {
@@ -89,7 +96,7 @@ Object.keys(services).forEach(function(index) {
             .each($section => {
               cy.wrap($section).within(() => {
                 // asserting that the heading id === the section aria-labelledby
-                cy.get('h2[class^="Title"]')
+                cy.get('h2')
                   .should('have.lengthOf', 1)
                   .should('have.id', $section.attr('aria-labelledby'));
               });
@@ -98,9 +105,27 @@ Object.keys(services).forEach(function(index) {
 
         it('should contain at least one story promo', function() {
           cy.get(el.section).within(() => {
-            cy.get('h3')
+            cy.get('img')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
+            cy.get('h3')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible')
+              .is()
+              .rightOf('img', '16px')
+              .find('a')
+              .should('have.attr', 'href');
+            cy.get('p')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible')
+              .is()
+              // actually 8px below, but someone decided to space the story promo out by using paddings :sob:
+              .below('h3', '0px');
+            cy.get('time')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible')
+              .is()
+              .below('p', '0px');
           });
         });
       });
@@ -110,6 +135,8 @@ Object.keys(services).forEach(function(index) {
           cy.get('footer')
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
+            .is()
+            .inside('body', { bottom: '0px', left: '0px', right: '0px' })
             .find('a')
             .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
             .find('svg')
