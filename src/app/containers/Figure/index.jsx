@@ -103,12 +103,12 @@ const FigureContainer = props => {
   const { platform } = useContext(RequestContext);
   const { useFigure } = props;
 
-  return useFigure ? (
-    <Figure>
+  const Wrapper = useFigure ? Figure : Fragment;
+
+  return (
+    <Wrapper>
       <ImageComponent {...props} platform={platform} />
-    </Figure>
-  ) : (
-    <ImageComponent {...props} platform={platform} />
+    </Wrapper>
   );
 };
 
