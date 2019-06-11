@@ -22,6 +22,7 @@ const shouldRender = data => {
   const { service } = useContext(ServiceContext);
 
   const hasDataAnd200Status = pageData && status === 200;
+
   const passportHome = pageData && getPassportHome(pageData);
 
   const isValidHome = pageData && passportHome === service;
