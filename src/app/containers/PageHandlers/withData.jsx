@@ -2,12 +2,9 @@ import React, { useContext } from 'react';
 import { shape, element } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../helpers/logger.node';
 import deepGet from '../../helpers/json/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getPassportHome from '../../lib/utilities/getPassportHome';
-
-const logger = nodeLogger(__filename);
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({
@@ -51,11 +48,7 @@ const WithData = Component => {
     );
 
     if (hasDataAnd200Status && isValidHome) {
-      try {
-        return <Component pageData={pageData} {...props} />;
-      } catch (err) {
-        logger.error(err);
-      }
+      return <Component pageData={pageData} {...props} />;
     }
 
     return <ErrorMain status={status} />;
