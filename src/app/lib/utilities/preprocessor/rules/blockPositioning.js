@@ -2,11 +2,7 @@ import deepGet from '../../../../helpers/json/deepGet';
 import deepClone from '../../../../helpers/json/deepClone';
 
 const insertBlockPositioning = ({ model }, positionArr = []) => {
-  if (!model || typeof model !== 'object') {
-    return null;
-  }
-
-  if (!('blocks' in model)) {
+  if (!deepGet(['blocks'], model)) {
     return model;
   }
 
@@ -33,7 +29,7 @@ const applyBlockPositioning = obj => {
   const json = deepClone(obj);
   const content = deepGet(['content'], obj);
 
-  if (content && content.model) {
+  if (deepGet(['model'], content)) {
     const withBlockPositioning = insertBlockPositioning(content);
 
     json.content.model = withBlockPositioning;
