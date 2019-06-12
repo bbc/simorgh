@@ -8,7 +8,11 @@ const fixtureData = {
   nothing: {
     nada: false,
     thingsJonSnowKnows: 0,
-    zilch: '',
+    foobar: {
+        barfoo: {
+            zilch: '',
+        },
+    },
   },
 };
 
@@ -51,6 +55,8 @@ describe('deepGet', () => {
   it('should not clobber falsy, defined, non-null values', () => {
     expect(deepGet(['nothing', 'nada'], fixtureData)).toEqual(false);
     expect(deepGet(['nothing', 'thingsJonSnowKnows'], fixtureData)).toEqual(0);
-    expect(deepGet(['nothing', 'zilch'], fixtureData)).toEqual('');
+    expect(
+      deepGet(['nothing', 'foobar', 'barfoo', 'zilch'], fixtureData),
+    ).toEqual('');
   });
 });
