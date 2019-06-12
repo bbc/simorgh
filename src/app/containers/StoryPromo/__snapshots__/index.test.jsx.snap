@@ -69,11 +69,6 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 0.25rem;
-}
-
-.c7:last-child {
-  padding-bottom: 1rem;
 }
 
 .c2 {
@@ -303,11 +298,6 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  padding-bottom: 0.25rem;
-}
-
-.c8:last-child {
-  padding-bottom: 1rem;
 }
 
 .c3 {
