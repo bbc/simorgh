@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836

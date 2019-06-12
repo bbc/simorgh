@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers/testHelpers';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Banner from './index.amp';
 

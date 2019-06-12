@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot } from '../../../testHelpers/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import InlineLinkContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 

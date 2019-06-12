@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'enzyme';
 import ArticleTimestamp from '.';
-import { isNull } from '../../../testHelpers/testHelpers';
+import { isNull } from '../../../testHelpers';
 import { timestampGenerator, isBritishSummerTime } from './testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 

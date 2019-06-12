@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultPageWrapper from './defaultPageWrapper';
-import { shouldShallowMatchSnapshot } from '../../testHelpers/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../testHelpers';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';

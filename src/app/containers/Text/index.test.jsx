@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../../testHelpers/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {

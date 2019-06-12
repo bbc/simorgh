@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import newsConfig from '../../lib/config/services/news';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import FrontPageSection from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
