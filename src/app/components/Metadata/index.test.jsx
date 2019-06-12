@@ -275,4 +275,44 @@ describe('Metadata', () => {
     '@BBCNews',
     'IDX',
   );
+
+  metadataSnapshotTest(
+    'WS Front Page does not render article metadata even if values provided',
+    false,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        hrefLang: 'en-gb',
+      },
+    ],
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
+    'Author should not be added as a tag',
+    '',
+    'https://foo.com/static/news/image.png',
+    'BBC News',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    101010,
+    202020,
+    'pcm',
+    'pcm',
+    [],
+    '#B80000',
+    1539188371344,
+    1514811600000,
+    'Index title',
+    '@BBCNews',
+    '@BBCNews',
+    'IDX',
+  );
 });
