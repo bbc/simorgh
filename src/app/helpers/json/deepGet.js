@@ -7,11 +7,9 @@
  * @param {Array} path Array of strings
  * @param {Object} object Object to retrieve nested value from
  */
-const deepGet = (path, object) => {
-  if (typeof object === 'object') {
-    return path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object);
-  }
-  return null;
-};
+const deepGet = (path, object) =>
+  typeof object === 'object'
+    ? path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object)
+    : null;
 
 export default deepGet;
