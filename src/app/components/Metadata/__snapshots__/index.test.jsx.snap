@@ -55,26 +55,6 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     rel="alternate"
   />
   <meta
-    content="BBC News"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
-  />
-  <meta
     content="This is a description"
     name="description"
   />
@@ -215,26 +195,6 @@ exports[`Metadata News article should render correctly 1`] = `
     rel="amphtml"
   />
   <meta
-    content="BBC News"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
-  />
-  <meta
     content="This is a description"
     name="description"
   />
@@ -355,26 +315,6 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/persian/articles/c4vlle3q337o"
     rel="canonical"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
   />
   <meta
     content="This is a description"
@@ -500,26 +440,6 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <link
     href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
     rel="amphtml"
-  />
-  <meta
-    content="BBC News فارسی"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
   />
   <meta
     content="This is a description"
@@ -660,30 +580,6 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <link
     href="https://www.bbc.com/news/articles/c0000000001o.amp"
     rel="amphtml"
-  />
-  <meta
-    content="BBC News"
-    name="article:author"
-  />
-  <meta
-    content={1539188371344}
-    name="article:modified_time"
-  />
-  <meta
-    content={1514811600000}
-    name="article:published_time"
-  />
-  <meta
-    content="Politics"
-    name="article:section"
-  />
-  <meta
-    content="tagA"
-    name="article:tag"
-  />
-  <meta
-    content="tagB"
-    name="article:tag"
   />
   <meta
     content="This is a description"

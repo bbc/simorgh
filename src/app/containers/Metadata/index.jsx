@@ -111,7 +111,9 @@ const MetadataContainer = ({ metadata, promo }) => {
         description={getDescription(metadata, promo)}
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
-        lang={metadata.language}
+        lang={
+          metadata.passport ? metadata.passport.language : metadata.language
+        }
         locale={locale}
         metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
