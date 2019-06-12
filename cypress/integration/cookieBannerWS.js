@@ -8,7 +8,7 @@ describe('World Service Cookie Banner Test', () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
-        `${config[serviceName].assets.serviceURL}`,
+        `${config[serviceName].assets.mockArticleURL}`,
         `${config[serviceName].assets.privacyAgreement}`,
         `${config[serviceName].assets.cookieAgreement}`,
       );
@@ -18,7 +18,7 @@ describe('World Service Cookie Banner Test', () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
-        `${config[serviceName].assets.serviceURL}.amp`,
+        `${config[serviceName].assets.mockAmpArticleURL}`,
         `${config[serviceName].assets.privacyAgreement}`,
         `${config[serviceName].assets.cookieAgreement}`,
       );
