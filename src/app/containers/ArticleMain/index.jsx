@@ -18,8 +18,10 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData }) => {
+  console.log('in article main container');
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
+
   return (
     <Fragment>
       <MetadataContainer metadata={metadata} promo={promo} />

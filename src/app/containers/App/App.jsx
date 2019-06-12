@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
+  console.log('in app container');
+
   const { service, isAmp, id } = getRouteProps(routes, location.pathname);
 
   const [state, setState] = useState({
