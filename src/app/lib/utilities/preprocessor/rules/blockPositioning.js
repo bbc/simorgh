@@ -9,13 +9,13 @@ const insertBlockPositioning = ({ model }, positionArr = []) => {
   const amendedJson = model;
   let incrementPositionAtLevel = 0;
 
-  model.blocks.forEach((childObj, index) => {
+  for (let i = 0; i < model.blocks.length; i += 1) {
     const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
-    const newChildObj = Object.assign(childObj, { position: newPosition });
+    const currentBlock = amendedJson.blocks[i];
 
-    amendedJson.blocks[index] = newChildObj;
-    insertBlockPositioning(newChildObj, newPosition);
-  });
+    currentBlock.position = newPosition;
+    insertBlockPositioning(currentBlock, newPosition);
+  }
 
   return amendedJson;
 };
