@@ -37,9 +37,10 @@ describe(`FooterContainer`, () => {
     global.Date = RealDate;
   });
 
-  shouldMatchSnapshot('should render correctly', 
+  shouldMatchSnapshot(
+    'should render correctly',
     <ServiceContext.Provider value={contextStub}>
       <FooterContainer />
-    </ServiceContext.Provider>
+    </ServiceContext.Provider>,
   );
 });
