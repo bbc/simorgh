@@ -91,7 +91,7 @@ const ImageContainer = ({ blocks, position }) => {
 ImageContainer.propTypes = imageModelPropTypes;
 
 ImageContainer.defaultProps = {
-  position: [0],
+  position: [1],
 };
 
 export default ImageContainer;
