@@ -8,6 +8,8 @@
  * @param {Object} object Object to retrieve nested value from
  */
 const deepGet = (path, object) =>
-  path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object);
+  typeof object === 'object'
+    ? path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object)
+    : null;
 
 export default deepGet;
