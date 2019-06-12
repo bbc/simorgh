@@ -50,19 +50,26 @@ const FigureContainer = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
 
-  let Wrapper = NestedGridItemLarge;
+  let CaptionWrapper = NestedGridItemSmall;
+  let ImageWrapper = NestedGridItemLarge;
 
   if (height === width) {
-    Wrapper = NestedGridItemMedium;
+    CaptionWrapper = NestedGridItemMedium;
+    ImageWrapper = NestedGridItemMedium;
   }
   if (height > width) {
-    Wrapper = NestedGridItemSmall;
+    CaptionWrapper = NestedGridItemSmall;
+    ImageWrapper = NestedGridItemSmall;
   }
 
   return (
-    <Wrapper
+    <ImageWrapper
       gridColumnStart={1}
-      gridSpan={{ group3: '10', group4: '10', group5: '10' }}
+      gridSpan={{
+        group3: '10',
+        group4: '5',
+        group5: '10',
+      }}
     >
       <Figure>
         <ImagePlaceholder ratio={ratio}>
@@ -80,14 +87,20 @@ const FigureContainer = ({
           )}
           {renderCopyright(copyright)}
         </ImagePlaceholder>
-        <Wrapper
+        <CaptionWrapper
           gridColumnStart={1}
-          gridSpan={{ group3: '10', group4: '5', group5: '12' }}
+          gridSpan={{
+            group1: '10',
+            group2: '8',
+            group3: '4',
+            group4: '5',
+            group5: '12',
+          }}
         >
           {renderCaption(captionBlock, type)}
-        </Wrapper>
+        </CaptionWrapper>
       </Figure>
-    </Wrapper>
+    </ImageWrapper>
   );
 };
 
