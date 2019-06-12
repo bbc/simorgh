@@ -1,16 +1,16 @@
-import hasPageAnchor from './pageAnchor';
+import urlWithPageAnchor from './pageAnchor';
 
-describe('hasPageAnchor', () => {
+describe('urlWithPageAnchor', () => {
   beforeEach(() => {
     window.location.hash = '';
   });
 
   it('should return false when no anchor', () => {
-    expect(hasPageAnchor()).toBeFalsy();
+    expect(urlWithPageAnchor()).toBeFalsy();
   });
 
   it('should return the hash value when present', () => {
     window.location.hash = 'foobar';
-    expect(hasPageAnchor()).toEqual('#foobar');
+    expect(urlWithPageAnchor()).toEqual('#foobar');
   });
 });

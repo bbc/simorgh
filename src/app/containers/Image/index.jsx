@@ -9,7 +9,7 @@ import {
 } from '../../lib/styledGrid';
 import createSrcset from './helpers/srcSet';
 import getIChefURL from './helpers/ichefUrl';
-import hasPageAnchor from '../../helpers/pageAnchor';
+import urlWithPageAnchor from '../../helpers/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 3;
@@ -30,7 +30,7 @@ const getRawImageSrc = (originCode, locator) =>
     : locator;
 
 const shouldLazyLoad = position =>
-  !!hasPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
+  !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
 const ImageContainer = ({ blocks, position }) => {
   if (!blocks) {
