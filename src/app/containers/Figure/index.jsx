@@ -20,9 +20,9 @@ const transitionStyles = {
   exited: { opacity: 0 },
 };
 
-const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   transition: ${() => `opacity ${FADE_IN_DURATION}ms ease-in-out`};
-  opacity: ${props => props.opacity || 1};
+  opacity: ${props => props.opacity || 0};
 `;
 
 const renderImage = (imageToRender, lazyLoad, fadeIn, setFadeIn) =>

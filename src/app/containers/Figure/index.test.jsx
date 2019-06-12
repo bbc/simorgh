@@ -1,3 +1,4 @@
+import React from 'react';
 import { mount } from 'enzyme';
 import LazyLoad from 'react-lazyload';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
@@ -14,6 +15,8 @@ import {
   FigureImageWithCaptionContainingLink,
   FigureAmpImageWithCaptionContainingLink,
 } from './fixtureData';
+
+import { ImageWrapper } from '.';
 
 describe('Figure', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
@@ -107,5 +110,17 @@ describe('Figure', () => {
   shouldMatchSnapshot(
     'should render an AMP image with caption and copyright',
     FigureAmpImageWithCopyrightAndCaption,
+  );
+});
+
+describe('ImageWrapper', () => {
+  const props = {
+    opacity: 1,
+    onLoad: () => {},
+  };
+  const imageToRender = <img src="" alt="img" width="40" height="40" />;
+  shouldMatchSnapshot(
+    'should render with valid props',
+    <ImageWrapper {...props}>{imageToRender}</ImageWrapper>,
   );
 });

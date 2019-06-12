@@ -925,3 +925,24 @@ exports[`Figure should render can AMP image with aption text 1`] = `
   </figcaption>
 </figure>
 `;
+
+exports[`ImageWrapper should render with valid props 1`] = `
+.c0 {
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  opacity: 1;
+}
+
+<div
+  className="c0"
+  onLoad={[Function]}
+  opacity={1}
+>
+  <img
+    alt="img"
+    height="40"
+    src=""
+    width="40"
+  />
+</div>
+`;
