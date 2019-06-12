@@ -13,6 +13,7 @@ const newsServiceContextStub = {
   imageCopyrightOffscreenText: 'Image source, ',
 };
 const persianServiceContextStub = {
+  lang: 'en-GB',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 
