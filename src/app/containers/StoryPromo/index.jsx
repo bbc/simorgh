@@ -1,5 +1,8 @@
 import React, { Fragment, useContext } from 'react';
+import moment from 'moment';
+import momentDurationFormatSetup from 'moment-duration-format';
 import { shape } from 'prop-types';
+import MediaIndicator from '@bbc/psammead-media-indicator';
 import StoryPromoComponent, {
   Headline,
   Summary,
@@ -10,6 +13,33 @@ import StoryPromoFigure from './Figure';
 import Timestamp from '../Timestamp';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../helpers/json/deepGet';
+
+momentDurationFormatSetup(moment);
+
+const buildMediaIndicator = item => {
+  const isMedia = deepGet(['cpsType'], item) === 'MAP';
+  if (isMedia) {
+    const format = deepGet(['media', 'format'], item);
+    const capitalisedFormat =
+      format.slice(0, 1).toUpperCase() + format.slice(1);
+    const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
+    if (rawDuration) {
+      const duration = moment.duration(rawDuration, 'seconds');
+      const isOverAnHour = duration.asHours() >= 1;
+      return (
+        <MediaIndicator
+          duration={duration.format(isOverAnHour ? '_HMS_' : '*_MS_')}
+          datetime={duration.toISOString()}
+          // TODO this will need localising :)
+          offscreenText={`${capitalisedFormat} `}
+          type={format}
+        />
+      );
+    }
+    return <MediaIndicator offscreenText={capitalisedFormat} type={format} />;
+  }
+  return null;
+};
 
 const StoryPromo = ({ item }) => {
   const { script } = useContext(ServiceContext);
@@ -43,7 +73,13 @@ const StoryPromo = ({ item }) => {
     </Fragment>
   );
 
-  return <StoryPromoComponent image={Image} info={Info} />;
+  return (
+    <StoryPromoComponent
+      image={Image}
+      info={Info}
+      mediaIndicator={buildMediaIndicator(item)}
+    />
+  );
 };
 
 StoryPromo.propTypes = {
