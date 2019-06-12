@@ -70,12 +70,6 @@ export const gelGridMargin = css`
   1008+: no explicit margin, since we use 16px gutters as margin
 */
 
-console.log(GEL_GROUP_2_SCREEN_WIDTH_MAX, '2');
-console.log(GEL_GROUP_1_SCREEN_WIDTH_MAX, '1');
-console.log(GEL_GROUP_3_SCREEN_WIDTH_MAX, '3');
-console.log(GEL_GROUP_4_SCREEN_WIDTH_MAX, '4');
-console.log(GEL_GROUP_5_SCREEN_WIDTH_MIN, '5');
-
 export const layoutGridWrapper = css`
   margin: 0 auto;
 
