@@ -41,7 +41,7 @@ const StoryPromo = ({ item }) => {
           script={script}
           padding={false}
         />
-      )}  
+      )}
     </Fragment>
   );
 
