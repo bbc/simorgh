@@ -2,7 +2,7 @@ import React from 'react';
 import { shape, element } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../helpers/logger.node';
+import nodeLogger from '../../lib/logger.node';
 import deepGet from '../../lib/json/deepGet';
 
 const logger = nodeLogger(__filename);
