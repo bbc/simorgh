@@ -1,7 +1,7 @@
 import React from 'react';
 import CopyrightContainer from './index';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers/testHelpers';
 
 const CopyrightWithContext = (copyrightText, contextStub) => (
   <ServiceContext.Provider value={contextStub}>

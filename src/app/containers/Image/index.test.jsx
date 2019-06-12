@@ -3,7 +3,7 @@ import ImageContainer from './index';
 import {
   shouldShallowMatchSnapshot,
   isNull,
-} from '../../helpers/tests/testHelpers';
+} from '../../../testHelpers/testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {

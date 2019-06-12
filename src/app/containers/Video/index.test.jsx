@@ -1,7 +1,7 @@
 import {
   shouldShallowMatchSnapshot,
   isNull,
-} from '../../helpers/tests/testHelpers';
+} from '../../../testHelpers/testHelpers';
 import {
   NoData,
   NoAresMedia,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers/testHelpers';
 import { articleDataNews } from '../Article/fixtureData';
 import WithData from './withData';
 

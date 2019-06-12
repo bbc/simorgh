@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowRender } from '../../app/helpers/tests/testHelpers';
+import { shallowRender } from '../../testHelpers/testHelpers';
 import DocumentComponent from './component';
 
 describe('Document Component', () => {

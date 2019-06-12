@@ -1,4 +1,4 @@
-import loggerMock from '../../../helpers/tests/loggerMock'; // Must be imported before getInitialData
+import loggerMock from '../../../../testHelpers/loggerMock'; // Must be imported before getInitialData
 import preprocess from '../../../lib/utilities/preprocessor';
 
 jest.mock('../../../lib/utilities/preprocessor', () => jest.fn());

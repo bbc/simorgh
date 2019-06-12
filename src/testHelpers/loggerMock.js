@@ -1,4 +1,4 @@
-import nodeLogger from '../../lib/logger.node';
+import nodeLogger from '../app/lib/logger.node';
 
 const mocks = {
   error: jest.fn(),
@@ -9,7 +9,7 @@ const mocks = {
   silly: jest.fn(),
 };
 
-jest.mock('../../lib/logger.node', () => jest.fn());
+jest.mock('../app/lib/logger.node', () => jest.fn());
 
 nodeLogger.mockImplementation(() => mocks);
 

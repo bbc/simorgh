@@ -1,6 +1,6 @@
 import React from 'react';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers/testHelpers';
 import frontPageDataPidgin from '../../../../data/prod/pidgin/frontpage';
 
 describe('FrontPageMain', () => {

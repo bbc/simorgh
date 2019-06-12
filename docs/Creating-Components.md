@@ -46,7 +46,7 @@ storiesOf('Blockquote', module).add('quote with cite', () => (
 ### index.test.jsx
 ```js
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../testHelpers/testHelpers';
 import Blockquote from './index';
 
 describe('Blockquote', () => {

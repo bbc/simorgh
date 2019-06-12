@@ -4,7 +4,7 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import {
   shouldShallowMatchSnapshot,
   isNull,
-} from '../../helpers/tests/testHelpers';
+} from '../../../testHelpers/testHelpers';
 import StoryPromoFigure from './Figure';
 
 const imageProps = {

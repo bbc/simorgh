@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers/testHelpers';
 import WithPageWrapper from './withPageWrapper';
 
 const dataProps = {

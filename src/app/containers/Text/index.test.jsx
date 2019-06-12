@@ -2,7 +2,7 @@ import React from 'react';
 import {
   shouldShallowMatchSnapshot,
   isNull,
-} from '../../helpers/tests/testHelpers';
+} from '../../../testHelpers/testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
