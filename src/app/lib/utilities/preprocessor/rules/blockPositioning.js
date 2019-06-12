@@ -1,30 +1,24 @@
 import deepGet from '../../../../helpers/json/deepGet';
 import deepClone from '../../../../helpers/json/deepClone';
 
-const insertBlockPositioning = (
-  { model },
-  positionArr = [],
-  positionAtLevel = 0,
-) => {
+const insertBlockPositioning = ({ model }, positionArr = []) => {
   if (!model || typeof model !== 'object') {
     return null;
   }
 
+  if (!('blocks' in model)) {
+    return model;
+  }
+
   const amendedJson = model;
+  let incrementPositionAtLevel = 0;
 
-  Object.keys(model).forEach(key => {
-    if (key !== 'blocks') {
-      return null;
-    }
+  model.blocks.forEach((childObj, index) => {
+    const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
+    const newChildObj = Object.assign(childObj, { position: newPosition });
 
-    let incrementPositionAtLevel = positionAtLevel;
-    return model[key].map((childObj, index) => {
-      const newPosition = [...positionArr, (incrementPositionAtLevel += 1)];
-      const newChildObj = Object.assign(childObj, { position: newPosition });
-
-      amendedJson[key][index] = newChildObj;
-      return insertBlockPositioning(newChildObj, newPosition);
-    });
+    amendedJson.blocks[index] = newChildObj;
+    insertBlockPositioning(newChildObj, newPosition);
   });
 
   return amendedJson;

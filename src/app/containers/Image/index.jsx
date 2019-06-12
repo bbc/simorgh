@@ -30,7 +30,7 @@ const getRawImageSrc = (originCode, locator) =>
     : locator;
 
 const shouldLazyLoad = position =>
-  hasPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
+  !!hasPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
 const ImageContainer = ({ blocks, position }) => {
   if (!blocks) {
