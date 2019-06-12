@@ -5,7 +5,7 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoConatiner from '.';
 import fixture from '../../../../data/prod/pidgin/frontpage';
 import deepGet from '../../lib/json/deepGet';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const getStoryPromo = platform => (
   <ServiceContextProvider service="news">
