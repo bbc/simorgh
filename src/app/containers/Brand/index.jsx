@@ -17,7 +17,7 @@ const BrandContainer = () => {
       minWidth={minWidth}
       maxWidth={maxWidth}
       svg={brandSVG}
-      frontpageUrl={frontpageUrl}
+      url={frontpageUrl}
     />
   );
 };
