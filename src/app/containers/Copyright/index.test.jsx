@@ -10,10 +10,11 @@ const CopyrightWithContext = (copyrightText, contextStub) => (
 );
 
 const newsServiceContextStub = {
+  lang: 'en-GB',
   imageCopyrightOffscreenText: 'Image source, ',
 };
 const persianServiceContextStub = {
-  lang: 'en-GB',
+  lang: 'fa',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 
