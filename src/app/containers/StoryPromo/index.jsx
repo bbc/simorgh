@@ -9,7 +9,7 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import StoryPromoFigure from './Figure';
 import Timestamp from '../Timestamp';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/json/deepGet';
 
 const StoryPromo = ({ item }) => {
   const { script } = useContext(ServiceContext);
