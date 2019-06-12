@@ -24,18 +24,17 @@ const shouldRender = data => {
   const { status, pageData } = constructRenderObject(data);
 
   let statusCode = status;
-  let isValidHome;
+  let isCorrectService;
 
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
-    const passportHome = pageData && getPassportHome(pageData);
-    isValidHome = validatePassportHome(passportHome);
-    statusCode = passportHome && !isValidHome ? 404 : status;
+    const passportHome = getPassportHome(pageData);
+    isCorrectService = validatePassportHome(passportHome);
+    statusCode = !isCorrectService ? 404 : status;
   }
 
   return {
-    hasDataAnd200Status,
-    isValidHome,
+    hasData200StatusAndCorrectService: hasDataAnd200Status && isCorrectService,
     status: statusCode,
     pageData,
   };
@@ -43,11 +42,13 @@ const shouldRender = data => {
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
-    const { hasDataAnd200Status, isValidHome, status, pageData } = shouldRender(
-      data,
-    );
+    const {
+      hasData200StatusAndCorrectService,
+      status,
+      pageData,
+    } = shouldRender(data);
 
-    if (hasDataAnd200Status && isValidHome) {
+    if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
     }
 
