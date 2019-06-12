@@ -49,8 +49,7 @@
           "thingLabel": "Manchester",
           "thingType": ["Thing", "Place"]
         }
-      ],
-      "mentions": []
+      ]
     }
   },
   "content": {

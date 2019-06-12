@@ -1,6 +1,6 @@
-import Enzyme, { shallow, mount } from 'enzyme'; // eslint-disable-line import/no-extraneous-dependencies
-import Adapter from 'enzyme-adapter-react-16'; // eslint-disable-line import/no-extraneous-dependencies
-import fetch from 'jest-fetch-mock'; // eslint-disable-line import/no-extraneous-dependencies
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import fetch from 'jest-fetch-mock';
 import path from 'path';
 
 Enzyme.configure({ adapter: new Adapter() });

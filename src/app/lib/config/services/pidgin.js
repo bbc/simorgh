@@ -6,8 +6,11 @@ const pidgin = {
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+  defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {
