@@ -8,9 +8,9 @@ import StoryPromoComponent, {
   Summary,
   Link,
 } from '@bbc/psammead-story-promo';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
 import StoryPromoFigure from './Figure';
-import Timestamp from '../Timestamp';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../helpers/json/deepGet';
 
@@ -68,6 +68,8 @@ const StoryPromo = ({ item }) => {
           timestamp={timestamp * 1000}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
+          script={script}
+          padding={false}
         />
       )}
     </Fragment>

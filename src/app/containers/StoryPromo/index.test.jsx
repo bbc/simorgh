@@ -85,38 +85,32 @@ const fixtures = {
   audio: audioItem,
 };
 
+// eslint-disable-next-line react/prop-types
+const WrappedStoryPromo = ({ platform, ...props }) => (
+  <ServiceContextProvider service="igbo">
+    <RequestContextProvider
+      platform={platform || 'canonical'}
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
+      <StoryPromo {...props} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
+
 describe('StoryPromo Container', () => {
   Object.entries(fixtures).forEach(([name, data]) => {
     shouldMatchSnapshot(
       `should render ${name} correctly for canonical`,
-      <ServiceContextProvider service="igbo">
-        <RequestContextProvider
-          platform="canonical"
-          isUK
-          origin="https://www.bbc.co.uk"
-          id="c0000000000o"
-          statsDestination="NEWS_PS_TEST"
-          statsPageIdentifier="news.articles.c0000000000o"
-        >
-          <StoryPromo item={data} />
-        </RequestContextProvider>
-      </ServiceContextProvider>,
+      <WrappedStoryPromo platform="canonical" item={data} />,
     );
 
     shouldMatchSnapshot(
       `should render ${name} correctly for amp`,
-      <ServiceContextProvider service="igbo">
-        <RequestContextProvider
-          platform="amp"
-          isUK
-          origin="https://www.bbc.co.uk"
-          id="c0000000000o"
-          statsDestination="NEWS_PS_TEST"
-          statsPageIdentifier="news.articles.c0000000000o"
-        >
-          <StoryPromo item={data} />
-        </RequestContextProvider>
-      </ServiceContextProvider>,
+      <WrappedStoryPromo platform="amp" item={data} />,
     );
   });
 
@@ -126,7 +120,7 @@ describe('StoryPromo Container', () => {
     });
 
     it('should render h3, a, p, time', () => {
-      const { container } = render(<StoryPromo item={item} />);
+      const { container } = render(<WrappedStoryPromo item={item} />);
 
       expect(container.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         item.headlines.headline,
@@ -141,16 +135,7 @@ describe('StoryPromo Container', () => {
 
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
-        <RequestContextProvider
-          platform="canonical"
-          isUK
-          origin="https://www.bbc.co.uk"
-          id="c0000000000o"
-          statsDestination="NEWS_PS_TEST"
-          statsPageIdentifier="news.articles.c0000000000o"
-        >
-          <StoryPromo item={item} />
-        </RequestContextProvider>,
+        <WrappedStoryPromo platform="canonical" item={item} />,
       );
 
       expect(container.getElementsByTagName('img').length).toEqual(1);
@@ -165,16 +150,7 @@ describe('StoryPromo Container', () => {
 
     it('should render amp-img with src & alt when platform is amp', () => {
       const { container } = render(
-        <RequestContextProvider
-          platform="amp"
-          isUK
-          origin="https://www.bbc.co.uk"
-          id="c0000000000o"
-          statsDestination="NEWS_PS_TEST"
-          statsPageIdentifier="news.articles.c0000000000o"
-        >
-          <StoryPromo item={item} />
-        </RequestContextProvider>,
+        <WrappedStoryPromo platform="amp" item={item} />,
       );
 
       expect(container.getElementsByTagName('amp-img').length).toEqual(1);
@@ -193,7 +169,7 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a headline element', () => {
-        const { container } = render(<StoryPromo item={item} />);
+        const { container } = render(<WrappedStoryPromo item={item} />);
 
         expect(container.getElementsByTagName('h3').length).toEqual(0);
       });
@@ -205,7 +181,7 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a paragraph element', () => {
-        const { container } = render(<StoryPromo item={item} />);
+        const { container } = render(<WrappedStoryPromo item={item} />);
 
         expect(container.getElementsByTagName('p').length).toEqual(0);
       });
@@ -217,7 +193,7 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a time element', () => {
-        const { container } = render(<StoryPromo item={item} />);
+        const { container } = render(<WrappedStoryPromo item={item} />);
 
         expect(container.getElementsByTagName('time').length).toEqual(0);
       });
@@ -229,7 +205,7 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include an img element', () => {
-        const { container } = render(<StoryPromo item={item} />);
+        const { container } = render(<WrappedStoryPromo item={item} />);
 
         expect(container.getElementsByTagName('img').length).toEqual(0);
       });
