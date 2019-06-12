@@ -108,8 +108,8 @@ export const worldServiceCookieBannerTranslations = (
   privacyStatement,
   performanceStatement,
   service,
-  yes,
-  ok,
+  cookieAgreement,
+  privacyAgreement,
 ) => {
   const getPrivacyBanner = () => cy.contains(privacyStatement);
 
@@ -130,14 +130,14 @@ export const worldServiceCookieBannerTranslations = (
   getCookieBanner().should('not.be.visible');
 
   getPrivacyBannerContainer()
-    .contains(yes)
+    .contains(cookieAgreement)
     .click();
 
   getCookieBanner().should('be.visible');
   getPrivacyBanner().should('not.be.visible');
 
   getCookieBannerContainer()
-    .contains(ok)
+    .contains(privacyAgreement)
     .click();
 
   getCookieBanner().should('not.be.visible');
