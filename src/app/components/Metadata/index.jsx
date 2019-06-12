@@ -27,21 +27,9 @@ const getArticleSection = articleSection =>
   ) : null;
 
 const getMetaTags = metaTags => {
-  metaTags.map(tag => <meta name="article:tag" content={tag} key={tag} />);
-};
-
-const getArticleMeta = (
-  articleAuthor,
-  timeLastPublished,
-  timeFirstPublished,
-  articleSection,
-  metaTags,
-) => {
-  getAuthor(articleAuthor);
-  getModifiedTime(timeLastPublished);
-  getPublishedTime(timeFirstPublished);
-  getArticleSection(articleSection);
-  getMetaTags(metaTags);
+  return metaTags.map(tag => (
+    <meta name="article:tag" content={tag} key={tag} />
+  ));
 };
 
 const Metadata = ({
@@ -98,15 +86,11 @@ const Metadata = ({
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
-      {type === 'article'
-        ? getArticleMeta(
-            articleAuthor,
-            timeLastPublished,
-            timeFirstPublished,
-            articleSection,
-            metaTags,
-          )
-        : null}
+      {type === 'article' ? getAuthor(articleAuthor) : null}
+      {type === 'article' ? getModifiedTime(timeLastPublished) : null}
+      {type === 'article' ? getPublishedTime(timeFirstPublished) : null}
+      {type === 'article' ? getArticleSection(articleSection) : null}
+      {type === 'article' ? getMetaTags(metaTags) : null}
       <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />

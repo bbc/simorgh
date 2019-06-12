@@ -55,6 +55,26 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     rel="alternate"
   />
   <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -91,6 +111,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="og:title"
   />
   <meta
+    content="article"
     name="og:type"
   />
   <meta
@@ -195,6 +216,26 @@ exports[`Metadata News article should render correctly 1`] = `
     rel="amphtml"
   />
   <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -231,6 +272,7 @@ exports[`Metadata News article should render correctly 1`] = `
     name="og:title"
   />
   <meta
+    content="article"
     name="og:type"
   />
   <meta
@@ -317,6 +359,26 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     rel="canonical"
   />
   <meta
+    content="BBC News فارسی"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -353,6 +415,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:title"
   />
   <meta
+    content="article"
     name="og:type"
   />
   <meta
@@ -442,6 +505,26 @@ exports[`Metadata Persian article should render correctly 1`] = `
     rel="amphtml"
   />
   <meta
+    content="BBC News فارسی"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -478,6 +561,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:title"
   />
   <meta
+    content="article"
     name="og:type"
   />
   <meta
@@ -582,6 +666,30 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     rel="amphtml"
   />
   <meta
+    content="BBC News"
+    name="article:author"
+  />
+  <meta
+    content={1539188371344}
+    name="article:modified_time"
+  />
+  <meta
+    content={1514811600000}
+    name="article:published_time"
+  />
+  <meta
+    content="Politics"
+    name="article:section"
+  />
+  <meta
+    content="tagA"
+    name="article:tag"
+  />
+  <meta
+    content="tagB"
+    name="article:tag"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -618,6 +726,7 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="og:title"
   />
   <meta
+    content="article"
     name="og:type"
   />
   <meta
