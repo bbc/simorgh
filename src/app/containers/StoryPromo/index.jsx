@@ -39,8 +39,9 @@ const StoryPromo = ({ item }) => {
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           script={script}
+          padding={false}
         />
-      )}
+      )}  
     </Fragment>
   );
 
