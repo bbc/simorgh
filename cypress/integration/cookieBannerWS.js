@@ -1,10 +1,12 @@
 import config from '../support/cookieConfig';
 import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
+import describeForEuOnly from '../support/describeForEuOnly';
 
-describe('World Service Cookie Banner Test', () => {
-  const services = Object.keys(config);
+const services = Object.keys(config);
+
+describe('World Service Cookie Banner Transations - Canonical', () => {
   services.forEach(serviceName => {
-    it(`should load the relevant translations for ${serviceName} (canonical)`, () => {
+    it(`should load the relevant translations for ${serviceName}`, () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
@@ -13,8 +15,12 @@ describe('World Service Cookie Banner Test', () => {
         `${config[serviceName].assets.cookieAgreement}`,
       );
     });
+  });
+});
 
-    it(`should load the relevant translations for ${serviceName} (AMP)`, () => {
+describeForEuOnly('World Service Cookie Banner Transations - AMP', () => {
+  services.forEach(serviceName => {
+    it(`should load the relevant translations for ${serviceName}`, () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
