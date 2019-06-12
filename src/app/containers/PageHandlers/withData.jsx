@@ -15,19 +15,24 @@ const constructRenderObject = data => ({
   pageData: deepGet(['pageData'], data),
 });
 
+const validatePassportHome = passportHome => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { service } = useContext(ServiceContext);
+
+  return passportHome ? passportHome === service : true;
+};
+
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = data => {
   const { status, pageData } = constructRenderObject(data);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { service } = useContext(ServiceContext);
+
   let statusCode = status;
   let isValidHome;
 
   const hasDataAnd200Status = pageData && status === 200;
-
   if (hasDataAnd200Status) {
     const passportHome = pageData && getPassportHome(pageData);
-    isValidHome = passportHome ? passportHome === service : true;
+    isValidHome = validatePassportHome(passportHome);
     statusCode = passportHome && !isValidHome ? 404 : status;
   }
 
