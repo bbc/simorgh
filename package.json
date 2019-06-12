@@ -14,7 +14,7 @@
     "cypress:interactive": "cypress open",
     "cypress:storybook": "wait-on -t 60000 http://localhost:9001 && cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
-    "dataValidate": "node src/app/dataValidator/index.js",
+    "dataValidate": "node dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
