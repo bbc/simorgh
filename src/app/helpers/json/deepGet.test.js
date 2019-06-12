@@ -9,9 +9,9 @@ const fixtureData = {
     nada: false,
     thingsJonSnowKnows: 0,
     foobar: {
-        barfoo: {
-            zilch: '',
-        },
+      barfoo: {
+        zilch: '',
+      },
     },
   },
 };
