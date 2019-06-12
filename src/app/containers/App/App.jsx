@@ -17,6 +17,8 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     error: null,
   });
 
+  console.log('state in app', state);
+
   const isInitialMount = useRef(true);
 
   useEffect(() => {
