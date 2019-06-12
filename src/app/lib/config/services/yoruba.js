@@ -96,12 +96,12 @@ const yoruba = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
     },
     links: [
       {
         href: 'https://www.bbc.com/yoruba/institutional-48528718',
-        text: 'Why you can trust the BBC',
+        text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       {
         href: 'https://www.bbc.co.uk/usingthebbc/terms/',

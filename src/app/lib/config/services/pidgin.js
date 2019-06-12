@@ -96,12 +96,12 @@ const pidgin = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'De way wey we de take go external link.',
     },
     links: [
       {
         href: 'https://www.bbc.com/pidgin/institutional-48528766',
-        text: 'Why you can trust the BBC',
+        text: 'Why you fit trust BBC News',
       },
       {
         href: 'https://www.bbc.co.uk/usingthebbc/terms/',

@@ -96,12 +96,12 @@ const igbo = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'Usoro anyị maka njikọ dị na mpụga.',
     },
     links: [
       {
         href: 'https://www.bbc.com/igbo/institutional-48529074',
-        text: 'Why you can trust the BBC',
+        text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       {
         href: 'https://www.bbc.co.uk/usingthebbc/terms',
