@@ -11,7 +11,7 @@ const yoruba = {
   brandSVG,
   script: latin,
   fonts: [],
-  link: 'https://www.bbc.com/yoruba',
+  frontpageUrl: 'https://www.bbc.com/yoruba',
   translations: {
     error: {
       404: {
