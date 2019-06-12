@@ -39,7 +39,7 @@ describe('deepGet', () => {
 
   it('should gracefully return null if passed a non-object as the object param', () => {
     expect(deepGet(['foo', 'bar'], undefined)).toEqual(null);
-    expect(deepGet(['foo', 'bar'], 'sting')).toEqual(null);
+    expect(deepGet(['foo', 'bar'], 'string')).toEqual(null);
     expect(deepGet(['foo', 'bar'], 23)).toEqual(null);
   });
 });
