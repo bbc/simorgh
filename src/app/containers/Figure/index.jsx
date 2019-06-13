@@ -30,7 +30,7 @@ export const FadeInWrapper = styled.div`
 export const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
-      <LazyLoad offset={LAZYLOAD_OFFSET} once scroll>
+      <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
       <noscript>{imageToRender}</noscript>
