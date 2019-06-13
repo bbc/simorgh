@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterForBlockType } from '../../helpers/blockHandlers';
+import { filterForBlockType } from '../../lib/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
 import Figure from '../Figure';
 import {

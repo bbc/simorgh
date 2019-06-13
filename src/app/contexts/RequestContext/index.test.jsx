@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 

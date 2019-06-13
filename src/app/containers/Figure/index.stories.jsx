@@ -14,7 +14,7 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Figure', module)
   .add('with a caption', () => FigureImageWithCaption)
