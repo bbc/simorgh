@@ -18,32 +18,33 @@ momentDurationFormatSetup(moment);
 
 const buildMediaIndicator = (item, mediaTranslations) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
-  if (isMedia) {
-    const type = deepGet(['media', 'format'], item);
-    const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
+  // Only build a media indicator if this is a media item.
+  if (!isMedia) {
+    return null;
+  }
 
-    if (rawDuration) {
-      const duration = moment.duration(rawDuration, 'seconds');
-      const isOverAnHour = duration.asHours() >= 1;
-      const durationString = duration.format(isOverAnHour ? '_HMS_' : '*_MS_');
-      const isoDuration = duration.toISOString();
-      // TODO this will need localising
-      const human = duration.format('h [hours] m [minutes] s [seconds]');
-      return (
-        <MediaIndicator
-          duration={durationString}
-          datetime={isoDuration}
-          offscreenText={`${mediaTranslations[type]} ${human}`}
-          type={type}
-        />
-      );
-    }
+  const type = deepGet(['media', 'format'], item);
+  // Always gets the first version. Smarter logic may be needed in the future.
+  const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
 
+  if (rawDuration) {
+    const duration = moment.duration(rawDuration, 'seconds');
+    const isOverAnHour = duration.asHours() >= 1;
+    const durationString = duration.format(isOverAnHour ? '_HMS_' : '*_MS_');
+    const isoDuration = duration.toISOString();
+    // TODO this will need localising
+    const human = duration.format('h [hours] m [minutes] s [seconds]');
     return (
-      <MediaIndicator offscreenText={mediaTranslations[type]} type={type} />
+      <MediaIndicator
+        duration={durationString}
+        datetime={isoDuration}
+        offscreenText={`${mediaTranslations[type]} ${human}`}
+        type={type}
+      />
     );
   }
-  return null;
+
+  return <MediaIndicator offscreenText={mediaTranslations[type]} type={type} />;
 };
 
 const StoryPromo = ({ item }) => {
