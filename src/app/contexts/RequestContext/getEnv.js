@@ -1,14 +1,14 @@
 const getEnv = origin => {
-  if (origin.includes('.stage.')) {
-    return 'stage';
+  if (origin.includes('local')) {
+    return 'local';
   }
 
-  if (origin.includes('.test.')) {
+  if (origin.includes('test')) {
     return 'test';
   }
 
-  if (origin.includes('localhost')) {
-    return 'local';
+  if (origin.includes('stage')) {
+    return 'stage';
   }
 
   return 'live';
