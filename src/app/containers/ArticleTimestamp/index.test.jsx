@@ -1,11 +1,9 @@
 import React from 'react';
 import { render } from 'enzyme';
 import ArticleTimestamp from '.';
-import { isNull } from '../../helpers/tests/testHelpers';
-import {
-  timestampGenerator,
-  isBritishSummerTime,
-} from '../Timestamp/helpers/testHelpers';
+import { isNull } from '../../../testHelpers';
+import { timestampGenerator, isBritishSummerTime } from './testHelpers';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
 const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
@@ -17,6 +15,12 @@ const firstChild = wrapper => wrapper[0].children[0].data;
 const secondChild = wrapper => wrapper[1].children[0].data;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
+
+const WrappedArticleTimestamp = props => (
+  <ServiceContextProvider service="news">
+    <ArticleTimestamp {...props} />
+  </ServiceContextProvider>
+);
 
 describe('ArticleTimestamp', () => {
   let originalDate;
@@ -38,7 +42,7 @@ describe('ArticleTimestamp', () => {
           seconds: 25,
         });
         const renderedWrapper = renderedTimestamps(
-          <ArticleTimestamp
+          <WrappedArticleTimestamp
             firstPublished={moreThanTenHoursAgo}
             lastPublished={moreThanTenHoursAgo}
           />,
@@ -75,7 +79,7 @@ describe('ArticleTimestamp', () => {
   describe('with invalid data', () => {
     isNull(
       'should return null',
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished="8640000000000001"
         lastPublished={8640000000000001}
       />,
@@ -85,7 +89,7 @@ describe('ArticleTimestamp', () => {
   it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {
     const threeHoursAgo = timestampGenerator({ hours: 3 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeHoursAgo}
         lastPublished={threeHoursAgo}
       />,
@@ -101,7 +105,7 @@ describe('ArticleTimestamp', () => {
       hours: 11,
     });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={elevenHoursAgo}
         lastPublished={elevenHoursAgo}
       />,
@@ -116,7 +120,7 @@ describe('ArticleTimestamp', () => {
       seconds: 1,
     });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
         lastPublished={twentyFourHoursAgo}
       />,
@@ -131,7 +135,7 @@ describe('ArticleTimestamp', () => {
     });
     const threeHoursAgo = timestampGenerator({ hours: 3 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={fiveHoursAgo}
         lastPublished={threeHoursAgo}
       />,
@@ -151,7 +155,7 @@ describe('ArticleTimestamp', () => {
       hours: 11,
     });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
         lastPublished={elevenHoursAgo}
       />,
@@ -167,7 +171,7 @@ describe('ArticleTimestamp', () => {
     });
     const twoDaysAgo = timestampGenerator({ days: 2 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={twoDaysAgo}
       />,
@@ -185,7 +189,7 @@ describe('ArticleTimestamp', () => {
     });
     const elevenHoursAgo = timestampGenerator({ hours: 11 });
     const renderedWrapper = renderedTimestamps(
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={elevenHoursAgo}
       />,
