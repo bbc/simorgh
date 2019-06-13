@@ -15,6 +15,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     isAmp,
     loading: false,
     error: null,
+    debug: 'first',
   });
 
   console.log('state in app', state);
@@ -41,6 +42,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
         isAmp: nextIsAmp,
         loading: true,
         error: null,
+        debug: 'second',
       });
 
       const fetchData = async () => {
@@ -50,12 +52,14 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
             ...prevState,
             data: newData,
             loading: false,
+            debug: 'third',
           }));
         } catch (error) {
           setState(prevState => ({
             ...prevState,
             error,
             loading: false,
+            debug: 'fourth',
           }));
         }
       };
