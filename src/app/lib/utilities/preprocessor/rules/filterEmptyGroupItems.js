@@ -1,4 +1,4 @@
-import deepGet from '../../../../helpers/json/deepGet';
+import deepGet from '../../../json/deepGet';
 
 const filterEmptyGroupItems = jsonRaw => {
   const json = jsonRaw;
