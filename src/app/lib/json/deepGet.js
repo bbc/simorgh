@@ -9,7 +9,7 @@
  */
 const deepGet = (path, object) =>
   typeof object === 'object'
-    ? path.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), object)
+    ? path.reduce((xs, x) => (xs && xs[x] !== undefined ? xs[x] : null), object)
     : null;
 
 export default deepGet;

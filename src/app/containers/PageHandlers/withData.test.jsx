@@ -3,7 +3,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   shouldShallowMatchSnapshot,
   shouldMatchSnapshot,
-} from '../../helpers/tests/testHelpers';
+} from '../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import WithData from './withData';
 import { ServiceContext } from '../../contexts/ServiceContext';
