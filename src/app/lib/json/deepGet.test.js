@@ -5,6 +5,15 @@ const fixtureData = {
   bar: {
     baz: 456,
   },
+  nothing: {
+    nada: false,
+    thingsJonSnowKnows: 0,
+    foobar: {
+      barfoo: {
+        zilch: '',
+      },
+    },
+  },
 };
 
 const fixtureDataWithArrays = {
@@ -41,5 +50,13 @@ describe('deepGet', () => {
     expect(deepGet(['foo', 'bar'], undefined)).toEqual(null);
     expect(deepGet(['foo', 'bar'], 'string')).toEqual(null);
     expect(deepGet(['foo', 'bar'], 23)).toEqual(null);
+  });
+
+  it('should not clobber falsy, defined, non-null values', () => {
+    expect(deepGet(['nothing', 'nada'], fixtureData)).toEqual(false);
+    expect(deepGet(['nothing', 'thingsJonSnowKnows'], fixtureData)).toEqual(0);
+    expect(
+      deepGet(['nothing', 'foobar', 'barfoo', 'zilch'], fixtureData),
+    ).toEqual('');
   });
 });
