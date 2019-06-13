@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import deepGet from '../../../../helpers/json/deepGet';
+import deepGet from '../../../json/deepGet';
 import compose from '../../../../helpers/compose';
 
 let mapIdsToBlocks;

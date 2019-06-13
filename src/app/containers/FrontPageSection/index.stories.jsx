@@ -5,7 +5,7 @@ import FrontPageSection from '.';
 
 import igboData from '../../../../data/test/igbo/frontpage/index.json';
 import pidginData from '../../../../data/test/pidgin/frontpage/index.json';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const getSection = platform => (service, data) => (
