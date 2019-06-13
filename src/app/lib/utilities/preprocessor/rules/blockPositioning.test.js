@@ -1,4 +1,4 @@
-import deepClone from '../../../../helpers/json/deepClone';
+import deepClone from '../../../json/deepClone';
 import applyBlockPositioning from './blockPositioning';
 
 const standardObject = {
