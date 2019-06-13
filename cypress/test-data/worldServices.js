@@ -1,5 +1,5 @@
 export default {
-  igbo: { url: '/igbo' },
-  yoruba: { url: '/yoruba' },
-  pidgin: { url: '/pidgin' },
+  igbo: { url: '/igbo', article: undefined },
+  yoruba: { url: '/yoruba', article: undefined },
+  pidgin: { url: '/pidgin', article: undefined },
 };
