@@ -18,16 +18,14 @@ Object.keys(services).forEach(function(index) {
       cy.visit(xservice.url);
     });
 
-    context('should render the page at 1008', function() {
+    context('checks te components are present at 1008px', function() {
       before(() => {
         cy.viewport(1008, 768);
       });
 
       describe('cookie banner', function() {
         it('should have a visible cookie banner', function() {
-          cy.get(el.cookieBanner)
-            .is()
-            .inside('body', { left: '0px', right: '0px', top: '0px' });
+          cy.get(el.cookieBanner).should('be.visible');
         });
 
         it('should have a functional cookie banner', function() {
@@ -111,22 +109,25 @@ Object.keys(services).forEach(function(index) {
             cy.get('h3')
               .should('have.length.of.at.least', 1)
               .should('be.visible')
-              .is()
-              .rightOf('img', '16px')
               .find('a')
               .should('have.attr', 'href');
             cy.get('p')
               .should('have.length.of.at.least', 1)
-              .should('be.visible')
-              .is()
-              // actually 8px below, but someone decided to space the story promo out by using paddings :sob:
-              .below('h3', '0px');
+              .should('be.visible');
             cy.get('time')
               .should('have.length.of.at.least', 1)
-              .should('be.visible')
-              .is()
-              .below('p', '0px');
+              .should('be.visible');
           });
+        });
+
+        // This is a temporary test to demonstrate object merging
+        it('uses Top Stories as its first section', function() {
+          console.log(xservice);
+          console.log(xservice.data.article);
+          cy.get(xservice.data.h2Selector).should(
+            'have.text',
+            xservice.data.h2,
+          );
         });
       });
 
@@ -143,90 +144,18 @@ Object.keys(services).forEach(function(index) {
             .should('be.visible');
         });
       });
-
-      xservice.data.forEach(section => {
-        describe(`${section.h2} tests`, function() {
-          it(`should have ${section.stories.length} stories`, function() {
-            cy.get(section.sectionSelector)
-              .find('h3')
-              .should('have.lengthOf', section.stories.length);
-          });
-
-          it('should show the correct section heading', function() {
-            cy.get(section.h2Selector).should('have.text', section.h2);
-          });
-
-          function promoElement($el, selector) {
-            return cy.wrap($el).find(selector);
-          }
-
-          it('should have the correct headings', function() {
-            cy.get(section.sectionSelector).within(() => {
-              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
-                promoElement($el, 'h3').should(
-                  'have.text',
-                  section.stories[idx].headline,
-                );
-              });
-            });
-          });
-
-          it('should have the correct summaries', function() {
-            cy.get(section.sectionSelector).within(() => {
-              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
-                promoElement($el, 'p')
-                  .should('be.visible')
-                  .should('have.text', section.stories[idx].summary);
-              });
-            });
-          });
-
-          it('should have the correct article timestamps', function() {
-            cy.get(section.sectionSelector).within(() => {
-              cy.get('*[class^="StoryPromoWrapper"]').each(($el, idx) => {
-                promoElement($el, 'time').should(
-                  'have.text',
-                  section.stories[idx].timestamp,
-                );
-              });
-            });
-          });
-        });
-      });
     });
 
-    context('should render the page at 600', function() {
+    context('verifies the layout at less than 600px', function() {
       before(() => {
-        cy.viewport(600, 1024);
+        cy.viewport(599, 1024);
       });
 
-      it('verifies the layout at 600', function() {
-        cy.document().then(function(doc) {
-          cy.log(doc.documentElement.getBoundingClientRect().width);
-        });
-      });
-    });
-
-    context('should render the page at 360', () => {
-      before(() => {
-        cy.viewport(360, 667);
-      });
-
-      it('verifies the layout at 360', function() {
-        cy.document().then(function(doc) {
-          cy.log(doc.documentElement.getBoundingClientRect().width);
-        });
-      });
-    });
-
-    context('should render the page at 240', () => {
-      before(() => {
-        cy.viewport(240, 480);
-      });
-
-      it('verifies the layout at 1008', function() {
-        cy.document().then(function(doc) {
-          cy.log(doc.documentElement.getBoundingClientRect().width);
+      it('does not display the summary', function() {
+        cy.get(el.section).within(() => {
+          cy.get('p')
+            .should('have.length.of.at.least', 1)
+            .should('not.be.visible');
         });
       });
     });
