@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ServiceContextProvider, ServiceContext } from './index';
 
 const renderWithContextProvider = (node, service) => (
