@@ -47,6 +47,7 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
+  const guidance = deepGet(['warnings', 'short'], version);
   const env = process.env.APP_ENV;
   const mediaPlayerSettings = {
     product: 'news',
@@ -62,6 +63,7 @@ const VideoContainer = ({ blocks }) => {
           kind,
         },
       ],
+      guidance,
     },
     mediator: {
       host: mediatorURL(env),

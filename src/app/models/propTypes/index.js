@@ -45,22 +45,24 @@ export const videoComponentPropTypes = {
   title: string.isRequired,
   mediaPlayerSettings: shape({
     product: string.isRequired,
-    responsive: string.isRequired,
+    responsive: bool.isRequired,
     statsObject: shape({
       pid: string,
     }),
-    playlistObject: shape({
-      title: string.isRequired,
-      holdingImage: string.isRequired,
-      items: shape({
-        duration: number.isRequired,
-        versionID: string.isRequired,
-        kind: string.isRequired,
+    playlistObject: arrayOf(
+      shape({
+        title: string.isRequired,
+        holdingImageURL: string.isRequired,
+        items: shape({
+          duration: number.isRequired,
+          versionID: string.isRequired,
+          kind: string.isRequired,
+        }),
+        mediator: shape({
+          host: string.isRequired,
+        }),
       }),
-      mediator: shape({
-        host: string.isRequired,
-      }),
-    }),
+    ),
   }),
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
