@@ -73,16 +73,7 @@ describe('StoryPromo Container', () => {
 
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
-        <RequestContextProvider
-          platform="canonical"
-          isUK
-          origin="https://www.bbc.co.uk"
-          id="c0000000000o"
-          statsDestination="NEWS_PS_TEST"
-          statsPageIdentifier="news.articles.c0000000000o"
-        >
-          <StoryPromo item={item} lazyLoadImage={false} />
-        </RequestContextProvider>,
+        <WrappedStoryPromo item={item} lazyLoadImage={false} />,
       );
 
       expect(container.getElementsByTagName('img').length).toEqual(1);
@@ -129,7 +120,7 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include any paragraph element', () => {
-        const { container } = render(<StoryPromo item={item} />);
+        const { container } = render(<WrappedStoryPromo item={item} />);
         expect(container.getElementsByTagName('p').length).toEqual(0);
       });
     });
