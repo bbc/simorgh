@@ -4,8 +4,8 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
 import fixture from '../../../../data/prod/pidgin/frontpage';
-import deepGet from '../../helpers/json/deepGet';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import deepGet from '../../lib/json/deepGet';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const mediaFixture = type =>
   deepGet(['content', 'groups'], fixture)

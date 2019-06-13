@@ -1,9 +1,6 @@
 import React from 'react';
 import ImageContainer from './index';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
