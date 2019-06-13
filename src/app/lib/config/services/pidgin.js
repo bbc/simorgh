@@ -120,8 +120,7 @@ const pidgin = {
         text: 'Call BBC',
       },
     ],
-    copyrightText:
-      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
+    copyrightText: 'BBC. De external site no concern BBC.',
   },
 };
 

@@ -121,7 +121,7 @@ const yoruba = {
       },
     ],
     copyrightText:
-      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
+      'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
   },
 };
 
