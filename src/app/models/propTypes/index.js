@@ -1,4 +1,4 @@
-import { arrayOf, bool, shape, string } from 'prop-types';
+import { arrayOf, bool, number, shape, string } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -44,10 +44,24 @@ export const videoComponentPropTypes = {
   pid: string.isRequired,
   title: string.isRequired,
   mediaPlayerSettings: shape({
-    duration: string.isRequired,
-    versionID: string.isRequired,
-    kind: string.isRequired,
-  }).isRequired,
+    product: string.isRequired,
+    responsive: string.isRequired,
+    statsObject: shape({
+      pid: string,
+    }),
+    playlistObject: shape({
+      title: string.isRequired,
+      holdingImage: string.isRequired,
+      items: shape({
+        duration: number.isRequired,
+        versionID: string.isRequired,
+        kind: string.isRequired,
+      }),
+      mediator: shape({
+        host: string.isRequired,
+      }),
+    }),
+  }),
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
   statsCountername: string.isRequired,
