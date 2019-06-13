@@ -14,7 +14,7 @@
     "cypress:interactive": "cypress open",
     "cypress:storybook": "wait-on -t 60000 http://localhost:9001 && cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
-    "dataValidate": "node src/app/dataValidator/index.js",
+    "dataValidate": "node dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
@@ -93,7 +93,7 @@
     "@bbc/psammead-sitewide-links": "^0.3.9",
     "@bbc/psammead-story-promo": "^0.2.0-alpha.5",
     "@bbc/psammead-story-promo-list": "^0.1.0-alpha.2",
-    "@bbc/psammead-styles": "^0.3.2",
+    "@bbc/psammead-styles": "^0.4.1",
     "@bbc/psammead-timestamp-container": "^1.1.0",
     "@bbc/psammead-visually-hidden-text": "^0.1.10",
     "assets-webpack-plugin": "^3.9.8",
@@ -184,11 +184,11 @@
   "jest": {
     "collectCoverageFrom": [
       "**/(src|scripts)/**/*.{js,jsx}",
-      "!**/src/app/helpers/tests/**",
+      "!**/src/testHelpers/**",
       "!**/*.stories.jsx"
     ],
     "setupFiles": [
-      "./src/app/helpers/tests/jest-setup.js"
+      "./src/testHelpers/jest-setup.js"
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
