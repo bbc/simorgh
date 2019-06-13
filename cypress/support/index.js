@@ -1,6 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'cypress-layout';
-
 Cypress.Screenshot.defaults({
   screenshotOnRunFailure: true,
 });
