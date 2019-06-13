@@ -8,7 +8,7 @@ if (DOT_ENV_CONFIG.error) {
 
 // now `process.env.*` variables are set run the rest of the app
 const http = require('http');
-const nodeLogger = require('./app/helpers/logger.node');
+const nodeLogger = require('./app/lib/logger.node');
 const app = require('./server').default;
 
 const logger = nodeLogger(__filename);
