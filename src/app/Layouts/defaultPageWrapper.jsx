@@ -15,12 +15,13 @@ import GlobalStyle from '../lib/globalStyles';
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-
+  const pageType = 'article';
   return (
     <Fragment>
       <ServiceContextProvider service={service}>
         <GlobalStyle />
         <RequestContextProvider
+          pageType={pageType}
           env={env}
           id={id}
           isUK={isUK}
@@ -32,7 +33,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
             service,
           })}
           statsPageIdentifier={getStatsPageIdentifier({
-            pageType: 'article',
+            pageType,
             service,
             id,
           })}
