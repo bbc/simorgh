@@ -4,6 +4,10 @@ def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "0.0.2"
 def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 
+def appGitCommit = ""
+def appGitCommitAuthor = ""
+def appGitCommitMessage = ""
+
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
@@ -16,6 +20,12 @@ def runDevelopmentTests(){
 def runProductionTests(){
   sh 'make installProd'
   sh 'make productionTests'
+}
+
+def getCommitInfo = {
+  appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
+  appGitCommitAuthor = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git --no-pager show -s --format='%an' ${appGitCommit}").trim()
+  appGitCommitMessage = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git log -1 --pretty=%B").trim()
 }
 
 pipeline {
@@ -149,6 +159,10 @@ pipeline {
   }
   post {
     always {
+      // Get simorgh commit information
+      getCommitInfo()
+
+      // Clean the workspace
       cleanWs()
     }
   }
