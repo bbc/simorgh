@@ -2,14 +2,14 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable prefer-template */
 
-const ampAnalyticsJson = ({ pageviewParams }) => ({
+const ampAnalyticsJson = ({ baseUrl, pageviewParams }) => ({
   transport: {
     beacon: false,
     xhrpost: false,
     image: true,
   },
   requests: {
-    base: 'https://a1.api.bbc.co.uk/hit.xiti?',
+    base: baseUrl,
     pageview: '${base}' + pageviewParams,
   },
   triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
