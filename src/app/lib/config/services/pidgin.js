@@ -11,7 +11,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   fonts: [],
-  frontpageUrl: 'https://www.bbc.com/pidgin',
+  frontpageUrl: '/pidgin',
   translations: {
     error: {
       404: {

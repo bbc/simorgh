@@ -23,7 +23,7 @@ const news = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  frontpageUrl: 'https://www.bbc.com/news',
+  frontpageUrl: '/news',
   translations: {
     error: {
       404: {
