@@ -3,7 +3,7 @@
 exports[`ArticleMain should render a news article correctly 1`] = `
 <React.Fragment>
   <ATIAnalytics
-    articleData={
+    data={
       Object {
         "content": Object {
           "model": Object {
@@ -141,6 +141,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
         },
       }
     }
+    pageType="article"
   />
   <MetadataContainer
     metadata={
@@ -303,7 +304,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <React.Fragment>
   <ATIAnalytics
-    articleData={
+    data={
       Object {
         "content": Object {
           "model": Object {
@@ -398,6 +399,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         },
       }
     }
+    pageType="article"
   />
   <MetadataContainer
     metadata={

@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { shape } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -23,7 +22,7 @@ const ArticleMain = ({ articleData }) => {
   const { blocks } = content.model;
   return (
     <Fragment>
-      <ATIAnalytics articleData={articleData} />
+      <ATIAnalytics data={articleData} pageType="article" />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostWrapper>
@@ -35,7 +34,7 @@ const ArticleMain = ({ articleData }) => {
 };
 
 ArticleMain.propTypes = {
-  articleData: shape(articleDataPropTypes).isRequired,
+  articleData: articleDataPropTypes.isRequired,
 };
 
 export default ArticleMain;

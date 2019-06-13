@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { shape } from 'prop-types';
-import articlePropTypes from '../../../models/propTypes/article';
+import { string } from 'prop-types';
 import { atiBaseUrl } from '../atiUrl';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import ArticleAtiParams from '../ArticleAtiParams';
 
-const CanonicalATIAnalytics = ({ articleData }) => {
-  const [atiPageViewUrl] = useState(atiBaseUrl + ArticleAtiParams(articleData));
+const CanonicalATIAnalytics = ({ pageviewParams }) => {
+  const [atiPageViewUrl] = useState(atiBaseUrl + pageviewParams);
 
   useEffect(() => {
     sendBeacon(atiPageViewUrl);
@@ -20,7 +18,7 @@ const CanonicalATIAnalytics = ({ articleData }) => {
 };
 
 CanonicalATIAnalytics.propTypes = {
-  articleData: shape(articlePropTypes).isRequired,
+  pageviewParams: string.isRequired,
 };
 
 export default CanonicalATIAnalytics;

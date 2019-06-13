@@ -1,14 +1,26 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import ReactDOM from 'react-dom';
+import { act } from 'react-dom/test-utils';
 import AmpATIAnalytics from '.';
 
 describe('Amp ATI Analytics', () => {
-  it('should render amp-analytics with JSON script', () => {
-    expect(mount(<AmpATIAnalytics />).find('amp-analytics').length).toBe(1);
+  let container;
+  beforeEach(() => {
+    jest.resetModules();
+    container = document.createElement('div');
+    document.body.appendChild(container);
+  });
+
+  it('should render amp-analytics with script tag', () => {
+    act(() => {
+      ReactDOM.render(<AmpATIAnalytics />, container);
+    });
+
+    expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
     expect(
-      mount(<AmpATIAnalytics />).find(
+      container.querySelectorAll(
         'amp-analytics script[type="application/json"]',
       ).length,
-    ).toBe(1);
+    ).toEqual(1);
   });
 });

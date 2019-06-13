@@ -1,8 +1,7 @@
 import React from 'react';
-import { shape } from 'prop-types';
-import articlePropTypes from '../../../models/propTypes/article';
+import { string } from 'prop-types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import ArticleAtiParams from '../ArticleAtiParams';
+import { atiBaseUrl } from '../atiUrl';
 
 const JsonInlinedScript = data => (
   <script
@@ -12,20 +11,19 @@ const JsonInlinedScript = data => (
   />
 );
 
-const AmpATIAnalytics = ({ articleData }) => {
+const AmpATIAnalytics = ({ pageviewParams }) => {
   return (
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          pageviewParams: ArticleAtiParams(articleData),
+          baseUrl: atiBaseUrl,
+          pageviewParams,
         }),
       )}
     </amp-analytics>
   );
 };
 
-AmpATIAnalytics.propTypes = {
-  articleData: shape(articlePropTypes).isRequired,
-};
+AmpATIAnalytics.propTypes = { pageviewParams: string.isRequired };
 
 export default AmpATIAnalytics;
