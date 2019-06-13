@@ -5,7 +5,7 @@ import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/json/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
   const { product, serviceLocalizedName, translations } = useContext(

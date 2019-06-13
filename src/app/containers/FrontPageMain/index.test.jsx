@@ -1,7 +1,7 @@
 import React from 'react';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
-import frontPageDataIgbo from '../../../../data/prod/igbo/frontpage';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
 
 const igboConfig = {
   product: 'BBC News',
