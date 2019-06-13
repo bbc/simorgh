@@ -15,6 +15,10 @@ const getCopyrightText = text => `\u00A9 ${currentYear()} ${text} `;
 const FooterContainer = () => {
   const { footer } = useContext(ServiceContext);
 
+  if (!footer) {
+    return null;
+  }
+
   const { externalLink, links, copyrightText } = footer;
 
   return (

@@ -226,3 +226,5 @@ exports[`FooterContainer should render correctly 1`] = `
   </div>
 </footer>
 `;
+
+exports[`FooterContainer should render null when footer config not availible 1`] = `null`;

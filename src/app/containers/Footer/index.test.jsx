@@ -43,4 +43,11 @@ describe(`FooterContainer`, () => {
       <FooterContainer />
     </ServiceContext.Provider>,
   );
+
+  shouldMatchSnapshot(
+    'should render null when footer config not availible',
+    <ServiceContext.Provider value={{}}>
+      <FooterContainer />
+    </ServiceContext.Provider>,
+  );
 });
