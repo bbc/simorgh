@@ -128,7 +128,6 @@ describe('StoryPromo Container', () => {
         delete item.indexImage.copyrightHolder;
       });
 
-
       it('should not include any paragraph element', () => {
         const { container } = render(<StoryPromo item={item} />);
         expect(container.getElementsByTagName('p').length).toEqual(0);
