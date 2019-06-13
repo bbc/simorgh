@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import LazyLoad from 'react-lazyload';
+import { Transition } from 'react-transition-group';
 import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
 import {
   FigureImage,
@@ -16,7 +17,7 @@ import {
   FigureAmpImageWithCaptionContainingLink,
 } from './fixtureData';
 
-import { ImageWrapper } from '.';
+import { FadeInWrapper, ImageWrapper } from '.';
 
 describe('Figure', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
@@ -58,6 +59,17 @@ describe('Figure', () => {
     expect(onEntering).toBeDefined();
     expect(onEntered).toBeDefined();
     expect(timeout).toBe(200);
+  });
+
+  it('should lazy load and fade on load', () => {
+    const wrapper = mount(FigureLazyLoadImage);
+    const imgWrapper = wrapper.find(ImageWrapper);
+    imgWrapper.simulate('load');
+    const transitionComponent = wrapper.find(Transition);
+
+    expect(transitionComponent).toBeDefined();
+    expect(imgWrapper).toBeDefined();
+    expect(wrapper).toMatchSnapshot();
   });
 
   shouldMatchSnapshot(
@@ -113,7 +125,7 @@ describe('Figure', () => {
   );
 });
 
-describe('ImageWrapper', () => {
+describe('FadenWrapper', () => {
   const props = {
     opacity: 1,
     onLoad: () => {},
@@ -121,6 +133,6 @@ describe('ImageWrapper', () => {
   const imageToRender = <img src="" alt="img" width="40" height="40" />;
   shouldMatchSnapshot(
     'should render with valid props',
-    <ImageWrapper {...props}>{imageToRender}</ImageWrapper>,
+    <FadeInWrapper {...props}>{imageToRender}</FadeInWrapper>,
   );
 });

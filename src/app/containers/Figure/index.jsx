@@ -20,23 +20,22 @@ const transitionStyles = {
   exited: { opacity: 0 },
 };
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div``;
+
+export const FadeInWrapper = styled.div`
   transition: ${() => `opacity ${FADE_IN_DURATION}ms ease-in-out`};
   opacity: ${props => props.opacity || 0};
 `;
 
-const renderImage = (imageToRender, lazyLoad, fadeIn, setFadeIn) =>
+export const renderImage = (imageToRender, lazyLoad, fadeIn) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once scroll>
         <Transition in={fadeIn} timeout={FADE_IN_DURATION}>
           {state => (
-            <ImageWrapper
-              {...transitionStyles[state]}
-              onLoad={() => setFadeIn(true)}
-            >
+            <FadeInWrapper {...transitionStyles[state]}>
               {imageToRender}
-            </ImageWrapper>
+            </FadeInWrapper>
           )}
         </Transition>
       </LazyLoad>
@@ -84,7 +83,9 @@ const FigureContainer = ({
             width={width}
           />
         ) : (
-          renderImage(imageToRender, lazyLoad, fadeIn, setFadeIn)
+          <ImageWrapper onLoad={() => setFadeIn(true)}>
+            {renderImage(imageToRender, lazyLoad, fadeIn)}
+          </ImageWrapper>
         )}
         {renderCopyright(copyright)}
       </ImagePlaceholder>
