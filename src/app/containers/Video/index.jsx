@@ -31,9 +31,7 @@ const VideoContainer = ({ blocks }) => {
   }
 
   const metadata = videoMetadata(aresMediaBlock);
-
   const captionBlock = filterForBlockType(blocks, 'caption');
-
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind =
     deepGet(['model', 'blocks', 0, 'model', 'format'], aresMediaBlock) ===
@@ -49,9 +47,7 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
-
   const env = process.env.APP_ENV;
-
   const mediaPlayerSettings = {
     product: 'news',
     responsive: true,
