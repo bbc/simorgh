@@ -70,8 +70,6 @@ Object.keys(services).forEach(function(index) {
           cy.get(el.header)
             .should('have.lengthOf', 1)
             .should('have.attr', 'role', 'banner')
-            .is()
-            .inside('body', { left: '0px', right: '0px', top: '0px' })
             .find('a')
             .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
             .find('svg')
@@ -137,8 +135,6 @@ Object.keys(services).forEach(function(index) {
           cy.get('footer')
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
-            .is()
-            .inside('body', { bottom: '0px', left: '0px', right: '0px' })
             .find('a')
             .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
             .find('svg')
