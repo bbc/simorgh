@@ -126,7 +126,7 @@ exports[`Document Component should render correctly 1`] = `
     <script
       dangerouslySetInnerHTML={
         Object {
-          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\",\\"service\\":\\"news\\",\\"isAmp\\":false}",
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
         }
       }
     />
