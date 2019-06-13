@@ -6,21 +6,23 @@ let mapIdsToBlocks;
 
 const getJsonContent = jsonRaw => deepGet(['content'], jsonRaw);
 
-const getBlocks = content => deepGet(['model', 'blocks'], content);
+const getBlocks = block => deepGet(['model', 'blocks'], block);
 
 const addIdsToBlock = block => {
   const blockWithId = { ...block, id: uuid() };
   const nestedBlocks = getBlocks(blockWithId);
 
-  return nestedBlocks
-    ? {
-        ...blockWithId,
-        model: {
-          ...blockWithId.model,
-          blocks: mapIdsToBlocks(nestedBlocks),
-        },
-      }
-    : blockWithId;
+  if (!nestedBlocks) {
+    return blockWithId;
+  }
+
+  return {
+    ...blockWithId,
+    model: {
+      ...blockWithId.model,
+      blocks: mapIdsToBlocks(nestedBlocks),
+    },
+  };
 };
 
 mapIdsToBlocks = blocks => blocks.map(addIdsToBlock);
