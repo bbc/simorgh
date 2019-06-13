@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import moment from 'moment';
-import momentDurationFormatSetup from 'moment-duration-format';
 import { shape } from 'prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import StoryPromoComponent, {
@@ -13,8 +12,7 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import StoryPromoFigure from './Figure';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/json/deepGet';
-
-momentDurationFormatSetup(moment);
+import formatDuration from '../../lib/utilities/formatDuration';
 
 const buildMediaIndicator = (item, mediaTranslations) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
@@ -29,9 +27,7 @@ const buildMediaIndicator = (item, mediaTranslations) => {
 
   if (rawDuration) {
     const duration = moment.duration(rawDuration, 'seconds');
-    const isOverAnHour = duration.asHours() >= 1;
-    // TODO don't need moment-duration-format any more? REFACTOR TIME!
-    const durationString = duration.format(isOverAnHour ? '_HMS_' : '*_MS_');
+    const durationString = formatDuration(duration);
     const isoDuration = duration.toISOString();
     return (
       <MediaIndicator
