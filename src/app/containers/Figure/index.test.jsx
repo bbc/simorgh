@@ -125,7 +125,7 @@ describe('Figure', () => {
   );
 });
 
-describe('FadenWrapper', () => {
+describe('FadeInWrapper', () => {
   const props = {
     opacity: 1,
     onLoad: () => {},

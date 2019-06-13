@@ -27,17 +27,11 @@ export const FadeInWrapper = styled.div`
   opacity: ${props => props.opacity || 0};
 `;
 
-export const renderImage = (imageToRender, lazyLoad, fadeIn) =>
+export const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once scroll>
-        <Transition in={fadeIn} timeout={FADE_IN_DURATION}>
-          {state => (
-            <FadeInWrapper {...transitionStyles[state]}>
-              {imageToRender}
-            </FadeInWrapper>
-          )}
-        </Transition>
+        {imageToRender}
       </LazyLoad>
       <noscript>{imageToRender}</noscript>
     </Fragment>
@@ -64,11 +58,20 @@ const FigureContainer = ({
   srcset,
 }) => {
   const { platform } = useContext(RequestContext);
-  const imageToRender = (
-    <Image alt={alt} src={src} width={width} srcset={srcset} />
-  );
 
   const [fadeIn, setFadeIn] = useState(false);
+
+  const imageToRender = (
+    <Transition in={fadeIn} timeout={200}>
+      {state => {
+        return (
+          <FadeInWrapper {...transitionStyles[state]}>
+            <Image alt={alt} src={src} width={width} srcset={srcset} />
+          </FadeInWrapper>
+        );
+      }}
+    </Transition>
+  );
 
   return (
     <Figure>
@@ -84,7 +87,7 @@ const FigureContainer = ({
           />
         ) : (
           <ImageWrapper onLoad={() => setFadeIn(true)}>
-            {renderImage(imageToRender, lazyLoad, fadeIn)}
+            {renderImage(imageToRender, lazyLoad)}
           </ImageWrapper>
         )}
         {renderCopyright(copyright)}
