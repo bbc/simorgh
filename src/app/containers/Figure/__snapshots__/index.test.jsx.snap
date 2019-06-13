@@ -2,8 +2,8 @@
 
 exports[`FadeInWrapper should render with valid props 1`] = `
 .c0 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 1;
 }
 
@@ -237,8 +237,8 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
@@ -638,8 +638,8 @@ exports[`Figure should render an image with alt text 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
@@ -742,8 +742,8 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
@@ -862,8 +862,8 @@ exports[`Figure should render an image with caption text 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
@@ -998,8 +998,8 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
@@ -1101,8 +1101,8 @@ exports[`Figure should render an image with copyright text 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 900ms ease-in-out;
-  transition: opacity 900ms ease-in-out;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
 
