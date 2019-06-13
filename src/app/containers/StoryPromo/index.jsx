@@ -20,23 +20,28 @@ const buildMediaIndicator = item => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   if (isMedia) {
     const format = deepGet(['media', 'format'], item);
-    const capitalisedFormat =
-      format.slice(0, 1).toUpperCase() + format.slice(1);
     const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
+
     if (rawDuration) {
       const duration = moment.duration(rawDuration, 'seconds');
       const isOverAnHour = duration.asHours() >= 1;
+      const durationString = duration.format(isOverAnHour ? '_HMS_' : '*_MS_');
+      const isoDuration = duration.toISOString();
+      // TODO this will need localising
+      const human = duration.format('h [hours] m [minutes] s [seconds]');
       return (
         <MediaIndicator
-          duration={duration.format(isOverAnHour ? '_HMS_' : '*_MS_')}
-          datetime={duration.toISOString()}
-          // TODO this will need localising :)
-          offscreenText={`${capitalisedFormat} `}
+          duration={durationString}
+          datetime={isoDuration}
+          // TODO this will need localising
+          offscreenText={`${format} ${duration.format(human)}`}
           type={format}
         />
       );
     }
-    return <MediaIndicator offscreenText={capitalisedFormat} type={format} />;
+
+    // TODO offscreenText will need localising
+    return <MediaIndicator offscreenText={format} type={format} />;
   }
   return null;
 };
