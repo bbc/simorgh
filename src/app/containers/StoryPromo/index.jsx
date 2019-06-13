@@ -19,7 +19,7 @@ momentDurationFormatSetup(moment);
 const buildMediaIndicator = item => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   if (isMedia) {
-    const format = deepGet(['media', 'format'], item);
+    const type = deepGet(['media', 'format'], item);
     const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
 
     if (rawDuration) {
@@ -33,15 +33,15 @@ const buildMediaIndicator = item => {
         <MediaIndicator
           duration={durationString}
           datetime={isoDuration}
-          // TODO this will need localising
-          offscreenText={`${format} ${duration.format(human)}`}
-          type={format}
+          // TODO type will need localising
+          offscreenText={`${type} ${human}`}
+          type={type}
         />
       );
     }
 
     // TODO offscreenText will need localising
-    return <MediaIndicator offscreenText={format} type={format} />;
+    return <MediaIndicator offscreenText={type} type={type} />;
   }
   return null;
 };
