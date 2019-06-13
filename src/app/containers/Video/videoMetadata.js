@@ -1,4 +1,4 @@
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/json/deepGet';
 
 const videoObject = 'VideoObject';
 
