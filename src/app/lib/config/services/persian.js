@@ -99,6 +99,10 @@ const persian = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+    media: {
+      audio: 'صدا',
+      video: 'ویدیو',
+    },
   },
   brandSVG,
   fonts: [],

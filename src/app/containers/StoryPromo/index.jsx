@@ -16,7 +16,7 @@ import deepGet from '../../helpers/json/deepGet';
 
 momentDurationFormatSetup(moment);
 
-const buildMediaIndicator = item => {
+const buildMediaIndicator = (item, mediaTranslations) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   if (isMedia) {
     const type = deepGet(['media', 'format'], item);
@@ -33,21 +33,21 @@ const buildMediaIndicator = item => {
         <MediaIndicator
           duration={durationString}
           datetime={isoDuration}
-          // TODO type will need localising
-          offscreenText={`${type} ${human}`}
+          offscreenText={`${mediaTranslations[type]} ${human}`}
           type={type}
         />
       );
     }
 
-    // TODO offscreenText will need localising
-    return <MediaIndicator offscreenText={type} type={type} />;
+    return (
+      <MediaIndicator offscreenText={mediaTranslations[type]} type={type} />
+    );
   }
   return null;
 };
 
 const StoryPromo = ({ item }) => {
-  const { script } = useContext(ServiceContext);
+  const { translations, script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -84,7 +84,7 @@ const StoryPromo = ({ item }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={buildMediaIndicator(item)}
+      mediaIndicator={buildMediaIndicator(item, translations.media)}
     />
   );
 };

@@ -283,7 +283,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             <span
               className="c8"
             >
-              audio 3 minutes 12 seconds
+              Ọdịyo 3 minutes 12 seconds
             </span>
             <span
               aria-hidden="true"
@@ -610,7 +610,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             <span
               className="c9"
             >
-              audio 3 minutes 12 seconds
+              Ọdịyo 3 minutes 12 seconds
             </span>
             <span
               aria-hidden="true"
@@ -1392,7 +1392,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             <span
               className="c8"
             >
-              video 1 hour 33 minutes 20 seconds
+              Vidio 1 hour 33 minutes 20 seconds
             </span>
             <span
               aria-hidden="true"
@@ -1716,7 +1716,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             <span
               className="c9"
             >
-              video 1 hour 33 minutes 20 seconds
+              Vidio 1 hour 33 minutes 20 seconds
             </span>
             <span
               aria-hidden="true"
