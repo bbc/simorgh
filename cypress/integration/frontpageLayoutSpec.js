@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
