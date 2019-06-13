@@ -6,7 +6,7 @@ const BrandContainer = () => {
   const { brandName, brandSVG, frontpageUrl } = useContext(ServiceContext);
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const svgRatio = brandSVG.ratio;
+  const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 
