@@ -30,15 +30,14 @@ const buildMediaIndicator = (item, mediaTranslations) => {
   if (rawDuration) {
     const duration = moment.duration(rawDuration, 'seconds');
     const isOverAnHour = duration.asHours() >= 1;
+    // TODO don't need moment-duration-format any more? REFACTOR TIME!
     const durationString = duration.format(isOverAnHour ? '_HMS_' : '*_MS_');
     const isoDuration = duration.toISOString();
-    // TODO this will need localising
-    const human = duration.format('h [hours] m [minutes] s [seconds]');
     return (
       <MediaIndicator
         duration={durationString}
         datetime={isoDuration}
-        offscreenText={`${mediaTranslations[type]} ${human}`}
+        offscreenText={`${mediaTranslations[type]} ${durationString}`}
         type={type}
       />
     );
