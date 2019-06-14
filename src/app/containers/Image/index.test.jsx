@@ -75,6 +75,11 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
+    shouldShallowMatchSnapshot(
+      'should render a lazyload container instead of an image if the image is after the 3rd block',
+      <ImageContainer position={[4]} {...data} />,
+    );
+
     const dataWithNonBbcCopyright = blockArrayModel([
       rawImageBlockWithNonBbcCopyright,
       blockContainingText(

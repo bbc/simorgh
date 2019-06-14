@@ -44,29 +44,29 @@ pipeline {
         expression { env.BRANCH_NAME != 'latest' }
       }
       parallel {
-        stage('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runDevelopmentTests()
-          }
-        }
+        // stage('Test Development') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     runDevelopmentTests()
+        //   }
+        // }
 
-        stage('Test Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runProductionTests()
-          }
-        }  
+        // stage('Test Production') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     runProductionTests()
+        //   }
+        // }  
       }
       post {
         always {
@@ -77,21 +77,21 @@ pipeline {
       }
     }
     stage ('Build, Test & Package') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
+      // when {
+      //   expression { env.BRANCH_NAME == 'latest' }
+      // }
       parallel {
-        stage('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runDevelopmentTests()
-          }
-        }
+        // stage('Test Development') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     runDevelopmentTests()
+        //   }
+        // }
         stage('Test Production and Zip Production') {
           agent {
             docker {
@@ -101,7 +101,7 @@ pipeline {
           }
           steps {
             // Testing
-            runProductionTests()
+            // runProductionTests()
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
@@ -111,31 +111,31 @@ pipeline {
             }
 
             // Write commit information to build_tag.txt
-
+            sh "rm -rf pack/build_tag.txt && touch pack/build_tag.txt"
             writeFile file: 'pack/build_tag.txt', text: "*Author*: ${appGitCommitAuthor}\n *Commit Hash*\n ${appGitCommit}\n *Commit Message*\n ${appGitCommitMessage}"
-            sh 'ls -l pack/build_tag.txt'
-            sh 'cat pack/build_tag.txt'
+            sh "ls -l pack/build_tag.txt"
+            sh "cat pack/build_tag.txt"
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
           }
         }
-        stage('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }    
+        // stage('Build storybook dist') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     sh "rm -f storybook.zip"
+        //     sh 'make install'
+        //     sh 'make buildStorybook'
+        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+        //     stash name: 'simorgh_storybook', includes: storybookDist
+        //   }
+        // }    
       }
       post {
         always {
@@ -157,7 +157,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infrastructure/latest',
+          job: 'simorgh-infra-sandbox/sandbox-fix-slack-notification-449',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
