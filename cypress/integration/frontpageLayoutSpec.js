@@ -1,12 +1,13 @@
 import services from '../support/serviceConfig';
 import config from '../support/config';
-import { el } from '../support';
+import { el } from '../support/frontpageElements';
+import describeForLocalOnly from '../support/describeForLocalOnly';
 
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];
   const service = index;
 
-  describe(`frontpage tests for ${service}`, () => {
+  describeForLocalOnly(`frontpage tests for ${service}`, () => {
     // eslint-disable-next-line no-undef
     before(() => {
       cy.visit(serviceConfig.url);
@@ -23,7 +24,7 @@ Object.keys(services).forEach(index => {
           cy.get(el.header)
             .should('have.lengthOf', 1)
             .find('a')
-            .should('have.attr', 'href', `${config.baseUrl}/news`) // expect `${config.baseUrl}${serviceConfig.url}` once header hooked up
+            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // expect `${config.baseUrl}${serviceConfig.url}` once header hooked up
             .find('svg')
             .should('be.visible');
         });
@@ -76,7 +77,7 @@ Object.keys(services).forEach(index => {
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
             .find('a')
-            .should('have.attr', 'href', `${config.baseUrl}/news`) // expect `${config.baseUrl}${serviceConfig.url}` once footer hooked up
+            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // expect `${config.baseUrl}${serviceConfig.url}` once footer hooked up
             .find('svg')
             .should('be.visible');
         });
