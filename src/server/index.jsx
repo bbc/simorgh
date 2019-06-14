@@ -14,7 +14,7 @@ import {
   manifestRegexPath,
   swRegexPath,
 } from '../app/routes/regex';
-import nodeLogger from '../app/helpers/logger.node';
+import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';

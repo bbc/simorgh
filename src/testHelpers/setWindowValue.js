@@ -1,4 +1,4 @@
-import deepClone from '../json/deepClone';
+import deepClone from '../app/lib/json/deepClone';
 
 export const setWindowValue = (key, value) => {
   const windowValue = window[key];

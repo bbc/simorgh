@@ -34,7 +34,7 @@ export default Blockquote;
 ### index.stories.jsx
 ```js
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import Blockquote from './index';
 
 storiesOf('Blockquote', module).add('default - quote only', () => <Blockquote>To be or not to be, that is the question</Blockquote>);
@@ -46,7 +46,7 @@ storiesOf('Blockquote', module).add('quote with cite', () => (
 ### index.test.jsx
 ```js
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../testHelpers';
 import Blockquote from './index';
 
 describe('Blockquote', () => {
