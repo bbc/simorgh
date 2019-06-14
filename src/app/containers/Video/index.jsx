@@ -10,7 +10,7 @@ import {
   videoPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
-import { filterForBlockType } from '../../lib/blockHandlers';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
