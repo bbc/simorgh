@@ -104,6 +104,18 @@ pipeline {
             runProductionTests()
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
+
+            script {
+              // Get simorgh commit information
+              getCommitInfo()
+            }
+
+            // Write commit information to build_tag.txt
+
+            writeFile file: 'pack/build_tag.txt', text: "*Author*: ${appGitCommitAuthor}\n *Commit Hash*\n ${appGitCommit}\n *Commit Message*\n ${appGitCommitMessage}"
+            sh 'ls -l pack/build_tag.txt'
+            sh 'cat pack/build_tag.txt'
+
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
@@ -159,9 +171,6 @@ pipeline {
   }
   post {
     always {
-      // Get simorgh commit information
-      getCommitInfo()
-
       // Clean the workspace
       cleanWs()
     }
