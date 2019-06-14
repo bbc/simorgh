@@ -82,9 +82,9 @@ describe('withData HOC', () => {
   });
 
   describe('with missing articleData', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       `should return the errorMain component`,
-      <WithDataHOC {...noAssetData} />,
+      WithDataHOCWithContext(noAssetData),
     );
   });
 
