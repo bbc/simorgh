@@ -10,14 +10,18 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
     >
       <React.Fragment>
         <span
-          lang="en-GB"
+          role="text"
         >
-          BBC News
+          <span
+            lang="en-GB"
+          >
+            BBC News
+          </span>
+          , 
+          Ìgbò
+           - 
+          Akụkọ
         </span>
-        , 
-        Ìgbò
-         - 
-        Akụkọ
       </React.Fragment>
     </ForwardRef(VisuallyHiddenText)>
     <ForwardRef(GhostWrapper)>

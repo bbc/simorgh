@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
 import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -15,9 +16,12 @@ const FrontPageMain = ({ frontPageData }) => {
 
   const groups = deepGet(['content', 'groups'], frontPageData);
 
+  // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
     <Fragment>
-      <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
+      <span role="text">
+        <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
+      </span>
     </Fragment>
   );
 
