@@ -1,11 +1,13 @@
 import services from '../support/worldServices';
 import { el } from '../support';
+import describeForLocalOnly from '../support/describeForLocalOnly';
 
 Object.keys(services).forEach(index => {
   const xservice = services[index];
   const service = index;
 
-  describe(`frontpage tests for ${service}`, () => {
+  // TODO this needs to become a normal describe block once Mozart routing is set up
+  describeForLocalOnly(`frontpage tests for ${service}`, () => {
     // eslint-disable-next-line no-undef
     before(() => {
       cy.visit(xservice.url);
