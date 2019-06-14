@@ -37,6 +37,12 @@ describe('getInitialData', () => {
       expected: { isUK: false, origin: 'https://beepboop.org' },
       assertion: 'should return isUK as false if tld isnt .co.uk',
     },
+    {
+      bbcOrigin: 'https://beepboop.co.uk',
+      location: 'https://beepboop.co.uk',
+      expected: { isUK: true, origin: 'https://beepboop.co.uk' },
+      assertion: 'should return isUK as true if tld is .co.uk',
+    },
   ];
 
   tests.forEach(({ bbcOrigin, location, expected, assertion }) => {
