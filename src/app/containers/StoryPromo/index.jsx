@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import { shape } from 'prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import StoryPromoComponent, {
