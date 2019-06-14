@@ -1,35 +1,28 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-/* eslint-disable func-names */
-/* eslint-disable prefer-arrow-callback */
-// eslint-disable-next-line import/no-extraneous-dependencies
-import deepExtend from 'deep-extend';
-import services from '../test-data/worldServices';
-import extendedServices from '../test-data/worldServicesFpData';
-
+import services from '../support/worldServices';
 import { el } from '../support';
 
-deepExtend(services, extendedServices);
-Object.keys(services).forEach(function(index) {
+Object.keys(services).forEach(index => {
   const xservice = services[index];
   const service = index;
 
-  describe(`frontpage tests for ${service}`, function() {
-    before(function() {
+  describe(`frontpage tests for ${service}`, () => {
+    // eslint-disable-next-line no-undef
+    before(() => {
       cy.visit(xservice.url);
     });
 
-    context('checks te components are present at 1008px', function() {
+    describe('checks the components are present', () => {
+      // eslint-disable-next-line no-undef
       before(() => {
         cy.viewport(1008, 768);
       });
 
-      describe('cookie banner', function() {
-        it('should have a visible cookie banner', function() {
+      describe('cookie banner', () => {
+        it('should have a visible cookie banner', () => {
           cy.get(el.cookieBanner).should('be.visible');
         });
 
-        it('should have a functional cookie banner', function() {
+        it('should have a functional cookie banner', () => {
           cy.get(el.cookieBanner).within(() => {
             cy.get('a')
               .should('have.length.of', 1)
@@ -65,8 +58,8 @@ Object.keys(services).forEach(function(index) {
         });
       });
 
-      describe('header tests', function() {
-        it('should have a visible banner', function() {
+      describe('header tests', () => {
+        it('should have a visible banner', () => {
           cy.get(el.header)
             .should('have.lengthOf', 1)
             .should('have.attr', 'role', 'banner')
@@ -84,8 +77,8 @@ Object.keys(services).forEach(function(index) {
         // });
       });
 
-      describe('section tests', function() {
-        it('should be labelled by a visible section label', function() {
+      describe('section tests', () => {
+        it('should be labelled by a visible section label', () => {
           cy.get(el.section)
             .should('have.length.of.at.least', 1)
             .should('be.visible')
@@ -100,7 +93,7 @@ Object.keys(services).forEach(function(index) {
             });
         });
 
-        it('should contain at least one story promo', function() {
+        it('should contain at least one story promo', () => {
           cy.get(el.section).within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
@@ -118,20 +111,10 @@ Object.keys(services).forEach(function(index) {
               .should('be.visible');
           });
         });
-
-        // This is a temporary test to demonstrate object merging
-        it('uses Top Stories as its first section', function() {
-          console.log(xservice);
-          console.log(xservice.data.article);
-          cy.get(xservice.data.h2Selector).should(
-            'have.text',
-            xservice.data.h2,
-          );
-        });
       });
 
-      describe('footer tests', function() {
-        it('should have a visible footer', function() {
+      describe('footer tests', () => {
+        it('should have a visible footer', () => {
           cy.get('footer')
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
@@ -143,12 +126,13 @@ Object.keys(services).forEach(function(index) {
       });
     });
 
-    context('verifies the layout at less than 600px', function() {
+    describe('verifies the layout at less than 600px', () => {
+      // eslint-disable-next-line no-undef
       before(() => {
         cy.viewport(599, 1024);
       });
 
-      it('does not display the summary', function() {
+      it('does not display the summary', () => {
         cy.get(el.section).within(() => {
           cy.get('p')
             .should('have.length.of.at.least', 1)
