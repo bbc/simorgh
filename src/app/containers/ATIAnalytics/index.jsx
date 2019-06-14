@@ -8,16 +8,15 @@ import ArticleAtiParams from './ArticleAtiParams';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 
 const ATIAnalytics = ({ data, pageType = 'article' }) => {
-  const { platform } = React.useContext(RequestContext);
-
   let pageviewParams = '';
-
+  const { platform } = React.useContext(RequestContext);
   // can allow pageType of frontPage when FrontPageAtiParams has been created
   if (pageType !== 'article') {
     return null;
   }
 
   pageviewParams = ArticleAtiParams(data);
+
   return platform === 'amp' ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
