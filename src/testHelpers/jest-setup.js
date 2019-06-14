@@ -11,5 +11,5 @@ global.mount = mount;
 
 process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
   __dirname,
-  '../../../server/assets/fixture.json',
+  '../server/assets/fixture.json',
 );

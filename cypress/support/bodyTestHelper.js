@@ -104,6 +104,46 @@ export const placeholderImageLoaded = placeholderImage => {
   );
 };
 
+export const worldServiceCookieBannerTranslations = (
+  privacyStatement,
+  performanceStatement,
+  service,
+  cookieAgreement,
+  privacyAgreement,
+) => {
+  const getPrivacyBanner = () => cy.contains(privacyStatement);
+
+  const getCookieBanner = () => cy.contains(performanceStatement);
+  const getPrivacyBannerContainer = () => getPrivacyBanner().parent();
+  const getCookieBannerContainer = () => getCookieBanner().parent();
+
+  const visitArticle = () => {
+    cy.visit(service, {
+      failOnStatusCode: false,
+    });
+  };
+
+  cy.clearCookies();
+  visitArticle();
+
+  getPrivacyBanner().should('be.visible');
+  getCookieBanner().should('not.be.visible');
+
+  getPrivacyBannerContainer()
+    .contains(cookieAgreement)
+    .click();
+
+  getCookieBanner().should('be.visible');
+  getPrivacyBanner().should('not.be.visible');
+
+  getCookieBannerContainer()
+    .contains(privacyAgreement)
+    .click();
+
+  getCookieBanner().should('not.be.visible');
+  getPrivacyBanner().should('not.be.visible');
+};
+
 export const figureVisibility = figure => {
   figure.should('be.visible');
   figure.should('to.have.descendants', 'img');
