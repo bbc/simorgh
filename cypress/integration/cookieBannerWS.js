@@ -6,7 +6,7 @@ const services = Object.keys(config);
 
 describe('World Service Cookie Banner Transations - Canonical', () => {
   services.forEach(serviceName => {
-    it(`should load the relevant translations for ${serviceName}`, () => {
+    xit(`should load the relevant translations for ${serviceName}`, () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
@@ -20,7 +20,7 @@ describe('World Service Cookie Banner Transations - Canonical', () => {
 
 describeForEuOnly('World Service Cookie Banner Transations - AMP', () => {
   services.forEach(serviceName => {
-    it(`should load the relevant translations for ${serviceName}`, () => {
+    xit(`should load the relevant translations for ${serviceName}`, () => {
       worldServiceCookieBannerTranslations(
         `${config[serviceName].assets.privacyStatement}`,
         `${config[serviceName].assets.performanceStatement}`,
