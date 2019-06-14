@@ -18,7 +18,7 @@ const contextStub = {
       },
     ],
     copyrightText:
-      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
+      'BBC. The BBC is not responsible for the content of external sites.',
   },
 };
 
