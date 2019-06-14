@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StoryPromo Container should render audio correctly for amp 1`] = `
-.c8 {
+.c10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -41,11 +41,6 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   height: 100%;
 }
 
-.c7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
@@ -53,14 +48,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   position: relative;
 }
 
-.c9 {
+.c7 {
   display: inline-block;
   vertical-align: top;
   padding: 0 0.5rem;
   max-width: 66.67%;
 }
 
-.c10 {
+.c8 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #222222;
@@ -70,7 +65,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-weight: 700;
 }
 
-.c12 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -79,14 +74,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
+.c9 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11:before {
+.c9:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -98,17 +93,17 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   z-index: 1;
 }
 
-.c11:hover,
-.c11:focus {
+.c9:hover,
+.c9:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11:visited {
+.c9:visited {
   color: #6E6E73;
 }
 
-.c13 {
+.c12 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -158,19 +153,19 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c7 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c7 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c7 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -186,49 +181,49 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -276,45 +271,54 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
               d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
             />
           </svg>
-          <time
-            className="c7"
-            dateTime="PT3M12S"
-          >
-            <span
-              className="c8"
-            >
-              Ọdịyo 3:12
-            </span>
-            <span
-              aria-hidden="true"
-            >
-              3:12
-            </span>
-          </time>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c9"
+    className="c7"
   >
     <h3
-      className="c10"
+      className="c8"
     >
       <a
-        className="c11"
+        className="c9"
         href="https://www.bbc.co.uk"
       >
-        An audio item
+        <span
+          role="text"
+        >
+          <span
+            className="c10"
+          >
+            Ọdịyo
+            , 
+          </span>
+          <span>
+            An audio item
+          </span>
+          <span>
+            <span
+              className="c10"
+            >
+              , 
+              <time
+                dateTime="PT3M12S"
+              >
+                3:12
+              </time>
+            </span>
+          </span>
+        </span>
       </a>
     </h3>
     <p
-      className="c12"
+      className="c11"
     >
       Summary text
     </p>
     <time
-      className="c13"
+      className="c12"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -324,7 +328,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render audio correctly for canonical 1`] = `
-.c9 {
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -364,11 +368,6 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   height: 100%;
 }
 
-.c8 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
@@ -376,14 +375,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   position: relative;
 }
 
-.c10 {
+.c8 {
   display: inline-block;
   vertical-align: top;
   padding: 0 0.5rem;
   max-width: 66.67%;
 }
 
-.c11 {
+.c9 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #222222;
@@ -393,7 +392,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-weight: 700;
 }
 
-.c13 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -402,14 +401,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c12 {
+.c10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12:before {
+.c10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -421,17 +420,17 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   z-index: 1;
 }
 
-.c12:hover,
-.c12:focus {
+.c10:hover,
+.c10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12:visited {
+.c10:visited {
   color: #6E6E73;
 }
 
-.c14 {
+.c13 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -486,19 +485,19 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c10 {
+  .c8 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c10 {
+  .c8 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -514,49 +513,49 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c9 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -603,45 +602,54 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
               d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
             />
           </svg>
-          <time
-            className="c8"
-            dateTime="PT3M12S"
-          >
-            <span
-              className="c9"
-            >
-              Ọdịyo 3:12
-            </span>
-            <span
-              aria-hidden="true"
-            >
-              3:12
-            </span>
-          </time>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c10"
+    className="c8"
   >
     <h3
-      className="c11"
+      className="c9"
     >
       <a
-        className="c12"
+        className="c10"
         href="https://www.bbc.co.uk"
       >
-        An audio item
+        <span
+          role="text"
+        >
+          <span
+            className="c11"
+          >
+            Ọdịyo
+            , 
+          </span>
+          <span>
+            An audio item
+          </span>
+          <span>
+            <span
+              className="c11"
+            >
+              , 
+              <time
+                dateTime="PT3M12S"
+              >
+                3:12
+              </time>
+            </span>
+          </span>
+        </span>
       </a>
     </h3>
     <p
-      className="c13"
+      className="c12"
     >
       Summary text
     </p>
     <time
-      className="c14"
+      className="c13"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -1113,7 +1121,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 `;
 
 exports[`StoryPromo Container should render video correctly for amp 1`] = `
-.c8 {
+.c10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1153,11 +1161,6 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   height: 100%;
 }
 
-.c7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
@@ -1165,14 +1168,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   position: relative;
 }
 
-.c9 {
+.c7 {
   display: inline-block;
   vertical-align: top;
   padding: 0 0.5rem;
   max-width: 66.67%;
 }
 
-.c10 {
+.c8 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #222222;
@@ -1182,7 +1185,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-weight: 700;
 }
 
-.c12 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -1191,14 +1194,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
+.c9 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11:before {
+.c9:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1210,17 +1213,17 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   z-index: 1;
 }
 
-.c11:hover,
-.c11:focus {
+.c9:hover,
+.c9:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11:visited {
+.c9:visited {
   color: #6E6E73;
 }
 
-.c13 {
+.c12 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -1270,19 +1273,19 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c7 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c7 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c7 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -1298,49 +1301,49 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1385,45 +1388,54 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
               points="3,32 29,16 3,0"
             />
           </svg>
-          <time
-            className="c7"
-            dateTime="PT1H33M20S"
-          >
-            <span
-              className="c8"
-            >
-              Vidio 1:33:20
-            </span>
-            <span
-              aria-hidden="true"
-            >
-              1:33:20
-            </span>
-          </time>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c9"
+    className="c7"
   >
     <h3
-      className="c10"
+      className="c8"
     >
       <a
-        className="c11"
+        className="c9"
         href="https://www.bbc.co.uk"
       >
-        A video item
+        <span
+          role="text"
+        >
+          <span
+            className="c10"
+          >
+            Vidio
+            , 
+          </span>
+          <span>
+            A video item
+          </span>
+          <span>
+            <span
+              className="c10"
+            >
+              , 
+              <time
+                dateTime="PT1H33M20S"
+              >
+                1:33:20
+              </time>
+            </span>
+          </span>
+        </span>
       </a>
     </h3>
     <p
-      className="c12"
+      className="c11"
     >
       Summary text
     </p>
     <time
-      className="c13"
+      className="c12"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -1433,7 +1445,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render video correctly for canonical 1`] = `
-.c9 {
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1473,11 +1485,6 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   height: 100%;
 }
 
-.c8 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: top;
@@ -1485,14 +1492,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   position: relative;
 }
 
-.c10 {
+.c8 {
   display: inline-block;
   vertical-align: top;
   padding: 0 0.5rem;
   max-width: 66.67%;
 }
 
-.c11 {
+.c9 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #222222;
@@ -1502,7 +1509,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-weight: 700;
 }
 
-.c13 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -1511,14 +1518,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c12 {
+.c10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12:before {
+.c10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1530,17 +1537,17 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   z-index: 1;
 }
 
-.c12:hover,
-.c12:focus {
+.c10:hover,
+.c10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12:visited {
+.c10:visited {
   color: #6E6E73;
 }
 
-.c14 {
+.c13 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -1595,19 +1602,19 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c10 {
+  .c8 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c10 {
+  .c8 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -1623,49 +1630,49 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c9 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1709,45 +1716,54 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
               points="3,32 29,16 3,0"
             />
           </svg>
-          <time
-            className="c8"
-            dateTime="PT1H33M20S"
-          >
-            <span
-              className="c9"
-            >
-              Vidio 1:33:20
-            </span>
-            <span
-              aria-hidden="true"
-            >
-              1:33:20
-            </span>
-          </time>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c10"
+    className="c8"
   >
     <h3
-      className="c11"
+      className="c9"
     >
       <a
-        className="c12"
+        className="c10"
         href="https://www.bbc.co.uk"
       >
-        A video item
+        <span
+          role="text"
+        >
+          <span
+            className="c11"
+          >
+            Vidio
+            , 
+          </span>
+          <span>
+            A video item
+          </span>
+          <span>
+            <span
+              className="c11"
+            >
+              , 
+              <time
+                dateTime="PT1H33M20S"
+              >
+                1:33:20
+              </time>
+            </span>
+          </span>
+        </span>
       </a>
     </h3>
     <p
-      className="c13"
+      className="c12"
     >
       Summary text
     </p>
     <time
-      className="c14"
+      className="c13"
       dateTime="2019-05-02"
     >
       2 May 2019
