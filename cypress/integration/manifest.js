@@ -5,6 +5,10 @@ const testManifest200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
     testResponseCode(`/${service}/articles/manifest.json`, 200);
   });
+
+  it(`should return a 200 status code for ${service} without /articles`, () => {
+    testResponseCode(`/${service}/manifest.json`, 200);
+  });
 };
 
 describe('Manifest.json files', () => {

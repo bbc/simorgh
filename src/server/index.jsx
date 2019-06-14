@@ -11,6 +11,7 @@ import {
   articleDataRegexPath,
   frontpageDataRegexPath,
   manifestRegexPath,
+  serviceManifestRegexPath,
   swRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
@@ -127,16 +128,19 @@ server
       }
     });
   })
-  .get(manifestRegexPath, async ({ params }, res) => {
-    const { service } = params;
-    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-    res.sendFile(manifestPath, {}, error => {
-      if (error) {
-        console.log(error); // eslint-disable-line no-console
-        res.status(500).send('Unable to find manifest.');
-      }
-    });
-  })
+  .get(
+    [manifestRegexPath, serviceManifestRegexPath],
+    async ({ params }, res) => {
+      const { service } = params;
+      const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+      res.sendFile(manifestPath, {}, error => {
+        if (error) {
+          console.log(error); // eslint-disable-line no-console
+          res.status(500).send('Unable to find manifest.');
+        }
+      });
+    },
+  )
   .get(
     '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
     ({ params }, res) => {

@@ -17,3 +17,5 @@ export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
 export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
 export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
+
+export const serviceManifestRegexPath = `/:service(${serviceRegex})/manifest.json`;
