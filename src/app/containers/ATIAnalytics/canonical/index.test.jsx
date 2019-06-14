@@ -7,6 +7,7 @@ import CanonicalATIAnalytics from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
 const ContextWrap = props => (
   <ServiceContextProvider service="news">
@@ -34,12 +35,13 @@ describe('Canonical ATI Analytics', () => {
   shouldMatchSnapshot('should render correctly',
   <ContextWrap><CanonicalATIAnalytics pageviewParams={mockPageviewParams} /></ContextWrap>);
 
-  xit('should call sendBeacon function with the ATI url', () => {
-    const sendBeacon = require('../../../lib/analyticsUtils/sendBeacon').default;
-    const mock = jest.fn().mockReturnValue('foobar');
-    sendBeacon = mock;
+  it('should call sendBeacon function with the ATI url', () => {
+
+    const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
+    beacon.default = mockSendBeacon;
+
     renderer.create(<ContextWrap><CanonicalATIAnalytics pageviewParams={mockPageviewParams} /></ContextWrap>);
-    expect(sendBeacon).toHaveBeenCalledTimes(1);
-    expect(sendBeacon).toHaveBeenCalledWith('https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2');
+    expect(mockSendBeacon).toHaveBeenCalledTimes(1);
+    expect(mockSendBeacon).toHaveBeenCalledWith('https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2');
   });
 });
