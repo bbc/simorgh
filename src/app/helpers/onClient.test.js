@@ -1,7 +1,4 @@
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../testHelpers/setWindowValue';
+import { setWindowValue, resetWindowValue } from '../../testHelpers';
 import onClient from './onClient';
 
 const windowLocation = window.location;
