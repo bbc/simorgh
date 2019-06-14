@@ -45,10 +45,10 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
   const canonicalLink = `${origin}/${service}/articles/${id}`;
-  const canonicalLinkUK = `https://www.bbc.com/${service}/articles/${id}`;
+  const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
-  const ampLinkUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
+  const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
 
