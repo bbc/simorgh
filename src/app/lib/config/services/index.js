@@ -12,6 +12,7 @@ import yoruba from './yoruba';
 export default {
   default: {
     brandName: 'Default Brand Name',
+    dir: 'ltr',
     externalLinkText: ', default external link suffix',
     imageCaptionOffscreenText: 'Default image caption prefix, ',
     videoCaptionOffscreenText: 'Default video caption prefix, ',

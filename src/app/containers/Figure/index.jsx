@@ -41,6 +41,7 @@ const FigureContainer = ({
   srcset,
 }) => {
   const { platform } = useContext(RequestContext);
+
   const imageToRender = (
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
