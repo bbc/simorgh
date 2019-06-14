@@ -147,3 +147,18 @@ export const errorTitle = service => {
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
 };
+
+export const hasNoscriptImgAtiUrl = () => {
+  getElement('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      '<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?',
+    );
+};
+
+export const hasAmpAnalyticsAtiUrl = () => {
+  getElement('amp-analytics script[type="application/json"]')
+    .eq(0)
+    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti');
+};
