@@ -3,154 +3,105 @@ import renderer from 'react-test-renderer';
 import ArticleAtiParams from './ArticleAtiParams';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-
-const mockArticleData = { metadata: {}, content: {}, promo: {} };
+import * as atiUrl from './atiUrl';
+import * as testUtils from '../../lib/analyticsUtils/article';
 
 describe('ArticleAtiParams', () => {
+  const mockArticleData = {
+    content: {},
+    metadata: {
+      locators: { optimoUrn: 'urn:c0000000000o' },
+      passport: { language: 'language' },
+      firstPublished: 946684800000,
+      lastPublished: 978307200000,
+      tags: {
+        about: [
+          {
+            thingId: 'id',
+            thingLabel: 'label',
+          },
+        ],
+      },
+    },
+    promo: { headlines: { seoHeadline: 'A headline' } },
+  };
+
+  const Component = (newsServiceContextStub, requestContextStub) => (
+    <ServiceContext.Provider value={newsServiceContextStub}>
+      <RequestContextProvider {...requestContextStub}>
+        <ArticleAtiParams {...mockArticleData} />
+      </RequestContextProvider>
+    </ServiceContext.Provider>
+  );
+  const newsServiceContextStub = {
+    service: 'news',
+  };
+  const requestContextStub = {
+    isUK: true,
+    platform: 'canonical',
+    statsDestination: 'NEWS_PS_TEST',
+  };
+
   describe('atiPageViewParams is called ', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
 
-    it('should call atiPageViewParams with specific params', () => {
-      const mock = jest.fn();
-      jest.mock('./atiUrl', () => ({ atiPageViewParams: mock }));
-      const { atiPageViewParams } = require('./atiUrl');
-      jest.mock('../../lib/analyticsUtils/article', () => ({
-        getLanguage: 'language',
-      }));
+    it('should call atiPageViewParams with the params from the Contexts', () => {
+      const mock = jest.fn().mockReturnValue('key=value&key2=value2');
+      atiUrl.atiPageViewParams = mock;
 
-      // atiPageViewParams = jest.fn();
-      // jest.mock(atiPageViewParams);
-      // Object.defineProperty(atiPageViewParams, 'doOneThing', {
-      //   value: jest.fn(),
-      // });
-      // const spy = jest.spyOn(ArticleAtiParams, 'atiPageViewParams');
+      renderer.create(Component(newsServiceContextStub, requestContextStub));
 
-      const Component = (newsServiceContextStub, requestContextStub) => (
-        <ServiceContext.Provider value={newsServiceContextStub}>
-          <RequestContextProvider {...requestContextStub}>
-            <ArticleAtiParams articleData={mockArticleData} />
-          </RequestContextProvider>
-        </ServiceContext.Provider>
-      );
-      const newsServiceContextStub = {
-        service: 'news',
-      };
-      const requestContextStub = {
+      expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
+      expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
+        contentType: 'article',
         isUK: true,
+        language: 'language',
+        ldpThingIds: 'id',
+        ldpThingLabels: 'label',
+        optimoUrn: 'urn:c0000000000o',
+        pageIdentifier: 'news.articles.c0000000000o.page',
+        pageTitle: 'A headline',
         platform: 'canonical',
+        service: 'news',
         statsDestination: 'NEWS_PS_TEST',
-      };
-      renderer
-        .create(Component(newsServiceContextStub, requestContextStub))
-        .toJSON();
-      // expect(tree).toMatchSnapshot();
-
-      expect(mock).toHaveBeenCalledTimes(1);
+        timePublished: '2000-01-01T00:00:00.000Z',
+        timeUpdated: '2001-01-01T00:00:00.000Z',
+      });
     });
-  });
 
-  xdescribe('analytics utilities are called with correct params', () => {
-    it('should call each analytics util correctly', () => {
-      const { getLanguage } = require('../../lib/analyticsUtils/article');
-      expect(getLanguage).toHaveBeenCalledWith(mockArticleData);
+    xit('should call atiPageViewParams with the functions - getlanguage with articledata', () => {
+      const mockLanguage = jest.fn().mockReturnValue('language');
+      testUtils.getLanguage = mockLanguage;
+
+      renderer.create(Component(newsServiceContextStub, requestContextStub));
+
+      expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
+      expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(1);
+      expect(testUtils.getThingAttributes).toHaveBeenCalledWith(
+        'thingId',
+        mockArticleData,
+      );
+      expect(testUtils.getThingAttributes).toHaveBeenCalledWith(
+        'thingLabel',
+        mockArticleData,
+      );
+      expect(testUtils.getOptimoUrn).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(
+        'news',
+        mockArticleData,
+      );
+      expect(testUtils.getPromoHeadline).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getPublishedDatetime).toHaveBeenCalledWith(
+        'firstPublished',
+        mockArticleData,
+      );
+      expect(testUtils.getPublishedDatetime).toHaveBeenCalledWith(
+        'lastPublished',
+        mockArticleData,
+      );
     });
   });
 });
-//   expect(atiPageViewParams).toHaveBeenCalledWith({
-//     contentType,
-//     language,
-//     ldpThingIds,
-//     ldpThingLabels,
-//     optimoUrn,
-//     pageIdentifier,
-//     pageTitle,
-//     timePublished,
-//     timeUpdated,
-//     isUK,
-//     platform,
-//     service,
-//     statsDestination,
-//   });
-// });
-
-// const tests = [
-//   { description: '', func: getLanguage, args: articleData },
-//   {
-//     description: '',
-//     func: getThingAttributes,
-//     args: ('thingId', articleData),
-//   },
-//   {
-//     description: '',
-//     func: getThingAttributes,
-//     args: ('thingLabel', articleData),
-//   },
-//   { description: '', func: getOptimoUrn, args: articleData },
-//   {
-//     description: '',
-//     func: getPageIdentifier,
-//     args: (service, articleData),
-//   },
-//   { description: '', func: getPromoHeadline, args: articleData },
-//   {
-//     description: '',
-//     func: getPublishedDatetime,
-//     args: ('firstPublished', articleData),
-//   },
-//   {
-//     description: '',
-//     func: getPublishedDatetime,
-//     args: ('lastPublished', articleData),
-//   },
-// ];
-// tests.forEach(({ func, args }) => {
-//   it(description, () => {
-//     expect(func).toHaveBeenCalledWith({ args });
-//   });
-// });
-
-// const contentType = '';
-// const language = '';
-// const ldpThingIds = '';
-// const ldpThingLabels = '';
-// const optimoUrn = '';
-// const pageIdentifier = '';
-// const pageTitle = '';
-// const timePublished = '';
-// const timeUpdated = '';
-// const isUK = '';
-// const platform = '';
-// const service = '';
-// const statsDestination = '';
-
-// xdescribe('ArticleAtiParams', () => {
-//   let container;
-//   beforeEach(() => {
-//     container = document.createElement('div');
-//     document.body.appendChild(container);
-//   });
-
-//   afterEach(() => {
-//     jest.clearAllMocks();
-//   });
-
-//   it('should return the query parameters for the ati article', () => {
-//     jest.mock('./atiUrl', () => jest.fn());
-//     const { atiPageViewParams } = require('./atiUrl'); // eslint-diable-line global-require
-//     // jest.mock('../../lib/analyticsUtils/article', () => jest.fn());
-//     // const { getLanguage } = require('../../lib/analyticsUtils/article');
-
-//     act(() => {
-//       ReactDOM.render(
-//         <ArticleAtiParams articleData={articleData} />,
-//         container,
-//       );
-//     });
-
-//     expect(atiPageViewParams).toHaveBeenCalledTimes(1);
-//     // expect(ArticleAtiParams).toHaveBeenCalledTimes(1);
-//     // expect(getLanguage).toHaveBeenCalledWith({ articleData });
-//   });
-// });
