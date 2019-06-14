@@ -1,20 +1,18 @@
 import React, { useContext } from 'react';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const ManifestContainer = ({ service }) => {
-  const { manifestPath } = useContext(ServiceContext);
+const ManifestContainer = () => {
+  const { manifestPath, service } = useContext(ServiceContext);
   return (
     <Helmet>
-      <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-      <link rel="manifest" href={`/${service}${manifestPath}`} />
+      {manifestPath ? (
+        <link rel="manifest" href={`/${service}${manifestPath}`} />
+      ) : (
+        <link rel="manifest" href={`/${service}/articles/manifest.json`} />
+      )}
     </Helmet>
   );
-};
-
-ManifestContainer.propTypes = {
-  service: string.isRequired,
 };
 
 export default ManifestContainer;

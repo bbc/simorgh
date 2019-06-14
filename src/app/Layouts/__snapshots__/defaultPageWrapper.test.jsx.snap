@@ -14,9 +14,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
     >
-      <ManifestContainer
-        service="news"
-      />
+      <ManifestContainer />
       <ConsentBanner />
       <HeaderContainer />
       <h2>

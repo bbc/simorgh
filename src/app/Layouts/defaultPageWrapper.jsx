@@ -35,7 +35,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
             id,
           })}
         >
-          <ManifestContainer service={service} />
+          <ManifestContainer />
           <ConsentBanner />
           <HeaderContainer />
           {children}
