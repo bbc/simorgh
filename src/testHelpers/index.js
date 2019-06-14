@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import nodeLogger from '../app/lib/logger.node';
-import deepClone from '../app/lib/json/deepClone';
+import deepClone from '../app/lib/utilities/deepClone';
 
 export const shouldMatchSnapshot = (title, component) => {
   it(title, () => {

@@ -3,7 +3,7 @@ import { shape } from 'prop-types';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import FrontPageSection from '../FrontPageSection';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
   const groups = deepGet(['content', 'groups'], frontPageData);
