@@ -3,7 +3,7 @@ import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
-    const { type, model, id } = block;
+    const { type, model, id, position } = block;
 
     if (!componentsToRender || !type) {
       return null;
@@ -20,6 +20,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
     return (
       <Block
         key={id}
+        position={position}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
         {...model}
