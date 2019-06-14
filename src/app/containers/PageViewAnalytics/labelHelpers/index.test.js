@@ -3,7 +3,7 @@ import onClient from '../../../helpers/onClient';
 import {
   setWindowValue,
   resetWindowValue,
-} from '../../../helpers/tests/setWindowValue';
+} from '../../../../testHelpers/setWindowValue';
 
 let isOnClient = true;
 

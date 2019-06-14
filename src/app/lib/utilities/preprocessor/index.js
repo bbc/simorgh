@@ -1,4 +1,4 @@
-import nodeLogger from '../../../helpers/logger.node';
+import nodeLogger from '../../logger.node';
 import applyTimestampRules from './rules/timestamp';
 
 const defaultRules = [applyTimestampRules];
