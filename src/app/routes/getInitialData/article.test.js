@@ -4,6 +4,7 @@ import fetchData from './utils/fetchData';
 
 const mockApplyTimestampRules = jest.fn();
 const mockAddIdsToBlocks = jest.fn();
+const mockApplyBlockPositioning = jest.fn();
 
 jest.mock(
   '../../lib/utilities/preprocessor/rules/timestamp',
@@ -15,7 +16,16 @@ jest.mock(
   () => mockAddIdsToBlocks,
 );
 
-const preprocessorRules = [mockApplyTimestampRules, mockAddIdsToBlocks];
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/blockPositioning',
+  () => mockApplyBlockPositioning,
+);
+
+const preprocessorRules = [
+  mockApplyTimestampRules,
+  mockAddIdsToBlocks,
+  mockApplyBlockPositioning,
+];
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
