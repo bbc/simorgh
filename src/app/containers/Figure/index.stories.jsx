@@ -12,6 +12,7 @@ import {
   FigureAmpImageWithCaptionContainingLink,
   FigureImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
+  FigureLazyLoadImage,
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
@@ -30,7 +31,8 @@ storiesOf('Figure', module)
   .add(
     'with a caption with multiple paragraphs with a link',
     () => FigureImageWithCaptionContainingMultipleParagraphsAndLink,
-  );
+  )
+  .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
 storiesOf('Figure - AMP', module)
   .addDecorator(AmpDecorator)
