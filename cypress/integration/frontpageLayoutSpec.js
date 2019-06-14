@@ -1,14 +1,15 @@
-import services from '../support/worldServices';
+import services from '../support/serviceConfig';
+import config from '../support/config';
 import { el } from '../support';
 
 Object.keys(services).forEach(index => {
-  const xservice = services[index];
+  const serviceConfig = services[index];
   const service = index;
 
   describe(`frontpage tests for ${service}`, () => {
     // eslint-disable-next-line no-undef
     before(() => {
-      cy.visit(xservice.url);
+      cy.visit(serviceConfig.url);
     });
 
     describe('checks the components are present', () => {
@@ -17,54 +18,12 @@ Object.keys(services).forEach(index => {
         cy.viewport(1008, 768);
       });
 
-      describe('cookie banner', () => {
-        it('should have a visible cookie banner', () => {
-          cy.get(el.cookieBanner).should('be.visible');
-        });
-
-        it('should have a functional cookie banner', () => {
-          cy.get(el.cookieBanner).within(() => {
-            cy.get('a')
-              .should('have.length.of', 1)
-              .should(
-                'have.attr',
-                'href',
-                'https://www.bbc.co.uk/usingthebbc/your-data-matters',
-              );
-            cy.get('button')
-              .should('have.attr', 'type', 'button')
-              .click();
-          });
-
-          cy.get(el.cookieBanner).within(() => {
-            cy.get('a')
-              .should('have.length.of', 2)
-              .should(
-                'have.attr',
-                'href',
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
-              )
-              .last()
-              .should(
-                'have.attr',
-                'href',
-                'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
-              );
-
-            cy.get('button')
-              .should('have.attr', 'type', 'button')
-              .click();
-          });
-        });
-      });
-
       describe('header tests', () => {
         it('should have a visible banner', () => {
           cy.get(el.header)
             .should('have.lengthOf', 1)
-            .should('have.attr', 'role', 'banner')
             .find('a')
-            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
+            .should('have.attr', 'href', `${config.baseUrl}/news`) // expect `${config.baseUrl}${serviceConfig.url}` once header hooked up
             .find('svg')
             .should('be.visible');
         });
@@ -86,9 +45,7 @@ Object.keys(services).forEach(index => {
             .each($section => {
               cy.wrap($section).within(() => {
                 // asserting that the heading id === the section aria-labelledby
-                cy.get('h2')
-                  .should('have.lengthOf', 1)
-                  .should('have.id', $section.attr('aria-labelledby'));
+                cy.get('h2').should('have.lengthOf', 1);
               });
             });
         });
@@ -119,24 +76,9 @@ Object.keys(services).forEach(index => {
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
             .find('a')
-            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // this should one day soon become 'https://www.bbc.com/igbo' etc.
+            .should('have.attr', 'href', `${config.baseUrl}/news`) // expect `${config.baseUrl}${serviceConfig.url}` once footer hooked up
             .find('svg')
             .should('be.visible');
-        });
-      });
-    });
-
-    describe('verifies the layout at less than 600px', () => {
-      // eslint-disable-next-line no-undef
-      before(() => {
-        cy.viewport(599, 1024);
-      });
-
-      it('does not display the summary', () => {
-        cy.get(el.section).within(() => {
-          cy.get('p')
-            .should('have.length.of.at.least', 1)
-            .should('not.be.visible');
         });
       });
     });
