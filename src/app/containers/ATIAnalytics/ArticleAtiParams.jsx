@@ -5,14 +5,14 @@ import { atiPageViewParams } from './atiUrl';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
-const {
+import {
   getLanguage,
   getOptimoUrn,
   getPageIdentifier,
   getPromoHeadline,
   getPublishedDatetime,
   getThingAttributes,
-} = require('../../lib/analyticsUtils/article');
+} from '../../lib/analyticsUtils/article';
 
 const ArticleAtiParams = articleData => {
   const { platform, isUK, statsDestination } = useContext(RequestContext);

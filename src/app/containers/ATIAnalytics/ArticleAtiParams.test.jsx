@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from './ArticleAtiParams';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
 import * as atiUrl from './atiUrl';
 import * as testUtils from '../../lib/analyticsUtils/article';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 describe('ArticleAtiParams', () => {
   const mockArticleData = {
@@ -38,8 +38,10 @@ describe('ArticleAtiParams', () => {
   };
   const requestContextStub = {
     isUK: true,
+    origin: 'https://www.bbc.co.uk',
     platform: 'canonical',
     statsDestination: 'NEWS_PS_TEST',
+    statsPageIdentifier: 'news.articles.c0000000000o.page',
   };
 
   describe('atiPageViewParams is called ', () => {
@@ -71,15 +73,22 @@ describe('ArticleAtiParams', () => {
       });
     });
 
-    xit('should call atiPageViewParams with the functions - getlanguage with articledata', () => {
-      const mockLanguage = jest.fn().mockReturnValue('language');
-      testUtils.getLanguage = mockLanguage;
+    it('should call article utility functions with arguments', () => {
+      testUtils.getLanguage = jest.fn();
+      testUtils.getLanguage = jest.fn();
+      testUtils.getOptimoUrn = jest.fn();
+      testUtils.getPageIdentifier = jest.fn();
+      testUtils.getPromoHeadline = jest.fn();
+      testUtils.getPublishedDatetime = jest.fn();
+      testUtils.getThingAttributes = jest.fn();
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
       expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
       expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
-      expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(1);
+      expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
+      expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(2);
       expect(testUtils.getThingAttributes).toHaveBeenCalledWith(
         'thingId',
         mockArticleData,
@@ -88,12 +97,16 @@ describe('ArticleAtiParams', () => {
         'thingLabel',
         mockArticleData,
       );
+      expect(testUtils.getOptimoUrn).toHaveBeenCalledTimes(1);
       expect(testUtils.getOptimoUrn).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getPageIdentifier).toHaveBeenCalledTimes(1);
       expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(
         'news',
         mockArticleData,
       );
+      expect(testUtils.getPromoHeadline).toHaveBeenCalledTimes(1);
       expect(testUtils.getPromoHeadline).toHaveBeenCalledWith(mockArticleData);
+      expect(testUtils.getPublishedDatetime).toHaveBeenCalledTimes(2);
       expect(testUtils.getPublishedDatetime).toHaveBeenCalledWith(
         'firstPublished',
         mockArticleData,
