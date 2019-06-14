@@ -10,11 +10,6 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
@@ -400,11 +395,6 @@ exports[`Figure should render an image with alt text 1`] = `
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
@@ -447,11 +437,6 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
@@ -570,11 +555,6 @@ exports[`Figure should render an image with caption text 1`] = `
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
@@ -673,11 +653,6 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
@@ -805,11 +780,6 @@ exports[`Figure should render an image with copyright text 1`] = `
 .c2 {
   display: block;
   width: 100%;
-  opacity: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
 }
 
 .c1 {
