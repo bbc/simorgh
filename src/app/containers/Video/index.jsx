@@ -68,6 +68,11 @@ const VideoContainer = ({ blocks }) => {
               custom-element="amp-iframe"
               src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
             />
+            <script
+              async
+              custom-element="amp-img"
+              src="https://cdn.ampproject.org/v0/amp-img-0.1.js"
+            />
           </Helmet>
         </>
       ) : null}
@@ -93,7 +98,13 @@ const VideoContainer = ({ blocks }) => {
             layout="responsive"
             sandbox="allow-scripts allow-same-origin"
           >
-            <amp-image src={`https://${holdingImageUrl}`} placeholder />
+            <amp-img
+              src={`https://${holdingImageUrl}`}
+              layout="responsive"
+              width="450"
+              height="300"
+              placeholder
+            />
           </amp-iframe>
         )}
         {captionBlock ? <Caption block={captionBlock} video /> : null}
