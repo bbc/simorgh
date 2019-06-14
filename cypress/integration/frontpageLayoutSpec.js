@@ -41,10 +41,8 @@ Object.keys(services).forEach(index => {
           cy.get(el.section)
             .should('have.length.of.at.least', 1)
             .should('be.visible')
-            .should('have.attr', 'role', 'region')
             .each($section => {
               cy.wrap($section).within(() => {
-                // asserting that the heading id === the section aria-labelledby
                 cy.get('h2').should('have.lengthOf', 1);
               });
             });
