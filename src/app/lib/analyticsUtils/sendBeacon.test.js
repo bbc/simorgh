@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import loggerMock from '../../helpers/tests/loggerMock';
+import loggerMock from '../../../testHelpers/loggerMock';
 
 let fetchResponse;
 let isOnClient;

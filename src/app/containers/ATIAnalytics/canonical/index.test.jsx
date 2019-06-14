@@ -6,7 +6,7 @@ import CanonicalATIAnalytics from '.';
 
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
 const ContextWrap = props => (

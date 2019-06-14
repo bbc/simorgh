@@ -1,5 +1,5 @@
 import onClient from '../../helpers/onClient';
-import nodeLogger from '../../helpers/logger.node';
+import nodeLogger from '../logger.node';
 import 'isomorphic-fetch';
 
 const logger = nodeLogger(__filename);

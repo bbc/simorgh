@@ -1,7 +1,8 @@
-import nodeLogger from '../../../helpers/logger.node';
+import nodeLogger from '../../logger.node';
 import applyTimestampRules from './rules/timestamp';
+import applyBlockPositioning from './rules/blockPositioning';
 
-const defaultRules = [applyTimestampRules];
+const defaultRules = [applyBlockPositioning, applyTimestampRules];
 
 const Preprocessor = (jsonRaw = {}, rules = defaultRules) => {
   try {

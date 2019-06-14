@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 

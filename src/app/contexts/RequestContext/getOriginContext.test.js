@@ -1,7 +1,7 @@
 import {
   setWindowValue,
   resetWindowValue,
-} from '../../helpers/tests/setWindowValue';
+} from '../../../testHelpers/setWindowValue';
 
 const windowLocation = window.location;
 

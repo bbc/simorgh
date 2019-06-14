@@ -1,4 +1,4 @@
-import deepClone from '../json/deepClone';
+import deepClone from '../../lib/json/deepClone';
 
 export const setLocationValue = value => {
   const windowLocation = deepClone(window.location);

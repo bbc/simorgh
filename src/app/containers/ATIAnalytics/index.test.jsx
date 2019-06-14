@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
-import { isNull } from '../../helpers/tests/testHelpers';
+import { isNull } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
