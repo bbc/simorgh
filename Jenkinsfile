@@ -23,9 +23,9 @@ def runProductionTests(){
 }
 
 def getCommitInfo = {
-  appGitCommit = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git rev-parse HEAD")
-  appGitCommitAuthor = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-  appGitCommitMessage = sh(returnStdout: true, script: "cd ${APP_DIRECTORY}; git log -1 --pretty=%B").trim()
+  appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
+  appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
+  appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
 }
 
 pipeline {
@@ -40,33 +40,36 @@ pipeline {
   }
   stages {
     stage ('Build and Test') {
+      // when {
+      //   expression { env.BRANCH_NAME != 'latest' }
+      // }
       when {
-        expression { env.BRANCH_NAME != 'latest' }
+        expression { env.BRANCH_NAME == 'latest' }
       }
       parallel {
-        // stage('Test Development') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     runDevelopmentTests()
-        //   }
-        // }
+        stage('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            runDevelopmentTests()
+          }
+        }
 
-        // stage('Test Production') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     runProductionTests()
-        //   }
-        // }  
+        stage('Test Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            runProductionTests()
+          }
+        }  
       }
       post {
         always {
