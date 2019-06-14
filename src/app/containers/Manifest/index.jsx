@@ -4,13 +4,14 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const ManifestContainer = () => {
   const { manifestPath, service } = useContext(ServiceContext);
+
+  if (!manifestPath) {
+    return null;
+  }
+
   return (
     <Helmet>
-      {manifestPath ? (
-        <link rel="manifest" href={`/${service}${manifestPath}`} />
-      ) : (
-        <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-      )}
+      <link rel="manifest" href={`/${service}${manifestPath}`} />
     </Helmet>
   );
 };
