@@ -303,6 +303,11 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 .c3 {
   display: block;
   width: 100%;
+  opacity: 1;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: eMLfYp;
+  animation-name: eMLfYp;
 }
 
 .c2 {
