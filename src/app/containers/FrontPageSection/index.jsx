@@ -6,7 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import idSanitiser from '../../lib/utilities/idSanitiser';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/json/deepGet';
 
 const FrontPageSection = ({ bar, group }) => {
   const { script } = useContext(ServiceContext);
@@ -36,13 +36,17 @@ const FrontPageSection = ({ bar, group }) => {
       <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
         {group.strapline.name}
       </SectionLabel>
-      <StoryPromoUl>
-        {items.map(item => (
-          <StoryPromoLi key={item.id}>
-            <StoryPromo item={item} script={script} />
-          </StoryPromoLi>
-        ))}
-      </StoryPromoUl>
+      {items.length > 1 ? (
+        <StoryPromoUl>
+          {items.map(item => (
+            <StoryPromoLi key={item.id}>
+              <StoryPromo item={item} script={script} />
+            </StoryPromoLi>
+          ))}
+        </StoryPromoUl>
+      ) : (
+        <StoryPromo item={items[0]} script={script} />
+      )}
     </section>
   );
 };

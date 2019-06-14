@@ -6,8 +6,11 @@ const pidgin = {
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+  defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
+  fonts: [],
   translations: {
     error: {
       404: {
@@ -42,49 +45,49 @@ const pidgin = {
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'We don update our Privacy and Cookies Policy',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
         accept: 'OK',
-        reject: "Find out what's changed",
+        reject: 'Find out wetin don change',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'Let us know say you agree to cookies',
         description: {
           uk: {
             first: 'We use ',
             linkText: 'cookies',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
+            first: 'We and our partners use technologies, like ',
             linkText: 'cookies',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        reject: 'No, cari me go settings',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },

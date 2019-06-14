@@ -1,8 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Figure from '@bbc/psammead-figure';
-import Iframe from 'react-iframe';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/json/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
@@ -11,7 +10,7 @@ import {
   videoPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
-import { filterForBlockType } from '../../helpers/blockHandlers';
+import { filterForBlockType } from '../../lib/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
@@ -55,13 +54,22 @@ const VideoContainer = ({ blocks }) => {
   return (
     <>
       {metadata ? (
-        <Helmet>
-          {
-            <script type="application/ld+json">
-              {JSON.stringify(metadata)}
-            </script>
-          }
-        </Helmet>
+        <>
+          <Helmet>
+            {
+              <script type="application/ld+json">
+                {JSON.stringify(metadata)}
+              </script>
+            }
+          </Helmet>
+          <Helmet>
+            <script
+              async
+              custom-element="amp-video-iframe"
+              src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"
+            />
+          </Helmet>
+        </>
       ) : null}
       <Figure>
         {platform === 'canonical' ? (
@@ -78,8 +86,9 @@ const VideoContainer = ({ blocks }) => {
             uiLocale="en-GB"
           />
         ) : (
-          <Iframe
-            url="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?amp=1"
+          <amp-video-iframe
+            src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?amp=1"
+            poster={`https://${holdingImageUrl}`}
             width="450px"
             height="450px"
           />

@@ -1,10 +1,7 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import StoryPromoFigure from './Figure';
 
 const imageProps = {

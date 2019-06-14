@@ -1,11 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoConatiner from '.';
 import fixture from '../../../../data/prod/pidgin/frontpage';
-import deepGet from '../../helpers/json/deepGet';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import deepGet from '../../lib/json/deepGet';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const getStoryPromo = platform => (
   <ServiceContextProvider service="news">

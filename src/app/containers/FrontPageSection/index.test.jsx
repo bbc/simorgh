@@ -1,6 +1,6 @@
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import newsConfig from '../../lib/config/services/news';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import FrontPageSection from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -104,6 +104,34 @@ const hasNoItems = {
   },
 };
 
+const hasOneItem = {
+  type: 'responsive-top-stories',
+  title: 'Top Stories',
+  items: [
+    {
+      headlines: {
+        headline: 'Top Story 1 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 1',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 1',
+        copyrightHolder: 'Image provider 1',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000001',
+    },
+  ],
+  strapline: {
+    name: 'Top Stories',
+  },
+};
+
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
@@ -131,6 +159,11 @@ describe('FrontPageSection Container', () => {
     shouldShallowMatchSnapshot(
       'should render without a bar',
       <FrontPageSection group={group} bar={false} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render with only one item',
+      <FrontPageSection group={hasOneItem} />,
     );
   });
 
@@ -194,6 +227,17 @@ describe('FrontPageSection Container', () => {
       // container is a <div> which would contain the rendered elements...
       // IF THERE WERE ANY!
       expect(container.children).toHaveLength(0);
+    });
+
+    it('should not render the story promo inside a list when only one item exists', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasOneItem} />
+        </ServiceContextProvider>,
+      );
+
+      expect(container.getElementsByTagName('ul')).toHaveLength(0);
+      expect(container.getElementsByTagName('li')).toHaveLength(0);
     });
   });
 });
