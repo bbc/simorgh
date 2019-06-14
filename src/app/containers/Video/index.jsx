@@ -65,8 +65,8 @@ const VideoContainer = ({ blocks }) => {
           <Helmet>
             <script
               async
-              custom-element="amp-video-iframe"
-              src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"
+              custom-element="amp-iframe"
+              src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
             />
           </Helmet>
         </>
@@ -86,12 +86,15 @@ const VideoContainer = ({ blocks }) => {
             uiLocale="en-GB"
           />
         ) : (
-          <amp-video-iframe
-            src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?amp=1"
-            poster={`https://${holdingImageUrl}`}
-            width="450px"
-            height="450px"
-          />
+          <amp-iframe
+            src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?#amp=1"
+            width="450"
+            height="300"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin"
+          >
+            <amp-image src={`https://${holdingImageUrl}`} placeholder />
+          </amp-iframe>
         )}
         {captionBlock ? <Caption block={captionBlock} video /> : null}
       </Figure>
