@@ -1,5 +1,4 @@
 import services from '../support/serviceConfig';
-import config from '../support/config';
 import { el } from '../support/frontpageElements';
 import describeForLocalOnly from '../support/describeForLocalOnly';
 
