@@ -1,4 +1,4 @@
-import deepGet from './deepGet';
+import deepGet from '.';
 
 const fixtureData = {
   foo: 123,
