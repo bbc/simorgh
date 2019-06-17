@@ -63,7 +63,7 @@ Object.keys(config.assets).forEach(key => {
     it('should render a title', () => {
       cy.window().then(win => {
         const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-        if (win.SIMORGH_DATA.service === 'news') {
+        if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
           renderedTitle(`${seoHeadline} - BBC News`);
         } else {
           renderedTitle(`${seoHeadline} - BBC News فارسی`);
@@ -73,7 +73,7 @@ Object.keys(config.assets).forEach(key => {
 
     it('should render an H2, which contains/displays a styled subheading', () => {
       cy.window().then(win => {
-        if (win.SIMORGH_DATA.service === 'news') {
+        if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
           firstSubheadlineDataWindow();
         }
       });
@@ -81,7 +81,7 @@ Object.keys(config.assets).forEach(key => {
 
     it('should have an inline link', () => {
       cy.window().then(win => {
-        if (win.SIMORGH_DATA.service === 'news') {
+        if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
           getElement('main a');
         }
       });
