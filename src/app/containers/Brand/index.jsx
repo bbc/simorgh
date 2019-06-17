@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import onClient from '../../helpers/onClient';
+import onClient from '../../lib/utilities/onClient';
 import getBaseUrl from '../../routes/getInitialData/utils/getBaseUrl';
 
 const BrandContainer = () => {

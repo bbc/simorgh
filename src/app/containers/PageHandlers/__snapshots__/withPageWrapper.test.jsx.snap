@@ -64,6 +64,12 @@ Array [
   }
 }
 
+@media screen and (-ms-high-contrast:active),print {
+  .c5 {
+    fill: windowText;
+  }
+}
+
 <header
     role="banner"
   >
@@ -235,6 +241,12 @@ Array [
   }
 }
 
+@media screen and (-ms-high-contrast:active),print {
+  .c6 {
+    fill: windowText;
+  }
+}
+
 @media (max-width:14.9375rem) {
   .c8 {
     grid-auto-flow: row;
@@ -245,7 +257,7 @@ Array [
   .c8 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: repeat( 4,auto );
   }
 }
 
@@ -253,7 +265,7 @@ Array [
   .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat( 3,auto );
   }
 }
 
@@ -261,7 +273,7 @@ Array [
   .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat( 3,auto );
   }
 }
 
@@ -269,7 +281,7 @@ Array [
   .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat( 3,auto );
   }
 }
 

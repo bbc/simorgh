@@ -9,7 +9,7 @@ import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
 import StoryPromoFigure from './Figure';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const StoryPromo = ({ item }) => {
   const { script } = useContext(ServiceContext);

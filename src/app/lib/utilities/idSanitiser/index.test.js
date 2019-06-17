@@ -1,4 +1,4 @@
-import idSanitiser from './idSanitiser';
+import idSanitiser from '.';
 
 describe('idSanitiser', () => {
   it('should replace spaces with hyphens', () => {
