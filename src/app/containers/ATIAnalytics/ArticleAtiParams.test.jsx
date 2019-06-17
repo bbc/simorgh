@@ -76,7 +76,6 @@ describe('ArticleAtiParams', () => {
 
     it('should call article utility functions with arguments', () => {
       testUtils.getLanguage = jest.fn();
-      testUtils.getLanguage = jest.fn();
       testUtils.getOptimoUrn = jest.fn();
       testUtils.getPageIdentifier = jest.fn();
       testUtils.getPromoHeadline = jest.fn();
@@ -85,8 +84,6 @@ describe('ArticleAtiParams', () => {
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
-      expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
-      expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
       expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
       expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
       expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(2);
