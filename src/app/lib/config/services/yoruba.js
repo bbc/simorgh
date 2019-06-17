@@ -2,16 +2,19 @@ import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const yoruba = {
+  product: 'BBC News',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
+  serviceLocalizedName: 'Yorùbá',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
   defaultImageAltText: 'BBC News Yorùbá',
   brandSVG,
   script: latin,
   fonts: [],
   translations: {
+    home: 'Ìròyìn',
     error: {
       404: {
         statusCode: '404',
@@ -92,6 +95,36 @@ const yoruba = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+  },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'Ìlànà Lílò',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Òfin Àṣírí',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.com/yoruba/institutional-43091540',
+        text: 'Kàn sí BBC',
+      },
+    ],
+    copyrightText:
+      'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
   },
 };
 
