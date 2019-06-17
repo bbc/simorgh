@@ -1,4 +1,4 @@
-import mediatorURL from './mediatorUrls';
+import mediatorURL from './mediatorUrl';
 
 describe('mediatorURL', () => {
   const tests = [

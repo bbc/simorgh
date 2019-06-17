@@ -10,7 +10,6 @@ const MediaPlayerContainer = styled.div`
 
 const Video = ({
   id,
-  pid,
   title,
   statsAppName,
   statsAppType,
@@ -26,7 +25,7 @@ const Video = ({
           function mediaPlayerSetup(container) {
             require(['bump-4'], (bump) => {
               var mediaPlayer = bump.player(
-                document.getElementById('mediaPlayer${pid}'),
+                document.getElementById('${id}'),
                 ${JSON.stringify(mediaPlayerSettings)});
               mediaPlayer.load();
             });
@@ -50,7 +49,7 @@ const Video = ({
         src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
       />
     </Helmet>
-    <MediaPlayerContainer id={`${id}${pid}`} />
+    <MediaPlayerContainer id={id} />
     <div>title: {title}</div>
     <div>statsAppName: {statsAppName}</div>
     <div>statsAppType: {statsAppType}</div>

@@ -6,7 +6,7 @@ import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
 import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
-import mediatorURL from './mediatorUrls';
+import mediatorURL from './helpers/mediatorUrl';
 
 import {
   videoPropTypes,
@@ -69,6 +69,7 @@ const VideoContainer = ({ blocks }) => {
       host: mediatorURL(env),
     },
   };
+  const id = `mp#${pid}`;
 
   return (
     <GridItemConstrainedLargeNoMargin>
@@ -83,8 +84,7 @@ const VideoContainer = ({ blocks }) => {
       ) : null}
       <Figure>
         <Video
-          id="mediaPlayer"
-          pid={pid}
+          id={id}
           title={title}
           statsAppName="news"
           statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
