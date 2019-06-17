@@ -68,11 +68,6 @@ const VideoContainer = ({ blocks }) => {
               custom-element="amp-iframe"
               src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
             />
-            <script
-              async
-              custom-element="amp-img"
-              src="https://cdn.ampproject.org/v0/amp-img-0.1.js"
-            />
           </Helmet>
         </>
       ) : null}
@@ -93,16 +88,15 @@ const VideoContainer = ({ blocks }) => {
         ) : (
           <amp-iframe
             src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?#amp=1"
-            width="450"
-            height="300"
+            width="350"
+            height="200"
             layout="responsive"
+            scrolling="no"
             sandbox="allow-scripts allow-same-origin"
           >
             <amp-img
-              src={`https://${holdingImageUrl}`}
-              layout="responsive"
-              width="450"
-              height="300"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              layout="fill"
               placeholder
             />
           </amp-iframe>
