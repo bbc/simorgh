@@ -9,9 +9,9 @@ import routes from '../app/routes';
 import {
   articleRegexPath,
   articleDataRegexPath,
-  frontpageDataRegexPath,
   articleManifestRegexPath,
   articleSwRegexPath,
+  frontpageDataRegexPath,
   frontpageSwRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';

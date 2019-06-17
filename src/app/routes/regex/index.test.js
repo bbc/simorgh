@@ -2,10 +2,10 @@ import { matchPath } from 'react-router-dom';
 import {
   articleRegexPath,
   articleDataRegexPath,
-  frontpageRegexPath,
-  frontpageDataRegexPath,
   articleSwRegexPath,
   articleManifestRegexPath,
+  frontpageRegexPath,
+  frontpageDataRegexPath,
   frontpageSwRegexPath,
 } from './index';
 
