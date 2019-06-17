@@ -45,7 +45,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    `${config.baseUrl}/persian/articles/${config.assets.persian}`,
+    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -59,12 +59,12 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
   );
 
   it('should include the canonical URL & ampHTML', () => {
-    const currentOrigin = window.location.origin;
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(
-      `${currentOrigin}/persian/articles/${config.assets.persian}`,
+      `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
     );
     checkAmpHTML(
-      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
+      `${canonicalOrigin}/persian/articles/${config.assets.persian}.amp`,
     );
   });
 
