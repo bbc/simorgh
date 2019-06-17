@@ -8,7 +8,7 @@ import StoryPromoComponent, {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 import StoryPromoFigure from './Figure';
 import LinkContents from './LinkContents';
