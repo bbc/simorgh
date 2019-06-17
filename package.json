@@ -125,7 +125,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.6.1",
-    "react-router-config": "5.0.0",
+    "react-router-config": "5.0.1",
     "react-router-dom": "^5.0.1",
     "speculate": "^1.7.4",
     "styled-components": "^4.3.1",
