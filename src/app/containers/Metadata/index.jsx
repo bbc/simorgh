@@ -105,7 +105,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         articleAuthor={articleAuthor}
         articleSection={metadata.passport ? metadata.passport.genre : null}
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalLink} // to fix
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}
@@ -117,8 +117,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         locale={locale}
         metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
-        timeFirstPublished={timeFirstPublished}
-        timeLastPublished={timeLastPublished}
+        timeFirstPublished={timeFirstPublished} // to fix
+        timeLastPublished={timeLastPublished} // to fix
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}

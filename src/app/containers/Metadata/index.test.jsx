@@ -7,6 +7,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import frontPageData from '../../../../data/test/igbo/frontpage/index.json';
 
 const Container = (service, bbcOrigin, platform, data, id) => {
   const serviceConfig = services[service];
@@ -36,12 +37,14 @@ const metadataProps = (
   metaTags,
   title,
   serviceConfig,
+  type,
+  showArticleTags,
 ) => ({
   isAmp,
   alternateLinks,
   ampLink,
   appleTouchIcon: `https://foo.com/static/${serviceConfig.service}/images/icons/icon-192x192.png`,
-  articleAuthor: serviceConfig.articleAuthor,
+  articleAuthor: serviceConfig.articleAuthor || null,
   articleSection: null,
   brandName: serviceConfig.brandName,
   canonicalLink,
@@ -59,8 +62,8 @@ const metadataProps = (
   title,
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
-  type: 'article',
-  showArticleTags: true,
+  type,
+  showArticleTags,
 });
 
 const linkedDataProps = (
@@ -129,6 +132,8 @@ describe('Metadata Container', () => {
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
           services.news,
+          'article',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -191,6 +196,8 @@ describe('Metadata Container', () => {
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
           'Article Headline for SEO',
           services.news,
+          'article',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -240,6 +247,8 @@ describe('Metadata Container', () => {
           [],
           'سرصفحه مقاله',
           services.persian,
+          'article',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -278,6 +287,8 @@ describe('Metadata Container', () => {
           [],
           'سرصفحه مقاله',
           services.persian,
+          'article',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
@@ -287,6 +298,46 @@ describe('Metadata Container', () => {
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
+        ),
+      );
+    });
+
+    it('should be correct for WS Frontpages', () => {
+      const Wrapper = mount(
+        Container(
+          'igbo',
+          dotComOrigin,
+          'canonical',
+          frontPageData,
+          'c4vlle3q337o',
+        ),
+      );
+
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          false,
+          [],
+          'https://www.bbc.com/igbo/articles/igbo/front_page/desktop/domestic.amp',
+          'https://www.bbc.com/igbo',
+          'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
+          'ig',
+          [],
+          'Ogbako',
+          services.igbo,
+          'IDX',
+          false,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'BBC News Igbo',
+          'https://www.bbc.co.uk/igbo',
+          'Igbo',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+          'seoHeadline',
         ),
       );
     });
