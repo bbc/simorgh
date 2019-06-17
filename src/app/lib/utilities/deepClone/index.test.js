@@ -1,4 +1,4 @@
-import deepClone from './deepClone';
+import deepClone from '.';
 
 const fixtureData = {
   foo: 123,

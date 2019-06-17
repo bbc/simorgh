@@ -1,4 +1,4 @@
-import deepGet from '../../../lib/json/deepGet';
+import deepGet from '../../../lib/utilities/deepGet';
 
 export const getOptimoUrn = articleData =>
   deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
