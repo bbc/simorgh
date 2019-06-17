@@ -3,13 +3,13 @@ import describeForLocalOnly from '../support/describeForLocalOnly';
 
 const testArticleServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    testResponseCode(`/${service}/articles/manifest.json`, 200);
+    testResponseCode(`/${service}/sw.js`, 200);
   });
 };
 
 const testFrontpageServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    testResponseCode(`/${service}/manifest.json`, 200);
+    testResponseCode(`/${service}/sw.js`, 200);
   });
 };
 
