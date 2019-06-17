@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalAndTest from '../support/limitEnvRuns';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
   checkCanonicalURL,
