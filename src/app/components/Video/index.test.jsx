@@ -5,7 +5,7 @@ import Video from './index';
 describe('Video', () => {
   describe('with data', () => {
     const props = {
-      pid: 'p00a0a0m',
+      id: 'mp#p00a0a0m',
       kind: 'episode',
       title: 'Hello World',
       items: [

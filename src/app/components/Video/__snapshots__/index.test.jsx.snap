@@ -13,7 +13,7 @@ exports[`Video with data should render the video with valid props 1`] = `
           function mediaPlayerSetup(container) {
             require(['bump-4'], (bump) =&gt; {
               var mediaPlayer = bump.player(
-                document.getElementById('mediaPlayerp00a0a0m'),
+                document.getElementById('mp#p00a0a0m'),
                 undefined);
               mediaPlayer.load();
             });
@@ -40,7 +40,7 @@ exports[`Video with data should render the video with valid props 1`] = `
     />
   </HelmetWrapper>
   <ForwardRef(MediaPlayerContainer)
-    id="undefinedp00a0a0m"
+    id="mp#p00a0a0m"
   />
   <div>
     title: 
