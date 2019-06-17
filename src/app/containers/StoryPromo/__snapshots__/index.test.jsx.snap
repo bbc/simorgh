@@ -297,17 +297,10 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <span>
             An audio item
           </span>
-          <span>
-            <span
-              className="c10"
-            >
-              , 
-              <time
-                dateTime="PT3M12S"
-              >
-                3:12
-              </time>
-            </span>
+          <span
+            className="c10"
+          >
+            , 3:12
           </span>
         </span>
       </a>
@@ -628,17 +621,10 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <span>
             An audio item
           </span>
-          <span>
-            <span
-              className="c11"
-            >
-              , 
-              <time
-                dateTime="PT3M12S"
-              >
-                3:12
-              </time>
-            </span>
+          <span
+            className="c11"
+          >
+            , 3:12
           </span>
         </span>
       </a>
@@ -2068,17 +2054,10 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <span>
             A video item
           </span>
-          <span>
-            <span
-              className="c10"
-            >
-              , 
-              <time
-                dateTime="PT1H33M20S"
-              >
-                1:33:20
-              </time>
-            </span>
+          <span
+            className="c10"
+          >
+            , 1:33:20
           </span>
         </span>
       </a>
@@ -2396,17 +2375,10 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <span>
             A video item
           </span>
-          <span>
-            <span
-              className="c11"
-            >
-              , 
-              <time
-                dateTime="PT1H33M20S"
-              >
-                1:33:20
-              </time>
-            </span>
+          <span
+            className="c11"
+          >
+            , 1:33:20
           </span>
         </span>
       </a>

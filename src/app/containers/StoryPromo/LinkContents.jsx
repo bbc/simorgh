@@ -29,7 +29,6 @@ const LinkContents = ({ item }) => {
   // hilariously, this works. according to moment, null seconds == 0 seconds!
   const duration = moment.duration(rawDuration, 'seconds');
   const durationString = formatDuration(duration);
-  const isoDuration = duration.toISOString();
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
@@ -38,11 +37,8 @@ const LinkContents = ({ item }) => {
       <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
       <span>{headline}</span>
       {rawDuration && (
-        <span>
-          <VisuallyHiddenText>
-            , <time dateTime={isoDuration}>{durationString}</time>
-          </VisuallyHiddenText>
-        </span>
+        // once we have 'duration' translations, we could place those here
+        <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
       )}
     </span>
   );

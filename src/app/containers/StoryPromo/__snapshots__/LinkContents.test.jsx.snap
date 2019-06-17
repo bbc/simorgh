@@ -11,15 +11,8 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   <span>
     A headline for a media item
   </span>
-  <span>
-    <ForwardRef(VisuallyHiddenText)>
-      , 
-      <time
-        dateTime="PT11M6S"
-      >
-        11:06
-      </time>
-    </ForwardRef(VisuallyHiddenText)>
-  </span>
+  <ForwardRef(VisuallyHiddenText)>
+    , 11:06
+  </ForwardRef(VisuallyHiddenText)>
 </span>
 `;
