@@ -4,7 +4,7 @@ import { shape } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 
 import { storyItem } from '../../models/propTypes/storyItem';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 import formatDuration from '../../lib/utilities/formatDuration';
 
 const MediaIndicator = ({ item }) => {
