@@ -11,8 +11,8 @@ import {
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
 
-describe('Article Body Tests', () => {
-  Object.keys(config.assets).forEach(key => {
+Object.keys(config.assets).forEach(key => {
+  describe('Article Body Tests', () => {
     // eslint-disable-next-line no-undef
     before(() => {
       cy.visit(`/${key}/articles/${config.assets[key]}`);
@@ -20,10 +20,6 @@ describe('Article Body Tests', () => {
 
     it('should render an H1, which contains/displays a styled headline', () => {
       firstHeadlineDataWindow();
-    });
-
-    it('should render an H2, which contains/displays a styled subheading', () => {
-      firstSubheadlineDataWindow();
     });
 
     it('should render a paragraph, which contains/displays styled text', () => {
@@ -67,12 +63,28 @@ describe('Article Body Tests', () => {
     it('should render a title', () => {
       cy.window().then(win => {
         const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-        renderedTitle(`${seoHeadline} - BBC News`);
+        if (win.SIMORGH_DATA.service === 'news') {
+          renderedTitle(`${seoHeadline} - BBC News`);
+        } else {
+          renderedTitle(`${seoHeadline} - BBC News فارسی`);
+        }
+      });
+    });
+
+    it('should render an H2, which contains/displays a styled subheading', () => {
+      cy.window().then(win => {
+        if (win.SIMORGH_DATA.service === 'news') {
+          firstSubheadlineDataWindow();
+        }
       });
     });
 
     it('should have an inline link', () => {
-      getElement('main a');
+      cy.window().then(win => {
+        if (win.SIMORGH_DATA.service === 'news') {
+          getElement('main a');
+        }
+      });
     });
   });
 });

@@ -76,10 +76,9 @@ describe('AMP Tests on a .amp page', () => {
     const canonicalOrigin = origin.includes('localhost')
       ? 'https://www.bbc.co.uk'
       : origin;
+    cy.log(canonicalOrigin);
     checkCanonicalURL(
-      `${canonicalOrigin}
-      /news/articles/
-      ${config.specialAssets.news}`,
+      `${canonicalOrigin}/news/articles/${config.specialAssets.news}`,
     );
   });
 
