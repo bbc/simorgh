@@ -6,7 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import idSanitiser from '../../lib/utilities/idSanitiser';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const FrontPageSection = ({ bar, group }) => {
   const { script } = useContext(ServiceContext);
