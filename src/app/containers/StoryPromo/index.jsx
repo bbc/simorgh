@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from 'react';
-import moment from 'moment-timezone';
 import { shape } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
@@ -7,52 +6,16 @@ import StoryPromoComponent, {
   Link,
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { storyItem } from '../../models/propTypes/storyItem';
-import StoryPromoFigure from './Figure';
-import MediaIndicator from './MediaIndicator';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/json/deepGet';
-import formatDuration from '../../lib/utilities/formatDuration';
 
-const buildLinkContents = (item, mediaTranslations) => {
-  const isMedia = deepGet(['cpsType'], item) === 'MAP';
-
-  const headline = deepGet(['headlines', 'headline'], item);
-
-  if (!isMedia) {
-    return headline;
-  }
-
-  const type = deepGet(['media', 'format'], item);
-
-  // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
-
-  // hilariously, this works. according to moment, null seconds == 0 seconds!
-  const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = formatDuration(duration);
-  const isoDuration = duration.toISOString();
-
-  return (
-    // role="text" is required to correct a text splitting bug on iOS VoiceOver.
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
-      <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
-      <span>{headline}</span>
-      {rawDuration && (
-        <span>
-          <VisuallyHiddenText>
-            , <time dateTime={isoDuration}>{durationString}</time>
-          </VisuallyHiddenText>
-        </span>
-      )}
-    </span>
-  );
-};
+import StoryPromoFigure from './Figure';
+import LinkContents from './LinkContents';
+import MediaIndicator from './MediaIndicator';
 
 const StoryPromo = ({ item }) => {
-  const { translations, script } = useContext(ServiceContext);
+  const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -69,7 +32,9 @@ const StoryPromo = ({ item }) => {
     <Fragment>
       {headline && (
         <Headline script={script}>
-          <Link href={url}>{buildLinkContents(item, translations.media)}</Link>
+          <Link href={url}>
+            <LinkContents item={item} />
+          </Link>
         </Headline>
       )}
       {summary && <Summary script={script}>{summary}</Summary>}

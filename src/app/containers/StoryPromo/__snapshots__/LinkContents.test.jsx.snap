@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Promo Link Contents should render with visually hidden text for media promos 1`] = `
+<span
+  role="text"
+>
+  <ForwardRef(VisuallyHiddenText)>
+    AUDIO
+    , 
+  </ForwardRef(VisuallyHiddenText)>
+  <span>
+    A headline for a media item
+  </span>
+  <span>
+    <ForwardRef(VisuallyHiddenText)>
+      , 
+      <time
+        dateTime="PT11M6S"
+      >
+        11:06
+      </time>
+    </ForwardRef(VisuallyHiddenText)>
+  </span>
+</span>
+`;
