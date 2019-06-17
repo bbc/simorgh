@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { shape, element } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getPassportHome from '../../lib/utilities/getPassportHome';
 

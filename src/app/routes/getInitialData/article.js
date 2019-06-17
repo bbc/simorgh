@@ -1,4 +1,4 @@
-import onClient from '../../helpers/onClient';
+import onClient from '../../lib/utilities/onClient';
 import getBaseUrl from './utils/getBaseUrl';
 import fetchData from './utils/fetchData';
 

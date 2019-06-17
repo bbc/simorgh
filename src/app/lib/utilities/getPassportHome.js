@@ -1,4 +1,4 @@
-import deepGet from '../json/deepGet';
+import deepGet from './deepGet';
 
 const getPassportHome = pageData => {
   const homeServiceUrl = deepGet(['metadata', 'passport', 'home'], pageData);

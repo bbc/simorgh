@@ -3,7 +3,7 @@ import * as reactDom from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 import getRouteProps from './app/routes/getInitialData/utils/getRouteProps';
-import { setWindowValue, resetWindowValue } from './testHelpers/setWindowValue';
+import { setWindowValue, resetWindowValue } from './testHelpers';
 
 jest.mock('react-dom');
 
