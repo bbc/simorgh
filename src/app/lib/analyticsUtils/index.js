@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../../helpers/onClient';
+import onClient from '../utilities/onClient';
 
 export const getAppName = service => {
   const appName = {

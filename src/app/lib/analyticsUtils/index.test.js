@@ -1,13 +1,10 @@
 import Cookie from 'js-cookie';
-import onClient from '../../helpers/onClient';
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../../testHelpers/setWindowValue';
+import onClient from '../utilities/onClient';
+import { setWindowValue, resetWindowValue } from '../../../testHelpers';
 
 let isOnClient = true;
 
-jest.mock('../../helpers/onClient', () => jest.fn());
+jest.mock('../utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {

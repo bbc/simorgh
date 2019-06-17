@@ -1,4 +1,4 @@
-import onClient from '../../helpers/onClient';
+import onClient from '../utilities/onClient';
 import nodeLogger from '../logger.node';
 import 'isomorphic-fetch';
 
