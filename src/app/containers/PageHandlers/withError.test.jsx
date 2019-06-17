@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import WithError from './withError';
 
 describe('withError HOC', () => {

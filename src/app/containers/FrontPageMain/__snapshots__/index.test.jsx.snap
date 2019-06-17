@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageMain should render a pidgin article correctly 1`] = `
+exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] = `
 <React.Fragment>
   <MetadataContainer
     metadata={
@@ -53,6 +53,25 @@ exports[`FrontPageMain should render a pidgin article correctly 1`] = `
   <main
     role="main"
   >
+    <ForwardRef(VisuallyHiddenText)
+      as="h1"
+    >
+      <React.Fragment>
+        <span
+          role="text"
+        >
+          <span
+            lang="en-GB"
+          >
+            BBC News
+          </span>
+          , 
+          Ìgbò
+           - 
+          Akụkọ
+        </span>
+      </React.Fragment>
+    </ForwardRef(VisuallyHiddenText)>
     <ForwardRef(GhostWrapper)>
       <ForwardRef(GridItemConstrainedLarge)>
         <FrontPageSection
