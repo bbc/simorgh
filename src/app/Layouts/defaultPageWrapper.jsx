@@ -21,11 +21,11 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
       <ServiceContextProvider service={service}>
         <GlobalStyle />
         <RequestContextProvider
-          pageType={pageType}
           env={env}
           id={id}
           isUK={isUK}
           origin={origin}
+          pageType={pageType}
           platform={isAmp ? 'amp' : 'canonical'}
           statsDestination={getStatsDestination({
             isUK,

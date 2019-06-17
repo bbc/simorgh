@@ -15,6 +15,7 @@ const ContextWrap = props => (
       isUK={true}
       platform='canonical'
       origin='https://www.test.bbc.co.uk'
+      pageType='article'
       service='news'
       statsDestination='NEWS_PS_TEST'
       statsPageIdentifier='news.articles.c0000000000o.page'

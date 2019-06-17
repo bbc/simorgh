@@ -16,6 +16,7 @@ const ContextWrap = ({ platform, children }) => (
       isUK
       platform={platform}
       origin="https://www.test.bbc.co.uk"
+      pageType="article"
       service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
