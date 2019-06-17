@@ -2,10 +2,12 @@ import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
+  product: 'BBC News',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
+  serviceLocalizedName: 'Ìgbò',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
@@ -13,6 +15,7 @@ const igbo = {
   manifestPath: '/manifest.json',
   fonts: [],
   translations: {
+    home: 'Akụkọ',
     error: {
       404: {
         statusCode: '404',

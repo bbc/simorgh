@@ -51,25 +51,25 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
-    let thirdFigure;
+    const imageHasNotLoaded = getElement('figure').eq(2);
 
-    thirdFigure = getElement('figure').eq(2);
-
-    thirdFigure.within(() => {
+    imageHasNotLoaded.within(() => {
       const lazyLoadPlaceholder = getElement('div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
+    });
 
+    imageHasNotLoaded.scrollIntoView();
+
+    const imageHasLoaded = getElement('figure').eq(2);
+
+    visibleImageWithCaption(imageHasLoaded);
+    imageHasLoaded.within(() => {
       const noscriptImg = getElement('noscript');
       noscriptImg.contains('<img ');
-
-      cy.scrollTo('bottom', { duration: 1000 });
 
       const ImageContainer = getElement('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
     });
-
-    thirdFigure = getElement('figure').eq(2);
-    visibleImageWithCaption(thirdFigure);
   });
 
   it('should have an image copyright label with styling', () => {
