@@ -3,8 +3,10 @@ import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 
 const persian = {
+  product: 'BBC News',
   articleAuthor: 'https://www.facebook.com/bbcpersian',
   brandName: 'BBC News فارسی',
+  serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
   dir: 'rtl',
