@@ -2,16 +2,19 @@ import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const yoruba = {
+  product: 'BBC News',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
+  serviceLocalizedName: 'Yorùbá',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
   defaultImageAltText: 'BBC News Yorùbá',
   brandSVG,
   script: latin,
   fonts: [],
   translations: {
+    home: 'Ìròyìn',
     error: {
       404: {
         statusCode: '404',
