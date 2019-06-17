@@ -6,9 +6,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const CopyrightContainer = ({ children }) => {
   const { imageCopyrightOffscreenText, dir } = useContext(ServiceContext);
+  const copyrightProps = {
+    position: dir === 'rtl' ? 'right' : 'left',
+  };
 
   return (
-    <Copyright position={dir === 'rtl' ? 'right' : 'left'}>
+    <Copyright {...copyrightProps}>
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
       ) : null}
