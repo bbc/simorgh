@@ -9,27 +9,68 @@ const renderAmpHtml = (ampLink, isAmp) => {
   return <link rel="amphtml" href={ampLink} />;
 };
 
-// const getAuthor = articleAuthor => (
-//   <meta name="article:author" content={articleAuthor} />
-// );
+// const getAuthor = (articleAuthor, showArticleTags) => {
+//   if (!showArticleTags) {
+//     return null;
+//   }
 
-// const getModifiedTime = timeLastPublished => (
-//   <meta name="article:modified_time" content={timeLastPublished} />
-// );
+//   return <meta name="article:author" content={articleAuthor} />;
+// };
 
-// const getPublishedTime = timeFirstPublished => (
-//   <meta name="article:published_time" content={timeFirstPublished} />
-// );
+// const getModifiedTime = (timeLastPublished, showArticleTags) => {
+//   if (!showArticleTags) {
+//     return null;
+//   }
 
-// const getArticleSection = articleSection =>
-//   articleSection ? (
-//     <meta name="article:section" content={articleSection} />
-//   ) : null;
+//   return <meta name="article:modified_time" content={timeLastPublished} />;
+// };
 
-const getMetaTags = metaTags => {
+// const getPublishedTime = (timeFirstPublished, showArticleTags) => {
+//   if (!showArticleTags) {
+//     return null;
+//   }
+
+//   return <meta name="article:published_time" content={timeFirstPublished} />;
+// };
+
+const getArticleSection = (articleSection, showArticleTags) => {
+  if (!showArticleTags) {
+    return null;
+  }
+
+  return articleSection ? (
+    <meta name="article:section" content={articleSection} />
+  ) : null;
+};
+
+const getMetaTags = (metaTags, showArticleTags) => {
+  if (!showArticleTags) {
+    return null;
+  }
+
   return metaTags.map(tag => (
     <meta name="article:tag" content={tag} key={tag} />
   ));
+};
+
+const getArticleMetadata = ({
+  showArticleTags,
+  articleAuthor,
+  timeLastPublished,
+  timeFirstPublished,
+}) => {
+  console.log(showArticleTags);
+  if (!showArticleTags) {
+    return null;
+  }
+
+  return (
+    <React.Fragment>
+      <meta name="article:author" content={articleAuthor} />;
+      <meta name="article:modified_time" content={timeLastPublished} />
+      <meta name="article:published_time" content={timeFirstPublished} />
+    </React.Fragment>
+  );
 };
 
 const Metadata = ({
@@ -87,14 +128,14 @@ const Metadata = ({
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
-      {showArticleTags ? (
-        <React.Fragment>
-          <meta name="article:author" content={articleAuthor} />
-          <meta name="article:modified_time" content={timeLastPublished} />
-          <meta name="article:published_time" content={timeFirstPublished} />
-          <meta name="article:section" content={articleSection} />
-        </React.Fragment>
-      ) : null}
+      {getArticleMetadata(
+        showArticleTags,
+        articleAuthor,
+        timeLastPublished,
+        timeFirstPublished,
+      )}
+      {getArticleSection(articleSection, showArticleTags)}
+      {getMetaTags(metaTags, showArticleTags)}
       <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
