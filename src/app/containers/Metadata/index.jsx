@@ -20,7 +20,7 @@ const allTags = tags => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, platform } = useContext(RequestContext);
+  const { platform } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -44,10 +44,10 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
-  const canonicalLink = `${origin}/${service}/articles/${id}`;
+  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = `${origin}/${service}/articles/${id}.amp`;
+  const ampLink = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;

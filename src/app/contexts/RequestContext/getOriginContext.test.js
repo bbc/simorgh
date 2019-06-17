@@ -14,7 +14,7 @@ describe('getInitialData', () => {
     {
       bbcOrigin: undefined,
       location: undefined,
-      expected: { isUK: false, origin: 'https://www.bbc.com' },
+      expected: { isUK: true, origin: 'https://www.bbc.co.uk' },
       assertion: 'should return defaults if no origin can be found',
     },
     {
@@ -34,14 +34,8 @@ describe('getInitialData', () => {
     {
       bbcOrigin: 'https://beepboop.org',
       location: 'https://beepboop.org',
-      expected: { isUK: false, origin: 'https://beepboop.org' },
-      assertion: 'should return isUK as false if tld isnt .co.uk',
-    },
-    {
-      bbcOrigin: 'https://beepboop.co.uk',
-      location: 'https://beepboop.co.uk',
-      expected: { isUK: true, origin: 'https://beepboop.co.uk' },
-      assertion: 'should return isUK as true if tld is .co.uk',
+      expected: { isUK: true, origin: 'https://beepboop.org' },
+      assertion: 'should return isUK as true if tld isnt .com',
     },
   ];
 
