@@ -11,6 +11,6 @@ describe('Manifest.json files', () => {
   ['news'].forEach(testManifest200s);
 });
 
-describeForLocalAndTest('Local Env - Manifest.json files', () => {
+describeForLocalOnly('Local Env - Manifest.json files', () => {
   ['persian', 'igbo', 'pidgin', 'yoruba'].forEach(testManifest200s);
 });
