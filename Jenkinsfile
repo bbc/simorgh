@@ -7,6 +7,9 @@ def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 def appGitCommit = ""
 def appGitCommitAuthor = ""
 def appGitCommitMessage = ""
+def buildTagText = ""
+
+
 
 def stageName = ""
 def packageName = 'simorgh.zip'
@@ -26,6 +29,10 @@ def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
   appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
+}
+
+def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
+  "*Author* ${gitCommitAuthor} *Commit Hash* ${gitCommit} *Commit Message* ${gitCommitMessage}"
 }
 
 pipeline {
@@ -111,13 +118,16 @@ pipeline {
             script {
               // Get simorgh commit information
               getCommitInfo()
+              
+              // Set build tag information
+              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
             }
 
             // Write commit information to build_tag.txt
-            sh "rm -rf pack/build_tag.txt && touch pack/build_tag.txt"
-            writeFile file: 'pack/build_tag.txt', text: "*Author*: ${appGitCommitAuthor}\n *Commit Hash*\n ${appGitCommit}\n *Commit Message*\n ${appGitCommitMessage}"
-            sh "ls -l pack/build_tag.txt"
-            sh "cat pack/build_tag.txt"
+            sh "rm -rf ./pack/build_tag.txt && touch ./pack/build_tag.txt"
+            sh "echo ${buildTagText} >> ./pack/build_tag.txt"
+            sh "ls -l ./pack/build_tag.txt"
+            sh "cat ./pack/build_tag.txt"
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
