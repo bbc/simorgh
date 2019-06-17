@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalAndTest from '../support/limitEnvRuns';
+import describeForLocalOnly from '../support/limitEnvRuns';
 import {
   errorMessage,
   errorPageInlineLink,
