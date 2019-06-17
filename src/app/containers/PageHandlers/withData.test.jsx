@@ -1,37 +1,7 @@
 import React from 'react';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  shouldShallowMatchSnapshot,
-  shouldMatchSnapshot,
-} from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import WithData from './withData';
-import { ServiceContext } from '../../contexts/ServiceContext';
-
-const newsServiceContextStub = {
-  locale: 'en_GB',
-  brandName: 'BBC News',
-  brandSVG,
-  translations: {
-    error: {
-      404: {
-        title: 'Page cannot be found',
-        solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
-        ],
-      },
-      500: {
-        title: 'Internal server error',
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-      },
-    },
-  },
-};
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;
@@ -59,6 +29,7 @@ describe('withData HOC', () => {
       pageData: articleDataNews,
       status: 200,
     },
+    service: 'news',
   };
 
   const validPersianProps = {
@@ -66,13 +37,8 @@ describe('withData HOC', () => {
       pageData: articleDataPersian,
       status: 200,
     },
+    service: 'news',
   };
-
-  const WithDataHOCWithContext = (props, context = newsServiceContextStub) => (
-    <ServiceContext.Provider value={context}>
-      <WithDataHOC {...props} />
-    </ServiceContext.Provider>
-  );
 
   describe('with no data', () => {
     shouldShallowMatchSnapshot(
@@ -82,30 +48,30 @@ describe('withData HOC', () => {
   });
 
   describe('with missing articleData', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       `should return the errorMain component`,
-      WithDataHOCWithContext(noAssetData),
+      <WithDataHOC {...noAssetData} />,
     );
   });
 
   describe('with valid props', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       `should return the passed in component`,
-      WithDataHOCWithContext(validNewsProps),
+      <WithDataHOC {...validNewsProps} />,
     );
 
     describe('but different home service other than locale service', () => {
-      shouldMatchSnapshot(
+      shouldShallowMatchSnapshot(
         `should return the errorMain component`,
-        WithDataHOCWithContext(validPersianProps),
+        <WithDataHOC {...validPersianProps} />,
       );
     });
   });
 
   describe('with non 200 status', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       `should return the errorMain component`,
-      WithDataHOCWithContext(non200StatusProps),
+      <WithDataHOC {...non200StatusProps} />,
     );
   });
 });

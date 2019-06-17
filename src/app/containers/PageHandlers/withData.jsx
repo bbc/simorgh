@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { shape, element } from 'prop-types';
+import React from 'react';
+import { shape, element, string } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
 import deepGet from '../../lib/utilities/deepGet';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import getPassportHome from '../../lib/utilities/getPassportHome';
 
 // checks for data, status, setting default status if not found
@@ -12,15 +11,12 @@ const constructRenderObject = data => ({
   pageData: deepGet(['pageData'], data),
 });
 
-const validatePassportHome = passportHome => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { service } = useContext(ServiceContext);
-
+const validatePassportHome = (passportHome, service) => {
   return passportHome ? passportHome === service : true;
 };
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
-const shouldRender = data => {
+const shouldRender = (data, service) => {
   const { status, pageData } = constructRenderObject(data);
 
   let statusCode = status;
@@ -29,7 +25,7 @@ const shouldRender = data => {
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
     const passportHome = getPassportHome(pageData);
-    isCorrectService = validatePassportHome(passportHome);
+    isCorrectService = validatePassportHome(passportHome, service);
     statusCode = !isCorrectService ? 404 : status;
   }
 
@@ -42,11 +38,12 @@ const shouldRender = data => {
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
+    const { service } = props;
     const {
       hasData200StatusAndCorrectService,
       status,
       pageData,
-    } = shouldRender(data);
+    } = shouldRender(data, service);
 
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
@@ -57,10 +54,12 @@ const WithData = Component => {
 
   DataContainer.propTypes = {
     data: shape(articlePropTypes),
+    service: string,
   };
 
   DataContainer.defaultProps = {
     data: null,
+    service: 'default',
   };
 
   return DataContainer;
