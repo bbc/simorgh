@@ -3,7 +3,7 @@
  * https://github.com/acdlite/recompose
  */
 
-import compose from './compose';
+import compose from '.';
 
 test('compose composes from right to left', () => {
   const double = x => x * 2;

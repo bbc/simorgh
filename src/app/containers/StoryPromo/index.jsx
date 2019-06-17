@@ -10,7 +10,7 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import FigureContainer from '../Figure';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
