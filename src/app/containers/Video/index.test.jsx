@@ -1,9 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import {
   NoData,
   NoAresMedia,

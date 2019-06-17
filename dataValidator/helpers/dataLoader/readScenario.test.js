@@ -44,7 +44,7 @@ describe('readScenario helper', () => {
 
   it('should process exit on validation error', () => {
     const fileName = 'invalidScenario.json';
-    const invalidDataPath = './src/app/dataValidator';
+    const invalidDataPath = './dataValidator';
 
     process.exit = jest.fn();
 

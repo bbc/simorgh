@@ -1,6 +1,6 @@
 import React from 'react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import ErrorMain from './index';
 
 describe('ErrorMain', () => {

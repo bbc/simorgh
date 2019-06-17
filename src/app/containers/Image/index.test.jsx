@@ -1,9 +1,6 @@
 import React from 'react';
 import ImageContainer from './index';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
@@ -76,6 +73,11 @@ describe('Image', () => {
     shouldShallowMatchSnapshot(
       'should render an image with alt text',
       <ImageContainer {...data} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'should render a lazyload container instead of an image if the image is after the 3rd block',
+      <ImageContainer position={[4]} {...data} />,
     );
 
     const dataWithNonBbcCopyright = blockArrayModel([
