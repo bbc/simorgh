@@ -2,16 +2,19 @@ import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const pidgin = {
+  product: 'BBC News',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
+  serviceLocalizedName: 'Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
   fonts: [],
   translations: {
+    home: 'Home',
     error: {
       404: {
         statusCode: '404',
@@ -92,6 +95,35 @@ const pidgin = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+  },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'De way wey we de take go external link.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        text: 'Why you fit trust BBC News',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'How dem dey take use am',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Privacy Policy',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-42188215',
+        text: 'Call BBC',
+      },
+    ],
+    copyrightText: 'BBC. De external site no concern BBC.',
   },
 };
 
