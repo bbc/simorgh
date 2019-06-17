@@ -103,7 +103,7 @@ describe('Article Meta Tests', () => {
     const currentOrigin = window.location.origin;
     checkCanonicalURL(`${currentOrigin}/news/articles/${config.assets.news}`);
     checkAmpHTML(
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `${currentOrigin}/news/articles/${config.assets.news}.amp`,
     );
   });
 

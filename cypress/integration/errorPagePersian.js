@@ -17,16 +17,16 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/persian/articles/${config.assets.nonExistent}`, 404);
+    testResponseCode(`/persian/articles/${config.specialAssets.nonExistent}`, 404);
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/persian/articles/${config.specialAssets.nonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);
 
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/persian/articles/${config.specialAssets.nonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);
