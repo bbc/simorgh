@@ -108,6 +108,49 @@ const persian = {
     },
   },
   brandSVG,
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+      text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/persian/institutional-37474133',
+        text: 'شرایط استفاده',
+      },
+      {
+        href: 'https://www.bbc.com/persian/institutional-37474136',
+        text: 'درباره بی بی سی',
+      },
+      {
+        href: 'https://www.bbc.com/persian/institutional-37540067',
+        text: 'سیاست حفظ حریم خصوصی',
+      },
+      {
+        href:
+          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.co.uk/accessibility',
+        text: 'Accessibility Help',
+      },
+      {
+        href: 'https://www.bbc.co.uk/guidance',
+        text: 'Parental Guidance',
+      },
+      {
+        href: 'https://www.bbc.com/persian/institutional-37542244',
+        text: 'تماس با بی بی سی',
+      },
+      {
+        href: 'https://www.bbc.co.uk/bbcnewsletter',
+        text: 'Get Personalised Newsletters',
+      },
+    ],
+    copyrightText:
+      'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
+  },
   fonts: [],
 };
 

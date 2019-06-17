@@ -100,6 +100,36 @@ const igbo = {
       video: 'Vidio',
     },
   },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Usoro anyị maka njikọ dị na mpụga.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/igbo/institutional-48529074',
+        text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms',
+        text: 'Usoro Ojiji',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Iwu Nzuzo',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Kuki',
+      },
+      {
+        href: 'https://www.bbc.com/igbo/institutional-43090448',
+        text: 'Kpọtụrụ BBC',
+      },
+    ],
+    copyrightText:
+      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
+  },
 };
 
 export default igbo;
