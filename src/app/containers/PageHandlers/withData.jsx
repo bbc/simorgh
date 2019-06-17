@@ -3,7 +3,7 @@ import { shape, element } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
 import nodeLogger from '../../lib/logger.node';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const logger = nodeLogger(__filename);
 

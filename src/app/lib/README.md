@@ -2,6 +2,8 @@
 
 This directory contains core files and references used across the application.
 
+The `./utilities` directory is where helpers and utiltiies used in production should be maintained, whereas non-production helpers and utilities should be stored in `../testHelpers`. Helpers nested within their containers or components is permitted, on the basis that that container or component is the only thing using said helper. If the helper needs to be used elsewhere, it should be moved to within its respective global-scope folder (`utilities` or `testHelpers`). The terms `utiltiies` and `helpers` are interchangable.
+
 NB This is not a global styles directory. Global styles should be avoided in all cases, because of the use of Styled Components.
 
 ## Typography

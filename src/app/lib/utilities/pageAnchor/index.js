@@ -1,4 +1,4 @@
-import onClient from './onClient';
+import onClient from '../onClient';
 
 const urlWithPageAnchor = () => (onClient() ? window.location.hash : false);
 
