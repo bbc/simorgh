@@ -29,7 +29,7 @@ describe('ManifestContainer', () => {
     wrapper.unmount();
   });
 
-  it('should render with no manifest path provided', () => {
+  it('should not render with no manifest path provided', () => {
     const wrapper = mountManifest({ service: 'news' });
     const { linkTags } = Helmet.peek();
 
