@@ -1,7 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape } from 'prop-types';
-import MediaIndicator from '@bbc/psammead-media-indicator';
 import StoryPromoComponent, {
   Headline,
   Summary,
@@ -11,38 +10,10 @@ import Timestamp from '@bbc/psammead-timestamp-container';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { storyItem } from '../../models/propTypes/storyItem';
 import StoryPromoFigure from './Figure';
+import MediaIndicator from './MediaIndicator';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/json/deepGet';
 import formatDuration from '../../lib/utilities/formatDuration';
-
-const buildMediaIndicator = (item, mediaTranslations) => {
-  const isMedia = deepGet(['cpsType'], item) === 'MAP';
-  // Only build a media indicator if this is a media item.
-  if (!isMedia) {
-    return null;
-  }
-
-  const type = deepGet(['media', 'format'], item);
-  // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
-
-  if (rawDuration) {
-    const duration = moment.duration(rawDuration, 'seconds');
-    const durationString = formatDuration(duration);
-    const isoDuration = duration.toISOString();
-    return (
-      <MediaIndicator
-        duration={durationString}
-        datetime={isoDuration}
-        // TODO make offscreenText optional in psammead-media-indicator
-        offscreenText=""
-        type={type}
-      />
-    );
-  }
-
-  return <MediaIndicator offscreenText={mediaTranslations[type]} type={type} />;
-};
 
 const buildLinkContents = (item, mediaTranslations) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
@@ -118,7 +89,7 @@ const StoryPromo = ({ item }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={buildMediaIndicator(item, translations.media)}
+      mediaIndicator={<MediaIndicator item={item} />}
     />
   );
 };

@@ -6,7 +6,6 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import deepClone from '../../lib/json/deepClone';
 import StoryPromo from '.';
 
-let item;
 const completeItem = {
   headlines: {
     headline: 'A headline',
@@ -139,6 +138,7 @@ describe('StoryPromo Container', () => {
   });
 
   describe('assertion tests', () => {
+    let item;
     beforeEach(() => {
       item = deepClone(completeItem);
     });
