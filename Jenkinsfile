@@ -32,7 +32,7 @@ def getCommitInfo = {
 }
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
-  "*Author* ${gitCommitAuthor} *Commit Hash* ${gitCommit} *Commit Message* ${gitCommitMessage}"
+  "*Author* ${gitCommitAuthor}\n *Commit Hash*\n ${gitCommit}\n *Commit Message*\n ${gitCommitMessage}"
 }
 
 pipeline {
@@ -124,8 +124,9 @@ pipeline {
             }
 
             // Write commit information to build_tag.txt
-            sh "rm -rf ./pack/build_tag.txt && touch ./pack/build_tag.txt"
-            sh "echo ${buildTagText} >> ./pack/build_tag.txt"
+            // sh "touch ./pack/build_tag.txt"
+            // sh "echo ${buildTagText} >> ./pack/build_tag.txt"
+            sh "./scripts/signSimorghArchive.sh ${buildTagText}"
             sh "ls -l ./pack/build_tag.txt"
             sh "cat ./pack/build_tag.txt"
 
