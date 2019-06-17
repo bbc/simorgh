@@ -9,22 +9,22 @@ const renderAmpHtml = (ampLink, isAmp) => {
   return <link rel="amphtml" href={ampLink} />;
 };
 
-const getAuthor = articleAuthor => (
-  <meta name="article:author" content={articleAuthor} />
-);
+// const getAuthor = articleAuthor => (
+//   <meta name="article:author" content={articleAuthor} />
+// );
 
-const getModifiedTime = timeLastPublished => (
-  <meta name="article:modified_time" content={timeLastPublished} />
-);
+// const getModifiedTime = timeLastPublished => (
+//   <meta name="article:modified_time" content={timeLastPublished} />
+// );
 
-const getPublishedTime = timeFirstPublished => (
-  <meta name="article:published_time" content={timeFirstPublished} />
-);
+// const getPublishedTime = timeFirstPublished => (
+//   <meta name="article:published_time" content={timeFirstPublished} />
+// );
 
-const getArticleSection = articleSection =>
-  articleSection ? (
-    <meta name="article:section" content={articleSection} />
-  ) : null;
+// const getArticleSection = articleSection =>
+//   articleSection ? (
+//     <meta name="article:section" content={articleSection} />
+//   ) : null;
 
 const getMetaTags = metaTags => {
   return metaTags.map(tag => (
@@ -56,6 +56,7 @@ const Metadata = ({
   twitterCreator,
   twitterSite,
   type,
+  showArticleTags,
 }) => {
   const htmlAttributes = { lang };
 
@@ -86,11 +87,14 @@ const Metadata = ({
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
-      {type === 'article' ? getAuthor(articleAuthor) : null}
-      {type === 'article' ? getModifiedTime(timeLastPublished) : null}
-      {type === 'article' ? getPublishedTime(timeFirstPublished) : null}
-      {type === 'article' ? getArticleSection(articleSection) : null}
-      {type === 'article' ? getMetaTags(metaTags) : null}
+      {showArticleTags ? (
+        <React.Fragment>
+          <meta name="article:author" content={articleAuthor} />
+          <meta name="article:modified_time" content={timeLastPublished} />
+          <meta name="article:published_time" content={timeFirstPublished} />
+          <meta name="article:section" content={articleSection} />
+        </React.Fragment>
+      ) : null}
       <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
@@ -144,6 +148,7 @@ Metadata.propTypes = {
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
+  showArticleTags: bool.isRequired,
 };
 
 Metadata.defaultProps = {

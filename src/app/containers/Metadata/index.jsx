@@ -123,6 +123,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={metadata.type}
+        showArticleTags={metadata.type === 'article' ? true : false}
       />
     </Fragment>
   );
