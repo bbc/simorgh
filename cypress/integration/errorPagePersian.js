@@ -8,7 +8,7 @@ import {
 import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
 
-describeForLocalAndTest('Article Body Tests', () => {
+describeForLocalOnly('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
