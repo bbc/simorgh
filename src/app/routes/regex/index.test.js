@@ -6,6 +6,7 @@ import {
   frontpageDataRegexPath,
   swRegexPath,
   manifestRegexPath,
+  serviceManifestRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -103,4 +104,12 @@ describe('manifestRegexPath', () => {
 
   const invalidRoutes = ['/news/manifest.json', '/persian/articles/manifest'];
   shouldNotMatchInvalidRoutes(invalidRoutes, manifestRegexPath);
+});
+
+describe('serviceManifestRegexPath', () => {
+  const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
+  shouldMatchValidRoutes(validRoutes, serviceManifestRegexPath);
+
+  const invalidRoutes = ['/foobar/manifest.json', '/foobar/manifest'];
+  shouldNotMatchInvalidRoutes(invalidRoutes, serviceManifestRegexPath);
 });
