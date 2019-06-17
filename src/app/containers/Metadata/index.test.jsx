@@ -60,6 +60,7 @@ const metadataProps = (
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
   type: 'article',
+  showArticleTags: true,
 });
 
 const linkedDataProps = (

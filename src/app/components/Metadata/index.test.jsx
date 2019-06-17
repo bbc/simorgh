@@ -27,6 +27,7 @@ const metadataSnapshotTest = (
   twitterCreator,
   twitterSite,
   type,
+  showArticleTags,
 ) =>
   describe(testDescription, () => {
     const metadataProps = {
@@ -53,6 +54,7 @@ const metadataSnapshotTest = (
       twitterCreator,
       twitterSite,
       type,
+      showArticleTags,
     };
 
     shouldShallowMatchSnapshot(
@@ -100,6 +102,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    true,
   );
 
   metadataSnapshotTest(
@@ -140,6 +143,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    true,
   );
 
   metadataSnapshotTest(
@@ -167,6 +171,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    true,
   );
 
   metadataSnapshotTest(
@@ -194,6 +199,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    true,
   );
 
   metadataSnapshotTest(
@@ -234,6 +240,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    true,
   );
 
   metadataSnapshotTest(
@@ -274,6 +281,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'IDX',
+    false,
   );
 
   metadataSnapshotTest(
@@ -314,5 +322,6 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'IDX',
+    false,
   );
 });
