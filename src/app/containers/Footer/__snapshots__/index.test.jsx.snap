@@ -88,7 +88,7 @@ exports[`FooterContainer should render correctly 1`] = `
   .c5 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 1,auto );
+    grid-template-rows: repeat(4,auto);
   }
 }
 
@@ -96,7 +96,7 @@ exports[`FooterContainer should render correctly 1`] = `
   .c5 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 1,auto );
+    grid-template-rows: repeat(3,auto);
   }
 }
 
@@ -104,7 +104,7 @@ exports[`FooterContainer should render correctly 1`] = `
   .c5 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat( 1,auto );
+    grid-template-rows: repeat(3,auto);
   }
 }
 
@@ -112,7 +112,7 @@ exports[`FooterContainer should render correctly 1`] = `
   .c5 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 1,auto );
+    grid-template-rows: repeat(3,auto);
   }
 }
 
