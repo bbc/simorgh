@@ -1,13 +1,13 @@
 import config from '../support/cookieConfig';
 import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
-import describeForLocalAndTest from '../support/limitEnvRuns';
+import describeForLocalOnly from '../support/limitEnvRuns';
 
 const services = Object.keys(config);
 
 // These tests work locally, but fail on Test & Live environments since they have
 // not yet been set up to have the correct translated cookie banners on the error pages
-describeForLocalAndTest('World Service Cookie banner Translations', () => {
+describeForLocalOnly('World Service Cookie banner Translations', () => {
   describe('Canonical', () => {
     services.forEach(serviceName => {
       it(`should load the relevant translations for ${serviceName}`, () => {
