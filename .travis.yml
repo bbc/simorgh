@@ -7,7 +7,7 @@ before_install: npm install -g npm@6.4.1; npm -v
 jobs:
   include:
     - stage: test
-      if: type = push
+      if: type = push OR (pull_request AND fork = true)
       name: "Unit Tests"
       install: npm ci
       before_script:
@@ -19,7 +19,7 @@ jobs:
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
-      if: type = push
+      if: type = push OR (pull_request AND fork = true)
       name: "Production e2e and lighthouse Tests" 
       install: npm ci --only=prod
       addons: 
