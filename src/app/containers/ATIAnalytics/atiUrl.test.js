@@ -20,7 +20,6 @@ const splitUrl = url =>
     .split(',');
 
 const analyticsUtilFunctions = [
-  { name: 'getAppName', source: genericLabelHelpers },
   { name: 'getDestination', source: genericLabelHelpers },
   { name: 'getAppType', source: genericLabelHelpers },
   { name: 'getScreenInfo', source: genericLabelHelpers },
@@ -57,6 +56,7 @@ describe('getThingAttributes', () => {
     });
 
     const queryParams = atiPageViewParams({
+      appName: 'appName',
       contentType: 'contentType',
       language: 'language',
       ldpThingIds: 'ldpThingIds',
@@ -73,6 +73,7 @@ describe('getThingAttributes', () => {
     const expectedValues = [
       'p=pageIdentifier',
       'x1=[optimoUrn]',
+      'x3=[appName]',
       'x4=[language]',
       'x7=[contentType]',
       'x11=[timePublished]',
@@ -106,7 +107,6 @@ describe('getThingAttributes', () => {
       'hl=getCurrentTime',
       'lng=getDeviceLanguage',
       'x2=[getAppType]',
-      'x3=[getAppName]',
       'x5=[getHref]',
       'x6=[getReferrer]',
       'x9=[sanitise]',

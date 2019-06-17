@@ -1,5 +1,4 @@
 import {
-  getAppName,
   getDestination,
   getAppType,
   getScreenInfo,
@@ -21,6 +20,7 @@ export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
  */
 
 export const atiPageViewParams = ({
+  appName,
   contentType,
   language,
   ldpThingIds,
@@ -87,7 +87,7 @@ export const atiPageViewParams = ({
     {
       key: 'x3',
       description: 'app name',
-      value: getAppName(service),
+      value: appName,
       wrap: true,
     },
     { key: 'x4', description: 'language', value: language, wrap: true },

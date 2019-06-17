@@ -14,9 +14,10 @@ import {
 
 const ArticleAtiParams = articleData => {
   const { platform, isUK, statsDestination } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+  const { atiAnalyticsAppName, service } = useContext(ServiceContext);
 
   return atiPageViewParams({
+    appName: atiAnalyticsAppName,
     contentType: 'article',
     language: getLanguage(articleData),
     ldpThingIds: getThingAttributes('thingId', articleData),

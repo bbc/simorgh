@@ -10,6 +10,7 @@ import yoruba from './yoruba';
 
 export default {
   default: {
+    atiAnalyticsAppName: 'default',
     brandName: 'Default Brand Name',
     externalLinkText: ', default external link suffix',
     imageCaptionOffscreenText: 'Default image caption prefix, ',

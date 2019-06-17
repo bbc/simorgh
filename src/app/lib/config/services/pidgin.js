@@ -3,6 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const pidgin = {
   product: 'BBC News',
+  atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',

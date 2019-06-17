@@ -35,6 +35,7 @@ describe('ArticleAtiParams', () => {
   );
   const newsServiceContextStub = {
     service: 'news',
+    atiAnalyticsAppName: 'news',
   };
   const requestContextStub = {
     isUK: true,
@@ -58,6 +59,7 @@ describe('ArticleAtiParams', () => {
 
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
+        appName: 'news',
         contentType: 'article',
         isUK: true,
         language: 'language',

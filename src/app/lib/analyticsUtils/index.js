@@ -1,19 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '../utilities/onClient';
 
-export const getAppName = service => {
-  const appName = {
-    igbo: 'news-igbo',
-    news: 'news',
-    persian: 'news-persian',
-    pidgin: 'news-pidgin',
-    thai: 'news-thai',
-    yoruba: 'news-yoruba',
-  };
-
-  return appName[service];
-};
-
 export const getDestination = statsDestination => {
   const destinationIDs = {
     NEWS_PS: 598285,
