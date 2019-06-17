@@ -7,7 +7,7 @@ import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
-import deepGet from '../../lib/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
   const { product, serviceLocalizedName, translations } = useContext(

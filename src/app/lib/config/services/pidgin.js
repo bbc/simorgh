@@ -102,6 +102,35 @@ const pidgin = {
       },
     },
   },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'De way wey we de take go external link.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        text: 'Why you fit trust BBC News',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'How dem dey take use am',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Privacy Policy',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-42188215',
+        text: 'Call BBC',
+      },
+    ],
+    copyrightText: 'BBC. De external site no concern BBC.',
+  },
 };
 
 export default pidgin;
