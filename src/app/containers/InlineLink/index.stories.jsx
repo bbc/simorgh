@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 

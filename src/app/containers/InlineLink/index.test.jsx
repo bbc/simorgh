@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import InlineLinkContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -32,14 +32,14 @@ describe('InlineLinkContainer', () => {
   describe('link matching routes for SPA', () => {
     testInternalInlineLink(
       'should render correctly',
-      'https://www.bbc.com/news/articles/cn7769kpk9mo',
+      'https://www.bbc.com/news/articles/c0g992jmmkko',
       [fragmentBlock('This is text for an internal link')],
       false,
     );
 
     testInternalInlineLink(
       'should render correctly for TEST environment',
-      'https://www.test.bbc.com/news/articles/cn7769kpk9mo',
+      'https://www.test.bbc.com/news/articles/c0g992jmmkko',
       [fragmentBlock('This is text for an internal link')],
       false,
     );

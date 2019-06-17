@@ -5,6 +5,8 @@ import {
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
+import MPulseBeacon from '../../app/containers/MPulseBeacon';
+import { DialContextProvider } from '../../app/contexts/DialContext';
 
 /* eslint-disable react/prop-types */
 const Document = ({
@@ -14,20 +16,15 @@ const Document = ({
   data,
   styleTags,
   helmet,
-  service,
   isAmp,
+  dials,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const clientDataObj = {
-    ...data,
-    service,
-    isAmp,
-  };
-  const serialisedData = JSON.stringify(clientDataObj);
+  const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scripts = (
     <Fragment>
@@ -55,6 +52,11 @@ const Document = ({
         {links}
         {styleTags}
         {headScript}
+        {scriptsAllowed && (
+          <DialContextProvider dials={dials}>
+            <MPulseBeacon />
+          </DialContextProvider>
+        )}
         {isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>

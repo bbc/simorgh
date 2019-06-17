@@ -1,6 +1,6 @@
 # Contributing
 
-We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/simorgh/blob/latest/CODE_OF_CONDUCT.md). Please take a moment to read it.
+We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
 We are particularly looking for help with our [open issues](https://github.com/bbc/simorgh/issues). We appreciate all forms of contribution - not just code - that can include documentation, clarifications, typo corrections and much more.
 

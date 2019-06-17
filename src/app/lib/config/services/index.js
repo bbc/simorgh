@@ -6,7 +6,6 @@ import news from './news';
 import persian from './persian';
 import igbo from './igbo';
 import pidgin from './pidgin';
-import thai from './thai';
 import yoruba from './yoruba';
 
 export default {
@@ -18,11 +17,11 @@ export default {
     imageCopyrightOffscreenText: 'Default image copyright text, ',
     service: 'default',
     themeColor: '#000',
+    fonts: [],
   },
   news,
   persian,
   igbo,
   pidgin,
-  thai,
   yoruba,
 };

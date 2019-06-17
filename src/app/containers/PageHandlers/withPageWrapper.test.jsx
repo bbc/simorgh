@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import WithPageWrapper from './withPageWrapper';
 
 const dataProps = {
@@ -12,6 +12,6 @@ describe('with pageWarpper', () => {
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,
-    <PageWrapperHOC data={dataProps} />,
+    <PageWrapperHOC {...dataProps} />,
   );
 });

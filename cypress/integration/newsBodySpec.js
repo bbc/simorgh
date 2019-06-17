@@ -43,12 +43,33 @@ describe('Article Body Tests', () => {
     placeholderImageLoaded(getElement('figure div').eq(0));
   });
 
-  it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(0));
+  it('should have a visible image without a caption, and also not be lazyloaded', () => {
+    const firstFigure = getElement('figure').eq(0);
+
+    visibleImageNoCaption(firstFigure);
+    firstFigure.within(() => getElement('noscript').should('not.exist'));
   });
 
-  it('should have a visible image with a caption', () => {
-    visibleImageWithCaption(getElement('figure').eq(2));
+  it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
+    const imageHasNotLoaded = getElement('figure').eq(2);
+
+    imageHasNotLoaded.within(() => {
+      const lazyLoadPlaceholder = getElement('div div');
+      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
+    });
+
+    imageHasNotLoaded.scrollIntoView();
+
+    const imageHasLoaded = getElement('figure').eq(2);
+
+    visibleImageWithCaption(imageHasLoaded);
+    imageHasLoaded.within(() => {
+      const noscriptImg = getElement('noscript');
+      noscriptImg.contains('<img ');
+
+      const ImageContainer = getElement('div div');
+      ImageContainer.should('not.have.class', 'lazyload-placeholder');
+    });
   });
 
   it('should have an image copyright label with styling', () => {

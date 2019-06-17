@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
@@ -15,7 +15,7 @@ const headingsContainerWithContext = (type, blocks) => (
   </ServiceContext.Provider>
 );
 
-storiesOf('Heading Container')
+storiesOf('Heading Container', module)
   .add('default heading', () =>
     headingsContainerWithContext('headline', headline),
   )

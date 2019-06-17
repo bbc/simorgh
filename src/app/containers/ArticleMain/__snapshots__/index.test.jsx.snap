@@ -88,7 +88,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
   <main
     role="main"
   >
-    <ForwardRef>
+    <ForwardRef(GhostWrapper)>
       <Blocks
         blocks={
           Array [
@@ -155,7 +155,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
           }
         }
       />
-    </ForwardRef>
+    </ForwardRef(GhostWrapper)>
   </main>
 </React.Fragment>
 `;
@@ -168,11 +168,11 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         "created": 1514808060000,
         "createdBy": "Persian",
         "firstPublished": 1514808060000,
-        "id": "urn:bbc:ares::article:cyddjz5058wo",
+        "id": "urn:bbc:ares::article:c4vlle3q337o",
         "lastPublished": 1514811600000,
         "lastUpdated": 1514815200000,
         "locators": Object {
-          "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
+          "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o",
         },
         "passport": Object {
           "category": "news",
@@ -193,9 +193,9 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
           "promoHeadline": "سرصفحه مقاله برای ارتقاء",
           "seoHeadline": "سرصفحه مقاله",
         },
-        "id": "urn:bbc:ares::article:cyddjz5058wo",
+        "id": "urn:bbc:ares::article:c4vlle3q337o",
         "locators": Object {
-          "optimoUrn": "urn:bbc:optimo:asset:cyddjz5058wo",
+          "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o",
         },
         "summary": "خلاصه مقاله",
         "timestamp": 1514811600000,
@@ -205,7 +205,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   <main
     role="main"
   >
-    <ForwardRef>
+    <ForwardRef(GhostWrapper)>
       <Blocks
         blocks={
           Array [
@@ -272,7 +272,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
           }
         }
       />
-    </ForwardRef>
+    </ForwardRef(GhostWrapper)>
   </main>
 </React.Fragment>
 `;

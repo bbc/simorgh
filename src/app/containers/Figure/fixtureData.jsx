@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { any, bool, string, objectOf } from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -138,7 +138,13 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const generateFixtureData = ({ caption, copyright, platform, type }) => (
+const generateFixtureData = ({
+  caption,
+  copyright,
+  lazyLoad,
+  platform,
+  type,
+}) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
       platform={platform}
@@ -150,33 +156,41 @@ const generateFixtureData = ({ caption, copyright, platform, type }) => (
     >
       <FigureContainer
         alt={imageAlt}
-        captionBlock={caption || null}
-        copyright={copyright ? copyrightText : null}
+        captionBlock={caption}
+        copyright={copyright}
         height={imageHeight}
         ratio={imageRatio}
         src={imageSrc}
         width={imageWidth}
         type={type}
+        lazyLoad={lazyLoad}
       />
     </RequestContextProvider>
   </ServiceContext.Provider>
 );
 
 generateFixtureData.propTypes = {
-  caption: PropTypes.objectOf(PropTypes.any),
-  copyright: PropTypes.string,
-  platform: PropTypes.string,
-  type: PropTypes.string,
+  caption: objectOf(any),
+  copyright: string,
+  lazyLoad: bool,
+  platform: string,
+  type: string,
 };
 
 generateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
+  lazyLoad: false,
   platform: 'canonical',
   type: '',
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
+
+export const FigureLazyLoadImage = generateFixtureData({
+  platform: 'canonical',
+  lazyLoad: true,
+});
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 

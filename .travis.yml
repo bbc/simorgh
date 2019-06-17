@@ -5,6 +5,7 @@ before_install: npm install -g npm@6.4.1; npm -v
 jobs:
   include:
     - stage: test
+      name: "Unit Tests"
       install: npm ci
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -15,10 +16,19 @@ jobs:
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
+      name: "Production Tests" 
       install: npm ci --only=prod
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+    - stage: test
+      name: "Lighthouse tests" 
+      install: npm ci --only=prod
+      addons: 
+        chrome: stable
+      script:
+        - npm run build
+        - xvfb-run -a npm run test:lighthouse:ci
 notifications:
   email: false
   slack:

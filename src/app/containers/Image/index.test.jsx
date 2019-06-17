@@ -1,9 +1,6 @@
 import React from 'react';
 import ImageContainer from './index';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
@@ -30,28 +27,6 @@ describe('Image', () => {
         height: 420,
         locator: '439A/production/_100960371_syrians_and_asylum_v2-nc.png',
         originCode: 'cpsprodpb',
-        copyrightHolder: 'Getty images',
-      },
-    };
-
-    const rawImageBlockWithNullOriginCode = {
-      type: 'rawImage',
-      model: {
-        width: 640,
-        height: 420,
-        locator: '439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: null,
-        copyrightHolder: 'Getty images',
-      },
-    };
-
-    const rawImageBlockWithEmptyStringOriginCode = {
-      type: 'rawImage',
-      model: {
-        width: 640,
-        height: 420,
-        locator: '439A/production/_100960371_syrians_and_asylum_v2-nc.png',
-        originCode: '',
         copyrightHolder: 'Getty images',
       },
     };
@@ -100,6 +75,11 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
+    shouldShallowMatchSnapshot(
+      'should render a lazyload container instead of an image if the image is after the 3rd block',
+      <ImageContainer position={[4]} {...data} />,
+    );
+
     const dataWithNonBbcCopyright = blockArrayModel([
       rawImageBlockWithNonBbcCopyright,
       blockContainingText(
@@ -128,32 +108,6 @@ describe('Image', () => {
     shouldShallowMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
-    );
-
-    const dataWithNullOriginCode = blockArrayModel([
-      rawImageBlockWithNullOriginCode,
-      blockContainingText(
-        'altText',
-        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-      ),
-    ]);
-
-    shouldShallowMatchSnapshot(
-      'should render an image with the default originCode `cpsdevpb` - null',
-      <ImageContainer {...dataWithNullOriginCode} />,
-    );
-
-    const dataWithEmptyStringOriginCode = blockArrayModel([
-      rawImageBlockWithEmptyStringOriginCode,
-      blockContainingText(
-        'altText',
-        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-      ),
-    ]);
-
-    shouldShallowMatchSnapshot(
-      'should render an image with the default originCode `cpsdevpb` - empty string',
-      <ImageContainer {...dataWithEmptyStringOriginCode} />,
     );
 
     const dataWithOtherOriginCode = blockArrayModel([
