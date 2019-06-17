@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../../../helpers/onClient';
+import onClient from '../../../lib/utilities/onClient';
 
 export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
