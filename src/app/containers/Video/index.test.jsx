@@ -1,3 +1,5 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
 import {
   shouldShallowMatchSnapshot,
   isNull,
@@ -15,6 +17,10 @@ import {
   AudioClipNonUk,
   AudioEpisodeGlobal,
 } from './fixtureData';
+import VideoContainer from '.';
+import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
+import * as gridComponents from '../../lib/styledGrid';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 describe('AudioVideo', () => {
   describe('with no data', () => {
@@ -31,6 +37,19 @@ describe('AudioVideo', () => {
   });
 
   describe('with Video data', () => {
+    it('should render', () => {
+      const mockGridItem = jest.fn().mockReturnValue('whatever');
+      gridComponents.GridItemConstrainedLargeNoMargin = mockGridItem;
+
+      renderer.create(
+        <RequestContextProvider platform="amp">
+          <VideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
+        </RequestContextProvider>,
+      );
+
+      expect(mockGridItem).toHaveBeenCalledTimes(1);
+    });
+
     shouldShallowMatchSnapshot(
       'canonical - should render the video without a caption',
       VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
