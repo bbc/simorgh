@@ -65,13 +65,16 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c1 {
   background-color: #B80000;
-  height: 5rem;
+  height: 3.5rem;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 .c2 {
-  max-width: 80rem;
-  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+  max-width: NaNrem;
+  min-width: NaNrem;
 }
 
 .c0 {
@@ -152,20 +155,9 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (min-width:37.5rem) {
   .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c1 {
+    height: 5rem;
     padding: 0 1rem;
   }
 }
@@ -177,8 +169,9 @@ exports[`FooterContainer should render correctly 1`] = `
   <div
     className="c1"
   >
-    <div
+    <a
       className="c2"
+      href="http://localhostundefined"
     />
   </div>
   <div

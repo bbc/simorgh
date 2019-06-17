@@ -6,6 +6,7 @@ import * as fonts from '@bbc/psammead-styles/fonts';
 const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   brandName: 'BBC News',
+  product: 'BBC News',
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',

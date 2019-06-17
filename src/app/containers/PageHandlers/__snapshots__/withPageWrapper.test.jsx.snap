@@ -64,12 +64,6 @@ Array [
   }
 }
 
-@media screen and (-ms-high-contrast:active),print {
-  .c5 {
-    fill: windowText;
-  }
-}
-
 <header
     role="banner"
   >
@@ -237,12 +231,6 @@ Array [
 
 @media screen and (-ms-high-contrast:active),print {
   .c4 {
-    fill: windowText;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c6 {
     fill: windowText;
   }
 }

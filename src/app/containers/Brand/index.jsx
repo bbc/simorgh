@@ -5,7 +5,9 @@ import onClient from '../../lib/utilities/onClient';
 import getBaseUrl from '../../routes/getInitialData/utils/getBaseUrl';
 
 const BrandContainer = () => {
-  const { brandName, brandSVG, frontpageUrl } = useContext(ServiceContext);
+  const { product, serviceLocalizedName, brandSVG, frontpageUrl } = useContext(
+    ServiceContext,
+  );
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
@@ -17,7 +19,8 @@ const BrandContainer = () => {
 
   return (
     <Brand
-      brandName={brandName}
+      product={product}
+      serviceLocalisedName={serviceLocalizedName}
       svgHeight={svgMaxHeight}
       minWidth={minWidth}
       maxWidth={maxWidth}
