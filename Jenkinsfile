@@ -126,7 +126,7 @@ pipeline {
             // Write commit information to build_tag.txt
             // sh "touch ./pack/build_tag.txt"
             // sh "echo ${buildTagText} >> ./pack/build_tag.txt"
-            sh "./scripts/signSimorghArchive.sh ${buildTagText}"
+            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
             sh "ls -l ./pack/build_tag.txt"
             sh "cat ./pack/build_tag.txt"
 
