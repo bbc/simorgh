@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Figure from '@bbc/psammead-figure';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
@@ -10,7 +10,7 @@ import {
   videoPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
-import { filterForBlockType } from '../../helpers/blockHandlers';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {

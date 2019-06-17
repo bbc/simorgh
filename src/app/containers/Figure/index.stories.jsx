@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import {
   FigureImage,
   FigureAmpImage,
@@ -12,8 +12,9 @@ import {
   FigureAmpImageWithCaptionContainingLink,
   FigureImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
+  FigureLazyLoadImage,
 } from './fixtureData';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Figure', module)
   .add('with a caption', () => FigureImageWithCaption)
@@ -30,7 +31,8 @@ storiesOf('Figure', module)
   .add(
     'with a caption with multiple paragraphs with a link',
     () => FigureImageWithCaptionContainingMultipleParagraphsAndLink,
-  );
+  )
+  .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
 storiesOf('Figure - AMP', module)
   .addDecorator(AmpDecorator)

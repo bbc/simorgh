@@ -6,7 +6,7 @@ import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
@@ -50,9 +50,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
-  const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH
-  }/${service}/images/icons/icon-192x192.png`;
+  const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
 
   const isAmp = platform === 'amp';
 

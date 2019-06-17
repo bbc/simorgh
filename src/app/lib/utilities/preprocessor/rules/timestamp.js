@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
-import deepClone from '../../../../helpers/json/deepClone';
-import deepGet from '../../../../helpers/json/deepGet';
+import deepClone from '../../deepClone';
+import deepGet from '../../deepGet';
 
 const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
