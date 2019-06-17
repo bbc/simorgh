@@ -1,29 +1,34 @@
 language: node_js
+matrix:
+  fast_finish: true
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
 before_install: npm install -g npm@6.4.1; npm -v
-jobs:
-  include:
-    - stage: test
-      name: "Unit Tests"
-      install: npm ci
-      before_script:
-        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        - chmod +x ./cc-test-reporter
-        - ./cc-test-reporter before-build
-      script:
-        - npm run test
-        - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-        - xvfb-run -a npm run test:e2e:storybook:ci
-    - stage: test
-      name: "Production e2e and lighthouse Tests" 
-      install: npm ci --only=prod
-      addons: 
-        chrome: stable
-      script:
-        - npm run build
-        - xvfb-run -a npm run test:prod:travis
-        - xvfb-run -a npm run test:lighthouse:ci
+if: |
+  type = push
+  type = pull_request AND fork = true
+  jobs:
+    include:
+      - stage: test
+        name: "Unit Tests"
+        install: npm ci
+        before_script:
+          - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          - chmod +x ./cc-test-reporter
+          - ./cc-test-reporter before-build
+        script:
+          - npm run test
+          - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+          - xvfb-run -a npm run test:e2e:storybook:ci
+      - stage: test
+        name: "Production e2e and lighthouse Tests" 
+        install: npm ci --only=prod
+        addons: 
+          chrome: stable
+        script:
+          - npm run build
+          - xvfb-run -a npm run test:prod:travis
+          - xvfb-run -a npm run test:lighthouse:ci
 notifications:
   email: false
   slack:
