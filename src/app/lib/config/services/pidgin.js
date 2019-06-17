@@ -2,16 +2,19 @@ import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const pidgin = {
+  product: 'BBC News',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
+  serviceLocalizedName: 'Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
   fonts: [],
   translations: {
+    home: 'Home',
     error: {
       404: {
         statusCode: '404',
