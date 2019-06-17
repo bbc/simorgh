@@ -1,5 +1,5 @@
 import { testResponseCode } from '../support/metaTestHelper';
-import describeForLocalAndTest from '../support/limitEnvRuns';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 const testManifest200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
