@@ -1,8 +1,8 @@
-import urlWithPageAnchor from './pageAnchor';
-import onClient from './onClient';
+import urlWithPageAnchor from '.';
+import onClient from '../onClient';
 
 let onClientMockRes = true;
-jest.mock('./onClient', () => jest.fn());
+jest.mock('../onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockRes);
 
 describe('urlWithPageAnchor', () => {

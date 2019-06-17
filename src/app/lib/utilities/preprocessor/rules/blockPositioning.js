@@ -1,5 +1,5 @@
-import deepGet from '../../../json/deepGet';
-import deepClone from '../../../json/deepClone';
+import deepGet from '../../deepGet';
+import deepClone from '../../deepClone';
 
 const insertBlockPositioning = ({ model }, positionArr = []) => {
   if (!deepGet(['blocks'], model)) {
