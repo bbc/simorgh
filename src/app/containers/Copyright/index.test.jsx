@@ -13,6 +13,7 @@ const newsServiceContextStub = {
   imageCopyrightOffscreenText: 'Image source, ',
 };
 const persianServiceContextStub = {
+  dir: 'rtl',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 

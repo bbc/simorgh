@@ -62,7 +62,7 @@ exports[`should render Copyright with persian service context 1`] = `
   position: absolute;
   bottom: 0;
   margin: 0;
-  left: 0;
+  right: 0;
 }
 
 <p
