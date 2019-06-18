@@ -1,7 +1,16 @@
 import deepGet from '../utilities/deepGet';
 
-export const getOptimoUrn = articleData =>
+const getOptimoUrn = articleData =>
   deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
+
+export const getContentId = articleData => {
+  const optimoUrn = getOptimoUrn(articleData);
+  const id = optimoUrn ? optimoUrn.split(':').pop() : null;
+  if (!id) {
+    return null;
+  }
+  return `urn:bbc:optimo:${id}`;
+};
 
 export const getOptimoId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);

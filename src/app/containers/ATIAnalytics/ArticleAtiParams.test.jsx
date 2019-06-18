@@ -10,7 +10,7 @@ describe('ArticleAtiParams', () => {
   const mockArticleData = {
     content: {},
     metadata: {
-      locators: { optimoUrn: 'urn:c0000000000o' },
+      locators: { optimoUrn: 'urn:bbc:optimo:asset:c0000000000o' },
       passport: { language: 'language' },
       firstPublished: 946684800000,
       lastPublished: 978307200000,
@@ -60,12 +60,12 @@ describe('ArticleAtiParams', () => {
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
         appName: 'news',
+        contentId: 'urn:bbc:optimo:c0000000000o',
         contentType: 'article',
         isUK: true,
         language: 'language',
         ldpThingIds: 'id',
         ldpThingLabels: 'label',
-        optimoUrn: 'urn:c0000000000o',
         pageIdentifier: 'news.articles.c0000000000o.page',
         pageTitle: 'A headline',
         platform: 'canonical',
@@ -77,8 +77,8 @@ describe('ArticleAtiParams', () => {
     });
 
     it('should call article utility functions with arguments', () => {
+      testUtils.getContentId = jest.fn();
       testUtils.getLanguage = jest.fn();
-      testUtils.getOptimoUrn = jest.fn();
       testUtils.getPageIdentifier = jest.fn();
       testUtils.getPromoHeadline = jest.fn();
       testUtils.getPublishedDatetime = jest.fn();
@@ -86,6 +86,8 @@ describe('ArticleAtiParams', () => {
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
+      expect(testUtils.getContentId).toHaveBeenCalledTimes(1);
+      expect(testUtils.getContentId).toHaveBeenCalledWith(mockArticleData);
       expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
       expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
       expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(2);
@@ -97,8 +99,6 @@ describe('ArticleAtiParams', () => {
         'thingLabel',
         mockArticleData,
       );
-      expect(testUtils.getOptimoUrn).toHaveBeenCalledTimes(1);
-      expect(testUtils.getOptimoUrn).toHaveBeenCalledWith(mockArticleData);
       expect(testUtils.getPageIdentifier).toHaveBeenCalledTimes(1);
       expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(
         'news',

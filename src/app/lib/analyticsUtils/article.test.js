@@ -1,6 +1,6 @@
 const {
+  getContentId,
   getPageIdentifier,
-  getOptimoUrn,
   getLanguage,
   getPromoHeadline,
   getPublishedDatetime,
@@ -43,19 +43,19 @@ describe('getPageIdentifier', () => {
   });
 });
 
-describe('getOptimoUrn', () => {
+describe('getContentId', () => {
   it('should find value in good data', () => {
     const goodData = {
       metadata: {
         locators: {
-          optimoUrn: 'desired value',
+          optimoUrn: 'urn:bbc:optimo:asset:c0g992jmmkko',
         },
       },
     };
 
-    const optimoUrn = getOptimoUrn(goodData);
+    const contentId = getContentId(goodData);
 
-    expect(optimoUrn).toEqual('desired value');
+    expect(contentId).toEqual('urn:bbc:optimo:c0g992jmmkko');
   });
 
   it('should return null in bad data', () => {
@@ -67,9 +67,9 @@ describe('getOptimoUrn', () => {
       },
     };
 
-    const optimoUrn = getOptimoUrn(badData);
+    const contentId = getContentId(badData);
 
-    expect(optimoUrn).toEqual(null);
+    expect(contentId).toEqual(null);
   });
 });
 

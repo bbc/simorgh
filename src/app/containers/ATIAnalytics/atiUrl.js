@@ -21,11 +21,11 @@ export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
 
 export const atiPageViewParams = ({
   appName,
+  contentId,
   contentType,
   language,
   ldpThingIds,
   ldpThingLabels,
-  optimoUrn,
   pageIdentifier,
   pageTitle,
   platform,
@@ -77,7 +77,7 @@ export const atiPageViewParams = ({
       value: getDeviceLanguage(platform),
       wrap: false,
     },
-    { key: 'x1', description: 'content id', value: optimoUrn, wrap: true },
+    { key: 'x1', description: 'content id', value: contentId, wrap: true },
     {
       key: 'x2',
       description: 'app type',

@@ -5,7 +5,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 import {
   getLanguage,
-  getOptimoUrn,
+  getContentId,
   getPageIdentifier,
   getPromoHeadline,
   getPublishedDatetime,
@@ -18,11 +18,11 @@ const ArticleAtiParams = articleData => {
 
   return atiPageViewParams({
     appName: atiAnalyticsAppName,
+    contentId: getContentId(articleData),
     contentType: 'article',
     language: getLanguage(articleData),
     ldpThingIds: getThingAttributes('thingId', articleData),
     ldpThingLabels: getThingAttributes('thingLabel', articleData),
-    optimoUrn: getOptimoUrn(articleData),
     pageIdentifier: getPageIdentifier(service, articleData),
     pageTitle: getPromoHeadline(articleData),
     timePublished: getPublishedDatetime('firstPublished', articleData),

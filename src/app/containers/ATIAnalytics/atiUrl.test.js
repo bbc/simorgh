@@ -57,11 +57,11 @@ describe('getThingAttributes', () => {
 
     const queryParams = atiPageViewParams({
       appName: 'appName',
+      contentId: 'contentId',
       contentType: 'contentType',
       language: 'language',
       ldpThingIds: 'ldpThingIds',
       ldpThingLabels: 'ldpThingLabels',
-      optimoUrn: 'optimoUrn',
       pageIdentifier: 'pageIdentifier',
       pageTitle: 'pageTitle',
       platform: 'platform',
@@ -72,7 +72,7 @@ describe('getThingAttributes', () => {
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
       'p=pageIdentifier',
-      'x1=[optimoUrn]',
+      'x1=[contentId]',
       'x3=[appName]',
       'x4=[language]',
       'x7=[contentType]',
