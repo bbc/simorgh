@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -11,7 +11,7 @@ import {
   twitterMeta,
 } from '../support/metaTestHelper';
 
-describeForLocalOnly('Persian Article Meta Tests', () => {
+describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
