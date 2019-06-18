@@ -15,15 +15,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
     >
-      <HelmetWrapper
-        defer={true}
-        encodeSpecialCharacters={true}
-      >
-        <link
-          href="/news/articles/manifest.json"
-          rel="manifest"
-        />
-      </HelmetWrapper>
+      <ManifestContainer />
       <ConsentBanner />
       <HeaderContainer />
       <h2>
