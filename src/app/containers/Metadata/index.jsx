@@ -20,7 +20,7 @@ const allTags = tags => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { platform } = useContext(RequestContext);
+  const { origin, platform } = useContext(RequestContext);
   const {
     service,
     brandName,
