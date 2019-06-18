@@ -13,6 +13,7 @@ const igbo = {
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
     home: 'Akụkọ',
