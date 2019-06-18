@@ -1,4 +1,4 @@
-import services from '../support/serviceConfig';
+import services from '../support/worldServices';
 import { el } from '../support/frontpageElements';
 import describeForLocalOnly from '../support/describeForLocalOnly';
 
