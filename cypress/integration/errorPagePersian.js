@@ -17,7 +17,10 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/persian/articles/${config.specialAssets.nonExistent}`, 404);
+    testResponseCode(
+      `/persian/articles/${config.specialAssets.nonExistent}`,
+      404,
+    );
   });
 
   it('should display a relevant error message on screen', () => {
