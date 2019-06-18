@@ -100,12 +100,13 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include the canonical URL & ampHTML', () => {
+    const currentOrigin = window.location.origin;
     const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(
       `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
     );
     checkAmpHTML(
-      `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
 

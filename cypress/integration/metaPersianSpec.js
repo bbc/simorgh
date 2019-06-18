@@ -60,11 +60,12 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
 
   it('should include the canonical URL & ampHTML', () => {
     const canonicalOrigin = 'https://www.bbc.com';
+    const currentOrigin = window.location.origin;
     checkCanonicalURL(
       `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
     );
     checkAmpHTML(
-      `${canonicalOrigin}/persian/articles/${config.assets.persian}.amp`,
+      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
     );
   });
 
