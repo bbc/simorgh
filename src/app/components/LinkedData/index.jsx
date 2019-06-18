@@ -80,8 +80,8 @@ LinkedData.propTypes = {
   canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: string.isRequired,
-  lastUpdated: string.isRequired,
+  firstPublished: string,
+  lastUpdated: string,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
@@ -97,6 +97,8 @@ LinkedData.propTypes = {
 
 LinkedData.defaultProps = {
   about: undefined,
+  firstPublished: null,
+  lastUpdated: null,
 };
 
 export default LinkedData;
