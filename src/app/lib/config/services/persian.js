@@ -9,6 +9,7 @@ const persian = {
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
+  dir: 'rtl',
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',

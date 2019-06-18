@@ -9,6 +9,7 @@ const news = {
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
+  dir: 'ltr',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',

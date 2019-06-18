@@ -10,6 +10,7 @@ const pidgin = {
   serviceLocalizedName: 'Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
+  dir: 'ltr',
   brandSVG,
   script: latin,
   fonts: [],
