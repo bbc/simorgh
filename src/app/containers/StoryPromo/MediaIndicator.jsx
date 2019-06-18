@@ -28,14 +28,12 @@ const MediaIndicator = ({ item }) => {
       <MediaIndicatorComp
         duration={durationString}
         datetime={isoDuration}
-        // TODO make offscreenText optional in psammead-media-indicator
         offscreenText={capitalise(type)}
         type={type}
       />
     );
   }
 
-  // TODO make offscreenText optional in psammead-media-indicator
   return <MediaIndicatorComp offscreenText={capitalise(type)} type={type} />;
 };
 
