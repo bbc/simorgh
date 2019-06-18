@@ -10,6 +10,7 @@ const config = {
       persian: 'c7eel0lmr4do',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598342',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -22,6 +23,7 @@ const config = {
       persian: 'c4vlle3q337o',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598343',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -36,6 +38,7 @@ const config = {
       news: 'c0g992jmmkko',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598343',
   },
 };
 
