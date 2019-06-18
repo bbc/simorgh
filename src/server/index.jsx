@@ -12,8 +12,7 @@ import {
   articleManifestRegexPath,
   articleSwRegexPath,
   frontpageDataRegexPath,
-  manifestRegexPath,
-  serviceManifestRegexPath,
+  frontpageManifestRegexPath,
   frontpageSwRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
@@ -131,7 +130,7 @@ server
     });
   })
   .get(
-    [manifestRegexPath, serviceManifestRegexPath],
+    [articleManifestRegexPath, frontpageManifestRegexPath],
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;

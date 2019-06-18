@@ -18,8 +18,6 @@ export const frontpageRegexPath = `/:service(${serviceRegex}):amp(${ampRegex})?`
 
 export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
 
-export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
-
-export const serviceManifestRegexPath = `/:service(${serviceRegex})/manifest.json`;
+export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.json`;
 
 export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
