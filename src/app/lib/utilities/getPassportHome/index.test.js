@@ -15,19 +15,19 @@ describe('getPassportHome', () => {
     },
   };
 
-  it('should return valid service in good data', () => {
+  it('should return a valid service when a valid passport object is passed', () => {
     const homeService = getPassportHome(data);
 
     expect(homeService).toEqual('news');
   });
 
-  it('should return null if data is null or empty', () => {
+  it('should return null when an empty or null object is passed', () => {
     const homeService = getPassportHome({});
 
     expect(homeService).toEqual(null);
   });
 
-  it('should return null if home is not in data', () => {
+  it('should return null if home is not in the passport object', () => {
     const homeService = getPassportHome(invalidData);
 
     expect(homeService).toEqual(null);
