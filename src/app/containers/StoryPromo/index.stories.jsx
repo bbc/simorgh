@@ -26,6 +26,7 @@ const getStoryPromo = platform => item => (
       platform={platform}
       isUK
       origin="https://www.bbc.co.uk"
+      pageType="article"
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
