@@ -2,11 +2,13 @@ import { matchPath } from 'react-router-dom';
 import {
   articleRegexPath,
   articleDataRegexPath,
+  articleSwRegexPath,
+  articleManifestRegexPath,
   frontpageRegexPath,
   frontpageDataRegexPath,
-  swRegexPath,
   manifestRegexPath,
   serviceManifestRegexPath,
+  frontpageSwRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -89,10 +91,10 @@ describe('frontpageDataRegexPath', () => {
 
 describe('swRegexPath', () => {
   const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
-  shouldMatchValidRoutes(validRoutes, swRegexPath);
+  shouldMatchValidRoutes(validRoutes, articleSwRegexPath);
 
   const invalidRoutes = ['/news/sw.js', '/persian/articles/sw'];
-  shouldNotMatchInvalidRoutes(invalidRoutes, swRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleSwRegexPath);
 });
 
 describe('manifestRegexPath', () => {
@@ -100,10 +102,18 @@ describe('manifestRegexPath', () => {
     '/news/articles/manifest.json',
     '/persian/articles/manifest.json',
   ];
-  shouldMatchValidRoutes(validRoutes, manifestRegexPath);
+  shouldMatchValidRoutes(validRoutes, articleManifestRegexPath);
 
   const invalidRoutes = ['/news/manifest.json', '/persian/articles/manifest'];
-  shouldNotMatchInvalidRoutes(invalidRoutes, manifestRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestRegexPath);
+});
+
+describe('frontpageSwRegexPath', () => {
+  const validRoutes = ['/news/sw.js', '/persian/sw.js'];
+  shouldMatchValidRoutes(validRoutes, frontpageSwRegexPath);
+
+  const invalidRoutes = ['/news/articles/sw.js', '/persian/sw'];
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageSwRegexPath);
 });
 
 describe('serviceManifestRegexPath', () => {
