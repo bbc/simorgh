@@ -4,13 +4,14 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
-  const { service, isAmp, id } = getRouteProps(routes, location.pathname);
+  const { service, isAmp, id, route } = getRouteProps(routes, location.pathname);
 
   const [state, setState] = useState({
     data: initialData,
     service,
     id,
     isAmp,
+    route,
     loading: false,
     error: null,
   });
@@ -26,7 +27,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
         service: nextService,
         id: nextId,
         isAmp: nextIsAmp,
-        route,
+        route: nextRoute,
         match,
       } = getRouteProps(routes, location.pathname);
 
@@ -35,6 +36,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
         service: nextService,
         id: nextId,
         isAmp: nextIsAmp,
+        route: nextRoute,
         loading: true,
         error: null,
       });

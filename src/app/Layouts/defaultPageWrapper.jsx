@@ -12,10 +12,11 @@ import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, route }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-  const pageType = 'article';
+  const { pageType } = route;
+
   return (
     <Fragment>
       <ServiceContextProvider service={service}>

@@ -8,6 +8,7 @@ const routes = [
     exact: true,
     component: Article,
     getInitialData: getArticleInitialData,
+    pageType: 'article',
   },
 ];
 
