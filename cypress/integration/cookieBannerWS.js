@@ -1,7 +1,7 @@
 import config from '../support/cookieConfig';
 import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 const services = Object.keys(config);
 
