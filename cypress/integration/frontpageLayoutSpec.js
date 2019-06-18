@@ -28,7 +28,7 @@ Object.keys(services).forEach(index => {
             .should('be.visible');
         });
 
-        it('should have a visually hidden top-level header', function() {
+        it('should have a visually hidden top-level header', () => {
           cy.get('h1')
             .should('have.length', 1)
             .should('not.be.visible');
