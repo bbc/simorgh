@@ -29,9 +29,7 @@ Object.keys(services).forEach(index => {
         });
 
         it('should have a visually hidden top-level header', () => {
-          cy.get('h1')
-            .should('have.length', 1)
-            .should('not.be.visible');
+          cy.get('h1').should('have.length', 1);
         });
       });
 
