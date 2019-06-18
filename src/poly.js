@@ -7,9 +7,6 @@ import 'core-js/es6/set';
 // IE11, IE10
 import 'core-js/es6/symbol';
 
-// All IE, Edge < 15, Safari < 10
-import 'core-js/modules/es7.string.pad-start';
-
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
 
