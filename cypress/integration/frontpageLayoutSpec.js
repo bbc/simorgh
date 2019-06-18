@@ -28,12 +28,11 @@ Object.keys(services).forEach(index => {
             .should('be.visible');
         });
 
-        // TODO uncomment me after simorgh#1869
-        // it('should have an invisible top-level header', function() {
-        //   cy.get('h1')
-        //     .should('have.length', 1)
-        //     .should('not.be.visible');
-        // });
+        it('should have a visually hidden top-level header', function() {
+          cy.get('h1')
+            .should('have.length', 1)
+            .should('not.be.visible');
+        });
       });
 
       describe('section tests', () => {
