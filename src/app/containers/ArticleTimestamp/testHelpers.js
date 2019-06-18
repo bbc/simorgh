@@ -57,13 +57,16 @@ export const sameDayTimestampsGenerator = ({ intervals, date }) => {
     );
   }
 
-  const firstTimestamp = moment(date)
+  const startOfDayTimestamp = moment(date)
     .startOf('day')
     .valueOf();
-  const lastTimestamp = addTimeDifference(firstTimestamp, intervals[0]);
+  const mockCurrentTimestamp = addTimeDifference(
+    startOfDayTimestamp,
+    intervals[0],
+  );
   return intervals
-    .map(interval => subtractTimeDifference(lastTimestamp, interval))
-    .concat(lastTimestamp);
+    .map(interval => subtractTimeDifference(mockCurrentTimestamp, interval))
+    .concat(mockCurrentTimestamp);
 };
 
 export const isBritishSummerTime = timestamp =>

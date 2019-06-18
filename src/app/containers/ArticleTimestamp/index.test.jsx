@@ -42,12 +42,12 @@ describe('ArticleTimestamp', () => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
         const [
           moreThanTenHoursAgo,
-          currentTimestamp,
+          mockCurrentTimestamp,
         ] = sameDayTimestampsGenerator({
           date,
           intervals: [{ hours: 10, seconds: 25 }],
         });
-        Date.now = jest.fn(() => currentTimestamp);
+        Date.now = jest.fn(() => mockCurrentTimestamp);
         const renderedWrapper = renderedTimestamps(
           <WrappedArticleTimestamp
             firstPublished={moreThanTenHoursAgo}
@@ -94,10 +94,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastPublished === firstPublished', () => {
-    const [threeHoursAgo, currentTimestamp] = sameDayTimestampsGenerator({
+    const [threeHoursAgo, mockCurrentTimestamp] = sameDayTimestampsGenerator({
       intervals: [{ hours: 3 }],
     });
-    Date.now = jest.fn(() => currentTimestamp);
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={threeHoursAgo}
@@ -109,10 +109,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastPublished === firstPublished', () => {
-    const [elevenHoursAgo, currentTimestamp] = sameDayTimestampsGenerator({
+    const [elevenHoursAgo, mockCurrentTimestamp] = sameDayTimestampsGenerator({
       intervals: [{ hours: 11 }],
     });
-    Date.now = jest.fn(() => currentTimestamp);
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={elevenHoursAgo}
@@ -142,11 +142,11 @@ describe('ArticleTimestamp', () => {
     const [
       fiveHoursAgo,
       threeHoursAgo,
-      currentTimestamp,
+      mockCurrentTimestamp,
     ] = sameDayTimestampsGenerator({
       intervals: [{ hours: 5 }, { hours: 3 }],
     });
-    Date.now = jest.fn(() => currentTimestamp);
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={fiveHoursAgo}
@@ -162,11 +162,11 @@ describe('ArticleTimestamp', () => {
     const [
       twelveHoursAgo,
       elevenHoursAgo,
-      currentTimestamp,
+      mockCurrentTimestamp,
     ] = sameDayTimestampsGenerator({
       intervals: [{ hours: 12 }, { hours: 11 }],
     });
-    Date.now = jest.fn(() => currentTimestamp);
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
