@@ -154,18 +154,6 @@ server
     });
   })
   .get(
-    '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
-    ({ params }, res) => {
-      // This is a temporary route to unblock route setup in Mozart.
-      // Simply returns a 200 response which can we route to until
-      // it's set up properly in simorgh.
-      const { service } = params;
-      res
-        .status(200)
-        .send(`Welcome to the temporary ${service} homepage simorgh route`);
-    },
-  )
-  .get(
     [articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
       try {
