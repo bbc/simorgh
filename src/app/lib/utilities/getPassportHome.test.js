@@ -15,7 +15,7 @@ describe('getPassportHome', () => {
     },
   };
 
-  it('should return valid service in good data', () => {
+  it('should return a valid service when a valid passport object is passed', () => {
     const homeService = getPassportHome(data);
 
     expect(homeService).toEqual('news');
