@@ -35,6 +35,8 @@ const metadataProps = (
   description,
   lang,
   metaTags,
+  timeFirstPublished,
+  timeLastPublished,
   title,
   serviceConfig,
   type,
@@ -57,8 +59,8 @@ const metadataProps = (
   locale: serviceConfig.locale,
   metaTags,
   themeColor: serviceConfig.themeColor,
-  timeFirstPublished: '2018-01-01T12:01:00.000Z',
-  timeLastPublished: '2018-01-01T13:00:00.000Z',
+  timeFirstPublished,
+  timeLastPublished,
   title,
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
@@ -69,20 +71,23 @@ const metadataProps = (
 const linkedDataProps = (
   brandName,
   canonicalLink,
+  firstPublished,
+  lastUpdated,
   createdBy,
   logoUrl,
   seoHeadline,
+  type,
   about = undefined,
 ) => ({
   brandName,
   canonicalLink,
-  firstPublished: '2018-01-01T12:01:00.000Z',
-  lastUpdated: '2018-01-01T13:00:00.000Z',
+  firstPublished,
+  lastUpdated,
   logoUrl,
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   seoHeadline,
-  type: 'article',
+  type,
   about,
 });
 
@@ -130,6 +135,8 @@ describe('Metadata Container', () => {
           'Article summary.',
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
           services.news,
           'article',
@@ -140,9 +147,12 @@ describe('Metadata Container', () => {
         linkedDataProps(
           'BBC News',
           'https://www.bbc.com/news/articles/c0000000001o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
+          'article',
           [
             {
               '@type': 'Thing',
@@ -194,6 +204,8 @@ describe('Metadata Container', () => {
           'Article summary.',
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
           services.news,
           'article',
@@ -204,9 +216,12 @@ describe('Metadata Container', () => {
         linkedDataProps(
           'BBC News',
           'https://www.bbc.co.uk/news/articles/c0000000001o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
+          'article',
           [
             {
               '@type': 'Thing',
@@ -245,6 +260,8 @@ describe('Metadata Container', () => {
           'خلاصه مقاله',
           'fa',
           [],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
           services.persian,
           'article',
@@ -255,9 +272,12 @@ describe('Metadata Container', () => {
         linkedDataProps(
           'BBC News فارسی',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
+          'article',
         ),
       );
     });
@@ -285,6 +305,8 @@ describe('Metadata Container', () => {
           'خلاصه مقاله',
           'fa',
           [],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
           services.persian,
           'article',
@@ -295,9 +317,12 @@ describe('Metadata Container', () => {
         linkedDataProps(
           'BBC News فارسی',
           'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
+          'article',
         ),
       );
     });
@@ -325,6 +350,8 @@ describe('Metadata Container', () => {
           'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
           'ig',
           [],
+          null,
+          null,
           'Ogbako',
           services.igbo,
           'IDX',
@@ -333,11 +360,14 @@ describe('Metadata Container', () => {
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
-          'BBC News Igbo',
-          'https://www.bbc.co.uk/igbo',
+          'BBC News Ìgbò',
+          'https://www.bbc.com/igbo',
+          null,
+          null,
           'Igbo',
           'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
-          'seoHeadline',
+          'Ogbako',
+          'IDX',
         ),
       );
     });

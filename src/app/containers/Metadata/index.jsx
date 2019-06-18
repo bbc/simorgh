@@ -61,7 +61,9 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
-  const canonicalLink = getCanonicalLink(origin, service, id, metadata.type);
+  const assetType = metadata.type;
+
+  const canonicalLink = getCanonicalLink(origin, service, id, assetType);
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
@@ -97,13 +99,13 @@ const MetadataContainer = ({ metadata, promo }) => {
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalLink}
-        firstPublished={timeFirstPublished}
-        lastUpdated={timeLastPublished}
+        firstPublished={assetType === 'article' ? timeFirstPublished : null}
+        lastUpdated={assetType === 'article' ? timeLastPublished : null}
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={getTitle(promo)}
-        type={metadata.type}
+        type={assetType}
         about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
       />
       <Metadata
@@ -126,13 +128,13 @@ const MetadataContainer = ({ metadata, promo }) => {
         locale={locale}
         metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
-        timeFirstPublished={timeFirstPublished} // to fix
-        timeLastPublished={timeLastPublished} // to fix
+        timeFirstPublished={assetType === 'article' ? timeFirstPublished : null}
+        timeLastPublished={assetType === 'article' ? timeLastPublished : null}
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
-        type={metadata.type}
-        showArticleTags={metadata.type === 'article'}
+        type={assetType}
+        showArticleTags={assetType === 'article'}
       />
     </Fragment>
   );
