@@ -32,7 +32,45 @@ def getCommitInfo = {
 }
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
-  "*Author* ${gitCommitAuthor}\n *Commit Hash*\n ${gitCommit}\n *Commit Message*\n ${gitCommitMessage}"
+  """
+  ${env.JOB_NAME}
+  ${env.BUILD_URL}
+  *Author*: ${gitCommitAuthor}
+  *Commit Hash*
+  ${gitCommit}
+  *Commit Message*
+  ${gitCommitMessage}
+  """
+}
+
+def messageContent(title, text, applicationName, stageName, gitCommit, gitCommitMessage) {
+  "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
+    *Build Task*: ${applicationName}\n\
+    *Stage*: ${stageName}\n\
+    *Commit Hash*\n ${gitCommit}\n\
+    *Commit Message*\n ${gitCommitMessage}"
+}
+
+def notifySlack(messageParameters) {
+  def title = "*${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}]*"
+
+  def text = "*Author*: ${messageParameters.gitCommitAuthor}"
+
+  if (messageParameters.customText && messageParameters.customText.length()>0) {
+    text = messageParameters.customText
+  }
+
+
+  def message = messageContent(title, text, messageParameters.applicationName,
+    messageParameters.stageName, messageParameters.gitCommit,
+    messageParameters.gitCommitMessage
+  )
+
+  slackSend(
+    channel: messageParameters.slackChannel, 
+    color: messageParameters.colour,
+    message: message
+  )
 }
 
 pipeline {
@@ -50,9 +88,6 @@ pipeline {
       // when {
       //   expression { env.BRANCH_NAME != 'latest' }
       // }
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
       parallel {
         stage('Test Development') {
           agent {
