@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { node, string, bool } from 'prop-types';
-import Helmet from 'react-helmet';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
+import ManifestContainer from '../containers/Manifest';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
@@ -35,9 +35,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
             id,
           })}
         >
-          <Helmet>
-            <link rel="manifest" href={`/${service}/articles/manifest.json`} />
-          </Helmet>
+          <ManifestContainer />
           <ConsentBanner />
           <HeaderContainer />
           {children}
