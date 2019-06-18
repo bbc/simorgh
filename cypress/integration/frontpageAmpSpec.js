@@ -71,8 +71,8 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
   });
 
-  xit('should contain an amp-img', () => {
-    const storyPromo = getElement('li').first();
+  it('should contain an amp-img', () => {
+    const storyPromo = getElement('li');
     storyPromo.should('be.visible');
     storyPromo.within(() => {
       getElement('amp-img').should('be.visible');
@@ -88,7 +88,7 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
     checkCanonicalURL(`${canonicalOrigin}${worldServices.igbo.url}`);
   });
 
-  it('should not have an AMP attribute on the main article', () => {
+  xit('should not have an AMP attribute on the main article', () => {
     cy.visit(`${worldServices.igbo.url}`);
     getElement('html').should('not.have.attr', 'amp');
   });
