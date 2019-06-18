@@ -99,7 +99,7 @@ export const atiPageViewParams = ({
     },
     {
       key: 'x6',
-      description: 'referer url',
+      description: 'referrer url',
       value: getReferrer(platform),
       wrap: true,
     },

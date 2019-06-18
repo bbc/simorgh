@@ -112,7 +112,8 @@ export const getHref = platform => {
   }
 
   if (onClient() && window.location.href) {
-    return window.location.href;
+    const { href } = window.location;
+    return href.replace('#', '%23');
   }
 
   return null;

@@ -301,6 +301,14 @@ describe('getHref', () => {
 
     expect(href).toEqual(null);
   });
+
+  it('should return href with anchor text - encoding the hash', () => {
+    setWindowValue('location', {
+      href: 'https://www.example.com/#anchortext',
+    });
+    const href = getHref();
+    expect(href).toEqual('https://www.example.com/%23anchortext');
+  });
 });
 
 describe('getReferrer', () => {
