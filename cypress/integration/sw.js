@@ -3,7 +3,7 @@ import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 const testArticleServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    testResponseCode(`/${service}/sw.js`, 200);
+    testResponseCode(`/${service}/articles/sw.js`, 200);
   });
 };
 
