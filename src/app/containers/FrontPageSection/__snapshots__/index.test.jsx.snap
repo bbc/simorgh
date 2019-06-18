@@ -249,6 +249,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             "timestamp": 1557738768,
           }
         }
+        lazyLoadImage={true}
         script={
           Object {
             "atlas": Object {
@@ -487,6 +488,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             "timestamp": 1557738768,
           }
         }
+        lazyLoadImage={true}
         script={
           Object {
             "atlas": Object {
@@ -954,6 +956,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "timestamp": 1557738768,
       }
     }
+    lazyLoadImage={true}
     script={
       Object {
         "atlas": Object {
@@ -1421,6 +1424,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             "timestamp": 1557738768,
           }
         }
+        lazyLoadImage={true}
         script={
           Object {
             "atlas": Object {
@@ -1659,6 +1663,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             "timestamp": 1557738768,
           }
         }
+        lazyLoadImage={true}
         script={
           Object {
             "atlas": Object {
