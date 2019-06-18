@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -11,7 +11,7 @@ import {
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
 
-describeForLocalOnly('Article Body Tests', () => {
+describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
@@ -38,25 +38,25 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
-    let thirdFigure;
+    const imageHasNotLoaded = getElement('figure').eq(2);
 
-    thirdFigure = getElement('figure').eq(2);
-
-    thirdFigure.within(() => {
+    imageHasNotLoaded.within(() => {
       const lazyLoadPlaceholder = getElement('div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
+    });
 
+    imageHasNotLoaded.scrollIntoView();
+
+    const imageHasLoaded = getElement('figure').eq(2);
+
+    visibleImageWithCaption(imageHasLoaded);
+    imageHasLoaded.within(() => {
       const noscriptImg = getElement('noscript');
       noscriptImg.contains('<img ');
-
-      cy.scrollTo('bottom', { duration: 200 });
 
       const ImageContainer = getElement('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
     });
-
-    thirdFigure = getElement('figure').eq(2);
-    visibleImageWithCaption(thirdFigure);
   });
 
   it('should render a title', () => {

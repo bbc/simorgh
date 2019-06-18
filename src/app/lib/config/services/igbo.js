@@ -2,16 +2,21 @@ import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
+  product: 'BBC News',
+  atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
+  serviceLocalizedName: 'Ìgbò',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
+    home: 'Akụkọ',
     error: {
       404: {
         statusCode: '404',
@@ -92,6 +97,36 @@ const igbo = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+  },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Usoro anyị maka njikọ dị na mpụga.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/igbo/institutional-48529074',
+        text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms',
+        text: 'Usoro Ojiji',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Iwu Nzuzo',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Kuki',
+      },
+      {
+        href: 'https://www.bbc.com/igbo/institutional-43090448',
+        text: 'Kpọtụrụ BBC',
+      },
+    ],
+    copyrightText:
+      'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
 };
 
