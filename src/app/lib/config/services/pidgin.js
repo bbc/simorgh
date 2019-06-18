@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const pidgin = {
   product: 'BBC News',
+  atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',
@@ -13,6 +14,7 @@ const pidgin = {
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
