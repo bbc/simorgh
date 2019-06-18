@@ -27,7 +27,7 @@ describe('getPassportHome', () => {
     expect(homeService).toEqual(null);
   });
 
-  it('should return null if home is not in data', () => {
+  it('should return null if home is not in the passport object', () => {
     const homeService = getPassportHome(invalidData);
 
     expect(homeService).toEqual(null);
