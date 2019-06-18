@@ -116,7 +116,7 @@ pipeline {
             sh "./scripts/jenkinsProductionFiles.sh"
 
             script {
-              // Get simorgh commit information
+              // Get Simorgh commit information
               getCommitInfo()
               
               // Set build tag information
@@ -124,32 +124,28 @@ pipeline {
             }
 
             // Write commit information to build_tag.txt
-            // sh "touch ./pack/build_tag.txt"
-            // sh "echo ${buildTagText} >> ./pack/build_tag.txt"
             sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
-            sh "ls -l ./pack/build_tag.txt"
-            sh "cat ./pack/build_tag.txt"
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
           }
         }
-        // stage('Build storybook dist') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     sh "rm -f storybook.zip"
-        //     sh 'make install'
-        //     sh 'make buildStorybook'
-        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-        //     stash name: 'simorgh_storybook', includes: storybookDist
-        //   }
-        // }    
+        stage('Build storybook dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh "rm -f storybook.zip"
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
+          }
+        }    
       }
       post {
         always {
@@ -160,9 +156,9 @@ pipeline {
       }
     }
     stage ('Run Pipeline') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
+      // when {
+      //   expression { env.BRANCH_NAME == 'latest' }
+      // }
       options {
         // Do not perform the SCM step
         skipDefaultCheckout true
@@ -175,7 +171,7 @@ pipeline {
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
+            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
           ],
           propagate: true,
           wait: true
