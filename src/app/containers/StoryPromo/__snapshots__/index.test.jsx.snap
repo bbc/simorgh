@@ -2,68 +2,6 @@
 
 exports[`StoryPromo Container should render correctly for amp 1`] = `
 .c1 {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 33.33%;
-  position: relative;
-}
-
-.c3 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.c6 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c5 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c5:hover,
-.c5:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c5:visited {
-  color: #6E6E73;
-}
-
-.c7 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -85,49 +23,7 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c6 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c1 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
@@ -188,69 +84,7 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 `;
 
 exports[`StoryPromo Container should render correctly for canonical 1`] = `
-.c1 {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 33.33%;
-  position: relative;
-}
-
-.c4 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.c7 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c6 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c6:hover,
-.c6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c6:visited {
-  color: #6E6E73;
-}
-
-.c8 {
+.c2 {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #6E6E73;
@@ -277,49 +111,7 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c7 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
