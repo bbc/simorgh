@@ -1,12 +1,13 @@
 import worldServices from '../support/worldServices';
 import { getElement } from '../support/bodyTestHelper';
 import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
 //   The Metadata container performs some AMP work, so the AMP on the front page
 //   will not be valid until the Metadata container has been added into the front
 //   page container. 🙃
-describe('AMP Tests on a .amp page', () => {
+describeForLocalOnly('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`${worldServices.igbo.url}.amp`);
