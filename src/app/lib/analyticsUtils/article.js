@@ -1,14 +1,25 @@
-import deepGet from '../../../lib/utilities/deepGet';
+import deepGet from '../utilities/deepGet';
 
-export const getOptimoUrn = articleData =>
+const getOptimoUrn = articleData =>
   deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
 
-export const getPageIdentifier = (service, articleData) => {
+export const getContentId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);
+  const id = optimoUrn ? optimoUrn.split(':').pop() : null;
+  if (!id) {
+    return null;
+  }
+  return `urn:bbc:optimo:${id}`;
+};
 
-  const optimoId = optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
+export const getOptimoId = articleData => {
+  const optimoUrn = getOptimoUrn(articleData);
+  return optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
+};
 
-  return `health::${service || 'news'}.articles.${optimoId}.page`;
+export const getPageIdentifier = (service, articleData) => {
+  const optimoId = getOptimoId(articleData);
+  return `${service}.articles.${optimoId}.page`;
 };
 
 export const getLanguage = articleData =>
@@ -24,11 +35,11 @@ const getISODate = unixTimestamp => {
   return date.toISOString();
 };
 
-export const getPublishedTime = (attribute, articleData) => {
-  const publishedTime = deepGet(['metadata', attribute], articleData);
+export const getPublishedDatetime = (attribute, articleData) => {
+  const publishedDatetime = deepGet(['metadata', attribute], articleData);
 
-  return publishedTime && isValidDateTime(publishedTime)
-    ? getISODate(publishedTime)
+  return publishedDatetime && isValidDateTime(publishedDatetime)
+    ? getISODate(publishedDatetime)
     : null;
 };
 
@@ -40,7 +51,7 @@ export const getThingAttributes = (attribute, articleData) => {
 
     things.forEach(thing => {
       if (thing[attribute]) {
-        attributes.push(thing[attribute]);
+        attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
       }
     });
 
