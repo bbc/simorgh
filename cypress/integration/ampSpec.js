@@ -44,6 +44,12 @@ describe('AMP Tests on a .amp page', () => {
       'src',
       'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
     );
+    const ampAnalyticsScript = getElement('head script').eq(5);
+    ampAnalyticsScript.should(
+      'have.attr',
+      'src',
+      'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
+    );
   });
 
   it('should load the AMP body scripts', () => {
@@ -60,7 +66,7 @@ describe('AMP Tests on a .amp page', () => {
       .should('be', 2); // 1 for amp-geo + 1 for amp-consent
     getElement('head script')
       .its('length')
-      .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
+      .should('be', 5); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 for amp-analytics + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {

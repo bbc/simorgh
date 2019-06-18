@@ -187,3 +187,28 @@ export const errorTitle = service => {
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
 };
+
+export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
+  getElement('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${bucketId}`,
+    );
+};
+
+export const hasNoscriptImgAtiUrl = analyticsBucketId => {
+  getElement('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${analyticsBucketId}`,
+    );
+};
+
+export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
+  getElement('amp-analytics script[type="application/json"]')
+    .eq(0)
+    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
+    .should('contain', `s=${analyticsBucketId}`);
+};
