@@ -1,13 +1,14 @@
 import Cookie from 'js-cookie';
-import onClient from '../../../lib/utilities/onClient';
-import { setWindowValue, resetWindowValue } from '../../../../testHelpers';
+import onClient from '../utilities/onClient';
+import { setWindowValue, resetWindowValue } from '../../../testHelpers';
 
 let isOnClient = true;
 
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('../utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 const {
+  getDestination,
   getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
@@ -15,6 +16,7 @@ const {
   getAppType,
   getHref,
   getReferrer,
+  sanitise,
 } = require('./index');
 
 let locServeCookieValue;
@@ -34,6 +36,60 @@ const returnsNullWhenOffClient = func => {
     });
   });
 };
+
+describe('getDestination', () => {
+  const getDestinationTestScenarios = [
+    {
+      statsDestination: 'NEWS_PS',
+      expected: 598285,
+      summary: 'should return for live uk for News',
+    },
+    {
+      statsDestination: 'NEWS_GNL',
+      expected: 598287,
+      summary: 'should return for live international for News',
+    },
+    {
+      statsDestination: 'NEWS_PS_TEST',
+      expected: 598286,
+      summary: 'should return for test uk for News',
+    },
+    {
+      statsDestination: 'NEWS_GNL_TEST',
+      expected: 598288,
+      summary: 'should return for test international for News',
+    },
+    {
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      expected: 598342,
+      summary: 'should return for live WS',
+    },
+    {
+      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+      expected: 598343,
+      summary: 'should return for test WS',
+    },
+    {
+      statsDestination: undefined,
+      expected: 598285,
+      summary: 'should return for live uk statsDestination is undefined',
+    },
+    {
+      statsDestination: null,
+      expected: 598285,
+      summary: 'should return for live uk statsDestination is null',
+    },
+  ];
+
+  getDestinationTestScenarios.forEach(
+    ({ statsDestination, expected, summary }) => {
+      it(summary, () => {
+        const destination = getDestination(statsDestination);
+        expect(destination).toEqual(expected);
+      });
+    },
+  );
+});
 
 describe('getAppType', () => {
   const getAppTypeScenarios = [
@@ -186,7 +242,7 @@ describe('getDeviceLanguage', () => {
   });
 });
 
-describe('getLocServeCookie', () => {
+describe('isLocServeCookieSet', () => {
   beforeEach(() => {
     jest.mock('js-cookie', () => jest.fn());
     Cookie.get = jest.fn();
@@ -194,24 +250,24 @@ describe('getLocServeCookie', () => {
   });
 
   // eslint-disable-next-line global-require
-  returnsNullWhenOffClient(require('./index').getLocServeCookie);
+  returnsNullWhenOffClient(require('./index').isLocServeCookieSet);
 
   it('should return true if cookie is set', () => {
-    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+    const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = 'value';
 
-    const locServeCookie = getLocServeCookie();
+    const locServeCookie = isLocServeCookieSet();
 
     expect(locServeCookie).toEqual(true);
   });
 
   it('should return false if cookie is not set', () => {
-    const { getLocServeCookie } = require('./index'); // eslint-disable-line global-require
+    const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
     locServeCookieValue = null;
 
-    const locServeCookie = getLocServeCookie();
+    const locServeCookie = isLocServeCookieSet();
 
     expect(locServeCookie).toEqual(false);
   });
@@ -245,6 +301,14 @@ describe('getHref', () => {
 
     expect(href).toEqual(null);
   });
+
+  it('should return href with anchor text - encoding the hash', () => {
+    setWindowValue('location', {
+      href: 'https://www.example.com/#anchortext',
+    });
+    const href = getHref();
+    expect(href).toEqual('https://www.example.com/%23anchortext');
+  });
 });
 
 describe('getReferrer', () => {
@@ -270,5 +334,11 @@ describe('getReferrer', () => {
     const referrer = getReferrer();
 
     expect(referrer).toEqual(null);
+  });
+});
+
+describe('sanitise', () => {
+  it('should replace all spaces with a + character', () => {
+    expect(sanitise('hi hello there')).toEqual('hi+hello+there');
   });
 });
