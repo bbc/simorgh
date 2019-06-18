@@ -82,6 +82,7 @@ const ImageContainer = ({ blocks, position }) => {
         src={rawImageSrc}
         width={width}
         srcset={srcSet}
+        showCopyright
         lazyLoad={lazyLoad}
       />
     </Wrapper>
