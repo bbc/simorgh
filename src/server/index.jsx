@@ -9,9 +9,10 @@ import routes from '../app/routes';
 import {
   articleRegexPath,
   articleDataRegexPath,
+  articleManifestRegexPath,
+  articleSwRegexPath,
   frontpageDataRegexPath,
-  manifestRegexPath,
-  swRegexPath,
+  frontpageSwRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -118,7 +119,7 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
-  .get(swRegexPath, (req, res) => {
+  .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
@@ -127,7 +128,7 @@ server
       }
     });
   })
-  .get(manifestRegexPath, async ({ params }, res) => {
+  .get(articleManifestRegexPath, async ({ params }, res) => {
     const { service } = params;
     const manifestPath = `${__dirname}/public/${service}/manifest.json`;
     res.sendFile(manifestPath, {}, error => {
