@@ -166,21 +166,21 @@ pipeline {
             stash name: 'simorgh', includes: packageName
           }
         }
-        // stage('Build storybook dist') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     sh "rm -f storybook.zip"
-        //     sh 'make install'
-        //     sh 'make buildStorybook'
-        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-        //     stash name: 'simorgh_storybook', includes: storybookDist
-        //   }
-        // }    
+        stage('Build storybook dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh "rm -f storybook.zip"
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
+          }
+        }    
       }
       post {
         always {
@@ -216,61 +216,63 @@ pipeline {
   }
   post {
     always {
+      script {
+        // Get Simorgh commit information
+        getCommitInfo()
+      }
+
       // Clean the workspace
       cleanWs()
     }
     aborted {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
       script {
-        def messageParameters = [
-          buildStatus: 'Aborted',
-          branchName: env.BRANCH_NAME,
-          colour: messageColor,
-          gitCommit: appGitCommit,
-          gitCommitAuthor: appGitCommitAuthor,
-          gitCommitMessage: appGitCommitMessage,
-          stageName: stageName,
-          slackChannel: params.SLACK_CHANNEL
-        ]
-        notifySlack(messageParameters)
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Aborted',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
       }
     }
     failure {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
       script {
-        def messageParameters = [
-          buildStatus: 'Failed',
-          branchName: env.BRANCH_NAME,
-          colour: messageColor,
-          gitCommit: appGitCommit,
-          gitCommitAuthor: appGitCommitAuthor,
-          gitCommitMessage: appGitCommitMessage,
-          stageName: stageName,
-          slackChannel: params.SLACK_CHANNEL
-        ]
-        notifySlack(messageParameters)
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Failed',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
       }
     }
     unstable {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
       script {
-        def messageParameters = [
-          buildStatus: 'Unstable',
-          branchName: env.BRANCH_NAME,
-          colour: messageColor,
-          gitCommit: appGitCommit,
-          gitCommitAuthor: appGitCommitAuthor,
-          gitCommitMessage: appGitCommitMessage,
-          stageName: stageName,
-          slackChannel: params.SLACK_CHANNEL
-        ]
-        notifySlack(messageParameters)
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Unstable',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
       }
     }
   }
