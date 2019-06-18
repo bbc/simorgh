@@ -8,6 +8,7 @@ def appGitCommit = ""
 def appGitCommitAuthor = ""
 def appGitCommitMessage = ""
 def buildTagText = ""
+def messageColor = 'danger'
 
 
 
@@ -33,7 +34,7 @@ def getCommitInfo = {
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
   """
-  ${env.JOB_NAME}
+  *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
   ${env.BUILD_URL}
   *Author*: ${gitCommitAuthor}
   *Commit Hash*
@@ -43,9 +44,8 @@ def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
   """
 }
 
-def messageContent(title, text, applicationName, stageName, gitCommit, gitCommitMessage) {
+def messageContent(title, text, stageName, gitCommit, gitCommitMessage) {
   "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
-    *Build Task*: ${applicationName}\n\
     *Stage*: ${stageName}\n\
     *Commit Hash*\n ${gitCommit}\n\
     *Commit Message*\n ${gitCommitMessage}"
@@ -56,12 +56,7 @@ def notifySlack(messageParameters) {
 
   def text = "*Author*: ${messageParameters.gitCommitAuthor}"
 
-  if (messageParameters.customText && messageParameters.customText.length()>0) {
-    text = messageParameters.customText
-  }
-
-
-  def message = messageContent(title, text, messageParameters.applicationName,
+  def message = messageContent(title, text,
     messageParameters.stageName, messageParameters.gitCommit,
     messageParameters.gitCommitMessage
   )
@@ -223,6 +218,60 @@ pipeline {
     always {
       // Clean the workspace
       cleanWs()
+    }
+    aborted {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      script {
+        def messageParameters = [
+          buildStatus: 'Aborted',
+          branchName: env.BRANCH_NAME,
+          colour: messageColor,
+          gitCommit: appGitCommit,
+          gitCommitAuthor: appGitCommitAuthor,
+          gitCommitMessage: appGitCommitMessage,
+          stageName: stageName,
+          slackChannel: params.SLACK_CHANNEL
+        ]
+        notifySlack(messageParameters)
+      }
+    }
+    failure {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      script {
+        def messageParameters = [
+          buildStatus: 'Failed',
+          branchName: env.BRANCH_NAME,
+          colour: messageColor,
+          gitCommit: appGitCommit,
+          gitCommitAuthor: appGitCommitAuthor,
+          gitCommitMessage: appGitCommitMessage,
+          stageName: stageName,
+          slackChannel: params.SLACK_CHANNEL
+        ]
+        notifySlack(messageParameters)
+      }
+    }
+    unstable {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      script {
+        def messageParameters = [
+          buildStatus: 'Unstable',
+          branchName: env.BRANCH_NAME,
+          colour: messageColor,
+          gitCommit: appGitCommit,
+          gitCommitAuthor: appGitCommitAuthor,
+          gitCommitMessage: appGitCommitMessage,
+          stageName: stageName,
+          slackChannel: params.SLACK_CHANNEL
+        ]
+        notifySlack(messageParameters)
+      }
     }
   }
 }
