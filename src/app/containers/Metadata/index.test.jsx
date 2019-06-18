@@ -183,7 +183,7 @@ describe('Metadata Container', () => {
               hrefLang: 'en-gb',
             },
           ],
-          'https://www.bbc.com/news/articles/c0000000001o.amp',
+          'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
           'https://www.bbc.com/news/articles/c0000000001o',
           'Article summary.',
           'en-gb',
@@ -270,7 +270,7 @@ describe('Metadata Container', () => {
         metadataProps(
           true,
           [],
-          'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
+          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
           'fa',
