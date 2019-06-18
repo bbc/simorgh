@@ -12,7 +12,7 @@ const CopyrightContainer = ({ children }) => {
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
       ) : null}
-      {lang === 'en-GB' ? children : <span lang="en-GB"> {children}</span>}
+      {lang === 'en-GB' ? children : <span lang="en-GB">{children}</span>}
     </Copyright>
   );
 };
