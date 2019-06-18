@@ -21,7 +21,7 @@ describe('getPassportHome', () => {
     expect(homeService).toEqual('news');
   });
 
-  it('should return null if data is null or empty', () => {
+  it('should return null when an empty or null object is passed', () => {
     const homeService = getPassportHome({});
 
     expect(homeService).toEqual(null);
