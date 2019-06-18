@@ -13,6 +13,7 @@ const igbo = {
   dir: 'ltr',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
     home: 'Akụkọ',
