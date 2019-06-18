@@ -1,4 +1,4 @@
-import getPassportHome from './getPassportHome';
+import getPassportHome from '.';
 
 describe('getPassportHome', () => {
   const data = {
