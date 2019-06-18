@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -11,7 +11,7 @@ import {
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
 
-describeForLocalOnly('Article Body Tests', () => {
+describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
