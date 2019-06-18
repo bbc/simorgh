@@ -3,18 +3,10 @@ import { storiesOf } from '@storybook/react';
 import Video from './index';
 
 const props = {
-  id: 'mediaPlayer',
+  id: 'mp#p00a00a',
   pid: 'p00a00a',
   kind: 'clip',
   title: 'Static Data Example',
-  items: [
-    {
-      versionID: 'p00p00v',
-      kind: 'programme',
-      duration: 10,
-    },
-  ],
-  holdingImageUrl: 'https://www.foo.bar/baz.png',
   statsAppName: 'news',
   statsAppType: 'responsive',
   statsCountername: 'news.articles.c0000000000o.page',
@@ -23,13 +15,13 @@ const props = {
   mediaPlayerSettings: {
     product: 'news',
     responsive: true,
-    statsObject: { clipPID: 'p00a00a' },
+    statsObject: { clipPID: 'test' },
     playlistObject: {
-      title: 'Static Data Example',
-      holdingImageURL: 'https://www.foo.bar/baz.png',
+      title: 'Ants',
+      holdingImageURL: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
       items: [
         {
-          versionID: 'p00p00v',
+          versionID: 'p01kdbnv',
           duration: 111,
           kind: 'programme',
         },

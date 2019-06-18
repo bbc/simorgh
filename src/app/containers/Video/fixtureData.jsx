@@ -16,6 +16,7 @@ import {
 
 const generateFixtureData = ({ platform, blocks }) => (
   <RequestContextProvider
+    env="test"
     id="c0000000000o"
     isUK
     origin="https://www.test.bbc.co.uk"

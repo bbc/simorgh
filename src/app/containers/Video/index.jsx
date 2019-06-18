@@ -16,9 +16,12 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
-  const { platform, statsDestination, statsPageIdentifier } = React.useContext(
-    RequestContext,
-  );
+  const {
+    env,
+    platform,
+    statsDestination,
+    statsPageIdentifier,
+  } = React.useContext(RequestContext);
 
   if (!blocks) {
     return null;
@@ -48,7 +51,6 @@ const VideoContainer = ({ blocks }) => {
     aresMediaBlock.model,
   );
   const guidance = deepGet(['warnings', 'short'], version);
-  const env = process.env.APP_ENV;
   const mediaPlayerSettings = {
     product: 'news',
     responsive: true,
