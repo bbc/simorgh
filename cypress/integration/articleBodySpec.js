@@ -7,6 +7,7 @@ import {
   getElement,
   placeholderImageLoaded,
   renderedTitle,
+  shouldContainText,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
@@ -61,6 +62,17 @@ Object.keys(config.assets).forEach(key => {
 
     it('should have an image copyright label with styling', () => {
       copyrightDataWindow();
+    });
+
+    it('should render a formatted timestamp', () => {
+      cy.window().then(win => {
+        if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
+          const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
+          const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
+          const time = getElement('time');
+          shouldContainText(time, timeStamp);
+        }
+      });
     });
 
     it('should render a title', () => {
