@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, oneOf, string } from 'prop-types';
 
 export const RequestContext = React.createContext('default');
 
@@ -9,6 +9,7 @@ export const RequestContextProvider = ({
   id,
   isUK,
   origin,
+  pageType,
   platform,
   statsDestination,
   statsPageIdentifier,
@@ -18,6 +19,7 @@ export const RequestContextProvider = ({
     id,
     isUK,
     origin,
+    pageType,
     platform,
     statsDestination,
     statsPageIdentifier,
@@ -32,6 +34,7 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   env: string,
   id: string,
+  pageType: oneOf(['article', 'frontPage']).isRequired,
   platform: string.isRequired,
   isUK: bool.isRequired,
   origin: string.isRequired,

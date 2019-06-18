@@ -1,9 +1,9 @@
 const {
+  getContentId,
   getPageIdentifier,
-  getOptimoUrn,
   getLanguage,
   getPromoHeadline,
-  getPublishedTime,
+  getPublishedDatetime,
   getThingAttributes,
 } = require('./article');
 
@@ -11,7 +11,7 @@ describe('getPageIdentifier', () => {
   const goodData = {
     metadata: {
       locators: {
-        optimoUrn: 'prefix:desiredValue',
+        optimoUrn: 'prefix1:prefix2:prefix3:desiredValue',
       },
     },
   };
@@ -19,7 +19,7 @@ describe('getPageIdentifier', () => {
   const badData = {
     metadata: {
       locators: {
-        unknownUrn: 'prefix:missedValue',
+        unknownUrn: 'prefix1:prefix2:prefix3:missedValue',
       },
     },
   };
@@ -27,35 +27,35 @@ describe('getPageIdentifier', () => {
   it('should construct page identifier', () => {
     const optimoUrn = getPageIdentifier('service', goodData);
 
-    expect(optimoUrn).toEqual('health::service.articles.desiredValue.page');
+    expect(optimoUrn).toEqual('service.articles.desiredValue.page');
   });
 
   it('should use "unknown" if optimo id is unknown', () => {
     const optimoUrn = getPageIdentifier('service', badData);
 
-    expect(optimoUrn).toEqual('health::service.articles.unknown.page');
+    expect(optimoUrn).toEqual('service.articles.unknown.page');
   });
 
   it('should use null if service is null', () => {
     const optimoUrn = getPageIdentifier(null, goodData);
 
-    expect(optimoUrn).toEqual('health::news.articles.desiredValue.page');
+    expect(optimoUrn).toEqual('null.articles.desiredValue.page');
   });
 });
 
-describe('getOptimoUrn', () => {
+describe('getContentId', () => {
   it('should find value in good data', () => {
     const goodData = {
       metadata: {
         locators: {
-          optimoUrn: 'desired value',
+          optimoUrn: 'urn:bbc:optimo:asset:c0g992jmmkko',
         },
       },
     };
 
-    const optimoUrn = getOptimoUrn(goodData);
+    const contentId = getContentId(goodData);
 
-    expect(optimoUrn).toEqual('desired value');
+    expect(contentId).toEqual('urn:bbc:optimo:c0g992jmmkko');
   });
 
   it('should return null in bad data', () => {
@@ -67,9 +67,9 @@ describe('getOptimoUrn', () => {
       },
     };
 
-    const optimoUrn = getOptimoUrn(badData);
+    const contentId = getContentId(badData);
 
-    expect(optimoUrn).toEqual(null);
+    expect(contentId).toEqual(null);
   });
 });
 
@@ -133,7 +133,7 @@ describe('getPromoHeadline', () => {
   });
 });
 
-describe('getPublishedTime', () => {
+describe('getPublishedDatetime', () => {
   const data = {
     metadata: {
       firstPublished: 946688461000,
@@ -142,19 +142,19 @@ describe('getPublishedTime', () => {
   };
 
   it('should find value in good data', () => {
-    const publishedTime = getPublishedTime('firstPublished', data);
+    const publishedTime = getPublishedDatetime('firstPublished', data);
 
     expect(publishedTime).toEqual('2000-01-01T01:01:01.000Z');
   });
 
   it('should return null if type not found', () => {
-    const publishedTime = getPublishedTime('foobar', data);
+    const publishedTime = getPublishedDatetime('foobar', data);
 
     expect(publishedTime).toEqual(null);
   });
 
   it('should return null if timestamp is invalid', () => {
-    const publishedTime = getPublishedTime('invalidDate', data);
+    const publishedTime = getPublishedDatetime('invalidDate', data);
 
     expect(publishedTime).toEqual(null);
   });
@@ -164,15 +164,15 @@ describe('getThingAttributes', () => {
   const data = {
     metadata: {
       tags: {
-        about: [{ thingId: 'foo' }, { thingId: 'bar' }],
+        about: [{ thingId: 'foo bar' }, { thingId: 'baz' }],
       },
     },
   };
 
-  it('should find value in good data', () => {
+  it('should return thing names in good data', () => {
     const thingAttributes = getThingAttributes('thingId', data);
 
-    expect(thingAttributes).toEqual('foo~bar');
+    expect(thingAttributes).toEqual('foo+bar~baz');
   });
 
   it('should return null if type not found', () => {
