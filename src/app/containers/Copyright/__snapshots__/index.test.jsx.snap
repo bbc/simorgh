@@ -77,7 +77,6 @@ exports[`should render Copyright with persian service context 1`] = `
   <span
     lang="en-GB"
   >
-     
     Getty Images
   </span>
 </p>
