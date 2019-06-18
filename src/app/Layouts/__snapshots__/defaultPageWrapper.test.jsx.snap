@@ -7,7 +7,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
   >
     <GlobalStyle />
     <RequestContextProvider
-      env="local"
+      env="live"
       id="c0000000000o"
       isUK={true}
       origin="https://www.bbc.com"
