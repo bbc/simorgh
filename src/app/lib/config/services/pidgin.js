@@ -12,6 +12,7 @@ const pidgin = {
   defaultImageAltText: 'BBC News Pidgin',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
     home: 'Home',

@@ -12,6 +12,7 @@ import {
   articleManifestRegexPath,
   articleSwRegexPath,
   frontpageDataRegexPath,
+  frontpageManifestRegexPath,
   frontpageSwRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
@@ -128,6 +129,19 @@ server
       }
     });
   })
+  .get(
+    [articleManifestRegexPath, frontpageManifestRegexPath],
+    async ({ params }, res) => {
+      const { service } = params;
+      const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+      res.sendFile(manifestPath, {}, error => {
+        if (error) {
+          console.log(error); // eslint-disable-line no-console
+          res.status(500).send('Unable to find manifest.');
+        }
+      });
+    },
+  )
   .get(articleManifestRegexPath, async ({ params }, res) => {
     const { service } = params;
     const manifestPath = `${__dirname}/public/${service}/manifest.json`;
