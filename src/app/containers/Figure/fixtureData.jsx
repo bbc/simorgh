@@ -6,7 +6,7 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockContainingText } from '../../models/blocks';
 
 const imageAlt = 'Pauline Clayton';
-const imageHeight = 360;
+const imageHeight = 640;
 const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageWidth = 640;
