@@ -27,6 +27,15 @@ const getDescription = (metadata, promo) =>
     ? promo.summary || promo.headlines.seoHeadline
     : metadata.summary;
 
+const getCanonicalLink = (origin, service, id, assetType) => {
+  const canonicalLink =
+    assetType === 'article'
+      ? `${origin}/${service}/articles/${id}`
+      : `${origin}/${service}`;
+
+  return canonicalLink;
+};
+
 const MetadataContainer = ({ metadata, promo }) => {
   const { origin, platform } = useContext(RequestContext);
   const {
@@ -52,7 +61,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
-  const canonicalLink = `${origin}/${service}/articles/${id}`;
+  const canonicalLink = getCanonicalLink(origin, service, id, metadata.type);
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
@@ -105,7 +114,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         articleAuthor={articleAuthor}
         articleSection={metadata.passport ? metadata.passport.genre : null}
         brandName={brandName}
-        canonicalLink={canonicalLink} // to fix
+        canonicalLink={canonicalLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}
