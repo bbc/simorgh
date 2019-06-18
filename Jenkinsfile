@@ -83,6 +83,9 @@ pipeline {
     APP_DIRECTORY = "app"
     CI = true
   }
+  parameters {
+    string(name: 'SLACK_CHANNEL', defaultValue: '#test_jenkins_plugin', description: 'The Slack channel where the build status is posted.')
+  }
   stages {
     stage ('Build and Test') {
       // when {
@@ -97,7 +100,8 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            // runDevelopmentTests()
+            sh "ls -la ${pwd()}"
           }
         }
 
@@ -109,7 +113,8 @@ pipeline {
             }
           }
           steps {
-            runProductionTests()
+            // runProductionTests()
+            sh "ls -la ${pwd()}"
           }
         }  
       }
@@ -166,21 +171,21 @@ pipeline {
             stash name: 'simorgh', includes: packageName
           }
         }
-        stage('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }    
+        // stage('Build storybook dist') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     sh "rm -f storybook.zip"
+        //     sh 'make install'
+        //     sh 'make buildStorybook'
+        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+        //     stash name: 'simorgh_storybook', includes: storybookDist
+        //   }
+        // }    
       }
       post {
         always {
