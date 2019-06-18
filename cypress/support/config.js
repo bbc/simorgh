@@ -5,9 +5,11 @@ const config = {
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
     assets: {
-      news: 'c8xxl4l3dzeo',
-      newsThreeSubheadlines: 'c5ll353v7y9o',
+      news: 'c5ll353v7y9o',
       persian: 'c7eel0lmr4do',
+    },
+    specialAssets: {
+      news: 'c8xxl4l3dzeo',
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598342',
@@ -18,9 +20,11 @@ const config = {
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     assets: {
-      news: 'c0g992jmmkko',
-      newsThreeSubheadlines: 'c6v11qzyv8po',
+      news: 'c6v11qzyv8po',
       persian: 'c4vlle3q337o',
+    },
+    specialAssets: {
+      news: 'c0g992jmmkko',
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598343',
