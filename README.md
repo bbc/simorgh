@@ -72,7 +72,7 @@ We use Storybook for developing components in isolation from the Simorgh Applica
 
 To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
-When viewing Video stories locally, make sure to use a BBC domain, as outline in the changing request location section. Video will not work in the hosted version of Storybook linked above for this reason.
+When viewing Video stories locally, make sure to use a BBC domain, as outlined in the [changing request location section](https://github.com/bbc/simorgh#changing-request-location). Video will not work in the hosted version of Storybook linked above for this reason.
 
 ## Production build locally
 
