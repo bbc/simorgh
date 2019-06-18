@@ -10,35 +10,25 @@ const renderAmpHtml = (ampLink, isAmp) => {
 };
 
 const getAuthor = (articleAuthor, showArticleTags) => {
-  if (!showArticleTags) {
-    return null;
-  }
-
-  return <meta name="article:author" content={articleAuthor} />;
+  return showArticleTags ? (
+    <meta name="article:author" content={articleAuthor} />
+  ) : null;
 };
 
 const getModifiedTime = (timeLastPublished, showArticleTags) => {
-  if (!showArticleTags) {
-    return null;
-  }
-
-  return <meta name="article:modified_time" content={timeLastPublished} />;
+  return showArticleTags ? (
+    <meta name="article:modified_time" content={timeLastPublished} />
+  ) : null;
 };
 
 const getPublishedTime = (timeFirstPublished, showArticleTags) => {
-  if (!showArticleTags) {
-    return null;
-  }
-
-  return <meta name="article:published_time" content={timeFirstPublished} />;
+  return showArticleTags ? (
+    <meta name="article:published_time" content={timeFirstPublished} />
+  ) : null;
 };
 
 const getArticleSection = (articleSection, showArticleTags) => {
-  if (!showArticleTags) {
-    return null;
-  }
-
-  return articleSection ? (
+  return articleSection && showArticleTags ? (
     <meta name="article:section" content={articleSection} />
   ) : null;
 };
@@ -160,8 +150,8 @@ Metadata.propTypes = {
   locale: string.isRequired,
   metaTags: arrayOf(string),
   themeColor: string.isRequired,
-  timeFirstPublished: number,
-  timeLastPublished: number,
+  timeFirstPublished: string,
+  timeLastPublished: string,
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
