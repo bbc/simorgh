@@ -36,6 +36,14 @@ const getCanonicalLink = (origin, service, id, assetType) => {
   return canonicalLink;
 };
 
+const getTimeTags = (timeTag, assetType) => {
+  if (assetType !== 'article') {
+    return null;
+  }
+
+  return new Date(timeTag).toISOString();
+};
+
 const MetadataContainer = ({ metadata, promo }) => {
   const { origin, platform } = useContext(RequestContext);
   const {
@@ -58,10 +66,10 @@ const MetadataContainer = ({ metadata, promo }) => {
   }
 
   const id = aresArticleId.split(':').pop();
-  const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
-  const timeLastPublished = new Date(metadata.lastPublished).toISOString();
-
   const assetType = metadata.type;
+
+  const timeFirstPublished = getTimeTags(metadata.firstPublished, assetType);
+  const timeLastPublished = getTimeTags(metadata.lastPublished, assetType);
 
   const canonicalLink = getCanonicalLink(origin, service, id, assetType);
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
@@ -99,8 +107,8 @@ const MetadataContainer = ({ metadata, promo }) => {
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalLink}
-        firstPublished={assetType === 'article' ? timeFirstPublished : null}
-        lastUpdated={assetType === 'article' ? timeLastPublished : null}
+        firstPublished={timeFirstPublished}
+        lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
@@ -128,8 +136,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         locale={locale}
         metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
-        timeFirstPublished={assetType === 'article' ? timeFirstPublished : null}
-        timeLastPublished={assetType === 'article' ? timeLastPublished : null}
+        timeFirstPublished={timeFirstPublished}
+        timeLastPublished={timeLastPublished}
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
