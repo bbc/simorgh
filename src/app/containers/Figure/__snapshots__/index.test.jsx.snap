@@ -30,7 +30,7 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
   grid-column-gap: 1rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -54,7 +54,7 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -157,7 +157,7 @@ exports[`Figure should render an AMP image with alt text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -181,7 +181,7 @@ exports[`Figure should render an AMP image with alt text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -333,7 +333,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -357,7 +357,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -540,7 +540,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -564,7 +564,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -692,7 +692,7 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -716,7 +716,7 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -825,7 +825,7 @@ exports[`Figure should render an image with alt text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -849,7 +849,7 @@ exports[`Figure should render an image with alt text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -1005,7 +1005,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -1029,7 +1029,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c6 {
     grid-column: 1 / span 6;
   }
@@ -1194,7 +1194,7 @@ exports[`Figure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -1218,7 +1218,7 @@ exports[`Figure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -1395,7 +1395,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -1419,7 +1419,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c5 {
     grid-column: 1 / span 6;
   }
@@ -1551,7 +1551,7 @@ exports[`Figure should render an image with copyright text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -1575,7 +1575,7 @@ exports[`Figure should render an image with copyright text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c6 {
     grid-column: 1 / span 6;
   }
@@ -1722,7 +1722,7 @@ exports[`Figure should render can AMP image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c2 {
     grid-column: 1 / span 6;
   }
@@ -1746,7 +1746,7 @@ exports[`Figure should render can AMP image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }

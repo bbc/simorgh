@@ -200,7 +200,7 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -224,7 +224,7 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c6 {
     grid-column: 1 / span 6;
   }
@@ -527,7 +527,7 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -551,7 +551,7 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c7 {
     grid-column: 1 / span 6;
   }
