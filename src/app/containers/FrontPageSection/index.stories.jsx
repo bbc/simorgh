@@ -14,6 +14,7 @@ const getSection = platform => (service, data) => (
       platform={platform}
       isUK={false}
       origin={`https://www.bbc.com/${platform}`}
+      pageType="article"
       statsDestination="WS_NEWS_LANGUAGES_TEST"
       statsPageIdentifier={`${service}.page`}
     >

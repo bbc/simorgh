@@ -1,5 +1,5 @@
 import baseUrl from './utils/getBaseUrl';
-import onClient from '../../helpers/onClient';
+import onClient from '../../lib/utilities/onClient';
 import fetchData from './utils/fetchData';
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
@@ -9,7 +9,7 @@ jest.mock('./utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../helpers/onClient', () => jest.fn());
+jest.mock('../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {

@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import deepClone from '../../lib/json/deepClone';
+import deepClone from '../../lib/utilities/deepClone';
 import StoryPromo from '.';
 
 let item;
@@ -73,7 +73,7 @@ describe('StoryPromo Container', () => {
 
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
-        <WrappedStoryPromo platform="canonical" item={item} />,
+        <WrappedStoryPromo item={item} lazyLoadImage={false} />,
       );
 
       expect(container.getElementsByTagName('img').length).toEqual(1);
@@ -116,11 +116,11 @@ describe('StoryPromo Container', () => {
     describe('With no summary provided', () => {
       beforeEach(() => {
         delete item.summary;
+        delete item.indexImage.copyrightHolder;
       });
 
-      it('should not include a paragraph element', () => {
+      it('should not include any paragraph element', () => {
         const { container } = render(<WrappedStoryPromo item={item} />);
-
         expect(container.getElementsByTagName('p').length).toEqual(0);
       });
     });
