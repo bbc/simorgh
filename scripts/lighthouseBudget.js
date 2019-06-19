@@ -69,7 +69,7 @@ const exitResult = isPassing => {
 // START OF SCRIPT
 
 const budget = {
-  ally: 90,
+  ally: 100,
   bestPractises: 90,
   seo: 90,
 };
