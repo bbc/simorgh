@@ -17,6 +17,7 @@ const routes = [
     exact: true,
     component: FrontPage,
     getInitialData: getFrontpageInitialData,
+    pageType: 'frontPage',
   },
 ];
 
