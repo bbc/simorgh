@@ -59,15 +59,19 @@ const LinkedData = ({
     publisher,
     image,
     thumbnailUrl: logoUrl,
-    about,
     mainEntityOfPage,
   };
 
-  if (type !== 'IDX') {
-    linkMetadata.headline = seoHeadline;
-    linkMetadata.datePublished = firstPublished;
-    linkMetadata.dateModified = lastUpdated;
-    Object.assign(linkMetadata, author);
+  if (type === 'article') {
+    const articleSpecificSchema = {
+      headline: seoHeadline,
+      datePublished: firstPublished,
+      dateModified: lastUpdated,
+      author,
+      about,
+    };
+
+    Object.assign(linkMetadata, articleSpecificSchema);
   }
 
   return (
