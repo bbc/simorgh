@@ -6,6 +6,7 @@ import {
   articleManifestRegexPath,
   frontpageRegexPath,
   frontpageDataRegexPath,
+  frontpageManifestRegexPath,
   frontpageSwRegexPath,
 } from './index';
 
@@ -112,4 +113,12 @@ describe('frontpageSwRegexPath', () => {
 
   const invalidRoutes = ['/news/articles/sw.js', '/persian/sw'];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageSwRegexPath);
+});
+
+describe('frontpageManifestRegexPath', () => {
+  const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
+  shouldMatchValidRoutes(validRoutes, frontpageManifestRegexPath);
+
+  const invalidRoutes = ['/foobar/manifest.json', '/foobar/manifest'];
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
 });
