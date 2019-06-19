@@ -99,12 +99,6 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
   }
 }
 
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
@@ -234,12 +228,6 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
 @media (min-width:80rem) {
   .c3 {
     grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
   }
 }
 
@@ -375,12 +363,6 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
   }
 }
 
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
@@ -498,12 +480,6 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
 @media (min-width:80rem) {
   .c3 {
     grid-column: 1 / span 1;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
   }
 }
 
@@ -627,12 +603,6 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
   }
 }
 
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
@@ -750,12 +720,6 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
 @media (min-width:80rem) {
   .c3 {
     grid-column: 1 / span 5;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-template-columns: repeat(6,1fr);
   }
 }
 
@@ -1410,7 +1374,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
-    grid-template-columns: repeat( 5,1fr);
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -1600,7 +1564,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
-    grid-template-columns: repeat( 5,1fr);
+    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -1790,7 +1754,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
-    grid-template-columns: repeat( 5,1fr);
+    grid-template-columns: repeat(5,1fr);
   }
 }
 

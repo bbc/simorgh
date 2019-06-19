@@ -8,10 +8,13 @@ import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
 import {
-  NestedGridItemLarge,
-  NestedGridItemMedium,
-  NestedGridItemSmall,
+  NestedGridParentLarge,
+  NestedGridParentMedium,
+  NestedGridParentSmall,
+  NestedGridItemChildSmall,
   NestedGridItemChildMedium,
+  NestedGridChildItemLarge
+  ,
 } from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -52,31 +55,28 @@ const ImageComponent = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
 
-  let ParentWrapper = NestedGridItemLarge;
-  let ChildWrapper = NestedGridItemSmall;
+  let ParentWrapper = NestedGridParentLarge;
+  let ChildWrapper = NestedGridChildItemLarge;
 
   if (height === width) {
-    ParentWrapper = NestedGridItemMedium;
+    ParentWrapper = NestedGridParentMedium;
     ChildWrapper = NestedGridItemChildMedium;
   }
   if (height > width) {
-    ParentWrapper = NestedGridItemSmall;
-    ChildWrapper = NestedGridItemSmall;
+    ParentWrapper = NestedGridParentSmall;
+    ChildWrapper = NestedGridItemChildSmall;
   }
 
   return (
-    <ParentWrapper
-      gridColumnStart={1}
-      gridSpan={{group3: '10',group4: '10',group5: '12',}}
-    >
-      <Figure>
+    <Figure>
+      <ParentWrapper>
         <ChildWrapper
           gridColumnStart={1}
           gridSpan={{
-            group1: '10',
-            group2: '5',
-            group3: '10',
-            group4: '5',
+            group1: '6',
+            group2: '6',
+            group3: '6',
+            group4: '6',
             group5: '12',
           }}
         >
@@ -98,21 +98,18 @@ const ImageComponent = ({
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}
-          gridColumns={{
-            group3: '6'
-          }}
           gridSpan={{
             group1: '6',
             group2: '6',
             group3: '5',
-            group4: '3',
+            group4: '2',
             group5: '8'
           }}
         >
           {renderCaption(captionBlock, type)}
-        </ChildWrapper>
-      </Figure>
+      </ChildWrapper>
     </ParentWrapper>
+  </Figure>
   );
 };
 

@@ -251,9 +251,6 @@ export const nestedGridItemLargeCss = css`
 
 export const gridContainerLargeCss = css`
   ${nestedGrid}
-  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(6, 1fr);
-  }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -290,7 +287,7 @@ export const gridContainerSmallCss = css`
     grid-template-columns: repeat(4, 1fr);
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-template-columns: repeat( ${ props => (props.gridColumns && props.gridColumns.group3) || 5}, 1fr);
+    grid-template-columns: repeat(5 , 1fr);
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(4, 1fr);
