@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -25,31 +25,31 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -79,67 +79,71 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
-        />
-        <noscript>
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
-          />
-        </noscript>
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
-        />
-      </div>
-    </figure>
+          className="c3"
+        >
+          <div
+            className="lazyload-placeholder"
+            style={
+              Object {
+                "height": undefined,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Pauline Clayton"
+              className="c4"
+              height={null}
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width={640}
+            />
+          </noscript>
+        </div>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          />
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an AMP image with alt text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -158,31 +162,31 @@ exports[`Figure should render an AMP image with alt text 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -212,58 +216,62 @@ exports[`Figure should render an AMP image with alt text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <amp-img
-          alt="Pauline Clayton"
-          attribution=""
-          height={360}
-          layout="responsive"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c4"
-        />
-      </div>
-    </figure>
+          className="c3"
+        >
+          <amp-img
+            alt="Pauline Clayton"
+            attribution=""
+            height={360}
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+        </div>
+        <div
+          className="c1"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an AMP image with caption and copyright 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -328,7 +336,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   font-style: normal;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -346,25 +354,25 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -394,83 +402,85 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <amp-img
-          alt="Pauline Clayton"
-          attribution="Getty Images"
-          height={360}
-          layout="responsive"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-        <p
-          className="c4"
-          role="text"
-        >
-          Getty Images
-        </p>
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
+          className="c3"
         >
-          <figcaption
-            className="c6"
+          <amp-img
+            alt="Pauline Clayton"
+            attribution="Getty Images"
+            height={360}
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+          <p
+            className="c4"
+            role="text"
           >
             <span
-              className="c7"
+              lang="en-GB"
             >
-              Image caption, 
+              Getty Images
             </span>
-            <p>
-              This is a caption
-            </p>
-          </figcaption>
+          </p>
         </div>
-      </div>
-    </figure>
-      <span
-        lang="en-GB"
-      >
-        Getty Images
-      </span>
-    </p>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          >
+            <figcaption
+              className="c6"
+            >
+              <span
+                className="c7"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an AMP image with caption text with inline link 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -543,7 +553,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   border-bottom: 2px solid #B80000;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -561,25 +571,25 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -609,78 +619,82 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <amp-img
-          alt="Pauline Clayton"
-          attribution=""
-          height={360}
-          layout="responsive"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c4"
+          className="c3"
         >
-          <figcaption
-            className="c5"
-          >
-            <span
-              className="c6"
-            >
-              Image caption, 
-            </span>
-            <p>
-              This is a caption 
-              <a
-                className="c7"
-                href="https://www.bbc.com"
-              >
-                containing an inline link
-              </a>
-              .
-            </p>
-          </figcaption>
+          <amp-img
+            alt="Pauline Clayton"
+            attribution=""
+            height={360}
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
         </div>
-      </div>
-    </figure>
+        <div
+          className="c1"
+        >
+          <div
+            className="c4"
+          >
+            <figcaption
+              className="c5"
+            >
+              <span
+                className="c6"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption 
+                <a
+                  className="c7"
+                  href="https://www.bbc.com"
+                >
+                  containing an inline link
+                </a>
+                .
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an AMP image with copyright text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -713,31 +727,31 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
   margin: 0;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -767,70 +781,72 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <amp-img
-          alt="Pauline Clayton"
-          attribution="Getty Images"
-          height={360}
-          layout="responsive"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-        <p
-          className="c4"
-          role="text"
-        >
-          Getty Images
-        </p>
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
-        />
-      </div>
-    </figure>
-      <span
-        lang="en-GB"
-      >
-        Getty Images
-      </span>
-    </p>
+          className="c3"
+        >
+          <amp-img
+            alt="Pauline Clayton"
+            attribution="Getty Images"
+            height={360}
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+          <p
+            className="c4"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              Getty Images
+            </span>
+          </p>
+        </div>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          />
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an image with alt text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -854,31 +870,31 @@ exports[`Figure should render an image with alt text 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -908,57 +924,61 @@ exports[`Figure should render an image with alt text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <img
-          alt="Pauline Clayton"
-          className="c4"
-          height={null}
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
-        />
-      </div>
-    </figure>
+          className="c3"
+        >
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+        </div>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          />
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an image with caption and copyright 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -1028,7 +1048,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   font-style: normal;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -1046,25 +1066,25 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -1094,82 +1114,84 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <img
-          alt="Pauline Clayton"
-          className="c4"
-          height={null}
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-        <p
-          className="c5"
-          role="text"
-        >
-          Getty Images
-        </p>
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c6"
+          className="c3"
         >
-          <figcaption
-            className="c7"
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+          <p
+            className="c5"
+            role="text"
           >
             <span
-              className="c8"
+              lang="en-GB"
             >
-              Image caption, 
+              Getty Images
             </span>
-            <p>
-              This is a caption
-            </p>
-          </figcaption>
+          </p>
         </div>
-      </div>
-    </figure>
-      <span
-        lang="en-GB"
-      >
-        Getty Images
-      </span>
-    </p>
+        <div
+          className="c1"
+        >
+          <div
+            className="c6"
+          >
+            <figcaption
+              className="c7"
+            >
+              <span
+                className="c8"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an image with caption text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -1225,7 +1247,7 @@ exports[`Figure should render an image with caption text 1`] = `
   font-style: normal;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -1243,25 +1265,25 @@ exports[`Figure should render an image with caption text 1`] = `
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -1291,70 +1313,74 @@ exports[`Figure should render an image with caption text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <img
-          alt="Pauline Clayton"
-          className="c4"
-          height={null}
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
+          className="c3"
         >
-          <figcaption
-            className="c6"
-          >
-            <span
-              className="c7"
-            >
-              Image caption, 
-            </span>
-            <p>
-              This is a caption
-            </p>
-          </figcaption>
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
         </div>
-      </div>
-    </figure>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          >
+            <figcaption
+              className="c6"
+            >
+              <span
+                className="c7"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an image with caption text with inline link 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -1432,7 +1458,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   border-bottom: 2px solid #B80000;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -1450,25 +1476,25 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -1498,77 +1524,81 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <img
-          alt="Pauline Clayton"
-          className="c4"
-          height={null}
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c5"
+          className="c3"
         >
-          <figcaption
-            className="c6"
-          >
-            <span
-              className="c7"
-            >
-              Image caption, 
-            </span>
-            <p>
-              This is a caption 
-              <a
-                className="c8"
-                href="https://www.bbc.com"
-              >
-                containing an inline link
-              </a>
-              .
-            </p>
-          </figcaption>
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
         </div>
-      </div>
-    </figure>
+        <div
+          className="c1"
+        >
+          <div
+            className="c5"
+          >
+            <figcaption
+              className="c6"
+            >
+              <span
+                className="c7"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption 
+                <a
+                  className="c8"
+                  href="https://www.bbc.com"
+                >
+                  containing an inline link
+                </a>
+                .
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render an image with copyright text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -1606,31 +1636,31 @@ exports[`Figure should render an image with copyright text 1`] = `
   margin: 0;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -1660,69 +1690,71 @@ exports[`Figure should render an image with copyright text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <img
-          alt="Pauline Clayton"
-          className="c4"
-          height={null}
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-        <p
-          className="c5"
-          role="text"
-        >
-          Getty Images
-        </p>
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c6"
-        />
-      </div>
-    </figure>
-      <span
-        lang="en-GB"
-      >
-        Getty Images
-      </span>
-    </p>
+          className="c3"
+        >
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
+          <p
+            className="c5"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              Getty Images
+            </span>
+          </p>
+        </div>
+        <div
+          className="c1"
+        >
+          <div
+            className="c6"
+          />
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
 
 exports[`Figure should render can AMP image with caption text 1`] = `
-.c2 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -1773,7 +1805,7 @@ exports[`Figure should render can AMP image with caption text 1`] = `
   font-style: normal;
 }
 
-.c0 {
+.c1 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -1791,25 +1823,25 @@ exports[`Figure should render can AMP image with caption text 1`] = `
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     grid-column: 1 / span 10;
   }
 }
@@ -1839,65 +1871,69 @@ exports[`Figure should render can AMP image with caption text 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-<div
+<figure
   className="c0"
 >
   <div
     className="c1"
   >
-    <figure
+    <div
       className="c2"
     >
-      <div
-        className="c3"
-      >
-        <amp-img
-          alt="Pauline Clayton"
-          attribution=""
-          height={360}
-          layout="responsive"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          width={640}
-        />
-      </div>
-      <div
+      <figure
         className="c0"
       >
         <div
-          className="c4"
+          className="c3"
         >
-          <figcaption
-            className="c5"
-          >
-            <span
-              className="c6"
-            >
-              Image caption, 
-            </span>
-            <p>
-              This is a caption
-            </p>
-          </figcaption>
+          <amp-img
+            alt="Pauline Clayton"
+            attribution=""
+            height={360}
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={640}
+          />
         </div>
-      </div>
-    </figure>
+        <div
+          className="c1"
+        >
+          <div
+            className="c4"
+          >
+            <figcaption
+              className="c5"
+            >
+              <span
+                className="c6"
+              >
+                Image caption, 
+              </span>
+              <p>
+                This is a caption
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
-</div>
+</figure>
 `;
