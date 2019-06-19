@@ -29,13 +29,17 @@ const getDescription = (metadata, promo) =>
   deepGet(['headlines', 'seoHeadline'], promo) ||
   deepGet(['summary'], metadata);
 
-const getCanonicalLink = (origin, service, id, assetType) => {
-  const canonicalLink =
+const getLink = (origin, service, id, assetType, linkType = '') => {
+  let link =
     assetType === 'article'
       ? `${origin}/${service}/articles/${id}`
       : `${origin}/${service}`;
 
-  return canonicalLink;
+  if (linkType === 'amp') {
+    link = `${link}.amp`;
+  }
+
+  return link;
 };
 
 const getTimeTags = (timeTag, assetType) => {
@@ -73,10 +77,10 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = getTimeTags(metadata.firstPublished, assetType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, assetType);
 
-  const canonicalLink = getCanonicalLink(origin, service, id, assetType);
+  const canonicalLink = getLink(origin, service, id, assetType);
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = `${origin}/${service}/articles/${id}.amp`;
+  const ampLink = getLink(origin, service, id, assetType, 'amp');
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
