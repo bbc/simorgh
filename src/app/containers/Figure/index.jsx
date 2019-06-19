@@ -67,12 +67,7 @@ const ImageComponent = ({
   return (
     <ParentWrapper
       gridColumnStart={1}
-      gridSpan={{
-        // group1:'5',
-        group3: '10',
-        group4: '10',
-        group5: '12',
-      }}
+      gridSpan={{group3: '10',group4: '10',group5: '12',}}
     >
       <Figure>
         <ChildWrapper
@@ -103,12 +98,15 @@ const ImageComponent = ({
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}
+          gridColumns={{
+            group3: '6'
+          }}
           gridSpan={{
             group1: '6',
-            group2: '5',
-            group3: '4',
-            group4: '4',
-            group5: '12',
+            group2: '6',
+            group3: '5',
+            group4: '3',
+            group5: '8'
           }}
         >
           {renderCaption(captionBlock, type)}

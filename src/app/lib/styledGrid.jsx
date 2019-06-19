@@ -82,7 +82,7 @@ export const NestedGridItemMedium = props => {
 export const NestedGridItemSmall = props => {
   const { children } = props;
   return (
-    <NestedGridParentSmall>
+    <NestedGridParentSmall {...props}>
       <NestedGridItemChildSmall {...props}>{children}</NestedGridItemChildSmall>
     </NestedGridParentSmall>
   );
