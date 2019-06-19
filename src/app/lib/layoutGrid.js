@@ -303,3 +303,26 @@ export const gridContainerSmallCss = css`
     max-width: initial;
   }
 `;
+
+export const customGridItemMedium = css`
+  ${gelGridMargin}
+
+  grid-column: 1 / span 6;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 5;
+    max-width: ${fiveOfSixColumnsMaxWidthScaleable};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    grid-column: 3 / span 5;
+    max-width: ${fiveOfSixColumnsMaxWidthGroup4};
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 3 / span 3;
+    max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
+  }
+
+  @supports (display: grid) {
+    max-width: initial;
+  }
+`;

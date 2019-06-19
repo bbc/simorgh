@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { number } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { GridPopoutMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -19,7 +19,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   }
 
   return (
-    <GridItemConstrainedMedium>
+    <GridPopoutMedium>
       <Timestamp
         timestamp={firstPublished}
         dateTimeFormat={formatDateNumeric}
@@ -37,7 +37,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
           script={script}
         />
       ) : null}
-    </GridItemConstrainedMedium>
+    </GridPopoutMedium>
   );
 };
 

@@ -14,6 +14,7 @@ import {
   gridContainerSmallCss,
   gridContainerMediumCss,
   gridContainerLargeCss,
+  customGridItemMedium,
 } from './layoutGrid';
 
 export const GhostWrapper = styled.div`
@@ -59,6 +60,10 @@ const NestedGridParentMedium = styled.div`
 
 const NestedGridParentSmall = styled.div`
   ${gridContainerSmallCss}
+`;
+
+export const GridPopoutMedium = styled.div`
+  ${customGridItemMedium}
 `;
 
 export const NestedGridItemLarge = props => {
