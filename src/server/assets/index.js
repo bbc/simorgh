@@ -1,5 +1,5 @@
 import fs from 'fs';
-import nodeLogger from '../../app/helpers/logger.node';
+import nodeLogger from '../../app/lib/logger.node';
 
 const logger = nodeLogger(__filename);
 

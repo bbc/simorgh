@@ -1,10 +1,10 @@
 /* eslint-disable global-require */
 import path from 'path';
-import nodeLogger from '../../app/helpers/logger.node';
+import nodeLogger from '../../app/lib/logger.node';
 
 const mockLogError = jest.fn();
 
-jest.mock('../../app/helpers/logger.node', () => jest.fn());
+jest.mock('../../app/lib/logger.node', () => jest.fn());
 
 nodeLogger.mockImplementation(() => ({ error: mockLogError }));
 

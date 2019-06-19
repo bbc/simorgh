@@ -1,11 +1,11 @@
-import {
-  setWindowValue,
-  resetWindowValue,
-} from '../../helpers/tests/setWindowValue';
+import { setWindowValue, resetWindowValue } from '../../../testHelpers';
 
 const windowLocation = window.location;
 
-describe('getInitialData', () => {
+describe('getOriginContext', () => {
+  beforeEach(() => {
+    process.env.APP_ENV = 'test';
+  });
   afterEach(() => {
     resetWindowValue('location', windowLocation);
   });
@@ -47,6 +47,39 @@ describe('getInitialData', () => {
 
       const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
 
+      expect(getOriginContext(bbcOrigin)).toEqual(expected);
+    });
+  });
+});
+
+describe('getOriginContext - localhost', () => {
+  const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
+
+  beforeEach(() => {
+    process.env.APP_ENV = 'local';
+  });
+
+  const localScenarios = [
+    {
+      description: 'should return test if local & undefined bbcOrigin',
+      bbcOrigin: undefined,
+      expected: {
+        isUK: true,
+        origin: 'https://www.test.bbc.co.uk',
+      },
+    },
+    {
+      description: 'should return bbcOrigin if local & bbcOrigin is defined',
+      bbcOrigin: 'https://foobar.co.uk',
+      expected: {
+        isUK: true,
+        origin: 'https://foobar.co.uk',
+      },
+    },
+  ];
+
+  localScenarios.forEach(({ bbcOrigin, description, expected }) => {
+    it(description, () => {
       expect(getOriginContext(bbcOrigin)).toEqual(expected);
     });
   });

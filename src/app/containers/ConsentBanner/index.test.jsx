@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
@@ -14,6 +14,7 @@ describe('Consent Banner Container', () => {
       platform="amp"
       isUK
       origin="https://www.bbc.co.uk"
+      pageType="article"
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
@@ -28,6 +29,7 @@ describe('Consent Banner Container', () => {
       platform="canonical"
       isUK
       origin="https://www.bbc.co.uk"
+      pageType="article"
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"

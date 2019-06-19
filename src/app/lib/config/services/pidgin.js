@@ -4,17 +4,23 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/en-gb';
 
 const pidgin = {
+  product: 'BBC News',
+  atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
   themeColor: `${C_POSTBOX}`,
+  serviceLocalizedName: 'Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
+  dir: 'ltr',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
+    home: 'Home',
     error: {
       404: {
         statusCode: '404',
@@ -48,53 +54,82 @@ const pidgin = {
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'We don update our Privacy and Cookies Policy',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
         accept: 'OK',
-        reject: "Find out what's changed",
+        reject: 'Find out wetin don change',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'Let us know say you agree to cookies',
         description: {
           uk: {
             first: 'We use ',
             linkText: 'cookies',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
+            first: 'We and our partners use technologies, like ',
             linkText: 'cookies',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        reject: 'No, cari me go settings',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+  },
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'De way wey we de take go external link.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        text: 'Why you fit trust BBC News',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'How dem dey take use am',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Privacy Policy',
+      },
+      {
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.com/pidgin/institutional-42188215',
+        text: 'Call BBC',
+      },
+    ],
+    copyrightText: 'BBC. De external site no concern BBC.',
   },
 };
 

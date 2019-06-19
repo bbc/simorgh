@@ -6,7 +6,7 @@ import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
-import deepGet from '../../helpers/json/deepGet';
+import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];

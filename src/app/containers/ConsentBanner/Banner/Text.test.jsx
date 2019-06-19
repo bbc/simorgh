@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import BannerText from './Text';
 
@@ -34,6 +34,7 @@ describe('Consent Banner Text', () => {
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
+      pageType="article"
       platform="canonical"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
@@ -48,6 +49,7 @@ describe('Consent Banner Text', () => {
       isUK={false}
       origin="https://www.bbc.com"
       id="c0000000000o"
+      pageType="article"
       platform="canonical"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
@@ -62,6 +64,7 @@ describe('Consent Banner Text', () => {
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
+      pageType="article"
       platform="canonical"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
@@ -76,6 +79,7 @@ describe('Consent Banner Text', () => {
       isUK={false}
       origin="https://www.bbc.com"
       id="c0000000000o"
+      pageType="article"
       platform="canonical"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"

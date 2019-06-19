@@ -1,11 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPageSection from '.';
 
 import igboData from '../../../../data/test/igbo/frontpage/index.json';
 import pidginData from '../../../../data/test/pidgin/frontpage/index.json';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const getSection = platform => (service, data) => (
@@ -14,6 +14,7 @@ const getSection = platform => (service, data) => (
       platform={platform}
       isUK={false}
       origin={`https://www.bbc.com/${platform}`}
+      pageType="article"
       statsDestination="WS_NEWS_LANGUAGES_TEST"
       statsPageIdentifier={`${service}.page`}
     >

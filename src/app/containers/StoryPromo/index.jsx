@@ -1,25 +1,48 @@
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
+import { shape, bool } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
   Link,
 } from '@bbc/psammead-story-promo';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
-import StoryPromoFigure from './Figure';
-import Timestamp from '../Timestamp';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../helpers/json/deepGet';
+import FigureContainer from '../Figure';
 
-const StoryPromo = ({ item }) => {
+import { ServiceContext } from '../../contexts/ServiceContext';
+import deepGet from '../../lib/utilities/deepGet';
+
+const StoryPromoImage = ({ imageValues, lazyLoad }) => {
+  if (!imageValues) {
+    return null;
+  }
+  const ratio = (imageValues.height / imageValues.width) * 100;
+  const src = `https://ichef.bbci.co.uk/news/660${imageValues.path}`;
+
+  return (
+    <FigureContainer
+      alt={imageValues.altText}
+      ratio={ratio}
+      src={src}
+      {...imageValues}
+      useFigure={false}
+      lazyLoad={lazyLoad}
+      copyright={imageValues.copyrightHolder}
+    />
+  );
+};
+
+StoryPromoImage.propTypes = {
+  lazyLoad: bool.isRequired,
+  imageValues: storyItem.indexImage.isRequired,
+};
+
+const StoryPromo = ({ item, lazyLoadImage }) => {
   const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
-  const imageValues = deepGet(['indexImage'], item);
-
-  const Image = imageValues && <StoryPromoFigure {...imageValues} />;
 
   if (!headline || !url) {
     return null;
@@ -38,9 +61,16 @@ const StoryPromo = ({ item }) => {
           timestamp={timestamp * 1000}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
+          script={script}
+          padding={false}
         />
       )}
     </Fragment>
+  );
+
+  const imageValues = deepGet(['indexImage'], item);
+  const Image = (
+    <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
   return <StoryPromoComponent image={Image} info={Info} />;
@@ -48,6 +78,11 @@ const StoryPromo = ({ item }) => {
 
 StoryPromo.propTypes = {
   item: shape(storyItem).isRequired,
+  lazyLoadImage: bool,
+};
+
+StoryPromo.defaultProps = {
+  lazyLoadImage: true,
 };
 
 export default StoryPromo;
