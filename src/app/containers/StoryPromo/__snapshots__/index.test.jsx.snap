@@ -65,7 +65,7 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 
 .c11 {
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -387,7 +387,7 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 
 .c12 {
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
