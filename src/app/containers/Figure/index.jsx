@@ -102,8 +102,8 @@ const ImageComponent = ({
             group1: '6',
             group2: '6',
             group3: '5',
-            group4: '2',
-            group5: '8'
+            group4: '5',
+            group5: '10'
           }}
         >
           {renderCaption(captionBlock, type)}

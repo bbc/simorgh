@@ -200,7 +200,13 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:25rem) {
+  .c4 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -218,7 +224,13 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:25rem) {
+  .c6 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c6 {
     grid-column: 1 / span 5;
   }
@@ -226,17 +238,17 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c6 {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
   .c6 {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 10;
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (max-width:80rem) {
   .c3 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -515,7 +527,13 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:25rem) {
+  .c4 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     grid-column: 1 / span 6;
   }
@@ -533,7 +551,13 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:25rem) {
+  .c7 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c7 {
     grid-column: 1 / span 5;
   }
@@ -541,17 +565,17 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c7 {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
   .c7 {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 10;
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (max-width:80rem) {
   .c3 {
     grid-template-columns: repeat(6,1fr);
   }
