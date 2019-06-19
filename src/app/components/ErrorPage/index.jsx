@@ -1,6 +1,5 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
-import nanoid from 'nanoid';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import InlineLink from '@bbc/psammead-inline-link';
@@ -9,6 +8,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')};
@@ -48,7 +48,7 @@ const ErrorPage = ({
         <Paragraph script={script}>{message}</Paragraph>
         <ul>
           {solutions.map(text => (
-            <Paragraph script={script} as="li" key={nanoid()}>
+            <Paragraph script={script} as="li" key={idSanitiser(text)}>
               {text}
             </Paragraph>
           ))}
