@@ -318,8 +318,10 @@ export const customGridItemMedium = css`
     max-width: ${fiveOfSixColumnsMaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: 3 / span 3;
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props => props.gridSpan};
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
+    max-height: 1.375rem;
   }
 
   @supports (display: grid) {

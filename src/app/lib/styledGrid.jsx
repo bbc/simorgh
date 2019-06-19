@@ -62,9 +62,13 @@ const NestedGridParentSmall = styled.div`
   ${gridContainerSmallCss}
 `;
 
-export const GridPopoutMedium = styled.div`
+const PopoutGridParentMedium = styled.div`
   ${customGridItemMedium}
 `;
+export const GridPopoutMedium = props => {
+  const { children } = props;
+  return <PopoutGridParentMedium {...props}>{children}</PopoutGridParentMedium>;
+};
 
 export const NestedGridItemLarge = props => {
   const { children } = props;
@@ -102,5 +106,9 @@ NestedGridItemMedium.propTypes = {
 };
 
 NestedGridItemLarge.propTypes = {
+  children: node.isRequired,
+};
+
+GridPopoutMedium.propTypes = {
   children: node.isRequired,
 };
