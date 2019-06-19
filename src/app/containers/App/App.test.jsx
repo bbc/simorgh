@@ -40,12 +40,15 @@ describe('App', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
-      data: initialData,
-      service: 'news',
-      isAmp: false,
-      error: null,
-      loading: false,
       bbcOrigin: 'https://www.bbc.co.uk',
+      data: initialData,
+      error: null,
+      isAmp: false,
+      loading: false,
+      route: {
+        getInitialData: route.getInitialData,
+      },
+      service: 'news',
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -86,12 +89,16 @@ describe('App', () => {
             2,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: true,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: true,
+              route: {
+                getInitialData: route.getInitialData,
+              },
+              service: 'news',
             },
           );
 
@@ -100,12 +107,15 @@ describe('App', () => {
             3,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error,
-              loading: false,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error,
+              isAmp: false,
+              loading: false,
+              route: {
+                getInitialData: route.getInitialData,
+              },
+              service: 'news',
             },
           );
         });
@@ -131,12 +141,16 @@ describe('App', () => {
             2,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: true,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: true,
+              route: {
+                getInitialData: route.getInitialData,
+              },
+              service: 'news',
             },
           );
 
@@ -145,12 +159,16 @@ describe('App', () => {
             3,
             [],
             {
-              data,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: false,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: false,
+              route: {
+                getInitialData: route.getInitialData,
+              },
+              service: 'news',
             },
           );
         });
