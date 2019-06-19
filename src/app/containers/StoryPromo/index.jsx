@@ -37,7 +37,7 @@ StoryPromoImage.propTypes = {
   imageValues: storyItem.indexImage.isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage }) => {
+const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
@@ -73,16 +73,18 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
     <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
-  return <StoryPromoComponent image={Image} info={Info} />;
+  return <StoryPromoComponent image={Image} info={Info} topStory={topStory} />;
 };
 
 StoryPromo.propTypes = {
   item: shape(storyItem).isRequired,
   lazyLoadImage: bool,
+  topStory: bool,
 };
 
 StoryPromo.defaultProps = {
   lazyLoadImage: true,
+  topStory: false,
 };
 
 export default StoryPromo;
