@@ -10,8 +10,6 @@ def appGitCommitMessage = ""
 def buildTagText = ""
 def messageColor = 'danger'
 
-
-
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
@@ -79,15 +77,15 @@ pipeline {
     CI = true
   }
   parameters {
-    string(name: 'SLACK_CHANNEL', defaultValue: '#test_jenkins_plugin', description: 'The Slack channel where the build status is posted.')
+    string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
   }
   stages {
     stage ('Build and Test') {
-      // when {
-      //   expression { env.BRANCH_NAME != 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       parallel {
-        stage('Test Development') {
+        stage ('Test Development') {
           agent {
             docker {
               image "${nodeImage}"
@@ -95,12 +93,11 @@ pipeline {
             }
           }
           steps {
-            // runDevelopmentTests()
-            sh "ls -la ${pwd()}"
+            runDevelopmentTests()
           }
         }
 
-        stage('Test Production') {
+        stage ('Test Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -108,8 +105,7 @@ pipeline {
             }
           }
           steps {
-            // runProductionTests()
-            sh "ls -la ${pwd()}"
+            runProductionTests()
           }
         }  
       }
@@ -122,22 +118,22 @@ pipeline {
       }
     }
     stage ('Build, Test & Package') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       parallel {
-        // stage('Test Development') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     runDevelopmentTests()
-        //   }
-        // }
-        stage('Test Production and Zip Production') {
+        stage ('Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            runDevelopmentTests()
+          }
+        }
+        stage ('Test Production and Zip Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -146,7 +142,8 @@ pipeline {
           }
           steps {
             // Testing
-            // runProductionTests()
+            runProductionTests()
+
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
@@ -166,7 +163,7 @@ pipeline {
             stash name: 'simorgh', includes: packageName
           }
         }
-        stage('Build storybook dist') {
+        stage ('Build storybook dist') {
           agent {
             docker {
               image "${nodeImage}"
@@ -191,9 +188,9 @@ pipeline {
       }
     }
     stage ('Run Pipeline') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       options {
         // Do not perform the SCM step
         skipDefaultCheckout true
@@ -202,11 +199,11 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infra-sandbox/sandbox-fix-slack-notification-449',
+          job: 'simorgh-infrastructure/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
+            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
           ],
           propagate: true,
           wait: true
