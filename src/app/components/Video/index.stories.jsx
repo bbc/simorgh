@@ -26,11 +26,11 @@ const props = {
           kind: 'programme',
         },
       ],
+      mediator: {
+        host: 'open.test.bbc.co.uk',
+      },
+      guidance: null,
     },
-    mediator: {
-      host: 'open.test.bbc.co.uk',
-    },
-    guidance: null,
   },
 };
 

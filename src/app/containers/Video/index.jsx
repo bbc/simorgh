@@ -37,10 +37,7 @@ const VideoContainer = ({ blocks }) => {
   const captionBlock = filterForBlockType(blocks, 'caption');
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind =
-    deepGet(['model', 'blocks', 0, 'model', 'format'], aresMediaBlock) ===
-    'audio_video'
-      ? 'programme'
-      : 'audio';
+    deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
   const pid = deepGet(['id'], nestedModel);
   const title = deepGet(['title'], nestedModel);
   const version = deepGet(['versions', 0], nestedModel);
@@ -51,6 +48,7 @@ const VideoContainer = ({ blocks }) => {
     aresMediaBlock.model,
   );
   const guidance = deepGet(['warnings', 'short'], version);
+  const id = `mp#${pid}`;
   const mediaPlayerSettings = {
     product: 'news',
     responsive: true,
@@ -58,6 +56,7 @@ const VideoContainer = ({ blocks }) => {
     playlistObject: {
       title,
       holdingImageURL: `https://${holdingImageUrl}`,
+      guidance,
       items: [
         {
           versionID,
@@ -65,13 +64,11 @@ const VideoContainer = ({ blocks }) => {
           kind,
         },
       ],
-      guidance,
-    },
-    mediator: {
-      host: mediatorURL(env),
+      mediator: {
+        host: mediatorURL(env),
+      },
     },
   };
-  const id = `mp#${pid}`;
 
   return (
     <GridItemConstrainedLargeNoMargin>

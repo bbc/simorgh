@@ -53,6 +53,7 @@ export const videoComponentPropTypes = {
     playlistObject: shape({
       title: string.isRequired,
       holdingImageURL: string.isRequired,
+      guidance: string.isRequired,
       items: arrayOf(
         shape({
           duration: number.isRequired,
@@ -64,7 +65,6 @@ export const videoComponentPropTypes = {
         host: string.isRequired,
       }).isRequired,
     }).isRequired,
-    guidance: string.isRequired,
   }).isRequired,
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
