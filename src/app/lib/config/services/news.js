@@ -4,12 +4,15 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
 
 const news = {
+  lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
+  atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   product: 'BBC News',
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
+  dir: 'ltr',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
@@ -25,6 +28,7 @@ const news = {
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
   frontpageUrl: '/news',
+  manifestPath: '/articles/manifest.json',
   translations: {
     error: {
       404: {

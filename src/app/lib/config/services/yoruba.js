@@ -3,6 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const yoruba = {
   product: 'BBC News',
+  atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
   service: 'yoruba',
@@ -10,8 +11,10 @@ const yoruba = {
   serviceLocalizedName: 'Yorùbá',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
   defaultImageAltText: 'BBC News Yorùbá',
+  dir: 'ltr',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   frontpageUrl: '/yoruba',
   translations: {
