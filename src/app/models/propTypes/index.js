@@ -1,4 +1,4 @@
-import { arrayOf, bool, number, shape, string } from 'prop-types';
+import { arrayOf, bool, number, shape, string, oneOfType } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -42,12 +42,14 @@ export const videoPropTypes = {
 
 export const videoComponentPropTypes = {
   title: string.isRequired,
+  id: string.isRequired,
   mediaPlayerSettings: shape({
     product: string.isRequired,
     responsive: bool.isRequired,
-    statsObject: shape({
-      pid: string,
-    }),
+    statsObject: oneOfType([
+      shape({ clipPID: string }),
+      shape({ episodePID: string }),
+    ]).isRequired,
     playlistObject: shape({
       title: string.isRequired,
       holdingImageURL: string.isRequired,
@@ -57,12 +59,13 @@ export const videoComponentPropTypes = {
           versionID: string.isRequired,
           kind: string.isRequired,
         }),
-      ),
+      ).isRequired,
       mediator: shape({
         host: string.isRequired,
-      }),
-    }),
-  }),
+      }).isRequired,
+    }).isRequired,
+    guidance: string.isRequired,
+  }).isRequired,
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
   statsCountername: string.isRequired,

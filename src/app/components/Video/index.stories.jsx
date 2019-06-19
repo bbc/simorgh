@@ -28,8 +28,9 @@ const props = {
       ],
     },
     mediator: {
-      host: 'https://open.test.bbc.co.uk',
+      host: 'open.test.bbc.co.uk',
     },
+    guidance: null,
   },
 };
 

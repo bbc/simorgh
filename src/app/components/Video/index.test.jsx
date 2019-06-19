@@ -6,16 +6,27 @@ describe('Video', () => {
   describe('with data', () => {
     const props = {
       id: 'mp#p00a0a0m',
-      kind: 'episode',
       title: 'Hello World',
-      items: [
-        {
-          versionID: 'p00a0a0v',
-          kind: 'episode',
-          duration: 100,
+      mediaPlayerSettings: {
+        product: 'news',
+        responsive: true,
+        statsObject: { clipPID: 'p00a0a0m' },
+        playlistObject: {
+          title: 'Hello World',
+          holdingImageURL: 'https://foo/bar/baz.png',
+          items: [
+            {
+              versionID: 'p00a0a0v',
+              kind: 'episode',
+              duration: 100,
+            },
+          ],
+          guidance: 'Scary',
+          mediator: {
+            host: 'open.test.bbc.co.uk',
+          },
         },
-      ],
-      holdingImageUrl: 'https://foo/bar/baz.png',
+      },
       statsAppName: 'news',
       statsAppType: 'responsive',
       statsCountername: 'news.articles.c0000000000o.page',

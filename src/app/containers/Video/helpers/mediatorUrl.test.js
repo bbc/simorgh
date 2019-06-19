@@ -20,7 +20,7 @@ describe('mediatorURL', () => {
     {
       env: '',
       expected: 'open.bbc.co.uk',
-      description: 'no env returns test url',
+      description: 'no env returns live url',
     },
   ];
 
