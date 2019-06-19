@@ -459,6 +459,12 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
         </div>
       </div>
     </figure>
+      <span
+        lang="en-GB"
+      >
+        Getty Images
+      </span>
+    </p>
   </div>
 </div>
 `;
@@ -813,6 +819,12 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
         />
       </div>
     </figure>
+      <span
+        lang="en-GB"
+      >
+        Getty Images
+      </span>
+    </p>
   </div>
 </div>
 `;
@@ -1146,6 +1158,12 @@ exports[`Figure should render an image with caption and copyright 1`] = `
         </div>
       </div>
     </figure>
+      <span
+        lang="en-GB"
+      >
+        Getty Images
+      </span>
+    </p>
   </div>
 </div>
 `;
@@ -1693,6 +1711,12 @@ exports[`Figure should render an image with copyright text 1`] = `
         />
       </div>
     </figure>
+      <span
+        lang="en-GB"
+      >
+        Getty Images
+      </span>
+    </p>
   </div>
 </div>
 `;
