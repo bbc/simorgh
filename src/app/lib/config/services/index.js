@@ -1,6 +1,8 @@
 /*
-  This file includes data for the Service Context
-  It will be used by the ServiceContext Component
+  Do not import this file into the primary application.
+  This file is intented for use by tests only where needed. 
+  Including this file in the application will cause the 
+  bundle splitting to stop working.
 */
 import news from './news';
 import persian from './persian';
