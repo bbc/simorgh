@@ -79,7 +79,7 @@ Object.keys(services).forEach(index => {
     });
   });
 
-  describe('<script> tags', () => {
+  describeForLocalOnly('<script> tags', () => {
     // Testing the actual fetch is not currently possible
     it('should have script to fetch bundle', () => {
       cy.get('script')
