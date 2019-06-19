@@ -1939,7 +1939,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 .c13 {
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2279,7 +2279,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 .c14 {
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
