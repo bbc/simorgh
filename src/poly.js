@@ -1,11 +1,11 @@
 // Needed by React 16 https://reactjs.org/docs/javascript-environment-requirements.html
 // IE10
-import 'core-js/es6/map';
-import 'core-js/es6/set';
+import 'core-js/es/map';
+import 'core-js/es/set';
 
 // Needed by Styled Components
 // IE11, IE10
-import 'core-js/es6/symbol';
+import 'core-js/es/symbol';
 
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
