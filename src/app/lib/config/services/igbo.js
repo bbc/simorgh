@@ -12,6 +12,7 @@ const igbo = {
   serviceLocalizedName: 'Ìgbò',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
+  dir: 'ltr',
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
