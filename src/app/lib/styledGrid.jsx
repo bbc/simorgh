@@ -14,6 +14,7 @@ import {
   gridContainerSmallCss,
   gridContainerMediumCss,
   gridContainerLargeCss,
+  customCss,
 } from './layoutGrid';
 
 export const GhostWrapper = styled.div`
@@ -61,6 +62,10 @@ const NestedGridParentSmall = styled.div`
   ${gridContainerSmallCss}
 `;
 
+const CustomGridItemConstrainedMedium = styled.div`
+  ${customCss}
+`;
+
 export const NestedGridItemLarge = props => {
   const { children } = props;
   return (
@@ -86,6 +91,19 @@ export const NestedGridItemSmall = props => {
       <NestedGridItemChildSmall {...props}>{children}</NestedGridItemChildSmall>
     </NestedGridParentSmall>
   );
+};
+
+export const PopOutGridItemConstrainedMedium = props => {
+  const { children } = props;
+  return (
+    <CustomGridItemConstrainedMedium {...props}>
+      {children}
+    </CustomGridItemConstrainedMedium>
+  );
+};
+
+PopOutGridItemConstrainedMedium.propTypes = {
+  children: node.isRequired,
 };
 
 NestedGridItemSmall.propTypes = {

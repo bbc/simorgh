@@ -10,6 +10,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
+  PopOutGridItemConstrainedMedium,
 } from './styledGrid';
 
 const red = '#ffaacc';
@@ -194,5 +195,14 @@ storiesOf('Grid Examples', module)
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
+    </GhostWrapper>
+  ))
+  .add('Pop out grid item', () => (
+    <GhostWrapper>
+      <PopOutGridItemConstrainedMedium>
+        <ColouredDiv colour={indigo}>
+          lose yourself to dance <span>✨</span>
+        </ColouredDiv>
+      </PopOutGridItemConstrainedMedium>
     </GhostWrapper>
   ));
