@@ -5,10 +5,13 @@ import Copyright from '@bbc/psammead-copyright';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const CopyrightContainer = ({ children }) => {
-  const { imageCopyrightOffscreenText, lang } = useContext(ServiceContext);
+  const { dir, imageCopyrightOffscreenText, lang } = useContext(ServiceContext);
+  const copyrightProps = {
+    position: dir === 'rtl' ? 'right' : 'left',
+  };
 
   return (
-    <Copyright>
+    <Copyright {...copyrightProps}>
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
       ) : null}
