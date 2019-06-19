@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { node, string, bool } from 'prop-types';
+import { any, node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -55,6 +55,8 @@ PageWrapper.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
+  // TODO provide a real prop type shape for `route`
+  route: any.isRequired, // eslint-disable-line react/forbid-prop-types
   service: string.isRequired,
 };
 

@@ -4,7 +4,10 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
-  const { service, isAmp, id, route } = getRouteProps(routes, location.pathname);
+  const { service, isAmp, id, route } = getRouteProps(
+    routes,
+    location.pathname,
+  );
 
   const [state, setState] = useState({
     data: initialData,
@@ -59,7 +62,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       };
       fetchData();
     }
-  }, [routes, location.pathname]);
+  }, [route, routes, location.pathname]);
 
   return renderRoutes(routes, { ...state, bbcOrigin });
 };
