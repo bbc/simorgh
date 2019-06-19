@@ -29,6 +29,7 @@ describe('defaultPageWrapper', () => {
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,
+    route: { pageType: 'article' },
   };
   shouldShallowMatchSnapshot(
     'should render with children',
