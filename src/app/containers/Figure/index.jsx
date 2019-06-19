@@ -11,6 +11,7 @@ import {
   NestedGridItemLarge,
   NestedGridItemMedium,
   NestedGridItemSmall,
+  NestedGridItemChildMedium,
 } from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -51,53 +52,69 @@ const ImageComponent = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
 
-  let Wrapper = NestedGridItemLarge;
+  let ParentWrapper = NestedGridItemLarge;
+  let ChildWrapper = NestedGridItemSmall;
 
   if (height === width) {
-    Wrapper = NestedGridItemMedium;
+    ParentWrapper = NestedGridItemMedium;
+    ChildWrapper = NestedGridItemChildMedium;
   }
   if (height > width) {
-    Wrapper = NestedGridItemSmall;
+    ParentWrapper = NestedGridItemSmall;
+    ChildWrapper = NestedGridItemSmall;
   }
 
   return (
-    <Wrapper
+    <ParentWrapper
       gridColumnStart={1}
       gridSpan={{
+        // group1:'5',
         group3: '10',
-        group4: '5',
-        group5: '10',
+        group4: '10',
+        group5: '12',
       }}
     >
       <Figure>
-        <ImagePlaceholder ratio={ratio}>
-          {platform === 'amp' ? (
-            <AmpImg
-              alt={alt}
-              attribution={copyright || ''}
-              layout="responsive"
-              src={src}
-              height={height}
-              width={width}
-            />
-          ) : (
-            renderImage(imageToRender, lazyLoad)
-          )}
-          {renderCopyright(copyright)}
-        </ImagePlaceholder>
-        <Wrapper
+        <ChildWrapper
           gridColumnStart={1}
           gridSpan={{
-            group2: '10',
-            group3: '5',
-            group4: '6',
+            group1: '10',
+            group2: '5',
+            group3: '10',
+            group4: '5',
+            group5: '12',
+          }}
+        >
+          <ImagePlaceholder ratio={ratio}>
+            {platform === 'amp' ? (
+              <AmpImg
+                alt={alt}
+                attribution={copyright || ''}
+                layout="responsive"
+                src={src}
+                height={height}
+                width={width}
+              />
+            ) : (
+                renderImage(imageToRender, lazyLoad)
+              )}
+            {showCopyright && renderCopyright(copyright)}
+          </ImagePlaceholder>
+        </ChildWrapper>
+        <ChildWrapper
+          gridColumnStart={1}
+          gridSpan={{
+            group1: '6',
+            group2: '5',
+            group3: '4',
+            group4: '4',
             group5: '12',
           }}
         >
           {renderCaption(captionBlock, type)}
-        </Wrapper>
+        </ChildWrapper>
       </Figure>
-    </Wrapper>
+    </ParentWrapper>
   );
 };
 
