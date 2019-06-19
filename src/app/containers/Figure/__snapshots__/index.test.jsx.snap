@@ -131,8 +131,8 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  right: 0;
   margin: 0;
-  left: 0;
 }
 
 .c3 {
@@ -361,8 +361,8 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  right: 0;
   margin: 0;
-  left: 0;
 }
 
 <figure
@@ -481,8 +481,8 @@ exports[`Figure should render an image with caption and copyright 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  right: 0;
   margin: 0;
-  left: 0;
 }
 
 .c4 {
@@ -817,8 +817,8 @@ exports[`Figure should render an image with copyright text 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  right: 0;
   margin: 0;
-  left: 0;
 }
 
 <figure
