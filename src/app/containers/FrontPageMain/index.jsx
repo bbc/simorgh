@@ -32,7 +32,11 @@ const FrontPageMain = ({ frontPageData }) => {
         <GhostWrapper>
           <GridItemConstrainedLarge>
             {groups.map(group => (
-              <FrontPageSection key={group.title} group={group} />
+              <FrontPageSection
+                key={group.title}
+                group={group}
+                sectionNumber={groups.indexOf(group)}
+              />
             ))}
           </GridItemConstrainedLarge>
         </GhostWrapper>

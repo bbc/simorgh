@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape } from 'prop-types';
+import { bool, shape, number } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -8,12 +8,13 @@ import groupShape from '../../models/propTypes/frontPageGroup';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import deepGet from '../../lib/utilities/deepGet';
 
-const FrontPageSection = ({ bar, group }) => {
+const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
   const strapline = deepGet(['strapline', 'name'], group);
   const items = deepGet(['items'], group);
+  const isFirstSection = sectionNumber === 0 ? true : false;
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -32,8 +33,15 @@ const FrontPageSection = ({ bar, group }) => {
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    console.log('SECTION NUMBER --- ', sectionNumber),
+    console.log('FIRST SECTION --- ', isFirstSection),
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
+      <SectionLabel
+        script={script}
+        labelId={sectionLabelId}
+        bar={bar}
+        visuallyHidden={isFirstSection}
+      >
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
@@ -58,6 +66,7 @@ FrontPageSection.defaultProps = {
 FrontPageSection.propTypes = {
   bar: bool,
   group: shape(groupShape).isRequired,
+  sectionNumber: number.isRequired,
 };
 
 export default FrontPageSection;
