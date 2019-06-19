@@ -1,30 +1,14 @@
 import baseUrl from './utils/getBaseUrl';
 import onClient from '../../lib/utilities/onClient';
 import fetchData from './utils/fetchData';
-
-const mockApplyTimestampRules = jest.fn();
-const mockAddIdsToBlocks = jest.fn();
-const mockApplyBlockPositioning = jest.fn();
-
-jest.mock(
-  '../../lib/utilities/preprocessor/rules/timestamp',
-  () => mockApplyTimestampRules,
-);
-
-jest.mock(
-  '../../lib/utilities/preprocessor/rules/addIdsToBlocks',
-  () => mockAddIdsToBlocks,
-);
-
-jest.mock(
-  '../../lib/utilities/preprocessor/rules/blockPositioning',
-  () => mockApplyBlockPositioning,
-);
+import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
+import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
+import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
 
 const preprocessorRules = [
-  mockApplyTimestampRules,
-  mockAddIdsToBlocks,
-  mockApplyBlockPositioning,
+  filterUnknownCpsTypes,
+  filterEmptyGroupItems,
+  applySquashTopstories,
 ];
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
@@ -44,27 +28,27 @@ const fetchDataMockResponse = {
 jest.mock('./utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => fetchDataMockResponse);
 
-const getArticleInitialData = require('./article').default;
+const getFrontpageInitialData = require('./frontpage').default;
 
-const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';
+const defaultAmpParam = '';
 let defaultContext;
 
-describe('getArticleInitialData', () => {
+describe('getFrontpageInitialData', () => {
   beforeEach(() => {
     defaultContext = {
-      id: defaultIdParam,
       service: defaultServiceParam,
+      amp: defaultAmpParam,
     };
 
     jest.clearAllMocks();
   });
 
   it('fetches data and returns expected object', async () => {
-    const response = await getArticleInitialData(defaultContext);
+    const response = await getFrontpageInitialData(defaultContext);
 
     expect(fetchData).toHaveBeenCalledWith({
-      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
+      url: 'https://www.getBaseUrl.com/news.json',
       preprocessorRules,
     });
 
@@ -74,16 +58,36 @@ describe('getArticleInitialData', () => {
     });
   });
 
+  describe('When on amp', () => {
+    beforeEach(() => {
+      defaultContext.amp = true;
+    });
+
+    it('returns isAmp as true', async () => {
+      const response = await getFrontpageInitialData(defaultContext);
+
+      expect(fetchData).toHaveBeenCalledWith({
+        url: 'https://www.getBaseUrl.com/news.json',
+        preprocessorRules,
+      });
+
+      expect(response).toEqual({
+        pageData: 'foo',
+        status: 123,
+      });
+    });
+  });
+
   describe('When not on client', () => {
     beforeEach(() => {
       onClientMockResponse = false;
     });
 
     it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
-      const response = await getArticleInitialData(defaultContext);
+      const response = await getFrontpageInitialData(defaultContext);
 
       expect(fetchData).toHaveBeenCalledWith({
-        url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
+        url: 'https://www.SIMORGH_BASE_URL.com/news.json',
         preprocessorRules,
       });
 
