@@ -57,15 +57,18 @@ const LinkedData = ({
     '@type': type,
     url: canonicalLink,
     publisher,
-    datePublished: firstPublished,
-    dateModified: lastUpdated,
-    headline: seoHeadline,
     image,
     thumbnailUrl: logoUrl,
-    author,
     about,
     mainEntityOfPage,
   };
+
+  if (type !== 'IDX') {
+    linkMetadata.headline = seoHeadline;
+    linkMetadata.datePublished = firstPublished;
+    linkMetadata.dateModified = lastUpdated;
+    Object.assign(linkMetadata, author);
+  }
 
   return (
     <Helmet>
@@ -97,8 +100,8 @@ LinkedData.propTypes = {
 
 LinkedData.defaultProps = {
   about: undefined,
-  firstPublished: null,
-  lastUpdated: null,
+  firstPublished: undefined,
+  lastUpdated: undefined,
 };
 
 export default LinkedData;
