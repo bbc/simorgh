@@ -139,7 +139,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@bbc/apache2-license-checker": "^1.1.4",
-    "@storybook/react": "5.0.11",
+    "@storybook/react": "5.1.8",
     "@storybook/theming": "5.0.11",
     "@testing-library/react": "^8.0.1",
     "amphtml-validator": "^1.0.23",
