@@ -12,26 +12,8 @@ import FigureContainer from '../Figure';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
 import createSrcset from '../Image/helpers/srcSet';
-
-const pathToArray = path => path.slice(1).split('/');
-
-const getOriginCode = path => {
-  const items = pathToArray(path);
-  const [originCode] = items;
-  if (!originCode) {
-    return null;
-  }
-  return originCode;
-};
-
-const getLocator = path => {
-  const items = pathToArray(path);
-  if (items.length === 0) {
-    return null;
-  }
-  const locator = items.slice(1).join('/');
-  return locator;
-};
+import getOriginCode from './helpers/originCode';
+import getLocator from './helpers/locator';
 
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
