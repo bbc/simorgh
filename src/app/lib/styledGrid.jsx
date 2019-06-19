@@ -1,4 +1,4 @@
-import { node } from 'prop-types';
+import { node, number } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
@@ -111,4 +111,11 @@ NestedGridItemLarge.propTypes = {
 
 GridPopoutMedium.propTypes = {
   children: node.isRequired,
+  gridColumnStart: number,
+  gridSpan: number,
+};
+
+GridPopoutMedium.defaultProps = {
+  gridColumnStart: 3,
+  gridSpan: 3,
 };

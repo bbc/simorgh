@@ -19,7 +19,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   }
 
   return (
-    <GridPopoutMedium gridColumnStart={3} gridSpan={3}>
+    <GridPopoutMedium>
       <Timestamp
         timestamp={firstPublished}
         dateTimeFormat={formatDateNumeric}
