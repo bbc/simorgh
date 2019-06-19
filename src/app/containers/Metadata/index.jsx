@@ -20,12 +20,14 @@ const allTags = tags => {
 };
 
 const getTitle = promo =>
-  promo.subType === 'IDX' ? promo.name : promo.headlines.seoHeadline;
+  promo.subType === 'IDX'
+    ? deepGet(['name'], promo)
+    : deepGet(['headlines', 'seoHeadline'], promo);
 
 const getDescription = (metadata, promo) =>
-  promo.headlines
-    ? promo.summary || promo.headlines.seoHeadline
-    : metadata.summary;
+  deepGet(['summary'], promo) ||
+  deepGet(['headlines', 'seoHeadline'], promo) ||
+  deepGet(['summary'], metadata);
 
 const getCanonicalLink = (origin, service, id, assetType) => {
   const canonicalLink =
@@ -122,7 +124,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
         articleAuthor={articleAuthor}
-        articleSection={metadata.passport ? metadata.passport.genre : null}
+        articleSection={deepGet(['passport', 'genre'], metadata)}
         brandName={brandName}
         canonicalLink={canonicalLink}
         defaultImage={defaultImage}
@@ -131,7 +133,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
         lang={
-          metadata.passport ? metadata.passport.language : metadata.language
+          deepGet(['passport', 'language'], metadata) ||
+          deepGet(['language'], metadata)
         }
         locale={locale}
         metaTags={allTags(metadata.tags)}
