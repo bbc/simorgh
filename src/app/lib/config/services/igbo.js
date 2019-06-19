@@ -3,6 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 
 const igbo = {
   product: 'BBC News',
+  atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   service: 'igbo',
@@ -13,6 +14,7 @@ const igbo = {
   dir: 'ltr',
   brandSVG,
   script: latin,
+  manifestPath: '/manifest.json',
   fonts: [],
   translations: {
     home: 'Akụkọ',
