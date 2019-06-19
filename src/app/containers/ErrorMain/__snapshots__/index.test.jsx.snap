@@ -286,7 +286,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
@@ -313,15 +313,15 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c4 {
     font-size: 1.375rem;
-    line-height: 2.125rem;
+    line-height: 2rem;
   }
 }
 
@@ -367,21 +367,21 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    font-size: 1.5rem;
-    line-height: 2.125rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 2.125rem;
-    line-height: 2.75rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
-    font-size: 2.25rem;
+    font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
@@ -777,7 +777,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
@@ -804,15 +804,15 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c4 {
     font-size: 1.375rem;
-    line-height: 2.125rem;
+    line-height: 2rem;
   }
 }
 
@@ -858,21 +858,21 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    font-size: 1.5rem;
-    line-height: 2.125rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 2.125rem;
-    line-height: 2.75rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
-    font-size: 2.25rem;
+    font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
