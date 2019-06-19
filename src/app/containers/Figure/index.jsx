@@ -13,8 +13,7 @@ import {
   NestedGridParentSmall,
   NestedGridItemChildSmall,
   NestedGridItemChildMedium,
-  NestedGridChildItemLarge
-  ,
+  NestedGridChildItemLarge,
 } from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -91,8 +90,8 @@ const ImageComponent = ({
                 width={width}
               />
             ) : (
-                renderImage(imageToRender, lazyLoad)
-              )}
+              renderImage(imageToRender, lazyLoad)
+            )}
             {showCopyright && renderCopyright(copyright)}
           </ImagePlaceholder>
         </ChildWrapper>
@@ -103,13 +102,13 @@ const ImageComponent = ({
             group2: '6',
             group3: '5',
             group4: '5',
-            group5: '10'
+            group5: '10',
           }}
         >
           {renderCaption(captionBlock, type)}
-      </ChildWrapper>
-    </ParentWrapper>
-  </Figure>
+        </ChildWrapper>
+      </ParentWrapper>
+    </Figure>
   );
 };
 

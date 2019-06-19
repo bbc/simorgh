@@ -229,10 +229,10 @@ export const nestedGridItemMediumCss = css`
 `;
 
 export const nestedGridItemLargeCss = css`
-@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
-    specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 6)};
+        specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
