@@ -197,10 +197,22 @@ storiesOf('Grid Examples', module)
       </GridItemConstrainedLargeNoMargin>
     </GhostWrapper>
   ))
-  .add('Pop-out grid item', () => (
+  .add('Group 5 breakpoint pop-out grid item', () => (
     <GhostWrapper>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
       <GridPopoutMedium>
         <ColouredDiv colour={blue}>Popout</ColouredDiv>
       </GridPopoutMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
     </GhostWrapper>
   ));
