@@ -5,16 +5,27 @@ import {
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
+import MPulseBeacon from '../../app/containers/MPulseBeacon';
+import { DialContextProvider } from '../../app/contexts/DialContext';
 
 /* eslint-disable react/prop-types */
-const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
+const Document = ({
+  assets,
+  assetOrigins,
+  app,
+  data,
+  styleTags,
+  helmet,
+  isAmp,
+  dials,
+}) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
-  const scriptsAllowed = !data.isAmp;
+  const scriptsAllowed = !isAmp;
   const scripts = (
     <Fragment>
       <IfAboveIE9>
@@ -41,7 +52,12 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
         {links}
         {styleTags}
         {headScript}
-        {data.isAmp && (
+        {scriptsAllowed && (
+          <DialContextProvider dials={dials}>
+            <MPulseBeacon />
+          </DialContextProvider>
+        )}
+        {isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
@@ -49,7 +65,7 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
             </noscript>
           </Fragment>
         )}
-        {data.isAmp && (
+        {isAmp && (
           <Fragment>
             <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
             <script
@@ -61,6 +77,11 @@ const Document = ({ assets, assetOrigins, app, data, styleTags, helmet }) => {
               async
               custom-element="amp-consent"
               src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+            />
+            <script
+              async
+              custom-element="amp-analytics"
+              src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
           </Fragment>
         )}

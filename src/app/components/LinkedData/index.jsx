@@ -1,17 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
+import { arrayOf, string, shape } from 'prop-types';
 
 const LinkedData = ({
+  brandName,
   type,
   seoHeadline,
   firstPublished,
   lastUpdated,
-  optimoId,
-  service,
   logoUrl,
   publishingPrinciples,
   noBylinesPolicy,
+  about,
   canonicalLink,
 }) => {
   const imgObject = 'ImageObject';
@@ -34,14 +34,14 @@ const LinkedData = ({
 
   const publisher = {
     '@type': newsMediaOrg,
-    name: service,
+    name: brandName,
     publishingPrinciples,
     logo,
   };
 
   const author = {
     '@type': newsMediaOrg,
-    name: service,
+    name: brandName,
     logo,
     noBylinesPolicy,
   };
@@ -55,7 +55,7 @@ const LinkedData = ({
   const linkMetadata = {
     '@context': 'http://schema.org',
     '@type': type,
-    url: `https://www.bbc.com/${service}/articles/${optimoId}`,
+    url: canonicalLink,
     publisher,
     datePublished: firstPublished,
     dateModified: lastUpdated,
@@ -63,6 +63,7 @@ const LinkedData = ({
     image,
     thumbnailUrl: logoUrl,
     author,
+    about,
     mainEntityOfPage,
   };
 
@@ -75,16 +76,27 @@ const LinkedData = ({
 };
 
 LinkedData.propTypes = {
+  brandName: string.isRequired,
+  canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
   firstPublished: string.isRequired,
   lastUpdated: string.isRequired,
-  optimoId: string.isRequired,
-  service: string.isRequired,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
-  canonicalLink: string.isRequired,
+  about: arrayOf(
+    shape({
+      '@type': string.isRequired,
+      alternateName: string,
+      name: string.isRequired,
+      sameAs: arrayOf(string.isRequired),
+    }),
+  ),
+};
+
+LinkedData.defaultProps = {
+  about: undefined,
 };
 
 export default LinkedData;

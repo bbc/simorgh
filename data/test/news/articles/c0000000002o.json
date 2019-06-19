@@ -24,8 +24,7 @@
           "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
           "thingType": ["Film", "Thing"]
         }
-      ],
-      "mentions": null
+      ]
     },
     "version": "v0.3.2",
     "blockTypes": [
@@ -181,26 +180,12 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque This is superscript vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis.",
+                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque This is ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "superscript",
-                        "attributes": ["superscript"]
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis.",
+                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis. Nec vulputate metus sagittis. ",
                         "attributes": []
                       }
                     }

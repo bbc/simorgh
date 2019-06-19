@@ -1,7 +1,7 @@
 import React from 'react';
 import CopyrightContainer from './index';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const CopyrightWithContext = (copyrightText, contextStub) => (
   <ServiceContext.Provider value={contextStub}>
@@ -10,9 +10,14 @@ const CopyrightWithContext = (copyrightText, contextStub) => (
 );
 
 const newsServiceContextStub = {
+  dir: 'ltr',
+  lang: 'en-GB',
   imageCopyrightOffscreenText: 'Image source, ',
 };
+
 const persianServiceContextStub = {
+  dir: 'rtl',
+  lang: 'fa',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 
@@ -23,8 +28,5 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render Copyright with persian service context',
-  CopyrightWithContext(
-    'توصیف چیزی که اتفاق می افتد',
-    persianServiceContextStub,
-  ),
+  CopyrightWithContext('Getty Images', persianServiceContextStub),
 );

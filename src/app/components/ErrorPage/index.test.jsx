@@ -1,5 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import ErrorMain from './index';
 
 describe('ErrorMain', () => {
@@ -15,7 +16,12 @@ describe('ErrorMain', () => {
   };
 
   shouldMatchSnapshot(
-    'should correctly render for an error',
-    <ErrorMain {...messaging} />,
+    'should correctly render for an error page for News',
+    <ErrorMain {...messaging} script={latin} />,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render for an error page for Persian',
+    <ErrorMain {...messaging} script={arabic} />,
   );
 });

@@ -10,6 +10,7 @@ const config = {
       persian: 'c7eel0lmr4do',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598342',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -17,11 +18,12 @@ const config = {
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     assets: {
-      news: 'cn7769kpk9mo',
-      newsThreeSubheadlines: 'cl55zn0w0l4o',
-      persian: 'cyddjz5058wo',
+      news: 'c0g992jmmkko',
+      newsThreeSubheadlines: 'c6v11qzyv8po',
+      persian: 'c4vlle3q337o',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598343',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -29,11 +31,12 @@ const config = {
     assetUrl: 'http://localhost:7080',
     assetOrigin: 'http://localhost:7080',
     assets: {
-      news: 'cn7769kpk9mo',
-      newsThreeSubheadlines: 'cl55zn0w0l4o',
-      persian: 'cyddjz5058wo',
+      news: 'c0g992jmmkko',
+      newsThreeSubheadlines: 'c6v11qzyv8po',
+      persian: 'c4vlle3q337o',
       nonExistent: 'cxvxrj8tvppo',
     },
+    atiAnalyticsWSBucket: '598343',
   },
 };
 

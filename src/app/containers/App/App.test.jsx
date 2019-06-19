@@ -4,22 +4,28 @@
  */
 import React from 'react';
 import * as reactRouterConfig from 'react-router-config';
+import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { App } from './App';
-import * as loadInitialData from '../../routes/loadInitialData';
 
 describe('App', () => {
   let wrapper;
-  let setStateSpy;
-  let loadInitialDataSpy;
-  const initialData = { data: 'Some initial data' };
+  const initialData = { pageData: 'Some initial data' };
+  const error = 'Error!';
+  const match = { params: { service: 'news', amp: false } };
+
+  const route = {
+    getInitialData: jest.fn(),
+  };
+
+  reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([{ route, match }]);
 
   reactRouterConfig.renderRoutes = jest
     .fn()
-    .mockReturnValue(<h1>{initialData.data}</h1>);
+    .mockReturnValue(<h1>{initialData.pageData}</h1>);
 
   beforeAll(() => {
-    // eslint-disable-next-line no-undef
-    wrapper = shallow(
+    wrapper = mount(
       <App
         location={{ pathname: 'pathnameOne' }}
         routes={[]}
@@ -27,16 +33,16 @@ describe('App', () => {
         bbcOrigin="https://www.bbc.co.uk"
       />,
     );
-    setStateSpy = jest.spyOn(wrapper.instance(), 'setState');
-    loadInitialDataSpy = jest.spyOn(loadInitialData, 'default');
   });
 
   it('should return rendered routes', () => {
     expect.assertions(4);
-    expect(loadInitialDataSpy).not.toHaveBeenCalled();
+    expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       data: initialData,
+      service: 'news',
+      isAmp: false,
       error: null,
       loading: false,
       bbcOrigin: 'https://www.bbc.co.uk',
@@ -47,50 +53,61 @@ describe('App', () => {
   describe('componentDidUpdate', () => {
     describe('same location', () => {
       it('should not call set state with new data', () => {
-        wrapper.setProps({ location: { pathname: 'pathnameOne' } });
+        reactRouterConfig.renderRoutes.mockClear();
 
-        expect.assertions(2);
-        expect(loadInitialDataSpy).not.toHaveBeenCalled();
-        expect(setStateSpy).not.toHaveBeenCalled();
+        act(() => {
+          wrapper.setProps({ location: { pathname: 'pathnameOne' } });
+
+          expect.assertions(2);
+          expect(route.getInitialData).not.toHaveBeenCalled();
+          expect(reactRouterConfig.renderRoutes).not.toHaveBeenCalled();
+        });
       });
     });
 
     describe('different location', () => {
+      beforeEach(() => {
+        // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
+        jest.clearAllMocks();
+      });
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
-          const error = 'Error!';
+          route.getInitialData.mockImplementation(() => Promise.reject(error));
 
-          loadInitialData.default = jest
-            .fn()
-            .mockImplementation(() => Promise.reject(error));
-
-          wrapper.setProps({ location: { pathname: 'pathnameThree' } });
-
-          await loadInitialData.default;
-
-          expect.assertions(3);
-
-          // why is state being called 3 times?
-          expect(setStateSpy).toHaveBeenNthCalledWith(1, {
-            data: null,
-            error: null,
-            loadInitialDataPromise: expect.any(Promise),
-            loading: true,
+          act(() => {
+            wrapper.setProps({ location: { pathname: 'pathnameThree' } });
           });
 
-          expect(setStateSpy).toHaveBeenNthCalledWith(2, {
-            data: null,
-            error,
-            loadInitialDataPromise: null,
-            loading: false,
-          });
+          await route.getInitialData;
 
-          expect(setStateSpy).toHaveBeenNthCalledWith(2, {
-            data: null,
-            error,
-            loadInitialDataPromise: null,
-            loading: false,
-          });
+          expect.assertions(2);
+
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            2,
+            [],
+            {
+              data: null,
+              service: 'news',
+              isAmp: false,
+              error: null,
+              loading: true,
+              bbcOrigin: 'https://www.bbc.co.uk',
+            },
+          );
+
+          // data fetch promise rejected, set data to null, loading to false and set error
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            3,
+            [],
+            {
+              data: null,
+              service: 'news',
+              isAmp: false,
+              error,
+              loading: false,
+              bbcOrigin: 'https://www.bbc.co.uk',
+            },
+          );
         });
       });
 
@@ -99,39 +116,43 @@ describe('App', () => {
           const pathname = 'pathnameFour';
           const data = 'Really cool data';
 
-          loadInitialData.default = jest
-            .fn()
-            .mockImplementation(async () => data);
+          route.getInitialData.mockImplementation(() => Promise.resolve(data));
 
           wrapper.setProps({ location: { pathname } });
 
-          await loadInitialData.default;
+          await route.getInitialData;
 
-          expect.assertions(4);
+          expect.assertions(3);
 
-          expect(loadInitialData.default).toHaveBeenCalledWith(pathname, []);
+          expect(route.getInitialData).toHaveBeenCalledWith(match.params);
 
-          // why is state being called 3 times?
-          expect(setStateSpy).toHaveBeenNthCalledWith(4, {
-            data: null,
-            error: null,
-            loadInitialDataPromise: expect.any(Promise),
-            loading: true,
-          });
+          // start data fetch and set loading to true
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            2,
+            [],
+            {
+              data: null,
+              service: 'news',
+              isAmp: false,
+              error: null,
+              loading: true,
+              bbcOrigin: 'https://www.bbc.co.uk',
+            },
+          );
 
-          expect(setStateSpy).toHaveBeenNthCalledWith(5, {
-            data,
-            error: null,
-            loadInitialDataPromise: null,
-            loading: false,
-          });
-
-          expect(setStateSpy).toHaveBeenNthCalledWith(6, {
-            data,
-            error: null,
-            loadInitialDataPromise: null,
-            loading: false,
-          });
+          // data fetch promise resolved, set data to fetched data and loading to false
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            3,
+            [],
+            {
+              data,
+              service: 'news',
+              isAmp: false,
+              error: null,
+              loading: false,
+              bbcOrigin: 'https://www.bbc.co.uk',
+            },
+          );
         });
       });
     });

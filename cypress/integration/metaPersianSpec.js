@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -11,7 +11,7 @@ import {
   twitterMeta,
 } from '../support/metaTestHelper';
 
-describeForLocalOnly('Persian Article Meta Tests', () => {
+describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
@@ -28,7 +28,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
   facebookMeta(
     '100004154058350',
     '1609039196070050',
-    'https://www.facebook.com/bbcnews',
+    'https://www.facebook.com/bbcpersian',
   );
 
   // it('should have description meta data', () => {

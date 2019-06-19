@@ -1,36 +1,19 @@
 import React from 'react';
 import { render } from 'enzyme';
-import HeadingsContainer from './index';
+import { latin } from '@bbc/gel-foundations/scripts';
+import HeadingsContainer from '.';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
-import {
-  shouldShallowMatchSnapshot,
-  isNull,
-} from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../../testHelpers';
+import blocksSingleFragment from './testHelpers';
 
-const blocksSingleFragment = (text, attributes = []) => [
-  {
-    type: 'text',
-    model: {
-      blocks: [
-        {
-          type: 'paragraph',
-          model: {
-            text,
-            blocks: [
-              {
-                type: 'fragment',
-                model: {
-                  text,
-                  attributes,
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-];
+const HeadingsContainerWithContext = data => (
+  <ServiceContext.Provider value={{ script: latin }}>
+    <HeadingsContainer {...data} />
+  </ServiceContext.Provider>
+);
+
+const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
@@ -77,103 +60,122 @@ const template = (title, text, type) => {
       ...textBlock(text),
       type,
     };
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
-      <HeadingsContainer {...data} />,
+      HeadingsContainerWithContext(data),
     );
   });
 };
 
 describe('Headings', () => {
   describe('with no data', () => {
-    isNull('should not render anything', <HeadingsContainer />);
+    isNull('should not render anything', HeadingsContainerWithContext);
   });
 
   template('with headline data', 'This is a headline!', 'headline');
   template('with subheadline data', 'This is a subheadline', 'subheadline');
 
   describe('with plain text', () => {
-    it('should render headline', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('Plain headline', [])}
-          type="headline"
-        />,
+    describe('headline', () => {
+      const data = {
+        blocks: blocksSingleFragment('Plain headline', []),
+        type: 'headline',
+      };
+
+      shouldMatchSnapshot(
+        'should render h1 containing correct text',
+        HeadingsContainerWithContext(data),
       );
-      expect(renderedWrapper.find('h1').html()).toBe('Plain headline');
+
+      it('should not have an id', () => {
+        const headlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(headlineHeading)).toBe(undefined);
+      });
     });
-    it('should render subheadline', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('Plain subheadline', [])}
-          type="subheadline"
-        />,
+
+    describe('subheadline', () => {
+      const data = {
+        blocks: blocksSingleFragment('Plain subheadline', []),
+        type: 'subheadline',
+      };
+
+      shouldMatchSnapshot(
+        'should render h2 containing correct text',
+        <HeadingsContainer {...data} />,
       );
-      expect(renderedWrapper.find('h2').html()).toBe('Plain subheadline');
+
+      it('should have an id of sanitised text', () => {
+        const subheadlineHeading = render(<HeadingsContainer {...data} />);
+        expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
+      });
     });
   });
 
   describe('with rich text', () => {
-    it('should render headline with italic text', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('All is italic', ['italic'])}
-          type="headline"
-        />,
-      );
-      expect(renderedWrapper.find('h1').html()).toBe('<i>All is italic</i>');
-    });
+    describe('headline with italic text', () => {
+      const data = {
+        blocks: blocksSingleFragment('All is italic', ['italic']),
+        type: 'headline',
+      };
 
-    it('should render headline with bold text', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('All is bold', ['bold'])}
-          type="headline"
-        />,
-      );
-      expect(renderedWrapper.find('h1').html()).toBe('<b>All is bold</b>');
-    });
-
-    it('should render headline with bold & italic text', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('All is bold and italic', [
-            'bold',
-            'italic',
-          ])}
-          type="headline"
-        />,
-      );
-      expect(renderedWrapper.find('h1').html()).toBe(
-        '<i><b>All is bold and italic</b></i>',
+      shouldMatchSnapshot(
+        'should render h1 with <i> tag',
+        <HeadingsContainer {...data} />,
       );
     });
 
-    it('should render headline with italic & bold text', () => {
-      const renderedWrapper = render(
-        <HeadingsContainer
-          blocks={blocksSingleFragment('All is italic and bold', [
-            'italic',
-            'bold',
-          ])}
-          type="headline"
-        />,
+    describe('headline with bold text', () => {
+      const data = {
+        blocks: blocksSingleFragment('All is bold', ['bold']),
+        type: 'headline',
+      };
+
+      shouldMatchSnapshot(
+        'should render h1 with <b> tag',
+        <HeadingsContainer {...data} />,
       );
-      expect(renderedWrapper.find('h1').html()).toBe(
-        '<b><i>All is italic and bold</i></b>',
+    });
+
+    describe('should render headline with bold & italic text', () => {
+      const data = {
+        blocks: blocksSingleFragment('All is bold and italic', [
+          'bold',
+          'italic',
+        ]),
+        type: 'headline',
+      };
+
+      shouldMatchSnapshot(
+        'should render h1 with <i><b> tags',
+        <HeadingsContainer {...data} />,
+      );
+    });
+
+    describe('should render headline with italic & bold text', () => {
+      const data = {
+        blocks: blocksSingleFragment('All is italic and bold', [
+          'italic',
+          'bold',
+        ]),
+        type: 'headline',
+      };
+
+      shouldMatchSnapshot(
+        'should render h1 with <b><i> tags',
+        <HeadingsContainer {...data} />,
       );
     });
 
     describe('with different attributes', () => {
-      it('should render headline with only middle of text italic', () => {
-        const renderedWrapper = render(
-          <HeadingsContainer
-            blocks={textItalicFragmentPart('This is ', 'very', ' important')}
-            type="headline"
-          />,
-        );
-        expect(renderedWrapper.find('h1').html()).toBe(
-          'This is <i>very</i> important',
+      describe('should render headline with only middle of text italic', () => {
+        const data = {
+          blocks: textItalicFragmentPart('This is ', 'very', ' important'),
+          type: 'headline',
+        };
+
+        shouldMatchSnapshot(
+          'should render correctly',
+          <HeadingsContainer {...data} />,
         );
       });
     });

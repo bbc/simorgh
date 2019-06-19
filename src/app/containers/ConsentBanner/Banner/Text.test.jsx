@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import BannerText from './Text';
 
@@ -30,28 +30,60 @@ const bannerWithLinkMessaging = {
 describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text in the UK',
-    <RequestContextProvider bbcOrigin="https://www.bbc.co.uk">
+    <RequestContextProvider
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      pageType="article"
+      platform="canonical"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text outside the UK',
-    <RequestContextProvider bbcOrigin="https://www.bbc.com">
+    <RequestContextProvider
+      isUK={false}
+      origin="https://www.bbc.com"
+      id="c0000000000o"
+      pageType="article"
+      platform="canonical"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
-    <RequestContextProvider bbcOrigin="https://www.bbc.co.uk">
+    <RequestContextProvider
+      isUK
+      origin="https://www.bbc.co.uk"
+      id="c0000000000o"
+      pageType="article"
+      platform="canonical"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link outside the UK',
-    <RequestContextProvider bbcOrigin="https://www.bbc.com">
+    <RequestContextProvider
+      isUK={false}
+      origin="https://www.bbc.com"
+      id="c0000000000o"
+      pageType="article"
+      platform="canonical"
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o"
+    >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,
   );

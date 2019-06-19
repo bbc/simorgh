@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withData HOC with missing articleData should return the errorMain component 1`] = `
+<ErrorMain
+  status={200}
+/>
+`;
+
+exports[`withData HOC with no data should return the errorMain component and 500 status 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
+
+exports[`withData HOC with non 200 status should return the errorMain component 1`] = `
+<ErrorMain
+  status={157}
+/>
+`;
+
+exports[`withData HOC with valid props should return the passed in component 1`] = `
+<Component
+  pageData={
+    Object {
+      "content": Object {
+        "model": Object {
+          "blocks": Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "blocks": Array [
+                              Object {
+                                "model": Object {
+                                  "attributes": Array [],
+                                  "text": "Article Headline",
+                                },
+                                "type": "fragment",
+                              },
+                            ],
+                            "text": "Article Headline",
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                    },
+                    "type": "text",
+                  },
+                ],
+              },
+              "type": "headline",
+            },
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "attributes": Array [],
+                            "text": "A paragraph.",
+                          },
+                          "type": "fragment",
+                        },
+                      ],
+                      "text": "A paragraph.",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ],
+        },
+      },
+      "metadata": Object {
+        "created": 1514808060000,
+        "createdBy": "News",
+        "firstPublished": 1514808060000,
+        "id": "urn:bbc:ares::article:c0000000001o",
+        "lastPublished": 1514811600000,
+        "lastUpdated": 1514815200000,
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+        },
+        "passport": Object {
+          "category": "news",
+          "genre": null,
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+          "language": "en-gb",
+        },
+        "tags": Object {
+          "about": Array [
+            Object {
+              "curationType": Array [
+                "vivo-stream",
+              ],
+              "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
+              "thingLabel": "Royal Wedding 2018",
+              "thingSameAs": Array [
+                "http://dbpedia.org/resource/Queen_Victoria",
+                "http://rdf.freebase.com/ns/m.0cw10",
+              ],
+              "thingType": Array [
+                "Thing",
+                "Event",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
+              "topicId": "cpwpy79d6dxt",
+              "topicName": "Royal Wedding 2018",
+            },
+            Object {
+              "curationType": Array [
+                "vivo-stream",
+              ],
+              "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
+              "thingLabel": "Duchess of Sussex",
+              "thingSameAs": Array [],
+              "thingType": Array [
+                "Person",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+              "topicId": "cg3mq45zq4xt",
+              "topicName": "Duchess of Sussex",
+            },
+          ],
+          "mentions": Array [
+            Object {
+              "thingId": "1efbf3e5-b330-49a1-b531-b507ab027c96",
+              "thingLabel": "Queen Victoria",
+              "thingType": Array [
+                "Person",
+                "Thing",
+              ],
+              "thingUri": "http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id",
+            },
+          ],
+        },
+        "type": "article",
+      },
+      "promo": Object {
+        "headlines": Object {
+          "promoHeadline": "Article Headline for Promo",
+          "seoHeadline": "Article Headline for SEO",
+        },
+        "id": "urn:bbc:ares::article:c0000000001o",
+        "locators": Object {
+          "optimoUrn": "urn:bbc:optimo:asset:c0000000001o",
+        },
+        "summary": "Article summary.",
+        "timestamp": 1514811600000,
+      },
+    }
+  }
+/>
+`;

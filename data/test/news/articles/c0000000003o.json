@@ -33,8 +33,7 @@
           "topicId": "c50znx8v4z7t",
           "curationType": ["vivo-stream"]
         }
-      ],
-      "mentions": null
+      ]
     },
     "version": "v0.3.2",
     "blockTypes": [
@@ -85,29 +84,36 @@
             "locator": "urn:bbc:pips:pid:p067gq6h",
             "blocks": [
               {
-                "type" : "aresMedia",
-                "model" : {
-                  "id" : "p067gq6h",
-                  "subType" : "clip",
-                  "format" : "audio_video",
-                  "title" : "Mark and Isla Royal Wedding",
-                  "synopses" : {
-                    "short" : "Stop the press! It’s a Mark and Isla Royal Wedding special…",
-                    "medium" : null,
-                    "long" : null
-                  },
-                  "imageUrl" : "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                  "embedding" : true,
-                  "warnings" : {},
-                  "advertising" : false,
-                  "versions" : [
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId" : "p067gq6k",
-                      "types" : [ "Original" ],
-                      "duration" : 94,
-                      "availableTerritories" : {
-                        "uk" : true,
-                        "nonUk" : false
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p067gq6h",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Mark and Isla Royal Wedding",
+                        "synopses": {
+                          "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                          "medium": null,
+                          "long": null
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                        "embedding": true,
+                        "warnings": {},
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p067gq6k",
+                            "types": ["Original"],
+                            "duration": 94,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -172,21 +178,7 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Quisque quis libero H",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "2",
-                        "attributes": ["subscript"]
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "O bibendum, feugiat felis ut, dignissim tortor.",
+                        "text": "Quisque quis libero H²0 bibendum, feugiat felis ut, dignissim tortor.",
                         "attributes": []
                       }
                     }

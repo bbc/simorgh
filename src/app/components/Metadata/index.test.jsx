@@ -1,6 +1,6 @@
 import React from 'react';
 import Metadata from './index';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 
 const metadataSnapshotTest = (
   testDescription,
@@ -142,12 +142,12 @@ describe('Metadata', () => {
     'Persian article',
     false,
     [],
-    'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
+    'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
     'BBC News فارسی',
     null,
     'https://foo.com/static/persian/image.png',
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/cyddjz5058wo',
+    'https://www.bbc.com/persian/articles/c4vlle3q337o',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',
@@ -168,12 +168,12 @@ describe('Metadata', () => {
     'Persian AMP article',
     true,
     [],
-    'https://www.bbc.com/persian/articles/cyddjz5058wo.amp',
+    'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
     'BBC News فارسی',
     null,
     'https://foo.com/static/persian/image.png',
     'BBC News فارسی',
-    'https://www.bbc.com/persian/articles/cyddjz5058wo',
+    'https://www.bbc.com/persian/articles/c4vlle3q337o',
     'https://www.bbc.com/persian/image.png',
     'BBC News فارسی',
     'This is a description',

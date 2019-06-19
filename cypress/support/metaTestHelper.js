@@ -6,6 +6,12 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
+export const mozartFallbackStatus = path => {
+  cy.request(path).then(({ headers }) => {
+    expect(headers).not.to.have.property('x-mfa');
+  });
+};
+
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
@@ -123,7 +129,7 @@ export const checkDataMatchesMetadata = data => {
 };
 export const metadataAssertion = () => {
   cy.window().then(win => {
-    const windowData = win.SIMORGH_DATA.data;
+    const windowData = win.SIMORGH_DATA.pageData;
     checkDataMatchesMetadata(windowData);
   });
 };
@@ -133,7 +139,7 @@ export const metadataAssertion = () => {
 
 export const metadataAssertionAMP = AMPURL => {
   cy.window().then(win => {
-    const windowData = win.SIMORGH_DATA.data;
+    const windowData = win.SIMORGH_DATA.pageData;
     cy.visit(AMPURL);
     checkDataMatchesMetadata(windowData);
   });

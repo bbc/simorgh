@@ -1,9 +1,26 @@
 import React from 'react';
 import FooterContainer from './index';
-
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const RealDate = Date;
+
+const contextStub = {
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Read about our approach to external linking.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        text: 'Why you can trust the BBC',
+      },
+    ],
+    copyrightText:
+      'BBC. The BBC is not responsible for the content of external sites.',
+  },
+};
 
 describe(`FooterContainer`, () => {
   beforeEach(() => {
@@ -19,5 +36,17 @@ describe(`FooterContainer`, () => {
     global.Date = RealDate;
   });
 
-  shouldShallowMatchSnapshot('should render correctly', <FooterContainer />);
+  shouldMatchSnapshot(
+    'should render correctly',
+    <ServiceContext.Provider value={contextStub}>
+      <FooterContainer />
+    </ServiceContext.Provider>,
+  );
+
+  shouldMatchSnapshot(
+    'should render null when footer config not availible',
+    <ServiceContext.Provider value={{}}>
+      <FooterContainer />
+    </ServiceContext.Provider>,
+  );
 });

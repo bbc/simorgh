@@ -39,8 +39,7 @@
           "thingLabel": "Cardiff Airport link road",
           "thingType": ["Event", "Thing"]
         }
-      ],
-      "mentions": []
+      ]
     }
   },
   "content": {
@@ -391,6 +390,7 @@
                       "model": {
                         "text": "UK ups the ante on Galileo project",
                         "locator": "http://www.bbc.co.uk/news/science-environment-44116085",
+                        "isExternal": false,
                         "blocks": [
                           {
                             "type": "fragment",

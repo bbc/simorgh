@@ -3,17 +3,19 @@ none:
 
 install:
 	npm --version; node --version;
-	cd ${APP_DIRECTORY}; npm ci;
+	npm ci;
 
 installProd:
-	cd ${APP_DIRECTORY}; rm -rf node_modules
-	cd ${APP_DIRECTORY}; npm ci --only=production
+	rm -rf node_modules
+	npm ci --only=production
 
 developmentTests:
-	cd ${APP_DIRECTORY}; npm run audit:ci;
-	cd ${APP_DIRECTORY}; npx apache2-license-checker;
-	cd ${APP_DIRECTORY}; npm run test;
-	cd ${APP_DIRECTORY}; xvfb-run npm run test:e2e:storybook:ci;
+	npx apache2-license-checker;
+	npm run test;
+	xvfb-run npm run test:e2e:storybook:ci;
 
 productionTests:
-	cd ${APP_DIRECTORY}; npm run build; xvfb-run npm run test:prod:ci;
+	npm run build && xvfb-run npm run test:prod:ci;
+
+buildStorybook:
+	npm run build:storybook;

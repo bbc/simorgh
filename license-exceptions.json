@@ -18,6 +18,9 @@
     "chrome-devtools-frontend@*": {
       "reason": "Custom license, manually verified; https://github.com/ChromeDevTools/devtools-frontend/blob/master/LICENSE"
     },
+    "create-react-context@*": {
+      "reason": "Licensed under MIT; https://github.com/jamiebuilds/create-react-context/blob/master/LICENSE"
+    },
     "css-select@*": {
       "reason": "Licensed under BSD-2 clause 'simplified'; https://github.com/fb55/css-select/blob/master/LICENSE"
     },
@@ -26,6 +29,9 @@
     },
     "jszip@*": {
       "reason": "Dual-licensed under GPLv3 or MIT; https://github.com/Stuk/jszip#license"
+    },
+    "JSV@*": {
+      "reason": "Licensed under LGPL; https://github.com/garycourt/JSV"
     },
     "mdn-data@*": {
       "reason": "Licensed under Creative Commons Zero v1.0 Universal; https://github.com/mdn/data/blob/master/LICENSE"
@@ -44,6 +50,9 @@
     },
     "ua-parser-js@*": {
       "reason": "Dual license under GPL or MIT; https://github.com/faisalman/ua-parser-js#license"
+    },
+    "xmldom@*": {
+      "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
     }
   }
 }

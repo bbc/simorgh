@@ -64,6 +64,21 @@ const presetThings = {
       thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
       thingLabel: 'Royal Wedding 2018',
       thingType: ['Thing', 'Event'],
+      thingSameAs: [
+        'http://dbpedia.org/resource/Queen_Victoria',
+        'http://rdf.freebase.com/ns/m.0cw10',
+      ],
+    },
+    {
+      thingUri:
+        'http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id',
+      topicId: 'cg3mq45zq4xt',
+      topicName: 'Duchess of Sussex',
+      curationType: ['vivo-stream'],
+      thingId: '803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+      thingLabel: 'Duchess of Sussex',
+      thingType: ['Person'],
+      thingSameAs: [],
     },
   ],
   mentions: [
@@ -96,7 +111,7 @@ export const articleDataNews = articleDataBuilder(
 );
 
 export const articleDataPersian = articleDataBuilder(
-  'cyddjz5058wo',
+  'c4vlle3q337o',
   'Persian',
   'fa',
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',

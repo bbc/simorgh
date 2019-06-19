@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -11,7 +11,7 @@ import {
   visibleImageWithCaption,
 } from '../support/bodyTestHelper';
 
-describeForLocalOnly('Article Body Tests', () => {
+describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
@@ -38,12 +38,30 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
-    visibleImageWithCaption(getElement('figure').eq(2));
+    const imageHasNotLoaded = getElement('figure').eq(2);
+
+    imageHasNotLoaded.within(() => {
+      const lazyLoadPlaceholder = getElement('div div');
+      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
+    });
+
+    imageHasNotLoaded.scrollIntoView();
+
+    const imageHasLoaded = getElement('figure').eq(2);
+
+    visibleImageWithCaption(imageHasLoaded);
+    imageHasLoaded.within(() => {
+      const noscriptImg = getElement('noscript');
+      noscriptImg.contains('<img ');
+
+      const ImageContainer = getElement('div div');
+      ImageContainer.should('not.have.class', 'lazyload-placeholder');
+    });
   });
 
   it('should render a title', () => {
     cy.window().then(win => {
-      const { seoHeadline } = win.SIMORGH_DATA.data.promo.headlines;
+      const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
       renderedTitle(`${seoHeadline} - BBC News فارسی`);
     });
   });

@@ -18,9 +18,8 @@ export const shouldMatchReturnedData = (data, element) => {
   getElement(element).should('contain', data);
 };
 
-export const getBlockData = (blockType, win) => {
+export const getBlockByType = (blocks, blockType) => {
   let blockData;
-  const { blocks } = win.SIMORGH_DATA.data.content.model;
 
   blocks.forEach(block => {
     if (!blockData && block.type === blockType) {
@@ -28,6 +27,12 @@ export const getBlockData = (blockType, win) => {
     }
   });
   return blockData;
+};
+
+export const getBlockData = (blockType, win) => {
+  const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+  return getBlockByType(blocks, blockType);
 };
 
 export const firstHeadlineDataWindow = () => {
@@ -61,7 +66,11 @@ export const firstParagraphDataWindow = () => {
 export const copyrightDataWindow = () => {
   cy.window().then(win => {
     const copyrightData = getBlockData('image', win);
-    const { copyrightHolder } = copyrightData.model.blocks[0].model;
+    const rawImageblock = getBlockByType(
+      copyrightData.model.blocks,
+      'rawImage',
+    );
+    const { copyrightHolder } = rawImageblock.model;
     const copyrightLabel = getElement('figure p').eq(0);
 
     shouldContainText(copyrightLabel, copyrightHolder);
@@ -93,6 +102,46 @@ export const placeholderImageLoaded = placeholderImage => {
     'background-image',
     `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
   );
+};
+
+export const worldServiceCookieBannerTranslations = (
+  privacyStatement,
+  performanceStatement,
+  service,
+  cookieAgreement,
+  privacyAgreement,
+) => {
+  const getPrivacyBanner = () => cy.contains(privacyStatement);
+
+  const getCookieBanner = () => cy.contains(performanceStatement);
+  const getPrivacyBannerContainer = () => getPrivacyBanner().parent();
+  const getCookieBannerContainer = () => getCookieBanner().parent();
+
+  const visitArticle = () => {
+    cy.visit(service, {
+      failOnStatusCode: false,
+    });
+  };
+
+  cy.clearCookies();
+  visitArticle();
+
+  getPrivacyBanner().should('be.visible');
+  getCookieBanner().should('not.be.visible');
+
+  getPrivacyBannerContainer()
+    .contains(cookieAgreement)
+    .click();
+
+  getCookieBanner().should('be.visible');
+  getPrivacyBanner().should('not.be.visible');
+
+  getCookieBannerContainer()
+    .contains(privacyAgreement)
+    .click();
+
+  getCookieBanner().should('not.be.visible');
+  getPrivacyBanner().should('not.be.visible');
 };
 
 export const figureVisibility = figure => {
@@ -137,4 +186,29 @@ export const errorTitle = service => {
   renderedTitle(
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
+};
+
+export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
+  getElement('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${bucketId}`,
+    );
+};
+
+export const hasNoscriptImgAtiUrl = analyticsBucketId => {
+  getElement('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${analyticsBucketId}`,
+    );
+};
+
+export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
+  getElement('amp-analytics script[type="application/json"]')
+    .eq(0)
+    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
+    .should('contain', `s=${analyticsBucketId}`);
 };
