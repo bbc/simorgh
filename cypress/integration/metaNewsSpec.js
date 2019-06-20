@@ -82,7 +82,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `${config.baseUrl}/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
@@ -101,8 +101,9 @@ describe('Article Meta Tests', () => {
 
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+      `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
     );
     checkAmpHTML(
       `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
