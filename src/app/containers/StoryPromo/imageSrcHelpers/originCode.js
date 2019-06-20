@@ -8,6 +8,7 @@ const getOriginCode = path => {
   if (!originCode) {
     return null;
   }
+
   return originCode;
 };
 
