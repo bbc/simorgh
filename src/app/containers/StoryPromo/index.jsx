@@ -51,11 +51,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={script}>
+        <Headline script={script} topStory={topStory}>
           <Link href={url}>{headline}</Link>
         </Headline>
       )}
-      {summary && <Summary script={script}>{summary}</Summary>}
+      {summary && (
+        <Summary script={script} topStory={topStory}>
+          {summary}
+        </Summary>
+      )}
       {timestamp && (
         <Timestamp
           timestamp={timestamp * 1000}
