@@ -27,7 +27,40 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
-        - xvfb-run -a npm run test:lighthouse:ci
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Production e2e and lighthouse Tests2" 
+      install: npm ci --only=prod
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run test:prod:travis2
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Production e2e and lighthouse Tests3" 
+      install: npm ci --only=prod
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run test:prod:travis3
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Production e2e and lighthouse Tests4" 
+      install: npm ci --only=prod
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run test:prod:travis4
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Production e2e and lighthouse Tests5" 
+      install: 
+        - npm ci --only=prod
+        - npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run test:prod:travis5
 notifications:
   email: false
   slack:
