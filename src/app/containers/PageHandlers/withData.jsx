@@ -11,9 +11,8 @@ const constructRenderObject = data => ({
   pageData: deepGet(['pageData'], data),
 });
 
-const isValidPassportHome = (passportHome, service) => {
-  return passportHome ? passportHome === service : true;
-};
+const isValidPassportHome = (passportHome, service) =>
+  passportHome ? passportHome === service : true;
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = (data, service) => {
