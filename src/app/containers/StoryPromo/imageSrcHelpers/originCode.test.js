@@ -7,6 +7,7 @@ describe('getOriginCode', () => {
 
     expect(originCode).toEqual('cpsprodpb');
   });
+
   it('should return null when path is not provided', () => {
     const originCode = getOriginCode();
 
