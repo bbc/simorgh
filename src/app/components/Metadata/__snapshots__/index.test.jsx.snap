@@ -40,17 +40,17 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     rel="canonical"
   />
   <link
-    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    href="https://www.bbc.com/news/articles/c0000000001o"
     hrefLang="x-default"
     rel="alternate"
   />
   <link
-    href="https://www.bbc.com/news/articles/c0000000001o.amp"
+    href="https://www.bbc.com/news/articles/c0000000001o"
     hrefLang="en"
     rel="alternate"
   />
   <link
-    href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
     hrefLang="en-gb"
     rel="alternate"
   />
@@ -83,7 +83,6 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="fb:admins"
   />
   <meta
-    content={202020}
     name="fb:app_id"
   />
   <meta
@@ -243,7 +242,6 @@ exports[`Metadata News article should render correctly 1`] = `
     name="fb:admins"
   />
   <meta
-    content={202020}
     name="fb:app_id"
   />
   <meta
@@ -353,8 +351,23 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/c4vlle3q337o"
+    href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
   />
   <meta
     content="BBC News فارسی"
@@ -385,7 +398,6 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="fb:admins"
   />
   <meta
-    content={202020}
     name="fb:app_id"
   />
   <meta
@@ -393,11 +405,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:description"
   />
   <meta
-    content="https://www.bbc.com/persian/image.png"
+    content="https://www.bbc.com/news/image.png"
     name="og:image"
   />
   <meta
-    content="BBC News فارسی"
+    content="BBC News"
     name="og:image:alt"
   />
   <meta
@@ -416,7 +428,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/c4vlle3q337o"
+    content="https://www.bbc.com/news/articles/c0000000001o"
     name="og:url"
   />
   <meta
@@ -432,11 +444,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="twitter:description"
   />
   <meta
-    content="BBC News فارسی"
+    content="BBC News"
     name="twitter:image:alt"
   />
   <meta
-    content="https://www.bbc.com/persian/image.png"
+    content="https://www.bbc.com/news/image.png"
     name="twitter:image:src"
   />
   <meta
@@ -453,7 +465,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     type="image/x-icon"
   />
   <link
-    href="https://foo.com/static/persian/image.png"
+    href="https://foo.com/static/news/image.png"
     rel="apple-touch-icon"
   />
 </HelmetWrapper>
@@ -494,11 +506,26 @@ exports[`Metadata Persian article should render correctly 1`] = `
     BBC News فارسی
   </title>
   <link
-    href="https://www.bbc.com/persian/articles/c4vlle3q337o"
+    href="https://www.bbc.com/news/articles/c0000000001o"
     rel="canonical"
   />
   <link
-    href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="x-default"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o"
+    hrefLang="en"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.co.uk/news/articles/c0000000001o"
+    hrefLang="en-gb"
+    rel="alternate"
+  />
+  <link
+    href="https://www.bbc.com/news/articles/c0000000001o.amp"
     rel="amphtml"
   />
   <meta
@@ -530,7 +557,6 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="fb:admins"
   />
   <meta
-    content={202020}
     name="fb:app_id"
   />
   <meta
@@ -538,11 +564,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:description"
   />
   <meta
-    content="https://www.bbc.com/persian/image.png"
+    content="https://www.bbc.com/news/image.png"
     name="og:image"
   />
   <meta
-    content="BBC News فارسی"
+    content="BBC News"
     name="og:image:alt"
   />
   <meta
@@ -561,7 +587,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://www.bbc.com/persian/articles/c4vlle3q337o"
+    content="https://www.bbc.com/news/articles/c0000000001o"
     name="og:url"
   />
   <meta
@@ -577,11 +603,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="twitter:description"
   />
   <meta
-    content="BBC News فارسی"
+    content="BBC News"
     name="twitter:image:alt"
   />
   <meta
-    content="https://www.bbc.com/persian/image.png"
+    content="https://www.bbc.com/news/image.png"
     name="twitter:image:src"
   />
   <meta
@@ -598,7 +624,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
     type="image/x-icon"
   />
   <link
-    href="https://foo.com/static/persian/image.png"
+    href="https://foo.com/static/news/image.png"
     rel="apple-touch-icon"
   />
 </HelmetWrapper>
@@ -694,7 +720,6 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="fb:admins"
   />
   <meta
-    content={202020}
     name="fb:app_id"
   />
   <meta
