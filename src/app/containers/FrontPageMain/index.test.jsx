@@ -10,6 +10,10 @@ const igboConfig = {
   serviceLocalizedName: 'Ìgbò',
   translations: {
     home: 'Akụkọ',
+    media: {
+      audio: 'Ọdịyo',
+      video: 'Vidio',
+    },
   },
   script: latin,
 };
