@@ -22,3 +22,5 @@ const props = {
 };
 
 storiesOf('Video', module).add('default', () => <Video {...props} />);
+
+export default props;
