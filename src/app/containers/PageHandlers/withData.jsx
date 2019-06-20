@@ -11,7 +11,7 @@ const constructRenderObject = data => ({
   pageData: deepGet(['pageData'], data),
 });
 
-const validatePassportHome = (passportHome, service) => {
+const isValidPassportHome = (passportHome, service) => {
   return passportHome ? passportHome === service : true;
 };
 
@@ -25,7 +25,7 @@ const shouldRender = (data, service) => {
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
     const passportHome = getPassportHome(pageData);
-    isCorrectService = validatePassportHome(passportHome, service);
+    isCorrectService = isValidPassportHome(passportHome, service);
     statusCode = !isCorrectService ? 404 : status;
   }
 
