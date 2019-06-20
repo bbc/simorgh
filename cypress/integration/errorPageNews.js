@@ -3,6 +3,7 @@ import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
+  hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
 import { testResponseCode } from '../support/metaTestHelper';
 import news from '../../src/app/lib/config/services/news';
@@ -17,6 +18,10 @@ describe('Article Body Tests', () => {
 
   it('should return a 404 error code', () => {
     testResponseCode(`/news/articles/${config.assets.nonExistent}`, 404);
+  });
+
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
   });
 
   it('should display a relevant error message on screen', () => {
