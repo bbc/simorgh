@@ -34,11 +34,11 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(2));
+    visibleImageNoCaption(getElement('figure').eq(3));
   });
 
   it('should have a visible image with a caption', () => {
-    const imageHasNotLoaded = getElement('figure').eq(2);
+    const imageHasNotLoaded = getElement('figure').eq(3);
 
     imageHasNotLoaded.within(() => {
       const lazyLoadPlaceholder = getElement('div div');
