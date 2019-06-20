@@ -53,6 +53,9 @@ const VideoContainer = ({ blocks }) => {
     product: 'news',
     responsive: true,
     statsObject: { clipPID: pid },
+    mediator: {
+      host: mediatorURL(env),
+    },
     playlistObject: {
       title,
       holdingImageURL: `https://${holdingImageUrl}`,
@@ -64,9 +67,6 @@ const VideoContainer = ({ blocks }) => {
           kind,
         },
       ],
-      mediator: {
-        host: mediatorURL(env),
-      },
     },
   };
 

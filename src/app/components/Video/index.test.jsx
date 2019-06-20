@@ -11,20 +11,20 @@ describe('Video', () => {
         product: 'news',
         responsive: true,
         statsObject: { clipPID: 'p00a0a0m' },
+        mediator: {
+          host: 'open.test.bbc.co.uk',
+        },
         playlistObject: {
           title: 'Hello World',
           holdingImageURL: 'https://foo/bar/baz.png',
+          guidance: 'Scary',
           items: [
             {
-              versionID: 'p00a0a0v',
+              versionID: 'p01k6msm',
               kind: 'episode',
               duration: 100,
             },
           ],
-          guidance: 'Scary',
-          mediator: {
-            host: 'open.test.bbc.co.uk',
-          },
         },
       },
       statsAppName: 'news',

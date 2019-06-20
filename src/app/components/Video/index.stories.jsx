@@ -16,9 +16,13 @@ const props = {
     product: 'news',
     responsive: true,
     statsObject: { clipPID: 'test' },
+    mediator: {
+      host: 'open.test.bbc.co.uk',
+    },
     playlistObject: {
       title: 'Ants',
-      holdingImageURL: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+      holdingImageURL:
+        'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
       items: [
         {
           versionID: 'p01kdbnv',
@@ -26,9 +30,6 @@ const props = {
           kind: 'programme',
         },
       ],
-      mediator: {
-        host: 'open.test.bbc.co.uk',
-      },
       guidance: null,
     },
   },

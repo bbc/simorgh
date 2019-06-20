@@ -50,10 +50,13 @@ export const videoComponentPropTypes = {
       shape({ clipPID: string }),
       shape({ episodePID: string }),
     ]).isRequired,
+    mediator: shape({
+      host: string.isRequired,
+    }).isRequired,
     playlistObject: shape({
       title: string.isRequired,
       holdingImageURL: string.isRequired,
-      guidance: string.isRequired,
+      guidance: string,
       items: arrayOf(
         shape({
           duration: number.isRequired,
@@ -61,9 +64,6 @@ export const videoComponentPropTypes = {
           kind: string.isRequired,
         }),
       ).isRequired,
-      mediator: shape({
-        host: string.isRequired,
-      }).isRequired,
     }).isRequired,
   }).isRequired,
   statsAppName: string.isRequired,
