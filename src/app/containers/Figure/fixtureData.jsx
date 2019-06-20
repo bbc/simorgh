@@ -1,5 +1,5 @@
 import React from 'react';
-import { any, bool, string, objectOf, number } from 'prop-types';
+import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -139,13 +139,13 @@ const serviceContextStubNews = {
 };
 
 const generateFixtureData = ({
+  height,
+  width,
   caption,
   copyright,
   lazyLoad,
   platform,
   type,
-  height,
-  width,
 }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
@@ -178,6 +178,8 @@ generateFixtureData.propTypes = {
   lazyLoad: bool,
   platform: string,
   type: string,
+  height: number,
+  width: number,
 };
 
 generateFixtureData.defaultProps = {
@@ -186,6 +188,8 @@ generateFixtureData.defaultProps = {
   lazyLoad: false,
   platform: 'canonical',
   type: '',
+  height: 0,
+  width: 0,
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
