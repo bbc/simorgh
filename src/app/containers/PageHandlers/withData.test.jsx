@@ -2,6 +2,7 @@ import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import WithData from './withData';
+import fronPageDataPidgin from '../../../../data/prod/pidgin/frontpage';
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;
@@ -40,6 +41,13 @@ describe('withData HOC', () => {
     service: 'news',
   };
 
+  const validFrontPagesProps = {
+    data: {
+      pageData: fronPageDataPidgin,
+      status: 200,
+    },
+  };
+
   describe('with no data', () => {
     shouldShallowMatchSnapshot(
       `should return the errorMain component and 500 status`,
@@ -54,7 +62,7 @@ describe('withData HOC', () => {
     );
   });
 
-  describe('with valid props', () => {
+  describe('with valid articles data', () => {
     shouldShallowMatchSnapshot(
       `should return the passed in component`,
       <WithDataHOC {...validNewsProps} />,
@@ -66,6 +74,13 @@ describe('withData HOC', () => {
         <WithDataHOC {...validPersianProps} />,
       );
     });
+  });
+
+  describe('with valid front-pages data', () => {
+    shouldShallowMatchSnapshot(
+      `should return the passed in component`,
+      <WithDataHOC {...validFrontPagesProps} />,
+    );
   });
 
   describe('with non 200 status', () => {
