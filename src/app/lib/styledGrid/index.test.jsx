@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import {
   GhostWrapper,
   GridItemConstrainedSmall,
@@ -9,7 +9,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from './styledGrid';
+} from './index';
 
 describe('Styled Grid items', () => {
   describe('GridItemConstrainedSmall', () => {
