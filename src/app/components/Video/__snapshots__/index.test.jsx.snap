@@ -14,7 +14,7 @@ exports[`Video with data should render the video with valid props 1`] = `
             require(['bump-4'], (bump) =&gt; {
               var mediaPlayer = bump.player(
                 document.getElementById('mp#p00a0a0m'),
-                {"product":"news","responsive":true,"statsObject":{"clipPID":"p00a0a0m"},"playlistObject":{"title":"Hello World","holdingImageURL":"https://foo/bar/baz.png","items":[{"versionID":"p00a0a0v","kind":"episode","duration":100}],"guidance":"Scary","mediator":{"host":"open.test.bbc.co.uk"}}});
+                {"product":"news","responsive":true,"statsObject":{"clipPID":"p00a0a0m"},"mediator":{"host":"open.test.bbc.co.uk"},"playlistObject":{"title":"Hello World","holdingImageURL":"https://foo/bar/baz.png","guidance":"Scary","items":[{"versionID":"p01k6msm","kind":"episode","duration":100}]}});
               mediaPlayer.load();
             });
           }
