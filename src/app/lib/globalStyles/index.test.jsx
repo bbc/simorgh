@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import GlobalStyles from './index';
+import GlobalStyles from '.';
 
 const serviceStub = {
   fonts: [

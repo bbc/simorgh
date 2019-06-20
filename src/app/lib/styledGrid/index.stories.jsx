@@ -10,7 +10,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from './index';
+} from '.';
 
 const red = '#ffaacc';
 const orange = '#ffddcc';

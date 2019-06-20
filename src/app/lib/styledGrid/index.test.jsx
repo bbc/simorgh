@@ -9,7 +9,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from './index';
+} from '.';
 
 describe('Styled Grid items', () => {
   describe('GridItemConstrainedSmall', () => {
