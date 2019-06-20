@@ -20,6 +20,10 @@ cp -rf ./.storybook ./pack/.storybook
 cp -rf ./envConfig ./pack/envConfig
 cp -rf ./public ./pack/public
 
+# Temp for frontpage launch
+# To be removed in https://github.com/bbc/simorgh/issues/1996
+cp -rf ./data ./pack/data
+
 # Copy the needed files in the root directory
 cp package.json ./pack
 cp package-lock.json ./pack
