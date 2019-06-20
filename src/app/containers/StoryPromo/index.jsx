@@ -12,6 +12,9 @@ import FigureContainer from '../Figure';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
 
+import LinkContents from './LinkContents';
+import MediaIndicator from './MediaIndicator';
+
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
@@ -52,7 +55,9 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <Fragment>
       {headline && (
         <Headline script={script} topStory={topStory}>
-          <Link href={url}>{headline}</Link>
+          <Link href={url}>
+            <LinkContents item={item} />
+          </Link>
         </Headline>
       )}
       {summary && (
@@ -77,7 +82,14 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
-  return <StoryPromoComponent image={Image} info={Info} topStory={topStory} />;
+  return (
+    <StoryPromoComponent
+      image={Image}
+      info={Info}
+      mediaIndicator={<MediaIndicator item={item} />}
+      topStory={topStory}
+    />
+  );
 };
 
 StoryPromo.propTypes = {

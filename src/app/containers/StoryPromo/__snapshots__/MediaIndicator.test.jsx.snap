@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Promo Media Indicator should render correctly 1`] = `
+<MediaIndicator
+  datetime="PT1H33M20S"
+  duration="1:33:20"
+  offscreenText="Video"
+  type="video"
+/>
+`;
+
+exports[`Story Promo Media Indicator should render correctly even without duration 1`] = `
+<MediaIndicator
+  datetime={null}
+  duration={null}
+  offscreenText="Video"
+  type="video"
+/>
+`;
