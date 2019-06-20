@@ -30,6 +30,7 @@ const getDescription = (metadata, promo) =>
   deepGet(['summary'], metadata);
 
 const getLink = (origin, service, id, assetType, linkType = '') => {
+  // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
   const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
 
   let link =
