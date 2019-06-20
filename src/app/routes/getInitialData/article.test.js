@@ -2,6 +2,31 @@ import baseUrl from './utils/getBaseUrl';
 import onClient from '../../lib/utilities/onClient';
 import fetchData from './utils/fetchData';
 
+const mockApplyTimestampRules = jest.fn();
+const mockAddIdsToBlocks = jest.fn();
+const mockApplyBlockPositioning = jest.fn();
+
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/timestamp',
+  () => mockApplyTimestampRules,
+);
+
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  () => mockAddIdsToBlocks,
+);
+
+jest.mock(
+  '../../lib/utilities/preprocessor/rules/blockPositioning',
+  () => mockApplyBlockPositioning,
+);
+
+const preprocessorRules = [
+  mockApplyTimestampRules,
+  mockAddIdsToBlocks,
+  mockApplyBlockPositioning,
+];
+
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
@@ -40,6 +65,7 @@ describe('getArticleInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
+      preprocessorRules,
     });
 
     expect(response).toEqual({
@@ -58,6 +84,7 @@ describe('getArticleInitialData', () => {
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
+        preprocessorRules,
       });
 
       expect(response).toEqual({

@@ -65,16 +65,16 @@ server
  * Local env routes - fixture data
  */
 
-if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath, next) => {
-    res.sendFile(dataFilePath, {}, sendErr => {
-      if (sendErr) {
-        logger.error(sendErr);
-        next(sendErr);
-      }
-    });
-  };
+const sendDataFile = (res, dataFilePath, next) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
+    if (sendErr) {
+      logger.error(sendErr);
+      next(sendErr);
+    }
+  });
+};
 
+if (process.env.APP_ENV === 'local') {
   server
     .use(
       expressStaticGzip(publicDirectory, {
@@ -96,19 +96,6 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
-
-      const dataFilePath = path.join(
-        process.cwd(),
-        dataFolderToRender,
-        service,
-        'frontpage',
-        'index.json',
-      );
-
-      sendDataFile(res, dataFilePath, next);
-    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
@@ -121,6 +108,24 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
+  .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+    /*
+     *
+     * TODO: MOVE THIS ROUTE BACK INTO LOCAL ONLY
+     *
+     */
+    const { service } = params;
+
+    const dataFilePath = path.join(
+      process.cwd(),
+      dataFolderToRender,
+      service,
+      'frontpage',
+      'index.json',
+    );
+
+    sendDataFile(res, dataFilePath, next);
+  })
   .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
