@@ -40,7 +40,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div').eq(2));
   });
 
   it('should have a visible image without a caption, and also not be lazyloaded', () => {

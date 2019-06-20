@@ -26,7 +26,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div').eq(2));
   });
 
   it('should have an image copyright label with styling', () => {
@@ -34,7 +34,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(0));
+    visibleImageNoCaption(getElement('figure').eq(2));
   });
 
   it('should have a visible image with a caption', () => {
