@@ -4,27 +4,27 @@ exports[`Video with data should render the video with valid props 1`] = `
 <div>
   <div>
     video pid: 
-    p00a0a0m
+    p00a00a
   </div>
   <div>
     kind: 
-    episode
+    clip
   </div>
   <div>
     title: 
-    Hello World
+    Static Data Example
   </div>
   <div>
     holdingImageURL: 
-    https://foo/bar/baz.png
+    https://www.foo.bar/baz.png
   </div>
   <div>
     items: 
     [
     {
-        "versionID": "p00a0a0v",
-        "kind": "episode",
-        "duration": 100
+        "versionID": "p00p00v",
+        "kind": "clip",
+        "duration": 10
     }
 ]
   </div>
