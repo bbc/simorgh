@@ -43,7 +43,7 @@ const ImageComponent = ({
   showCopyright,
 }) => {
   const imageToRender = (
-    <Image alt={alt} src={src} width={width} srcset={srcset} />
+    <Image alt={alt} src={src} width={width} srcset={srcset} fade />
   );
 
   return (
