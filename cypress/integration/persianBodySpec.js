@@ -29,7 +29,7 @@ describeForLocalAndTest('Article Body Tests', () => {
     placeholderImageLoaded(getElement('figure div').eq(2));
   });
 
-  it('should have an image copyright label with styling', () => {
+  it('should have an image copyright label withgg styling', () => {
     copyrightDataWindow();
   });
 
