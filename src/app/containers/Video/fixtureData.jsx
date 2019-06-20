@@ -23,6 +23,7 @@ const generateFixtureData = ({ platform, blocks }) => (
     platform={platform}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
+    script="latin"
   >
     <VideoContainer blocks={blocks} />
   </RequestContextProvider>
