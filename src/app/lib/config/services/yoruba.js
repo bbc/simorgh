@@ -15,6 +15,7 @@ const yoruba = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  serviceWorkerPath: '/yoruba/sw.js',
   fonts: [],
   translations: {
     home: 'Ìròyìn',

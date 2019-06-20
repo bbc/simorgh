@@ -27,6 +27,7 @@ const persian = {
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
   manifestPath: '/articles/manifest.json',
+  serviceWorkerPath: '/persian/sw.js',
   translations: {
     error: {
       404: {
