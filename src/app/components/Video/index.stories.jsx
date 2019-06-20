@@ -12,6 +12,7 @@ const props = {
   statsCountername: 'news.articles.c0000000000o.page',
   statsDestination: 'NEWS_PS_TEST',
   uiLocale: 'en-GB',
+  script: 'latin',
   mediaPlayerSettings: {
     product: 'news',
     responsive: true,
