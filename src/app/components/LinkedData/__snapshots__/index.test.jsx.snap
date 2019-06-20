@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LinkData should correctly render metadata for frontpages 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"IDX","url":"https://www.bbc.com/igbo","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/igbo","name":"Ogbako"}}
+  </script>
+</HelmetWrapper>
+`;
+
 exports[`LinkData should correctly render metadata for links 1`] = `
 <HelmetWrapper
   defer={true}
