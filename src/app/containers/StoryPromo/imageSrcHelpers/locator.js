@@ -10,6 +10,7 @@ const getLocator = path => {
   }
 
   const locator = items.slice(1).join('/');
+
   return locator;
 };
 
