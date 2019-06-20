@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { any, node, string, bool } from 'prop-types';
+import { node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -12,10 +12,9 @@ import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, route }) => {
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-  const { pageType } = route;
 
   return (
     <Fragment>
@@ -55,8 +54,7 @@ PageWrapper.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  // TODO provide a real prop type shape for `route`
-  route: any.isRequired, // eslint-disable-line react/forbid-prop-types
+  pageType: string.isRequired,
   service: string.isRequired,
 };
 

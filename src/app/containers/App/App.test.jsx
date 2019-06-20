@@ -16,6 +16,7 @@ describe('App', () => {
 
   const route = {
     getInitialData: jest.fn(),
+    pageType: 'article',
   };
 
   reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([{ route, match }]);
@@ -45,9 +46,7 @@ describe('App', () => {
       error: null,
       isAmp: false,
       loading: false,
-      route: {
-        getInitialData: route.getInitialData,
-      },
+      pageType: 'article',
       service: 'news',
     });
     expect(wrapper).toMatchSnapshot();
@@ -95,9 +94,7 @@ describe('App', () => {
               id: undefined,
               isAmp: false,
               loading: true,
-              route: {
-                getInitialData: route.getInitialData,
-              },
+              pageType: 'article',
               service: 'news',
             },
           );
@@ -112,9 +109,7 @@ describe('App', () => {
               error,
               isAmp: false,
               loading: false,
-              route: {
-                getInitialData: route.getInitialData,
-              },
+              pageType: 'article',
               service: 'news',
             },
           );
@@ -147,9 +142,7 @@ describe('App', () => {
               id: undefined,
               isAmp: false,
               loading: true,
-              route: {
-                getInitialData: route.getInitialData,
-              },
+              pageType: 'article',
               service: 'news',
             },
           );
@@ -165,9 +158,7 @@ describe('App', () => {
               id: undefined,
               isAmp: false,
               loading: false,
-              route: {
-                getInitialData: route.getInitialData,
-              },
+              pageType: 'article',
               service: 'news',
             },
           );
