@@ -50,6 +50,14 @@ const getTimeTags = (timeTag, assetType) => {
   return new Date(timeTag).toISOString();
 };
 
+const getAppleTouchUrl = service => {
+  if (process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH === '/') {
+    return `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}/${service}/images/icons/icon-192x192.png`;
+  }
+
+  return `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
+};
+
 const MetadataContainer = ({ metadata, promo }) => {
   const { origin, platform } = useContext(RequestContext);
   const {
@@ -83,8 +91,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const ampLink = getLink(origin, service, id, assetType, 'amp');
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
-  const appleTouchIcon = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
-
+  const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 
   let alternateLinks = [];
