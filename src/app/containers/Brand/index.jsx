@@ -5,7 +5,15 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const BrandContainer = () => {
   const { brandName, brandSVG } = useContext(ServiceContext);
 
-  return <Brand brandName={brandName} svg={brandSVG} />;
+  return (
+    <Brand
+      product={brandName}
+      svg={brandSVG}
+      svgHeight={24}
+      minWidth={112}
+      maxWidth={168}
+    />
+  );
 };
 
 export default BrandContainer;
