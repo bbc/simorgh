@@ -12,7 +12,6 @@ import {
   AudioClipGlobalGuidance,
   AudioClipUk,
   AudioClipNonUk,
-  AudioEpisodeGlobal,
 } from './fixtureData';
 import VideoContainer from '.';
 import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
@@ -121,15 +120,6 @@ describe('AudioVideo', () => {
     shouldShallowMatchSnapshot(
       'amp - should render audio clip non-UK only',
       AudioClipNonUk({ platform: 'amp' }),
-    );
-
-    shouldShallowMatchSnapshot(
-      'canonical - should render audio episode global',
-      AudioEpisodeGlobal({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render audio episode global',
-      AudioEpisodeGlobal({ platform: 'amp' }),
     );
   });
 });

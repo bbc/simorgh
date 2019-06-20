@@ -3,7 +3,6 @@ import {
   AudioClipGlobalGuidance,
   AudioClipNonUk,
   AudioClipUk,
-  AudioEpisodeGlobal,
   VideoClipNonUk,
   VideoClipGlobalPortrait,
   VideoClipGlobalWithCaption,
@@ -36,9 +35,6 @@ storiesOf('Video Container', module)
   )
   .add('audio, clip, non-UK, without guidance', () =>
     AudioClipNonUk({ platform: 'canonical' }),
-  )
-  .add('audio, episode, global, without guidance', () =>
-    AudioEpisodeGlobal({ platform: 'canonical' }),
   );
 
 storiesOf('Video Container - AMP', module)
@@ -66,7 +62,4 @@ storiesOf('Video Container - AMP', module)
   )
   .add('audio, clip, non-UK, without guidance', () =>
     AudioClipNonUk({ platform: 'amp' }),
-  )
-  .add('audio, episode, global, without guidance', () =>
-    AudioEpisodeGlobal({ platform: 'amp' }),
   );

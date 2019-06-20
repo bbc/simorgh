@@ -11,7 +11,6 @@ import {
   audioClipGlobalGuidanceBlock,
   audioClipNonUkBlock,
   audioClipUkOnlyBlock,
-  audioEpisodeGlobalBlock,
 } from './helpers/fixtures';
 
 const generateFixtureData = ({ platform, blocks }) => (
@@ -94,10 +93,4 @@ export const AudioClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipNonUkBlock],
-  });
-
-export const AudioEpisodeGlobal = ({ platform }) =>
-  generateFixtureData({
-    platform,
-    blocks: [audioEpisodeGlobalBlock],
   });
