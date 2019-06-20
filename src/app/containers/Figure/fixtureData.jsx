@@ -1,5 +1,5 @@
 import React from 'react';
-import { any, bool, string, objectOf } from 'prop-types';
+import { any, bool, string, objectOf, number } from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -144,6 +144,8 @@ const generateFixtureData = ({
   lazyLoad,
   platform,
   type,
+  height,
+  width,
 }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
@@ -158,10 +160,10 @@ const generateFixtureData = ({
         alt={imageAlt}
         captionBlock={caption}
         copyright={copyright}
-        height={imageHeight}
+        height={height || imageHeight}
         ratio={imageRatio}
         src={imageSrc}
-        width={imageWidth}
+        width={width || imageWidth}
         type={type}
         lazyLoad={lazyLoad}
         showCopyright
@@ -187,6 +189,12 @@ generateFixtureData.defaultProps = {
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
+export const FigureImageWithNestedGrid = (width, height) =>
+  generateFixtureData({
+    platform: 'canonical',
+    width,
+    height,
+  });
 
 export const FigureLazyLoadImage = generateFixtureData({
   platform: 'canonical',
