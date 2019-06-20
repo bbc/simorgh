@@ -215,7 +215,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News',
-          'https://www.bbc.co.uk/news/articles/c0000000001o',
+          'https://www.bbc.com/news/articles/c0000000001o',
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'News',
@@ -316,7 +316,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
-          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o',
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'Persian',

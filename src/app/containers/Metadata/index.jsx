@@ -30,10 +30,12 @@ const getDescription = (metadata, promo) =>
   deepGet(['summary'], metadata);
 
 const getLink = (origin, service, id, assetType, linkType = '') => {
+  const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
+
   let link =
     assetType === 'article'
-      ? `${origin}/${service}/articles/${id}`
-      : `${origin}/${service}`;
+      ? `${linkOrigin}/${service}/articles/${id}`
+      : `${linkOrigin}/${service}`;
 
   if (linkType === 'amp') {
     link = `${link}.amp`;
@@ -90,7 +92,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = getTimeTags(metadata.firstPublished, assetType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, assetType);
 
-  const canonicalLink = getLink(origin, service, id, assetType);
+  const canonicalLink = getLink(origin, service, id, assetType, 'canonical');
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = getLink(origin, service, id, assetType, 'amp');
