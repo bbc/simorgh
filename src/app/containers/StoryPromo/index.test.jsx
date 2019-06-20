@@ -6,7 +6,6 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import deepClone from '../../lib/utilities/deepClone';
 import StoryPromo from '.';
 
-let item;
 const completeItem = {
   headlines: {
     headline: 'A headline',
@@ -23,6 +22,90 @@ const completeItem = {
     altText: 'Image Alt text',
     copyrightHolder: 'Image provider',
   },
+};
+
+const audioItem = {
+  headlines: {
+    headline: 'An audio item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'MAP',
+  media: {
+    format: 'audio',
+    versions: [
+      {
+        duration: 192,
+      },
+    ],
+  },
+};
+
+const videoItem = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'MAP',
+  media: {
+    format: 'video',
+    versions: [
+      {
+        duration: 5600,
+      },
+    ],
+  },
+};
+
+const audioItemNoDuration = {
+  headlines: {
+    headline: 'An audio item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'MAP',
+  media: {
+    format: 'audio',
+    versions: [{}],
+  },
+};
+
+const fixtures = {
+  standard: completeItem,
+  video: videoItem,
+  audio: audioItem,
+  'audio with no duration': audioItemNoDuration,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -42,17 +125,20 @@ const WrappedStoryPromo = ({ platform, ...props }) => (
 );
 
 describe('StoryPromo Container', () => {
-  shouldMatchSnapshot(
-    'should render correctly for canonical',
-    <WrappedStoryPromo platform="canonical" item={completeItem} />,
-  );
+  Object.entries(fixtures).forEach(([name, data]) => {
+    shouldMatchSnapshot(
+      `should render ${name} correctly for canonical`,
+      <WrappedStoryPromo platform="canonical" item={data} />,
+    );
 
-  shouldMatchSnapshot(
-    'should render correctly for amp',
-    <WrappedStoryPromo platform="amp" item={completeItem} />,
-  );
+    shouldMatchSnapshot(
+      `should render ${name} correctly for amp`,
+      <WrappedStoryPromo platform="amp" item={data} />,
+    );
+  });
 
   describe('assertion tests', () => {
+    let item;
     beforeEach(() => {
       item = deepClone(completeItem);
     });
