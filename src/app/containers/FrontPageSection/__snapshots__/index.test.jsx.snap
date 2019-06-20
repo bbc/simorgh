@@ -11,20 +11,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -42,7 +28,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -69,8 +55,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -79,34 +65,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -121,20 +79,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -191,20 +135,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -288,20 +218,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -319,7 +235,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -346,8 +262,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -356,34 +272,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -398,20 +286,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -468,20 +342,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -527,20 +387,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     lazyLoadImage={true}
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -558,7 +404,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -585,8 +431,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -595,34 +441,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -637,20 +455,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -707,20 +511,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -755,20 +545,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -786,7 +562,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -813,8 +589,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -823,34 +599,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -865,20 +613,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -935,20 +669,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
-          },
-        },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
