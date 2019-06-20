@@ -321,7 +321,7 @@ export const customGridItemMedium = css`
     grid-column: ${props => props.gridColumnStart} / span
       ${props => specifiedOrMaximum(props.gridSpan, 22)};
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
-    max-height: 1.375rem;
+    max-height: 1.15rem;
   }
 
   @supports (display: grid) {
