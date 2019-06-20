@@ -308,6 +308,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
               "type": "responsive-top-stories",
             }
           }
+          sectionNumber={0}
         />
         <FrontPageSection
           bar={true}
@@ -512,6 +513,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
               "type": "responsive-cluster",
             }
           }
+          sectionNumber={1}
         />
         <FrontPageSection
           bar={true}
@@ -715,6 +717,7 @@ Girl pikin dem for FIFA e grassroot project display how deh don di play football
               "type": "responsive-must-see",
             }
           }
+          sectionNumber={2}
         />
         <FrontPageSection
           bar={true}
@@ -1088,6 +1091,7 @@ Dem also tok say di meat dey help sick pipo and e dey good for sex.",
               "type": "responsive-inspire",
             }
           }
+          sectionNumber={3}
         />
         <FrontPageSection
           bar={true}
@@ -1703,6 +1707,7 @@ Dem also tok say di meat dey help sick pipo and e dey good for sex.",
               "type": "responsive-in-depth",
             }
           }
+          sectionNumber={4}
         />
         <FrontPageSection
           bar={true}
@@ -4377,6 +4382,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               "type": "special-reports",
             }
           }
+          sectionNumber={5}
         />
         <FrontPageSection
           bar={true}
@@ -4465,6 +4471,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               "type": "featured-site-top-stories",
             }
           }
+          sectionNumber={6}
         />
       </ForwardRef(GridItemConstrainedLarge)>
     </ForwardRef(GhostWrapper)>
