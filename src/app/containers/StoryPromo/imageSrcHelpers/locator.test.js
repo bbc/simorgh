@@ -8,9 +8,8 @@ describe('getLocator', () => {
     expect(locator).toEqual('FFC1/production/_107437456_177a9008.jpg');
   });
 
-  it('should return null when path not provided', () => {
-    const locator = getLocator();
-
-    expect(locator).toBeNull();
+  it('should return null when path is invalid', () => {
+    expect(getLocator()).toBeNull();
+    expect(getLocator('path')).toBeNull();
   });
 });

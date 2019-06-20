@@ -1,5 +1,5 @@
 const getOriginCode = path => {
-  if (!path) {
+  if (!path || path.indexOf('/') === -1) {
     return null;
   }
 

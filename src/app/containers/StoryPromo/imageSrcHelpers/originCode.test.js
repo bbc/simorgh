@@ -8,9 +8,8 @@ describe('getOriginCode', () => {
     expect(originCode).toEqual('cpsprodpb');
   });
 
-  it('should return null when path is not provided', () => {
-    const originCode = getOriginCode();
-
-    expect(originCode).toBeNull();
+  it('should return null when path is invalid', () => {
+    expect(getOriginCode()).toBeNull();
+    expect(getOriginCode('path')).toBeNull();
   });
 });

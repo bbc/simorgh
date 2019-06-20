@@ -1,12 +1,9 @@
 const getLocator = path => {
-  if (!path) {
+  if (!path || path.indexOf('/') === -1) {
     return null;
   }
 
   const items = path.slice(1).split('/');
-  if (items.length === 0) {
-    return null;
-  }
   const locator = items.slice(1).join('/');
   return locator;
 };
