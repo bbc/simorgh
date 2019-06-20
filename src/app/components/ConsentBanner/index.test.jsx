@@ -1,14 +1,11 @@
 import React from 'react';
+import path from 'path';
+import fakeProps from 'react-fake-props';
+
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ConsentBanner, ConsentBannerText } from '.';
 
-const baseProps = {
-  title: "We've updated our Privacy and Cookies Policy",
-  text: <p>Hello</p>,
-  accept: <button type="button">Accept</button>,
-  reject: <a href="https://foobar.com">Reject</a>,
-  id: 'banner-id',
-};
+const baseProps = fakeProps(path.join(__dirname, './index.jsx'));
 
 describe('ConsentBanner', () => {
   shouldMatchSnapshot(
@@ -18,8 +15,8 @@ describe('ConsentBanner', () => {
 
   describe('with hidden attribute on wrapper', () => {
     const props = {
-      hidden: true,
       ...baseProps,
+      hidden: true,
     };
 
     shouldMatchSnapshot(

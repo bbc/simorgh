@@ -116,7 +116,7 @@ exports[`ConsentBanner should correctly render 1`] = `
 <div
   className="c0"
   hidden={null}
-  id="banner-id"
+  id={null}
 >
   <div
     className="c1"
@@ -124,31 +124,27 @@ exports[`ConsentBanner should correctly render 1`] = `
     <h2
       className="c2"
     >
-      We've updated our Privacy and Cookies Policy
+      title
     </h2>
-    <p>
-      Hello
-    </p>
+    <div>
+      fake text element
+    </div>
     <ul
       className="c3"
     >
       <li
         className="c4"
       >
-        <button
-          type="button"
-        >
-          Accept
-        </button>
+        <div>
+          fake accept element
+        </div>
       </li>
       <li
         className="c4"
       >
-        <a
-          href="https://foobar.com"
-        >
-          Reject
-        </a>
+        <div>
+          fake reject element
+        </div>
       </li>
     </ul>
   </div>
@@ -271,7 +267,7 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 <div
   className="c0"
   hidden={true}
-  id="banner-id"
+  id={null}
 >
   <div
     className="c1"
@@ -279,31 +275,27 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
     <h2
       className="c2"
     >
-      We've updated our Privacy and Cookies Policy
+      title
     </h2>
-    <p>
-      Hello
-    </p>
+    <div>
+      fake text element
+    </div>
     <ul
       className="c3"
     >
       <li
         className="c4"
       >
-        <button
-          type="button"
-        >
-          Accept
-        </button>
+        <div>
+          fake accept element
+        </div>
       </li>
       <li
         className="c4"
       >
-        <a
-          href="https://foobar.com"
-        >
-          Reject
-        </a>
+        <div>
+          fake reject element
+        </div>
       </li>
     </ul>
   </div>
