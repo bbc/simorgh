@@ -36,6 +36,7 @@ const ImageComponent = ({
   alt,
   copyright,
   ratio,
+  fade,
   lazyLoad,
   captionBlock,
   type,
@@ -43,7 +44,7 @@ const ImageComponent = ({
   showCopyright,
 }) => {
   const imageToRender = (
-    <Image alt={alt} src={src} width={width} srcset={srcset} fade />
+    <Image alt={alt} src={src} width={width} srcset={srcset} fade={fade} />
   );
 
   return (
@@ -73,6 +74,7 @@ const figurePropTypes = {
   captionBlock: objectOf(any),
   copyright: string,
   height: number,
+  fade: bool,
   lazyLoad: bool,
   ratio: number.isRequired,
   src: string.isRequired,
@@ -86,6 +88,7 @@ const defaultProps = {
   copyright: null,
   captionBlock: null,
   height: null,
+  fade: false,
   lazyLoad: false,
   type: '',
   srcset: null,
