@@ -51,11 +51,16 @@ const getTimeTags = (timeTag, assetType) => {
 };
 
 const getAppleTouchUrl = service => {
-  if (process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH === '/') {
-    return `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}/${service}/images/icons/icon-192x192.png`;
-  }
+  const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  const seperatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
 
-  return `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}/${service}/images/icons/icon-192x192.png`;
+  return [
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    assetsPath,
+    seperatorSlash,
+    service,
+    '/images/icons/icon-192x192.png',
+  ].join('');
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
