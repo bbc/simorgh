@@ -4,7 +4,6 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
-// import { ServiceContext } from '../../contexts/ServiceContext';
 
 const igboConfig = {
   product: 'BBC News',
