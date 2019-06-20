@@ -4,13 +4,18 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
 .c1 {
   display: inline-block;
   vertical-align: top;
-  position: relative;
   max-width: 33.33%;
+  position: relative;
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.5rem;
+  max-width: 66.67%;
 }
 
 .c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -27,13 +32,6 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c3 {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c5 {
@@ -114,17 +112,24 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+@media (min-width:80rem) {
+  .c3 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -167,27 +172,6 @@ exports[`StoryPromo Container should render correctly for amp 1`] = `
   .c6 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
   }
 }
 
@@ -256,13 +240,18 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
 .c1 {
   display: inline-block;
   vertical-align: top;
-  position: relative;
   max-width: 33.33%;
+  position: relative;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.5rem;
+  max-width: 66.67%;
 }
 
 .c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -279,13 +268,6 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c4 {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c6 {
@@ -371,17 +353,24 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+@media (min-width:80rem) {
+  .c4 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -424,27 +413,6 @@ exports[`StoryPromo Container should render correctly for canonical 1`] = `
   .c7 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
   }
 }
 

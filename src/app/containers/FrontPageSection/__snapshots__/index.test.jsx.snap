@@ -529,7 +529,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
       }
     }
-    topStory={false}
+    topStory={true}
   />
 </section>
 `;
