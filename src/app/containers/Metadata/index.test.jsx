@@ -184,7 +184,7 @@ describe('Metadata Container', () => {
             },
           ],
           'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
-          'https://www.bbc.co.uk/news/articles/c0000000001o',
+          'https://www.bbc.com/news/articles/c0000000001o',
           'Article summary.',
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
@@ -195,7 +195,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News',
-          'https://www.bbc.co.uk/news/articles/c0000000001o',
+          'https://www.bbc.com/news/articles/c0000000001o',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
@@ -271,7 +271,7 @@ describe('Metadata Container', () => {
           true,
           [],
           'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
-          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
           'fa',
           [],
@@ -282,7 +282,7 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
-          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o',
+          'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
