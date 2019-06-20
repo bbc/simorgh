@@ -12,8 +12,8 @@ import FigureContainer from '../Figure';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
 import createSrcset from '../Image/helpers/srcSet';
-import getOriginCode from './helpers/originCode';
-import getLocator from './helpers/locator';
+import getOriginCode from './imageSrcHelpers/originCode';
+import getLocator from './imageSrcHelpers/locator';
 
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
