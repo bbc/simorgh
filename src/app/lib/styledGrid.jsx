@@ -62,15 +62,19 @@ const NestedGridParentSmall = styled.div`
   ${gridContainerSmallCss}
 `;
 
-const PopoutGridParentMedium = styled.div`
+// 1.
+// The max-height must be 0 at Group 5 breakpoints so that
+// the item does not force the following sibling item downwards.
+
+const PopOutAtGroup5 = styled.div`
   ${layoutGridItemMedium}
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    max-height: 1.15rem;
+    max-height: 0; /* [1] */
   }
 `;
-export const GridPopoutMedium = props => {
+export const PopOutGridItemMedium = props => {
   const { children } = props;
-  return <PopoutGridParentMedium {...props}>{children}</PopoutGridParentMedium>;
+  return <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>;
 };
 
 export const NestedGridItemLarge = props => {
@@ -112,13 +116,13 @@ NestedGridItemLarge.propTypes = {
   children: node.isRequired,
 };
 
-GridPopoutMedium.propTypes = {
+PopOutGridItemMedium.propTypes = {
   children: node.isRequired,
   gridColumnStart: number,
   gridSpan: number,
 };
 
-GridPopoutMedium.defaultProps = {
+PopOutGridItemMedium.defaultProps = {
   gridColumnStart: 3,
   gridSpan: 3,
 };

@@ -9,7 +9,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-  GridPopoutMedium,
+  PopOutGridItemMedium,
 } from './styledGrid';
 
 describe('Styled Grid items', () => {
@@ -190,7 +190,7 @@ describe('Styled Grid items', () => {
     shouldMatchSnapshot(
       'should pop out of grid at Group 5 breakpoint',
       <GhostWrapper>
-        <GridPopoutMedium>Group 5 pop out grid.</GridPopoutMedium>
+        <PopOutGridItemMedium>Group 5 pop out grid.</PopOutGridItemMedium>
       </GhostWrapper>,
     );
   });

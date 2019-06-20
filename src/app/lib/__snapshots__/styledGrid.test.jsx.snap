@@ -494,13 +494,18 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should pop out of gr
   .c1 {
     grid-column: 3 / span 3;
     max-width: 38.5rem;
-    max-height: 1.15rem;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    max-height: 0;
   }
 }
 

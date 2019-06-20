@@ -10,7 +10,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-  GridPopoutMedium,
+  PopOutGridItemMedium,
 } from './styledGrid';
 
 const red = '#ffaacc';
@@ -202,9 +202,9 @@ storiesOf('Grid Examples', module)
       <GridItemConstrainedMedium>
         <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
       </GridItemConstrainedMedium>
-      <GridPopoutMedium>
+      <PopOutGridItemMedium>
         <ColouredDiv colour={blue}>Popout</ColouredDiv>
-      </GridPopoutMedium>
+      </PopOutGridItemMedium>
       <GridItemConstrainedMedium>
         <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
       </GridItemConstrainedMedium>

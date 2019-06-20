@@ -14,7 +14,6 @@ const expectedLayoutGridExports = {
   gridContainerLargeCss: 'object',
   gridContainerMediumCss: 'object',
   gridContainerSmallCss: 'object',
-  customGridItemMedium: 'object',
 };
 
 const errorIfMissingKey = (keys, object, message) => {
