@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { latin } from '@bbc/gel-foundations/scripts';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+// import { ServiceContext } from '../../contexts/ServiceContext';
 
 const igboConfig = {
   product: 'BBC News',
@@ -11,6 +12,7 @@ const igboConfig = {
   translations: {
     home: 'Akụkọ',
   },
+  script: latin,
 };
 
 jest.mock('react', () => {
@@ -24,15 +26,15 @@ jest.mock('react', () => {
 const { useContext } = jest.requireMock('react');
 
 describe('FrontPageMain', () => {
+  beforeEach(() => {
+    useContext.mockReturnValue(igboConfig);
+  });
+
+  afterEach(() => {
+    useContext.mockReset();
+  });
+
   describe('snapshots', () => {
-    beforeEach(() => {
-      useContext.mockReturnValue(igboConfig);
-    });
-
-    afterEach(() => {
-      useContext.mockReset();
-    });
-
     shouldShallowMatchSnapshot(
       'should render an igbo frontpage correctly',
       <FrontPageMain frontPageData={frontPageDataIgbo} />,
@@ -40,27 +42,17 @@ describe('FrontPageMain', () => {
   });
 
   describe('assertions', () => {
-    beforeEach(() => {
-      useContext.mockReturnValue(igboConfig);
-    });
-
-    afterEach(() => {
-      useContext.mockReset();
-    });
-
     it('should render with tab index and content attributes', () => {
       const { container } = render(
-        <ServiceContextProvider service="news">
-          <FrontPageMain frontPageData={frontPageDataIgbo} />,
-        </ServiceContextProvider>,
+        <FrontPageMain frontPageData={frontPageDataIgbo} />,
       );
 
-      const h1 = container.getElementByTagName('h1');
+      const h1 = container.getElementsByTagName('h1')[0];
       const content = h1.getAttribute('id');
       const tabIndex = h1.getAttribute('tabIndex');
 
       expect(content).toEqual('content');
-      expect(tabIndex).toBe(-1);
+      expect(tabIndex).toBe('-1');
     });
   });
 });
