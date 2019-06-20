@@ -15,6 +15,9 @@ import createSrcset from '../Image/helpers/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
 import getLocator from './imageSrcHelpers/locator';
 
+import LinkContents from './LinkContents';
+import MediaIndicator from './MediaIndicator';
+
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
@@ -64,7 +67,9 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
     <Fragment>
       {headline && (
         <Headline script={script}>
-          <Link href={url}>{headline}</Link>
+          <Link href={url}>
+            <LinkContents item={item} />
+          </Link>
         </Headline>
       )}
       {summary && <Summary script={script}>{summary}</Summary>}
@@ -85,7 +90,13 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
     <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
-  return <StoryPromoComponent image={Image} info={Info} />;
+  return (
+    <StoryPromoComponent
+      image={Image}
+      info={Info}
+      mediaIndicator={<MediaIndicator item={item} />}
+    />
+  );
 };
 
 StoryPromo.propTypes = {
