@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import onClient from '../../lib/utilities/onClient';
-import getBaseUrl from '../../routes/getInitialData/utils/getBaseUrl';
 
 const BrandContainer = () => {
   const { product, serviceLocalizedName, brandSVG, frontpageUrl } = useContext(
@@ -13,9 +11,6 @@ const BrandContainer = () => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const originUrl = onClient()
-    ? getBaseUrl(window.location.origin)
-    : 'http://www.bbc.com';
 
   return (
     <Brand
@@ -25,7 +20,7 @@ const BrandContainer = () => {
       minWidth={minWidth}
       maxWidth={maxWidth}
       svg={brandSVG}
-      url={`${originUrl}${frontpageUrl}`}
+      url={frontpageUrl}
     />
   );
 };
