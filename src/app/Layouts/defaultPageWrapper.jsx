@@ -5,6 +5,7 @@ import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
+import { FeatureFlagContextProvider } from '../contexts/FeatureFlagContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
@@ -38,11 +39,13 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
             id,
           })}
         >
-          <ManifestContainer />
-          <ConsentBanner />
-          <HeaderContainer />
-          {children}
-          <FooterContainer />
+          <FeatureFlagContextProvider>
+            <ManifestContainer />
+            <ConsentBanner />
+            <HeaderContainer />
+            {children}
+            <FooterContainer />
+          </FeatureFlagContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </Fragment>

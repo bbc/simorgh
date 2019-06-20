@@ -12,6 +12,8 @@ import {
   GridItemConstrainedLarge,
 } from '../../lib/styledGrid';
 
+import FeatureFlag from '../FeatureFlag';
+
 const Headings = {
   headline: Headline,
   subheadline: SubHeading,
@@ -50,9 +52,11 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <Heading script={script} id={subHeadingId}>
-        {renderText()}
-      </Heading>
+      <FeatureFlag flag="ads">
+        <Heading script={script} id={subHeadingId}>
+          {renderText()}
+        </Heading>
+      </FeatureFlag>
     </GridConstrain>
   );
 };

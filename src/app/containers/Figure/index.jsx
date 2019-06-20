@@ -7,6 +7,7 @@ import LazyLoad from 'react-lazyload';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
+import FeatureFlag from '../FeatureFlag';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -47,24 +48,26 @@ const ImageComponent = ({
   );
 
   return (
-    <Fragment>
-      <ImagePlaceholder ratio={ratio}>
-        {platform === 'amp' ? (
-          <AmpImg
-            alt={alt}
-            attribution={copyright || ''}
-            layout="responsive"
-            src={src}
-            height={height}
-            width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad)
-        )}
-        {showCopyright && renderCopyright(copyright)}
-      </ImagePlaceholder>
-      {renderCaption(captionBlock, type)}
-    </Fragment>
+    <FeatureFlag flag="images">
+      <Fragment>
+        <ImagePlaceholder ratio={ratio}>
+          {platform === 'amp' ? (
+            <AmpImg
+              alt={alt}
+              attribution={copyright || ''}
+              layout="responsive"
+              src={src}
+              height={height}
+              width={width}
+            />
+          ) : (
+            renderImage(imageToRender, lazyLoad)
+          )}
+          {showCopyright && renderCopyright(copyright)}
+        </ImagePlaceholder>
+        {renderCaption(captionBlock, type)}
+      </Fragment>
+    </FeatureFlag>
   );
 };
 
