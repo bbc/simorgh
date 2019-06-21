@@ -24,6 +24,11 @@ describe('Article Body Tests', () => {
       failOnStatusCode: false,
     });
     errorMessage(news);
+
+    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+      failOnStatusCode: false,
+    });
+    errorMessage(news);
   });
 
   it('should have an inline link on the page that is linked to the home page', () => {
