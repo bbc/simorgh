@@ -27,7 +27,7 @@ const news = {
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
   manifestPath: '/articles/manifest.json',
-  serviceWorkerPath: '/news/articles/sw.js',
+  swPath: '/news/articles/sw.js',
   translations: {
     error: {
       404: {

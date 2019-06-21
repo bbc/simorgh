@@ -16,7 +16,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
-  serviceWorkerPath: '/pidgin/sw.js',
+  swPath: '/pidgin/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
