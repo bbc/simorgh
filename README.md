@@ -146,7 +146,7 @@ Cypress can be run interactively using `npm run test:e2e:interactive`. This load
 #### Running e2e in the UK against LIVE
 **This affects UK developers only**
 
-Cypress .visit() function is locked to visiting a single domain per test. This becomes problematic when you launch the e2e tests from within the UK, due to redirects from `.com` to `.co.uk`. By default cypress tests will run as if they were ran outside of the uk. In order to run these tests from the uk you have to pass in the `UK` Cypress environment variable to the tests. This will replace the URL endings to `.co.uk`, which will allow you to run these tests successfuly.
+Cypress .visit() function is locked to visiting a single domain per test. This becomes problematic when you launch the e2e tests from within the UK, due to redirects from `.com` to `.co.uk`. By default cypress tests will run as if they were ran outside of the uk. In order to run these tests from the UK you have to pass in the `UK` Cypress environment variable to the tests. This will replace the URL endings to `.co.uk`, which will allow you to run these tests successfully.
 
 Here is an example command:
 
