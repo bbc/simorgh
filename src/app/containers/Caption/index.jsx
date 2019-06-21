@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import deepGet from '../../lib/utilities/deepGet';
@@ -71,7 +71,7 @@ const CaptionContainer = ({ block, type }) => {
 CaptionContainer.propTypes = {
   block: shape({
     model: shape({
-      blocks: arrayOf(shape({})).isRequired,
+      blocks: arrayOf(any).isRequired,
     }).isRequired,
   }).isRequired,
   type: string.isRequired,
