@@ -2,18 +2,10 @@ import React, { useContext } from 'react';
 import { cleanup, render, waitForElement } from '@testing-library/react';
 import services from '../../lib/config/services/async';
 import * as createLoadableContext from '../utils/createLoadableContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
 
 // Unmock createLoadableContext which is mocked globally in jest-setup.js
 jest.unmock('../utils/createLoadableContext');
 jest.mock('../utils/createLoadableContext', () => jest.fn());
-
-describe('ServiceContext', () => {
-  shouldMatchSnapshot(
-    `should have a brand name for default service context`,
-    <Component />,
-  );
-});
 
 describe('ServiceContextProvider', () => {
   afterEach(() => {
@@ -33,27 +25,32 @@ describe('ServiceContextProvider', () => {
     );
   });
 
-  Object.keys(services).forEach(service =>
-    it(`should have a brand name for ${service}`, async () => {
-      const { ServiceContext, ServiceContextProvider } = require('./index');
+  describe('lalal', () => {
+    beforeEach(() => {
+      jest.unmock('../utils/createLoadableContext');
+    });
 
-      const Component = () => {
-        const { brandName } = useContext(ServiceContext);
+    Object.keys(services).forEach(service =>
+      it(`should have a brand name for ${service}`, async () => {
+        // eslint-disable-next-line global-require
+        const { ServiceContext, ServiceContextProvider } = require('./index');
 
-        return <span>{brandName}</span>;
-      };
+        const Component = () => {
+          const { brandName } = useContext(ServiceContext);
 
-      const { container } = render(
-        <ServiceContextProvider service={service}>
-          <Component />
-        </ServiceContextProvider>,
-      );
+          return <span>{brandName}</span>;
+        };
 
-      await waitForElement(() => container.querySelector('span'));
+        const { container } = render(
+          <ServiceContextProvider service={service}>
+            <Component />
+          </ServiceContextProvider>,
+        );
 
-      // expect(Loadable).toHaveBeenCalled();
+        await waitForElement(() => container.querySelector('span'));
 
-      expect(container.innerHTML).toMatchSnapshot();
-    }),
-  );
+        expect(container.innerHTML).toMatchSnapshot();
+      }),
+    );
+  });
 });
