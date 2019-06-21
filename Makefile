@@ -12,12 +12,12 @@ installProd:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	Xvfb :99 &;
+	Xvfb :99 &
 	npm run test:e2e:storybook:ci;
 
 productionTests:
 	npm run build;
-	Xvfb :99 &;
+	Xvfb :99 &
 	npm run test:prod:ci;
 
 buildStorybook:
