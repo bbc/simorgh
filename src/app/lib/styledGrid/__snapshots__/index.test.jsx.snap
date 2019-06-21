@@ -503,12 +503,6 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should pop out of gr
   }
 }
 
-@media (min-width:80rem) {
-  .c1 {
-    max-height: 0;
-  }
-}
-
 <div
   className="c0"
 >
