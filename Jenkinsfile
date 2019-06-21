@@ -89,7 +89,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+              args '-e DISPLAY :99 -u root -v /etc/pki:/certs'
             }
           }
           steps {
@@ -101,7 +101,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+              args '-e DISPLAY :99 -u root -v /etc/pki:/certs'
             }
           }
           steps {
