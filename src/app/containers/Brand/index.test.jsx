@@ -6,6 +6,7 @@ import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const newsServiceContextStub = {
   product: 'BBC News',
+  service: 'news',
   brandSVG,
   svgHeight: 24,
   maxWidth: 280,

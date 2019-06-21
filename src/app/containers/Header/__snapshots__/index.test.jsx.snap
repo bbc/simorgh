@@ -80,7 +80,7 @@ exports[`Header should render correctly 1`] = `
     >
       <a
         className="c2 c3"
-        href="/undefined"
+        href="/news"
       >
         <svg
           aria-hidden="true"
