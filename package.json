@@ -29,7 +29,7 @@
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
-    "test:prod:ci": "npm run build && npm run start & npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest && run-p cypress bbcA11y test:lighthouse",
+    "test:prod:ci": "npm run build && npm run start & npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest @storybook/react@latest @storybook/theming@latest && run-p cypress bbcA11y test:lighthouse storybook:ci cypress:storybook",
     "test:prod:jenkins": "npm install --no-save cypress@3.3.0 npm-run-all@4.1.5 && run-p --race start cypress",
     "test:prod:travis": "CYPRESS_SKIP_EU=true npm run test:prod:ci",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
@@ -140,8 +140,6 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@bbc/apache2-license-checker": "^1.1.4",
-    "@storybook/react": "^5.1.8",
-    "@storybook/theming": "^5.1.8",
     "@testing-library/react": "^8.0.1",
     "amphtml-validator": "^1.0.23",
     "babel-eslint": "^10.0.0",
@@ -182,6 +180,8 @@
     "yaml-js": "^0.2.3"
   },
   "optionalDependencies": {
+    "@storybook/react": "^5.1.8",
+    "@storybook/theming": "^5.1.8",
     "cypress": "3.3.1"
   },
   "jest": {
