@@ -16,7 +16,6 @@ const igbo = {
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
-  frontpageUrl: '/igbo',
   translations: {
     home: 'Akụkọ',
     error: {

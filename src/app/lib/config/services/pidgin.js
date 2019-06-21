@@ -16,7 +16,6 @@ const pidgin = {
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
-  frontpageUrl: '/pidgin',
   translations: {
     home: 'Home',
     error: {

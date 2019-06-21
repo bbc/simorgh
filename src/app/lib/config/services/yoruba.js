@@ -16,7 +16,6 @@ const yoruba = {
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
-  frontpageUrl: '/yoruba',
   translations: {
     home: 'Ìròyìn',
     error: {
