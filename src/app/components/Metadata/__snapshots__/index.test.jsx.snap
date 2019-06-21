@@ -618,6 +618,7 @@ exports[`Metadata WS Front Page does not render article metadata even if values 
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
+      "dir": "ltr",
       "lang": "pcm",
     }
   }
@@ -759,6 +760,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
+      "dir": "ltr",
       "lang": "pcm",
     }
   }
@@ -775,7 +777,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="robots"
   />
   <meta
-    content="#B80000"
+    content={1539188371344}
     name="theme-color"
   />
   <meta
@@ -783,7 +785,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    Index title
+    @BBCNews
      - 
     BBC News
   </title>
@@ -815,11 +817,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="description"
   />
   <meta
-    content={101010}
+    content={202020}
     name="fb:admins"
   />
   <meta
-    content={202020}
+    content="pcm"
     name="fb:app_id"
   />
   <meta
@@ -835,7 +837,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="og:image:alt"
   />
   <meta
-    content="pcm"
+    content={Array []}
     name="og:locale"
   />
   <meta
@@ -843,11 +845,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="og:site_name"
   />
   <meta
-    content="Index title"
+    content="@BBCNews"
     name="og:title"
   />
   <meta
-    content="IDX"
+    content={false}
     name="og:type"
   />
   <meta
@@ -875,11 +877,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="twitter:image:src"
   />
   <meta
-    content="@BBCNews"
+    content="IDX"
     name="twitter:site"
   />
   <meta
-    content="Index title"
+    content="@BBCNews"
     name="twitter:title"
   />
   <link

@@ -354,6 +354,7 @@ describe('Metadata Container', () => {
           'https://www.bbc.com/igbo.amp',
           'https://www.bbc.com/igbo',
           'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
+          'ltr',
           'ig',
           [],
           null,
