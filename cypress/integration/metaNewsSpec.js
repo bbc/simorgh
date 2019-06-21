@@ -1,5 +1,9 @@
 import config from '../support/config';
-import { getElement, getSecondElement } from '../support/bodyTestHelper';
+import {
+  getElement,
+  getSecondElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -17,8 +21,8 @@ describe('Article Meta Tests', () => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
-  it('should have the correct lang attribute', () => {
-    cy.get('html').should('have.attr', 'lang', 'en-gb');
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should have a nofollow meta tag', () => {
