@@ -44,7 +44,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
-  const canonicalLink = `${origin}/${service}/articles/${id}`;
+  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
