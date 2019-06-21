@@ -1,22 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { latin } from '@bbc/gel-foundations/scripts';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
-
-const igboConfig = {
-  product: 'BBC News',
-  serviceLocalizedName: 'Ìgbò',
-  translations: {
-    home: 'Akụkọ',
-    media: {
-      audio: 'Ọdịyo',
-      video: 'Vidio',
-    },
-  },
-  script: latin,
-};
+import igboConfig from '../../lib/config/services/igbo';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');

@@ -54,7 +54,7 @@ const getTimeTags = (timeTag, assetType) => {
 };
 
 const getAppleTouchUrl = service => {
-  const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
   const separatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
 
   return [
