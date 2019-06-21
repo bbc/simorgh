@@ -77,7 +77,6 @@ const ImageContainer = ({ blocks, position }) => {
         alt={altText}
         captionBlock={captionBlock}
         copyright={copyright}
-        fade
         height={height}
         ratio={ratio}
         src={rawImageSrc}
@@ -85,6 +84,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        fade
       />
     </Wrapper>
   );
