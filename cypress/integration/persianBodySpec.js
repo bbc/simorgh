@@ -34,7 +34,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(2));
+    visibleImageNoCaption(getElement('figure').eq(0));
   });
 
   it('should have a visible image with a caption', () => {
