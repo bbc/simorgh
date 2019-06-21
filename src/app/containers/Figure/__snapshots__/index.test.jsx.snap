@@ -93,42 +93,38 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
         <div
-          className="c3"
-        >
-          <div
-            className="lazyload-placeholder"
-            style={
-              Object {
-                "height": undefined,
-              }
+          className="lazyload-placeholder"
+          style={
+            Object {
+              "height": undefined,
             }
+          }
+        />
+        <noscript>
+          <img
+            alt="Pauline Clayton"
+            className="c4"
+            height={null}
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width={null}
           />
-          <noscript>
-            <img
-              alt="Pauline Clayton"
-              className="c4"
-              height={null}
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width={null}
-            />
-          </noscript>
-        </div>
+        </noscript>
       </div>
-      <div
-        className="c5"
-      />
     </div>
-  </figure>
+    <div
+      className="c5"
+    />
+  </div>
 </figure>
 `;
 
@@ -220,32 +216,28 @@ exports[`Figure should render an AMP image with alt text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution=""
-            height={null}
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          />
-        </div>
+        <amp-img
+          alt="Pauline Clayton"
+          attribution=""
+          height={null}
+          layout="responsive"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
       </div>
-      <div
-        className="c4"
-      />
     </div>
-  </figure>
+    <div
+      className="c4"
+    />
+  </div>
 </figure>
 `;
 
@@ -395,55 +387,51 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution="Getty Images"
-            height={null}
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          />
-          <p
-            className="c4"
-            role="text"
-          >
-            <span
-              lang="en-GB"
-            >
-              Getty Images
-            </span>
-          </p>
-        </div>
-      </div>
-      <div
-        className="c5"
-      >
-        <figcaption
-          className="c6"
+        <amp-img
+          alt="Pauline Clayton"
+          attribution="Getty Images"
+          height={null}
+          layout="responsive"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
+        <p
+          className="c4"
+          role="text"
         >
           <span
-            className="c7"
+            lang="en-GB"
           >
-            Image caption, 
+            Getty Images
           </span>
-          <p>
-            This is a caption
-          </p>
-        </figcaption>
+        </p>
       </div>
     </div>
-  </figure>
+    <div
+      className="c5"
+    >
+      <figcaption
+        className="c6"
+      >
+        <span
+          className="c7"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -579,45 +567,41 @@ exports[`Figure should render an AMP image with caption text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution=""
-            height={null}
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          />
-        </div>
-      </div>
-      <div
-        className="c4"
-      >
-        <figcaption
-          className="c5"
-        >
-          <span
-            className="c6"
-          >
-            Image caption, 
-          </span>
-          <p>
-            This is a caption
-          </p>
-        </figcaption>
+        <amp-img
+          alt="Pauline Clayton"
+          attribution=""
+          height={null}
+          layout="responsive"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
       </div>
     </div>
-  </figure>
+    <div
+      className="c4"
+    >
+      <figcaption
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -775,52 +759,48 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution=""
-            height={null}
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          />
-        </div>
-      </div>
-      <div
-        className="c4"
-      >
-        <figcaption
-          className="c5"
-        >
-          <span
-            className="c6"
-          >
-            Image caption, 
-          </span>
-          <p>
-            This is a caption 
-            <a
-              className="c7"
-              href="https://www.bbc.com"
-            >
-              containing an inline link
-            </a>
-            .
-          </p>
-        </figcaption>
+        <amp-img
+          alt="Pauline Clayton"
+          attribution=""
+          height={null}
+          layout="responsive"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
       </div>
     </div>
-  </figure>
+    <div
+      className="c4"
+    >
+      <figcaption
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption 
+          <a
+            className="c7"
+            href="https://www.bbc.com"
+          >
+            containing an inline link
+          </a>
+          .
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -926,42 +906,38 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
+        <amp-img
+          alt="Pauline Clayton"
+          attribution="Getty Images"
+          height={null}
+          layout="responsive"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        />
+        <p
+          className="c4"
+          role="text"
         >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution="Getty Images"
-            height={null}
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          />
-          <p
-            className="c4"
-            role="text"
+          <span
+            lang="en-GB"
           >
-            <span
-              lang="en-GB"
-            >
-              Getty Images
-            </span>
-          </p>
-        </div>
+            Getty Images
+          </span>
+        </p>
       </div>
-      <div
-        className="c5"
-      />
     </div>
-  </figure>
+    <div
+      className="c5"
+    />
+  </div>
 </figure>
 `;
 
@@ -1064,32 +1040,28 @@ exports[`Figure should render an image and caption for a portrait with nested gr
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={600}
-          />
-        </div>
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={600}
+        />
       </div>
-      <div
-        className="c2"
-      />
     </div>
-  </figure>
+    <div
+      className="c2"
+    />
+  </div>
 </figure>
 `;
 
@@ -1168,32 +1140,28 @@ exports[`Figure should render an image and caption for a square with nested grid
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={1240}
-          />
-        </div>
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={1240}
+        />
       </div>
-      <div
-        className="c2"
-      />
     </div>
-  </figure>
+    <div
+      className="c2"
+    />
+  </div>
 </figure>
 `;
 
@@ -1290,32 +1258,28 @@ exports[`Figure should render an image with alt text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={null}
-          />
-        </div>
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={null}
+        />
       </div>
-      <div
-        className="c5"
-      />
     </div>
-  </figure>
+    <div
+      className="c5"
+    />
+  </div>
 </figure>
 `;
 
@@ -1470,55 +1434,51 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={null}
-          />
-          <p
-            className="c5"
-            role="text"
-          >
-            <span
-              lang="en-GB"
-            >
-              Getty Images
-            </span>
-          </p>
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <figcaption
-          className="c7"
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={null}
+        />
+        <p
+          className="c5"
+          role="text"
         >
           <span
-            className="c8"
+            lang="en-GB"
           >
-            Image caption, 
+            Getty Images
           </span>
-          <p>
-            This is a caption
-          </p>
-        </figcaption>
+        </p>
       </div>
     </div>
-  </figure>
+    <div
+      className="c6"
+    >
+      <figcaption
+        className="c7"
+      >
+        <span
+          className="c8"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -1659,45 +1619,41 @@ exports[`Figure should render an image with caption text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={null}
-          />
-        </div>
-      </div>
-      <div
-        className="c5"
-      >
-        <figcaption
-          className="c6"
-        >
-          <span
-            className="c7"
-          >
-            Image caption, 
-          </span>
-          <p>
-            This is a caption
-          </p>
-        </figcaption>
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={null}
+        />
       </div>
     </div>
-  </figure>
+    <div
+      className="c5"
+    >
+      <figcaption
+        className="c6"
+      >
+        <span
+          className="c7"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -1860,52 +1816,48 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
-        >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={null}
-          />
-        </div>
-      </div>
-      <div
-        className="c5"
-      >
-        <figcaption
-          className="c6"
-        >
-          <span
-            className="c7"
-          >
-            Image caption, 
-          </span>
-          <p>
-            This is a caption 
-            <a
-              className="c8"
-              href="https://www.bbc.com"
-            >
-              containing an inline link
-            </a>
-            .
-          </p>
-        </figcaption>
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={null}
+        />
       </div>
     </div>
-  </figure>
+    <div
+      className="c5"
+    >
+      <figcaption
+        className="c6"
+      >
+        <span
+          className="c7"
+        >
+          Image caption, 
+        </span>
+        <p>
+          This is a caption 
+          <a
+            className="c8"
+            href="https://www.bbc.com"
+          >
+            containing an inline link
+          </a>
+          .
+        </p>
+      </figcaption>
+    </div>
+  </div>
 </figure>
 `;
 
@@ -2016,41 +1968,37 @@ exports[`Figure should render an image with copyright text 1`] = `
 <figure
   className="c0"
 >
-  <figure
-    className="c0"
+  <div
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
       >
-        <div
-          className="c3"
+        <img
+          alt="Pauline Clayton"
+          className="c4"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width={null}
+        />
+        <p
+          className="c5"
+          role="text"
         >
-          <img
-            alt="Pauline Clayton"
-            className="c4"
-            height={null}
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={null}
-          />
-          <p
-            className="c5"
-            role="text"
+          <span
+            lang="en-GB"
           >
-            <span
-              lang="en-GB"
-            >
-              Getty Images
-            </span>
-          </p>
-        </div>
+            Getty Images
+          </span>
+        </p>
       </div>
-      <div
-        className="c6"
-      />
     </div>
-  </figure>
+    <div
+      className="c6"
+    />
+  </div>
 </figure>
 `;
