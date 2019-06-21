@@ -68,8 +68,10 @@ const NestedGridParentSmall = styled.div`
 
 const PopOutAtGroup5 = styled.div`
   ${layoutGridItemMedium}
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    max-height: 0; /* [1] */
+  @supports(display: grid) {
+    @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+      max-height: 0; /* [1] */
+    }
   }
 `;
 export const PopOutGridItemMedium = props => {
