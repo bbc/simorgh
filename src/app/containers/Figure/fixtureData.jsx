@@ -160,10 +160,10 @@ const generateFixtureData = ({
         alt={imageAlt}
         captionBlock={caption}
         copyright={copyright}
-        height={height || imageHeight}
+        height={height}
         ratio={imageRatio}
         src={imageSrc}
-        width={width || imageWidth}
+        width={width}
         type={type}
         lazyLoad={lazyLoad}
         showCopyright
@@ -188,8 +188,8 @@ generateFixtureData.defaultProps = {
   lazyLoad: false,
   platform: 'canonical',
   type: '',
-  height: 0,
-  width: 0,
+  height: imageHeight,
+  width: imageWidth,
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });

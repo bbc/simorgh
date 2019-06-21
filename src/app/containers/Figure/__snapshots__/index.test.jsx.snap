@@ -119,7 +119,7 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
               className="c4"
               height={null}
               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width={640}
+              width={null}
             />
           </noscript>
         </div>
@@ -235,10 +235,9 @@ exports[`Figure should render an AMP image with alt text 1`] = `
           <amp-img
             alt="Pauline Clayton"
             attribution=""
-            height={360}
+            height={null}
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
           />
         </div>
       </div>
@@ -411,10 +410,9 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
           <amp-img
             alt="Pauline Clayton"
             attribution="Getty Images"
-            height={360}
+            height={null}
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
           />
           <p
             className="c4"
@@ -596,10 +594,9 @@ exports[`Figure should render an AMP image with caption text 1`] = `
           <amp-img
             alt="Pauline Clayton"
             attribution=""
-            height={360}
+            height={null}
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
           />
         </div>
       </div>
@@ -793,10 +790,9 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
           <amp-img
             alt="Pauline Clayton"
             attribution=""
-            height={360}
+            height={null}
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
           />
         </div>
       </div>
@@ -945,10 +941,9 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
           <amp-img
             alt="Pauline Clayton"
             attribution="Getty Images"
-            height={360}
+            height={null}
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
           />
           <p
             className="c4"
@@ -1312,7 +1307,7 @@ exports[`Figure should render an image with alt text 1`] = `
             className="c4"
             height={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
+            width={null}
           />
         </div>
       </div>
@@ -1492,7 +1487,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
             className="c4"
             height={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
+            width={null}
           />
           <p
             className="c5"
@@ -1681,7 +1676,7 @@ exports[`Figure should render an image with caption text 1`] = `
             className="c4"
             height={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
+            width={null}
           />
         </div>
       </div>
@@ -1882,7 +1877,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
             className="c4"
             height={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
+            width={null}
           />
         </div>
       </div>
@@ -2038,7 +2033,7 @@ exports[`Figure should render an image with copyright text 1`] = `
             className="c4"
             height={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width={640}
+            width={null}
           />
           <p
             className="c5"
