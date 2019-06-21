@@ -12,16 +12,18 @@ installProd:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	Xvfb :99 &
+	xvfb-run npm run test:e2e:storybook:ci;
+	# Xvfb :99 &
 	# export PIDFILE=$(echo $!);
-	npm run test:e2e:storybook:ci;
+	# npm run test:e2e:storybook:ci;
 	# kill -SIGTERM $(echo $PIDFILE);
 
 productionTests:
 	npm run build;
-	Xvfb :99 &
+	npm run build && xvfb-run npm run test:prod:ci
+	# Xvfb :99 &
 	# export PIDFILE=$(echo $!);
-	npm run test:prod:ci;
+	# npm run test:prod:ci;
 	# kill -SIGTERM $(echo $PIDFILE);
 
 buildStorybook:
