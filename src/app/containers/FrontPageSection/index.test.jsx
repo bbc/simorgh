@@ -153,17 +153,17 @@ describe('FrontPageSection Container', () => {
 
     shouldShallowMatchSnapshot(
       'should render correctly for canonical',
-      <FrontPageSection group={group} />,
+      <FrontPageSection group={group} sectionNumber={0} />,
     );
 
     shouldShallowMatchSnapshot(
       'should render without a bar',
-      <FrontPageSection group={group} bar={false} />,
+      <FrontPageSection group={group} bar={false} sectionNumber={0} />,
     );
 
     shouldShallowMatchSnapshot(
       'should render with only one item',
-      <FrontPageSection group={hasOneItem} />,
+      <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
   });
 
@@ -179,7 +179,7 @@ describe('FrontPageSection Container', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
+          <FrontPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -194,7 +194,7 @@ describe('FrontPageSection Container', () => {
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
+          <FrontPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
       const section = container.getElementsByTagName('section')[0];
@@ -205,10 +205,25 @@ describe('FrontPageSection Container', () => {
       expect(section.getAttribute('aria-labelledby')).toEqual(label.id);
     });
 
+    it('should add styling to visually hide section label when width of screen is less than 600px and sectionNumber === 0', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      global.innerWidth = 500;
+      global.dispatchEvent(new Event('resize'));
+      const sectionLabel = container.getElementsByTagName('section')[0]
+        .firstChild;
+
+      expect(sectionLabel).toHaveStyleRule('clip-path');
+    });
+
     it('should render null when there are no items', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoItems} />
+          <FrontPageSection group={hasNoItems} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -220,7 +235,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there is no strapline', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoStrapline} />
+          <FrontPageSection group={hasNoStrapline} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -232,7 +247,7 @@ describe('FrontPageSection Container', () => {
     it('should not render the story promo inside a list when only one item exists', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOneItem} />
+          <FrontPageSection group={hasOneItem} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
