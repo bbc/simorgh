@@ -15,7 +15,7 @@ developmentTests:
 	xvfb-run npm run test:e2e:storybook:ci;
 
 productionTests:
-	npm run build && xvfb-run npm run test:prod:ci;
+	npm run build && xvfb-run npm run test:prod:jenkins;
 
 buildStorybook:
 	npm run build:storybook;
