@@ -4,6 +4,7 @@ import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
+  hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
 import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
@@ -21,6 +22,10 @@ describeForLocalOnly('Article Body Tests', () => {
       `/persian/articles/${config.specialAssets.nonExistent}`,
       404,
     );
+  });
+
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
   });
 
   it('should display a relevant error message on screen', () => {
