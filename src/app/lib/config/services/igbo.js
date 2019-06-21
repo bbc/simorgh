@@ -15,7 +15,7 @@ const igbo = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
-  serviceWorkerPath: '/igbo/sw.js',
+  swPath: '/igbo/sw.js',
   fonts: [],
   translations: {
     home: 'Akụkọ',

@@ -15,7 +15,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
-  serviceWorkerPath: '/pidgin/sw.js',
+  swPath: '/pidgin/sw.js',
   fonts: [],
   translations: {
     home: 'Home',
