@@ -67,7 +67,7 @@ const ImageComponent = ({
   }
 
   return (
-    <Figure>
+    <Fragment>
       <ParentWrapper>
         <ChildWrapper
           gridColumnStart={1}
@@ -104,7 +104,7 @@ const ImageComponent = ({
           {renderCaption(captionBlock, type)}
         </ChildWrapper>
       </ParentWrapper>
-    </Figure>
+    </Fragment>
   );
 };
 
