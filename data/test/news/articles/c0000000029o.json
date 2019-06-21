@@ -94,40 +94,55 @@
                 "model": {
                   "blocks": [
                     {
-                      "type": "image",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Galileo",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Galileo",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "13225/production/_101237387_mediaitem101237386.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC"
+                      }
+                    },
+                    {
+                      "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1024,
-                              "height": 576,
-                              "locator": "13225/production/_101237387_mediaitem101237386.jpg",
-                              "originCode": "cpsprodpb",
-                              "copyrightHolder": "BBC"
-                            }
-                          },
-                          {
-                            "type": "altText",
+                            "type": "text",
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "text",
+                                  "type": "paragraph",
                                   "model": {
+                                    "text": "Galileo",
                                     "blocks": [
                                       {
-                                        "type": "paragraph",
+                                        "type": "fragment",
                                         "model": {
                                           "text": "Galileo",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Galileo",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
+                                          "attributes": []
                                         }
                                       }
                                     ]
@@ -135,28 +150,28 @@
                                 }
                               ]
                             }
-                          },
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
                           {
-                            "type": "caption",
+                            "type": "text",
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "text",
+                                  "type": "paragraph",
                                   "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
                                     "blocks": [
                                       {
-                                        "type": "paragraph",
+                                        "type": "fragment",
                                         "model": {
                                           "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
+                                          "attributes": []
                                         }
                                       }
                                     ]
@@ -183,67 +198,82 @@
                 "model": {
                   "blocks": [
                     {
-                      "type": "video",
+                      "type": "paragraph",
                       "model": {
-                        "locator": "urn:bbc:pips:pid:p067gq6h",
+                        "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
                         "blocks": [
                           {
-                            "type": "aresMedia",
+                            "type": "fragment",
                             "model": {
-                              "blocks": [
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "video",
+                "model": {
+                  "locator": "urn:bbc:pips:pid:p067gq6h",
+                  "blocks": [
+                    {
+                      "type": "aresMedia",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "aresMediaMetadata",
+                            "model": {
+                              "id": "p067gq6h",
+                              "subType": "clip",
+                              "format": "audio_video",
+                              "title": "Mark and Isla Royal Wedding",
+                              "synopses": {
+                                "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
+                                "medium": null,
+                                "long": null
+                              },
+                              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
+                              "embedding": true,
+                              "warnings": {},
+                              "advertising": false,
+                              "versions": [
                                 {
-                                  "type": "aresMediaMetadata",
-                                  "model": {
-                                    "id": "p067gq6h",
-                                    "subType": "clip",
-                                    "format": "audio_video",
-                                    "title": "Mark and Isla Royal Wedding",
-                                    "synopses": {
-                                      "short": "Stop the press! It’s a Mark and Isla Royal Wedding special…",
-                                      "medium": null,
-                                      "long": null
-                                    },
-                                    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p067grwg.jpg",
-                                    "embedding": true,
-                                    "warnings": {},
-                                    "advertising": false,
-                                    "versions": [
-                                      {
-                                        "versionId": "p067gq6k",
-                                        "types": ["Original"],
-                                        "duration": 94,
-                                        "availableTerritories": {
-                                          "uk": true,
-                                          "nonUk": false
-                                        }
-                                      }
-                                    ]
+                                  "versionId": "p067gq6k",
+                                  "types": ["Original"],
+                                  "duration": 94,
+                                  "availableTerritories": {
+                                    "uk": true,
+                                    "nonUk": false
                                   }
                                 }
                               ]
                             }
-                          },
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
                           {
-                            "type": "caption",
+                            "type": "text",
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "text",
+                                  "type": "paragraph",
                                   "model": {
+                                    "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
                                     "blocks": [
                                       {
-                                        "type": "paragraph",
+                                        "type": "fragment",
                                         "model": {
                                           "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
+                                          "attributes": []
                                         }
                                       }
                                     ]
@@ -306,40 +336,55 @@
                 "model": {
                   "blocks": [
                     {
-                      "type": "image",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "13225/production/_101237387_mediaitem101237386.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC"
+                      }
+                    },
+                    {
+                      "type": "altText",
                       "model": {
                         "blocks": [
                           {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1024,
-                              "height": 576,
-                              "locator": "13225/production/_101237387_mediaitem101237386.jpg",
-                              "originCode": "cpsprodpb",
-                              "copyrightHolder": "BBC"
-                            }
-                          },
-                          {
-                            "type": "altText",
+                            "type": "text",
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "text",
+                                  "type": "paragraph",
                                   "model": {
+                                    "text": "Galileo",
                                     "blocks": [
                                       {
-                                        "type": "paragraph",
+                                        "type": "fragment",
                                         "model": {
                                           "text": "Galileo",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Galileo",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
+                                          "attributes": []
                                         }
                                       }
                                     ]
@@ -347,28 +392,28 @@
                                 }
                               ]
                             }
-                          },
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
                           {
-                            "type": "caption",
+                            "type": "text",
                             "model": {
                               "blocks": [
                                 {
-                                  "type": "text",
+                                  "type": "paragraph",
                                   "model": {
+                                    "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
                                     "blocks": [
                                       {
-                                        "type": "paragraph",
+                                        "type": "fragment",
                                         "model": {
                                           "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "The Galileo system was conceived to give Europe an independent sat-nav capability",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
+                                          "attributes": []
                                         }
                                       }
                                     ]
