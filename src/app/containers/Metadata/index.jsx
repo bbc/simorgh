@@ -74,6 +74,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     articleAuthor,
     defaultImage,
     defaultImageAltText,
+    dir,
     locale,
     themeColor,
     twitterCreator,
@@ -149,6 +150,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}
+        dir={dir}
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
         lang={
