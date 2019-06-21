@@ -13,16 +13,16 @@ developmentTests:
 	npx apache2-license-checker;
 	npm run test;
 	Xvfb :99 &
-	export PIDFILE=$!;
+	# export PIDFILE=$(echo $!);
 	npm run test:e2e:storybook:ci;
-	killproc -p $PIDFILE Xvfb
+	# kill -SIGTERM $(echo $PIDFILE);
 
 productionTests:
 	npm run build;
 	Xvfb :99 &
-	export PIDFILE=$!;
+	# export PIDFILE=$(echo $!);
 	npm run test:prod:ci;
-	killproc -p $PIDFILE Xvfb
+	# kill -SIGTERM $(echo $PIDFILE);
 
 buildStorybook:
 	npm run build:storybook;
