@@ -1,9 +1,10 @@
 const featureFlags = {
-  defaults: {
-    ads: {
-      enabled: true,
-      value: '',
-    },
+  ads: {
+    enabled: true,
+    value: '',
+  },
+  images: {
+    enabled: true,
   },
 };
 

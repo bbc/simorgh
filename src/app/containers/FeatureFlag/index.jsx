@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+
+// context
 import { FeatureFlagContext } from '../../contexts/FeatureFlagContext';
 
 const featureEnabled = (flag, featureFlags) => {
@@ -8,8 +10,10 @@ const featureEnabled = (flag, featureFlags) => {
 };
 
 const FeatureFlagContainer = ({ flag, children }) => {
-  const featureFlags = useContext(FeatureFlagContext);
-  const isEnabled = featureEnabled(flag, featureFlags.defaults);
+  const { featureFlagState } = useContext(FeatureFlagContext);
+  const isEnabled = featureEnabled(flag, featureFlagState);
+
+  console.log(`feature flags: ${JSON.stringify(featureFlagState)}`);
 
   return isEnabled ? children : <h4>{flag} Not Enabled</h4>;
 };

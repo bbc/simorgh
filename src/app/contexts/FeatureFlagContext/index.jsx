@@ -1,20 +1,32 @@
-import React from 'react';
-import { node, string } from 'prop-types';
-import featureFlags from '../../lib/config/featuresFlags/featuredFlags.js';
+import React, { createContext, useReducer } from 'react';
+import defaultFeatureFlags from '../../lib/config/featuresFlags/featuredFlags.js';
 
-export const FeatureFlagContext = React.createContext(featureFlags);
+// reducer
+import { featureFlagReducer } from '../../reducers/FeatureFlagReducer';
 
-export const FeatureFlagContextProvider = ({ children }) => (
-  <FeatureFlagContext.Provider value={featureFlags}>
-    {children}
-  </FeatureFlagContext.Provider>
-);
+const FEATURE_FLAG_INITIAL_STATE = defaultFeatureFlags;
 
-FeatureFlagContext.propTypes = {
-  children: node.isRequired,
-  service: string,
+const FeatureFlagContext = createContext();
+
+const FeatureFlagContextProvider = ({ children }) => {
+  const [featureFlagState, featureFlagDispatch] = useReducer(
+    featureFlagReducer,
+    FEATURE_FLAG_INITIAL_STATE,
+  );
+
+  return (
+    <FeatureFlagContext.Provider
+      value={{ featureFlagState, featureFlagDispatch }}
+    >
+      {children}
+    </FeatureFlagContext.Provider>
+  );
 };
 
-FeatureFlagContext.defaultProps = {
-  service: 'default',
+const FeatureFlagContextConsumer = FeatureFlagContext.Consumer;
+
+export {
+  FeatureFlagContext,
+  FeatureFlagContextProvider,
+  FeatureFlagContextConsumer,
 };
