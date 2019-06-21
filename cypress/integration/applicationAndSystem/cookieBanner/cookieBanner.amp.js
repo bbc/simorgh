@@ -1,5 +1,5 @@
-import config from '../support/config';
-import describeForEuOnly from '../support/describeForEuOnly';
+import config from '../../../support/config';
+import describeForEuOnly from '../../../support/describeForEuOnly';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");

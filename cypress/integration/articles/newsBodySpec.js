@@ -1,4 +1,4 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -10,7 +10,7 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
-} from '../support/bodyTestHelper';
+} from '../../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef

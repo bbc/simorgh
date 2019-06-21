@@ -1,5 +1,5 @@
-import config from '../support/config';
-import { describeForLocalAndTest } from '../support/limitEnvRuns';
+import config from '../../support/config';
+import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -9,8 +9,8 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/metaTestHelper';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
+} from '../../support/metaTestHelper';
+import { hasHtmlLangDirAttributes } from '../../support/bodyTestHelper';
 
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef

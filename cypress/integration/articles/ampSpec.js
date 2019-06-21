@@ -1,9 +1,12 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   getElement,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+} from '../../support/bodyTestHelper';
+import {
+  testResponseCode,
+  checkCanonicalURL,
+} from '../../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef

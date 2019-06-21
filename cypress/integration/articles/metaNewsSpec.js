@@ -1,9 +1,9 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   getElement,
   getSecondElement,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
+} from '../../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -13,7 +13,7 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/metaTestHelper';
+} from '../../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef

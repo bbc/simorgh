@@ -1,5 +1,5 @@
-import config from '../support/config';
-import { testResponseCode } from '../support/metaTestHelper';
+import config from '../../support/config';
+import { testResponseCode } from '../../support/metaTestHelper';
 
 describe('Static Articles data', () => {
   it('should return a 200 status code', () => {

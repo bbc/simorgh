@@ -1,5 +1,5 @@
-import config from '../support/config';
-import { describeForLocalAndTest } from '../support/limitEnvRuns';
+import config from '../../support/config';
+import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -9,7 +9,7 @@ import {
   renderedTitle,
   visibleImageNoCaption,
   visibleImageWithCaption,
-} from '../support/bodyTestHelper';
+} from '../../support/bodyTestHelper';
 
 describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef

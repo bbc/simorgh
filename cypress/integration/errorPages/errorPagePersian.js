@@ -1,13 +1,13 @@
-import config from '../support/config';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import config from '../../support/config';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
-import { testResponseCode } from '../support/metaTestHelper';
-import persian from '../../src/app/lib/config/services/persian';
+} from '../../support/bodyTestHelper';
+import { testResponseCode } from '../../support/metaTestHelper';
+import persian from '../../../src/app/lib/config/services/persian';
 
 describeForLocalOnly('Article Body Tests', () => {
   // eslint-disable-next-line no-undef

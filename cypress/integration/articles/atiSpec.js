@@ -1,9 +1,9 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   hasNoscriptImgAtiUrl,
   hasAmpAnalyticsAtiUrl,
-} from '../support/bodyTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+} from '../../support/bodyTestHelper';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {

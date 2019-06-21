@@ -1,6 +1,6 @@
-import services from '../support/worldServices';
-import { el } from '../support/frontpageElements';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import services from '../../support/worldServices';
+import { el } from '../../support/frontpageElements';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];

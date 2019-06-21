@@ -1,9 +1,9 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   checkFooterLinks,
   getElement,
   shouldContainText,
-} from '../support/bodyTestHelper';
+} from '../../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef

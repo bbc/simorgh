@@ -1,7 +1,10 @@
-import worldServices from '../support/worldServices';
-import { getElement } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import worldServices from '../../support/worldServices';
+import { getElement } from '../../support/bodyTestHelper';
+import {
+  testResponseCode,
+  checkCanonicalURL,
+} from '../../support/metaTestHelper';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
 //   The Metadata container performs some AMP work, so the AMP on the front page

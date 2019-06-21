@@ -1,13 +1,13 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
-import { testResponseCode } from '../support/metaTestHelper';
-import news from '../../src/app/lib/config/services/news';
+} from '../../support/bodyTestHelper';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
+import { testResponseCode } from '../../support/metaTestHelper';
+import news from '../../../src/app/lib/config/services/news';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef

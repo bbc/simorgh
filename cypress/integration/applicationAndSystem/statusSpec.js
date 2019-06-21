@@ -1,8 +1,8 @@
-import config from '../support/config';
+import config from '../../support/config';
 import {
   testContentTypeContains,
   mozartFallbackStatus,
-} from '../support/metaTestHelper';
+} from '../../support/metaTestHelper';
 
 describe('Service worker', () => {
   it('should have the content type set to Javascript', () => {

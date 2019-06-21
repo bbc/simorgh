@@ -1,8 +1,8 @@
 import {
   assertCookieValue,
   assertCookieExpiryDate,
-} from '../support/metaTestHelper';
-import config from '../support/config';
+} from '../../../support/metaTestHelper';
+import config from '../../../support/config';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");

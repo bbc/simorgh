@@ -1,5 +1,5 @@
-import { testResponseCode } from '../support/metaTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import { testResponseCode } from '../../support/metaTestHelper';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const testArticleServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
