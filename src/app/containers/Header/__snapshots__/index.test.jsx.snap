@@ -31,7 +31,7 @@ exports[`Header should render correctly 1`] = `
   padding-bottom: 0.75rem;
   width: 100%;
   max-width: 10.5rem;
-  min-width: 7rem;
+  min-width: 9.625rem;
 }
 
 .c4:hover .c2,

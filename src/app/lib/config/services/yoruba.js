@@ -5,6 +5,7 @@ const yoruba = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
+  brandHomepage: 'https://www.bbc.com/yoruba',
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',

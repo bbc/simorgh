@@ -5,6 +5,7 @@ const pidgin = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
+  brandHomepage: 'https://www.bbc.com/pidgin',
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',

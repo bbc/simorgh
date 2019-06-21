@@ -8,6 +8,7 @@ const persian = {
   articleAuthor: 'https://www.facebook.com/bbcpersian',
   atiAnalyticsAppName: 'news-persian',
   brandName: 'BBC News فارسی',
+  brandHomepage: 'https://www.bbc.com/persian',
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',

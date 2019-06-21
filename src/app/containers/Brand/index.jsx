@@ -3,14 +3,15 @@ import Brand from '@bbc/psammead-brand';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const BrandContainer = () => {
-  const { brandName, brandSVG } = useContext(ServiceContext);
+  const { brandName, brandHomepage, brandSVG } = useContext(ServiceContext);
 
   return (
     <Brand
       product={brandName}
       svg={brandSVG}
+      url={brandHomepage}
       svgHeight={24}
-      minWidth={112}
+      minWidth={154}
       maxWidth={168}
     />
   );

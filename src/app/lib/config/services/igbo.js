@@ -5,6 +5,7 @@ const igbo = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
+  brandHomepage: 'https://www.bbc.com/igbo',
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
