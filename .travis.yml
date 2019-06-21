@@ -25,16 +25,7 @@ jobs:
       addons: 
         chrome: stable
       script:
-        - npm run build
         - xvfb-run -a npm run test:prod:travis
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: "Production e2e and lighthouse Tests2" 
-      install: npm ci --only=prod
-      addons: 
-        chrome: stable
-      script:
-        - xvfb-run -a npm run test:prod:travis2
 notifications:
   email: false
   slack:
