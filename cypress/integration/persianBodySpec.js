@@ -41,7 +41,7 @@ describeForLocalAndTest('Article Body Tests', () => {
     const imageHasNotLoaded = getElement('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = getElement('div div div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
