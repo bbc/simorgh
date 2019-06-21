@@ -23,13 +23,13 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
       ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
+          `webpack-dev-server/client?http://localhost.bbc.com:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
     devServer: {
-      host: 'localhost',
+      host: 'localhost.bbc.com',
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
