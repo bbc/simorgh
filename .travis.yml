@@ -4,12 +4,9 @@ language: node_js
 matrix:
   fast_finish: true
 cache:
-  # Caches $HOME/.npm when npm ci is default script command
-  # Caches node_modules in all other cases
-  npm: true
   directories:
     # we also need to cache folder with Cypress binary
-    - ~/.cache
+    - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
 before_install: npm install -g npm@6.4.1; npm -v
