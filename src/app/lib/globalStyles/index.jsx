@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
-import { ServiceContext } from '../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const createFontStyles = fonts =>
   fonts.reduce((fontStyles, fontStyle) => fontStyles + fontStyle, '');
