@@ -1,10 +1,23 @@
 import config from '../support/config';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 
-['news', 'persian'].forEach(service => {
+const services = [
+  { service: 'news', url: `/news/articles/${config.assets.news}`, describe },
+  {
+    service: 'persian',
+    url: `/persian/articles/${config.assets.persian}`,
+    describe: describeForLocalOnly,
+  },
+  { service: 'igbo', url: `/igbo`, describe: describeForLocalOnly },
+  { service: 'yoruba', url: `/yoruba`, describe: describeForLocalOnly },
+  { service: 'pidgin', url: `/pidgin`, describe: describeForLocalOnly },
+];
+
+services.forEach(({ service, url, describe }) => {
   describe(`Script src - ${service}`, () => {
     // eslint-disable-next-line no-undef
     before(() => {
-      cy.visit(`/${service}/articles/${config.assets[service]}`);
+      cy.visit(url);
     });
 
     // Testing the actual fetch is not currently possible
@@ -18,14 +31,13 @@ import config from '../support/config';
       cy.get('script').should($p => {
         const srcs = [];
 
-        // build array of script src's
-        $p.map((i, el) => {
-          const src = Cypress.$(el).attr('src');
+        for (let x = 0; x < $p.length; x += 1) {
+          const src = Cypress.$($p[x]).attr('src');
+
           if (src) {
             srcs.push(src);
           }
-          return null;
-        });
+        }
 
         // filter out all regexes that have a match in srcs array
         expectedMatches = expectedMatches.filter(regex => {
