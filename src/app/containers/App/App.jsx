@@ -1,12 +1,10 @@
-import { useEffect, useState, useRef, useContext } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
-import { ServiceContext } from '../../contexts/ServiceContext';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
   const { service, isAmp, id } = getRouteProps(routes, location.pathname);
-  const { serviceWorkerPath } = useContext(ServiceContext);
 
   const [state, setState] = useState({
     data: initialData,
@@ -60,12 +58,6 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       fetchData();
     }
   }, [routes, location.pathname]);
-
-  if (process.env.NODE_ENV === 'production') {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(serviceWorkerPath);
-    }
-  }
 
   return renderRoutes(routes, { ...state, bbcOrigin });
 };
