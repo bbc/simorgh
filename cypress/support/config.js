@@ -46,12 +46,12 @@ const geoLocate = (conf, isUk = false) => {
   // eslint-disable-next-line no-param-reassign
   conf.baseUrl = conf.baseUrl.replace('.com', '.co.uk');
   // eslint-disable-next-line no-param-reassign
-  conf.dataUrl = conf.baseUrl.replace('.com', '.co.uk');
+  conf.dataUrl = conf.dataUrl.replace('.com', '.co.uk');
 
   return conf;
 };
 
 module.exports =
   typeof Cypress !== 'undefined'
-    ? geoLocate(config[Cypress.env('APP_ENV')], true)
-    : env => geoLocate(config[env], true);
+    ? geoLocate(config[Cypress.env('APP_ENV')], Cypress.env('UK'))
+    : (env, uk) => geoLocate(config[env], uk);
