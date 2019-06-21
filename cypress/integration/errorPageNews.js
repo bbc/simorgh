@@ -3,7 +3,9 @@ import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
+  hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 import { testResponseCode } from '../support/metaTestHelper';
 import news from '../../src/app/lib/config/services/news';
 
@@ -18,6 +20,15 @@ describe('Article Body Tests', () => {
   it('should return a 404 error code', () => {
     testResponseCode(`/news/articles/${config.assets.nonExistent}`, 404);
   });
+
+  describeForLocalOnly(
+    'Temporary fix to limit to local Simorgh error page',
+    () => {
+      it('should have the correct lang & dir attributes', () => {
+        hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+      });
+    },
+  );
 
   it('should display a relevant error message on screen', () => {
     cy.visit(`/news/articles/${config.assets.nonExistent}`, {
