@@ -31,7 +31,9 @@ const FrontPageMain = ({ frontPageData }) => {
     <Fragment>
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        <VisuallyHiddenText as="h1">{offScreenText}</VisuallyHiddenText>
+        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+          {offScreenText}
+        </VisuallyHiddenText>
         <GhostWrapper>
           <GridItemConstrainedLarge>
             {groups.map(group => (
