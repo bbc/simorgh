@@ -7,8 +7,6 @@ const BrandContainer = () => {
     ServiceContext,
   );
 
-  console.log(useContext(ServiceContext));
-
   return (
     <Brand
       product={brandName}
