@@ -12,21 +12,23 @@ import {
   audioClipNonUkBlock,
   audioClipUkOnlyBlock,
 } from './helpers/fixtures';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const generateFixtureData = ({ platform, blocks }) => (
-  <RequestContextProvider
-    env="test"
-    id="c0000000000o"
-    isUK
-    origin="https://www.test.bbc.co.uk"
-    pageType="article"
-    platform={platform}
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
-    script="latin"
-  >
-    <VideoContainer blocks={blocks} />
-  </RequestContextProvider>
+  <ServiceContextProvider service="news">
+    <RequestContextProvider
+      env="test"
+      id="c0000000000o"
+      isUK
+      origin="https://www.test.bbc.co.uk"
+      pageType="article"
+      platform={platform}
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o.page"
+    >
+      <VideoContainer blocks={blocks} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
 );
 
 generateFixtureData.propTypes = {
@@ -45,13 +47,16 @@ export const NoData = ({ platform }) =>
 export const NoAresMedia = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [captionBlock],
+    blocks: [captionBlock('No Ares Media')],
   });
 
 export const VideoClipGlobalWithCaption = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+    blocks: [
+      videoClipGlobalGuidanceBlock,
+      captionBlock('Video Clip Global with Caption'),
+    ],
   });
 
 export const VideoClipGlobalWithoutCaption = ({ platform }) =>

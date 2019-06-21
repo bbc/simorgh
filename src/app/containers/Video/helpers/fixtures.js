@@ -160,16 +160,12 @@ export const multipleAresMetadata = {
   type: 'aresMedia',
 };
 
-export const captionBlock = {
+export const captionBlock = text => ({
   model: {
-    blocks: [
-      singleTextBlock(
-        'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
-      ),
-    ],
+    blocks: [singleTextBlock(text)],
   },
   type: 'caption',
-};
+});
 
 export const videoClipGlobalGuidanceBlock = {
   model: {

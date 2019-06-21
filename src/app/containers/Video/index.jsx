@@ -19,7 +19,6 @@ const VideoContainer = ({ blocks }) => {
   const {
     env,
     platform,
-    script,
     statsDestination,
     statsPageIdentifier,
   } = React.useContext(RequestContext);
@@ -93,9 +92,7 @@ const VideoContainer = ({ blocks }) => {
           uiLocale="en-GB"
           mediaPlayerSettings={mediaPlayerSettings}
         />
-        {captionBlock ? (
-          <Caption block={captionBlock} script={script} video />
-        ) : null}
+        {captionBlock ? <Caption block={captionBlock} type="video" /> : null}
       </Figure>
     </GridItemConstrainedLargeNoMargin>
   );
