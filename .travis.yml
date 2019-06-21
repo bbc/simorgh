@@ -21,10 +21,10 @@ jobs:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
         - ./cc-test-reporter before-build
-        - npm run test:e2e:storybook:ci
       script:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
+        - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: "Production e2e and lighthouse Tests" 
@@ -32,6 +32,7 @@ jobs:
       addons: 
         chrome: stable
       script:
+        - npm run build
         - xvfb-run -a npm run test:prod:travis
 notifications:
   email: false
