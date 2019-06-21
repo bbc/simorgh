@@ -1,39 +1,36 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Helmet from 'react-helmet';
-import ManifestContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import ServiceWorkerContainer from './index';
 
-const contextStub = {
-  manifestPath: '/manifest.json',
-  service: 'news',
-};
+const mockRootElement = <div />;
+document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
-const mountManifest = context =>
-  mount(
-    <ServiceContext.Provider value={context}>
-      <ManifestContainer />
-    </ServiceContext.Provider>,
-  );
-
-describe('ManifestContainer', () => {
-  it('should render with context manifest path', () => {
-    const wrapper = mountManifest(contextStub);
-    const { linkTags } = Helmet.peek();
-    const { href, rel } = linkTags[0];
-
-    expect(linkTags).toHaveLength(1);
-    expect(href).toEqual('/news/manifest.json');
-    expect(rel).toEqual('manifest');
-
-    wrapper.unmount();
+describe('Service Worker', () => {
+  beforeEach(() => {
+    global.navigator.serviceWorker = {
+      register: jest.fn(),
+    };
   });
 
-  it('should not render with no manifest path provided', () => {
-    const wrapper = mountManifest({ service: 'news' });
-    const { linkTags } = Helmet.peek();
+  describe('on production environment', () => {
+    beforeEach(() => {
+      process.env.NODE_ENV = 'production';
+      mount(<ServiceWorkerContainer />);
+    });
 
-    expect(linkTags).toHaveLength(0);
-    wrapper.unmount();
+    it('should be installed', async () => {
+      expect(navigator.serviceWorker.register).toHaveBeenCalled();
+    });
+  });
+
+  describe('on dev environment', () => {
+    beforeEach(() => {
+      process.env.NODE_ENV = 'dev';
+      mount(<ServiceWorkerContainer />);
+    });
+
+    it('should not be installed', async () => {
+      expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+    });
   });
 });
