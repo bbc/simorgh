@@ -644,6 +644,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           className="c3"
           height={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
           width={2048}
         />
       </noscript>
@@ -1355,6 +1356,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           className="c3"
           height={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
           width={2048}
         />
       </noscript>
@@ -1934,6 +1936,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           className="c3"
           height={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
           width={2048}
         />
       </noscript>
@@ -2611,6 +2614,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           className="c3"
           height={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
           width={2048}
         />
       </noscript>
