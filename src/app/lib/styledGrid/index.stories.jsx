@@ -11,7 +11,7 @@ import {
   NestedGridItemMedium,
   NestedGridItemLarge,
   PopOutGridItemMedium,
-} from './styledGrid';
+} from '.';
 
 const red = '#ffaacc';
 const orange = '#ffddcc';

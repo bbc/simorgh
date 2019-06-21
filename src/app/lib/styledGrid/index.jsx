@@ -15,7 +15,7 @@ import {
   gridContainerSmallCss,
   gridContainerMediumCss,
   gridContainerLargeCss,
-} from './layoutGrid';
+} from '../layoutGrid';
 
 export const GhostWrapper = styled.div`
   ${layoutGridWrapper};
