@@ -7,6 +7,8 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
   >
     <ForwardRef(VisuallyHiddenText)
       as="h1"
+      id="content"
+      tabIndex="-1"
     >
       <React.Fragment>
         <span
