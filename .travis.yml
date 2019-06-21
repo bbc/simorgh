@@ -5,7 +5,8 @@ matrix:
   fast_finish: true
 cache:
   directories:
-    # we also need to cache folder with Cypress binary
+    # Cache only the folder with Cypress binary, other caching takes longer and saves
+    # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
@@ -15,7 +16,7 @@ jobs:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: "Unit Tests"
-      install: npm ci
+      install: npm ci --no-optional
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
