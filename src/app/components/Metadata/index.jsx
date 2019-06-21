@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, shape, string, number } from 'prop-types';
+import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -21,6 +21,7 @@ const Metadata = ({
   defaultImage,
   defaultImageAltText,
   description,
+  dir,
   facebookAdmin,
   facebookAppID,
   lang,
@@ -34,7 +35,7 @@ const Metadata = ({
   twitterSite,
   type,
 }) => {
-  const htmlAttributes = { lang };
+  const htmlAttributes = { dir, lang };
 
   if (isAmp) {
     htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
@@ -113,6 +114,7 @@ Metadata.propTypes = {
   defaultImage: string.isRequired,
   defaultImageAltText: string.isRequired,
   description: string.isRequired,
+  dir: oneOf(['ltr', 'rtl']).isRequired,
   facebookAdmin: number.isRequired,
   facebookAppID: number.isRequired,
   lang: string.isRequired,
