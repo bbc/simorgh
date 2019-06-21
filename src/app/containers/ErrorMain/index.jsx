@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { number, string, shape } from 'prop-types';
+import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import ErrorPageComponent from '../../components/ErrorPage';
@@ -8,11 +8,11 @@ import ErrorPageComponent from '../../components/ErrorPage';
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
  */
-const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
+const ErrorMetadata = ({ dir, locale, messaging, brandName, themeColor }) => {
   const { title } = messaging;
 
   return (
-    <Helmet htmlAttributes={{ lang: locale }}>
+    <Helmet htmlAttributes={{ lang: locale, dir }}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
@@ -30,15 +30,21 @@ const ErrorMetadata = ({ locale, messaging, brandName, themeColor }) => {
 };
 
 const ErrorMain = ({ status }) => {
-  const { script, brandName, locale, themeColor, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    dir,
+    script,
+    brandName,
+    locale,
+    themeColor,
+    translations,
+  } = useContext(ServiceContext);
   const messaging = translations.error[status] || translations.error[500];
 
   return (
     <Fragment>
       <ErrorMetadata
         brandName={brandName}
+        dir={dir}
         locale={locale}
         messaging={messaging}
         themeColor={themeColor}
@@ -53,6 +59,7 @@ ErrorMain.propTypes = {
 };
 
 ErrorMetadata.propTypes = {
+  dir: oneOf(['rtl', 'ltr']).isRequired,
   locale: string.isRequired,
   messaging: shape({ title: string.isRequired }).isRequired,
   brandName: string.isRequired,

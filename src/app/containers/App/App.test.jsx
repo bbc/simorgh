@@ -3,10 +3,12 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import * as reactRouterConfig from 'react-router-config';
+import reactRouterConfig from 'react-router-config';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { App } from './App';
+
+jest.mock('react-router-config');
 
 describe('App', () => {
   let wrapper;
@@ -18,11 +20,11 @@ describe('App', () => {
     getInitialData: jest.fn(),
   };
 
-  reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([{ route, match }]);
+  reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
-  reactRouterConfig.renderRoutes = jest
-    .fn()
-    .mockReturnValue(<h1>{initialData.pageData}</h1>);
+  reactRouterConfig.renderRoutes.mockReturnValue(
+    <h1>{initialData.pageData}</h1>,
+  );
 
   beforeAll(() => {
     wrapper = mount(
