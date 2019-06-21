@@ -212,3 +212,9 @@ export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
     .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
     .should('contain', `s=${analyticsBucketId}`);
 };
+
+export const hasHtmlLangDirAttributes = ({ lang, dir }) => {
+  const html = cy.get('html');
+  html.should('have.attr', 'lang', lang);
+  html.should('have.attr', 'dir', dir);
+};
