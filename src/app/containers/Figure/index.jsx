@@ -13,7 +13,7 @@ import {
   NestedGridParentSmall,
   NestedGridItemChildSmall,
   NestedGridItemChildMedium,
-  NestedGridChildItemLarge,
+  NestedGridItemChildLarge,
 } from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -55,7 +55,7 @@ const ImageComponent = ({
   );
 
   let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridChildItemLarge;
+  let ChildWrapper = NestedGridItemChildLarge;
 
   if (height === width) {
     ParentWrapper = NestedGridParentMedium;
@@ -72,10 +72,7 @@ const ImageComponent = ({
         <ChildWrapper
           gridColumnStart={1}
           gridSpan={{
-            group1: '6',
-            group2: '6',
-            group3: '6',
-            group4: '6',
+            default: '6',
             group5: '12',
           }}
         >
@@ -98,8 +95,7 @@ const ImageComponent = ({
         <ChildWrapper
           gridColumnStart={1}
           gridSpan={{
-            group1: '6',
-            group2: '6',
+            default: '6',
             group3: '5',
             group4: '5',
             group5: '10',

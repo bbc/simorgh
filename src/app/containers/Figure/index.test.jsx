@@ -65,7 +65,7 @@ describe('Figure', () => {
   );
 
   shouldMatchSnapshot(
-    'should render can AMP image with caption text',
+    'should render an AMP image with caption text',
     FigureAmpImageWithCaption,
   );
 
