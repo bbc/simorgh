@@ -32,13 +32,23 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
     );
   }
 
-  // else return a normal hyperlink
+  if (isExternal) {
+    return (
+      <InlineLink
+        href={locator}
+        aria-label={`${blocks[0].model.text}${externalLinkText}`}
+      >
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        {isExternal ? (
+          <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
+        ) : null}
+      </InlineLink>
+    );
+  }
+
   return (
     <InlineLink href={locator}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      {isExternal ? (
-        <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
-      ) : null}
     </InlineLink>
   );
 };
