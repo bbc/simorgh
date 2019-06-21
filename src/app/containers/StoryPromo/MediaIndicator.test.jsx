@@ -39,6 +39,33 @@ const noDurationItem = {
   },
 };
 
+const noMediaObject = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
+};
+
+const noMediaFormat = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
+  media: {
+    versions: [
+      {
+        duration: 5600,
+      },
+    ],
+  },
+};
+
 describe('Story Promo Media Indicator', () => {
   shouldShallowMatchSnapshot(
     'should render correctly',
@@ -50,8 +77,18 @@ describe('Story Promo Media Indicator', () => {
     <MediaIndicator item={noDurationItem} />,
   );
 
+  shouldShallowMatchSnapshot(
+    'should not render if item media object has no format',
+    <MediaIndicator item={noMediaFormat} />,
+  );
+
   isNull(
     'should not render if item is not media',
     <MediaIndicator item={nonMediaItem} />,
+  );
+
+  isNull(
+    'should not render if item media object is missing',
+    <MediaIndicator item={noMediaObject} />,
   );
 });
