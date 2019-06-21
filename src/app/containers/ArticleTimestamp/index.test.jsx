@@ -2,7 +2,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import ArticleTimestamp from '.';
 import { isNull } from '../../../testHelpers';
-import { timestampGenerator, isBritishSummerTime } from './testHelpers';
+import {
+  timestampGenerator,
+  sameDayTimestampsGenerator,
+  isBritishSummerTime,
+} from './testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
@@ -34,13 +38,16 @@ describe('ArticleTimestamp', () => {
   });
 
   describe('daylight savings time', () => {
-    const daylightSavingsBehaviour = ({ descriptor, dateTime, longName }) => {
+    const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
-        Date.now = jest.fn(() => dateTime);
-        const moreThanTenHoursAgo = timestampGenerator({
-          hours: 10,
-          seconds: 25,
+        const [
+          moreThanTenHoursAgo,
+          mockCurrentTimestamp,
+        ] = sameDayTimestampsGenerator({
+          date,
+          intervals: [{ hours: 10, seconds: 25 }],
         });
+        Date.now = jest.fn(() => mockCurrentTimestamp);
         const renderedWrapper = renderedTimestamps(
           <WrappedArticleTimestamp
             firstPublished={moreThanTenHoursAgo}
@@ -57,12 +64,12 @@ describe('ArticleTimestamp', () => {
     const testValues = [
       {
         descriptor: 'BST',
-        dateTime: 1496235600000,
+        date: '2017-05-31',
         longName: 'British Summer Time',
       },
       {
         descriptor: 'GMT',
-        dateTime: 1483275600000,
+        date: '2017-01-01',
         longName: 'Greenwich Mean Time',
       },
     ];
@@ -86,8 +93,11 @@ describe('ArticleTimestamp', () => {
     );
   });
 
-  it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastUpdated === firstPublished', () => {
-    const threeHoursAgo = timestampGenerator({ hours: 3 });
+  it('should render one timestamp with relative time when firstPublished < 10 hours ago and lastPublished === firstPublished', () => {
+    const [threeHoursAgo, mockCurrentTimestamp] = sameDayTimestampsGenerator({
+      intervals: [{ hours: 3 }],
+    });
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={threeHoursAgo}
@@ -98,12 +108,11 @@ describe('ArticleTimestamp', () => {
     expect(firstChild(renderedWrapper)).toEqual('3 hours ago');
   });
 
-  it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastUpdated === firstPublished', () => {
-    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
-    Date.now = jest.fn(() => timestamp);
-    const elevenHoursAgo = timestampGenerator({
-      hours: 11,
+  it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastPublished === firstPublished', () => {
+    const [elevenHoursAgo, mockCurrentTimestamp] = sameDayTimestampsGenerator({
+      intervals: [{ hours: 11 }],
     });
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={elevenHoursAgo}
@@ -114,7 +123,7 @@ describe('ArticleTimestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
   });
 
-  it('should render one timestamp with date when firstPublished before today and lastUpdated === firstPublished', () => {
+  it('should render one timestamp with date when firstPublished before today and lastPublished === firstPublished', () => {
     const twentyFourHoursAgo = timestampGenerator({
       hours: 24,
       seconds: 1,
@@ -130,10 +139,14 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
-    const fiveHoursAgo = timestampGenerator({
-      hours: 5,
+    const [
+      fiveHoursAgo,
+      threeHoursAgo,
+      mockCurrentTimestamp,
+    ] = sameDayTimestampsGenerator({
+      intervals: [{ hours: 5 }, { hours: 3 }],
     });
-    const threeHoursAgo = timestampGenerator({ hours: 3 });
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={fiveHoursAgo}
@@ -146,14 +159,14 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
-    const timestamp = inBritishSummerTime ? 1496235600000 : 1483275600000;
-    Date.now = jest.fn(() => timestamp);
-    const twelveHoursAgo = timestampGenerator({
-      hours: 12,
+    const [
+      twelveHoursAgo,
+      elevenHoursAgo,
+      mockCurrentTimestamp,
+    ] = sameDayTimestampsGenerator({
+      intervals: [{ hours: 12 }, { hours: 11 }],
     });
-    const elevenHoursAgo = timestampGenerator({
-      hours: 11,
-    });
+    Date.now = jest.fn(() => mockCurrentTimestamp);
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
