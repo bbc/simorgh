@@ -70,7 +70,6 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c1 {
   background-color: #B80000;
-  height: 3.5rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -155,7 +154,6 @@ exports[`FooterContainer should render correctly 1`] = `
 
 @media (min-width:37.5rem) {
   .c1 {
-    height: 5rem;
     padding: 0 1rem;
   }
 }

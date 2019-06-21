@@ -6,6 +6,11 @@ const igbo = {
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   brandHomepage: 'https://www.bbc.com/igbo',
+  brandDimensions: {
+    height: 24,
+    minWidth: 222,
+    maxWidth: 222,
+  },
   locale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',

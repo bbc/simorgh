@@ -9,6 +9,11 @@ const news = {
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   brandHomepage: 'https://www.bbc.co.uk/news',
+  brandDimensions: {
+    height: 24,
+    minWidth: 154,
+    maxWidth: 168,
+  },
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',

@@ -6,6 +6,11 @@ const pidgin = {
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   brandHomepage: 'https://www.bbc.com/pidgin',
+  brandDimensions: {
+    height: 24,
+    minWidth: 250,
+    maxWidth: 250,
+  },
   locale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',

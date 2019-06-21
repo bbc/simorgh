@@ -6,6 +6,11 @@ const yoruba = {
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   brandHomepage: 'https://www.bbc.com/yoruba',
+  brandDimensions: {
+    height: 24,
+    minWidth: 250,
+    maxWidth: 250,
+  },
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',

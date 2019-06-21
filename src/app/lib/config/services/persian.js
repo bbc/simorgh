@@ -9,6 +9,11 @@ const persian = {
   atiAnalyticsAppName: 'news-persian',
   brandName: 'BBC News فارسی',
   brandHomepage: 'https://www.bbc.com/persian',
+  brandDimensions: {
+    height: 24,
+    minWidth: 250,
+    maxWidth: 250,
+  },
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',

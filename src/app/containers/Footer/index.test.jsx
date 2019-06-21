@@ -6,6 +6,7 @@ import { shouldMatchSnapshot } from '../../../testHelpers';
 const RealDate = Date;
 
 const contextStub = {
+  brandDimensions: {},
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

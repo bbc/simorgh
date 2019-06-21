@@ -7,6 +7,7 @@ import { shouldMatchSnapshot } from '../../../testHelpers';
 const newsServiceContextStub = {
   brandName: 'BBC News',
   brandSVG,
+  brandDimensions: {},
 };
 
 const BrandContainerWithContext = context => (
