@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
+import { bool } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const BrandContainer = () => {
+const BrandContainer = ({ isHeader, isFooter }) => {
   const { product, serviceLocalizedName, brandSVG, service } = useContext(
     ServiceContext,
   );
@@ -21,8 +22,20 @@ const BrandContainer = () => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
+      borderTop={isFooter}
+      borderBottom={isHeader}
     />
   );
+};
+
+BrandContainer.propTypes = {
+  isHeader: bool,
+  isFooter: bool,
+};
+
+BrandContainer.defaultProps = {
+  isHeader: false,
+  isFooter: false,
 };
 
 export default BrandContainer;
