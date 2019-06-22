@@ -14,12 +14,6 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
   });
 };
 
-export const testContentTypeContains = (path, contentType) => {
-  cy.request(path).then(({ headers }) => {
-    expect(headers['content-type']).to.include(contentType);
-  });
-};
-
 export const retrieveMetaDataContent = (metaDataTag, content) => {
   const metaElement = getElement(metaDataTag);
   metaElement.should('have.attr', 'content', content);
@@ -86,12 +80,6 @@ export const checkCanonicalURL = URL => {
 export const checkAmpHTML = amphtml => {
   const ampHtml = getElement('head link[rel="amphtml"]');
   ampHtml.should('have.attr', 'href', amphtml);
-};
-
-export const retrieve404BodyResponse = (url, bodyResponse) => {
-  cy.request({ url, failOnStatusCode: false })
-    .its('body')
-    .should('include', bodyResponse);
 };
 
 export const checkDataMatchesMetadata = data => {
