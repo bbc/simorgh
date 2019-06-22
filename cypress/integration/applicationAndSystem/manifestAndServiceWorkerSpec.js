@@ -1,4 +1,5 @@
 // NB must still configure to handle different envs!!!!!
+// NB2 must also handle isUK for news
 
 import config from '../../support/newConfig';
 
