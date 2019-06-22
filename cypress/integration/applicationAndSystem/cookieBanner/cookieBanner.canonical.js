@@ -1,4 +1,3 @@
-import { assertCookieExpiryDate } from '../../../support/metaTestHelper';
 import config from '../../../support/config';
 
 const getPrivacyBanner = () =>
@@ -7,11 +6,21 @@ const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 const getPrivacyBannerContainer = () => getPrivacyBanner().parent();
 const getCookieBannerContainer = () => getCookieBanner().parent();
 
-const ensureCookieExpiryDates = () => {
+const assertCookieExpiryDate = cookieName => {
+  const testBuffer = 60;
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
-  assertCookieExpiryDate('ckns_explicit', inOneYear);
-  assertCookieExpiryDate('ckns_policy', inOneYear);
-  assertCookieExpiryDate('ckns_privacy', inOneYear);
+  cy.getCookie(cookieName).then(c => {
+    expect(c.expiry).to.be.within(
+      inOneYear - testBuffer,
+      inOneYear + testBuffer,
+    );
+  });
+};
+
+const ensureCookieExpiryDates = () => {
+  ['ckns_explicit', 'ckns_policy', 'ckns_privacy'].forEach(
+    assertCookieExpiryDate,
+  );
 };
 
 const assertCookieValues = cookies => {

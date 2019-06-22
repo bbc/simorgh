@@ -1,13 +1,3 @@
-export const assertCookieExpiryDate = (cookieName, timestamp) => {
-  const testBuffer = 60;
-  cy.getCookie(cookieName).then(c => {
-    expect(c.expiry).to.be.within(
-      timestamp - testBuffer,
-      timestamp + testBuffer,
-    );
-  });
-};
-
 export const retrieveMetaDataContent = (metaDataTag, content) => {
   const metaElement = cy.get(metaDataTag);
   metaElement.should('have.attr', 'content', content);
