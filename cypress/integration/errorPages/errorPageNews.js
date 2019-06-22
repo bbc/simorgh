@@ -16,8 +16,12 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should return a 404 error code', () => {
-    cy.testResponseCode(`/news/articles/${config.assets.nonExistent}`, 404);
+  it('should return a 404 error code and return HTML', () => {
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.nonExistent}`,
+      404,
+      'text/html',
+    );
   });
 
   describeForLocalOnly(

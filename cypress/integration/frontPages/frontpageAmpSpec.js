@@ -15,15 +15,31 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      cy.testResponseCode(`${worldServices.igbo.url}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `${worldServices.igbo.url}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
-  it('should error gracefully', () => {
-    cy.testResponseCode(`${worldServices.igbo.url}.cake`, 404);
-    cy.testResponseCode(`/amp${worldServices.igbo.url}`, 404);
-    cy.testResponseCode(`${worldServices.igbo.url}/amp`, 404);
-    cy.testResponseCode(`/cake.amp`, 404);
+  it('should error gracefully and return HTML', () => {
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/amp${worldServices.igbo.url}`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}/amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(`/cake.amp`, 404, 'text/html');
   });
 
   xit('should have AMP attribute', () => {

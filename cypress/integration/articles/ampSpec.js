@@ -12,15 +12,31 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   describe('AMP Status', () => {
-    it('should return a 200 response', () => {
-      cy.testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
+    it('should return a 200 response and be HTML', () => {
+      cy.testResponseCodeAndType(
+        `/news/articles/${config.assets.news}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
-  it('should error gracefully', () => {
-    cy.testResponseCode(`/news/articles/${config.assets.news}.cake`, 404);
-    cy.testResponseCode(`/news/lol/${config.assets.news}.amp`, 404);
-    cy.testResponseCode(`/cake/articles/${config.assets.news}.amp`, 404);
+  it('should error gracefully and return HTML', () => {
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.news}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/news/lol/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/cake/articles/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have AMP attribute', () => {

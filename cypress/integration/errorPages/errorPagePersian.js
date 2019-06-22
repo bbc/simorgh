@@ -16,8 +16,12 @@ describeForLocalOnly('Article Body Tests', () => {
     });
   });
 
-  it('should return a 404 error code', () => {
-    cy.testResponseCode(`/persian/articles/${config.assets.nonExistent}`, 404);
+  it('should return a 404 error code and return HTML', () => {
+    cy.testResponseCodeAndType(
+      `/persian/articles/${config.assets.nonExistent}`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have the correct lang & dir attributes', () => {
