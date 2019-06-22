@@ -1,9 +1,6 @@
 import worldServices from '../../support/worldServices';
 import { getElement } from '../../support/bodyTestHelper';
-import {
-  testResponseCode,
-  checkCanonicalURL,
-} from '../../support/metaTestHelper';
+import { checkCanonicalURL } from '../../support/metaTestHelper';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -23,10 +20,10 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`${worldServices.igbo.url}.cake`, 404);
-    testResponseCode(`/amp${worldServices.igbo.url}`, 404);
-    testResponseCode(`${worldServices.igbo.url}/amp`, 404);
-    testResponseCode(`/cake.amp`, 404);
+    cy.testResponseCode(`${worldServices.igbo.url}.cake`, 404);
+    cy.testResponseCode(`/amp${worldServices.igbo.url}`, 404);
+    cy.testResponseCode(`${worldServices.igbo.url}/amp`, 404);
+    cy.testResponseCode(`/cake.amp`, 404);
   });
 
   xit('should have AMP attribute', () => {
