@@ -1,7 +1,7 @@
 // NB2 must also handle isUK for news
 
-import news from '../../../src/app/lib/config/services/news';
-import persian from '../../../src/app/lib/config/services/persian';
+import newsStrings from '../../../src/app/lib/config/services/news';
+import persianStrings from '../../../src/app/lib/config/services/persian';
 import { config } from '../../support';
 
 Object.keys(config.services).forEach(index => {
@@ -45,55 +45,36 @@ Object.keys(config.services).forEach(index => {
         cy.visit(`${serviceConfig.errorPages}`, {
           failOnStatusCode: false,
         });
+        // const serviceStrings = newsStrings;
+        let serviceStrings;
         if (service === 'news') {
-          // errorMessage
-          cy.get('h1')
-            .should('contain', news.translations.error[404].statusCode)
-            .and('contain', news.translations.error[404].title);
-          // errorPageInlineLink
-          cy.get('main p')
-            .eq(1)
-            .within(() => {
-              cy.get('a').should(
-                'have.attr',
-                'href',
-                news.translations.error[404].callToActionLinkUrl,
-              );
-            });
-          // errorTitle
-          cy.title().should(
-            'eq',
-            `${news.translations.error[404].title} - ${news.brandName}`,
-          );
-          // commented due to env only local
-          // it('should have the correct lang & dir attributes', () => {
-          //   cy.hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
-          // });
+          serviceStrings = newsStrings;
         } else if (service === 'persian') {
-          // errorMessage
-          cy.get('h1')
-            .should('contain', persian.translations.error[404].statusCode)
-            .and('contain', persian.translations.error[404].title);
-          // errorPageInlineLink
-          cy.get('main p')
-            .eq(1)
-            .within(() => {
-              cy.get('a').should(
-                'have.attr',
-                'href',
-                persian.translations.error[404].callToActionLinkUrl,
-              );
-            });
-          // errorTitle
-          cy.title().should(
-            'eq',
-            `${persian.translations.error[404].title} - ${persian.brandName}`,
-          );
-          // commented due to env only local
-          // it('should have the correct lang & dir attributes', () => {
-          //   cy.hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
-          // });
+          serviceStrings = persianStrings;
         }
+        // errorMessage
+        cy.get('h1')
+          .should('contain', serviceStrings.translations.error[404].statusCode)
+          .and('contain', serviceStrings.translations.error[404].title);
+        // errorPageInlineLink
+        cy.get('main p')
+          .eq(1)
+          .within(() => {
+            cy.get('a').should(
+              'have.attr',
+              'href',
+              serviceStrings.translations.error[404].callToActionLinkUrl,
+            );
+          });
+        // errorTitle
+        cy.title().should(
+          'eq',
+          `${serviceStrings.translations.error[404].title} - ${serviceStrings.brandName}`,
+        );
+        // commented due to env only local NB dir different for persian
+        // it('should have the correct lang & dir attributes', () => {
+        //   cy.hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+        // });
       });
       // hasHtmlLangDirAttributes
     }
