@@ -15,8 +15,6 @@ const FeatureFlagContainer = ({ flag, FallbackUi, children }) => {
   } else {
     return null;
   }
-
-  // return enabled ? children : <h4>{flag} Not Enabled</h4>;
 };
 
 export default FeatureFlagContainer;
