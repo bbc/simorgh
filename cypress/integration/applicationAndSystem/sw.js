@@ -2,13 +2,13 @@ import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const testArticleServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    cy.request(`/${service}/articles/sw.js`);
+    cy.testResponseCode(`/${service}/articles/sw.js`, 200);
   });
 };
 
 const testFrontpageServiceWorker200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    cy.request(`/${service}/sw.js`);
+    cy.testResponseCode(`/${service}/sw.js`, 200);
   });
 };
 

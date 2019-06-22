@@ -2,13 +2,13 @@ import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const testManifest200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    cy.request(`/${service}/articles/manifest.json`);
+    cy.testResponseCode(`/${service}/articles/manifest.json`, 200);
   });
 };
 
 const testManifestServicePaths = service => {
   it(`should return a 200 status code for ${service} without /articles`, () => {
-    cy.request(`/${service}/manifest.json`);
+    cy.testResponseCode(`/${service}/manifest.json`, 200);
   });
 };
 

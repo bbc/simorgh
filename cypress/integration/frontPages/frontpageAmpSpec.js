@@ -15,7 +15,7 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      cy.request(`${worldServices.igbo.url}.amp`);
+      cy.testResponseCode(`${worldServices.igbo.url}.amp`, 200);
     });
   });
 
