@@ -1,8 +1,10 @@
+// Used in news and persian article tests
 export const retrieveMetaDataContent = (metaDataTag, content) => {
   const metaElement = cy.get(metaDataTag);
   metaElement.should('have.attr', 'content', content);
 };
 
+// Used in news and persian article tests
 export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
   it('should have Facebook meta data', () => {
     retrieveMetaDataContent('head meta[name="fb:admins"]', fbAdmins);
@@ -11,6 +13,7 @@ export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
   });
 };
 
+// Used in news and persian article tests
 export const openGraphMeta = (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
@@ -33,6 +36,7 @@ export const openGraphMeta = (
   });
 };
 
+// Used in news and persian article tests
 export const twitterMeta = (
   card,
   creator,
@@ -56,7 +60,8 @@ export const twitterMeta = (
   });
 };
 
-export const checkDataMatchesMetadata = data => {
+// Used in news and persian article tests
+const checkDataMatchesMetadata = data => {
   const description = data.promo.summary || data.promo.headlines.seoHeadline;
   const title = data.promo.headlines.seoHeadline;
   const { language } = data.metadata.passport;
@@ -84,6 +89,7 @@ export const metadataAssertion = () => {
   });
 };
 
+// Used in news and persian article tests
 // This will only work if you visit the matching canonical
 // url prior to running this.
 
