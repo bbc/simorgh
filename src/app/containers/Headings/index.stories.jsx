@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from 'drew-testing-123/esm/scripts';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import blocksSingleFragment from './testHelpers';

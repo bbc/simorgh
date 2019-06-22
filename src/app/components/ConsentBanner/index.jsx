@@ -11,18 +11,18 @@ import {
   GEL_GREAT_PRIMER,
   GEL_LONG_PRIMER,
   GEL_FF_REITH_SANS,
-} from '@bbc/gel-foundations/typography';
+} from 'drew-testing-123/esm/typography';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from 'drew-testing-123/esm/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING,
-} from '@bbc/gel-foundations/spacings';
+} from 'drew-testing-123/esm/spacings';
 
 const Wrapper = styled.div`
   font-family: ${GEL_FF_REITH_SANS};

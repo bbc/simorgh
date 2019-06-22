@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
-import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_QUAD } from 'drew-testing-123/esm/spacings';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BrandContainer from '../Brand';
 

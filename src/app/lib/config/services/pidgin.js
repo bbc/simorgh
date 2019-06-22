@@ -1,5 +1,5 @@
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from 'drew-testing-123/esm/scripts';
 
 const pidgin = {
   product: 'BBC News',
