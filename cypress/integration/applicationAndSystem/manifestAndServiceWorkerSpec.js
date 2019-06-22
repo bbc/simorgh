@@ -1,10 +1,10 @@
 // NB must still configure to handle different envs!!!!!
 // NB2 must also handle isUK for news
 
-import config from '../../support/newConfig';
+import config from '../../support/configLocal';
 
-Object.keys(config.local.services).forEach(index => {
-  const serviceConfig = config.local.services[index];
+Object.keys(config.services).forEach(index => {
+  const serviceConfig = config.services[index];
   const service = index;
 
   describe('Manifest.json files', () => {
