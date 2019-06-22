@@ -1,6 +1,11 @@
 import services from '../../support/worldServices';
-import { el } from '../../support/frontpageElements';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
+
+const el = {
+  viewport: 'viewport',
+  header: 'header',
+  section: 'section',
+};
 
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];
