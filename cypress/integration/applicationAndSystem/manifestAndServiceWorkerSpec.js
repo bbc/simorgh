@@ -1,3 +1,5 @@
+// NB must still configure to handle different envs!!!!!
+
 import config from '../../support/newConfig';
 
 Object.keys(config.local.services).forEach(index => {
@@ -15,6 +17,24 @@ Object.keys(config.local.services).forEach(index => {
       } else {
         cy.testResponseCodeAndType(
           `/${serviceConfig.manifestPath}`,
+          404,
+          'text/html',
+        );
+      }
+    });
+  });
+
+  describe('sw.js files', () => {
+    it(`should return a 200 status code and js file for ${service} unless it's undefined`, () => {
+      if (serviceConfig.serviceWorkerPath !== undefined) {
+        cy.testResponseCodeAndType(
+          `/${serviceConfig.serviceWorkerPath}`,
+          200,
+          'application/javascript',
+        );
+      } else {
+        cy.testResponseCodeAndType(
+          `/${serviceConfig.serviceWorkerPath}`,
           404,
           'text/html',
         );
