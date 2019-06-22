@@ -1,5 +1,5 @@
 const featureFlags = {
-  ads: {
+  headings: {
     enabled: true,
     value: '',
   },

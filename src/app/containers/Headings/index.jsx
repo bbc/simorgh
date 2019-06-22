@@ -52,7 +52,7 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <FeatureFlag flag="ads">
+      <FeatureFlag flag="headings">
         <Heading script={script} id={subHeadingId}>
           {renderText()}
         </Heading>

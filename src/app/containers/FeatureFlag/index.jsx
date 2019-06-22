@@ -1,21 +1,22 @@
 import React, { useContext } from 'react';
+import { isFeatureEnabled } from './featureFlagUtils.js';
 
 // context
 import { FeatureFlagContext } from '../../contexts/FeatureFlagContext';
 
-const featureEnabled = (flag, featureFlags) => {
-  if (featureFlags[flag]) return featureFlags[flag].enabled;
-
-  return false;
-};
-
-const FeatureFlagContainer = ({ flag, children }) => {
+const FeatureFlagContainer = ({ flag, FallbackUi, children }) => {
   const { featureFlagState } = useContext(FeatureFlagContext);
-  const isEnabled = featureEnabled(flag, featureFlagState);
+  const { enabled } = isFeatureEnabled(flag, featureFlagState);
 
-  console.log(`feature flags: ${JSON.stringify(featureFlagState)}`);
+  if (enabled) {
+    return children;
+  } else if (FallbackUi) {
+    return <FallbackUi />;
+  } else {
+    return null;
+  }
 
-  return isEnabled ? children : <h4>{flag} Not Enabled</h4>;
+  // return enabled ? children : <h4>{flag} Not Enabled</h4>;
 };
 
 export default FeatureFlagContainer;
