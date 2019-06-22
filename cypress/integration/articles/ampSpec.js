@@ -3,7 +3,6 @@ import {
   getElement,
   hasHtmlLangDirAttributes,
 } from '../../support/bodyTestHelper';
-import { checkCanonicalURL } from '../../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -102,7 +101,11 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should include the canonical URL', () => {
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
+    cy.get('head link[rel="canonical"]').should(
+      'have.attr',
+      'href',
+      `${canonicalOrigin}/news/articles/${config.assets.news}`,
+    );
   });
 
   it('should not have an AMP attribute on the main article', () => {

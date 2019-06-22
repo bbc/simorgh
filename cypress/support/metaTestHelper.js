@@ -72,16 +72,6 @@ export const twitterMeta = (
   });
 };
 
-export const checkCanonicalURL = URL => {
-  const canonical = getElement('head link[rel="canonical"]');
-  canonical.should('have.attr', 'href', URL);
-};
-
-export const checkAmpHTML = amphtml => {
-  const ampHtml = getElement('head link[rel="amphtml"]');
-  ampHtml.should('have.attr', 'href', amphtml);
-};
-
 export const checkDataMatchesMetadata = data => {
   const description = data.promo.summary || data.promo.headlines.seoHeadline;
   const title = data.promo.headlines.seoHeadline;

@@ -5,8 +5,6 @@ import {
   hasHtmlLangDirAttributes,
 } from '../../support/bodyTestHelper';
 import {
-  checkAmpHTML,
-  checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
   metadataAssertionAMP,
@@ -67,7 +65,7 @@ describe('Article Meta Tests', () => {
       const selector = `head link[href="${resource}"]`;
       const firstElement = getElement(selector);
       firstElement.should('have.attr', 'rel', 'preconnect');
-      const secondElement = getSecondElement(selector);
+      const secondElement = cy.get(selector).eq(1);
       secondElement.should('have.attr', 'rel', 'dns-prefetch');
     });
   });
@@ -106,10 +104,14 @@ describe('Article Meta Tests', () => {
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(
+    cy.get('head link[rel="canonical"]').should(
+      'have.attr',
+      'href',
       `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
     );
-    checkAmpHTML(
+    cy.get('head link[rel="amphtml"]').should(
+      'have.attr',
+      'href',
       `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
     );
   });

@@ -1,8 +1,6 @@
 import config from '../../support/config';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
-  checkAmpHTML,
-  checkCanonicalURL,
   facebookMeta,
   metadataAssertion,
   metadataAssertionAMP,
@@ -62,10 +60,14 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
   it('should include the canonical URL & ampHTML', () => {
     const canonicalOrigin = 'https://www.bbc.com';
     const currentOrigin = window.location.origin;
-    checkCanonicalURL(
+    cy.get('head link[rel="canonical"]').should(
+      'have.attr',
+      'href',
       `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
     );
-    checkAmpHTML(
+    cy.get('head link[rel="amphtml"]').should(
+      'have.attr',
+      'href',
       `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
     );
   });
