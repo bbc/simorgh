@@ -45,17 +45,20 @@ Object.keys(config.services).forEach(index => {
         cy.visit(`${serviceConfig.errorPages}`, {
           failOnStatusCode: false,
         });
-        // const serviceStrings = newsStrings;
+
+        // These conditionals are horrid but I couldn't find a nice way to point to the imported files.
         let serviceStrings;
         if (service === 'news') {
           serviceStrings = newsStrings;
         } else if (service === 'persian') {
           serviceStrings = persianStrings;
         }
+
         // errorMessage
         cy.get('h1')
           .should('contain', serviceStrings.translations.error[404].statusCode)
           .and('contain', serviceStrings.translations.error[404].title);
+
         // errorPageInlineLink
         cy.get('main p')
           .eq(1)
@@ -66,17 +69,25 @@ Object.keys(config.services).forEach(index => {
               serviceStrings.translations.error[404].callToActionLinkUrl,
             );
           });
+
         // errorTitle
         cy.title().should(
           'eq',
           `${serviceStrings.translations.error[404].title} - ${serviceStrings.brandName}`,
         );
-        // commented due to env only local NB dir different for persian
-        // it('should have the correct lang & dir attributes', () => {
-        //   cy.hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
-        // });
       });
-      // hasHtmlLangDirAttributes
+
+      if (
+        serviceConfig.attributes.lang !== undefined &&
+        serviceConfig.attributes.dir !== undefined
+      ) {
+        it('should have the correct lang & dir attributes', () => {
+          cy.hasHtmlLangDirAttributes({
+            lang: `${serviceConfig.attributes.lang}`,
+            dir: `${serviceConfig.attributes.dir}`,
+          });
+        });
+      }
     }
   });
 });
