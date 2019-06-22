@@ -1,7 +1,4 @@
-import {
-  assertCookieValue,
-  assertCookieExpiryDate,
-} from '../../../support/metaTestHelper';
+import { assertCookieExpiryDate } from '../../../support/metaTestHelper';
 import config from '../../../support/config';
 
 const getPrivacyBanner = () =>
@@ -19,7 +16,7 @@ const ensureCookieExpiryDates = () => {
 
 const assertCookieValues = cookies => {
   Object.keys(cookies).forEach(cookie => {
-    assertCookieValue(cookie, cookies[cookie]);
+    cy.getCookie(cookie).should('have.property', 'value', cookies[cookie]);
   });
 };
 
