@@ -128,10 +128,3 @@ export const errorTitle = service => {
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
 };
-
-// used all over the place
-export const hasHtmlLangDirAttributes = ({ lang, dir }) => {
-  cy.get('html')
-    .should('have.attr', 'lang', lang)
-    .and('have.attr', 'dir', dir);
-};

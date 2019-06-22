@@ -1,5 +1,4 @@
 import config from '../../support/config';
-import { hasHtmlLangDirAttributes } from '../../support/bodyTestHelper';
 import {
   facebookMeta,
   metadataAssertion,
@@ -16,7 +15,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+    cy.hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should have a nofollow meta tag', () => {

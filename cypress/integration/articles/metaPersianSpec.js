@@ -8,7 +8,6 @@ import {
   retrieveMetaDataContent,
   twitterMeta,
 } from '../../support/metaTestHelper';
-import { hasHtmlLangDirAttributes } from '../../support/bodyTestHelper';
 
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
@@ -17,7 +16,7 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
+    cy.hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
   });
 
   it('should have a nofollow meta tag', () => {

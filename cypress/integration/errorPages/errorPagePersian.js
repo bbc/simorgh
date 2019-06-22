@@ -4,7 +4,6 @@ import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
-  hasHtmlLangDirAttributes,
 } from '../../support/bodyTestHelper';
 import persian from '../../../src/app/lib/config/services/persian';
 
@@ -25,7 +24,7 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
+    cy.hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
   });
 
   it('should display a relevant error message on screen', () => {

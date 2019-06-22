@@ -3,7 +3,6 @@ import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
-  hasHtmlLangDirAttributes,
 } from '../../support/bodyTestHelper';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 import news from '../../../src/app/lib/config/services/news';
@@ -28,7 +27,7 @@ describe('Article Body Tests', () => {
     'Temporary fix to limit to local Simorgh error page',
     () => {
       it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+        cy.hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
       });
     },
   );
