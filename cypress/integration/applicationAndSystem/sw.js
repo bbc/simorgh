@@ -1,4 +1,4 @@
-import { describeForLocalOnly } from '../../support/limitEnvRuns';
+import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 
 const testArticleServiceWorker200s = service => {
   it(`should return a 200 status code and JS file for ${service}`, () => {
@@ -24,7 +24,7 @@ describe('Service worker files', () => {
   ['news'].forEach(testArticleServiceWorker200s);
 });
 
-describeForLocalOnly('Local Env - Service worker files', () => {
+describeForLocalAndTest('Service worker files', () => {
   ['persian'].forEach(testArticleServiceWorker200s);
   ['igbo', 'pidgin', 'yoruba'].forEach(testFrontpageServiceWorker200s);
 });
