@@ -8,7 +8,6 @@ import {
   renderedTitle,
   visibleImageNoCaption,
   visibleImageWithCaption,
-  shouldContainText,
 } from '../../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
@@ -25,8 +24,7 @@ describe('Article Body Tests', () => {
     cy.window().then(win => {
       const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
       const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
-      const time = cy.get('time');
-      shouldContainText(time, timeStamp);
+      cy.get('time').should('contain', timeStamp);
     });
   });
 

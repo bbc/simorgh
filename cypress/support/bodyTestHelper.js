@@ -1,20 +1,16 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 
-export const shouldContainText = (element, text) => {
-  element.should('contain', text);
-};
-
-export const shouldContainStyles = (element, css, styling) => {
+const shouldContainStyles = (element, css, styling) => {
   element.should(el => {
     expect(el).to.have.css(css, styling);
   });
 };
 
-export const shouldMatchReturnedData = (data, element) => {
+const shouldMatchReturnedData = (data, element) => {
   cy.get(element).should('contain', data);
 };
 
-export const getBlockByType = (blocks, blockType) => {
+const getBlockByType = (blocks, blockType) => {
   let blockData;
 
   blocks.forEach(block => {
@@ -25,7 +21,7 @@ export const getBlockByType = (blocks, blockType) => {
   return blockData;
 };
 
-export const getBlockData = (blockType, win) => {
+const getBlockData = (blockType, win) => {
   const { blocks } = win.SIMORGH_DATA.pageData.content.model;
 
   return getBlockByType(blocks, blockType);
@@ -53,9 +49,7 @@ export const firstParagraphDataWindow = () => {
   cy.window().then(win => {
     const paragraphData = getBlockData('text', win);
     const { text } = paragraphData.model.blocks[0].model;
-    const paragraphExample = cy.get('p');
-
-    shouldContainText(paragraphExample, text);
+    cy.get('p').should('contain', text);
   });
 };
 
@@ -67,12 +61,13 @@ export const copyrightDataWindow = () => {
       'rawImage',
     );
     const { copyrightHolder } = rawImageblock.model;
-    const copyrightLabel = cy.get('figure p').eq(0);
-
-    shouldContainText(copyrightLabel, copyrightHolder);
+    cy.get('figure p')
+      .eq(0)
+      .should('contain', copyrightHolder);
   });
 };
 
+// cut
 export const checkFooterLinks = (position, url) => {
   cy.get('a')
     .eq(position)
@@ -83,9 +78,7 @@ export const checkFooterLinks = (position, url) => {
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   cy.get(link).click();
   cy.url().should('contain', url);
-  const anchorElement = cy.get('header a');
-
-  shouldContainText(anchorElement, 'BBC News');
+  cy.get('header a').should('contain', 'BBC News');
 };
 
 export const renderedTitle = title => {
@@ -100,6 +93,7 @@ export const placeholderImageLoaded = placeholderImage => {
   );
 };
 
+// cut
 export const worldServiceCookieBannerTranslations = (
   privacyStatement,
   performanceStatement,
@@ -140,7 +134,7 @@ export const worldServiceCookieBannerTranslations = (
   getPrivacyBanner().should('not.be.visible');
 };
 
-export const figureVisibility = figure => {
+const figureVisibility = figure => {
   figure.should('be.visible');
   figure.should('to.have.descendants', 'img');
 };
@@ -155,6 +149,7 @@ export const visibleImageWithCaption = figure => {
   figure.should('to.have.descendants', 'figcaption');
 };
 
+// used for error pages
 export const errorMessage = service => {
   cy.get('h1 span').should(
     'contain',
@@ -163,6 +158,7 @@ export const errorMessage = service => {
   cy.get('h1').should('contain', `${service.translations.error[404].title}`);
 };
 
+// used for error pages
 export const errorPageInlineLink = service => {
   cy.get('main p')
     .eq(1)
@@ -175,12 +171,14 @@ export const errorPageInlineLink = service => {
     });
 };
 
+// used for error pages
 export const errorTitle = service => {
   renderedTitle(
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
 };
 
+// used for error pages
 export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
   cy.get('noscript')
     .eq(0)
@@ -190,6 +188,7 @@ export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
     );
 };
 
+// used for ati tests
 export const hasNoscriptImgAtiUrl = analyticsBucketId => {
   cy.get('noscript')
     .eq(0)
@@ -199,6 +198,7 @@ export const hasNoscriptImgAtiUrl = analyticsBucketId => {
     );
 };
 
+// used for ati tests
 export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
   cy.get('amp-analytics script[type="application/json"]')
     .eq(0)
@@ -206,6 +206,7 @@ export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
     .should('contain', `s=${analyticsBucketId}`);
 };
 
+// used all over the place
 export const hasHtmlLangDirAttributes = ({ lang, dir }) => {
   const html = cy.get('html');
   html.should('have.attr', 'lang', lang);

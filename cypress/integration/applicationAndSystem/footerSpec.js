@@ -1,8 +1,5 @@
 import config from '../../support/config';
-import {
-  checkFooterLinks,
-  shouldContainText,
-} from '../../support/bodyTestHelper';
+import { checkFooterLinks } from '../../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
@@ -10,8 +7,9 @@ describe('Footer Tests', () => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
   it('should render the BBC News branding', () => {
-    const newsBrandingLink = cy.get('footer a').eq(0);
-    shouldContainText(newsBrandingLink, 'BBC News');
+    cy.get('footer a')
+      .eq(0)
+      .should('contain', 'BBC News');
   });
 
   it('should have working links', () => {
