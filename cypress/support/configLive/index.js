@@ -1,5 +1,5 @@
 export default {
-  baseUrl: 'https://www.bbc.com',
+  baseUrl: 'https://www.bbc.co.uk',
   baseUrlNonSTLD: 'https://www.bbc.com',
   assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
   assetOrigin: 'https://news.files.bbci.co.uk',
@@ -42,8 +42,8 @@ export default {
     },
     persian: {
       subDir: '/persian',
-      manifestPath: '/persian/articles/manifest.json',
-      serviceWorkerPath: '/persian/articles/sw.js',
+      manifestPath: undefined,
+      serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
         frontPage: undefined,
@@ -51,7 +51,7 @@ export default {
     },
     igbo: {
       subDir: '/igbo',
-      manifestPath: '/igbo/manifest.json',
+      manifestPath: undefined,
       serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
@@ -60,7 +60,7 @@ export default {
     },
     pidgin: {
       subDir: '/pidgin',
-      manifestPath: '/pidgin/manifest.json',
+      manifestPath: undefined,
       serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
@@ -69,7 +69,7 @@ export default {
     },
     yoruba: {
       subDir: '/yoruba',
-      manifestPath: '/yoruba/manifest.json',
+      manifestPath: undefined,
       serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
