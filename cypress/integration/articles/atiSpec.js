@@ -1,9 +1,21 @@
 import config from '../../support/config';
-import {
-  hasNoscriptImgAtiUrl,
-  hasAmpAnalyticsAtiUrl,
-} from '../../support/bodyTestHelper';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
+
+const hasNoscriptImgAtiUrl = analyticsBucketId => {
+  cy.get('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${analyticsBucketId}`,
+    );
+};
+
+const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
+  cy.get('amp-analytics script[type="application/json"]')
+    .eq(0)
+    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
+    .should('contain', `s=${analyticsBucketId}`);
+};
 
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {

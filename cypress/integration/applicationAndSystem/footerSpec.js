@@ -1,5 +1,11 @@
 import config from '../../support/config';
-import { checkFooterLinks } from '../../support/bodyTestHelper';
+
+const checkFooterLinks = (position, url) => {
+  cy.get('a')
+    .eq(position)
+    .should('have.attr', 'href')
+    .and('contain', url);
+};
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef

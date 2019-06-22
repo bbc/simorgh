@@ -67,14 +67,6 @@ export const copyrightDataWindow = () => {
   });
 };
 
-// cut
-export const checkFooterLinks = (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-};
-
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   cy.get(link).click();
   cy.url().should('contain', url);
@@ -91,47 +83,6 @@ export const placeholderImageLoaded = placeholderImage => {
     'background-image',
     `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
   );
-};
-
-// cut
-export const worldServiceCookieBannerTranslations = (
-  privacyStatement,
-  performanceStatement,
-  service,
-  cookieAgreement,
-  privacyAgreement,
-) => {
-  const getPrivacyBanner = () => cy.contains(privacyStatement);
-
-  const getCookieBanner = () => cy.contains(performanceStatement);
-  const getPrivacyBannerContainer = () => getPrivacyBanner().parent();
-  const getCookieBannerContainer = () => getCookieBanner().parent();
-
-  const visitArticle = () => {
-    cy.visit(service, {
-      failOnStatusCode: false,
-    });
-  };
-
-  cy.clearCookies();
-  visitArticle();
-
-  getPrivacyBanner().should('be.visible');
-  getCookieBanner().should('not.be.visible');
-
-  getPrivacyBannerContainer()
-    .contains(cookieAgreement)
-    .click();
-
-  getCookieBanner().should('be.visible');
-  getPrivacyBanner().should('not.be.visible');
-
-  getCookieBannerContainer()
-    .contains(privacyAgreement)
-    .click();
-
-  getCookieBanner().should('not.be.visible');
-  getPrivacyBanner().should('not.be.visible');
 };
 
 const figureVisibility = figure => {
@@ -176,34 +127,6 @@ export const errorTitle = service => {
   renderedTitle(
     `${service.translations.error[404].title} - ${service.brandName}`,
   );
-};
-
-// used for error pages
-export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
-  cy.get('noscript')
-    .eq(0)
-    .should(
-      'contain',
-      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${bucketId}`,
-    );
-};
-
-// used for ati tests
-export const hasNoscriptImgAtiUrl = analyticsBucketId => {
-  cy.get('noscript')
-    .eq(0)
-    .should(
-      'contain',
-      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${analyticsBucketId}`,
-    );
-};
-
-// used for ati tests
-export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
-  cy.get('amp-analytics script[type="application/json"]')
-    .eq(0)
-    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
-    .should('contain', `s=${analyticsBucketId}`);
 };
 
 // used all over the place
