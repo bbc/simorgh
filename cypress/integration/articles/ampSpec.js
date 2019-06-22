@@ -16,7 +16,7 @@ describe('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
+      cy.request(`/news/articles/${config.assets.news}.amp`);
     });
   });
 

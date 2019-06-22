@@ -1,15 +1,14 @@
-import { testResponseCode } from '../../support/metaTestHelper';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const testManifest200s = service => {
   it(`should return a 200 status code for ${service}`, () => {
-    testResponseCode(`/${service}/articles/manifest.json`, 200);
+    cy.request(`/${service}/articles/manifest.json`);
   });
 };
 
 const testManifestServicePaths = service => {
   it(`should return a 200 status code for ${service} without /articles`, () => {
-    testResponseCode(`/${service}/manifest.json`, 200);
+    cy.request(`/${service}/manifest.json`);
   });
 };
 
