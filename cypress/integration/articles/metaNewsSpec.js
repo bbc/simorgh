@@ -1,7 +1,6 @@
 import config from '../../support/config';
 import {
   getElement,
-  getSecondElement,
   hasHtmlLangDirAttributes,
 } from '../../support/bodyTestHelper';
 import {
