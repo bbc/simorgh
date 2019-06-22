@@ -1,6 +1,6 @@
 // NB2 must also handle isUK for news
 
-import config from '../../support';
+import { config } from '../../support';
 
 Object.keys(config.services).forEach(index => {
   const serviceConfig = config.services[index];
