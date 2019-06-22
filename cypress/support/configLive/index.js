@@ -17,8 +17,8 @@ export default {
     },
     news: {
       subDir: '/news',
-      manifestPath: 'news/articles/manifest.json',
-      serviceWorkerPath: 'news/articles/sw.js',
+      manifestPath: '/news/articles/manifest.json',
+      serviceWorkerPath: '/news/articles/sw.js',
       pageTypes: {
         articles: {
           path: '/articles',
@@ -42,8 +42,8 @@ export default {
     },
     persian: {
       subDir: '/persian',
-      manifestPath: 'persian/articles/manifest.json',
-      serviceWorkerPath: 'persian/articles/sw.js',
+      manifestPath: '/persian/articles/manifest.json',
+      serviceWorkerPath: '/persian/articles/sw.js',
       pageTypes: {
         articles: undefined,
         frontPage: undefined,
@@ -51,8 +51,8 @@ export default {
     },
     igbo: {
       subDir: '/igbo',
-      manifestPath: 'igbo/manifest.json',
-      serviceWorkerPath: 'igbo/sw.js',
+      manifestPath: '/igbo/manifest.json',
+      serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
         frontPage: undefined,
@@ -60,8 +60,8 @@ export default {
     },
     pidgin: {
       subDir: '/pidgin',
-      manifestPath: 'pidgin/manifest.json',
-      serviceWorkerPath: 'pidgin/sw.js',
+      manifestPath: '/pidgin/manifest.json',
+      serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
         frontPage: undefined,
@@ -69,8 +69,8 @@ export default {
     },
     yoruba: {
       subDir: '/yoruba',
-      manifestPath: 'yoruba/manifest.json',
-      serviceWorkerPath: 'yoruba/sw.js',
+      manifestPath: '/yoruba/manifest.json',
+      serviceWorkerPath: undefined,
       pageTypes: {
         articles: undefined,
         frontPage: undefined,

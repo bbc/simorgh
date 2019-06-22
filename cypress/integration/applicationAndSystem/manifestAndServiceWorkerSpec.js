@@ -1,7 +1,5 @@
-// NB must still configure to handle different envs!!!!!
 // NB2 must also handle isUK for news
 
-// import config from '../../support/configLocal';
 import { config } from '../../support';
 
 Object.keys(config.services).forEach(index => {
