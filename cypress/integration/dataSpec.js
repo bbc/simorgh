@@ -1,4 +1,4 @@
-import config from '../../support/configOld';
+import config from '../support/configOld';
 
 describe('Static Articles data', () => {
   it('should return a 200 status code and JSON file', () => {

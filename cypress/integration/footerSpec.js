@@ -1,4 +1,4 @@
-import config from '../../support/configOld';
+import config from '../support/configOld';
 
 const checkFooterLinks = (position, url) => {
   cy.get('a')

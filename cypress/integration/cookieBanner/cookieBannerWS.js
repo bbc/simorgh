@@ -1,6 +1,6 @@
-import config from '../../../support/cookieConfig';
-import describeForEuOnly from '../../../support/describeForEuOnly';
-import { describeForLocalOnly } from '../../../support/limitEnvRuns';
+import config from '../../support/cookieConfig';
+import describeForEuOnly from '../../support/describeForEuOnly';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const services = Object.keys(config);
 const worldServiceCookieBannerTranslations = (
