@@ -10,14 +10,14 @@ import persian from '../../../src/app/lib/config/services/persian';
 describeForLocalOnly('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`${config.assets.persianNonExistent}`, {
       failOnStatusCode: false,
     });
   });
 
   it('should return a 404 error code and return HTML', () => {
     cy.testResponseCodeAndType(
-      `/persian/articles/${config.assets.nonExistent}`,
+      `${config.assets.persianNonExistent}`,
       404,
       'text/html',
     );
@@ -28,12 +28,12 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`${config.assets.persianNonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);
 
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`${config.assets.persianNonExistent}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);

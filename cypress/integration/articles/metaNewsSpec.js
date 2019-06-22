@@ -11,7 +11,7 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`${config.assets.newsThreeSubheadlines}`);
   });
 
   it('should have the correct lang & dir attributes', () => {
@@ -79,7 +79,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `https://www.bbc.com${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
@@ -102,18 +102,18 @@ describe('Article Meta Tests', () => {
     cy.get('head link[rel="canonical"]').should(
       'have.attr',
       'href',
-      `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+      `${canonicalOrigin}${config.assets.newsThreeSubheadlines}`,
     );
     cy.get('head link[rel="amphtml"]').should(
       'have.attr',
       'href',
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `${currentOrigin}${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
 
   it('should include metadata in the head on AMP pages', () => {
     metadataAssertionAMP(
-      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `${config.assets.newsThreeSubheadlines}.amp`,
     );
   });
 

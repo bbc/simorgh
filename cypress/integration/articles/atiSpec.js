@@ -20,13 +20,13 @@ const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+      cy.visit(`${config.assets.newsThreeSubheadlines}`);
       hasNoscriptImgAtiUrl('');
     });
   });
   describe('AMP page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+      cy.visit(`${config.assets.newsThreeSubheadlines}.amp`);
       hasAmpAnalyticsAtiUrl('');
     });
   });
@@ -35,13 +35,13 @@ describe('Article ATI for News', () => {
 describeForLocalOnly('ATI for Persian', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/persian/articles/${config.assets.persian}`);
+      cy.visit(`${config.assets.persian}`);
       hasNoscriptImgAtiUrl(config.atiAnalyticsWSBucket);
     });
   });
   describe('AMP page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/persian/articles/${config.assets.persian}.amp`);
+      cy.visit(`${config.assets.persian}.amp`);
       hasAmpAnalyticsAtiUrl(config.atiAnalyticsWSBucket);
     });
   });

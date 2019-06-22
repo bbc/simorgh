@@ -10,7 +10,7 @@ const checkFooterLinks = (position, url) => {
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`${config.assets.newsThreeSubheadlines}`);
   });
   it('should render the BBC News branding', () => {
     cy.get('footer a')

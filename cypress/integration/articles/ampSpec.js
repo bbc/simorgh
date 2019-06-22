@@ -3,25 +3,17 @@ import config from '../../support/config';
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.news}.amp`);
+    cy.visit(`${config.assets.news}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response and be HTML', () => {
-      cy.testResponseCodeAndType(
-        `/news/articles/${config.assets.news}.amp`,
-        200,
-        'text/html',
-      );
+      cy.testResponseCodeAndType(`${config.assets.news}.amp`, 200, 'text/html');
     });
   });
 
   it('should error gracefully and return HTML', () => {
-    cy.testResponseCodeAndType(
-      `/news/articles/${config.assets.news}.cake`,
-      404,
-      'text/html',
-    );
+    cy.testResponseCodeAndType(`${config.assets.news}.cake`, 404, 'text/html');
     cy.testResponseCodeAndType(
       `/news/lol/${config.assets.news}.amp`,
       404,
@@ -100,12 +92,12 @@ describe('AMP Tests on a .amp page', () => {
     cy.get('head link[rel="canonical"]').should(
       'have.attr',
       'href',
-      `${canonicalOrigin}/news/articles/${config.assets.news}`,
+      `${canonicalOrigin}${config.assets.news}`,
     );
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit(`/news/articles/${config.assets.news}`);
+    cy.visit(`${config.assets.news}`);
     cy.get('html').should('not.have.attr', 'amp');
   });
 });

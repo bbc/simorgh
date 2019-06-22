@@ -13,7 +13,7 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`${config.assets.newsThreeSubheadlines}`);
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
@@ -87,7 +87,7 @@ describe('Article Body Tests', () => {
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(
   //     'main a',
-  //     `/news/articles/${config.assets.news}`,
+  //     `${config.assets.news}`,
   //   );
   // });
 

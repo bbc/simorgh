@@ -13,7 +13,7 @@ import {
 describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.persian}`);
+    cy.visit(`${config.assets.persian}`);
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {

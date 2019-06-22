@@ -12,7 +12,7 @@ import {
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.persian}`);
+    cy.visit(`${config.assets.persian}`);
   });
 
   it('should have the correct lang & dir attributes', () => {
@@ -43,7 +43,7 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    `https://www.bbc.com${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -62,12 +62,12 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
     cy.get('head link[rel="canonical"]').should(
       'have.attr',
       'href',
-      `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
+      `${canonicalOrigin}${config.assets.persian}`,
     );
     cy.get('head link[rel="amphtml"]').should(
       'have.attr',
       'href',
-      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
+      `${currentOrigin}${config.assets.persian}.amp`,
     );
   });
 
@@ -76,6 +76,6 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    metadataAssertionAMP(`/persian/articles/${config.assets.persian}.amp`);
+    metadataAssertionAMP(`${config.assets.persian}.amp`);
   });
 });
