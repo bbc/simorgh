@@ -99,32 +99,3 @@ export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
 };
-
-// used for error pages
-export const errorMessage = service => {
-  cy.get('h1 span').should(
-    'contain',
-    `${service.translations.error[404].statusCode}`,
-  );
-  cy.get('h1').should('contain', `${service.translations.error[404].title}`);
-};
-
-// used for error pages
-export const errorPageInlineLink = service => {
-  cy.get('main p')
-    .eq(1)
-    .within(() => {
-      cy.get('a').should(
-        'have.attr',
-        'href',
-        `${service.translations.error[404].callToActionLinkUrl}`,
-      );
-    });
-};
-
-// used for error pages
-export const errorTitle = service => {
-  renderedTitle(
-    `${service.translations.error[404].title} - ${service.brandName}`,
-  );
-};
