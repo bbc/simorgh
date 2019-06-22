@@ -1,5 +1,4 @@
 import worldServices from '../../support/worldServices';
-import { getElement } from '../../support/bodyTestHelper';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -42,7 +41,7 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   });
 
   xit('should have AMP attribute', () => {
-    getElement('html').should('have.attr', 'amp');
+    cy.get('html').should('have.attr', 'amp');
   });
 
   it('should load the AMP framework', () => {
@@ -51,17 +50,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
     // Once bbc/simorgh#1906 has been merged, this may need to become .eq(2) as:
     //  the second loaded will be the Schema.org metadata script
     // and the below `.eq(x)`s will also need updating
-    const ampScript = getElement('head script').eq(1);
+    const ampScript = cy.get('head script').eq(1);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(2);
+    const ampGeoScript = cy.get('head script').eq(2);
     ampGeoScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     );
 
-    const ampConsentScript = getElement('head script').eq(3);
+    const ampConsentScript = cy.get('head script').eq(3);
     ampConsentScript.should(
       'have.attr',
       'src',
@@ -70,27 +69,27 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   });
 
   it('should load the AMP body scripts', () => {
-    const ampGeoScript = getElement('body script').eq(0);
+    const ampGeoScript = cy.get('body script').eq(0);
     ampGeoScript.should('have.attr', 'type', 'application/json');
 
-    const ampConsentScript = getElement('body script').eq(1);
+    const ampConsentScript = cy.get('body script').eq(1);
     ampConsentScript.should('have.attr', 'type', 'application/json');
   });
 
   it('should have any correct amp scripts in the body and the head', () => {
-    getElement('body script')
+    cy.get('body script')
       .its('length')
       .should('be', 2); // 1 for amp-geo + 1 for amp-consent
-    getElement('head script')
+    cy.get('head script')
       .its('length')
       .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {
-    const storyPromo = getElement('li');
+    const storyPromo = cy.get('li');
     storyPromo.should('be.visible');
     storyPromo.within(() => {
-      getElement('amp-img').should('be.visible');
+      cy.get('amp-img').should('be.visible');
     });
   });
 
@@ -109,6 +108,6 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   xit('should not have an AMP attribute on the main article', () => {
     cy.visit(`${worldServices.igbo.url}`);
-    getElement('html').should('not.have.attr', 'amp');
+    cy.get('html').should('not.have.attr', 'amp');
   });
 });

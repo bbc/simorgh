@@ -1,8 +1,5 @@
 import config from '../../support/config';
-import {
-  getElement,
-  hasHtmlLangDirAttributes,
-} from '../../support/bodyTestHelper';
+import { hasHtmlLangDirAttributes } from '../../support/bodyTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -39,7 +36,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should have AMP attribute', () => {
-    getElement('html').should('have.attr', 'amp');
+    cy.get('html').should('have.attr', 'amp');
   });
 
   it('should have lang and dir attributes', () => {
@@ -50,23 +47,23 @@ describe('AMP Tests on a .amp page', () => {
     // .eq(2) gets the amp <script> as:
     // the first loaded is a Cypress <script>
     // the second loaded is the Schema.org metadata script
-    const ampScript = getElement('head script').eq(2);
+    const ampScript = cy.get('head script').eq(2);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(3);
+    const ampGeoScript = cy.get('head script').eq(3);
     ampGeoScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     );
 
-    const ampConsentScript = getElement('head script').eq(4);
+    const ampConsentScript = cy.get('head script').eq(4);
     ampConsentScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
     );
-    const ampAnalyticsScript = getElement('head script').eq(5);
+    const ampAnalyticsScript = cy.get('head script').eq(5);
     ampAnalyticsScript.should(
       'have.attr',
       'src',
@@ -75,27 +72,27 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should load the AMP body scripts', () => {
-    const ampGeoScript = getElement('body script').eq(0);
+    const ampGeoScript = cy.get('body script').eq(0);
     ampGeoScript.should('have.attr', 'type', 'application/json');
 
-    const ampConsentScript = getElement('body script').eq(1);
+    const ampConsentScript = cy.get('body script').eq(1);
     ampConsentScript.should('have.attr', 'type', 'application/json');
   });
 
   it('should have any correct amp scripts in the body and the head', () => {
-    getElement('body script')
+    cy.get('body script')
       .its('length')
       .should('be', 2); // 1 for amp-geo + 1 for amp-consent
-    getElement('head script')
+    cy.get('head script')
       .its('length')
       .should('be', 5); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 for amp-analytics + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {
-    const figure = getElement('figure').eq(0);
+    const figure = cy.get('figure').eq(0);
     figure.should('be.visible');
     figure.within(() => {
-      getElement('amp-img').should('be.visible');
+      cy.get('amp-img').should('be.visible');
     });
   });
 
@@ -110,6 +107,6 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should not have an AMP attribute on the main article', () => {
     cy.visit(`/news/articles/${config.assets.news}`);
-    getElement('html').should('not.have.attr', 'amp');
+    cy.get('html').should('not.have.attr', 'amp');
   });
 });

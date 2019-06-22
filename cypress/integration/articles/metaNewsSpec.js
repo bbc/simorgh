@@ -1,8 +1,5 @@
 import config from '../../support/config';
-import {
-  getElement,
-  hasHtmlLangDirAttributes,
-} from '../../support/bodyTestHelper';
+import { hasHtmlLangDirAttributes } from '../../support/bodyTestHelper';
 import {
   facebookMeta,
   metadataAssertion,
@@ -62,7 +59,7 @@ describe('Article Meta Tests', () => {
 
     resources.forEach(resource => {
       const selector = `head link[href="${resource}"]`;
-      const firstElement = getElement(selector);
+      const firstElement = cy.get(selector);
       firstElement.should('have.attr', 'rel', 'preconnect');
       const secondElement = cy.get(selector).eq(1);
       secondElement.should('have.attr', 'rel', 'dns-prefetch');

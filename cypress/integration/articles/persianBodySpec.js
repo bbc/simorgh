@@ -4,7 +4,6 @@ import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
-  getElement,
   placeholderImageLoaded,
   renderedTitle,
   visibleImageNoCaption,
@@ -26,7 +25,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(cy.get('figure div').eq(0));
   });
 
   it('should have an image copyright label with styling', () => {
@@ -34,27 +33,27 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a visible image without a caption', () => {
-    visibleImageNoCaption(getElement('figure').eq(0));
+    visibleImageNoCaption(cy.get('figure').eq(0));
   });
 
   it('should have a visible image with a caption', () => {
-    const imageHasNotLoaded = getElement('figure').eq(2);
+    const imageHasNotLoaded = cy.get('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = cy.get('div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
     imageHasNotLoaded.scrollIntoView();
 
-    const imageHasLoaded = getElement('figure').eq(2);
+    const imageHasLoaded = cy.get('figure').eq(2);
 
     visibleImageWithCaption(imageHasLoaded);
     imageHasLoaded.within(() => {
-      const noscriptImg = getElement('noscript');
+      const noscriptImg = cy.get('noscript');
       noscriptImg.contains('<img ');
 
-      const ImageContainer = getElement('div div');
+      const ImageContainer = cy.get('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
     });
   });

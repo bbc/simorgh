@@ -4,7 +4,6 @@ import {
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
   firstSubheadlineDataWindow,
-  getElement,
   placeholderImageLoaded,
   renderedTitle,
   visibleImageNoCaption,
@@ -26,7 +25,7 @@ describe('Article Body Tests', () => {
     cy.window().then(win => {
       const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
       const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
-      const time = getElement('time');
+      const time = cy.get('time');
       shouldContainText(time, timeStamp);
     });
   });
@@ -40,34 +39,34 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(cy.get('figure div').eq(0));
   });
 
   it('should have a visible image without a caption, and also not be lazyloaded', () => {
-    const firstFigure = getElement('figure').eq(0);
+    const firstFigure = cy.get('figure').eq(0);
 
     visibleImageNoCaption(firstFigure);
-    firstFigure.within(() => getElement('noscript').should('not.exist'));
+    firstFigure.within(() => cy.get('noscript').should('not.exist'));
   });
 
   it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
-    const imageHasNotLoaded = getElement('figure').eq(2);
+    const imageHasNotLoaded = cy.get('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = cy.get('div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
     imageHasNotLoaded.scrollIntoView();
 
-    const imageHasLoaded = getElement('figure').eq(2);
+    const imageHasLoaded = cy.get('figure').eq(2);
 
     visibleImageWithCaption(imageHasLoaded);
     imageHasLoaded.within(() => {
-      const noscriptImg = getElement('noscript');
+      const noscriptImg = cy.get('noscript');
       noscriptImg.contains('<img ');
 
-      const ImageContainer = getElement('div div');
+      const ImageContainer = cy.get('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
     });
   });
@@ -84,7 +83,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have an inline link', () => {
-    getElement('main a');
+    cy.get('main a');
   });
 
   // it('should have a working first inline link', () => {

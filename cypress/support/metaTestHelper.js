@@ -1,5 +1,3 @@
-import { getElement } from './bodyTestHelper';
-
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
@@ -15,7 +13,7 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
 };
 
 export const retrieveMetaDataContent = (metaDataTag, content) => {
-  const metaElement = getElement(metaDataTag);
+  const metaElement = cy.get(metaDataTag);
   metaElement.should('have.attr', 'content', content);
 };
 
@@ -91,7 +89,7 @@ export const checkDataMatchesMetadata = data => {
     'head meta[name="article:modified_time"]',
     lastPublished,
   );
-  getElement('html').should('have.attr', 'lang', language);
+  cy.get('html').should('have.attr', 'lang', language);
 };
 export const metadataAssertion = () => {
   cy.window().then(win => {

@@ -1,5 +1,5 @@
 import config from '../../support/config';
-import { getElement, shouldContainText } from '../../support/bodyTestHelper';
+import { shouldContainText } from '../../support/bodyTestHelper';
 
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
@@ -8,7 +8,7 @@ describe('Header Tests', () => {
   });
 
   it('should render the BBC News branding', () => {
-    const newsBrandingLink = getElement('header a');
+    const newsBrandingLink = cy.get('header a');
     shouldContainText(newsBrandingLink, 'BBC News');
   });
 });
