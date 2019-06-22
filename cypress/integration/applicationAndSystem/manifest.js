@@ -1,30 +1,24 @@
-import { describeForLocalOnly } from '../../support/limitEnvRuns';
+import config from '../../support/newConfig';
 
-const testManifest200s = service => {
-  it(`should return a 200 status code and JSON file for ${service}`, () => {
-    cy.testResponseCodeAndType(
-      `/${service}/articles/manifest.json`,
-      200,
-      'application/json',
-    );
+Object.keys(config.local.services).forEach(index => {
+  const serviceConfig = config.local.services[index];
+  const service = index;
+
+  describe('Manifest.json files', () => {
+    it(`should return a 200 status code and JSON file for ${service} unless it's undefined`, () => {
+      if (serviceConfig.manifestPath !== undefined) {
+        cy.testResponseCodeAndType(
+          `/${serviceConfig.manifestPath}`,
+          200,
+          'application/json',
+        );
+      } else {
+        cy.testResponseCodeAndType(
+          `/${serviceConfig.manifestPath}`,
+          404,
+          'text/html',
+        );
+      }
+    });
   });
-};
-
-const testManifestServicePaths = service => {
-  it(`should return a 200 status code and JSON file for ${service} without /articles`, () => {
-    cy.testResponseCodeAndType(
-      `/${service}/manifest.json`,
-      200,
-      'application/json',
-    );
-  });
-};
-
-describe('Manifest.json files', () => {
-  ['news'].forEach(testManifest200s);
-});
-
-describeForLocalOnly('Local Env - Manifest.json files', () => {
-  ['persian'].forEach(testManifest200s);
-  ['igbo', 'pidgin', 'yoruba'].forEach(testManifestServicePaths);
 });

@@ -30,6 +30,8 @@ export default {
       // Proof we can add all services in this config file, even without coding anything.
       mundo: {
         subDir: '/mundo',
+        manifestPath: undefined,
+        serviceWorkerPath: undefined,
         pageTypes: {
           articles: undefined,
           frontPage: undefined,
@@ -37,6 +39,8 @@ export default {
       },
       news: {
         subDir: '/news',
+        manifestPath: 'news/articles/manifest.json',
+        serviceWorkerPath: 'news/articles/sw.js',
         pageTypes: {
           articles: {
             path: '/articles',
@@ -52,8 +56,7 @@ export default {
               dataEndpoint: true,
               header: true,
               footer: true,
-              manifest: true,
-              serviceWorker: true,
+              meta: true,
             },
           },
           frontPage: undefined,
@@ -61,6 +64,8 @@ export default {
       },
       persian: {
         subDir: '/persian',
+        manifestPath: 'persian/articles/manifest.json',
+        serviceWorkerPath: 'persian/articles/sw.js',
         pageTypes: {
           articles: {
             path: '/articles',
@@ -74,8 +79,7 @@ export default {
               dataEndpoint: true,
               header: true,
               footer: true,
-              manifest: true,
-              serviceWorker: true,
+              meta: true,
             },
           },
           frontPage: undefined,
@@ -83,6 +87,8 @@ export default {
       },
       igbo: {
         subDir: '/igbo',
+        manifestPath: 'igbo/manifest.json',
+        serviceWorkerPath: 'igbo/sw.js',
         pageTypes: {
           articles: undefined,
           frontPage: {
@@ -93,8 +99,7 @@ export default {
               dataEndpoint: false,
               header: false,
               footer: false,
-              manifest: true,
-              serviceWorker: true,
+              meta: false,
             },
           },
           article: undefined,
@@ -102,8 +107,12 @@ export default {
       },
       pidgin: {
         subDir: '/pidgin',
+        manifestPath: 'pidgin/manifest.json',
+        serviceWorkerPath: 'pidgin/sw.js',
         pageTypes: {
           articles: undefined,
+          manifest: true,
+          serviceWorker: true,
           frontPage: {
             featureFlags: {
               amp: false,
@@ -112,8 +121,7 @@ export default {
               dataEndpoint: false,
               header: false,
               footer: false,
-              manifest: true,
-              serviceWorker: true,
+              meta: false,
             },
           },
           article: undefined,
@@ -121,6 +129,8 @@ export default {
       },
       yoruba: {
         subDir: '/yoruba',
+        manifestPath: 'yoruba/manifest.json',
+        serviceWorkerPath: 'yoruba/sw.js',
         pageTypes: {
           articles: undefined,
           frontPage: {
@@ -131,8 +141,7 @@ export default {
               dataEndpoint: false,
               header: false,
               footer: false,
-              manifest: true,
-              serviceWorker: true,
+              meta: false,
             },
           },
           article: undefined,
