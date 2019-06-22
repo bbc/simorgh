@@ -112,9 +112,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    metadataAssertionAMP(
-      `${config.assets.newsThreeSubheadlines}.amp`,
-    );
+    metadataAssertionAMP(`${config.assets.newsThreeSubheadlines}.amp`);
   });
 
   it('should include mainEntityOfPage in the LinkedData', () => {
