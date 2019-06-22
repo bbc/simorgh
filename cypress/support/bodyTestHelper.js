@@ -131,7 +131,7 @@ export const errorTitle = service => {
 
 // used all over the place
 export const hasHtmlLangDirAttributes = ({ lang, dir }) => {
-  const html = cy.get('html');
-  html.should('have.attr', 'lang', lang);
-  html.should('have.attr', 'dir', dir);
+  cy.get('html')
+    .should('have.attr', 'lang', lang)
+    .and('have.attr', 'dir', dir);
 };
