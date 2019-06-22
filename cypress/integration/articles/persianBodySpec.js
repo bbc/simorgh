@@ -1,4 +1,4 @@
-import config from '../../support/config';
+import config from '../../support/configOld';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
   copyrightDataWindow,

@@ -1,4 +1,4 @@
-import config from '../../../support/config';
+import config from '../../../support/configOld';
 import describeForEuOnly from '../../../support/describeForEuOnly';
 
 const getPrivacyBanner = () =>

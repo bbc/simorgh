@@ -1,5 +1,5 @@
 export default {
-  baseUrl: 'https://www.bbc.co.uk',
+  baseUrl: 'https://www.bbc.com',
   baseUrlNonSTLD: 'https://www.bbc.com',
   assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
   assetOrigin: 'https://news.files.bbci.co.uk',

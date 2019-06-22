@@ -1,4 +1,4 @@
-import config from '../../../support/config';
+import config from '../../../support/configOld';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");

@@ -1,6 +1,6 @@
 // NB2 must also handle isUK for news
 
-import { config } from '../../support';
+import config from '../../support';
 
 Object.keys(config.services).forEach(index => {
   const serviceConfig = config.services[index];
@@ -10,13 +10,13 @@ Object.keys(config.services).forEach(index => {
     it(`should return a 200 status code and JSON file for ${service} unless it's undefined`, () => {
       if (serviceConfig.manifestPath !== undefined) {
         cy.testResponseCodeAndType(
-          `/${serviceConfig.manifestPath}`,
+          `${serviceConfig.manifestPath}`,
           200,
           'application/json',
         );
       } else {
         cy.testResponseCodeAndType(
-          `/${serviceConfig.manifestPath}`,
+          `${serviceConfig.manifestPath}`,
           404,
           'text/html',
         );
@@ -28,13 +28,13 @@ Object.keys(config.services).forEach(index => {
     it(`should return a 200 status code and js file for ${service} unless it's undefined`, () => {
       if (serviceConfig.serviceWorkerPath !== undefined) {
         cy.testResponseCodeAndType(
-          `/${serviceConfig.serviceWorkerPath}`,
+          `${serviceConfig.serviceWorkerPath}`,
           200,
           'application/javascript',
         );
       } else {
         cy.testResponseCodeAndType(
-          `/${serviceConfig.serviceWorkerPath}`,
+          `${serviceConfig.serviceWorkerPath}`,
           404,
           'text/html',
         );

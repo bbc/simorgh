@@ -1,4 +1,4 @@
-import config from '../../support/config';
+import config from '../../support/configOld';
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const hasNoscriptImgAtiUrl = analyticsBucketId => {

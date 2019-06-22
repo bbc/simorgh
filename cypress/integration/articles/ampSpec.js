@@ -1,4 +1,4 @@
-import config from '../../support/config';
+import config from '../../support/configOld';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef

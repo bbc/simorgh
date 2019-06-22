@@ -1,8 +1,11 @@
-const envConfig = require('../support/config');
+const envConfig = require('../support/configOld');
 
 /* eslint-disable no-param-reassign */
-module.exports = (on, config) => {
-  config.baseUrl = envConfig(config.env.APP_ENV, config.env.UK).baseUrl;
+module.exports = (on, configOld) => {
+  configOld.baseUrl = envConfig(
+    configOld.env.APP_ENV,
+    configOld.env.UK,
+  ).baseUrl;
 
-  return config;
+  return configOld;
 };
