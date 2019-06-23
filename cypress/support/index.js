@@ -1,4 +1,5 @@
 import './commands';
+import './pageTestFragmentCommands';
 
 const configLocal = require('./configLocal');
 const configTest = require('./configTest');

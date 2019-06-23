@@ -35,7 +35,7 @@ Object.keys(config.services).forEach(index => {
 
       if (serviceConfig.pageTypes.articles.featureFlags.header === true) {
         it(`should render the header's BBC News branding for ${service}`, () => {
-          cy.get('header a').should('contain', 'BBC News');
+          cy.headerTest();
         });
       }
 
