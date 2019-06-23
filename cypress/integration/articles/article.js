@@ -55,7 +55,15 @@ Object.keys(config.services).forEach(index => {
 
       if (serviceConfig.pageTypes.articles.featureFlags.header === true) {
         it(`should render the header's BBC News branding for ${service}`, () => {
-          cy.headerTest();
+          cy.headerTestBBCNewsString();
+        });
+
+        it(`should have a visible banner for ${service}`, () => {
+          cy.headerTestVisibleBanner();
+        });
+
+        it(`should have aand h1 for ${service}`, () => {
+          cy.headerTestHaveH1();
         });
       }
 
@@ -72,6 +80,10 @@ Object.keys(config.services).forEach(index => {
           cy.footerTestCopyrightLink();
         });
       }
+
+      it(`should have script to fetch bundle for ${service}`, () => {
+        cy.hasScriptToFetchBundle();
+      });
     }
   });
 });
