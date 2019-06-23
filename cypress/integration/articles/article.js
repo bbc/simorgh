@@ -62,7 +62,7 @@ Object.keys(config.services).forEach(index => {
           cy.headerTestVisibleBanner(serviceConfig.canonical);
         });
 
-        it(`should have aand h1 for ${service}`, () => {
+        it(`should have and h1 for ${service}`, () => {
           cy.headerTestHaveH1();
         });
       }
