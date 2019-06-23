@@ -4,6 +4,26 @@ Object.keys(config.services).forEach(index => {
   const serviceConfig = config.services[index];
   const service = index;
 
+  // NB need to PREVENT not handle redirect
+  // Attempt to handle redirects this doesn't work, the replace seems to do nothing but the set to null is successful
+  // Fails in envs with redirects
+  // if (Cypress.env('APP_ENV') !== 'local') {
+  //   // Cypress.env('UK') === true &&
+  //   if (service !== 'news') {
+  //     // Cypress.config('baseUrl', null);
+  //     const oldBaseUrl = Cypress.config('baseUrl');
+  //     const newBaseUrl = oldBaseUrl.replace('.co.uk', '.com');
+  //     // Cypress.config('baseUrl', newBaseUrl);
+  //     Cypress.config().baseUrl = newBaseUrl;
+  //   } else if (service === 'news') {
+  //     // Cypress.config('baseUrl', null);
+  //     const oldBaseUrl = Cypress.config('baseUrl');
+  //     const newBaseUrl = oldBaseUrl.replace('.com', '.co.uk');
+  //     // Cypress.config('baseUrl', newBaseUrl);
+  //     Cypress.config().baseUrl = newBaseUrl;
+  //   }
+  // }
+
   describe(`Article Tests for ${service}`, () => {
     if (
       serviceConfig.pageTypes.articles !== undefined &&
