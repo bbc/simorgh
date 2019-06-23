@@ -8,7 +8,7 @@ Object.keys(config.services).forEach(index => {
   const serviceConfig = config.services[index];
   const service = index;
 
-  describe('Manifest.json files', () => {
+  describe(`Manifest.json files for ${service}`, () => {
     if (serviceConfig.manifestPath !== undefined) {
       it(`should return a 200 status code and JSON file for ${service}`, () => {
         cy.testResponseCodeAndType(
@@ -20,7 +20,7 @@ Object.keys(config.services).forEach(index => {
     }
   });
 
-  describe('sw.js files', () => {
+  describe(`sw.js files for ${service}`, () => {
     if (serviceConfig.serviceWorkerPath !== undefined) {
       it(`should return a 200 status code and js file for ${service}`, () => {
         cy.testResponseCodeAndType(
@@ -32,7 +32,7 @@ Object.keys(config.services).forEach(index => {
     }
   });
 
-  describe('error pages', () => {
+  describe(`error pages for ${service}`, () => {
     if (serviceConfig.errorPages !== undefined) {
       it(`should return a 404 status code and HTML file for ${service}`, () => {
         cy.testResponseCodeAndType(
