@@ -1,7 +1,6 @@
 import config from '../../support/configOld';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
-  copyrightDataWindow,
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
   placeholderImageLoaded,
@@ -27,10 +26,6 @@ describeForLocalAndTest('Article Body Tests', () => {
     placeholderImageLoaded(cy.get('figure div').eq(0));
   });
 
-  it('should have an image copyright label with styling', () => {
-    copyrightDataWindow();
-  });
-
   it('should have a visible image without a caption', () => {
     visibleImageNoCaption(cy.get('figure').eq(0));
   });
@@ -54,13 +49,6 @@ describeForLocalAndTest('Article Body Tests', () => {
 
       const ImageContainer = cy.get('div div');
       ImageContainer.should('not.have.class', 'lazyload-placeholder');
-    });
-  });
-
-  it('should render a title', () => {
-    cy.window().then(win => {
-      const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-      cy.title().should('eq', `${seoHeadline} - BBC News فارسی`);
     });
   });
 });

@@ -67,7 +67,11 @@ Object.keys(config.services).forEach(index => {
         });
       }
 
-      it('should render a title', () => {
+      it(`should have an image copyright label with styling for ${service}`, () => {
+        cy.copyrightDataWindow();
+      });
+
+      it(`should render a title for ${service}`, () => {
         cy.window().then(win => {
           const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
           cy.title().should(

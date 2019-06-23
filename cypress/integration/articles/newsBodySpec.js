@@ -1,6 +1,5 @@
 import config from '../../support/configOld';
 import {
-  copyrightDataWindow,
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
   firstSubheadlineDataWindow,
@@ -68,20 +67,9 @@ describe('Article Body Tests', () => {
     });
   });
 
-  it('should have an image copyright label with styling', () => {
-    copyrightDataWindow();
-  });
-
-  it('should render a title', () => {
-    cy.window().then(win => {
-      const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-      cy.title().should('eq', `${seoHeadline} - BBC News`);
-    });
-  });
-
-  it('should have an inline link', () => {
-    cy.get('main a');
-  });
+  // it('should have an inline link', () => {
+  //   cy.get('main a');
+  // });
 
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(
