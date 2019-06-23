@@ -1,8 +1,6 @@
 import config from '../../support/configOld';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
-  firstHeadlineDataWindow,
-  firstParagraphDataWindow,
   placeholderImageLoaded,
   visibleImageNoCaption,
   visibleImageWithCaption,
@@ -12,14 +10,6 @@ describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`${config.assets.persian}`);
-  });
-
-  it('should render an H1, which contains/displays a styled headline', () => {
-    firstHeadlineDataWindow();
-  });
-
-  it('should render a paragraph, which contains/displays styled text', () => {
-    firstParagraphDataWindow();
   });
 
   it('should have a placeholder image', () => {

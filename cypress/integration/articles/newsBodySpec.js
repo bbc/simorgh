@@ -1,7 +1,5 @@
 import config from '../../support/configOld';
 import {
-  firstHeadlineDataWindow,
-  firstParagraphDataWindow,
   firstSubheadlineDataWindow,
   placeholderImageLoaded,
   visibleImageNoCaption,
@@ -14,10 +12,6 @@ describe('Article Body Tests', () => {
     cy.visit(`${config.assets.newsThreeSubheadlines}`);
   });
 
-  it('should render an H1, which contains/displays a styled headline', () => {
-    firstHeadlineDataWindow();
-  });
-
   it('should render a formatted timestamp', () => {
     cy.window().then(win => {
       const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
@@ -28,10 +22,6 @@ describe('Article Body Tests', () => {
 
   it('should render an H2, which contains/displays a styled subheading', () => {
     firstSubheadlineDataWindow();
-  });
-
-  it('should render a paragraph, which contains/displays styled text', () => {
-    firstParagraphDataWindow();
   });
 
   it('should have a placeholder image', () => {
@@ -67,9 +57,9 @@ describe('Article Body Tests', () => {
     });
   });
 
-  // it('should have an inline link', () => {
-  //   cy.get('main a');
-  // });
+  it('should have an inline link', () => {
+    cy.get('main a');
+  });
 
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(

@@ -67,9 +67,9 @@ Object.keys(config.services).forEach(index => {
         });
       }
 
-      // it('should render an H1, which contains/displays a styled headline', () => {
-      //   firstHeadlineDataWindow();
-      // });
+      it(`should render an H1, which contains/displays a styled headline for ${service}`, () => {
+        cy.firstHeadlineDataWindow();
+      });
 
       // news only
       // it('should render a formatted timestamp', () => {
@@ -85,9 +85,9 @@ Object.keys(config.services).forEach(index => {
       //   firstSubheadlineDataWindow();
       // });
 
-      // it('should render a paragraph, which contains/displays styled text', () => {
-      //   firstParagraphDataWindow();
-      // });
+      it('should render a paragraph, which contains/displays styled text', () => {
+        cy.firstParagraphDataWindow();
+      });
 
       // it('should have a placeholder image', () => {
       //   placeholderImageLoaded(cy.get('figure div').eq(0));
