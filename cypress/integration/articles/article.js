@@ -41,39 +41,15 @@ Object.keys(config.services).forEach(index => {
 
       if (serviceConfig.pageTypes.articles.featureFlags.footer === true) {
         it(`should render the footers's BBC News branding for ${service}`, () => {
-          cy.get('footer a')
-            .eq(0)
-            .should('contain', 'BBC News');
+          cy.footerTestBranding();
         });
 
         it(`should have working links for ${service} in the footer`, () => {
-          const checkFooterLinks = (position, url) => {
-            cy.get('a')
-              .eq(position)
-              .should('have.attr', 'href')
-              .and('contain', url);
-          };
-
-          cy.get('footer ul').within(() => {
-            checkFooterLinks('0', '/news/help-41670342');
-            checkFooterLinks('1', '/terms');
-            checkFooterLinks('2', '/aboutthebbc/');
-            checkFooterLinks('3', '/privacy/');
-            checkFooterLinks('4', '/usingthebbc/cookies/');
-            checkFooterLinks('5', '/accessibility/');
-            checkFooterLinks('6', '/contact/');
-          });
+          cy.footerTestWorkingLinks();
         });
 
         it(`should contain copyright text with a link in it for ${service} in the footer`, () => {
-          cy.get('footer p')
-            .should(
-              'contain',
-              `© ${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites. `,
-            )
-            .children('a')
-            .should('have.attr', 'href')
-            .and('contain', '/help/web/links');
+          cy.footerTestCopyrightLink();
         });
       }
     }
