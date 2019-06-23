@@ -79,7 +79,7 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.3.4",
-    "drew-testing-123": "1.0.0",
+    "drew-testing-123": "1.0.2",
     "@bbc/psammead-assets": "^0.1.9",
     "@bbc/psammead-brand": "^1.0.1",
     "@bbc/psammead-caption": "^1.1.5",
