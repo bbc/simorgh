@@ -52,7 +52,7 @@ Object.keys(config.services).forEach(index => {
         });
 
         it(`should have working links for ${service} in the footer`, () => {
-          cy.footerTestWorkingLinks();
+          cy.footerTestWorkingLinks(); // NB the values inside this are hardcoded to /news values.
         });
 
         it(`should contain copyright text with a link in it for ${service} in the footer`, () => {

@@ -27,21 +27,22 @@ Cypress.Commands.add('footerTestBranding', canonicalLink => {
     .should('be.visible');
 });
 
+Cypress.Commands.add('footerTestWorkingLinksHeloer', (position, url) => {
+  cy.get('a')
+    .eq(position)
+    .should('have.attr', 'href')
+    .and('contain', url);
+});
+
 Cypress.Commands.add('footerTestWorkingLinks', () => {
-  const checkFooterLinks = (position, url) => {
-    cy.get('a')
-      .eq(position)
-      .should('have.attr', 'href')
-      .and('contain', url);
-  };
   cy.get('footer ul').within(() => {
-    checkFooterLinks('0', '/news/help-41670342');
-    checkFooterLinks('1', '/terms');
-    checkFooterLinks('2', '/aboutthebbc/');
-    checkFooterLinks('3', '/privacy/');
-    checkFooterLinks('4', '/usingthebbc/cookies/');
-    checkFooterLinks('5', '/accessibility/');
-    checkFooterLinks('6', '/contact/');
+    cy.footerTestWorkingLinksHeloer('0', '/news/help-41670342');
+    cy.footerTestWorkingLinksHeloer('1', '/terms');
+    cy.footerTestWorkingLinksHeloer('2', '/aboutthebbc/');
+    cy.footerTestWorkingLinksHeloer('3', '/privacy/');
+    cy.footerTestWorkingLinksHeloer('4', '/usingthebbc/cookies/');
+    cy.footerTestWorkingLinksHeloer('5', '/accessibility/');
+    cy.footerTestWorkingLinksHeloer('6', '/contact/');
   });
 });
 
