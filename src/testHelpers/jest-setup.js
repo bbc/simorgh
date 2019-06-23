@@ -2,7 +2,11 @@ import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import fetch from 'jest-fetch-mock';
 import path from 'path';
-import './createLoadableContextMock';
+
+/*
+ * Mock to avoid async behaviour in tests
+ */
+jest.mock('../app/contexts/utils/createLoadableContext');
 
 Enzyme.configure({ adapter: new Adapter() });
 

@@ -7,6 +7,10 @@ import 'core-js/es6/set';
 // IE11, IE10
 import 'core-js/es6/symbol';
 
+// Needed by React Loadable
+// IE11, IE10
+import 'core-js/fn/object/assign';
+
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
 
