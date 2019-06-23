@@ -78,13 +78,13 @@ Object.keys(config.services).forEach(index => {
       });
 
       if (
-        serviceConfig.attributes.lang !== undefined &&
-        serviceConfig.attributes.dir !== undefined
+        serviceConfig.meta.lang !== undefined &&
+        serviceConfig.meta.dir !== undefined
       ) {
         it('should have the correct lang & dir attributes', () => {
           cy.hasHtmlLangDirAttributes({
-            lang: `${serviceConfig.attributes.lang}`,
-            dir: `${serviceConfig.attributes.dir}`,
+            lang: `${serviceConfig.meta.lang}`,
+            dir: `${serviceConfig.meta.dir}`,
           });
         });
       }

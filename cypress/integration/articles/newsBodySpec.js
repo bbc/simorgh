@@ -5,7 +5,6 @@ import {
   firstParagraphDataWindow,
   firstSubheadlineDataWindow,
   placeholderImageLoaded,
-  renderedTitle,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../../support/bodyTestHelper';
@@ -76,7 +75,7 @@ describe('Article Body Tests', () => {
   it('should render a title', () => {
     cy.window().then(win => {
       const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-      renderedTitle(`${seoHeadline} - BBC News`);
+      cy.title().should('eq', `${seoHeadline} - BBC News`);
     });
   });
 

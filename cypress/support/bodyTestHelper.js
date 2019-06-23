@@ -1,33 +1,26 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 
-const shouldContainStyles = (element, css, styling) => {
-  element.should(el => {
-    expect(el).to.have.css(css, styling);
-  });
-};
-
-const shouldMatchReturnedData = (data, element) => {
-  cy.get(element).should('contain', data);
-};
-
-const getBlockByType = (blocks, blockType) => {
-  let blockData;
-
-  blocks.forEach(block => {
-    if (!blockData && block.type === blockType) {
-      blockData = block;
-    }
-  });
-  return blockData;
-};
-
-const getBlockData = (blockType, win) => {
-  const { blocks } = win.SIMORGH_DATA.pageData.content.model;
-
-  return getBlockByType(blocks, blockType);
-};
-
 export const firstHeadlineDataWindow = () => {
+  const getBlockByType = (blocks, blockType) => {
+    let blockData;
+
+    blocks.forEach(block => {
+      if (!blockData && block.type === blockType) {
+        blockData = block;
+      }
+    });
+    return blockData;
+  };
+
+  const getBlockData = (blockType, win) => {
+    const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+    return getBlockByType(blocks, blockType);
+  };
+  const shouldMatchReturnedData = (data, element) => {
+    cy.get(element).should('contain', data);
+  };
+
   cy.window().then(win => {
     const headlineData = getBlockData('headline', win);
     const { text } = headlineData.model.blocks[0].model.blocks[0].model;
@@ -37,6 +30,27 @@ export const firstHeadlineDataWindow = () => {
 };
 
 export const firstSubheadlineDataWindow = () => {
+  const getBlockByType = (blocks, blockType) => {
+    let blockData;
+
+    blocks.forEach(block => {
+      if (!blockData && block.type === blockType) {
+        blockData = block;
+      }
+    });
+    return blockData;
+  };
+
+  const getBlockData = (blockType, win) => {
+    const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+    return getBlockByType(blocks, blockType);
+  };
+
+  const shouldMatchReturnedData = (data, element) => {
+    cy.get(element).should('contain', data);
+  };
+
   cy.window().then(win => {
     const subheadingData = getBlockData('subheadline', win);
     const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
@@ -46,6 +60,23 @@ export const firstSubheadlineDataWindow = () => {
 };
 
 export const firstParagraphDataWindow = () => {
+  const getBlockByType = (blocks, blockType) => {
+    let blockData;
+
+    blocks.forEach(block => {
+      if (!blockData && block.type === blockType) {
+        blockData = block;
+      }
+    });
+    return blockData;
+  };
+
+  const getBlockData = (blockType, win) => {
+    const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+    return getBlockByType(blocks, blockType);
+  };
+
   cy.window().then(win => {
     const paragraphData = getBlockData('text', win);
     const { text } = paragraphData.model.blocks[0].model;
@@ -54,6 +85,23 @@ export const firstParagraphDataWindow = () => {
 };
 
 export const copyrightDataWindow = () => {
+  const getBlockByType = (blocks, blockType) => {
+    let blockData;
+
+    blocks.forEach(block => {
+      if (!blockData && block.type === blockType) {
+        blockData = block;
+      }
+    });
+    return blockData;
+  };
+
+  const getBlockData = (blockType, win) => {
+    const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+    return getBlockByType(blocks, blockType);
+  };
+
   cy.window().then(win => {
     const copyrightData = getBlockData('image', win);
     const rawImageblock = getBlockByType(
@@ -73,11 +121,13 @@ export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   cy.get('header a').should('contain', 'BBC News');
 };
 
-export const renderedTitle = title => {
-  cy.title().should('eq', title);
-};
-
 export const placeholderImageLoaded = placeholderImage => {
+  const shouldContainStyles = (element, css, styling) => {
+    element.should(el => {
+      expect(el).to.have.css(css, styling);
+    });
+  };
+
   shouldContainStyles(
     placeholderImage,
     'background-image',
@@ -85,17 +135,22 @@ export const placeholderImageLoaded = placeholderImage => {
   );
 };
 
-const figureVisibility = figure => {
-  figure.should('be.visible');
-  figure.should('to.have.descendants', 'img');
-};
-
 export const visibleImageNoCaption = figure => {
+  const figureVisibility = fig => {
+    fig.should('be.visible');
+    fig.should('to.have.descendants', 'img');
+  };
+
   figureVisibility(figure);
   figure.should('not.to.have.descendants', 'figcaption');
 };
 
 export const visibleImageWithCaption = figure => {
+  const figureVisibility = fig => {
+    fig.should('be.visible');
+    fig.should('to.have.descendants', 'img');
+  };
+
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
 };

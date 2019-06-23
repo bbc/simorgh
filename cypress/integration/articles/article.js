@@ -67,6 +67,16 @@ Object.keys(config.services).forEach(index => {
         });
       }
 
+      it('should render a title', () => {
+        cy.window().then(win => {
+          const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
+          cy.title().should(
+            'eq',
+            `${seoHeadline}${serviceConfig.meta.titleSuffix}`,
+          );
+        });
+      });
+
       if (serviceConfig.pageTypes.articles.featureFlags.footer === true) {
         it(`should render the footers's BBC News branding for ${service}`, () => {
           cy.footerTestBranding(serviceConfig.canonical);

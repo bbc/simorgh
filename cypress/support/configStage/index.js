@@ -11,9 +11,10 @@ export default {
       errorPages: undefined,
       manifestPath: undefined,
       serviceWorkerPath: undefined,
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: undefined,
       },
       pageTypes: {
         articles: undefined,
@@ -25,9 +26,10 @@ export default {
       errorPages: '/news/articles/cxvxrj8tvppo',
       manifestPath: '/news/articles/manifest.json',
       serviceWorkerPath: '/news/articles/sw.js',
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: ' - BBC News',
       },
       pageTypes: {
         articles: {
@@ -55,9 +57,10 @@ export default {
       errorPages: undefined,
       manifestPath: '/persian/articles/manifest.json',
       serviceWorkerPath: '/persian/articles/sw.js',
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: ' - BBC News فارسی',
       },
       pageTypes: {
         articles: undefined,
@@ -69,9 +72,10 @@ export default {
       errorPages: undefined,
       manifestPath: '/igbo/manifest.json',
       serviceWorkerPath: '/igbo/sw.js',
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: undefined,
       },
       pageTypes: {
         articles: undefined,
@@ -83,9 +87,10 @@ export default {
       errorPages: undefined,
       manifestPath: '/pidgin/manifest.json',
       serviceWorkerPath: '/pidgin/sw.js',
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: undefined,
       },
       pageTypes: {
         articles: undefined,
@@ -97,9 +102,10 @@ export default {
       errorPages: undefined,
       manifestPath: '/yoruba/manifest.json',
       serviceWorkerPath: '/yoruba/sw.js',
-      attributes: {
-        lang: undefined,
+      meta: {
         dir: undefined,
+        lang: undefined,
+        titleSuffix: undefined,
       },
       pageTypes: {
         articles: undefined,

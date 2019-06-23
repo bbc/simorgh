@@ -1,6 +1,7 @@
 import './commands';
-import './pageTestFragmentCommands/header';
+import './pageTestFragmentCommands/articleBody';
 import './pageTestFragmentCommands/footer';
+import './pageTestFragmentCommands/header';
 import './pageTestFragmentCommands/section';
 
 const configLocal = require('./configLocal');
