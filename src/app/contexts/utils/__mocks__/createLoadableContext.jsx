@@ -1,5 +1,10 @@
 import React from 'react';
 
+/*
+ * This file is mocked by default to avoid having to handle
+ * async behavior in tests across the application when
+ * using service contexts.
+ */
 const createLoadableContextMock = (Context, dynamicConfig) => {
   const syncServices = require('../../../lib/config/services'); // eslint-disable-line global-require
 
