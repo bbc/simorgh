@@ -25,7 +25,7 @@ describe('ServiceContextProvider', () => {
     );
   });
 
-  describe('lalal', () => {
+  describe('should load hydrated service context', () => {
     beforeEach(() => {
       jest.unmock('../utils/createLoadableContext');
     });
