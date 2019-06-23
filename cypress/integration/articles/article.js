@@ -72,20 +72,6 @@ Object.keys(config.services).forEach(index => {
         cy.firstHeadlineDataWindow();
       });
 
-      // news only
-      // it(`should render a formatted timestamp for ${service}`, () => {
-      //   cy.window().then(win => {
-      //     const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-      //     const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
-      //     cy.get('time').should('contain', timeStamp);
-      //   });
-      // });
-
-      // news only
-      // it(`should render an H2, which contains/displays a styled subheading for ${service}`, () => {
-      //   firstSubheadlineDataWindow();
-      // });
-
       it(`should render a paragraph, which contains/displays styled text for ${service}`, () => {
         cy.firstParagraphDataWindow();
       });
@@ -167,10 +153,53 @@ Object.keys(config.services).forEach(index => {
         cy.hasScriptToFetchBundle();
       });
 
-      // HACK as this link is only on news and seems not worth having feature flag
+      // HACK as these are only on news and seems not worth having feature flag
       if (service === 'news') {
         it(`should have an inline link for ${service}`, () => {
           cy.get('main a');
+        });
+
+        it(`should render a formatted timestamp for ${service}`, () => {
+          cy.window().then(win => {
+            const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
+            const timeStamp = Cypress.moment(lastPublished).format(
+              'D MMMM YYYY',
+            );
+            cy.get('time').should('contain', timeStamp);
+          });
+        });
+
+        it(`should render an H2, which contains/displays a styled subheading for ${service}`, () => {
+          // TODO refactor to remove the consts
+          const getBlockByType = (blocks, blockType) => {
+            let blockData;
+
+            blocks.forEach(block => {
+              if (!blockData && block.type === blockType) {
+                blockData = block;
+              }
+            });
+            return blockData;
+          };
+
+          const getBlockData = (blockType, win) => {
+            const { blocks } = win.SIMORGH_DATA.pageData.content.model;
+
+            return getBlockByType(blocks, blockType);
+          };
+
+          const shouldMatchReturnedData = (data, element) => {
+            cy.get(element).should('contain', data);
+          };
+
+          cy.window().then(win => {
+            const subheadingData = getBlockData('subheadline', win);
+            const {
+              text,
+            } = subheadingData.model.blocks[0].model.blocks[0].model;
+
+            shouldMatchReturnedData(text, 'h2');
+          });
         });
 
         // This test is fixed to local because we are unable to run it on TEST as it requires a cert in order to work.
