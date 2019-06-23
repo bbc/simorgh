@@ -18,17 +18,4 @@ describe('Article Body Tests', () => {
   it('should render an H2, which contains/displays a styled subheading', () => {
     firstSubheadlineDataWindow();
   });
-
-  it('should have an inline link', () => {
-    cy.get('main a');
-  });
-
-  // it('should have a working first inline link', () => {
-  //   clickInlineLinkAndTestPageHasHTML(
-  //     'main a',
-  //     `${config.assets.news}`,
-  //   );
-  // });
-
-  // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
 });

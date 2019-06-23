@@ -153,21 +153,6 @@ Object.keys(config.services).forEach(index => {
         cy.copyrightDataWindow();
       });
 
-      // news only
-      // it(`should have an inline link for ${service}`, () => {
-      //   cy.get('main a');
-      // });
-
-      // news and local only
-      // it(`should have a working first inline link for ${service}`, () => {
-      //   clickInlineLinkAndTestPageHasHTML(
-      //     'main a',
-      //     `${config.assets.news}`,
-      //   );
-      // });
-
-      // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
-
       it(`should render a title for ${service}`, () => {
         cy.window().then(win => {
           const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
@@ -181,6 +166,22 @@ Object.keys(config.services).forEach(index => {
       it(`should have script to fetch bundle for ${service}`, () => {
         cy.hasScriptToFetchBundle();
       });
+
+      // HACK as this link is only on news and seems not worth having feature flag
+      if (service === 'news') {
+        it(`should have an inline link for ${service}`, () => {
+          cy.get('main a');
+        });
+
+        // This test is fixed to local because we are unable to run it on TEST as it requires a cert in order to work.
+        if (Cypress.env('APP_ENV') === 'local') {
+          it(`should have a working first inline link for ${service}`, () => {
+            cy.get('main a').click(); // Order of tests in this file matter because this click goes to a different article, so is last.
+            cy.url().should('contain', '/news/articles/c0g992jmmkko');
+            cy.get('header a').should('contain', 'BBC News');
+          });
+        }
+      }
     }
   });
 });
