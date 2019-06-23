@@ -71,7 +71,7 @@ export default {
             cookieTests: true,
             dataEndpoint: true,
             header: true,
-            footer: true,
+            footer: false,
             meta: true,
           },
         },
