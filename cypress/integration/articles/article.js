@@ -1,3 +1,4 @@
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import { config } from '../../support';
 
 Object.keys(config.services).forEach(index => {
@@ -72,7 +73,7 @@ Object.keys(config.services).forEach(index => {
       });
 
       // news only
-      // it('should render a formatted timestamp', () => {
+      // it(`should render a formatted timestamp for ${service}`, () => {
       //   cy.window().then(win => {
       //     const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
       //     const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
@@ -81,26 +82,32 @@ Object.keys(config.services).forEach(index => {
       // });
 
       // news only
-      // it('should render an H2, which contains/displays a styled subheading', () => {
+      // it(`should render an H2, which contains/displays a styled subheading for ${service}`, () => {
       //   firstSubheadlineDataWindow();
       // });
 
-      it('should render a paragraph, which contains/displays styled text', () => {
+      it(`should render a paragraph, which contains/displays styled text for ${service}`, () => {
         cy.firstParagraphDataWindow();
       });
 
-      // it('should have a placeholder image', () => {
-      //   placeholderImageLoaded(cy.get('figure div').eq(0));
-      // });
+      it(`should have a placeholder image for ${service}`, () => {
+        cy.get('figure div')
+          .eq(0)
+          .should(
+            'have.css',
+            'background-image',
+            `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
+          );
+      });
 
-      // it('should have a visible image without a caption, and also not be lazyloaded', () => {
+      // it(`should have a visible image without a caption, and also not be lazyloaded for ${service}`, () => {
       //   const firstFigure = cy.get('figure').eq(0);
 
       //   visibleImageNoCaption(firstFigure);
       //   firstFigure.within(() => cy.get('noscript').should('not.exist'));
       // });
 
-      // it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
+      // it(`should have a visible image with a caption that is lazyloaded and has a noscript fallback image for ${service}`, () => {
       //   const imageHasNotLoaded = cy.get('figure').eq(2);
 
       //   imageHasNotLoaded.within(() => {
@@ -141,12 +148,12 @@ Object.keys(config.services).forEach(index => {
       });
 
       // news only
-      // it('should have an inline link', () => {
+      // it(`should have an inline link for ${service}`, () => {
       //   cy.get('main a');
       // });
 
       // news and local only
-      // it('should have a working first inline link', () => {
+      // it(`should have a working first inline link for ${service}`, () => {
       //   clickInlineLinkAndTestPageHasHTML(
       //     'main a',
       //     `${config.assets.news}`,

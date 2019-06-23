@@ -1,7 +1,6 @@
 import config from '../../support/configOld';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
 import {
-  placeholderImageLoaded,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../../support/bodyTestHelper';
@@ -10,10 +9,6 @@ describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`${config.assets.persian}`);
-  });
-
-  it('should have a placeholder image', () => {
-    placeholderImageLoaded(cy.get('figure div').eq(0));
   });
 
   it('should have a visible image without a caption', () => {

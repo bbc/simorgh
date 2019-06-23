@@ -1,7 +1,6 @@
 import config from '../../support/configOld';
 import {
   firstSubheadlineDataWindow,
-  placeholderImageLoaded,
   visibleImageNoCaption,
   visibleImageWithCaption,
 } from '../../support/bodyTestHelper';
@@ -22,10 +21,6 @@ describe('Article Body Tests', () => {
 
   it('should render an H2, which contains/displays a styled subheading', () => {
     firstSubheadlineDataWindow();
-  });
-
-  it('should have a placeholder image', () => {
-    placeholderImageLoaded(cy.get('figure div').eq(0));
   });
 
   it('should have a visible image without a caption, and also not be lazyloaded', () => {

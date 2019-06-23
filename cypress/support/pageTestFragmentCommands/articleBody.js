@@ -81,3 +81,7 @@ Cypress.Commands.add('firstParagraphDataWindow', () => {
     cy.get('p').should('contain', text);
   });
 });
+
+// Cypress.Commands.add('placeholderImageLoaded', placeholderImage => {
+
+// });
