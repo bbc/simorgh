@@ -2,6 +2,7 @@ import './commands';
 import './pageTestFragmentCommands/articleBody';
 import './pageTestFragmentCommands/footer';
 import './pageTestFragmentCommands/header';
+import './pageTestFragmentCommands/metaData';
 import './pageTestFragmentCommands/section';
 
 const configLocal = require('./configLocal');
