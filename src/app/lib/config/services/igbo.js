@@ -101,6 +101,10 @@ const igbo = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+    media: {
+      audio: 'Ọdịyo',
+      video: 'Vidio',
+    },
   },
   footer: {
     externalLink: {

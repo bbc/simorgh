@@ -102,6 +102,10 @@ const yoruba = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+    media: {
+      audio: 'Orin',
+      video: 'Fidio',
+    },
   },
   footer: {
     externalLink: {

@@ -27,6 +27,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     articleAuthor,
     defaultImage,
     defaultImageAltText,
+    dir,
     locale,
     themeColor,
     twitterCreator,
@@ -44,7 +45,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = new Date(metadata.firstPublished).toISOString();
   const timeLastPublished = new Date(metadata.lastPublished).toISOString();
 
-  const canonicalLink = `${origin}/${service}/articles/${id}`;
+  const canonicalLink = `https://www.bbc.com/${service}/articles/${id}`;
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
   const ampLink = `${origin}/${service}/articles/${id}.amp`;
@@ -101,6 +102,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={promo.summary || promo.headlines.seoHeadline}
+        dir={dir}
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
         lang={metadata.passport.language}

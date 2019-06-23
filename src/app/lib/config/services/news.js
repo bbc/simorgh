@@ -109,6 +109,10 @@ const news = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+    media: {
+      audio: 'Audio',
+      video: 'Video',
+    },
   },
   brandSVG,
   footer: {

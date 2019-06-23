@@ -7,6 +7,7 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   htmlAttributes={
     Object {
       "amp": "",
+      "dir": "ltr",
       "lang": "en-GB",
     }
   }
@@ -163,6 +164,7 @@ exports[`Metadata News article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
+      "dir": "ltr",
       "lang": "en-GB",
     }
   }
@@ -324,6 +326,7 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   htmlAttributes={
     Object {
       "amp": "",
+      "dir": "rtl",
       "lang": "fa",
     }
   }
@@ -465,6 +468,7 @@ exports[`Metadata Persian article should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
+      "dir": "rtl",
       "lang": "fa",
     }
   }
@@ -610,6 +614,7 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   encodeSpecialCharacters={true}
   htmlAttributes={
     Object {
+      "dir": "ltr",
       "lang": "en-GB",
     }
   }

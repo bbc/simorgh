@@ -1,5 +1,9 @@
 import config from '../support/config';
-import { getElement, getSecondElement } from '../support/bodyTestHelper';
+import {
+  getElement,
+  getSecondElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -17,8 +21,8 @@ describe('Article Meta Tests', () => {
     cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
   });
 
-  it('should have the correct lang attribute', () => {
-    cy.get('html').should('have.attr', 'lang', 'en-gb');
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should have a nofollow meta tag', () => {
@@ -74,7 +78,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `${config.baseUrl}/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
   );
 
   twitterMeta(
@@ -93,8 +97,9 @@ describe('Article Meta Tests', () => {
 
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+      `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
     );
     checkAmpHTML(
       `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
