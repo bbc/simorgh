@@ -32,11 +32,11 @@ export default {
       pageTypes: {
         articles: {
           path: '/articles',
-          basicAsset: '/c8xxl4l3dzeo',
+          basicAsset: '/news/articles/c8xxl4l3dzeo',
           fullyFeaturedAsset: undefined,
-          nonExistent: '/cxvxrj8tvppo',
+          nonExistent: '/news/articles/cxvxrj8tvppo',
           // Special case
-          threeSubheadlines: '/c5ll353v7y9o',
+          threeSubheadlines: '/news/articles/c5ll353v7y9o',
           featureFlags: {
             amp: true,
             atiAnalytics: true,

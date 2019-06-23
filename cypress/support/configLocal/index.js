@@ -32,11 +32,11 @@ export default {
       pageTypes: {
         articles: {
           path: '/articles',
-          basicAsset: '/c0g992jmmkko',
+          basicAsset: '/news/articles/c0g992jmmkko',
           fullyFeaturedAsset: undefined,
-          nonExistent: '/cxvxrj8tvppo',
+          nonExistent: '/news/articles/cxvxrj8tvppo',
           // Special case
-          threeSubheadlines: '/c6v11qzyv8po',
+          threeSubheadlines: '/news/articles/c6v11qzyv8po',
           featureFlags: {
             amp: true,
             atiAnalytics: true,
@@ -62,9 +62,9 @@ export default {
       pageTypes: {
         articles: {
           path: '/articles',
-          basicAsset: '/c4vlle3q337o',
+          basicAsset: '/persian/articles/c4vlle3q337o',
           fullyFeaturedAsset: undefined,
-          nonExistent: '/cxvxrj8tvppo',
+          nonExistent: '/persian/articles/cxvxrj8tvppo',
           featureFlags: {
             amp: true,
             atiAnalytics: true,
