@@ -11,16 +11,25 @@ const configLive = require('./configLive');
 
 let env;
 
-if (Cypress.env('APP_ENV') === 'local') {
-  env = configLocal;
-} else if (Cypress.env('APP_ENV') === 'test') {
-  env = configTest;
+switch (Cypress.env('APP_ENV')) {
+  default:
+    env = null;
+    break;
+  case 'local':
+    env = configLocal;
+    break;
+  case 'test':
+    env = configTest;
+    break;
   // Commented out until we use it
-  // } else if (Cypress.env('APP_ENV') === 'stage') {
+  // case 'stage':
   //   env = configStage;
-} else if (Cypress.env('APP_ENV') === 'live') {
-  env = configLive;
+  //   break;
+  case 'live':
+    env = configLive;
+    break;
 }
+
 export const config = env; // eslint-disable-line import/prefer-default-export
 
 Cypress.Screenshot.defaults({
