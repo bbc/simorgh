@@ -1,6 +1,10 @@
 import config from '../support/config';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
-import scriptMatches from '../support/scriptMatches';
+
+const bundleRegex = name =>
+  new RegExp(`(\\/static\\/js\\/${name}-\\w+\\.\\w+\\.js)`, 'g');
+
+const getMatchCount = (regex, arr) => arr.filter(i => i.match(regex)).length;
 
 const services = [
   { service: 'news', url: `/news/articles/${config.assets.news}`, describe },
@@ -23,8 +27,6 @@ services.forEach(({ service, url, describe }) => {
 
     // Testing the actual fetch is not currently possible
     it('should have script srcs for service', () => {
-      let expectedMatches = scriptMatches(service);
-
       cy.get('script').should($p => {
         const srcs = [];
 
@@ -36,14 +38,15 @@ services.forEach(({ service, url, describe }) => {
           }
         }
 
-        // filter out all regexes that have a match in srcs array
-        expectedMatches = expectedMatches.filter(regex => {
-          const matches = srcs.filter(src => src.match(regex));
-          return matches.length === 0;
-        });
+        const mainMatchCount = getMatchCount(bundleRegex('main'), srcs);
+        const vendorMatchCount = getMatchCount(bundleRegex('vendor'), srcs);
+        const serviceMatchCount = getMatchCount(bundleRegex(service), srcs);
 
-        // expect no regexes to be left after all have been met
-        expect(expectedMatches).to.be.empty; // eslint-disable-line no-unused-expressions
+        expect(mainMatchCount + vendorMatchCount + serviceMatchCount).to.equal(
+          srcs.length,
+        );
+
+        expect(serviceMatchCount).to.be.greaterThan(0);
       });
     });
   });

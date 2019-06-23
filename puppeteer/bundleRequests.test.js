@@ -1,17 +1,24 @@
 import puppeteer from 'puppeteer';
-import scriptMatches from '../cypress/support/scriptMatches';
+import cypressConfig from '../cypress/support/config';
 
 let browser;
 let page;
 let requests = [];
 
-const config = [
-  { service: 'news', path: '/news/articles/c0g992jmmkko' },
-  { service: 'persian', path: '/persian/articles/c4vlle3q337o' },
+const config = cypressConfig('local');
+
+const services = [
+  { service: 'news', path: `/news/articles/${config.assets.news}` },
+  { service: 'persian', path: `/persian/articles/${config.assets.persian}` },
   { service: 'igbo', path: '/igbo' },
   { service: 'yoruba', path: '/yoruba' },
   { service: 'pidgin', path: '/pidgin' },
 ];
+
+const bundleRegex = name =>
+  new RegExp(`(\\/static\\/js\\/${name}-\\w+\\.\\w+\\.js)`, 'g');
+
+const getMatchCount = (regex, arr) => arr.filter(i => i.match(regex)).length;
 
 describe('Js bundle requests', () => {
   beforeEach(async () => {
@@ -28,7 +35,7 @@ describe('Js bundle requests', () => {
     requests = [];
   });
 
-  config.forEach(({ service, path }) => {
+  services.forEach(({ service, path }) => {
     describe(service, () => {
       beforeEach(async () => {
         await page.goto(`http://localhost:7080${path}`, {
@@ -37,17 +44,26 @@ describe('Js bundle requests', () => {
       });
 
       it('only loads expected js bundles', async () => {
-        const requestedJs = requests.filter(url => url.endsWith('.js'));
+        const loadedScriptUrls = requests.filter(url => url.endsWith('.js'));
 
-        const unwantedRequests = requestedJs.filter(url => {
-          const matches = scriptMatches(service).filter(regex =>
-            url.match(regex),
-          );
+        const mainMatchCount = getMatchCount(
+          bundleRegex('main'),
+          loadedScriptUrls,
+        );
+        const vendorMatchCount = getMatchCount(
+          bundleRegex('vendor'),
+          loadedScriptUrls,
+        );
+        const serviceMatchCount = getMatchCount(
+          bundleRegex(service),
+          loadedScriptUrls,
+        );
 
-          return matches.length === 0;
-        });
+        expect(mainMatchCount + vendorMatchCount + serviceMatchCount).toEqual(
+          loadedScriptUrls.length,
+        );
 
-        expect(unwantedRequests).toHaveLength(0);
+        expect(serviceMatchCount).toBeGreaterThanOrEqual(1);
       });
     });
   });
