@@ -4,24 +4,23 @@ Object.keys(config.services).forEach(index => {
   const serviceConfig = config.services[index];
   const service = index;
 
-  describe(`Article Tests for ${service}`, () => {
-    if (
-      serviceConfig.pageTypes.articles !== undefined &&
-      serviceConfig.pageTypes.articles.basicAsset !== undefined
-    ) {
+  describe(`FrontPage Tests for ${service}`, () => {
+    if (serviceConfig.pageTypes.frontPage !== undefined) {
       // can refactor to use the visit below for increased speed?
       it(`should return a 200 status code and HTML file for ${service}`, () => {
         cy.testResponseCodeAndType(
-          `${serviceConfig.pageTypes.articles.basicAsset}`,
+          `${serviceConfig.pageTypes.frontPage.path}`,
           200,
           'text/html',
         );
       });
 
-      if (serviceConfig.pageTypes.articles.featureFlags.dataEndpoint === true) {
+      if (
+        serviceConfig.pageTypes.frontPage.featureFlags.dataEndpoint === true
+      ) {
         it(`should have an available data endpoint (200 response with a JSON file) for ${service}`, () => {
           cy.testResponseCodeAndType(
-            `${serviceConfig.pageTypes.articles.basicAsset}.json`,
+            `${serviceConfig.pageTypes.frontPage.path}.json`,
             200,
             'application/json',
           );
@@ -30,16 +29,16 @@ Object.keys(config.services).forEach(index => {
 
       // eslint-disable-next-line no-undef
       before(() => {
-        cy.visit(`${serviceConfig.pageTypes.articles.basicAsset}`);
+        cy.visit(`${serviceConfig.pageTypes.frontPage.path}`);
       });
 
-      if (serviceConfig.pageTypes.articles.featureFlags.header === true) {
+      if (serviceConfig.pageTypes.frontPage.featureFlags.header === true) {
         it(`should render the header's BBC News branding for ${service}`, () => {
           cy.get('header a').should('contain', 'BBC News');
         });
       }
 
-      if (serviceConfig.pageTypes.articles.featureFlags.footer === true) {
+      if (serviceConfig.pageTypes.frontPage.featureFlags.footer === true) {
         it(`should render the footers's BBC News branding for ${service}`, () => {
           cy.get('footer a')
             .eq(0)

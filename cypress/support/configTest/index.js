@@ -90,6 +90,7 @@ export default {
       pageTypes: {
         articles: undefined,
         frontPage: {
+          path: '/igbo',
           featureFlags: {
             amp: false,
             atiAnalytics: false,
@@ -114,6 +115,7 @@ export default {
       pageTypes: {
         articles: undefined,
         frontPage: {
+          path: '/pidgin',
           featureFlags: {
             amp: false,
             atiAnalytics: false,
@@ -138,6 +140,7 @@ export default {
       pageTypes: {
         articles: undefined,
         frontPage: {
+          path: '/yoruba',
           featureFlags: {
             amp: false,
             atiAnalytics: false,
