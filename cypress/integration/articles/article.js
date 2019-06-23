@@ -140,6 +140,21 @@ Object.keys(config.services).forEach(index => {
         cy.copyrightDataWindow();
       });
 
+      // news only
+      // it('should have an inline link', () => {
+      //   cy.get('main a');
+      // });
+
+      // news and local only
+      // it('should have a working first inline link', () => {
+      //   clickInlineLinkAndTestPageHasHTML(
+      //     'main a',
+      //     `${config.assets.news}`,
+      //   );
+      // });
+
+      // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
+
       it(`should render a title for ${service}`, () => {
         cy.window().then(win => {
           const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
