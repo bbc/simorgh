@@ -38,7 +38,7 @@ Object.keys(config.services).forEach(index => {
         });
 
         it(`should have a visible banner for ${service}`, () => {
-          cy.headerTestVisibleBanner();
+          cy.headerTestVisibleBanner(serviceConfig.canonical);
         });
 
         it(`should have aand h1 for ${service}`, () => {
@@ -48,7 +48,7 @@ Object.keys(config.services).forEach(index => {
 
       if (serviceConfig.pageTypes.frontPage.featureFlags.footer === true) {
         it(`should render the footers's BBC News branding for ${service}`, () => {
-          cy.footerTestBranding();
+          cy.footerTestBranding(serviceConfig.canonical);
         });
 
         it(`should have working links for ${service} in the footer`, () => {

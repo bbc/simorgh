@@ -7,7 +7,7 @@ export default {
   services: {
     // Proof we can add all services in this config file, even without coding anything.
     mundo: {
-      subDir: '/mundo',
+      canonical: undefined,
       errorPages: undefined,
       manifestPath: undefined,
       serviceWorkerPath: undefined,
@@ -21,7 +21,7 @@ export default {
       },
     },
     news: {
-      subDir: '/news',
+      canonical: 'https://www.bbc.co.uk/news',
       errorPages: '/news/articles/cxvxrj8tvppo',
       manifestPath: '/news/articles/manifest.json',
       serviceWorkerPath: '/news/articles/sw.js',
@@ -51,7 +51,7 @@ export default {
       },
     },
     persian: {
-      subDir: '/persian',
+      canonical: 'https://www.bbc.co.uk/news',
       errorPages: undefined,
       manifestPath: '/persian/articles/manifest.json',
       serviceWorkerPath: '/persian/articles/sw.js',
@@ -65,7 +65,7 @@ export default {
       },
     },
     igbo: {
-      subDir: '/igbo',
+      canonical: 'https://www.bbc.co.uk/news',
       errorPages: undefined,
       manifestPath: '/igbo/manifest.json',
       serviceWorkerPath: '/igbo/sw.js',
@@ -79,7 +79,7 @@ export default {
       },
     },
     pidgin: {
-      subDir: '/pidgin',
+      canonical: 'https://www.bbc.co.uk/news',
       errorPages: undefined,
       manifestPath: '/pidgin/manifest.json',
       serviceWorkerPath: '/pidgin/sw.js',
@@ -93,7 +93,7 @@ export default {
       },
     },
     yoruba: {
-      subDir: '/yoruba',
+      canonical: 'https://www.bbc.co.uk/news',
       errorPages: undefined,
       manifestPath: '/yoruba/manifest.json',
       serviceWorkerPath: '/yoruba/sw.js',

@@ -2,16 +2,11 @@ Cypress.Commands.add('headerTestBBCNewsString', () => {
   cy.get('header a').should('contain', 'BBC News');
 });
 
-Cypress.Commands.add('headerTestVisibleBanner', () => {
-  const el = {
-    viewport: 'viewport',
-    header: 'header',
-    section: 'section',
-  };
-  cy.get(el.header)
+Cypress.Commands.add('headerTestVisibleBanner', canonicalLink => {
+  cy.get('header')
     .should('have.lengthOf', 1)
     .find('a')
-    .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // unhardcode later
+    .should('have.attr', 'href', `${canonicalLink}`)
     .find('svg')
     .should('be.visible');
 });
@@ -20,14 +15,14 @@ Cypress.Commands.add('headerTestHaveH1', () => {
   cy.get('h1').should('have.length', 1);
 });
 
-Cypress.Commands.add('footerTestBranding', () => {
+Cypress.Commands.add('footerTestBranding', canonicalLink => {
   cy.get('footer')
     .should('have.length', 1)
     .should('have.attr', 'role', 'contentinfo')
     .find('a')
     .eq(0)
     .should('contain', 'BBC News')
-    .and('have.attr', 'href', 'https://www.bbc.co.uk/news') // unhardcode later
+    .and('have.attr', 'href', `${canonicalLink}`)
     .find('svg')
     .should('be.visible');
 });
@@ -65,13 +60,7 @@ Cypress.Commands.add('hasScriptToFetchBundle', () => {
 });
 
 Cypress.Commands.add('hasVisibleSectionLabel', () => {
-  const el = {
-    viewport: 'viewport',
-    header: 'header',
-    section: 'section',
-  };
-
-  cy.get(el.section)
+  cy.get('section')
     .should('have.length.of.at.least', 1)
     .should('be.visible')
     .each($section => {
@@ -82,13 +71,7 @@ Cypress.Commands.add('hasVisibleSectionLabel', () => {
 });
 
 Cypress.Commands.add('hasOneOrMoreStoryPromos', () => {
-  const el = {
-    viewport: 'viewport',
-    header: 'header',
-    section: 'section',
-  };
-
-  cy.get(el.section).within(() => {
+  cy.get('section').within(() => {
     cy.get('img')
       .should('have.length.of.at.least', 1)
       .should('be.visible');
