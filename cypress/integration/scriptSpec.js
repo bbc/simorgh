@@ -1,5 +1,6 @@
 import config from '../support/config';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
+import scriptMatches from '../support/scriptMatches';
 
 const services = [
   { service: 'news', url: `/news/articles/${config.assets.news}`, describe },
@@ -22,11 +23,7 @@ services.forEach(({ service, url, describe }) => {
 
     // Testing the actual fetch is not currently possible
     it('should have script srcs for service', () => {
-      let expectedMatches = [
-        /(\/static\/js\/main-\w+\.\w+\.js)/g,
-        /(\/static\/js\/vendor-\w+\.\w+\.js)/g,
-        new RegExp(`(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`, 'g'),
-      ];
+      let expectedMatches = scriptMatches(service);
 
       cy.get('script').should($p => {
         const srcs = [];
