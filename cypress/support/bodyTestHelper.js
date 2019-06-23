@@ -50,16 +50,6 @@ export const placeholderImageLoaded = placeholderImage => {
   );
 };
 
-export const visibleImageNoCaption = figure => {
-  const figureVisibility = fig => {
-    fig.should('be.visible');
-    fig.should('to.have.descendants', 'img');
-  };
-
-  figureVisibility(figure);
-  figure.should('not.to.have.descendants', 'figcaption');
-};
-
 export const visibleImageWithCaption = figure => {
   const figureVisibility = fig => {
     fig.should('be.visible');

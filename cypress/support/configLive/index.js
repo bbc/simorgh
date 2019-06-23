@@ -34,11 +34,9 @@ export default {
       pageTypes: {
         articles: {
           path: '/articles',
-          basicAsset: '/news/articles/c8xxl4l3dzeo',
+          basicAsset: '/news/articles/c6v11qzyv8po',
           fullyFeaturedAsset: undefined,
           nonExistent: '/news/articles/cxvxrj8tvppo',
-          // Special case
-          threeSubheadlines: '/news/articles/c5ll353v7y9o',
           featureFlags: {
             amp: true,
             atiAnalytics: true,

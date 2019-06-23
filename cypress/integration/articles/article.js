@@ -100,34 +100,40 @@ Object.keys(config.services).forEach(index => {
           );
       });
 
-      // it(`should have a visible image without a caption, and also not be lazyloaded for ${service}`, () => {
-      //   const firstFigure = cy.get('figure').eq(0);
+      it(`should have a visible image without a caption, and also not be lazyloaded for ${service}`, () => {
+        cy.get('figure')
+          .eq(0)
+          .should('be.visible')
+          .should('to.have.descendants', 'img')
+          .should('not.to.have.descendants', 'figcaption')
+          .within(() => cy.get('noscript').should('not.exist'));
+      });
 
-      //   visibleImageNoCaption(firstFigure);
-      //   firstFigure.within(() => cy.get('noscript').should('not.exist'));
-      // });
+      it(`should have a visible image with a caption that is lazyloaded and has a noscript fallback image for ${service}`, () => {
+        // pre-scrolled into view
+        cy.get('figure')
+          .eq(2)
+          .within(() => {
+            cy.get('div div').should('have.class', 'lazyload-placeholder');
+          });
 
-      // it(`should have a visible image with a caption that is lazyloaded and has a noscript fallback image for ${service}`, () => {
-      //   const imageHasNotLoaded = cy.get('figure').eq(2);
+        // scroll into view
+        cy.get('figure')
+          .eq(2)
+          .scrollIntoView();
 
-      //   imageHasNotLoaded.within(() => {
-      //     const lazyLoadPlaceholder = cy.get('div div');
-      //     lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
-      //   });
-
-      //   imageHasNotLoaded.scrollIntoView();
-
-      //   const imageHasLoaded = cy.get('figure').eq(2);
-
-      //   visibleImageWithCaption(imageHasLoaded);
-      //   imageHasLoaded.within(() => {
-      //     const noscriptImg = cy.get('noscript');
-      //     noscriptImg.contains('<img ');
-
-      //     const ImageContainer = cy.get('div div');
-      //     ImageContainer.should('not.have.class', 'lazyload-placeholder');
-      //   });
-      // });
+        // once scrolled into view
+        cy.get('figure')
+          .eq(2)
+          .scrollIntoView()
+          .should('be.visible')
+          .should('to.have.descendants', 'img')
+          .should('to.have.descendants', 'figcaption')
+          .within(() => {
+            cy.get('noscript').contains('<img ');
+            cy.get('div div').should('not.have.class', 'lazyload-placeholder');
+          });
+      });
 
       if (serviceConfig.pageTypes.articles.featureFlags.footer === true) {
         it(`should render the footers's BBC News branding for ${service}`, () => {

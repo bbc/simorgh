@@ -82,6 +82,12 @@ Cypress.Commands.add('firstParagraphDataWindow', () => {
   });
 });
 
-// Cypress.Commands.add('placeholderImageLoaded', placeholderImage => {
+Cypress.Commands.add('visibleImageNoCaption', figure => {
+  const figureVisibility = fig => {
+    fig.should('be.visible');
+    fig.should('to.have.descendants', 'img');
+  };
 
-// });
+  figureVisibility(figure);
+  figure.should('not.to.have.descendants', 'figcaption');
+});

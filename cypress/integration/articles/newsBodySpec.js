@@ -1,9 +1,5 @@
 import config from '../../support/configOld';
-import {
-  firstSubheadlineDataWindow,
-  visibleImageNoCaption,
-  visibleImageWithCaption,
-} from '../../support/bodyTestHelper';
+import { firstSubheadlineDataWindow } from '../../support/bodyTestHelper';
 
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
@@ -21,35 +17,6 @@ describe('Article Body Tests', () => {
 
   it('should render an H2, which contains/displays a styled subheading', () => {
     firstSubheadlineDataWindow();
-  });
-
-  it('should have a visible image without a caption, and also not be lazyloaded', () => {
-    const firstFigure = cy.get('figure').eq(0);
-
-    visibleImageNoCaption(firstFigure);
-    firstFigure.within(() => cy.get('noscript').should('not.exist'));
-  });
-
-  it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
-    const imageHasNotLoaded = cy.get('figure').eq(2);
-
-    imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = cy.get('div div');
-      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
-    });
-
-    imageHasNotLoaded.scrollIntoView();
-
-    const imageHasLoaded = cy.get('figure').eq(2);
-
-    visibleImageWithCaption(imageHasLoaded);
-    imageHasLoaded.within(() => {
-      const noscriptImg = cy.get('noscript');
-      noscriptImg.contains('<img ');
-
-      const ImageContainer = cy.get('div div');
-      ImageContainer.should('not.have.class', 'lazyload-placeholder');
-    });
   });
 
   it('should have an inline link', () => {
