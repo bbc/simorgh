@@ -14,3 +14,11 @@ Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
     .should('have.attr', 'lang', lang)
     .and('have.attr', 'dir', dir);
 });
+
+Cypress.Commands.add('hasScriptToFetchBundle', () => {
+  // Testing the actual fetch is not currently possible
+  cy.get('script')
+    .last()
+    .should('have.attr', 'src')
+    .and('match', /(\/static\/js\/main-\w+\.\w+\.js)/g);
+});
