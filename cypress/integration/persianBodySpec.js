@@ -38,25 +38,18 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a visible image with a caption', () => {
-    const imageHasNotLoaded = getElement('figure').eq(2);
-
-    imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
-      lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
-    });
-
-    imageHasNotLoaded.scrollIntoView();
-
-    const imageHasLoaded = getElement('figure').eq(2);
-
-    visibleImageWithCaption(imageHasLoaded);
-    imageHasLoaded.within(() => {
-      const noscriptImg = getElement('noscript');
-      noscriptImg.contains('<img ');
-
-      const ImageContainer = getElement('div div');
-      ImageContainer.should('not.have.class', 'lazyload-placeholder');
-    });
+    getElement('figure')
+      .eq(2)
+      .as('figure')
+      .within(() =>
+        getElement('div div').should('have.class', 'lazyload-placeholder'),
+      )
+      .scrollIntoView()
+      .then(() => visibleImageWithCaption(getElement('@figure')))
+      .within(() => {
+        getElement('noscript').contains('<img ');
+        getElement('div div').should('not.have.class', 'lazyload-placeholder');
+      });
   });
 
   it('should render a title', () => {

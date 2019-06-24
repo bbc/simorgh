@@ -8,7 +8,6 @@ describe('Header Tests', () => {
   });
 
   it('should render the BBC News branding', () => {
-    const newsBrandingLink = getElement('header a');
-    shouldContainText(newsBrandingLink, 'BBC News');
+    shouldContainText(getElement('header a'), 'BBC News');
   });
 });
