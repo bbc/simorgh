@@ -477,8 +477,7 @@ export const audioClipGlobalGuidanceBlock = {
           synopses: {
             short: 'Some audio from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
           imageCopyright: null,
           embedding: false,
           advertising: false,
@@ -515,8 +514,7 @@ export const audioClipGlobalGuidanceBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
@@ -544,8 +542,7 @@ export const audioClipUkOnlyBlock = {
             short:
               'This is some sound from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: false,
@@ -579,8 +576,7 @@ export const audioClipUkOnlyBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
@@ -608,8 +604,7 @@ export const audioClipNonUkBlock = {
             short:
               'This is some audio from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: true,
@@ -643,8 +638,7 @@ export const audioClipNonUkBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
