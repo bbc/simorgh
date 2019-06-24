@@ -1,4 +1,5 @@
 import React, { useContext, Fragment } from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { string, number, objectOf, any, bool, oneOf } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
@@ -10,13 +11,18 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
+/* eslint-disable react/no-danger */
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
-      <noscript>{imageToRender}</noscript>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: ReactDOMServer.renderToString(imageToRender),
+        }}
+      />
     </Fragment>
   ) : (
     imageToRender

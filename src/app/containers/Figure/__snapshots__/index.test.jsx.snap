@@ -7,11 +7,6 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
   width: 100%;
 }
 
-.c2 {
-  display: block;
-  width: 100%;
-}
-
 .c1 {
   position: relative;
   height: 0;
@@ -39,15 +34,13 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
         }
       }
     />
-    <noscript>
-      <img
-        alt="Pauline Clayton"
-        className="c2"
-        height={null}
-        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-        width={640}
-      />
-    </noscript>
+    <noscript
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<img alt=\\"Pauline Clayton\\" src=\\"https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg\\" width=\\"640\\" class=\\"StyledImg-sc-7vx2mr-0 tahEv\\"/>",
+        }
+      }
+    />
   </div>
 </figure>
 `;
