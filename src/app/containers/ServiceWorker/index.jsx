@@ -10,7 +10,7 @@ const ServiceWorkerContainer = () => {
     if (envIsProduction && onClient() && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
-  }, [envIsProduction, swPath]);
+  }, [envIsProduction, swPath, service]);
 
   return null;
 };
