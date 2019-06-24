@@ -375,7 +375,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
                     "id": "p01m7d3c",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -410,7 +410,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -806,7 +806,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
                     "id": "p01m7d07",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -844,7 +844,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -1240,7 +1240,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
                     "id": "p01m7d4m",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -1275,7 +1275,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -1671,7 +1671,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
                     "id": "p01m7d3c",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -1706,7 +1706,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -2102,7 +2102,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
                     "id": "p01m7d07",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -2140,7 +2140,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -2536,7 +2536,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
                     "id": "p01m7d4m",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -2571,7 +2571,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg",
                           "originCode": null,
                           "width": null,
                         },
