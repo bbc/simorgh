@@ -158,7 +158,7 @@ describe('FrontPageSection Container', () => {
 
     shouldShallowMatchSnapshot(
       'should render without a bar',
-      <FrontPageSection group={group} bar={false} sectionNumber={0} />,
+      <FrontPageSection group={group} bar={false} sectionNumber={1} />,
     );
 
     shouldShallowMatchSnapshot(
@@ -217,7 +217,26 @@ describe('FrontPageSection Container', () => {
       const sectionLabel = container.getElementsByTagName('section')[0]
         .firstChild;
 
-      expect(sectionLabel).toHaveStyleRule('clip-path');
+      expect(sectionLabel).toHaveStyleRule('clip-path', 'inset(100%)', {
+        media: '(max-width: 37.4375rem)',
+      });
+    });
+
+    it('should not add styling to visually hide section label when width of screen is less than 600px and sectionNumber !== 0', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} sectionNumber={2} />
+        </ServiceContextProvider>,
+      );
+
+      global.innerWidth = 500;
+      global.dispatchEvent(new Event('resize'));
+      const sectionLabel = container.getElementsByTagName('section')[0]
+        .firstChild;
+
+      expect(sectionLabel).not.toHaveStyleRule('clip-path', 'inset(100%)', {
+        media: '(max-width: 37.4375rem)',
+      });
     });
 
     it('should render null when there are no items', () => {
