@@ -11,6 +11,9 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
+// dangerouslySetInnerHTML below to used to ensure noscript tag is rendered on the client
+// Related issue https://github.com/facebook/react/issues/11423#issuecomment-341751071
+
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
