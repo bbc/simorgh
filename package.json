@@ -44,6 +44,8 @@
     "test:lighthouse:ci": "npm install --no-save lighthouse@latest npm-run-all@latest && run-p --race start test:lighthouse",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
+    "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
+    "test:puppeteer:ci": "npm install --no-save puppeteer@latest && run-p --race start test:puppeteer",
     "test:size": "./scripts/bundleSize.sh",
     "test:unit": "jest --env=jsdom --coverage --colors",
     "snyk": "snyk test",

@@ -28,6 +28,7 @@ jobs:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
         - xvfb-run -a npm run test:lighthouse:ci
+        - xvfb-run -a npm run test:puppeteer:ci
 notifications:
   email: false
   slack:
