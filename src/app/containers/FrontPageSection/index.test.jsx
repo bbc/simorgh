@@ -165,6 +165,16 @@ describe('FrontPageSection Container', () => {
       'should render with only one item',
       <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
+
+    shouldShallowMatchSnapshot(
+      'visuallyHidden should be called with true when sectionNumber === 0',
+      <FrontPageSection group={group} sectionNumber={0} />,
+    );
+
+    shouldShallowMatchSnapshot(
+      'visuallyHidden should be called with false when sectionNumber !== 0',
+      <FrontPageSection group={group} sectionNumber={7} />,
+    );
   });
 
   describe('assertions', () => {
@@ -203,40 +213,6 @@ describe('FrontPageSection Container', () => {
       expect(section.getAttribute('aria-labelledby')).toBeDefined();
       expect(label.id).toBeDefined();
       expect(section.getAttribute('aria-labelledby')).toEqual(label.id);
-    });
-
-    it('should add styling to visually hide section label when width of screen is less than 600px and sectionNumber === 0', () => {
-      const { container } = render(
-        <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={0} />
-        </ServiceContextProvider>,
-      );
-
-      global.innerWidth = 500;
-      global.dispatchEvent(new Event('resize'));
-      const sectionLabel = container.getElementsByTagName('section')[0]
-        .firstChild;
-
-      expect(sectionLabel).toHaveStyleRule('clip-path', 'inset(100%)', {
-        media: '(max-width: 37.4375rem)',
-      });
-    });
-
-    it('should not add styling to visually hide section label when width of screen is less than 600px and sectionNumber !== 0', () => {
-      const { container } = render(
-        <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={2} />
-        </ServiceContextProvider>,
-      );
-
-      global.innerWidth = 500;
-      global.dispatchEvent(new Event('resize'));
-      const sectionLabel = container.getElementsByTagName('section')[0]
-        .firstChild;
-
-      expect(sectionLabel).not.toHaveStyleRule('clip-path', 'inset(100%)', {
-        media: '(max-width: 37.4375rem)',
-      });
     });
 
     it('should render null when there are no items', () => {
