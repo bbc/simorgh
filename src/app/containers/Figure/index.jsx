@@ -48,26 +48,24 @@ const ImageComponent = ({
   );
 
   return (
-    <FeatureFlag flag="images">
-      <Fragment>
-        <ImagePlaceholder ratio={ratio}>
-          {platform === 'amp' ? (
-            <AmpImg
-              alt={alt}
-              attribution={copyright || ''}
-              layout="responsive"
-              src={src}
-              height={height}
-              width={width}
-            />
-          ) : (
-            renderImage(imageToRender, lazyLoad)
-          )}
-          {showCopyright && renderCopyright(copyright)}
-        </ImagePlaceholder>
-        {renderCaption(captionBlock, type)}
-      </Fragment>
-    </FeatureFlag>
+    <Fragment>
+      <ImagePlaceholder ratio={ratio}>
+        {platform === 'amp' ? (
+          <AmpImg
+            alt={alt}
+            attribution={copyright || ''}
+            layout="responsive"
+            src={src}
+            height={height}
+            width={width}
+          />
+        ) : (
+          renderImage(imageToRender, lazyLoad)
+        )}
+        {showCopyright && renderCopyright(copyright)}
+      </ImagePlaceholder>
+      {renderCaption(captionBlock, type)}
+    </Fragment>
   );
 };
 
