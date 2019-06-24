@@ -13,7 +13,10 @@ describe('FrontPageAtiParams', () => {
     metadata: {
       analyticsLabels: {
         counterName: 'SERVICE.page',
-        cps_asset_id: '12345678',
+      },
+      locators: {
+        curie:
+          'http://www.bbc.co.uk/asset/b2ce8e02-168f-42c4-b78b-4780807445b4/desktop/domestic',
       },
       language: 'LANGUAGE',
       title: 'PAGE TITLE',
@@ -50,7 +53,7 @@ describe('FrontPageAtiParams', () => {
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
       expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
         appName: 'news-SERVICE',
-        contentId: '12345678',
+        contentId: 'urn:bbc:cps:b2ce8e02-168f-42c4-b78b-4780807445b4',
         contentType: 'index-home',
         language: 'LANGUAGE',
         pageIdentifier: 'SERVICE.page',

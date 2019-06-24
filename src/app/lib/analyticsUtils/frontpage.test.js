@@ -38,16 +38,33 @@ describe('getPageIdentifier', () => {
 describe('getContentId', () => {
   const goodData = {
     metadata: {
-      analyticsLabels: {
-        cps_asset_id: '12345678',
+      locators: {
+        curie:
+          'http://www.bbc.co.uk/asset/b2ce8e02-168f-42c4-b78b-4780807445b4/desktop/domestic',
       },
     },
   };
 
   const badData = {
     metadata: {
-      analyticsLabels: {
-        notACpsAssetId: 'muahahaha',
+      locators: {
+        noCurie: 'oops',
+      },
+    },
+  };
+
+  const badCurie = {
+    metadata: {
+      locators: {
+        curie: '555',
+      },
+    },
+  };
+
+  const nonGuid = {
+    metadata: {
+      locators: {
+        curie: 'http://www.bbc.co.uk/asset/123/desktop/domestic',
       },
     },
   };
@@ -55,11 +72,25 @@ describe('getContentId', () => {
   it('should find the CPS asset id', () => {
     const contentid = getContentId(goodData);
 
-    expect(contentid).toEqual('12345678');
+    expect(contentid).toEqual(
+      'urn:bbc:cps:b2ce8e02-168f-42c4-b78b-4780807445b4',
+    );
   });
 
-  it('should return null if CPS asset id is not defined', () => {
+  it('should return null if there is no curie', () => {
     const contentid = getContentId(badData);
+
+    expect(contentid).toBeNull();
+  });
+
+  it('should return null if the curie format is not recognised', () => {
+    const contentid = getContentId(badCurie);
+
+    expect(contentid).toBeNull();
+  });
+
+  it('should return null if the value in the curie is not a guid', () => {
+    const contentid = getContentId(nonGuid);
 
     expect(contentid).toBeNull();
   });
