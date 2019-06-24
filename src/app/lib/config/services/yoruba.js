@@ -20,6 +20,11 @@ const yoruba = {
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  themeColor: `${C_POSTBOX}`,
+  twitterCreator: '@BBCNews', // to be updated
+  twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
     error: {

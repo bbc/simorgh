@@ -57,15 +57,22 @@ const LinkedData = ({
     '@type': type,
     url: canonicalLink,
     publisher,
-    datePublished: firstPublished,
-    dateModified: lastUpdated,
-    headline: seoHeadline,
     image,
     thumbnailUrl: logoUrl,
-    author,
-    about,
     mainEntityOfPage,
   };
+
+  if (type === 'article') {
+    const articleSpecificSchema = {
+      headline: seoHeadline,
+      datePublished: firstPublished,
+      dateModified: lastUpdated,
+      author,
+      about,
+    };
+
+    Object.assign(linkMetadata, articleSpecificSchema);
+  }
 
   return (
     <Helmet>
@@ -80,8 +87,8 @@ LinkedData.propTypes = {
   canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: string.isRequired,
-  lastUpdated: string.isRequired,
+  firstPublished: string,
+  lastUpdated: string,
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
@@ -97,6 +104,8 @@ LinkedData.propTypes = {
 
 LinkedData.defaultProps = {
   about: undefined,
+  firstPublished: undefined,
+  lastUpdated: undefined,
 };
 
 export default LinkedData;
