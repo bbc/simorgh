@@ -15,11 +15,6 @@ const services = [
   { service: 'pidgin', path: '/pidgin' },
 ];
 
-const bundleRegex = name =>
-  new RegExp(`(\\/static\\/js\\/${name}-\\w+\\.\\w+\\.js)`, 'g');
-
-const getMatchCount = (regex, arr) => arr.filter(i => i.match(regex)).length;
-
 describe('Js bundle requests', () => {
   beforeEach(async () => {
     browser = await puppeteer.launch();
@@ -44,26 +39,26 @@ describe('Js bundle requests', () => {
       });
 
       it('only loads expected js bundles', async () => {
-        const loadedScriptUrls = requests.filter(url => url.endsWith('.js'));
+        requests
+          .filter(url => url.endsWith('.js'))
+          .forEach(url => {
+            expect(url).toMatch(
+              new RegExp(
+                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                'g',
+              ),
+            );
+          });
+      });
 
-        const mainMatchCount = getMatchCount(
-          bundleRegex('main'),
-          loadedScriptUrls,
-        );
-        const vendorMatchCount = getMatchCount(
-          bundleRegex('vendor'),
-          loadedScriptUrls,
-        );
-        const serviceMatchCount = getMatchCount(
-          bundleRegex(service),
-          loadedScriptUrls,
+      it('loads at least 1 service bundle', async () => {
+        const serviceMatches = requests.filter(url =>
+          url.match(
+            new RegExp(`(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`, 'g'),
+          ),
         );
 
-        expect(mainMatchCount + vendorMatchCount + serviceMatchCount).toEqual(
-          loadedScriptUrls.length,
-        );
-
-        expect(serviceMatchCount).toBeGreaterThanOrEqual(1);
+        expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
       });
     });
   });
