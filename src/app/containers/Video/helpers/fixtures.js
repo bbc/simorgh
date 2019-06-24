@@ -252,7 +252,7 @@ export const videoClipGlobalPortraitBlock = {
           synopses: {
             short: 'This is a really plain green test vertical video',
           },
-          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: true,
@@ -286,7 +286,7 @@ export const videoClipGlobalPortraitBlock = {
               model: {
                 width: null,
                 height: null,
-                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },

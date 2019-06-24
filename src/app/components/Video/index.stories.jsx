@@ -22,11 +22,11 @@ const props = {
     playlistObject: {
       title: 'Ants',
       holdingImageURL:
-        'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg',
       items: [
         {
           versionID: 'p01kdbnv',
-          duration: 111,
+          duration: 162,
           kind: 'programme',
         },
       ],
