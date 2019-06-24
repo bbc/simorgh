@@ -33,20 +33,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   it('should load the AMP framework', () => {
     // .eq(1) gets the amp <script> as:
     // the first loaded is a Cypress <script>
-    // Once bbc/simorgh#1906 has been merged, this may need to become .eq(2) as:
-    //  the second loaded will be the Schema.org metadata script
-    // and the below `.eq(x)`s will also need updating
-    const ampScript = getElement('head script').eq(1);
+    const ampScript = getElement('head script').eq(2);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(2);
+    const ampGeoScript = getElement('head script').eq(3);
     ampGeoScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     );
 
-    const ampConsentScript = getElement('head script').eq(3);
+    const ampConsentScript = getElement('head script').eq(4);
     ampConsentScript.should(
       'have.attr',
       'src',
