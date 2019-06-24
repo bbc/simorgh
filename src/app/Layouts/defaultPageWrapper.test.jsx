@@ -1,9 +1,11 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { shouldShallowMatchSnapshot } from '../../testHelpers';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
+import * as requestContextImports from '../contexts/RequestContext';
 
 jest.mock('../contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -29,9 +31,45 @@ describe('defaultPageWrapper', () => {
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,
+    pageType: 'article',
   };
+
   shouldShallowMatchSnapshot(
     'should render with children',
     <DefaultPageWrapper {...propsWithChildren} />,
   );
+
+  describe('assertions', () => {
+    let requestContextSpy;
+    beforeEach(() => {
+      requestContextSpy = jest.spyOn(
+        requestContextImports,
+        'RequestContextProvider',
+      );
+    });
+
+    const pageTypes = ['article', 'frontPage', 'chicken'];
+
+    pageTypes.forEach(pageType => {
+      it(`passing pageType==${pageType} should pass along`, () => {
+        const fixture = {
+          bbcOrigin: 'https://www.bbc.com',
+          id: 'c0000000000o',
+          service: 'news',
+          isAmp: true,
+          pageType,
+        };
+
+        render(<DefaultPageWrapper {...fixture} />);
+
+        expect(requestContextSpy).toHaveBeenCalled();
+        expect(requestContextSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            pageType,
+          }),
+          {},
+        );
+      });
+    });
+  });
 });
