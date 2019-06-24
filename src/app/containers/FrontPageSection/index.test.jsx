@@ -250,6 +250,9 @@ describe('FrontPageSection Container', () => {
       const images = container.getElementsByTagName('img');
       const image = images[0];
 
+      // When lazy loading an image, it get placed inside <noscript> and wont be on the DOM
+      // Even though we have 2 items we only expect 1 image on the DOM
+      // The first image being a top story won't be lazyloaded and will be the only iamge present on the DOM
       expect(images).toHaveLength(1);
       expect(image.getAttribute('src')).toEqual(
         'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
