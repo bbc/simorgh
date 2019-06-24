@@ -7,7 +7,8 @@ const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
 const contextStub = {
-  swPath: '/news/articles/sw.js',
+  swPath: '/articles/sw.js',
+  service: 'news',
 };
 
 describe('Service Worker', () => {
@@ -17,34 +18,32 @@ describe('Service Worker', () => {
     };
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('on production environment', () => {
-    beforeEach(() => {
+    it('should be installed', async () => {
       process.env.NODE_ENV = 'production';
       mount(
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
       );
-    });
-
-    it('should be installed', async () => {
       expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
-        contextStub.swPath,
+        `/news/articles/sw.js`,
       );
     });
   });
 
   describe('on dev environment', () => {
-    beforeEach(() => {
+    it('should not be installed', async () => {
       process.env.NODE_ENV = 'dev';
       mount(
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
       );
-    });
-
-    it('should not be installed', async () => {
       expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
     });
   });

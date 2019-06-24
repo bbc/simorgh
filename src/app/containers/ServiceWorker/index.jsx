@@ -3,12 +3,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import onClient from '../../lib/utilities/onClient';
 
 const ServiceWorkerContainer = () => {
-  const { swPath } = useContext(ServiceContext);
+  const { swPath, service } = useContext(ServiceContext);
   const envIsProduction = process.env.NODE_ENV === 'production';
 
   useEffect(() => {
     if (envIsProduction && onClient() && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register(swPath);
+      navigator.serviceWorker.register(`/${service}${swPath}`);
     }
   }, [envIsProduction, swPath]);
 
