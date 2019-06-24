@@ -10,7 +10,6 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     id,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
-  const { serviceWorkerPath } = useContext(ServiceContext);
 
   const [state, setState] = useState({
     data: initialData,
