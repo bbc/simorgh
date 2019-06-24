@@ -169,7 +169,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             "altText": "Image Alt text 1",
             "copyrightHolder": "Image provider 1",
             "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "path": "/cpsprodpb/0A06/production/image1.jpg",
             "width": 2048,
           },
           "locators": Object {
@@ -192,7 +192,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             "altText": "Image Alt text 2",
             "copyrightHolder": "Image provider 2",
             "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "path": "/cpsprodpb/0A06/production/image2.jpg",
             "width": 2048,
           },
           "locators": Object {
@@ -386,7 +386,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "timestamp": 1557738768,
       }
     }
-    lazyLoadImage={true}
+    lazyLoadImage={false}
     script={
       Object {
         "bodyCopy": Object {
@@ -705,7 +705,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             "altText": "Image Alt text 1",
             "copyrightHolder": "Image provider 1",
             "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "path": "/cpsprodpb/0A06/production/image1.jpg",
             "width": 2048,
           },
           "locators": Object {
@@ -728,7 +728,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             "altText": "Image Alt text 2",
             "copyrightHolder": "Image provider 2",
             "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "path": "/cpsprodpb/0A06/production/image2.jpg",
             "width": 2048,
           },
           "locators": Object {

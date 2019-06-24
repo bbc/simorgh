@@ -11,10 +11,15 @@ import deepGet from '../../lib/utilities/deepGet';
 
 const StoryPromoLiContainer = ({ item, sectionNumber, storyNumber }) => {
   const topStory = sectionNumber === 0 && storyNumber === 0;
+  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
     <StoryPromoLi key={item.id}>
-      <StoryPromo item={item} topStory={topStory} />
+      <StoryPromo
+        item={item}
+        topStory={topStory}
+        lazyLoadImage={lazyLoadImage}
+      />
     </StoryPromoLi>
   );
 };
@@ -64,7 +69,12 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
           ))}
         </StoryPromoUl>
       ) : (
-        <StoryPromo item={items[0]} script={script} topStory />
+        <StoryPromo
+          item={items[0]}
+          script={script}
+          topStory
+          lazyLoadImage={false}
+        />
       )}
     </section>
   );
