@@ -27,7 +27,7 @@ jobs:
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: "Production e2e and lighthouse Tests" 
+      name: "Production CI tests" 
       install: npm ci --only=prod
       addons: 
         chrome: stable
