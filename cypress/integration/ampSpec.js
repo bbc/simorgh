@@ -1,5 +1,8 @@
 import config from '../support/config';
-import { getElement } from '../support/bodyTestHelper';
+import {
+  getElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
 import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
@@ -22,6 +25,10 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should have AMP attribute', () => {
     getElement('html').should('have.attr', 'amp');
+  });
+
+  it('should have lang and dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should load the AMP framework', () => {
@@ -78,11 +85,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should include the canonical URL', () => {
-    const { origin } = window.location;
-    const canonicalOrigin = origin.includes('localhost')
-      ? 'https://www.test.bbc.co.uk'
-      : origin;
-
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
   });
 
