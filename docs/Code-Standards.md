@@ -6,7 +6,7 @@ We are following an AMP-first approach therefore all page components must be AMP
 
 ## Quality Assurance
 
-We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simorgh)/[Psammead](https://github.com/bbc/psammead)), who are responsible for ensuring the quality of the code and are good source for an enquiries.
+We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simorgh)/[Psammead](https://github.com/bbc/psammead)), who are responsible for ensuring the quality of the code and are a good source for enquiries.
 
 #### Issue/PR(Pull Request)
 
@@ -18,13 +18,13 @@ We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simo
 
 #### Unit Tests
 
-Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
+- Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
 
-We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
+- We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
 
-For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable.
+- For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable.
 
-For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
+- For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
 
 #### Linting standard
 
