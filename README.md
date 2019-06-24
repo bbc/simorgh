@@ -95,19 +95,19 @@ To run LIVE bundles on localhost:
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost.bbc.com:7080/news/articles/c8xxl4l3dzeo
 
-## Changing request location
-
-Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
-
-- UK version: [http://localhost.bbc.co.uk:7080/news/articles/c0000000001o](http://localhost.bbc.co.uk:7080/news/articles/c0000000001o)
-- International version: [http://localhost.bbc.com:7080/news/articles/c0000000001o](http://localhost.bbc.com:7080/news/articles/c0000000001o)
-
 If these urls do not work, you may need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
 
 ```
 127.0.0.1 localhost.bbc.co.uk
 127.0.0.1 localhost.bbc.com
 ```
+
+## Changing request location
+
+Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
+
+- UK version: [http://localhost.bbc.co.uk:7080/news/articles/c0000000001o](http://localhost.bbc.co.uk:7080/news/articles/c0000000001o)
+- International version: [http://localhost.bbc.com:7080/news/articles/c0000000001o](http://localhost.bbc.com:7080/news/articles/c0000000001o)
 
 ## Production build on CI
 
