@@ -10,12 +10,14 @@ const routes = [
     exact: true,
     component: Article,
     getInitialData: getArticleInitialData,
+    pageType: 'article',
   },
   {
     path: frontpageRegexPath,
     exact: true,
     component: FrontPage,
     getInitialData: getFrontpageInitialData,
+    pageType: 'frontPage',
   },
 ];
 
