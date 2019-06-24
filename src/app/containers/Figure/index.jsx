@@ -11,18 +11,19 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-/* eslint-disable react/no-danger */
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
+      {/* eslint-disable react/no-danger */}
       <noscript
         dangerouslySetInnerHTML={{
           __html: ReactDOMServer.renderToString(imageToRender),
         }}
       />
+      {/* eslint-enable react/no-danger */}
     </Fragment>
   ) : (
     imageToRender

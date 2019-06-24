@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import { atiBaseUrl } from '../atiUrl';
@@ -11,6 +10,7 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
     sendBeacon(atiPageViewUrl);
   }, [atiPageViewUrl]);
 
+  /* eslint-disable react/no-danger */
   return (
     <noscript
       dangerouslySetInnerHTML={{
@@ -18,6 +18,7 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
       }}
     />
   );
+  /* eslint-enable react/no-danger */
 };
 
 CanonicalATIAnalytics.propTypes = {
