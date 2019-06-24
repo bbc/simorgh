@@ -15,7 +15,7 @@ import config from '../support/config';
       cy.visit(url);
     });
 
-    it('should have script srcs for service', () => {
+    it('should only have expected bundle script tags', () => {
       cy.onLocal(() => {
         cy.get('script[src]').each($p =>
           expect($p.attr('src')).to.match(
@@ -25,6 +25,31 @@ import config from '../support/config';
             ),
           ),
         );
+      });
+    });
+
+    it('should have 1 bundle for its service', () => {
+      cy.onLocal(() => {
+        let matches = 0;
+
+        cy.get('script[src]')
+          .each($p => {
+            const match = $p
+              .attr('src')
+              .match(
+                new RegExp(
+                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
+                  'g',
+                ),
+              );
+
+            if (match) {
+              matches += 1;
+            }
+          })
+          .then(() => {
+            expect(matches).to.equal(1);
+          });
       });
     });
   });
