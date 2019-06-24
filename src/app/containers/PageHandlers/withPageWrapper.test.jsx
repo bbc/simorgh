@@ -5,6 +5,7 @@ import WithPageWrapper from './withPageWrapper';
 const dataProps = {
   isAmp: false,
   service: 'news',
+  route: { pageType: 'article' },
 };
 
 describe('with pageWrapper', () => {
