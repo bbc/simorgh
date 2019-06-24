@@ -4,13 +4,19 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
-  const { service, isAmp, id } = getRouteProps(routes, location.pathname);
+  const {
+    service,
+    isAmp,
+    id,
+    route: { pageType },
+  } = getRouteProps(routes, location.pathname);
 
   const [state, setState] = useState({
     data: initialData,
     service,
     id,
     isAmp,
+    pageType,
     loading: false,
     error: null,
   });
@@ -35,6 +41,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
         service: nextService,
         id: nextId,
         isAmp: nextIsAmp,
+        pageType: route.pageType,
         loading: true,
         error: null,
       });
