@@ -53,7 +53,7 @@ StoryPromoImage.propTypes = {
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script } = useContext(ServiceContext);
+  const { script, locale } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -79,6 +79,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       )}
       {timestamp && (
         <Timestamp
+          locale={locale}
           timestamp={timestamp * 1000}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"

@@ -117,7 +117,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
        * we need it, without importing it in every file or importing
        * every locale.
        */
-      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/),
+      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb|fa|yo/),
       /* moment-timezone-data-plugin allows you to specify how much
        * and what specific timezone data you wish to bundle.
        * matchZones: (string or array of strings) Only include data
