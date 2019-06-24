@@ -71,6 +71,7 @@ const PopOutAtGroup5 = styled.div`
   @supports(display: grid) {
     @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
       max-height: 0; /* [1] */
+      padding-top: 0.25rem;
     }
   }
 `;
