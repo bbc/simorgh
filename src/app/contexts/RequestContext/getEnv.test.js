@@ -17,7 +17,7 @@ const tests = [
     assertion: 'should return expected output for test',
   },
   {
-    input: 'http://localhost:7080',
+    input: 'http://localhost.bbc.com:7080',
     expected: 'local',
     assertion: 'should return expected output for local',
   },

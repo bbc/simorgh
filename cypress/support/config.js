@@ -26,10 +26,10 @@ const config = {
     atiAnalyticsWSBucket: '598343',
   },
   local: {
-    baseUrl: 'http://localhost:7080',
-    dataUrl: 'http://localhost:7080',
-    assetUrl: 'http://localhost:7080',
-    assetOrigin: 'http://localhost:7080',
+    baseUrl: 'http://localhost.bbc.com:7080',
+    dataUrl: 'http://localhost.bbc.com:7080',
+    assetUrl: 'http://localhost.bbc.com:7080',
+    assetOrigin: 'http://localhost.bbc.com:7080',
     assets: {
       news: 'c0g992jmmkko',
       newsThreeSubheadlines: 'c6v11qzyv8po',

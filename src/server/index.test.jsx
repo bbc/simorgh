@@ -167,7 +167,7 @@ describe('Server', () => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
@@ -287,7 +287,7 @@ describe('Server', () => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}

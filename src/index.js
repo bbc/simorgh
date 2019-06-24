@@ -21,7 +21,7 @@ server.listen(port, error => {
     logger.error(error);
   }
 
-  logger.info(`Started and listening on http://localhost:${port}`);
+  logger.info(`Started and listening on http://localhost.bbc.com:${port}`);
 });
 
 if (module.hot) {
