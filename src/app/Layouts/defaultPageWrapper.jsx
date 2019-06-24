@@ -12,10 +12,10 @@ import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp }) => {
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-  const pageType = 'article';
+
   return (
     <Fragment>
       <ServiceContextProvider service={service}>
@@ -54,6 +54,7 @@ PageWrapper.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
+  pageType: string.isRequired,
   service: string.isRequired,
 };
 
