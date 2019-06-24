@@ -1007,22 +1007,6 @@ BBC Africa Eye tori pesin Zuhura Yunus continue di tori of how di codeine story 
                   "timestamp": 1560015971,
                   "type": "cps",
                 },
-              ],
-              "semanticGroupName": "Section 2",
-              "strapline": Object {
-                "name": "Ginger me",
-              },
-              "title": "Section 2",
-              "type": "responsive-inspire",
-            }
-          }
-          sectionNumber={3}
-        />
-        <FrontPageSection
-          bar={true}
-          group={
-            Object {
-              "items": Array [
                 Object {
                   "cpsType": "MAP",
                   "headlines": Object {
@@ -1112,6 +1096,7 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
               "type": "responsive-inspire",
             }
           }
+          sectionNumber={3}
         />
         <FrontPageSection
           bar={true}
@@ -3971,6 +3956,7 @@ Four years down di line, how far with dis promise?",
               "type": "responsive-in-depth",
             }
           }
+          sectionNumber={4}
         />
         <FrontPageSection
           bar={true}
@@ -4036,22 +4022,6 @@ Four years down di line, how far with dis promise?",
                   "timestamp": 1559133172,
                   "type": "cps",
                 },
-              ],
-              "semanticGroupName": "Section 3",
-              "strapline": Object {
-                "name": "Informate me",
-              },
-              "title": "Section 3",
-              "type": "responsive-in-depth",
-            }
-          }
-          sectionNumber={4}
-        />
-        <FrontPageSection
-          bar={true}
-          group={
-            Object {
-              "items": Array [
                 Object {
                   "cpsType": "STY",
                   "headlines": Object {
