@@ -357,6 +357,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
               "type": "responsive-top-stories",
             }
           }
+          sectionNumber={0}
         />
         <FrontPageSection
           bar={true}
@@ -544,6 +545,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
               "type": "responsive-cluster",
             }
           }
+          sectionNumber={1}
         />
         <FrontPageSection
           bar={true}
@@ -686,6 +688,7 @@ exports[`FrontPageMain snapshots should render an igbo frontpage correctly 1`] =
               "type": "responsive-must-see",
             }
           }
+          sectionNumber={2}
         />
         <FrontPageSection
           bar={true}
@@ -1093,6 +1096,7 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
               "type": "responsive-inspire",
             }
           }
+          sectionNumber={3}
         />
         <FrontPageSection
           bar={true}
@@ -3952,6 +3956,7 @@ Four years down di line, how far with dis promise?",
               "type": "responsive-in-depth",
             }
           }
+          sectionNumber={4}
         />
         <FrontPageSection
           bar={true}
@@ -6430,6 +6435,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               "type": "special-reports",
             }
           }
+          sectionNumber={5}
         />
         <FrontPageSection
           bar={true}
@@ -6518,6 +6524,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
               "type": "featured-site-top-stories",
             }
           }
+          sectionNumber={6}
         />
       </ForwardRef(GridItemConstrainedLarge)>
     </ForwardRef(GhostWrapper)>
