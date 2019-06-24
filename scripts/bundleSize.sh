@@ -1,20 +1,28 @@
 #!/bin/bash
 
 # Size limit for all bundles used by each service (K)
-limit=730
+# Keep these +/- 10K
+min=662
+max=686
 
 services=( "news" "persian" "igbo" "yoruba" "pidgin" )
 failure=false
 
-tput setaf 1
-
-for i in "${services[@]}"
+for service in "${services[@]}"
 do
-   size=$(du -chsk build/public/static/js/{main,vendor,$i}-*.js | grep total | grep -Eo '[0-9]{1,4}')
+   size=$(du -chsk build/public/static/js/{main,vendor,$service}-*.js | grep total | grep -Eo '[0-9]{1,4}')
 
-   if [[ $size -gt $limit ]]; then
-     echo "Bundle size for $i is too great at ${size}K"
+   if [[ $size -lt $min ]]; then
+     tput setaf 1
+     echo "Bundle size for $service is too small at ${size}K, please update thresholds"
      failure=true
+   elif [[ $size -gt $max ]]; then
+     tput setaf 1
+     echo "Bundle size for $service is too great at ${size}K, please update thresholds"
+     failure=true
+   else 
+    tput setaf 2
+    echo "${service} JS = ${size}K"
    fi
 done
 
