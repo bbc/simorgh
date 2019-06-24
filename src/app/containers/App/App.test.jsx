@@ -3,10 +3,12 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import * as reactRouterConfig from 'react-router-config';
+import reactRouterConfig from 'react-router-config';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { App } from './App';
+
+jest.mock('react-router-config');
 
 describe('App', () => {
   let wrapper;
@@ -16,13 +18,14 @@ describe('App', () => {
 
   const route = {
     getInitialData: jest.fn(),
+    pageType: 'article',
   };
 
-  reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([{ route, match }]);
+  reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
-  reactRouterConfig.renderRoutes = jest
-    .fn()
-    .mockReturnValue(<h1>{initialData.pageData}</h1>);
+  reactRouterConfig.renderRoutes.mockReturnValue(
+    <h1>{initialData.pageData}</h1>,
+  );
 
   beforeAll(() => {
     wrapper = mount(
@@ -40,12 +43,13 @@ describe('App', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
-      data: initialData,
-      service: 'news',
-      isAmp: false,
-      error: null,
-      loading: false,
       bbcOrigin: 'https://www.bbc.co.uk',
+      data: initialData,
+      error: null,
+      isAmp: false,
+      loading: false,
+      pageType: 'article',
+      service: 'news',
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -86,12 +90,14 @@ describe('App', () => {
             2,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: true,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: true,
+              pageType: 'article',
+              service: 'news',
             },
           );
 
@@ -100,12 +106,13 @@ describe('App', () => {
             3,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error,
-              loading: false,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error,
+              isAmp: false,
+              loading: false,
+              pageType: 'article',
+              service: 'news',
             },
           );
         });
@@ -131,12 +138,14 @@ describe('App', () => {
             2,
             [],
             {
-              data: null,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: true,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data: null,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: true,
+              pageType: 'article',
+              service: 'news',
             },
           );
 
@@ -145,12 +154,14 @@ describe('App', () => {
             3,
             [],
             {
-              data,
-              service: 'news',
-              isAmp: false,
-              error: null,
-              loading: false,
               bbcOrigin: 'https://www.bbc.co.uk',
+              data,
+              error: null,
+              id: undefined,
+              isAmp: false,
+              loading: false,
+              pageType: 'article',
+              service: 'news',
             },
           );
         });

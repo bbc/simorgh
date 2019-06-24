@@ -1,5 +1,8 @@
 import config from '../support/config';
-import { getElement } from '../support/bodyTestHelper';
+import {
+  getElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
 import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
@@ -22,6 +25,10 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should have AMP attribute', () => {
     getElement('html').should('have.attr', 'amp');
+  });
+
+  it('should have lang and dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should load the AMP framework', () => {
