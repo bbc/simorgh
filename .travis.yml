@@ -33,7 +33,6 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
-        - xvfb-run -a npm run test:puppeteer:ci
 notifications:
   email: false
   slack:
