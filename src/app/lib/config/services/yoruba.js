@@ -10,7 +10,6 @@ const yoruba = {
   locale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
-  themeColor: `${C_POSTBOX}`,
   serviceLocalizedName: 'Yorùbá',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
   defaultImageAltText: 'BBC News Yorùbá',
