@@ -143,6 +143,17 @@ Further details on using the Cypress CLI can be found at https://docs.cypress.io
 
 Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+#### Running e2e in the UK against LIVE
+**This affects UK developers only**
+
+Cypress .visit() function is locked to visiting a single domain per test. This becomes problematic when you launch the e2e tests from within the UK, due to redirects from `.com` to `.co.uk`. By default cypress tests will run as if they were ran outside of the uk. In order to run these tests from the UK you have to pass in the `UK` Cypress environment variable to the tests. This will replace the URL endings to `.co.uk`, which will allow you to run these tests successfully.
+
+Here is an example command:
+
+```
+CYPRESS_APP_ENV=test CYPRESS_UK=true npm run cypress:interactive
+```
+
 #### Storybook
 
 We also have a [Cypress](https://www.cypress.io/) project which runs a different set of end-to-end tests on [Storybook](https://github.com/bbc/simorgh#storybook-ui-development-environmentstyle-guide). For running the tests locally we need two terminals running:
