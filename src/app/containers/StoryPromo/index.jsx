@@ -49,7 +49,7 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
 
 StoryPromoImage.propTypes = {
   lazyLoad: bool.isRequired,
-  imageValues: storyItem.indexImage.isRequired,
+  imageValues: shape(storyItem.indexImage).isRequired,
 };
 
 const StoryPromo = ({ item, lazyLoadImage }) => {
