@@ -42,6 +42,21 @@ describe('LinkData', () => {
       'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
   };
 
+  const propsForFrontpage = {
+    isAmp: false,
+    brandName: 'BBC News',
+    canonicalLink: 'https://www.bbc.com/igbo',
+    lang: 'ig',
+    seoHeadline: 'Ogbako',
+    type: 'IDX',
+    service: 'igbo',
+    lastUpdated: null,
+    firstPublished: null,
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+  };
+
   shouldShallowMatchSnapshot(
     'should correctly render metadata for links',
     <LinkData {...props} />,
@@ -50,5 +65,10 @@ describe('LinkData', () => {
   shouldShallowMatchSnapshot(
     'should correctly render metadata with no about tags for links',
     <LinkData {...propsWithNoAbout} />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should correctly render metadata for frontpages',
+    <LinkData {...propsForFrontpage} />,
   );
 });
