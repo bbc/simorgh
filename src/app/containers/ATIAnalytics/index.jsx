@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, oneOfType } from 'prop-types';
+import { oneOfType } from 'prop-types';
 import { RequestContext } from '../../contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
@@ -7,9 +7,9 @@ import ArticleAtiParams from './ArticleAtiParams';
 
 import { articleDataPropTypes } from '../../models/propTypes/article';
 
-const ATIAnalytics = ({ data, pageType = 'article' }) => {
+const ATIAnalytics = ({ data }) => {
   let pageviewParams = '';
-  const { platform } = React.useContext(RequestContext);
+  const { pageType, platform } = React.useContext(RequestContext);
   // can allow pageType of frontPage when FrontPageAtiParams has been created
   if (pageType !== 'article') {
     return null;
@@ -26,6 +26,5 @@ const ATIAnalytics = ({ data, pageType = 'article' }) => {
 
 ATIAnalytics.propTypes = {
   data: oneOfType([articleDataPropTypes]).isRequired,
-  pageType: oneOf(['article', 'frontPage']).isRequired,
 };
 export default ATIAnalytics;
