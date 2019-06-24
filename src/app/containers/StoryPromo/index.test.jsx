@@ -153,7 +153,7 @@ describe('StoryPromo Container', () => {
         item.summary,
       );
       expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 May 2019',
+        '2 Mee 2019',
       );
     });
 
