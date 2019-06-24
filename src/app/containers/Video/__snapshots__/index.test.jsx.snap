@@ -2967,7 +2967,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
                     "id": "p01m7hmc",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -3002,7 +3002,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
                           "originCode": null,
                           "width": null,
                         },
@@ -5747,7 +5747,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
                     "id": "p01m7hmc",
                     "image": null,
                     "imageCopyright": null,
-                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg",
+                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
                     "subType": "clip",
                     "syndication": Object {
                       "destinations": Array [],
@@ -5782,7 +5782,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
                         "model": Object {
                           "copyrightHolder": null,
                           "height": null,
-                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg",
+                          "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
                           "originCode": null,
                           "width": null,
                         },
