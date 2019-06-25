@@ -19,6 +19,7 @@ const news = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
+  datetimeLocale: 'en-gb',
   service: 'news',
   serviceName: 'News',
   themeColor: `${C_POSTBOX}`,

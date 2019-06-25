@@ -8,6 +8,7 @@ const igbo = {
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  datetimeLocale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
   serviceLocalizedName: 'Ìgbò',

@@ -12,7 +12,7 @@ import {
 } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const { script, locale } = useContext(ServiceContext);
+  const { script, datetimeLocale } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
@@ -21,7 +21,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   const timestampProps = {
     dateTimeFormat: formatDateNumeric,
     script,
-    locale,
+    locale: datetimeLocale,
   };
 
   const firstPublishedProps = {

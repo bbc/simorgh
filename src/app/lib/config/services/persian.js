@@ -19,6 +19,7 @@ const persian = {
   defaultCaptionOffscreenText: ' ، عنوان',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',
+  datetimeLocale: 'fa',
   service: 'persian',
   serviceName: 'Persian',
   themeColor: `${C_POSTBOX}`,
