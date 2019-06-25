@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import deepGet from '../../lib/utilities/deepGet';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
@@ -33,11 +34,9 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   }
 
   if (isExternal) {
+    const linkText = deepGet([0, 'model', 'text'], blocks);
     return (
-      <InlineLink
-        href={locator}
-        aria-label={`${blocks[0].model.text}${externalLinkText}`}
-      >
+      <InlineLink href={locator} aria-label={`${linkText}${externalLinkText}`}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         {isExternal ? (
           <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
