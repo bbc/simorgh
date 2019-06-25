@@ -2,6 +2,28 @@
 
 exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users & localised 1`] = `
 .c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -13,12 +35,12 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 }
 
 <a
-  className="InlineLink-hkwpaz-0 guatGt"
+  className="c0"
   href="https://www.example.com/"
 >
   این لینک هست
   <span
-    className="c0"
+    className="c1"
   >
      ،لینک خارجی
   </span>
@@ -27,6 +49,28 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 exports[`InlineLinkContainer external link accessibility should be explicitly marked "external" for screen reader users 1`] = `
 .c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -38,12 +82,12 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 }
 
 <a
-  className="InlineLink-hkwpaz-0 guatGt"
+  className="c0"
   href="https://www.example.com/"
 >
   This is a link
   <span
-    className="c0"
+    className="c1"
   >
     , external
   </span>
@@ -51,8 +95,30 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 `;
 
 exports[`InlineLinkContainer internal link not matching SPA route should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 <a
-  className="InlineLink-hkwpaz-0 guatGt"
+  className="c0"
   href="https://www.bbc.com/news"
 >
   <b>
@@ -62,8 +128,30 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 `;
 
 exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
+.c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 <a
-  className="InlineLink-hkwpaz-0-Link LLDYR"
+  className="-Link c0"
   href="/news/articles/c0g992jmmkko"
   onClick={[Function]}
 >
@@ -72,8 +160,30 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 `;
 
 exports[`InlineLinkContainer link matching routes for SPA should render correctly for TEST environment 1`] = `
+.c0 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:visited {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.c0:focus {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c0:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 <a
-  className="InlineLink-hkwpaz-0-Link LLDYR"
+  className="-Link c0"
   href="/news/articles/c0g992jmmkko"
   onClick={[Function]}
 >
