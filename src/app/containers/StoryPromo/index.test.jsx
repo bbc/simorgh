@@ -109,8 +109,8 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ platform, ...props }) => (
-  <ServiceContextProvider service="igbo">
+const WrappedStoryPromo = ({ service, platform, ...props }) => (
+  <ServiceContextProvider service={service || 'news'}>
     <RequestContextProvider
       platform={platform || 'canonical'}
       isUK
@@ -145,6 +145,12 @@ describe('StoryPromo Container', () => {
 
     it('should render h3, a, p, time', () => {
       const { container } = render(<WrappedStoryPromo item={item} />);
+      const igboContainer = render(
+        <WrappedStoryPromo service="igbo" item={item} />,
+      ).container;
+      const yorubaContainer = render(
+        <WrappedStoryPromo service="yoruba" item={item} />,
+      ).container;
 
       expect(container.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         item.headlines.headline,
@@ -153,7 +159,13 @@ describe('StoryPromo Container', () => {
         item.summary,
       );
       expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
+        '2 May 2019',
+      );
+      expect(igboContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Mee 2019',
+      );
+      expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
+        '2 Èbibi 2019',
       );
     });
 

@@ -35,7 +35,7 @@ stories.add('default', () => (
 Object.keys(services)
   .filter(service => service !== 'default')
   .forEach(service => {
-    stories.add(`default ${service}`, () => (
+    stories.add(service, () => (
       <WrappedArticleTimestamp
         firstPublished={1530947227000}
         lastPublished={1552666749637}
