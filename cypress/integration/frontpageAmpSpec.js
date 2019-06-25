@@ -1,6 +1,6 @@
 import worldServices from '../support/worldServices';
 import { getElement } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -15,15 +15,31 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`${worldServices.igbo.url}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `${worldServices.igbo.url}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`${worldServices.igbo.url}.cake`, 404);
-    testResponseCode(`/amp${worldServices.igbo.url}`, 404);
-    testResponseCode(`${worldServices.igbo.url}/amp`, 404);
-    testResponseCode(`/cake.amp`, 404);
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/amp${worldServices.igbo.url}`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}/amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(`/cake.amp`, 404, 'text/html');
   });
 
   xit('should have AMP attribute', () => {
