@@ -22,8 +22,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 }
 
 .c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -31,8 +29,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 }
 
 .c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -45,8 +41,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -62,8 +56,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 }
 
 .c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   color: #F6A21D;
   font-weight: 700;
   background: none;
@@ -97,22 +89,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 
 @media (min-width:37.5rem) {
   .c2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
     width: 22%;
     margin-right: 3.5%;
     float: left;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.875rem;
   }
 }
 
@@ -125,22 +104,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
     margin: 0;
     float: left;
     width: 53%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -218,8 +184,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 }
 
 .c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -227,8 +191,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 }
 
 .c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -241,8 +203,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -258,8 +218,6 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 }
 
 .c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   color: #F6A21D;
   font-weight: 700;
   background: none;
@@ -293,22 +251,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 
 @media (min-width:37.5rem) {
   .c2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
     width: 22%;
     margin-right: 3.5%;
     float: left;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.875rem;
   }
 }
 
@@ -321,22 +266,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
     margin: 0;
     float: left;
     width: 53%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
   }
 }
 
