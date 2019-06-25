@@ -48,6 +48,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     return null;
   }
 
+  const isFirstSection = sectionNumber !== 0;
+
   return (
     // jsx-a11y considers `role="region"` on a <section> to be redundant.
     // (<section> tags *should* imply `role="region"`)
@@ -72,8 +74,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         <StoryPromo
           item={items[0]}
           script={script}
-          topStory={sectionNumber === 0}
-          lazyLoadImage={sectionNumber === 0}
+          topStory={isFirstSection}
+          lazyLoadImage={isFirstSection}
         />
       )}
     </section>

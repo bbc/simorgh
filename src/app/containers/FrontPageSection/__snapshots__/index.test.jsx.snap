@@ -386,7 +386,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "timestamp": 1557738768,
       }
     }
-    lazyLoadImage={false}
+    lazyLoadImage={true}
     script={
       Object {
         "bodyCopy": Object {
