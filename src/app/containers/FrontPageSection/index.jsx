@@ -72,8 +72,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         <StoryPromo
           item={items[0]}
           script={script}
-          topStory
-          lazyLoadImage={false}
+          topStory={sectionNumber === 0}
+          lazyLoadImage={sectionNumber === 0}
         />
       )}
     </section>
