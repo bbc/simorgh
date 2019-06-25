@@ -179,6 +179,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "timestamp": 1557738768,
         }
       }
+      sectionNumber={0}
       storyNumber={0}
     />
     <StoryPromoLiContainer
@@ -202,6 +203,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "timestamp": 1557738768,
         }
       }
+      sectionNumber={0}
       storyNumber={1}
     />
   </StoryPromoUl>
@@ -715,6 +717,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "timestamp": 1557738768,
         }
       }
+      sectionNumber={1}
       storyNumber={0}
     />
     <StoryPromoLiContainer
@@ -738,6 +741,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "timestamp": 1557738768,
         }
       }
+      sectionNumber={1}
       storyNumber={1}
     />
   </StoryPromoUl>
