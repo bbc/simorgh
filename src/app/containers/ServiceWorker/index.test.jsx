@@ -3,15 +3,13 @@ import { mount } from 'enzyme';
 import ServiceWorkerContainer from './index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const mockRootElement = <div />;
-document.getElementById = jest.fn().mockReturnValue(mockRootElement);
-
 const contextStub = {
   swPath: '/articles/sw.js',
   service: 'news',
 };
 
 describe('Service Worker', () => {
+  let wrapper;
   beforeEach(() => {
     global.navigator.serviceWorker = {
       register: jest.fn(),
@@ -19,13 +17,15 @@ describe('Service Worker', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    if (wrapper) {
+      wrapper.unmount();
+    }
   });
 
   describe('on production environment', () => {
     it('should be installed', async () => {
       process.env.NODE_ENV = 'production';
-      mount(
+      wrapper = mount(
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
@@ -39,7 +39,7 @@ describe('Service Worker', () => {
   describe('on dev environment', () => {
     it('should not be installed', async () => {
       process.env.NODE_ENV = 'dev';
-      mount(
+      wrapper = mount(
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
