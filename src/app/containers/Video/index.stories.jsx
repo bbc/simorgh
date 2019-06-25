@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import {
-  AudioClipGlobalGuidance,
+  AudioClipGlobalGuidanceWithCaption,
   AudioClipNonUk,
   AudioClipUk,
-  AudioEpisodeGlobal,
   VideoClipNonUk,
   VideoClipGlobalPortrait,
   VideoClipGlobalWithCaption,
@@ -29,16 +28,13 @@ storiesOf('Video Container', module)
     VideoClipGlobalPortrait({ platform: 'canonical' }),
   )
   .add('audio, clip, global, with guidance', () =>
-    AudioClipGlobalGuidance({ platform: 'canonical' }),
+    AudioClipGlobalGuidanceWithCaption({ platform: 'canonical' }),
   )
   .add('audio, clip, UK, without guidance', () =>
     AudioClipUk({ platform: 'canonical' }),
   )
   .add('audio, clip, non-UK, without guidance', () =>
     AudioClipNonUk({ platform: 'canonical' }),
-  )
-  .add('audio, episode, global, without guidance', () =>
-    AudioEpisodeGlobal({ platform: 'canonical' }),
   );
 
 storiesOf('Video Container - AMP', module)
@@ -59,14 +55,11 @@ storiesOf('Video Container - AMP', module)
     VideoClipGlobalPortrait({ platform: 'amp' }),
   )
   .add('audio, clip, global, with guidance', () =>
-    AudioClipGlobalGuidance({ platform: 'amp' }),
+    AudioClipGlobalGuidanceWithCaption({ platform: 'amp' }),
   )
   .add('audio, clip, UK, without guidance', () =>
     AudioClipUk({ platform: 'amp' }),
   )
   .add('audio, clip, non-UK, without guidance', () =>
     AudioClipNonUk({ platform: 'amp' }),
-  )
-  .add('audio, episode, global, without guidance', () =>
-    AudioEpisodeGlobal({ platform: 'amp' }),
   );
