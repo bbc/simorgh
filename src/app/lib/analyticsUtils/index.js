@@ -150,8 +150,8 @@ const getISODate = unixTimestamp => {
   return new Date(unixTimestamp * 1000).toISOString();
 };
 
-export const getPublishedDatetime = (attribute, articleData) => {
-  const publishedDatetime = deepGet(['metadata', attribute], articleData);
+export const getPublishedDatetime = (attribute, data) => {
+  const publishedDatetime = deepGet(['metadata', attribute], data);
 
   return publishedDatetime && isValidDateTime(publishedDatetime)
     ? getISODate(publishedDatetime)
