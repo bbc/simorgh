@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import * as SectionLabel from '@bbc/psammead-section-label';
 import newsConfig from '../../lib/config/services/news';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import FrontPageSection from '.';
@@ -165,16 +166,41 @@ describe('FrontPageSection Container', () => {
       'should render with only one item',
       <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
+  });
 
-    shouldShallowMatchSnapshot(
-      'visuallyHidden should be called with true when sectionNumber === 0',
-      <FrontPageSection group={group} sectionNumber={0} />,
-    );
+  describe('Section Label visuallyHidden prop', () => {
+    afterEach(() => {
+      SectionLabel.default.mockClear();
+    });
 
-    shouldShallowMatchSnapshot(
-      'visuallyHidden should be called with false when sectionNumber !== 0',
-      <FrontPageSection group={group} sectionNumber={7} />,
-    );
+    beforeEach(() => {
+      jest.spyOn(SectionLabel, 'default');
+      useContext.mockReturnValue(newsConfig);
+    });
+
+    it('should be called with true when sectionNumber === 0', () => {
+      render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasOneItem} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
+        true,
+      );
+    });
+
+    it('should be called with false when sectionNumber !== 0', () => {
+      render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasOneItem} sectionNumber={1} />
+        </ServiceContextProvider>,
+      );
+
+      expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
+        false,
+      );
+    });
   });
 
   describe('assertions', () => {
