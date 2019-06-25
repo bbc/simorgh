@@ -78,6 +78,8 @@ const VideoContainer = ({ blocks }) => {
     },
   };
 
+  const type = kind === 'audio' ? kind : 'video';
+
   return (
     <GridItemConstrainedLargeNoMargin>
       {metadata ? (
@@ -100,7 +102,7 @@ const VideoContainer = ({ blocks }) => {
           uiLocale="en-GB"
           mediaPlayerSettings={mediaPlayerSettings}
         />
-        {captionBlock ? <Caption block={captionBlock} type="video" /> : null}
+        {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
       </Figure>
     </GridItemConstrainedLargeNoMargin>
   );

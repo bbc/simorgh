@@ -15,6 +15,7 @@ const chooseOffscreenText = (
   mediaType,
   videoCaption,
   imageCaption,
+  audioCaption,
   defaultText,
 ) => {
   switch (mediaType) {
@@ -22,6 +23,8 @@ const chooseOffscreenText = (
       return videoCaption;
     case 'image':
       return imageCaption;
+    case 'audio':
+      return audioCaption;
     default:
       return defaultText;
   }
@@ -52,11 +55,13 @@ const CaptionContainer = ({ block, type }) => {
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
     defaultCaptionOffscreenText,
+    audioCaptionOffscreenText,
   } = useContext(ServiceContext);
   const offscreenText = chooseOffscreenText(
     type,
     videoCaptionOffscreenText,
     imageCaptionOffscreenText,
+    audioCaptionOffscreenText,
     defaultCaptionOffscreenText,
   );
 

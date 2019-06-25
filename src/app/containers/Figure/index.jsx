@@ -25,8 +25,8 @@ const renderImage = (imageToRender, lazyLoad) =>
 const renderCopyright = copyright =>
   copyright ? <Copyright>{copyright}</Copyright> : null;
 
-const renderCaption = block =>
-  block ? <Caption block={block} type="image" /> : null;
+const renderCaption = (block, type) =>
+  block ? <Caption block={block} type={type} /> : null;
 
 const ImageComponent = ({
   platform,
