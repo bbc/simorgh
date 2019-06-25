@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import * as atiUrl from './atiUrl';
+import * as commonTestUtils from '../../lib/analyticsUtils';
 import * as testUtils from '../../lib/analyticsUtils/frontpage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -20,6 +21,8 @@ describe('FrontPageAtiParams', () => {
       },
       language: 'LANGUAGE',
       title: 'PAGE TITLE',
+      firstPublished: 946684800000,
+      lastPublished: 978307200000,
     },
   };
 
@@ -62,6 +65,8 @@ describe('FrontPageAtiParams', () => {
         platform: 'canonical',
         service: 'SERVICE',
         statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+        timePublished: '2000-01-01T00:00:00.000Z',
+        timeUpdated: '2001-01-01T00:00:00.000Z',
       });
     });
 
@@ -70,6 +75,7 @@ describe('FrontPageAtiParams', () => {
       testUtils.getLanguage = jest.fn();
       testUtils.getPageIdentifier = jest.fn();
       testUtils.getPageTitle = jest.fn();
+      commonTestUtils.getPublishedDatetime = jest.fn();
 
       renderer.create(Component(serviceContextStub, requestContextStub));
 
@@ -86,6 +92,16 @@ describe('FrontPageAtiParams', () => {
       expect(testUtils.getPageTitle).toHaveBeenCalledWith(
         mockFPData,
         'BBC News SERVICE',
+      );
+
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledTimes(2);
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
+        'firstPublished',
+        mockFPData,
+      );
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
+        'lastPublished',
+        mockFPData,
       );
     });
   });

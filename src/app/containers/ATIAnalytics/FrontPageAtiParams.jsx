@@ -4,6 +4,7 @@ import { atiPageViewParams } from './atiUrl';
 
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { getPublishedDatetime } from '../../lib/analyticsUtils';
 import {
   getContentId,
   getLanguage,
@@ -24,6 +25,8 @@ const FrontPageAtiParams = frontpageData => {
     language: getLanguage(frontpageData),
     pageIdentifier: getPageIdentifier(frontpageData),
     pageTitle: getPageTitle(frontpageData, brandName),
+    timePublished: getPublishedDatetime('firstPublished', frontpageData),
+    timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
     platform,
     service,
     statsDestination,

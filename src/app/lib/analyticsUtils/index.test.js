@@ -348,6 +348,7 @@ describe('getPublishedDatetime', () => {
   const data = {
     metadata: {
       firstPublished: 946688461000,
+      seconds: 946688461,
       invalidDate: 'foobar',
     },
   };
@@ -356,6 +357,12 @@ describe('getPublishedDatetime', () => {
     const publishedTime = getPublishedDatetime('firstPublished', data);
 
     expect(publishedTime).toEqual('2000-01-01T01:01:01.000Z');
+  });
+
+  it('should autodetect timestamp in seconds and autocorrect', () => {
+    const secondsTimestamp = getPublishedDatetime('seconds', data);
+
+    expect(secondsTimestamp).toEqual('2000-01-01T01:01:01.000Z');
   });
 
   it('should return null if type not found', () => {
