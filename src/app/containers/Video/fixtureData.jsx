@@ -83,10 +83,13 @@ export const VideoClipNonUk = ({ platform }) =>
     blocks: [videoClipNonUkBlock],
   });
 
-export const AudioClipGlobalGuidance = ({ platform }) =>
+export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [audioClipGlobalGuidanceBlock],
+    blocks: [
+      audioClipGlobalGuidanceBlock,
+      captionBlock('Audio Clip Global Guidance with Caption'),
+    ],
   });
 
 export const AudioClipUk = ({ platform }) =>

@@ -432,7 +432,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data amp - should render audio clip global with guidance 1`] = `
+exports[`AudioVideo with Audio data amp - should render audio clip global with guidance and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -859,6 +859,35 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
               ],
             },
             "type": "aresMedia",
+          },
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "attributes": Array [],
+                                "text": "Audio Clip Global Guidance with Caption",
+                              },
+                              "type": "fragment",
+                            },
+                          ],
+                          "text": "Audio Clip Global Guidance with Caption",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+            "type": "caption",
           },
         ]
       }
@@ -1731,7 +1760,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data canonical - should render audio clip global with guidance 1`] = `
+exports[`AudioVideo with Audio data canonical - should render audio clip global with guidance and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -2158,6 +2187,35 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
               ],
             },
             "type": "aresMedia",
+          },
+          Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "model": Object {
+                                "attributes": Array [],
+                                "text": "Audio Clip Global Guidance with Caption",
+                              },
+                              "type": "fragment",
+                            },
+                          ],
+                          "text": "Audio Clip Global Guidance with Caption",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+            "type": "caption",
           },
         ]
       }

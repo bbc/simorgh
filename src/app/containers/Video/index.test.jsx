@@ -9,7 +9,7 @@ import {
   VideoClipGlobalPortrait,
   VideoClipUkWithGuidance,
   VideoClipNonUk,
-  AudioClipGlobalGuidance,
+  AudioClipGlobalGuidanceWithCaption,
   AudioClipUk,
   AudioClipNonUk,
 } from './fixtureData';
@@ -96,12 +96,12 @@ describe('AudioVideo', () => {
 
   describe('with Audio data', () => {
     shouldShallowMatchSnapshot(
-      'canonical - should render audio clip global with guidance',
-      AudioClipGlobalGuidance({ platform: 'canonical' }),
+      'canonical - should render audio clip global with guidance and caption',
+      AudioClipGlobalGuidanceWithCaption({ platform: 'canonical' }),
     );
     shouldShallowMatchSnapshot(
-      'amp - should render audio clip global with guidance',
-      AudioClipGlobalGuidance({ platform: 'amp' }),
+      'amp - should render audio clip global with guidance and caption',
+      AudioClipGlobalGuidanceWithCaption({ platform: 'amp' }),
     );
 
     shouldShallowMatchSnapshot(

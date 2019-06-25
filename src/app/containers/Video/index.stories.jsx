@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import {
-  AudioClipGlobalGuidance,
+  AudioClipGlobalGuidanceWithCaption,
   AudioClipNonUk,
   AudioClipUk,
   VideoClipNonUk,
@@ -28,7 +28,7 @@ storiesOf('Video Container', module)
     VideoClipGlobalPortrait({ platform: 'canonical' }),
   )
   .add('audio, clip, global, with guidance', () =>
-    AudioClipGlobalGuidance({ platform: 'canonical' }),
+    AudioClipGlobalGuidanceWithCaption({ platform: 'canonical' }),
   )
   .add('audio, clip, UK, without guidance', () =>
     AudioClipUk({ platform: 'canonical' }),
@@ -55,7 +55,7 @@ storiesOf('Video Container - AMP', module)
     VideoClipGlobalPortrait({ platform: 'amp' }),
   )
   .add('audio, clip, global, with guidance', () =>
-    AudioClipGlobalGuidance({ platform: 'amp' }),
+    AudioClipGlobalGuidanceWithCaption({ platform: 'amp' }),
   )
   .add('audio, clip, UK, without guidance', () =>
     AudioClipUk({ platform: 'amp' }),

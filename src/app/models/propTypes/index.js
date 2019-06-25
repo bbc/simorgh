@@ -69,7 +69,7 @@ export const videoComponentPropTypes = {
       subtitles: shape({
         defaultOn: bool.isRequired,
       }).isRequired,
-      local: shape({
+      locale: shape({
         lang: string.isRequired,
       }).isRequired,
     }).isRequired,
