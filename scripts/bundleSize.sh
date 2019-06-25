@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Size limit for all bundles used by each service (K)
-# Keep these +/- 10K
-min=662
-max=686
+# Keep these +/- 5K and update frequently!
+min=672
+max=690
 
 services=( "news" "persian" "igbo" "yoruba" "pidgin" )
 failure=false
 
 for service in "${services[@]}"
 do
-   size=$(du -chsk build/public/static/js/{main,vendor,$service}-*.js | grep total | grep -Eo '[0-9]{1,4}')
+   size=$(($(cat build/public/static/js/{main,vendor,$service}-*.js | wc -c | tr -d ' ') / 1000 ))
 
    if [[ $size -lt $min ]]; then
      tput setaf 1

@@ -15,7 +15,6 @@ const yoruba = {
   defaultImageAltText: 'BBC News Yorùbá',
   dir: 'ltr',
   brandSVG,
-  latin,
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
