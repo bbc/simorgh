@@ -93,20 +93,15 @@ pipeline {
             }
           }
           steps {
-            // runDevelopmentTests()
-            sh 'ls -al'
+            runDevelopmentTests()
           }
         }
 
         stage ('Test Production') {
           agent {
-            // docker {
-            //   image "${nodeImage}"
-            //   args '-u root -v /etc/pki:/certs'
-            // }
             docker {
-              image "bbca11y/bbc-a11y-docker"
-              args '--tty -u root -v /etc/pki:/certs'
+              image "${dockerRegistry}/bbc-news/node-8-lts:0.0.8"
+              args '-u root -v /etc/pki:/certs'
             }
           }
           steps {
