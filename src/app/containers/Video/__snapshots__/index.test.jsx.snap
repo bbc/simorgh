@@ -6,6 +6,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -437,6 +438,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -871,6 +873,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -1302,6 +1305,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -1733,6 +1737,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -2167,6 +2172,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -2598,6 +2604,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -3029,6 +3036,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -3492,6 +3500,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -3957,6 +3966,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -4394,6 +4404,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -4886,6 +4897,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -5378,6 +5390,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -5809,6 +5822,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -6272,6 +6286,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
@@ -6737,6 +6752,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "atiAnalyticsAppName": "news",
+      "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
         "group": <g
