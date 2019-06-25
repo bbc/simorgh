@@ -1,9 +1,6 @@
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
   cy.request({ url, failOnStatusCode: false }).then(({ headers }) => {
-    // expect(status).to.eq(responseCode);
-    // expect(headers['content-type']).to.include(type);
-    // // Always ensure we're not seeing the Mozart fallback
-    // expect(headers).not.to.have.property('x-mfa');
+    // Always ensure we're not seeing the Mozart fallback
     if (expect(headers).not.have.property('mxfa')) {
       return originalFn(url, options);
     }
