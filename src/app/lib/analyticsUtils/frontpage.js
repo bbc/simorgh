@@ -9,16 +9,20 @@ const guidRegex =
 const curieRegex = new RegExp(
   `http://www.bbc.co.uk/asset/${guidRegex}/desktop/domestic`,
 );
+
 export const getContentId = frontpageData => {
   const curie = deepGet(['metadata', 'locators', 'curie'], frontpageData);
+
   if (!curie) {
     return null;
   }
+
   const matches = curie.match(curieRegex);
 
   if (matches) {
     return `urn:bbc:cps:${matches[1]}`;
   }
+
   return null;
 };
 
