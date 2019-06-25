@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import services from '../../lib/config/services';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });
@@ -15,19 +16,35 @@ const twentyFourHoursAgo = timestampGenerator({
 const twoDaysAgo = timestampGenerator({ days: 2 });
 const threeDaysAgo = timestampGenerator({ days: 3 });
 
-const WrappedArticleTimestamp = props => (
-  <ServiceContextProvider service="news">
-    <ArticleTimestamp {...props} />
+// eslint-disable-next-line react/prop-types
+const WrappedArticleTimestamp = ({ service, ...rest }) => (
+  <ServiceContextProvider service={service || 'news'}>
+    <ArticleTimestamp {...rest} />
   </ServiceContextProvider>
 );
 
-storiesOf('ArticleTimestamp', module)
-  .add('default', () => (
-    <WrappedArticleTimestamp
-      firstPublished={1530947227000}
-      lastPublished={1552666749637}
-    />
-  ))
+const stories = storiesOf('ArticleTimestamp', module);
+
+stories.add('default', () => (
+  <WrappedArticleTimestamp
+    firstPublished={1530947227000}
+    lastPublished={1552666749637}
+  />
+));
+
+Object.keys(services)
+  .filter(service => service !== 'default')
+  .forEach(service => {
+    stories.add(`default ${service}`, () => (
+      <WrappedArticleTimestamp
+        firstPublished={1530947227000}
+        lastPublished={1552666749637}
+        service={service}
+      />
+    ));
+  });
+
+stories
   .add(
     'lastPublished === firstPublished and firstPublished < 10 hours ago',
     () => (
