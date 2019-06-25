@@ -22,6 +22,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 }
 
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -29,6 +31,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 }
 
 .c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -56,6 +60,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 }
 
 .c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #F6A21D;
   font-weight: 700;
   background: none;
@@ -87,11 +93,39 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c2 {
     width: 22%;
     margin-right: 3.5%;
     float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -107,6 +141,20 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
     margin: 0;
     float: left;
     width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -184,6 +232,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 }
 
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -191,6 +241,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 }
 
 .c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -218,6 +270,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 }
 
 .c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #F6A21D;
   font-weight: 700;
   background: none;
@@ -249,11 +303,39 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c2 {
     width: 22%;
     margin-right: 3.5%;
     float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -269,6 +351,20 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
     margin: 0;
     float: left;
     width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
