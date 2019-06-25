@@ -1,17 +1,12 @@
 import config from '../support/config';
-import {
-  testContentTypeContains,
-  mozartFallbackStatus,
-} from '../support/metaTestHelper';
 
-describe('Service worker', () => {
-  it('should have the content type set to Javascript', () => {
-    testContentTypeContains('/news/articles/sw.js', 'application/javascript');
-  });
-});
-
+// Best to run this on every page visit rather than like this.
 describe('Mozart status', () => {
-  it('should not contain the response header X-Mfa set to 1', () => {
-    mozartFallbackStatus(`/news/articles/${config.assets.news}`);
+  it('test a specific page does not get a mozart fallback', () => {
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.news}`,
+      200,
+      'text/html',
+    );
   });
 });
