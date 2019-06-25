@@ -68,6 +68,14 @@ const VideoContainer = ({ blocks }) => {
         },
       ],
     },
+    ui: {
+      subtitles: {
+        defaultOn: true,
+      },
+      locale: {
+        lang: 'en-GB',
+      },
+    },
   };
 
   return (

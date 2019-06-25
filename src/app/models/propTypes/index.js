@@ -65,6 +65,14 @@ export const videoComponentPropTypes = {
         }),
       ).isRequired,
     }).isRequired,
+    ui: shape({
+      subtitles: shape({
+        defaultOn: bool.isRequired,
+      }).isRequired,
+      local: shape({
+        lang: string.isRequired,
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
