@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { objectOf, any, string } from 'prop-types';
+import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import deepGet from '../../lib/utilities/deepGet';
@@ -7,6 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
@@ -14,6 +15,7 @@ const chooseOffscreenText = (
   mediaType,
   videoCaption,
   imageCaption,
+  audioCaption,
   defaultText,
 ) => {
   switch (mediaType) {
@@ -21,15 +23,19 @@ const chooseOffscreenText = (
       return videoCaption;
     case 'image':
       return imageCaption;
+    case 'audio':
+      return audioCaption;
     default:
       return defaultText;
   }
 };
-const renderParagraph = paragraphBlock => (
-  <p key={deepGet([0, 'model', 'text'], paragraphBlock)}>
-    <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
-  </p>
-);
+const renderParagraph = paragraphBlock => {
+  return (
+    <p key={idSanitiser(deepGet([0, 'model', 'text'], paragraphBlock))}>
+      <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
+    </p>
+  );
+};
 
 const renderCaption = (paragraphBlocks, offscreenText, script) => (
   <Caption script={script}>
@@ -49,11 +55,13 @@ const CaptionContainer = ({ block, type }) => {
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
     defaultCaptionOffscreenText,
+    audioCaptionOffscreenText,
   } = useContext(ServiceContext);
   const offscreenText = chooseOffscreenText(
     type,
     videoCaptionOffscreenText,
     imageCaptionOffscreenText,
+    audioCaptionOffscreenText,
     defaultCaptionOffscreenText,
   );
 
@@ -66,12 +74,12 @@ const CaptionContainer = ({ block, type }) => {
 };
 
 CaptionContainer.propTypes = {
-  block: objectOf(any).isRequired,
-  type: string,
-};
-
-CaptionContainer.defaultProps = {
-  type: '',
+  block: shape({
+    model: shape({
+      blocks: arrayOf(any).isRequired,
+    }).isRequired,
+  }).isRequired,
+  type: string.isRequired,
 };
 
 export default CaptionContainer;
