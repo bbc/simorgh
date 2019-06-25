@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '../utilities/onClient';
+import deepGet from '../utilities/deepGet';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -133,3 +134,18 @@ export const getReferrer = platform => {
 
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '+') : null;
+
+const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+
+const getISODate = unixTimestamp => {
+  const date = new Date(unixTimestamp);
+  return date.toISOString();
+};
+
+export const getPublishedDatetime = (attribute, articleData) => {
+  const publishedDatetime = deepGet(['metadata', attribute], articleData);
+
+  return publishedDatetime && isValidDateTime(publishedDatetime)
+    ? getISODate(publishedDatetime)
+    : null;
+};
