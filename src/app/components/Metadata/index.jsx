@@ -133,17 +133,6 @@ const Metadata = ({
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
-
-      {
-        appleTouchIconLinks.map(appleTouchIconLink => (
-          <link
-            rel="apple-touch-icon"
-            sizes={appleTouchIconLink.size}
-            href={appleTouchIconLink.href}
-          />
-        ))
-      }
-
       <link rel="apple-touch-icon" sizes="72x72" href={`/path/to/72x72.png`} />
       <link rel="apple-touch-icon" sizes="96x96" href={`/path/to/96x96.png`} />
       <link rel="apple-touch-icon" sizes="128x128" href={`/path/to/128x128.png`} />
