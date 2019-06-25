@@ -1,4 +1,4 @@
-import { arrayOf, bool, number, shape, string } from 'prop-types';
+import { arrayOf, bool, number, shape, string, oneOfType } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -41,17 +41,39 @@ export const videoPropTypes = {
 };
 
 export const videoComponentPropTypes = {
-  pid: string.isRequired,
-  kind: string.isRequired,
   title: string.isRequired,
-  items: arrayOf(
-    shape({
-      versionID: string.isRequired,
-      kind: string.isRequired,
-      duration: number.isRequired,
-    }),
-  ).isRequired,
-  holdingImageUrl: string.isRequired,
+  id: string.isRequired,
+  mediaPlayerSettings: shape({
+    product: string.isRequired,
+    responsive: bool.isRequired,
+    statsObject: oneOfType([
+      shape({ clipPID: string }),
+      shape({ episodePID: string }),
+    ]).isRequired,
+    mediator: shape({
+      host: string.isRequired,
+    }).isRequired,
+    playlistObject: shape({
+      title: string.isRequired,
+      holdingImageURL: string.isRequired,
+      guidance: string,
+      items: arrayOf(
+        shape({
+          duration: number.isRequired,
+          versionID: string.isRequired,
+          kind: string.isRequired,
+        }),
+      ).isRequired,
+    }).isRequired,
+    ui: shape({
+      subtitles: shape({
+        defaultOn: bool.isRequired,
+      }).isRequired,
+      locale: shape({
+        lang: string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
   statsAppName: string.isRequired,
   statsAppType: string.isRequired,
   statsCountername: string.isRequired,
