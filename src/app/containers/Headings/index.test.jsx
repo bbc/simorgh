@@ -4,7 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot, isNull } from '../../../testHelpers';
 import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (

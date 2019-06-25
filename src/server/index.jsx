@@ -9,11 +9,14 @@ import routes from '../app/routes';
 import {
   articleRegexPath,
   articleDataRegexPath,
+  articleManifestRegexPath,
+  articleSwRegexPath,
+  frontpageRegexPath,
   frontpageDataRegexPath,
-  manifestRegexPath,
-  swRegexPath,
+  frontpageManifestRegexPath,
+  frontpageSwRegexPath,
 } from '../app/routes/regex';
-import nodeLogger from '../app/helpers/logger.node';
+import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';
@@ -62,21 +65,22 @@ server
  * Local env routes - fixture data
  */
 
-if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath, next) => {
-    res.sendFile(dataFilePath, {}, sendErr => {
-      if (sendErr) {
-        logger.error(sendErr);
-        next(sendErr);
-      }
-    });
-  };
+const sendDataFile = (res, dataFilePath, next) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
+    if (sendErr) {
+      logger.error(sendErr);
+      next(sendErr);
+    }
+  });
+};
 
+if (process.env.APP_ENV === 'local') {
   server
     .use(
       expressStaticGzip(publicDirectory, {
         enableBrotli: true,
         orderPreference: ['br'],
+        redirect: false,
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
@@ -88,19 +92,6 @@ if (process.env.APP_ENV === 'local') {
         service,
         'articles',
         `${id}.json`,
-      );
-
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
-
-      const dataFilePath = path.join(
-        process.cwd(),
-        dataFolderToRender,
-        service,
-        'frontpage',
-        'index.json',
       );
 
       sendDataFile(res, dataFilePath, next);
@@ -117,7 +108,25 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
-  .get(swRegexPath, (req, res) => {
+  .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+    /*
+     *
+     * TODO: MOVE THIS ROUTE BACK INTO LOCAL ONLY
+     *
+     */
+    const { service } = params;
+
+    const dataFilePath = path.join(
+      process.cwd(),
+      dataFolderToRender,
+      service,
+      'frontpage',
+      'index.json',
+    );
+
+    sendDataFile(res, dataFilePath, next);
+  })
+  .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
@@ -126,7 +135,20 @@ server
       }
     });
   })
-  .get(manifestRegexPath, async ({ params }, res) => {
+  .get(
+    [articleManifestRegexPath, frontpageManifestRegexPath],
+    async ({ params }, res) => {
+      const { service } = params;
+      const manifestPath = `${__dirname}/public/${service}/manifest.json`;
+      res.sendFile(manifestPath, {}, error => {
+        if (error) {
+          console.log(error); // eslint-disable-line no-console
+          res.status(500).send('Unable to find manifest.');
+        }
+      });
+    },
+  )
+  .get(articleManifestRegexPath, async ({ params }, res) => {
     const { service } = params;
     const manifestPath = `${__dirname}/public/${service}/manifest.json`;
     res.sendFile(manifestPath, {}, error => {
@@ -137,49 +159,40 @@ server
     });
   })
   .get(
-    '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
-    ({ params }, res) => {
-      // This is a temporary route to unblock route setup in Mozart.
-      // Simply returns a 200 response which can we route to until
-      // it's set up properly in simorgh.
-      const { service } = params;
-      res
-        .status(200)
-        .send(`Welcome to the temporary ${service} homepage simorgh route`);
-    },
-  )
-  .get(articleRegexPath, async ({ url, headers }, res) => {
-    try {
-      const { service, isAmp, route, match } = getRouteProps(routes, url);
-      const data = await route.getInitialData(match.params);
-      const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
-
-      let dials = {};
+    [articleRegexPath, frontpageRegexPath],
+    async ({ url, headers }, res) => {
       try {
-        dials = await getDials();
-      } catch ({ message }) {
-        logger.error(`Error fetching Cosmos dials: ${message}`);
-      }
+        const { service, isAmp, route, match } = getRouteProps(routes, url);
+        const data = await route.getInitialData(match.params);
+        const { status } = data;
+        const bbcOrigin = headers['bbc-origin'];
 
-      res
-        .status(status)
-        .send(
-          await renderDocument(
-            url,
-            data,
-            routes,
-            bbcOrigin,
-            service,
-            isAmp,
-            dials,
-          ),
-        );
-    } catch ({ message, status }) {
-      // Return an internal server error for any uncaught errors
-      logger.error(`status: ${status || 500} - ${message}`);
-      res.status(500).send(message);
-    }
-  });
+        let dials = {};
+        try {
+          dials = await getDials();
+        } catch ({ message }) {
+          logger.error(`Error fetching Cosmos dials: ${message}`);
+        }
+
+        res
+          .status(status)
+          .send(
+            await renderDocument(
+              url,
+              data,
+              routes,
+              bbcOrigin,
+              service,
+              isAmp,
+              dials,
+            ),
+          );
+      } catch ({ message, status }) {
+        // Return an internal server error for any uncaught errors
+        logger.error(`status: ${status || 500} - ${message}`);
+        res.status(500).send(message);
+      }
+    },
+  );
 
 export default server;

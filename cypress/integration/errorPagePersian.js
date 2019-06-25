@@ -1,9 +1,10 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 import {
   errorMessage,
   errorPageInlineLink,
   errorTitle,
+  hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
 import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
@@ -18,6 +19,10 @@ describeForLocalOnly('Article Body Tests', () => {
 
   it('should return a 404 error code', () => {
     testResponseCode(`/persian/articles/${config.assets.nonExistent}`, 404);
+  });
+
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
   });
 
   it('should display a relevant error message on screen', () => {

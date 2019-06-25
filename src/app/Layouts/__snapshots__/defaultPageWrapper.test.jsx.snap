@@ -2,27 +2,21 @@
 
 exports[`defaultPageWrapper should render with children 1`] = `
 <React.Fragment>
-  <GlobalStyleComponent />
   <ServiceContextProvider
     service="news"
   >
+    <GlobalStyle />
     <RequestContextProvider
+      env="live"
       id="c0000000000o"
       isUK={true}
       origin="https://www.bbc.com"
+      pageType="article"
       platform="amp"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
     >
-      <HelmetWrapper
-        defer={true}
-        encodeSpecialCharacters={true}
-      >
-        <link
-          href="/news/articles/manifest.json"
-          rel="manifest"
-        />
-      </HelmetWrapper>
+      <ManifestContainer />
       <ConsentBanner />
       <HeaderContainer />
       <h2>

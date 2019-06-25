@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
-import { ComponentUsingContext } from '../../helpers/tests/mockComponents';
+import { shouldMatchSnapshot } from '../../../testHelpers';
+import { ComponentUsingContext } from '../../../testHelpers/mockComponents';
 import { DialContext, DialContextProvider } from './index';
 
 describe('DialContext', () => {

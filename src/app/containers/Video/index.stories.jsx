@@ -10,7 +10,7 @@ import {
   VideoClipUkWithGuidance,
   VideoClipGlobalWithoutCaption,
 } from './fixtureData';
-import AmpDecorator from '../../helpers/storybook/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Video Container', module)
   .add('video, clip, with guidance, with caption', () =>

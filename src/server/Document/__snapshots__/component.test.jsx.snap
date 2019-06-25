@@ -59,6 +59,11 @@ exports[`Document Component should render AMP version correctly 1`] = `
         custom-element="amp-consent"
         src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
       />
+      <script
+        async={true}
+        custom-element="amp-analytics"
+        src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+      />
     </React.Fragment>
   </head>
   <body>
@@ -126,7 +131,7 @@ exports[`Document Component should render correctly 1`] = `
     <script
       dangerouslySetInnerHTML={
         Object {
-          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\",\\"service\\":\\"news\\",\\"isAmp\\":false}",
+          "__html": "window.SIMORGH_DATA={\\"test\\":\\"data\\"}",
         }
       }
     />

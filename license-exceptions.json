@@ -30,6 +30,9 @@
     "jszip@*": {
       "reason": "Dual-licensed under GPLv3 or MIT; https://github.com/Stuk/jszip#license"
     },
+    "JSV@*": {
+      "reason": "Licensed under LGPL; https://github.com/garycourt/JSV"
+    },
     "mdn-data@*": {
       "reason": "Licensed under Creative Commons Zero v1.0 Universal; https://github.com/mdn/data/blob/master/LICENSE"
     },
@@ -42,11 +45,17 @@
     "sha.js@*": {
       "reason": "Licensed under MIT; https://github.com/crypto-browserify/sha.js#license-mit"
     },
+    "store2@*": {
+      "reason": "Licensed under MIT; https://github.com/nbubna/store/blob/master/LICENSE-MIT"
+    },
     "type-fest@*": {
       "reason": "Dual-licensed under MIT or CC0-1.0; https://github.com/sindresorhus/type-fest#license"
     },
     "ua-parser-js@*": {
       "reason": "Dual license under GPL or MIT; https://github.com/faisalman/ua-parser-js#license"
+    },
+    "xmldom@*": {
+      "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
     }
   }
 }

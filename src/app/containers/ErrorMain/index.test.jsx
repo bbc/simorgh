@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ErrorMain from './index';
 

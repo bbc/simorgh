@@ -24,8 +24,7 @@
           "thingId": "3fbfd244-928b-498d-a585-9e39bd27fad3",
           "thingType": ["Film", "Thing"]
         }
-      ],
-      "mentions": null
+      ]
     },
     "version": "v0.3.2",
     "blockTypes": [

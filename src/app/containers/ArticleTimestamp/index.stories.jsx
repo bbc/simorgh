@@ -1,7 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import ArticleTimestamp from '.';
-import { timestampGenerator } from '../Timestamp/helpers/testHelpers';
+import { timestampGenerator } from './testHelpers';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });
@@ -14,9 +15,15 @@ const twentyFourHoursAgo = timestampGenerator({
 const twoDaysAgo = timestampGenerator({ days: 2 });
 const threeDaysAgo = timestampGenerator({ days: 3 });
 
+const WrappedArticleTimestamp = props => (
+  <ServiceContextProvider service="news">
+    <ArticleTimestamp {...props} />
+  </ServiceContextProvider>
+);
+
 storiesOf('ArticleTimestamp', module)
   .add('default', () => (
-    <ArticleTimestamp
+    <WrappedArticleTimestamp
       firstPublished={1530947227000}
       lastPublished={1552666749637}
     />
@@ -24,7 +31,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished === firstPublished and firstPublished < 10 hours ago',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeHoursAgo}
         lastPublished={threeHoursAgo}
       />
@@ -33,7 +40,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished === firstPublished and firstPublished today and > 10 hours ago',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={elevenHoursAgo}
         lastPublished={elevenHoursAgo}
       />
@@ -42,7 +49,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished === firstPublished and firstPublished before today',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
         lastPublished={twentyFourHoursAgo}
       />
@@ -51,7 +58,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished today < 10 hours ago and firstPublished today < 10 hours ago',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={fiveHoursAgo}
         lastPublished={threeHoursAgo}
       />
@@ -60,7 +67,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished today > 10 hours ago and firstPublished today > 10 hours ago',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
         lastPublished={elevenHoursAgo}
       />
@@ -69,7 +76,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished before today and firstPublished same day as lastPublished',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={threeDaysAgo}
       />
@@ -78,7 +85,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished before today, !==firstPublished day and firstPublished before today',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={twoDaysAgo}
       />
@@ -87,7 +94,7 @@ storiesOf('ArticleTimestamp', module)
   .add(
     'lastPublished today and > 10 hours and firstPublished before today',
     () => (
-      <ArticleTimestamp
+      <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={elevenHoursAgo}
       />

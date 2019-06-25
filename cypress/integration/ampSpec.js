@@ -1,5 +1,8 @@
 import config from '../support/config';
-import { getElement } from '../support/bodyTestHelper';
+import {
+  getElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
 import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
@@ -24,6 +27,10 @@ describe('AMP Tests on a .amp page', () => {
     getElement('html').should('have.attr', 'amp');
   });
 
+  it('should have lang and dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+  });
+
   it('should load the AMP framework', () => {
     // .eq(2) gets the amp <script> as:
     // the first loaded is a Cypress <script>
@@ -44,6 +51,12 @@ describe('AMP Tests on a .amp page', () => {
       'src',
       'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
     );
+    const ampAnalyticsScript = getElement('head script').eq(5);
+    ampAnalyticsScript.should(
+      'have.attr',
+      'src',
+      'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
+    );
   });
 
   it('should load the AMP body scripts', () => {
@@ -60,7 +73,7 @@ describe('AMP Tests on a .amp page', () => {
       .should('be', 2); // 1 for amp-geo + 1 for amp-consent
     getElement('head script')
       .its('length')
-      .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
+      .should('be', 5); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 for amp-analytics + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {
@@ -72,11 +85,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should include the canonical URL', () => {
-    const { origin } = window.location;
-    const canonicalOrigin = origin.includes('localhost')
-      ? 'https://www.bbc.co.uk'
-      : origin;
-
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
   });
 

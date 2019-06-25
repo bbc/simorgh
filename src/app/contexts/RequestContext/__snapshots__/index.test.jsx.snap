@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RequestContext should have a request object for platform amp, origin https://www.bbc.com, isUK, false, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for platform amp, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     amp
@@ -10,6 +10,9 @@ Array [
   </span>,
   <span />,
   <span>
+    article
+  </span>,
+  <span>
     NEWS_PS_TEST
   </span>,
   <span>
@@ -18,7 +21,7 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform canonical, origin https://www.bbc.com, isUK, false, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for platform canonical, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     canonical
@@ -28,23 +31,8 @@ Array [
   </span>,
   <span />,
   <span>
-    NEWS_PS_TEST
+    article
   </span>,
-  <span>
-    persian.articles.c0000000000o.page
-  </span>,
-]
-`;
-
-exports[`RequestContext should have a request object for platform default, origin false, isUK, https://www.bbc.co.uk, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
-Array [
-  <span>
-    default
-  </span>,
-  <span>
-    false
-  </span>,
-  <span />,
   <span>
     NEWS_PS_TEST
   </span>,
@@ -54,7 +42,7 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default, origin https://www.bbc.com, isUK, false, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
   <span>
     default
@@ -63,6 +51,30 @@ Array [
     false
   </span>,
   <span />,
+  <span>
+    article
+  </span>,
+  <span>
+    NEWS_PS_TEST
+  </span>,
+  <span>
+    persian.articles.c0000000000o.page
+  </span>,
+]
+`;
+
+exports[`RequestContext should have a request object for platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 2`] = `
+Array [
+  <span>
+    default
+  </span>,
+  <span>
+    false
+  </span>,
+  <span />,
+  <span>
+    article
+  </span>,
   <span>
     NEWS_PS_TEST
   </span>,

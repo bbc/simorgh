@@ -164,6 +164,7 @@ const generateFixtureData = ({
         width={imageWidth}
         type={type}
         lazyLoad={lazyLoad}
+        showCopyright
       />
     </RequestContextProvider>
   </ServiceContext.Provider>

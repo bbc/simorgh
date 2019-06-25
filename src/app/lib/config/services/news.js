@@ -1,13 +1,17 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import * as fonts from '@bbc/psammead-styles/fonts';
 
 const news = {
+  lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
+  atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
+  dir: 'ltr',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
@@ -22,6 +26,7 @@ const news = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
+  manifestPath: '/articles/manifest.json',
   translations: {
     error: {
       404: {
@@ -103,8 +108,58 @@ const news = {
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
+    media: {
+      audio: 'Audio',
+      video: 'Video',
+    },
   },
   brandSVG,
+  footer: {
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Read about our approach to external linking.',
+    },
+    links: [
+      {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Why you can trust the BBC',
+      },
+      {
+        href: 'https://www.bbc.com/terms',
+        text: 'Terms of Use',
+      },
+      {
+        href: 'https://www.bbc.co.uk/aboutthebbc/',
+        text: 'About the BBC',
+      },
+      {
+        href: 'https://www.bbc.com/privacy/',
+        text: 'Privacy Policy',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        text: 'Cookies',
+      },
+      {
+        href: 'https://www.bbc.com/accessibility/',
+        text: 'Accessibility Help',
+      },
+      {
+        href: 'https://www.bbc.com/contact/',
+        text: 'Contact the BBC',
+      },
+    ],
+    copyrightText:
+      'BBC. The BBC is not responsible for the content of external sites.',
+  },
+  fonts: [
+    fonts.F_REITH_SERIF_MEDIUM,
+    fonts.F_REITH_SERIF_MEDIUM_ITALIC,
+    fonts.F_REITH_SANS_REGULAR,
+    fonts.F_REITH_SANS_ITALIC,
+    fonts.F_REITH_SANS_BOLD,
+    fonts.F_REITH_SANS_BOLD_ITALIC,
+  ],
 };
 
 export default news;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import igboData from '../../../../data/prod/igbo/frontpage';
 import yorubaData from '../../../../data/prod/yoruba/frontpage';
 import pidginData from '../../../../data/prod/pidgin/frontpage';

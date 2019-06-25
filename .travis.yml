@@ -1,8 +1,20 @@
+# All Travis builds are a redundancy against Jenkins failures, except that we also use
+# this for running builds on PRs from forks, because we're OSS friendly. :)
 language: node_js
-before_install: npm install -g npm@6.4.1; npm -v
+matrix:
+  fast_finish: true
+cache:
+  directories:
+    # Cache only the folder with Cypress binary, other caching takes longer and saves
+    # less time, therefore this is more efficient than caching all.
+    - ~/.cache/Cypress
+env:
+  - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
 jobs:
   include:
     - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Unit Tests and storybook e2e"
       install: npm ci
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -13,13 +25,18 @@ jobs:
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: "Production CI tests" 
       install: npm ci --only=prod
+      addons: 
+        chrome: stable
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
 notifications:
   email: false
   slack:
+    on_pull_requests: false
     rooms:
       - secure: 'cIgDmp/ossApuLeVj1C3y058PKFJK8cdoGLdbHebdFvV+hY45m0QlEK8WpKpnEp7HZYTQMV5D64lybsffvmcpe3ZG17z/2Afoo6HLF0Eq42JcWl5eYkMw6S5S65i8YrPjctLdUeFNS8OhVPzcLe9XSbctrQzplRuYlskqAFiJ9jaPGLMQqUolR5VkxXQx2kbaFYWfSAPUSjW+IEaQoPVdIgbhns9cKETJ7G9ErkX1BN9ifEOrd7p+Bbb1MB+Gm2Dqyo4m1y41vHsXJ675gLsoKA/S6X1fdTbRFEr3D//vL/sP5aPgiu/SJuQG9q+r1yvMgdCnaTWZytLfSs3HQERzQiQFayuo5lDYGeiqz/vH4RrichuGWyVbOB481XV81Xi2nxKdaPRWLgMhgJB42be/u7i5R3Ol9PvI7iFQ2vB9oKKuiIlijzeqU6wQqtVKWjes8qmukt/XFHHDehtVRXHf9bYXLBvCxvwFMMcO2BOc9BNZov+Ogw4D12JTyPJCmYtJj3buPC+RpIl7NqVSWRnm+U5fEmADxQnmfN/Ii3Jn9aO2dNK21A3tLlnaMmCINVFGkt8Ub141EEvqyxktz5YlYjRR5yiMEKjFdhMjKLU61sbWakt++9Jzaj7mMe3EbRMPiMQpdwxURSE54PAAW46VdulxhH8fNNT8p2ZwuNuRFc='
     on_success: change # default: always

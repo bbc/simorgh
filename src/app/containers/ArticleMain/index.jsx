@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { shape } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -8,6 +7,7 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
+import ATIAnalytics from '../ATIAnalytics';
 
 const componentsToRender = {
   headline: headings,
@@ -20,8 +20,10 @@ const componentsToRender = {
 const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
+
   return (
     <Fragment>
+      <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostWrapper>
@@ -33,7 +35,7 @@ const ArticleMain = ({ articleData }) => {
 };
 
 ArticleMain.propTypes = {
-  articleData: shape(articleDataPropTypes).isRequired,
+  articleData: articleDataPropTypes.isRequired,
 };
 
 export default ArticleMain;

@@ -10,10 +10,14 @@ export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idReg
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
+export const articleSwRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
+
+export const articleManifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
+
 export const frontpageRegexPath = `/:service(${serviceRegex}):amp(${ampRegex})?`;
 
 export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
 
-export const swRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
+export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.json`;
 
-export const manifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
+export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;

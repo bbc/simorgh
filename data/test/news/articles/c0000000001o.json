@@ -16,10 +16,7 @@
       "category": "news",
       "genre": null
     },
-    "tags": {
-      "about": null,
-      "mentions": null
-    },
+    "tags": {},
     "version": "v0.3.2",
     "blockTypes": ["headline", "text", "paragraph", "fragment"]
   },

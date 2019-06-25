@@ -1,5 +1,5 @@
 import config from '../support/config';
-import describeForLocalOnly from '../support/describeForLocalOnly';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -10,15 +10,16 @@ import {
   retrieveMetaDataContent,
   twitterMeta,
 } from '../support/metaTestHelper';
+import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 
-describeForLocalOnly('Persian Article Meta Tests', () => {
+describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/persian/articles/${config.assets.persian}`);
   });
 
-  it('should have the correct lang attribute', () => {
-    cy.get('html').should('have.attr', 'lang', 'fa');
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'fa', dir: 'rtl' });
   });
 
   it('should have a nofollow meta tag', () => {
@@ -45,7 +46,7 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    `${config.baseUrl}/persian/articles/${config.assets.persian}`,
+    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
   );
 
   twitterMeta(
@@ -59,9 +60,10 @@ describeForLocalOnly('Persian Article Meta Tests', () => {
   );
 
   it('should include the canonical URL & ampHTML', () => {
+    const canonicalOrigin = 'https://www.bbc.com';
     const currentOrigin = window.location.origin;
     checkCanonicalURL(
-      `${currentOrigin}/persian/articles/${config.assets.persian}`,
+      `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
     );
     checkAmpHTML(
       `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,

@@ -1,8 +1,14 @@
 #!/usr/bin/env groovy
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "0.0.2"
+def nodeImageVersion = "10.16.0"
 def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
+
+def appGitCommit = ""
+def appGitCommitAuthor = ""
+def appGitCommitMessage = ""
+def buildTagText = ""
+def messageColor = 'danger'
 
 def stageName = ""
 def packageName = 'simorgh.zip'
@@ -18,6 +24,48 @@ def runProductionTests(){
   sh 'make productionTests'
 }
 
+def getCommitInfo = {
+  appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
+  appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
+  appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
+}
+
+def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
+  """
+  *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
+  ${env.BUILD_URL}
+  *Author*: ${gitCommitAuthor}
+  *Commit Hash*
+  ${gitCommit}
+  *Commit Message*
+  ${gitCommitMessage}
+  """
+}
+
+def messageContent(title, text, stageName, gitCommit, gitCommitMessage) {
+  "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
+    *Stage*: ${stageName}\n\
+    *Commit Hash*\n ${gitCommit}\n\
+    *Commit Message*\n ${gitCommitMessage}"
+}
+
+def notifySlack(messageParameters) {
+  def title = "*${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}]*"
+
+  def text = "*Author*: ${messageParameters.gitCommitAuthor}"
+
+  def message = messageContent(title, text,
+    messageParameters.stageName, messageParameters.gitCommit,
+    messageParameters.gitCommitMessage
+  )
+
+  slackSend(
+    channel: messageParameters.slackChannel, 
+    color: messageParameters.colour,
+    message: message
+  )
+}
+
 pipeline {
   agent any
   options {
@@ -28,13 +76,16 @@ pipeline {
     APP_DIRECTORY = "app"
     CI = true
   }
+  parameters {
+    string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
+  }
   stages {
     stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
       parallel {
-        stage('Test Development') {
+        stage ('Test Development') {
           agent {
             docker {
               image "${nodeImage}"
@@ -46,7 +97,7 @@ pipeline {
           }
         }
 
-        stage('Test Production') {
+        stage ('Test Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -71,7 +122,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'latest' }
       }
       parallel {
-        stage('Test Development') {
+        stage ('Test Development') {
           agent {
             docker {
               image "${nodeImage}"
@@ -82,7 +133,7 @@ pipeline {
             runDevelopmentTests()
           }
         }
-        stage('Test Production and Zip Production') {
+        stage ('Test Production and Zip Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -92,14 +143,27 @@ pipeline {
           steps {
             // Testing
             runProductionTests()
+
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
+
+            script {
+              // Get Simorgh commit information
+              getCommitInfo()
+              
+              // Set build tag information
+              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+            }
+
+            // Write commit information to build_tag.txt
+            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
+
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
           }
         }
-        stage('Build storybook dist') {
+        stage ('Build storybook dist') {
           agent {
             docker {
               image "${nodeImage}"
@@ -149,7 +213,64 @@ pipeline {
   }
   post {
     always {
+      script {
+        // Get Simorgh commit information
+        getCommitInfo()
+      }
+
+      // Clean the workspace
       cleanWs()
+    }
+    aborted {
+      script {
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Aborted',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
+      }
+    }
+    failure {
+      script {
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Failed',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
+      }
+    }
+    unstable {
+      script {
+        if(env.BRANCH_NAME == 'latest') {
+          def messageParameters = [
+            buildStatus: 'Unstable',
+            branchName: env.BRANCH_NAME,
+            colour: messageColor,
+            gitCommit: appGitCommit,
+            gitCommitAuthor: appGitCommitAuthor,
+            gitCommitMessage: appGitCommitMessage,
+            stageName: stageName,
+            slackChannel: params.SLACK_CHANNEL
+          ]
+          notifySlack(messageParameters)
+        }
+      }
     }
   }
 }

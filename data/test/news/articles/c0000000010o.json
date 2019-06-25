@@ -65,8 +65,7 @@
           "thingLabel": "New York City",
           "thingType": ["Thing", "Place"]
         }
-      ],
-      "mentions": []
+      ]
     }
   },
   "content": {

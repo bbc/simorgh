@@ -16,7 +16,6 @@ const Document = ({
   data,
   styleTags,
   helmet,
-  service,
   isAmp,
   dials,
 }) => {
@@ -25,12 +24,7 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const clientDataObj = {
-    ...data,
-    service,
-    isAmp,
-  };
-  const serialisedData = JSON.stringify(clientDataObj);
+  const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scripts = (
     <Fragment>
@@ -83,6 +77,11 @@ const Document = ({
               async
               custom-element="amp-consent"
               src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+            />
+            <script
+              async
+              custom-element="amp-analytics"
+              src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
           </Fragment>
         )}

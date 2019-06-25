@@ -2,7 +2,7 @@ const getStatsPageIdentifier = ({ pageType, service, id }) => {
   if (pageType === 'article') {
     return `${service}.articles.${id}.page`;
   }
-  if (pageType === 'frontpage') {
+  if (pageType === 'frontPage') {
     return `${service}.page`; // front pages
   }
   return null;

@@ -22,7 +22,6 @@ exports[`ClientApp should render correctly 1`] = `
 
 exports[`ServerApp no passed routerContext should render correctly 1`] = `
 <StaticRouter
-  basename=""
   context={Object {}}
   data="somePassedData"
   location="someUrl"
@@ -45,7 +44,6 @@ exports[`ServerApp no passed routerContext should render correctly 1`] = `
 
 exports[`ServerApp should render correctly 1`] = `
 <StaticRouter
-  basename=""
   context={
     Object {
       "context": "someRouterContext",

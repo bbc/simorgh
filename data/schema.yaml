@@ -293,10 +293,12 @@ components:
           - $ref: '#/components/schemas/altText'
           - $ref: '#/components/schemas/aresMedia'
           - $ref: '#/components/schemas/aresMediaMetadata'
+          - $ref: '#/components/schemas/audio'
           - $ref: '#/components/schemas/caption'
           - $ref: '#/components/schemas/fragment'
           - $ref: '#/components/schemas/headline'
           - $ref: '#/components/schemas/image'
+          - $ref: '#/components/schemas/inline'
           - $ref: '#/components/schemas/paragraph'
           - $ref: '#/components/schemas/rawImage'
           - $ref: '#/components/schemas/subheadline'
@@ -445,6 +447,24 @@ components:
                         type: string
                         example: 'Contains some strong language.'
 
+    audio:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+          required:
+            - blocks
+        type:
+          enum:
+            - audio
+          type: string
+
     caption:
       type: object
       required:
@@ -512,6 +532,31 @@ components:
         type:
           enum:
             - image
+          type: string
+
+    inline:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          type: object
+          required:
+            - text
+            - blocks
+            - language
+          properties:
+            text:
+              type: string
+            blocks:
+              $ref: '#/components/schemas/blocks'
+            language:
+              type: string
+              example: 'en-gb'
+        type:
+          enum:
+            - inline
           type: string
 
     paragraph:

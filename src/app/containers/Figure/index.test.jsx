@@ -1,6 +1,6 @@
 import { mount } from 'enzyme';
 import LazyLoad from 'react-lazyload';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import {
   FigureImage,
   FigureAmpImage,

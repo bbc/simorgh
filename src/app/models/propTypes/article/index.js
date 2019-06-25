@@ -3,17 +3,17 @@ import metadataPropTypes from '../metadata';
 import promoPropTypes from '../promo';
 import mainContentPropTypes from '../mainContent';
 
-export const articleDataPropTypes = {
+export const articleDataPropTypes = shape({
   metadata: shape(metadataPropTypes).isRequired,
   content: shape({
     model: shape(mainContentPropTypes),
   }).isRequired,
   promo: shape(promoPropTypes).isRequired,
-};
+});
 
 const articlePropTypes = {
   isAmp: bool,
-  data: shape(articleDataPropTypes),
+  data: articleDataPropTypes,
   service: string,
   status: number,
 };

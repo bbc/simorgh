@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import FrontPageContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging

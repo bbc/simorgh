@@ -3,7 +3,7 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import { ClientApp, ServerApp } from '.';
 
 describe('ClientApp', () => {

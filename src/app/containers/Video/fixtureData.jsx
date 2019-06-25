@@ -19,6 +19,7 @@ const generateFixtureData = ({ platform, blocks }) => (
     id="c0000000000o"
     isUK
     origin="https://www.test.bbc.co.uk"
+    pageType="article"
     platform={platform}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
@@ -41,7 +42,10 @@ export const NoData = ({ platform }) =>
   generateFixtureData({ platform, blocks: null });
 
 export const NoAresMedia = ({ platform }) =>
-  generateFixtureData({ platform, blocks: [captionBlock] });
+  generateFixtureData({
+    platform,
+    blocks: [captionBlock],
+  });
 
 export const VideoClipGlobalWithCaption = ({ platform }) =>
   generateFixtureData({

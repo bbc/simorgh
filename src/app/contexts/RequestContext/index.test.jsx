@@ -1,15 +1,22 @@
 import React, { Fragment, useContext } from 'react';
-import { shouldMatchSnapshot } from '../../helpers/tests/testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
 const renderWithContextProvider = (
   node,
-  { platformString, bbcOrigin, statsDestination, statsPageIdentifier },
+  {
+    platformString,
+    bbcOrigin,
+    pageType,
+    statsDestination,
+    statsPageIdentifier,
+  },
 ) => (
   <RequestContextProvider
     platform={platformString}
     bbcOrigin={bbcOrigin}
+    pageType={pageType}
     statsDestination={statsDestination}
     statsPageIdentifier={statsPageIdentifier}
   >
@@ -22,6 +29,7 @@ const Component = () => {
     platform,
     isUK,
     origin,
+    pageType,
     statsDestination,
     statsPageIdentifier,
   } = useContext(RequestContext);
@@ -30,6 +38,7 @@ const Component = () => {
       <span>{platform}</span>
       <span>{isUK ? 'true' : 'false'}</span>
       <span>{origin}</span>
+      <span>{pageType}</span>
       <span>{statsDestination}</span>
       <span>{statsPageIdentifier}</span>
     </Fragment>
@@ -37,18 +46,20 @@ const Component = () => {
 };
 
 describe('RequestContext', () => {
-  const testRequestContext = (
+  const testRequestContext = ({
+    pageType,
     platformString,
     statsDestination,
     statsPageIdentifier,
     isUK,
     origin,
-  ) => {
+  }) => {
     shouldMatchSnapshot(
-      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
+      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, pageType ${pageType}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
       renderWithContextProvider(<Component />, {
         isUK,
         origin,
+        pageType,
         platformString,
         statsDestination,
         statsPageIdentifier,
@@ -56,33 +67,36 @@ describe('RequestContext', () => {
     );
   };
 
-  testRequestContext(
-    'default',
-    'NEWS_PS_TEST',
-    'persian.articles.c0000000000o.page',
-    false,
-    'https://www.bbc.com',
-  );
-  testRequestContext(
-    'canonical',
-    'NEWS_PS_TEST',
-    'persian.articles.c0000000000o.page',
-    false,
-    'https://www.bbc.com',
-  );
-  testRequestContext(
-    'amp',
-    'NEWS_PS_TEST',
-    'persian.articles.c0000000000o.page',
-    false,
-    'https://www.bbc.com',
-  );
-  testRequestContext(
-    'default',
-    'NEWS_PS_TEST',
-    'persian.articles.c0000000000o.page',
-    'https://www.bbc.co.uk',
-    false,
-    'https://www.bbc.com',
-  );
+  testRequestContext({
+    pageType: 'article',
+    platformString: 'default',
+    statsDestination: 'NEWS_PS_TEST',
+    statsPageIdentifier: 'persian.articles.c0000000000o.page',
+    isUK: false,
+    origin: 'https://www.bbc.com',
+  });
+  testRequestContext({
+    pageType: 'article',
+    platformString: 'canonical',
+    statsDestination: 'NEWS_PS_TEST',
+    statsPageIdentifier: 'persian.articles.c0000000000o.page',
+    isUK: false,
+    origin: 'https://www.bbc.com',
+  });
+  testRequestContext({
+    pageType: 'article',
+    platformString: 'amp',
+    statsDestination: 'NEWS_PS_TEST',
+    statsPageIdentifier: 'persian.articles.c0000000000o.page',
+    isUK: false,
+    origin: 'https://www.bbc.com',
+  });
+  testRequestContext({
+    pageType: 'article',
+    platformString: 'default',
+    statsDestination: 'NEWS_PS_TEST',
+    statsPageIdentifier: 'persian.articles.c0000000000o.page',
+    isUK: false,
+    origin: 'https://www.bbc.com',
+  });
 });

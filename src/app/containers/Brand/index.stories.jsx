@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Brand from '.';
 import services from '../../lib/config/services';

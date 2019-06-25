@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from '../../helpers/compose';
+import compose from '../../lib/utilities/compose';
 import frontPagePropTypes from '../../models/propTypes/frontPage';
 import FrontPageMain from '../FrontPageMain';
 

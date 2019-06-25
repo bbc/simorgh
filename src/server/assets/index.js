@@ -1,5 +1,5 @@
 import fs from 'fs';
-import nodeLogger from '../../app/helpers/logger.node';
+import nodeLogger from '../../app/lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
@@ -28,9 +28,7 @@ const getAssetsArray = () => {
     }
   } catch (error) {
     logger.error(
-      `Error parsing assets manifest. ${assetsManifestEnv} = ${
-        process.env[assetsManifestEnv]
-      }`,
+      `Error parsing assets manifest. ${assetsManifestEnv} = ${process.env[assetsManifestEnv]}`,
     );
   }
   return assets;

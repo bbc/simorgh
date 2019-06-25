@@ -32,9 +32,7 @@ describe('getStyleTag', () => {
       const inlineCss = renderToString(getStyleTag(sheet));
       expect(inlineCss).toBe(
         expectedOutput(
-          `data-styled="gDvQnu bKGMUB" data-styled-version="${
-            packageLock.dependencies['styled-components'].version
-          }"`,
+          `data-styled="gDvQnu bKGMUB" data-styled-version="${packageLock.dependencies['styled-components'].version}"`,
         ),
       );
     });
