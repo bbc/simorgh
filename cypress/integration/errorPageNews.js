@@ -6,7 +6,6 @@ import {
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
-import { testResponseCode } from '../support/metaTestHelper';
 import news from '../../src/app/lib/config/services/news';
 
 describe('Article Body Tests', () => {
@@ -18,7 +17,11 @@ describe('Article Body Tests', () => {
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/news/articles/${config.specialAssets.nonExistent}`, 404);
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.nonExistent}`,
+      404,
+      'text/html',
+    );
   });
 
   describeForLocalOnly(

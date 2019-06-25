@@ -3,7 +3,7 @@ import {
   getElement,
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -13,14 +13,30 @@ describe('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`/news/articles/${config.specialAssets.news}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `/news/articles/${config.assets.news}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`/news/articles/${config.specialAssets.news}.cake`, 404);
-    testResponseCode(`/news/lol/${config.specialAssets.news}.amp`, 404);
-    testResponseCode(`/cake/articles/${config.specialAssets.news}.amp`, 404);
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.news}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/news/lol/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/cake/articles/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have AMP attribute', () => {

@@ -6,7 +6,6 @@ import {
   errorTitle,
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
-import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
 
 describeForLocalOnly('Article Body Tests', () => {
@@ -18,9 +17,10 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(
-      `/persian/articles/${config.specialAssets.nonExistent}`,
+    cy.testResponseCodeAndType(
+      `/persian/articles/${config.assets.nonExistent}`,
       404,
+      'text/html',
     );
   });
 
