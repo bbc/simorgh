@@ -6,6 +6,16 @@ export const testResponseCode = (path, responseCode) => {
   });
 };
 
+export const testRedirect = (url, expectedStatus, expectedUrl) => {
+  cy.request({
+    url,
+    followRedirect: false,
+  }).then(resp => {
+    expect(resp.status).to.eq(expectedStatus);
+    expect(resp.redirectedToUrl).to.eq(expectedUrl);
+  });
+};
+
 export const mozartFallbackStatus = path => {
   cy.request(path).then(({ headers }) => {
     expect(headers).not.to.have.property('x-mfa');

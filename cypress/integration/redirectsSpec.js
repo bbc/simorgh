@@ -1,22 +1,44 @@
 import config from '../support/config';
+import { testRedirect } from '../support/metaTestHelper';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 
-describe('Persian redirects', () => {
+describeForLocalAndTest('Persian redirects', () => {
   // We are testing redirects from .co.uk to com
   // This means we need to enforce these tests to call .co.uk
   // We are assuming that these tests are running outside of the uk
-  Cypress.config('baseUrl', 'https://www.test.bbc.com');
+  Cypress.config('baseUrl', 'https://www.test.bbc.co.uk');
 
-  // Given I go to https://www.bbc.co.uk/persian/articles/:id
-  // Then I am given a 301 redirect to https://www.bbc.com/persian/articles/:id
-  it('should redirect me to .com if I am hitting the .co.uk on persian canonical', () => {
-    cy.request({
-      url: `/persian/articles/c4vlle3q337o`,
-      followRedirect: false,
-    }).then(resp => {
-      expect(resp.status).to.eq(302);
-      expect(resp.redirectedToUrl).to.eq(
-        `https://www.test.bbc.com/persian/articles/c4vlle3q337o`,
-      );
-    });
+  it('should redirect me to .com if I am hitting the .co.uk on Persian canonical', () => {
+    testRedirect(
+      `/persian/articles/${config.assets.persian}`,
+      302,
+      `https://www.test.bbc.com/persian/articles/${config.assets.persian}`,
+    );
+  });
+
+  // Using the full url due to http enforce
+  it('should redirect me to the https site if visiting http on Persian canonical', () => {
+    testRedirect(
+      `http://www.test.bbc.co.uk/persian/articles/${config.assets.persian}`,
+      301,
+      `https://www.test.bbc.co.uk/persian/articles/${config.assets.persian}`,
+    );
+  });
+
+  it('should redirect me to .com if I am hitting the .co.uk on Persian amp', () => {
+    testRedirect(
+      `/persian/articles/${config.assets.persian}.amp`,
+      302,
+      `https://www.test.bbc.com/persian/articles/${config.assets.persian}.amp`,
+    );
+  });
+
+  // Using the full url due to http enforce
+  it('should redirect me to the https site if visiting http on Persian amp', () => {
+    testRedirect(
+      `http://www.test.bbc.co.uk/persian/articles/${config.assets.persian}.amp`,
+      301,
+      `https://www.test.bbc.co.uk/persian/articles/${config.assets.persian}.amp`,
+    );
   });
 });
