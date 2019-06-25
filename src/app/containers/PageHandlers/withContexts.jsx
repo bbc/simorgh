@@ -3,6 +3,7 @@ import getStatsDestination from '../../contexts/RequestContext/getStatsDestinati
 import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
 import getOriginContext from '../../contexts/RequestContext/getOriginContext';
 import getEnv from '../../contexts/RequestContext/getEnv';
+import FeatureFlagUpdater from '../FeatureFlagUpdater';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -35,6 +36,7 @@ const WithContexts = Component => {
               id,
             })}
           >
+            <FeatureFlagUpdater />
             <Component {...props} />
           </RequestContextProvider>
         </ServiceContextProvider>
