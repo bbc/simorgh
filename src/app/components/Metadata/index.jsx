@@ -104,9 +104,19 @@ const Metadata = ({
       {getPublishedTime(timeFirstPublished, showArticleTags)}
       {getArticleSection(articleSection, showArticleTags)}
       {getMetaTags(metaTags, showArticleTags)}
+      <meta name="apple-mobile-web-app-title" content={brandName}/>
+      <meta name="application-name" content={brandName}/>
       <meta name="description" content={description} />
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
+      <meta name="mobile-web-app-capable" content="yes"/>
+
+      <meta name="msapplication-config" content="path/to/browserconfig.xml" /> {/* */}
+
+      <meta name="msapplication-TileColor" content={themeColor}/>
+
+      <meta name="msapplication-TileImage" content={`/path/to/144x144.png`}/> {/* */}
+
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
       <meta name="og:image:alt" content={defaultImageAltText} />
@@ -122,8 +132,35 @@ const Metadata = ({
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
+
+      {
+        appleTouchIconLinks.map(appleTouchIconLink => (
+          <link
+            rel="apple-touch-icon"
+            sizes={appleTouchIconLink.size}
+            href={appleTouchIconLink.href}
+          />
+        ))
+      }
+
+      <link rel="apple-touch-icon" sizes="72x72" href={`/path/to/72x72.png`} />
+      <link rel="apple-touch-icon" sizes="96x96" href={`/path/to/96x96.png`} />
+      <link rel="apple-touch-icon" sizes="128x128" href={`/path/to/128x128.png`} />
+      <link rel="apple-touch-icon" sizes="144x144" href={`/path/to/144x144.png`} />
+      <link rel="apple-touch-icon" sizes="152x152" href={`/path/to/152x152.png`} />
+      <link rel="apple-touch-icon" sizes="192x192" href={`/path/to/192x192.png`} />
+      <link rel="apple-touch-icon" sizes="384x384" href={`/path/to/384x384.png`} />
+      <link rel="apple-touch-icon" sizes="512x512" href={`/path/to/512x512.png`} />
+
+      <link rel="icon" type="image/png" href={`/path/to/72x72.png`} sizes="72x72" />
+      <link rel="icon" type="image/png" href={`/path/to/96x96.png`} sizes="96x96" />
+      <link rel="icon" type="image/png" href={`/path/to/192x192.png`} sizes="192x192"/>
+
+      <link rel="apple-touch-startup-image" href={`/path/to/512x512.png`}/> {/* */}
+      <link rel="mask-icon" href="path/to/safari-pinned-tab.svg" color="#color"></link> {/* */}
+
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
 };
