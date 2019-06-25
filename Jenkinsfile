@@ -100,9 +100,13 @@ pipeline {
 
         stage ('Test Production') {
           agent {
+            // docker {
+            //   image "${nodeImage}"
+            //   args '-u root -v /etc/pki:/certs'
+            // }
             docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+              image "bbca11y/bbc-a11y-docker"
+              args '--tty -u root -v /etc/pki:/certs'
             }
           }
           steps {
