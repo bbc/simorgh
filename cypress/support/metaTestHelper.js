@@ -1,11 +1,5 @@
 import { getElement } from './bodyTestHelper';
 
-export const testResponseCode = (path, responseCode) => {
-  cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
-    expect(status).to.eq(responseCode);
-  });
-};
-
 export const mozartFallbackStatus = path => {
   cy.request(path).then(({ headers }) => {
     expect(headers).not.to.have.property('x-mfa');
