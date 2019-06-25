@@ -49,7 +49,7 @@ storiesOf('InlineLink', module)
       isExternal={false}
     />
   ))
-  .add('external link - English offscreen text', () => (
+  .add('external link - English aria-label text', () => (
     <ServiceContextProvider service="news">
       <InlineLinkContainer
         locator="https://www.example.com/"
@@ -58,7 +58,7 @@ storiesOf('InlineLink', module)
       />
     </ServiceContextProvider>
   ))
-  .add('external link - Persian offscreen text', () => (
+  .add('external link - Persian aria-label text', () => (
     <ServiceContextProvider service="persian">
       <InlineLinkContainer
         locator="https://www.example.com/"
