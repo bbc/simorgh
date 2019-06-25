@@ -95,7 +95,7 @@
     "@bbc/psammead-story-promo": "^0.2.0-alpha.8",
     "@bbc/psammead-story-promo-list": "^0.1.0-alpha.2",
     "@bbc/psammead-styles": "^1.0.0",
-    "@bbc/psammead-timestamp-container": "^1.2.0",
+    "@bbc/psammead-timestamp-container": "^1.2.2",
     "@bbc/psammead-visually-hidden-text": "^0.1.10",
     "assets-webpack-plugin": "^3.9.8",
     "babel-loader": "^8.0.5",
