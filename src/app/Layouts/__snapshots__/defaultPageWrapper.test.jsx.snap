@@ -5,7 +5,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
   <ServiceContextProvider
     service="news"
   >
-    <GlobalStyleComponent />
+    <GlobalStyle />
     <RequestContextProvider
       env="live"
       id="c0000000000o"

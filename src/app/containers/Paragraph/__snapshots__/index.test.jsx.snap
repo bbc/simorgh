@@ -10,28 +10,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.c2 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c2:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c2:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c0 {
   grid-column: 1 / span 6;
 }
@@ -99,7 +77,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
       This is some text.
     </b>
     <a
-      className="c2"
+      className="InlineLink-hkwpaz-0 guatGt"
       href="/bbc-test"
     >
       Some text

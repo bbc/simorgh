@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -236,7 +214,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
       >
         Alternatively, please visit the 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.
@@ -249,28 +227,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for 404 for persian 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -484,7 +440,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
       >
         روش دیگر، لطفآ به 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com/persian"
         >
           صفحه اصلی بی بی سی فارسی
@@ -497,28 +453,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for 500 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -727,7 +661,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
       >
         Alternatively, please visit the 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.
@@ -740,28 +674,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for 500 for persian 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -970,7 +882,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
       >
         روش دیگر، لطفآ به 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com/persian"
         >
           صفحه اصلی بی بی سی فارسی
@@ -983,28 +895,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for other status code 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1213,7 +1103,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
       >
         Alternatively, please visit the 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.

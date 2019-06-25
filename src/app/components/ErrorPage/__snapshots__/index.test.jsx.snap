@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for an error page for News 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -231,7 +209,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
       >
         You can do 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com"
         >
           this
@@ -244,28 +222,6 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -474,7 +430,7 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
       >
         You can do 
         <a
-          className="c5"
+          className="InlineLink-hkwpaz-0 guatGt"
           href="https://www.bbc.com"
         >
           this

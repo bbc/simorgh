@@ -260,28 +260,6 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
   font-style: normal;
 }
 
-.c4 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c4:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c4:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0.5rem 1rem 0;
@@ -320,7 +298,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
     <p>
       This is a caption 
       <a
-        className="c4"
+        className="InlineLink-hkwpaz-0 guatGt"
         href="https://www.bbc.com"
       >
         containing an inline link
@@ -712,28 +690,6 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
   font-style: normal;
 }
 
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
-}
-
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
-.c5:hover {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0.5rem 1rem 0;
@@ -771,7 +727,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
     <p>
       This is a caption 
       <a
-        className="c5"
+        className="InlineLink-hkwpaz-0 guatGt"
         href="https://www.bbc.com"
       >
         containing an inline link
