@@ -25,5 +25,12 @@ export const getContentId = frontpageData => {
 export const getLanguage = frontpageData =>
   deepGet(['metadata', 'language'], frontpageData);
 
-export const getPageTitle = frontpageData =>
-  deepGet(['metadata', 'title'], frontpageData);
+// This formatting of the page title is implemented independently of
+// the actual page title in the metadata component. Ideally these would
+// not be duplicated but refactored upwards. They cannot be refactored
+// into the default page wrapper because that component does not have
+// access to the page data.
+export const getPageTitle = (frontpageData, brandName) => {
+  const title = deepGet(['metadata', 'title'], frontpageData);
+  return title && `${title} - ${brandName}`;
+};

@@ -36,6 +36,7 @@ describe('FrontPageAtiParams', () => {
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',
+    brandName: 'BBC News SERVICE',
     service: 'SERVICE',
   };
 
@@ -57,7 +58,7 @@ describe('FrontPageAtiParams', () => {
         contentType: 'index-home',
         language: 'LANGUAGE',
         pageIdentifier: 'SERVICE.page',
-        pageTitle: 'PAGE TITLE',
+        pageTitle: 'PAGE TITLE - BBC News SERVICE',
         platform: 'canonical',
         service: 'SERVICE',
         statsDestination: 'WS_NEWS_LANGUAGES_TEST',
@@ -82,7 +83,10 @@ describe('FrontPageAtiParams', () => {
       expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(mockFPData);
 
       expect(testUtils.getPageTitle).toHaveBeenCalledTimes(1);
-      expect(testUtils.getPageTitle).toHaveBeenCalledWith(mockFPData);
+      expect(testUtils.getPageTitle).toHaveBeenCalledWith(
+        mockFPData,
+        'BBC News SERVICE',
+      );
     });
   });
 });

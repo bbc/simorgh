@@ -135,14 +135,16 @@ describe('getPageTitle', () => {
     },
   };
 
-  it('should find the page title', () => {
-    const title = getPageTitle(goodData);
+  const brandName = 'BRAND';
 
-    expect(title).toEqual('Home');
+  it('should find the page title', () => {
+    const title = getPageTitle(goodData, brandName);
+
+    expect(title).toEqual('Home - BRAND');
   });
 
   it('should return null when there is no page title', () => {
-    const title = getPageTitle(badData);
+    const title = getPageTitle(badData, brandName);
 
     expect(title).toBeNull();
   });
