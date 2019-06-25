@@ -89,11 +89,12 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-e DISPLAY=:99 -u root -v /etc/pki:/certs'
+              args '-u root -v /etc/pki:/certs'
             }
           }
           steps {
-            runDevelopmentTests()
+            // runDevelopmentTests()
+            sh 'ls -al'
           }
         }
 
@@ -101,7 +102,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-e DISPLAY=:99 -u root -v /etc/pki:/certs'
+              args '-u root -v /etc/pki:/certs'
             }
           }
           steps {
