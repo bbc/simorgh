@@ -9,7 +9,7 @@ import 'core-js/es/symbol';
 
 // Needed by React Loadable
 // IE11, IE10
-import 'core-js/fn/object/assign';
+import 'core-js/es/object/assign';
 
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
