@@ -82,7 +82,7 @@
     "@bbc/psammead-assets": "^0.1.9",
     "@bbc/psammead-brand": "^1.0.1",
     "@bbc/psammead-caption": "^1.1.5",
-    "@bbc/psammead-copyright": "^1.0.0",
+    "@bbc/psammead-copyright": "^1.0.1",
     "@bbc/psammead-figure": "^0.1.10",
     "@bbc/psammead-headings": "^2.0.0",
     "@bbc/psammead-image": "^0.3.3",
