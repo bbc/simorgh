@@ -18,6 +18,21 @@ const AmpDecorator = storyFn => (
       <style amp-boilerplate="">{AMP_SCRIPT}</style>
       <noscript>{`<style amp-boilerplate="">${AMP_NO_SCRIPT}</style>`}</noscript>
       <script async src="https://cdn.ampproject.org/v0.js" />
+      <script
+        async
+        custom-element="amp-geo"
+        src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+      />
+      <script
+        async
+        custom-element="amp-consent"
+        src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+      />
+      <script
+        async
+        custom-element="amp-analytics"
+        src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+      />
     </Helmet>
     {storyFn()}
   </div>
