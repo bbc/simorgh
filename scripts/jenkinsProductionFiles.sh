@@ -35,6 +35,7 @@ cp cypress.json ./pack
 cp Jenkinsfile ./pack
 cp Makefile ./pack
 cp a11y.js ./pack
+cp excludeFromPublicBuild.txt ./pack
 
 # Copy the webpack configs
 cp webpack.config.js ./pack

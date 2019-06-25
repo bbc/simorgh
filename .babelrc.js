@@ -39,7 +39,7 @@ module.exports = {
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
         "useBuiltIns": "usage",
-        "corejs": "2"
+        "corejs": "3"
       }
     ],
     "@babel/preset-react" // transform JSX to JS

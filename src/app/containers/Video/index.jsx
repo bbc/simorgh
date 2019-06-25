@@ -5,6 +5,8 @@ import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
+import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
+import mediatorURL from './helpers/mediatorUrl';
 
 import {
   videoPropTypes,
@@ -14,9 +16,12 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
-  const { platform, statsDestination, statsPageIdentifier } = React.useContext(
-    RequestContext,
-  );
+  const {
+    env,
+    platform,
+    statsDestination,
+    statsPageIdentifier,
+  } = React.useContext(RequestContext);
 
   if (!blocks) {
     return null;
@@ -29,11 +34,10 @@ const VideoContainer = ({ blocks }) => {
   }
 
   const metadata = videoMetadata(aresMediaBlock);
-
   const captionBlock = filterForBlockType(blocks, 'caption');
-
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
-  const kind = deepGet(['subType'], nestedModel);
+  const kind =
+    deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
   const pid = deepGet(['id'], nestedModel);
   const title = deepGet(['title'], nestedModel);
   const version = deepGet(['versions', 0], nestedModel);
@@ -43,16 +47,41 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
-  const items = [
-    {
-      versionID,
-      kind,
-      duration,
+  const guidance = deepGet(['warnings', 'short'], version);
+  const id = `mp#${pid}`;
+  const mediaPlayerSettings = {
+    product: 'news',
+    responsive: true,
+    statsObject: { clipPID: pid },
+    mediator: {
+      host: mediatorURL(env),
     },
-  ];
+    playlistObject: {
+      title,
+      holdingImageURL: `https://${holdingImageUrl}`,
+      guidance,
+      items: [
+        {
+          versionID,
+          duration,
+          kind,
+        },
+      ],
+    },
+    ui: {
+      subtitles: {
+        defaultOn: true,
+      },
+      locale: {
+        lang: 'en-GB',
+      },
+    },
+  };
+
+  const type = kind === 'audio' ? kind : 'video';
 
   return (
-    <>
+    <GridItemConstrainedLargeNoMargin>
       {metadata ? (
         <Helmet>
           {
@@ -64,20 +93,18 @@ const VideoContainer = ({ blocks }) => {
       ) : null}
       <Figure>
         <Video
-          pid={pid}
-          kind={kind}
+          id={id}
           title={title}
-          items={items}
-          holdingImageUrl={holdingImageUrl}
           statsAppName="news"
           statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
           statsCountername={statsPageIdentifier}
           statsDestination={statsDestination}
           uiLocale="en-GB"
+          mediaPlayerSettings={mediaPlayerSettings}
         />
-        {captionBlock ? <Caption block={captionBlock} video /> : null}
+        {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
       </Figure>
-    </>
+    </GridItemConstrainedLargeNoMargin>
   );
 };
 
