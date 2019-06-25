@@ -5,8 +5,25 @@ import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
+import { storyItem } from '../../models/propTypes/storyItem';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import deepGet from '../../lib/utilities/deepGet';
+
+const StoryPromoLiContainer = ({ item, sectionNumber, storyNumber }) => {
+  const topStory = sectionNumber === 0 && storyNumber === 0;
+
+  return (
+    <StoryPromoLi key={item.id}>
+      <StoryPromo item={item} topStory={topStory} />
+    </StoryPromoLi>
+  );
+};
+
+StoryPromoLiContainer.propTypes = {
+  item: shape(storyItem).isRequired,
+  sectionNumber: number.isRequired,
+  storyNumber: number.isRequired,
+};
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script } = useContext(ServiceContext);
@@ -44,14 +61,16 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       </SectionLabel>
       {items.length > 1 ? (
         <StoryPromoUl>
-          {items.map(item => (
-            <StoryPromoLi key={item.id}>
-              <StoryPromo item={item} script={script} />
-            </StoryPromoLi>
+          {items.map((item, index) => (
+            <StoryPromoLiContainer
+              item={item}
+              sectionNumber={sectionNumber}
+              storyNumber={index}
+            />
           ))}
         </StoryPromoUl>
       ) : (
-        <StoryPromo item={items[0]} script={script} />
+        <StoryPromo item={items[0]} script={script} topStory />
       )}
     </section>
   );
