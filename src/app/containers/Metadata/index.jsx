@@ -166,6 +166,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={assetType}
+        service={service}
         showArticleTags={assetType === 'article'}
       />
     </Fragment>
