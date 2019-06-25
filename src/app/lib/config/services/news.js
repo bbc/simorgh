@@ -15,6 +15,7 @@ const news = {
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
+  audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
