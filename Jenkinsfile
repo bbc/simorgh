@@ -89,7 +89,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+              args '-e DISPLAY=:99 -u root -v /etc/pki:/certs'
             }
           }
           steps {
@@ -100,8 +100,8 @@ pipeline {
         stage ('Test Production') {
           agent {
             docker {
-              image "${dockerRegistry}/bbc-news/node-8-lts:0.0.8"
-              args '-u root -v /etc/pki:/certs'
+              image "${nodeImage}"
+              args '-e DISPLAY=:99 -u root -v /etc/pki:/certs'
             }
           }
           steps {
