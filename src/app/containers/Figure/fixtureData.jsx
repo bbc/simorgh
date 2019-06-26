@@ -149,6 +149,7 @@ const generateFixtureData = ({
     <RequestContextProvider
       platform={platform}
       isUK
+      lang="en-gb"
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"

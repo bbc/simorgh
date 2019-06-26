@@ -13,6 +13,7 @@ const Context = ({ children }) => (
   <RequestContextProvider
     id="c0000000000o"
     isUK
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"

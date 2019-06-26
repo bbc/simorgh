@@ -32,6 +32,7 @@ describe('Consent Banner Text', () => {
     'should correctly render banner text in the UK',
     <RequestContextProvider
       isUK
+      lang="en-gb"
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       pageType="article"
@@ -47,6 +48,7 @@ describe('Consent Banner Text', () => {
     'should correctly render banner text outside the UK',
     <RequestContextProvider
       isUK={false}
+      lang="en-gb"
       origin="https://www.bbc.com"
       id="c0000000000o"
       pageType="article"
@@ -62,6 +64,7 @@ describe('Consent Banner Text', () => {
     'should correctly render banner text with a link in the UK',
     <RequestContextProvider
       isUK
+      lang="en-gb"
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       pageType="article"
@@ -77,6 +80,7 @@ describe('Consent Banner Text', () => {
     'should correctly render banner text with a link outside the UK',
     <RequestContextProvider
       isUK={false}
+      lang="en-gb"
       origin="https://www.bbc.com"
       id="c0000000000o"
       pageType="article"

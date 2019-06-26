@@ -12,7 +12,15 @@ import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
+const PageWrapper = ({
+  bbcOrigin,
+  children,
+  id,
+  service,
+  isAmp,
+  pageType,
+  lang,
+}) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
 
@@ -24,6 +32,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
           env={env}
           id={id}
           isUK={isUK}
+          lang={lang}
           origin={origin}
           pageType={pageType}
           platform={isAmp ? 'amp' : 'canonical'}
@@ -56,6 +65,7 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
+  lang: string.isRequired,
 };
 
 PageWrapper.defaultProps = {

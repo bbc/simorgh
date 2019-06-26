@@ -4,6 +4,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 <RequestContextProvider
   id="c0000000000o"
   isUK={true}
+  lang="en-gb"
   origin="https://www.test.bbc.co.uk"
   pageType="article"
   platform="canonical"
@@ -158,6 +159,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
 <RequestContextProvider
   id="c0000000000o"
   isUK={true}
+  lang="en-gb"
   origin="https://www.test.bbc.co.uk"
   pageType="article"
   platform="canonical"

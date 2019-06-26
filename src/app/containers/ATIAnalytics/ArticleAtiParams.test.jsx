@@ -39,6 +39,7 @@ describe('ArticleAtiParams', () => {
   };
   const requestContextStub = {
     isUK: true,
+    lang: 'en-gb',
     origin: 'https://www.bbc.co.uk',
     pageType: 'article',
     platform: 'canonical',

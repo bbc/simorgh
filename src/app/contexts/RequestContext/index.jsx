@@ -7,6 +7,7 @@ export const RequestContextProvider = ({
   children,
   id,
   isUK,
+  lang,
   origin,
   pageType,
   platform,
@@ -16,6 +17,7 @@ export const RequestContextProvider = ({
   const value = {
     id,
     isUK,
+    lang,
     origin,
     pageType,
     platform,
@@ -31,6 +33,7 @@ export const RequestContextProvider = ({
 RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
+  lang: string.isRequired,
   pageType: oneOf(['article', 'frontPage']).isRequired,
   platform: string.isRequired,
   isUK: bool.isRequired,

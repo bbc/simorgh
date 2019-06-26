@@ -13,6 +13,7 @@ describe('Consent Banner Container', () => {
     <RequestContextProvider
       platform="amp"
       isUK
+      lang="en-gb"
       origin="https://www.bbc.co.uk"
       pageType="article"
       id="c0000000000o"
@@ -27,6 +28,7 @@ describe('Consent Banner Container', () => {
     'should correctly render canonical banner',
     <RequestContextProvider
       platform="canonical"
+      lang="en-gb"
       isUK
       origin="https://www.bbc.co.uk"
       pageType="article"

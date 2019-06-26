@@ -25,6 +25,7 @@ const getStoryPromo = platform => item => (
     <RequestContextProvider
       platform={platform}
       isUK
+      lang="en-gb"
       origin="https://www.bbc.co.uk"
       pageType="article"
       id="c0000000000o"

@@ -17,6 +17,7 @@ const Container = (service, bbcOrigin, platform, data, id) => {
         platform={platform}
         id={id}
         isUK
+        lang="en-gb"
         origin={bbcOrigin}
         statsDestination="NEWS_PS_TEST"
         statsPageIdentifier={`${service}.articles.${id}.page`}

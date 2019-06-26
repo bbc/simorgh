@@ -12,6 +12,7 @@ const ContextWrap = ({ children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       isUK
+      lang="en-gb"
       platform="canonical"
       origin="https://www.test.bbc.co.uk"
       pageType="article"
