@@ -80,7 +80,7 @@
     "@babel/runtime": "^7.3.4",
     "@bbc/gel-foundations": "3.0.0",
     "@bbc/psammead-assets": "^0.1.9",
-    "@bbc/psammead-brand": "^4.1.1",
+    "@bbc/psammead-brand": "^4.1.2",
     "@bbc/psammead-caption": "^1.1.5",
     "@bbc/psammead-copyright": "^1.0.0",
     "@bbc/psammead-figure": "^0.1.10",
