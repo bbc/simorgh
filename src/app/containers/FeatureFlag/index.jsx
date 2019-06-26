@@ -1,12 +1,8 @@
-import React, { useContext } from 'react';
-import { isFeatureEnabled } from './featureFlagUtils.js';
-
-// context
-import { FeatureFlagContext } from '../../contexts/FeatureFlagContext';
+import React from 'react';
+import useFeatureFlag from './useFeatureFlag';
 
 const FeatureFlagContainer = ({ flag, FallbackUi, children }) => {
-  const { featureFlagState } = useContext(FeatureFlagContext);
-  const { enabled } = isFeatureEnabled(flag, featureFlagState);
+  const [enabled] = useFeatureFlag(flag);
 
   if (enabled) {
     return children;

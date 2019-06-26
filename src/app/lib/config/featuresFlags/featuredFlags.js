@@ -6,6 +6,9 @@ const featureFlags = {
   images: {
     enabled: true,
   },
+  topStoryPromo: {
+    enabled: false,
+  },
 };
 
 export default featureFlags;

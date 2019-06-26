@@ -18,6 +18,8 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 
+import useFeatureFlag from '../FeatureFlag/useFeatureFlag';
+
 const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
@@ -58,6 +60,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
+  const [enabled] = useFeatureFlag('topStoryPromo');
 
   if (!headline || !url) {
     return null;
@@ -99,7 +102,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       image={Image}
       info={Info}
       mediaIndicator={<MediaIndicator item={item} />}
-      topStory={topStory}
+      topStory={enabled ? topStory : false}
     />
   );
 };
