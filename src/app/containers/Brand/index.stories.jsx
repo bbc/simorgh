@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import * as svgs from '@bbc/psammead-assets/svgs';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Brand from '.';
 import services from '../../lib/config/services';
@@ -11,7 +12,13 @@ Object.keys(services)
   .forEach(service => {
     stories.add(service, () => (
       <ServiceContextProvider service={service}>
-        <Brand />
+        <Brand
+          product="BBC News"
+          svg={svgs[service]}
+          svgHeight={24}
+          maxWidth={280}
+          minWidth={180}
+        />
       </ServiceContextProvider>
     ));
   });
