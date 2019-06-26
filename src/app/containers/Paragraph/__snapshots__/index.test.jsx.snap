@@ -106,6 +106,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
       This is some text.
     </b>
     <a
+      aria-label={null}
       className="c2"
       href="/bbc-test"
     >
