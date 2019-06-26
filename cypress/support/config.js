@@ -25,7 +25,7 @@ const config = {
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598343',
-    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
+    atiUrl: 'https://logws1363.ati-host.net?',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -39,7 +39,7 @@ const config = {
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598343',
-    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
+    atiUrl: 'https://logws1363.ati-host.net?',
   },
 };
 

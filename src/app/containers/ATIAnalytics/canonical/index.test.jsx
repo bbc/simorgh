@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { oneOf, node } from 'prop-types';
 import renderer from 'react-test-renderer';
 import CanonicalATIAnalytics from '.';
 
@@ -8,9 +8,10 @@ import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
-const ContextWrap = ({ children }) => (
+const ContextWrap = ({ env, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
+      env={env}
       isUK
       platform="canonical"
       origin="https://www.test.bbc.co.uk"
@@ -18,7 +19,6 @@ const ContextWrap = ({ children }) => (
       service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
-      articleData={{}}
     >
       {children}
     </RequestContextProvider>
@@ -26,6 +26,7 @@ const ContextWrap = ({ children }) => (
 );
 
 ContextWrap.propTypes = {
+  env: oneOf(['local', 'test', 'live']).isRequired,
   children: node.isRequired,
 };
 
@@ -37,25 +38,43 @@ describe('Canonical ATI Analytics', () => {
   });
 
   shouldMatchSnapshot(
-    'should render correctly',
-    <ContextWrap>
+    'should render correctly for Live ATI endpoint',
+    <ContextWrap env="live">
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
     </ContextWrap>,
   );
 
-  it('should call sendBeacon function with the ATI url', () => {
-    const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
-    beacon.default = mockSendBeacon;
+  const testCases = [
+    {
+      describe: 'should call sendBeacon with Live ATI URL for live env',
+      atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
+      env: 'live',
+    },
+    // {
+    //   describe: 'should call sendBeacon with Test ATI URL for test env',
+    //   atiUrl: 'https://logws1363.ati-host.net?key=value&key2=value2',
+    //   env: 'test',
+    // },
+    // {
+    //   describe: 'should call sendBeacon with Test ATI URL for local env',
+    //   atiUrl: 'https://logws1363.ati-host.net?key=value&key2=value2',
+    //   env: 'local',
+    // },
+  ];
 
-    renderer.create(
-      <ContextWrap>
-        <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
-      </ContextWrap>,
-    );
+  testCases.forEach(({ describe, atiUrl, env }) => {
+    it(describe, () => {
+      const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
+      beacon.default = mockSendBeacon;
 
-    expect(mockSendBeacon).toHaveBeenCalledTimes(1);
-    expect(mockSendBeacon).toHaveBeenCalledWith(
-      'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
-    );
+      renderer.create(
+        <ContextWrap env={env}>
+          <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
+        </ContextWrap>,
+      );
+
+      expect(mockSendBeacon).toHaveBeenCalledTimes(1);
+      expect(mockSendBeacon).toHaveBeenCalledWith(atiUrl);
+    });
   });
 });

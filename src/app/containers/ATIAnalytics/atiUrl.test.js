@@ -3,8 +3,12 @@ import * as genericLabelHelpers from '../../lib/analyticsUtils';
 const { atiBaseUrl, atiPageViewParams } = require('./atiUrl');
 
 describe('ATI Base Url', () => {
-  it('should be defined', () => {
-    expect(atiBaseUrl).toBe('https://a1.api.bbc.co.uk/hit.xiti?');
+  it('should be defined for local, test & live', () => {
+    expect(atiBaseUrl('local')).toBe('https://logws1363.ati-host.net?');
+    expect(atiBaseUrl('test')).toBe('https://logws1363.ati-host.net?');
+    expect(atiBaseUrl('live')).toBe('https://a1.api.bbc.co.uk/hit.xiti?');
+    expect(atiBaseUrl('')).toBe('https://a1.api.bbc.co.uk/hit.xiti?');
+    expect(atiBaseUrl()).toBe('https://a1.api.bbc.co.uk/hit.xiti?');
   });
 });
 

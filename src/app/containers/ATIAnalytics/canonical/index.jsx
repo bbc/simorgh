@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import { atiBaseUrl } from '../atiUrl';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import { RequestContext } from '../../../contexts/RequestContext';
 
 const CanonicalATIAnalytics = ({ pageviewParams }) => {
-  const [atiPageViewUrl] = useState(atiBaseUrl + pageviewParams);
+  const { env } = useContext(RequestContext);
+  const [atiPageViewUrl] = useState(atiBaseUrl(env) + pageviewParams);
 
   useEffect(() => {
     sendBeacon(atiPageViewUrl);
