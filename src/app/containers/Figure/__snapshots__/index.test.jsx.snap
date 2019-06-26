@@ -427,7 +427,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
           Image caption, 
         </span>
         <p>
-          This is a caption
+          Figure Amp Image with Copyright and Caption
         </p>
       </figcaption>
     </div>
@@ -597,7 +597,7 @@ exports[`Figure should render an AMP image with caption text 1`] = `
           Image caption, 
         </span>
         <p>
-          This is a caption
+          Figure Amp Image with Caption
         </p>
       </figcaption>
     </div>
@@ -1474,7 +1474,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
           Image caption, 
         </span>
         <p>
-          This is a caption
+          Figure Image with Copyright and Caption
         </p>
       </figcaption>
     </div>
@@ -1649,7 +1649,7 @@ exports[`Figure should render an image with caption text 1`] = `
           Image caption, 
         </span>
         <p>
-          This is a caption
+          Figure Image With Caption
         </p>
       </figcaption>
     </div>

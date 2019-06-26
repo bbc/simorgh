@@ -4,18 +4,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -32,6 +27,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c14 {
@@ -162,31 +164,24 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c12 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -229,6 +224,27 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   .c15 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -423,18 +439,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c13 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -451,6 +462,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c15 {
@@ -586,31 +604,24 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c13 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c7 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -653,6 +664,27 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   .c16 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c13 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -857,18 +889,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c11 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c12 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -885,6 +912,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c13 {
@@ -1010,31 +1044,24 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c11 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1077,6 +1104,27 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c14 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -1260,18 +1308,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -1288,6 +1331,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c14 {
@@ -1418,31 +1468,24 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c12 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c7 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1485,6 +1528,27 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c15 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -1678,18 +1742,13 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c7 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -1706,6 +1765,13 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c7 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c9 {
@@ -1791,31 +1857,24 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c7 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1858,6 +1917,27 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   .c10 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c7 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -2000,18 +2080,13 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c8 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c9 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -2028,6 +2103,13 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c8 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c10 {
@@ -2118,31 +2200,24 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c7 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2185,6 +2260,27 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   .c11 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c8 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c8 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -2337,18 +2433,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -2365,6 +2456,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c14 {
@@ -2495,31 +2593,24 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c12 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2562,6 +2653,27 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   .c15 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -2753,18 +2865,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .c1 {
   display: inline-block;
   vertical-align: top;
-  max-width: 33.33%;
   position: relative;
-}
-
-.c13 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0.5rem;
-  max-width: 66.67%;
+  max-width: 33.33%;
 }
 
 .c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -2781,6 +2888,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 66.67%;
+  padding: 0 0.5rem;
 }
 
 .c15 {
@@ -2916,31 +3030,24 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    max-width: 66.67%;
-  }
-}
-
-@supports (display:grid) {
-  .c13 {
-    display: block;
-    max-width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
 @media (min-width:25rem) {
   .c7 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2983,6 +3090,27 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   .c16 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    max-width: 66.67%;
+  }
+}
+
+@supports (display:grid) {
+  .c13 {
+    display: block;
+    max-width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 

@@ -476,6 +476,12 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should pop out of gr
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
