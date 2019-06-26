@@ -1,4 +1,4 @@
-import * as layoutGridExports from './layoutGrid';
+import * as layoutGridExports from '.';
 
 const expectedLayoutGridExports = {
   gelGridMargin: 'object',

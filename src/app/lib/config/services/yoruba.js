@@ -1,3 +1,4 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
@@ -16,6 +17,11 @@ const yoruba = {
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  themeColor: `${C_POSTBOX}`,
+  twitterCreator: '@BBCNews', // to be updated
+  twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
     error: {

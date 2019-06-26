@@ -15,6 +15,7 @@ const persian = {
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  audioCaptionOffscreenText: ' `توضیح صدا،` ',
   defaultCaptionOffscreenText: ' ، عنوان',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',

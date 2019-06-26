@@ -7,7 +7,10 @@ exports[`withLoading HOC and the loading prop set to true should return the load
   role="main"
 >
   <ForwardRef(GhostWrapper)>
-    <ForwardRef(GridItemConstrainedMedium) />
+    <ForwardRef(GridItemConstrainedMedium)
+      gridColumnStart={6}
+      gridSpan={10}
+    />
   </ForwardRef(GhostWrapper)>
 </main>
 `;

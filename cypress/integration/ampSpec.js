@@ -1,6 +1,9 @@
 import config from '../support/config';
-import { getElement } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import {
+  getElement,
+  hasHtmlLangDirAttributes,
+} from '../support/bodyTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -10,18 +13,38 @@ describe('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `/news/articles/${config.assets.news}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`/news/articles/${config.assets.news}.cake`, 404);
-    testResponseCode(`/news/lol/${config.assets.news}.amp`, 404);
-    testResponseCode(`/cake/articles/${config.assets.news}.amp`, 404);
+    cy.testResponseCodeAndType(
+      `/news/articles/${config.assets.news}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/news/lol/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/cake/articles/${config.assets.news}.amp`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have AMP attribute', () => {
     getElement('html').should('have.attr', 'amp');
+  });
+
+  it('should have lang and dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should load the AMP framework', () => {
@@ -78,11 +101,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should include the canonical URL', () => {
-    const { origin } = window.location;
-    const canonicalOrigin = origin.includes('localhost')
-      ? 'https://www.test.bbc.co.uk'
-      : origin;
-
+    const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
   });
 

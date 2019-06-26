@@ -3,3 +3,6 @@ export const isFeatureEnabled = (flag, featureFlags) => {
 
   return false;
 };
+
+export const isEqual = (currentFlags, remoteFlags) =>
+  JSON.stringify(currentFlags) === JSON.stringify(remoteFlags);

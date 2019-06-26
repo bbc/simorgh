@@ -1,36 +1,51 @@
 import React from 'react';
-import { shape, element } from 'prop-types';
+import { shape, element, string } from 'prop-types';
 import articlePropTypes from '../../models/propTypes/article';
 import ErrorMain from '../ErrorMain';
-import nodeLogger from '../../lib/logger.node';
 import deepGet from '../../lib/utilities/deepGet';
+import getPassportHome from '../../lib/utilities/getPassportHome';
 
-const logger = nodeLogger(__filename);
-
-// checks for data and status keys, setting default status if not found
+// checks for data, status, setting default status if not found
 const constructRenderObject = data => ({
   status: deepGet(['status'], data) || 500,
   pageData: deepGet(['pageData'], data),
 });
 
-// checks for pageData and 200 status
-const shouldRender = data => {
+const isValidPassportHome = (passportHome, service) =>
+  passportHome ? passportHome === service : true;
+
+// checks for pageData, 200 status and if home service from article data fits the service locale
+const shouldRender = (data, service) => {
   const { status, pageData } = constructRenderObject(data);
 
-  const hasDataAnd200Status = pageData && status === 200;
+  let statusCode = status;
+  let isCorrectService;
 
-  return { hasDataAnd200Status, status, pageData };
+  const hasDataAnd200Status = pageData && status === 200;
+  if (hasDataAnd200Status) {
+    const passportHome = getPassportHome(pageData);
+    isCorrectService = isValidPassportHome(passportHome, service);
+    statusCode = !isCorrectService ? 404 : status;
+  }
+
+  return {
+    hasData200StatusAndCorrectService: hasDataAnd200Status && isCorrectService,
+    status: statusCode,
+    pageData,
+  };
 };
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
-    const { hasDataAnd200Status, status, pageData } = shouldRender(data);
-    if (hasDataAnd200Status) {
-      try {
-        return <Component pageData={pageData} {...props} />;
-      } catch (err) {
-        logger.error(err);
-      }
+    const { service } = props;
+    const {
+      hasData200StatusAndCorrectService,
+      status,
+      pageData,
+    } = shouldRender(data, service);
+
+    if (hasData200StatusAndCorrectService) {
+      return <Component pageData={pageData} {...props} />;
     }
 
     return <ErrorMain status={status} />;
@@ -38,10 +53,12 @@ const WithData = Component => {
 
   DataContainer.propTypes = {
     data: shape(articlePropTypes),
+    service: string,
   };
 
   DataContainer.defaultProps = {
     data: null,
+    service: 'default',
   };
 
   return DataContainer;

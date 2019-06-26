@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { FeatureFlagContext } from '../../contexts/FeatureFlagContext';
 import { updateFeatureFlags } from '../../reducers/FeatureFlagReducer';
+import { isEqual } from '../FeatureFlag/featureFlagUtils';
 
 const FeatureFlagUpdater = () => {
   const { featureFlagState, featureFlagDispatch } = useContext(
@@ -14,19 +15,15 @@ const FeatureFlagUpdater = () => {
     res
       .json()
       .then(res => {
-        compareRemoteFeatureFlags(res);
+        compareRemoteFeatureFlags(res.toggles);
       })
       .catch(err => console.error(err));
   };
 
   const compareRemoteFeatureFlags = remoteFlags => {
-    // this is gross, and will evaluate to false if the key values are the same but the order is different
-    const isEqual =
-      JSON.stringify(featureFlagState) === JSON.stringify(remoteFlags.toggles);
-
-    if (!isEqual) {
-      // if remote flags differ to flags in context, dispatch an action to update the context with the remote flags, in turning re-rendering
-      featureFlagDispatch(updateFeatureFlags(remoteFlags.toggles));
+    if (!isEqual(featureFlagState, remoteFlags)) {
+      // if remote flags differ to flags in context, dispatch an action to update the context with the remote flags.
+      featureFlagDispatch(updateFeatureFlags(remoteFlags));
     }
   };
 

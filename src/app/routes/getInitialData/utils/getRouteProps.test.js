@@ -1,10 +1,12 @@
-import * as reactRouterConfig from 'react-router-config';
+import reactRouterConfig from 'react-router-config';
 import getRouteProps from './getRouteProps';
+
+jest.mock('react-router-config');
 
 describe('getRouteProps', () => {
   describe('no matched route', () => {
     it('should return an empty object', async () => {
-      reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([]);
+      reactRouterConfig.matchRoutes.mockReturnValue([]);
 
       try {
         await getRouteProps([], 'fake url');
@@ -16,7 +18,7 @@ describe('getRouteProps', () => {
 
   describe('valid route', () => {
     it('should return service, isAmp, route and match', async () => {
-      reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([
+      reactRouterConfig.matchRoutes.mockReturnValue([
         {
           route: { route: 'data' },
           match: { params: { service: 'news', amp: undefined } },
@@ -43,7 +45,7 @@ describe('getRouteProps', () => {
 
   describe('valid amp route', () => {
     it('should return service, isAmp, route and match', async () => {
-      reactRouterConfig.matchRoutes = jest.fn().mockReturnValue([
+      reactRouterConfig.matchRoutes.mockReturnValue([
         {
           route: { route: 'data' },
           match: { params: { service: 'news', amp: '.amp' } },

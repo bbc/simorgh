@@ -10,7 +10,8 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from './styledGrid';
+  PopOutGridItemMedium,
+} from '.';
 
 const red = '#ffaacc';
 const orange = '#ffddcc';
@@ -194,5 +195,24 @@ storiesOf('Grid Examples', module)
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
+    </GhostWrapper>
+  ))
+  .add('Group 5 breakpoint pop-out grid item', () => (
+    <GhostWrapper>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <PopOutGridItemMedium>
+        <ColouredDiv colour={blue}>Popout</ColouredDiv>
+      </PopOutGridItemMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
     </GhostWrapper>
   ));

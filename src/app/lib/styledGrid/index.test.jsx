@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import {
   GhostWrapper,
   GridItemConstrainedSmall,
@@ -9,7 +9,8 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
-} from './styledGrid';
+  PopOutGridItemMedium,
+} from '.';
 
 describe('Styled Grid items', () => {
   describe('GridItemConstrainedSmall', () => {
@@ -184,6 +185,12 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemLarge>
         </GridItemConstrainedLargeNoMargin>
+      </GhostWrapper>,
+    );
+    shouldMatchSnapshot(
+      'should pop out of grid at Group 5 breakpoint',
+      <GhostWrapper>
+        <PopOutGridItemMedium>Group 5 pop out grid.</PopOutGridItemMedium>
       </GhostWrapper>,
     );
   });

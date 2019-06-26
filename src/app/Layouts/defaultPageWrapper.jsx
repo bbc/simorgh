@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { node, string, bool } from 'prop-types';
+import { node } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -23,7 +23,5 @@ const PageWrapper = ({ children }) => {
 PageWrapper.propTypes = {
   children: node.isRequired,
 };
-
-PageWrapper.defaultProps = {};
 
 export default PageWrapper;

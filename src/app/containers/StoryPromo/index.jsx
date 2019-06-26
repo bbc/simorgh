@@ -11,6 +11,9 @@ import FigureContainer from '../Figure';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
+import createSrcset from '../Image/helpers/srcSet';
+import getOriginCode from './imageSrcHelpers/originCode';
+import getLocator from './imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
@@ -19,8 +22,16 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
   }
-  const ratio = (imageValues.height / imageValues.width) * 100;
-  const src = `https://ichef.bbci.co.uk/news/660${imageValues.path}`;
+
+  const { height, width, path } = imageValues;
+
+  const ratio = (height / width) * 100;
+  const originCode = getOriginCode(path);
+  const locator = getLocator(path);
+  const srcset = createSrcset(originCode, locator, width);
+
+  const DEFAULT_IMAGE_RES = 660;
+  const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
   return (
     <FigureContainer
@@ -31,16 +42,17 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       useFigure={false}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
+      srcset={srcset}
     />
   );
 };
 
 StoryPromoImage.propTypes = {
   lazyLoad: bool.isRequired,
-  imageValues: storyItem.indexImage.isRequired,
+  imageValues: shape(storyItem.indexImage).isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage }) => {
+const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const { script } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
@@ -54,13 +66,17 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={script}>
+        <Headline script={script} topStory={topStory}>
           <Link href={url}>
             <LinkContents item={item} />
           </Link>
         </Headline>
       )}
-      {summary && <Summary script={script}>{summary}</Summary>}
+      {summary && (
+        <Summary script={script} topStory={topStory}>
+          {summary}
+        </Summary>
+      )}
       {timestamp && (
         <Timestamp
           timestamp={timestamp * 1000}
@@ -83,6 +99,7 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
       image={Image}
       info={Info}
       mediaIndicator={<MediaIndicator item={item} />}
+      topStory={topStory}
     />
   );
 };
@@ -90,10 +107,12 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
 StoryPromo.propTypes = {
   item: shape(storyItem).isRequired,
   lazyLoadImage: bool,
+  topStory: bool,
 };
 
 StoryPromo.defaultProps = {
   lazyLoadImage: true,
+  topStory: false,
 };
 
 export default StoryPromo;
