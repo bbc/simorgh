@@ -11,6 +11,7 @@ const config = {
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598342',
+    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -24,6 +25,7 @@ const config = {
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598343',
+    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -37,6 +39,7 @@ const config = {
       nonExistent: 'cxvxrj8tvppo',
     },
     atiAnalyticsWSBucket: '598343',
+    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
   },
 };
 
