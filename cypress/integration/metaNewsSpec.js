@@ -106,12 +106,8 @@ describe('Article Meta Tests', () => {
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(
-      `${canonicalOrigin}/news/articles/${config.assets.news}`,
-    );
-    checkAmpHTML(
-      `${currentOrigin}/news/articles/${config.assets.news}.amp`,
-    );
+    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
+    checkAmpHTML(`${currentOrigin}/news/articles/${config.assets.news}.amp`);
   });
 
   it('should include metadata in the head on AMP pages', () => {
