@@ -8,7 +8,7 @@ const dataProps = {
   route: { pageType: 'article' },
 };
 
-describe('with pageWarpper', () => {
+describe('with pageWrapper', () => {
   const PageWrapperContainer = () => <h1>Holla</h1>;
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(

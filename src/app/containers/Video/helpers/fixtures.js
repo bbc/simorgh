@@ -160,16 +160,12 @@ export const multipleAresMetadata = {
   type: 'aresMedia',
 };
 
-export const captionBlock = {
+export const captionBlock = text => ({
   model: {
-    blocks: [
-      singleTextBlock(
-        'p01k6msm: Video, Clip, UK and non-UK, guidance, subtitles (about bees)',
-      ),
-    ],
+    blocks: [singleTextBlock(text)],
   },
   type: 'caption',
-};
+});
 
 export const videoClipGlobalGuidanceBlock = {
   model: {
@@ -256,7 +252,7 @@ export const videoClipGlobalPortraitBlock = {
           synopses: {
             short: 'This is a really plain green test vertical video',
           },
-          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: true,
@@ -290,7 +286,7 @@ export const videoClipGlobalPortraitBlock = {
               model: {
                 width: null,
                 height: null,
-                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01m7hny.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
@@ -481,8 +477,7 @@ export const audioClipGlobalGuidanceBlock = {
           synopses: {
             short: 'Some audio from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
           imageCopyright: null,
           embedding: false,
           advertising: false,
@@ -519,8 +514,7 @@ export const audioClipGlobalGuidanceBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d07.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
@@ -548,8 +542,7 @@ export const audioClipUkOnlyBlock = {
             short:
               'This is some sound from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: false,
@@ -583,8 +576,7 @@ export const audioClipUkOnlyBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },
@@ -612,8 +604,7 @@ export const audioClipNonUkBlock = {
             short:
               'This is some audio from a supermarket checkout in Birmingham',
           },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg',
           imageCopyright: null,
           embedding: true,
           advertising: true,
@@ -647,71 +638,7 @@ export const audioClipNonUkBlock = {
               model: {
                 width: null,
                 height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg',
-                originCode: null,
-                copyrightHolder: null,
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
-
-export const audioEpisodeGlobalBlock = {
-  type: 'aresMedia',
-  model: {
-    blocks: [
-      {
-        blockId: 'urn:bbc:ares::clip:p01mbrvl',
-        type: 'aresMediaMetadata',
-        model: {
-          id: 'p01mbrvl',
-          subType: 'episode',
-          format: 'audio',
-          title: 'Test audio episode for articles, worldwide',
-          synopses: {
-            short: 'This is a test asset created for the articles project',
-          },
-          imageUrl:
-            'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/p01mbrvl.jpg',
-          imageCopyright: null,
-          embedding: false,
-          advertising: false,
-          caption: null,
-          versions: [
-            {
-              versionId: 'p01mbrx4',
-              types: ['Original'],
-              duration: 127,
-              warnings: {},
-              availableTerritories: {
-                uk: false,
-                nonUk: false,
-              },
-              availableUntil: null,
-              availableFrom: null,
-            },
-          ],
-          image: null,
-          syndication: {
-            destinations: [],
-          },
-        },
-      },
-      {
-        type: 'image',
-        model: {
-          blocks: [
-            {
-              type: 'rawImage',
-              model: {
-                width: null,
-                height: null,
-                locator:
-                  'ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/p01mbrvl.jpg',
+                locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg',
                 originCode: null,
                 copyrightHolder: null,
               },

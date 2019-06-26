@@ -5,17 +5,28 @@ import Video from './index';
 describe('Video', () => {
   describe('with data', () => {
     const props = {
-      pid: 'p00a0a0m',
-      kind: 'episode',
+      id: 'mp#p00a0a0m',
       title: 'Hello World',
-      items: [
-        {
-          versionID: 'p00a0a0v',
-          kind: 'episode',
-          duration: 100,
+      mediaPlayerSettings: {
+        product: 'news',
+        responsive: true,
+        statsObject: { clipPID: 'p00a0a0m' },
+        mediator: {
+          host: 'open.test.bbc.co.uk',
         },
-      ],
-      holdingImageUrl: 'https://foo/bar/baz.png',
+        playlistObject: {
+          title: 'Hello World',
+          holdingImageURL: 'https://foo/bar/baz.png',
+          guidance: 'Scary',
+          items: [
+            {
+              versionID: 'p01k6msm',
+              kind: 'episode',
+              duration: 100,
+            },
+          ],
+        },
+      },
       statsAppName: 'news',
       statsAppType: 'responsive',
       statsCountername: 'news.articles.c0000000000o.page',
