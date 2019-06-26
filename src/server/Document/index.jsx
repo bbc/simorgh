@@ -9,13 +9,13 @@ import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
 const renderDocument = async ({
-  url,
-  data,
-  routes,
   bbcOrigin,
-  service,
-  isAmp,
+  data,
   dials,
+  isAmp,
+  routes,
+  service,
+  url,
 }) => {
   const sheet = new ServerStyleSheet();
 

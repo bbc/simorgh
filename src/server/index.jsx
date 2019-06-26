@@ -176,13 +176,13 @@ server
 
         res.status(status).send(
           await renderDocument({
-            url,
-            data,
-            routes,
             bbcOrigin,
-            service,
-            isAmp,
+            data,
             dials,
+            isAmp,
+            routes,
+            service,
+            url,
           }),
         );
       } catch ({ message, status }) {
