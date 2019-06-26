@@ -5,7 +5,10 @@ import {
   errorTitle,
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import {
+  describeForLocalOnly,
+  describeForLocalAndLive,
+} from '../support/limitEnvRuns';
 import news from '../../src/app/lib/config/services/news';
 
 describe('Article Body Tests', () => {
@@ -33,7 +36,7 @@ describe('Article Body Tests', () => {
     },
   );
 
-  describeForLocalOnly(
+  describeForLocalAndLive(
     'should display a relevant error message on screen',
     () => {
       cy.visit(`/news/articles/${config.assets.nonExistent}`, {
@@ -48,14 +51,17 @@ describe('Article Body Tests', () => {
     },
   );
 
-  describeForLocalOnly(
+  describeForLocalAndLive(
     'should have an inline link on the page that is linked to the home page',
     () => {
       errorPageInlineLink(news);
     },
   );
 
-  describeForLocalOnly('should have a relevant error title in the head', () => {
-    errorTitle(news);
-  });
+  describeForLocalAndLive(
+    'should have a relevant error title in the head',
+    () => {
+      errorTitle(news);
+    },
+  );
 });
