@@ -34,7 +34,7 @@ jobs:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
     - stage: test
-      if: type = push OR (pull_request AND fork = true) AND branch = latest
+      if: branch = latest AND type = push
       name: "Test third party dependencies" 
       install: npm install cypress@latest
       addons: 
