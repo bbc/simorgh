@@ -330,7 +330,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <span
             className="c7"
           >
-            Audio
+            Ọdịyo
             , 
           </span>
           <span>
@@ -353,7 +353,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
       className="c13"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -704,7 +704,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <span
             className="c8"
           >
-            Audio
+            Ọdịyo
             , 
           </span>
           <span>
@@ -727,7 +727,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       className="c14"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -1052,7 +1052,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           <span
             className="c7"
           >
-            Audio
+            Ọdịyo
             , 
           </span>
           <span>
@@ -1070,7 +1070,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       className="c12"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -1410,7 +1410,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           <span
             className="c8"
           >
-            Audio
+            Ọdịyo
             , 
           </span>
           <span>
@@ -1428,7 +1428,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       className="c13"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -1690,7 +1690,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
       className="c8"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -1967,7 +1967,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       className="c9"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -2300,7 +2300,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <span
             className="c7"
           >
-            Video
+            Vidio
             , 
           </span>
           <span>
@@ -2323,7 +2323,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
       className="c13"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
@@ -2671,7 +2671,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <span
             className="c8"
           >
-            Video
+            Vidio
             , 
           </span>
           <span>
@@ -2694,7 +2694,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       className="c14"
       dateTime="2019-05-02"
     >
-      2 May 2019
+      2 Mee 2019
     </time>
   </div>
 </div>
