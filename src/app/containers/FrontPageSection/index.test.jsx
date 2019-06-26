@@ -20,7 +20,7 @@ const group = {
       summary: 'Summary text 1',
       timestamp: 1557738768,
       indexImage: {
-        path: '/cpsprodpb/0A06/production/image.jpg',
+        path: '/cpsprodpb/0A06/production/image1.jpg',
         height: 1152,
         width: 2048,
         altText: 'Image Alt text 1',
@@ -38,7 +38,7 @@ const group = {
       summary: 'Summary text 2',
       timestamp: 1557738768,
       indexImage: {
-        path: '/cpsprodpb/0A06/production/image.jpg',
+        path: '/cpsprodpb/0A06/production/image2.jpg',
         height: 1152,
         width: 2048,
         altText: 'Image Alt text 2',
@@ -238,6 +238,25 @@ describe('FrontPageSection Container', () => {
 
       expect(container.getElementsByTagName('ul')).toHaveLength(0);
       expect(container.getElementsByTagName('li')).toHaveLength(0);
+    });
+
+    it('should not lazyload the story promo image if it is a top story', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      const images = container.getElementsByTagName('img');
+      const image = images[0];
+
+      // When lazy loading an image, it get placed inside <noscript> and wont be accessible on the DOM
+      // Even though we have 2 items we only expect 1 image to be accessible on the DOM
+      // The first image being a top story won't be lazyloaded and will be the only image accessible on the DOM
+      expect(images).toHaveLength(1);
+      expect(image.getAttribute('src')).toEqual(
+        'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
+      );
     });
   });
 });
