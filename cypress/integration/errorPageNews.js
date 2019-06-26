@@ -37,31 +37,20 @@ describe('Article Body Tests', () => {
   );
 
   describeForLocalAndLive(
-    'should display a relevant error message on screen',
+    'Temporary fix to limit to local and live Simorgh error page',
     () => {
-      cy.visit(`/news/articles/${config.assets.nonExistent}`, {
-        failOnStatusCode: false,
+      it('should display a relevant error message on screen', () => {
+        cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+          failOnStatusCode: false,
+        });
+        errorMessage(news);
       });
-      errorMessage(news);
-
-      cy.visit(`/news/articles/${config.assets.nonExistent}`, {
-        failOnStatusCode: false,
+      it('should have an inline link on the page that is linked to the home page', () => {
+        errorPageInlineLink(news);
       });
-      errorMessage(news);
-    },
-  );
-
-  describeForLocalAndLive(
-    'should have an inline link on the page that is linked to the home page',
-    () => {
-      errorPageInlineLink(news);
-    },
-  );
-
-  describeForLocalAndLive(
-    'should have a relevant error title in the head',
-    () => {
-      errorTitle(news);
+      it('should have a relevant error title in the head', () => {
+        errorTitle(news);
+      });
     },
   );
 });
