@@ -22,7 +22,7 @@ describe('Test we get a 404', () => {
 
 // These must only ever be run locally as otherwise you're testing
 // the mozart page not the response from this application.
-describeForLocalOnly('Article Body Tests', () => {
+describeForLocalOnly('Local Article Error Page Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/news/articles/${config.assets.nonExistent}`, {
