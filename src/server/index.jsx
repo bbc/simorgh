@@ -174,19 +174,17 @@ server
           logger.error(`Error fetching Cosmos dials: ${message}`);
         }
 
-        res
-          .status(status)
-          .send(
-            await renderDocument(
-              url,
-              data,
-              routes,
-              bbcOrigin,
-              service,
-              isAmp,
-              dials,
-            ),
-          );
+        res.status(status).send(
+          await renderDocument({
+            url,
+            data,
+            routes,
+            bbcOrigin,
+            service,
+            isAmp,
+            dials,
+          }),
+        );
       } catch ({ message, status }) {
         // Return an internal server error for any uncaught errors
         logger.error(`status: ${status || 500} - ${message}`);

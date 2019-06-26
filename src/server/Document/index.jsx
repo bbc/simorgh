@@ -8,7 +8,7 @@ import { getStyleTag } from '../styles';
 import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
-const renderDocument = async (
+const renderDocument = async ({
   url,
   data,
   routes,
@@ -16,7 +16,7 @@ const renderDocument = async (
   service,
   isAmp,
   dials,
-) => {
+}) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
