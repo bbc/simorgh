@@ -15,3 +15,9 @@ export const describeForLocalAndTest = (name, func) => {
     describe(name, func);
   }
 };
+
+export const describeForLocalAndLive = (name, func) => {
+  if (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'live') {
+    describe(name, func);
+  }
+};
