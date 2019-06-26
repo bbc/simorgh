@@ -8,6 +8,7 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
+import audioVideo from '../AudioVideo';
 
 const componentsToRender = {
   headline: headings,
@@ -15,6 +16,7 @@ const componentsToRender = {
   text,
   image,
   timestamp,
+  video: audioVideo,
 };
 
 const ArticleMain = ({ articleData }) => {

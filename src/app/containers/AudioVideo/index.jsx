@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Figure from '@bbc/psammead-figure';
 import deepGet from '../../lib/utilities/deepGet';
-import Amp from './Amp';
 import Canonical from './Canonical';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
@@ -48,7 +47,7 @@ const AudioVideoContainer = ({ blocks }) => {
         </Helmet>
       ) : null}
       <Figure>
-        {platform === 'amp' ? <Amp /> : <Canonical blocks={blocks} />}
+        {platform === 'canonical' ? <Canonical blocks={blocks} /> : null}
         {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
       </Figure>
     </GridItemConstrainedLargeNoMargin>

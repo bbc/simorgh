@@ -17,17 +17,18 @@ const Video = ({
   statsDestination,
   uiLocale,
   mediaPlayerSettings,
+  uuid,
 }) => (
   <>
     <Helmet>
       <script type="text/javascript">
         {`
-          function mediaPlayerSetup(container) {
+          function mediaPlayerSetup${uuid}(container) {
             require(['bump-4'], (bump) => {
-              var mediaPlayer = bump.player(
+              var mediaPlayer${uuid} = bump.player(
                 document.getElementById('${id}'),
                 ${JSON.stringify(mediaPlayerSettings)});
-              mediaPlayer.load();
+              mediaPlayer${uuid}.load();
             });
           }
         `}
@@ -39,7 +40,7 @@ const Video = ({
               "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
             };
             require({ paths: requiredScripts, waitSeconds: 30 });
-            mediaPlayerSetup();
+            mediaPlayerSetup${uuid}();
           }
         `}
       </script>
