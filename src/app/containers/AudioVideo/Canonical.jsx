@@ -1,5 +1,4 @@
 import React from 'react';
-import uuid from 'uuid';
 import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
 import mediatorURL from './helpers/mediatorUrl';
@@ -75,7 +74,6 @@ const Canonical = ({ blocks }) => {
       statsDestination={statsDestination}
       uiLocale="en-GB"
       mediaPlayerSettings={mediaPlayerSettings}
-      uuid={uuid().replace(/-/g, '')}
     />
   );
 };
