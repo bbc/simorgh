@@ -6,7 +6,7 @@ import path from 'path';
 /*
  * Mock to avoid async behaviour in tests
  */
-jest.mock('../app/contexts/utils/createLoadableContext');
+jest.mock('../app/contexts/ServiceContext');
 
 Enzyme.configure({ adapter: new Adapter() });
 

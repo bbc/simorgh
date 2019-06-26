@@ -4,9 +4,6 @@ import createLoadableContext from './createLoadableContext';
 import { ServiceContext } from '../ServiceContext';
 import dynamicServiceFixtureData from './fixtures';
 
-// Unmock createLoadableContext which is mocked globally in jest-setup.js
-jest.unmock('./createLoadableContext');
-
 const Component = () => {
   const { foobar } = useContext(ServiceContext);
 

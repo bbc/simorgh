@@ -3,8 +3,8 @@ import { cleanup, render, waitForElement } from '@testing-library/react';
 import services from '../../lib/config/services/async';
 import * as createLoadableContext from '../utils/createLoadableContext';
 
-// Unmock createLoadableContext which is mocked globally in jest-setup.js
-jest.unmock('../utils/createLoadableContext');
+// Unmock service context which is mocked globally in jest-setup.js
+jest.unmock('./index');
 jest.mock('../utils/createLoadableContext', () => jest.fn());
 
 describe('ServiceContextProvider', () => {
