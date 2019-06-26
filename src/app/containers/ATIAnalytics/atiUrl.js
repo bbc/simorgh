@@ -144,7 +144,6 @@ export const atiPageViewParams = ({
     },
   ];
 
-  console.log('pageViewBeaconValues', pageViewBeaconValues);
   const cleanedValues = pageViewBeaconValues.filter(({ value }) => value);
 
   const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
