@@ -23,7 +23,7 @@ const FooterContainer = () => {
 
   return (
     <Footer role="contentinfo">
-      <BrandContainer />
+      <BrandContainer isFooter />
       <SitewideLinks
         links={links}
         copyrightText={getCopyrightText(copyrightText)}

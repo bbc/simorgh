@@ -158,52 +158,56 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     Top Stories
   </SectionLabel>
   <StoryPromoUl>
-    <StoryPromoLiContainer
-      item={
-        Object {
-          "headlines": Object {
-            "headline": "Top Story 1 headline",
-          },
-          "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-          "indexImage": Object {
-            "altText": "Image Alt text 1",
-            "copyrightHolder": "Image provider 1",
-            "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
-            "width": 2048,
-          },
-          "locators": Object {
-            "assetUri": "https://www.bbc.co.uk",
-          },
-          "summary": "Summary text 1",
-          "timestamp": 1557738768,
+    <StoryPromoLi>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 1 headline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+            "indexImage": Object {
+              "altText": "Image Alt text 1",
+              "copyrightHolder": "Image provider 1",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image1.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Summary text 1",
+            "timestamp": 1557738768,
+          }
         }
-      }
-      storyNumber={0}
-    />
-    <StoryPromoLiContainer
-      item={
-        Object {
-          "headlines": Object {
-            "headline": "Top Story 2 headline",
-          },
-          "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-          "indexImage": Object {
-            "altText": "Image Alt text 2",
-            "copyrightHolder": "Image provider 2",
-            "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
-            "width": 2048,
-          },
-          "locators": Object {
-            "assetUri": "https://www.bbc.co.uk",
-          },
-          "summary": "Summary text 2",
-          "timestamp": 1557738768,
+        storyNumber={0}
+      />
+    </StoryPromoLi>
+    <StoryPromoLi>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 2 headline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+            "indexImage": Object {
+              "altText": "Image Alt text 2",
+              "copyrightHolder": "Image provider 2",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image2.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Summary text 2",
+            "timestamp": 1557738768,
+          }
         }
-      }
-      storyNumber={1}
-    />
+        storyNumber={1}
+      />
+    </StoryPromoLi>
   </StoryPromoUl>
 </section>
 `;
@@ -365,7 +369,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   >
     Top Stories
   </SectionLabel>
-  <StoryPromo
+  <StoryPromoComponent
     item={
       Object {
         "headlines": Object {
@@ -386,152 +390,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "timestamp": 1557738768,
       }
     }
-    lazyLoadImage={true}
-    script={
-      Object {
-        "bodyCopy": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "22",
-          },
-        },
-        "brevier": Object {
-          "groupA": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-          "groupB": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "13",
-            "lineHeight": "16",
-          },
-        },
-        "canon": Object {
-          "groupA": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-          "groupB": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupD": Object {
-            "fontSize": "44",
-            "lineHeight": "48",
-          },
-        },
-        "doublePica": Object {
-          "groupA": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupB": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupD": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-        },
-        "greatPrimer": Object {
-          "groupA": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupB": Object {
-            "fontSize": "18",
-            "lineHeight": "22",
-          },
-          "groupD": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-        },
-        "longPrimer": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupB": Object {
-            "fontSize": "15",
-            "lineHeight": "18",
-          },
-          "groupD": Object {
-            "fontSize": "14",
-            "lineHeight": "18",
-          },
-        },
-        "minion": Object {
-          "groupA": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupB": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-          "groupD": Object {
-            "fontSize": "12",
-            "lineHeight": "16",
-          },
-        },
-        "paragon": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "22",
-            "lineHeight": "26",
-          },
-          "groupD": Object {
-            "fontSize": "28",
-            "lineHeight": "32",
-          },
-        },
-        "pica": Object {
-          "groupA": Object {
-            "fontSize": "15",
-            "lineHeight": "20",
-          },
-          "groupB": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-          "groupD": Object {
-            "fontSize": "16",
-            "lineHeight": "20",
-          },
-        },
-        "trafalgar": Object {
-          "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
-          },
-          "groupB": Object {
-            "fontSize": "24",
-            "lineHeight": "28",
-          },
-          "groupD": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-        },
-      }
-    }
-    topStory={true}
+    storyNumber={0}
   />
 </section>
 `;
@@ -694,52 +553,56 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     Top Stories
   </SectionLabel>
   <StoryPromoUl>
-    <StoryPromoLiContainer
-      item={
-        Object {
-          "headlines": Object {
-            "headline": "Top Story 1 headline",
-          },
-          "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-          "indexImage": Object {
-            "altText": "Image Alt text 1",
-            "copyrightHolder": "Image provider 1",
-            "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
-            "width": 2048,
-          },
-          "locators": Object {
-            "assetUri": "https://www.bbc.co.uk",
-          },
-          "summary": "Summary text 1",
-          "timestamp": 1557738768,
+    <StoryPromoLi>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 1 headline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+            "indexImage": Object {
+              "altText": "Image Alt text 1",
+              "copyrightHolder": "Image provider 1",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image1.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Summary text 1",
+            "timestamp": 1557738768,
+          }
         }
-      }
-      storyNumber={0}
-    />
-    <StoryPromoLiContainer
-      item={
-        Object {
-          "headlines": Object {
-            "headline": "Top Story 2 headline",
-          },
-          "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-          "indexImage": Object {
-            "altText": "Image Alt text 2",
-            "copyrightHolder": "Image provider 2",
-            "height": 1152,
-            "path": "/cpsprodpb/0A06/production/image.jpg",
-            "width": 2048,
-          },
-          "locators": Object {
-            "assetUri": "https://www.bbc.co.uk",
-          },
-          "summary": "Summary text 2",
-          "timestamp": 1557738768,
+        storyNumber={0}
+      />
+    </StoryPromoLi>
+    <StoryPromoLi>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 2 headline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+            "indexImage": Object {
+              "altText": "Image Alt text 2",
+              "copyrightHolder": "Image provider 2",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image2.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Summary text 2",
+            "timestamp": 1557738768,
+          }
         }
-      }
-      storyNumber={1}
-    />
+        storyNumber={1}
+      />
+    </StoryPromoLi>
   </StoryPromoUl>
 </section>
 `;
