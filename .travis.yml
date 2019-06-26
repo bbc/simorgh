@@ -1,14 +1,20 @@
+# All Travis builds are a redundancy against Jenkins failures, except that we also use
+# this for running builds on PRs from forks, because we're OSS friendly. :)
 language: node_js
 matrix:
   fast_finish: true
+cache:
+  directories:
+    # Cache only the folder with Cypress binary, other caching takes longer and saves
+    # less time, therefore this is more efficient than caching all.
+    - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
-before_install: npm install -g npm@6.4.1; npm -v
 jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: "Unit Tests"
+      name: "Unit Tests and storybook e2e"
       install: npm ci
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -20,14 +26,13 @@ jobs:
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: "Production e2e and lighthouse Tests" 
+      name: "Production CI tests" 
       install: npm ci --only=prod
       addons: 
         chrome: stable
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
-        - xvfb-run -a npm run test:lighthouse:ci
 notifications:
   email: false
   slack:

@@ -1,6 +1,6 @@
 import worldServices from '../support/worldServices';
 import { getElement } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -15,15 +15,31 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`${worldServices.igbo.url}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `${worldServices.igbo.url}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`${worldServices.igbo.url}.cake`, 404);
-    testResponseCode(`/amp${worldServices.igbo.url}`, 404);
-    testResponseCode(`${worldServices.igbo.url}/amp`, 404);
-    testResponseCode(`/cake.amp`, 404);
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/amp${worldServices.igbo.url}`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `${worldServices.igbo.url}/amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(`/cake.amp`, 404, 'text/html');
   });
 
   xit('should have AMP attribute', () => {
@@ -33,20 +49,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   it('should load the AMP framework', () => {
     // .eq(1) gets the amp <script> as:
     // the first loaded is a Cypress <script>
-    // Once bbc/simorgh#1906 has been merged, this may need to become .eq(2) as:
-    //  the second loaded will be the Schema.org metadata script
-    // and the below `.eq(x)`s will also need updating
-    const ampScript = getElement('head script').eq(1);
+    const ampScript = getElement('head script').eq(2);
     ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(2);
+    const ampGeoScript = getElement('head script').eq(3);
     ampGeoScript.should(
       'have.attr',
       'src',
       'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
     );
 
-    const ampConsentScript = getElement('head script').eq(3);
+    const ampConsentScript = getElement('head script').eq(4);
     ampConsentScript.should(
       'have.attr',
       'src',

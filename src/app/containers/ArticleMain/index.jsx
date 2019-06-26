@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useRef, useEffect } from 'react';
+import React, { Fragment, useRef, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { obj } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
@@ -10,7 +10,6 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import { RequestContext } from '../../contexts/RequestContext';
 
 const usePrevious = value => {
   const ref = useRef();
@@ -29,7 +28,6 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData, location }) => {
-  const { pageType } = useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
   const { pathname } = location;
@@ -41,11 +39,7 @@ const ArticleMain = ({ articleData, location }) => {
 
   return (
     <Fragment>
-      <ATIAnalytics
-        data={articleData}
-        pageType={pageType}
-        previousPath={previousPath}
-      />
+      <ATIAnalytics data={articleData} previousPath={previousPath} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <div>
