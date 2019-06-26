@@ -33,6 +33,7 @@ describe('FrontPageMain', () => {
 
   describe('assertions', () => {
     afterEach(cleanup);
+
     it('should render visually hidden text as h1', () => {
       const { container } = render(
         <FrontPageMain frontPageData={frontPageDataIgbo} />,
