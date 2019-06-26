@@ -8,7 +8,7 @@ max=702
 services=( "news" "persian" "igbo" "yoruba" "pidgin" )
 failure=false
 
-for service in "${services[@]}"
+for service in ${services[@]}
 do
    size=$(($(cat build/public/static/js/{main,vendor,$service}-*.js | wc -c | tr -d ' ') / 1000 ))
 
@@ -28,7 +28,7 @@ done
 
 tput sgr0
 
-if [ "$failure" = true ] ; then
+if [ $failure = true ] ; then
     exit 1;
 else
     echo 'All bundle sizes are good!'
