@@ -23,7 +23,7 @@ Object.keys(services).forEach(index => {
           cy.get(el.header)
             .should('have.lengthOf', 1)
             .find('a')
-            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // expect `${config.baseUrl}${serviceConfig.url}` once header hooked up
+            .should('have.attr', 'href', serviceConfig.url)
             .find('svg')
             .should('be.visible');
         });
@@ -71,7 +71,7 @@ Object.keys(services).forEach(index => {
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
             .find('a')
-            .should('have.attr', 'href', 'https://www.bbc.co.uk/news') // expect `${config.baseUrl}${serviceConfig.url}` once footer hooked up
+            .should('have.attr', 'href', serviceConfig.url)
             .find('svg')
             .should('be.visible');
         });
