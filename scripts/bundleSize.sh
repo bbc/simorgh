@@ -14,11 +14,11 @@ do
 
    if [[ $size -lt $min ]]; then
      tput setaf 1
-     echo "Bundle size for $service is too small at ${size}K, please update thresholds"
+     echo "Bundle size for $service is too small at ${size}K, please update thresholds in './scripts/bundleSize.sh'"
      failure=true
    elif [[ $size -gt $max ]]; then
      tput setaf 1
-     echo "Bundle size for $service is too great at ${size}K, please update thresholds"
+     echo "Bundle size for $service is too great at ${size}K, please update thresholds in './scripts/bundleSize.sh'"
      failure=true
    else 
     tput setaf 2
