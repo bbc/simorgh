@@ -10,18 +10,11 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
     sendBeacon(atiPageViewUrl);
   }, [atiPageViewUrl]);
 
-  // dangerouslySetInnerHTML used to ensure noscript tag is rendered on the client
-  // Related issue https://github.com/facebook/react/issues/11423#issuecomment-341751071
-
-  /* eslint-disable react/no-danger */
   return (
-    <noscript
-      dangerouslySetInnerHTML={{
-        __html: `<img height="1px" width="1px" alt="" src="${atiPageViewUrl}" />`,
-      }}
-    />
+    <noscript>
+      <img height="1px" width="1px" alt="" src={atiPageViewUrl} />
+    </noscript>
   );
-  /* eslint-enable react/no-danger */
 };
 
 CanonicalATIAnalytics.propTypes = {

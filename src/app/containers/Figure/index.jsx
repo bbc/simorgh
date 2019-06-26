@@ -1,5 +1,4 @@
 import React, { useContext, Fragment } from 'react';
-import ReactDOMServer from 'react-dom/server';
 import { string, number, objectOf, any, bool, oneOf } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Image, { AmpImg } from '@bbc/psammead-image';
@@ -11,22 +10,13 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-// dangerouslySetInnerHTML below to used to ensure noscript tag is rendered on the client
-// Related issue https://github.com/facebook/react/issues/11423#issuecomment-341751071
-
 const renderImage = (imageToRender, lazyLoad) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
-      {/* eslint-disable react/no-danger */}
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: ReactDOMServer.renderToString(imageToRender),
-        }}
-      />
-      {/* eslint-enable react/no-danger */}
+      <noscript>{imageToRender}</noscript>
     </Fragment>
   ) : (
     imageToRender

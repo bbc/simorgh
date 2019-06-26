@@ -367,7 +367,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   max-width: 33.33%;
 }
 
-.c10 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-size: 0.9375rem;
@@ -379,7 +379,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-weight: 700;
 }
 
-.c12 {
+.c13 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -388,21 +388,21 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: top;
   max-width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c11 {
+.c12 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11:before {
+.c12:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -414,22 +414,27 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   z-index: 1;
 }
 
-.c11:hover,
-.c11:focus {
+.c12:hover,
+.c12:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11:visited {
+.c12:visited {
   color: #6E6E73;
 }
 
-.c13 {
+.c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
 }
 
 .c2 {
@@ -445,7 +450,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c7 {
+.c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -456,13 +461,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   width: 1px;
 }
 
-.c6 {
+.c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
   fill: #222222;
 }
 
-.c4 {
+.c5 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: inline-block;
@@ -473,7 +478,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   height: 2rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -485,7 +490,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   height: 100%;
 }
 
-.c8 {
+.c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
 }
@@ -519,82 +524,82 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c4 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c10 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c10 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -603,14 +608,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -633,26 +638,29 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           }
         }
       />
-      <noscript
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<img alt=\\"Image Alt text\\" src=\\"https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg\\" width=\\"2048\\" srcSet=\\"https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w\\" class=\\"StyledImg-sc-7vx2mr-0 tahEv\\"/>",
-          }
-        }
-      />
+      <noscript>
+        <img
+          alt="Image Alt text"
+          className="c3"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
+          width={2048}
+        />
+      </noscript>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-hidden="true"
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -666,12 +674,12 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             />
           </svg>
           <span
-            className="c7"
+            className="c8"
           >
             Audio
           </span>
           <time
-            className="c8"
+            className="c9"
             dateTime="PT3M12S"
           >
             3:12
@@ -681,20 +689,20 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
     </div>
   </div>
   <div
-    className="c9"
+    className="c10"
   >
     <h3
-      className="c10"
+      className="c11"
     >
       <a
-        className="c11"
+        className="c12"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c7"
+            className="c8"
           >
             Ọdịyo
             , 
@@ -703,7 +711,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             An audio item
           </span>
           <span
-            className="c7"
+            className="c8"
           >
             , 3:12
           </span>
@@ -711,12 +719,12 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       </a>
     </h3>
     <p
-      className="c12"
+      className="c13"
     >
       Summary text
     </p>
     <time
-      className="c13"
+      className="c14"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -1076,7 +1084,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   max-width: 33.33%;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-size: 0.9375rem;
@@ -1088,7 +1096,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-weight: 700;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -1097,21 +1105,21 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding-bottom: 0.5rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   vertical-align: top;
   max-width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c10 {
+.c11 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c10:before {
+.c11:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1123,22 +1131,27 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   z-index: 1;
 }
 
-.c10:hover,
-.c10:focus {
+.c11:hover,
+.c11:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10:visited {
+.c11:visited {
   color: #6E6E73;
 }
 
-.c12 {
+.c13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
 }
 
 .c2 {
@@ -1154,7 +1167,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c7 {
+.c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1165,13 +1178,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   width: 1px;
 }
 
-.c6 {
+.c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
   fill: #222222;
 }
 
-.c4 {
+.c5 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: inline-block;
@@ -1182,7 +1195,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   height: 2rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1223,82 +1236,82 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c4 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c8 {
+  .c9 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -1307,14 +1320,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1337,26 +1350,29 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           }
         }
       />
-      <noscript
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<img alt=\\"Image Alt text\\" src=\\"https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg\\" width=\\"2048\\" srcSet=\\"https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w\\" class=\\"StyledImg-sc-7vx2mr-0 tahEv\\"/>",
-          }
-        }
-      />
+      <noscript>
+        <img
+          alt="Image Alt text"
+          className="c3"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
+          width={2048}
+        />
+      </noscript>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-hidden="true"
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -1370,7 +1386,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             />
           </svg>
           <span
-            className="c7"
+            className="c8"
           >
             Audio
           </span>
@@ -1379,20 +1395,20 @@ exports[`StoryPromo Container should render audio with no duration correctly for
     </div>
   </div>
   <div
-    className="c8"
+    className="c9"
   >
     <h3
-      className="c9"
+      className="c10"
     >
       <a
-        className="c10"
+        className="c11"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c7"
+            className="c8"
           >
             Ọdịyo
             , 
@@ -1404,12 +1420,12 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       </a>
     </h3>
     <p
-      className="c11"
+      className="c12"
     >
       Summary text
     </p>
     <time
-      className="c12"
+      className="c13"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -1688,7 +1704,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   max-width: 33.33%;
 }
 
-.c5 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-size: 0.9375rem;
@@ -1700,7 +1716,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-weight: 700;
 }
 
-.c7 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -1709,21 +1725,21 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   padding-bottom: 0.5rem;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
   vertical-align: top;
   max-width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c6 {
+.c7 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:before {
+.c7:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1735,22 +1751,27 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   z-index: 1;
 }
 
-.c6:hover,
-.c6:focus {
+.c7:hover,
+.c7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6:visited {
+.c7:visited {
   color: #6E6E73;
 }
 
-.c8 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
 }
 
 .c2 {
@@ -1795,82 +1816,82 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c4 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c8 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c7 {
+  .c8 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c5 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c5 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -1879,14 +1900,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1909,38 +1930,41 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           }
         }
       />
-      <noscript
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<img alt=\\"Image Alt text\\" src=\\"https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg\\" width=\\"2048\\" srcSet=\\"https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w\\" class=\\"StyledImg-sc-7vx2mr-0 tahEv\\"/>",
-          }
-        }
-      />
+      <noscript>
+        <img
+          alt="Image Alt text"
+          className="c3"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
+          width={2048}
+        />
+      </noscript>
     </div>
     <div
-      className="c3"
+      className="c4"
     />
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <h3
-      className="c5"
+      className="c6"
     >
       <a
-        className="c6"
+        className="c7"
         href="https://www.bbc.co.uk"
       >
         A headline
       </a>
     </h3>
     <p
-      className="c7"
+      className="c8"
     >
       Summary text
     </p>
     <time
-      className="c8"
+      className="c9"
       dateTime="2019-05-02"
     >
       2 May 2019
@@ -2313,7 +2337,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   max-width: 33.33%;
 }
 
-.c10 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-size: 0.9375rem;
@@ -2325,7 +2349,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-weight: 700;
 }
 
-.c12 {
+.c13 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
@@ -2334,21 +2358,21 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: top;
   max-width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c11 {
+.c12 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11:before {
+.c12:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2360,22 +2384,27 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   z-index: 1;
 }
 
-.c11:hover,
-.c11:focus {
+.c12:hover,
+.c12:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11:visited {
+.c12:visited {
   color: #6E6E73;
 }
 
-.c13 {
+.c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
 }
 
 .c2 {
@@ -2391,7 +2420,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c7 {
+.c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2402,13 +2431,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   width: 1px;
 }
 
-.c6 {
+.c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
   fill: #222222;
 }
 
-.c4 {
+.c5 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: inline-block;
@@ -2419,7 +2448,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   height: 2rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2431,7 +2460,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   height: 100%;
 }
 
-.c8 {
+.c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
 }
@@ -2465,82 +2494,82 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c4 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c10 {
     max-width: 66.67%;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c10 {
     display: block;
     max-width: initial;
     padding: initial;
@@ -2549,14 +2578,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2579,26 +2608,29 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           }
         }
       />
-      <noscript
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<img alt=\\"Image Alt text\\" src=\\"https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg\\" width=\\"2048\\" srcSet=\\"https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w\\" class=\\"StyledImg-sc-7vx2mr-0 tahEv\\"/>",
-          }
-        }
-      />
+      <noscript>
+        <img
+          alt="Image Alt text"
+          className="c3"
+          height={null}
+          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+          srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0A06/production/image.jpg 800w"
+          width={2048}
+        />
+      </noscript>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-hidden="true"
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             focusable="false"
             height="12px"
             viewBox="0 0 32 32"
@@ -2609,12 +2641,12 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             />
           </svg>
           <span
-            className="c7"
+            className="c8"
           >
             Video
           </span>
           <time
-            className="c8"
+            className="c9"
             dateTime="PT1H33M20S"
           >
             1:33:20
@@ -2624,20 +2656,20 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
     </div>
   </div>
   <div
-    className="c9"
+    className="c10"
   >
     <h3
-      className="c10"
+      className="c11"
     >
       <a
-        className="c11"
+        className="c12"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c7"
+            className="c8"
           >
             Vidio
             , 
@@ -2646,7 +2678,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             A video item
           </span>
           <span
-            className="c7"
+            className="c8"
           >
             , 1:33:20
           </span>
@@ -2654,12 +2686,12 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       </a>
     </h3>
     <p
-      className="c12"
+      className="c13"
     >
       Summary text
     </p>
     <time
-      className="c13"
+      className="c14"
       dateTime="2019-05-02"
     >
       2 May 2019
