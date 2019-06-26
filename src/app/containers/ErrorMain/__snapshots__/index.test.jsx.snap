@@ -165,7 +165,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (max-width:37.4375rem) {
   .c1 {
-    padding: 0 0.5rem;
+    padding: 0 auto;
   }
 }
 
@@ -173,6 +173,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -419,7 +420,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (max-width:37.4375rem) {
   .c1 {
-    padding: 0 0.5rem;
+    padding: 0 auto;
   }
 }
 
@@ -427,6 +428,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -673,7 +675,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (max-width:37.4375rem) {
   .c1 {
-    padding: 0 0.5rem;
+    padding: 0 auto;
   }
 }
 
@@ -681,6 +683,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -922,7 +925,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (max-width:37.4375rem) {
   .c1 {
-    padding: 0 0.5rem;
+    padding: 0 auto;
   }
 }
 
@@ -930,6 +933,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -1171,7 +1175,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (max-width:37.4375rem) {
   .c1 {
-    padding: 0 0.5rem;
+    padding: 0 auto;
   }
 }
 
@@ -1179,6 +1183,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 

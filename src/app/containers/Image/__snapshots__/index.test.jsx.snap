@@ -5,6 +5,7 @@ exports[`Image with data should render a lazyload container instead of an image 
   padding={
     Object {
       "group2": "0px",
+      "group3": "0px",
     }
   }
 >
@@ -30,6 +31,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   padding={
     Object {
       "group2": "0px",
+      "group3": "0px",
     }
   }
 >
@@ -55,6 +57,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   padding={
     Object {
       "group2": "0px",
+      "group3": "0px",
     }
   }
 >
@@ -110,6 +113,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   padding={
     Object {
       "group2": "0px",
+      "group3": "0px",
     }
   }
 >
@@ -135,6 +139,7 @@ exports[`Image with data should render an image with other originCode - this wou
   padding={
     Object {
       "group2": "0px",
+      "group3": "0px",
     }
   }
 >

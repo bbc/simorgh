@@ -54,6 +54,10 @@ const ImageComponent = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} />
   );
 
+  const imageSpan = {
+    default: '6',
+    group5: '12',
+  };
   let ParentWrapper = NestedGridParentLarge;
   let ChildWrapper = NestedGridItemChildLarge;
 
@@ -64,6 +68,7 @@ const ImageComponent = ({
   if (height > width) {
     ParentWrapper = NestedGridParentSmall;
     ChildWrapper = NestedGridItemChildSmall;
+    imageSpan.default = '4';
   }
 
   return (
@@ -71,10 +76,10 @@ const ImageComponent = ({
       <ParentWrapper>
         <ChildWrapper
           gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group5: '12',
+          marginLeft={{
+            group3: '1em',
           }}
+          gridSpan={imageSpan}
         >
           <ImagePlaceholder ratio={ratio}>
             {platform === 'amp' ? (

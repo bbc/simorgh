@@ -75,6 +75,7 @@ const ImageContainer = ({ blocks, position }) => {
     <Wrapper
       padding={{
         group2: '0px',
+        group3: '0px',
       }}
     >
       <Figure
