@@ -1,4 +1,4 @@
-describe('Storybook Article', () => {
+describe('Sanity test', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit('https://www.bbc.co.uk');
