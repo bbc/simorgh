@@ -52,5 +52,24 @@ describe('ServiceContextProvider', () => {
         expect(container.innerHTML).toMatchSnapshot();
       }),
     );
+
+    it(`should return null for foobar service`, async () => {
+      // eslint-disable-next-line global-require
+      const { ServiceContext, ServiceContextProvider } = require('./index');
+
+      const Component = () => {
+        const { brandName } = useContext(ServiceContext);
+
+        return <span>{brandName}</span>;
+      };
+
+      const { container } = render(
+        <ServiceContextProvider service="foobar">
+          <Component />
+        </ServiceContextProvider>,
+      );
+
+      expect(container.querySelector('span')).toBeNull();
+    });
   });
 });
