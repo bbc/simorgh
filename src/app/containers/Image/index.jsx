@@ -72,7 +72,11 @@ const ImageContainer = ({ blocks, position }) => {
   // https://github.com/bbc/simorgh/issues/1369
   // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Wrapper>
+    <Wrapper
+      padding={{
+        group2: '0px',
+      }}
+    >
       <Figure
         alt={altText}
         captionBlock={captionBlock}

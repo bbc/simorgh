@@ -123,6 +123,11 @@ export const layoutGridItemMedium = css`
   ${gelGridMargin}
 
   grid-column: 1 / span 6;
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding: 0
+      ${props =>
+        (props.padding && props.padding.group2) || GEL_MARGIN_BELOW_400PX};
+  }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
@@ -147,6 +152,9 @@ export const layoutGridItemSmall = css`
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
+    padding: 0
+      ${props =>
+        (props.padding && props.padding.group2) || GEL_MARGIN_BELOW_400PX};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
