@@ -1,27 +1,16 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import Figure from '@bbc/psammead-figure';
 import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
-import Caption from '../Caption';
-import videoMetadata from './videoMetadata';
-import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
 import mediatorURL from './helpers/mediatorUrl';
 
-import {
-  videoPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '../../models/propTypes';
+import { videoPropTypes } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
-const VideoContainer = ({ blocks }) => {
-  const {
-    env,
-    platform,
-    statsDestination,
-    statsPageIdentifier,
-  } = React.useContext(RequestContext);
+const Canonical = ({ blocks }) => {
+  const { env, statsDestination, statsPageIdentifier } = React.useContext(
+    RequestContext,
+  );
 
   if (!blocks) {
     return null;
@@ -33,8 +22,6 @@ const VideoContainer = ({ blocks }) => {
     return null;
   }
 
-  const metadata = videoMetadata(aresMediaBlock);
-  const captionBlock = filterForBlockType(blocks, 'caption');
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind =
     deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
@@ -78,38 +65,20 @@ const VideoContainer = ({ blocks }) => {
     },
   };
 
-  const type = kind === 'audio' ? kind : 'video';
-
   return (
-    <GridItemConstrainedLargeNoMargin>
-      {metadata ? (
-        <Helmet>
-          {
-            <script type="application/ld+json">
-              {JSON.stringify(metadata)}
-            </script>
-          }
-        </Helmet>
-      ) : null}
-      <Figure>
-        <Video
-          id={id}
-          title={title}
-          statsAppName="news"
-          statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
-          statsCountername={statsPageIdentifier}
-          statsDestination={statsDestination}
-          uiLocale="en-GB"
-          mediaPlayerSettings={mediaPlayerSettings}
-        />
-        {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-      </Figure>
-    </GridItemConstrainedLargeNoMargin>
+    <Video
+      id={id}
+      title={title}
+      statsAppName="news"
+      statsAppType="responsive"
+      statsCountername={statsPageIdentifier}
+      statsDestination={statsDestination}
+      uiLocale="en-GB"
+      mediaPlayerSettings={mediaPlayerSettings}
+    />
   );
 };
 
-VideoContainer.propTypes = videoPropTypes;
+Canonical.propTypes = videoPropTypes;
 
-VideoContainer.defaultProps = emptyBlockArrayDefaultProps;
-
-export default VideoContainer;
+export default Canonical;

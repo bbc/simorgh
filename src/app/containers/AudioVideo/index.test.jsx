@@ -13,7 +13,7 @@ import {
   AudioClipUk,
   AudioClipNonUk,
 } from './fixtureData';
-import VideoContainer from '.';
+import AudioVideoContainer from '.';
 import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
 import * as gridComponents from '../../lib/styledGrid';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -39,7 +39,7 @@ describe('AudioVideo', () => {
 
       renderer.create(
         <RequestContextProvider platform="amp">
-          <VideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
+          <AudioVideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
         </RequestContextProvider>,
       );
 

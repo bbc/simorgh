@@ -361,7 +361,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -794,7 +794,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -1259,7 +1259,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -1692,7 +1692,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -2125,7 +2125,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -2590,7 +2590,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -3023,7 +3023,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -3456,7 +3456,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -3921,7 +3921,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -4388,7 +4388,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -4827,7 +4827,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -5321,7 +5321,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -5815,7 +5815,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -6248,7 +6248,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -6713,7 +6713,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
@@ -7180,7 +7180,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
-    <VideoContainer
+    <AudioVideoContainer
       blocks={
         Array [
           Object {
