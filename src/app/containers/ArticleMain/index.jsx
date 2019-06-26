@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useRef, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
+import { obj } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -36,11 +37,15 @@ const ArticleMain = ({ articleData, location }) => {
   /* this is not working... everytime I navigate to a new page using
       an anchor tag or a Link, this gets reset... state and props don'r get preserved during navigation.
   */
-  const previousPathname = usePrevious(pathname);
+  const previousPath = usePrevious(pathname);
 
   return (
     <Fragment>
-      <ATIAnalytics data={articleData} pageType={pageType} />
+      <ATIAnalytics
+        data={articleData}
+        pageType={pageType}
+        previousPath={previousPath}
+      />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <div>
@@ -59,6 +64,7 @@ const ArticleMain = ({ articleData, location }) => {
 
 ArticleMain.propTypes = {
   articleData: articleDataPropTypes.isRequired,
+  location: obj.isRequired,
 };
 
 export default withRouter(ArticleMain);
