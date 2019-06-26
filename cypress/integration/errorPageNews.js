@@ -33,23 +33,29 @@ describe('Article Body Tests', () => {
     },
   );
 
-  it('should display a relevant error message on screen', () => {
-    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
-      failOnStatusCode: false,
-    });
-    errorMessage(news);
+  describeForLocalOnly(
+    'should display a relevant error message on screen',
+    () => {
+      cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+        failOnStatusCode: false,
+      });
+      errorMessage(news);
 
-    cy.visit(`/news/articles/${config.assets.nonExistent}`, {
-      failOnStatusCode: false,
-    });
-    errorMessage(news);
-  });
+      cy.visit(`/news/articles/${config.assets.nonExistent}`, {
+        failOnStatusCode: false,
+      });
+      errorMessage(news);
+    },
+  );
 
-  it('should have an inline link on the page that is linked to the home page', () => {
-    errorPageInlineLink(news);
-  });
+  describeForLocalOnly(
+    'should have an inline link on the page that is linked to the home page',
+    () => {
+      errorPageInlineLink(news);
+    },
+  );
 
-  it('should have a relevant error title in the head', () => {
+  describeForLocalOnly('should have a relevant error title in the head', () => {
     errorTitle(news);
   });
 });
