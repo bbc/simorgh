@@ -95,7 +95,7 @@ To run TEST bundles on localhost:
 
 To run LIVE bundles on localhost:
 
-- In `envConfig/live.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+- In `envConfig/live.env` change these values of `LOG_DIR` to `LOG_DIR='log'` & `COSMOS_DIALS_PATH` to `COSMOS_DIALS_PATH='dials.json'`
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
