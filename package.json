@@ -89,6 +89,7 @@
     "@bbc/psammead-image-placeholder": "^0.1.8",
     "@bbc/psammead-inline-link": "^0.3.4",
     "@bbc/psammead-media-indicator": "^0.2.1",
+    "@bbc/psammead-navigation": "^1.0.0-alpha.1",
     "@bbc/psammead-paragraph": "^1.0.2",
     "@bbc/psammead-section-label": "^0.1.1",
     "@bbc/psammead-sitewide-links": "^0.3.9",

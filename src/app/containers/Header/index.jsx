@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import BrandContainer from '../Brand';
+import NavigationContainer from '../Navigation';
+import { RequestContext } from '../../contexts/RequestContext';
 
-const HeaderContainer = () => (
-  <header role="banner">
-    <BrandContainer />
-  </header>
-);
+const HeaderContainer = () => {
+  const { pageType } = useContext(RequestContext);
+
+  return (
+    <header role="banner">
+      <BrandContainer />
+      {pageType === 'frontPage' && <NavigationContainer />}
+    </header>
+  );
+};
 
 export default HeaderContainer;
