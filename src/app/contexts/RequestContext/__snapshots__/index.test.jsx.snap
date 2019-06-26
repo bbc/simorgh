@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RequestContext should have a request object for platform amp, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for env test, platform amp, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
+  <span>
+    test
+  </span>,
   <span>
     amp
   </span>,
@@ -21,8 +24,11 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform canonical, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for env test, platform canonical, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
+  <span>
+    test
+  </span>,
   <span>
     canonical
   </span>,
@@ -42,8 +48,11 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
+exports[`RequestContext should have a request object for env test, platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 1`] = `
 Array [
+  <span>
+    test
+  </span>,
   <span>
     default
   </span>,
@@ -63,8 +72,11 @@ Array [
 ]
 `;
 
-exports[`RequestContext should have a request object for platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 2`] = `
+exports[`RequestContext should have a request object for env test, platform default, origin https://www.bbc.com, isUK, false, pageType article, statsDestination NEWS_PS_TEST & statsPageIdentifier persian.articles.c0000000000o.page 2`] = `
 Array [
+  <span>
+    test
+  </span>,
   <span>
     default
   </span>,

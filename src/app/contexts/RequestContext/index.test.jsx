@@ -6,6 +6,7 @@ const { RequestContextProvider, RequestContext } = require('./index');
 const renderWithContextProvider = (
   node,
   {
+    env,
     platformString,
     bbcOrigin,
     pageType,
@@ -14,6 +15,7 @@ const renderWithContextProvider = (
   },
 ) => (
   <RequestContextProvider
+    env={env}
     platform={platformString}
     bbcOrigin={bbcOrigin}
     pageType={pageType}
@@ -26,6 +28,7 @@ const renderWithContextProvider = (
 
 const Component = () => {
   const {
+    env,
     platform,
     isUK,
     origin,
@@ -35,6 +38,7 @@ const Component = () => {
   } = useContext(RequestContext);
   return (
     <Fragment>
+      <span>{env}</span>
       <span>{platform}</span>
       <span>{isUK ? 'true' : 'false'}</span>
       <span>{origin}</span>
@@ -47,6 +51,7 @@ const Component = () => {
 
 describe('RequestContext', () => {
   const testRequestContext = ({
+    env,
     pageType,
     platformString,
     statsDestination,
@@ -55,8 +60,9 @@ describe('RequestContext', () => {
     origin,
   }) => {
     shouldMatchSnapshot(
-      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, pageType ${pageType}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
+      `should have a request object for env ${env}, platform ${platformString}, origin ${origin}, isUK, ${isUK}, pageType ${pageType}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
       renderWithContextProvider(<Component />, {
+        env,
         isUK,
         origin,
         pageType,
@@ -68,6 +74,7 @@ describe('RequestContext', () => {
   };
 
   testRequestContext({
+    env: 'test',
     pageType: 'article',
     platformString: 'default',
     statsDestination: 'NEWS_PS_TEST',
@@ -76,6 +83,7 @@ describe('RequestContext', () => {
     origin: 'https://www.bbc.com',
   });
   testRequestContext({
+    env: 'test',
     pageType: 'article',
     platformString: 'canonical',
     statsDestination: 'NEWS_PS_TEST',
@@ -84,6 +92,7 @@ describe('RequestContext', () => {
     origin: 'https://www.bbc.com',
   });
   testRequestContext({
+    env: 'test',
     pageType: 'article',
     platformString: 'amp',
     statsDestination: 'NEWS_PS_TEST',
@@ -92,6 +101,7 @@ describe('RequestContext', () => {
     origin: 'https://www.bbc.com',
   });
   testRequestContext({
+    env: 'test',
     pageType: 'article',
     platformString: 'default',
     statsDestination: 'NEWS_PS_TEST',

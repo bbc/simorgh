@@ -5,6 +5,7 @@ export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
+  env,
   id,
   isUK,
   origin,
@@ -14,6 +15,7 @@ export const RequestContextProvider = ({
   statsPageIdentifier,
 }) => {
   const value = {
+    env,
     id,
     isUK,
     origin,
@@ -30,6 +32,7 @@ export const RequestContextProvider = ({
 
 RequestContextProvider.propTypes = {
   children: node.isRequired,
+  env: oneOf(['local', 'test', 'live']),
   id: string,
   pageType: oneOf(['article', 'frontPage']).isRequired,
   platform: string.isRequired,
@@ -40,5 +43,6 @@ RequestContextProvider.propTypes = {
 };
 
 RequestContextProvider.defaultProps = {
+  env: 'local',
   id: null,
 };

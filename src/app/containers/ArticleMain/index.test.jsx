@@ -11,6 +11,7 @@ articleDataNewsNoHeadline.content.model.blocks.shift();
 
 const Context = ({ children }) => (
   <RequestContextProvider
+    env="test"
     id="c0000000000o"
     isUK
     origin="https://www.test.bbc.co.uk"

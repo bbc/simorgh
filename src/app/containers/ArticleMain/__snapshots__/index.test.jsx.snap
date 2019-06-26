@@ -2,6 +2,7 @@
 
 exports[`ArticleMain should render a news article correctly 1`] = `
 <RequestContextProvider
+  env="test"
   id="c0000000000o"
   isUK={true}
   origin="https://www.test.bbc.co.uk"
@@ -156,6 +157,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <RequestContextProvider
+  env="test"
   id="c0000000000o"
   isUK={true}
   origin="https://www.test.bbc.co.uk"
