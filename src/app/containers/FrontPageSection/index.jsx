@@ -30,6 +30,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
 
   const strapline = deepGet(['strapline', 'name'], group);
   const items = deepGet(['items'], group);
+  const isFirstSection = sectionNumber === 0;
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -49,7 +50,12 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
+      <SectionLabel
+        script={script}
+        labelId={sectionLabelId}
+        bar={bar}
+        visuallyHidden={isFirstSection}
+      >
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
