@@ -1,9 +1,3 @@
-Cypress.Commands.add('onLocal', tests => {
-  if (Cypress.env('APP_ENV') === 'local') {
-    tests();
-  }
-});
-
 Cypress.Commands.add('testResponseCodeAndType', (path, responseCode, type) => {
   cy.request({ url: path, failOnStatusCode: false }).then(
     ({ status, headers }) => {
