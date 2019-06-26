@@ -1,6 +1,5 @@
 import React, { Fragment, useRef, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import { obj } from 'prop-types';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -27,6 +26,7 @@ const componentsToRender = {
   timestamp,
 };
 
+// eslint-disable-next-line react/prop-types
 const ArticleMain = ({ articleData, location }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
@@ -58,7 +58,6 @@ const ArticleMain = ({ articleData, location }) => {
 
 ArticleMain.propTypes = {
   articleData: articleDataPropTypes.isRequired,
-  location: obj.isRequired,
 };
 
 export default withRouter(ArticleMain);
