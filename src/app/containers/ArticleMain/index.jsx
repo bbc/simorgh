@@ -1,4 +1,5 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, useRef, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -10,6 +11,14 @@ import { GhostWrapper } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import { RequestContext } from '../../contexts/RequestContext';
 
+const usePrevious = value => {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+};
+
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
@@ -18,16 +27,28 @@ const componentsToRender = {
   timestamp,
 };
 
-const ArticleMain = ({ articleData }) => {
+const ArticleMain = ({ articleData, location }) => {
   const { pageType } = useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
+  const { pathname } = location;
+
+  /* this is not working... everytime I navigate to a new page using
+      an anchor tag or a Link, this gets reset... state and props don'r get preserved during navigation.
+  */
+  const previousPathname = usePrevious(pathname);
 
   return (
     <Fragment>
       <ATIAnalytics data={articleData} pageType={pageType} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
+        <div>
+          <a href="/news/articles/c6v11qzyv8po">article 1</a>
+        </div>
+        <div>
+          <a href="/news/articles/c0000000003o">article 2</a>
+        </div>
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostWrapper>
@@ -40,4 +61,4 @@ ArticleMain.propTypes = {
   articleData: articleDataPropTypes.isRequired,
 };
 
-export default ArticleMain;
+export default withRouter(ArticleMain);
