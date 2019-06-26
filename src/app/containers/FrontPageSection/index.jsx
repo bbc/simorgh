@@ -9,17 +9,16 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import deepGet from '../../lib/utilities/deepGet';
 
-const StoryPromoLiContainer = ({ item, sectionNumber, storyNumber }) => {
+const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
   const topStory = sectionNumber === 0 && storyNumber === 0;
+  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
-    <StoryPromoLi key={item.id}>
-      <StoryPromo item={item} topStory={topStory} />
-    </StoryPromoLi>
+    <StoryPromo item={item} topStory={topStory} lazyLoadImage={lazyLoadImage} />
   );
 };
 
-StoryPromoLiContainer.propTypes = {
+StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
   sectionNumber: number.isRequired,
   storyNumber: number.isRequired,
@@ -31,6 +30,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
 
   const strapline = deepGet(['strapline', 'name'], group);
   const items = deepGet(['items'], group);
+  const isFirstSection = sectionNumber === 0;
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -50,21 +50,32 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel script={script} labelId={sectionLabelId} bar={bar}>
+      <SectionLabel
+        script={script}
+        labelId={sectionLabelId}
+        bar={bar}
+        visuallyHidden={isFirstSection}
+      >
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
         <StoryPromoUl>
           {items.map((item, index) => (
-            <StoryPromoLiContainer
-              item={item}
-              sectionNumber={sectionNumber}
-              storyNumber={index}
-            />
+            <StoryPromoLi key={item.id}>
+              <StoryPromoComponent
+                item={item}
+                sectionNumber={sectionNumber}
+                storyNumber={index}
+              />
+            </StoryPromoLi>
           ))}
         </StoryPromoUl>
       ) : (
-        <StoryPromo item={items[0]} script={script} topStory />
+        <StoryPromoComponent
+          item={items[0]}
+          sectionNumber={sectionNumber}
+          storyNumber={0}
+        />
       )}
     </section>
   );

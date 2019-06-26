@@ -1,32 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Video with data should render the video with valid props 1`] = `
-<div>
-  <div>
-    video pid: 
-    p00a0a0m
-  </div>
-  <div>
-    kind: 
-    episode
-  </div>
+<React.Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <script
+      type="text/javascript"
+    >
+      
+          function mediaPlayerSetup(container) {
+            require(['bump-4'], (bump) =&gt; {
+              var mediaPlayer = bump.player(
+                document.getElementById('mp#p00a0a0m'),
+                {"product":"news","responsive":true,"statsObject":{"clipPID":"p00a0a0m"},"mediator":{"host":"open.test.bbc.co.uk"},"playlistObject":{"title":"Hello World","holdingImageURL":"https://foo/bar/baz.png","guidance":"Scary","items":[{"versionID":"p01k6msm","kind":"episode","duration":100}]}});
+              mediaPlayer.load();
+            });
+          }
+        
+    </script>
+    <script
+      type="text/javascript"
+    >
+      
+          function initialiseRequires() {
+            var requiredScripts = {
+              "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
+            };
+            require({ paths: requiredScripts, waitSeconds: 30 });
+            mediaPlayerSetup();
+          }
+        
+    </script>
+    <script
+      onLoad="initialiseRequires()"
+      src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+      type="text/javascript"
+    />
+  </HelmetWrapper>
+  <ForwardRef(MediaPlayerContainer)
+    id="mp#p00a0a0m"
+  />
   <div>
     title: 
     Hello World
-  </div>
-  <div>
-    holdingImageURL: 
-    https://foo/bar/baz.png
-  </div>
-  <div>
-    items: 
-    [
-    {
-        "versionID": "p00a0a0v",
-        "kind": "episode",
-        "duration": 100
-    }
-]
   </div>
   <div>
     statsAppName: 
@@ -48,5 +66,5 @@ exports[`Video with data should render the video with valid props 1`] = `
     uiLocale: 
     en-GB
   </div>
-</div>
+</React.Fragment>
 `;
