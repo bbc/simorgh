@@ -13,6 +13,7 @@ export const RequestContextProvider = ({
   platform,
   statsDestination,
   statsPageIdentifier,
+  previousPath,
 }) => {
   const value = {
     env,
@@ -23,6 +24,7 @@ export const RequestContextProvider = ({
     platform,
     statsDestination,
     statsPageIdentifier,
+    previousPath,
   };
 
   return (
@@ -40,9 +42,11 @@ RequestContextProvider.propTypes = {
   origin: string.isRequired,
   statsDestination: string.isRequired,
   statsPageIdentifier: string.isRequired,
+  previousPath: string,
 };
 
 RequestContextProvider.defaultProps = {
   id: null,
   env: 'local',
+  previousPath: null,
 };

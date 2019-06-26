@@ -19,6 +19,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     pageType,
     loading: false,
     error: null,
+    previousPath: null,
   });
 
   const isInitialMount = useRef(true);
@@ -66,7 +67,17 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     }
   }, [routes, location.pathname]);
 
-  return renderRoutes(routes, { ...state, bbcOrigin });
+  const pathRef = useRef(null);
+  const [previousPath, setPath] = useState(null);
+
+  useEffect(() => {
+    pathRef.current = location.pathname;
+    return () => {
+      setPath(pathRef.current);
+    };
+  }, [location.pathname]);
+
+  return renderRoutes(routes, { ...state, bbcOrigin, previousPath });
 };
 
 export default withRouter(App);
