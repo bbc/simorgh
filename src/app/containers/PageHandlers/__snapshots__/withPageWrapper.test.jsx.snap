@@ -50,14 +50,14 @@ Array [
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) {
   .c0 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) {
   .c4 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
@@ -236,14 +236,14 @@ Array [
   padding-top: 2rem;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) {
   .c1 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) {
   .c5 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;

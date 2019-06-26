@@ -160,7 +160,7 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) {
   .c1 {
     height: 5rem;
     padding: 0 1rem;
