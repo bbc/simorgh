@@ -320,6 +320,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
     <p>
       This is a caption 
       <a
+        aria-label={null}
         className="c4"
         href="https://www.bbc.com"
       >
@@ -771,6 +772,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
     <p>
       This is a caption 
       <a
+        aria-label={null}
         className="c5"
         href="https://www.bbc.com"
       >
