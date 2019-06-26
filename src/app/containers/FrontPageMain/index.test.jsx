@@ -51,6 +51,7 @@ describe('FrontPageMain', () => {
 
       const langSpan = span.querySelector('span');
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
+      expect(langSpan.textContent).toEqual('BBC News');
     });
 
     it('should render front page sections', () => {
