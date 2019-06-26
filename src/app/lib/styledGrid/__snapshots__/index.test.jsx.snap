@@ -859,6 +859,12 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
@@ -1013,6 +1019,12 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 0.5rem;
   }
 }
 
@@ -1173,6 +1185,12 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
@@ -1329,6 +1347,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 @media (max-width:25rem) {
   .c1 {
     grid-column: 1 / span 6;
+    padding: 0 0.5rem;
   }
 }
 
@@ -1519,6 +1538,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 @media (max-width:25rem) {
   .c1 {
     grid-column: 1 / span 6;
+    padding: 0 0.5rem;
   }
 }
 
@@ -1709,6 +1729,7 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 @media (max-width:25rem) {
   .c1 {
     grid-column: 1 / span 6;
+    padding: 0 0.5rem;
   }
 }
 
