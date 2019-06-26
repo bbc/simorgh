@@ -164,10 +164,10 @@ describe('Server', () => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
+                'news-12345.js',
                 'vendor-54321.js',
                 'main-12345.js',
                 'vendor-12345.js',
-                'news-12345.js',
               ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
@@ -289,10 +289,10 @@ describe('Server', () => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
+                'igbo-12345.js',
                 'vendor-54321.js',
                 'main-12345.js',
                 'vendor-12345.js',
-                'igbo-12345.js',
               ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',

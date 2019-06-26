@@ -32,10 +32,10 @@ describe('getAssetsArray', () => {
       );
       const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray('serviceName')).toEqual([
+        'serviceName-12345.js',
         'vendor-54321.js',
         'main-12345.js',
         'vendor-12345.js',
-        'serviceName-12345.js',
       ]);
       expect(mockLogError).not.toHaveBeenCalled();
     });
@@ -63,9 +63,9 @@ describe('getAssetsArray', () => {
       );
       const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray('serviceName')).toEqual([
+        'serviceName-12345.js',
         'vendor-54321.js',
         'main-12345.js',
-        'serviceName-12345.js',
       ]);
       expect(mockLogError).not.toHaveBeenCalled();
     });

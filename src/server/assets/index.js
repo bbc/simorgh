@@ -7,7 +7,7 @@ const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGIN = 'https://gel.files.bbci.co.uk';
 
 const getAssetsArray = service => {
-  let assets = [];
+  const assets = [];
   const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
   try {
     const assetManifest = JSON.parse(
@@ -32,14 +32,16 @@ const getAssetsArray = service => {
     );
   }
 
-  assets = assets.filter(
-    asset =>
-      asset.includes('main') ||
-      asset.includes('vendor') ||
-      asset.includes(service),
+  const serviceAssets = assets.filter(asset => asset.includes(service));
+  const appAssets = assets.filter(
+    asset => asset.includes('main') || asset.includes('vendor'),
   );
 
-  return assets;
+  /*
+   * Service bundles must appear first in the page so react-loadable
+   * knows to ensure theyre preloaded before hydration is done.
+   */
+  return [...serviceAssets, ...appAssets];
 };
 
 const getAssetOrigins = () => {
