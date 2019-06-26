@@ -1,3 +1,4 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
@@ -11,10 +12,16 @@ const igbo = {
   serviceLocalizedName: 'Ìgbò',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   defaultImageAltText: 'BBC News Ìgbò',
+  dir: 'ltr',
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  themeColor: `${C_POSTBOX}`,
+  twitterCreator: '@BBCNews', // to be updated
+  twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Akụkọ',
     error: {
@@ -96,6 +103,10 @@ const igbo = {
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
+    },
+    media: {
+      audio: 'Ọdịyo',
+      video: 'Vidio',
     },
   },
   footer: {

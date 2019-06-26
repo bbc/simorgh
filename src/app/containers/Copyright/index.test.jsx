@@ -10,9 +10,14 @@ const CopyrightWithContext = (copyrightText, contextStub) => (
 );
 
 const newsServiceContextStub = {
+  dir: 'ltr',
+  lang: 'en-GB',
   imageCopyrightOffscreenText: 'Image source, ',
 };
+
 const persianServiceContextStub = {
+  dir: 'rtl',
+  lang: 'fa',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 
@@ -23,8 +28,5 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render Copyright with persian service context',
-  CopyrightWithContext(
-    'توصیف چیزی که اتفاق می افتد',
-    persianServiceContextStub,
-  ),
+  CopyrightWithContext('Getty Images', persianServiceContextStub),
 );

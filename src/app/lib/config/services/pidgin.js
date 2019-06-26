@@ -1,3 +1,4 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 
@@ -11,10 +12,16 @@ const pidgin = {
   serviceLocalizedName: 'Pidgin',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
   defaultImageAltText: 'BBC News Pidgin',
+  dir: 'ltr',
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
   fonts: [],
+  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  themeColor: `${C_POSTBOX}`,
+  twitterCreator: '@BBCNews', // to be updated
+  twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Home',
     error: {
@@ -96,6 +103,10 @@ const pidgin = {
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
+    },
+    media: {
+      audio: 'Audio',
+      video: 'Video',
     },
   },
   footer: {

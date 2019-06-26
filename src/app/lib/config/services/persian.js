@@ -3,6 +3,7 @@ import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 
 const persian = {
+  lang: 'fa',
   product: 'BBC News',
   articleAuthor: 'https://www.facebook.com/bbcpersian',
   atiAnalyticsAppName: 'news-persian',
@@ -10,6 +11,7 @@ const persian = {
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
+  dir: 'rtl',
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
@@ -103,6 +105,10 @@ const persian = {
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
+    },
+    media: {
+      audio: 'صدا',
+      video: 'ویدیو',
     },
   },
   brandSVG,

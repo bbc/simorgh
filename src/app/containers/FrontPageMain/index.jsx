@@ -6,6 +6,7 @@ import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { GhostWrapper, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
+import MetadataContainer from '../Metadata';
 import deepGet from '../../lib/utilities/deepGet';
 
 const FrontPageMain = ({ frontPageData }) => {
@@ -15,6 +16,7 @@ const FrontPageMain = ({ frontPageData }) => {
   const { home } = translations;
 
   const groups = deepGet(['content', 'groups'], frontPageData);
+  const { metadata, promo } = frontPageData;
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -27,12 +29,19 @@ const FrontPageMain = ({ frontPageData }) => {
 
   return (
     <Fragment>
+      <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        <VisuallyHiddenText as="h1">{offScreenText}</VisuallyHiddenText>
+        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+          {offScreenText}
+        </VisuallyHiddenText>
         <GhostWrapper>
           <GridItemConstrainedLarge>
-            {groups.map(group => (
-              <FrontPageSection key={group.title} group={group} />
+            {groups.map((group, index) => (
+              <FrontPageSection
+                key={group.title}
+                group={group}
+                sectionNumber={index}
+              />
             ))}
           </GridItemConstrainedLarge>
         </GhostWrapper>

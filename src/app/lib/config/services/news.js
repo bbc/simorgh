@@ -4,12 +4,14 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
 
 const news = {
+  lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
+  dir: 'ltr',
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
@@ -105,6 +107,10 @@ const news = {
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
+    },
+    media: {
+      audio: 'Audio',
+      video: 'Video',
     },
   },
   brandSVG,

@@ -11,6 +11,7 @@ import {
   articleDataRegexPath,
   articleManifestRegexPath,
   articleSwRegexPath,
+  frontpageRegexPath,
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
@@ -64,16 +65,16 @@ server
  * Local env routes - fixture data
  */
 
-if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath, next) => {
-    res.sendFile(dataFilePath, {}, sendErr => {
-      if (sendErr) {
-        logger.error(sendErr);
-        next(sendErr);
-      }
-    });
-  };
+const sendDataFile = (res, dataFilePath, next) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
+    if (sendErr) {
+      logger.error(sendErr);
+      next(sendErr);
+    }
+  });
+};
 
+if (process.env.APP_ENV === 'local') {
   server
     .use(
       expressStaticGzip(publicDirectory, {
@@ -95,19 +96,6 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
-
-      const dataFilePath = path.join(
-        process.cwd(),
-        dataFolderToRender,
-        service,
-        'frontpage',
-        'index.json',
-      );
-
-      sendDataFile(res, dataFilePath, next);
-    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
@@ -120,6 +108,24 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
+  .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+    /*
+     *
+     * TODO: MOVE THIS ROUTE BACK INTO LOCAL ONLY
+     *
+     */
+    const { service } = params;
+
+    const dataFilePath = path.join(
+      process.cwd(),
+      dataFolderToRender,
+      service,
+      'frontpage',
+      'index.json',
+    );
+
+    sendDataFile(res, dataFilePath, next);
+  })
   .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
@@ -153,49 +159,40 @@ server
     });
   })
   .get(
-    '/:service(igbo|pidgin|yoruba)(.amp|/beta|/beta.amp)?',
-    ({ params }, res) => {
-      // This is a temporary route to unblock route setup in Mozart.
-      // Simply returns a 200 response which can we route to until
-      // it's set up properly in simorgh.
-      const { service } = params;
-      res
-        .status(200)
-        .send(`Welcome to the temporary ${service} homepage simorgh route`);
-    },
-  )
-  .get(articleRegexPath, async ({ url, headers }, res) => {
-    try {
-      const { service, isAmp, route, match } = getRouteProps(routes, url);
-      const data = await route.getInitialData(match.params);
-      const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
-
-      let dials = {};
+    [articleRegexPath, frontpageRegexPath],
+    async ({ url, headers }, res) => {
       try {
-        dials = await getDials();
-      } catch ({ message }) {
-        logger.error(`Error fetching Cosmos dials: ${message}`);
-      }
+        const { service, isAmp, route, match } = getRouteProps(routes, url);
+        const data = await route.getInitialData(match.params);
+        const { status } = data;
+        const bbcOrigin = headers['bbc-origin'];
 
-      res
-        .status(status)
-        .send(
-          await renderDocument(
-            url,
-            data,
-            routes,
-            bbcOrigin,
-            service,
-            isAmp,
-            dials,
-          ),
-        );
-    } catch ({ message, status }) {
-      // Return an internal server error for any uncaught errors
-      logger.error(`status: ${status || 500} - ${message}`);
-      res.status(500).send(message);
-    }
-  });
+        let dials = {};
+        try {
+          dials = await getDials();
+        } catch ({ message }) {
+          logger.error(`Error fetching Cosmos dials: ${message}`);
+        }
+
+        res
+          .status(status)
+          .send(
+            await renderDocument(
+              url,
+              data,
+              routes,
+              bbcOrigin,
+              service,
+              isAmp,
+              dials,
+            ),
+          );
+      } catch ({ message, status }) {
+        // Return an internal server error for any uncaught errors
+        logger.error(`status: ${status || 500} - ${message}`);
+        res.status(500).send(message);
+      }
+    },
+  );
 
 export default server;

@@ -11,20 +11,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -42,7 +28,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -69,8 +55,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -79,34 +65,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -121,20 +79,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -193,20 +137,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             "lineHeight": "20",
           },
         },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
         "trafalgar": Object {
           "groupA": Object {
             "fontSize": "20",
@@ -223,488 +153,57 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         },
       }
     }
+    visuallyHidden={false}
   >
     Top Stories
   </SectionLabel>
   <StoryPromoUl>
-    <StoryPromoLi>
-      <StoryPromo
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 1 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-            "indexImage": Object {
-              "altText": "Image Alt text 1",
-              "copyrightHolder": "Image provider 1",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 1",
-            "timestamp": 1557738768,
-          }
+    <StoryPromoLiContainer
+      item={
+        Object {
+          "headlines": Object {
+            "headline": "Top Story 1 headline",
+          },
+          "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+          "indexImage": Object {
+            "altText": "Image Alt text 1",
+            "copyrightHolder": "Image provider 1",
+            "height": 1152,
+            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "width": 2048,
+          },
+          "locators": Object {
+            "assetUri": "https://www.bbc.co.uk",
+          },
+          "summary": "Summary text 1",
+          "timestamp": 1557738768,
         }
-        lazyLoadImage={true}
-        script={
-          Object {
-            "atlas": Object {
-              "groupA": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupB": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-              "groupD": Object {
-                "fontSize": "140",
-                "lineHeight": "148",
-              },
-            },
-            "bodyCopy": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-            },
-            "brevier": Object {
-              "groupA": Object {
-                "fontSize": "14",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "13",
-                "lineHeight": "16",
-              },
-            },
-            "canon": Object {
-              "groupA": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-              "groupB": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupD": Object {
-                "fontSize": "44",
-                "lineHeight": "48",
-              },
-            },
-            "doublePica": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupD": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-            },
-            "elephant": Object {
-              "groupA": Object {
-                "fontSize": "60",
-                "lineHeight": "64",
-              },
-              "groupB": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupD": Object {
-                "fontSize": "116",
-                "lineHeight": "124",
-              },
-            },
-            "foolscap": Object {
-              "groupA": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupB": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupD": Object {
-                "fontSize": "56",
-                "lineHeight": "60",
-              },
-            },
-            "greatPrimer": Object {
-              "groupA": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupB": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-            },
-            "imperial": Object {
-              "groupA": Object {
-                "fontSize": "50",
-                "lineHeight": "54",
-              },
-              "groupB": Object {
-                "fontSize": "64",
-                "lineHeight": "72",
-              },
-              "groupD": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-            },
-            "longPrimer": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupB": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-            },
-            "minion": Object {
-              "groupA": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupD": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-            },
-            "paragon": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "22",
-                "lineHeight": "26",
-              },
-              "groupD": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-            },
-            "pica": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-            },
-            "royal": Object {
-              "groupA": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupB": Object {
-                "fontSize": "52",
-                "lineHeight": "60",
-              },
-              "groupD": Object {
-                "fontSize": "76",
-                "lineHeight": "84",
-              },
-            },
-            "trafalgar": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-              "groupD": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-            },
-          }
+      }
+      storyNumber={0}
+    />
+    <StoryPromoLiContainer
+      item={
+        Object {
+          "headlines": Object {
+            "headline": "Top Story 2 headline",
+          },
+          "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+          "indexImage": Object {
+            "altText": "Image Alt text 2",
+            "copyrightHolder": "Image provider 2",
+            "height": 1152,
+            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "width": 2048,
+          },
+          "locators": Object {
+            "assetUri": "https://www.bbc.co.uk",
+          },
+          "summary": "Summary text 2",
+          "timestamp": 1557738768,
         }
-      />
-    </StoryPromoLi>
-    <StoryPromoLi>
-      <StoryPromo
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 2 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-            "indexImage": Object {
-              "altText": "Image Alt text 2",
-              "copyrightHolder": "Image provider 2",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 2",
-            "timestamp": 1557738768,
-          }
-        }
-        lazyLoadImage={true}
-        script={
-          Object {
-            "atlas": Object {
-              "groupA": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupB": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-              "groupD": Object {
-                "fontSize": "140",
-                "lineHeight": "148",
-              },
-            },
-            "bodyCopy": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-            },
-            "brevier": Object {
-              "groupA": Object {
-                "fontSize": "14",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "13",
-                "lineHeight": "16",
-              },
-            },
-            "canon": Object {
-              "groupA": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-              "groupB": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupD": Object {
-                "fontSize": "44",
-                "lineHeight": "48",
-              },
-            },
-            "doublePica": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupD": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-            },
-            "elephant": Object {
-              "groupA": Object {
-                "fontSize": "60",
-                "lineHeight": "64",
-              },
-              "groupB": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupD": Object {
-                "fontSize": "116",
-                "lineHeight": "124",
-              },
-            },
-            "foolscap": Object {
-              "groupA": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupB": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupD": Object {
-                "fontSize": "56",
-                "lineHeight": "60",
-              },
-            },
-            "greatPrimer": Object {
-              "groupA": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupB": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-            },
-            "imperial": Object {
-              "groupA": Object {
-                "fontSize": "50",
-                "lineHeight": "54",
-              },
-              "groupB": Object {
-                "fontSize": "64",
-                "lineHeight": "72",
-              },
-              "groupD": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-            },
-            "longPrimer": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupB": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-            },
-            "minion": Object {
-              "groupA": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupD": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-            },
-            "paragon": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "22",
-                "lineHeight": "26",
-              },
-              "groupD": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-            },
-            "pica": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-            },
-            "royal": Object {
-              "groupA": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupB": Object {
-                "fontSize": "52",
-                "lineHeight": "60",
-              },
-              "groupD": Object {
-                "fontSize": "76",
-                "lineHeight": "84",
-              },
-            },
-            "trafalgar": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-              "groupD": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-            },
-          }
-        }
-      />
-    </StoryPromoLi>
+      }
+      storyNumber={1}
+    />
   </StoryPromoUl>
 </section>
 `;
@@ -720,20 +219,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -751,7 +236,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -778,8 +263,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -788,34 +273,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -830,20 +287,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -902,20 +345,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
             "lineHeight": "20",
           },
         },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
         "trafalgar": Object {
           "groupA": Object {
             "fontSize": "20",
@@ -932,6 +361,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
       }
     }
+    visuallyHidden={false}
   >
     Top Stories
   </SectionLabel>
@@ -959,20 +389,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     lazyLoadImage={true}
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -990,7 +406,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -1017,8 +433,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -1027,34 +443,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -1069,20 +457,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -1141,20 +515,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
             "lineHeight": "20",
           },
         },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
         "trafalgar": Object {
           "groupA": Object {
             "fontSize": "20",
@@ -1171,6 +531,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
       }
     }
+    topStory={true}
   />
 </section>
 `;
@@ -1186,20 +547,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     labelId="Top-Stories"
     script={
       Object {
-        "atlas": Object {
-          "groupA": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupB": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
-          },
-          "groupD": Object {
-            "fontSize": "140",
-            "lineHeight": "148",
-          },
-        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -1217,7 +564,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         "brevier": Object {
           "groupA": Object {
             "fontSize": "14",
-            "lineHeight": "16",
+            "lineHeight": "18",
           },
           "groupB": Object {
             "fontSize": "14",
@@ -1244,8 +591,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         },
         "doublePica": Object {
           "groupA": Object {
-            "fontSize": "20",
-            "lineHeight": "24",
+            "fontSize": "18",
+            "lineHeight": "22",
           },
           "groupB": Object {
             "fontSize": "20",
@@ -1254,34 +601,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "groupD": Object {
             "fontSize": "24",
             "lineHeight": "28",
-          },
-        },
-        "elephant": Object {
-          "groupA": Object {
-            "fontSize": "60",
-            "lineHeight": "64",
-          },
-          "groupB": Object {
-            "fontSize": "78",
-            "lineHeight": "84",
-          },
-          "groupD": Object {
-            "fontSize": "116",
-            "lineHeight": "124",
-          },
-        },
-        "foolscap": Object {
-          "groupA": Object {
-            "fontSize": "32",
-            "lineHeight": "36",
-          },
-          "groupB": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupD": Object {
-            "fontSize": "56",
-            "lineHeight": "60",
           },
         },
         "greatPrimer": Object {
@@ -1296,20 +615,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
-          },
-        },
-        "imperial": Object {
-          "groupA": Object {
-            "fontSize": "50",
-            "lineHeight": "54",
-          },
-          "groupB": Object {
-            "fontSize": "64",
-            "lineHeight": "72",
-          },
-          "groupD": Object {
-            "fontSize": "96",
-            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -1368,20 +673,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             "lineHeight": "20",
           },
         },
-        "royal": Object {
-          "groupA": Object {
-            "fontSize": "40",
-            "lineHeight": "44",
-          },
-          "groupB": Object {
-            "fontSize": "52",
-            "lineHeight": "60",
-          },
-          "groupD": Object {
-            "fontSize": "76",
-            "lineHeight": "84",
-          },
-        },
         "trafalgar": Object {
           "groupA": Object {
             "fontSize": "20",
@@ -1398,488 +689,57 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         },
       }
     }
+    visuallyHidden={false}
   >
     Top Stories
   </SectionLabel>
   <StoryPromoUl>
-    <StoryPromoLi>
-      <StoryPromo
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 1 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-            "indexImage": Object {
-              "altText": "Image Alt text 1",
-              "copyrightHolder": "Image provider 1",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 1",
-            "timestamp": 1557738768,
-          }
+    <StoryPromoLiContainer
+      item={
+        Object {
+          "headlines": Object {
+            "headline": "Top Story 1 headline",
+          },
+          "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+          "indexImage": Object {
+            "altText": "Image Alt text 1",
+            "copyrightHolder": "Image provider 1",
+            "height": 1152,
+            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "width": 2048,
+          },
+          "locators": Object {
+            "assetUri": "https://www.bbc.co.uk",
+          },
+          "summary": "Summary text 1",
+          "timestamp": 1557738768,
         }
-        lazyLoadImage={true}
-        script={
-          Object {
-            "atlas": Object {
-              "groupA": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupB": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-              "groupD": Object {
-                "fontSize": "140",
-                "lineHeight": "148",
-              },
-            },
-            "bodyCopy": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-            },
-            "brevier": Object {
-              "groupA": Object {
-                "fontSize": "14",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "13",
-                "lineHeight": "16",
-              },
-            },
-            "canon": Object {
-              "groupA": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-              "groupB": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupD": Object {
-                "fontSize": "44",
-                "lineHeight": "48",
-              },
-            },
-            "doublePica": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupD": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-            },
-            "elephant": Object {
-              "groupA": Object {
-                "fontSize": "60",
-                "lineHeight": "64",
-              },
-              "groupB": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupD": Object {
-                "fontSize": "116",
-                "lineHeight": "124",
-              },
-            },
-            "foolscap": Object {
-              "groupA": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupB": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupD": Object {
-                "fontSize": "56",
-                "lineHeight": "60",
-              },
-            },
-            "greatPrimer": Object {
-              "groupA": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupB": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-            },
-            "imperial": Object {
-              "groupA": Object {
-                "fontSize": "50",
-                "lineHeight": "54",
-              },
-              "groupB": Object {
-                "fontSize": "64",
-                "lineHeight": "72",
-              },
-              "groupD": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-            },
-            "longPrimer": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupB": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-            },
-            "minion": Object {
-              "groupA": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupD": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-            },
-            "paragon": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "22",
-                "lineHeight": "26",
-              },
-              "groupD": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-            },
-            "pica": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-            },
-            "royal": Object {
-              "groupA": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupB": Object {
-                "fontSize": "52",
-                "lineHeight": "60",
-              },
-              "groupD": Object {
-                "fontSize": "76",
-                "lineHeight": "84",
-              },
-            },
-            "trafalgar": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-              "groupD": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-            },
-          }
+      }
+      storyNumber={0}
+    />
+    <StoryPromoLiContainer
+      item={
+        Object {
+          "headlines": Object {
+            "headline": "Top Story 2 headline",
+          },
+          "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+          "indexImage": Object {
+            "altText": "Image Alt text 2",
+            "copyrightHolder": "Image provider 2",
+            "height": 1152,
+            "path": "/cpsprodpb/0A06/production/image.jpg",
+            "width": 2048,
+          },
+          "locators": Object {
+            "assetUri": "https://www.bbc.co.uk",
+          },
+          "summary": "Summary text 2",
+          "timestamp": 1557738768,
         }
-      />
-    </StoryPromoLi>
-    <StoryPromoLi>
-      <StoryPromo
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 2 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-            "indexImage": Object {
-              "altText": "Image Alt text 2",
-              "copyrightHolder": "Image provider 2",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 2",
-            "timestamp": 1557738768,
-          }
-        }
-        lazyLoadImage={true}
-        script={
-          Object {
-            "atlas": Object {
-              "groupA": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupB": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-              "groupD": Object {
-                "fontSize": "140",
-                "lineHeight": "148",
-              },
-            },
-            "bodyCopy": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "22",
-              },
-            },
-            "brevier": Object {
-              "groupA": Object {
-                "fontSize": "14",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "13",
-                "lineHeight": "16",
-              },
-            },
-            "canon": Object {
-              "groupA": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-              "groupB": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupD": Object {
-                "fontSize": "44",
-                "lineHeight": "48",
-              },
-            },
-            "doublePica": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupD": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-            },
-            "elephant": Object {
-              "groupA": Object {
-                "fontSize": "60",
-                "lineHeight": "64",
-              },
-              "groupB": Object {
-                "fontSize": "78",
-                "lineHeight": "84",
-              },
-              "groupD": Object {
-                "fontSize": "116",
-                "lineHeight": "124",
-              },
-            },
-            "foolscap": Object {
-              "groupA": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-              "groupB": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupD": Object {
-                "fontSize": "56",
-                "lineHeight": "60",
-              },
-            },
-            "greatPrimer": Object {
-              "groupA": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupB": Object {
-                "fontSize": "18",
-                "lineHeight": "22",
-              },
-              "groupD": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-            },
-            "imperial": Object {
-              "groupA": Object {
-                "fontSize": "50",
-                "lineHeight": "54",
-              },
-              "groupB": Object {
-                "fontSize": "64",
-                "lineHeight": "72",
-              },
-              "groupD": Object {
-                "fontSize": "96",
-                "lineHeight": "104",
-              },
-            },
-            "longPrimer": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupB": Object {
-                "fontSize": "15",
-                "lineHeight": "18",
-              },
-              "groupD": Object {
-                "fontSize": "14",
-                "lineHeight": "18",
-              },
-            },
-            "minion": Object {
-              "groupA": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupB": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-              "groupD": Object {
-                "fontSize": "12",
-                "lineHeight": "16",
-              },
-            },
-            "paragon": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "22",
-                "lineHeight": "26",
-              },
-              "groupD": Object {
-                "fontSize": "28",
-                "lineHeight": "32",
-              },
-            },
-            "pica": Object {
-              "groupA": Object {
-                "fontSize": "15",
-                "lineHeight": "20",
-              },
-              "groupB": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-              "groupD": Object {
-                "fontSize": "16",
-                "lineHeight": "20",
-              },
-            },
-            "royal": Object {
-              "groupA": Object {
-                "fontSize": "40",
-                "lineHeight": "44",
-              },
-              "groupB": Object {
-                "fontSize": "52",
-                "lineHeight": "60",
-              },
-              "groupD": Object {
-                "fontSize": "76",
-                "lineHeight": "84",
-              },
-            },
-            "trafalgar": Object {
-              "groupA": Object {
-                "fontSize": "20",
-                "lineHeight": "24",
-              },
-              "groupB": Object {
-                "fontSize": "24",
-                "lineHeight": "28",
-              },
-              "groupD": Object {
-                "fontSize": "32",
-                "lineHeight": "36",
-              },
-            },
-          }
-        }
-      />
-    </StoryPromoLi>
+      }
+      storyNumber={1}
+    />
   </StoryPromoUl>
 </section>
 `;

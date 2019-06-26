@@ -12,6 +12,10 @@ describe('deepClone', () => {
     expect(deepClone(fixtureData).bar.baz).toEqual(456);
   });
 
+  it('should respect nulls', () => {
+    expect(deepClone({ nullProperty: null }).nullProperty).toBe(null);
+  });
+
   it('should return a NEW object', () => {
     const newObj = deepClone(fixtureData);
     newObj.foo = 'overridden value';

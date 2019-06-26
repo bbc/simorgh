@@ -22,8 +22,8 @@ exports[`should render Copyright with news service context 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
-  right: 0;
   margin: 0;
+  left: 0;
 }
 
 <p
@@ -61,8 +61,8 @@ exports[`should render Copyright with persian service context 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
-  right: 0;
   margin: 0;
+  right: 0;
 }
 
 <p
@@ -74,6 +74,10 @@ exports[`should render Copyright with persian service context 1`] = `
   >
      ، منبع تصویر
   </span>
-  توصیف چیزی که اتفاق می افتد
+  <span
+    lang="en-GB"
+  >
+    Getty Images
+  </span>
 </p>
 `;
