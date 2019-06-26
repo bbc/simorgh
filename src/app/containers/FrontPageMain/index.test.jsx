@@ -49,7 +49,7 @@ describe('FrontPageMain', () => {
       expect(span.textContent).toEqual('BBC News, Ìgbò - Akụkọ');
 
       const langSpan = span.querySelector('span');
-      expect(langSpan.getAttribute('lang')).toBeDefined();
+      expect(langSpan.getAttribute('lang')).toEqual('en-GB');
     });
 
     it('should render front page sections', () => {
