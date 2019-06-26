@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
 import cypressConfig from '../cypress/support/config';
+import wsConfig from '../cypress/support/worldServices';
 
 let browser;
 let page;
@@ -7,13 +8,26 @@ let requests = [];
 
 const config = cypressConfig('local');
 
-const services = [
-  { service: 'news', path: `/news/articles/${config.assets.news}` },
-  { service: 'persian', path: `/persian/articles/${config.assets.persian}` },
-  { service: 'igbo', path: '/igbo' },
-  { service: 'yoruba', path: '/yoruba' },
-  { service: 'pidgin', path: '/pidgin' },
-];
+const services = [];
+
+// This logic is required to combine the service configs untill this is done in a follow up PR
+const rawConfig = {
+  ...wsConfig,
+  news: config.assets.news,
+  persian: config.assets.persian,
+};
+
+Object.keys(rawConfig).forEach(service => {
+  if (typeof rawConfig[service] === 'object') {
+    services.push({ service, path: rawConfig[service].url });
+  } else {
+    services.push({
+      service,
+      path: `/${service}/articles/${rawConfig[service]}`,
+    });
+  }
+});
+// End of logic to be removed.
 
 describe('Js bundle requests', () => {
   beforeEach(async () => {
