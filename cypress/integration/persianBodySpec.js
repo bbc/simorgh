@@ -26,7 +26,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div').eq(2));
   });
 
   it('should have an image copyright label with styling', () => {
@@ -41,7 +41,7 @@ describeForLocalAndTest('Article Body Tests', () => {
     const imageHasNotLoaded = getElement('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = getElement('div div div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 

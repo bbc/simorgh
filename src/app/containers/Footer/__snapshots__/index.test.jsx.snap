@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-.c8 {
+.c9 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -10,7 +10,7 @@ exports[`FooterContainer should render correctly 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -19,13 +19,13 @@ exports[`FooterContainer should render correctly 1`] = `
   display: inline;
 }
 
-.c7:hover .c9,
-.c7:focus .c9 {
+.c8:hover .c10,
+.c8:focus .c10 {
   padding-bottom: 2px;
   border-bottom: 2px solid #FFFFFF;
 }
 
-.c5 {
+.c6 {
   border-bottom: 1px solid #3F3F42;
   display: grid;
   grid-auto-flow: column;
@@ -34,39 +34,33 @@ exports[`FooterContainer should render correctly 1`] = `
   padding: 0 0 0.5rem;
 }
 
-.c5 > li:first-child {
+.c6 > li:first-child {
   border-bottom: 1px solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;
 }
 
-.c6 {
+.c7 {
   min-width: 50%;
 }
 
-.c3 {
+.c4 {
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
 }
 
-.c4 {
+.c5 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c10 {
+.c11 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
-}
-
-.c1 {
-  background-color: #B80000;
-  height: 5rem;
-  width: 100%;
 }
 
 .c2 {
@@ -74,18 +68,33 @@ exports[`FooterContainer should render correctly 1`] = `
   margin: 0 auto;
 }
 
+.c1 {
+  background-color: #B80000;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  max-width: NaNrem;
+  min-width: NaNrem;
+}
+
 .c0 {
   padding-top: 2rem;
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c6 {
     grid-auto-flow: row;
   }
 }
 
 @media (min-width:15rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -93,7 +102,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -101,7 +110,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -109,7 +118,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -117,55 +126,44 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports not (display:grid) {
-  .c5 > li:first-child {
+  .c6 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c6 {
+  .c7 {
     display: inline-block;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c4 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c3 {
+  .c4 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 0.8125rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
   .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c1 {
+    height: 5rem;
     padding: 0 1rem;
   }
 }
@@ -179,28 +177,33 @@ exports[`FooterContainer should render correctly 1`] = `
   >
     <div
       className="c2"
-    />
+    >
+      <a
+        className="c3"
+        href="/undefined"
+      />
+    </div>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <ul
-        className="c5"
+        className="c6"
         role="list"
       >
         <li
-          className="c6"
+          className="c7"
           role="listitem"
         >
           <a
-            className="c7 c8"
+            className="c8 c9"
             href="https://www.bbc.com/yoruba/institutional-48528718"
           >
             <span
-              className="c9"
+              className="c10"
             >
               Why you can trust the BBC
             </span>
@@ -208,15 +211,15 @@ exports[`FooterContainer should render correctly 1`] = `
         </li>
       </ul>
       <p
-        className="c10"
+        className="c11"
       >
         © 3000 BBC. The BBC is not responsible for the content of external sites. 
         <a
-          className="c7 c11"
+          className="c8 c12"
           href="https://www.bbc.co.uk/help/web/links/"
         >
           <span
-            className="c9"
+            className="c10"
           >
             Read about our approach to external linking.
           </span>
