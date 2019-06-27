@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import * as SectionLabel from '@bbc/psammead-section-label';
 import newsConfig from '../../lib/config/services/news';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import FrontPageSection from '.';
@@ -20,7 +21,7 @@ const group = {
       summary: 'Summary text 1',
       timestamp: 1557738768,
       indexImage: {
-        path: '/cpsprodpb/0A06/production/image.jpg',
+        path: '/cpsprodpb/0A06/production/image1.jpg',
         height: 1152,
         width: 2048,
         altText: 'Image Alt text 1',
@@ -38,7 +39,7 @@ const group = {
       summary: 'Summary text 2',
       timestamp: 1557738768,
       indexImage: {
-        path: '/cpsprodpb/0A06/production/image.jpg',
+        path: '/cpsprodpb/0A06/production/image2.jpg',
         height: 1152,
         width: 2048,
         altText: 'Image Alt text 2',
@@ -153,18 +154,53 @@ describe('FrontPageSection Container', () => {
 
     shouldShallowMatchSnapshot(
       'should render correctly for canonical',
-      <FrontPageSection group={group} />,
+      <FrontPageSection group={group} sectionNumber={0} />,
     );
 
     shouldShallowMatchSnapshot(
       'should render without a bar',
-      <FrontPageSection group={group} bar={false} />,
+      <FrontPageSection group={group} bar={false} sectionNumber={1} />,
     );
 
     shouldShallowMatchSnapshot(
       'should render with only one item',
-      <FrontPageSection group={hasOneItem} />,
+      <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
+  });
+
+  describe('Section Label visuallyHidden prop', () => {
+    afterEach(() => {
+      SectionLabel.default.mockClear();
+    });
+
+    beforeEach(() => {
+      jest.spyOn(SectionLabel, 'default');
+      useContext.mockReturnValue(newsConfig);
+    });
+
+    it('should be called with true when sectionNumber === 0', () => {
+      render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasOneItem} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
+        true,
+      );
+    });
+
+    it('should be called with false when sectionNumber !== 0', () => {
+      render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={hasOneItem} sectionNumber={1} />
+        </ServiceContextProvider>,
+      );
+
+      expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
+        false,
+      );
+    });
   });
 
   describe('assertions', () => {
@@ -179,7 +215,7 @@ describe('FrontPageSection Container', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
+          <FrontPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -194,7 +230,7 @@ describe('FrontPageSection Container', () => {
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} />
+          <FrontPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
       const section = container.getElementsByTagName('section')[0];
@@ -208,7 +244,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there are no items', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoItems} />
+          <FrontPageSection group={hasNoItems} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -220,7 +256,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there is no strapline', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoStrapline} />
+          <FrontPageSection group={hasNoStrapline} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -232,12 +268,31 @@ describe('FrontPageSection Container', () => {
     it('should not render the story promo inside a list when only one item exists', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOneItem} />
+          <FrontPageSection group={hasOneItem} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
       expect(container.getElementsByTagName('ul')).toHaveLength(0);
       expect(container.getElementsByTagName('li')).toHaveLength(0);
+    });
+
+    it('should not lazyload the story promo image if it is a top story', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={group} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      const images = container.getElementsByTagName('img');
+      const image = images[0];
+
+      // When lazy loading an image, it get placed inside <noscript> and wont be accessible on the DOM
+      // Even though we have 2 items we only expect 1 image to be accessible on the DOM
+      // The first image being a top story won't be lazyloaded and will be the only image accessible on the DOM
+      expect(images).toHaveLength(1);
+      expect(image.getAttribute('src')).toEqual(
+        'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
+      );
     });
   });
 });

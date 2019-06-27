@@ -11,22 +11,25 @@ import {
   audioClipGlobalGuidanceBlock,
   audioClipNonUkBlock,
   audioClipUkOnlyBlock,
-  audioEpisodeGlobalBlock,
 } from './helpers/fixtures';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const generateFixtureData = ({ platform, blocks }) => (
-  <RequestContextProvider
-    id="c0000000000o"
-    isUK
-    lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
-    pageType="article"
-    platform={platform}
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
-  >
-    <VideoContainer blocks={blocks} />
-  </RequestContextProvider>
+  <ServiceContextProvider service="news">
+    <RequestContextProvider
+      env="test"
+      id="c0000000000o"
+      isUK
+      lang="en-gb"
+      origin="https://www.test.bbc.co.uk"
+      pageType="article"
+      platform={platform}
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier="news.articles.c0000000000o.page"
+    >
+      <VideoContainer blocks={blocks} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
 );
 
 generateFixtureData.propTypes = {
@@ -45,13 +48,16 @@ export const NoData = ({ platform }) =>
 export const NoAresMedia = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [captionBlock],
+    blocks: [captionBlock('No Ares Media')],
   });
 
 export const VideoClipGlobalWithCaption = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [videoClipGlobalGuidanceBlock, captionBlock],
+    blocks: [
+      videoClipGlobalGuidanceBlock,
+      captionBlock('Video Clip Global with Caption'),
+    ],
   });
 
 export const VideoClipGlobalWithoutCaption = ({ platform }) =>
@@ -78,10 +84,13 @@ export const VideoClipNonUk = ({ platform }) =>
     blocks: [videoClipNonUkBlock],
   });
 
-export const AudioClipGlobalGuidance = ({ platform }) =>
+export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
   generateFixtureData({
     platform,
-    blocks: [audioClipGlobalGuidanceBlock],
+    blocks: [
+      audioClipGlobalGuidanceBlock,
+      captionBlock('Audio Clip Global Guidance with Caption'),
+    ],
   });
 
 export const AudioClipUk = ({ platform }) =>
@@ -94,10 +103,4 @@ export const AudioClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipNonUkBlock],
-  });
-
-export const AudioEpisodeGlobal = ({ platform }) =>
-  generateFixtureData({
-    platform,
-    blocks: [audioEpisodeGlobalBlock],
   });
