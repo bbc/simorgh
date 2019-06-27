@@ -46,26 +46,23 @@ const getMetaTags = (metaTags, showArticleTags) => {
 const iconAssetUrl = (service, size) =>
   `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
 
-const getIconSizes = iconType => {
-  const appleTouchIconSizes = [
-    '72x72',
-    '96x96',
-    '128x128',
-    '144x144',
-    '152x152',
-    '192x192',
-    '384x384',
-    '512x512',
-  ];
-  const iconSizes = ['72x72', '96x96', '192x192'];
-
-  return iconType === 'apple-touch-icon' ? appleTouchIconSizes : iconSizes;
-};
-
 const getIconLinks = (service, iconType) => {
-  const availableIconSizes = getIconSizes(iconType);
+  const iconSizes = {
+    'apple-touch-icon': [
+      '72x72',
+      '96x96',
+      '128x128',
+      '144x144',
+      '152x152',
+      '192x192',
+      '384x384',
+      '512x512',
+    ],
+    icon: ['72x72', '96x96', '192x192'],
+  };
+
   if (iconType === 'apple-touch-icon') {
-    return availableIconSizes.map(size => (
+    return iconSizes[iconType].map(size => (
       <link
         rel="apple-touch-icon"
         sizes={size}
@@ -73,7 +70,7 @@ const getIconLinks = (service, iconType) => {
       />
     ));
   }
-  return availableIconSizes.map(size => (
+  return iconSizes.icon.map(size => (
     <link
       rel="icon"
       type="image/png"
