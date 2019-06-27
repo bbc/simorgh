@@ -8,7 +8,7 @@ import { describeForLocalOnly } from '../support/limitEnvRuns';
 // NB: If these tests start failing unexpectedly it's a good sign that the dom is being
 // cleared during hydration. React won't render noscript tags on the client so if they
 // get cleared during hydration, the following render wont re-add them.
-// See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or 
+// See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
 // https://github.com/bbc/simorgh/pull/1872for more infomation.
 
 describe('Article ATI for News', () => {
