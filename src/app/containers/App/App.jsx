@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
+import usePrevious from '../../lib/utilities/usePrevious';
 
 export const App = ({ routes, location, initialData, bbcOrigin }) => {
   const {
@@ -66,15 +67,9 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     }
   }, [routes, location.pathname]);
 
-  const pathRef = useRef(null);
-  const [previousPath, setPath] = useState(null);
+  const previousPath = usePrevious(location.pathname);
 
-  useEffect(() => {
-    pathRef.current = location.pathname;
-    return () => {
-      setPath(pathRef.current);
-    };
-  }, [location.pathname]);
+  console.log('stat', previousPath);
 
   return renderRoutes(routes, { ...state, bbcOrigin, previousPath });
 };
