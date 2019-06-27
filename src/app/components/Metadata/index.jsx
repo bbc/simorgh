@@ -46,6 +46,43 @@ const getMetaTags = (metaTags, showArticleTags) => {
 const iconAssetUrl = (service, size) =>
   `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
 
+const getIconSizes = iconType => {
+  const appleTouchIconSizes = [
+    '72x72',
+    '96x96',
+    '128x128',
+    '144x144',
+    '152x152',
+    '192x192',
+    '384x384',
+    '512x512',
+  ];
+  const iconSizes = ['72x72', '96x96', '192x192'];
+
+  return iconType === 'apple-touch-icon' ? appleTouchIconSizes : iconSizes;
+};
+
+const getIconLinks = (service, iconType) => {
+  const availableIconSizes = getIconSizes(iconType);
+  if (iconType === 'apple-touch-icon') {
+    return availableIconSizes.map(size => (
+      <link
+        rel="apple-touch-icon"
+        sizes={size}
+        href={iconAssetUrl(service, size)}
+      />
+    ));
+  }
+  return availableIconSizes.map(size => (
+    <link
+      rel="icon"
+      type="image/png"
+      href={iconAssetUrl(service, size)}
+      sizes={size}
+    />
+  ));
+};
+
 const Metadata = ({
   isAmp,
   alternateLinks,
@@ -135,64 +172,8 @@ const Metadata = ({
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
-      <link
-        rel="apple-touch-icon"
-        sizes="72x72"
-        href={iconAssetUrl(service, '72x72')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="96x96"
-        href={iconAssetUrl(service, '96x96')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="128x128"
-        href={iconAssetUrl(service, '128x128')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="144x144"
-        href={iconAssetUrl(service, '144x144')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="152x152"
-        href={iconAssetUrl(service, '152x152')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="192x192"
-        href={iconAssetUrl(service, '192x192')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="384x384"
-        href={iconAssetUrl(service, '384x384')}
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="512x512"
-        href={iconAssetUrl(service, '512x512')}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href={iconAssetUrl(service, '72x72')}
-        sizes="72x72"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href={iconAssetUrl(service, '96x96')}
-        sizes="96x96"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href={iconAssetUrl(service, '192x192')}
-        sizes="192x192"
-      />
+      {getIconLinks(service, 'apple-touch-icon')}
+      {getIconLinks(service, 'icon')}
       <link
         rel="apple-touch-startup-image"
         href={iconAssetUrl(service, '512x512')}
