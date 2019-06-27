@@ -19,7 +19,6 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     pageType,
     loading: false,
     error: null,
-    previousPath: null,
   });
 
   const isInitialMount = useRef(true);

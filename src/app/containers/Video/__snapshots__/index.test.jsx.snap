@@ -358,6 +358,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -791,6 +792,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -1256,6 +1258,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -1689,6 +1692,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -2122,6 +2126,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -2587,6 +2592,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -3020,6 +3026,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -3453,6 +3460,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -3918,6 +3926,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -4385,6 +4394,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -4824,6 +4834,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -5318,6 +5329,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -5812,6 +5824,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -6245,6 +6258,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -6710,6 +6724,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >
@@ -7177,6 +7192,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
+    previousPath={null}
     statsDestination="NEWS_PS_TEST"
     statsPageIdentifier="news.articles.c0000000000o.page"
   >

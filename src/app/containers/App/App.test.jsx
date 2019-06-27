@@ -50,6 +50,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'news',
+      previousPath: null,
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -98,6 +99,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
+              previousPath: 'pathnameOne',
             },
           );
 
@@ -113,6 +115,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
+              previousPath: 'pathnameOne',
             },
           );
         });
@@ -146,6 +149,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
+              previousPath: 'pathnameThree',
             },
           );
 
@@ -162,6 +166,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
+              previousPath: 'pathnameThree',
             },
           );
         });

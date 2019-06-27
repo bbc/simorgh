@@ -13,6 +13,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
       origin="https://www.bbc.com"
       pageType="article"
       platform="amp"
+      previousPath={null}
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o.page"
     >
