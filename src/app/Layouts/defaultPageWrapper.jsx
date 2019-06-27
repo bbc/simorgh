@@ -28,11 +28,10 @@ const PageWithRequestContext = ({
   service,
 }) => {
   const { lang } = useContext(ServiceContext);
-  const articleLang =
-    pageType === 'article'
+  const getLangByPageType = type =>
+    type === 'article'
       ? deepGet(['pageData', 'metadata', 'passport', 'language'], data)
-      : false;
-  const getLangByPageType = type => (type === 'article' ? articleLang : lang);
+      : lang;
 
   return (
     <RequestContextProvider
