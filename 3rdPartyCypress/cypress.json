@@ -1,4 +1,4 @@
 {
-	"video": false,
-	"screenshotOnRunFailure": false
+  "video": false,
+  "screenshotOnRunFailure": false
 }
