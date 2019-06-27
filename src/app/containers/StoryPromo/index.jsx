@@ -60,7 +60,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
   const timestamp = deepGet(['timestamp'], item);
-  const [enabled] = useFeatureFlag('topStoryPromo');
+  const [promoEnabled] = useFeatureFlag('topStoryPromo');
 
   if (!headline || !url) {
     return null;
@@ -102,7 +102,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       image={Image}
       info={Info}
       mediaIndicator={<MediaIndicator item={item} />}
-      topStory={enabled ? topStory : false}
+      topStory={promoEnabled ? topStory : false}
     />
   );
 };

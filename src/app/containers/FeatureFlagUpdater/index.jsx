@@ -11,7 +11,7 @@ const FeatureFlagUpdater = () => {
   // this function shouldnt live here, I'd like to see a custom hook that can be used for fetching data client side.
   const fetchData = async () => {
     // fetch from temp endpoint as toggles api is restricted based on the origin of the request
-    const res = await fetch('http://www.mocky.io/v2/5d1273b53100001ec508d371');
+    const res = await fetch('http://www.mocky.io/v2/5d133cc00e0000b256b4a37d');
     res
       .json()
       .then(res => {

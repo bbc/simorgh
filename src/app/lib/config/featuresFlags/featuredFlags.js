@@ -7,7 +7,7 @@ const featureFlags = {
     enabled: true,
   },
   topStoryPromo: {
-    enabled: false,
+    enabled: true,
   },
 };
 
