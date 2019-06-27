@@ -1,10 +1,9 @@
 import React from 'react';
-// import { string } from 'prop-types';
 import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
 import mediatorURL from './helpers/mediatorUrl';
 
-import { videoComponentPropTypes } from '../../models/propTypes';
+import { videoPropTypes } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
@@ -65,6 +64,7 @@ const Canonical = ({ blocks }) => {
       },
     },
   };
+
   return (
     <Video
       id={id}
@@ -82,7 +82,7 @@ const Canonical = ({ blocks }) => {
 };
 
 Canonical.propTypes = {
-  ...videoComponentPropTypes,
+  ...videoPropTypes,
 };
 
 export default Canonical;
