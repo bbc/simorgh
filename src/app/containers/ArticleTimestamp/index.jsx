@@ -12,31 +12,37 @@ import {
 } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const { script } = useContext(ServiceContext);
+  const { script, datetimeLocale } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
   }
 
+  const timestampProps = {
+    dateTimeFormat: formatDateNumeric,
+    script,
+    locale: datetimeLocale,
+  };
+
+  const firstPublishedProps = {
+    timestamp: firstPublished,
+    format: formatType({ firstPublished }),
+    isRelative: isFirstRelative(firstPublished, lastPublished),
+  };
+
+  const lastPublishedProps = {
+    timestamp: lastPublished,
+    format: formatType({ lastPublished, firstPublished }),
+    isRelative: isLastRelative(lastPublished),
+    prefix: 'Updated',
+  };
+
   return (
     <PopOutGridItemMedium>
-      <Timestamp
-        timestamp={firstPublished}
-        dateTimeFormat={formatDateNumeric}
-        format={formatType({ firstPublished })}
-        isRelative={isFirstRelative(firstPublished, lastPublished)}
-        script={script}
-      />
-      {firstPublished !== lastPublished ? (
-        <Timestamp
-          timestamp={lastPublished}
-          dateTimeFormat={formatDateNumeric}
-          format={formatType({ lastPublished, firstPublished })}
-          isRelative={isLastRelative(lastPublished)}
-          prefix="Updated"
-          script={script}
-        />
-      ) : null}
+      <Timestamp {...timestampProps} {...firstPublishedProps} />
+      {firstPublished !== lastPublished && (
+        <Timestamp {...timestampProps} {...lastPublishedProps} />
+      )}
     </PopOutGridItemMedium>
   );
 };
