@@ -31,6 +31,7 @@ storiesOf('Front Page', module)
         isAmp={false}
         loading={false}
         error=""
+        pageType="frontPage"
       />
     );
   })
@@ -49,6 +50,7 @@ storiesOf('Front Page', module)
         isAmp={false}
         loading={false}
         error=""
+        pageType="frontPage"
       />
     );
   })
@@ -67,6 +69,7 @@ storiesOf('Front Page', module)
         isAmp={false}
         loading={false}
         error=""
+        pageType="frontPage"
       />
     );
   });
