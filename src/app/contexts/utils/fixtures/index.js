@@ -1,5 +1,8 @@
 const dynamicServiceFixtureData = {
-  fooService: () => import('./fooService.js'),
+  fooService: {
+    loader: () => import('./fooService.js'),
+    webpack: () => [require.resolveWeak('./fooService.js')],
+  },
 };
 
 export default dynamicServiceFixtureData;

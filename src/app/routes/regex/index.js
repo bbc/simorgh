@@ -1,4 +1,4 @@
-import services from '../../lib/config/services/async';
+import services from '../../lib/config/services/loadableConfig';
 
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
