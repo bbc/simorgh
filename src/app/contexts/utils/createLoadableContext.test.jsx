@@ -30,5 +30,5 @@ it(`should pass fixture data as context from dynamic service`, async () => {
 
   await waitForElement(() => getByText(expectedFixtureText));
 
-  expect(getByText(expectedFictureText)).toBeTruthy();
+  expect(getByText(expectedFixtureText)).toBeTruthy();
 });
