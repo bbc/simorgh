@@ -65,6 +65,7 @@ const PageWithRequestContext = ({
 PageWithRequestContext.propTypes = {
   children: node.isRequired,
   env: string.isRequired,
+  data: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
   isUK: bool.isRequired,
