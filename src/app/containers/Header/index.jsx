@@ -5,10 +5,11 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
+  const borderBottom = pageType !== 'frontPage';
 
   return (
     <header role="banner">
-      <BrandContainer {...(pageType !== 'frontPage' && { isHeader: true })} />
+      <BrandContainer isHeader={borderBottom} />
       {pageType === 'frontPage' && <NavigationContainer />}
     </header>
   );
