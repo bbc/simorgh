@@ -69,8 +69,6 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
 
   const previousPath = usePrevious(location.pathname);
 
-  console.log('stat', previousPath);
-
   return renderRoutes(routes, { ...state, bbcOrigin, previousPath });
 };
 
