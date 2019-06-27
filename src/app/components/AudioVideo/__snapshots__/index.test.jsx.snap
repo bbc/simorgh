@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video with data should render the video with valid props 1`] = `
+exports[`AudioVideo with data should render the video with valid props 1`] = `
 <React.Fragment>
   <HelmetWrapper
     defer={true}
