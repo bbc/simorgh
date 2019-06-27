@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 const stories = storiesOf('Navigation', module);
 
 Object.keys(services)
-  .filter(service => ['default', 'news', 'persian'].indexOf(service) === -1)
+  .filter(service => services[service].navigation)
   .forEach(service => {
     stories.add(service, () => (
       <ServiceContextProvider service={service}>
