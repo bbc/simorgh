@@ -1,13 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import 'moment/locale/en-gb';
+import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  datetimeLocale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
   serviceLocalizedName: 'Pidgin',

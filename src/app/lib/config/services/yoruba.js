@@ -1,13 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import 'moment/locale/en-gb';
+import 'moment/locale/yo';
 
 const yoruba = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  datetimeLocale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
   serviceLocalizedName: 'Yorùbá',

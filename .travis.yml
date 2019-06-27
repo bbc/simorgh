@@ -33,6 +33,14 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+    - stage: test
+      if: branch = latest AND type = push
+      name: "Test third party dependencies" 
+      install: npm install cypress@latest
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run cypress:3rdParty
 notifications:
   email: false
   slack:
