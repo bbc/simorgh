@@ -3,7 +3,10 @@ import {
   hasNoscriptImgAtiUrl,
   hasAmpAnalyticsAtiUrl,
 } from '../support/bodyTestHelper';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import {
+  describeForLocalOnly,
+  describeForLocalAndTest,
+} from '../support/limitEnvRuns';
 
 // NB: If these tests start failing unexpectedly it's a good sign that the dom is being
 // cleared during hydration. React won't render noscript tags on the client so if they
@@ -19,7 +22,7 @@ describe('Article ATI for News', () => {
     });
   });
   describe('AMP page', () => {
-    it('should have a noscript tag with an 1px image with the ati url', () => {
+    it('should have an amp-analytics tag with the ati url', () => {
       cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
       hasAmpAnalyticsAtiUrl('');
     });
@@ -34,8 +37,23 @@ describeForLocalOnly('ATI for Persian', () => {
     });
   });
   describe('AMP page', () => {
-    it('should have a noscript tag with an 1px image with the ati url', () => {
+    it('should have an amp-analytics tag with the ati url', () => {
       cy.visit(`/persian/articles/${config.assets.persian}.amp`);
+      hasAmpAnalyticsAtiUrl(config.atiAnalyticsWSBucket);
+    });
+  });
+});
+
+describeForLocalAndTest('ATI for Pidgin front page', () => {
+  describe('Canonical page', () => {
+    it('should have a noscript tag with an 1px image with the ati url', () => {
+      cy.visit(`/pidgin`);
+      hasNoscriptImgAtiUrl(config.atiAnalyticsWSBucket);
+    });
+  });
+  describe('AMP page', () => {
+    it('should have an amp-analytics tag with the ati url', () => {
+      cy.visit(`/pidgin.amp`);
       hasAmpAnalyticsAtiUrl(config.atiAnalyticsWSBucket);
     });
   });
