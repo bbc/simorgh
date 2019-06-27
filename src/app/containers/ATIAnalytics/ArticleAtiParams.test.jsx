@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from './ArticleAtiParams';
 import * as atiUrl from './atiUrl';
+import * as commonTestUtils from '../../lib/analyticsUtils';
 import * as testUtils from '../../lib/analyticsUtils/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -82,8 +83,8 @@ describe('ArticleAtiParams', () => {
       testUtils.getLanguage = jest.fn();
       testUtils.getPageIdentifier = jest.fn();
       testUtils.getPromoHeadline = jest.fn();
-      testUtils.getPublishedDatetime = jest.fn();
       testUtils.getThingAttributes = jest.fn();
+      commonTestUtils.getPublishedDatetime = jest.fn();
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
@@ -107,12 +108,12 @@ describe('ArticleAtiParams', () => {
       );
       expect(testUtils.getPromoHeadline).toHaveBeenCalledTimes(1);
       expect(testUtils.getPromoHeadline).toHaveBeenCalledWith(mockArticleData);
-      expect(testUtils.getPublishedDatetime).toHaveBeenCalledTimes(2);
-      expect(testUtils.getPublishedDatetime).toHaveBeenCalledWith(
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledTimes(2);
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
         'firstPublished',
         mockArticleData,
       );
-      expect(testUtils.getPublishedDatetime).toHaveBeenCalledWith(
+      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
         'lastPublished',
         mockArticleData,
       );
