@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
-import { ServiceContextProvider } from '../contexts/ServiceContext';
+import {
+  ServiceContextProvider,
+  ServiceContext,
+} from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
@@ -11,16 +14,72 @@ import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdent
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
+import deepGet from '../lib/utilities/deepGet';
 
-const PageWrapper = ({
-  bbcOrigin,
+const PageWithRequestContext = ({
   children,
+  env,
   id,
-  service,
   isAmp,
+  isUK,
+  origin,
   pageType,
-  lang,
+  service,
 }) => {
+  const lang = useContext(ServiceContext);
+  const articleLang =
+    pageType === 'article'
+      ? deepGet(
+          ['props', 'data', 'pageData', 'metadata', 'passport', 'language'],
+          children,
+        )
+      : false;
+
+  return (
+    <RequestContextProvider
+      env={env}
+      id={id}
+      isUK={isUK}
+      lang={articleLang || lang}
+      origin={origin}
+      pageType={pageType}
+      platform={isAmp ? 'amp' : 'canonical'}
+      statsDestination={getStatsDestination({
+        isUK,
+        env,
+        service,
+      })}
+      statsPageIdentifier={getStatsPageIdentifier({
+        pageType,
+        service,
+        id,
+      })}
+    >
+      <ManifestContainer />
+      <ConsentBanner />
+      <HeaderContainer />
+      {children}
+      <FooterContainer />
+    </RequestContextProvider>
+  );
+};
+
+PageWithRequestContext.propTypes = {
+  children: node.isRequired,
+  env: string.isRequired,
+  id: string,
+  isAmp: bool.isRequired,
+  isUK: bool.isRequired,
+  origin: string.isRequired,
+  pageType: string.isRequired,
+  service: string.isRequired,
+};
+
+PageWithRequestContext.defaultProps = {
+  id: null,
+};
+
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
 
@@ -28,31 +87,16 @@ const PageWrapper = ({
     <Fragment>
       <ServiceContextProvider service={service}>
         <GlobalStyle />
-        <RequestContextProvider
-          env={env}
-          id={id}
-          isUK={isUK}
-          lang={lang}
-          origin={origin}
-          pageType={pageType}
-          platform={isAmp ? 'amp' : 'canonical'}
-          statsDestination={getStatsDestination({
-            isUK,
-            env,
-            service,
-          })}
-          statsPageIdentifier={getStatsPageIdentifier({
-            pageType,
-            service,
-            id,
-          })}
-        >
-          <ManifestContainer />
-          <ConsentBanner />
-          <HeaderContainer />
-          {children}
-          <FooterContainer />
-        </RequestContextProvider>
+        {PageWithRequestContext({
+          children,
+          env,
+          id,
+          isAmp,
+          isUK,
+          origin,
+          pageType,
+          service,
+        })}
       </ServiceContextProvider>
     </Fragment>
   );
@@ -65,7 +109,6 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
-  lang: string.isRequired,
 };
 
 PageWrapper.defaultProps = {
