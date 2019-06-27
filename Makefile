@@ -12,17 +12,18 @@ installProd:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	sh -e ./scripts/xvfb start;
-	sleep 3;
-	npm run test:e2e:storybook:ci;
-	sh -e ./scripts/xvfb stop;
+	xvfb-run npm run test:e2e:storybook:ci;
+	# sh -e ./scripts/xvfb start;
+	# sleep 3;
+	# npm run test:e2e:storybook:ci;
+	# sh -e ./scripts/xvfb stop;
 
 productionTests:
-	npm run build;
-	sh -e ./scripts/xvfb start;
-	sleep 3;
-	npm run test:prod:ci;
-	sh -e ./scripts/xvfb stop;
+	npm run build && xvfb-run npm run test:prod:ci;
+	# sh -e ./scripts/xvfb start;
+	# sleep 3;
+	# npm run test:prod:ci;
+	# sh -e ./scripts/xvfb stop;
 
 buildStorybook:
 	npm run build:storybook;
