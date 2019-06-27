@@ -18,3 +18,7 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible.
 -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 - We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)
+
+## Beyond this suite of tests
+We have two other cypress test suites. One is just a smoke test of our storybook deployment, see in the repo root under `.storybook/cypress`. The second one is for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under `3rdPartyCypress/`.
+

@@ -5,7 +5,7 @@ import {
 } from '../../../cypress/support/bodyTestHelper';
 import news from '../../../src/app/lib/config/services/news';
 
-// This is a 3rd party test, we should arrange for it to be fixed but it's not due to our application.
+// This is a 3rd party test, but if it fails we should arrange for it to be fixed.
 describe('Test the mozart 404 page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
