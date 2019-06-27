@@ -1,11 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Figure from '@bbc/psammead-figure';
 import deepGet from '../../lib/utilities/deepGet';
 import Canonical from './Canonical';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
-import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
+import {
+  NestedGridParentLarge,
+  NestedGridParentSmall,
+  NestedGridItemChildSmall,
+  NestedGridItemChildLarge,
+  GridItemConstrainedLargeNoMargin,
+  GridItemConstrainedSmall,
+} from '../../lib/styledGrid';
 
 import {
   videoPropTypes,
@@ -35,8 +41,25 @@ const AudioVideoContainer = ({ blocks }) => {
 
   const type = kind === 'audio' ? kind : 'video';
 
+  const orientation = deepGet(['versions', 0, 'types', 0], nestedModel);
+
+  const wrapperSpan = {
+    default: '6',
+    group5: '12',
+  };
+  let ParentWrapper = NestedGridParentLarge;
+  let ChildWrapper = NestedGridItemChildLarge;
+  let Container = GridItemConstrainedLargeNoMargin;
+
+  if (orientation === 'Portrait') {
+    ParentWrapper = NestedGridParentSmall;
+    ChildWrapper = NestedGridItemChildSmall;
+    Container = GridItemConstrainedSmall;
+    wrapperSpan.default = '4';
+  }
+
   return (
-    <GridItemConstrainedLargeNoMargin>
+    <Container>
       {metadata ? (
         <Helmet>
           {
@@ -46,11 +69,23 @@ const AudioVideoContainer = ({ blocks }) => {
           }
         </Helmet>
       ) : null}
-      <Figure>
-        {platform === 'canonical' ? <Canonical blocks={blocks} /> : null}
-        {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-      </Figure>
-    </GridItemConstrainedLargeNoMargin>
+      <ParentWrapper>
+        <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
+          {platform === 'canonical' ? <Canonical blocks={blocks} /> : null}
+        </ChildWrapper>
+        <ChildWrapper
+          gridColumnStart={1}
+          gridSpan={{
+            default: '6',
+            group3: '5',
+            group4: '5',
+            group5: '10',
+          }}
+        >
+          {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
+        </ChildWrapper>
+      </ParentWrapper>
+    </Container>
   );
 };
 

@@ -46,11 +46,11 @@ export const NestedGridItemChildMedium = styled.div`
   ${nestedGridItemMediumCss}
 `;
 
-export const NestedGridChildItemLarge = styled.div`
+export const NestedGridItemChildLarge = styled.div`
   ${nestedGridItemLargeCss}
 `;
 
-const NestedGridParentLarge = styled.div`
+export const NestedGridParentLarge = styled.div`
   ${gridContainerLargeCss}
 `;
 
@@ -58,7 +58,7 @@ const NestedGridParentMedium = styled.div`
   ${gridContainerMediumCss}
 `;
 
-const NestedGridParentSmall = styled.div`
+export const NestedGridParentSmall = styled.div`
   ${gridContainerSmallCss}
 `;
 
@@ -84,7 +84,7 @@ export const NestedGridItemLarge = props => {
   const { children } = props;
   return (
     <NestedGridParentLarge>
-      <NestedGridChildItemLarge {...props}>{children}</NestedGridChildItemLarge>
+      <NestedGridItemChildLarge {...props}>{children}</NestedGridItemChildLarge>
     </NestedGridParentLarge>
   );
 };
