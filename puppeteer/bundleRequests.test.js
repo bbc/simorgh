@@ -10,7 +10,7 @@ const config = cypressConfig('local');
 
 const services = [];
 
-// This logic is required to combine the service configs untill
+// This logic is required to combine the service configs until
 // this is done in https://github.com/bbc/simorgh/issues/2131
 const rawConfig = {
   ...wsConfig,

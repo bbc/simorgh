@@ -61,7 +61,7 @@ module.exports = (shell = {}) => {
         },
       ],
     },
-    // Bundle sizes are monitoried by `./scripts/bundleSize.sh`
+    // Bundle sizes are monitored by `./scripts/bundleSize.sh`
     performance: {
       hints: false,
     },

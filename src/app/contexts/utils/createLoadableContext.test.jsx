@@ -26,9 +26,9 @@ it(`should pass fixture data as context from dynamic service`, async () => {
     </LoadableServiceProvider>,
   );
 
-  const expectedFictureText = 'valueFromFixtureData';
+  const expectedFixtureText = 'valueFromFixtureData';
 
-  await waitForElement(() => getByText(expectedFictureText));
+  await waitForElement(() => getByText(expectedFixtureText));
 
   expect(getByText(expectedFictureText)).toBeTruthy();
 });
