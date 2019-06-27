@@ -18,6 +18,7 @@ import deepGet from '../lib/utilities/deepGet';
 
 const PageWithRequestContext = ({
   children,
+  data,
   env,
   id,
   isAmp,
@@ -26,13 +27,10 @@ const PageWithRequestContext = ({
   pageType,
   service,
 }) => {
-  const lang = useContext(ServiceContext);
+  const { lang } = useContext(ServiceContext);
   const articleLang =
     pageType === 'article'
-      ? deepGet(
-          ['props', 'data', 'pageData', 'metadata', 'passport', 'language'],
-          children,
-        )
+      ? deepGet(['pageData', 'metadata', 'passport', 'language'], data)
       : false;
 
   return (
@@ -82,13 +80,14 @@ PageWithRequestContext.defaultProps = {
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-
+  const data = deepGet(['props', 'data'], children);
   return (
     <Fragment>
       <ServiceContextProvider service={service}>
         <GlobalStyle />
         {PageWithRequestContext({
           children,
+          data,
           env,
           id,
           isAmp,
