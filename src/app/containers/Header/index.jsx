@@ -8,7 +8,7 @@ const HeaderContainer = () => {
 
   return (
     <header role="banner">
-      <BrandContainer isHeader />
+      <BrandContainer {...(pageType !== 'frontPage' && { isHeader: true })} />
       {pageType === 'frontPage' && <NavigationContainer />}
     </header>
   );
