@@ -1,6 +1,6 @@
 /*
   Do not import this file into the primary application.
-  This file is intented for use by tests only where needed. 
+  This file is intended for use by tests only where needed. 
   Including this file in the application will cause the 
   bundle splitting to stop working.
 */
