@@ -40,7 +40,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div div div').eq(0));
   });
 
   it('should have a visible image without a caption, and also not be lazyloaded', () => {
@@ -54,7 +54,7 @@ describe('Article Body Tests', () => {
     const imageHasNotLoaded = getElement('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = getElement('div div div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
