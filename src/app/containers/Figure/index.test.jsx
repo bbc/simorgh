@@ -8,6 +8,7 @@ import {
   FigureImageWithCaption,
   FigureAmpImageWithCaption,
   FigureImageWithCopyright,
+  FigureImageWithNestedGrid,
   FigureAmpImageWithCopyright,
   FigureImageWithCopyrightAndCaption,
   FigureAmpImageWithCopyrightAndCaption,
@@ -64,7 +65,7 @@ describe('Figure', () => {
   );
 
   shouldMatchSnapshot(
-    'should render can AMP image with aption text',
+    'should render an AMP image with caption text',
     FigureAmpImageWithCaption,
   );
 
@@ -86,5 +87,14 @@ describe('Figure', () => {
   shouldMatchSnapshot(
     'should render an AMP image with caption and copyright',
     FigureAmpImageWithCopyrightAndCaption,
+  );
+
+  shouldMatchSnapshot(
+    'should render an image and caption for a square with nested grid',
+    FigureImageWithNestedGrid(1240, 1240),
+  );
+  shouldMatchSnapshot(
+    'should render an image and caption for a portrait with nested grid',
+    FigureImageWithNestedGrid(600, 1240),
   );
 });
