@@ -9,7 +9,7 @@ const NavigationContainer = () => {
   const { script, translations, navigation } = useContext(ServiceContext);
   const { currentPage, skipLinkText } = translations;
 
-  if (!navigation || !navigation.length) {
+  if (!navigation || navigation.length === 0) {
     return null;
   }
 
