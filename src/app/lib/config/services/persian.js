@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
+import 'moment/locale/fa';
 
 const persian = {
   lang: 'fa',
@@ -15,9 +16,11 @@ const persian = {
   externalLinkText: ' ،لینک خارجی',
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
+  audioCaptionOffscreenText: ' `توضیح صدا،` ',
   defaultCaptionOffscreenText: ' ، عنوان',
   imageCopyrightOffscreenText: ' ، منبع تصویر',
   locale: 'fa',
+  datetimeLocale: 'fa',
   service: 'persian',
   serviceName: 'Persian',
   themeColor: `${C_POSTBOX}`,

@@ -10,7 +10,6 @@ cache:
     - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
-before_install: npm install -g npm@6.4.1; npm -v
 jobs:
   include:
     - stage: test
@@ -34,6 +33,14 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+    - stage: test
+      if: branch = latest AND type = push
+      name: "Test third party dependencies" 
+      install: npm install cypress@latest
+      addons: 
+        chrome: stable
+      script:
+        - xvfb-run -a npm run cypress:3rdParty
 notifications:
   email: false
   slack:
