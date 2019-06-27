@@ -356,6 +356,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -790,6 +791,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -1256,6 +1258,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -1690,6 +1693,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -2124,6 +2128,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -2590,6 +2595,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -3024,6 +3030,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -3458,6 +3465,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -3924,6 +3932,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -4392,6 +4401,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -4420,8 +4430,8 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                       "destinations": Array [],
                     },
                     "synopses": Object {
-                      "long": "Every week 170 people in the UK lose a limb because of diabetes.
-Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive.
+                      "long": "Every week 170 people in the UK lose a limb because of diabetes. 
+Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. 
 Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital.
 And a further 12 million people could be at risk of getting type 2 diabetes in the future.
 Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
@@ -4832,6 +4842,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="amp"
@@ -5327,6 +5338,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -5822,6 +5834,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -6256,6 +6269,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -6722,6 +6736,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -7190,6 +7205,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     env="test"
     id="c0000000000o"
     isUK={true}
+    lang="en-gb"
     origin="https://www.test.bbc.co.uk"
     pageType="article"
     platform="canonical"
@@ -7218,8 +7234,8 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                       "destinations": Array [],
                     },
                     "synopses": Object {
-                      "long": "Every week 170 people in the UK lose a limb because of diabetes.
-Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive.
+                      "long": "Every week 170 people in the UK lose a limb because of diabetes. 
+Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. 
 Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital.
 And a further 12 million people could be at risk of getting type 2 diabetes in the future.
 Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
