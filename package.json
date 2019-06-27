@@ -12,6 +12,8 @@
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
+    "cypress:3rdParty": "cypress run --project ./3rdPartyCypress/.",
+    "cypress:3rdParty:interactive": "cypress open --project ./3rdPartyCypress/.",
     "cypress:storybook": "wait-on -t 120000 http://localhost:9001 && cypress run --project ./.storybook/.",
     "cypress:storybook:interactive": "cypress open --project ./.storybook/.",
     "dataValidate": "node dataValidator/index.js",
