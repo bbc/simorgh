@@ -28,6 +28,7 @@ const metadataSnapshotTest = (
   twitterCreator,
   twitterSite,
   type,
+  service,
   showArticleTags,
 ) =>
   describe(testDescription, () => {
@@ -56,6 +57,7 @@ const metadataSnapshotTest = (
       twitterCreator,
       twitterSite,
       type,
+      service,
       showArticleTags,
     };
 
@@ -105,6 +107,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -147,6 +150,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -176,6 +180,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    'persian',
     true,
   );
 
@@ -205,6 +210,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    'persian',
     true,
   );
 
@@ -247,6 +253,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -289,6 +296,7 @@ describe('Metadata', () => {
     '@BBCNews',
     'IDX',
     false,
+    'news',
   );
 
   metadataSnapshotTest(
@@ -330,6 +338,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'IDX',
+    'news',
     false,
   );
 });

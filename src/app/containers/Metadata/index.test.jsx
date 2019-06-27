@@ -41,6 +41,7 @@ const metadataProps = (
   title,
   serviceConfig,
   type,
+  service,
   showArticleTags,
 ) => ({
   isAmp,
@@ -67,6 +68,7 @@ const metadataProps = (
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
   type,
+  service,
   showArticleTags,
 });
 
@@ -143,6 +145,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -213,6 +216,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -270,6 +274,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -316,6 +321,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -362,6 +368,7 @@ describe('Metadata Container', () => {
           'Ogbako',
           services.igbo,
           'IDX',
+          'igbo',
           false,
         ),
       );

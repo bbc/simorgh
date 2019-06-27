@@ -143,13 +143,11 @@ const Metadata = ({
       <meta name="fb:admins" content={facebookAdmin} />
       <meta name="fb:app_id" content={facebookAppID} />
       <meta name="mobile-web-app-capable" content="yes" />
-
-      <meta name="msapplication-config" content="path/to/browserconfig.xml" />
-
       <meta name="msapplication-TileColor" content={themeColor} />
-
-      <meta name="msapplication-TileImage" content="/path/to/144x144.png" />
-
+      <meta
+        name="msapplication-TileImage"
+        content={`https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-144x144.png`}
+      />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
       <meta name="og:image:alt" content={defaultImageAltText} />
@@ -168,10 +166,10 @@ const Metadata = ({
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getAppleTouchIconLinks(service)}
       {getIcons(service)}
-
-      <link rel="apple-touch-startup-image" href="/path/to/512x512.png" />
-      <link rel="mask-icon" href="path/to/safari-pinned-tab.svg" color="#color" />
-
+      <link
+        rel="apple-touch-startup-image"
+        href={`https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-512x512.png`}
+      />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
