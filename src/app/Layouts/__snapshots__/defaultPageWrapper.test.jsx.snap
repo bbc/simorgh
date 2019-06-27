@@ -10,6 +10,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
       env="live"
       id="c0000000000o"
       isUK={true}
+      lang="en-gb"
       origin="https://www.bbc.com"
       pageType="article"
       platform="amp"
@@ -19,9 +20,19 @@ exports[`defaultPageWrapper should render with children 1`] = `
       <ManifestContainer />
       <ConsentBanner />
       <HeaderContainer />
-      <h2>
-        Child element
-      </h2>
+      Object {
+        "props": Object {
+          "data": Object {
+            "pageData": Object {
+              "metadata": Object {
+                "passport": Object {
+                  "language": "en-gb",
+                },
+              },
+            },
+          },
+        },
+      }
       <FooterContainer />
     </RequestContextProvider>
   </ServiceContextProvider>

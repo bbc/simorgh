@@ -27,7 +27,11 @@ getStatsPageIdentifier.mockImplementation(
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     bbcOrigin: 'https://www.bbc.com',
-    children: <h2>Child element</h2>,
+    children: {
+      props: {
+        data: { pageData: { metadata: { passport: { language: 'en-gb' } } } },
+      },
+    },
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,

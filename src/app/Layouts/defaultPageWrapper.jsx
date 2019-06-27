@@ -33,6 +33,7 @@ const PageWithRequestContext = ({
       ? deepGet(['pageData', 'metadata', 'passport', 'language'], data)
       : false;
   const getLangByPageType = type => (type === 'article' ? articleLang : lang);
+
   return (
     <RequestContextProvider
       env={env}
