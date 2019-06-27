@@ -8,7 +8,21 @@ import {
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import news from '../../src/app/lib/config/services/news';
 
-describe('Article Body Tests', () => {
+// It is safe to test only that a 404 is returned on all
+describe('Test we get a 404', () => {
+  it('should return a 404 error code', () => {
+    cy.request({
+      url: `/news/articles/${config.assets.nonExistent}`,
+      failOnStatusCode: false,
+    }).then(({ status }) => {
+      expect(status).to.eq(404);
+    });
+  });
+});
+
+// These must only ever be run locally as otherwise you're testing
+// the mozart page not the response from this application.
+describeForLocalOnly('Local Article Error Page Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/news/articles/${config.assets.nonExistent}`, {
@@ -24,14 +38,9 @@ describe('Article Body Tests', () => {
     );
   });
 
-  describeForLocalOnly(
-    'Temporary fix to limit to local Simorgh error page',
-    () => {
-      it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
-      });
-    },
-  );
+  it('should have the correct lang & dir attributes', () => {
+    hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+  });
 
   it('should display a relevant error message on screen', () => {
     cy.visit(`/news/articles/${config.assets.nonExistent}`, {

@@ -16,6 +16,7 @@ const {
   getAppType,
   getHref,
   getReferrer,
+  getPublishedDatetime,
   sanitise,
 } = require('./index');
 
@@ -340,5 +341,39 @@ describe('getReferrer', () => {
 describe('sanitise', () => {
   it('should replace all spaces with a + character', () => {
     expect(sanitise('hi hello there')).toEqual('hi+hello+there');
+  });
+});
+
+describe('getPublishedDatetime', () => {
+  const data = {
+    metadata: {
+      firstPublished: 946688461000,
+      seconds: 1504785600,
+      invalidDate: 'foobar',
+    },
+  };
+
+  it('should find value in good data', () => {
+    const publishedTime = getPublishedDatetime('firstPublished', data);
+
+    expect(publishedTime).toEqual('2000-01-01T01:01:01.000Z');
+  });
+
+  it('should autodetect timestamp in seconds and autocorrect', () => {
+    const secondsTimestamp = getPublishedDatetime('seconds', data);
+
+    expect(secondsTimestamp).toEqual('2017-09-07T12:00:00.000Z');
+  });
+
+  it('should return null if type not found', () => {
+    const publishedTime = getPublishedDatetime('foobar', data);
+
+    expect(publishedTime).toEqual(null);
+  });
+
+  it('should return null if timestamp is invalid', () => {
+    const publishedTime = getPublishedDatetime('invalidDate', data);
+
+    expect(publishedTime).toEqual(null);
   });
 });

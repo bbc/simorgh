@@ -54,7 +54,7 @@ export const NestedGridParentLarge = styled.div`
   ${gridContainerLargeCss}
 `;
 
-const NestedGridParentMedium = styled.div`
+export const NestedGridParentMedium = styled.div`
   ${gridContainerMediumCss}
 `;
 

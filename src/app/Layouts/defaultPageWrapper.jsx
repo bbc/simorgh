@@ -3,6 +3,7 @@ import { node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
+import ServiceWorkerContainer from '../containers/ServiceWorker';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
@@ -38,6 +39,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
             id,
           })}
         >
+          <ServiceWorkerContainer />
           <ManifestContainer />
           <ConsentBanner />
           <HeaderContainer />

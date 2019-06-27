@@ -1,21 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
-import { string } from 'prop-types';
-import { videoComponentPropTypes } from '../../models/propTypes';
+import { arrayOf, bool, number, oneOfType, shape, string } from 'prop-types';
 
-const Video = ({
-  id,
-  title,
-  statsAppName,
-  statsAppType,
-  statsCountername,
-  statsDestination,
-  uiLocale,
-  mediaPlayerSettings,
-  width,
-  height,
-}) => {
+const Video = ({ id, mediaPlayerSettings, width, height }) => {
   const MediaPlayerContainer = styled.div`
     height: ${height};
     width: ${width};
@@ -26,13 +14,13 @@ const Video = ({
       <Helmet>
         <script type="text/javascript">
           {`
-          function mediaPlayerSetup(container) {
-            require(['bump-4'], (bump) => {
-              var mediaPlayer = bump.player(
-                document.getElementById('${id}'),
-                ${JSON.stringify(mediaPlayerSettings)});
-              mediaPlayer.load();
-            });
+            function mediaPlayerSetup(container) {
+              require(['bump-4'], (bump) => {
+                var mediaPlayer = bump.player(
+                  document.getElementById('${id}'),
+                  ${JSON.stringify(mediaPlayerSettings)});
+                mediaPlayer.load();
+              });
           }
         `}
         </script>
@@ -54,20 +42,57 @@ const Video = ({
         />
       </Helmet>
       <MediaPlayerContainer id={id} />
-      <div>title: {title}</div>
-      <div>statsAppName: {statsAppName}</div>
-      <div>statsAppType: {statsAppType}</div>
-      <div>statsCountername: {statsCountername}</div>
-      <div>statsDestination: {statsDestination}</div>
-      <div>uiLocale: {uiLocale}</div>
     </>
   );
 };
 
-Video.propTypes = { ...videoComponentPropTypes, height: string, width: string };
+Video.propTypes = {
+  id: string.isRequired,
+  mediaPlayerSettings: shape({
+    appName: string.isRequired,
+    appType: string.isRequired,
+    counterName: string.isRequired,
+    mediator: shape({
+      host: string.isRequired,
+    }).isRequired,
+    playlistObject: shape({
+      guidance: string,
+      holdingImageURL: string.isRequired,
+      items: arrayOf(
+        shape({
+          duration: number.isRequired,
+          versionID: string.isRequired,
+          kind: string.isRequired,
+        }),
+      ).isRequired,
+      title: string.isRequired,
+    }).isRequired,
+    product: string.isRequired,
+    responsive: bool.isRequired,
+    statsObject: oneOfType([
+      shape({ clipPID: string, destination: string.isRequired }),
+      shape({ episodePID: string, destination: string.isRequired }),
+    ]).isRequired,
+    ui: shape({
+      cta: shape({
+        mode: string.isRequired,
+      }).isRequired,
+      locale: shape({
+        lang: string.isRequired,
+      }).isRequired,
+      subtitles: shape({
+        defaultOn: bool.isRequired,
+        enabled: bool.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+  width: string,
+  height: string,
+};
+
 Video.defaultProps = {
-  height: '100%',
-  width: '26em',
+  width: '100%',
+  height: '26em',
 };
 
 export default Video;
