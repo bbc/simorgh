@@ -28,6 +28,12 @@ Object.keys(services).forEach(index => {
             .should('be.visible');
         });
 
+        it('should have one visible navigation', () => {
+          cy.get('nav')
+            .should('have.lengthOf', 1)
+            .should('be.visible');
+        });
+
         it('should have a visually hidden top-level header', () => {
           cy.get('h1').should('have.length', 1);
         });
