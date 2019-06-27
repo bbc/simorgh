@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
+import 'moment/locale/en-gb';
 
 const news = {
   lang: 'en-GB',
@@ -20,6 +21,7 @@ const news = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
+  datetimeLocale: 'en-gb',
   service: 'news',
   serviceName: 'News',
   themeColor: `${C_POSTBOX}`,

@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  datetimeLocale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
   serviceLocalizedName: 'Ìgbò',
