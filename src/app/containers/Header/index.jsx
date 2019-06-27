@@ -3,7 +3,7 @@ import BrandContainer from '../Brand';
 
 const HeaderContainer = () => (
   <header role="banner">
-    <BrandContainer isHeader />
+    <BrandContainer borderBottom />
   </header>
 );
 
