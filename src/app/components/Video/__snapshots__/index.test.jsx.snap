@@ -13,8 +13,8 @@ exports[`Video with data should render the video with valid props 1`] = `
           function mediaPlayerSetup(container) {
             require(['bump-4'], (bump) =&gt; {
               var mediaPlayer = bump.player(
-                document.getElementById('mp#p00a0a0m'),
-                {"product":"news","responsive":true,"statsObject":{"clipPID":"p00a0a0m"},"mediator":{"host":"open.test.bbc.co.uk"},"playlistObject":{"title":"Hello World","holdingImageURL":"https://foo/bar/baz.png","guidance":"Scary","items":[{"versionID":"p01k6msm","kind":"episode","duration":100}]}});
+                document.getElementById('mp#p01k6msm'),
+                {"appName":"news","appType":"responsive","counterName":"news.articles.c0000000000o.page","mediator":{"host":"open.test.bbc.co.uk"},"playlistObject":{"title":"Five things ants can teach us about management","holdingImageURL":"https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg","guidance":"Contains strong language and adult humour.","items":[{"versionID":"p01k6msp","duration":191,"kind":"programme"}]},"product":"news","responsive":true,"statsObject":{"destination":"NEWS_PS_TEST","clipPID":"p01k6msm"},"ui":{"cta":{"mode":"duration"},"locale":{"lang":"en-GB"},"subtitles":{"defaultOn":true,"enabled":true}}});
               mediaPlayer.load();
             });
           }
@@ -40,31 +40,7 @@ exports[`Video with data should render the video with valid props 1`] = `
     />
   </HelmetWrapper>
   <ForwardRef(MediaPlayerContainer)
-    id="mp#p00a0a0m"
+    id="mp#p01k6msm"
   />
-  <div>
-    title: 
-    Hello World
-  </div>
-  <div>
-    statsAppName: 
-    news
-  </div>
-  <div>
-    statsAppType: 
-    responsive
-  </div>
-  <div>
-    statsCountername: 
-    news.articles.c0000000000o.page
-  </div>
-  <div>
-    statsDestination: 
-    NEWS_PS_TEST
-  </div>
-  <div>
-    uiLocale: 
-    en-GB
-  </div>
 </React.Fragment>
 `;
