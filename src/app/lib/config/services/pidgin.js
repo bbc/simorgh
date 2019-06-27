@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  datetimeLocale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
   serviceLocalizedName: 'Pidgin',
@@ -16,6 +18,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
