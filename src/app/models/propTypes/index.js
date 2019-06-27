@@ -1,4 +1,4 @@
-import { arrayOf, bool, number, shape, string, oneOfType } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -38,47 +38,6 @@ export const videoPropTypes = {
       ),
     }),
   ).isRequired,
-};
-
-export const videoComponentPropTypes = {
-  title: string.isRequired,
-  id: string.isRequired,
-  mediaPlayerSettings: shape({
-    product: string.isRequired,
-    responsive: bool.isRequired,
-    statsObject: oneOfType([
-      shape({ clipPID: string }),
-      shape({ episodePID: string }),
-    ]).isRequired,
-    mediator: shape({
-      host: string.isRequired,
-    }).isRequired,
-    playlistObject: shape({
-      title: string.isRequired,
-      holdingImageURL: string.isRequired,
-      guidance: string,
-      items: arrayOf(
-        shape({
-          duration: number.isRequired,
-          versionID: string.isRequired,
-          kind: string.isRequired,
-        }),
-      ).isRequired,
-    }).isRequired,
-    ui: shape({
-      subtitles: shape({
-        defaultOn: bool.isRequired,
-      }).isRequired,
-      locale: shape({
-        lang: string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
-  statsAppName: string.isRequired,
-  statsAppType: string.isRequired,
-  statsCountername: string.isRequired,
-  statsDestination: string.isRequired,
-  uiLocale: string.isRequired,
 };
 
 const baseDefaultPropTypes = {
