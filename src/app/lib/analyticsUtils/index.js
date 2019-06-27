@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '../utilities/onClient';
+import deepGet from '../utilities/deepGet';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -133,3 +134,26 @@ export const getReferrer = (platform, origin, previousPath) => {
 
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '+') : null;
+
+const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+
+const getISODate = unixTimestamp => {
+  const date = new Date(unixTimestamp);
+
+  // if the date is before 1980, our timestamp was probably in seconds.
+  // this fixes an ares bug - ARES-758 on JIRA.
+  // if you come across this in the future, please check if it's no longer needed
+  // if so, delete this!
+  if (date.getFullYear() > 1980) {
+    return date.toISOString();
+  }
+  return new Date(unixTimestamp * 1000).toISOString();
+};
+
+export const getPublishedDatetime = (attribute, data) => {
+  const publishedDatetime = deepGet(['metadata', attribute], data);
+
+  return publishedDatetime && isValidDateTime(publishedDatetime)
+    ? getISODate(publishedDatetime)
+    : null;
+};

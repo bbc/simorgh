@@ -3,12 +3,12 @@ import { atiPageViewParams } from './atiUrl';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
+import { getPublishedDatetime } from '../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
   getPageIdentifier,
   getPromoHeadline,
-  getPublishedDatetime,
   getThingAttributes,
 } from '../../lib/analyticsUtils/article';
 
