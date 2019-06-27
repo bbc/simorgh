@@ -92,6 +92,7 @@
     "@bbc/psammead-paragraph": "^1.0.5",
     "@bbc/psammead-section-label": "^1.0.1",
     "@bbc/psammead-sitewide-links": "^1.0.1",
+    "@bbc/psammead-locales": "^1.0.0",
     "@bbc/psammead-story-promo": "^0.2.0-alpha.8",
     "@bbc/psammead-styles": "^1.0.0",
     "@bbc/psammead-timestamp-container": "^1.2.2",
