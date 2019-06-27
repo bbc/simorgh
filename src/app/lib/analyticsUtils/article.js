@@ -28,21 +28,6 @@ export const getLanguage = articleData =>
 export const getPromoHeadline = articleData =>
   deepGet(['promo', 'headlines', 'seoHeadline'], articleData);
 
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
-
-const getISODate = unixTimestamp => {
-  const date = new Date(unixTimestamp);
-  return date.toISOString();
-};
-
-export const getPublishedDatetime = (attribute, articleData) => {
-  const publishedDatetime = deepGet(['metadata', attribute], articleData);
-
-  return publishedDatetime && isValidDateTime(publishedDatetime)
-    ? getISODate(publishedDatetime)
-    : null;
-};
-
 export const getThingAttributes = (attribute, articleData) => {
   const things = deepGet(['metadata', 'tags', 'about'], articleData);
 
