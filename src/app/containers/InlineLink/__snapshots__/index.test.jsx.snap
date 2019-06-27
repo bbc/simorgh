@@ -23,27 +23,12 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
   border-bottom: 2px solid #B80000;
 }
 
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
 <a
+  aria-label="این لینک هست ،لینک خارجی"
   className="c0"
   href="https://www.example.com/"
 >
   این لینک هست
-  <span
-    className="c1"
-  >
-     ،لینک خارجی
-  </span>
 </a>
 `;
 
@@ -70,27 +55,12 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
   border-bottom: 2px solid #B80000;
 }
 
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
 <a
+  aria-label="This is a link, external"
   className="c0"
   href="https://www.example.com/"
 >
   This is a link
-  <span
-    className="c1"
-  >
-    , external
-  </span>
 </a>
 `;
 
@@ -118,6 +88,7 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 }
 
 <a
+  aria-label={null}
   className="c0"
   href="https://www.bbc.com/news"
 >

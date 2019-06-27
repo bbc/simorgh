@@ -28,6 +28,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -121,6 +122,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -460,6 +462,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -553,6 +556,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -924,6 +928,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -1017,6 +1022,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -1356,6 +1362,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -1449,6 +1456,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -1788,6 +1796,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -1881,6 +1890,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -2252,6 +2262,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -2345,6 +2356,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -2684,6 +2696,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -2777,6 +2790,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -3116,6 +3130,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -3209,6 +3224,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -3580,6 +3596,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -3673,6 +3690,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -4046,6 +4064,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -4139,6 +4158,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -4484,6 +4504,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -4577,6 +4598,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -4977,6 +4999,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -5070,6 +5093,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -5470,6 +5494,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -5563,6 +5588,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -5902,6 +5928,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -5995,6 +6022,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -6366,6 +6394,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -6459,6 +6488,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
@@ -6832,6 +6862,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -6925,6 +6956,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
       "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
