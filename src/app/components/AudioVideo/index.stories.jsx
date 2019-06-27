@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Video from './index';
+import AudioVideo from '.';
+
 import {
   videoClipGlobalGuidance,
   videoClipUkGuidance,
@@ -11,25 +12,25 @@ import {
   audioClipNonUkNoGuidance,
 } from './helpers/fixtures';
 
-storiesOf('Video', module)
+storiesOf('Audio Video', module)
   .add('video, clip, global, with guidance', () => (
-    <Video {...videoClipGlobalGuidance} />
+    <AudioVideo {...videoClipGlobalGuidance} />
   ))
   .add('video, clip, UK only, with guidance', () => (
-    <Video {...videoClipUkGuidance} />
+    <AudioVideo {...videoClipUkGuidance} />
   ))
   .add('video, clip, non-UK, without guidance', () => (
-    <Video {...videoClipNonUkNoGuidance} />
+    <AudioVideo {...videoClipNonUkNoGuidance} />
   ))
   .add('video, clip, global, no guidance, portrait', () => (
-    <Video {...videoClipGlobalNoGuidancePortrait} />
+    <AudioVideo {...videoClipGlobalNoGuidancePortrait} />
   ))
   .add('audio, clip, global, with guidance', () => (
-    <Video {...audioClipGlobalGuidance} />
+    <AudioVideo {...audioClipGlobalGuidance} />
   ))
   .add('audio, clip, UK, without guidance', () => (
-    <Video {...audioClipUkNoGuidance} />
+    <AudioVideo {...audioClipUkNoGuidance} />
   ))
   .add('audio, clip, non-UK, without guidance', () => (
-    <Video {...audioClipNonUkNoGuidance} />
+    <AudioVideo {...audioClipNonUkNoGuidance} />
   ));

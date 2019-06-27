@@ -1,11 +1,12 @@
-import videoMetadata from './videoMetadata';
+import videoMetadata from './audioVideoMetadata';
 import {
   noAresMediaMetadata,
   multipleAresMetadata,
   videoClipGlobalGuidanceBlock,
+  audioClipGlobalGuidanceBlock,
 } from './helpers/fixtures';
 
-describe('videoMetadata', () => {
+describe('audioVideoMetadata', () => {
   it('returns correct video metadata', () => {
     const metadata = videoMetadata(videoClipGlobalGuidanceBlock);
     const output = {
@@ -13,6 +14,27 @@ describe('videoMetadata', () => {
         '@list': [
           {
             '@type': 'VideoObject',
+            name: 'Five things ants can teach us about management',
+            description:
+              'They may be tiny, but us humans could learn a thing or two from ants.',
+            duration: 191,
+            thumbnailUrl:
+              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            uploadDate: null,
+          },
+        ],
+      },
+    };
+    expect(metadata).toEqual(output);
+  });
+
+  it('returns correct audio metadata', () => {
+    const metadata = videoMetadata(audioClipGlobalGuidanceBlock);
+    const output = {
+      audio: {
+        '@list': [
+          {
+            '@type': 'AudioObject',
             name: 'Five things ants can teach us about management',
             description:
               'They may be tiny, but us humans could learn a thing or two from ants.',

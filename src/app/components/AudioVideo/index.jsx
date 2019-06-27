@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, number, oneOfType, shape, string } from 'prop-types';
 
-const Video = ({ id, mediaPlayerSettings, width, height }) => {
+const AudioVideo = ({ id, mediaPlayerSettings, width, height }) => {
   const MediaPlayerContainer = styled.div`
     height: ${height};
     width: ${width};
@@ -46,7 +46,7 @@ const Video = ({ id, mediaPlayerSettings, width, height }) => {
   );
 };
 
-Video.propTypes = {
+AudioVideo.propTypes = {
   id: string.isRequired,
   mediaPlayerSettings: shape({
     appName: string.isRequired,
@@ -90,9 +90,9 @@ Video.propTypes = {
   height: string,
 };
 
-Video.defaultProps = {
+AudioVideo.defaultProps = {
   width: '100%',
   height: '26em',
 };
 
-export default Video;
+export default AudioVideo;

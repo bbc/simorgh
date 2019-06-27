@@ -1,9 +1,9 @@
 import React from 'react';
 import deepGet from '../../lib/utilities/deepGet';
-import Video from '../../components/Video';
+import AudioVideo from '../../components/AudioVideo';
 import mediatorURL from './helpers/mediatorUrl';
 
-import { videoPropTypes } from '../../models/propTypes';
+import { audioVideoPropTypes } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
@@ -84,7 +84,7 @@ const Canonical = ({ blocks }) => {
   };
 
   return (
-    <Video
+    <AudioVideo
       id={id}
       mediaPlayerSettings={mediaPlayerSettings}
       width="100%"
@@ -94,7 +94,7 @@ const Canonical = ({ blocks }) => {
 };
 
 Canonical.propTypes = {
-  ...videoPropTypes,
+  ...audioVideoPropTypes,
 };
 
 export default Canonical;

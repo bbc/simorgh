@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import deepGet from '../../lib/utilities/deepGet';
 import Canonical from './Canonical';
 import Caption from '../Caption';
-import videoMetadata from './videoMetadata';
+import videoMetadata from './audioVideoMetadata';
 import {
   NestedGridParentLarge,
   NestedGridParentSmall,
@@ -14,7 +14,7 @@ import {
 } from '../../lib/styledGrid';
 
 import {
-  videoPropTypes,
+  audioVideoPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
@@ -89,7 +89,7 @@ const AudioVideoContainer = ({ blocks }) => {
   );
 };
 
-AudioVideoContainer.propTypes = videoPropTypes;
+AudioVideoContainer.propTypes = audioVideoPropTypes;
 
 AudioVideoContainer.defaultProps = emptyBlockArrayDefaultProps;
 
