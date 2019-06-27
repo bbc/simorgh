@@ -12,7 +12,7 @@ import {
 // cleared during hydration. React won't render noscript tags on the client so if they
 // get cleared during hydration, the following render wont re-add them.
 // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-// https://github.com/bbc/simorgh/pull/1872for more infomation.
+// https://github.com/bbc/simorgh/pull/1872 for more infomation.
 
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {
