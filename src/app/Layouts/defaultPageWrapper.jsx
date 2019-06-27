@@ -3,6 +3,7 @@ import { node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
+import ServiceWorkerContainer from '../containers/ServiceWorker';
 import {
   ServiceContextProvider,
   ServiceContext,
@@ -54,6 +55,7 @@ const PageWithRequestContext = ({
         id,
       })}
     >
+      <ServiceWorkerContainer />
       <ManifestContainer />
       <ConsentBanner />
       <HeaderContainer />
