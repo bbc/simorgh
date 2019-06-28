@@ -1,8 +1,5 @@
 import deepGet from '../../lib/utilities/deepGet';
 
-const videoObject = 'VideoObject';
-const audioObject = 'AudioObject';
-
 const videoMetadata = blocks => {
   const aresMediaBlocks = deepGet(['model', 'blocks'], blocks);
   const listContent = [];
@@ -22,7 +19,7 @@ const videoMetadata = blocks => {
 
   aresMetaDataBlocks.forEach(block => {
     const format = deepGet(['model', 'format'], block);
-    const type = format === 'audio' ? audioObject : videoObject;
+    const type = format === 'audio' ? 'AudioObject' : 'VideoObject';
 
     listContent.push({
       '@type': type,
