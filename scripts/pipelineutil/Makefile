@@ -2,7 +2,10 @@ venv:
 	test -d venv || virtualenv --no-site-packages venv
 
 activate: 
-	./venv/bin/activate
+	source ./venv/bin/activate
+
+install:
+	pip3 install -r requirements.txt
 
 mac-install:
 	brew update
