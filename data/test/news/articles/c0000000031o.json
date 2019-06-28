@@ -157,6 +157,7 @@
                         "blocks": [
                           {
                             "model": {
+                              "copyrightHolder": "BBC",
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mxrbn.jpg",
                               "originCode": "mpv"
                             },
