@@ -15,12 +15,14 @@ def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 
 def runDevelopmentTests(){
+  sh "pip install -r scripts/pipelineutil/requirements.txt"
   sh 'python scripts/pipelineutil/pipelineutil.py doc-change'
   sh 'make install'
   sh 'make developmentTests'
 }
 
 def runProductionTests(){
+  sh "pip install -r scripts/pipelineutil/requirements.txt"
   sh 'python scripts/pipelineutil/pipelineutil.py doc-change'
   sh 'make installProd'
   sh 'make productionTests'
