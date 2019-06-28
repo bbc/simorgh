@@ -39,6 +39,28 @@
                   "blocks": [
                     {
                       "model": {
+                        "attributes": [],
+                        "text": "Here's an article that has videos that are available in different regions."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Here's an article that has videos that are available in different regions."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
                         "blocks": [
                           {
                             "model": {
