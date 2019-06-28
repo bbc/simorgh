@@ -484,8 +484,10 @@
                           {
                             "model": {
                               "copyrightHolder": "BBC",
+                              "height": 1080,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "width": 1920
                             },
                             "type": "rawImage"
                           }
@@ -611,8 +613,10 @@
                           {
                             "model": {
                               "copyrightHolder": "BBC",
+                              "height": 1080,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "width": 1920
                             },
                             "type": "rawImage"
                           }
