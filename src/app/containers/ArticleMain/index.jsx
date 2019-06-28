@@ -11,7 +11,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
-import MediaPlayerSettings from '../AudioVideo/MediaPlayerSettings';
+import MediaPlayerSettings from '../AudioVideo/mediaPlayerSettings';
 import deepGet from '../../lib/utilities/deepGet';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
