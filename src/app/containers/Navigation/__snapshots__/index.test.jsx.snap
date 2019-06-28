@@ -1,0 +1,762 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
+<Navigation
+  script={
+    Object {
+      "bodyCopy": Object {
+        "groupA": Object {
+          "fontSize": "15",
+          "lineHeight": "20",
+        },
+        "groupB": Object {
+          "fontSize": "16",
+          "lineHeight": "22",
+        },
+        "groupD": Object {
+          "fontSize": "16",
+          "lineHeight": "22",
+        },
+      },
+      "brevier": Object {
+        "groupA": Object {
+          "fontSize": "14",
+          "lineHeight": "18",
+        },
+        "groupB": Object {
+          "fontSize": "14",
+          "lineHeight": "18",
+        },
+        "groupD": Object {
+          "fontSize": "13",
+          "lineHeight": "16",
+        },
+      },
+      "canon": Object {
+        "groupA": Object {
+          "fontSize": "28",
+          "lineHeight": "32",
+        },
+        "groupB": Object {
+          "fontSize": "32",
+          "lineHeight": "36",
+        },
+        "groupD": Object {
+          "fontSize": "44",
+          "lineHeight": "48",
+        },
+      },
+      "doublePica": Object {
+        "groupA": Object {
+          "fontSize": "18",
+          "lineHeight": "22",
+        },
+        "groupB": Object {
+          "fontSize": "20",
+          "lineHeight": "24",
+        },
+        "groupD": Object {
+          "fontSize": "24",
+          "lineHeight": "28",
+        },
+      },
+      "greatPrimer": Object {
+        "groupA": Object {
+          "fontSize": "18",
+          "lineHeight": "22",
+        },
+        "groupB": Object {
+          "fontSize": "18",
+          "lineHeight": "22",
+        },
+        "groupD": Object {
+          "fontSize": "20",
+          "lineHeight": "24",
+        },
+      },
+      "longPrimer": Object {
+        "groupA": Object {
+          "fontSize": "15",
+          "lineHeight": "18",
+        },
+        "groupB": Object {
+          "fontSize": "15",
+          "lineHeight": "18",
+        },
+        "groupD": Object {
+          "fontSize": "14",
+          "lineHeight": "18",
+        },
+      },
+      "minion": Object {
+        "groupA": Object {
+          "fontSize": "12",
+          "lineHeight": "16",
+        },
+        "groupB": Object {
+          "fontSize": "12",
+          "lineHeight": "16",
+        },
+        "groupD": Object {
+          "fontSize": "12",
+          "lineHeight": "16",
+        },
+      },
+      "paragon": Object {
+        "groupA": Object {
+          "fontSize": "20",
+          "lineHeight": "24",
+        },
+        "groupB": Object {
+          "fontSize": "22",
+          "lineHeight": "26",
+        },
+        "groupD": Object {
+          "fontSize": "28",
+          "lineHeight": "32",
+        },
+      },
+      "pica": Object {
+        "groupA": Object {
+          "fontSize": "15",
+          "lineHeight": "20",
+        },
+        "groupB": Object {
+          "fontSize": "16",
+          "lineHeight": "20",
+        },
+        "groupD": Object {
+          "fontSize": "16",
+          "lineHeight": "20",
+        },
+      },
+      "trafalgar": Object {
+        "groupA": Object {
+          "fontSize": "20",
+          "lineHeight": "24",
+        },
+        "groupB": Object {
+          "fontSize": "24",
+          "lineHeight": "28",
+        },
+        "groupD": Object {
+          "fontSize": "32",
+          "lineHeight": "36",
+        },
+      },
+    }
+  }
+  skipLinkText="Wụga n’ọdịnaya"
+>
+  <NavigationUl>
+    <NavigationLi
+      active={true}
+      currentPageText="Current page"
+      dir="ltr"
+      script={
+        Object {
+          "bodyCopy": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+          },
+          "brevier": Object {
+            "groupA": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "13",
+              "lineHeight": "16",
+            },
+          },
+          "canon": Object {
+            "groupA": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+            "groupB": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+            "groupD": Object {
+              "fontSize": "44",
+              "lineHeight": "48",
+            },
+          },
+          "doublePica": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupD": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+          },
+          "greatPrimer": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+          },
+          "longPrimer": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+          },
+          "minion": Object {
+            "groupA": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupB": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupD": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+          },
+          "paragon": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "22",
+              "lineHeight": "26",
+            },
+            "groupD": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+          },
+          "pica": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+          },
+          "trafalgar": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+            "groupD": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+          },
+        }
+      }
+      url="/igbo"
+    >
+      Akụkọ
+    </NavigationLi>
+    <NavigationLi
+      active={false}
+      currentPageText="Current page"
+      dir="ltr"
+      script={
+        Object {
+          "bodyCopy": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+          },
+          "brevier": Object {
+            "groupA": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "13",
+              "lineHeight": "16",
+            },
+          },
+          "canon": Object {
+            "groupA": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+            "groupB": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+            "groupD": Object {
+              "fontSize": "44",
+              "lineHeight": "48",
+            },
+          },
+          "doublePica": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupD": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+          },
+          "greatPrimer": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+          },
+          "longPrimer": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+          },
+          "minion": Object {
+            "groupA": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupB": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupD": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+          },
+          "paragon": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "22",
+              "lineHeight": "26",
+            },
+            "groupD": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+          },
+          "pica": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+          },
+          "trafalgar": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+            "groupD": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+          },
+        }
+      }
+      url="/igbo/egwuregwu"
+    >
+      Egwuregwu
+    </NavigationLi>
+    <NavigationLi
+      active={false}
+      currentPageText="Current page"
+      dir="ltr"
+      script={
+        Object {
+          "bodyCopy": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+          },
+          "brevier": Object {
+            "groupA": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "13",
+              "lineHeight": "16",
+            },
+          },
+          "canon": Object {
+            "groupA": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+            "groupB": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+            "groupD": Object {
+              "fontSize": "44",
+              "lineHeight": "48",
+            },
+          },
+          "doublePica": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupD": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+          },
+          "greatPrimer": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+          },
+          "longPrimer": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+          },
+          "minion": Object {
+            "groupA": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupB": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupD": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+          },
+          "paragon": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "22",
+              "lineHeight": "26",
+            },
+            "groupD": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+          },
+          "pica": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+          },
+          "trafalgar": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+            "groupD": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+          },
+        }
+      }
+      url="/igbo/media/video"
+    >
+      Ihe nkiri
+    </NavigationLi>
+    <NavigationLi
+      active={false}
+      currentPageText="Current page"
+      dir="ltr"
+      script={
+        Object {
+          "bodyCopy": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "22",
+            },
+          },
+          "brevier": Object {
+            "groupA": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "13",
+              "lineHeight": "16",
+            },
+          },
+          "canon": Object {
+            "groupA": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+            "groupB": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+            "groupD": Object {
+              "fontSize": "44",
+              "lineHeight": "48",
+            },
+          },
+          "doublePica": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupD": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+          },
+          "greatPrimer": Object {
+            "groupA": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupB": Object {
+              "fontSize": "18",
+              "lineHeight": "22",
+            },
+            "groupD": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+          },
+          "longPrimer": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupB": Object {
+              "fontSize": "15",
+              "lineHeight": "18",
+            },
+            "groupD": Object {
+              "fontSize": "14",
+              "lineHeight": "18",
+            },
+          },
+          "minion": Object {
+            "groupA": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupB": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+            "groupD": Object {
+              "fontSize": "12",
+              "lineHeight": "16",
+            },
+          },
+          "paragon": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "22",
+              "lineHeight": "26",
+            },
+            "groupD": Object {
+              "fontSize": "28",
+              "lineHeight": "32",
+            },
+          },
+          "pica": Object {
+            "groupA": Object {
+              "fontSize": "15",
+              "lineHeight": "20",
+            },
+            "groupB": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+            "groupD": Object {
+              "fontSize": "16",
+              "lineHeight": "20",
+            },
+          },
+          "trafalgar": Object {
+            "groupA": Object {
+              "fontSize": "20",
+              "lineHeight": "24",
+            },
+            "groupB": Object {
+              "fontSize": "24",
+              "lineHeight": "28",
+            },
+            "groupD": Object {
+              "fontSize": "32",
+              "lineHeight": "36",
+            },
+          },
+        }
+      }
+      url="/igbo/popular/read"
+    >
+      Nke ka ewuewu
+    </NavigationLi>
+  </NavigationUl>
+</Navigation>
+`;
