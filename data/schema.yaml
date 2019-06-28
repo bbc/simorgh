@@ -297,6 +297,7 @@ components:
           - $ref: '#/components/schemas/caption'
           - $ref: '#/components/schemas/fragment'
           - $ref: '#/components/schemas/headline'
+          - $ref: '#/components/schemas/idt2'
           - $ref: '#/components/schemas/image'
           - $ref: '#/components/schemas/inline'
           - $ref: '#/components/schemas/paragraph'
@@ -516,6 +517,38 @@ components:
         type:
           enum:
             - headline
+          type: string
+
+    idt2:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+            uuid: 
+              type: string
+            href: 
+              type: string
+            width: 
+              type: number
+            height: 
+              type: number
+            altText: 
+              type: string
+            caption: 
+              type: string
+            copyrightHolder: 
+              type: string
+            published: 
+              type: number
+          type: object
+        type:
+          enum:
+            - idt2
           type: string
 
     image:
