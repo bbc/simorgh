@@ -1,13 +1,19 @@
-import deepGet from '../../lib/utilities/deepGet';
+import React from 'react';
 import mediatorURL from './helpers/mediatorUrl';
+import { RequestContext } from '../../contexts/RequestContext';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+import deepGet from '../../lib/utilities/deepGet';
 
-const mediaPlayerSettings = ({
-  aresMediaBlock,
-  env,
-  pid,
-  statsDestination,
-  statsPageIdentifier,
-}) => {
+const MediaPlayerSettings = ({ blocks }) => {
+  const { env, statsDestination, statsPageIdentifier } = React.useContext(
+    RequestContext,
+  );
+  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+
+  if (!aresMediaBlock) {
+    return null;
+  }
+  const pid = deepGet(['model', 'blocks', 0, 'model', 'id'], aresMediaBlock);
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind =
     deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
@@ -67,4 +73,4 @@ const mediaPlayerSettings = ({
   };
 };
 
-export default mediaPlayerSettings;
+export default MediaPlayerSettings;
