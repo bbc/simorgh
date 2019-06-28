@@ -62,10 +62,17 @@ exports[`ParagraphContainer should render correctly 1`] = `
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 auto;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -99,6 +106,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
       This is some text.
     </b>
     <a
+      aria-label={null}
       className="c2"
       href="/bbc-test"
     >
