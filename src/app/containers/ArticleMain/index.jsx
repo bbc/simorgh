@@ -39,15 +39,29 @@ const ArticleMain = ({ articleData }) => {
       <MetadataContainer metadata={metadata} promo={promo} />
       {platform === 'canonical' ? (
         <AudioVideoHead
-          audioVideoAssets={audioVideoBlocks.map(avBlock => ({
-            id: deepGet(
-              ['model', 'blocks', 0, 'model', 'id'],
-              filterForBlockType(avBlock.model.blocks, 'aresMedia'),
-            ),
-            mediaPlayerSettings: MediaPlayerSettings({
-              blocks: deepGet(['model', 'blocks'], avBlock),
-            }),
-          }))}
+          audioVideoAssets={audioVideoBlocks.map(avBlock => {
+            const toplevelblock = deepGet(['model', 'blocks'], avBlock);
+            const aresMediaBlock = filterForBlockType(
+              toplevelblock,
+              'aresMedia',
+            );
+            const aresMediaBlocksArray = deepGet(
+              ['model', 'blocks'],
+              aresMediaBlock,
+            );
+            const aresMediaMetadata = filterForBlockType(
+              aresMediaBlocksArray,
+              'aresMediaMetadata',
+            );
+            const pid = deepGet(['model', 'id'], aresMediaMetadata);
+
+            return {
+              id: pid,
+              mediaPlayerSettings: MediaPlayerSettings({
+                aresMediaBlocks: aresMediaBlocksArray,
+              }),
+            };
+          })}
         />
       ) : null}
       <main role="main">

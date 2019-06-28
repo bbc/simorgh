@@ -4,24 +4,17 @@ import { RequestContext } from '../../contexts/RequestContext';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import deepGet from '../../lib/utilities/deepGet';
 
-const MediaPlayerSettings = ({ blocks }) => {
+const MediaPlayerSettings = ({ aresMediaBlocks }) => {
   const { env, statsDestination, statsPageIdentifier } = React.useContext(
     RequestContext,
   );
 
-  if (!blocks) {
+  if (!aresMediaBlocks) {
     return null;
   }
 
-  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-
-  if (!aresMediaBlock) {
-    return null;
-  }
-
-  const blocksArray = deepGet(['model', 'blocks'], aresMediaBlock);
   const aresMediaMetadata = filterForBlockType(
-    blocksArray,
+    aresMediaBlocks,
     'aresMediaMetadata',
   );
   const pid = deepGet(['model', 'id'], aresMediaMetadata);
@@ -41,7 +34,7 @@ const MediaPlayerSettings = ({ blocks }) => {
     statsObject.episodePID = pid;
   }
 
-  const aresMediaImage = filterForBlockType(blocksArray, 'image');
+  const aresMediaImage = filterForBlockType(aresMediaBlocks, 'image');
   const imageBlocks = deepGet(['model', 'blocks'], aresMediaImage);
   const rawImageBlock = filterForBlockType(imageBlocks, 'rawImage');
   const holdingImageUrl = deepGet(['model', 'locator'], rawImageBlock);
