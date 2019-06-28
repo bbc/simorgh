@@ -1,13 +1,23 @@
 import fire
-from pygit2 import Repository, GIT_STATUS_INDEX_MODIFIED, GIT_STATUS_WT_MODIFIED, GIT_DELTA_ADDED
+from pygit2 import Repository, Commit, GIT_STATUS_INDEX_MODIFIED, GIT_STATUS_WT_MODIFIED, GIT_DELTA_ADDED
+
+to_ignore = [".env", ".gitignore"]
 
 def is_doc(path):
   return path.endswith('.md')
 
+def filter(path):
+  if path in to_ignore:
+    return False
+  
+  return True
+
 def get_files(repo, ref):
-  difference = repo.diff(ref)
-  files = [patch.delta.new_file.path for patch in difference]
-  files.remove(".env")
+  tree = repo.revparse_single(ref.name).tree
+  tree2 = repo.revparse_single("latest").tree
+
+  difference = repo.diff(tree,tree2)
+  files = [patch.delta.new_file.path for patch in difference if filter(patch.delta.new_file.path)]
   return files
 
 def print_files(files):
@@ -43,21 +53,22 @@ def log_result(outcome):
 
 class Doc:
   def doc_change(self):
+
     log_start()
     repo = Repository('.')
     head = repo.head
     print("Branch: %s" % head.shorthand)
 
-
     files = get_files(repo, head)
+
     print_files(files)
 
     result = test_files(files)
 
     log_result(result)
-
     print("Outcome: %s" % result)
     return result
+
 
 if __name__ == '__main__':
   fire.Fire(Doc)

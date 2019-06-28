@@ -1,0 +1,17 @@
+doc-change
+This script will check for changes in the current git repository
+I will check if you only changed markdown files (.md)
+Branch: pipeline-branching
+-----------------------------------
+FILES CHANGED
+-----------------------------------
+package-lock.json
+package.json
+scripts/pipelineutil/Makefile
+scripts/pipelineutil/pipelineutil.py
+scripts/pipelineutil/requirements.txt
+-----------------------------------
+Files other than markdown were changed
+Tests are necessary
+Outcome: False
+False
