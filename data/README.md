@@ -41,7 +41,8 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 | 30       | Home: News | Headline, Text (1 para), Subheadline, Video (landscape) | No tags | Test |
 | 31       | Home: News | Headline, Text (1 para), Subheadline, Video (portrait) | No tags | Test |
 | 32       | Home: News | Headline, Subheadline, Video, Subheadline, Audio | No tags | Test |
-| 33       | Home: News | Headline, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Audio, Subheadline, Audio, Subheadline, Audio | No tags | Test |
+| 33       | Home: News | Headline, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Video | No tags | Test |
+| 34       | Home: News | Headline, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Audio, Subheadline, Audio, Subheadline, Audio | No tags | Test |
 
 ## Video test assets
 

@@ -14,12 +14,12 @@
                           {
                             "model": {
                               "attributes": [],
-                              "text": "So many videos"
+                              "text": "New Mega AV test article"
                             },
                             "type": "fragment"
                           }
                         ],
-                        "text": "So many videos"
+                        "text": "New Mega AV test article"
                       },
                       "type": "paragraph"
                     }
@@ -606,6 +606,408 @@
             "locator": "urn:bbc:pips:pid:p01kdbpz"
           },
           "type": "video"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Audio, Clip, UK+Intl, Guidance"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Audio, Clip, UK+Intl, Guidance"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Audio, Clip, UK+Intl, Guidance"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Audio, Clip, UK+Intl, Guidance"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d07",
+                      "model": {
+                        "advertising": false,
+                        "embedding": false,
+                        "format": "audio",
+                        "id": "p01m7d07",
+                        "imageCopyright": "Getty Images",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "Some audio from a supermarket checkout in Birmingham"
+                        },
+                        "title": "Birmingham checkout",
+                        "versions": [
+                          {
+                            "availableFrom": 1555067395,
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "types": [
+                              "Original"
+                            ],
+                            "versionId": "p01m7d09",
+                            "warnings": {
+                              "long": "Contains some strong language.",
+                              "short": "Contains some strong language."
+                            }
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "copyrightHolder": "Getty Images",
+                              "height": 1152,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                              "originCode": "mpv",
+                              "width": 2048
+                            },
+                            "type": "rawImage"
+                          },
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "model": {
+                                                "attributes": [],
+                                                "text": "England star Fran Kirby"
+                                              },
+                                              "type": "fragment"
+                                            }
+                                          ],
+                                          "text": "England star Fran Kirby"
+                                        },
+                                        "type": "paragraph"
+                                      }
+                                    ]
+                                  },
+                                  "type": "text"
+                                }
+                              ]
+                            },
+                            "type": "altText"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
+              }
+            ],
+            "locator": "urn:bbc:pips:pid:p01m7d07"
+          },
+          "type": "audio"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Clip, Audio, UK-only, no guidance"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Clip, Audio, UK-only, no guidance"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Clip, Audio, UK-only, no guidance"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Clip, Audio, UK-only, no guidance"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d3c",
+                      "model": {
+                        "advertising": false,
+                        "embedding": true,
+                        "format": "audio",
+                        "id": "p01m7d3c",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "This is some sound from a supermarket checkout in Birmingham"
+                        },
+                        "title": "Birmingham Checkout 2",
+                        "versions": [
+                          {
+                            "availableFrom": 1555067786,
+                            "availableTerritories": {
+                              "nonUk": false,
+                              "uk": true
+                            },
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "types": [
+                              "Original"
+                            ],
+                            "versionId": "p01m7d3h",
+                            "warnings": {}
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d3c.jpg",
+                              "originCode": "mpv"
+                            },
+                            "type": "rawImage"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
+              }
+            ],
+            "locator": "urn:bbc:pips:pid:p01m7d3c"
+          },
+          "type": "audio"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Clip, Audio, International-only, no guidance"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Clip, Audio, International-only, no guidance"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Clip, Audio, International-only, no guidance"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Clip, Audio, International-only, no guidance"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d4m",
+                      "model": {
+                        "advertising": true,
+                        "embedding": true,
+                        "format": "audio",
+                        "id": "p01m7d4m",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "short": "This is some audio from a supermarket checkout in Birmingham"
+                        },
+                        "title": "Birmingham Checkout 3",
+                        "versions": [
+                          {
+                            "availableFrom": 1555068044,
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": false
+                            },
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "types": [
+                              "Original"
+                            ],
+                            "versionId": "p01m7d4p",
+                            "warnings": {}
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01m7d4m.jpg",
+                              "originCode": "mpv"
+                            },
+                            "type": "rawImage"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
+              }
+            ],
+            "locator": "urn:bbc:pips:pid:p01m7d4m"
+          },
+          "type": "audio"
         }
       ]
     }
@@ -624,13 +1026,13 @@
     ],
     "createdBy": "News",
     "firstPublished": 1559129664696,
-    "id": "urn:bbc:ares::article:c0000000033o",
+    "id": "urn:bbc:ares::article:c0000000034o",
     "language": "en-gb",
     "lastPublished": 1559129664696,
     "lastUpdated": 1561372763272,
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000033o",
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000033o"
+      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000034o",
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000034o"
     },
     "options": {},
     "passport": {
@@ -643,12 +1045,12 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "So many videos"
+      "seoHeadline": "New Mega AV test article"
     },
-    "id": "urn:bbc:ares::article:c0000000033o",
+    "id": "urn:bbc:ares::article:c0000000034o",
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000033o",
-      "optimoUrn": "urn:bbc:optimo:asset:c0000000033o"
+      "canonicalUrl": "https://www.bbc.com/news/articles/c0000000034o",
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000034o"
     },
     "summary": "",
     "timestamp": 1559129664696,
