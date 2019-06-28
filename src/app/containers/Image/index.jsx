@@ -89,6 +89,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        fade
         type="image"
       />
     </Wrapper>
