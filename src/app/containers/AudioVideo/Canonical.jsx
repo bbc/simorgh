@@ -25,6 +25,7 @@ const Canonical = ({ blocks }) => {
 
   return (
     <AudioVideo
+      idArray={['mediaPlayer1', 'mediaPlayer2', 'mediaPlayer3']}
       id={id}
       mediaPlayerSettings={mediaPlayerSettings({
         aresMediaBlock,

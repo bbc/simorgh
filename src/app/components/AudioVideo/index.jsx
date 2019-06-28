@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, number, oneOfType, shape, string } from 'prop-types';
 
-const AudioVideo = ({ width, height }) => {
+const AudioVideo = ({ idArray, width, height }) => {
   const MediaPlayerContainer = styled.div`
     height: ${height};
     width: ${width};
@@ -112,7 +112,7 @@ const AudioVideo = ({ width, height }) => {
                 settings.push(${settingsArray[0]});
                 settings.push(${settingsArray[1]});
                 settings.push(${settingsArray[2]});
-                for (i = 0; i < 4; i++) {
+                for (i = 0; i < ${settingsArray.length}+1; i++) {
                     var player = bump.player(document.getElementById('mediaPlayer'+(i+1)), settings[i]);
                     player.load();
                 }
@@ -137,7 +137,7 @@ const AudioVideo = ({ width, height }) => {
           src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
         />
       </Helmet>
-      {audioVideoAssets.map(({ id }) => (
+      {idArray.map(id => (
         <MediaPlayerContainer id={id} />
       ))}
     </>
@@ -145,45 +145,7 @@ const AudioVideo = ({ width, height }) => {
 };
 
 AudioVideo.propTypes = {
-  id: string.isRequired,
-  mediaPlayerSettings: shape({
-    appName: string.isRequired,
-    appType: string.isRequired,
-    counterName: string.isRequired,
-    mediator: shape({
-      host: string.isRequired,
-    }).isRequired,
-    playlistObject: shape({
-      guidance: string,
-      holdingImageURL: string.isRequired,
-      items: arrayOf(
-        shape({
-          duration: number.isRequired,
-          versionID: string.isRequired,
-          kind: string.isRequired,
-        }),
-      ).isRequired,
-      title: string.isRequired,
-    }).isRequired,
-    product: string.isRequired,
-    responsive: bool.isRequired,
-    statsObject: oneOfType([
-      shape({ clipPID: string, destination: string.isRequired }),
-      shape({ episodePID: string, destination: string.isRequired }),
-    ]).isRequired,
-    ui: shape({
-      cta: shape({
-        mode: string.isRequired,
-      }).isRequired,
-      locale: shape({
-        lang: string.isRequired,
-      }).isRequired,
-      subtitles: shape({
-        defaultOn: bool.isRequired,
-        enabled: bool.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+  idArray: arrayOf(string).isRequired,
   width: string,
   height: string,
 };
