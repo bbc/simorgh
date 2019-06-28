@@ -13,6 +13,7 @@ exports[`Image with data should render a lazyload container instead of an image 
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={true}
     ratio={65.625}
@@ -39,6 +40,7 @@ exports[`Image with data should render an image with alt text 1`] = `
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -95,6 +97,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
       }
     }
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -121,6 +124,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright="Getty images"
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -147,6 +151,7 @@ exports[`Image with data should render an image with other originCode - this wou
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright="Getty images"
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
