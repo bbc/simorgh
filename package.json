@@ -129,7 +129,7 @@
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
-    "react-amphtml": "3.1.1",
+    "react-amphtml": "3.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.6.1",
