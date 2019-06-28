@@ -40,6 +40,10 @@ const ArticleMain = ({ articleData }) => {
       {platform === 'canonical' ? (
         <AudioVideoHead
           audioVideoAssets={audioVideoBlocks.map(avBlock => {
+            // The following lines are just to fetch the pid
+            // that is needed for ids on the media player placeholder divs
+            // and aresMediaBlocksArray to generate the mediaPlayerSettings
+            // object which needs to be passed to AudioVideoHead
             const toplevelblock = deepGet(['model', 'blocks'], avBlock);
             const aresMediaBlock = filterForBlockType(
               toplevelblock,
