@@ -11,3 +11,6 @@ These are E2Es of third-party systems, the success of those tests may or may not
 
 ## Why is there duplication?
 Tests are deliberately duplicated between this directory and the `../cypress/` directory. We do not want to conflate the tests here and there, these tests are only ever run against live environments, those are designed to run against any environment or more specifically any environment where the simorgh application is definitely the application that's being tested. For example, the current tests here are for error pages, these are served in production by a 3rd party system, so we cannot test our application in a live environment for any kind of error page. This suite therefore is created to ensure the most consistent possible user experience while keeping our build as stable as possible.
+
+## When to write tests in this directory
+If you're testing anything in the live environment that isn't a 200 response and 'text/html' content type. Do not run these kinds of tests agains the test environment, there is no expectation that it is stable.
