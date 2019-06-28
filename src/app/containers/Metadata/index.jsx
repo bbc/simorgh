@@ -124,6 +124,20 @@ const MetadataContainer = ({ metadata, promo }) => {
     alternateLinks = alternateLinksEnglishSites;
   }
 
+  const iconSizes = {
+    'apple-touch-icon': [
+      '72x72',
+      '96x96',
+      '128x128',
+      '144x144',
+      '152x152',
+      '192x192',
+      '384x384',
+      '512x512',
+    ],
+    icon: ['72x72', '96x96', '192x192'],
+  };
+
   return (
     <Fragment>
       <LinkedData
@@ -168,6 +182,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         type={assetType}
         service={service}
         showArticleTags={assetType === 'article'}
+        iconSizes={iconSizes}
       />
     </Fragment>
   );
