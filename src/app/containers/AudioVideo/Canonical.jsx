@@ -1,25 +1,22 @@
 import React from 'react';
-import AudioVideo from '../../components/AudioVideo';
-import { audioVideoPropTypes } from '../../models/propTypes';
-import MediaPlayerSettings from './MediaPlayerSettings';
+import styled from 'styled-components';
+import { string } from 'prop-types';
 
-const Canonical = ({ blocks }) => {
-  if (!blocks) {
-    return null;
-  }
+const Canonical = ({ id }) => {
+  const MediaPlayerContainer = styled.div`
+    height: 26em;
+    width: 100%;
+  `;
 
   return (
-    <AudioVideo
-      idArray={['mediaPlayer1', 'mediaPlayer2', 'mediaPlayer3']}
-      mediaPlayerSettings={MediaPlayerSettings({ blocks })}
-      width="100%"
-      height="26em"
-    />
+    <>
+      <MediaPlayerContainer id={id} key={id} />
+    </>
   );
 };
 
 Canonical.propTypes = {
-  ...audioVideoPropTypes,
+  id: string.isRequired,
 };
 
 export default Canonical;

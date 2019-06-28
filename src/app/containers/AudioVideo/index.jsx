@@ -36,6 +36,7 @@ const AudioVideoContainer = ({ blocks }) => {
   const metadata = videoMetadata(aresMediaBlock);
   const captionBlock = filterForBlockType(blocks, 'caption');
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
+  const pid = deepGet(['id'], nestedModel);
   const kind =
     deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
 
@@ -71,7 +72,9 @@ const AudioVideoContainer = ({ blocks }) => {
       ) : null}
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
-          {platform === 'canonical' ? <Canonical blocks={blocks} /> : null}
+          {platform === 'canonical' ? (
+            <Canonical id={pid} blocks={blocks} />
+          ) : null}
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}

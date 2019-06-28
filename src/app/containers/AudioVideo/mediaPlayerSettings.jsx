@@ -8,11 +8,17 @@ const MediaPlayerSettings = ({ blocks }) => {
   const { env, statsDestination, statsPageIdentifier } = React.useContext(
     RequestContext,
   );
+
+  if (!blocks) {
+    return null;
+  }
+
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
 
   if (!aresMediaBlock) {
     return null;
   }
+
   const pid = deepGet(['model', 'blocks', 0, 'model', 'id'], aresMediaBlock);
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
   const kind =
@@ -36,7 +42,7 @@ const MediaPlayerSettings = ({ blocks }) => {
     statsObject.episodePID = pid;
   }
 
-  return {
+  const settings = {
     appName: 'news',
     appType: 'responsive',
     counterName: statsPageIdentifier,
@@ -71,6 +77,8 @@ const MediaPlayerSettings = ({ blocks }) => {
       },
     },
   };
+
+  return JSON.stringify(settings);
 };
 
 export default MediaPlayerSettings;

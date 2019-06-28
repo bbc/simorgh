@@ -18,10 +18,20 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
                 settings.push(${settingsArray[0]});
                 settings.push(${settingsArray[1]});
                 settings.push(${settingsArray[2]});
-                for (i = 0; i < ${settingsArray.length}+1; i++) {
-                  var player = bump.player(document.getElementById('mediaPlayer'+(i+1)), settings[i]);
-                  player.load();
-                }
+                settings.push(${settingsArray[3]});
+                settings.push(${settingsArray[4]});
+                settings.push(${settingsArray[5]});
+                settings.push(${settingsArray[6]});
+                settings.push(${settingsArray[7]});
+                ${audioVideoAssets
+                  .map(
+                    (
+                      avAsset,
+                      index,
+                    ) => `var player${index} = bump.player(document.getElementById('${avAsset.id}'), settings[${index}]);
+                player${index}.load();`,
+                  )
+                  .join('')}
               });
             }
           `}
