@@ -106,23 +106,21 @@ const AudioVideoHead = () => {
                 settings.push(${settingsArray[1]});
                 settings.push(${settingsArray[2]});
                 for (i = 0; i < ${settingsArray.length}+1; i++) {
-                    var player = bump.player(document.getElementById('mediaPlayer'+(i+1)), settings[i]);
-                    player.load();
+                  var player = bump.player(document.getElementById('mediaPlayer'+(i+1)), settings[i]);
+                  player.load();
                 }
               });
-          }
-        `}
+            }
+          `}
         </script>
         <script type="text/javascript">
           {`
-          function initialiseRequires() {
-            var requiredScripts = {
-              "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
-            };
-            require({ paths: requiredScripts, waitSeconds: 30 });
-            mediaPlayerSetup();
-          }
-        `}
+            function initialiseRequires() {
+              var requiredScripts = { "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4" };
+              require({ paths: requiredScripts, waitSeconds: 30 });
+              mediaPlayerSetup();
+            }
+          `}
         </script>
         <script
           onLoad="initialiseRequires()"

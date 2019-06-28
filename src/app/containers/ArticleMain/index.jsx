@@ -10,6 +10,7 @@ import { GhostWrapper } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
+import { RequestContext } from '../../contexts/RequestContext';
 
 const componentsToRender = {
   headline: headings,
@@ -21,6 +22,7 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData }) => {
+  const { platform } = React.useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
 
@@ -28,7 +30,7 @@ const ArticleMain = ({ articleData }) => {
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
-      <AudioVideoHead />
+      {platform === 'canonical' ? <AudioVideoHead /> : null}
       <main role="main">
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
