@@ -51,12 +51,16 @@ const AudioVideoContainer = ({ blocks }) => {
   let ParentWrapper = NestedGridParentLarge;
   let ChildWrapper = NestedGridItemChildLarge;
   let Container = GridItemConstrainedLargeNoMargin;
+  let width = '100%';
+  let height = '26em';
 
   if (orientation === 'Portrait') {
     ParentWrapper = NestedGridParentSmall;
     ChildWrapper = NestedGridItemChildSmall;
     Container = GridItemConstrainedSmall;
     wrapperSpan.default = '4';
+    width = '100%';
+    height = `853px`;
   }
 
   return (
@@ -73,7 +77,7 @@ const AudioVideoContainer = ({ blocks }) => {
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
           {platform === 'canonical' ? (
-            <Canonical id={pid} blocks={blocks} />
+            <Canonical id={pid} blocks={blocks} width={width} height={height} />
           ) : null}
         </ChildWrapper>
         <ChildWrapper
