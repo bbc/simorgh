@@ -177,10 +177,17 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 auto;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 
@@ -565,10 +572,17 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 auto;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
+    padding: 0 auto;
   }
 }
 

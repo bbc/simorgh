@@ -12,10 +12,10 @@ import {
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Video Container', module)
-  .add('video, clip, with guidance, with caption', () =>
+  .add('video, clip, global, with guidance, with caption', () =>
     VideoClipGlobalWithCaption({ platform: 'canonical' }),
   )
-  .add('video, clip, with guidance, without caption', () =>
+  .add('video, clip, global, with guidance, without caption', () =>
     VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
   )
   .add('video, clip, UK, with guidance', () =>
@@ -39,10 +39,10 @@ storiesOf('Video Container', module)
 
 storiesOf('Video Container - AMP', module)
   .addDecorator(AmpDecorator)
-  .add('video, clip, with guidance, with caption', () =>
+  .add('video, clip, global, with guidance, with caption', () =>
     VideoClipGlobalWithCaption({ platform: 'amp' }),
   )
-  .add('video, clip, with guidance, without caption', () =>
+  .add('video, clip, global, with guidance, without caption', () =>
     VideoClipGlobalWithoutCaption({ platform: 'amp' }),
   )
   .add('video, clip, UK, with guidance', () =>

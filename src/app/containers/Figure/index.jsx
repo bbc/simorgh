@@ -7,6 +7,14 @@ import LazyLoad from 'react-lazyload';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import { RequestContext } from '../../contexts/RequestContext';
+import {
+  NestedGridParentLarge,
+  NestedGridParentMedium,
+  NestedGridParentSmall,
+  NestedGridItemChildSmall,
+  NestedGridItemChildMedium,
+  NestedGridItemChildLarge,
+} from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -47,24 +55,61 @@ const ImageComponent = ({
     <Image alt={alt} src={src} width={width} srcset={srcset} fade={fade} />
   );
 
+  const imageSpan = {
+    default: '6',
+    group5: '12',
+  };
+  let ParentWrapper = NestedGridParentLarge;
+  let ChildWrapper = NestedGridItemChildLarge;
+
+  if (height === width) {
+    ParentWrapper = NestedGridParentMedium;
+    ChildWrapper = NestedGridItemChildMedium;
+  }
+  if (height > width) {
+    ParentWrapper = NestedGridParentSmall;
+    ChildWrapper = NestedGridItemChildSmall;
+    imageSpan.default = '4';
+  }
+
   return (
     <Fragment>
-      <ImagePlaceholder ratio={ratio}>
-        {platform === 'amp' ? (
-          <AmpImg
-            alt={alt}
-            attribution={copyright || ''}
-            layout="responsive"
-            src={src}
-            height={height}
-            width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad)
-        )}
-        {showCopyright && renderCopyright(copyright)}
-      </ImagePlaceholder>
-      {renderCaption(captionBlock, type)}
+      <ParentWrapper>
+        <ChildWrapper
+          gridColumnStart={1}
+          marginLeft={{
+            group3: '1em',
+          }}
+          gridSpan={imageSpan}
+        >
+          <ImagePlaceholder ratio={ratio}>
+            {platform === 'amp' ? (
+              <AmpImg
+                alt={alt}
+                attribution={copyright || ''}
+                layout="responsive"
+                src={src}
+                height={height}
+                width={width}
+              />
+            ) : (
+              renderImage(imageToRender, lazyLoad)
+            )}
+            {showCopyright && renderCopyright(copyright)}
+          </ImagePlaceholder>
+        </ChildWrapper>
+        <ChildWrapper
+          gridColumnStart={1}
+          gridSpan={{
+            default: '6',
+            group3: '5',
+            group4: '5',
+            group5: '10',
+          }}
+        >
+          {renderCaption(captionBlock, type)}
+        </ChildWrapper>
+      </ParentWrapper>
     </Fragment>
   );
 };
