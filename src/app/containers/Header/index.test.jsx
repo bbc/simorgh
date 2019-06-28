@@ -5,8 +5,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const newsServiceContextStub = {
-  brandName: 'BBC News',
+  product: 'BBC News',
+  service: 'news',
   brandSVG,
+  svgHeight: 24,
+  maxWidth: 280,
+  minWidth: 180,
 };
 
 const HeaderContainerWithContext = context => (

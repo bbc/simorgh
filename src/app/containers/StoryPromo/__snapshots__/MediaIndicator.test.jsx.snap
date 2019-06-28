@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Story Promo Media Indicator should not render if item media object has no format 1`] = `
+<MediaIndicator
+  datetime="PT1H33M20S"
+  duration="1:33:20"
+  offscreenText={null}
+  type={null}
+/>
+`;
+
 exports[`Story Promo Media Indicator should render correctly 1`] = `
 <MediaIndicator
   datetime="PT1H33M20S"
