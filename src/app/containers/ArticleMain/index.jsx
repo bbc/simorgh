@@ -9,6 +9,7 @@ import timestamp from '../ArticleTimestamp';
 import { GhostWrapper } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import audioVideo from '../AudioVideo';
+import AudioVideoHead from '../../components/AudioVideoHead';
 
 const componentsToRender = {
   headline: headings,
@@ -27,6 +28,7 @@ const ArticleMain = ({ articleData }) => {
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
+      <AudioVideoHead />
       <main role="main">
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
