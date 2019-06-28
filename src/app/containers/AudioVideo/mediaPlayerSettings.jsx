@@ -19,8 +19,13 @@ const MediaPlayerSettings = ({ blocks }) => {
     return null;
   }
 
-  const pid = deepGet(['model', 'blocks', 0, 'model', 'id'], aresMediaBlock);
-  const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
+  const blocksArray = deepGet(['model', 'blocks'], aresMediaBlock);
+  const aresMediaMetadata = filterForBlockType(
+    blocksArray,
+    'aresMediaMetadata',
+  );
+  const pid = deepGet(['model', 'id'], aresMediaMetadata);
+  const nestedModel = deepGet(['model'], aresMediaMetadata);
   const kind =
     deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
   const subType = deepGet(['subType'], nestedModel);
@@ -28,19 +33,18 @@ const MediaPlayerSettings = ({ blocks }) => {
   const version = deepGet(['versions', 0], nestedModel);
   const duration = deepGet(['duration'], version);
   const versionID = deepGet(['versionId'], version);
-  const holdingImageUrl = deepGet(
-    ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
-    aresMediaBlock.model,
-  );
   const guidance = deepGet(['warnings', 'short'], version);
-
   const statsObject = { destination: statsDestination };
-
   if (subType === 'clip') {
     statsObject.clipPID = pid;
   } else if (subType === 'episode') {
     statsObject.episodePID = pid;
   }
+
+  const aresMediaImage = filterForBlockType(blocksArray, 'image');
+  const imageBlocks = deepGet(['model', 'blocks'], aresMediaImage);
+  const rawImageBlock = filterForBlockType(imageBlocks, 'rawImage');
+  const holdingImageUrl = deepGet(['model', 'locator'], rawImageBlock);
 
   const settings = {
     appName: 'news',

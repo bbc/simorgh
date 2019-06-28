@@ -31,7 +31,7 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
                     ) => `var player${index} = bump.player(document.getElementById('${avAsset.id}'), settings[${index}]);
                 player${index}.load();`,
                   )
-                  .join('')}
+                  .join(' ')}
               });
             }
           `}
