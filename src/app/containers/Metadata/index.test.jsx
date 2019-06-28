@@ -70,6 +70,7 @@ const metadataProps = (
   type,
   service,
   showArticleTags,
+  iconSizes: null,
 });
 
 const linkedDataProps = (

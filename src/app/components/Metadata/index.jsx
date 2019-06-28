@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
+import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -43,43 +44,6 @@ const getMetaTags = (metaTags, showArticleTags) => {
   ));
 };
 
-const iconAssetUrl = (service, size) =>
-  `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
-
-const getIconLinks = (service, iconType) => {
-  const iconSizes = {
-    'apple-touch-icon': [
-      '72x72',
-      '96x96',
-      '128x128',
-      '144x144',
-      '152x152',
-      '192x192',
-      '384x384',
-      '512x512',
-    ],
-    icon: ['72x72', '96x96', '192x192'],
-  };
-
-  if (iconType === 'apple-touch-icon') {
-    return iconSizes[iconType].map(size => (
-      <link
-        rel="apple-touch-icon"
-        sizes={size}
-        href={iconAssetUrl(service, size)}
-      />
-    ));
-  }
-  return iconSizes.icon.map(size => (
-    <link
-      rel="icon"
-      type="image/png"
-      href={iconAssetUrl(service, size)}
-      sizes={size}
-    />
-  ));
-};
-
 const Metadata = ({
   isAmp,
   alternateLinks,
@@ -105,8 +69,9 @@ const Metadata = ({
   twitterCreator,
   twitterSite,
   type,
-  service,
   showArticleTags,
+  service,
+  iconSizes,
 }) => {
   const htmlAttributes = { dir, lang };
 
@@ -169,8 +134,7 @@ const Metadata = ({
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
-      {getIconLinks(service, 'apple-touch-icon')}
-      {getIconLinks(service, 'icon')}
+      {getIconLinks(service, iconSizes)}
       <link
         rel="apple-touch-startup-image"
         href={iconAssetUrl(service, '512x512')}
@@ -210,8 +174,12 @@ Metadata.propTypes = {
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
-  service: string.isRequired,
   showArticleTags: bool.isRequired,
+  service: string.isRequired,
+  iconSizes: shape({
+    'apple-touch-icon-sizes': arrayOf(string),
+    icon: arrayOf(string),
+  }),
 };
 
 Metadata.defaultProps = {
@@ -221,6 +189,7 @@ Metadata.defaultProps = {
   metaTags: [],
   timeFirstPublished: null,
   timeLastPublished: null,
+  iconSizes: null,
 };
 
 export default Metadata;
