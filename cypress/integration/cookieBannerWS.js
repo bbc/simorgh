@@ -7,7 +7,7 @@ Object.keys(services).forEach(index => {
   const serviceConfig = services[index];
   const service = index;
 
-  // This should be unhacked when this files is consolidated with other cookie testing files.
+  // This should be unhacked when this file is consolidated with other cookie testing files.
   if (service === 'news' || service === 'default') {
     return;
   }
