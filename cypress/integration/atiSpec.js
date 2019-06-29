@@ -1,4 +1,5 @@
-import config from '../support/config';
+import config from '../support/config/envs';
+import services from '../support/config/services';
 import {
   hasNoscriptImgAtiUrl,
   hasAmpAnalyticsAtiUrl,
@@ -11,13 +12,13 @@ import {
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+      cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
       hasNoscriptImgAtiUrl('');
     });
   });
   describe('AMP page', () => {
     it('should have an amp-analytics tag with the ati url', () => {
-      cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+      cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
       hasAmpAnalyticsAtiUrl('');
     });
   });
@@ -26,7 +27,9 @@ describe('Article ATI for News', () => {
 describeForLocalOnly('ATI for Persian', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(`/persian/articles/${config.assets.persian}`);
+      cy.visit(
+        `/persian/articles/${services.persian.pageTypes.articles.asset}`,
+      );
       hasNoscriptImgAtiUrl(config.atiAnalyticsWSBucket);
     });
   });

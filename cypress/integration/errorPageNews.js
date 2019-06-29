@@ -1,4 +1,4 @@
-import config from '../support/config';
+import config from '../support/config/envs';
 import {
   errorMessage,
   errorPageInlineLink,

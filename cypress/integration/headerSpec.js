@@ -1,4 +1,4 @@
-import config from '../support/config';
+import config from '../support/config/envs';
 import { getElement, shouldContainText } from '../support/bodyTestHelper';
 
 describe('Header Tests', () => {
