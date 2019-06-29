@@ -1,4 +1,3 @@
-// import config from '../support/config/services';
 import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
 import { describeForLocalOnly } from '../support/limitEnvRuns';

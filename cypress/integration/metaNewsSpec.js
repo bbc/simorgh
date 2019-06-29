@@ -1,4 +1,4 @@
-import envs from '../support/config/envs';
+import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import {
   getElement,
@@ -59,7 +59,7 @@ describe('Article Meta Tests', () => {
 
   it('should have resource hints', () => {
     const resources = [
-      envs.assetOrigin,
+      envConfig.assetOrigin,
       'https://ichef.bbci.co.uk',
       'https://gel.files.bbci.co.uk',
     ];

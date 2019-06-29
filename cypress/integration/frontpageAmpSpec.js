@@ -1,4 +1,4 @@
-import config from '../support/config/services';
+import services from '../support/config/services';
 import { getElement } from '../support/bodyTestHelper';
 import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
@@ -10,13 +10,13 @@ import { describeForLocalOnly } from '../support/limitEnvRuns';
 describeForLocalOnly('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`${config.igbo.pageTypes.frontPage}.amp`);
+    cy.visit(`${services.igbo.pageTypes.frontPage}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
       cy.testResponseCodeAndType(
-        `${config.igbo.pageTypes.frontPage}.amp`,
+        `${services.igbo.pageTypes.frontPage}.amp`,
         200,
         'text/html',
       );
@@ -25,17 +25,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     cy.testResponseCodeAndType(
-      `${config.igbo.pageTypes.frontPage}.cake`,
+      `${services.igbo.pageTypes.frontPage}.cake`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `/amp${config.igbo.pageTypes.frontPage}`,
+      `/amp${services.igbo.pageTypes.frontPage}`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `${config.igbo.pageTypes.frontPage}/amp`,
+      `${services.igbo.pageTypes.frontPage}/amp`,
       404,
       'text/html',
     );
@@ -98,11 +98,11 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       ? 'https://www.bbc.com'
       : origin;
 
-    checkCanonicalURL(`${canonicalOrigin}${config.igbo.pageTypes.frontPage}`);
+    checkCanonicalURL(`${canonicalOrigin}${services.igbo.pageTypes.frontPage}`);
   });
 
   xit('should not have an AMP attribute on the main article', () => {
-    cy.visit(`${config.igbo.pageTypes.frontPage}`);
+    cy.visit(`${services.igbo.pageTypes.frontPage}`);
     getElement('html').should('not.have.attr', 'amp');
   });
 });

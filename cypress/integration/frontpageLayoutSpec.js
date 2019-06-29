@@ -1,9 +1,9 @@
-import config from '../support/config/services';
+import services from '../support/config/services';
 import { el } from '../support/frontpageElements';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
-Object.keys(config).forEach(index => {
-  const serviceConfig = config[index];
+Object.keys(services).forEach(index => {
+  const serviceConfig = services[index];
   const service = index;
 
   if (!serviceConfig.pageTypes.frontPage) {
