@@ -35,7 +35,9 @@ describeForLocalOnly('ATI for Persian', () => {
   });
   describe('AMP page', () => {
     it('should have an amp-analytics tag with the ati url', () => {
-      cy.visit(`/persian/articles/${config.assets.persian}.amp`);
+      cy.visit(
+        `/persian/articles/${services.persian.pageTypes.articles.asset}.amp`,
+      );
       hasAmpAnalyticsAtiUrl(config.atiAnalyticsWSBucket);
     });
   });
