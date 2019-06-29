@@ -1,4 +1,4 @@
-import config from '../support/config/envs';
+import services from '../support/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
@@ -15,7 +15,7 @@ import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.persian}`);
+    cy.visit(`/persian/articles/${services.persian.pageTypes.articles.asset}`);
   });
 
   it('should have the correct lang & dir attributes', () => {
@@ -46,7 +46,7 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
     'BBC News فارسی',
     'پهپادی که برایتان قهوه می‌آورد',
     'article',
-    `https://www.bbc.com/persian/articles/${config.assets.persian}`,
+    `https://www.bbc.com/persian/articles/${services.persian.pageTypes.articles.asset}`,
   );
 
   twitterMeta(
@@ -63,10 +63,10 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
     const canonicalOrigin = 'https://www.bbc.com';
     const currentOrigin = window.location.origin;
     checkCanonicalURL(
-      `${canonicalOrigin}/persian/articles/${config.assets.persian}`,
+      `${canonicalOrigin}/persian/articles/${services.persian.pageTypes.articles.asset}`,
     );
     checkAmpHTML(
-      `${currentOrigin}/persian/articles/${config.assets.persian}.amp`,
+      `${currentOrigin}/persian/articles/${services.persian.pageTypes.articles.asset}.amp`,
     );
   });
 
@@ -75,6 +75,8 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    metadataAssertionAMP(`/persian/articles/${config.assets.persian}.amp`);
+    metadataAssertionAMP(
+      `/persian/articles/${services.persian.pageTypes.articles.asset}.amp`,
+    );
   });
 });

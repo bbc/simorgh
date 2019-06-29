@@ -7,7 +7,7 @@ const config = {
     assets: {
       news: 'c8xxl4l3dzeo',
       newsThreeSubheadlines: 'c5ll353v7y9o',
-      persian: 'c7eel0lmr4do',
+      // persian: 'c7eel0lmr4do',
     },
     atiAnalyticsWSBucket: '598342',
   },
@@ -19,7 +19,7 @@ const config = {
     assets: {
       news: 'c0g992jmmkko',
       newsThreeSubheadlines: 'c6v11qzyv8po',
-      persian: 'c4vlle3q337o',
+      // persian: 'c4vlle3q337o',
     },
     atiAnalyticsWSBucket: '598343',
   },
@@ -31,7 +31,7 @@ const config = {
     assets: {
       news: 'c0g992jmmkko',
       newsThreeSubheadlines: 'c6v11qzyv8po',
-      persian: 'c4vlle3q337o',
+      // persian: 'c4vlle3q337o',
     },
     atiAnalyticsWSBucket: '598343',
   },
