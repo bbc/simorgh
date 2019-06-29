@@ -16,7 +16,7 @@ export default {
   news: {
     pageTypes: {
       articles: {
-        asset: 'c6v11qzyv8po',
+        asset: 'c5ll353v7y9o',
       },
       frontPage: undefined,
     },
