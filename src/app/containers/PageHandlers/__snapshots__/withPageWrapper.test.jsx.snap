@@ -385,7 +385,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/news/help-41670342"
+              href="/news/help-41670342"
             >
               <span
                 className="c13"
@@ -400,7 +400,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/terms"
+              href="/terms"
             >
               <span
                 className="c13"
@@ -415,7 +415,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.co.uk/aboutthebbc/"
+              href="/aboutthebbc/"
             >
               <span
                 className="c13"
@@ -430,7 +430,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/privacy/"
+              href="/privacy/"
             >
               <span
                 className="c13"
@@ -445,7 +445,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/usingthebbc/cookies/"
+              href="/usingthebbc/cookies/"
             >
               <span
                 className="c13"
@@ -460,7 +460,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/accessibility/"
+              href="/accessibility/"
             >
               <span
                 className="c13"
@@ -475,7 +475,7 @@ Array [
           >
             <a
               className="c11 c12"
-              href="https://www.bbc.com/contact/"
+              href="/contact/"
             >
               <span
                 className="c13"
@@ -491,7 +491,7 @@ Array [
           © 2019 BBC. The BBC is not responsible for the content of external sites. 
           <a
             className="c11 c15"
-            href="https://www.bbc.co.uk/help/web/links/"
+            href="/help/web/links/"
           >
             <span
               className="c13"

@@ -162,7 +162,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
     >
       We and our partners use technologies, such as 
       <a
-        href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+        href="/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
       >
         cookies
       </a>
@@ -185,7 +185,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
         className="c5"
       >
         <a
-          href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+          href="/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           onClick={[Function]}
         >
           No, take me to settings
@@ -375,7 +375,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
         className="c5"
       >
         <a
-          href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          href="/usingthebbc/your-data-matters"
           onClick={[Function]}
         >
           Find out what's changed

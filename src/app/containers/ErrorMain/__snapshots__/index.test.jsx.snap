@@ -244,7 +244,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
         Alternatively, please visit the 
         <a
           className="c5"
-          href="https://www.bbc.com/news"
+          href="/news"
         >
           BBC News homepage.
         </a>
@@ -499,7 +499,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
         روش دیگر، لطفآ به 
         <a
           className="c5"
-          href="https://www.bbc.com/persian"
+          href="/persian"
         >
           صفحه اصلی بی بی سی فارسی
         </a>
@@ -749,7 +749,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
         Alternatively, please visit the 
         <a
           className="c5"
-          href="https://www.bbc.com/news"
+          href="/news"
         >
           BBC News homepage.
         </a>
@@ -999,7 +999,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
         روش دیگر، لطفآ به 
         <a
           className="c5"
-          href="https://www.bbc.com/persian"
+          href="/persian"
         >
           صفحه اصلی بی بی سی فارسی
         </a>
@@ -1249,7 +1249,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
         Alternatively, please visit the 
         <a
           className="c5"
-          href="https://www.bbc.com/news"
+          href="/news"
         >
           BBC News homepage.
         </a>

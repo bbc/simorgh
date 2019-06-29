@@ -82,36 +82,36 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -121,9 +121,9 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -279,17 +279,17 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -309,7 +309,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -318,7 +318,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -332,7 +332,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -517,36 +517,36 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -556,9 +556,9 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -714,17 +714,17 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -744,7 +744,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -753,7 +753,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -767,7 +767,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -984,36 +984,36 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -1023,9 +1023,9 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -1181,17 +1181,17 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -1211,7 +1211,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -1220,7 +1220,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -1234,7 +1234,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -1419,36 +1419,36 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -1458,9 +1458,9 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -1616,17 +1616,17 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -1646,7 +1646,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -1655,7 +1655,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -1669,7 +1669,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -1854,36 +1854,36 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -1893,9 +1893,9 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -2051,17 +2051,17 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -2081,7 +2081,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -2090,7 +2090,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -2104,7 +2104,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -2321,36 +2321,36 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -2360,9 +2360,9 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -2518,17 +2518,17 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -2548,7 +2548,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -2557,7 +2557,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -2571,7 +2571,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -2756,36 +2756,36 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -2795,9 +2795,9 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -2953,17 +2953,17 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -2983,7 +2983,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -2992,7 +2992,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -3006,7 +3006,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -3191,36 +3191,36 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -3230,9 +3230,9 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -3388,17 +3388,17 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -3418,7 +3418,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -3427,7 +3427,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -3441,7 +3441,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -3658,36 +3658,36 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -3697,9 +3697,9 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -3855,17 +3855,17 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -3885,7 +3885,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -3894,7 +3894,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -3908,7 +3908,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -4127,36 +4127,36 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -4166,9 +4166,9 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -4324,17 +4324,17 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -4354,7 +4354,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -4363,7 +4363,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -4377,7 +4377,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -4568,36 +4568,36 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -4607,9 +4607,9 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -4765,17 +4765,17 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -4795,7 +4795,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -4804,7 +4804,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -4818,7 +4818,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -5064,36 +5064,36 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -5103,9 +5103,9 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -5261,17 +5261,17 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -5291,7 +5291,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -5300,7 +5300,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -5314,7 +5314,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -5560,36 +5560,36 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -5599,9 +5599,9 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -5757,17 +5757,17 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -5787,7 +5787,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -5796,7 +5796,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -5810,7 +5810,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -5995,36 +5995,36 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -6034,9 +6034,9 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -6192,17 +6192,17 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -6222,7 +6222,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -6231,7 +6231,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -6245,7 +6245,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -6462,36 +6462,36 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -6501,9 +6501,9 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -6659,17 +6659,17 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -6689,7 +6689,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -6698,7 +6698,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -6712,7 +6712,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",
@@ -6931,36 +6931,36 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "https://www.bbc.co.uk/help/web/links/",
+          "href": "/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
           Object {
-            "href": "https://www.bbc.com/news/help-41670342",
+            "href": "/news/help-41670342",
             "text": "Why you can trust the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/terms",
+            "href": "/terms",
             "text": "Terms of Use",
           },
           Object {
-            "href": "https://www.bbc.co.uk/aboutthebbc/",
+            "href": "/aboutthebbc/",
             "text": "About the BBC",
           },
           Object {
-            "href": "https://www.bbc.com/privacy/",
+            "href": "/privacy/",
             "text": "Privacy Policy",
           },
           Object {
-            "href": "https://www.bbc.com/usingthebbc/cookies/",
+            "href": "/usingthebbc/cookies/",
             "text": "Cookies",
           },
           Object {
-            "href": "https://www.bbc.com/accessibility/",
+            "href": "/accessibility/",
             "text": "Accessibility Help",
           },
           Object {
-            "href": "https://www.bbc.com/contact/",
+            "href": "/contact/",
             "text": "Contact the BBC",
           },
         ],
@@ -6970,9 +6970,9 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "lang": "en-GB",
       "locale": "en_GB",
       "manifestPath": "/articles/manifest.json",
-      "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      "noBylinesPolicy": "/news/help-41670342#authorexpertise",
       "product": "BBC News",
-      "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      "publishingPrinciples": "/news/help-41670342",
       "script": Object {
         "bodyCopy": Object {
           "groupA": Object {
@@ -7128,17 +7128,17 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                 "first": "We and our partners use technologies, such as ",
                 "last": ", and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
               "uk": Object {
                 "first": "We use ",
                 "last": " to give you the best online experience. Please let us know if you agree to all of these cookies.",
                 "linkText": "cookies",
-                "linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+                "linkUrl": "/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
               },
             },
             "reject": "No, take me to settings",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+            "rejectUrl": "/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
             "title": "Let us know you agree to cookies",
           },
           "privacy": Object {
@@ -7158,7 +7158,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
               },
             },
             "reject": "Find out what's changed",
-            "rejectUrl": "https://www.bbc.co.uk/usingthebbc/your-data-matters",
+            "rejectUrl": "/usingthebbc/your-data-matters",
             "title": "We've updated our Privacy and Cookies Policy",
           },
         },
@@ -7167,7 +7167,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Double checking the url",
@@ -7181,7 +7181,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
             "callToActionFirst": "Alternatively, please visit the ",
             "callToActionLast": "",
             "callToActionLinkText": "BBC News homepage.",
-            "callToActionLinkUrl": "https://www.bbc.com/news",
+            "callToActionLinkUrl": "/news",
             "message": "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
             "solutions": Array [
               "Hitting the refresh button in your browser",

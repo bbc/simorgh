@@ -10,7 +10,8 @@ const news = {
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   product: 'BBC News',
-  defaultImage: '/news/special/2015/newsspec_10857/bbc_news_logo.png',
+  defaultImage:
+    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
   dir: 'ltr',
   externalLinkText: ', external',
