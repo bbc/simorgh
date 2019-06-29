@@ -17,7 +17,6 @@ export default {
     pageTypes: {
       articles: {
         asset: 'c6v11qzyv8po',
-        nonExistent: 'cxvxrj8tvppo',
       },
       frontPage: undefined,
     },
@@ -35,7 +34,6 @@ export default {
     pageTypes: {
       articles: {
         asset: 'c4vlle3q337o',
-        nonExistentAsset: 'cxvxrj8tvppo',
       },
       frontPage: undefined,
     },
