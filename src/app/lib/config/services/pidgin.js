@@ -154,7 +154,7 @@ const pidgin = {
   ],
   footer: {
     externalLink: {
-      href: '/help/web/links/',
+      href: 'http://www.bbc.co.uk/help/web/links/',
       text: 'De way wey we de take go external link.',
     },
     links: [

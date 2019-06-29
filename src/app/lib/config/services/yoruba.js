@@ -131,7 +131,7 @@ const yoruba = {
   ],
   footer: {
     externalLink: {
-      href: '/help/web/links/',
+      href: 'http://www.bbc.co.uk/help/web/links/',
       text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
     },
     links: [

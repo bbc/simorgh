@@ -121,7 +121,7 @@ const news = {
   brandSVG,
   footer: {
     externalLink: {
-      href: '/help/web/links/',
+      href: 'http://www.bbc.co.uk/help/web/links/',
       text: 'Read about our approach to external linking.',
     },
     links: [
