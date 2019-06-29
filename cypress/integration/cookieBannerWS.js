@@ -10,6 +10,10 @@ const services = Object.keys(config);
 describeForLocalOnly('World Service Cookie banner Translations', () => {
   describe('Canonical', () => {
     services.forEach(serviceName => {
+      // This is a little hacky, it should be changed to check for undefined once config is entirely consistent.
+      if (serviceName === 'news') {
+        return;
+      }
       it(`should load the relevant translations for ${serviceName}`, () => {
         worldServiceCookieBannerTranslations(
           `${config[serviceName].assets.privacyStatement}`,
@@ -24,6 +28,10 @@ describeForLocalOnly('World Service Cookie banner Translations', () => {
 
   describeForEuOnly('AMP', () => {
     services.forEach(serviceName => {
+      // This is a little hacky, it should be changed to check for undefined once config is entirely consistent.
+      if (serviceName === 'news') {
+        return;
+      }
       it(`should load the relevant translations for ${serviceName}`, () => {
         worldServiceCookieBannerTranslations(
           `${config[serviceName].assets.privacyStatement}`,
