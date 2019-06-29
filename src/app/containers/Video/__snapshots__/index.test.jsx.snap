@@ -82,7 +82,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -517,7 +517,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -984,7 +984,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -1419,7 +1419,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -1854,7 +1854,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -2321,7 +2321,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -2756,7 +2756,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -3191,7 +3191,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -3658,7 +3658,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -4127,7 +4127,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -4568,7 +4568,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -5064,7 +5064,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -5560,7 +5560,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -5995,7 +5995,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -6462,7 +6462,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
@@ -6931,7 +6931,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       "footer": Object {
         "copyrightText": "BBC. The BBC is not responsible for the content of external sites.",
         "externalLink": Object {
-          "href": "/help/web/links/",
+          "href": "http://www.bbc.co.uk/help/web/links/",
           "text": "Read about our approach to external linking.",
         },
         "links": Array [
