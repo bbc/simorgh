@@ -11,7 +11,7 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 - Use custom cypress commands, see `/support/commands.js`.
 - If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unecessarily, use cypress aliasing or chain requests. 
 - If trying to reuse tests always use cypress commands. i.e. don't export and import const's within cypress. Config is a sensible exception to this rule.
-- Config exists in one place. Config for running tests is in `/support/config.js` and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
+- Config exists in one place. Config for running tests is in `/support/config/` and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
 - Before writing a long/complex test, look to see if similar ones could be reused.
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
 - Work together to consolidate the tests we have. Between the many tests in this folder are nearly all the tests we need, but are they as routinely used as they could be?

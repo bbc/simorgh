@@ -1,4 +1,4 @@
-import config from '../support/cookieConfig';
+import config from '../support/config/services';
 import { el } from '../support/frontpageElements';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 

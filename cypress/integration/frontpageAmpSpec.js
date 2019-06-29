@@ -1,4 +1,4 @@
-import config from '../support/cookieConfig';
+import config from '../support/config/services';
 import { getElement } from '../support/bodyTestHelper';
 import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
