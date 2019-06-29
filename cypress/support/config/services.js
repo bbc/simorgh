@@ -3,10 +3,10 @@ export default {
     assets: {
       mockArticleURL: '/igbo/articles/c0000000000o',
       mockAmpArticleURL: '/igbo/articles/c0000000000o.amp',
-      privacyStatement: 'Anyị ewelitela ihe nzuzo anyị nakwa iwu dị na ya.',
-      performanceStatement: 'Ka anyị mara ma i kwernyere na iwu ndị a',
-      cookieAgreement: 'Eeh, ekwere m',
-      privacyAgreement: 'Ọ dị mma',
+      // privacyStatement: 'Anyị ewelitela ihe nzuzo anyị nakwa iwu dị na ya.',
+      // performanceStatement: 'Ka anyị mara ma i kwernyere na iwu ndị a',
+      // cookieAgreement: 'Eeh, ekwere m',
+      // privacyAgreement: 'Ọ dị mma',
     },
     pageTypes: {
       articles: undefined,
