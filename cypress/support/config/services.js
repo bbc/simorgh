@@ -15,7 +15,10 @@ export default {
   },
   news: {
     pageTypes: {
-      articles: undefined,
+      articles: {
+        asset: 'c6v11qzyv8po',
+        nonExistent: 'cxvxrj8tvppo',
+      },
       frontPage: undefined,
     },
   },
@@ -30,7 +33,10 @@ export default {
       privacyAgreement: 'تایید',
     },
     pageTypes: {
-      articles: undefined,
+      articles: {
+        asset: 'c4vlle3q337o',
+        nonExistentAsset: 'cxvxrj8tvppo',
+      },
       frontPage: undefined,
     },
   },
