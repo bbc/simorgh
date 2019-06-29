@@ -90,7 +90,7 @@ describe('Article Body Tests', () => {
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(
   //     'main a',
-  //     `/news/articles/${config.assets.news}`,
+  //     `/news/articles/${services.news.pageTypes.articles.asset}`,
   //   );
   // });
 
