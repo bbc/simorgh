@@ -1,4 +1,4 @@
-const config = {
+export default {
   igbo: {
     assets: {
       mockArticleURL: '/igbo/articles/c0000000000o',
@@ -7,6 +7,16 @@ const config = {
       performanceStatement: 'Ka anyị mara ma i kwernyere na iwu ndị a',
       cookieAgreement: 'Eeh, ekwere m',
       privacyAgreement: 'Ọ dị mma',
+    },
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/igbo',
+    },
+  },
+  news: {
+    pageTypes: {
+      articles: undefined,
+      frontPage: undefined,
     },
   },
   persian: {
@@ -19,6 +29,10 @@ const config = {
       cookieAgreement: 'بله، موافقم',
       privacyAgreement: 'تایید',
     },
+    pageTypes: {
+      articles: undefined,
+      frontPage: undefined,
+    },
   },
   pidgin: {
     assets: {
@@ -28,6 +42,10 @@ const config = {
       performanceStatement: 'Let us know say you agree to cookies',
       cookieAgreement: 'Yes, I agree',
       privacyAgreement: 'OK',
+    },
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/pidgin',
     },
   },
   yoruba: {
@@ -40,7 +58,9 @@ const config = {
       cookieAgreement: 'Bẹ́ẹ̀ni, mo fara mọ́ ọ',
       privacyAgreement: 'Ó dára bẹ́ẹ̀',
     },
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/yoruba',
+    },
   },
 };
-
-module.exports = config;
