@@ -30,6 +30,7 @@
     "@babel/plugin-proposal-object-rest-spread", // allows ...spread notation
     "@babel/plugin-syntax-dynamic-import", // allows `await import()` syntax
     "dynamic-import-node", // allows dynamic `import()` in Node tests. Webpack can do natively.
+    "transform-react-remove-prop-types", // removes prop-types from prod build
     [
       "babel-plugin-styled-components",
       {
