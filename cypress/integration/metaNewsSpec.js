@@ -1,4 +1,5 @@
-import config from '../support/config/envs';
+import envs from '../support/config/envs';
+import services from '../support/config/services';
 import {
   getElement,
   getSecondElement,
@@ -18,7 +19,7 @@ import {
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
 
   it('should have the correct lang & dir attributes', () => {
@@ -58,7 +59,7 @@ describe('Article Meta Tests', () => {
 
   it('should have resource hints', () => {
     const resources = [
-      config.assetOrigin,
+      envs.assetOrigin,
       'https://ichef.bbci.co.uk',
       'https://gel.files.bbci.co.uk',
     ];
@@ -86,7 +87,7 @@ describe('Article Meta Tests', () => {
     'BBC News',
     "Meghan's bouquet laid on tomb of unknown warrior",
     'article',
-    `https://www.bbc.com/news/articles/${config.assets.newsThreeSubheadlines}`,
+    `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
   );
 
   twitterMeta(
@@ -107,16 +108,16 @@ describe('Article Meta Tests', () => {
     const currentOrigin = window.location.origin;
     const canonicalOrigin = 'https://www.bbc.com';
     checkCanonicalURL(
-      `${canonicalOrigin}/news/articles/${config.assets.newsThreeSubheadlines}`,
+      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
     );
     checkAmpHTML(
-      `${currentOrigin}/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `${currentOrigin}/news/articles/${services.news.pageTypes.articles.asset}.amp`,
     );
   });
 
   it('should include metadata in the head on AMP pages', () => {
     metadataAssertionAMP(
-      `/news/articles/${config.assets.newsThreeSubheadlines}.amp`,
+      `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
     );
   });
 
