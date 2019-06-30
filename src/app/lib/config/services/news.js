@@ -10,8 +10,7 @@ const news = {
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   product: 'BBC News',
-  defaultImage:
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+  defaultImage: '/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
   dir: 'ltr',
   externalLinkText: ', external',
@@ -27,8 +26,8 @@ const news = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews',
   twitterSite: '@BBCNews',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  noBylinesPolicy: '/news/help-41670342#authorexpertise',
+  publishingPrinciples: '/news/help-41670342',
   script: latin,
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
@@ -47,7 +46,7 @@ const news = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
       500: {
         statusCode: '500',
@@ -61,7 +60,7 @@ const news = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
     },
     consentBanner: {
@@ -85,7 +84,7 @@ const news = {
         },
         accept: 'OK',
         reject: "Find out what's changed",
-        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        rejectUrl: '/usingthebbc/your-data-matters',
       },
       cookie: {
         title: 'Let us know you agree to cookies',
@@ -96,7 +95,7 @@ const news = {
             last:
               ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
             first: 'We and our partners use technologies, such as ',
@@ -104,13 +103,13 @@ const news = {
             last:
               ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Yes, I agree',
         reject: 'No, take me to settings',
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          '/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
     media: {
@@ -121,36 +120,36 @@ const news = {
   brandSVG,
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href: '/help/web/links/',
       text: 'Read about our approach to external linking.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: '/news/help-41670342',
         text: 'Why you can trust the BBC',
       },
       {
-        href: 'https://www.bbc.com/terms',
+        href: '/terms',
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
+        href: '/aboutthebbc/',
         text: 'About the BBC',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
+        href: '/privacy/',
         text: 'Privacy Policy',
       },
       {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        href: '/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
+        href: '/accessibility/',
         text: 'Accessibility Help',
       },
       {
-        href: 'https://www.bbc.com/contact/',
+        href: '/contact/',
         text: 'Contact the BBC',
       },
     ],
