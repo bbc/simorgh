@@ -7,49 +7,29 @@ import ServiceWorkerContainer from '../containers/ServiceWorker';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
-import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
-import getOriginContext from '../contexts/RequestContext/getOriginContext';
-import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
-  const env = getEnv(origin);
-
-  return (
-    <Fragment>
-      <ServiceContextProvider service={service}>
-        <GlobalStyle />
-        <RequestContextProvider
-          env={env}
-          id={id}
-          isUK={isUK}
-          origin={origin}
-          pageType={pageType}
-          platform={isAmp ? 'amp' : 'canonical'}
-          statsDestination={getStatsDestination({
-            isUK,
-            env,
-            service,
-          })}
-          statsPageIdentifier={getStatsPageIdentifier({
-            pageType,
-            service,
-            id,
-          })}
-        >
-          <ServiceWorkerContainer />
-          <ManifestContainer />
-          <ConsentBanner />
-          <HeaderContainer />
-          {children}
-          <FooterContainer />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </Fragment>
-  );
-};
+const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => (
+  <Fragment>
+    <ServiceContextProvider service={service}>
+      <GlobalStyle />
+      <RequestContextProvider
+        id={id}
+        bbcOrigin={bbcOrigin}
+        pageType={pageType}
+        isAmp={isAmp}
+        service={service}
+      >
+        <ServiceWorkerContainer />
+        <ManifestContainer />
+        <ConsentBanner />
+        <HeaderContainer />
+        {children}
+        <FooterContainer />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </Fragment>
+);
 
 PageWrapper.propTypes = {
   bbcOrigin: string,
