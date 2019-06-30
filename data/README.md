@@ -2,8 +2,6 @@
 
 These are a set of data samples which represent possible input to Simorgh from upstream systems (and ultimately from a CMS). They cover a number of scenarios, most of which are made up with random Lorem Ipsum or real text.
 
-Scenarios are divided into 'test' and 'prod' - those in prod are based on real articles that were published on the BBC News website, and are considered safe content to use in the production environment.
-
 Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 
 <!--prettier-ignore-->
@@ -41,7 +39,7 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 
 ## Video test assets
 
-All these are included in article cmejqde986vo on the Test environment
+All these are included in article cmejqde986vo.
 
 |      PID | Availability  |
 | -------: | ------------- |
