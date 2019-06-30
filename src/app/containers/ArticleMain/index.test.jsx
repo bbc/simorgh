@@ -12,12 +12,10 @@ articleDataNewsNoHeadline.content.model.blocks.shift();
 const Context = ({ children }) => (
   <RequestContextProvider
     id="c0000000000o"
-    isUK
-    origin="https://www.test.bbc.co.uk"
+    bbcOrigin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    isAmp={false}
+    service="news"
   >
     {children}
   </RequestContextProvider>

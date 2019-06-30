@@ -11,13 +11,11 @@ describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render amp banner',
     <RequestContextProvider
-      platform="amp"
-      isUK
-      origin="https://www.bbc.co.uk"
-      pageType="article"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      pageType="article"
+      isAmp
+      service="news"
     >
       <ConsentBanner />
     </RequestContextProvider>,
@@ -26,13 +24,11 @@ describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render canonical banner',
     <RequestContextProvider
-      platform="canonical"
-      isUK
-      origin="https://www.bbc.co.uk"
-      pageType="article"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      pageType="article"
+      isAmp={false}
+      service="news"
     >
       <ConsentBanner />
     </RequestContextProvider>,

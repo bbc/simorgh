@@ -11,12 +11,10 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
-      platform={platform}
-      isUK={false}
-      origin={`https://www.bbc.com/${platform}`}
-      pageType="article"
-      statsDestination="WS_NEWS_LANGUAGES_TEST"
-      statsPageIdentifier={`${service}.page`}
+      bbcOrigin="https://www.test.bbc.com"
+      pageType="frontpage"
+      isAmp={platform === 'amp'}
+      service="news"
     >
       <FrontPageSection group={data} />
     </RequestContextProvider>

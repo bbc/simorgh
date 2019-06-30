@@ -17,14 +17,11 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 const generateFixtureData = ({ platform, blocks }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      env="test"
       id="c0000000000o"
-      isUK
-      origin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       pageType="article"
-      platform={platform}
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
+      isAmp={platform === 'amp'}
+      service="news"
     >
       <VideoContainer blocks={blocks} />
     </RequestContextProvider>

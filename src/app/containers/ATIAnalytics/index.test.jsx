@@ -14,14 +14,11 @@ import * as frontpageatiparams from './FrontPageAtiParams';
 const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      isUK
-      platform={platform}
-      origin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      bbcOrigin="https://www.test.bbc.co.uk"
       pageType={pageType}
+      isAmp={platform === 'amp'}
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
-      articleData={{}}
     >
       {children}
     </RequestContextProvider>

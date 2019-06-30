@@ -149,12 +149,11 @@ const generateFixtureData = ({
 }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
-      platform={platform}
-      isUK
-      origin="https://www.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      pageType="article"
+      isAmp={platform === 'amp'}
+      service="news"
     >
       <FigureContainer
         alt={imageAlt}

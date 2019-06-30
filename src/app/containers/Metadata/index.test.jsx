@@ -14,12 +14,11 @@ const Container = (service, bbcOrigin, platform, data, id) => {
   return (
     <ServiceContextProvider {...serviceConfig}>
       <RequestContextProvider
-        platform={platform}
         id={id}
-        isUK
-        origin={bbcOrigin}
-        statsDestination="NEWS_PS_TEST"
-        statsPageIdentifier={`${service}.articles.${id}.page`}
+        bbcOrigin={bbcOrigin}
+        pageType="article"
+        isAmp={platform === 'amp'}
+        service={service}
       >
         <MetadataContainer {...data} />
       </RequestContextProvider>

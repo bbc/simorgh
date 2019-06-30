@@ -34,8 +34,10 @@ describe('FrontPageAtiParams', () => {
     </ServiceContext.Provider>
   );
   const requestContextStub = {
-    platform: 'canonical',
-    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+    bbcOrigin: 'https://www.test.bbc.co.uk',
+    pageType: 'frontpage',
+    isAmp: false,
+    service: 'SERVICE',
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',
