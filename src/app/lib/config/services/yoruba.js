@@ -20,8 +20,8 @@ const yoruba = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   fonts: [],
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  noBylinesPolicy: '/news/help-41670342#authorexpertise',
+  publishingPrinciples: '/news/help-41670342',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
@@ -43,7 +43,7 @@ const yoruba = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
       500: {
         statusCode: '500',
@@ -57,7 +57,7 @@ const yoruba = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
     },
     consentBanner: {
@@ -81,7 +81,7 @@ const yoruba = {
         },
         accept: 'Ó dára bẹ́ẹ̀',
         reject: 'Ẹ ṣe ìwádìí ohun tó yípadà',
-        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        rejectUrl: '/usingthebbc/your-data-matters',
       },
       cookie: {
         title: 'Ẹ jẹ́ ká mọ̀ pé ẹ faramọ́ ìlànà òpó ìtàkún àgbáyé wa',
@@ -92,7 +92,7 @@ const yoruba = {
             last:
               ' láti jẹ́ kẹ ní ìrírí tó dára jùlọ lójú òpó ìtàkùn àgbáyé. Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ tẹ bá faramọ gbogbo àwọn ìlàná òpó ìtàkùn àgbáyé wọnyí.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
             first: 'Àwa àti àwọn alábàáṣiṣẹ́pọ̀ wa ń lo àwọn ìmọ̀ ẹ̀rọ, bíi ',
@@ -100,13 +100,13 @@ const yoruba = {
             last:
               ', láti mọ détà tí ẹ̀ ń lò, ká le è fun yín ní ìrírí lílo ojú òpó yélujára tó dára jùlọ, ká sì tún ri dájú pé ẹyin ìkan ló ń rí àwọn ohun ta kọ àti ìpolówó ọjà tí á ń fi hàn yín.Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ̀ tẹ bá fara mọ́ ọ.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Bẹ́ẹ̀ni, mo fara mọ́ ọ',
         reject: 'Rárá, ẹ gbé mi padà sí ojú òpó àtúntò (setting)',
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          '/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
     media: {
@@ -131,28 +131,28 @@ const yoruba = {
   ],
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href: '/help/web/links/',
       text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        href: '/yoruba/institutional-48528718',
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        href: '/usingthebbc/terms/',
         text: 'Ìlànà Lílò',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        href: '/usingthebbc/privacy/',
         text: 'Òfin Àṣírí',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        href: '/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/yoruba/institutional-43091540',
+        href: '/yoruba/institutional-43091540',
         text: 'Kàn sí BBC',
       },
     ],

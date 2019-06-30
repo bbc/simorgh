@@ -20,8 +20,8 @@ const pidgin = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   fonts: [],
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  noBylinesPolicy: '/news/help-41670342#authorexpertise',
+  publishingPrinciples: '/news/help-41670342',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
@@ -43,7 +43,7 @@ const pidgin = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
       500: {
         statusCode: '500',
@@ -57,7 +57,7 @@ const pidgin = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
     },
     consentBanner: {
@@ -81,7 +81,7 @@ const pidgin = {
         },
         accept: 'OK',
         reject: 'Find out wetin don change',
-        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        rejectUrl: '/usingthebbc/your-data-matters',
       },
       cookie: {
         title: 'Let us know say you agree to cookies',
@@ -92,7 +92,7 @@ const pidgin = {
             last:
               ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
             first: 'We and our partners use technologies, like ',
@@ -100,13 +100,13 @@ const pidgin = {
             last:
               ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Yes, I agree',
         reject: 'No, cari me go settings',
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          '/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
     media: {
@@ -154,28 +154,28 @@ const pidgin = {
   ],
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href: '/help/web/links/',
       text: 'De way wey we de take go external link.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        href: '/pidgin/institutional-48528766',
         text: 'Why you fit trust BBC News',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        href: '/usingthebbc/terms/',
         text: 'How dem dey take use am',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        href: '/usingthebbc/privacy/',
         text: 'Privacy Policy',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        href: '/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/pidgin/institutional-42188215',
+        href: '/pidgin/institutional-42188215',
         text: 'Call BBC',
       },
     ],
