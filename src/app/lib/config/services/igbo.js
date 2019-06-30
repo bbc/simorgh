@@ -20,8 +20,8 @@ const igbo = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   fonts: [],
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  noBylinesPolicy: '/news/help-41670342#authorexpertise',
+  publishingPrinciples: '/news/help-41670342',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
@@ -43,7 +43,7 @@ const igbo = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
       500: {
         statusCode: '500',
@@ -57,7 +57,7 @@ const igbo = {
         callToActionFirst: 'Alternatively, please visit the ',
         callToActionLinkText: 'BBC News homepage.',
         callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionLinkUrl: '/news',
       },
     },
     consentBanner: {
@@ -81,7 +81,7 @@ const igbo = {
         },
         accept: 'Ọ dị mma',
         reject: 'Chọpụta ihe gbanwere',
-        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        rejectUrl: '/usingthebbc/your-data-matters',
       },
       cookie: {
         title: 'Ka anyị mara ma i kwernyere na iwu ndị a',
@@ -92,7 +92,7 @@ const igbo = {
             last:
               ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
             first: 'Anyị na ndị anyị na ha na-emekọrịta na-eji teknụzụdịka ',
@@ -100,13 +100,13 @@ const igbo = {
             last:
               ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Eeh, ekwere m',
         reject: "Mba, duga m n'ebe mwube",
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          '/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
     media: {
@@ -134,28 +134,28 @@ const igbo = {
   ],
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href: '/help/web/links/',
       text: 'Usoro anyị maka njikọ dị na mpụga.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/igbo/institutional-48529074',
+        href: '/igbo/institutional-48529074',
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/terms',
+        href: '/usingthebbc/terms',
         text: 'Usoro Ojiji',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        href: '/usingthebbc/privacy/',
         text: 'Iwu Nzuzo',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        href: '/usingthebbc/cookies/',
         text: 'Kuki',
       },
       {
-        href: 'https://www.bbc.com/igbo/institutional-43090448',
+        href: '/igbo/institutional-43090448',
         text: 'Kpọtụrụ BBC',
       },
     ],
