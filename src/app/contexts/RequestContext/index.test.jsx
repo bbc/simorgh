@@ -1,102 +1,110 @@
-import React, { Fragment, useContext } from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import React, { useContext } from 'react';
+import { render } from '@testing-library/react';
+import * as getStatsDestination from './getStatsDestination';
+import * as getStatsPageIdentifier from './getStatsPageIdentifier';
+import * as getOriginContext from './getOriginContext';
+import * as getEnv from './getEnv';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
-const renderWithContextProvider = (
-  node,
-  {
-    platformString,
-    bbcOrigin,
-    pageType,
-    statsDestination,
-    statsPageIdentifier,
-  },
-) => (
-  <RequestContextProvider
-    platform={platformString}
-    bbcOrigin={bbcOrigin}
-    pageType={pageType}
-    statsDestination={statsDestination}
-    statsPageIdentifier={statsPageIdentifier}
-  >
-    {node}
-  </RequestContextProvider>
-);
-
 const Component = () => {
-  const {
-    platform,
-    isUK,
-    origin,
-    pageType,
-    statsDestination,
-    statsPageIdentifier,
-  } = useContext(RequestContext);
-  return (
-    <Fragment>
-      <span>{platform}</span>
-      <span>{isUK ? 'true' : 'false'}</span>
-      <span>{origin}</span>
-      <span>{pageType}</span>
-      <span>{statsDestination}</span>
-      <span>{statsPageIdentifier}</span>
-    </Fragment>
-  );
+  useContext(RequestContext);
+  return null;
+};
+
+jest.mock('react', () => {
+  const original = jest.requireActual('react');
+  return {
+    ...original,
+    useContext: jest.fn().mockImplementation(original.useContext),
+  };
+});
+
+jest.mock('./getStatsDestination');
+jest.mock('./getStatsPageIdentifier');
+jest.mock('./getOriginContext');
+jest.mock('./getEnv');
+
+getStatsDestination.default.mockReturnValue('getStatsDestination');
+getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
+getOriginContext.default.mockReturnValue({ isUK: 'isUK', origin: 'origin' });
+getEnv.default.mockReturnValue('getEnv');
+
+const input = {
+  bbcOrigin: 'bbcOrigin',
+  id: 'id',
+  isAmp: true,
+  pageType: 'frontpage',
+  service: 'service',
+};
+
+const expectedOutput = {
+  env: 'getEnv',
+  id: input.id,
+  isUK: 'isUK',
+  origin: 'origin',
+  pageType: input.pageType,
+  platform: 'amp',
+  statsDestination: 'getStatsDestination',
+  statsPageIdentifier: 'getStatsPageIdentifier',
 };
 
 describe('RequestContext', () => {
-  const testRequestContext = ({
-    pageType,
-    platformString,
-    statsDestination,
-    statsPageIdentifier,
-    isUK,
-    origin,
-  }) => {
-    shouldMatchSnapshot(
-      `should have a request object for platform ${platformString}, origin ${origin}, isUK, ${isUK}, pageType ${pageType}, statsDestination ${statsDestination} & statsPageIdentifier ${statsPageIdentifier}`,
-      renderWithContextProvider(<Component />, {
-        isUK,
-        origin,
-        pageType,
-        platformString,
-        statsDestination,
-        statsPageIdentifier,
-      }),
-    );
-  };
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-  testRequestContext({
-    pageType: 'article',
-    platformString: 'default',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'persian.articles.c0000000000o.page',
-    isUK: false,
-    origin: 'https://www.bbc.com',
+  it('should return expected values', () => {
+    render(
+      <RequestContextProvider {...input}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(getStatsDestination.default).toHaveBeenCalledWith({
+      env: 'getEnv',
+      isUK: 'isUK',
+      service: 'service',
+    });
+
+    expect(getStatsPageIdentifier.default).toHaveBeenCalledWith({
+      id: 'id',
+      pageType: 'frontpage',
+      service: 'service',
+    });
+
+    expect(getOriginContext.default).toHaveBeenCalledWith('bbcOrigin');
+
+    expect(getEnv.default).toHaveBeenCalledWith('origin');
+
+    expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });
-  testRequestContext({
-    pageType: 'article',
-    platformString: 'canonical',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'persian.articles.c0000000000o.page',
-    isUK: false,
-    origin: 'https://www.bbc.com',
-  });
-  testRequestContext({
-    pageType: 'article',
-    platformString: 'amp',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'persian.articles.c0000000000o.page',
-    isUK: false,
-    origin: 'https://www.bbc.com',
-  });
-  testRequestContext({
-    pageType: 'article',
-    platformString: 'default',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'persian.articles.c0000000000o.page',
-    isUK: false,
-    origin: 'https://www.bbc.com',
+
+  describe('platform', () => {
+    it('should be "amp" when isAmp is true', () => {
+      render(
+        <RequestContextProvider {...input} isAmp>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        platform: 'amp',
+      });
+    });
+
+    it('should be "canonical" when isAmp is false', () => {
+      render(
+        <RequestContextProvider {...input} isAmp={false}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        platform: 'canonical',
+      });
+    });
   });
 });
