@@ -1,18 +1,26 @@
 /*
-  Do not import this file into the primary application.
-  This file is intended for use by tests only where needed. 
-  Including this file in the application will cause the 
-  bundle splitting to stop working.
+  This file includes data for the Service Context
+  It will be used by the ServiceContext Component
 */
 import news from './news';
 import persian from './persian';
 import igbo from './igbo';
 import pidgin from './pidgin';
 import yoruba from './yoruba';
-import defaultConfig from './default';
 
 export default {
-  default: defaultConfig,
+  default: {
+    atiAnalyticsAppName: 'default',
+    brandName: 'Default Brand Name',
+    dir: 'ltr',
+    externalLinkText: ', default external link suffix',
+    imageCaptionOffscreenText: 'Default image caption prefix, ',
+    videoCaptionOffscreenText: 'Default video caption prefix, ',
+    imageCopyrightOffscreenText: 'Default image copyright text, ',
+    service: 'default',
+    themeColor: '#000',
+    fonts: [],
+  },
   news,
   persian,
   igbo,

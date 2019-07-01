@@ -1,23 +1,5 @@
 {
   "one": {
-    "js": "news-12345.js"
-  },
-  "two": {
-    "js": "igbo-12345.js"
-  },
-  "three": {
-    "js": "serviceName-12345.js"
-  },
-  "four": {
-    "js": "vendor-12345.js"
-  },
-  "five": {
-    "js": "main-12345.js"
-  },
-  "six": {
-    "js": "vendor-54321.js"
-  },
-  "seven": {
-    "js": "wrongServiceName-54321.js"
+    "js": "one.js"
   }
 }

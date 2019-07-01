@@ -1,14 +1,8 @@
 {
-  "one": {
-    "js": "serviceName-12345.js"
+  "foo": {
+    "js": "foo.js"
   },
   "": {
-    "js": "vendor-12345.js"
-  },
-  "three": {
-    "js": "main-12345.js"
-  },
-  "four": {
-    "js": "vendor-54321.js"
+    "js": "bar.js"
   }
 }
