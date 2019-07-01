@@ -2,8 +2,8 @@
 
 # Size limit for all bundles used by each service (K)
 # Keep these +/- 5K and update frequently!
-min=634
-max=649
+min=650
+max=668
 
 services=( "news" "persian" "igbo" "yoruba" "pidgin" )
 failure=false
