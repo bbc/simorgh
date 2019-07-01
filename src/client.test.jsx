@@ -14,6 +14,14 @@ jest.mock('./app/routes', () => ({
   default: [],
 }));
 
+jest.mock('./app/routes', () => ({
+  default: [],
+}));
+
+jest.mock('react-loadable', () => ({
+  preloadReady: () => Promise.resolve(),
+}));
+
 jest.mock('./app/routes/getInitialData/utils/getRouteProps');
 
 const mockRootElement = <div />;
