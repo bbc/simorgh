@@ -1,50 +1,52 @@
-import config from '../support/config';
+import config from '../support/config/services';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
-[
-  { service: 'news', url: `/news/articles/${config.assets.news}` },
-  {
-    service: 'persian',
-    url: `/persian/articles/${config.assets.persian}`,
-  },
-  { service: 'igbo', url: `/igbo` },
-  { service: 'yoruba', url: `/yoruba` },
-  { service: 'pidgin', url: `/pidgin` },
-].forEach(({ service, url }) => {
-  describeForLocalOnly(`Script src - ${service}`, () => {
-    beforeEach(() => {
-      cy.visit(url);
-    });
-
-    it('should only have expected bundle script tags', () => {
-      cy.get('script[src]').each($p =>
-        expect($p.attr('src')).to.match(
-          new RegExp(
-            `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
-            'g',
-          ),
-        ),
-      );
-    });
-
-    it('should have 1 bundle for its service', () => {
-      let matches = 0;
-
-      cy.get('script[src]')
-        .each($p => {
-          const match = $p
-            .attr('src')
-            .match(
-              new RegExp(`(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`, 'g'),
-            );
-
-          if (match) {
-            matches += 1;
-          }
-        })
-        .then(() => {
-          expect(matches).to.equal(1);
+Object.keys(config).forEach(service => {
+  Object.keys(config[service].pageTypes)
+    .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+    .forEach(pageType => {
+      describeForLocalOnly(`Script src - ${service} ${pageType}`, () => {
+        beforeEach(() => {
+          cy.visit(
+            pageType === 'frontPage'
+              ? `/${service}`
+              : `/${service}/articles/${config[service].pageTypes.articles.asset}`,
+          );
         });
+
+        it('should only have expected bundle script tags', () => {
+          cy.get('script[src]').each($p =>
+            expect($p.attr('src')).to.match(
+              new RegExp(
+                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                'g',
+              ),
+            ),
+          );
+        });
+
+        it('should have 1 bundle for its service', () => {
+          let matches = 0;
+
+          cy.get('script[src]')
+            .each($p => {
+              const match = $p
+                .attr('src')
+                .match(
+                  new RegExp(
+                    `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
+                    'g',
+                  ),
+                );
+
+              if (match) {
+                matches += 1;
+              }
+            })
+            .then(() => {
+              expect(matches).to.equal(1);
+            });
+        });
+      });
     });
-  });
 });
