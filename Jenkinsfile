@@ -146,7 +146,9 @@ pipeline {
       }
       post {
         aborted {
-          currentBuild.result = 'SUCCESS'
+          script: {
+            currentBuild.result = 'SUCCESS'
+          }
         }
       }
     }
