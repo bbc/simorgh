@@ -163,12 +163,7 @@ describe('Server', () => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                'news-12345.js',
-                'vendor-54321.js',
-                'main-12345.js',
-                'vendor-12345.js',
-              ]}
+              assets={['one.js']}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
@@ -288,12 +283,7 @@ describe('Server', () => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                'igbo-12345.js',
-                'vendor-54321.js',
-                'main-12345.js',
-                'vendor-12345.js',
-              ]}
+              assets={['one.js']}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',

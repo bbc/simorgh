@@ -1,6 +1,5 @@
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
-const Loadable = require('react-loadable');
 
 const DOT_ENV_CONFIG = dotenv.config();
 if (DOT_ENV_CONFIG.error) {
@@ -17,14 +16,12 @@ const server = http.createServer(app);
 const port = process.env.PORT || 7080;
 let currentApp = app;
 
-Loadable.preloadAll().then(() => {
-  server.listen(port, error => {
-    if (error) {
-      logger.error(error);
-    }
+server.listen(port, error => {
+  if (error) {
+    logger.error(error);
+  }
 
-    logger.info(`Started and listening on http://localhost:${port}`);
-  });
+  logger.info(`Started and listening on http://localhost:${port}`);
 });
 
 if (module.hot) {
