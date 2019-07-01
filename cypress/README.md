@@ -15,8 +15,8 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
 - Work together to consolidate the tests we have. Between the many tests in this folder are nearly all the tests we need, but are they as routinely used as they could be?
 - Write as many tests as you please, but don't make them atomic. i.e. use .and() instead of a second test.
-  -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible.
-  -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
+- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible.
+- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 - We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)
 - Use the scripts from the package.json to run Cypress test locally on LIVE/TEST: https://github.com/bbc/simorgh/blob/latest/package.json#L39#L40
 
