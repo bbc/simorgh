@@ -1,19 +1,27 @@
 # Cypress tests and our approach to E2E testing
 
+## Overview:
+
 This folder contains all the simorgh application end-to-end (E2E) tests and exclusively uses cypress as a testing framework. At present we run all E2E tests on all builds and deploys to all environments including live.
 
 We aim to keep the code reusable but also to leverage the cypress framework as much as possible, here are some helpful hints. NB we're not perfect we're breaking our own guidelines and need help tidying up and making our tests more scalable.
 
-## Overview:
-
 ## Directory Structure:
 
-- Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
+Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
 
-## Helpful commands:
+<!-- prettier-ignore -->
+.
+├── fixtures
+├── integration         # Cypress tests
+├── plugins             # Internal behavior of Cypress
+└── support             # Helper utilities for tests
+    └── unit
 
-• Use the default cypress commands e.g. cy.get().
-• Use custom cypress commands, see /support/commands.js.
+## Useful commands:
+
+- Use the default cypress commands e.g. cy.get().
+- Use custom cypress commands, see /support/commands.js.
 
 ## Best Practises:
 
