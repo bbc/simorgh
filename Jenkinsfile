@@ -122,6 +122,12 @@ pipeline {
       when {
         expression { env.BRANCH_NAME != 'latest' && params.BRANCH_DEPLOY_TO_TEST == true }
       }
+      agent {
+        docker {
+          image "${nodeImage}"
+          args '-u root -v /etc/pki:/certs'
+        }
+      }
       steps {
         sh 'make installProd'
         sh "./scripts/jenkinsProductionFiles.sh"
