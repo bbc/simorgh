@@ -1,11 +1,5 @@
 import { getElement } from './bodyTestHelper';
 
-export const mozartFallbackStatus = path => {
-  cy.request(path).then(({ headers }) => {
-    expect(headers).not.to.have.property('x-mfa');
-  });
-};
-
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
@@ -17,12 +11,6 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
       timestamp - testBuffer,
       timestamp + testBuffer,
     );
-  });
-};
-
-export const testContentTypeContains = (path, contentType) => {
-  cy.request(path).then(({ headers }) => {
-    expect(headers['content-type']).to.include(contentType);
   });
 };
 
