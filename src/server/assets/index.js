@@ -1,5 +1,6 @@
 import fs from 'fs';
 import nodeLogger from '../../app/lib/logger.node';
+import assetsFilter from './assetsFilter';
 
 const logger = nodeLogger(__filename);
 
@@ -32,16 +33,7 @@ const getAssetsArray = service => {
     );
   }
 
-  const serviceAssets = assets.filter(asset => asset.includes(service));
-  const appAssets = assets.filter(
-    asset => asset.includes('main') || asset.includes('vendor'),
-  );
-
-  /*
-   * Service bundles must appear first in the page so react-loadable
-   * knows to ensure theyre preloaded before hydration is done.
-   */
-  return [...serviceAssets, ...appAssets];
+  return assetsFilter(assets, service);
 };
 
 const getAssetOrigins = () => {
