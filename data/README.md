@@ -4,6 +4,8 @@ These are a set of data samples which represent possible input to Simorgh from u
 
 Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 
+The assets sequentially numbered are for local testing, those which aren't are either on the test or live environments.
+
 <!--prettier-ignore-->
 | Scenario | Metadata | Content | Tagging | Notes |
 |---------:|----------|---------|---------|-------|
