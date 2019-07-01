@@ -18,6 +18,7 @@ const yoruba = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -26,6 +27,8 @@ const yoruba = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
+    currentPage: 'Current page',
+    skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
     error: {
       404: {
         statusCode: '404',
@@ -111,6 +114,21 @@ const yoruba = {
       video: 'Fidio',
     },
   },
+  navigation: [
+    {
+      title: 'Ìròyìn',
+      url: '/yoruba',
+    },
+    { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+    {
+      title: 'Fídíò',
+      url: '/yoruba/media/video',
+    },
+    {
+      title: 'Èyí to gbajúmọ̀ jù',
+      url: '/yoruba/popular/read',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

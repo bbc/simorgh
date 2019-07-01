@@ -3,7 +3,7 @@ import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const BrandContainer = ({ isHeader, isFooter }) => {
+const BrandContainer = props => {
   const { product, serviceLocalizedName, brandSVG, service } = useContext(
     ServiceContext,
   );
@@ -22,20 +22,19 @@ const BrandContainer = ({ isHeader, isFooter }) => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
-      borderTop={isFooter}
-      borderBottom={isHeader}
+      {...props}
     />
   );
 };
 
 BrandContainer.propTypes = {
-  isHeader: bool,
-  isFooter: bool,
+  borderTop: bool,
+  borderBottom: bool,
 };
 
 BrandContainer.defaultProps = {
-  isHeader: false,
-  isFooter: false,
+  borderTop: false,
+  borderBottom: false,
 };
 
 export default BrandContainer;

@@ -18,6 +18,7 @@ const igbo = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -26,6 +27,8 @@ const igbo = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Akụkọ',
+    currentPage: 'Current page',
+    skipLinkText: 'Wụga n’ọdịnaya',
     error: {
       404: {
         statusCode: '404',
@@ -111,6 +114,24 @@ const igbo = {
       video: 'Vidio',
     },
   },
+  navigation: [
+    {
+      title: 'Akụkọ',
+      url: '/igbo',
+    },
+    {
+      title: 'Egwuregwu',
+      url: '/igbo/egwuregwu',
+    },
+    {
+      title: 'Ihe nkiri',
+      url: '/igbo/media/video',
+    },
+    {
+      title: 'Nke ka ewuewu',
+      url: '/igbo/popular/read',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
