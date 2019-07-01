@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import describeForEuOnly from '../support/describeForEuOnly';
 
 const getPrivacyBanner = () =>
@@ -8,7 +8,7 @@ const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
 describeForEuOnly('Amp Cookie Banner Test', () => {
   beforeEach(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
@@ -29,7 +29,7 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
     cy.contains('OK').click();
 
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
 
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
@@ -39,7 +39,7 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
     cy.contains('OK').click();
     cy.contains('Yes, I agree').click();
 
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
 
     getPrivacyBanner().should('not.be.visible');
     getCookieBanner().should('not.be.visible');
@@ -52,7 +52,7 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
     cy.contains('OK').click();
     cy.contains('No, take me to settings').click();
 
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
 
     getPrivacyBanner().should('not.be.visible');
     getCookieBanner().should('not.be.visible');
