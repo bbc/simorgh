@@ -8,7 +8,7 @@ import {
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import news from '../../src/app/lib/config/services/news';
 
-// It is safe to test only that a 404 is returned on all
+// It is safe to test only that a 404 is returned on all environments
 describe('Test we get a 404', () => {
   it('should return a 404 error code', () => {
     cy.request({
