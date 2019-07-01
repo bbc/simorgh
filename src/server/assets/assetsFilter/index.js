@@ -14,7 +14,10 @@ const assetsFilter = (assets, service) => {
    * Service bundles must appear first in the page so react-loadable
    * knows to ensure theyre preloaded before hydration is done.
    */
-  return [...serviceAssets, ...vendorAssets, ...mainAssets];
+  const orderedAssets = [...serviceAssets, ...vendorAssets, ...mainAssets];
+
+  // Filter out duplicates just incase
+  return [...new Set(orderedAssets)];
 };
 
 export default assetsFilter;
