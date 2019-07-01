@@ -1,19 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServiceContext should have a brand name for default 1`] = `
-<span>
-  Default Brand Name
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for igbo 1`] = `"<span>BBC News Ìgbò</span>"`;
 
-exports[`ServiceContext should have a brand name for news 1`] = `
-<span>
-  BBC News
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for news 1`] = `"<span>BBC News</span>"`;
 
-exports[`ServiceContext should have a brand name for persian 1`] = `
-<span>
-  BBC News فارسی
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for persian 1`] = `"<span>BBC News فارسی</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for pidgin 1`] = `"<span>BBC News Pidgin</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for yoruba 1`] = `"<span>BBC News Yorùbá</span>"`;
