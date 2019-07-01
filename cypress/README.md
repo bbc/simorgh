@@ -4,7 +4,11 @@ This folder contains all the simorgh application end-to-end (E2E) tests and excl
 
 We aim to keep the code reusable but also to leverage the cypress framework as much as possible, here are some helpful hints. NB we're not perfect we're breaking our own guidelines and need help tidying up and making our tests more scalable.
 
-## Directory Structure:
+Use the scripts from the package.json to run Cypress test locally on LIVE/TEST: https://github.com/bbc/simorgh/blob/latest/package.json#L39#L40
+
+See the files in `./support/` directory for useful functions that may assist you in writing cypress tests.
+
+## Directory Structure
 
 <!-- prettier-ignore -->
     .
@@ -18,12 +22,14 @@ Config exists in one place. Config for running tests is in /support/config/ and 
 
 For further reading about cypress directory structure: https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure
 
-## Useful commands:
+## Writing test
 
-- Use the default cypress commands e.g. cy.get().
-- Use custom cypress commands, see /support/commands.js.
+Useful commands:
 
-## Best Practises:
+- Use the default cypress commands e.g. cy.get(). [For more defaults commands.](https://docs.cypress.io/api/api/table-of-contents.html)
+- Use custom cypress commands, see `./support/commands.js`.
+
+## Best Practises
 
 - Code reusability is good but ease of understanding is better.
 - If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unecessarily, use cypress aliasing or chain requests.
@@ -34,22 +40,6 @@ For further reading about cypress directory structure: https://docs.cypress.io/g
 - Write as many tests as you please, but don't make them atomic. i.e. use .and() instead of a second test. -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible. -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 
 _We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)_
-
-## Helper utilities:
-
-See the files in `./support/` directory for useful functions that may assist you in writing cypress tests.
-
-<!-- | Support Files        | Purpose |
-| -------------------- | ------- |
-| bodyTestHelper.js    |         |
-| commands.js          |         |
-| describeForEuOnly.js |         |
-| frontPageElements.js |         |
-| index.js             |         |
-| limitEnvRuns.js      |         |
-| metaTestHelper.js    |         |
-| config/env.js        |         |
-| services.js          |         | -->
 
 ## Beyond this suite of tests
 
