@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -15,7 +15,7 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
@@ -96,7 +96,7 @@ describe('Article Body Tests', () => {
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(
   //     'main a',
-  //     `/news/articles/${config.assets.news}`,
+  //     `/news/articles/${services.news.pageTypes.articles.asset}`,
   //   );
   // });
 
