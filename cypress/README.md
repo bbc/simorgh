@@ -11,12 +11,12 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
 
 <!-- prettier-ignore -->
-.
-├── fixtures
-├── integration         # Cypress tests
-├── plugins             # Internal behavior of Cypress
-└── support             # Helper utilities for tests
-    └── unit
+    .
+    ├── fixtures
+    ├── integration                 # Cypress tests
+    ├── plugins                     # Internal behavior of Cypress
+    └── support                     # Helper utilities for tests
+        └── unit
 
 ## Useful commands:
 
