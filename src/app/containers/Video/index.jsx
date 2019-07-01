@@ -39,6 +39,7 @@ const VideoContainer = ({ blocks }) => {
   const kind =
     deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
   const pid = deepGet(['id'], nestedModel);
+  const subType = deepGet(['subType'], nestedModel);
   const title = deepGet(['title'], nestedModel);
   const version = deepGet(['versions', 0], nestedModel);
   const duration = deepGet(['duration'], version);
@@ -48,11 +49,21 @@ const VideoContainer = ({ blocks }) => {
     aresMediaBlock.model,
   );
   const guidance = deepGet(['warnings', 'short'], version);
+
   const id = `mp#${pid}`;
+
+  const statsObject = { destination: statsDestination };
+
+  if (subType === 'clip') {
+    statsObject.clipPID = pid;
+  } else if (subType === 'episode') {
+    statsObject.episodePID = pid;
+  }
+
   const mediaPlayerSettings = {
-    product: 'news',
-    responsive: true,
-    statsObject: { clipPID: pid },
+    appName: 'news',
+    appType: platform === 'amp' ? 'amp' : 'responsive',
+    counterName: statsPageIdentifier,
     mediator: {
       host: mediatorURL(env),
     },
@@ -68,12 +79,19 @@ const VideoContainer = ({ blocks }) => {
         },
       ],
     },
+    product: 'news',
+    responsive: true,
+    statsObject,
     ui: {
-      subtitles: {
-        defaultOn: true,
+      cta: {
+        mode: 'duration',
       },
       locale: {
         lang: 'en-GB',
+      },
+      subtitles: {
+        defaultOn: true,
+        enabled: true,
       },
     },
   };
@@ -102,16 +120,7 @@ const VideoContainer = ({ blocks }) => {
       ) : null}
       <Figure>
         {platform === 'canonical' ? (
-          <Video
-            id={id}
-            title={title}
-            statsAppName="news"
-            statsAppType="responsive"
-            statsCountername={statsPageIdentifier}
-            statsDestination={statsDestination}
-            uiLocale="en-GB"
-            mediaPlayerSettings={mediaPlayerSettings}
-          />
+          <Video id={id} mediaPlayerSettings={mediaPlayerSettings} />
         ) : (
           <amp-iframe
             src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?#amp=1"

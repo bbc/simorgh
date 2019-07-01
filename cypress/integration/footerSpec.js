@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import {
   checkFooterLinks,
   getElement,
@@ -8,7 +8,7 @@ import {
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
   it('should render the BBC News branding', () => {
     const newsBrandingLink = getElement('footer a').eq(0);
