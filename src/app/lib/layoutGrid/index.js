@@ -130,13 +130,13 @@ export const layoutGridItemMedium = css`
 
   grid-column: 1 / span 6;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${props => deepGet(['padding', 'group2'], props) || 0};
+    padding: 0 ${props => deepGet(['padding', 'group2'], props) || ''};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    padding: 0 ${props => deepGet(['padding', 'group3'], props) || 0};
+    padding: 0 ${props => deepGet(['padding', 'group3'], props) || ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 5;
@@ -159,7 +159,7 @@ export const layoutGridItemSmall = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
     padding: 0
-      ${props => deepGet(['padding', 'group2'], props) || 0};
+      ${props => deepGet(['padding', 'group2'], props) || ''};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
@@ -169,7 +169,7 @@ export const layoutGridItemSmall = css`
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
     padding: 0
-      ${props => deepGet(['padding', 'group3'], props) || 0};
+      ${props => deepGet(['padding', 'group3'], props) || ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 4;
