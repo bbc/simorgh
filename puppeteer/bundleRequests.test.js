@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-global.Cypress = { env: () => 'test' };
+global.Cypress = { env: () => 'local' };
 
 const config = require('../cypress/support/config/services').default;
 
