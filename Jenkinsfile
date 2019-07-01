@@ -143,6 +143,12 @@ pipeline {
         sh "rm -f ${packageName}"
         zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
         stash name: 'simorgh', includes: packageName
+
+        sh "rm -rf storybook_dist"
+        sh "mkdir storybook_dist"
+
+        zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+        stash name: 'simorgh_storybook', includes: storybookDist
       }
       post {
         always {
@@ -164,7 +170,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infrastructure/latest',
+          job: 'simorgh-infra-sandbox/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
@@ -257,7 +263,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infrastructure/latest',
+          job: 'simorgh-infra-sandbox/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
