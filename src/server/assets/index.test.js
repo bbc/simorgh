@@ -25,48 +25,25 @@ describe('getAssetsArray', () => {
   });
 
   describe('assets manifest exists', () => {
-    it('should return the main, vendor and service manifest contents as key-value pairs when service matches', async () => {
+    it('should return the manifest contents as key-value pairs', async () => {
       process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
         __dirname,
         'fixture.json',
       );
       const { getAssetsArray } = require('./index.js');
-      expect(getAssetsArray('serviceName')).toEqual([
-        'serviceName-12345.js',
-        'vendor-54321.js',
-        'main-12345.js',
-        'vendor-12345.js',
-      ]);
-      expect(mockLogError).not.toHaveBeenCalled();
-    });
-
-    it('should return main and vendor manifest contents only when service doesnt match', async () => {
-      process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
-        __dirname,
-        'fixture.json',
-      );
-      const { getAssetsArray } = require('./index.js');
-      expect(getAssetsArray()).toEqual([
-        'vendor-54321.js',
-        'main-12345.js',
-        'vendor-12345.js',
-      ]);
+      expect(getAssetsArray()).toEqual(['one.js']);
       expect(mockLogError).not.toHaveBeenCalled();
     });
   });
 
   describe('assets manifest corrupted', () => {
-    it('should return only main, vendor and service manifest contents which have a key', async () => {
+    it('should return only assets which have a key', async () => {
       process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
         __dirname,
         'fixtureMissingKey.json',
       );
       const { getAssetsArray } = require('./index.js');
-      expect(getAssetsArray('serviceName')).toEqual([
-        'serviceName-12345.js',
-        'vendor-54321.js',
-        'main-12345.js',
-      ]);
+      expect(getAssetsArray()).toEqual(['foo.js']);
       expect(mockLogError).not.toHaveBeenCalled();
     });
   });

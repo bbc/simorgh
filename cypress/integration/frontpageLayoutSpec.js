@@ -88,4 +88,14 @@ Object.keys(services).forEach(index => {
       });
     });
   });
+
+  describeForLocalOnly('<script> tags', () => {
+    // Testing the actual fetch is not currently possible
+    it('should have script to fetch bundle', () => {
+      cy.get('script')
+        .last()
+        .should('have.attr', 'src')
+        .and('match', /(\/static\/js\/main-\w+\.\w+\.js)/g);
+    });
+  });
 });
