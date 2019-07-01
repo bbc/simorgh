@@ -78,6 +78,7 @@ pipeline {
   }
   parameters {
     string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
+    booleanParam(name: 'BRANCH_DEPLOY_TO_TEST', defaultValue: false, description: 'Will deploy changes on the branch to the test environment')
   }
   stages {
     stage ('Build and Test') {
@@ -117,13 +118,9 @@ pipeline {
         }
       }
     }
-    stage ('Deploy to test') {
-      input {
-          message "Deploy to test?"
-          ok "Deploying to test"
-      }
+    stage ('Branch Deploy to TEST') {
       when {
-        expression { env.BRANCH_NAME != 'latest' }
+        expression { env.BRANCH_NAME != 'latest' && params.BRANCH_DEPLOY_TO_TEST == true }
       }
       options {
         // Do not perform the SCM step
@@ -137,19 +134,12 @@ pipeline {
         //   parameters: [
         //     [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
         //     [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-        //     [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
+        //     [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
         //   ],
         //   propagate: true,
         //   wait: true
         // )
         sh "echo Dabbing on them haters"
-      }
-      post {
-        aborted {
-          script {
-            sh "eho Aborted"
-          }
-        }
       }
     }
     stage ('Build, Test & Package') {
