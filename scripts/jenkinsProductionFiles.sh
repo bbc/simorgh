@@ -23,7 +23,7 @@ cp -rf ./public ./pack/public
 # Copy the needed files in the root directory
 cp package.json ./pack
 cp package-lock.json ./pack
-cp .babelrc.js ./pack
+cp .babelrc ./pack
 cp .eslintrc.js ./pack
 cp .npmrc ./pack
 cp .nvmrc ./pack

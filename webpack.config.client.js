@@ -111,7 +111,11 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ),
       /*
-       * Exclude all moment locales so they can be included within service bundles
+       * The webpack.ContextReplacementPlugin allows us to load only
+       * the specific locales we require into our code. By using this
+       * plugin we can reference `moment/locale/en.js` in the files
+       * we need it, without importing it in every file or importing
+       * every locale.
        */
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,

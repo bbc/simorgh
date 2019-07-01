@@ -9,20 +9,23 @@ import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/test/igbo/frontpage/index.json';
 
-const Container = (service, bbcOrigin, platform, data, id) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      platform={platform}
-      id={id}
-      isUK
-      origin={bbcOrigin}
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier={`${service}.articles.${id}.page`}
-    >
-      <MetadataContainer {...data} />
-    </RequestContextProvider>
-  </ServiceContextProvider>
-);
+const Container = (service, bbcOrigin, platform, data, id) => {
+  const serviceConfig = services[service];
+  return (
+    <ServiceContextProvider {...serviceConfig}>
+      <RequestContextProvider
+        platform={platform}
+        id={id}
+        isUK
+        origin={bbcOrigin}
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier={`${service}.articles.${id}.page`}
+      >
+        <MetadataContainer {...data} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  );
+};
 
 const metadataProps = (
   isAmp,
