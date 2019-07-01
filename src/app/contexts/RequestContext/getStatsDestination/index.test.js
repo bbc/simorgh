@@ -1,4 +1,4 @@
-import getStatsDestination from './index';
+import getStatsDestination from '.';
 
 describe('getStatsDestination', () => {
   const testScenarios = [
