@@ -6,7 +6,7 @@ const logger = nodeLogger(__filename);
 const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGIN = 'https://gel.files.bbci.co.uk';
 
-const getAssetsArray = () => {
+const getAssetsArray = service => {
   const assets = [];
   const assetsManifestEnv = 'SIMORGH_ASSETS_MANIFEST_PATH';
   try {
@@ -31,7 +31,17 @@ const getAssetsArray = () => {
       `Error parsing assets manifest. ${assetsManifestEnv} = ${process.env[assetsManifestEnv]}`,
     );
   }
-  return assets;
+
+  const serviceAssets = assets.filter(asset => asset.includes(service));
+  const appAssets = assets.filter(
+    asset => asset.includes('main') || asset.includes('vendor'),
+  );
+
+  /*
+   * Service bundles must appear first in the page so react-loadable
+   * knows to ensure theyre preloaded before hydration is done.
+   */
+  return [...serviceAssets, ...appAssets];
 };
 
 const getAssetOrigins = () => {
