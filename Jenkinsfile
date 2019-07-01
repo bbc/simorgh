@@ -83,7 +83,7 @@ pipeline {
   stages {
     stage ('Build and Test') {
       when {
-        expression { env.BRANCH_NAME != 'latest' }
+        expression { env.BRANCH_NAME != 'latest' && params.BRANCH_DEPLOY_TO_TEST == false }
       }
       parallel {
         stage ('Test Development') {
@@ -109,6 +109,34 @@ pipeline {
             runProductionTests()
           }
         }  
+      }
+      post {
+        always {
+          script {
+            stageName = env.STAGE_NAME
+          }
+        }
+      }
+    }
+    stage ('Branch build') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' && params.BRANCH_DEPLOY_TO_TEST == true }
+      }
+      steps {
+        sh 'make installProd'
+        sh "./scripts/jenkinsProductionFiles.sh"
+        script {
+          // Get Simorgh commit information
+          getCommitInfo()
+          
+          // Set build tag information
+          buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+        }
+        sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
+
+        sh "rm -f ${packageName}"
+        zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+        stash name: 'simorgh', includes: packageName
       }
       post {
         always {
