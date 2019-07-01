@@ -1,22 +1,22 @@
 # Cypress tests and our approach to E2E testing
 
-## Overview:
-
 This folder contains all the simorgh application end-to-end (E2E) tests and exclusively uses cypress as a testing framework. At present we run all E2E tests on all builds and deploys to all environments including live.
 
 We aim to keep the code reusable but also to leverage the cypress framework as much as possible, here are some helpful hints. NB we're not perfect we're breaking our own guidelines and need help tidying up and making our tests more scalable.
 
 ## Directory Structure:
 
-Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
-
 <!-- prettier-ignore -->
     .
-    ├── fixtures
+    ├── fixtures                    # Cypress pre-defined
     ├── integration                 # Cypress tests
     ├── plugins                     # Internal behavior of Cypress
     └── support                     # Helper utilities for tests
-        └── unit
+        └── config
+
+Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
+
+For further reading about cypress directory structure: https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure
 
 ## Useful commands:
 
@@ -32,9 +32,24 @@ Config exists in one place. Config for running tests is in /support/config/ and 
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
 - Work together to consolidate the tests we have. Between the many tests in this folder are nearly all the tests we need, but are they as routinely used as they could be?
 - Write as many tests as you please, but don't make them atomic. i.e. use .and() instead of a second test. -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible. -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
-- We could write many more best practices but cypress already did: Cypress.io Best Practices
+
+_We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)_
 
 ## Helper utilities:
+
+See the files in `./support/` directory for useful functions that may assist you in writing cypress tests.
+
+<!-- | Support Files        | Purpose |
+| -------------------- | ------- |
+| bodyTestHelper.js    |         |
+| commands.js          |         |
+| describeForEuOnly.js |         |
+| frontPageElements.js |         |
+| index.js             |         |
+| limitEnvRuns.js      |         |
+| metaTestHelper.js    |         |
+| config/env.js        |         |
+| services.js          |         | -->
 
 ## Beyond this suite of tests
 
