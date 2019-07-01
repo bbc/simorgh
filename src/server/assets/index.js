@@ -33,7 +33,7 @@ const getAssetsArray = service => {
     );
   }
 
-  return assets;
+  return assetsFilter(assets, service);
 };
 
 const getAssetOrigins = () => {
