@@ -118,7 +118,10 @@ pipeline {
       }
     }
     stage ('Deploy to test') {
-      input "Deploy to test?"
+      input {
+          message "Deploy to test?"
+          ok "Deploying to test"
+      }
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
