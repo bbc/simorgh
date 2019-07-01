@@ -163,17 +163,16 @@ pipeline {
       agent any
       steps {
         unstash 'simorgh'
-        // build(
-        //   job: 'simorgh-infrastructure/latest',
-        //   parameters: [
-        //     [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
-        //     [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-        //     [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
-        //   ],
-        //   propagate: true,
-        //   wait: true
-        // )
-        sh "echo Dabbing on them haters"
+        build(
+          job: 'simorgh-infrastructure/latest',
+          parameters: [
+            [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
+          ],
+          propagate: true,
+          wait: true
+        )
       }
     }
     stage ('Build, Test & Package') {
