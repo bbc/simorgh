@@ -16,6 +16,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import deepGet from '../utilities/deepGet';
 
 const group4ColWidth = `6.75rem`;
 /* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
@@ -129,13 +130,13 @@ export const layoutGridItemMedium = css`
 
   grid-column: 1 / span 6;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${props => (props.padding && props.padding.group2) || 'auto'};
+    padding: 0 ${props => deepGet(['padding', 'group2'], props) || 0};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    padding: 0 ${props => (props.padding && props.padding.group3) || 'auto'};
+    padding: 0 ${props => deepGet(['padding', 'group3'], props) || 0};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 5;
@@ -158,7 +159,7 @@ export const layoutGridItemSmall = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
     padding: 0
-      ${props => (props.padding && props.padding.group2) || 'auto'};
+      ${props => deepGet(['padding', 'group2'], props) || 0};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
@@ -168,7 +169,7 @@ export const layoutGridItemSmall = css`
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
     padding: 0
-      ${props => (props.padding && props.padding.group3) || 'auto'};
+      ${props => deepGet(['padding', 'group3'], props) || 0};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 4;
