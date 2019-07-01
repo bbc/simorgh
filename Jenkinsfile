@@ -144,6 +144,11 @@ pipeline {
         // )
         sh "echo Dabbing on them haters"
       }
+      post {
+        aborted {
+          currentBuild.result = 'SUCCESS'
+        }
+      }
     }
     stage ('Build, Test & Package') {
       when {
