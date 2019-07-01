@@ -18,14 +18,8 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
   -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible.
   -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 - We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)
+- Use the scripts from the package.json to run Cypress test locally on LIVE/TEST: https://github.com/bbc/simorgh/blob/latest/package.json#L39#L40
 
-## How to run LIVE/TEST environment Cypress tests locally ?
+## Beyond this suite of tests
 
-Run Cypress test for LIVE: `npm run test:e2e:live_env`
-Run Cypress test for TEST: `npm run test:e2e:test_env`
-
-### For developers/testers who are working in the UK
-
-You will need to change the `baseURL` of the corresponding environment you want to test against in `cypress/support/config.js` to be `.co.uk`. Otherwise you will be redirect to `.com` and a domain error will be thrown.
-
-Cypress config file: https://github.com/bbc/simorgh/blob/latest/cypress/support/config.js
+We have two other cypress test suites. One is just a smoke test of our storybook deployment, see in the repo root under `.storybook/cypress`. The second one is for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under `3rdPartyCypress/`.
