@@ -29,8 +29,8 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 ## Best Practises
 
 [Cypress best practices](https://docs.cypress.io/guides/references/best-practices.html)
-[Cypress defaults commands](https://docs.cypress.io/api/api/table-of-contents.html)
 
+- Use the default cypress commands e.g. cy.get().[More defaults commands](https://docs.cypress.io/api/api/table-of-contents.html)
 - Use the custom commands in `/support/command.js` directory.
 - Code reusability is good but ease of understanding is better.
 - If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unecessarily, use cypress aliasing or chain requests.
@@ -38,7 +38,9 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 - Before writing a long/complex test, look to see if similar ones could be reused.
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
 - Work together to consolidate the tests we have. Between the many tests in this folder are nearly all the tests we need, but are they as routinely used as they could be?
-- Write as many tests as you please, but don't make them atomic. i.e. use .and() instead of a second test. -- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible. -- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
+- Write as many tests as you please, but don't make them atomic. i.e. use .and() instead of a second test.
+- The runtime of tests matters so make each as fast as you can, avoid repeating expensive things like visit()s and request()s as much as possible.
+- Although the runtime of each test matters and making each test not too small is good practice always tend towards full coverage rather than limiting the scope of testing.
 
 ## Beyond this suite of tests
 
