@@ -12,6 +12,8 @@ If the work you want to carry out is not captured in an issue, please open one. 
 
 There are issue templates available for bug fix and feature requests, so you know what details to include.
 
+Once you find an issue you would like to work on, please see this [guide about our project board workflow](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
+
 ## Pull Requests
 
 If you never created a pull request before, [here is a great tutorial on how to send a PR](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github).
@@ -97,8 +99,9 @@ To run these on your forked version follow these steps.
 There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
 
 ### Note: Adding files to the root of simorgh
+
 As part of our deployment & pipeline work, we have created a handy script to copy only the production files to a separate directory. The script `/script/jenkinsProductionFiles.sh` will delete node_modules, create a `pack` directory and copy all relevant configuration files and the necessary directories. Adding files to the `/src` or `/cypress` directory will not be an issue, when the code is deployed.
 
-If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`. 
+If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`.
 
 _This script is temporary and will most likely be refactored later on_
