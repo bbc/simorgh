@@ -10,7 +10,6 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -116,9 +115,7 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
             alt="Pauline Clayton"
             className="c4"
             height={null}
-            sizes={null}
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            srcSet={null}
             width={null}
           />
         </noscript>
@@ -233,9 +230,7 @@ exports[`Figure should render an AMP image with alt text 1`] = `
           attribution=""
           height={null}
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
         />
       </div>
     </div>
@@ -406,9 +401,7 @@ exports[`Figure should render an AMP image with caption and copyright 1`] = `
           attribution="Getty Images"
           height={null}
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
         />
         <p
           className="c4"
@@ -588,9 +581,7 @@ exports[`Figure should render an AMP image with caption text 1`] = `
           attribution=""
           height={null}
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
         />
       </div>
     </div>
@@ -782,9 +773,7 @@ exports[`Figure should render an AMP image with caption text with inline link 1`
           attribution=""
           height={null}
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
         />
       </div>
     </div>
@@ -932,9 +921,7 @@ exports[`Figure should render an AMP image with copyright text 1`] = `
           attribution="Getty Images"
           height={null}
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
         />
         <p
           className="c4"
@@ -965,7 +952,6 @@ exports[`Figure should render an image and caption for a portrait with nested gr
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1099,9 +1085,7 @@ exports[`Figure should render an image and caption for a portrait with nested gr
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={600}
         />
       </div>
@@ -1123,7 +1107,6 @@ exports[`Figure should render an image and caption for a square with nested grid
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1221,9 +1204,7 @@ exports[`Figure should render an image and caption for a square with nested grid
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={1240}
         />
       </div>
@@ -1245,7 +1226,6 @@ exports[`Figure should render an image with alt text 1`] = `
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1342,9 +1322,7 @@ exports[`Figure should render an image with alt text 1`] = `
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={null}
         />
       </div>
@@ -1366,7 +1344,6 @@ exports[`Figure should render an image with caption and copyright 1`] = `
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1521,9 +1498,7 @@ exports[`Figure should render an image with caption and copyright 1`] = `
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={null}
         />
         <p
@@ -1568,7 +1543,6 @@ exports[`Figure should render an image with caption text 1`] = `
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1709,9 +1683,7 @@ exports[`Figure should render an image with caption text 1`] = `
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={null}
         />
       </div>
@@ -1746,7 +1718,6 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -1909,9 +1880,7 @@ exports[`Figure should render an image with caption text with inline link 1`] = 
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={null}
         />
       </div>
@@ -1954,7 +1923,6 @@ exports[`Figure should render an image with copyright text 1`] = `
 .c4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .c3 {
@@ -2065,9 +2033,7 @@ exports[`Figure should render an image with copyright text 1`] = `
           alt="Pauline Clayton"
           className="c4"
           height={null}
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          srcSet={null}
           width={null}
         />
         <p
