@@ -20,11 +20,14 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 
 ## Running test
 
+[Running Cypress locally](https://github.com/bbc/simorgh#end-to-end-tests)
+
 Use the scripts from the package.json to run Cypress test locally on LIVE/TEST: https://github.com/bbc/simorgh/blob/latest/package.json#L39#L40
 
 ## Writing test tips
 
-- Use the default cypress commands. [Examples of defaults commands.](https://docs.cypress.io/api/api/table-of-contents.html)
+[Cypress defaults commands.](https://docs.cypress.io/api/api/table-of-contents.html)
+
 - Use the custom commands in `/support/command.js` directory.
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
 - Work together to consolidate the tests we have. Between the many tests in this folder are nearly all the tests we need, but are they as routinely used as they could be?
@@ -32,12 +35,12 @@ Use the scripts from the package.json to run Cypress test locally on LIVE/TEST: 
 
 ## Best Practises
 
+[Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)
+
 - Code reusability is good but ease of understanding is better.
 - If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unecessarily, use cypress aliasing or chain requests.
 - If trying to reuse tests always use cypress commands. i.e. don't export and import const's within cypress. Config is a sensible exception to this rule.
 - Before writing a long/complex test, look to see if similar ones could be reused.
-
-_We could write many more best practices but cypress already did: [Cypress.io Best Practices](https://docs.cypress.io/guides/references/best-practices.html)_
 
 ## Beyond this suite of tests
 
