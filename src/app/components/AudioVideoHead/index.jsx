@@ -6,12 +6,7 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
   const settingsArray = audioVideoAssets.map(
     ({ mediaPlayerSettings }) => mediaPlayerSettings,
   );
-  const o = {};
-  settingsArray.forEach((item, index) => {
-    o[index] = item;
-  });
-  // console.log(o);
-  // console.log(typeof o[0]);
+
   return (
     <>
       <Helmet>
@@ -20,9 +15,14 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
             function mediaPlayerSetup(container) {
               require(['bump-4'], (bump) => {
                 var settings = [];
-                console.log(typeof ${o[0]});
-                Object.keys(${o}).forEach(value => settings.push(value));
-
+                settings.push(${settingsArray[0]});
+                settings.push(${settingsArray[1]});
+                settings.push(${settingsArray[2]});
+                settings.push(${settingsArray[3]});
+                settings.push(${settingsArray[4]});
+                settings.push(${settingsArray[5]});
+                settings.push(${settingsArray[6]});
+                settings.push(${settingsArray[7]});
                 ${audioVideoAssets
                   .map(
                     (
