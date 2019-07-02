@@ -42,7 +42,7 @@ exports[`Figure should render a lazyloaded image when lazyLoad set to true 1`] =
       height={null}
       sizes={null}
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      srcSet="https://ichef.bbci.co.uk/news/350/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 350w"
+      srcSet="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
       width={640}
     />
   </noscript>
@@ -112,7 +112,7 @@ exports[`Figure should render an image with alt text 1`] = `
     height={null}
     sizes={null}
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-    srcSet="https://ichef.bbci.co.uk/news/350/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 350w"
+    srcSet="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
     width={640}
   />
 </div>

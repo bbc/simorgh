@@ -55,7 +55,7 @@ const baseFixture = {
   src:
     'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
   srcset:
-    'https://ichef.bbci.co.uk/news/350/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 350w',
+    'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w',
   width: 640,
 };
 
