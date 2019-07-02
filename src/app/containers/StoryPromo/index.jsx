@@ -7,7 +7,7 @@ import StoryPromoComponent, {
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
-import FigureContainer from '../Figure';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
@@ -34,7 +34,7 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
   return (
-    <FigureContainer
+    <ImageWithPlaceholder
       alt={imageValues.altText}
       ratio={ratio}
       src={src}

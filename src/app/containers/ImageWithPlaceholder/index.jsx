@@ -19,7 +19,7 @@ const renderImage = (imageToRender, lazyLoad) =>
     imageToRender
   );
 
-const Figure = ({
+const ImageWithPlaceholder = ({
   alt,
   children,
   copyright,
@@ -56,7 +56,7 @@ const Figure = ({
   );
 };
 
-Figure.propTypes = {
+ImageWithPlaceholder.propTypes = {
   alt: string.isRequired,
   copyright: string,
   children: node,
@@ -69,7 +69,7 @@ Figure.propTypes = {
   width: number.isRequired,
 };
 
-Figure.defaultProps = {
+ImageWithPlaceholder.defaultProps = {
   copyright: null,
   children: null,
   height: null,
@@ -78,4 +78,4 @@ Figure.defaultProps = {
   srcset: null,
 };
 
-export default Figure;
+export default ImageWithPlaceholder;

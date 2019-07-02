@@ -8,7 +8,7 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const WrappedFigure = ({ platform, ...otherProps }) => (
+const WrappedImageWithPlaceholder = ({ platform, ...otherProps }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
       platform={platform}
@@ -23,7 +23,7 @@ const WrappedFigure = ({ platform, ...otherProps }) => (
   </ServiceContext.Provider>
 );
 
-WrappedFigure.propTypes = {
+WrappedImageWithPlaceholder.propTypes = {
   caption: objectOf(any),
   copyright: string,
   lazyLoad: bool,
@@ -33,7 +33,7 @@ WrappedFigure.propTypes = {
   width: number,
 };
 
-WrappedFigure.defaultProps = {
+WrappedImageWithPlaceholder.defaultProps = {
   caption: null,
   copyright: null,
   lazyLoad: false,
@@ -61,7 +61,7 @@ const baseFixture = {
 
 export const FigureImage = () => {
   const props = baseFixture;
-  return <WrappedFigure {...props} />;
+  return <WrappedImageWithPlaceholder {...props} />;
 };
 
 export const FigureAmpImage = () => {
@@ -70,7 +70,7 @@ export const FigureAmpImage = () => {
     platform: 'amp',
   };
 
-  return <WrappedFigure {...props} />;
+  return <WrappedImageWithPlaceholder {...props} />;
 };
 
 export const FigureLazyLoadImage = () => {
@@ -79,5 +79,5 @@ export const FigureLazyLoadImage = () => {
     lazyLoad: true,
   };
 
-  return <WrappedFigure {...props} />;
+  return <WrappedImageWithPlaceholder {...props} />;
 };

@@ -8,7 +8,7 @@ import {
   FigureLazyLoadImage,
 } from './fixtureData';
 
-describe('Figure', () => {
+describe('ImageWithPlaceholder', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
     const wrapper = mount(<FigureLazyLoadImage />).find(LazyLoad);
     const {

@@ -3,7 +3,7 @@ import { string, number, objectOf, any, bool } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
-import FigureContainer from '../Figure';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import {
   NestedGridParentLarge,
   NestedGridParentMedium,
@@ -60,7 +60,7 @@ const ArticleFigure = ({
           }}
           gridSpan={imageSpan}
         >
-          <FigureContainer
+          <ImageWithPlaceholder
             ratio={ratio}
             alt={alt}
             copyright={copyright}
@@ -72,7 +72,7 @@ const ArticleFigure = ({
             srcset={srcset}
           >
             {showCopyright && renderCopyright(copyright)}
-          </FigureContainer>
+          </ImageWithPlaceholder>
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}
