@@ -1,4 +1,3 @@
-/* eslint no-template-curly-in-string: 0 */
 import Cookie from 'js-cookie';
 import onClient from '../utilities/onClient';
 import { setWindowValue, resetWindowValue } from '../../../testHelpers';
@@ -233,10 +232,6 @@ describe('getDeviceLanguage', () => {
     expect(deviceLanguage).toEqual('abc');
   });
 
-  it('should handle the amp platform', () => {
-    expect(getDeviceLanguage('amp')).toEqual('${browserLanguage}');
-  });
-
   it('should return null if langage isnt set', () => {
     setWindowValue('navigator', {
       language: null,
@@ -315,10 +310,6 @@ describe('getHref', () => {
     const href = getHref();
     expect(href).toEqual('https://www.example.com/%23anchortext');
   });
-
-  it('should handle the amp platform', () => {
-    expect(getHref('amp')).toEqual('${sourceUrl}');
-  });
 });
 
 describe('getReferrer', () => {
@@ -344,10 +335,6 @@ describe('getReferrer', () => {
     const referrer = getReferrer();
 
     expect(referrer).toEqual(null);
-  });
-
-  it('should handle the amp platform', () => {
-    expect(getReferrer('amp')).toEqual('${documentReferrer}');
   });
 });
 
