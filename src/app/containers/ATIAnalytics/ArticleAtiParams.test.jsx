@@ -39,10 +39,10 @@ describe('ArticleAtiParams', () => {
     atiAnalyticsAppName: 'news',
   };
   const requestContextStub = {
-    id: 'c0000000000o',
     bbcOrigin: 'https://www.test.bbc.co.uk',
-    pageType: 'article',
+    id: 'c0000000000o',
     isAmp: false,
+    pageType: 'article',
     service: 'news',
   };
 

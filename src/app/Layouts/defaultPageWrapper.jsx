@@ -14,10 +14,10 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => (
     <ServiceContextProvider service={service}>
       <GlobalStyle />
       <RequestContextProvider
-        id={id}
         bbcOrigin={bbcOrigin}
-        pageType={pageType}
+        id={id}
         isAmp={isAmp}
+        pageType={pageType}
         service={service}
       >
         <ServiceWorkerContainer />

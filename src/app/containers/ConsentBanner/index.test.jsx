@@ -11,10 +11,10 @@ describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render amp banner',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.co.uk"
-      pageType="article"
+      id="c0000000000o"
       isAmp
+      pageType="article"
       service="news"
     >
       <ConsentBanner />
@@ -24,10 +24,10 @@ describe('Consent Banner Container', () => {
   shouldMatchSnapshot(
     'should correctly render canonical banner',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.co.uk"
-      pageType="article"
+      id="c0000000000o"
       isAmp={false}
+      pageType="article"
       service="news"
     >
       <ConsentBanner />

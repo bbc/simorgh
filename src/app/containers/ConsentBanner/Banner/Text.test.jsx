@@ -31,10 +31,10 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text in the UK',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.co.uk"
-      pageType="article"
+      id="c0000000000o"
       isAmp={false}
+      pageType="article"
       service="news"
     >
       <BannerText {...bannerMessaging} />
@@ -44,10 +44,10 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text outside the UK',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.com"
-      pageType="article"
+      id="c0000000000o"
       isAmp={false}
+      pageType="article"
       service="news"
     >
       <BannerText {...bannerMessaging} />
@@ -57,10 +57,10 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.co.uk"
-      pageType="article"
+      id="c0000000000o"
       isAmp={false}
+      pageType="article"
       service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />
@@ -70,10 +70,10 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text with a link outside the UK',
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.com"
-      pageType="article"
+      id="c0000000000o"
       isAmp={false}
+      pageType="article"
       service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />

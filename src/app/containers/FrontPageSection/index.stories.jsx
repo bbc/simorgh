@@ -12,8 +12,8 @@ const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
-      pageType="frontpage"
       isAmp={platform === 'amp'}
+      pageType="frontpage"
       service="news"
     >
       <FrontPageSection group={data} />

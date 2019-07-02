@@ -23,10 +23,10 @@ const videoFixture = mediaFixture('video');
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      id="c0000000000o"
       bbcOrigin="https://www.test.bbc.co.uk"
-      pageType="article"
+      id="c0000000000o"
       isAmp={platform === 'amp'}
+      pageType="article"
       service="news"
     >
       <StoryPromoContainer item={item} />
