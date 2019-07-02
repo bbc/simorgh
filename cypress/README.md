@@ -33,7 +33,7 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 - Use the default cypress commands e.g. cy.get().[More defaults commands](https://docs.cypress.io/api/api/table-of-contents.html)
 - Use the custom commands in `/support/command.js` directory.
 - Code reusability is good but ease of understanding is better.
-- If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unecessarily, use cypress aliasing or chain requests.
+- If you're using a let, var or const in any test/helper/command in this repo, you're probably doing it unnecessarily, use cypress aliasing or chain requests.
 - If trying to reuse tests always use cypress commands. i.e. don't export and import const's within cypress. Config is a sensible exception to this rule.
 - Before writing a long/complex test, look to see if similar ones could be reused.
 - Once you've written a test consider where else it might be helpful. For example testing a 200 response is useful on all requests and visits, so why not add it there in an additional PR (not in the same one to keep our PRs small and therefore fast to merge).
