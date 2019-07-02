@@ -11,6 +11,14 @@ const item = {
   },
 };
 
+const itemWithOvertypedHeadline = {
+  cpsType: 'STY',
+  headlines: {
+    headline: 'A headline',
+    overtyped: 'Overtyped headline',
+  },
+};
+
 const mediaItem = {
   cpsType: 'MAP',
   headlines: {
@@ -57,6 +65,16 @@ describe('Story Promo Link Contents', () => {
     const { container } = render(<LinkContents item={item} />);
 
     expect(container.innerHTML).toEqual(item.headlines.headline);
+  });
+
+  it('should render overtyped headline if provided', () => {
+    const { container } = render(
+      <LinkContents item={itemWithOvertypedHeadline} />,
+    );
+
+    expect(container.innerHTML).toEqual(
+      itemWithOvertypedHeadline.headlines.overtyped,
+    );
   });
 
   shouldShallowMatchSnapshot(
