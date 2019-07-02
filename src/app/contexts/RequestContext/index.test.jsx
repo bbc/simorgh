@@ -27,7 +27,7 @@ jest.mock('./getEnv');
 
 getStatsDestination.default.mockReturnValue('getStatsDestination');
 getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
-getOriginContext.default.mockReturnValue({ isUK: 'isUK', origin: 'origin' });
+getOriginContext.default.mockReturnValue({ isUK: true, origin: 'origin' });
 getEnv.default.mockReturnValue('getEnv');
 
 const input = {
@@ -41,7 +41,7 @@ const input = {
 const expectedOutput = {
   env: 'getEnv',
   id: input.id,
-  isUK: 'isUK',
+  isUK: true,
   origin: 'origin',
   pageType: input.pageType,
   platform: 'amp',
@@ -63,7 +63,7 @@ describe('RequestContext', () => {
 
     expect(getStatsDestination.default).toHaveBeenCalledWith({
       env: 'getEnv',
-      isUK: 'isUK',
+      isUK: true,
       service: 'service',
     });
 
