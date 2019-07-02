@@ -21,6 +21,7 @@ const componentsToRender = {
   text,
   image,
   timestamp,
+  audio: audioVideo,
   video: audioVideo,
 };
 
