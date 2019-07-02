@@ -1,16 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
-  FigureImage,
-  FigureAmpImage,
-  FigureLazyLoadImage,
+  ImageWithPlaceholder,
+  AmpImageWithPlaceholder,
+  LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('ImageWithPlaceholder', module)
-  .add('default', () => <FigureImage />)
-  .add('with a lazyloaded image', () => <FigureLazyLoadImage />);
+  .add('default', () => <ImageWithPlaceholder />)
+  .add('with a lazyloaded image', () => <LazyLoadImageWithPlaceholder />);
 
 storiesOf('ImageWithPlaceholder - AMP', module)
   .addDecorator(AmpDecorator)
-  .add('default', () => <FigureAmpImage />);
+  .add('default', () => <AmpImageWithPlaceholder />);

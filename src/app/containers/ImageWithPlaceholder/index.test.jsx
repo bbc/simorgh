@@ -3,14 +3,14 @@ import { mount } from 'enzyme';
 import LazyLoad from 'react-lazyload';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import {
-  FigureImage,
-  FigureAmpImage,
-  FigureLazyLoadImage,
+  ImageWithPlaceholder,
+  AmpImageWithPlaceholder,
+  LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 
 describe('ImageWithPlaceholder', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
-    const wrapper = mount(<FigureLazyLoadImage />).find(LazyLoad);
+    const wrapper = mount(<LazyLoadImageWithPlaceholder />).find(LazyLoad);
     const {
       offset,
       once,
@@ -31,13 +31,13 @@ describe('ImageWithPlaceholder', () => {
 
   shouldMatchSnapshot(
     'should render a lazyloaded image when lazyLoad set to true',
-    <FigureLazyLoadImage />,
+    <LazyLoadImageWithPlaceholder />,
   );
 
-  shouldMatchSnapshot('should render an image with alt text', <FigureImage />);
+  shouldMatchSnapshot('should render an image', <ImageWithPlaceholder />);
 
   shouldMatchSnapshot(
-    'should render an AMP image with alt text',
-    <FigureAmpImage />,
+    'should render an AMP image',
+    <AmpImageWithPlaceholder />,
   );
 });

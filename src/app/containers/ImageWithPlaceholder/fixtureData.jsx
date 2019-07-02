@@ -59,12 +59,12 @@ const baseFixture = {
   width: 640,
 };
 
-export const FigureImage = () => {
+export const ImageWithPlaceholder = () => {
   const props = baseFixture;
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
-export const FigureAmpImage = () => {
+export const AmpImageWithPlaceholder = () => {
   const props = {
     ...baseFixture,
     platform: 'amp',
@@ -73,7 +73,7 @@ export const FigureAmpImage = () => {
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
-export const FigureLazyLoadImage = () => {
+export const LazyLoadImageWithPlaceholder = () => {
   const props = {
     ...baseFixture,
     lazyLoad: true,
