@@ -34,6 +34,10 @@ const mediaItem = {
   },
 };
 
+const mediaItemWithOvertyped = { ...mediaItem };
+mediaItemWithOvertyped.headlines.overtyped =
+  'An overtyped headline for a media item';
+
 const mockServiceConfig = {
   translations: {
     media: {
@@ -80,5 +84,10 @@ describe('Story Promo Link Contents', () => {
   shouldShallowMatchSnapshot(
     'should render with visually hidden text for media promos',
     <LinkContents item={mediaItem} />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render with visually hidden text for media with overtyped headline',
+    <LinkContents item={mediaItemWithOvertyped} />,
   );
 });

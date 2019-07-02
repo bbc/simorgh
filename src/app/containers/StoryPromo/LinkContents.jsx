@@ -17,8 +17,10 @@ const LinkContents = ({ item }) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   const headlines = deepGet(['headlines'], item);
   const { headline, overtyped } = headlines;
+  const content = overtyped || headline;
+
   if (!isMedia) {
-    return overtyped || headline;
+    return content;
   }
 
   const type = deepGet(['media', 'format'], item);
@@ -35,7 +37,7 @@ const LinkContents = ({ item }) => {
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text">
       <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
-      <span>{overtyped || headline}</span>
+      <span>{content}</span>
       {rawDuration && (
         // once we have 'duration' translations, we could place those here
         <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
