@@ -7,6 +7,27 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
     ({ mediaPlayerSettings }) => mediaPlayerSettings,
   );
 
+  const definePlayerSettings = `var settings = [];
+    settings.push(${settingsArray[0]});
+    settings.push(${settingsArray[1]});
+    settings.push(${settingsArray[2]});
+    settings.push(${settingsArray[3]});
+    settings.push(${settingsArray[4]});
+    settings.push(${settingsArray[5]});
+    settings.push(${settingsArray[6]});
+    settings.push(${settingsArray[7]});
+    `;
+
+  const loadPlayers = audioVideoAssets
+    .map(
+      (
+        avAsset,
+        index,
+      ) => `var player${index} = bump.player(document.getElementById('${avAsset.id}'), settings[${index}]);
+  player${index}.load();`,
+    )
+    .join(' ');
+
   return (
     <>
       <Helmet>
@@ -14,24 +35,8 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
           {`
             function mediaPlayerSetup(container) {
               require(['bump-4'], (bump) => {
-                var settings = [];
-                settings.push(${settingsArray[0]});
-                settings.push(${settingsArray[1]});
-                settings.push(${settingsArray[2]});
-                settings.push(${settingsArray[3]});
-                settings.push(${settingsArray[4]});
-                settings.push(${settingsArray[5]});
-                settings.push(${settingsArray[6]});
-                settings.push(${settingsArray[7]});
-                ${audioVideoAssets
-                  .map(
-                    (
-                      avAsset,
-                      index,
-                    ) => `var player${index} = bump.player(document.getElementById('${avAsset.id}'), settings[${index}]);
-                player${index}.load();`,
-                  )
-                  .join(' ')}
+                ${definePlayerSettings}
+                ${loadPlayers}
               });
             }
           `}
