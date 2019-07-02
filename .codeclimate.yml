@@ -6,6 +6,7 @@ exclude_patterns:
 - "**/fixture*"
 - "scripts/lighthouseBudget.js"
 - "scripts/lighthouseConfig.js"
+- "src/index.js"
 - "src/server/index.jsx"
 - "src/app/components/Metadata/index.jsx"
 - "src/app/containers/ATIAnalytics/atiUrl.js"
