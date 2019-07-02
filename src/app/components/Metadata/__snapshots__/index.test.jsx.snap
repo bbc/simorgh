@@ -76,6 +76,14 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="article:tag"
   />
   <meta
+    content="BBC News"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -86,6 +94,18 @@ exports[`Metadata News AMP article should render correctly 1`] = `
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -148,13 +168,75 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/news/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -238,6 +320,14 @@ exports[`Metadata News article should render correctly 1`] = `
     name="article:tag"
   />
   <meta
+    content="BBC News"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -248,6 +338,18 @@ exports[`Metadata News article should render correctly 1`] = `
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -310,13 +412,75 @@ exports[`Metadata News article should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/news/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -382,6 +546,14 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="article:tag"
   />
   <meta
+    content="BBC News فارسی"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -392,6 +564,18 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -454,13 +638,75 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/persian/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -529,6 +775,14 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="article:tag"
   />
   <meta
+    content="BBC News فارسی"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News فارسی"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -539,6 +793,18 @@ exports[`Metadata Persian article should render correctly 1`] = `
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -601,13 +867,75 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/persian/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/persian/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -671,6 +999,14 @@ exports[`Metadata WS Front Page does not render article metadata even if values 
     rel="amphtml"
   />
   <meta
+    content="BBC News"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -681,6 +1017,18 @@ exports[`Metadata WS Front Page does not render article metadata even if values 
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -743,13 +1091,75 @@ exports[`Metadata WS Front Page does not render article metadata even if values 
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/news/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -813,6 +1223,14 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     rel="amphtml"
   />
   <meta
+    content="BBC News"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -823,6 +1241,18 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
   <meta
     content="pcm"
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content={1539188371344}
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -885,13 +1315,75 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/news/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
@@ -979,6 +1471,14 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="article:tag"
   />
   <meta
+    content="BBC News"
+    name="apple-mobile-web-app-title"
+  />
+  <meta
+    content="BBC News"
+    name="application-name"
+  />
+  <meta
     content="This is a description"
     name="description"
   />
@@ -989,6 +1489,18 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
   <meta
     content={202020}
     name="fb:app_id"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
+    content="#B80000"
+    name="msapplication-TileColor"
+  />
+  <meta
+    content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    name="msapplication-TileImage"
   />
   <meta
     content="This is a description"
@@ -1051,13 +1563,75 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="twitter:title"
   />
   <link
+    href="https://foo.com/static/news/image.png"
+    rel="apple-touch-icon"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="apple-touch-icon"
+    sizes="72x72"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="apple-touch-icon"
+    sizes="96x96"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+    rel="apple-touch-icon"
+    sizes="128x128"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+    rel="apple-touch-icon"
+    sizes="144x144"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+    rel="apple-touch-icon"
+    sizes="152x152"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="apple-touch-icon"
+    sizes="192x192"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+    rel="apple-touch-icon"
+    sizes="384x384"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-icon"
+    sizes="512x512"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+    rel="icon"
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+    rel="icon"
+    sizes="96x96"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+    rel="icon"
+    sizes="192x192"
+    type="image/png"
+  />
+  <link
+    href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+    rel="apple-touch-startup-image"
+  />
+  <link
     href="/favicon.ico"
     rel="shortcut icon"
     type="image/x-icon"
-  />
-  <link
-    href="https://foo.com/static/news/image.png"
-    rel="apple-touch-icon"
   />
 </HelmetWrapper>
 `;
