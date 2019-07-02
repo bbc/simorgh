@@ -20,16 +20,16 @@ const renderImage = (imageToRender, lazyLoad) =>
   );
 
 const Figure = ({
-  ratio,
   alt,
-  copyright,
-  src,
-  height,
-  width,
-  lazyLoad,
   children,
-  srcset,
+  copyright,
   fade,
+  height,
+  lazyLoad,
+  ratio,
+  src,
+  srcset,
+  width,
 }) => {
   const { platform } = useContext(RequestContext);
 
