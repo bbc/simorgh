@@ -1,14 +1,10 @@
 const assetRegex = type =>
-  new RegExp(`(\\/static\\/js\\/(${type})-\\w+\\.\\w+\\.js)`, 'g');
+  new RegExp(`\\/static\\/js\\/${type}-\\w+\\.\\w+\\.js$`);
 
 const assetsFilter = (assets, service) => {
-  const serviceAssets = assets.filter(asset =>
-    asset.match(assetRegex(service)),
-  );
-  const vendorAssets = assets.filter(asset =>
-    asset.match(assetRegex('vendor')),
-  );
-  const mainAssets = assets.filter(asset => asset.match(assetRegex('main')));
+  const serviceAssets = assets.filter(asset => assetRegex(service).test(asset));
+  const vendorAssets = assets.filter(asset => assetRegex('vendor').test(asset));
+  const mainAssets = assets.filter(asset => assetRegex('main').test(asset));
 
   /*
    * Service bundles must appear first in the page so react-loadable
