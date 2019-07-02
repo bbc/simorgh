@@ -42,6 +42,7 @@ const metadataProps = (
   title,
   serviceConfig,
   type,
+  service,
   showArticleTags,
 ) => ({
   isAmp,
@@ -68,7 +69,21 @@ const metadataProps = (
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
   type,
+  service,
   showArticleTags,
+  iconSizes: {
+    'apple-touch-icon': [
+      '72x72',
+      '96x96',
+      '128x128',
+      '144x144',
+      '152x152',
+      '192x192',
+      '384x384',
+      '512x512',
+    ],
+    icon: ['72x72', '96x96', '192x192'],
+  },
 });
 
 const linkedDataProps = (
@@ -144,6 +159,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -214,6 +230,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -271,6 +288,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -317,6 +335,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -363,6 +382,7 @@ describe('Metadata Container', () => {
           'Ogbako',
           services.igbo,
           'IDX',
+          'igbo',
           false,
         ),
       );
