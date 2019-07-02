@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   copyrightDataWindow,
@@ -14,7 +14,7 @@ import {
 describeForLocalAndTest('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.persian}`);
+    cy.visit(`/persian/articles/${services.persian.pageTypes.articles.asset}`);
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
@@ -26,7 +26,7 @@ describeForLocalAndTest('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div').eq(2));
   });
 
   it('should have an image copyright label with styling', () => {
@@ -41,7 +41,7 @@ describeForLocalAndTest('Article Body Tests', () => {
     const imageHasNotLoaded = getElement('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = getElement('div div div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
