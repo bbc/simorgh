@@ -10,23 +10,23 @@ See the files in `./support/` directory for useful functions that may assist you
 
 ## Directory Structure
 
+[About cypress directory structure](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
+
 <!-- prettier-ignore -->
     .
     ├── fixtures                    # Cypress pre-defined
     ├── integration                 # Cypress tests
     ├── plugins                     # Internal behavior of Cypress
     └── support                     # Helper utilities for tests
-        └── config
+        └── config*
 
-Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
-
-For further reading about cypress directory structure: https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure
+\*Config exists in one place. Config for running tests is in /support/config/ and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
 
 ## Writing test
 
 Useful commands:
 
-- Use the default cypress commands e.g. cy.get(). [For more defaults commands.](https://docs.cypress.io/api/api/table-of-contents.html)
+- Use the default cypress commands. [Examples defaults commands.](https://docs.cypress.io/api/api/table-of-contents.html)
 - Use custom cypress commands, see `./support/commands.js`.
 
 ## Best Practises
