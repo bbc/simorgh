@@ -16,6 +16,7 @@ import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
 import deepGet from '../lib/utilities/deepGet';
+import getLangByPageType from '../contexts/RequestContext/getLangByPageType';
 
 const PageWithRequestContext = ({
   children,
@@ -29,17 +30,12 @@ const PageWithRequestContext = ({
   service,
 }) => {
   const { lang } = useContext(ServiceContext);
-  const getLangByPageType = type =>
-    type === 'article'
-      ? deepGet(['pageData', 'metadata', 'passport', 'language'], data)
-      : lang;
-
   return (
     <RequestContextProvider
       env={env}
       id={id}
       isUK={isUK}
-      lang={getLangByPageType(pageType)}
+      lang={getLangByPageType(data, lang, pageType)}
       origin={origin}
       pageType={pageType}
       platform={isAmp ? 'amp' : 'canonical'}
@@ -88,17 +84,18 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
     <Fragment>
       <ServiceContextProvider service={service}>
         <GlobalStyle />
-        {PageWithRequestContext({
-          children,
-          data,
-          env,
-          id,
-          isAmp,
-          isUK,
-          origin,
-          pageType,
-          service,
-        })}
+        <PageWithRequestContext
+          data={data}
+          env={env}
+          id={id}
+          isAmp={isAmp}
+          isUK={isUK}
+          origin={origin}
+          pageType={pageType}
+          service={service}
+        >
+          {children}
+        </PageWithRequestContext>
       </ServiceContextProvider>
     </Fragment>
   );
