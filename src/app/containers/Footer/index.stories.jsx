@@ -1,17 +1,20 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Footer from '.';
 import services from '../../lib/config/services';
-
-const stories = storiesOf('Footer', module);
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { dirDecorator } from '@bbc/psammead-storybook-helpers';
+import { withKnobs } from '@storybook/addon-knobs';
 
 Object.keys(services)
   .filter(service => service !== 'default')
   .forEach(service => {
-    stories.add(service, () => (
-      <ServiceContextProvider service={service}>
-        <Footer />
-      </ServiceContextProvider>
-    ));
+    storiesOf('Footer', module)
+      .addDecorator(withKnobs)
+      .addDecorator(dirDecorator)
+      .add(service, () => (
+        <ServiceContextProvider service={service}>
+          <Footer />
+        </ServiceContextProvider>
+      ));
   });
