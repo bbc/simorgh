@@ -3,7 +3,6 @@ const {
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
-  getPublishedDatetime,
   getThingAttributes,
 } = require('./article');
 
@@ -130,33 +129,6 @@ describe('getPromoHeadline', () => {
     const promoHeadline = getPromoHeadline(badData);
 
     expect(promoHeadline).toEqual(null);
-  });
-});
-
-describe('getPublishedDatetime', () => {
-  const data = {
-    metadata: {
-      firstPublished: 946688461000,
-      invalidDate: 'foobar',
-    },
-  };
-
-  it('should find value in good data', () => {
-    const publishedTime = getPublishedDatetime('firstPublished', data);
-
-    expect(publishedTime).toEqual('2000-01-01T01:01:01.000Z');
-  });
-
-  it('should return null if type not found', () => {
-    const publishedTime = getPublishedDatetime('foobar', data);
-
-    expect(publishedTime).toEqual(null);
-  });
-
-  it('should return null if timestamp is invalid', () => {
-    const publishedTime = getPublishedDatetime('invalidDate', data);
-
-    expect(publishedTime).toEqual(null);
   });
 });
 

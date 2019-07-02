@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import 'moment/locale/yo';
 
 const yoruba = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  datetimeLocale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
   serviceLocalizedName: 'Yorùbá',
@@ -16,6 +18,7 @@ const yoruba = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -24,6 +27,8 @@ const yoruba = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
+    currentPage: 'Current page',
+    skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
     error: {
       404: {
         statusCode: '404',
@@ -109,6 +114,21 @@ const yoruba = {
       video: 'Fidio',
     },
   },
+  navigation: [
+    {
+      title: 'Ìròyìn',
+      url: '/yoruba',
+    },
+    { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+    {
+      title: 'Fídíò',
+      url: '/yoruba/media/video',
+    },
+    {
+      title: 'Èyí to gbajúmọ̀ jù',
+      url: '/yoruba/popular/read',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

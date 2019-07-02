@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
+import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
   product: 'BBC News',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  datetimeLocale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
   serviceLocalizedName: 'Pidgin',
@@ -16,6 +18,7 @@ const pidgin = {
   brandSVG,
   script: latin,
   manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -24,6 +27,8 @@ const pidgin = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Waka go wetin de inside',
     error: {
       404: {
         statusCode: '404',
@@ -109,6 +114,44 @@ const pidgin = {
       video: 'Video',
     },
   },
+  navigation: [
+    {
+      title: 'Home',
+      url: '/pidgin',
+    },
+    {
+      title: 'Nigeria',
+      url: '/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9',
+    },
+    {
+      title: 'Africa',
+      url: '/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735',
+    },
+    {
+      title: 'World',
+      url: '/pidgin/world',
+    },
+    {
+      title: 'Video',
+      url: '/pidgin/media/video',
+    },
+    {
+      title: 'Audio',
+      url: '/pidgin/media/audio',
+    },
+    {
+      title: 'Sport',
+      url: '/pidgin/sport',
+    },
+    {
+      title: 'Entertainment',
+      url: '/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
+    },
+    {
+      title: 'Most popular',
+      url: '/pidgin/popular/read',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

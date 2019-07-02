@@ -1,4 +1,6 @@
-## Containers
+# Containers
+
+## Overview
 
 This repo follows the container component pattern.
 
@@ -8,7 +10,9 @@ NB containers are just React components
 
 Here is a helper video to explain this pattern from Facebook: [Ext. YouTube Link](https://www.youtube.com/watch?v=KYzlpRvWZ6c)
 
-### We strongly recommend using the following webpack plugins
+Please refer to [Simorgh's coding standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md) documentation for further guidance.
+
+## We strongly recommend using the following webpack plugins
 
 These will reduce the size of your bundle considerably.
 
