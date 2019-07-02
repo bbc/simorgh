@@ -11,9 +11,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
-import MediaPlayerSettings from '../AudioVideo/mediaPlayerSettings';
-import deepGet from '../../lib/utilities/deepGet';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
+import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
 
 const componentsToRender = {
   headline: headings,
@@ -26,13 +24,14 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData }) => {
-  const { platform } = React.useContext(RequestContext);
+  const {
+    env,
+    platform,
+    statsDestination,
+    statsPageIdentifier,
+  } = React.useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
-
-  const audioVideoBlocks = blocks.filter(
-    block => block.type === 'audio' || block.type === 'video',
-  );
 
   return (
     <Fragment>
@@ -40,32 +39,12 @@ const ArticleMain = ({ articleData }) => {
       <MetadataContainer metadata={metadata} promo={promo} />
       {platform === 'canonical' ? (
         <AudioVideoHead
-          audioVideoAssets={audioVideoBlocks.map(avBlock => {
-            // The following lines are just to fetch the pid
-            // that is needed for ids on the media player placeholder divs
-            // and aresMediaBlocksArray to generate the mediaPlayerSettings
-            // object which needs to be passed to AudioVideoHead
-            const toplevelblock = deepGet(['model', 'blocks'], avBlock);
-            const aresMediaBlock = filterForBlockType(
-              toplevelblock,
-              'aresMedia',
-            );
-            const aresMediaBlocksArray = deepGet(
-              ['model', 'blocks'],
-              aresMediaBlock,
-            );
-            const aresMediaMetadata = filterForBlockType(
-              aresMediaBlocksArray,
-              'aresMediaMetadata',
-            );
-            const pid = deepGet(['model', 'id'], aresMediaMetadata);
-
-            return {
-              id: pid,
-              mediaPlayerSettings: MediaPlayerSettings({
-                aresMediaBlocks: aresMediaBlocksArray,
-              }),
-            };
+          audioVideoAssets={generateAVSettings({
+            blocks,
+            env,
+            platform,
+            statsDestination,
+            statsPageIdentifier,
           })}
         />
       ) : null}

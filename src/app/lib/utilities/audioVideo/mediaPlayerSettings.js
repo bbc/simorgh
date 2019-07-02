@@ -1,14 +1,13 @@
-import React from 'react';
-import mediatorURL from './helpers/mediatorUrl';
-import { RequestContext } from '../../contexts/RequestContext';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-import deepGet from '../../lib/utilities/deepGet';
+import mediatorURL from './mediatorUrl';
+import filterForBlockType from '../blockHandlers';
+import deepGet from '../deepGet';
 
-const MediaPlayerSettings = ({ aresMediaBlocks }) => {
-  const { env, statsDestination, statsPageIdentifier } = React.useContext(
-    RequestContext,
-  );
-
+const mediaPlayerSettings = ({
+  aresMediaBlocks,
+  env,
+  statsDestination,
+  statsPageIdentifier,
+}) => {
   if (!aresMediaBlocks) {
     return null;
   }
@@ -78,4 +77,4 @@ const MediaPlayerSettings = ({ aresMediaBlocks }) => {
   return JSON.stringify(settings);
 };
 
-export default MediaPlayerSettings;
+export default mediaPlayerSettings;
