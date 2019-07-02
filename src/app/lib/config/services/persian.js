@@ -7,6 +7,7 @@ const persian = {
   lang: 'fa',
   product: 'BBC News',
   articleAuthor: 'https://www.facebook.com/bbcpersian',
+  articleTimestampPrefix: 'به روز شده در',
   atiAnalyticsAppName: 'news-persian',
   brandName: 'BBC News فارسی',
   serviceLocalizedName: 'فارسی',
