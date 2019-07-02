@@ -20,13 +20,13 @@ We have a continuous deployment pipeline which automatically deploys all changes
 
 ## Installation
 
-Install Node 10. [https://nodejs.org/en/](https://nodejs.org/en/). We currently use v10.15.3 and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.
+Install Node 10. [https://nodejs.org/en/](https://nodejs.org/en/). We currently use v10.16.0 and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.
 
 ```
 nvm use
 ```
 
-Update to use the latest npm `npm i -g npm`
+Then you can run the following commands to install Simorgh
 
 ```
 git clone git@github.com:bbc/simorgh.git
