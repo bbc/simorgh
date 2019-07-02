@@ -1,20 +1,9 @@
 import React, { useContext, Fragment } from 'react';
-import { string, number, objectOf, any, bool, oneOf } from 'prop-types';
-import Figure from '@bbc/psammead-figure';
-import Image, { AmpImg } from '@bbc/psammead-image';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
-import Copyright from '../Copyright';
-import Caption from '../Caption';
+import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import Image, { AmpImg } from '@bbc/psammead-image';
 import { RequestContext } from '../../contexts/RequestContext';
-import {
-  NestedGridParentLarge,
-  NestedGridParentMedium,
-  NestedGridParentSmall,
-  NestedGridItemChildSmall,
-  NestedGridItemChildMedium,
-  NestedGridItemChildLarge,
-} from '../../lib/styledGrid';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -30,144 +19,63 @@ const renderImage = (imageToRender, lazyLoad) =>
     imageToRender
   );
 
-const renderCopyright = copyright =>
-  copyright ? <Copyright>{copyright}</Copyright> : null;
-
-const renderCaption = (block, type) =>
-  block ? <Caption block={block} type={type} /> : null;
-
-const ImageComponent = ({
-  platform,
-  height,
-  width,
-  src,
+const Figure = ({
+  ratio,
   alt,
   copyright,
-  ratio,
-  fade,
+  src,
+  height,
+  width,
   lazyLoad,
-  captionBlock,
-  type,
+  children,
   srcset,
-  showCopyright,
+  fade,
 }) => {
+  const { platform } = useContext(RequestContext);
+
   const imageToRender = (
     <Image alt={alt} src={src} width={width} srcset={srcset} fade={fade} />
   );
 
-  const imageSpan = {
-    default: '6',
-    group5: '12',
-  };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
-
-  if (height === width) {
-    ParentWrapper = NestedGridParentMedium;
-    ChildWrapper = NestedGridItemChildMedium;
-  }
-  if (height > width) {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    imageSpan.default = '4';
-  }
-
   return (
-    <Fragment>
-      <ParentWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          marginLeft={{
-            group3: '1em',
-          }}
-          gridSpan={imageSpan}
-        >
-          <ImagePlaceholder ratio={ratio}>
-            {platform === 'amp' ? (
-              <AmpImg
-                alt={alt}
-                attribution={copyright || ''}
-                layout="responsive"
-                src={src}
-                height={height}
-                width={width}
-              />
-            ) : (
-              renderImage(imageToRender, lazyLoad)
-            )}
-            {showCopyright && renderCopyright(copyright)}
-          </ImagePlaceholder>
-        </ChildWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {renderCaption(captionBlock, type)}
-        </ChildWrapper>
-      </ParentWrapper>
-    </Fragment>
+    <ImagePlaceholder ratio={ratio}>
+      {platform === 'amp' ? (
+        <AmpImg
+          alt={alt}
+          attribution={copyright || ''}
+          layout="responsive"
+          src={src}
+          height={height}
+          width={width}
+        />
+      ) : (
+        renderImage(imageToRender, lazyLoad)
+      )}
+      {children}
+    </ImagePlaceholder>
   );
 };
 
-const figurePropTypes = {
+Figure.propTypes = {
   alt: string.isRequired,
-  captionBlock: objectOf(any),
   copyright: string,
+  children: node,
   height: number,
   fade: bool,
   lazyLoad: bool,
   ratio: number.isRequired,
   src: string.isRequired,
-  type: string,
   srcset: string,
   width: number.isRequired,
-  showCopyright: bool,
 };
 
-const defaultProps = {
+Figure.defaultProps = {
   copyright: null,
-  captionBlock: null,
+  children: null,
   height: null,
   fade: false,
   lazyLoad: false,
-  type: '',
   srcset: null,
-  showCopyright: false,
 };
 
-ImageComponent.propTypes = {
-  ...figurePropTypes,
-  platform: oneOf(['amp', 'canonical']).isRequired,
-};
-
-ImageComponent.defaultProps = { ...defaultProps };
-
-const FigureContainer = props => {
-  const { platform } = useContext(RequestContext);
-  const { useFigure } = props;
-
-  const Wrapper = useFigure ? Figure : Fragment;
-
-  return (
-    <Wrapper>
-      <ImageComponent {...props} platform={platform} />
-    </Wrapper>
-  );
-};
-
-FigureContainer.propTypes = {
-  ...figurePropTypes,
-  useFigure: bool,
-};
-
-FigureContainer.defaultProps = {
-  ...defaultProps,
-  useFigure: true,
-};
-
-export default FigureContainer;
+export default Figure;

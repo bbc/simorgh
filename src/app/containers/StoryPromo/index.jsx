@@ -39,7 +39,6 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       ratio={ratio}
       src={src}
       {...imageValues}
-      useFigure={false}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
       srcset={srcset}
