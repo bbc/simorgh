@@ -119,7 +119,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .c8 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -563,7 +563,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .c9 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1010,7 +1010,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c8 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1438,7 +1438,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c9 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2576,7 +2576,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .c8 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -3017,7 +3017,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .c9 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
-  display: inline-block;
+  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
