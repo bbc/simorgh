@@ -7,6 +7,7 @@ import 'moment/locale/en-gb';
 const news = {
   lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
   product: 'BBC News',
