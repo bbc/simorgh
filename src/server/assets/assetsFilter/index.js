@@ -1,6 +1,6 @@
 const assetRegex = type => {
   if (process.env.NODE_ENV === 'development') {
-    return new RegExp(`\\/static\\/js\\/${type}[\\w_.~-]*.js$`);
+    return new RegExp(`\\/static\\/js\\/${type}[\\w.~-]*.js$`);
   }
 
   return new RegExp(`\\/static\\/js\\/${type}-\\w+\\.\\w+\\.js$`);
