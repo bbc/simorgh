@@ -1,4 +1,5 @@
 const defaultService = {
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'default',
   brandName: 'Default Brand Name',
   dir: 'ltr',
