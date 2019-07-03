@@ -38,7 +38,7 @@ describe('AudioVideo', () => {
       gridComponents.GridItemConstrainedLargeNoMargin = mockGridItem;
 
       renderer.create(
-        <RequestContextProvider platform="amp">
+        <RequestContextProvider isAmp>
           <VideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
         </RequestContextProvider>,
       );
