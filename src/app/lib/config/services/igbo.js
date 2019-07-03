@@ -5,6 +5,7 @@ import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
