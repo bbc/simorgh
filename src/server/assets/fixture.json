@@ -1,5 +1,23 @@
 {
   "one": {
-    "js": "one.js"
+    "js": "http://localhost:7080/static/js/news-12345.12345.js"
+  },
+  "two": {
+    "js": "http://localhost:7080/static/js/igbo-12345.12345.js"
+  },
+  "three": {
+    "js": "http://localhost:7080/static/js/serviceName-12345.12345.js"
+  },
+  "four": {
+    "js": "http://localhost:7080/static/js/vendor-12345.12345.js"
+  },
+  "five": {
+    "js": "http://localhost:7080/static/js/main-12345.12345.js"
+  },
+  "six": {
+    "js": "http://localhost:7080/static/js/vendor-54321.12345.js"
+  },
+  "seven": {
+    "js": "http://localhost:7080/static/js/wrongServiceName-54321.12345.js"
   }
 }

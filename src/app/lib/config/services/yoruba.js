@@ -5,6 +5,7 @@ import 'moment/locale/yo';
 
 const yoruba = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',

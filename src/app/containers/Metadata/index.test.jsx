@@ -9,23 +9,20 @@ import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 
-const Container = (service, bbcOrigin, platform, data, id) => {
-  const serviceConfig = services[service];
-  return (
-    <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider
-        platform={platform}
-        id={id}
-        isUK
-        origin={bbcOrigin}
-        statsDestination="NEWS_PS_TEST"
-        statsPageIdentifier={`${service}.articles.${id}.page`}
-      >
-        <MetadataContainer {...data} />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+const Container = (service, bbcOrigin, platform, data, id) => (
+  <ServiceContextProvider service={service}>
+    <RequestContextProvider
+      platform={platform}
+      id={id}
+      isUK
+      origin={bbcOrigin}
+      statsDestination="NEWS_PS_TEST"
+      statsPageIdentifier={`${service}.articles.${id}.page`}
+    >
+      <MetadataContainer {...data} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 const metadataProps = (
   isAmp,
@@ -41,6 +38,7 @@ const metadataProps = (
   title,
   serviceConfig,
   type,
+  service,
   showArticleTags,
 ) => ({
   isAmp,
@@ -67,7 +65,21 @@ const metadataProps = (
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
   type,
+  service,
   showArticleTags,
+  iconSizes: {
+    'apple-touch-icon': [
+      '72x72',
+      '96x96',
+      '128x128',
+      '144x144',
+      '152x152',
+      '192x192',
+      '384x384',
+      '512x512',
+    ],
+    icon: ['72x72', '96x96', '192x192'],
+  },
 });
 
 const linkedDataProps = (
@@ -143,6 +155,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -213,6 +226,7 @@ describe('Metadata Container', () => {
           'Article Headline for SEO',
           services.news,
           'article',
+          'news',
           true,
         ),
       );
@@ -270,6 +284,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -316,6 +331,7 @@ describe('Metadata Container', () => {
           'سرصفحه مقاله',
           services.persian,
           'article',
+          'persian',
           true,
         ),
       );
@@ -362,6 +378,7 @@ describe('Metadata Container', () => {
           'Ogbako',
           services.igbo,
           'IDX',
+          'igbo',
           false,
         ),
       );
