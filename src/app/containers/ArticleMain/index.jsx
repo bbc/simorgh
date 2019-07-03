@@ -33,14 +33,19 @@ const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
 
+  const audioVideoBlocks = blocks.filter(
+    block => block.type === 'audio' || block.type === 'video',
+  );
+  const hasAV = audioVideoBlocks.length > 0;
+
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
-      {platform === 'canonical' ? (
+      {hasAV && platform === 'canonical' ? (
         <AudioVideoHead
           audioVideoAssets={generateAVSettings({
-            blocks,
+            audioVideoBlocks,
             env,
             platform,
             statsDestination,

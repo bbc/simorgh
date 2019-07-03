@@ -3,15 +3,11 @@ import deepGet from '../deepGet';
 import filterForBlockType from '../blockHandlers';
 
 const generateAVSettings = ({
-  blocks,
+  audioVideoBlocks,
   env,
   statsDestination,
   statsPageIdentifier,
 }) => {
-  const audioVideoBlocks = blocks.filter(
-    block => block.type === 'audio' || block.type === 'video',
-  );
-
   return audioVideoBlocks.map(avBlock => {
     // The following lines are just to fetch the pid
     // that is needed for ids on the media player placeholder divs
