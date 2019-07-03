@@ -28,8 +28,6 @@ const getAssetsArray = service => {
     );
   }
 
-  console.log(assets);
-
   return assetsFilter(assets, service);
 };
 
