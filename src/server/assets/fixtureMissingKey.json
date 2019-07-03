@@ -1,8 +1,14 @@
 {
-  "foo": {
-    "js": "foo.js"
+  "one": {
+    "js": "http://localhost:7080/static/js/serviceName-12345.12345.js"
   },
   "": {
-    "js": "bar.js"
+    "js": "http://localhost:7080/static/js/vendor-12345.12345.js"
+  },
+  "three": {
+    "js": "http://localhost:7080/static/js/main-12345.12345.js"
+  },
+  "four": {
+    "js": "http://localhost:7080/static/js/vendor-54321.12345.js"
   }
 }
