@@ -112,12 +112,11 @@ const fixtures = {
 const WrappedStoryPromo = ({ service, platform, ...props }) => (
   <ServiceContextProvider service={service || 'igbo'}>
     <RequestContextProvider
-      platform={platform || 'canonical'}
-      isUK
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp={platform === 'amp'}
+      pageType="article"
+      service={service}
     >
       <StoryPromo {...props} />
     </RequestContextProvider>
