@@ -33,8 +33,8 @@ const renderDocument = async ({
     ),
   );
 
+  const assets = getAssetsArray(service);
   const headHelmet = Helmet.renderStatic();
-  const assets = getAssetsArray();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent
