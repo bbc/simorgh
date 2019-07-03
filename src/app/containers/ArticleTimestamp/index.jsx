@@ -12,7 +12,9 @@ import {
 } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const { script, datetimeLocale } = useContext(ServiceContext);
+  const { articleTimestampPrefix, datetimeLocale, script } = useContext(
+    ServiceContext,
+  );
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
@@ -34,7 +36,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     timestamp: lastPublished,
     format: formatType({ lastPublished, firstPublished }),
     isRelative: isLastRelative(lastPublished),
-    prefix: 'Updated',
+    prefix: articleTimestampPrefix,
   };
 
   return (

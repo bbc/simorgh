@@ -5,6 +5,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -440,6 +441,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -907,6 +909,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -1342,6 +1345,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -1777,6 +1781,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -2244,6 +2249,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -2679,6 +2685,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -3114,6 +3121,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -3581,6 +3589,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4050,6 +4059,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4491,6 +4501,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4987,6 +4998,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -5483,6 +5495,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -5918,6 +5931,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -6385,6 +6399,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -6854,6 +6869,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",

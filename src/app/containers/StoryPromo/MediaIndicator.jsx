@@ -7,8 +7,6 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import deepGet from '../../lib/utilities/deepGet';
 import formatDuration from '../../lib/utilities/formatDuration';
 
-const capitalise = str => str && str.slice(0, 1).toUpperCase() + str.slice(1);
-
 const MediaIndicator = ({ item }) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   const hasMediaInfo = deepGet(['media'], item);
@@ -31,13 +29,12 @@ const MediaIndicator = ({ item }) => {
       <MediaIndicatorComp
         duration={durationString}
         datetime={isoDuration}
-        offscreenText={capitalise(type)}
         type={type}
       />
     );
   }
 
-  return <MediaIndicatorComp offscreenText={capitalise(type)} type={type} />;
+  return <MediaIndicatorComp type={type} />;
 };
 
 MediaIndicator.propTypes = {
