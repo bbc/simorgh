@@ -30,16 +30,6 @@ describe('Styled Grid items', () => {
       </Grid>,
     );
     shouldMatchSnapshot(
-      'should start at column 1 & span 1',
-      <Grid>
-        <GridItemConstrainedSmall>
-          <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '1' }}>
-            <div>1/4 or 1/5 or 1/8</div>
-          </NestedGridItemSmall>
-        </GridItemConstrainedSmall>
-      </Grid>,
-    );
-    shouldMatchSnapshot(
       'should start at column 1 & span 8',
       <Grid>
         <GridItemConstrainedSmall>
