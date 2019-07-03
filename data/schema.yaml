@@ -300,10 +300,18 @@ components:
           - $ref: '#/components/schemas/idt2'
           - $ref: '#/components/schemas/image'
           - $ref: '#/components/schemas/inline'
+          - $ref: '#/components/schemas/keyPoints'
+          - $ref: '#/components/schemas/listItem'
+          - $ref: '#/components/schemas/onwardJourney'
+          - $ref: '#/components/schemas/onwardJourneys'
+          - $ref: '#/components/schemas/orderedList'
           - $ref: '#/components/schemas/paragraph'
           - $ref: '#/components/schemas/rawImage'
           - $ref: '#/components/schemas/subheadline'
+          - $ref: '#/components/schemas/synopsis'
           - $ref: '#/components/schemas/text'
+          - $ref: '#/components/schemas/tweet'
+          - $ref: '#/components/schemas/unorderedList'
           - $ref: '#/components/schemas/urlLink'
           - $ref: '#/components/schemas/video'
       minItems: 2
@@ -592,6 +600,86 @@ components:
             - inline
           type: string
 
+    keyPoints:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - keyPoints
+          type: string
+
+    listItem:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - listItem
+          type: string
+
+    onwardJourney:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - onwardJourney
+          type: string
+
+    onwardJourneys:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - onwardJourneys
+          type: string
+
+    orderedList:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - orderedList
+          type: string
+
     paragraph:
       type: object
       required:
@@ -664,6 +752,22 @@ components:
             - subheadline
           type: string
 
+    synopsis:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - synopsis
+          type: string
+
     text:
       type: object
       required:
@@ -678,6 +782,40 @@ components:
         type:
           enum:
             - text
+          type: string
+
+    tweet:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            id:
+              type: string
+          required:
+            - id
+          type: object
+        type:
+          enum:
+            - tweet
+          type: string
+
+    unorderedList:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - unorderedList
           type: string
 
     urlLink:
