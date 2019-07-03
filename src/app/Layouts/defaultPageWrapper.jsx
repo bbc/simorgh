@@ -15,7 +15,6 @@ import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdent
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
-import deepGet from '../lib/utilities/deepGet';
 import getLangByPageType from '../contexts/RequestContext/getLangByPageType';
 
 const PageWithRequestContext = ({
@@ -30,6 +29,7 @@ const PageWithRequestContext = ({
   service,
 }) => {
   const { lang } = useContext(ServiceContext);
+  console.log(getLangByPageType(data, lang, pageType));
   return (
     <RequestContextProvider
       env={env}
@@ -76,10 +76,18 @@ PageWithRequestContext.defaultProps = {
   id: null,
 };
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
+const PageWrapper = ({
+  bbcOrigin,
+  children,
+  data,
+  id,
+  service,
+  isAmp,
+  pageType,
+}) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
-  const data = deepGet(['props', 'data'], children);
+
   return (
     <Fragment>
       <ServiceContextProvider service={service}>
@@ -104,6 +112,7 @@ const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => {
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
+  data: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,
