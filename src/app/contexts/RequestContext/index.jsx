@@ -1,20 +1,23 @@
 import React from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
+import getLangByPageType from './getLangByPageType';
 
 export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
+  data,
   env,
   id,
   isUK,
-  lang,
   origin,
   pageType,
   platform,
+  serviceLang,
   statsDestination,
   statsPageIdentifier,
 }) => {
+  const lang = getLangByPageType(data, serviceLang, pageType);
   const value = {
     env,
     id,
@@ -34,9 +37,10 @@ export const RequestContextProvider = ({
 
 RequestContextProvider.propTypes = {
   children: node.isRequired,
+  data: node.isRequired,
   env: string,
   id: string,
-  lang: string.isRequired,
+  serviceLang: string.isRequired,
   pageType: oneOf(['article', 'frontPage']).isRequired,
   platform: string.isRequired,
   isUK: bool.isRequired,

@@ -15,7 +15,6 @@ import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdent
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import getEnv from '../contexts/RequestContext/getEnv';
 import GlobalStyle from '../lib/globalStyles';
-import getLangByPageType from '../contexts/RequestContext/getLangByPageType';
 
 const PageWithRequestContext = ({
   children,
@@ -32,13 +31,14 @@ const PageWithRequestContext = ({
 
   return (
     <RequestContextProvider
+      data={data}
       env={env}
       id={id}
       isUK={isUK}
-      lang={getLangByPageType(data, lang, pageType)}
       origin={origin}
       pageType={pageType}
       platform={isAmp ? 'amp' : 'canonical'}
+      serviceLang={lang}
       statsDestination={getStatsDestination({
         isUK,
         env,
