@@ -1,4 +1,4 @@
-import articleJson from '../../../../../../data/test/news/articles/c0000000003o.json';
+import articleJson from '../../../../../../data/news/articles/c0000000003o.json';
 import addIdsToBlocks from './addIdsToBlocks';
 
 jest.mock('uuid', () => () => 'mockId');
