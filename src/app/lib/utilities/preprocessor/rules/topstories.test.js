@@ -1,6 +1,6 @@
 import applySquashTopstories from './topstories';
-import fixtureDataFormatOne from '../../../../../../data/prod/thai/frontpage/index.json';
-import fixtureDataFormatTwo from '../../../../../../data/prod/igbo/frontpage/index.json';
+import fixtureDataFormatOne from '../../../../../../data/thai/frontpage/index.json';
+import fixtureDataFormatTwo from '../../../../../../data/igbo/frontpage/index.json';
 
 describe('Topstories rules', () => {
   it('should squash known blocks in received order and leave other blocks alone', () => {
