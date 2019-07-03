@@ -1,5 +1,10 @@
-const assetRegex = type =>
-  new RegExp(`\\/static\\/js\\/${type}-\\w+\\.\\w+\\.js$`);
+const assetRegex = type => {
+  if (process.env.NODE_ENV === 'development') {
+    return new RegExp(`\\/static\\/js\\/${type}[\\w_.~-]*.js$`);
+  }
+
+  return new RegExp(`\\/static\\/js\\/${type}-\\w+\\.\\w+\\.js$`);
+};
 
 const assetsFilter = (assets, service) => {
   const serviceAssets = assets.filter(asset => assetRegex(service).test(asset));
