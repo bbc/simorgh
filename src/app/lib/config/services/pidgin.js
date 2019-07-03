@@ -28,7 +28,7 @@ const pidgin = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Home',
-    currentPage: 'Current page',
+    currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
     error: {
       404: {
