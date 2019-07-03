@@ -99,7 +99,7 @@
     "@bbc/psammead-media-indicator": "^1.0.2",
     "@bbc/psammead-navigation": "^1.0.1",
     "@bbc/psammead-paragraph": "^1.0.5",
-    "@bbc/psammead-section-label": "^1.0.1",
+    "@bbc/psammead-section-label": "^1.0.2",
     "@bbc/psammead-sitewide-links": "^1.0.1",
     "@bbc/psammead-story-promo": "^1.0.0-alpha.4",
     "@bbc/psammead-story-promo-list": "^1.0.1",
