@@ -2,7 +2,7 @@ import React from 'react';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import WithData from './withData';
-import frontPageDataPidgin from '../../../../data/prod/pidgin/frontpage';
+import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;
