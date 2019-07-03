@@ -1435,7 +1435,6 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
 exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & span 1 1`] = `
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
 }
 
 .c2 {

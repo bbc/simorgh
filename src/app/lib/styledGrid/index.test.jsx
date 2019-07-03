@@ -15,22 +15,19 @@ import {
 
 describe('Styled Grid items', () => {
   describe('GhostGrid', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      <GhostGrid />,
-    );
+    shouldMatchSnapshot('should render correctly', <GhostGrid />);
   });
 
   describe('GridItemConstrainedSmall', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <GhostGrid>
+      <Grid>
         <GridItemConstrainedSmall>
           <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemSmall>
         </GridItemConstrainedSmall>
-      </GhostGrid>,
+      </Grid>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
