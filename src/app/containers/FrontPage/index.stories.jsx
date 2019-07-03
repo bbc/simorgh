@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import igboData from '../../../../data/prod/igbo/frontpage';
-import yorubaData from '../../../../data/prod/yoruba/frontpage';
-import pidginData from '../../../../data/prod/pidgin/frontpage';
+import igboData from '../../../../data/igbo/frontpage';
+import yorubaData from '../../../../data/yoruba/frontpage';
+import pidginData from '../../../../data/pidgin/frontpage';
 import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
 import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
