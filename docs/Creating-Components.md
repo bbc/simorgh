@@ -99,7 +99,7 @@ You'll also need to define the block subtype itself:
 The schema check currently only happens on local data. Eventually, we hope to run the schema validator at runtime.
 
 ### Update some local fixture data
-Pick a JSON file under `data/test/news/articles/[id].json`, and:
+Pick a JSON file under `data/news/articles/[id].json`, and:
 
 1) add an example of your block somewhere in the `content.model.blocks` array.
 2) add your new component to the `blockTypes` array.
