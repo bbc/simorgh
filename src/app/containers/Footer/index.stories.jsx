@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Footer from '.';
-import services from '../../lib/config/services';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import { select, withKnobs } from '@storybook/addon-knobs';
+import services from '../../lib/config/services';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import Footer from '.';
 
 storiesOf('Footer', module)
   .addDecorator(withKnobs)
