@@ -10,6 +10,7 @@ import yoruba from './yoruba';
 
 export default {
   default: {
+    articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'default',
     brandName: 'Default Brand Name',
     dir: 'ltr',
