@@ -24,7 +24,6 @@ jobs:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
         - xvfb-run -a npm run test:e2e:storybook:ci
-        - npm run audit:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
@@ -34,6 +33,7 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+        - npm run audit:ci
     - stage: test
       if: branch = latest AND type = push
       name: 'Test third party dependencies'
