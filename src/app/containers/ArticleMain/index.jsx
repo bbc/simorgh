@@ -6,7 +6,7 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostWrapper } from '../../lib/styledGrid';
+import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 
 const componentsToRender = {
@@ -26,9 +26,9 @@ const ArticleMain = ({ articleData }) => {
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        <GhostWrapper>
+        <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </GhostWrapper>
+        </GhostGrid>
       </main>
     </Fragment>
   );
