@@ -28,7 +28,7 @@ const igbo = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Akụkọ',
-    currentPage: 'Current page',
+    currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
     error: {
       404: {
