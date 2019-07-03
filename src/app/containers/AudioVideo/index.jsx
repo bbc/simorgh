@@ -52,7 +52,7 @@ const AudioVideoContainer = ({ blocks }) => {
   let ChildWrapper = NestedGridItemChildLarge;
   let Container = GridItemConstrainedLargeNoMargin;
   let width = '100%';
-  let height = '26em';
+  let height = '100%';
 
   if (orientation === 'Portrait') {
     ParentWrapper = NestedGridParentSmall;

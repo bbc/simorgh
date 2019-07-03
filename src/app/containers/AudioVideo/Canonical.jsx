@@ -8,11 +8,7 @@ const Canonical = ({ id, width, height }) => {
     width: ${width};
   `;
 
-  return (
-    <>
-      <MediaPlayerContainer id={id} key={id} />
-    </>
-  );
+  return <MediaPlayerContainer id={id} key={id} />;
 };
 
 Canonical.propTypes = {

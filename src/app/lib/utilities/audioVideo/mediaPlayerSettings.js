@@ -58,8 +58,8 @@ const mediaPlayerSettings = ({
       ],
     },
     product: 'news',
-    responsive: true,
     statsObject,
+    superResponsive: true,
     ui: {
       cta: {
         mode: 'duration',
