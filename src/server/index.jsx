@@ -26,8 +26,6 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
-const dataFolderToRender =
-  process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -88,7 +86,7 @@ if (process.env.APP_ENV === 'local') {
 
       const dataFilePath = path.join(
         process.cwd(),
-        dataFolderToRender,
+        'data',
         service,
         'articles',
         `${id}.json`,
@@ -101,7 +99,7 @@ if (process.env.APP_ENV === 'local') {
 
       const dataFilePath = path.join(
         process.cwd(),
-        dataFolderToRender,
+        'data',
         service,
         'frontpage',
         'index.json',
@@ -169,19 +167,17 @@ server
           logger.error(`Error fetching Cosmos dials: ${message}`);
         }
 
-        res
-          .status(status)
-          .send(
-            await renderDocument(
-              url,
-              data,
-              routes,
-              bbcOrigin,
-              service,
-              isAmp,
-              dials,
-            ),
-          );
+        res.status(status).send(
+          await renderDocument({
+            bbcOrigin,
+            data,
+            dials,
+            isAmp,
+            routes,
+            service,
+            url,
+          }),
+        );
       } catch ({ message, status }) {
         // Return an internal server error for any uncaught errors
         logger.error(`status: ${status || 500} - ${message}`);
