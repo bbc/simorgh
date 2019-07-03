@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
-import fixture from '../../../../data/prod/pidgin/frontpage';
+import fixture from '../../../../data/pidgin/frontpage';
 import deepGet from '../../lib/utilities/deepGet';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 

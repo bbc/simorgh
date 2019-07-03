@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPageSection from '.';
 
-import igboData from '../../../../data/test/igbo/frontpage/index.json';
-import pidginData from '../../../../data/test/pidgin/frontpage/index.json';
+import igboData from '../../../../data/igbo/frontpage/index.json';
+import pidginData from '../../../../data/pidgin/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
