@@ -29,7 +29,7 @@ const PageWithRequestContext = ({
   service,
 }) => {
   const { lang } = useContext(ServiceContext);
-  console.log(getLangByPageType(data, lang, pageType));
+
   return (
     <RequestContextProvider
       env={env}
