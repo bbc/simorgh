@@ -27,15 +27,12 @@ getStatsPageIdentifier.mockImplementation(
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     bbcOrigin: 'https://www.bbc.com',
-    children: {
-      props: {
-        data: { pageData: { metadata: { passport: { language: 'en-gb' } } } },
-      },
-    },
+    children: <h2>Child Element</h2>,
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,
     pageType: 'article',
+    data: { pageData: { metadata: { passport: { language: 'en-gb' } } } },
   };
 
   shouldShallowMatchSnapshot(

@@ -26,19 +26,9 @@ exports[`defaultPageWrapper should render with children 1`] = `
       pageType="article"
       service="news"
     >
-      Object {
-        "props": Object {
-          "data": Object {
-            "pageData": Object {
-              "metadata": Object {
-                "passport": Object {
-                  "language": "en-gb",
-                },
-              },
-            },
-          },
-        },
-      }
+      <h2>
+        Child Element
+      </h2>
     </PageWithRequestContext>
   </ServiceContextProvider>
 </React.Fragment>
