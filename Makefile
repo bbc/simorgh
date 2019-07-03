@@ -10,6 +10,7 @@ installProd:
 	npm ci --only=production
 
 developmentTests:
+	npm run audit:ci
 	npx apache2-license-checker;
 	npm run test;
 	xvfb-run npm run test:e2e:storybook:ci;
