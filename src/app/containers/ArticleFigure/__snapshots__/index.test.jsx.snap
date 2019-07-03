@@ -654,7 +654,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 .c7 {
-  color: #222222;
+  color: #B80000;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -665,14 +665,14 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   border-bottom: 1px solid #757575;
 }
 
-.c7:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c7:focus,
 .c7:hover {
-  color: #B80000;
+  background-color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #FFFFFF;
+  margin: 0 -2px;
+  padding: 0 2px;
+  white-space: pre-wrap;
 }
 
 .c3 {
@@ -1776,7 +1776,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 .c8 {
-  color: #222222;
+  color: #B80000;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1787,14 +1787,14 @@ exports[`ArticleFigure should render an image with caption text with inline link
   border-bottom: 1px solid #757575;
 }
 
-.c8:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c8:focus,
 .c8:hover {
-  color: #B80000;
+  background-color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #FFFFFF;
+  margin: 0 -2px;
+  padding: 0 2px;
+  white-space: pre-wrap;
 }
 
 .c3 {
