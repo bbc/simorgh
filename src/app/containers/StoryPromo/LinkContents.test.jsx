@@ -11,6 +11,14 @@ const item = {
   },
 };
 
+const itemWithOvertypedHeadline = {
+  cpsType: 'STY',
+  headlines: {
+    headline: 'A headline',
+    overtyped: 'Overtyped headline',
+  },
+};
+
 const mediaItem = {
   cpsType: 'MAP',
   headlines: {
@@ -25,6 +33,10 @@ const mediaItem = {
     ],
   },
 };
+
+const mediaItemWithOvertyped = { ...mediaItem };
+mediaItemWithOvertyped.headlines.overtyped =
+  'An overtyped headline for a media item';
 
 const mockServiceConfig = {
   translations: {
@@ -59,8 +71,23 @@ describe('Story Promo Link Contents', () => {
     expect(container.innerHTML).toEqual(item.headlines.headline);
   });
 
+  it('should render overtyped headline if provided', () => {
+    const { container } = render(
+      <LinkContents item={itemWithOvertypedHeadline} />,
+    );
+
+    expect(container.innerHTML).toEqual(
+      itemWithOvertypedHeadline.headlines.overtyped,
+    );
+  });
+
   shouldShallowMatchSnapshot(
     'should render with visually hidden text for media promos',
     <LinkContents item={mediaItem} />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render with visually hidden text for media with overtyped headline',
+    <LinkContents item={mediaItemWithOvertyped} />,
   );
 });
