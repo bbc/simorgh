@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import {
-  GhostWrapper,
+  GhostGrid,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -27,7 +27,7 @@ const ColouredDiv = styled.div`
 
 storiesOf('Grid Examples', module)
   .add('GridItemConstrainedSmall', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedSmall>
         <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/4 or 1/5 or 1/8</ColouredDiv>
@@ -54,10 +54,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={red}>4/4 or 5/5 or 8/8</ColouredDiv>
         </NestedGridItemSmall>
       </GridItemConstrainedSmall>
-    </GhostWrapper>
+    </GhostGrid>
   ))
   .add('GridItemConstrainedMedium', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedMedium>
         <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/5 or 1/10</ColouredDiv>
@@ -90,10 +90,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={yellow}>5/5 or 10/10</ColouredDiv>
         </NestedGridItemMedium>
       </GridItemConstrainedMedium>
-    </GhostWrapper>
+    </GhostGrid>
   ))
   .add('GridItemConstrainedLarge', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/6 or 1/12</ColouredDiv>
@@ -132,10 +132,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={blue}>6/6 or 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLarge>
-    </GhostWrapper>
+    </GhostGrid>
   ))
   .add('GridItemConstrainedLargeNoMargin', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/6 or 1/12</ColouredDiv>
@@ -174,10 +174,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={blue}>6/6 or 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
-    </GhostWrapper>
+    </GhostGrid>
   ))
   .add('Example of multi-breakpoint span', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '12' }}>
           <ColouredDiv colour={blue}>
@@ -195,10 +195,10 @@ storiesOf('Grid Examples', module)
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
-    </GhostWrapper>
+    </GhostGrid>
   ))
   .add('Group 5 breakpoint pop-out grid item', () => (
-    <GhostWrapper>
+    <GhostGrid>
       <GridItemConstrainedMedium>
         <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
       </GridItemConstrainedMedium>
@@ -214,5 +214,5 @@ storiesOf('Grid Examples', module)
       <GridItemConstrainedMedium>
         <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
       </GridItemConstrainedMedium>
-    </GhostWrapper>
+    </GhostGrid>
   ));
