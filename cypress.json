@@ -1,6 +1,5 @@
 {
   "video": false,
-  "chromeWebSecurity": true,
   "env": {
     "APP_ENV": "local",
     "UK": false
