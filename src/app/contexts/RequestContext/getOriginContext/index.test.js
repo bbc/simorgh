@@ -1,4 +1,4 @@
-import { setWindowValue, resetWindowValue } from '../../../testHelpers';
+import { setWindowValue, resetWindowValue } from '../../../../testHelpers';
 
 const windowLocation = window.location;
 
@@ -45,7 +45,7 @@ describe('getOriginContext', () => {
         origin: location,
       });
 
-      const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
+      const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
       expect(getOriginContext(bbcOrigin)).toEqual(expected);
     });
@@ -53,7 +53,7 @@ describe('getOriginContext', () => {
 });
 
 describe('getOriginContext - localhost', () => {
-  const getOriginContext = require('./getOriginContext').default; // eslint-disable-line global-require
+  const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
   beforeEach(() => {
     process.env.APP_ENV = 'local';

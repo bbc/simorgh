@@ -8,10 +8,10 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
-const WrappedImageWithPlaceholder = ({ platform, ...otherProps }) => (
+const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
-      platform={platform}
+      isAmp={isAmp}
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
@@ -27,7 +27,7 @@ WrappedImageWithPlaceholder.propTypes = {
   caption: objectOf(any),
   copyright: string,
   lazyLoad: bool,
-  platform: string,
+  isAmp: bool,
   type: string,
   height: number,
   width: number,
@@ -37,7 +37,7 @@ WrappedImageWithPlaceholder.defaultProps = {
   caption: null,
   copyright: null,
   lazyLoad: false,
-  platform: 'canonical',
+  isAmp: false,
   type: '',
   height: null,
   width: null,
@@ -50,7 +50,7 @@ const baseFixture = {
   fade: true,
   height: 360,
   lazyLoad: false,
-  platform: 'canonical',
+  isAmp: false,
   ratio: 56.25,
   src:
     'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
@@ -67,7 +67,7 @@ export const ImageWithPlaceholder = () => {
 export const AmpImageWithPlaceholder = () => {
   const props = {
     ...baseFixture,
-    platform: 'amp',
+    isAmp: true,
   };
 
   return <WrappedImageWithPlaceholder {...props} />;
