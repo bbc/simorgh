@@ -26,8 +26,6 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
-const dataFolderToRender =
-  process.env.NODE_ENV === 'production' ? 'data/prod' : 'data/test';
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -65,16 +63,16 @@ server
  * Local env routes - fixture data
  */
 
-const sendDataFile = (res, dataFilePath, next) => {
-  res.sendFile(dataFilePath, {}, sendErr => {
-    if (sendErr) {
-      logger.error(sendErr);
-      next(sendErr);
-    }
-  });
-};
-
 if (process.env.APP_ENV === 'local') {
+  const sendDataFile = (res, dataFilePath, next) => {
+    res.sendFile(dataFilePath, {}, sendErr => {
+      if (sendErr) {
+        logger.error(sendErr);
+        next(sendErr);
+      }
+    });
+  };
+
   server
     .use(
       expressStaticGzip(publicDirectory, {
@@ -88,10 +86,23 @@ if (process.env.APP_ENV === 'local') {
 
       const dataFilePath = path.join(
         process.cwd(),
-        dataFolderToRender,
+        'data',
         service,
         'articles',
         `${id}.json`,
+      );
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+      const { service } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        'frontpage',
+        'index.json',
       );
 
       sendDataFile(res, dataFilePath, next);
@@ -108,24 +119,6 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
-  .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-    /*
-     *
-     * TODO: MOVE THIS ROUTE BACK INTO LOCAL ONLY
-     *
-     */
-    const { service } = params;
-
-    const dataFilePath = path.join(
-      process.cwd(),
-      dataFolderToRender,
-      service,
-      'frontpage',
-      'index.json',
-    );
-
-    sendDataFile(res, dataFilePath, next);
-  })
   .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {

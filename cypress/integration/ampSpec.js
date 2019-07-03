@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import {
   getElement,
   hasHtmlLangDirAttributes,
@@ -8,13 +8,13 @@ import { checkCanonicalURL } from '../support/metaTestHelper';
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.news}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
       cy.testResponseCodeAndType(
-        `/news/articles/${config.assets.news}.amp`,
+        `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
         200,
         'text/html',
       );
@@ -23,17 +23,17 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     cy.testResponseCodeAndType(
-      `/news/articles/${config.assets.news}.cake`,
+      `/news/articles/${services.news.pageTypes.articles.asset}.cake`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `/news/lol/${config.assets.news}.amp`,
+      `/news/lol/${services.news.pageTypes.articles.asset}.amp`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `/cake/articles/${config.assets.news}.amp`,
+      `/cake/articles/${services.news.pageTypes.articles.asset}.amp`,
       404,
       'text/html',
     );
@@ -102,11 +102,13 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should include the canonical URL', () => {
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
+    checkCanonicalURL(
+      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
+    );
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit(`/news/articles/${config.assets.news}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     getElement('html').should('not.have.attr', 'amp');
   });
 });
