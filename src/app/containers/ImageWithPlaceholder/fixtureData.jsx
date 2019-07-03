@@ -27,7 +27,7 @@ WrappedImageWithPlaceholder.propTypes = {
   caption: objectOf(any),
   copyright: string,
   lazyLoad: bool,
-  platform: string,
+  isAmp: bool,
   type: string,
   height: number,
   width: number,
