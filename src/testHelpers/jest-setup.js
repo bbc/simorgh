@@ -3,6 +3,11 @@ import Adapter from 'enzyme-adapter-react-16';
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 
+/*
+ * Mock to avoid async behaviour in tests
+ */
+jest.mock('../app/contexts/ServiceContext');
+
 Enzyme.configure({ adapter: new Adapter() });
 
 global.fetch = fetch;
