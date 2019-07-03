@@ -2,7 +2,7 @@
 
 const { validateOneOf } = require('./validateOneOf');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
-const data = require('../../../data/test/news/articles/c0000000001o.json');
+const data = require('../../../data/news/articles/c0000000001o.json');
 
 const schemas = getAllSchemas();
 const referencedItems = schemas.blocks.items.oneOf;
