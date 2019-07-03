@@ -1,5 +1,5 @@
 import applyFilterCpsTypes from './cpstypes';
-import igboFixtureData from '../../../../../../data/prod/igbo/frontpage/index.json';
+import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
 
 describe('cpsTypes rules', () => {
   it('should filter items with unknown CPS types', () => {
