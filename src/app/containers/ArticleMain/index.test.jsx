@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { string, node } from 'prop-types';
 import ArticleMain from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
@@ -9,33 +9,34 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
-const Context = ({ children }) => (
+const Context = ({ service, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
     isAmp={false}
     pageType="article"
-    service="news"
+    service={service}
   >
     {children}
   </RequestContextProvider>
 );
 Context.propTypes = {
   children: node.isRequired,
+  service: string.isRequired,
 };
 
 describe('ArticleMain', () => {
   shouldShallowMatchSnapshot(
     'should render a news article correctly',
-    <Context>
-      <ArticleMain service="news" articleData={articleDataNews} />
+    <Context service="news">
+      <ArticleMain articleData={articleDataNews} />
     </Context>,
   );
 
   shouldShallowMatchSnapshot(
     'should render a persian article correctly',
-    <Context>
-      <ArticleMain service="persian" articleData={articleDataPersian} />
+    <Context service="persian">
+      <ArticleMain articleData={articleDataPersian} />
     </Context>,
   );
 });

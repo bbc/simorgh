@@ -116,7 +116,7 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType="article"
-      service="news"
+      service={service}
     >
       <StoryPromo {...props} />
     </RequestContextProvider>

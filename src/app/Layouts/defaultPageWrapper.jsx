@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { node, string, bool } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
@@ -10,25 +10,23 @@ import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
 
 const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => (
-  <Fragment>
-    <ServiceContextProvider service={service}>
-      <GlobalStyle />
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={isAmp}
-        pageType={pageType}
-        service={service}
-      >
-        <ServiceWorkerContainer />
-        <ManifestContainer />
-        <ConsentBanner />
-        <HeaderContainer />
-        {children}
-        <FooterContainer />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </Fragment>
+  <ServiceContextProvider service={service}>
+    <GlobalStyle />
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={isAmp}
+      pageType={pageType}
+      service={service}
+    >
+      <ServiceWorkerContainer />
+      <ManifestContainer />
+      <ConsentBanner />
+      <HeaderContainer />
+      {children}
+      <FooterContainer />
+    </RequestContextProvider>
+  </ServiceContextProvider>
 );
 
 PageWrapper.propTypes = {
