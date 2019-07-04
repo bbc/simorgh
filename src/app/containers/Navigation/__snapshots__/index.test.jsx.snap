@@ -151,7 +151,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   <NavigationUl>
     <NavigationLi
       active={true}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -303,7 +303,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -455,7 +455,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -607,7 +607,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
