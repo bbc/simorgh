@@ -22,14 +22,14 @@ const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
 
-  const { audiovideo } = useContext(DialContext);
+  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
 
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        {audiovideo && <h2>AV IS ENABLED K THX</h2>}
+        {audioVideoEnabled && <h2>AV IS ENABLED K THX</h2>}
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostWrapper>
