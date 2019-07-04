@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
+import frontPageDataIgbo from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 
 jest.mock('react', () => {

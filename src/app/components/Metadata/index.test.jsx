@@ -2,6 +2,20 @@ import React from 'react';
 import Metadata from './index';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 
+const iconSizes = {
+  'apple-touch-icon': [
+    '72x72',
+    '96x96',
+    '128x128',
+    '144x144',
+    '152x152',
+    '192x192',
+    '384x384',
+    '512x512',
+  ],
+  icon: ['72x72', '96x96', '192x192'],
+};
+
 const metadataSnapshotTest = (
   testDescription,
   isAmp,
@@ -28,6 +42,7 @@ const metadataSnapshotTest = (
   twitterCreator,
   twitterSite,
   type,
+  service,
   showArticleTags,
 ) =>
   describe(testDescription, () => {
@@ -56,12 +71,13 @@ const metadataSnapshotTest = (
       twitterCreator,
       twitterSite,
       type,
+      service,
       showArticleTags,
     };
 
     shouldShallowMatchSnapshot(
       'should render correctly',
-      <Metadata {...metadataProps} />,
+      <Metadata {...metadataProps} iconSizes={iconSizes} />,
     );
   });
 
@@ -105,6 +121,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -147,6 +164,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -176,6 +194,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    'persian',
     true,
   );
 
@@ -205,6 +224,7 @@ describe('Metadata', () => {
     '@bbcpersian',
     '@bbcpersian',
     'article',
+    'persian',
     true,
   );
 
@@ -247,6 +267,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'article',
+    'news',
     true,
   );
 
@@ -289,6 +310,7 @@ describe('Metadata', () => {
     '@BBCNews',
     'IDX',
     false,
+    'news',
   );
 
   metadataSnapshotTest(
@@ -330,6 +352,7 @@ describe('Metadata', () => {
     '@BBCNews',
     '@BBCNews',
     'IDX',
+    'news',
     false,
   );
 });

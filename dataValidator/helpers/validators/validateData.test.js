@@ -3,7 +3,7 @@ global.console.time = jest.fn(); // silence console.time during jest tests
 
 const { validateData } = require('./validateData');
 
-const validData = require('../../../data/test/news/articles/c0000000001o.json');
+const validData = require('../../../data/news/articles/c0000000001o.json');
 
 const invalidData = {};
 

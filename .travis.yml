@@ -14,7 +14,7 @@ jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: "Unit Tests and storybook e2e"
+      name: 'Unit Tests and storybook e2e'
       install: npm ci
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -26,18 +26,19 @@ jobs:
         - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: "Production CI tests" 
+      name: 'Production CI tests'
       install: npm ci --only=prod
-      addons: 
+      addons:
         chrome: stable
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+        - npm run audit:ci
     - stage: test
       if: branch = latest AND type = push
-      name: "Test third party dependencies" 
+      name: 'Test third party dependencies'
       install: npm install cypress@latest
-      addons: 
+      addons:
         chrome: stable
       script:
         - xvfb-run -a npm run cypress:3rdParty
