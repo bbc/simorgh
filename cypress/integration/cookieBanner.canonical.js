@@ -26,6 +26,7 @@ const assertCookieValues = cookies => {
 describe('Canonical Cookie Banner Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
+    cy.clearCookies();
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
 
@@ -42,6 +43,7 @@ describe('Canonical Cookie Banner Tests', () => {
       .contains('OK')
       .click();
 
+    cy.wait(1000);
     getCookieBanner().should('be.visible');
     getPrivacyBanner().should('not.be.visible');
 
@@ -50,9 +52,9 @@ describe('Canonical Cookie Banner Tests', () => {
       .click();
 
     assertCookieValues({
-      ckns_explicit: '1',
-      ckns_privacy: '1', // flakes here
-      ckns_policy: '111',
+      ckns_explicit: '1', // flakes here in terminal not interactive
+      ckns_privacy: '1', // flakes here in terminal not interactive
+      ckns_policy: '111', // flakes here in terminal not interactive
     });
 
     getCookieBanner().should('not.be.visible');

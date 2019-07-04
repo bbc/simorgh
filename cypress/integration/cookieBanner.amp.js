@@ -9,7 +9,6 @@ const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 describeForEuOnly('Amp Cookie Banner Test', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.clearCookies();
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
