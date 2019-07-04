@@ -1,0 +1,808 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "tags": {
+      "about": null,
+      "mentions": null
+    },
+    "version": "v0.3.2",
+    "blockTypes": ["headline", "text", "paragraph", "fragment"]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Some text content that is acting as a placeholder so that we can test an ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Some text content that is acting as a placeholder so that we can test an ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "inline link styles render on the page"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "isExternal": false,
+                              "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                              "text": "inline link styles render on the page"
+                            },
+                            "type": "urlLink"
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "inline link styles render on the page"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Rare use case: Some text content that is ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Rare use case: Some text content that is ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Common use case: Some bold text content that is acting as a placeholder so that we can test an ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Common use case: Some bold text content that is acting as a placeholder so that we can test an ",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["bold"],
+                              "text": "inline link styles render on the page"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["bold"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["bold"],
+                              "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["bold"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Some bold text content that is ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Some bold text content that is ",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["bold"],
+                              "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["bold"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Some italic text content that is acting as a placeholder so that we can test an ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Some bold text content that is acting as a placeholder so that we can test an ",
+                        "attributes": ["italic"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["italic"],
+                              "text": "inline link styles render on the page"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["italic"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Common use case: Some text content that is acting as a placeholder so that we can test how the following ",
+                        "attributes": ["italic"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["italic"],
+                              "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "inline link styles render on the page that is long enough to wrap on to the next link and"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["italic"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Some italic text content that is ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Some bold text content that is ",
+                        "attributes": ["italic"]
+                      }
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": ["italic"],
+                              "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                        "text": "acting as a placeholder so that we can test an inline link styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                        "attributes": ["italic"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Some caption text that contains a much more common use of "
+                                  },
+                                  "type": "fragment"
+                                },
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "attributes": [],
+                                          "text": "inline link"
+                                        },
+                                        "type": "fragment"
+                                      }
+                                    ],
+                                    "isExternal": false,
+                                    "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                                    "text": "inline"
+                                  },
+                                  "type": "urlLink"
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " that has some text following the link to see how the link renders compared to the line above and below. And a bit more text so that the line wraps underneath the link.",
+                                    "attributes": []
+                                  }
+                                }
+                              ],
+                              "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text. And a bit more text so that the line wraps underneath the link."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Royal wedding"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Royal wedding"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Some caption text that contains an "
+                                  },
+                                  "type": "fragment"
+                                },
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "attributes": [],
+                                          "text": "inline link which is just about the right length to wrap on to the next line"
+                                        },
+                                        "type": "fragment"
+                                      }
+                                    ],
+                                    "isExternal": false,
+                                    "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                                    "text": "inline link which is just about the right length to wrap on to the next line"
+                                  },
+                                  "type": "urlLink"
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " and also has some text following the link to see how the link renders compared to the line above and below. And a bit more text so that the line wraps underneath the link.",
+                                    "attributes": []
+                                  }
+                                }
+                              ],
+                              "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text. And a bit more text so that the line wraps underneath the link."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Royal wedding"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Royal wedding"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text. "
+                                  },
+                                  "type": "fragment"
+                                },
+                                {
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "model": {
+                                          "attributes": [],
+                                          "text": "An inline link to show how the styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                                        },
+                                        "type": "fragment"
+                                      }
+                                    ],
+                                    "isExternal": false,
+                                    "locator": "https://www.test.bbc.com/news/articles/cn7769kpk9mo",
+                                    "text": "An inline link to show how the styles render on the page that spans multiple lines (this is a link that spans many lines at smaller viewports to see how the styling of the link clashes aross multiple lines)"
+                                  },
+                                  "type": "urlLink"
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " that has some text following the link to see how the link renders compared to the line above and below.",
+                                    "attributes": []
+                                  }
+                                }
+                              ],
+                              "text": "Some caption text content so we can test how the inline link styling looks when the link is embedded in the caption text."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Royal wedding"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Royal wedding"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Some text content that is acting as a placeholder so that we can test an "
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
+    },
+    "summary": "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "timestamp": 1514811600000
+  }
+}
