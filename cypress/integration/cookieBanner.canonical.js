@@ -23,20 +23,13 @@ const assertCookieValues = cookies => {
   });
 };
 
-// const visitArticle = () => {
-//   cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
-// };
-
 describe('Canonical Cookie Banner Tests', () => {
+  // eslint-disable-next-line no-undef
   before(() => {
-    // cy.clearCookies();
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
-  it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
-    // cy.clearCookies();
-    // visitArticle();
-    // cy.reload();
 
+  it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
@@ -69,8 +62,6 @@ describe('Canonical Cookie Banner Tests', () => {
   });
 
   it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
-    // cy.clearCookies();
-    // visitArticle();
     cy.reload();
 
     getPrivacyBanner().should('be.visible');
@@ -103,9 +94,7 @@ describe('Canonical Cookie Banner Tests', () => {
   });
 
   it("should show cookie banner (and NOT privacy banner) if user has visited the page before and didn't explicitly 'accept' cookies", () => {
-    // cy.clearCookies();
     cy.setCookie('ckns_privacy', '1');
-    // visitArticle();
     cy.reload();
 
     getPrivacyBanner().should('not.be.visible');
@@ -113,9 +102,7 @@ describe('Canonical Cookie Banner Tests', () => {
   });
 
   it("should not override the user's default cookie policy", () => {
-    // cy.clearCookies();
     cy.setCookie('ckns_policy', 'made_up_value');
-    // visitArticle();
     cy.reload();
 
     assertCookieValues({

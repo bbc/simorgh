@@ -29,7 +29,6 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
     cy.contains('OK').click();
 
-    // cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
     cy.reload();
 
     getPrivacyBanner().should('be.visible');
@@ -40,7 +39,6 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
     cy.contains('OK').click();
     cy.contains('Yes, I agree').click();
 
-    // cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
     cy.reload();
 
     getPrivacyBanner().should('not.be.visible');
@@ -54,7 +52,6 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
     cy.contains('OK').click();
     cy.contains('No, take me to settings').click();
 
-    // cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
     cy.reload();
 
     getPrivacyBanner().should('not.be.visible'); // flakey
