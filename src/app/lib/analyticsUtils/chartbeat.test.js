@@ -127,7 +127,9 @@ describe('Chartbeat utilities', () => {
     sectionFixtures.forEach(
       ([{ service, producer, chapter, pageType, expected }]) => {
         it(`buildSections should return "${expected}"`, () => {
-          expect(buildSections(service, pageType, producer, chapter)).toBe(expected);
+          expect(buildSections(service, pageType, producer, chapter)).toBe(
+            expected,
+          );
         });
       },
     );
