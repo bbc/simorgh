@@ -28,7 +28,7 @@ const buildSectionArr = (service, value, type) => [
 
 const buildServiceType = (service, type) => `${service} - ${type}`;
 
-export const sections = (service, type, producer, chapter) => {
+export const buildSections = (service, type, producer, chapter) => {
   const pageType = type === 'article' ? 'ART' : 'IDX';
 
   const parts = [
@@ -41,5 +41,5 @@ export const sections = (service, type, producer, chapter) => {
   return parts.join(', ');
 };
 
-export const type = pageType =>
+export const getType = pageType =>
   pageType === 'article' ? 'New Article' : 'Index';

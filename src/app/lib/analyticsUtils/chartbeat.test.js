@@ -3,8 +3,8 @@ import {
   useCanonical,
   getSylphidCookie,
   getDomain,
-  sections,
-  type,
+  buildSections,
+  getType,
 } from './chartbeat';
 import onClient from '../utilities/onClient';
 
@@ -59,7 +59,7 @@ describe('Chartbeat utilities', () => {
 
     types.forEach(({ type: rawType, expectedType }) => {
       it(`Type ${rawType} should return ${expectedType}`, () => {
-        expect(type(rawType)).toBe(expectedType);
+        expect(getType(rawType)).toBe(expectedType);
       });
     });
   });
@@ -127,7 +127,7 @@ describe('Chartbeat utilities', () => {
     sectionFixtures.forEach(
       ([{ service, producer, chapter, pageType, expected }]) => {
         it(`sections should return "${expected}"`, () => {
-          expect(sections(service, pageType, producer, chapter)).toBe(expected);
+          expect(buildSections(service, pageType, producer, chapter)).toBe(expected);
         });
       },
     );
