@@ -4,15 +4,22 @@ export const useCanonical = true;
 
 export const cknsSylphid = () => {};
 
-export const domain = service =>
-  service ? `${service}.bbc.co.uk` : `bbc.co.uk`;
+export const domain = service => {
+  const serviceLower = service.toLowerCase();
 
-export const sections = ({ service }) => {
+  return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
+};
+
+export const sections = service => {
   const parts = [];
 
   parts.push(service);
 
-  return parts;
+  const pageType = `${service} - ART`;
+
+  parts.push(pageType);
+
+  return parts.join(', ');
 };
 
 export const type = pageType =>
