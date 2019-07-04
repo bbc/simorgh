@@ -4,6 +4,7 @@
   "description": "Simorgh",
   "scripts": {
     "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp",
+    "audit:ci": "audit-ci --low",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build": "rm -rf build && cp envConfig/local.env .env && npm run webpack:prod && npm run test:size",
@@ -155,6 +156,7 @@
     "@storybook/theming": "^5.1.9",
     "@testing-library/react": "^8.0.1",
     "amphtml-validator": "^1.0.23",
+    "audit-ci": "^2.1.0",
     "babel-eslint": "^10.0.2",
     "bbc-a11y": "^2.3.0",
     "chalk": "^2.4.1",
