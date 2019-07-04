@@ -1,4 +1,10 @@
-import { chartbeatUID, useCanonical, domain } from './chartbeat';
+import {
+  chartbeatUID,
+  useCanonical,
+  domain,
+  sections,
+  type,
+} from './chartbeat';
 
 describe('Chartbeat utilities', () => {
   it('should return the correct chartbeat UID', () => {
@@ -7,6 +13,16 @@ describe('Chartbeat utilities', () => {
 
   it('useCanonical should be true', () => {
     expect(useCanonical).toBe(true);
+  });
+
+  describe('Chartbeat Page Type', () => {
+    const types = [['article', 'News Article'], ['index', 'Index']];
+
+    types.forEach(([rawType, expected]) => {
+      it(`Type ${rawType} should return ${expected}`, () => {
+        expect(type(rawType)).toBe(expected);
+      });
+    });
   });
 
   describe('Chartbeat Domains', () => {
@@ -20,7 +36,20 @@ describe('Chartbeat utilities', () => {
     services.forEach(([service, expected]) => {
       it(`domain should return "${expected}" when service is ${service}`, () => {
         const res = domain(service);
+        expect(res).toBe(expected);
+      });
+    });
+  });
 
+  describe('Chartbeat Sections', () => {
+    const sectionsArr = [
+      ['news', 'news, news - ART'],
+      ['persian', 'persian, persian - ART'],
+    ];
+
+    sectionsArr.forEach(([service, expected]) => {
+      it(`sections should return "${expected}" when passed service ${service}`, () => {
+        const res = sections(service);
         expect(res).toBe(expected);
       });
     });
