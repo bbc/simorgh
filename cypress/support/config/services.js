@@ -21,7 +21,7 @@ export default {
       },
       frontPage: undefined,
     },
-  // },
+  },
   // pidgin: {
   //   pageTypes: {
   //     articles: undefined,
@@ -32,6 +32,6 @@ export default {
   //   pageTypes: {
   //     articles: undefined,
   //     frontPage: '/yoruba',
-  //   },
-      },
+  //   },  },
+
 };
