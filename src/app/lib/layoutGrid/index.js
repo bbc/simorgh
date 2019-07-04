@@ -201,7 +201,8 @@ export const nestedGridItemSmallCss = css`
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
-    ${({ marginLeft: { group3 } }) => (group3 ? `margin-left: ${group3}` : '')};
+    ${({ marginLeft: { group3 } = {} }) =>
+      group3 ? `margin-left: ${group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
@@ -220,7 +221,8 @@ export const nestedGridItemMediumCss = css`
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
-    ${({ marginLeft: { group3 } }) => (group3 ? `margin-left: ${group3}` : '')};
+    ${({ marginLeft: { group3 } = {} }) =>
+      group3 ? `margin-left: ${group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
