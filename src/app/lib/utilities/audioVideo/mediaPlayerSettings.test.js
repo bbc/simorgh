@@ -146,6 +146,65 @@ const audioAresMediaBlocks = [
   },
 ];
 
+const fakeAudioEpisodeExample = [
+  {
+    blockId: 'urn:bbc:ares::clip:p0000000',
+    type: 'aresMediaMetadata',
+    model: {
+      id: 'p0000000',
+      subType: 'episode',
+      format: 'audio',
+      title: 'Fake episode example ',
+      synopses: {
+        short: 'Some audio from somewhere',
+      },
+      imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p0111111.jpg',
+      imageCopyright: null,
+      embedding: false,
+      advertising: false,
+      caption: null,
+      versions: [
+        {
+          versionId: 'p0122222',
+          types: ['Original'],
+          duration: 127,
+          warnings: {
+            short: 'Contains some strong language.',
+            long: 'Contains some strong language.',
+          },
+          availableTerritories: {
+            uk: true,
+            nonUk: true,
+          },
+          availableUntil: null,
+          availableFrom: null,
+        },
+      ],
+      image: null,
+      syndication: {
+        destinations: [],
+      },
+    },
+  },
+  {
+    type: 'image',
+    model: {
+      blocks: [
+        {
+          type: 'rawImage',
+          model: {
+            width: null,
+            height: null,
+            locator: 'ichef.test.bbci.co.uk/images/ic/$recipe/p0111111.jpg',
+            originCode: null,
+            copyrightHolder: null,
+          },
+        },
+      ],
+    },
+  },
+];
+
 const expectedVideoSettingsObject = {
   appName: 'news',
   appType: 'responsive',
@@ -190,26 +249,74 @@ const expectedAudioSettingsObject = {
   },
 };
 
+const expectedFakeAudioEpisodeSettingsObject = {
+  appName: 'news',
+  appType: 'responsive',
+  counterName: 'news.articles.c0000000000o.page',
+  mediator: { host: 'open.test.bbc.co.uk' },
+  playlistObject: {
+    title: 'Fake episode example ',
+    holdingImageURL:
+      'https://ichef.test.bbci.co.uk/images/ic/$recipe/p0111111.jpg',
+    guidance: 'Contains some strong language.',
+    items: [{ versionID: 'p0122222', duration: 127, kind: 'audio' }],
+  },
+  product: 'news',
+  statsObject: { destination: 'NEWS_PS_TEST', episodePID: 'p0000000' },
+  superResponsive: true,
+  ui: {
+    cta: { mode: 'duration' },
+    locale: { lang: 'en-GB' },
+    subtitles: { defaultOn: true, enabled: true },
+  },
+};
+
 describe('mediaPlayerSettings', () => {
-  it('should return JSON given video aresMediaBlocks input', () => {
-    expect(
-      mediaPlayerSettings({
-        aresMediaBlocks: videoAresMediaBlocks,
-        env: 'test',
-        statsDestination: 'NEWS_PS_TEST',
-        statsPageIdentifier: 'news.articles.c0000000000o.page',
-      }),
-    ).toEqual(JSON.stringify(expectedVideoSettingsObject));
+  describe('insufficient data', () => {
+    it('should return null if aresMediaBlocks is missing', () => {
+      expect(
+        mediaPlayerSettings({
+          aresMediaBlocks: undefined,
+          env: 'test',
+          statsDestination: 'NEWS_PS_TEST',
+          statsPageIdentifier: 'news.articles.c0000000000o.page',
+        }),
+      ).toEqual(null);
+    });
   });
 
-  it('should return JSON given audio aresMediaBlocks input', () => {
-    expect(
-      mediaPlayerSettings({
-        aresMediaBlocks: audioAresMediaBlocks,
-        env: 'test',
-        statsDestination: 'NEWS_PS_TEST',
-        statsPageIdentifier: 'news.articles.c0000000000o.page',
-      }),
-    ).toEqual(JSON.stringify(expectedAudioSettingsObject));
+  describe('returns SMP settings object in strigified JSON format', () => {
+    it('should return expected JSON given video aresMediaBlocks input', () => {
+      expect(
+        mediaPlayerSettings({
+          aresMediaBlocks: videoAresMediaBlocks,
+          env: 'test',
+          statsDestination: 'NEWS_PS_TEST',
+          statsPageIdentifier: 'news.articles.c0000000000o.page',
+        }),
+      ).toEqual(JSON.stringify(expectedVideoSettingsObject));
+    });
+
+    it('should return expected JSON given audio aresMediaBlocks input', () => {
+      expect(
+        mediaPlayerSettings({
+          aresMediaBlocks: audioAresMediaBlocks,
+          env: 'test',
+          statsDestination: 'NEWS_PS_TEST',
+          statsPageIdentifier: 'news.articles.c0000000000o.page',
+        }),
+      ).toEqual(JSON.stringify(expectedAudioSettingsObject));
+    });
+
+    it('should return in case type of media is an episode', () => {
+      expect(
+        mediaPlayerSettings({
+          aresMediaBlocks: fakeAudioEpisodeExample,
+          env: 'test',
+          statsDestination: 'NEWS_PS_TEST',
+          statsPageIdentifier: 'news.articles.c0000000000o.page',
+        }),
+      ).toEqual(JSON.stringify(expectedFakeAudioEpisodeSettingsObject));
+    });
   });
 });
