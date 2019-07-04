@@ -18,6 +18,11 @@ const componentsToRender = {
   timestamp,
 };
 
+const avEnabledComment = (
+  // eslint-disable-next-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
+);
+
 const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
@@ -29,7 +34,7 @@ const ArticleMain = ({ articleData }) => {
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        {audioVideoEnabled && <h2>AV IS ENABLED K THX</h2>}
+        {audioVideoEnabled && avEnabledComment}
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostWrapper>
