@@ -17,7 +17,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
     id,
     isAmp,
     pageType,
-    dials,
     loading: false,
     error: null,
   });
