@@ -39,12 +39,11 @@ describe('ArticleAtiParams', () => {
     atiAnalyticsAppName: 'news',
   };
   const requestContextStub = {
-    isUK: true,
-    origin: 'https://www.bbc.co.uk',
+    bbcOrigin: 'https://www.test.bbc.co.uk',
+    id: 'c0000000000o',
+    isAmp: false,
     pageType: 'article',
-    platform: 'canonical',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'news.articles.c0000000000o.page',
+    service: 'news',
   };
 
   describe('atiPageViewParams is called ', () => {
