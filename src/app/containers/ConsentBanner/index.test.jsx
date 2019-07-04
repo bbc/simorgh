@@ -14,11 +14,11 @@ describe('Consent Banner Container', () => {
       platform="amp"
       isUK
       lang="en-gb"
-      origin="https://www.bbc.co.uk"
       pageType="article"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp
+      service="news"
     >
       <ConsentBanner />
     </RequestContextProvider>,
@@ -30,11 +30,11 @@ describe('Consent Banner Container', () => {
       platform="canonical"
       lang="en-gb"
       isUK
-      origin="https://www.bbc.co.uk"
       pageType="article"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp={false}
+      service="news"
     >
       <ConsentBanner />
     </RequestContextProvider>,

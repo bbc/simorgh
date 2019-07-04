@@ -9,21 +9,17 @@ import {
   ServiceContext,
 } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
-import ConsentBanner from '../containers/ConsentBanner';
-import getStatsDestination from '../contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '../contexts/RequestContext/getStatsPageIdentifier';
 import getOriginContext from '../contexts/RequestContext/getOriginContext';
-import getEnv from '../contexts/RequestContext/getEnv';
+import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
 
 const PageWithRequestContext = ({
+  bbcOrigin,
   children,
   data,
   env,
   id,
   isAmp,
-  isUK,
-  origin,
   pageType,
   service,
 }) => {
@@ -31,24 +27,14 @@ const PageWithRequestContext = ({
 
   return (
     <RequestContextProvider
+      bbcOrigin={bbcOrigin}
       data={data}
       env={env}
       id={id}
-      isUK={isUK}
-      origin={origin}
+      isAmp={isAmp}
       pageType={pageType}
-      platform={isAmp ? 'amp' : 'canonical'}
+      service={service}
       serviceLang={lang}
-      statsDestination={getStatsDestination({
-        isUK,
-        env,
-        service,
-      })}
-      statsPageIdentifier={getStatsPageIdentifier({
-        pageType,
-        service,
-        id,
-      })}
     >
       <ServiceWorkerContainer />
       <ManifestContainer />
@@ -66,8 +52,7 @@ PageWithRequestContext.propTypes = {
   data: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  isUK: bool.isRequired,
-  origin: string.isRequired,
+  bbcOrigin: string.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
 };
@@ -80,13 +65,13 @@ const PageWrapper = ({
   bbcOrigin,
   children,
   data,
+  env,
   id,
   service,
   isAmp,
   pageType,
 }) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
-  const env = getEnv(origin);
+  const { isUK } = getOriginContext(bbcOrigin);
 
   return (
     <Fragment>
@@ -98,7 +83,7 @@ const PageWrapper = ({
           id={id}
           isAmp={isAmp}
           isUK={isUK}
-          origin={origin}
+          bbcOrigin={bbcOrigin}
           pageType={pageType}
           service={service}
         >
@@ -113,6 +98,7 @@ PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
   data: node.isRequired,
+  env: string.isRequired,
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,

@@ -152,10 +152,11 @@ const generateFixtureData = ({
       platform={platform}
       isUK
       lang="en-gb"
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp={platform === 'amp'}
+      pageType="article"
+      service="news"
     >
       <FigureContainer
         alt={imageAlt}

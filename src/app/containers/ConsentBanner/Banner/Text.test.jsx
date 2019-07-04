@@ -33,12 +33,11 @@ describe('Consent Banner Text', () => {
     <RequestContextProvider
       isUK
       lang="en-gb"
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
@@ -49,12 +48,11 @@ describe('Consent Banner Text', () => {
     <RequestContextProvider
       isUK={false}
       lang="en-gb"
-      origin="https://www.bbc.com"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
@@ -65,12 +63,11 @@ describe('Consent Banner Text', () => {
     <RequestContextProvider
       isUK
       lang="en-gb"
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,
@@ -81,12 +78,11 @@ describe('Consent Banner Text', () => {
     <RequestContextProvider
       isUK={false}
       lang="en-gb"
-      origin="https://www.bbc.com"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,

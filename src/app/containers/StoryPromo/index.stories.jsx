@@ -26,11 +26,11 @@ const getStoryPromo = platform => item => (
       platform={platform}
       isUK
       lang="en-gb"
-      origin="https://www.bbc.co.uk"
       pageType="article"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp={platform === 'amp'}
+      service="news"
     >
       <StoryPromoContainer item={item} />
     </RequestContextProvider>

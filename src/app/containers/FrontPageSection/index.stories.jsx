@@ -14,10 +14,12 @@ const getSection = platform => (service, data) => (
       platform={platform}
       isUK={false}
       lang="en-gb"
-      origin={`https://www.bbc.com/${platform}`}
-      pageType="article"
       statsDestination="WS_NEWS_LANGUAGES_TEST"
       statsPageIdentifier={`${service}.page`}
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp={platform === 'amp'}
+      pageType="frontpage"
+      service={service}
     >
       <FrontPageSection group={data} />
     </RequestContextProvider>

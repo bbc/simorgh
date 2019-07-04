@@ -355,15 +355,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -792,15 +789,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -1261,15 +1255,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -1698,15 +1689,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -2135,15 +2123,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -2604,15 +2589,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -3041,15 +3023,12 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -3478,15 +3457,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -3947,15 +3923,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -4418,15 +4391,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -4861,15 +4831,12 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={true}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -5359,15 +5326,12 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -5857,15 +5821,12 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -6294,15 +6255,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -6763,15 +6721,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -7234,15 +7189,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
+    isAmp={false}
     lang="en-gb"
-    origin="https://www.test.bbc.co.uk"
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
