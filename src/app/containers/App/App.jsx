@@ -43,7 +43,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
         id: nextId,
         isAmp: nextIsAmp,
         pageType: route.pageType,
-        dials,
         loading: true,
         error: null,
       });
@@ -66,9 +65,9 @@ export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
       };
       fetchData();
     }
-  }, [routes, location.pathname, dials]);
+  }, [routes, location.pathname]);
 
-  return renderRoutes(routes, { ...state, bbcOrigin });
+  return renderRoutes(routes, { ...state, bbcOrigin, dials });
 };
 
 export default withRouter(App);
