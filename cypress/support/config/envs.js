@@ -18,12 +18,6 @@ const config = {
     dataUrl: 'http://localhost.bbc.com:7080',
     assetUrl: 'http://localhost.bbc.com:7080',
     assetOrigin: 'http://localhost.bbc.com:7080',
-    assets: {
-      news: 'c0g992jmmkko',
-      newsThreeSubheadlines: 'c6v11qzyv8po',
-      persian: 'c4vlle3q337o',
-      nonExistent: 'cxvxrj8tvppo',
-    },
     atiAnalyticsWSBucket: '598343',
   },
 };
