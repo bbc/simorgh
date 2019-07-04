@@ -15,6 +15,5 @@ export const sections = ({ service }) => {
   return parts;
 };
 
-export const title = () => {};
-
-export const type = () => {};
+export const type = pageType =>
+  pageType === 'article' ? 'News Article' : 'Index';

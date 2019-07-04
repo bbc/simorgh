@@ -1,12 +1,4 @@
-import {
-  chartbeatUID,
-  useCanonical,
-  cknsSylphid,
-  domain,
-  sections,
-  title,
-  type,
-} from './chartbeat';
+import { chartbeatUID, useCanonical } from './chartbeat';
 
 describe('Chartbeat metrics', () => {
   it('should return the correct chartbeat UID', () => {
