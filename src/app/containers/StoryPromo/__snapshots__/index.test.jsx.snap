@@ -9,7 +9,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -40,7 +40,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .c9 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -149,14 +149,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -232,14 +232,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c9 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c9 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -371,7 +371,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -402,7 +402,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .c10 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -517,14 +517,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -600,14 +600,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 
 @media (min-width:80rem) {
   .c10 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c10 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -748,7 +748,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -779,7 +779,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c8 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -883,14 +883,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -966,14 +966,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:80rem) {
   .c8 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c8 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -1094,7 +1094,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -1125,7 +1125,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c9 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -1235,14 +1235,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -1318,14 +1318,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:80rem) {
   .c9 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c9 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -1455,7 +1455,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -1486,7 +1486,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 .c5 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -1550,14 +1550,14 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -1633,14 +1633,14 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c5 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c5 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -1725,7 +1725,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -1756,7 +1756,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 .c6 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -1826,14 +1826,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -1909,14 +1909,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 
 @media (min-width:80rem) {
   .c6 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c6 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -2010,7 +2010,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -2041,7 +2041,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .c9 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -2150,14 +2150,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -2233,14 +2233,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 @media (min-width:80rem) {
   .c9 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c9 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
@@ -2369,7 +2369,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 33.33%;
+  width: 33.33%;
 }
 
 .c2 {
@@ -2400,7 +2400,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .c10 {
   display: inline-block;
   vertical-align: top;
-  max-width: 66.67%;
+  width: 66.67%;
   padding: 0 0.5rem;
 }
 
@@ -2515,14 +2515,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 @media (min-width:80rem) {
   .c1 {
-    max-width: 33.33%;
+    width: 33.33%;
   }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-    max-width: initial;
+    width: initial;
     grid-column: 1 / span 2;
   }
 }
@@ -2598,14 +2598,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 @media (min-width:80rem) {
   .c10 {
-    max-width: 66.67%;
+    width: 66.67%;
   }
 }
 
 @supports (display:grid) {
   .c10 {
     display: block;
-    max-width: initial;
+    width: initial;
     padding: initial;
     grid-column: 3 / span 4;
   }
