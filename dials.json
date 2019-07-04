@@ -1,3 +1,4 @@
 {
-  "mpulse": "false"
+  "mpulse": "true",
+  "audiovideo": "true"
 }
