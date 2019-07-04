@@ -54,7 +54,9 @@
     "updateSnapshots": "npm run test:unit -- -u",
     "webpack:prod": "NODE_ENV=production webpack",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/assets-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/assets-local.json && NODE_ENV=development webpack --env.config='server'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -146,7 +148,8 @@
     "webpack-cli": "^3.3.5",
     "webpack-merge": "^4.1.5",
     "webpack-node-externals": "^1.7.2",
-    "winston": "^3.1.0"
+    "winston": "^3.1.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
@@ -180,7 +183,6 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
-    "snyk": "^1.180.1",
     "start-server-webpack-plugin": "^2.2.5",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.1.0",
@@ -224,5 +226,6 @@
       "cloudteam-td-agent-setup",
       "dial-agent"
     ]
-  }
+  },
+  "snyk": true
 }
