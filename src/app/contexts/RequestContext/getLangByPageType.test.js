@@ -16,6 +16,13 @@ describe('getLangByPageType', () => {
       expected: 'testLang',
       assertion: 'should return value from lang if not an article',
     },
+    {
+      data: { pageData: { metadata: { passport: {} } } },
+      lang: 'testLang',
+      type: 'article',
+      expected: null,
+      assertion: 'should return null if there is no language in metadata',
+    },
   ];
 
   tests.forEach(({ data, lang, type, expected, assertion }) => {
