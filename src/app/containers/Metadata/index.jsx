@@ -1,10 +1,10 @@
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
+import { shape, oneOfType } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import metadataPropTypes from '../../models/propTypes/metadata';
+import { optimoPropTypes, cpsPropTypes } from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
 import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
@@ -189,7 +189,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 };
 
 MetadataContainer.propTypes = {
-  metadata: shape(metadataPropTypes).isRequired,
+  metadata: oneOfType([shape(cpsPropTypes), shape(optimoPropTypes)]).isRequired,
   promo: shape(promoPropTypes).isRequired,
 };
 

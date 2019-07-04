@@ -1,6 +1,6 @@
 import { arrayOf, number, shape, string } from 'prop-types';
 
-const metadataPropTypes = {
+export const optimoPropTypes = {
   id: string.isRequired,
   type: string.isRequired,
   createdBy: string,
@@ -9,7 +9,7 @@ const metadataPropTypes = {
   lastPublished: number.isRequired,
   lastUpdated: number.isRequired,
   locators: shape({
-    optimoUrn: string,
+    optimoUrn: string.isRequired,
   }),
   passport: shape({
     language: string.isRequired,
@@ -35,4 +35,11 @@ const metadataPropTypes = {
   blockTypes: arrayOf(string),
 };
 
-export default metadataPropTypes;
+export const cpsPropTypes = {
+  type: string.isRequired,
+  language: string.isRequired,
+  summary: string.isRequired,
+  promo: shape({
+    name: string.isRequired,
+  }),
+};
