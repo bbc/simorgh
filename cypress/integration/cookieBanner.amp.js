@@ -7,7 +7,9 @@ const getPrivacyBanner = () =>
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
 describeForEuOnly('Amp Cookie Banner Test', () => {
-  beforeEach(() => {
+  // eslint-disable-next-line no-undef
+  before(() => {
+    cy.clearCookies();
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
@@ -27,6 +29,8 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   });
 
   it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
+    cy.reload();
+
     cy.contains('OK').click();
 
     cy.reload();
@@ -36,6 +40,8 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   });
 
   it('should not show privacy & cookie banners once both accepted, on reload', () => {
+    cy.reload();
+
     cy.contains('OK').click();
     cy.contains('Yes, I agree').click();
 
@@ -46,15 +52,17 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   });
 
   it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
+    cy.reload();
+
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
     cy.contains('OK').click();
     cy.contains('No, take me to settings').click();
 
-    cy.reload();
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
 
-    getPrivacyBanner().should('not.be.visible'); // flakey
-    getCookieBanner().should('not.be.visible'); // flakey
+    getPrivacyBanner().should('not.be.visible');
+    getCookieBanner().should('not.be.visible');
   });
 });

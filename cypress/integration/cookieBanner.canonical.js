@@ -51,7 +51,7 @@ describe('Canonical Cookie Banner Tests', () => {
 
     assertCookieValues({
       ckns_explicit: '1',
-      ckns_privacy: '1',
+      ckns_privacy: '1', // flakes here
       ckns_policy: '111',
     });
 
