@@ -28,7 +28,6 @@ const renderDocument = async ({
         context={{}}
         service={service}
         isAmp={isAmp}
-        dials={data.dials}
       />,
     ),
   );
