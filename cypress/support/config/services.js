@@ -1,10 +1,10 @@
 export default {
-  // igbo: {
-  //   pageTypes: {
-  //     articles: undefined,
-  //     frontPage: '/igbo',
-  //   },
-  // },
+  igbo: {
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/igbo',
+    },
+  },
   news: {
     pageTypes: {
       articles: {
@@ -22,16 +22,16 @@ export default {
       frontPage: undefined,
     },
   },
-  // pidgin: {
-  //   pageTypes: {
-  //     articles: undefined,
-  //     frontPage: '/pidgin',
-  //   },
-  // },
-  // yoruba: {
-  //   pageTypes: {
-  //     articles: undefined,
-  //     frontPage: '/yoruba',
-  //   },  },
+  pidgin: {
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/pidgin',
+    },
+  },
+  yoruba: {
+    pageTypes: {
+      articles: undefined,
+      frontPage: '/yoruba',
+    },  },
 
 };
