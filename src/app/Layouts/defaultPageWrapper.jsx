@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string, bool, shape } from 'prop-types';
+import { node, string, bool, objectOf } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -47,7 +47,7 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
-  dials: shape.isRequired,
+  dials: objectOf(string).isRequired,
 };
 
 PageWrapper.defaultProps = {
