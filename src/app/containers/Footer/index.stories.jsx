@@ -9,7 +9,7 @@ import Footer from '.';
 storiesOf('Footer', module)
   .addDecorator(withKnobs)
   .add(
-    'testing',
+    'default',
     inputProvider(
       null,
       ({ service }) => {
