@@ -27,7 +27,7 @@ export const sections = x => {
 
   const parts = [
     x.service,
-    ...buildServiceType(x, pageType),
+    buildServiceType(x, pageType),
     ...(x.producer ? buildProducerArr(x, pageType) : []),
     ...(x.chapter ? buildChapterArr(x, pageType) : []),
   ];
