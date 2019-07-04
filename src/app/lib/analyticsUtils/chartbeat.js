@@ -12,10 +12,10 @@ export const getSylphidCookie = () => {
     return null;
   }
 
-  return Cookie.get(ID_COOKIE) ? Cookie.get(ID_COOKIE) : null;
+  return Cookie.get(ID_COOKIE) || null;
 };
 
-export const domain = service => {
+export const getDomain = service => {
   const serviceLower = service.toLowerCase();
 
   return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;

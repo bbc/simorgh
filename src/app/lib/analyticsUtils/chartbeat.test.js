@@ -2,7 +2,7 @@ import {
   chartbeatUID,
   useCanonical,
   getSylphidCookie,
-  domain,
+  getDomain,
   sections,
   type,
 } from './chartbeat';
@@ -85,8 +85,8 @@ describe('Chartbeat utilities', () => {
     ];
 
     services.forEach(({ service, expectedDomain }) => {
-      it(`domain should return "${expectedDomain}" when service is ${service}`, () => {
-        expect(domain(service)).toBe(expectedDomain);
+      it(`getDomain should return "${expectedDomain}" when service is ${service}`, () => {
+        expect(getDomain(service)).toBe(expectedDomain);
       });
     });
   });
