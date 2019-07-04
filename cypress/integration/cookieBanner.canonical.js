@@ -4,8 +4,6 @@ import {
 } from '../support/metaTestHelper';
 import services from '../support/config/services';
 
-Cypress.config('chromeWebSecurity', false);
-
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');

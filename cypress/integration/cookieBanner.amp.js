@@ -1,8 +1,6 @@
 import services from '../support/config/services';
 import describeForEuOnly from '../support/describeForEuOnly';
 
-Cypress.config('chromeWebSecurity', false);
-
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
 
