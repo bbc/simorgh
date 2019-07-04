@@ -10,14 +10,27 @@ export const domain = service => {
   return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
 };
 
-export const sections = service => {
-  const parts = [];
+const buildProducerArr = ({ service, producer }, type) => [
+  `${service} - ${producer}`,
+  `${service} - ${producer} - ${type}`,
+];
 
-  parts.push(service);
+const buildChapterArr = ({ service, chapter }, type) => [
+  `${service} - ${chapter}`,
+  `${service} - ${chapter} - ${type}`,
+];
 
-  const pageType = `${service} - ART`;
+const buildServiceType = ({ service }, type) => [`${service} - ${type}`];
 
-  parts.push(pageType);
+export const sections = x => {
+  const pageType = `ART`;
+
+  const parts = [
+    x.service,
+    ...buildServiceType(x, pageType),
+    ...(x.producer ? buildProducerArr(x, pageType) : []),
+    ...(x.chapter ? buildChapterArr(x, pageType) : []),
+  ];
 
   return parts.join(', ');
 };

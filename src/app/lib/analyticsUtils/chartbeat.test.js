@@ -42,13 +42,28 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Sections', () => {
-    const sectionsArr = [
-      ['news', 'news, news - ART'],
-      ['persian', 'persian, persian - ART'],
+    const secs = [
+      [
+        {
+          service: 'news',
+          producer: 'wales',
+          chapter: 'election 2017',
+          type: 'article',
+        },
+        'news, news - ART, news - wales, news - wales - ART, news - election 2017, news - election 2017 - ART',
+      ],
+      [
+        {
+          service: 'persian',
+          chapter: 'foo',
+          type: 'article',
+        },
+        'persian, persian - ART, persian - foo, persian - foo - ART',
+      ],
     ];
 
-    sectionsArr.forEach(([service, expected]) => {
-      it(`sections should return "${expected}" when passed service ${service}`, () => {
+    secs.forEach(([service, expected]) => {
+      it(`sections should return "${expected}"`, () => {
         const res = sections(service);
         expect(res).toBe(expected);
       });
