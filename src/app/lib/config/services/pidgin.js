@@ -5,6 +5,7 @@ import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
@@ -27,7 +28,7 @@ const pidgin = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Home',
-    currentPage: 'Current page',
+    currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
     error: {
       404: {

@@ -5,6 +5,7 @@ import 'moment/locale/yo';
 
 const yoruba = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
@@ -27,7 +28,7 @@ const yoruba = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
-    currentPage: 'Current page',
+    currentPage: 'Ojú ewé to wà yìí',
     skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
     error: {
       404: {

@@ -5,6 +5,7 @@ import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
@@ -27,7 +28,7 @@ const igbo = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Akụkọ',
-    currentPage: 'Current page',
+    currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
     error: {
       404: {
