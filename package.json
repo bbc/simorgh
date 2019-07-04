@@ -16,7 +16,7 @@
     "cypress:interactive": "npm run cypress:proxy -- open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "cypress:3rdParty:interactive": "npm run cypress:interactive -- --project ./3rdPartyCypress/.",
-    "cypress:storybook": "wait-on -t 120000 -v -l http://localhost.bbc.com:9001 && npm run cypress -- --project ./.storybook/.",
+    "cypress:storybook": "wait-on -t 120000 http://localhost.bbc.com:9001 && npm run cypress -- --project ./.storybook/.",
     "cypress:storybook:interactive": "npm run cypress:interactive -- --project ./.storybook/.",
     "dataValidate": "node dataValidator/index.js",
     "dataValidate:debug": "npm run dataValidate --DEBUG_MODE=true",
