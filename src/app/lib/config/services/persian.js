@@ -1,24 +1,27 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
+import 'moment/locale/fa';
 
 const persian = {
   lang: 'fa',
   product: 'BBC News',
   articleAuthor: 'https://www.facebook.com/bbcpersian',
+  articleTimestampPrefix: 'به روز شده در',
   atiAnalyticsAppName: 'news-persian',
   brandName: 'BBC News فارسی',
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
   defaultImageAltText: 'BBC News فارسی',
   dir: 'rtl',
-  externalLinkText: ' ،لینک خارجی',
-  imageCaptionOffscreenText: ' ، عنوان تصویر',
-  videoCaptionOffscreenText: ' ، عنوان ویدئو',
-  audioCaptionOffscreenText: ' `توضیح صدا،` ',
-  defaultCaptionOffscreenText: ' ، عنوان',
-  imageCopyrightOffscreenText: ' ، منبع تصویر',
+  externalLinkText: '، لینک خارجی',
+  imageCaptionOffscreenText: '،توضیح تصویر',
+  videoCaptionOffscreenText: '،توضیح ویدئو',
+  audioCaptionOffscreenText: '،توضیح صدا',
+  defaultCaptionOffscreenText: '،توضیح',
+  imageCopyrightOffscreenText: '،منبع تصویر',
   locale: 'fa',
+  datetimeLocale: 'fa',
   service: 'persian',
   serviceName: 'Persian',
   themeColor: `${C_POSTBOX}`,
@@ -28,29 +31,33 @@ const persian = {
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
   manifestPath: '/articles/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
         statusCode: '۴۰۴',
-        title: 'این صفحه یافت نشد',
+        title: 'این صفحه پیدا نشد',
         message:
-          'متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:',
+          'متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:',
         solutions: [
-          'لینک را چک کنید',
-          'صفحه را ریفرش کنید',
-          'با استفاده از نوار جستجوی بی بی سی برای این صفحه جستجو کنید',
+          'آدرس صفحه مورد نظر را دوباره بررسی کنید',
+          'با مرورگر خود صفحه را ریفرش (refresh) کنید',
+          'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
         ],
-        callToActionFirst: 'روش دیگر، لطفآ به ',
+        callToActionFirst: 'برای یافتن اطلاعات مورد نظر به ',
         callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
-        callToActionLast: ' بازدید کنید',
+        callToActionLast: ' بروید',
         callToActionLinkUrl: 'https://www.bbc.com/persian',
       },
       500: {
         statusCode: '۵۰۰',
-        title: 'مشکلی پیش آمده است',
+        title: 'خطا در سرور داخلی',
         message:
-          'متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:',
-        solutions: ['صفحه را ریفرش کنید', 'بعدا برگردید'],
+          'متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:',
+        solutions: [
+          'با مرورگر خود صفحه را ریفرش (refresh) کنید',
+          'بعدا دوباره امتحان کنید',
+        ],
         callToActionFirst: 'روش دیگر، لطفآ به ',
         callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
         callToActionLast: ' بازدید کنید',
@@ -119,6 +126,10 @@ const persian = {
       text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
     },
     links: [
+      {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
+      },
       {
         href: 'https://www.bbc.com/persian/institutional-37474133',
         text: 'شرایط استفاده',

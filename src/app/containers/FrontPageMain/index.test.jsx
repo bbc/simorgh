@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataIgbo from '../../../../data/prod/pidgin/frontpage';
+import frontPageDataIgbo from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 
 jest.mock('react', () => {
@@ -32,17 +32,38 @@ describe('FrontPageMain', () => {
   });
 
   describe('assertions', () => {
-    it('should render with tab index and content attributes', () => {
+    afterEach(cleanup);
+
+    it('should render visually hidden text as h1', () => {
       const { container } = render(
         <FrontPageMain frontPageData={frontPageDataIgbo} />,
       );
-
-      const h1 = container.getElementsByTagName('h1')[0];
+      const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
       const tabIndex = h1.getAttribute('tabIndex');
 
       expect(content).toEqual('content');
       expect(tabIndex).toBe('-1');
+
+      const span = h1.querySelector('span');
+      expect(span.getAttribute('role')).toEqual('text');
+      expect(span.textContent).toEqual('BBC News, Ìgbò - Akụkọ');
+
+      const langSpan = span.querySelector('span');
+      expect(langSpan.getAttribute('lang')).toEqual('en-GB');
+      expect(langSpan.textContent).toEqual('BBC News');
+    });
+
+    it('should render front page sections', () => {
+      const { container } = render(
+        <FrontPageMain frontPageData={frontPageDataIgbo} />,
+      );
+      const sections = container.querySelectorAll('section');
+
+      expect(sections).toHaveLength(7);
+      sections.forEach(section => {
+        expect(section.getAttribute('role')).toEqual('region');
+      });
     });
   });
 });

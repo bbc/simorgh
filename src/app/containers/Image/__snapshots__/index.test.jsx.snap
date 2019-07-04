@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render a lazyload container instead of an image if the image is after the 3rd block 1`] = `
-<ForwardRef(GridItemConstrainedLargeNoMargin)>
-  <FigureContainer
+<ForwardRef(GridItemConstrainedLargeNoMargin)
+  padding={
+    Object {
+      "group2": "0px",
+      "group3": "0px",
+    }
+  }
+>
+  <ArticleFigure
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={true}
     ratio={65.625}
@@ -13,18 +21,25 @@ exports[`Image with data should render a lazyload container instead of an image 
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
     type="image"
-    useFigure={true}
     width={640}
   />
 </ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with alt text 1`] = `
-<ForwardRef(GridItemConstrainedLargeNoMargin)>
-  <FigureContainer
+<ForwardRef(GridItemConstrainedLargeNoMargin)
+  padding={
+    Object {
+      "group2": "0px",
+      "group3": "0px",
+    }
+  }
+>
+  <ArticleFigure
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -32,15 +47,21 @@ exports[`Image with data should render an image with alt text 1`] = `
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
     type="image"
-    useFigure={true}
     width={640}
   />
 </ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-<ForwardRef(GridItemConstrainedLargeNoMargin)>
-  <FigureContainer
+<ForwardRef(GridItemConstrainedLargeNoMargin)
+  padding={
+    Object {
+      "group2": "0px",
+      "group3": "0px",
+    }
+  }
+>
+  <ArticleFigure
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={
       Object {
@@ -74,6 +95,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
       }
     }
     copyright={null}
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -81,18 +103,25 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
     type="image"
-    useFigure={true}
     width={640}
   />
 </ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-<ForwardRef(GridItemConstrainedLargeNoMargin)>
-  <FigureContainer
+<ForwardRef(GridItemConstrainedLargeNoMargin)
+  padding={
+    Object {
+      "group2": "0px",
+      "group3": "0px",
+    }
+  }
+>
+  <ArticleFigure
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright="Getty images"
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -100,18 +129,25 @@ exports[`Image with data should render an image with alt text and offscreen copy
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
     type="image"
-    useFigure={true}
     width={640}
   />
 </ForwardRef(GridItemConstrainedLargeNoMargin)>
 `;
 
 exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
-<ForwardRef(GridItemConstrainedLargeNoMargin)>
-  <FigureContainer
+<ForwardRef(GridItemConstrainedLargeNoMargin)
+  padding={
+    Object {
+      "group2": "0px",
+      "group3": "0px",
+    }
+  }
+>
+  <ArticleFigure
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={null}
     copyright="Getty images"
+    fade={true}
     height={420}
     lazyLoad={false}
     ratio={65.625}
@@ -119,7 +155,6 @@ exports[`Image with data should render an image with other originCode - this wou
     src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
     srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
     type="image"
-    useFigure={true}
     width={640}
   />
 </ForwardRef(GridItemConstrainedLargeNoMargin)>

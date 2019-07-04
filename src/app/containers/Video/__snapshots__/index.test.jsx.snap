@@ -5,6 +5,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -28,6 +29,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -267,6 +269,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -352,14 +355,11 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -438,6 +438,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -461,6 +462,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -700,6 +702,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -785,14 +788,11 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -903,6 +903,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -926,6 +927,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -1165,6 +1167,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -1250,14 +1253,11 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -1336,6 +1336,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -1359,6 +1360,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -1598,6 +1600,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -1683,14 +1686,11 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -1769,6 +1769,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -1792,6 +1793,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -2031,6 +2033,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -2116,14 +2119,11 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -2234,6 +2234,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -2257,6 +2258,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -2496,6 +2498,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -2581,14 +2584,11 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -2667,6 +2667,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -2690,6 +2691,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -2929,6 +2931,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -3014,14 +3017,11 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -3100,6 +3100,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -3123,6 +3124,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -3362,6 +3364,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -3447,14 +3450,11 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -3565,6 +3565,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -3588,6 +3589,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -3827,6 +3829,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -3912,14 +3915,11 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -4032,6 +4032,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4055,6 +4056,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -4294,6 +4296,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -4379,14 +4382,11 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -4471,6 +4471,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4494,6 +4495,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -4733,6 +4735,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -4818,14 +4821,11 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={true}
     pageType="article"
-    platform="amp"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -4965,6 +4965,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -4988,6 +4989,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -5227,6 +5229,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -5312,14 +5315,11 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -5459,6 +5459,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -5482,6 +5483,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -5721,6 +5723,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -5806,14 +5809,11 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -5892,6 +5892,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -5915,6 +5916,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -6154,6 +6156,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -6239,14 +6242,11 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -6357,6 +6357,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -6380,6 +6381,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -6619,6 +6621,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -6704,14 +6707,11 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={
@@ -6824,6 +6824,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   value={
     Object {
       "articleAuthor": "https://www.facebook.com/bbcnews",
+      "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
@@ -6847,6 +6848,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
           "width": 167.95,
         },
       },
+      "datetimeLocale": "en-gb",
       "defaultCaptionOffscreenText": "Caption, ",
       "defaultImage": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
       "defaultImageAltText": "BBC News",
@@ -7086,6 +7088,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
       },
       "service": "news",
       "serviceName": "News",
+      "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
       "translations": Object {
         "consentBanner": Object {
@@ -7171,14 +7174,11 @@ exports[`AudioVideo with Video data canonical - should render the video without 
   }
 >
   <RequestContextProvider
-    env="test"
+    bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isUK={true}
-    origin="https://www.test.bbc.co.uk"
+    isAmp={false}
     pageType="article"
-    platform="canonical"
-    statsDestination="NEWS_PS_TEST"
-    statsPageIdentifier="news.articles.c0000000000o.page"
+    service="news"
   >
     <VideoContainer
       blocks={

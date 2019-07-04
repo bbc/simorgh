@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
-import fixture from '../../../../data/prod/pidgin/frontpage';
+import fixture from '../../../../data/pidgin/frontpage';
 import deepGet from '../../lib/utilities/deepGet';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
@@ -23,13 +23,11 @@ const videoFixture = mediaFixture('video');
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      platform={platform}
-      isUK
-      origin="https://www.bbc.co.uk"
-      pageType="article"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      isAmp={platform === 'amp'}
+      pageType="article"
+      service="news"
     >
       <StoryPromoContainer item={item} />
     </RequestContextProvider>

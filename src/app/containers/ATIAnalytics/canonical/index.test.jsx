@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOf, node } from 'prop-types';
+import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
 import CanonicalATIAnalytics from '.';
 
@@ -8,17 +8,14 @@ import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
-const ContextWrap = ({ env, children }) => (
+const ContextWrap = ({ bbcOrigin, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      env={env}
-      isUK
-      platform="canonical"
-      origin="https://www.test.bbc.co.uk"
+      bbcOrigin={bbcOrigin}
+      id="c0000000000o"
+      isAmp={false}
       pageType="article"
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
     >
       {children}
     </RequestContextProvider>
@@ -26,7 +23,7 @@ const ContextWrap = ({ env, children }) => (
 );
 
 ContextWrap.propTypes = {
-  env: oneOf(['local', 'test', 'live']).isRequired,
+  bbcOrigin: string.isRequired,
   children: node.isRequired,
 };
 
@@ -39,7 +36,7 @@ describe('Canonical ATI Analytics', () => {
 
   shouldMatchSnapshot(
     'should render correctly for Live ATI endpoint',
-    <ContextWrap env="live">
+    <ContextWrap bbcOrigin="https://www.bbc.co.uk">
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
     </ContextWrap>,
   );
@@ -48,27 +45,27 @@ describe('Canonical ATI Analytics', () => {
     {
       describe: 'should call sendBeacon with Live ATI URL for live env',
       atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
-      env: 'live',
+      bbcOrigin: 'https://www.bbc.co.uk',
     },
     // {
     //   describe: 'should call sendBeacon with Test ATI URL for test env',
     //   atiUrl: 'https://logws1363.ati-host.net?key=value&key2=value2',
-    //   env: 'test',
+    //   bbcOrigin: 'https://www.test.bbc.co.uk',
     // },
     // {
     //   describe: 'should call sendBeacon with Test ATI URL for local env',
     //   atiUrl: 'https://logws1363.ati-host.net?key=value&key2=value2',
-    //   env: 'local',
+    //   bbcOrigin: 'http://localhost.bbc.co.uk',
     // },
   ];
 
-  testCases.forEach(({ describe, atiUrl, env }) => {
+  testCases.forEach(({ describe, atiUrl, bbcOrigin }) => {
     it(describe, () => {
       const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
       beacon.default = mockSendBeacon;
 
       renderer.create(
-        <ContextWrap env={env}>
+        <ContextWrap bbcOrigin={bbcOrigin}>
           <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
         </ContextWrap>,
       );

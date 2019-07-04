@@ -9,19 +9,16 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import * as articleatiparams from './ArticleAtiParams';
+import * as frontpageatiparams from './FrontPageAtiParams';
 
 const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      env="test"
-      isUK
-      platform={platform}
-      origin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
-      articleData={{}}
     >
       {children}
     </RequestContextProvider>
@@ -91,7 +88,62 @@ describe('ATI Analytics Container', () => {
       expect(mockArticleAtiParams).toHaveBeenCalledWith(mockData);
     });
   });
-  describe('pageType not article', () => {
+
+  describe('pageType=frontPage', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      const mockFrontPageAtiParams = jest
+        .fn()
+        .mockReturnValue(mockAtiQueryParams);
+      frontpageatiparams.default = mockFrontPageAtiParams;
+
+      renderer.create(
+        <ContextWrap platform="canonical" pageType="frontPage">
+          <ATIAnalytics data={mockData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical).toHaveBeenCalledTimes(1);
+      expect(mockCanonical).toHaveBeenCalledWith(
+        {
+          pageviewParams: mockAtiQueryParams,
+        },
+        mockData,
+      );
+      expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
+      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(mockData);
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      const mockFrontPageAtiParams = jest
+        .fn()
+        .mockReturnValue(mockAtiQueryParams);
+      frontpageatiparams.default = mockFrontPageAtiParams;
+
+      renderer.create(
+        <ContextWrap platform="amp" pageType="frontPage">
+          <ATIAnalytics data={mockData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp).toHaveBeenCalledTimes(1);
+      expect(mockAmp).toHaveBeenCalledWith(
+        {
+          pageviewParams: mockAtiQueryParams,
+        },
+        mockData,
+      );
+      expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
+      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(mockData);
+    });
+  });
+
+  describe('pageType neither article nor frontPage', () => {
     isNull(
       'should render null',
       <ContextWrap platform="canonical" pageType="randomvalue">

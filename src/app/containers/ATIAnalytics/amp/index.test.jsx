@@ -17,35 +17,32 @@ describe('Amp ATI Analytics', () => {
       describe:
         'should render amp-analytics with script tag & contain live ATI url - live env',
       atiBaseUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
-      env: 'live',
+      bbcOrigin: 'https://www.bbc.co.uk',
     },
     {
       describe:
         'should render amp-analytics with script tag & contain test ATI url - test env',
       atiBaseUrl: 'https://logws1363.ati-host.net?',
-      env: 'test',
+      bbcOrigin: 'https://www.test.bbc.co.uk',
     },
     {
       describe:
         'should render amp-analytics with script tag & contain test ATI url - local env',
       atiBaseUrl: 'https://logws1363.ati-host.net?',
-      env: 'local',
+      bbcOrigin: 'http://localhost.bbc.co.uk',
     },
   ];
 
-  testCases.forEach(({ describe, atiBaseUrl, env }) => {
+  testCases.forEach(({ describe, atiBaseUrl, bbcOrigin }) => {
     it(describe, () => {
       act(() => {
         ReactDOM.render(
           <RequestContextProvider
-            env={env}
-            isUK
-            platform="canonical"
-            origin="https://www.test.bbc.co.uk"
+            bbcOrigin={bbcOrigin}
+            id="c0000000000o"
+            isAmp={false}
             pageType="article"
             service="news"
-            statsDestination="NEWS_PS_TEST"
-            statsPageIdentifier="news.articles.c0000000000o.page"
           >
             <AmpATIAnalytics pageviewParams="key1=value1&key2=value2" />
           </RequestContextProvider>,

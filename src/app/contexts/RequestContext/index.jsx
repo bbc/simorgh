@@ -1,19 +1,34 @@
 import React from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
+import getStatsDestination from './getStatsDestination';
+import getStatsPageIdentifier from './getStatsPageIdentifier';
+import getOriginContext from './getOriginContext';
+import getEnv from './getEnv';
 
 export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
-  env,
+  bbcOrigin,
   id,
-  isUK,
-  origin,
+  isAmp,
   pageType,
-  platform,
-  statsDestination,
-  statsPageIdentifier,
+  service,
 }) => {
+  const { isUK, origin } = getOriginContext(bbcOrigin);
+  const env = getEnv(origin);
+  const platform = isAmp ? 'amp' : 'canonical';
+  const statsDestination = getStatsDestination({
+    isUK,
+    env,
+    service,
+  });
+  const statsPageIdentifier = getStatsPageIdentifier({
+    pageType,
+    service,
+    id,
+  });
+
   const value = {
     env,
     id,
@@ -31,18 +46,15 @@ export const RequestContextProvider = ({
 };
 
 RequestContextProvider.propTypes = {
+  bbcOrigin: string,
   children: node.isRequired,
-  env: oneOf(['local', 'test', 'live']),
   id: string,
+  isAmp: bool.isRequired,
   pageType: oneOf(['article', 'frontPage']).isRequired,
-  platform: string.isRequired,
-  isUK: bool.isRequired,
-  origin: string.isRequired,
-  statsDestination: string.isRequired,
-  statsPageIdentifier: string.isRequired,
+  service: string.isRequired,
 };
 
 RequestContextProvider.defaultProps = {
-  env: 'local',
+  bbcOrigin: null,
   id: null,
 };

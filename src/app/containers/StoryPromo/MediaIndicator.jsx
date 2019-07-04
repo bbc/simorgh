@@ -7,16 +7,17 @@ import { storyItem } from '../../models/propTypes/storyItem';
 import deepGet from '../../lib/utilities/deepGet';
 import formatDuration from '../../lib/utilities/formatDuration';
 
-const capitalise = str => str.slice(0, 1).toUpperCase() + str.slice(1);
-
 const MediaIndicator = ({ item }) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
+  const hasMediaInfo = deepGet(['media'], item);
+
   // Only build a media indicator if this is a media item.
-  if (!isMedia) {
+  if (!isMedia || !hasMediaInfo) {
     return null;
   }
 
   const type = deepGet(['media', 'format'], item);
+
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
 
@@ -28,13 +29,12 @@ const MediaIndicator = ({ item }) => {
       <MediaIndicatorComp
         duration={durationString}
         datetime={isoDuration}
-        offscreenText={capitalise(type)}
         type={type}
       />
     );
   }
 
-  return <MediaIndicatorComp offscreenText={capitalise(type)} type={type} />;
+  return <MediaIndicatorComp type={type} />;
 };
 
 MediaIndicator.propTypes = {

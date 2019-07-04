@@ -1,7 +1,7 @@
 import React from 'react';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
-import Figure from '../Figure';
+import ArticleFigure from '../ArticleFigure';
 import {
   GridItemConstrainedLargeNoMargin,
   GridItemConstrainedMedium,
@@ -72,8 +72,13 @@ const ImageContainer = ({ blocks, position }) => {
   // https://github.com/bbc/simorgh/issues/1369
   // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Wrapper>
-      <Figure
+    <Wrapper
+      padding={{
+        group2: '0px',
+        group3: '0px',
+      }}
+    >
+      <ArticleFigure
         alt={altText}
         captionBlock={captionBlock}
         copyright={copyright}
@@ -84,6 +89,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        fade
         type="image"
       />
     </Wrapper>

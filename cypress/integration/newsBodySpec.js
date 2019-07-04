@@ -1,4 +1,4 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,
@@ -15,7 +15,7 @@ import {
 describe('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.newsThreeSubheadlines}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
 
   it('should render an H1, which contains/displays a styled headline', () => {
@@ -40,7 +40,7 @@ describe('Article Body Tests', () => {
   });
 
   it('should have a placeholder image', () => {
-    placeholderImageLoaded(getElement('figure div').eq(0));
+    placeholderImageLoaded(getElement('figure div div div').eq(0));
   });
 
   it('should have a visible image without a caption, and also not be lazyloaded', () => {
@@ -54,7 +54,7 @@ describe('Article Body Tests', () => {
     const imageHasNotLoaded = getElement('figure').eq(2);
 
     imageHasNotLoaded.within(() => {
-      const lazyLoadPlaceholder = getElement('div div');
+      const lazyLoadPlaceholder = getElement('div div div div');
       lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
     });
 
@@ -63,6 +63,12 @@ describe('Article Body Tests', () => {
     const imageHasLoaded = getElement('figure').eq(2);
 
     visibleImageWithCaption(imageHasLoaded);
+
+    // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
+    // cleared during hydration. React won't render noscript tags on the client so if they
+    // get cleared during hydration, the following render wont re-add them.
+    // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
+    // https://github.com/bbc/simorgh/pull/1872 for more infomation.
     imageHasLoaded.within(() => {
       const noscriptImg = getElement('noscript');
       noscriptImg.contains('<img ');
@@ -90,7 +96,7 @@ describe('Article Body Tests', () => {
   // it('should have a working first inline link', () => {
   //   clickInlineLinkAndTestPageHasHTML(
   //     'main a',
-  //     `/news/articles/${config.assets.news}`,
+  //     `/news/articles/${services.news.pageTypes.articles.asset}`,
   //   );
   // });
 

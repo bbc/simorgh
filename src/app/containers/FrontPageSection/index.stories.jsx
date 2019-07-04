@@ -3,20 +3,18 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPageSection from '.';
 
-import igboData from '../../../../data/test/igbo/frontpage/index.json';
-import pidginData from '../../../../data/test/pidgin/frontpage/index.json';
+import igboData from '../../../../data/igbo/frontpage/index.json';
+import pidginData from '../../../../data/pidgin/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
 const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
-      platform={platform}
-      isUK={false}
-      origin={`https://www.bbc.com/${platform}`}
-      pageType="article"
-      statsDestination="WS_NEWS_LANGUAGES_TEST"
-      statsPageIdentifier={`${service}.page`}
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp={platform === 'amp'}
+      pageType="frontpage"
+      service={service}
     >
       <FrontPageSection group={data} />
     </RequestContextProvider>
