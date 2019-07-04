@@ -26,11 +26,12 @@ const assertCookieValues = cookies => {
 describe('Canonical Cookie Banner Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.clearCookies();
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
 
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
+    cy.clearCookies();
+    cy.reload(); // done to avoid the redirect when run from the uk breaking the cookies (marked below) from being set
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
@@ -52,9 +53,9 @@ describe('Canonical Cookie Banner Tests', () => {
       .click();
 
     assertCookieValues({
-      ckns_explicit: '1', // flakes here in terminal not interactive
-      ckns_privacy: '1', // flakes here in terminal not interactive
-      ckns_policy: '111', // flakes here in terminal not interactive
+      ckns_explicit: '1', // the reload above fixes this
+      ckns_privacy: '1',
+      ckns_policy: '111', // the reload above fixes this
     });
 
     getCookieBanner().should('not.be.visible');
