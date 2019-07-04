@@ -1,5 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+
 import deepGet from '../../lib/utilities/deepGet';
 import Canonical from './Canonical';
 import Caption from '../Caption';
@@ -51,16 +56,27 @@ const AudioVideoContainer = ({ blocks }) => {
   let ParentWrapper = NestedGridParentLarge;
   let ChildWrapper = NestedGridItemChildLarge;
   let Container = GridItemConstrainedLargeNoMargin;
-  let width = '100%';
-  let height = '100%';
+  let widthAndHeight = `
+    height: 100%;
+    width: 100%;
+  `;
 
   if (orientation === 'Portrait') {
     ParentWrapper = NestedGridParentSmall;
     ChildWrapper = NestedGridItemChildSmall;
     Container = GridItemConstrainedSmall;
     wrapperSpan.default = '4';
-    width = '100%';
-    height = `853px`;
+
+    widthAndHeight = `
+      @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+          height: calc(((100vw - 2rem) * 3/5 ) * 16/9);
+          width: 100%;
+      }
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        height: calc(((100vw - (100vw - 1280px) + 2rem) * 8/20 ) * 16/9);
+        width: 100%;
+      }
+    `;
   }
 
   return (
@@ -77,7 +93,11 @@ const AudioVideoContainer = ({ blocks }) => {
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
           {platform === 'canonical' ? (
-            <Canonical id={pid} blocks={blocks} width={width} height={height} />
+            <Canonical
+              id={pid}
+              blocks={blocks}
+              widthAndHeight={widthAndHeight}
+            />
           ) : null}
         </ChildWrapper>
         <ChildWrapper

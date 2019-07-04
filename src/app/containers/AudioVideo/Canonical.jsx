@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
 
-const Canonical = ({ id, width, height }) => {
+const Canonical = ({ id, widthAndHeight }) => {
   const MediaPlayerContainer = styled.div`
-    height: ${height};
-    width: ${width};
+    ${widthAndHeight}
   `;
 
   return <MediaPlayerContainer id={id} key={id} />;
@@ -13,8 +12,7 @@ const Canonical = ({ id, width, height }) => {
 
 Canonical.propTypes = {
   id: string.isRequired,
-  width: string.isRequired,
-  height: string.isRequired,
+  widthAndHeight: string.isRequired,
 };
 
 export default Canonical;
