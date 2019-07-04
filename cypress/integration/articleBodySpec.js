@@ -16,9 +16,11 @@ Object.keys(config)
   .filter(service => config[service].pageTypes.articles !== undefined)
   .forEach(service => {
     describe(`${service} Article Body Tests`, () => {
-  // eslint-disable-next-line no-undef
+      // eslint-disable-next-line no-undef
       beforeEach(() => {
-        cy.visit(`/${service}/articles/${config[service].pageTypes.articles.asset}`);
+        cy.visit(
+          `/${service}/articles/${config[service].pageTypes.articles.asset}`,
+        );
       });
 
       it('should render an H1, which contains/displays a styled headline', () => {
@@ -29,7 +31,9 @@ Object.keys(config)
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
             const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-            const timeStamp = Cypress.moment(lastPublished).format('D MMMM YYYY');
+            const timeStamp = Cypress.moment(lastPublished).format(
+              'D MMMM YYYY',
+            );
             const time = getElement('time');
             shouldContainText(time, timeStamp);
           }
@@ -47,7 +51,7 @@ Object.keys(config)
       it('should render a paragraph, which contains/displays styled text', () => {
         firstParagraphDataWindow();
       });
-          
+
       it('should have a placeholder image', () => {
         placeholderImageLoaded(getElement('figure div div div').eq(0));
       });
@@ -73,11 +77,11 @@ Object.keys(config)
 
         visibleImageWithCaption(imageHasLoaded);
 
-            // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
-            // cleared during hydration. React won't render noscript tags on the client so if they
-            // get cleared during hydration, the following render wont re-add them.
-            // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-            // https://github.com/bbc/simorgh/pull/1872 for more infomation.
+        // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
+        // cleared during hydration. React won't render noscript tags on the client so if they
+        // get cleared during hydration, the following render wont re-add them.
+        // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
+        // https://github.com/bbc/simorgh/pull/1872 for more infomation.
         imageHasLoaded.within(() => {
           const noscriptImg = getElement('noscript');
           noscriptImg.contains('<img ');
@@ -110,16 +114,13 @@ Object.keys(config)
         });
       });
 
-          // it('should have a working first inline link', () => {
-          //   clickInlineLinkAndTestPageHasHTML(
-          //     'main a',
-          //     `/news/articles/${services.news.pageTypes.articles.asset}`,
-          //   );
-          // });
+      // it('should have a working first inline link', () => {
+      //   clickInlineLinkAndTestPageHasHTML(
+      //     'main a',
+      //     `/news/articles/${services.news.pageTypes.articles.asset}`,
+      //   );
+      // });
 
-          // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
+      // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.
     });
-    });
-
-        
-
+  });

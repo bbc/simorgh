@@ -32,6 +32,6 @@ export default {
     pageTypes: {
       articles: undefined,
       frontPage: '/yoruba',
-    },  },
-
+    },
+  },
 };
