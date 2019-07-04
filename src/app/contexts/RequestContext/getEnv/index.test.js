@@ -1,4 +1,4 @@
-import getEnv from './getEnv';
+import getEnv from '.';
 
 const tests = [
   {
