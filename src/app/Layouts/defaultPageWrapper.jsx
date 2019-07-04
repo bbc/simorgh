@@ -47,7 +47,7 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
-  dials: objectOf(string).isRequired,
+  dials: objectOf(bool).isRequired,
 };
 
 PageWrapper.defaultProps = {
