@@ -3,7 +3,7 @@ import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 
-export const App = ({ routes, location, initialData, bbcOrigin }) => {
+export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
   const {
     service,
     isAmp,
@@ -17,6 +17,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
     id,
     isAmp,
     pageType,
+    dials,
     loading: false,
     error: null,
   });
@@ -42,6 +43,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
         id: nextId,
         isAmp: nextIsAmp,
         pageType: route.pageType,
+        dials,
         loading: true,
         error: null,
       });
@@ -64,7 +66,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
       };
       fetchData();
     }
-  }, [routes, location.pathname]);
+  }, [routes, location.pathname, dials]);
 
   return renderRoutes(routes, { ...state, bbcOrigin });
 };

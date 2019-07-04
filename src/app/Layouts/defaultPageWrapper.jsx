@@ -1,32 +1,43 @@
 import React from 'react';
-import { node, string, bool } from 'prop-types';
+import { node, string, bool, shape } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
+import { DialContextProvider } from '../contexts/DialContext';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
 
-const PageWrapper = ({ bbcOrigin, children, id, service, isAmp, pageType }) => (
-  <ServiceContextProvider service={service}>
-    <GlobalStyle />
-    <RequestContextProvider
-      bbcOrigin={bbcOrigin}
-      id={id}
-      isAmp={isAmp}
-      pageType={pageType}
-      service={service}
-    >
-      <ServiceWorkerContainer />
-      <ManifestContainer />
-      <ConsentBanner />
-      <HeaderContainer />
-      {children}
-      <FooterContainer />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+const PageWrapper = ({
+  bbcOrigin,
+  children,
+  id,
+  service,
+  isAmp,
+  pageType,
+  dials,
+}) => (
+  <DialContextProvider dials={dials}>
+    <ServiceContextProvider service={service}>
+      <GlobalStyle />
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        id={id}
+        isAmp={isAmp}
+        pageType={pageType}
+        service={service}
+      >
+        <ServiceWorkerContainer />
+        <ManifestContainer />
+        <ConsentBanner />
+        <HeaderContainer />
+        {children}
+        <FooterContainer />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </DialContextProvider>
 );
 
 PageWrapper.propTypes = {
@@ -36,6 +47,7 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
+  dials: shape.isRequired,
 };
 
 PageWrapper.defaultProps = {
