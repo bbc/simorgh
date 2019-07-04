@@ -16,7 +16,7 @@ import {
   FigureAmpImageWithCaptionContainingLink,
 } from './fixtureData';
 
-describe('Figure', () => {
+describe('ArticleFigure', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
     const wrapper = mount(FigureLazyLoadImage).find(LazyLoad);
     const {

@@ -1,4 +1,4 @@
-import getStatsPageIdentifier from './getStatsPageIdentifier';
+import getStatsPageIdentifier from '.';
 
 describe('getStatsPageIdentifier', () => {
   const testScenarios = [
