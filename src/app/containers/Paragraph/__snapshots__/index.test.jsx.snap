@@ -11,7 +11,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
 }
 
 .c2 {
-  color: #222222;
+  color: #B80000;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -22,14 +22,14 @@ exports[`ParagraphContainer should render correctly 1`] = `
   border-bottom: 1px solid #757575;
 }
 
-.c2:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c2:focus,
 .c2:hover {
-  color: #B80000;
+  background-color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #FFFFFF;
+  margin: 0 -2px;
+  padding: 0 2px;
+  white-space: pre-wrap;
 }
 
 .c0 {

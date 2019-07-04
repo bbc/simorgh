@@ -11,14 +11,11 @@ import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 const ContextWrap = ({ children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      isUK
-      platform="canonical"
-      origin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={false}
       pageType="article"
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
-      articleData={{}}
     >
       {children}
     </RequestContextProvider>
