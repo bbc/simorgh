@@ -17,7 +17,6 @@ const PageWithRequestContext = ({
   bbcOrigin,
   children,
   data,
-  env,
   id,
   isAmp,
   pageType,
@@ -29,7 +28,6 @@ const PageWithRequestContext = ({
     <RequestContextProvider
       bbcOrigin={bbcOrigin}
       data={data}
-      env={env}
       id={id}
       isAmp={isAmp}
       pageType={pageType}
@@ -48,7 +46,6 @@ const PageWithRequestContext = ({
 
 PageWithRequestContext.propTypes = {
   children: node.isRequired,
-  env: string.isRequired,
   data: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
@@ -65,7 +62,6 @@ const PageWrapper = ({
   bbcOrigin,
   children,
   data,
-  env,
   id,
   service,
   isAmp,
@@ -79,7 +75,6 @@ const PageWrapper = ({
         <GlobalStyle />
         <PageWithRequestContext
           data={data}
-          env={env}
           id={id}
           isAmp={isAmp}
           isUK={isUK}
@@ -98,7 +93,6 @@ PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
   data: node.isRequired,
-  env: string.isRequired,
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,

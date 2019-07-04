@@ -1,9 +1,9 @@
 import deepGet from '../../lib/utilities/deepGet';
 
-const getLangByPageType = (data, lang, type) => {
-  return type === 'article'
+const getLangByPageType = (data, defaultLang, pageType) => {
+  return pageType === 'article'
     ? deepGet(['pageData', 'metadata', 'passport', 'language'], data)
-    : lang;
+    : defaultLang;
 };
 
 export default getLangByPageType;
