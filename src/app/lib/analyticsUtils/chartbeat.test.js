@@ -68,23 +68,35 @@ describe('Chartbeat utilities', () => {
           service: 'news',
           producer: 'wales',
           chapter: 'election 2017',
-          type: 'article',
+          pageType: 'article',
+          expected:
+            'news, news - ART, news - wales, news - wales - ART, news - election 2017, news - election 2017 - ART',
         },
-        'news, news - ART, news - wales, news - wales - ART, news - election 2017, news - election 2017 - ART',
+      ],
+      [
+        {
+          service: 'news',
+          producer: 'business',
+          chapter: 'market data',
+          pageType: 'index',
+          expected:
+            'news, news - IDX, news - business, news - business - IDX, news - market data, news - market data - IDX',
+        },
       ],
       [
         {
           service: 'persian',
-          chapter: 'foo',
-          type: 'article',
+          producer: null,
+          chapter: null,
+          pageType: 'article',
+          expected: 'persian, persian - ART',
         },
-        'persian, persian - ART, persian - foo, persian - foo - ART',
       ],
     ];
 
-    secs.forEach(([service, expected]) => {
+    secs.forEach(([{ service, producer, chapter, pageType, expected }]) => {
       it(`sections should return "${expected}"`, () => {
-        expect(sections(service)).toBe(expected);
+        expect(sections(service, pageType, producer, chapter)).toBe(expected);
       });
     });
   });

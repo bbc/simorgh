@@ -10,26 +10,21 @@ export const domain = service => {
   return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
 };
 
-const buildProducerArr = ({ service, producer }, type) => [
-  `${service} - ${producer}`,
-  `${service} - ${producer} - ${type}`,
+const buildSectionArr = (service, value, type) => [
+  `${service} - ${value}`,
+  `${service} - ${value} - ${type}`,
 ];
 
-const buildChapterArr = ({ service, chapter }, type) => [
-  `${service} - ${chapter}`,
-  `${service} - ${chapter} - ${type}`,
-];
+const buildServiceType = (service, type) => `${service} - ${type}`;
 
-const buildServiceType = ({ service }, type) => [`${service} - ${type}`];
-
-export const sections = x => {
-  const pageType = `ART`;
+export const sections = (service, type, producer, chapter) => {
+  const pageType = type === 'article' ? 'ART' : 'IDX';
 
   const parts = [
-    x.service,
-    buildServiceType(x, pageType),
-    ...(x.producer ? buildProducerArr(x, pageType) : []),
-    ...(x.chapter ? buildChapterArr(x, pageType) : []),
+    service,
+    buildServiceType(service, pageType),
+    ...(producer ? buildSectionArr(service, producer, pageType) : []),
+    ...(chapter ? buildSectionArr(service, chapter, pageType) : []),
   ];
 
   return parts.join(', ');
