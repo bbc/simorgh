@@ -1,10 +1,17 @@
 import {
   chartbeatUID,
   useCanonical,
+  getSylphidCookie,
   domain,
   sections,
   type,
 } from './chartbeat';
+import onClient from '../utilities/onClient';
+
+let isOnClient = false;
+
+jest.mock('../utilities/onClient', () => jest.fn());
+onClient.mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {
   it('should return the correct chartbeat UID', () => {
@@ -13,6 +20,29 @@ describe('Chartbeat utilities', () => {
 
   it('useCanonical should be true', () => {
     expect(useCanonical).toBe(true);
+  });
+
+  describe('Chartbeat ID Cookie', () => {
+    it('should return null when onClient is false', () => {
+      expect(getSylphidCookie()).toBe(null);
+    });
+
+    it('should return null when ID cookie does not exist', () => {
+      isOnClient = true;
+      expect(getSylphidCookie()).toBe(null);
+    });
+
+    it('should return the contents of the ID cookie when a value is present', () => {
+      const expectedCookie = 'foobar';
+      isOnClient = true;
+
+      Object.defineProperty(window.document, 'cookie', {
+        writable: true,
+        value: `ckns_sylphid=${expectedCookie}`,
+      });
+
+      expect(getSylphidCookie()).toBe(expectedCookie);
+    });
   });
 
   describe('Chartbeat Page Type', () => {
@@ -62,7 +92,7 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Sections', () => {
-    const secs = [
+    const sectionFixtures = [
       [
         {
           service: 'news',
@@ -94,10 +124,12 @@ describe('Chartbeat utilities', () => {
       ],
     ];
 
-    secs.forEach(([{ service, producer, chapter, pageType, expected }]) => {
-      it(`sections should return "${expected}"`, () => {
-        expect(sections(service, pageType, producer, chapter)).toBe(expected);
-      });
-    });
+    sectionFixtures.forEach(
+      ([{ service, producer, chapter, pageType, expected }]) => {
+        it(`sections should return "${expected}"`, () => {
+          expect(sections(service, pageType, producer, chapter)).toBe(expected);
+        });
+      },
+    );
   });
 });

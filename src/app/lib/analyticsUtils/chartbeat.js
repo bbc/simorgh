@@ -1,8 +1,19 @@
+import Cookie from 'js-cookie';
+import onClient from '../utilities/onClient';
+
+const ID_COOKIE = 'ckns_sylphid';
+
 export const chartbeatUID = 50924;
 
 export const useCanonical = true;
 
-export const getSylphidCookie = () => {};
+export const getSylphidCookie = () => {
+  if (!onClient()) {
+    return null;
+  }
+
+  return Cookie.get(ID_COOKIE) ? Cookie.get(ID_COOKIE) : null;
+};
 
 export const domain = service => {
   const serviceLower = service.toLowerCase();
