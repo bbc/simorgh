@@ -2,7 +2,7 @@ export const chartbeatUID = 50924;
 
 export const useCanonical = true;
 
-export const cknsSylphid = () => {};
+export const getSylphidCookie = () => {};
 
 export const domain = service => {
   const serviceLower = service.toLowerCase();
@@ -36,4 +36,4 @@ export const sections = x => {
 };
 
 export const type = pageType =>
-  pageType === 'article' ? 'News Article' : 'Index';
+  pageType === 'article' ? 'New Article' : 'Index';

@@ -16,27 +16,47 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Page Type', () => {
-    const types = [['article', 'News Article'], ['index', 'Index']];
+    const types = [
+      {
+        type: 'article',
+        expectedType: 'New Article',
+      },
+      {
+        type: 'index',
+        expectedType: 'Index',
+      },
+    ];
 
-    types.forEach(([rawType, expected]) => {
-      it(`Type ${rawType} should return ${expected}`, () => {
-        expect(type(rawType)).toBe(expected);
+    types.forEach(({ type: rawType, expectedType }) => {
+      it(`Type ${rawType} should return ${expectedType}`, () => {
+        expect(type(rawType)).toBe(expectedType);
       });
     });
   });
 
   describe('Chartbeat Domains', () => {
     const services = [
-      ['news', 'bbc.co.uk'],
-      ['persian', 'persian.bbc.co.uk'],
-      ['igbo', 'igbo.bbc.co.uk'],
-      ['thai', 'thai.bbc.co.uk'],
+      {
+        service: 'news',
+        expectedDomain: 'bbc.co.uk',
+      },
+      {
+        service: 'persian',
+        expectedDomain: 'persian.bbc.co.uk',
+      },
+      {
+        service: 'igbo',
+        expectedDomain: 'igbo.bbc.co.uk',
+      },
+      {
+        service: 'thai',
+        expectedDomain: 'thai.bbc.co.uk',
+      },
     ];
 
-    services.forEach(([service, expected]) => {
-      it(`domain should return "${expected}" when service is ${service}`, () => {
-        const res = domain(service);
-        expect(res).toBe(expected);
+    services.forEach(({ service, expectedDomain }) => {
+      it(`domain should return "${expectedDomain}" when service is ${service}`, () => {
+        expect(domain(service)).toBe(expectedDomain);
       });
     });
   });
@@ -64,8 +84,7 @@ describe('Chartbeat utilities', () => {
 
     secs.forEach(([service, expected]) => {
       it(`sections should return "${expected}"`, () => {
-        const res = sections(service);
-        expect(res).toBe(expected);
+        expect(sections(service)).toBe(expected);
       });
     });
   });
