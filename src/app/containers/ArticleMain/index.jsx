@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import { DialContext } from '../../contexts/DialContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -21,11 +22,14 @@ const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
 
+  const { audiovideo } = useContext(DialContext);
+
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
+        {audiovideo && <h2>AV IS ENABLED K THX</h2>}
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostWrapper>
