@@ -13,7 +13,7 @@ const getSection = platform => (service, data) => (
     <RequestContextProvider
       platform={platform}
       isUK={false}
-      lang="en-gb"
+      serviceLang="en-gb"
       statsDestination="WS_NEWS_LANGUAGES_TEST"
       statsPageIdentifier={`${service}.page`}
       bbcOrigin="https://www.test.bbc.com"

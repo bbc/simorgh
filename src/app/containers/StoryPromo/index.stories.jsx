@@ -25,12 +25,13 @@ const getStoryPromo = platform => item => (
     <RequestContextProvider
       platform={platform}
       isUK
-      lang="en-gb"
+      serviceLang="en-gb"
       pageType="article"
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
       service="news"
+      data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     >
       <StoryPromoContainer item={item} />
     </RequestContextProvider>

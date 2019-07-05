@@ -12,11 +12,13 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
       isAmp={isAmp}
+      data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
+      serviceLang="en-gb"
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>

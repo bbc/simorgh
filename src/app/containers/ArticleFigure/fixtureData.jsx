@@ -150,6 +150,7 @@ const generateFixtureData = ({
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
       platform={platform}
+      data="{pageData: { metadata: { passport: { language: 'en-gb' }}}}"
       isUK
       lang="en-gb"
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -157,6 +158,7 @@ const generateFixtureData = ({
       isAmp={platform === 'amp'}
       pageType="article"
       service="news"
+      serviceLang="en-gb"
     >
       <FigureContainer
         alt={imageAlt}

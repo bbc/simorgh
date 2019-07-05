@@ -19,10 +19,11 @@ const generateFixtureData = ({ platform, blocks }) => (
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      lang="en-gb"
+      serviceLang="en-gb"
       isAmp={platform === 'amp'}
       pageType="article"
       service="news"
+      data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     >
       <VideoContainer blocks={blocks} />
     </RequestContextProvider>

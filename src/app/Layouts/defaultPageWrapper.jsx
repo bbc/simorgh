@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { node, string, bool } from 'prop-types';
+import { node, string, bool, shape, any } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -46,16 +46,17 @@ const PageWithRequestContext = ({
 
 PageWithRequestContext.propTypes = {
   children: node.isRequired,
-  data: node.isRequired,
+  data: shape({ any }).isRequired,
   id: string,
   isAmp: bool.isRequired,
-  bbcOrigin: string.isRequired,
+  bbcOrigin: string,
   pageType: string.isRequired,
   service: string.isRequired,
 };
 
 PageWithRequestContext.defaultProps = {
   id: null,
+  bbcOrigin: '',
 };
 
 const PageWrapper = ({
@@ -92,7 +93,7 @@ const PageWrapper = ({
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  data: node.isRequired,
+  data: shape({ any }).isRequired,
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,
@@ -100,7 +101,7 @@ PageWrapper.propTypes = {
 };
 
 PageWrapper.defaultProps = {
-  bbcOrigin: null,
+  bbcOrigin: '',
   id: null,
 };
 

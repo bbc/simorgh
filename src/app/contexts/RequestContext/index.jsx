@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, oneOf, string } from 'prop-types';
+import { bool, node, oneOf, string, shape, any } from 'prop-types';
 import getLangByPageType from './getLangByPageType';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
@@ -53,7 +53,7 @@ export const RequestContextProvider = ({
 RequestContextProvider.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  data: node.isRequired,
+  data: shape({ any }).isRequired,
   id: string,
   serviceLang: string.isRequired,
   isAmp: bool.isRequired,
