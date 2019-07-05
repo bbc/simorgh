@@ -11,7 +11,6 @@ import DocumentComponent from './component';
 const renderDocument = async ({
   bbcOrigin,
   data,
-  dials,
   isAmp,
   routes,
   service,
@@ -46,7 +45,7 @@ const renderDocument = async ({
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
-      dials={dials}
+      dials={data.dials}
     />,
   );
 
