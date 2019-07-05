@@ -12,8 +12,10 @@ import {
   shouldContainText,
 } from '../support/bodyTestHelper';
 
+const serviceHasArticlePageType = service => config[service].pageTypes.articles !== undefined;
+
 Object.keys(config)
-  .filter(service => config[service].pageTypes.articles !== undefined)
+  .filter(serviceHasArticlePageType)
   .forEach(service => {
     describe(`${service} Article Body Tests`, () => {
       // eslint-disable-next-line no-undef
