@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import { DialContext } from '../../contexts/DialContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -17,15 +18,23 @@ const componentsToRender = {
   timestamp,
 };
 
+const avEnabledComment = (
+  // eslint-disable-next-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
+);
+
 const ArticleMain = ({ articleData }) => {
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
+
+  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
 
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
+        {audioVideoEnabled && avEnabledComment}
         <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostGrid>
