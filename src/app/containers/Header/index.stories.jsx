@@ -19,9 +19,6 @@ storiesOf('Header Container', module)
           product: 'BBC News',
           service,
           brandSVG: svgs[service],
-          svgHeight: 24,
-          maxWidth: 280,
-          minWidth: 180,
         };
         return (
           <ServiceContextProvider service={service} value={serviceContextStub}>
