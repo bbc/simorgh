@@ -23,15 +23,15 @@ const assertCookieValues = cookies => {
   });
 };
 
-const visitArticle = () => {
-  cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
-};
-
 describe('Canonical Cookie Banner Tests', () => {
+  // eslint-disable-next-line no-undef
+  before(() => {
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
+  });
+
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     cy.clearCookies();
-    visitArticle();
-
+    cy.reload(); // done to avoid the redirect when run from the uk breaking the cookies (marked below) from being set
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 
@@ -44,6 +44,7 @@ describe('Canonical Cookie Banner Tests', () => {
       .contains('OK')
       .click();
 
+    cy.wait(1000);
     getCookieBanner().should('be.visible');
     getPrivacyBanner().should('not.be.visible');
 
@@ -52,9 +53,9 @@ describe('Canonical Cookie Banner Tests', () => {
       .click();
 
     assertCookieValues({
-      ckns_explicit: '1',
+      ckns_explicit: '1', // the reload above fixes this
       ckns_privacy: '1',
-      ckns_policy: '111',
+      ckns_policy: '111', // the reload above fixes this
     });
 
     getCookieBanner().should('not.be.visible');
@@ -64,8 +65,7 @@ describe('Canonical Cookie Banner Tests', () => {
   });
 
   it('should have a privacy banner that disappears once accepted but a cookie banner that is rejected', () => {
-    cy.clearCookies();
-    visitArticle();
+    cy.reload();
 
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
@@ -97,18 +97,16 @@ describe('Canonical Cookie Banner Tests', () => {
   });
 
   it("should show cookie banner (and NOT privacy banner) if user has visited the page before and didn't explicitly 'accept' cookies", () => {
-    cy.clearCookies();
     cy.setCookie('ckns_privacy', '1');
-    visitArticle();
+    cy.reload();
 
     getPrivacyBanner().should('not.be.visible');
     getCookieBanner().should('be.visible');
   });
 
   it("should not override the user's default cookie policy", () => {
-    cy.clearCookies();
     cy.setCookie('ckns_policy', 'made_up_value');
-    visitArticle();
+    cy.reload();
 
     assertCookieValues({
       ckns_policy: 'made_up_value',

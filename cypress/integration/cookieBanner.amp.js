@@ -7,7 +7,8 @@ const getPrivacyBanner = () =>
 const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
 
 describeForEuOnly('Amp Cookie Banner Test', () => {
-  beforeEach(() => {
+  // eslint-disable-next-line no-undef
+  before(() => {
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
@@ -27,25 +28,31 @@ describeForEuOnly('Amp Cookie Banner Test', () => {
   });
 
   it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
+    cy.reload();
+
     cy.contains('OK').click();
 
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
+    cy.reload();
 
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
   });
 
   it('should not show privacy & cookie banners once both accepted, on reload', () => {
+    cy.reload();
+
     cy.contains('OK').click();
     cy.contains('Yes, I agree').click();
 
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
+    cy.reload();
 
     getPrivacyBanner().should('not.be.visible');
     getCookieBanner().should('not.be.visible');
   });
 
   it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
+    cy.reload();
+
     getPrivacyBanner().should('be.visible');
     getCookieBanner().should('not.be.visible');
 

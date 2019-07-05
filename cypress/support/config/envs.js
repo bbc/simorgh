@@ -22,18 +22,7 @@ const config = {
   },
 };
 
-const geoLocate = (conf, isUk = false) => {
-  if (!isUk) return conf;
-
-  // eslint-disable-next-line no-param-reassign
-  conf.baseUrl = conf.baseUrl.replace('.com', '.co.uk');
-  // eslint-disable-next-line no-param-reassign
-  conf.dataUrl = conf.dataUrl.replace('.com', '.co.uk');
-
-  return conf;
-};
-
 module.exports =
   typeof Cypress !== 'undefined'
-    ? geoLocate(config[Cypress.env('APP_ENV')], Cypress.env('UK'))
-    : (env, uk) => geoLocate(config[env], uk);
+    ? config[Cypress.env('APP_ENV')]
+    : env => config[env];
