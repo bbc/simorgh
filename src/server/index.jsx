@@ -166,12 +166,13 @@ server
         } catch ({ message }) {
           logger.error(`Error fetching Cosmos dials: ${message}`);
         }
+        // Preserve initial dial state in window so it is available during hydration
+        data.dials = dials;
 
         res.status(status).send(
           await renderDocument({
             bbcOrigin,
             data,
-            dials,
             isAmp,
             routes,
             service,
