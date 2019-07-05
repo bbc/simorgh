@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import { DialContext } from '../../contexts/DialContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -23,6 +24,11 @@ const componentsToRender = {
   video: audioVideo,
 };
 
+const avEnabledComment = (
+  // eslint-disable-next-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
+);
+
 const ArticleMain = ({ articleData }) => {
   const {
     env,
@@ -37,6 +43,7 @@ const ArticleMain = ({ articleData }) => {
     block => block.type === 'audio' || block.type === 'video',
   );
   const hasAV = audioVideoBlocks.length > 0;
+  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
 
   return (
     <Fragment>
@@ -54,6 +61,7 @@ const ArticleMain = ({ articleData }) => {
         />
       ) : null}
       <main role="main">
+        {audioVideoEnabled && avEnabledComment}
         <GhostWrapper>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostWrapper>
