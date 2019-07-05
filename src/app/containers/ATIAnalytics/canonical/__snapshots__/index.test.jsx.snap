@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical ATI Analytics should render correctly for Live ATI endpoint 1`] = `
+exports[`Canonical ATI Analytics should render correctly 1`] = `
 <noscript>
   <img
     alt=""
