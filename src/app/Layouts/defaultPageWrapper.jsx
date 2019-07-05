@@ -1,5 +1,5 @@
-import React, { Fragment, useContext } from 'react';
-import { node, string, bool, shape, any } from 'prop-types';
+import React, { useContext } from 'react';
+import { node, string, bool, shape, any, objectOf } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -8,8 +8,8 @@ import {
   ServiceContextProvider,
   ServiceContext,
 } from '../contexts/ServiceContext';
+import { DialContextProvider } from '../contexts/DialContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
-import getOriginContext from '../contexts/RequestContext/getOriginContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
 
@@ -67,28 +67,24 @@ const PageWrapper = ({
   service,
   isAmp,
   pageType,
-}) => {
-  const { isUK } = getOriginContext(bbcOrigin);
-
-  return (
-    <Fragment>
-      <ServiceContextProvider service={service}>
-        <GlobalStyle />
-        <PageWithRequestContext
-          data={data}
-          id={id}
-          isAmp={isAmp}
-          isUK={isUK}
-          bbcOrigin={bbcOrigin}
-          pageType={pageType}
-          service={service}
-        >
-          {children}
-        </PageWithRequestContext>
-      </ServiceContextProvider>
-    </Fragment>
-  );
-};
+  dials,
+}) => (
+  <DialContextProvider dials={dials}>
+    <ServiceContextProvider service={service}>
+      <GlobalStyle />
+      <PageWithRequestContext
+        data={data}
+        id={id}
+        isAmp={isAmp}
+        bbcOrigin={bbcOrigin}
+        pageType={pageType}
+        service={service}
+      >
+        {children}
+      </PageWithRequestContext>
+    </ServiceContextProvider>
+  </DialContextProvider>
+);
 
 PageWrapper.propTypes = {
   bbcOrigin: string,
@@ -98,6 +94,7 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
+  dials: objectOf(bool).isRequired,
 };
 
 PageWrapper.defaultProps = {

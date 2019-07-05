@@ -356,11 +356,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -790,11 +791,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -1256,11 +1258,12 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -1690,11 +1693,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -2124,11 +2128,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -2590,11 +2595,12 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -3024,11 +3030,12 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -3458,11 +3465,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -3924,11 +3932,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -4392,11 +4401,12 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -4832,11 +4842,12 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={true}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -5327,11 +5338,12 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -5822,11 +5834,12 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -6256,11 +6269,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -6722,11 +6736,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={
@@ -7190,11 +7205,12 @@ exports[`AudioVideo with Video data canonical - should render the video without 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    data="{pageData: { metadata: { passport: { language: 'en-gb' } }}}"
     id="c0000000000o"
     isAmp={false}
-    lang="en-gb"
     pageType="article"
     service="news"
+    serviceLang="en-gb"
   >
     <VideoContainer
       blocks={

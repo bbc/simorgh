@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultPageWrapper should render with children 1`] = `
-<React.Fragment>
+<DialContextProvider>
   <ServiceContextProvider
     service="news"
   >
@@ -21,7 +21,6 @@ exports[`defaultPageWrapper should render with children 1`] = `
       }
       id="c0000000000o"
       isAmp={true}
-      isUK={true}
       pageType="article"
       service="news"
     >
@@ -30,5 +29,5 @@ exports[`defaultPageWrapper should render with children 1`] = `
       </h2>
     </PageWithRequestContext>
   </ServiceContextProvider>
-</React.Fragment>
+</DialContextProvider>
 `;
