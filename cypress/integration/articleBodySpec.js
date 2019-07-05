@@ -12,7 +12,8 @@ import {
   shouldContainText,
 } from '../support/bodyTestHelper';
 
-const serviceHasArticlePageType = service => config[service].pageTypes.articles !== undefined;
+const serviceHasArticlePageType = service =>
+  config[service].pageTypes.articles !== undefined;
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)
