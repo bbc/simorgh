@@ -33,15 +33,15 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return the contents of the ID cookie when a value is present', () => {
-      const expectedCookie = 'foobar';
+      const expectedCookieValue = 'foobar';
       isOnClient = true;
 
       Object.defineProperty(window.document, 'cookie', {
         writable: true,
-        value: `ckns_sylphid=${expectedCookie}`,
+        value: `ckns_sylphid=${expectedCookieValue}`,
       });
 
-      expect(getSylphidCookie()).toBe(expectedCookie);
+      expect(getSylphidCookie()).toBe(expectedCookieValue);
     });
   });
 
