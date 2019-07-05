@@ -9,7 +9,7 @@ import App from './App';
 
 export const ClientApp = props => (
   <BrowserRouter {...props}>
-    <App initialData={props.data} routes={props.routes} />
+    <App initialData={props.data} routes={props.routes} dials={props.data.dials} />
   </BrowserRouter>
 );
 
@@ -19,6 +19,7 @@ export const ServerApp = props => (
       initialData={props.data}
       routes={props.routes}
       bbcOrigin={props.bbcOrigin}
+      dials={props.data.dials}
     />
   </StaticRouter>
 );
