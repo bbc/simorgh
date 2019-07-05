@@ -13,13 +13,10 @@ storiesOf('CopyRight Container', module)
     inputProvider(
       null,
       ({ service }) => {
-        const imageCaptionOffscreenText = services[service]
-          .imageCopyrightOffscreenText
-          ? services[service].imageCopyrightOffscreenText
-          : 'Image source, ';
+        const imageCaptionOffscreenText =
+          services[service].imageCopyrightOffscreenText || 'Image source, ';
 
         const serviceContextStub = {
-          product: 'BBC News',
           imageCaptionOffscreenText,
           lang: services[service].lang,
           dir: services[service].dir,
