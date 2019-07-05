@@ -1,11 +1,20 @@
 // Overwriting Cypress Commands should very rarely be done.
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
-  cy.request({ url, failOnStatusCode: false }).then(({ headers }) => {
+  cy.request({ url, failOnStatusCode: false }).then(({ status, headers }) => {
     // Always ensure we're not seeing the Mozart fallback
     if (expect(headers).not.have.property('x-mfa')) {
+      // If redirection happening correct url
+      if (status === 302) {
+        if (url.contains('.com')) {
+          // eslint-disable-next-line no-param-reassign
+          url = url.replace('.com', '.co.uk');
+        } else if (url.contains('.co.uk')) {
+          // eslint-disable-next-line no-param-reassign
+          url = url.replace('.co.uk', '.com');
+        }
+      }
       return originalFn(url, options);
     }
-
     return false;
   });
 });
