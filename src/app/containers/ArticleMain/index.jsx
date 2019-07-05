@@ -20,8 +20,6 @@ const componentsToRender = {
   text,
   image,
   timestamp,
-  audio: audioVideo,
-  video: audioVideo,
 };
 
 const avEnabledComment = (
@@ -45,11 +43,16 @@ const ArticleMain = ({ articleData }) => {
   const hasAV = audioVideoBlocks.length > 0;
   const { audiovideo: audioVideoEnabled } = useContext(DialContext);
 
+  if (audioVideoEnabled) {
+    componentsToRender.audio = audioVideo;
+    componentsToRender.video = audioVideo;
+  }
+
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
-      {hasAV && platform === 'canonical' ? (
+      {audioVideoEnabled && hasAV && platform === 'canonical' ? (
         <AudioVideoHead
           audioVideoAssets={generateAVSettings({
             audioVideoBlocks,
