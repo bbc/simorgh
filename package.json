@@ -89,7 +89,7 @@
     "@bbc/gel-foundations": "3.0.1",
     "@bbc/psammead-assets": "^1.0.2",
     "@bbc/psammead-brand": "^4.1.2",
-    "@bbc/psammead-caption": "^1.1.7",
+    "@bbc/psammead-caption": "^1.1.9",
     "@bbc/psammead-copyright": "^1.0.2",
     "@bbc/psammead-figure": "^1.0.2",
     "@bbc/psammead-headings": "^2.0.2",
