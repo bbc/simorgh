@@ -51,6 +51,12 @@ describe('Canonical ATI Analytics', () => {
     // },
     // {
     //   describe:
+    //     'should call sendBeacon with Live ATI URL for stage env (.co.uk)',
+    //   atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
+    //   bbcOrigin: 'https://www.stage.bbc.co.uk',
+    // },
+    // {
+    //   describe:
     //     'should call sendBeacon with Test ATI URL for test env (.co.uk)',
     //   atiUrl: 'https://logws1363.ati-host.net?key=value&key2=value2',
     //   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -65,6 +71,11 @@ describe('Canonical ATI Analytics', () => {
     //   describe: 'should call sendBeacon with Live ATI URL for live env (.com)',
     //   atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
     //   bbcOrigin: 'https://www.bbc.com',
+    // },
+    // {
+    //   describe: 'should call sendBeacon with Live ATI URL for stage env (.com)',
+    //   atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
+    //   bbcOrigin: 'https://www.stage.bbc.com',
     // },
     // {
     //   describe: 'should call sendBeacon with Test ATI URL for test env (.com)',
