@@ -154,7 +154,16 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: string,
+  // eslint-disable-next-line react/require-default-props
+  articleAuthor: (props, propName) => {
+    const { type, articleAuthor } = props;
+
+    if (type === 'article' && typeof articleAuthor !== 'string') {
+      return new Error(`${propName} is a required prop and should be a string`);
+    }
+
+    return null;
+  },
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
