@@ -41,12 +41,10 @@ describe('withContexts HOC', () => {
     dials,
   };
 
-  describe('and the loading prop set to true', () => {
-    shouldShallowMatchSnapshot(
-      `should return all context providers`,
-      <ContextsHOC {...props} />,
-    );
-  });
+  shouldShallowMatchSnapshot(
+    `should return all context providers`,
+    <ContextsHOC {...props} />,
+  );
 
   describe('assertions', () => {
     let requestContextSpy;
