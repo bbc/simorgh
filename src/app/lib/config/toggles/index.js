@@ -1,12 +1,12 @@
 const toggles = {
   test: {
     images: {
-      enabled: false,
+      enabled: true,
     },
   },
   live: {
     images: {
-      enabled: false,
+      enabled: true,
     },
   },
 };
