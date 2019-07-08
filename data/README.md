@@ -39,7 +39,12 @@ The assets sequentially numbered are for local testing, those which aren't are e
 | 28       | Home: Persian | Headline, Image, Text (5 pars), Image (wide), Text (3 pars), Image (wide, caption), Text (3 pars) | One tag | Prod and Test |
 | 29       | Home: News | Headline (Image), Subheadline (Video), Text (1 par), Subheadline (Image), Text (1 par)| | |
 
-## Video test assets
+## Audio/Video test assets
+
+| ID | Description |
+| -----------: | ------------- |
+| c3wmq4d1y3wo | TEST asset containing multiple AV scenarios |
+| cd4117egk3go | PROD asset containing one live environment video |
 
 All these are included in article cmejqde986vo.
 
