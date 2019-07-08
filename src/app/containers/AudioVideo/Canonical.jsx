@@ -6,7 +6,7 @@ const Canonical = ({ id, portrait }) => {
   const position = portrait ? 'position: absolute;' : '';
 
   const PortraitParent = styled.div`
-    padding-bottom: 1778.78%;
+    padding-bottom: 178.78%;
     position: relative;
   `;
 
