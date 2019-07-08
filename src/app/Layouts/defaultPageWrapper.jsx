@@ -98,7 +98,7 @@ PageWrapper.propTypes = {
 };
 
 PageWrapper.defaultProps = {
-  bbcOrigin: '',
+  bbcOrigin: null,
   id: null,
 };
 
