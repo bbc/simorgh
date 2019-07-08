@@ -17,7 +17,11 @@ import {
   gridContainerLargeCss,
 } from '../layoutGrid';
 
-export const GhostWrapper = styled.div`
+export const Grid = styled.div`
+  ${layoutGridWrapper};
+`;
+
+export const GhostGrid = styled.div`
   ${layoutGridWrapper};
   background: ${C_GHOST};
 `;
