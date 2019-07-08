@@ -3,4 +3,4 @@ exclude_patterns:
   - 'cypress/{integration,support}/*.js'
   - 'src/**/*.test.{jsx,js}'
   - 'src/app/lib/config/'
-  - 'src/app/containers/**/fixtures.js'
+  - 'src/app/**/fixtures.js'
