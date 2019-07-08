@@ -40,6 +40,13 @@ class LoggerStream {
 
 const server = express();
 
+server.use((req, res, next) => {
+  const urlPath = /\?[^]*\//.test(req.url);
+  if (req.url.substr(-1) === '/' && req.url.length > 1 && !urlPath)
+    res.redirect(301, req.url.slice(0, -1));
+  else next();
+});
+
 /*
  * Default headers, compression, logging, status route
  */
