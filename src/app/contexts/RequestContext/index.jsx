@@ -40,7 +40,7 @@ export const RequestContextProvider = ({
     id,
     isUK,
     lang,
-    bbcOrigin,
+    origin,
     pageType,
     platform,
     statsDestination,
