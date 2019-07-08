@@ -16,9 +16,12 @@ export default {
   },
   persian: {
     pageTypes: {
-      articles: {
-        asset: 'c4vlle3q337o',
-      },
+      articles:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : {
+              asset: 'c4vlle3q337o',
+            },
       frontPage: undefined,
     },
   },
