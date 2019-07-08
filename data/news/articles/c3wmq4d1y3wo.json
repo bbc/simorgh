@@ -8,7 +8,7 @@
     "type": "article",
     "createdBy": "News",
     "language": "en-gb",
-    "lastUpdated": 1562240318965,
+    "lastUpdated": 1562585138255,
     "firstPublished": 1559129664696,
     "lastPublished": 1559129664696,
     "options": {},
@@ -619,7 +619,7 @@
                         "title": "'I lost my leg to type 2 diabetes' (NON UK)",
                         "synopses": {
                           "short": "Diabetes type 2: 'I blame myself for the loss of my leg'",
-                          "long": "Every week 170 people in the UK lose a limb because of diabetes. \nAround four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. \nDiabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital.\nAnd a further 12 million people could be at risk of getting type 2 diabetes in the future.\nStephen Richardson has told the BBC he blames himself for the loss of his limb.",
+                          "long": "Every week 170 people in the UK lose a limb because of diabetes. Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital. And a further 12 million people could be at risk of getting type 2 diabetes in the future. Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
                           "medium": "Stephen Richardson admits he ignored advice about diet and exercise."
                         },
                         "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
@@ -655,9 +655,40 @@
                           {
                             "type": "rawImage",
                             "model": {
+                              "width": 1920,
+                              "height": 1080,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
                               "originCode": "mpv",
                               "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Description of picture (ALT TEXT)",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Description of picture (ALT TEXT)",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -936,8 +967,11 @@
                           {
                             "type": "rawImage",
                             "model": {
+                              "width": 640,
+                              "height": 360,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
                             }
                           }
                         ]
@@ -1058,8 +1092,11 @@
                           {
                             "type": "rawImage",
                             "model": {
+                              "width": 640,
+                              "height": 360,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt92.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
                             }
                           }
                         ]
