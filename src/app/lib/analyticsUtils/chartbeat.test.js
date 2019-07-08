@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie';
 import {
   chartbeatUID,
   useCanonical,
@@ -35,12 +36,7 @@ describe('Chartbeat utilities', () => {
     it('should return the contents of the ID cookie when a value is present', () => {
       const expectedCookieValue = 'foobar';
       isOnClient = true;
-
-      Object.defineProperty(window.document, 'cookie', {
-        writable: true,
-        value: `ckns_sylphid=${expectedCookieValue}`,
-      });
-
+      jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
       expect(getSylphidCookie()).toBe(expectedCookieValue);
     });
   });
@@ -142,6 +138,13 @@ describe('Chartbeat utilities', () => {
         pageType: 'article',
         description: 'should not add producer when producer == service',
         expected: 'News, News - ART, News - baz, News - baz - ART',
+      },
+      {
+        service: 'news',
+        producer: 'business',
+        chapter: 'foo',
+        description: 'should not append pageType if not present',
+        expected: 'News, News - business, News - foo',
       },
     ];
 

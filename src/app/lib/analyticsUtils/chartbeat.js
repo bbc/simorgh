@@ -8,10 +8,10 @@ export const useCanonical = true;
 
 const buildSectionArr = (service, value, type) => [
   `${service} - ${value}`,
-  `${service} - ${value} - ${type}`,
+  ...(type ? [`${service} - ${value} - ${type}`] : []),
 ];
 
-const buildServiceType = (service, type) => `${service} - ${type}`;
+const buildServiceType = (service, type) => [`${service} - ${type}`];
 
 const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -24,20 +24,29 @@ export const getDomain = service => {
   return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
 };
 
+export const getType = (pageType, shorthand = false) => {
+  switch (pageType) {
+    case 'frontPage':
+    case 'index':
+      return shorthand ? 'IDX' : 'Index';
+    case 'article':
+      return shorthand ? 'ART' : 'New Article';
+    default:
+      return null;
+  }
+};
+
 export const buildSections = (service, type, producer, chapter) => {
-  const pageType = type === 'article' ? 'ART' : 'IDX';
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
+  const pageType = getType(type, true);
 
   const parts = [
     serviceCap,
-    buildServiceType(serviceCap, pageType),
+    ...(type ? buildServiceType(serviceCap, pageType) : []),
     ...(addProducer ? buildSectionArr(serviceCap, producer, pageType) : []),
     ...(chapter ? buildSectionArr(serviceCap, chapter, pageType) : []),
   ];
 
   return parts.join(', ');
 };
-
-export const getType = pageType =>
-  pageType === 'article' ? 'New Article' : 'Index';
