@@ -34,7 +34,7 @@ cd simorgh
 npm install
 ```
 
-To hit simorgh URLs locally you need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
+Finally you need to add to your hosts file (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
 
 ```
 127.0.0.1 localhost.bbc.co.uk
