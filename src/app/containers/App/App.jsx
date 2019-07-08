@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '../../lib/utilities/usePrevious';
 
-export const App = ({ routes, location, initialData, bbcOrigin }) => {
+export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
   const {
     service,
     isAmp,
@@ -69,7 +69,7 @@ export const App = ({ routes, location, initialData, bbcOrigin }) => {
 
   const previousPath = usePrevious(location.pathname);
 
-  return renderRoutes(routes, { ...state, bbcOrigin, previousPath });
+  return renderRoutes(routes, { ...state, bbcOrigin, dials, previousPath });
 };
 
 export default withRouter(App);
