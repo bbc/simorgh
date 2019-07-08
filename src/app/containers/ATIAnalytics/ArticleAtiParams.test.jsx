@@ -43,6 +43,7 @@ describe('ArticleAtiParams', () => {
     id: 'c0000000000o',
     isAmp: false,
     pageType: 'article',
+    previousPath: '/previous-path',
     service: 'news',
   };
 
@@ -73,8 +74,8 @@ describe('ArticleAtiParams', () => {
         statsDestination: 'NEWS_PS_TEST',
         timePublished: '2000-01-01T00:00:00.000Z',
         timeUpdated: '2001-01-01T00:00:00.000Z',
-        previousPath: null,
-        origin: 'https://www.bbc.co.uk',
+        previousPath: '/previous-path',
+        origin: 'https://www.test.bbc.co.uk',
       });
     });
 
