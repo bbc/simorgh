@@ -22,8 +22,6 @@ Loadable.preloadAll().then(() => {
     if (error) {
       logger.error(error);
     }
-
-    logger.info(`Started and listening on http://localhost:${port}`);
   });
 });
 
