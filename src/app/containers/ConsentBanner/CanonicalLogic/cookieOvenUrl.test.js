@@ -21,7 +21,7 @@ describe('cookieOvenUrl', () => {
       'https://my-routing-layer.test.cookieless-domain.co.uk/',
       'https://cookie-oven.test.api.bbc.com',
     ],
-    ['http://localhost:7080', 'http://localhost:7080'],
+    ['http://localhost.bbc.com:7080', 'http://localhost.bbc.com:7080'],
     ['https://foobar.org', 'https://cookie-oven.api.bbc.com'],
     ['http://foobar.org', 'https://cookie-oven.api.bbc.com'],
     ['foobar.org', 'https://cookie-oven.api.bbc.com'],
