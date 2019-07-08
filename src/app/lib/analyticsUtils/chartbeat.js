@@ -4,8 +4,16 @@ import onClient from '../utilities/onClient';
 const ID_COOKIE = 'ckns_sylphid';
 
 export const chartbeatUID = 50924;
-
 export const useCanonical = true;
+
+const buildSectionArr = (service, value, type) => [
+  `${service} - ${value}`,
+  `${service} - ${value} - ${type}`,
+];
+
+const buildServiceType = (service, type) => `${service} - ${type}`;
+
+const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 export const getSylphidCookie = () => {
   if (!onClient()) {
@@ -21,21 +29,16 @@ export const getDomain = service => {
   return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
 };
 
-const buildSectionArr = (service, value, type) => [
-  `${service} - ${value}`,
-  `${service} - ${value} - ${type}`,
-];
-
-const buildServiceType = (service, type) => `${service} - ${type}`;
-
 export const buildSections = (service, type, producer, chapter) => {
   const pageType = type === 'article' ? 'ART' : 'IDX';
+  const addProducer = producer && service !== producer;
+  const serviceCap = capitalize(service);
 
   const parts = [
-    service,
-    buildServiceType(service, pageType),
-    ...(producer ? buildSectionArr(service, producer, pageType) : []),
-    ...(chapter ? buildSectionArr(service, chapter, pageType) : []),
+    serviceCap,
+    buildServiceType(serviceCap, pageType),
+    ...(addProducer ? buildSectionArr(serviceCap, producer, pageType) : []),
+    ...(chapter ? buildSectionArr(serviceCap, chapter, pageType) : []),
   ];
 
   return parts.join(', ');

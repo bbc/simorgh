@@ -93,40 +93,61 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Sections', () => {
     const sectionFixtures = [
-      [
-        {
-          service: 'news',
-          producer: 'wales',
-          chapter: 'election 2017',
-          pageType: 'article',
-          expected:
-            'news, news - ART, news - wales, news - wales - ART, news - election 2017, news - election 2017 - ART',
-        },
-      ],
-      [
-        {
-          service: 'news',
-          producer: 'business',
-          chapter: 'market data',
-          pageType: 'index',
-          expected:
-            'news, news - IDX, news - business, news - business - IDX, news - market data, news - market data - IDX',
-        },
-      ],
-      [
-        {
-          service: 'persian',
-          producer: null,
-          chapter: null,
-          pageType: 'article',
-          expected: 'persian, persian - ART',
-        },
-      ],
+      {
+        service: 'news',
+        producer: 'wales',
+        chapter: 'election 2017',
+        pageType: 'article',
+        description: 'should add chapter and producer to article type',
+        expected:
+          'News, News - ART, News - wales, News - wales - ART, News - election 2017, News - election 2017 - ART',
+      },
+      {
+        service: 'news',
+        producer: 'business',
+        chapter: 'market data',
+        pageType: 'index',
+        description: 'should add chapter and producer to index type',
+        expected:
+          'News, News - IDX, News - business, News - business - IDX, News - market data, News - market data - IDX',
+      },
+      {
+        service: 'persian',
+        producer: null,
+        chapter: null,
+        pageType: 'article',
+        description: 'should not add chapter and producer when not present',
+        expected: 'Persian, Persian - ART',
+      },
+      {
+        service: 'news',
+        producer: 'foo',
+        chapter: null,
+        pageType: 'article',
+        description: 'should not add chapter when not present',
+        expected: 'News, News - ART, News - foo, News - foo - ART',
+      },
+      {
+        service: 'news',
+        producer: null,
+        chapter: 'bar',
+        pageType: 'article',
+        description: 'should not add producer when not present',
+        expected: 'News, News - ART, News - bar, News - bar - ART',
+      },
+      {
+        service: 'news',
+        producer: 'news',
+        chapter: 'baz',
+        pageType: 'article',
+        description: 'should not add producer when producer == service',
+        expected: 'News, News - ART, News - baz, News - baz - ART',
+      },
     ];
 
     sectionFixtures.forEach(
-      ([{ service, producer, chapter, pageType, expected }]) => {
-        it(`buildSections should return "${expected}"`, () => {
+      ({ service, producer, chapter, pageType, description, expected }) => {
+        it(description, () => {
           expect(buildSections(service, pageType, producer, chapter)).toBe(
             expected,
           );
