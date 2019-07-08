@@ -1,0 +1,5 @@
+exclude_patterns:
+- "**/node_modules/"
+- "cypress/{integration,support}/*.js"
+- "src/**/*.test.{jsx,js}"
+- "src/app/lib/config/"
