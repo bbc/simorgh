@@ -45,19 +45,32 @@ describe('Chartbeat utilities', () => {
     const types = [
       {
         type: 'article',
-        expectedType: 'New Article',
+        expectedDefaultType: 'New Article',
+        expectedShortType: 'ART',
       },
       {
         type: 'index',
-        expectedType: 'Index',
+        expectedDefaultType: 'Index',
+        expectedShortType: 'IDX',
+      },
+      {
+        type: null,
+        expectedDefaultType: null,
+        expectedShortType: null,
       },
     ];
 
-    types.forEach(({ type: rawType, expectedType }) => {
-      it(`Type ${rawType} should return ${expectedType}`, () => {
-        expect(getType(rawType)).toBe(expectedType);
-      });
-    });
+    types.forEach(
+      ({ type: rawType, expectedDefaultType, expectedShortType }) => {
+        it(`Type ${rawType} should return ${expectedDefaultType} as default`, () => {
+          expect(getType(rawType)).toBe(expectedDefaultType);
+        });
+
+        it(`Type ${rawType} should return ${expectedShortType} as shorthand`, () => {
+          expect(getType(rawType, true)).toBe(expectedShortType);
+        });
+      },
+    );
   });
 
   describe('Chartbeat Domains', () => {
@@ -143,6 +156,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'business',
         chapter: 'foo',
+        pageType: null,
         description: 'should not append pageType if not present',
         expected: 'News, News - business, News - foo',
       },
