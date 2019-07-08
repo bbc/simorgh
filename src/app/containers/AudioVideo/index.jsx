@@ -20,6 +20,27 @@ import {
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
+const selectWrappers = orientation => {
+  const wrapperSpan = {
+    default: '6',
+    group5: '12',
+  };
+  let ParentWrapper = NestedGridParentLarge;
+  let ChildWrapper = NestedGridItemChildLarge;
+  let Container = GridItemConstrainedLargeNoMargin;
+  let portrait = false;
+
+  if (orientation === 'Portrait') {
+    ParentWrapper = NestedGridParentSmall;
+    ChildWrapper = NestedGridItemChildSmall;
+    Container = GridItemConstrainedSmall;
+    wrapperSpan.default = '4';
+    portrait = true;
+  }
+
+  return { ParentWrapper, ChildWrapper, Container, wrapperSpan, portrait };
+};
+
 const AudioVideoContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
 
@@ -44,22 +65,13 @@ const AudioVideoContainer = ({ blocks }) => {
 
   const orientation = deepGet(['versions', 0, 'types', 0], nestedModel);
 
-  const wrapperSpan = {
-    default: '6',
-    group5: '12',
-  };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
-  let Container = GridItemConstrainedLargeNoMargin;
-  let portrait = false;
-
-  if (orientation === 'Portrait') {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    Container = GridItemConstrainedSmall;
-    wrapperSpan.default = '4';
-    portrait = true;
-  }
+  const {
+    ParentWrapper,
+    ChildWrapper,
+    Container,
+    wrapperSpan,
+    portrait,
+  } = selectWrappers(orientation);
 
   return (
     <Container>
