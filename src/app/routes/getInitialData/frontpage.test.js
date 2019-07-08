@@ -11,8 +11,7 @@ const preprocessorRules = [
   applySquashTopstories,
 ];
 
-process.env.SIMORGH_BASE_URL =
-  'https://www.SIMORGH_BASE_URL.com';
+process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
 jest.mock('./utils/getBaseUrl', () => jest.fn());
