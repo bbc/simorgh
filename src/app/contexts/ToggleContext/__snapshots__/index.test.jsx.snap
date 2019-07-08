@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleContext should provide a toggles object 1`] = `
+<span>
+  {"toggleState":{"test":{"images":{"enabled":false}},"live":{"images":{"enabled":false}}}}
+</span>
+`;

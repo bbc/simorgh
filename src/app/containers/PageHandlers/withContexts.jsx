@@ -5,24 +5,27 @@ import { bool, element, objectOf, string } from 'prop-types';
 import { DialContextProvider } from '../../contexts/DialContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const { bbcOrigin, id, service, isAmp, pageType, dials } = props;
     return (
-      <DialContextProvider dials={dials}>
-        <ServiceContextProvider service={service}>
-          <RequestContextProvider
-            bbcOrigin={bbcOrigin}
-            id={id}
-            isAmp={isAmp}
-            pageType={pageType}
-            service={service}
-          >
-            <Component {...props} />
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </DialContextProvider>
+      <ToggleContextProvider>
+        <DialContextProvider dials={dials}>
+          <ServiceContextProvider service={service}>
+            <RequestContextProvider
+              bbcOrigin={bbcOrigin}
+              id={id}
+              isAmp={isAmp}
+              pageType={pageType}
+              service={service}
+            >
+              <Component {...props} />
+            </RequestContextProvider>
+          </ServiceContextProvider>
+        </DialContextProvider>
+      </ToggleContextProvider>
     );
   };
 
