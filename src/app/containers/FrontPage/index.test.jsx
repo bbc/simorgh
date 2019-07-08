@@ -49,9 +49,7 @@ jest.mock('../PageHandlers/withData', () => Component => {
 });
 
 jest.mock('../FrontPageMain', () => {
-  const FrontPageMain = () => <div>FrontPageMain</div>;
-
-  return FrontPageMain;
+  return jest.fn().mockReturnValue(<div>FrontPageMain</div>);
 });
 
 describe('FrontPageContainer', () => {
@@ -107,10 +105,15 @@ describe('FrontPageContainer', () => {
           status: 200,
         };
 
+        const frontPageMainMock = jest.requireMock('../FrontPageMain');
         const { container } = render(
           <FrontPageComponent error="" data={data} service="igbo" />,
         );
 
+        expect(frontPageMainMock.mock.calls).toHaveLength(1);
+        expect(frontPageMainMock.mock.calls[0][0]).toEqual({
+          frontPageData: igboData,
+        });
         expect(container.textContent).toEqual('FrontPageMain');
       });
     });
