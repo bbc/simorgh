@@ -58,7 +58,7 @@ PageWithRequestContext.propTypes = {
 
 PageWithRequestContext.defaultProps = {
   id: null,
-  bbcOrigin: '',
+  bbcOrigin: null,
 };
 
 const PageWrapper = ({
