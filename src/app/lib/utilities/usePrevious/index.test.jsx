@@ -15,7 +15,6 @@ describe('usePrevious', () => {
 
   it('should set initial value to null', () => {
     expect(value).toBe(null);
-    wrapper.setProps({ prop: 'second' });
   });
 
   it('should return previous value after updates to dependency', () => {
