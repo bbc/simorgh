@@ -31,7 +31,7 @@ Then you can run the following commands to install Simorgh
 ```
 git clone git@github.com:bbc/simorgh.git
 cd simorgh
-npm install
+npm ci
 ```
 
 Finally you need to add to your hosts file (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
