@@ -6,7 +6,7 @@ import services from '../../lib/config/services';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import Footer from '.';
 
-storiesOf('Footer', module)
+storiesOf('Footer Container', module)
   .addDecorator(withKnobs)
   .add(
     'default',
