@@ -34,6 +34,13 @@ cd simorgh
 npm install
 ```
 
+To hit simorgh URLs locally you need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
+
+```
+127.0.0.1 localhost.bbc.co.uk
+127.0.0.1 localhost.bbc.com
+```
+
 ## Local Development
 
 To run this application locally, with hot-reloading, run
@@ -98,13 +105,6 @@ To run LIVE bundles on localhost:
 - In `envConfig/live.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost.bbc.com:7080/news/articles/c8xxl4l3dzeo
-
-If these urls do not work, you may need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
-
-```
-127.0.0.1 localhost.bbc.co.uk
-127.0.0.1 localhost.bbc.com
-```
 
 ## Changing request location
 
