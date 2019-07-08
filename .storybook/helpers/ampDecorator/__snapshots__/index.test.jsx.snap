@@ -34,6 +34,21 @@ exports[`AmpDecorator should render correctly 1`] = `
       async={true}
       src="https://cdn.ampproject.org/v0.js"
     />
+    <script
+      async={true}
+      custom-element="amp-geo"
+      src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    />
+    <script
+      async={true}
+      custom-element="amp-consent"
+      src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    />
+    <script
+      async={true}
+      custom-element="amp-analytics"
+      src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    />
   </HelmetWrapper>
   <div>
     Foobar
