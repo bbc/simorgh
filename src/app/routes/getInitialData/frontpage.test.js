@@ -11,8 +11,8 @@ const preprocessorRules = [
   applySquashTopstories,
 ];
 
-process.env.SIMORGH_FRONTPAGE_BASE_URL =
-  'https://www.SIMORGH_FRONTPAGE_BASE_URL.com';
+process.env.SIMORGH_BASE_URL =
+  'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
 jest.mock('./utils/getBaseUrl', () => jest.fn());
@@ -84,11 +84,11 @@ describe('getFrontpageInitialData', () => {
       onClientMockResponse = false;
     });
 
-    it('fetches data from SIMORGH_FRONTPAGE_BASE_URL enviroment variable origin', async () => {
+    it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
       const response = await getFrontpageInitialData(defaultContext);
 
       expect(fetchData).toHaveBeenCalledWith({
-        url: 'https://www.SIMORGH_FRONTPAGE_BASE_URL.com/news.json',
+        url: 'https://www.SIMORGH_BASE_URL.com/news.json',
         preprocessorRules,
       });
 
