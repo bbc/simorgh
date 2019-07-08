@@ -1217,8 +1217,11 @@
                           {
                             "type": "rawImage",
                             "model": {
+                              "width": 375,
+                              "height": 633,
                               "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
                             }
                           }
                         ]
