@@ -15,13 +15,8 @@ const buildServiceType = (service, type) => `${service} - ${type}`;
 
 const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
-export const getSylphidCookie = () => {
-  if (!onClient()) {
-    return null;
-  }
-
-  return Cookie.get(ID_COOKIE) || null;
-};
+export const getSylphidCookie = () =>
+  onClient() ? Cookie.get(ID_COOKIE) : null;
 
 export const getDomain = service => {
   const serviceLower = service.toLowerCase();

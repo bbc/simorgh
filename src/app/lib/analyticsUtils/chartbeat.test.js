@@ -24,12 +24,12 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat ID Cookie', () => {
     it('should return null when onClient is false', () => {
-      expect(getSylphidCookie()).toBe(null);
+      expect(getSylphidCookie()).toBeFalsy();
     });
 
     it('should return null when ID cookie does not exist', () => {
       isOnClient = true;
-      expect(getSylphidCookie()).toBe(null);
+      expect(getSylphidCookie()).toBeFalsy();
     });
 
     it('should return the contents of the ID cookie when a value is present', () => {
