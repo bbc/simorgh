@@ -4,7 +4,7 @@ These are a set of data samples which represent possible input to Simorgh from u
 
 Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 
-The assets sequentially numbered are for local testing, those which aren't are either on the test or live environments.
+The assets sequentially numbered are for local testing, those which aren't are also available either on the test or live environments.
 
 <!--prettier-ignore-->
 | Scenario | Metadata | Content | Tagging | Notes |
@@ -45,12 +45,3 @@ The assets sequentially numbered are for local testing, those which aren't are e
 | -----------: | ------------- |
 | c3wmq4d1y3wo | TEST asset containing multiple AV scenarios |
 | cd4117egk3go | PROD asset containing one live environment video |
-
-All these are included in article cmejqde986vo.
-
-|      PID | Availability  |
-| -------: | ------------- |
-| p01k6msm | International |
-| p01kdbwr | International |
-| p01kdbns | UK            |
-| p01kdbpz | Ex-UK         |
