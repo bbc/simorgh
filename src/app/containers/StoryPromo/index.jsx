@@ -7,7 +7,7 @@ import StoryPromoComponent, {
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import { storyItem } from '../../models/propTypes/storyItem';
-import FigureContainer from '../Figure';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
 import deepGet from '../../lib/utilities/deepGet';
@@ -34,12 +34,11 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
   return (
-    <FigureContainer
+    <ImageWithPlaceholder
       alt={imageValues.altText}
       ratio={ratio}
       src={src}
       {...imageValues}
-      useFigure={false}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
       srcset={srcset}
@@ -49,11 +48,11 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
 
 StoryPromoImage.propTypes = {
   lazyLoad: bool.isRequired,
-  imageValues: storyItem.indexImage.isRequired,
+  imageValues: shape(storyItem.indexImage).isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage }) => {
-  const { script } = useContext(ServiceContext);
+const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
+  const { script, datetimeLocale } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -66,15 +65,20 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={script}>
+        <Headline script={script} topStory={topStory}>
           <Link href={url}>
             <LinkContents item={item} />
           </Link>
         </Headline>
       )}
-      {summary && <Summary script={script}>{summary}</Summary>}
+      {summary && (
+        <Summary script={script} topStory={topStory}>
+          {summary}
+        </Summary>
+      )}
       {timestamp && (
         <Timestamp
+          locale={datetimeLocale}
           timestamp={timestamp * 1000}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
@@ -95,6 +99,7 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
       image={Image}
       info={Info}
       mediaIndicator={<MediaIndicator item={item} />}
+      topStory={topStory}
     />
   );
 };
@@ -102,10 +107,12 @@ const StoryPromo = ({ item, lazyLoadImage }) => {
 StoryPromo.propTypes = {
   item: shape(storyItem).isRequired,
   lazyLoadImage: bool,
+  topStory: bool,
 };
 
 StoryPromo.defaultProps = {
   lazyLoadImage: true,
+  topStory: false,
 };
 
 export default StoryPromo;

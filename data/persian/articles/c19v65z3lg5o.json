@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c19v65z3lg5o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
+      "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
+    },
+    "type": "article",
+    "createdBy": "Persian",
+    "language": "fa",
+    "lastUpdated": 1560350484907,
+    "firstPublished": 1560347946274,
+    "lastPublished": 1560347946274,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "inline",
+      "audio",
+      "caption",
+      "video",
+      "subheadline",
+      "urlLink",
+      "image",
+      "altText",
+      "rawImage"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "جام جهانی ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "فوتبال",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " زنان؛ تفاوت دستمزد با مردان چقدر است؟",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "جام جهانی فوتبال زنان  - \n202AFIFA Women's World Cup\n202C - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "جام جهانی فوتبال زنان  - ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "FIFA Women's World Cup",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "FIFA Women's World Cup",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "en-gb"
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "اما بازیکنان حاضر در این رقابت از حقوقی که می‌گیرند و میزان جایزه‌ها در مقایسه با فوتبال مردان ناراضی هستند.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "اما بازیکنان حاضر در این رقابت از ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "حقوقی",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " که می‌گیرند و میزان ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "جایزه‌ها",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " در مقایسه با فوتبال مردان ناراضی هستند.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " English paragraph to be added here when functionality promoted to Optimo test",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " English paragraph to be added here when functionality promoted to Optimo test",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01m7d07",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام جهانی ۲۰۱۵ را جشن گرفته است",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "جهانی",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " ۲۰۱۵ را جشن گرفته است",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d07",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01m7d07",
+                        "subType": "clip",
+                        "format": "audio",
+                        "title": "Birmingham checkout",
+                        "synopses": {
+                          "short": "Some audio from a supermarket checkout in Birmingham"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                        "imageCopyright": "Getty Images",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01m7d09",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {
+                              "short": "Contains some strong language.",
+                              "long": "Contains some strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1555067395
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 2048,
+                              "height": 1152,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "England star Fran Kirby",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "England star Fran Kirby",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01mt125",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01mt125",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01mt125",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Robin",
+                        "synopses": {
+                          "short": "A Robin perches on a branch"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt1bp.jpg",
+                        "imageCopyright": "Simon Rollings",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "Robins are a popular bird in the UK, as well as a given name",
+                        "versions": [
+                          {
+                            "versionId": "p01mt129",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 10,
+                            "durationISO8601": "PT10S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1560346976
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1280,
+                              "height": 720,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt1bp.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Simon Rollings"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Robin",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Robin",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "بازیکنان تمام مبلغ جایزه را می‌گیرند؟",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "بازیکنان تمام مبلغ ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "جایزه",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " را می‌گیرند؟",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "http://t.me/bbcpersian",
+                        "isExternal": true
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "http://www.bbc.com/persian/sport-48547907",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "جیل الیس",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "جیل الیس",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "f2c9/test/17a0c8b0-8d1a-11e9-b0be-cb6d2b512d8b.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
+      "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
+    },
+    "summary": "",
+    "timestamp": 1560347946274,
+    "id": "urn:bbc:ares::article:c19v65z3lg5o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "singleJourney": [],
+  "moreFromTheBBC": [],
+  "mostRead": [
+    {
+      "headlines": {
+        "promoHeadline": "Greece emerges from debt crisis regime"
+      },
+      "locators": {
+        "uri": "/news/business-45243088"
+      },
+      "timestamp": 1534761406,
+      "image": {
+        "blockId": "d228e31c-95d7-4614-bacd-bac4672dbb29",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "06af9889-06f8-48f6-bcfb-b278417861cf",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "5E54/production/_103084142_mediaitem103084140.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "AFP"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Energy switch firm wins record Dragon deal"
+      },
+      "locators": {
+        "uri": "/news/business-45244761"
+      },
+      "timestamp": 1534759600,
+      "image": {
+        "blockId": "e5deda34-d12c-4400-b213-90b541d7c6d0",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "b6bbaed9-8fc4-43b5-aad0-e5b65646773f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B17E/production/_103083454_dragons.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "UK woman rescued after 10 hours in sea"
+      },
+      "locators": {
+        "uri": "/news/uk-45240390"
+      },
+      "timestamp": 1534762438,
+      "image": {
+        "blockId": "23f653b0-805e-4b2d-ba38-5fb4b79dbe4b",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "1e4556c2-53eb-491f-938b-9ef9458889f2",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "6CF9/production/_103079872_mediaitem103079871.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "How to survive for 10 hours in the water"
+      },
+      "locators": {
+        "uri": "/news/uk-45244269"
+      },
+      "timestamp": 1534759395,
+      "image": {
+        "blockId": "4e559990-fe8b-4e48-9d58-ecd799cc76f0",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "dc3f49f7-5272-46c0-a7ec-1f541c8e1a4f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Shutterstock"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jobcentre joke is funniest at the Fringe"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
+      },
+      "timestamp": 1534757191,
+      "image": {
+        "blockId": "87eb7778-84c5-4d8e-80b8-c7fc5cfa2f92",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "17a22ddb-b79b-44e1-ba1b-780ac402fed0",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2573/production/_103078590_adamfb.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Adam Rowe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Crisis council money 'bought rugby box'"
+      },
+      "locators": {
+        "uri": "/news/uk-england-northamptonshire-45211357"
+      },
+      "timestamp": 1534720965,
+      "image": {
+        "blockId": "a4e49efc-cb6d-452a-a6fe-31121160bce2",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "75f62edb-c179-4cc2-a3cf-444c28799b26",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "'It never entered my mind that I wasn't coming back'"
+      },
+      "locators": {
+        "uri": "/news/business-44894414"
+      },
+      "timestamp": 1534720669,
+      "image": {
+        "blockId": "df8062f8-8f11-4c45-b0dc-50b0e1cff872",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "31b911a5-21f7-45a4-b1d5-0ed55e671827",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Baby born in helicopter above Cornwall"
+      },
+      "locators": {
+        "uri": "/news/uk-england-cornwall-45244859"
+      },
+      "timestamp": 1534750881,
+      "image": {
+        "blockId": "a26e3252-1faf-4f31-ba93-d8f1a5ca0dfe",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "7686b4b1-40fe-4f79-afec-6cbcebbb33c1",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "5486/production/_103083612_helicopter.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Greg Caygill"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "The deadly hostage drama where the media crossed a line"
+      },
+      "locators": {
+        "uri": "/news/stories-45226482"
+      },
+      "timestamp": 1534720978,
+      "image": {
+        "blockId": "91aa958b-caf2-4398-a73d-b4c6e30c7adb",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "59f4e9e2-d525-4be8-9976-d8fe1f5779fd",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Alamy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Mulberry shares collapse on profit warning"
+      },
+      "locators": {
+        "uri": "/news/business-45244579"
+      },
+      "timestamp": 1534755771,
+      "image": {
+        "blockId": "d9c60ed4-dab5-49fe-997f-b04fa6fecae8",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "8d3f03c7-1c9c-4ffb-b946-b2894a3326b6",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "4B26/production/_103083291_mediaitem103083290.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Mulberry"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

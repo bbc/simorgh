@@ -1,3 +1,5 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
 import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import {
   NoData,
@@ -7,11 +9,14 @@ import {
   VideoClipGlobalPortrait,
   VideoClipUkWithGuidance,
   VideoClipNonUk,
-  AudioClipGlobalGuidance,
+  AudioClipGlobalGuidanceWithCaption,
   AudioClipUk,
   AudioClipNonUk,
-  AudioEpisodeGlobal,
 } from './fixtureData';
+import VideoContainer from '.';
+import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
+import * as gridComponents from '../../lib/styledGrid';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 describe('AudioVideo', () => {
   describe('with no data', () => {
@@ -28,6 +33,19 @@ describe('AudioVideo', () => {
   });
 
   describe('with Video data', () => {
+    it('should render', () => {
+      const mockGridItem = jest.fn().mockReturnValue('whatever');
+      gridComponents.GridItemConstrainedLargeNoMargin = mockGridItem;
+
+      renderer.create(
+        <RequestContextProvider isAmp>
+          <VideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
+        </RequestContextProvider>,
+      );
+
+      expect(mockGridItem).toHaveBeenCalledTimes(1);
+    });
+
     shouldShallowMatchSnapshot(
       'canonical - should render the video without a caption',
       VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
@@ -78,12 +96,12 @@ describe('AudioVideo', () => {
 
   describe('with Audio data', () => {
     shouldShallowMatchSnapshot(
-      'canonical - should render audio clip global with guidance',
-      AudioClipGlobalGuidance({ platform: 'canonical' }),
+      'canonical - should render audio clip global with guidance and caption',
+      AudioClipGlobalGuidanceWithCaption({ platform: 'canonical' }),
     );
     shouldShallowMatchSnapshot(
-      'amp - should render audio clip global with guidance',
-      AudioClipGlobalGuidance({ platform: 'amp' }),
+      'amp - should render audio clip global with guidance and caption',
+      AudioClipGlobalGuidanceWithCaption({ platform: 'amp' }),
     );
 
     shouldShallowMatchSnapshot(
@@ -102,15 +120,6 @@ describe('AudioVideo', () => {
     shouldShallowMatchSnapshot(
       'amp - should render audio clip non-UK only',
       AudioClipNonUk({ platform: 'amp' }),
-    );
-
-    shouldShallowMatchSnapshot(
-      'canonical - should render audio episode global',
-      AudioEpisodeGlobal({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render audio episode global',
-      AudioEpisodeGlobal({ platform: 'amp' }),
     );
   });
 });

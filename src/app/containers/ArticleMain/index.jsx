@@ -1,4 +1,5 @@
 import React, { Fragment, useContext } from 'react';
+import { DialContext } from '../../contexts/DialContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -6,9 +7,8 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostWrapper } from '../../lib/styledGrid';
+import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import { RequestContext } from '../../contexts/RequestContext';
 
 const componentsToRender = {
   headline: headings,
@@ -18,19 +18,26 @@ const componentsToRender = {
   timestamp,
 };
 
+const avEnabledComment = (
+  // eslint-disable-next-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
+);
+
 const ArticleMain = ({ articleData }) => {
-  const { pageType } = useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
 
+  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
+
   return (
     <Fragment>
-      <ATIAnalytics data={articleData} pageType={pageType} />
+      <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
-        <GhostWrapper>
+        {audioVideoEnabled && avEnabledComment}
+        <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </GhostWrapper>
+        </GhostGrid>
       </main>
     </Fragment>
   );

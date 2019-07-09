@@ -5,9 +5,9 @@ import { Headline } from '@bbc/psammead-headings';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from 'drew-testing-123/esm/prop-types';
-import { getParagon, GEL_FF_REITH_SANS } from 'drew-testing-123/esm/typography';
-import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import { GhostGrid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const StatusCode = styled.span`
@@ -39,7 +39,7 @@ const ErrorPage = ({
   script,
 }) => (
   <main role="main">
-    <GhostWrapper>
+    <GhostGrid>
       <LongGridItemConstrainedMedium>
         <ShortHeadline script={script}>
           <StatusCode script={script}>{statusCode}</StatusCode>
@@ -61,7 +61,7 @@ const ErrorPage = ({
           {callToActionLast}
         </Paragraph>
       </LongGridItemConstrainedMedium>
-    </GhostWrapper>
+    </GhostGrid>
   </main>
 );
 

@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
@@ -15,7 +16,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        * And therefore stops `node_modules` being watched for file changes
        */
       nodeExternals({
-        whitelist: ['webpack/hot/poll?100', /drew-testing-123\/.*/],
+        whitelist: ['webpack/hot/poll?100'],
       }),
     ],
     watch: true,
@@ -26,11 +27,18 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        */
       __dirname: false,
     },
+    plugins: [
+      /**
+       * Limit chunks to 1 to avoid unnecessary service bundle splitting
+       */
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
   };
 
   if (START_DEV_SERVER) {
     const StartServerPlugin = require('start-server-webpack-plugin');
-    const webpack = require('webpack');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new StartServerPlugin('server.js'), // only start the server if we've run `npm run dev`

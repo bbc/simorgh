@@ -1,0 +1,286 @@
+{
+  "singleJourney": [],
+  "moreFromTheBBC": [],
+  "mostRead": [
+    {
+      "headlines": {
+        "promoHeadline": "'It never entered my mind that I wasn't coming back'"
+      },
+      "locators": {
+        "uri": "/news/business-44894414"
+      },
+      "timestamp": 1534720669,
+      "image": {
+        "blockId": "53d5a167-3b45-4168-a3c0-dc3f8869a19f",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "9fdcdc51-88aa-4eea-a3c2-40dee5b2e137",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jobcentre joke is funniest at the Fringe"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
+      },
+      "timestamp": 1534757191,
+      "image": {
+        "blockId": "5ba7e7fd-e6a1-41bc-9cd2-ff5981f099e1",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "013d6a37-651d-4b45-89dc-d2670363f1e3",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2573/production/_103078590_adamfb.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Adam Rowe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Venue probe after star thrown out of show"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45248730"
+      },
+      "timestamp": 1534769676,
+      "image": {
+        "blockId": "0677b2af-b21b-477a-adf3-189c5591c1dc",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "57f1a984-7aeb-449c-beec-9be23dce5630",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "6C79/production/_103096772_mediaitem103096770.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Layton Williams"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Energy switch firm wins record Dragon deal"
+      },
+      "locators": {
+        "uri": "/news/business-45244761"
+      },
+      "timestamp": 1534759600,
+      "image": {
+        "blockId": "dc39a431-ef55-47e5-a787-8b666a0d7970",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "6c1fbcc8-d3d7-44c4-8a84-503211a4a3c9",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B17E/production/_103083454_dragons.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jamie Oliver's 'jerk rice' sparks debate"
+      },
+      "locators": {
+        "uri": "/news/newsbeat-45246009"
+      },
+      "timestamp": 1534759932,
+      "image": {
+        "blockId": "3f7127a2-9a1e-47f6-8ee1-f3eb0256d1d3",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "ef713d39-a0d5-4e38-a81f-8747d020b2bb",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "0ECD/production/_103098730_jamie_oliver_getty.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Paris Jackson sorry for Singapore cover"
+      },
+      "locators": {
+        "uri": "/news/entertainment-arts-45245333"
+      },
+      "timestamp": 1534763852,
+      "image": {
+        "blockId": "f7590112-73a7-44d2-8837-5675ca442ddb",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "ba92bf0b-fee1-4ea0-83fa-ddd951f8b502",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B837/production/_103095174_paris-getty-2.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Knifeman killed at Spanish police station"
+      },
+      "locators": {
+        "uri": "/news/world-europe-45244739"
+      },
+      "timestamp": 1534768459,
+      "image": {
+        "blockId": "9f8a2530-3e6a-4027-aba8-1a24cb831abe",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "217615b1-4f46-40f6-ba2a-82c5a0018730",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "EPA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "UK woman rescued after 10 hours in sea"
+      },
+      "locators": {
+        "uri": "/news/uk-45240390"
+      },
+      "timestamp": 1534772217,
+      "image": {
+        "blockId": "95edcb34-f21e-4ff9-9eb3-cac355684cb0",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "bae4934c-cd7b-444d-97a0-a30093d33cdf",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "How to survive for 10 hours in the water"
+      },
+      "locators": {
+        "uri": "/news/uk-45244269"
+      },
+      "timestamp": 1534764954,
+      "image": {
+        "blockId": "17dd3925-1bca-4a49-9fc5-eabf54724d2f",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f30f5124-4c1e-4efc-80df-e28dd4085d92",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Shutterstock"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Gatwick flight information screens fail"
+      },
+      "locators": {
+        "uri": "/news/uk-england-sussex-45247499"
+      },
+      "timestamp": 1534767877,
+      "image": {
+        "blockId": "df8dba1e-b5d6-44a9-9d08-728fd10174be",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "cd7fc9b0-b2c1-47f3-9653-93c9099f5989",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Edmund von der Burg "
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

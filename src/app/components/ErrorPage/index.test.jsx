@@ -1,5 +1,5 @@
 import React from 'react';
-import { latin, arabic } from 'drew-testing-123/esm/scripts';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import ErrorMain from './index';
 

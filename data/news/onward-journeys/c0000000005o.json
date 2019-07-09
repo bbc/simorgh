@@ -1,0 +1,673 @@
+{
+  "singleJourney": [
+    {
+      "topicId": "cwlw3xz0lvvt",
+      "topicName": "Brexit",
+      "content": [
+        {
+          "headlines": {
+            "promoHeadline": "Firms 'hit by EU labour shortages'"
+          },
+          "locators": {
+            "uri": "/news/business-45162132"
+          },
+          "timestamp": 1534115732,
+          "image": {
+            "blockId": "ac949dbe-4ca9-4d4d-a187-a3a18521931f",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "c6454078-6771-4d0b-ac4f-9cd6976f670a",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "65FA/production/_99760162_gettyimages-862588248.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz0lvvt/brexit"
+    }
+  ],
+  "moreFromTheBBC": [
+    {
+      "topicId": "cwlw3xz0lvvt",
+      "topicName": "Brexit",
+      "content": [
+        {
+          "headlines": {
+            "promoHeadline": "Firms 'hit by EU labour shortages'"
+          },
+          "locators": {
+            "uri": "/news/business-45162132"
+          },
+          "timestamp": 1534115732,
+          "image": {
+            "blockId": "ac949dbe-4ca9-4d4d-a187-a3a18521931f",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "c6454078-6771-4d0b-ac4f-9cd6976f670a",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "65FA/production/_99760162_gettyimages-862588248.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "New Brexit vote campaign gets £1m donation"
+          },
+          "locators": {
+            "uri": "/news/uk-politics-45235655"
+          },
+          "timestamp": 1534682446,
+          "image": {
+            "blockId": "42f5e472-b2c6-47ef-ab39-1a1428551efa",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "e71502a4-bb76-466f-9f85-4a6795462f96",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "FA6B/production/_103070146_gettyimages-589501338.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Bank chief warns on Brexit staff moves"
+          },
+          "locators": {
+            "uri": "/news/business-45238457"
+          },
+          "timestamp": 1534678572,
+          "image": {
+            "blockId": "ee67cfa2-f2c6-41e3-bb03-be4cb09bcd5f",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "8bc72902-f37d-4a69-b7c8-b381632cfc07",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "5633/production/_103076022_stancharshadow.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Government to publish no-deal Brexit advice"
+          },
+          "locators": {
+            "uri": "/news/uk-politics-45237152"
+          },
+          "timestamp": 1534643937,
+          "image": {
+            "blockId": "001628ae-f9d2-42ba-a302-acc30f8f6284",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "5f3f7cae-fb1d-46ca-aada-9d6aa38a766d",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "B8F3/production/_103074374_hi048356448.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Reuters"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Farage to go 'on the road' with Leave group"
+          },
+          "locators": {
+            "uri": "/news/uk-politics-45229426"
+          },
+          "timestamp": 1534607930,
+          "image": {
+            "blockId": "dbee5248-be73-4042-9f4d-a688067b1712",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "a2411402-24c8-4c62-a9ed-35d2c4da0c59",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "6B87/production/_103072572_p06htr40.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Brexit plan a complete betrayal - Farage"
+          },
+          "locators": {
+            "uri": "/news/uk-politics-45234956"
+          },
+          "timestamp": 1534607853,
+          "image": {
+            "blockId": "c64d1b37-b112-48ed-8893-b277d4f73a19",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "c1ef15cc-3041-4408-961e-887e445b52ce",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "151FF/production/_103072568_p06htr40.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cwlw3xz0lvvt/brexit"
+    },
+    {
+      "topicId": "cjkm56d0p7et",
+      "topicName": "Manchester",
+      "content": [
+        {
+          "headlines": {
+            "promoHeadline": "Bolton keep up unbeaten start at Reading"
+          },
+          "locators": {
+            "uri": "/sport/football/45152571"
+          },
+          "timestamp": 1534608368,
+          "image": {
+            "blockId": "529abfde-a86b-4acd-9d5f-16e7e0715087",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "aed481b4-a310-46ac-8b88-36144312d1d1",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2048,
+                    "height": 1152,
+                    "locator": "17A27/production/_103070869_gettyimages-1010945444.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Pogba criticises Man Utd attitude"
+          },
+          "locators": {
+            "uri": "/sport/football/45159603"
+          },
+          "timestamp": 1534707178,
+          "image": {
+            "blockId": "6f8a26c6-9c15-422c-98dd-a7ecfad9a84b",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "2ede542e-52ea-49e7-8046-83e2db5e4109",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 768,
+                    "height": 432,
+                    "locator": "B3B8/production/_103080064_paulpogba.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Teenagers bailed after three men stabbed"
+          },
+          "locators": {
+            "uri": "/news/uk-england-manchester-45240372"
+          },
+          "timestamp": 1534695690,
+          "image": {
+            "blockId": "3dc17442-09c4-4169-b5f0-1bfae61acef5",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "b35e655a-9eb9-4d38-94e9-e2acd48dea15",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "1C12/production/_103068170_pg.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Man City documentary 'not disrespectful'"
+          },
+          "locators": {
+            "uri": "/sport/football/45241107"
+          },
+          "timestamp": 1534701579,
+          "image": {
+            "blockId": "715b07a7-a441-46ab-a339-d042ece7c721",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "9af08298-31a2-486a-b910-fb3f91de2778",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2048,
+                    "height": 1152,
+                    "locator": "174A5/production/_103079359_guardiola_getty.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Aguero treble as Man City thrash Terriers"
+          },
+          "locators": {
+            "uri": "/sport/football/45159602"
+          },
+          "timestamp": 1534694593,
+          "image": {
+            "blockId": "f0e70a9e-0399-429b-992b-8ea66101822c",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "37ee471b-6286-4987-836e-00b3f21fdffc",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 624,
+                    "height": 351,
+                    "locator": "4342/production/_103081271_sergioaguero.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Man dies in crash on pedestrian crossing"
+          },
+          "locators": {
+            "uri": "/news/uk-england-manchester-45239239"
+          },
+          "timestamp": 1534678456,
+          "image": {
+            "blockId": "e4dcbeec-79ca-49f1-bf76-9d1525001a7d",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "d04dfec1-2d55-46fc-ac46-05474b923d71",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "16F7D/production/_103077049_tw.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Google"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/localnews/2643123-manchester/0"
+    }
+  ],
+  "mostRead": [
+    {
+      "headlines": {
+        "promoHeadline": "Mulberry shares collapse on profit warning"
+      },
+      "locators": {
+        "uri": "/news/business-45244579"
+      },
+      "timestamp": 1534755771,
+      "image": {
+        "blockId": "df1713a4-5614-4c1c-bd54-9d05900644ea",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "c1ad59e4-7daf-4867-b51b-8e207329eed7",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "4B26/production/_103083291_mediaitem103083290.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Mulberry"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Energy switch firm wins record Dragon deal"
+      },
+      "locators": {
+        "uri": "/news/business-45244761"
+      },
+      "timestamp": 1534759600,
+      "image": {
+        "blockId": "02301623-f0ce-4eab-83e3-2b66ccdc0e7d",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "adf78cd8-8e42-46a3-b84c-dbf454bc911f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B17E/production/_103083454_dragons.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "UK woman rescued after 10 hours in sea"
+      },
+      "locators": {
+        "uri": "/news/uk-45240390"
+      },
+      "timestamp": 1534762438,
+      "image": {
+        "blockId": "3d3134be-6f8d-469a-a702-ceb5892d47b3",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "dd4caa47-ce51-4989-be80-428c5ec7f74f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "6CF9/production/_103079872_mediaitem103079871.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Crisis council money 'bought rugby box'"
+      },
+      "locators": {
+        "uri": "/news/uk-england-northamptonshire-45211357"
+      },
+      "timestamp": 1534720965,
+      "image": {
+        "blockId": "e15a6ea4-6680-489d-8254-1ace8fef5403",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "d8680788-a4ed-4a7d-9a02-e8b1e604f5d1",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jobcentre joke is funniest at the Fringe"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
+      },
+      "timestamp": 1534757191,
+      "image": {
+        "blockId": "b04d94ce-6254-4ad3-9632-da066e26205a",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "5ba30bb1-0f65-486c-9503-e69df0013b1c",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2573/production/_103078590_adamfb.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Adam Rowe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Knifeman killed at Spanish police station"
+      },
+      "locators": {
+        "uri": "/news/world-europe-45244739"
+      },
+      "timestamp": 1534759236,
+      "image": {
+        "blockId": "dd3114f2-9a05-4b65-8bde-891252f444a6",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "c83afa62-ed80-439b-bcbf-9b88c9212ac4",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "EPA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "'It never entered my mind that I wasn't coming back'"
+      },
+      "locators": {
+        "uri": "/news/business-44894414"
+      },
+      "timestamp": 1534720669,
+      "image": {
+        "blockId": "a28bf82c-bf6c-4231-9dec-8b9366b514e1",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "c7322436-06fd-4613-82de-4b8062a699d6",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Gatwick flight information screens fail"
+      },
+      "locators": {
+        "uri": "/news/uk-england-sussex-45247499"
+      },
+      "timestamp": 1534762702,
+      "image": {
+        "blockId": "432a83c5-0d0d-44ad-b905-3d0f47939e90",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "4bb539df-6a13-4274-85c6-514cada85c8b",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "15FCB/production/_103095009_gatwick_sherritracysengsouvanna.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Sherri Tracy Sengsouvanna "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "The deadly hostage drama where the media crossed a line"
+      },
+      "locators": {
+        "uri": "/news/stories-45226482"
+      },
+      "timestamp": 1534720978,
+      "image": {
+        "blockId": "19fba5d6-a18e-4220-9bb5-46aa38046885",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "36a26a6a-2166-4233-8110-82df01885098",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Alamy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "How to survive for 10 hours in the water"
+      },
+      "locators": {
+        "uri": "/news/uk-45244269"
+      },
+      "timestamp": 1534759395,
+      "image": {
+        "blockId": "74b9faeb-1b28-4181-b3ec-72a7752a1564",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "69e6e1a0-7788-4183-8461-32c2b6fe82b6",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Shutterstock"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

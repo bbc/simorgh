@@ -1,26 +1,42 @@
-import config from '../support/config';
+import services from '../support/config/services';
 import {
   getElement,
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
-import { testResponseCode, checkCanonicalURL } from '../support/metaTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${config.assets.news}.amp`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
-      testResponseCode(`/news/articles/${config.assets.news}.amp`, 200);
+      cy.testResponseCodeAndType(
+        `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
+        200,
+        'text/html',
+      );
     });
   });
 
   it('should error gracefully', () => {
-    testResponseCode(`/news/articles/${config.assets.news}.cake`, 404);
-    testResponseCode(`/news/lol/${config.assets.news}.amp`, 404);
-    testResponseCode(`/cake/articles/${config.assets.news}.amp`, 404);
+    cy.testResponseCodeAndType(
+      `/news/articles/${services.news.pageTypes.articles.asset}.cake`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/news/lol/${services.news.pageTypes.articles.asset}.amp`,
+      404,
+      'text/html',
+    );
+    cy.testResponseCodeAndType(
+      `/cake/articles/${services.news.pageTypes.articles.asset}.amp`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have AMP attribute', () => {
@@ -86,11 +102,13 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should include the canonical URL', () => {
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(`${canonicalOrigin}/news/articles/${config.assets.news}`);
+    checkCanonicalURL(
+      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
+    );
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit(`/news/articles/${config.assets.news}`);
+    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     getElement('html').should('not.have.attr', 'amp');
   });
 });

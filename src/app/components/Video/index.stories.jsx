@@ -1,24 +1,35 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Video from './index';
+import {
+  videoClipGlobalGuidance,
+  videoClipUkGuidance,
+  videoClipNonUkNoGuidance,
+  videoClipGlobalNoGuidancePortrait,
+  audioClipGlobalGuidance,
+  audioClipUkNoGuidance,
+  audioClipNonUkNoGuidance,
+} from './helpers/fixtures';
 
-const props = {
-  pid: 'p00a00a',
-  kind: 'clip',
-  title: 'Static Data Example',
-  items: [
-    {
-      versionID: 'p00p00v',
-      kind: 'clip',
-      duration: 10,
-    },
-  ],
-  holdingImageUrl: 'https://www.foo.bar/baz.png',
-  statsAppName: 'news',
-  statsAppType: 'responsive',
-  statsCountername: 'news.articles.c0000000000o.page',
-  statsDestination: 'NEWS_PS_TEST',
-  uiLocale: 'en-GB',
-};
-
-storiesOf('Video', module).add('default', () => <Video {...props} />);
+storiesOf('Video', module)
+  .add('video, clip, global, with guidance', () => (
+    <Video {...videoClipGlobalGuidance} />
+  ))
+  .add('video, clip, UK only, with guidance', () => (
+    <Video {...videoClipUkGuidance} />
+  ))
+  .add('video, clip, non-UK, without guidance', () => (
+    <Video {...videoClipNonUkNoGuidance} />
+  ))
+  .add('video, clip, global, no guidance, portrait', () => (
+    <Video {...videoClipGlobalNoGuidancePortrait} />
+  ))
+  .add('audio, clip, global, with guidance', () => (
+    <Video {...audioClipGlobalGuidance} />
+  ))
+  .add('audio, clip, UK, without guidance', () => (
+    <Video {...audioClipUkNoGuidance} />
+  ))
+  .add('audio, clip, non-UK, without guidance', () => (
+    <Video {...audioClipNonUkNoGuidance} />
+  ));

@@ -18,7 +18,7 @@ describe('Client', () => {
       'https://my-routing-layer.test.cookieless-domain.co.uk/',
       'https://www.test.bbc.co.uk',
     ],
-    ['http://localhost:7080', 'http://localhost:7080'],
+    ['http://localhost.bbc.com:7080', 'http://localhost.bbc.com:7080'],
     ['https://foobar.org', 'https://www.bbc.com'],
     ['http://foobar.org', 'https://www.bbc.com'],
     ['foobar.org', 'https://www.bbc.com'],

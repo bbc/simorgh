@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import {
-  GhostWrapper,
+  Grid,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -10,6 +10,7 @@ import {
   NestedGridItemSmall,
   NestedGridItemMedium,
   NestedGridItemLarge,
+  PopOutGridItemMedium,
 } from '.';
 
 const red = '#ffaacc';
@@ -26,7 +27,7 @@ const ColouredDiv = styled.div`
 
 storiesOf('Grid Examples', module)
   .add('GridItemConstrainedSmall', () => (
-    <GhostWrapper>
+    <Grid>
       <GridItemConstrainedSmall>
         <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/4 or 1/5 or 1/8</ColouredDiv>
@@ -53,10 +54,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={red}>4/4 or 5/5 or 8/8</ColouredDiv>
         </NestedGridItemSmall>
       </GridItemConstrainedSmall>
-    </GhostWrapper>
+    </Grid>
   ))
   .add('GridItemConstrainedMedium', () => (
-    <GhostWrapper>
+    <Grid>
       <GridItemConstrainedMedium>
         <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/5 or 1/10</ColouredDiv>
@@ -89,10 +90,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={yellow}>5/5 or 10/10</ColouredDiv>
         </NestedGridItemMedium>
       </GridItemConstrainedMedium>
-    </GhostWrapper>
+    </Grid>
   ))
   .add('GridItemConstrainedLarge', () => (
-    <GhostWrapper>
+    <Grid>
       <GridItemConstrainedLarge>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/6 or 1/12</ColouredDiv>
@@ -131,10 +132,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={blue}>6/6 or 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLarge>
-    </GhostWrapper>
+    </Grid>
   ))
   .add('GridItemConstrainedLargeNoMargin', () => (
-    <GhostWrapper>
+    <Grid>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
           <ColouredDiv colour={red}>1/6 or 1/12</ColouredDiv>
@@ -173,10 +174,10 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={blue}>6/6 or 12/12</ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
-    </GhostWrapper>
+    </Grid>
   ))
   .add('Example of multi-breakpoint span', () => (
-    <GhostWrapper>
+    <Grid>
       <GridItemConstrainedLargeNoMargin>
         <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '12' }}>
           <ColouredDiv colour={blue}>
@@ -194,5 +195,24 @@ storiesOf('Grid Examples', module)
           </ColouredDiv>
         </NestedGridItemLarge>
       </GridItemConstrainedLargeNoMargin>
-    </GhostWrapper>
+    </Grid>
+  ))
+  .add('Group 5 breakpoint pop-out grid item', () => (
+    <Grid>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <PopOutGridItemMedium>
+        <ColouredDiv colour={blue}>Popout</ColouredDiv>
+      </PopOutGridItemMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+      <GridItemConstrainedMedium>
+        <ColouredDiv colour={violet}>GridItemConstrainedMedium</ColouredDiv>
+      </GridItemConstrainedMedium>
+    </Grid>
   ));

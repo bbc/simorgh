@@ -7,18 +7,18 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import frontPageData from '../../../../data/igbo/frontpage/index.json';
 
 const Container = (service, bbcOrigin, platform, data, id) => {
   const serviceConfig = services[service];
   return (
     <ServiceContextProvider {...serviceConfig}>
       <RequestContextProvider
-        platform={platform}
+        bbcOrigin={bbcOrigin}
         id={id}
-        isUK
-        origin={bbcOrigin}
-        statsDestination="NEWS_PS_TEST"
-        statsPageIdentifier={`${service}.articles.${id}.page`}
+        isAmp={platform === 'amp'}
+        pageType="article"
+        service={service}
       >
         <MetadataContainer {...data} />
       </RequestContextProvider>
@@ -35,14 +35,19 @@ const metadataProps = (
   dir,
   lang,
   metaTags,
+  timeFirstPublished,
+  timeLastPublished,
   title,
   serviceConfig,
+  type,
+  service,
+  showArticleTags,
 ) => ({
   isAmp,
   alternateLinks,
   ampLink,
   appleTouchIcon: `https://foo.com/static/${serviceConfig.service}/images/icons/icon-192x192.png`,
-  articleAuthor: serviceConfig.articleAuthor,
+  articleAuthor: serviceConfig.articleAuthor || null,
   articleSection: null,
   brandName: serviceConfig.brandName,
   canonicalLink,
@@ -56,31 +61,49 @@ const metadataProps = (
   locale: serviceConfig.locale,
   metaTags,
   themeColor: serviceConfig.themeColor,
-  timeFirstPublished: '2018-01-01T12:01:00.000Z',
-  timeLastPublished: '2018-01-01T13:00:00.000Z',
+  timeFirstPublished,
+  timeLastPublished,
   title,
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
-  type: 'article',
+  type,
+  service,
+  showArticleTags,
+  iconSizes: {
+    'apple-touch-icon': [
+      '72x72',
+      '96x96',
+      '128x128',
+      '144x144',
+      '152x152',
+      '192x192',
+      '384x384',
+      '512x512',
+    ],
+    icon: ['72x72', '96x96', '192x192'],
+  },
 });
 
 const linkedDataProps = (
   brandName,
   canonicalLink,
+  firstPublished,
+  lastUpdated,
   createdBy,
   logoUrl,
   seoHeadline,
+  type,
   about = undefined,
 ) => ({
   brandName,
   canonicalLink,
-  firstPublished: '2018-01-01T12:01:00.000Z',
-  lastUpdated: '2018-01-01T13:00:00.000Z',
+  firstPublished,
+  lastUpdated,
   logoUrl,
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   seoHeadline,
-  type: 'article',
+  type,
   about,
 });
 
@@ -129,17 +152,25 @@ describe('Metadata Container', () => {
           'ltr',
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
           services.news,
+          'article',
+          'news',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News',
           'https://www.bbc.com/news/articles/c0000000001o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
+          'article',
           [
             {
               '@type': 'Thing',
@@ -192,17 +223,25 @@ describe('Metadata Container', () => {
           'ltr',
           'en-gb',
           ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
           services.news,
+          'article',
+          'news',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News',
           'https://www.bbc.com/news/articles/c0000000001o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
+          'article',
           [
             {
               '@type': 'Thing',
@@ -242,17 +281,25 @@ describe('Metadata Container', () => {
           'rtl',
           'fa',
           [],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
           services.persian,
+          'article',
+          'persian',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
+          'article',
         ),
       );
     });
@@ -281,17 +328,72 @@ describe('Metadata Container', () => {
           'rtl',
           'fa',
           [],
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
           services.persian,
+          'article',
+          'persian',
+          true,
         ),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps(
           'BBC News فارسی',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          '2018-01-01T12:01:00.000Z',
+          '2018-01-01T13:00:00.000Z',
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
+          'article',
+        ),
+      );
+    });
+
+    it('should be correct for WS Frontpages', () => {
+      const Wrapper = mount(
+        Container(
+          'igbo',
+          dotComOrigin,
+          'canonical',
+          frontPageData,
+          'c4vlle3q337o',
+        ),
+      );
+
+      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
+        true,
+      );
+      expect(Wrapper.find(Metadata).props()).toEqual(
+        metadataProps(
+          false,
+          [],
+          'https://www.bbc.com/igbo.amp',
+          'https://www.bbc.com/igbo',
+          'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
+          'ltr',
+          'ig',
+          [],
+          null,
+          null,
+          'Ogbako',
+          services.igbo,
+          'IDX',
+          'igbo',
+          false,
+        ),
+      );
+      expect(Wrapper.find(LinkedData).props()).toEqual(
+        linkedDataProps(
+          'BBC News Ìgbò',
+          'https://www.bbc.com/igbo',
+          null,
+          null,
+          'Igbo',
+          'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+          'Ogbako',
+          'IDX',
         ),
       );
     });

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { number } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { PopOutGridItemMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -12,32 +12,40 @@ import {
 } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const { script } = useContext(ServiceContext);
+  const { articleTimestampPrefix, datetimeLocale, script } = useContext(
+    ServiceContext,
+  );
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
   }
 
+  const timestampProps = {
+    dateTimeFormat: formatDateNumeric,
+    script,
+    locale: datetimeLocale,
+  };
+
+  const firstPublishedProps = {
+    timestamp: firstPublished,
+    format: formatType({ firstPublished }),
+    isRelative: isFirstRelative(firstPublished, lastPublished),
+  };
+
+  const lastPublishedProps = {
+    timestamp: lastPublished,
+    format: formatType({ lastPublished, firstPublished }),
+    isRelative: isLastRelative(lastPublished),
+    prefix: articleTimestampPrefix,
+  };
+
   return (
-    <GridItemConstrainedMedium>
-      <Timestamp
-        timestamp={firstPublished}
-        dateTimeFormat={formatDateNumeric}
-        format={formatType({ firstPublished })}
-        isRelative={isFirstRelative(firstPublished, lastPublished)}
-        script={script}
-      />
-      {firstPublished !== lastPublished ? (
-        <Timestamp
-          timestamp={lastPublished}
-          dateTimeFormat={formatDateNumeric}
-          format={formatType({ lastPublished, firstPublished })}
-          isRelative={isLastRelative(lastPublished)}
-          prefix="Updated"
-          script={script}
-        />
-      ) : null}
-    </GridItemConstrainedMedium>
+    <PopOutGridItemMedium>
+      <Timestamp {...timestampProps} {...firstPublishedProps} />
+      {firstPublished !== lastPublished && (
+        <Timestamp {...timestampProps} {...lastPublishedProps} />
+      )}
+    </PopOutGridItemMedium>
   );
 };
 

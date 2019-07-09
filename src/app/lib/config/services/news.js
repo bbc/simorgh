@@ -1,13 +1,16 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from 'drew-testing-123/esm/scripts';
+import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
+import 'moment/locale/en-gb';
 
 const news = {
   lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news',
   brandName: 'BBC News',
+  product: 'BBC News',
   defaultImage:
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
   defaultImageAltText: 'BBC News',
@@ -15,9 +18,11 @@ const news = {
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
+  audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
+  datetimeLocale: 'en-gb',
   service: 'news',
   serviceName: 'News',
   themeColor: `${C_POSTBOX}`,
@@ -27,6 +32,7 @@ const news = {
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
   manifestPath: '/articles/manifest.json',
+  swPath: '/articles/sw.js',
   translations: {
     error: {
       404: {

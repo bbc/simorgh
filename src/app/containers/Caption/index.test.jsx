@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { latin, arabic } from 'drew-testing-123/esm/scripts';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import CaptionContainer from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';

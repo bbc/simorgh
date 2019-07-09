@@ -163,11 +163,16 @@ describe('Server', () => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={['one.js']}
+              assets={[
+                'http://localhost:7080/static/js/news-12345.12345.js',
+                'http://localhost:7080/static/js/vendor-54321.12345.js',
+                'http://localhost:7080/static/js/vendor-12345.12345.js',
+                'http://localhost:7080/static/js/main-12345.12345.js',
+              ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
@@ -283,11 +288,16 @@ describe('Server', () => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={['one.js']}
+              assets={[
+                'http://localhost:7080/static/js/igbo-12345.12345.js',
+                'http://localhost:7080/static/js/vendor-54321.12345.js',
+                'http://localhost:7080/static/js/vendor-12345.12345.js',
+                'http://localhost:7080/static/js/main-12345.12345.js',
+              ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}

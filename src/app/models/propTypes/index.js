@@ -1,4 +1,4 @@
-import { arrayOf, bool, number, shape, string } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -38,25 +38,6 @@ export const videoPropTypes = {
       ),
     }),
   ).isRequired,
-};
-
-export const videoComponentPropTypes = {
-  pid: string.isRequired,
-  kind: string.isRequired,
-  title: string.isRequired,
-  items: arrayOf(
-    shape({
-      versionID: string.isRequired,
-      kind: string.isRequired,
-      duration: number.isRequired,
-    }),
-  ).isRequired,
-  holdingImageUrl: string.isRequired,
-  statsAppName: string.isRequired,
-  statsAppType: string.isRequired,
-  statsCountername: string.isRequired,
-  statsDestination: string.isRequired,
-  uiLocale: string.isRequired,
 };
 
 const baseDefaultPropTypes = {

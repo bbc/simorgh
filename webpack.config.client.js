@@ -23,13 +23,13 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
       ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
+          `webpack-dev-server/client?http://localhost.bbc.com:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
     devServer: {
-      host: 'localhost',
+      host: 'localhost.bbc.com',
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -50,7 +50,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `http://localhost:${webpackDevServerPort}/`
+        ? `http://localhost.bbc.com:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {
@@ -111,13 +111,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ),
       /*
-       * The webpack.ContextReplacementPlugin allows us to load only
-       * the specific locales we require into our code. By using this
-       * plugin we can reference `moment/locale/en.js` in the files
-       * we need it, without importing it in every file or importing
-       * every locale.
+       * Exclude all moment locales so they can be included within service bundles
        */
-      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      }),
       /* moment-timezone-data-plugin allows you to specify how much
        * and what specific timezone data you wish to bundle.
        * matchZones: (string or array of strings) Only include data

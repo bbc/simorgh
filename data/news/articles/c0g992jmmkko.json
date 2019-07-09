@@ -1,0 +1,801 @@
+{
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Royal wedding flowers given to Hackney hospice"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Royal wedding flowers given to Hackney hospice"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "headline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "St Joseph's Hospice",
+                  "height": 360,
+                  "locator": "4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Former embroider Pauline Clayton described the gift as \"lovely\""
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Former embroider Pauline Clayton described the gift as \"lovely\""
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Pauline Clayton"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Pauline Clayton"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Meghan's own bouquet was "
+                      },
+                      "type": "fragment"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "placed on the tomb of the unknown warrior"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.test.bbc.com/news/articles/c6v11qzyv8po",
+                        "text": "placed on the tomb of the unknown warrior"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": " at Westminster Abbey, following royal tradition."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Meghan's own bouquet was placed on the tomb of the unknown warrior at Westminster Abbey, following royal tradition."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "6a11/test/36df3fe0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "The flowers had adorned the chapel at Windsor Castle"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "The flowers had adorned the chapel at Windsor Castle"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Royal wedding"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Royal wedding"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "Reuters",
+                  "height": 360,
+                  "locator": "43b4/test/61a6f0b0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Philippa Craddock directed a team to create the wedding displays"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Philippa Craddock directed a team to create the wedding displays"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Flowers adorning the chapel at Windsor Castle"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Flowers adorning the chapel at Windsor Castle"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "Press Association",
+                  "height": 360,
+                  "locator": "bcd2/test/8472de60-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "The Queen and Prince Philip pose for an official photograph on their wedding day."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "The Queen and Prince Philip pose for an official photograph on their wedding day."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"They are beautiful and very special.\""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"They are beautiful and very special.\""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "copyrightHolder": "EPA",
+                  "height": 360,
+                  "locator": "735a/test/a76a6ff0-cca9-11e8-b0bf-f33155223fc4.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "type": "rawImage"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "The floral displays in St George's Chapel were created using locally sourced foliage"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "The floral displays in St George's Chapel were created using locally sourced foliage"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "St George's Chapel, Windsor"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "St George's Chapel, Windsor"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\""
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "analyticsLabels": {},
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "rawImage",
+      "caption",
+      "altText",
+      "urlLink"
+    ],
+    "createdBy": "News",
+    "firstPublished": 1539188425274,
+    "id": "urn:bbc:ares::article:c0g992jmmkko",
+    "language": "en-gb",
+    "lastPublished": 1539188425274,
+    "lastUpdated": 1552558351143,
+    "locators": {
+      "canonicalUrl": "https://www.bbc.com/news/articles/c0g992jmmkko",
+      "optimoUrn": "urn:bbc:optimo:asset:c0g992jmmkko"
+    },
+    "options": {},
+    "passport": {
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "language": "en-gb"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
+          "thingLabel": "Wedding of Prince Harry and Meghan Markle",
+          "thingSameAs": [],
+          "thingType": [
+            "Event",
+            "Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "06912d9a-26a9-4474-bdb6-f623d1f6a416",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
+          "thingLabel": "Duchess of Sussex",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Meghan_Markle"
+          ],
+          "thingType": [
+            "Person",
+            "Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
+          "topicId": "cg3mq45zq4xt",
+          "topicName": "Duchess of Sussex"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "2647694",
+              "curationType": "location-stream"
+            }
+          ],
+          "thingId": "dba7dfeb-87d3-4801-80ba-fa8be6c9555e",
+          "thingLabel": "Hackney",
+          "thingSameAs": [
+            "http://sws.geonames.org/2647694/"
+          ],
+          "thingType": [
+            "Place",
+            "Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/dba7dfeb-87d3-4801-80ba-fa8be6c9555e#id",
+          "topicId": "cmg0810x955t",
+          "topicName": "Hackney"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "2633842",
+              "curationType": "location-stream"
+            }
+          ],
+          "thingId": "f94940f0-476c-4ec7-b48d-e58120bb1956",
+          "thingLabel": "Windsor",
+          "thingSameAs": [
+            "http://sws.geonames.org/2633842/"
+          ],
+          "thingType": [
+            "Place",
+            "Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/f94940f0-476c-4ec7-b48d-e58120bb1956#id",
+          "topicId": "cy489180198t",
+          "topicName": "Windsor"
+        }
+      ]
+    },
+    "type": "article",
+    "version": "v1.0.4"
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Royal wedding flowers given to Hackney hospice"
+    },
+    "id": "urn:bbc:ares::article:c0g992jmmkko",
+    "locators": {
+      "canonicalUrl": "https://www.bbc.com/news/articles/c0g992jmmkko",
+      "optimoUrn": "urn:bbc:optimo:asset:c0g992jmmkko"
+    },
+    "summary": "",
+    "timestamp": 1539188425274,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "site": {
+      "name": "News",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/news"
+    }
+  }
+}

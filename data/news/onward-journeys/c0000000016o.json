@@ -1,0 +1,286 @@
+{
+  "singleJourney": [],
+  "moreFromTheBBC": [],
+  "mostRead": [
+    {
+      "headlines": {
+        "promoHeadline": "Lee Ryan joins Strictly line-up"
+      },
+      "locators": {
+        "uri": "/news/entertainment-arts-45168010"
+      },
+      "timestamp": 1534768198,
+      "image": {
+        "blockId": "f5a2d3b9-edd9-44bc-8841-191607402c90",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "017edf68-77ee-4ab9-84be-2efe1a507e7f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "E7D5/production/_103094395_gettyimages-692144392.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Gatwick flight information screens fail"
+      },
+      "locators": {
+        "uri": "/news/uk-england-sussex-45247499"
+      },
+      "timestamp": 1534767877,
+      "image": {
+        "blockId": "82101cd9-43cb-4d3e-9bd8-59049c026fad",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "3992b460-aaee-4816-b7ed-e74992c8ebee",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Edmund von der Burg "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Energy switch firm wins record Dragon deal"
+      },
+      "locators": {
+        "uri": "/news/business-45244761"
+      },
+      "timestamp": 1534759600,
+      "image": {
+        "blockId": "8d9b7674-aa94-44d1-812f-87d899d77c66",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "571ca059-d4c1-4cbf-be13-10eba4ddaf04",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B17E/production/_103083454_dragons.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "UK woman rescued after 10 hours in sea"
+      },
+      "locators": {
+        "uri": "/news/uk-45240390"
+      },
+      "timestamp": 1534766842,
+      "image": {
+        "blockId": "86780c82-5967-4939-bf5d-3d5ae86326b8",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "ee0db6a2-2d9d-46b7-9657-641616dc5af9",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jobcentre joke is funniest at the Fringe"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
+      },
+      "timestamp": 1534757191,
+      "image": {
+        "blockId": "afa401e5-e2e6-40e3-946a-c149cfe2c7c3",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "d108ad5f-7a17-4047-8368-959b1d1bc747",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2573/production/_103078590_adamfb.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Adam Rowe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Crisis council money 'bought rugby box'"
+      },
+      "locators": {
+        "uri": "/news/uk-england-northamptonshire-45211357"
+      },
+      "timestamp": 1534720965,
+      "image": {
+        "blockId": "3850fcc6-0177-4ac9-a277-509b0feae183",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "2cdf197b-a86a-4686-9e08-b5ad661e1784",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "'It never entered my mind that I wasn't coming back'"
+      },
+      "locators": {
+        "uri": "/news/business-44894414"
+      },
+      "timestamp": 1534720669,
+      "image": {
+        "blockId": "953858da-4a0c-4f2b-9a12-48d3a8d5bb45",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "c2d8ce06-ffbc-45d7-be14-c41944621e92",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "How to survive for 10 hours in the water"
+      },
+      "locators": {
+        "uri": "/news/uk-45244269"
+      },
+      "timestamp": 1534764954,
+      "image": {
+        "blockId": "ef40239d-35ae-40d0-9156-b27697dfaa03",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "3119abd2-630c-490f-ad37-5e3dadd674b8",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Shutterstock"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "The deadly hostage drama where the media crossed a line"
+      },
+      "locators": {
+        "uri": "/news/stories-45226482"
+      },
+      "timestamp": 1534720978,
+      "image": {
+        "blockId": "1003a503-3c14-49ff-9bb9-85707772bb7a",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "02124d56-769e-4082-902b-8d872d49523f",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Alamy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Knifeman killed at Spanish police station"
+      },
+      "locators": {
+        "uri": "/news/world-europe-45244739"
+      },
+      "timestamp": 1534768459,
+      "image": {
+        "blockId": "7dc86e38-1cac-4254-88c0-394c8d251b8e",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "e3863fac-7479-442a-b9dd-48101fa9a0e1",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "EPA"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

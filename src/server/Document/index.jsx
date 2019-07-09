@@ -8,15 +8,14 @@ import { getStyleTag } from '../styles';
 import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
-const renderDocument = async (
-  url,
-  data,
-  routes,
+const renderDocument = async ({
   bbcOrigin,
-  service,
+  data,
   isAmp,
-  dials,
-) => {
+  routes,
+  service,
+  url,
+}) => {
   const sheet = new ServerStyleSheet();
 
   const app = renderToString(
@@ -33,8 +32,8 @@ const renderDocument = async (
     ),
   );
 
+  const assets = getAssetsArray(service);
   const headHelmet = Helmet.renderStatic();
-  const assets = getAssetsArray();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent
@@ -46,7 +45,7 @@ const renderDocument = async (
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
-      dials={dials}
+      dials={data.dials}
     />,
   );
 

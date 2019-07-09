@@ -1,0 +1,442 @@
+{
+  "singleJourney": [
+    {
+      "topicId": "cly498dwj1lt",
+      "topicName": "Cardiff Airport link road",
+      "content": [
+        {
+          "headlines": {
+            "promoHeadline": "New 'smart' terminal in airport vision"
+          },
+          "locators": {
+            "uri": "/news/uk-wales-44864963"
+          },
+          "timestamp": 1531921296,
+          "image": {
+            "blockId": "f05fadbb-9214-492a-913d-12a8f866f600",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "7ba3bbde-d371-429f-87f4-c47aedc08af0",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "DA54/production/_101729855_airport11.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "PA"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cly498dwj1lt/cardiff-airport-link-road"
+    }
+  ],
+  "moreFromTheBBC": [
+    {
+      "topicId": "cly498dwj1lt",
+      "topicName": "Cardiff Airport link road",
+      "content": [
+        {
+          "headlines": {
+            "promoHeadline": "New 'smart' terminal in airport vision"
+          },
+          "locators": {
+            "uri": "/news/uk-wales-44864963"
+          },
+          "timestamp": 1531921296,
+          "image": {
+            "blockId": "f05fadbb-9214-492a-913d-12a8f866f600",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "7ba3bbde-d371-429f-87f4-c47aedc08af0",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "DA54/production/_101729855_airport11.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "PA"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "£81m road 'would have a massive effect'"
+          },
+          "locators": {
+            "uri": "/news/uk-wales-44253662"
+          },
+          "timestamp": 1527548592,
+          "image": {
+            "blockId": "41e82bb2-d0e6-4669-bca6-0b2369ddbf69",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "61bd89b0-94ec-4eab-b2fd-f5e4a9def8b6",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "6242/production/_101745152_ruthcole2.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Plans to block airport link road scheme"
+          },
+          "locators": {
+            "uri": "/news/uk-wales-44237816"
+          },
+          "timestamp": 1527548580,
+          "image": {
+            "blockId": "c68e28ba-2f31-4cec-82a5-d04ef5232d9e",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "2e60f489-f8f8-42fc-95a4-888744b2ca3a",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "FAE9/production/_101733246_pendoylan1.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "headlines": {
+            "promoHeadline": "Routes unveiled for £81m airport link"
+          },
+          "locators": {
+            "uri": "/news/uk-wales-43796987"
+          },
+          "timestamp": 1523975484,
+          "image": {
+            "blockId": "153e4656-ee64-4e22-98d3-fc7ad00dfb7c",
+            "type": "image",
+            "model": {
+              "blocks": [
+                {
+                  "blockId": "a4ee62ab-16f0-4ec2-a593-aa0f99b9e23e",
+                  "type": "rawImage",
+                  "model": {
+                    "width": 976,
+                    "height": 549,
+                    "locator": "314D/production/_100912621_peterston2.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "topicUrl": "https://www.bbc.co.uk/news/topics/cly498dwj1lt/cardiff-airport-link-road"
+    }
+  ],
+  "mostRead": [
+    {
+      "headlines": {
+        "promoHeadline": "Lee Ryan joins Strictly line-up"
+      },
+      "locators": {
+        "uri": "/news/entertainment-arts-45168010"
+      },
+      "timestamp": 1534768198,
+      "image": {
+        "blockId": "6cd25127-e93a-4e87-be08-3d9d906ece7b",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "bd5022a7-758f-46bb-9d6f-d27f522c2261",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "E7D5/production/_103094395_gettyimages-692144392.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Gatwick flight information screens fail"
+      },
+      "locators": {
+        "uri": "/news/uk-england-sussex-45247499"
+      },
+      "timestamp": 1534767877,
+      "image": {
+        "blockId": "508328e3-5d3f-4bd4-8dcd-2287c0dab502",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "07d2f089-0252-4d0a-bc18-76f64a23770a",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "D00B/production/_103095235_gatwick_edmundvonderburg.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Edmund von der Burg "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Energy switch firm wins record Dragon deal"
+      },
+      "locators": {
+        "uri": "/news/business-45244761"
+      },
+      "timestamp": 1534759600,
+      "image": {
+        "blockId": "6da3613d-23fb-4c60-b481-4a22ae9a18b3",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "2b7a6670-3a34-4cce-8a32-681c0be4ecac",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "B17E/production/_103083454_dragons.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "BBC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "UK woman rescued after 10 hours in sea"
+      },
+      "locators": {
+        "uri": "/news/uk-45240390"
+      },
+      "timestamp": 1534766842,
+      "image": {
+        "blockId": "75e16992-5034-4d27-9658-4525866b67a1",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "b0ce863f-4fa6-4c05-a077-1b3eae7b5360",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2F93/production/_103097121_18a62c9c-1ac8-4eb5-8cef-8e3ecb11d29d.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Jobcentre joke is funniest at the Fringe"
+      },
+      "locators": {
+        "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
+      },
+      "timestamp": 1534757191,
+      "image": {
+        "blockId": "9cb1ec09-0183-4713-ad57-dd52020e7f32",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "1dadafeb-8da8-4dae-aadc-fdc168f43bfc",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "2573/production/_103078590_adamfb.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Adam Rowe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Crisis council money 'bought rugby box'"
+      },
+      "locators": {
+        "uri": "/news/uk-england-northamptonshire-45211357"
+      },
+      "timestamp": 1534720965,
+      "image": {
+        "blockId": "249c381d-942f-4f0f-b2b3-377cb273fe3f",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "148dc2f0-0230-4ec0-ab45-6e89b49db61e",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "F5F5/production/_103056926_northampton_sts.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "'It never entered my mind that I wasn't coming back'"
+      },
+      "locators": {
+        "uri": "/news/business-44894414"
+      },
+      "timestamp": 1534720669,
+      "image": {
+        "blockId": "1b9cad19-c214-4e08-952d-1d94287b8ad1",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "ea689629-6588-4272-83cb-a7491518a9bb",
+              "type": "rawImage",
+              "model": {
+                "width": 2048,
+                "height": 1152,
+                "locator": "10BA2/production/_103041586_gettyimages-632553438.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Getty Images"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "How to survive for 10 hours in the water"
+      },
+      "locators": {
+        "uri": "/news/uk-45244269"
+      },
+      "timestamp": 1534764954,
+      "image": {
+        "blockId": "f46f368a-bea3-4449-8822-f40b879034ba",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f2c313d5-90b0-452e-9f53-67282a137e5c",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "4E50/production/_103084002_woman_sea_shutterstock.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Shutterstock"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "The deadly hostage drama where the media crossed a line"
+      },
+      "locators": {
+        "uri": "/news/stories-45226482"
+      },
+      "timestamp": 1534720978,
+      "image": {
+        "blockId": "0c8145b0-571d-483b-8eb1-f053fc8a48cf",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "50ecb552-0129-4127-8730-1d11b2c8c683",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "16AA4/production/_103063829_gunmen_bus976.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "Alamy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "headlines": {
+        "promoHeadline": "Knifeman killed at Spanish police station"
+      },
+      "locators": {
+        "uri": "/news/world-europe-45244739"
+      },
+      "timestamp": 1534768459,
+      "image": {
+        "blockId": "6f280990-c8c0-44e5-9bb9-7a803bbb58eb",
+        "type": "image",
+        "model": {
+          "blocks": [
+            {
+              "blockId": "f0bfceb7-0c27-49f1-b6da-7a0496eadde7",
+              "type": "rawImage",
+              "model": {
+                "width": 976,
+                "height": 549,
+                "locator": "1238E/production/_103083647_048751998-1.jpg",
+                "originCode": "cpsprodpb",
+                "copyrightHolder": "EPA"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

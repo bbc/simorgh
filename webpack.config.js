@@ -47,7 +47,7 @@ module.exports = (shell = {}) => {
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
         {
           test: /\.(js|jsx|mjs)$/,
-          exclude: /node_modules\/(?!(drew-testing-123)\/).*/,
+          include: /src/,
           use: [
             {
               loader: 'babel-loader',
@@ -61,15 +61,10 @@ module.exports = (shell = {}) => {
         },
       ],
     },
-
-    // This is to override bundle performance test. @TODO explain better
-    performance: !START_DEV_SERVER
-      ? {
-          maxAssetSize: 245760, // 240kb - individual bundles
-          maxEntrypointSize: 730000, // 730kb - total bundles
-          hints: 'error',
-        }
-      : undefined,
+    // Bundle sizes are monitored by `./scripts/bundleSize.sh`
+    performance: {
+      hints: false,
+    },
   };
 
   const mergeIntoBaseConfig = app => {

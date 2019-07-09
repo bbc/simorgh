@@ -1,4 +1,3 @@
-import config from '../support/config';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import {
   errorMessage,
@@ -6,19 +5,26 @@ import {
   errorTitle,
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
-import { testResponseCode } from '../support/metaTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
+
+// This is duplicated between this file and errorPageNews.js.
+// This is because both these files will be consolidated into 1 file in a later PR.
+const nonExistentAsset = 'cxvxrj8tvppo';
 
 describeForLocalOnly('Article Body Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/persian/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
   });
 
   it('should return a 404 error code', () => {
-    testResponseCode(`/persian/articles/${config.assets.nonExistent}`, 404);
+    cy.testResponseCodeAndType(
+      `/persian/articles/${nonExistentAsset}`,
+      404,
+      'text/html',
+    );
   });
 
   it('should have the correct lang & dir attributes', () => {
@@ -26,12 +32,12 @@ describeForLocalOnly('Article Body Tests', () => {
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/persian/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);
 
-    cy.visit(`/persian/articles/${config.assets.nonExistent}`, {
+    cy.visit(`/persian/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
     errorMessage(persian);

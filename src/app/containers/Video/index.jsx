@@ -5,6 +5,8 @@ import deepGet from '../../lib/utilities/deepGet';
 import Video from '../../components/Video';
 import Caption from '../Caption';
 import videoMetadata from './videoMetadata';
+import { GridItemConstrainedLargeNoMargin } from '../../lib/styledGrid';
+import mediatorURL from './helpers/mediatorUrl';
 
 import {
   videoPropTypes,
@@ -14,9 +16,12 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const VideoContainer = ({ blocks }) => {
-  const { platform, statsDestination, statsPageIdentifier } = React.useContext(
-    RequestContext,
-  );
+  const {
+    env,
+    platform,
+    statsDestination,
+    statsPageIdentifier,
+  } = React.useContext(RequestContext);
 
   if (!blocks) {
     return null;
@@ -29,12 +34,12 @@ const VideoContainer = ({ blocks }) => {
   }
 
   const metadata = videoMetadata(aresMediaBlock);
-
   const captionBlock = filterForBlockType(blocks, 'caption');
-
   const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
-  const kind = deepGet(['subType'], nestedModel);
+  const kind =
+    deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
   const pid = deepGet(['id'], nestedModel);
+  const subType = deepGet(['subType'], nestedModel);
   const title = deepGet(['title'], nestedModel);
   const version = deepGet(['versions', 0], nestedModel);
   const duration = deepGet(['duration'], version);
@@ -43,41 +48,98 @@ const VideoContainer = ({ blocks }) => {
     ['blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock.model,
   );
-  const items = [
-    {
-      versionID,
-      kind,
-      duration,
+  const guidance = deepGet(['warnings', 'short'], version);
+
+  const id = `mp#${pid}`;
+
+  const statsObject = { destination: statsDestination };
+
+  if (subType === 'clip') {
+    statsObject.clipPID = pid;
+  } else if (subType === 'episode') {
+    statsObject.episodePID = pid;
+  }
+
+  const mediaPlayerSettings = {
+    appName: 'news',
+    appType: platform === 'amp' ? 'amp' : 'responsive',
+    counterName: statsPageIdentifier,
+    mediator: {
+      host: mediatorURL(env),
     },
-  ];
+    playlistObject: {
+      title,
+      holdingImageURL: `https://${holdingImageUrl}`,
+      guidance,
+      items: [
+        {
+          versionID,
+          duration,
+          kind,
+        },
+      ],
+    },
+    product: 'news',
+    responsive: true,
+    statsObject,
+    ui: {
+      cta: {
+        mode: 'duration',
+      },
+      locale: {
+        lang: 'en-GB',
+      },
+      subtitles: {
+        defaultOn: true,
+        enabled: true,
+      },
+    },
+  };
+
+  const type = kind === 'audio' ? kind : 'video';
 
   return (
-    <>
+    <GridItemConstrainedLargeNoMargin>
       {metadata ? (
-        <Helmet>
-          {
-            <script type="application/ld+json">
-              {JSON.stringify(metadata)}
-            </script>
-          }
-        </Helmet>
+        <>
+          <Helmet>
+            {
+              <script type="application/ld+json">
+                {JSON.stringify(metadata)}
+              </script>
+            }
+          </Helmet>
+          <Helmet>
+            <script
+              async
+              custom-element="amp-iframe"
+              src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+            />
+          </Helmet>
+        </>
       ) : null}
       <Figure>
-        <Video
-          pid={pid}
-          kind={kind}
-          title={title}
-          items={items}
-          holdingImageUrl={holdingImageUrl}
-          statsAppName="news"
-          statsAppType={platform === 'amp' ? 'amp' : 'responsive'}
-          statsCountername={statsPageIdentifier}
-          statsDestination={statsDestination}
-          uiLocale="en-GB"
-        />
-        {captionBlock ? <Caption block={captionBlock} video /> : null}
+        {platform === 'canonical' ? (
+          <Video id={id} mediaPlayerSettings={mediaPlayerSettings} />
+        ) : (
+          <amp-iframe
+            src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm?#amp=1"
+            width="350"
+            height="200"
+            layout="responsive"
+            scrolling="no"
+            sandbox="allow-scripts allow-same-origin"
+          >
+            <amp-img
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              layout="fill"
+              placeholder
+            />
+          </amp-iframe>
+        )}
+        {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
       </Figure>
-    </>
+    </GridItemConstrainedLargeNoMargin>
   );
 };
 

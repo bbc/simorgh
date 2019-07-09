@@ -2,6 +2,20 @@ import React from 'react';
 import Metadata from './index';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 
+const iconSizes = {
+  'apple-touch-icon': [
+    '72x72',
+    '96x96',
+    '128x128',
+    '144x144',
+    '152x152',
+    '192x192',
+    '384x384',
+    '512x512',
+  ],
+  icon: ['72x72', '96x96', '192x192'],
+};
+
 const metadataSnapshotTest = (
   testDescription,
   isAmp,
@@ -27,6 +41,9 @@ const metadataSnapshotTest = (
   title,
   twitterCreator,
   twitterSite,
+  type,
+  service,
+  showArticleTags,
 ) =>
   describe(testDescription, () => {
     const metadataProps = {
@@ -53,11 +70,14 @@ const metadataSnapshotTest = (
       title,
       twitterCreator,
       twitterSite,
+      type,
+      service,
+      showArticleTags,
     };
 
     shouldShallowMatchSnapshot(
       'should render correctly',
-      <Metadata {...metadataProps} />,
+      <Metadata {...metadataProps} iconSizes={iconSizes} />,
     );
   });
 
@@ -100,6 +120,9 @@ describe('Metadata', () => {
     'An article title',
     '@BBCNews',
     '@BBCNews',
+    'article',
+    'news',
+    true,
   );
 
   metadataSnapshotTest(
@@ -140,6 +163,9 @@ describe('Metadata', () => {
     'An article title',
     '@BBCNews',
     '@BBCNews',
+    'article',
+    'news',
+    true,
   );
 
   metadataSnapshotTest(
@@ -167,6 +193,9 @@ describe('Metadata', () => {
     'پهپادی که برایتان قهوه می‌آورد',
     '@bbcpersian',
     '@bbcpersian',
+    'article',
+    'persian',
+    true,
   );
 
   metadataSnapshotTest(
@@ -194,6 +223,9 @@ describe('Metadata', () => {
     'پهپادی که برایتان قهوه می‌آورد',
     '@bbcpersian',
     '@bbcpersian',
+    'article',
+    'persian',
+    true,
   );
 
   metadataSnapshotTest(
@@ -234,5 +266,93 @@ describe('Metadata', () => {
     'An article title',
     '@BBCNews',
     '@BBCNews',
+    'article',
+    'news',
+    true,
+  );
+
+  metadataSnapshotTest(
+    'WS Front Page',
+    false,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        hrefLang: 'en-gb',
+      },
+    ],
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
+    '',
+    '',
+    'https://foo.com/static/news/image.png',
+    'BBC News',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    'ltr',
+    202020,
+    'pcm',
+    'pcm',
+    [],
+    '#B80000',
+    1539188371344,
+    1514811600000,
+    'Index title',
+    '@BBCNews',
+    '@BBCNews',
+    'IDX',
+    false,
+    'news',
+  );
+
+  metadataSnapshotTest(
+    'WS Front Page does not render article metadata even if values provided',
+    false,
+    [
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'x-default',
+      },
+      {
+        href: 'https://www.bbc.com/news/articles/c0000000001o',
+        hrefLang: 'en',
+      },
+      {
+        href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+        hrefLang: 'en-gb',
+      },
+    ],
+    'https://www.bbc.com/news/articles/c0000000001o.amp',
+    'Author should not be added as a tag',
+    '',
+    'https://foo.com/static/news/image.png',
+    'BBC News',
+    'https://www.bbc.com/news/articles/c0000000001o',
+    'https://www.bbc.com/news/image.png',
+    'BBC News',
+    'This is a description',
+    'ltr',
+    101010,
+    202020,
+    'pcm',
+    'pcm',
+    [],
+    '#B80000',
+    1539188371344,
+    1514811600000,
+    'Index title',
+    '@BBCNews',
+    '@BBCNews',
+    'IDX',
+    'news',
+    false,
   );
 });
