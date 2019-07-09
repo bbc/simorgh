@@ -179,8 +179,7 @@ Metadata.propTypes = {
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
-  showArticleTags: (props, componentName) =>
-    propTypeCheck(props, componentName, bool.isRequired),
+  showArticleTags: bool.isRequired,
   service: string.isRequired,
   iconSizes: shape({
     'apple-touch-icon-sizes': arrayOf(string),
@@ -199,7 +198,6 @@ Metadata.defaultProps = {
   metaTags: [],
   timeFirstPublished: null,
   timeLastPublished: null,
-  showArticleTags: null,
 };
 
 export default Metadata;
