@@ -59,6 +59,29 @@ module.exports = (shell = {}) => {
             },
           ],
         },
+        {
+          test: /\.(js|jsx|mjs)$/,
+          include: [resolvePath('node_modules/@bbc')],
+          use: [
+            IS_PROD
+              ? {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: [],
+                    plugins: [
+                      [
+                        'transform-react-remove-prop-types',
+                        {
+                          mode: 'remove',
+                          removeImport: true,
+                        },
+                      ],
+                    ],
+                  },
+                }
+              : {},
+          ],
+        },
       ],
     },
     // Bundle sizes are monitored by `./scripts/bundleSize.sh`
