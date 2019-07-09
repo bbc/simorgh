@@ -6,6 +6,16 @@ import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 import { template, templateStyles } from './app/lib/joinUsTemplate';
 
+
+
+
+import { one } from './apples';
+
+console.log('one', one);
+
+
+
+
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 

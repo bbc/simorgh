@@ -58,6 +58,7 @@ module.exports = (shell = {}) => {
               },
             },
           ],
+          sideEffects: false,
         },
       ],
     },
