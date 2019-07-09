@@ -1,8 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
+import {
+  arrayOf,
+  bool,
+  oneOf,
+  shape,
+  string,
+  number,
+  checkPropTypes,
+} from 'prop-types';
 import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
-import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -155,8 +162,19 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: (props, propName) => {
-    return propTypeCheck(props, propName, 'string');
+  articleAuthor: props => {
+    const { type } = props;
+
+    if (type === 'article') {
+      return checkPropTypes(
+        { articleAuthor: string },
+        props,
+        'prop',
+        'Metadata',
+      );
+    }
+
+    return null;
   },
   articleSection: string,
   brandName: string.isRequired,
@@ -169,9 +187,7 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: (props, propName) => {
-    return propTypeCheck(props, propName, 'object');
-  },
+  metaTags: arrayOf(string),
   themeColor: string.isRequired,
   timeFirstPublished: string,
   timeLastPublished: string,
