@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { any, arrayOf, shape, string } from 'prop-types';
-import uuid from 'uuid';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import deepGet from '../../lib/utilities/deepGet';
@@ -31,7 +30,7 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={uuid()}>
+    <p key={paragraphBlock.id}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
