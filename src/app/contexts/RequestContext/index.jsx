@@ -1,12 +1,10 @@
 import React from 'react';
-import { bool, node, oneOf, string, shape } from 'prop-types';
+import { bool, node, string, shape, any, oneOf } from 'prop-types';
 import getLangByPageType from './getLangByPageType';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
-import { articleDataPropTypes } from '../../models/propTypes/article';
-import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 
 export const RequestContext = React.createContext('default');
 
@@ -55,7 +53,7 @@ export const RequestContextProvider = ({
 RequestContextProvider.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  data: shape(oneOf([frontPageDataPropTypes, articleDataPropTypes])).isRequired,
+  data: shape({ any }).isRequired,
   id: string,
   serviceLang: string.isRequired,
   isAmp: bool.isRequired,

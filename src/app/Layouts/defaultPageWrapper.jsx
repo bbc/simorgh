@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { node, string, bool, shape, any, objectOf, oneOf } from 'prop-types';
+import { node, string, bool, shape, any, objectOf } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -12,8 +12,6 @@ import { DialContextProvider } from '../contexts/DialContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
-import { frontPageDataPropTypes } from '../models/propTypes/frontPage';
-import { articleDataPropTypes } from '../models/propTypes/article';
 
 const PageWithRequestContext = ({
   bbcOrigin,
@@ -91,7 +89,7 @@ const PageWrapper = ({
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  data: shape(oneOf([frontPageDataPropTypes, articleDataPropTypes])).isRequired,
+  data: shape({ any }).isRequired,
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,
