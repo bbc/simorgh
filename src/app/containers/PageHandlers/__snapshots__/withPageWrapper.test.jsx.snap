@@ -35,9 +35,11 @@ Array [
 
 .c4 {
   box-sizing: content-box;
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  fill: currentColor;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
+  height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
@@ -150,9 +152,11 @@ Array [
 
 .c5 {
   box-sizing: content-box;
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  fill: currentColor;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
+  height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
