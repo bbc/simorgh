@@ -1,14 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import TestRenderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 import ReactDOM from 'react-dom';
 import CanonicalATIAnalytics from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
-
-const { act } = TestRenderer;
 
 const ContextWrap = ({ bbcOrigin, children }) => (
   <ServiceContextProvider service="news">
@@ -98,7 +96,7 @@ describe('Canonical ATI Analytics', () => {
       beacon.default = mockSendBeacon;
 
       act(() => {
-        TestRenderer.create(
+        create(
           <ContextWrap bbcOrigin={bbcOrigin}>
             <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
           </ContextWrap>,
