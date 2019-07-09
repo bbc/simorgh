@@ -191,11 +191,14 @@ Metadata.propTypes = {
 Metadata.defaultProps = {
   alternateLinks: [],
   articleSection: null,
+  iconSizes: null,
+
+  // the default props below are only added to stop eslint from complaining
+  // because we're using custom propType rules for these props
   articleAuthor: null,
   metaTags: [],
   timeFirstPublished: null,
   timeLastPublished: null,
-  iconSizes: null,
   showArticleTags: null,
 };
 
