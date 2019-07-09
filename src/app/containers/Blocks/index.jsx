@@ -3,7 +3,7 @@ import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
-    const { type, id, model, position } = block;
+    const { type, model, id, position } = block;
 
     if (!componentsToRender || !type) {
       return null;
