@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
 import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
+import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -154,15 +155,8 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  // eslint-disable-next-line react/require-default-props
   articleAuthor: (props, propName) => {
-    const { type, articleAuthor } = props;
-
-    if (type === 'article' && typeof articleAuthor !== 'string') {
-      return new Error(`${propName} is a required prop and should be a string`);
-    }
-
-    return null;
+    return propTypeCheck(props, propName, 'string');
   },
   articleSection: string,
   brandName: string.isRequired,
@@ -175,7 +169,9 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: arrayOf(string),
+  metaTags: (props, propName) => {
+    return propTypeCheck(props, propName, 'object');
+  },
   themeColor: string.isRequired,
   timeFirstPublished: string,
   timeLastPublished: string,
