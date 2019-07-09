@@ -6549,7 +6549,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
         </span>
       </React.Fragment>
     </ForwardRef(VisuallyHiddenText)>
-    <ForwardRef(GhostWrapper)>
+    <ForwardRef(Grid)>
       <ForwardRef(GridItemConstrainedLarge)>
         <FrontPageSection
           bar={true}
@@ -13002,7 +13002,7 @@ She also believe say plenti Nigerians believe trust am dem say she dey run for p
           sectionNumber={6}
         />
       </ForwardRef(GridItemConstrainedLarge)>
-    </ForwardRef(GhostWrapper)>
+    </ForwardRef(Grid)>
   </main>
 </React.Fragment>
 `;
