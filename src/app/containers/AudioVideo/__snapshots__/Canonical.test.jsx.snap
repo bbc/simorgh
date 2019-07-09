@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical should place Canonical container (landscape video) on page 1`] = `null`;
+
+exports[`Canonical should place Canonical container (portrait video) on page 1`] = `null`;
