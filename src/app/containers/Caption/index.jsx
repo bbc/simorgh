@@ -30,7 +30,7 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={paragraphBlock.id}>
+    <p key={deepGet(['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
