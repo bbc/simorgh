@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical ATI Analytics should render correctly 1`] = `
-<noscript>
-  <img
-    alt=""
-    height="1px"
-    src="https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2"
-    width="1px"
-  />
-</noscript>
+<noscript
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" src=\\"https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2\\" />",
+    }
+  }
+/>
 `;

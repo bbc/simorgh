@@ -1,3 +1,4 @@
+/* eslint react/no-danger: 0 */
 import React, { useContext, useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import { atiBaseUrl } from '../atiUrl';
@@ -13,9 +14,11 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
   }, [atiPageViewUrl]);
 
   return (
-    <noscript>
-      <img height="1px" width="1px" alt="" src={atiPageViewUrl} />
-    </noscript>
+    <noscript
+      dangerouslySetInnerHTML={{
+        __html: `<img height="1px" width="1px" alt="" src="${atiPageViewUrl}" />`,
+      }}
+    />
   );
 };
 
