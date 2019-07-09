@@ -20,7 +20,6 @@ def runDevelopmentTests(){
 }
 
 def runProductionTests(){
-  // sh 'rm -rf stage_logs_directory && mkdir stage_logs_directory'
   sh 'make installProd'
   sh 'make productionTests'
 }
@@ -101,8 +100,6 @@ pipeline {
         stage ('Test Production') {
           agent {
             docker {
-              // image "${dockerRegistry}/bbc-news/node-8-lts:0.0.8"
-              // args "-u root -v /etc/pki:/certs -v stage_logs_directory:/root/.npm/_logs"
               image "${nodeImage}"
               args '-u root -v /etc/pki:/certs'
             }
@@ -110,13 +107,6 @@ pipeline {
           steps {
             runProductionTests()
           }
-          // post {
-          //   failure {
-          //     sh "rm -f ProductionTestsReport.zip"
-          //     zip archive: true, dir: "stage_logs_directory", glob: '', zipFile: 'ProductionTestsReport.zip'
-          //     stash name: 'reports', includes: 'ProductionTestsReport.zip'
-          //   }
-          // }
         }  
       }
       post {
