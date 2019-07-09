@@ -1,13 +1,14 @@
-const propTypeCheck = (props, propName, propType) => {
-  const { type } = props;
-  // eslint-disable-next-line react/destructuring-assignment
-  const propsValue = props[propName];
+import { checkPropTypes } from 'prop-types';
 
-  // eslint-disable-next-line valid-typeof
-  if (type === 'article' && typeof propsValue !== propType) {
-    return new Error(
-      `${propName} is a required prop and should be a ${propType}`,
-    );
+const propTypeCheck = (props, componentName, propType) => {
+  const { type } = props;
+
+  const expectedType = {
+    [componentName]: propType,
+  };
+
+  if (type === 'article') {
+    return checkPropTypes(expectedType, props, 'prop', 'Metadata');
   }
 
   return null;

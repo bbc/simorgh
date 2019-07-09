@@ -1,15 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import {
-  arrayOf,
-  bool,
-  oneOf,
-  shape,
-  string,
-  number,
-  checkPropTypes,
-} from 'prop-types';
+import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
 import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
+import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -162,20 +155,8 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: props => {
-    const { type } = props;
-
-    if (type === 'article') {
-      return checkPropTypes(
-        { articleAuthor: string },
-        props,
-        'prop',
-        'Metadata',
-      );
-    }
-
-    return null;
-  },
+  articleAuthor: (props, componentName) =>
+    propTypeCheck(props, componentName, string.isRequired),
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
@@ -187,15 +168,19 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: arrayOf(string),
+  metaTags: (props, componentName) =>
+    propTypeCheck(props, componentName, arrayOf(string)),
   themeColor: string.isRequired,
-  timeFirstPublished: string,
-  timeLastPublished: string,
+  timeFirstPublished: (props, componentName) =>
+    propTypeCheck(props, componentName, string.isRequired),
+  timeLastPublished: (props, componentName) =>
+    propTypeCheck(props, componentName, string.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
-  showArticleTags: bool.isRequired,
+  showArticleTags: (props, componentName) =>
+    propTypeCheck(props, componentName, bool.isRequired),
   service: string.isRequired,
   iconSizes: shape({
     'apple-touch-icon-sizes': arrayOf(string),
@@ -211,6 +196,7 @@ Metadata.defaultProps = {
   timeFirstPublished: null,
   timeLastPublished: null,
   iconSizes: null,
+  showArticleTags: null,
 };
 
 export default Metadata;
