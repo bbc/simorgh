@@ -7,11 +7,11 @@ describe('Canonical', () => {
 
   shouldMatchSnapshot(
     'should place Canonical container (landscape video) on page',
-    <Canonical id={examplePID} />,
+    <Canonical id={examplePID} portrait="false" />,
   );
 
   shouldMatchSnapshot(
     'should place Canonical container (portrait video) on page',
-    <Canonical id={examplePID} />,
+    <Canonical id={examplePID} portrait="true" />,
   );
 });
