@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import { arabic } from 'drew-testing-123/esm/scripts';
 import 'moment/locale/fa';
 
 const persian = {

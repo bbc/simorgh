@@ -1,5 +1,5 @@
 import React from 'react';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from 'drew-testing-123/esm/scripts';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import ParagraphContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';

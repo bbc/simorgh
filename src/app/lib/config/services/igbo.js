@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from 'drew-testing-123/esm/scripts';
 import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
