@@ -5,8 +5,8 @@ import { Headline } from '@bbc/psammead-headings';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import { scriptPropType } from 'drew-testing-123/esm/prop-types';
+import { getParagon, GEL_FF_REITH_SANS } from 'drew-testing-123/esm/typography';
 import { GhostGrid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 

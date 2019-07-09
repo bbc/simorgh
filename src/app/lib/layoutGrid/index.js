@@ -5,7 +5,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_GUTTER_ABOVE_600PX,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from 'drew-testing-123/esm/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -15,7 +15,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from 'drew-testing-123/esm/breakpoints';
 
 const group4ColWidth = `6.75rem`;
 /* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
