@@ -1,9 +1,10 @@
 import React from 'react';
+import uuid from 'uuid';
 import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
-    const { type, model, id, position } = block;
+    const { type, model, position } = block;
 
     if (!componentsToRender || !type) {
       return null;
@@ -19,7 +20,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        key={id}
+        key={uuid()}
         position={position}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
