@@ -39,7 +39,4 @@ export const cpsPropTypes = {
   type: string.isRequired,
   language: string.isRequired,
   summary: string.isRequired,
-  promo: shape({
-    name: string.isRequired,
-  }),
 };

@@ -5,7 +5,10 @@ import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { optimoPropTypes, cpsPropTypes } from '../../models/propTypes/metadata';
-import promoPropTypes from '../../models/propTypes/promo';
+import {
+  optimoPromoPropTypes,
+  cpsPromoPropTypes,
+} from '../../models/propTypes/promo';
 import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
@@ -190,7 +193,8 @@ const MetadataContainer = ({ metadata, promo }) => {
 
 MetadataContainer.propTypes = {
   metadata: oneOfType([shape(cpsPropTypes), shape(optimoPropTypes)]).isRequired,
-  promo: shape(promoPropTypes).isRequired,
+  promo: oneOfType([shape(cpsPromoPropTypes), shape(optimoPromoPropTypes)])
+    .isRequired,
 };
 
 export default MetadataContainer;
