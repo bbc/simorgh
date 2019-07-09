@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ImageContainer from '.';
-import { GhostWrapper } from '../../lib/styledGrid';
+import { Grid } from '../../lib/styledGrid';
 import {
   custom,
   imageData,
@@ -12,22 +12,22 @@ import {
 
 storiesOf('Image container within grid', module)
   .add('landscape image', () => (
-    <GhostWrapper>
+    <Grid>
       <ImageContainer {...imageData(landscape)} />
-    </GhostWrapper>
+    </Grid>
   ))
   .add('portrait image', () => (
-    <GhostWrapper>
+    <Grid>
       <ImageContainer {...imageData(portrait)} />
-    </GhostWrapper>
+    </Grid>
   ))
   .add('square image', () => (
-    <GhostWrapper>
+    <Grid>
       <ImageContainer {...imageData(square)} />
-    </GhostWrapper>
+    </Grid>
   ))
   .add('custom ratio image', () => (
-    <GhostWrapper>
+    <Grid>
       <ImageContainer {...imageData(custom)} />
-    </GhostWrapper>
+    </Grid>
   ));
