@@ -173,36 +173,6 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
                   "text": "Quisque quis libero H2O bibendum, feugiat felis ut, dignissim tortor.",
                   "blocks": [
                     {
