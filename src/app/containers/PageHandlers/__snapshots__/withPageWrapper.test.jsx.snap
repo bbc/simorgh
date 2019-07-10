@@ -11,6 +11,7 @@ Array [
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c1 {
@@ -128,6 +129,7 @@ Array [
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c2 {
