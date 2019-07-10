@@ -1,13 +1,13 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import { shape } from 'prop-types';
+import { shape, bool } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 
 import { storyItem } from '../../models/propTypes/storyItem';
 import deepGet from '../../lib/utilities/deepGet';
 import formatDuration from '../../lib/utilities/formatDuration';
 
-const MediaIndicator = ({ item }) => {
+const MediaIndicator = ({ item, topStory }) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';
   const hasMediaInfo = deepGet(['media'], item);
 
@@ -30,6 +30,7 @@ const MediaIndicator = ({ item }) => {
         duration={durationString}
         datetime={isoDuration}
         type={type}
+        topStory={topStory}
       />
     );
   }
@@ -39,6 +40,11 @@ const MediaIndicator = ({ item }) => {
 
 MediaIndicator.propTypes = {
   item: shape(storyItem).isRequired,
+  topStory: bool,
+};
+
+MediaIndicator.defaultProps = {
+  topStory: false,
 };
 
 export default MediaIndicator;
