@@ -37,7 +37,7 @@ module.exports = {
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
         "useBuiltIns": "usage",
-        "corejs": "3"
+        "corejs": "3",
         "modules": false,
       }
     ],
