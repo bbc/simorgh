@@ -25,7 +25,6 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   datetime={null}
   duration={null}
   offscreenText={null}
-  topStory={false}
   type="video"
 />
 `;
