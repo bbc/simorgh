@@ -4,7 +4,7 @@ import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import CopyrightContainer from '.';
 import services from '../../lib/config/services';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 storiesOf('Copyright Container', module)
   .addDecorator(withKnobs)
@@ -22,9 +22,9 @@ storiesOf('Copyright Container', module)
           dir: services[service].dir,
         };
         return (
-          <ServiceContextProvider service={service} value={serviceContextStub}>
+          <ServiceContext.Provider value={serviceContextStub}>
             <CopyrightContainer>{imageCaptionText}</CopyrightContainer>
-          </ServiceContextProvider>
+          </ServiceContext.Provider>
         );
       },
       Object.keys(services),
