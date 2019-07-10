@@ -2,32 +2,27 @@
 
 exports[`ErrorMain should correctly render for an error page for News 1`] = `
 .c5 {
-  color: #B80000;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
 .c5:focus,
 .c5:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -245,32 +240,27 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
 .c5 {
-  color: #B80000;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
 .c5:focus,
 .c5:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
