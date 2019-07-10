@@ -667,12 +667,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 .c7:focus,
 .c7:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c3 {
@@ -1789,12 +1785,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 .c8:focus,
 .c8:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c3 {

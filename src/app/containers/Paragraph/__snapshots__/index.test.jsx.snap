@@ -24,12 +24,8 @@ exports[`ParagraphContainer should render correctly 1`] = `
 
 .c2:focus,
 .c2:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c0 {

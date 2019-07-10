@@ -15,12 +15,8 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 .c5:focus,
 .c5:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c4 {
@@ -258,12 +254,8 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c4 {

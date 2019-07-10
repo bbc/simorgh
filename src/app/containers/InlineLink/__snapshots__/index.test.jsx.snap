@@ -15,12 +15,8 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 .c0:focus,
 .c0:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 <a
@@ -47,12 +43,8 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 .c0:focus,
 .c0:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 <a
@@ -79,12 +71,8 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 
 .c0:focus,
 .c0:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 <a
@@ -113,12 +101,8 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 
 .c0:focus,
 .c0:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 <a
@@ -145,12 +129,8 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 
 .c0:focus,
 .c0:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 <a
