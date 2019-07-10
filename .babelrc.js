@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 module.exports = {
-  "sourceType": "unambiguous",
   "presets": [
     [
       "@babel/preset-env",
@@ -44,4 +43,8 @@ module.exports = {
     "@babel/preset-react" // transform JSX to JS
   ],
   "plugins": plugins,
+  "overrides": [{
+      test: /.*logger.*/,
+      sourceType: "unambiguous",
+  }],
 };
