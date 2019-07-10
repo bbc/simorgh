@@ -20,7 +20,6 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
     `;
 
   return (
-    <>
       <Helmet>
         <script type="text/javascript">
           {`
@@ -46,7 +45,6 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
           src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
         />
       </Helmet>
-    </>
   );
 };
 
