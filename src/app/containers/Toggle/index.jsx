@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { string, element } from 'prop-types';
 import { RequestContext } from '../../contexts/RequestContext';
 import useToggle from './useToggle';
 
@@ -8,11 +9,23 @@ const ToggleContainer = ({ toggleName, FallbackComponent, children }) => {
 
   if (enabled) {
     return children;
-  } else if (FallbackComponent) {
-    return <FallbackComponent />;
-  } else {
-    return null;
   }
+
+  if (FallbackComponent) {
+    return <FallbackComponent />;
+  }
+
+  return null;
+};
+
+ToggleContainer.propTypes = {
+  toggleName: string.isRequired,
+  FallbackComponent: element,
+  children: element.isRequired,
+};
+
+ToggleContainer.defaultProps = {
+  FallbackComponent: null,
 };
 
 export default ToggleContainer;
