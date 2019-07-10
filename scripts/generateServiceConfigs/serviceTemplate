@@ -2,7 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 
 const service = {
-  lang: `{yaml|open_graph.override_locale}`,
+  lang: `{yaml|orbit.lang_code}`,
   articleAuthor: `{yaml|follow_us.networks.{serviceName}.facebook}`,
   articleTimestampPrefix: 'TODO',
   atiAnalyticsAppName: '{yaml|ati_analytics.app_name}',
@@ -18,8 +18,8 @@ const service = {
   audioCaptionOffscreenText: 'TODO',
   defaultCaptionOffscreenText: 'TODO',
   imageCopyrightOffscreenText: 'TODO',
-  locale: `{yaml|open_graph.override_locale}`,
-  datetimeLocale: `{yaml|open_graph.override_locale}`.toLowerCase(),
+  locale: `{yaml|orbit.lang_code}`,
+  datetimeLocale: `{yaml|orbit.lang_code}`.toLowerCase(),
   service: '{config|serviceName}',
   serviceName: '{ini|base.bannerLogo}',
   themeColor: `${C_POSTBOX}`,

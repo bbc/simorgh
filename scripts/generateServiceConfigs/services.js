@@ -4,10 +4,16 @@ const services = {
         iniName: 'fr'
     },
     afaanoromoo: {
-      iniName: 'om'
+      iniName: 'om',
+      overrides: {
+        'open_graph.twitter_handle': '@BBCAfrica'
+      }
     },
     amharic: {
-      iniName: 'am'
+      iniName: 'am',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcnewsamharic'
+      }
     },
     arabic: {
       iniName: 'ar'
@@ -19,13 +25,17 @@ const services = {
       iniName: 'bn'
     },
     burmese: {
-      iniName: 'my'
+      iniName: 'my',
+      yamlCleaner: yaml => yaml.replace('ldp_tag_augmentation', 'unused')
     },
     gahuza: {
       iniName: 'rw'
     },
-    gujarti: {
-      iniName: 'gu'
+    gujarati: {
+      iniName: 'gu',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcnewsgujarati'
+      }
     },
     hausa: {
       iniName: 'ha'
@@ -40,13 +50,19 @@ const services = {
       iniName: 'id'
     },
     korean: {
-      iniName: 'ko'
+      iniName: 'ko',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcworld'
+      }
     },
     kyrgyz: {
       iniName: 'ky'
     },
     marathi: {
-      iniName: 'mr'
+      iniName: 'mr',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcnewsmarathi'
+      }
     },
     mundo: {
       iniName: 'es'
@@ -64,16 +80,27 @@ const services = {
       iniName: 'pcm'
     },
     portuguese: {
-      iniName: 'pt'
+      iniName: 'pt',
+      overrides: {
+        'base.brand': 'BBC News Brasil'
+      }
     },
     punjabi: {
-      iniName: 'pa'
+      iniName: 'pa',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcnewspunjabi'
+      }
     },
     russian: {
       iniName: 'ru'
     },
     serbian: {
-      iniName: 'sr'
+      iniName: 'sr-Latn',
+      overrides: {
+        'orbit.lang_code': 'sr-Latn',
+        'follow_us.networks.{serviceName}.facebook': 'https://www.facebook.com/BBCNewsnasrpskom',
+        'open_graph.twitter_handle': '@bbcnasrpskom'
+      }
     },
     sinhala: {
       iniName: 'si'
@@ -85,24 +112,34 @@ const services = {
       iniName: 'sw'
     },
     tamil: {
-      iniName: 'tamil'
+      iniName: 'ta'
     },
     telugu: {
-      iniName: 'te'
+      iniName: 'te',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcnewstelugu'
+      }
     },
     thai: {
       iniName: 'th'
     },
     tigrinya: {
-      iniName: 'ti'
+      iniName: 'ti',
+      overrides: {
+        'open_graph.twitter_handle': '@bbcafrica'
+      }
     },
     turkce: {
       iniName: 'tr'
     },
     ukchina: {
-      iniName: 'zh-Hans'
+      iniName: 'zh-Hans',
+      overrides: {
+        'orbit.lang_code': 'zh-cn',
+        'follow_us.networks.{serviceName}.facebook': 'https://www.facebook.com/bbcworldservice/',
+      }
     },
-    ukranian: {
+    ukrainian: {
       iniName: 'uk'
     },
     urdu: {
@@ -111,23 +148,32 @@ const services = {
     uzbek: {
       iniName: 'uz'
     },
-    viatnamese: {
+    vietnamese: {
       iniName: 'vi'
     },
-    yorubu: {
+    yoruba: {
       iniName: 'yo'
     },
     zhongwen: {
-        iniName: 'zh-Hans'
+        iniName: 'zh-Hans',
+        overrides: {
+          'orbit.lang_code': 'zh_CN',
+          'follow_us.networks.{serviceName}.facebook': 'https://www.facebook.com/bbcworldservice/',
+        }
     },
     cymrufyw: {
-      iniName: 'cy'
+      iniName: 'cy',
+      yamlCleaner: yaml => yaml.replace('ati_analytics', 'unused')
     },
     naidheachdan: {
-      iniName: 'gd'
+      iniName: 'gd',
+      yamlCleaner: yaml => yaml.replace('ati_analytics', 'unused')
     },
     japanese: {
-      iniName: 'ja'
+      iniName: 'ja',
+      overrides: {
+        'follow_us.networks.{serviceName}.facebook': 'https://www.facebook.com/bbcnewsjapan/',
+      }
     },
     news: {
       iniName: 'en-GB'
@@ -140,6 +186,7 @@ const servicesToSkip = ['igbo', 'news', 'persian', 'pidgin', 'yoruba'];
 // Add default configs
 for (let [service, config] of Object.entries(services)) {
   if (servicesToSkip.includes(service)) config.skip = true;
+  config.serviceName = config.serviceName || service;
   config.script = config.script || 'latin';
   config.dir = config.dir || 'ltr';
 }
