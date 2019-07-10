@@ -7,9 +7,7 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
     destination = 'WS_NEWS_LANGUAGES';
   }
 
-  return env === 'live' || env === 'stage'
-    ? destination
-    : `${destination}_TEST`;
+  return env === 'live' ? destination : `${destination}_TEST`;
 };
 
 export default getStatsDestination;
