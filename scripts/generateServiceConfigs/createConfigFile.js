@@ -8,7 +8,7 @@ const getIniReplacement = (ini, serviceName, config) => (_, token) => {
         return config.overrides[token];
     }
 
-    const regex = new RegExp(`${token} = "(.*)"`);
+    const regex = new RegExp(`${token} = ["|'](.*)["|']`);
     const match = ini.match(regex);
 
     if (!match || !match[1]) {

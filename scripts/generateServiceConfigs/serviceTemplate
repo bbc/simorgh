@@ -1,5 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
+import * as brandSVGs from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: `{yaml|orbit.lang_code}`,
@@ -30,6 +31,85 @@ const service = {
   script: {config|script},
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
+  translations: {
+    error: {
+      404: {
+        statusCode: '404',
+        title: '{ini|404.pageNotFound}',
+        message:
+          "{ini|404.checkAddress}",
+        solutions: [
+          'TODO'
+        ],
+        callToActionFirst: 'TODO',
+        callToActionLinkText: '{ini|errorBase.homePageText}',
+        callToActionLast: 'TODO',
+        callToActionLinkUrl: 'https://www.bbc.com/{config|serviceName}',
+      },
+      500: {
+        statusCode: '500',
+        title: '{ini|500.error}',
+        message:
+          "{ini|500.refreshPage}",
+        solutions: [
+          'TODO'
+        ],
+        callToActionFirst: 'TODO',
+        callToActionLinkText: '{ini|errorBase.homePageText}',
+        callToActionLast: 'TODO',
+        callToActionLinkUrl: 'https://www.bbc.com/{config|serviceName}',
+      },
+    },
+    consentBanner: {
+      privacy: {
+        title: "TODO",
+        description: {
+          uk: {
+            first: "TODO",
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
+          international: {
+            first: "TODO",
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
+        },
+        accept: 'TODO',
+        reject: "TODO",
+        rejectUrl: 'TODO',
+      },
+      cookie: {
+        title: 'TODO',
+        description: {
+          uk: {
+            first: 'TODO',
+            linkText: 'TODO',
+            last:
+              'TODO',
+            linkUrl:
+              'TODO',
+          },
+          international: {
+            first: 'TODO',
+            linkText: 'TODO',
+            last: 'TODO',
+            linkUrl: 'TODO',
+          },
+        },
+        accept: 'TODO',
+        reject: 'TODO',
+        rejectUrl: 'TODO',
+      },
+    },
+    media: {
+      audio: '{ini|storyUnit.audio}',
+      video: '{ini|storyUnit.video}',
+    },
+  },
+  brandSVG: brandSVGs['{config|serviceName}'] || brandSVGs.news
 };
 
 export default service;
