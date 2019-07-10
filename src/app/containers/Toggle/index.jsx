@@ -5,7 +5,7 @@ import useToggle from './useToggle';
 
 const ToggleContainer = ({ toggleName, FallbackComponent, children }) => {
   const { env } = useContext(RequestContext);
-  const [enabled] = useToggle(toggleName, env);
+  const { enabled } = useToggle(toggleName, env);
 
   if (enabled) {
     return children;

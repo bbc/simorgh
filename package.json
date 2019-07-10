@@ -159,6 +159,7 @@
     "@storybook/react": "^5.1.9",
     "@storybook/theming": "^5.1.9",
     "@testing-library/react": "^8.0.1",
+    "@testing-library/react-hooks": "^1.1.0",
     "amphtml-validator": "^1.0.23",
     "audit-ci": "^2.1.0",
     "babel-eslint": "^10.0.2",
