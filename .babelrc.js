@@ -47,5 +47,8 @@ module.exports = {
   "overrides": [{
       test: /.*logger.*/,
       sourceType: "script",
+  },
+  {
+    test: name => { console.log(name); return false }
   }],
 };
