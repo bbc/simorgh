@@ -1,0 +1,247 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cd4117egk3go",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cd4117egk3go",
+      "canonicalUrl": "https://www.bbc.com/news/articles/cd4117egk3go"
+    },
+    "type": "article",
+    "createdBy": "News",
+    "language": "en-gb",
+    "lastUpdated": 1562586757794,
+    "firstPublished": 1562586751544,
+    "lastPublished": 1562586751544,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News"
+    },
+    "tags": {},
+    "version": "v1.0.6",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "video",
+      "caption"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Thousands turn out to see rare total solar eclipse in Chile",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Thousands turn out to see rare total solar eclipse in Chile",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p07ftj63",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Thousands watching in the region of Coquimbo in Chile cheered as darkness descended during a total eclipse of the sun. ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Thousands watching in the region of Coquimbo in Chile cheered as darkness descended during a total eclipse of the sun. ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "The Moon's great shadow, or umbra, then passed over the Andes and across to Argentina. ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Moon's great shadow, or umbra, then passed over the Andes and across to Argentina. ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "The rest of Chile, as well as Peru, Ecuador, Paraguay, Bolivia, Uruguay, and parts of Colombia, Brazil, Venezuela and Panama, witnessed a partial eclipse.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The rest of Chile, as well as Peru, Ecuador, Paraguay, Bolivia, Uruguay, and parts of Colombia, Brazil, Venezuela and Panama, witnessed a partial eclipse.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p07ftj63",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p07ftj63",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "'How pretty it is to see the sky'",
+                        "synopses": {
+                          "short": "Solar eclipse in Chile delights thousands",
+                          "long": "Thousands watching in the region of Coquimbo in Chile cheered as darkness descended during a total eclipse of the sun. \n\nThe Moon's great shadow, or umbra, then passed over the Andes and across to Argentina. \n\nThe rest of Chile, as well as Peru, Ecuador, Paraguay, Bolivia, Uruguay, and parts of Colombia, Brazil, Venezuela and Panama, witnessed a partial eclipse.",
+                          "medium": "The rare total solar eclipse delighted spectators in Chile, who cheered as the sun darkened."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ftl77.jpg",
+                        "imageCopyright": "AFP",
+                        "embedding": true,
+                        "warnings": {},
+                        "advertising": true,
+                        "caption": "Spectators cheered as the total solar eclipse took place",
+                        "versions": [
+                          {
+                            "versionId": "p07ftj65",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 74,
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableUntil": null
+                          }
+                        ],
+                        "image": null,
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.bbci.co.uk/images/ic/$recipe/p07ftl77.jpg",
+                              "originCode": null,
+                              "copyrightHolder": "AFP"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Solar eclipse",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Solar eclipse",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Thousands turn out to see rare total solar eclipse in Chile"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cd4117egk3go",
+      "canonicalUrl": "https://www.bbc.com/news/articles/cd4117egk3go"
+    },
+    "summary": "",
+    "timestamp": 1562586751544,
+    "id": "urn:bbc:ares::article:cd4117egk3go",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

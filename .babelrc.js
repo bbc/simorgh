@@ -1,5 +1,4 @@
 var plugins = [
-  "@babel/plugin-transform-modules-commonjs", // allows module.exports at the helpers/logger.*.js
   "@babel/plugin-proposal-object-rest-spread", // allows ...spread notation
   "@babel/plugin-syntax-dynamic-import", // allows `await import()` syntax
   [
@@ -45,4 +44,8 @@ module.exports = {
     "@babel/preset-react" // transform JSX to JS
   ],
   "plugins": plugins,
+  "overrides": [{
+      test: /.*logger.*/,
+      sourceType: "script",
+  }],
 };
