@@ -1,5 +1,4 @@
 var plugins = [
-  "@babel/plugin-transform-modules-commonjs", // allows module.exports at the helpers/logger.*.js
   "@babel/plugin-proposal-object-rest-spread", // allows ...spread notation
   "@babel/plugin-syntax-dynamic-import", // allows `await import()` syntax
   [
@@ -17,6 +16,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 module.exports = {
+  "sourceType": "unambiguous",
   "presets": [
     [
       "@babel/preset-env",
