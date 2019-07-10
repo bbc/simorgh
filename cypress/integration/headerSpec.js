@@ -1,5 +1,8 @@
 import services from '../support/config/services';
-import { getElement, shouldContainText } from '../support/bodyTestHelper';
+import {
+  getElement,
+  shouldContainText,
+} from '../../cypressSharedHelpers/bodyTestHelper';
 
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef

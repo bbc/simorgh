@@ -9,8 +9,8 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/metaTestHelper';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/metaTestHelper';
+import { hasHtmlLangDirAttributes } from '../../cypressSharedHelpers/bodyTestHelper';
 
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef

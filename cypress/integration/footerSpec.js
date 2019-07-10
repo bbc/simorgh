@@ -3,7 +3,7 @@ import {
   checkFooterLinks,
   getElement,
   shouldContainText,
-} from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef

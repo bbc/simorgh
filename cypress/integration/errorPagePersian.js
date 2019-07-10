@@ -4,7 +4,7 @@ import {
   errorPageInlineLink,
   errorTitle,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/bodyTestHelper';
 import persian from '../../src/app/lib/config/services/persian';
 
 // This is duplicated between this file and errorPageNews.js.

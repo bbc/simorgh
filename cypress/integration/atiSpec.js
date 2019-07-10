@@ -3,7 +3,7 @@ import services from '../support/config/services';
 import {
   hasNoscriptImgAtiUrl,
   hasAmpAnalyticsAtiUrl,
-} from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/bodyTestHelper';
 import {
   describeForLocalOnly,
   describeForLocalAndTest,

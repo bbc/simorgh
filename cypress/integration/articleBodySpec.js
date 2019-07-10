@@ -10,7 +10,7 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
-} from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;

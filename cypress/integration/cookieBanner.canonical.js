@@ -1,7 +1,7 @@
 import {
   assertCookieValue,
   assertCookieExpiryDate,
-} from '../support/metaTestHelper';
+} from '../../cypressSharedHelpers/metaTestHelper';
 import services from '../support/config/services';
 
 const getPrivacyBanner = () =>

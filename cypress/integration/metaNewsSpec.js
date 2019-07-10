@@ -4,7 +4,7 @@ import {
   getElement,
   getSecondElement,
   hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
+} from '../../cypressSharedHelpers/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -14,7 +14,7 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../support/metaTestHelper';
+} from '../../cypressSharedHelpers/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
