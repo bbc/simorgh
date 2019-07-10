@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import * as AmpHelpers from 'react-amphtml/helpers';
+import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { ConsentBanner } from '../../../components/ConsentBanner';
 import BannerText from './Text';
 
 const Accept = (message, onClick) => (
@@ -32,7 +32,7 @@ const AmpConsentBannerContainer = ({
   promptId,
   hidden,
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations, script } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   return (
@@ -47,6 +47,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
       )}
       hidden={hidden}
+      script={script}
     />
   );
 };

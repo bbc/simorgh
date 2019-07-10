@@ -1,15 +1,15 @@
 import React from 'react';
 import { bool, element } from 'prop-types';
-import { GhostWrapper, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { GhostGrid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
     if (!loading) return <Component {...props} />;
     return (
       <main role="main">
-        <GhostWrapper>
+        <GhostGrid>
           <GridItemConstrainedMedium />
-        </GhostWrapper>
+        </GhostGrid>
       </main>
     );
   };
