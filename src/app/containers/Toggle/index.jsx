@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RequestContext } from '../../contexts/RequestContext';
 import useToggle from './useToggle';
 
 const ToggleContainer = ({ toggleName, FallbackComponent, children }) => {
-  const [enabled] = useToggle(toggleName);
+  const { env } = useContext(RequestContext);
+  const [enabled] = useToggle(toggleName, env);
 
   if (enabled) {
     return children;

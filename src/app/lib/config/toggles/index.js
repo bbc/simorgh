@@ -1,12 +1,18 @@
 const toggles = {
   test: {
-    images: {
+    mpulse: {
+      enabled: false,
+    },
+    audioVideo: {
       enabled: true,
     },
   },
   live: {
-    images: {
-      enabled: true,
+    mpulse: {
+      enabled: false,
+    },
+    audioVideo: {
+      enabled: false,
     },
   },
 };
