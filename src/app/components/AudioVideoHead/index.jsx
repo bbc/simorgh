@@ -20,31 +20,31 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
     `;
 
   return (
-      <Helmet>
-        <script type="text/javascript">
-          {`
-            function mediaPlayerSetup(container) {
-              require(['bump-4'], (bump) => {
-                ${loadPlayers}
-              });
-            }
-          `}
-        </script>
-        <script type="text/javascript">
-          {`
-            function initialiseRequires() {
-              var requiredScripts = { "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4" };
-              require({ paths: requiredScripts, waitSeconds: 30 });
-              mediaPlayerSetup();
-            }
-          `}
-        </script>
-        <script
-          onLoad="initialiseRequires()"
-          type="text/javascript"
-          src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
-        />
-      </Helmet>
+    <Helmet>
+      <script type="text/javascript">
+        {`
+          function mediaPlayerSetup(container) {
+            require(['bump-4'], (bump) => {
+              ${loadPlayers}
+            });
+          }
+        `}
+      </script>
+      <script type="text/javascript">
+        {`
+          function initialiseRequires() {
+            var requiredScripts = { "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4" };
+            require({ paths: requiredScripts, waitSeconds: 30 });
+            mediaPlayerSetup();
+          }
+        `}
+      </script>
+      <script
+        onLoad="initialiseRequires()"
+        type="text/javascript"
+        src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+      />
+    </Helmet>
   );
 };
 
