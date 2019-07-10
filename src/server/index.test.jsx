@@ -113,6 +113,15 @@ describe('Server', () => {
           expect(statusCode).toEqual(404);
         });
       });
+
+      describe('Trailing slash redirects', () => {
+        it('should respond with a 301', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/c6v11qzyv8po/',
+          );
+          expect(statusCode).toEqual(301);
+        });
+      });
     });
   });
 
@@ -172,7 +181,7 @@ describe('Server', () => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
@@ -297,7 +306,7 @@ describe('Server', () => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost:7080',
+                'http://localhost.bbc.com:7080',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
