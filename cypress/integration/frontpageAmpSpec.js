@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../cypressSharedHelpers/config/services';
 import { getElement } from '../../cypressSharedHelpers/bodyTestHelper';
 import { checkCanonicalURL } from '../../cypressSharedHelpers/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';

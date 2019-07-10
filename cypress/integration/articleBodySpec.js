@@ -1,4 +1,4 @@
-import config from '../support/config/services';
+import config from '../../cypressSharedHelpers/config/services';
 import {
   copyrightDataWindow,
   firstHeadlineDataWindow,

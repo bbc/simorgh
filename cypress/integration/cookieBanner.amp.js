@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../cypressSharedHelpers/config/services';
 import describeForEuOnly from '../support/describeForEuOnly';
 
 const getPrivacyBanner = () =>

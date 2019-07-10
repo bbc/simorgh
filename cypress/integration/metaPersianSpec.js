@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../cypressSharedHelpers/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
