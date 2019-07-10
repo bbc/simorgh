@@ -12,6 +12,7 @@ import { DialContextProvider } from '../contexts/DialContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
+import { articleDataPropTypes } from '../models/propTypes/article';
 
 const PageWithRequestContext = ({
   bbcOrigin,
@@ -22,7 +23,7 @@ const PageWithRequestContext = ({
   pageType,
   service,
 }) => {
-  const { lang } = useContext(ServiceContext);
+  const { locale } = useContext(ServiceContext);
 
   return (
     <RequestContextProvider
@@ -32,7 +33,7 @@ const PageWithRequestContext = ({
       isAmp={isAmp}
       pageType={pageType}
       service={service}
-      serviceLang={lang}
+      serviceLang={locale}
     >
       <ServiceWorkerContainer />
       <ManifestContainer />
@@ -89,7 +90,7 @@ const PageWrapper = ({
 PageWrapper.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
-  data: shape({ any }).isRequired,
+  data: shape({ articleDataPropTypes }),
   id: string,
   isAmp: bool.isRequired,
   pageType: string.isRequired,
@@ -100,6 +101,7 @@ PageWrapper.propTypes = {
 PageWrapper.defaultProps = {
   bbcOrigin: null,
   id: null,
+  data: null,
 };
 
 PageWrapper.defaultProps = {};
