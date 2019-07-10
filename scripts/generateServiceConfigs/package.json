@@ -1,0 +1,17 @@
+{
+  "name": "generateserviceconfigs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ryanmccombe",
+  "license": "ISC",
+  "dependencies": {
+    "ini": "^1.3.5",
+    "lodash": "^4.17.13",
+    "nodegit": "^0.24.3",
+    "yaml": "^1.6.0"
+  }
+}

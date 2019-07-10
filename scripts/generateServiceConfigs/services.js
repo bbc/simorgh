@@ -1,3 +1,4 @@
+
 const services = {
     afrique: {
         // file name in responsive-news/vocabs/src/main/BBC/News/Translation
