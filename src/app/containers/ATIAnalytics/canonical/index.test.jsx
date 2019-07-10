@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import { create, act } from 'react-test-renderer';
-import ReactDOM from 'react-dom';
+import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
@@ -109,18 +109,15 @@ describe('Canonical ATI Analytics', () => {
   });
 
   it('should render a noscript image for non-JS users', () => {
-    act(() => {
-      ReactDOM.render(
-        <ContextWrap bbcOrigin="http://localhost.bbc.com">
-          <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
-        </ContextWrap>,
-        container,
-      );
+    const renderedATI = render(
+      <ContextWrap bbcOrigin="http://localhost.bbc.com">
+        <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
+      </ContextWrap>,
+    );
 
-      expect(container.innerHTML).toBe(
-        `<noscript><img height="1px" width="1px" alt="" src="https://logws1363.ati-host.net?key=value&key2=value2" /></noscript>`,
-      );
-    });
+    expect(renderedATI.html()).toBe(
+      `<img height="1px" width="1px" alt="" src="https://logws1363.ati-host.net?key=value&amp;key2=value2"/>`,
+    );
   });
 
   shouldMatchSnapshot(

@@ -14,11 +14,9 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
   }, [atiPageViewUrl]);
 
   return (
-    <noscript
-      dangerouslySetInnerHTML={{
-        __html: `<img height="1px" width="1px" alt="" src="${atiPageViewUrl}" />`,
-      }}
-    />
+    <noscript>
+      <img height="1px" width="1px" alt="" src={atiPageViewUrl} />
+    </noscript>
   );
 };
 
