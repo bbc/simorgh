@@ -6,6 +6,8 @@
 
 - We never reflow page layout, i.e. we always reserve vertical space and never change the height of elements during the render of the page. This means users never have their reading experience ruined by jumping content. NB interactive elements can still expand, but not where they'd not be expected to expand e.g. on clicking a play icon on an audio or video player.
 
+- We do not support no-JS (JavaScript) except for accessibility reasons for accessing primary content (why we do Server-Side Rendering). We do sometimes do trivial things to make the no-JS experience nicer, but this should just ask the user to turn on JS.
+
 ## Quality Assurance
 
 We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simorgh)/[Psammead](https://github.com/bbc/psammead)), who are responsible for ensuring the quality of the code and are a good source for enquiries.
