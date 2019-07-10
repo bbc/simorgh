@@ -45,6 +45,6 @@ module.exports = {
   "plugins": plugins,
   "overrides": [{
       test: /.*logger.*/,
-      sourceType: "unambiguous",
+      sourceType: "script",
   }],
 };
