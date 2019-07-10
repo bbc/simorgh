@@ -1,6 +1,6 @@
 import { arrayOf, number, shape, string } from 'prop-types';
 
-import storyItem from '../storyItem';
+import { storyItem } from '../storyItem';
 
 const frontPageGroupPropTypes = {
   type: string.isRequired,
