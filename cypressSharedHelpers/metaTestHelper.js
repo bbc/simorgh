@@ -1,5 +1,21 @@
 import { getElement } from './bodyTestHelper';
 
+export const testResponseCode = (path, responseCode) => {
+  cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
+    expect(status).to.eq(responseCode);
+  });
+};
+
+export const testRedirect = (url, expectedStatus, expectedUrl) => {
+  cy.request({
+    url,
+    followRedirect: false,
+  }).then(resp => {
+    expect(resp.status).to.eq(expectedStatus);
+    expect(resp.redirectedToUrl).to.eq(expectedUrl);
+  });
+};
+
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
