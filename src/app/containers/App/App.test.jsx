@@ -15,6 +15,7 @@ describe('App', () => {
   const initialData = { pageData: 'Some initial data' };
   const error = 'Error!';
   const match = { params: { service: 'news', amp: false } };
+  const history = { action: 'POP' };
 
   const route = {
     getInitialData: jest.fn(),
@@ -34,6 +35,7 @@ describe('App', () => {
         routes={[]}
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
+        history={history}
       />,
     );
   });
@@ -61,7 +63,10 @@ describe('App', () => {
         reactRouterConfig.renderRoutes.mockClear();
 
         act(() => {
-          wrapper.setProps({ location: { pathname: 'pathnameOne' } });
+          wrapper.setProps({
+            location: { pathname: 'pathnameOne' },
+            history: { action: 'PUSH' },
+          });
 
           expect.assertions(2);
           expect(route.getInitialData).not.toHaveBeenCalled();

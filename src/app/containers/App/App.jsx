@@ -4,7 +4,14 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '../../lib/utilities/usePrevious';
 
-export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
+export const App = ({
+  routes,
+  location,
+  initialData,
+  bbcOrigin,
+  dials,
+  history,
+}) => {
   const {
     service,
     isAmp,
@@ -67,9 +74,17 @@ export const App = ({ routes, location, initialData, bbcOrigin, dials }) => {
     }
   }, [routes, location.pathname]);
 
-  const previousPath = usePrevious(location.pathname);
+  const previousLocationPath = usePrevious(location.pathname);
 
-  return renderRoutes(routes, { ...state, bbcOrigin, dials, previousPath });
+  // clear the previous path on back clicks
+  const previousPath = history.action === 'POP' ? null : previousLocationPath;
+
+  return renderRoutes(routes, {
+    ...state,
+    bbcOrigin,
+    dials,
+    previousPath,
+  });
 };
 
 export default withRouter(App);
