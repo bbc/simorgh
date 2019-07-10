@@ -15,14 +15,27 @@ const getIniReplacement = ini => (_, token) => {
     return match[1];
 }
 
+const interpolateToken = (token, serviceName) => {
+    return token.replace('{serviceName}', serviceName);
+}
+
 module.exports = (serviceName, serviceConfig, yaml, ini) => {
-    let fileContents = fs.readFileSync('./serviceTemplate.js',  { encoding: 'utf8' });
+    let fileContents = fs.readFileSync('./serviceTemplate',  { encoding: 'utf8' });
 
     // Find and replace YAML tokens
-    fileContents = fileContents.replace(/{yaml\|(.*)}/g, (_, token) => get(yaml, token));
+    fileContents = fileContents.replace(/{yaml\|(.*)}/g,
+        (_, token) => get(yaml, interpolateToken(token, serviceName))
+    );
 
     // Find and replace INI tokens
     fileContents = fileContents.replace(/{ini\|(.*)}/g, getIniReplacement(ini));
+
+    // Find and replace config tokens
+    fileContents = fileContents.replace(/{config\|(.*)}/g,
+        (_, token) => serviceConfig[token]
+    );
+
+    console.log(fileContents);
 
     // Write File
     fs.writeFile(`${FILE_PATH}/${serviceName}.js`, fileContents, (err) => {

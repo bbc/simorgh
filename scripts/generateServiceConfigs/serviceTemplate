@@ -1,0 +1,35 @@
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { latin } from '@bbc/gel-foundations/scripts';
+
+const service = {
+  lang: `{yaml|open_graph.override_locale}`,
+  articleAuthor: `{yaml|follow_us.networks.{serviceName}.facebook}`,
+  articleTimestampPrefix: 'TODO',
+  atiAnalyticsAppName: '{yaml|ati_analytics.app_name}',
+  brandName: '{ini|base.brand}',
+  product: '{ini|base.brand}',
+  defaultImage: '{yaml|open_graph.logo}',
+  defaultImageAltText: '{ini|base.brand}',
+  twitterCreator: '{yaml|open_graph.twitter_handle}',
+  dir: `{config|dir}`,
+  externalLinkText: 'TODO',
+  imageCaptionOffscreenText: 'TODO',
+  videoCaptionOffscreenText: 'TODO',
+  audioCaptionOffscreenText: 'TODO',
+  defaultCaptionOffscreenText: 'TODO',
+  imageCopyrightOffscreenText: 'TODO',
+  locale: `{yaml|open_graph.override_locale}`,
+  datetimeLocale: `{yaml|open_graph.override_locale}`.toLowerCase(),
+  service: '{config|serviceName}',
+  serviceName: '{ini|base.bannerLogo}',
+  themeColor: `${C_POSTBOX}`,
+  twitterCreator: '{yaml|open_graph.twitter_handle}',
+  twitterSite: '{yaml|open_graph.twitter_handle}',
+  noBylinesPolicy: 'TODO',
+  publishingPrinciples: 'TODO',
+  script: {config|script},
+  manifestPath: '/articles/manifest.json',
+  swPath: '/articles/sw.js',
+};
+
+export default service;
