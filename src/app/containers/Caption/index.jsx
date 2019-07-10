@@ -39,9 +39,7 @@ const renderParagraph = paragraphBlock => {
 
 const renderCaption = (paragraphBlocks, offscreenText, script) => (
   <Caption script={script}>
-    {offscreenText ? (
-      <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
-    ) : null}
+    {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
     {paragraphBlocks.map(block => {
       const paragraphBlock = deepGet(['model', 'blocks'], block);
       return renderParagraph(paragraphBlock);

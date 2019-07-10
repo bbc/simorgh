@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import GlobalStyle from '../src/app/lib/globalStyles';
+import { ServiceContextProvider } from '../src/app/contexts/ServiceContext'
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
@@ -12,8 +13,10 @@ function loadStories() {
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <Fragment>
-    <GlobalStyle />
-    {story()}
+    <ServiceContextProvider service="news">
+      <GlobalStyle />
+      {story()}
+    </ServiceContextProvider>
   </Fragment>
   /* eslint-enable react/jsx-filename-extension */
 ));
