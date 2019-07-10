@@ -89,13 +89,17 @@ This is mainly used for debugging `latest` using the TEST and LIVE environment b
 
 To run TEST bundles on localhost:
 
-- In `envConfig/test.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+- In `envConfig/test.env` change the values of:
+  - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+  - `COSMOS_DIALS_PATH='/etc/cosmos-dials/dials.json'` to `COSMOS_DIALS_PATH='dials.json'`
 - Then run `rm -rf build && npm run build:test && npm run start`
 - Visit a test article: http://localhost.bbc.com:7080/news/articles/c0g992jmmkko
 
 To run LIVE bundles on localhost:
 
-- In `envConfig/live.env` change the value of `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+- In `envConfig/live.env` change the values of:
+  - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
+  - `COSMOS_DIALS_PATH='/etc/cosmos-dials/dials.json'` to `COSMOS_DIALS_PATH='dials.json'`
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost.bbc.com:7080/news/articles/c8xxl4l3dzeo
 
