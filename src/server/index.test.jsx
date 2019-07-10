@@ -113,6 +113,15 @@ describe('Server', () => {
           expect(statusCode).toEqual(404);
         });
       });
+
+      describe('Trailing slash redirects', () => {
+        it('should respond with a 301', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/c6v11qzyv8po/',
+          );
+          expect(statusCode).toEqual(301);
+        });
+      });
     });
   });
 
