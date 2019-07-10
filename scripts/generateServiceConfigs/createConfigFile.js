@@ -1,9 +1,18 @@
 var fs = require('fs');
 const get = require('lodash/get');
 
+const FILE_PATH = './generatedConfigs';
+
 const getIniReplacement = ini => (_, token) => {
-    console.log('ini replacement', token);
-    return 'TODO';
+    const regex = new RegExp(`${token} = "(.*)"`);
+    const match = ini.match(regex);
+
+    if (!match || !match[1]) {
+        console.warning(`Could not find match for ${token}`);
+        return '[TODO]'
+    }
+
+    return match[1];
 }
 
 module.exports = (serviceName, serviceConfig, yaml, ini) => {
@@ -16,7 +25,8 @@ module.exports = (serviceName, serviceConfig, yaml, ini) => {
     fileContents = fileContents.replace(/{ini\|(.*)}/g, getIniReplacement(ini));
 
     // Write File
-    console.log(fileContents);
-
-    // Return
+    fs.writeFile(`${FILE_PATH}/${serviceName}.js`, fileContents, (err) => {
+        if (err) console.error(err);
+        console.log(`Completed ${serviceName}`)
+    })
 }
