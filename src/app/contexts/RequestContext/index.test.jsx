@@ -36,6 +36,7 @@ const input = {
   isAmp: true,
   pageType: 'frontpage',
   service: 'service',
+  serviceLang: 'en-gb',
 };
 
 const expectedOutput = {
@@ -44,6 +45,7 @@ const expectedOutput = {
   isUK: true,
   origin: 'origin',
   pageType: input.pageType,
+  lang: input.serviceLang,
   platform: 'amp',
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
