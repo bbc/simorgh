@@ -37,8 +37,7 @@ module.exports = {
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
         "useBuiltIns": "usage",
-        "corejs": "3",
-        "modules": false,
+        "corejs": "3"
       }
     ],
     "@babel/preset-react" // transform JSX to JS
@@ -47,8 +46,5 @@ module.exports = {
   "overrides": [{
       test: /.*logger.*/,
       sourceType: "script",
-  },
-  {
-    test: name => { console.log(name); return false }
   }],
 };
