@@ -3,7 +3,7 @@
 # Size limit for all bundles used by each service (K)
 # Keep these +/- 5K and update frequently!
 min=604
-max=622
+max=623
 
 services=( "news" "persian" "igbo" "yoruba" "pidgin" )
 failure=false
@@ -20,7 +20,7 @@ do
      tput setaf 1
      echo "Bundle size for $service is too great at ${size}K, please update thresholds in './scripts/bundleSize.sh'"
      failure=true
-   else 
+   else
     tput setaf 2
     echo "${service} JS = ${size}K"
    fi
