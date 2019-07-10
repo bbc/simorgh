@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import * as svgs from '@bbc/psammead-assets/svgs';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import HeaderContainer from '.';
@@ -15,13 +14,8 @@ storiesOf('Header Container', module)
     inputProvider(
       null,
       ({ service }) => {
-        const serviceContextStub = {
-          product: 'BBC News',
-          service,
-          brandSVG: svgs[service],
-        };
         return (
-          <ServiceContextProvider service={service} value={serviceContextStub}>
+          <ServiceContextProvider service={service}>
             <RequestContextProvider
               pageType="frontPage"
               isAmp={false}
