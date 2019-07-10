@@ -3,6 +3,7 @@
 exports[`ArticleMain should render a news article correctly 1`] = `
 <RequestContextProvider
   bbcOrigin="https://www.test.bbc.co.uk"
+  data={null}
   id="c0000000000o"
   isAmp={false}
   isUK={true}
@@ -10,6 +11,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
   origin="https://www.test.bbc.co.uk"
   pageType="article"
   service="news"
+  serviceLang={null}
 >
   <ArticleMain
     articleData={
@@ -157,6 +159,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <RequestContextProvider
   bbcOrigin="https://www.test.bbc.co.uk"
+  data={null}
   id="c0000000000o"
   isAmp={false}
   isUK={true}
@@ -164,6 +167,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   origin="https://www.test.bbc.co.uk"
   pageType="article"
   service="persian"
+  serviceLang={null}
 >
   <ArticleMain
     articleData={

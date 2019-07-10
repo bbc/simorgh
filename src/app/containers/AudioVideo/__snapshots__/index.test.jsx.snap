@@ -361,7 +361,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -806,7 +806,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -1283,7 +1283,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -1728,7 +1728,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -2173,7 +2173,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -2650,7 +2650,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -3095,7 +3095,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -3540,7 +3540,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -4017,7 +4017,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -4496,7 +4496,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -4947,7 +4947,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     isAmp={true}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -5453,7 +5453,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -5959,7 +5959,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -6404,7 +6404,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -6881,7 +6881,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
@@ -7360,7 +7360,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     isAmp={false}
     pageType="article"
     service="news"
-    serviceLang="en-gb"
+    serviceLang={null}
   >
     <AudioVideoHead
       audioVideoAssets={
