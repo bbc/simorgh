@@ -1,13 +1,14 @@
-import videoMetadata from './videoMetadata';
+import audioVideoMetadata from './audioVideoMetadata';
 import {
   noAresMediaMetadata,
   multipleAresMetadata,
   videoClipGlobalGuidanceBlock,
+  audioClipGlobalGuidanceBlock,
 } from './helpers/fixtures';
 
-describe('videoMetadata', () => {
+describe('audioVideoMetadata', () => {
   it('returns correct video metadata', () => {
-    const metadata = videoMetadata(videoClipGlobalGuidanceBlock);
+    const metadata = audioVideoMetadata(videoClipGlobalGuidanceBlock);
     const output = {
       video: {
         '@list': [
@@ -27,18 +28,38 @@ describe('videoMetadata', () => {
     expect(metadata).toEqual(output);
   });
 
+  it('returns correct audio metadata', () => {
+    const metadata = audioVideoMetadata(audioClipGlobalGuidanceBlock);
+    const output = {
+      video: {
+        '@list': [
+          {
+            '@type': 'AudioObject',
+            description: 'Some audio from a supermarket checkout in Birmingham',
+            duration: 127,
+            name: 'Birmingham checkout',
+            thumbnailUrl:
+              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
+            uploadDate: null,
+          },
+        ],
+      },
+    };
+    expect(metadata).toEqual(output);
+  });
+
   it('handles aresMediaMetadata type not being present', () => {
-    const metadata = videoMetadata(noAresMediaMetadata);
+    const metadata = audioVideoMetadata(noAresMediaMetadata);
     expect(metadata).toEqual(null);
   });
 
   it('handles empty input', () => {
-    const metadata = videoMetadata([]);
+    const metadata = audioVideoMetadata([]);
     expect(metadata).toEqual(null);
   });
 
   it('handles multiple aresMediaMetadata types being present.', () => {
-    const metadata = videoMetadata(multipleAresMetadata);
+    const metadata = audioVideoMetadata(multipleAresMetadata);
     const output = {
       video: {
         '@list': [
