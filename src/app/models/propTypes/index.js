@@ -18,7 +18,7 @@ export const optionalTextPropTypes = {
   ),
 };
 
-export const videoPropTypes = {
+export const audioVideoPropTypes = {
   blocks: arrayOf(
     shape({
       locator: string,
