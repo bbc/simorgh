@@ -1,10 +1,10 @@
 import { checkPropTypes } from 'prop-types';
 
-const propTypeCheck = (props, componentName, propType) => {
+const propTypeCheck = (props, propName, propType) => {
   const { type } = props;
 
   const expectedType = {
-    [componentName]: propType,
+    [propName]: propType,
   };
 
   if (type === 'article') {

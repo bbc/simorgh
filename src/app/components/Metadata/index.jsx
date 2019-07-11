@@ -155,8 +155,8 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: (props, componentName) =>
-    propTypeCheck(props, componentName, string.isRequired),
+  articleAuthor: (props, propName) =>
+    propTypeCheck(props, propName, string.isRequired),
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
@@ -168,13 +168,13 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: (props, componentName) =>
-    propTypeCheck(props, componentName, arrayOf(string)),
+  metaTags: (props, propName) =>
+    propTypeCheck(props, propName, arrayOf(string)),
   themeColor: string.isRequired,
-  timeFirstPublished: (props, componentName) =>
-    propTypeCheck(props, componentName, string.isRequired),
-  timeLastPublished: (props, componentName) =>
-    propTypeCheck(props, componentName, string.isRequired),
+  timeFirstPublished: (props, propName) =>
+    propTypeCheck(props, propName, string.isRequired),
+  timeLastPublished: (props, propName) =>
+    propTypeCheck(props, propName, string.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
