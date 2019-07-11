@@ -40,6 +40,7 @@ const AudioVideoHead = ({ audioVideoAssets }) => {
         `}
       </script>
       <script
+        async
         onLoad="initialiseRequires()"
         type="text/javascript"
         src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
