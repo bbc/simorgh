@@ -7,7 +7,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
@@ -31,7 +30,7 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={idSanitiser(deepGet([0, 'model', 'text'], paragraphBlock))}>
+    <p key={deepGet(['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
