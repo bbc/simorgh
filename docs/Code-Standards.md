@@ -1,7 +1,5 @@
 # Code Standards
 
-## Coding Approach
-
 - We are following an AMP-first approach therefore all page components must be AMP compatible. [Example of component with AMP Compatibility](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-image) – the component is included in an AMP page and passes AMP validation.
 
 - We never reflow page layout, i.e. we always reserve vertical space and never change the height of elements during the render of the page. This means users never have their reading experience ruined by jumping content. NB interactive elements can still expand, but should not where they'd not be expected to expand e.g. on clicking a play icon on an audio or video player.
