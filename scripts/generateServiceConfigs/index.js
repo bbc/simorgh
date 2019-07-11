@@ -1,3 +1,4 @@
+// See ./README.md for documentation
 const services = require('./services');
 const getData = require('./getData');
 const createConfigFile = require('./createConfigFile');
@@ -9,7 +10,6 @@ Object
     .entries(services)
     .filter(([_, config]) => !config.skip)
     .forEach(([serviceName, serviceConfig]) => {
-        // Get data
         const yaml = getData(`${CONFIG_FILES_PATH}/${serviceName}.yaml`, serviceConfig);
         const ini = getData(`${TRANSLATION_FILES_PATH}/${serviceConfig.iniName}.ini`);
 

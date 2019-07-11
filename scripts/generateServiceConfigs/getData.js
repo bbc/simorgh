@@ -1,3 +1,6 @@
+// This file gets data from a provided file name
+// If it is a yaml file, it further parses it into a JS object
+
 var fs = require('fs');
 const YAML = require('yaml')
 
