@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Arabic',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
   defaultImageAltText: 'BBC News Arabic',
-  twitterCreator: '@BBCArabic',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

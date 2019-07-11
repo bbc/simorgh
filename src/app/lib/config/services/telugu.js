@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News తెలుగు',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
   defaultImageAltText: 'BBC News తెలుగు',
-  twitterCreator: '@bbcnewstelugu',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

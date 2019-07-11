@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Afrique',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
   defaultImageAltText: 'BBC News Afrique',
-  twitterCreator: '@bbcafrique',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -37,14 +36,14 @@ const service = {
         statusCode: '404',
         title: '404 - Page non trouvée',
         message:
-          "Vous avez peut-être mal entré l'adresse internet. Veuillez vérifier l'adresse.",
+          "Vous avez peut-être mal entré l\'adresse internet. Veuillez vérifier l\'adresse.",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
           'Searching for this page using the BBC search bar',
         ],
         callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Page d'accueil BBC',
+        callToActionLinkText: 'Page d\'accueil BBC',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afrique',
       },
@@ -52,13 +51,13 @@ const service = {
         statusCode: '500',
         title: '500 - Erreur',
         message:
-          "Une erreur s'est produite. Veuillez rafraichir la page.",
+          "Une erreur s\'est produite. Veuillez rafraichir la page.",
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
         ],
         callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Page d'accueil BBC',
+        callToActionLinkText: 'Page d\'accueil BBC',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afrique',
       },
@@ -153,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'La BBC n'est pas responsable du contenu de sites externes',
+    copyrightText: 'La BBC n\'est pas responsable du contenu de sites externes',
   },
   fonts: []
 };

@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News தமிழ்',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
   defaultImageAltText: 'BBC News தமிழ்',
-  twitterCreator: '@bbctamil',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

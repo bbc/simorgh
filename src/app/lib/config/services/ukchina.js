@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News 中文',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png',
   defaultImageAltText: 'BBC News 中文',
-  twitterCreator: '@BBCChina',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

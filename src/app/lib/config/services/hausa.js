@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Hausa',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
   defaultImageAltText: 'BBC News Hausa',
-  twitterCreator: '@bbchausa',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

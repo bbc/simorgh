@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News บีบีซีไทย',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
   defaultImageAltText: 'BBC News บีบีซีไทย',
-  twitterCreator: '@bbc_thailand',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

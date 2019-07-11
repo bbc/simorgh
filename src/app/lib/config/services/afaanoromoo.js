@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Afaan Oromoo',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
   defaultImageAltText: 'BBC News Afaan Oromoo',
-  twitterCreator: '@BBCAfrica',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -153,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu',
+    copyrightText: 'Qabiyyee iddoola alaatiif BBC\'n itti hin gaafatamu',
   },
   fonts: []
 };

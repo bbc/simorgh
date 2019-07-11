@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News ትግርኛ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
   defaultImageAltText: 'BBC News ትግርኛ',
-  twitterCreator: '@bbcafrica',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -52,7 +51,7 @@ const service = {
         statusCode: '500',
         title: 'ጌጋ',
         message:
-          "ዝተፈጥረ ጌጋ'ሎ፤እቲ ገፅ ክሕደስ ኣለዎ።",
+          "ዝተፈጥረ ጌጋ\'ሎ፤እቲ ገፅ ክሕደስ ኣለዎ።",
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',

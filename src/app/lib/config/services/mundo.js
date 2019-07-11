@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Mundo',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
   defaultImageAltText: 'BBC News Mundo',
-  twitterCreator: '@bbcmundo',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

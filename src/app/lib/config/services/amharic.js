@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News አማርኛ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
   defaultImageAltText: 'BBC News አማርኛ',
-  twitterCreator: '@bbcnewsamharic',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

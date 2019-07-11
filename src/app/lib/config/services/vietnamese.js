@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Tiếng Việt',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
   defaultImageAltText: 'BBC News Tiếng Việt',
-  twitterCreator: '@bbcvietnamese',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News پښتو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
   defaultImageAltText: 'BBC News پښتو',
-  twitterCreator: '@bbcpashto',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News සිංහල',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
   defaultImageAltText: 'BBC News සිංහල',
-  twitterCreator: '@bbcsinhala',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

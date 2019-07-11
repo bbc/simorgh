@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Somali',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
   defaultImageAltText: 'BBC News Somali',
-  twitterCreator: '@bbcsomali',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -153,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda',
+    copyrightText: 'BBC-du mas\'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda',
   },
   fonts: []
 };

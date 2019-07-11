@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News मराठी',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
   defaultImageAltText: 'BBC News मराठी',
-  twitterCreator: '@bbcnewsmarathi',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

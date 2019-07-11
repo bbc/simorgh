@@ -11,7 +11,6 @@ const service = {
   product: 'BBC Cymru Fyw',
   defaultImage: 'https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png',
   defaultImageAltText: 'BBC Cymru Fyw',
-  twitterCreator: '@BBCCymruFyw',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -35,9 +34,9 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - Methu dod o hyd I'r dudalen',
+        title: '404 - Methu dod o hyd I\'r dudalen',
         message:
-          "Efallai bod hyn oherwydd i chi deipio cyfeiriad y wefan yn anghywir. Gwirwch y cyfeiriad a'r sillafu",
+          "Efallai bod hyn oherwydd i chi deipio cyfeiriad y wefan yn anghywir. Gwirwch y cyfeiriad a\'r sillafu",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -153,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'Dyw'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.',
+    copyrightText: 'Dyw\'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.',
   },
   fonts: []
 };

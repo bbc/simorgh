@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Gahuza',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
   defaultImageAltText: 'BBC News Gahuza',
-  twitterCreator: '@bbcgahuza',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -37,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Hari ikosa',
         message:
-          "Ibishobora kuba vyatewe n'uko wanditse nabi adresse y'urubuga",
+          "Ibishobora kuba vyatewe n\'uko wanditse nabi adresse y\'urubuga",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',

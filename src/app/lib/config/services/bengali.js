@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News বাংলা',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
   defaultImageAltText: 'BBC News বাংলা',
-  twitterCreator: '@bbcbangla',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

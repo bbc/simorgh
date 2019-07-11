@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News ગુજરાતી',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
   defaultImageAltText: 'BBC News ગુજરાતી',
-  twitterCreator: '@bbcnewsgujarati',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

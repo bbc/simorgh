@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Кыргыз КызMATы',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
   defaultImageAltText: 'BBC News Кыргыз КызMATы',
-  twitterCreator: '@bbckyrgyz',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

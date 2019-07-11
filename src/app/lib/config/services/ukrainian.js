@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Україна',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
-  twitterCreator: '@BBC_ua',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

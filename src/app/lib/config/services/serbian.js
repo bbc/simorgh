@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News na srpskom',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   defaultImageAltText: 'BBC News na srpskom',
-  twitterCreator: '@bbcnasrpskom',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

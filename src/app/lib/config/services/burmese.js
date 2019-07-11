@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News မြန်မာ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
   defaultImageAltText: 'BBC News မြန်မာ',
-  twitterCreator: '@bbcburmese',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

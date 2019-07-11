@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Azərbaycanca',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
   defaultImageAltText: 'BBC News Azərbaycanca',
-  twitterCreator: '@bbcazeri',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

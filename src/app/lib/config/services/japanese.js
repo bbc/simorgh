@@ -11,7 +11,6 @@ const service = {
   product: 'BBCニュース',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
   defaultImageAltText: 'BBCニュース',
-  twitterCreator: '@bbcnewsjapan',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

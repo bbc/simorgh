@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News ਖ਼ਬਰਾਂ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
   defaultImageAltText: 'BBC News ਖ਼ਬਰਾਂ',
-  twitterCreator: '@bbcnewspunjabi',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

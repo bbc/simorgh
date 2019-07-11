@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Indonesia',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
   defaultImageAltText: 'BBC News Indonesia',
-  twitterCreator: '@bbcindonesia',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

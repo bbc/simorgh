@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Русская служба',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
   defaultImageAltText: 'BBC News Русская служба',
-  twitterCreator: '@bbcrussian',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

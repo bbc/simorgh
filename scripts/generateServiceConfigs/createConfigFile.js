@@ -16,7 +16,7 @@ const getIniReplacement = (ini, serviceName, config) => (_, token) => {
         return '[TODO]'
     }
 
-    return match[1];
+    return match[1].replace(/'/g, "\\'");
 }
 
 const getYamlReplacement = (yaml, serviceName, config) => (_, token) => {
@@ -30,7 +30,7 @@ const getYamlReplacement = (yaml, serviceName, config) => (_, token) => {
         console.log(`Could not find match for ${token} in ${serviceName} yaml`);
     }
 
-    return replacement || '[TODO]';
+    return replacement.replace(/'/g, "\\'") || '[TODO]';
 }
 
 const interpolateToken = (token, serviceName) => {

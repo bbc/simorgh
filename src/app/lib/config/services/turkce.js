@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Türkçe',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
   defaultImageAltText: 'BBC News Türkçe',
-  twitterCreator: '@bbcturkce',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

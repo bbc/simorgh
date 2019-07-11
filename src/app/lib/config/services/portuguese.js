@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Brasil',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png',
   defaultImageAltText: 'BBC News Brasil',
-  twitterCreator: '@bbcbrasil',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

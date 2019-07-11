@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News Swahili',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
   defaultImageAltText: 'BBC News Swahili',
-  twitterCreator: '@bbcswahili',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

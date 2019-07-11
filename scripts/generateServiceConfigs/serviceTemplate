@@ -11,7 +11,6 @@ const service = {
   product: '{ini|base.brand}',
   defaultImage: '{yaml|open_graph.logo}',
   defaultImageAltText: '{ini|base.brand}',
-  twitterCreator: '{yaml|open_graph.twitter_handle}',
   dir: `{config|dir}`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',

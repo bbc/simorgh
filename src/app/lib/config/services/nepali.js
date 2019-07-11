@@ -11,7 +11,6 @@ const service = {
   product: 'BBC News नेपाली',
   defaultImage: 'https://www.bbc.co.uk/news/special/2015/newsspec_11063/nepali_1024x576.png',
   defaultImageAltText: 'BBC News नेपाली',
-  twitterCreator: '@bbcnepali',
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
