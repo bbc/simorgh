@@ -156,7 +156,7 @@ Metadata.propTypes = {
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
   articleAuthor: (props, propName) =>
-    propTypeCheck(props, propName, string.isRequired),
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
@@ -169,12 +169,12 @@ Metadata.propTypes = {
   lang: string.isRequired,
   locale: string.isRequired,
   metaTags: (props, propName) =>
-    propTypeCheck(props, propName, arrayOf(string)),
+    propTypeCheck(props, propName, 'Metadata', arrayOf(string)),
   themeColor: string.isRequired,
   timeFirstPublished: (props, propName) =>
-    propTypeCheck(props, propName, string.isRequired),
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   timeLastPublished: (props, propName) =>
-    propTypeCheck(props, propName, string.isRequired),
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,

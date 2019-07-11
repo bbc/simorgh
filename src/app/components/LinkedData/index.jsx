@@ -88,10 +88,10 @@ LinkedData.propTypes = {
   canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: (props, componentName) =>
-    propTypeCheck(props, componentName, string.isRequired),
-  lastUpdated: (props, componentName) =>
-    propTypeCheck(props, componentName, string.isRequired),
+  firstPublished: (props, propName) =>
+    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
+  lastUpdated: (props, propName) =>
+    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
