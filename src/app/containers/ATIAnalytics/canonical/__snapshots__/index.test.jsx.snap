@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical ATI Analytics snapshots should render correctly 1`] = `
+exports[`Canonical ATI Analytics should render correctly 1`] = `
 <noscript>
   <img
     alt=""
     height="1px"
-    src="https://logws1363.ati-host.net?key=value&key2=value2"
+    src="https://foobar.com?key=value&key2=value2"
     width="1px"
   />
 </noscript>
