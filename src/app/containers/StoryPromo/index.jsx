@@ -98,7 +98,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={<MediaIndicator item={item} />}
+      mediaIndicator={<MediaIndicator item={item} topStory={topStory} />}
       topStory={topStory}
     />
   );
