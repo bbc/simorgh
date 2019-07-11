@@ -7,8 +7,6 @@ const propTypeCheck = (props, propName, componentName, propType) => {
     [propName]: propType,
   };
 
-  // console.log(componentName);
-
   if (type === 'article') {
     return checkPropTypes(expectedType, props, 'prop', componentName);
   }
