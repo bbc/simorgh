@@ -7,10 +7,6 @@ const getEnv = origin => {
     return 'test';
   }
 
-  if (origin.includes('stage')) {
-    return 'stage';
-  }
-
   return 'live';
 };
 
