@@ -152,7 +152,6 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^3.1.0",
     "@storybook/addon-knobs": "^5.1.9",
