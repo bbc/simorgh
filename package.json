@@ -93,7 +93,7 @@
     "@bbc/psammead-caption": "^1.1.12",
     "@bbc/psammead-consent-banner": "^1.0.0",
     "@bbc/psammead-copyright": "^1.0.2",
-    "@bbc/psammead-figure": "^1.0.2",
+    "@bbc/psammead-figure": "^1.0.7",
     "@bbc/psammead-headings": "^2.0.2",
     "@bbc/psammead-image": "^1.0.3",
     "@bbc/psammead-image-placeholder": "^1.0.1",
