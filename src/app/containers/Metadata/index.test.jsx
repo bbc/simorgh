@@ -362,7 +362,7 @@ describe('Metadata Container', () => {
           dotComOrigin,
           'canonical',
           frontPageData,
-          'npm',
+          null,
           'frontPage',
         ),
       );
