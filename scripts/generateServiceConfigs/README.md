@@ -6,8 +6,8 @@ This package is used to generate Simorgh service config files by parsing INI and
 # Usage
 
 1. Navigate to the `scripts/generateServiceConfigs` directory and `npm install` the dependencies
-2. Pull the latest YAML config files from [here](https://github.com/BBC-News/responsive-news/tree/9000f2296e1a6f2d0f2574fc2d15662aa2121fe8/configurator/src/main/BBC/News/Config) and put them in the `responsive-news/config` directory in this package
-3. Pull the latest INI translation files from [here](https://github.com/BBC-News/responsive-news/tree/493bfa49fbacd4af72263a74feefe4a82681fd5a/vocabs/src/main/BBC/News/Translation) and put them in the `responsive-news/translations` directory in this package
+2. Pull the latest YAML config files from the `responsive-news` repo (`configurator/src/main/BBC/News/Config`) and put them in the `responsive-news/config` directory in this package
+3. Pull the latest INI translation files from the `responsive-news` (`vocabs/src/main/BBC/News/Translation`) and put them in the `responsive-news/translations` directory in this package
 4. Execute `index.js` with Node (`node .`)
 5. This will add the generated service configs in the `generatedConfigs` directory, where they can be reviewed and moved to the correct directory within Simorgh if the output is acceptable
 
