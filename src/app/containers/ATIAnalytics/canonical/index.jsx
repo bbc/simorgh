@@ -1,4 +1,3 @@
-/* eslint react/no-danger: 0 */
 import React, { useContext, useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import { atiBaseUrl } from '../atiUrl';
